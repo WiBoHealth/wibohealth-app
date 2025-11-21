@@ -10,5 +10,10 @@
   "theme_color": "#667eea",
   "lang": "ar",
   "dir": "rtl",
-  "categories": ["health", "food", "lifestyle", "medical"]
+  "categories": [
+    "health",
+    "food",
+    "lifestyle",
+    "medical"
+  ]
 }
