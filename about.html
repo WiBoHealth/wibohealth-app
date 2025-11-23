@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - WiBo Health</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Cairo', sans-serif;
+        }
+        .about-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #2ecc71;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #2c3e50;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #2ecc71;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            background: #27ae60;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Header -->
+    <div style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <a href="index.html" style="text-decoration: none; color: #2ecc71; font-size: 24px; font-weight: bold;">💚 WiBo Health</a>
+            
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger-menu" onclick="toggleMobileMenu()" style="display: flex; flex-direction: column; cursor: pointer; padding: 10px;">
+                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
+                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
+                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
+            </div>
+            
+            <a href="index.html" style="text-decoration: none; color: #2ecc71; padding: 10px 20px; background: #f8f9fa; border-radius: 20px; font-weight: 600; display: none;">← العودة للرئيسية</a>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
+        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> الحاسبات الصحية</a>
+        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> الوصفات الصحية</a>
+        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> المقالات الصحية</a>
+        <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> د. وسيم حبيب</a>
+        <a href="pricing.html" class="mobile-nav-link"><i class="fas fa-tag"></i> الأسعار</a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> من نحن</a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> اتصل بنا</a>
+    </nav>
+
+    <div class="about-container">
+        <h1>💚 من نحن</h1>
+        
+        <p>
+            <strong>WiBo Health</strong> هي منصة صحية شاملة متخصصة في تقديم معلومات غذائية دقيقة وموثوقة 
+            لمساعدة الأشخاص على اتخاذ قرارات صحية أفضل في حياتهم اليومية.
+        </p>
+
+        <h2>🎯 رؤيتنا</h2>
+        <p>
+            نسعى لأن نكون المرجع الأول والأكثر موثوقية في العالم العربي لكل ما يتعلق بالمؤشر الجلايسيمي 
+            ومؤشر الأنسولين والتغذية الصحية المتوازنة.
+        </p>
+
+        <h2>✨ مهمتنا</h2>
+        <p>
+            تقديم معلومات غذائية شاملة ودقيقة لأكثر من 500 عنصر غذائي، مع توفير أدوات حسابية مجانية 
+            ومقالات علمية موثوقة لمساعدة الجميع في رحلتهم نحو حياة صحية أفضل.
+        </p>
+
+        <h2>📊 ما نقدمه</h2>
+        <ul style="font-size: 1.1em; line-height: 2; color: #2c3e50;">
+            <li>🍽️ <strong>505 عنصر غذائي</strong> مع معلومات كاملة</li>
+            <li>📰 <strong>مقالات صحية متخصصة</strong> مكتوبة بعناية</li>
+            <li>🧮 <strong>حاسبات طبية مجانية</strong> (BMI, BMR, السعرات، الماء)</li>
+            <li>📖 <strong>وصفات صحية</strong> سهلة التحضير</li>
+            <li>👨‍⚕️ <strong>استشارات طبية</strong> مع د. وسيم حبيب</li>
+        </ul>
+
+        <h2>💚 فريق العمل</h2>
+        <p>
+            يقود المنصة <strong>د. وسيم حبيب (بودي)</strong>، الخبير في التغذية والصحة، 
+            مع فريق من المتخصصين الملتزمين بتقديم أفضل محتوى صحي ممكن.
+        </p>
+
+        <h2>📞 تواصل معنا</h2>
+        <p>
+            نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية.
+            يمكنكم التواصل معنا عبر واتساب أو صفحة الاتصال.
+        </p>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </a>
+        </div>
+    </div>
+    <script>
+        // Auto-hide Header on Scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 150;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                header.classList.add('hide-nav');
+            } else if (currentScroll < lastScrollTop) {
+                header.classList.remove('hide-nav');
+            }
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide-nav');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    </script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

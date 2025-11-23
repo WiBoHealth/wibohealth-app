@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>مقالات صحية متخصصة: السكري، التغذية، خسارة الوزن | WiBo Health</title>
+    <meta name="description" content="مقالات صحية شاملة عن السكري، المؤشر الجلايسيمي، الألياف الغذائية، البروتينات، خسارة الوزن، والتغذية الصحية. محتوى علمي موثوق من خبراء التغذية.">
+    <meta name="keywords" content="مقالات صحية, السكري والتغذية, خسارة الوزن, الألياف الغذائية, البروتينات, الدهون الصحية, النوم الصحي, شرب الماء">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="مقالات صحية متخصصة | WiBo Health">
+    <meta property="og:description" content="محتوى صحي عالي الجودة عن السكري، التغذية، وخسارة الوزن - كتبه خبراء">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wibo-health.com/articles.html">
+    
+    <meta name="author" content="WiBo Health">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://wibo-health.com/articles.html">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: white;
+            --card-bg: white;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--header-bg);
+            padding: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Auto-hide for navigation */
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo h1 {
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2em;
+            font-weight: 900;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Page Title */
+        .page-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .page-header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .page-header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        /* Subscriber Badge */
+        .subscriber-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Article Card */
+        .article {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .article-header {
+            border-bottom: 3px solid #f0f0f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .article-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .article-category {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            color: white;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            margin-right: 10px;
+        }
+
+        .article-title {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 30px;
+            color: var(--text-light);
+            font-size: 0.95em;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .article-summary {
+            font-size: 1.2em;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+        }
+
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.9;
+            color: #34495e;
+        }
+
+        .article-content h2 {
+            font-size: 1.8em;
+            color: var(--text-dark);
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .article-content h3 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin: 25px 0 15px;
+        }
+
+        .article-content h4 {
+            font-size: 1.3em;
+            color: #34495e;
+            margin: 20px 0 10px;
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-right: 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .article-content strong {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .article-tags {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .article-tags .tags-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tag-item {
+            display: inline-block;
+            background: #e8f4f8;
+            color: #3498db;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        /* Divider */
+        .article-divider {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .article-divider i {
+            font-size: 2em;
+            color: #3498db;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 200px;
+            height: 60px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 10000;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float i {
+            font-size: 2em;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes pulse-whatsapp {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2em;
+            }
+
+            .article {
+                padding: 25px;
+            }
+
+            .article-title {
+                font-size: 1.7em;
+            }
+
+            .article-image {
+                height: 250px;
+            }
+
+            .article-content {
+                font-size: 1em;
+            }
+
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                bottom: 100px;
+                left: 20px;
+                border-radius: 50%;
+            }
+
+            .whatsapp-text {
+                display: none;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.8em;
+            }
+
+            .scroll-top {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <h1>💚 WiBo Health</h1>
+                </a>
+                
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <nav>
+                    <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="foods.html"><i class="fas fa-utensils"></i> الأطعمة</a>
+                    <a href="calculators.html"><i class="fas fa-calculator"></i> الحاسبات</a>
+                    <a href="recipes.html"><i class="fas fa-book-open"></i> الوصفات</a>
+                    <a href="doctor.html"><i class="fas fa-user-md"></i> د. وسيم</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية
+        </a>
+        <a href="foods.html" class="mobile-nav-link">
+            <i class="fas fa-utensils"></i>
+            دليل الأطعمة
+        </a>
+        <a href="calculators.html" class="mobile-nav-link">
+            <i class="fas fa-calculator"></i>
+            الحاسبات الصحية
+        </a>
+        <a href="recipes.html" class="mobile-nav-link">
+            <i class="fas fa-book-open"></i>
+            الوصفات الصحية
+        </a>
+        <a href="articles.html" class="mobile-nav-link">
+            <i class="fas fa-book-medical"></i>
+            المقالات الصحية
+        </a>
+        <a href="doctor.html" class="mobile-nav-link">
+            <i class="fas fa-user-md"></i>
+            د. وسيم حبيب
+        </a>
+        <a href="pricing.html" class="mobile-nav-link">
+            <i class="fas fa-tag"></i>
+            الأسعار
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-info-circle"></i>
+            من نحن
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            اتصل بنا
+        </a>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-book-medical"></i> المقالات الصحية</h1>
+            <p>7 مقالات متخصصة في الصحة والتغذية السليمة</p>
+            <div style="margin-top: 20px;">
+                <div class="subscriber-badge">
+                    <i class="fas fa-crown"></i>
+                    محتوى حصري للمشتركين
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Article 1 -->
+        <article class="article" id="article-1">
+            <div class="article-header">
+                <div class="article-number">1</div>
+                <div>
+                    <span class="article-category">السكري</span>
+                    <h2 class="article-title">السكري والتغذية السليمة</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 10 دقائق قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800&h=400&fit=crop" 
+                 alt="السكري والتغذية السليمة" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> دليل شامل لإدارة السكري من خلال التغذية المتوازنة والاختيارات الصحية اليومية
+            </div>
+
+            <div class="article-content">
+                <h2>مقدمة عن السكري</h2>
+                <p>مرض السكري من الأمراض المزمنة التي تتطلب إدارة يومية دقيقة، وخاصة فيما يتعلق بالتغذية. التغذية السليمة ليست فقط جزءاً من العلاج، بل هي حجر الأساس للتحكم في مستويات السكر في الدم والوقاية من المضاعفات.</p>
+
+                <h3>أهم النصائح الغذائية:</h3>
+                <ul>
+                    <li><strong>اختر الكربوهيدرات المعقدة ذات المؤشر الجلايسيمي المنخفض:</strong> مثل الشوفان، الأرز البني، البقوليات. هذه الأطعمة تُهضم ببطء وترفع السكر تدريجياً.</li>
+                    <li><strong>تناول وجبات صغيرة متكررة بدلاً من وجبات كبيرة:</strong> 5-6 وجبات صغيرة يومياً أفضل من 3 وجبات كبيرة.</li>
+                    <li><strong>راقب كمية الكربوهيدرات في كل وجبة:</strong> استخدم نظام حساب الكربوهيدرات لمعرفة الكمية المناسبة لك.</li>
+                    <li><strong>أكثر من الألياف الغذائية:</strong> الألياف تبطئ امتصاص السكر وتساعد على التحكم في مستوياته.</li>
+                    <li><strong>تجنب السكريات البسيطة والمشروبات الغازية:</strong> هذه ترفع السكر بسرعة كبيرة وبشكل مفاجئ.</li>
+                </ul>
+
+                <h3>أمثلة على وجبات صحية:</h3>
+                <h4>الإفطار:</h4>
+                <p>شوفان بالحليب قليل الدسم + حفنة مكسرات + تفاحة صغيرة</p>
+
+                <h4>الغداء:</h4>
+                <p>صدر دجاج مشوي + سلطة خضراء كبيرة + أرز بني (نصف كوب) + خضار مطبوخة</p>
+
+                <h4>العشاء:</h4>
+                <p>سمك مشوي + خضار مطبوخة على البخار + ربع رغيف خبز أسمر</p>
+
+                <h3>نصائح إضافية:</h3>
+                <ul>
+                    <li>اشرب 8-10 أكواب ماء يومياً</li>
+                    <li>مارس الرياضة 30 دقيقة يومياً</li>
+                    <li>راقب مستوى السكر بانتظام</li>
+                    <li>استشر أخصائي تغذية لخطة مخصصة</li>
+                </ul>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">السكري</span>
+                <span class="tag-item">التغذية</span>
+                <span class="tag-item">الصحة</span>
+                <span class="tag-item">الكربوهيدرات</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 2 -->
+        <article class="article" id="article-2">
+            <div class="article-header">
+                <div class="article-number">2</div>
+                <div>
+                    <span class="article-category">التغذية الصحية</span>
+                    <h2 class="article-title">الألياف الغذائية وفوائدها الصحية</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 8 دقائق قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop" 
+                 alt="الألياف الغذائية" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> تعرف على أهمية الألياف الغذائية ومصادرها الطبيعية وتأثيرها الإيجابي على الصحة العامة
+            </div>
+
+            <div class="article-content">
+                <h2>ما هي الألياف الغذائية؟</h2>
+                <p>الألياف الغذائية هي نوع من الكربوهيدرات التي لا يستطيع الجسم هضمها، لكنها ضرورية جداً للصحة. توجد بشكل طبيعي في الأطعمة النباتية وتلعب دوراً حيوياً في صحة الجهاز الهضمي والوقاية من الأمراض المزمنة.</p>
+
+                <h3>أنواع الألياف:</h3>
+                <h4>1. الألياف القابلة للذوبان:</h4>
+                <ul>
+                    <li>تذوب في الماء وتشكل مادة هلامية</li>
+                    <li>تساعد في خفض الكوليسترول والسكر في الدم</li>
+                    <li>موجودة في: الشوفان، التفاح، الفاصوليا، الجزر</li>
+                </ul>
+
+                <h4>2. الألياف غير القابلة للذوبان:</h4>
+                <ul>
+                    <li>لا تذوب في الماء</li>
+                    <li>تحسن حركة الأمعاء وتمنع الإمساك</li>
+                    <li>موجودة في: القمح الكامل، الخضروات، المكسرات</li>
+                </ul>
+
+                <h3>الفوائد الصحية:</h3>
+                <ol>
+                    <li><strong>تحسين صحة الجهاز الهضمي:</strong> تساعد على منع الإمساك وتحافظ على صحة الأمعاء</li>
+                    <li><strong>التحكم في مستوى السكر:</strong> تبطئ امتصاص السكر وتساعد في تنظيم مستوياته</li>
+                    <li><strong>خفض الكوليسترول:</strong> الألياف القابلة للذوبان تقلل من الكوليسترول الضار</li>
+                    <li><strong>المساعدة في إنقاص الوزن:</strong> تزيد الشعور بالشبع لفترة أطول</li>
+                    <li><strong>الوقاية من أمراض القلب:</strong> تقلل من خطر الإصابة بأمراض القلب والأوعية الدموية</li>
+                    <li><strong>الوقاية من السرطان:</strong> خاصة سرطان القولون</li>
+                </ol>
+
+                <h3>أفضل مصادر الألياف:</h3>
+                <ul>
+                    <li><strong>الحبوب الكاملة:</strong> الشوفان، الشعير، الأرز البني، الكينوا</li>
+                    <li><strong>البقوليات:</strong> العدس (16 جم/كوب)، الفول (15 جم/كوب)، الحمص (12 جم/كوب)</li>
+                    <li><strong>الخضروات الورقية:</strong> السبانخ، الخس، الجرجير</li>
+                    <li><strong>الفواكه:</strong> التفاح مع القشرة، الكمثرى، التوت، الموز</li>
+                    <li><strong>المكسرات والبذور:</strong> اللوز، بذور الشيا، بذور الكتان</li>
+                </ul>
+
+                <h3>الكمية الموصى بها:</h3>
+                <p><strong>الرجال:</strong> 30-38 جرام يومياً</p>
+                <p><strong>النساء:</strong> 21-25 جرام يومياً</p>
+
+                <h3>نصائح لزيادة الألياف:</h3>
+                <ol>
+                    <li>ابدأ يومك بوجبة شوفان</li>
+                    <li>استبدل الخبز الأبيض بالخبز الأسمر</li>
+                    <li>أضف البقوليات لوجباتك 3-4 مرات أسبوعياً</li>
+                    <li>تناول الفواكه كوجبات خفيفة</li>
+                    <li>احرص على شرب الماء الكافي مع زيادة الألياف</li>
+                </ol>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">الألياف</span>
+                <span class="tag-item">التغذية الصحية</span>
+                <span class="tag-item">الهضم</span>
+                <span class="tag-item">الصحة</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 3 -->
+        <article class="article" id="article-3">
+            <div class="article-header">
+                <div class="article-number">3</div>
+                <div>
+                    <span class="article-category">التغذية الصحية</span>
+                    <h2 class="article-title">البروتينات ودورها في بناء العضلات</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 12 دقيقة قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=800&h=400&fit=crop" 
+                 alt="البروتينات" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> أهمية البروتينات في النظام الغذائي ومصادرها المتنوعة وكيفية الاستفادة منها لبناء العضلات والصحة العامة
+            </div>
+
+            <div class="article-content">
+                <h2>لماذا البروتينات مهمة؟</h2>
+                <p>البروتينات هي اللبنات الأساسية لبناء الأنسجة في الجسم، وخاصة العضلات. تتكون البروتينات من أحماض أمينية تلعب دوراً حيوياً في جميع العمليات الحيوية في الجسم.</p>
+
+                <h3>وظائف البروتين في الجسم:</h3>
+                <ul>
+                    <li><strong>بناء وإصلاح الأنسجة العضلية:</strong> ضروري لنمو العضلات وإصلاحها بعد التمرين</li>
+                    <li><strong>إنتاج الإنزيمات والهرمونات:</strong> معظم الهرمونات مصنوعة من البروتين</li>
+                    <li><strong>تقوية جهاز المناعة:</strong> الأجسام المضادة بروتينات</li>
+                    <li><strong>نقل المواد الغذائية:</strong> الهيموجلوبين في الدم بروتين</li>
+                    <li><strong>توفير الطاقة:</strong> عند الحاجة، يمكن استخدام البروتين كمصدر للطاقة</li>
+                </ul>
+
+                <h3>الاحتياج اليومي من البروتين:</h3>
+                <p><strong>الشخص العادي:</strong> 0.8-1 جرام بروتين لكل كيلوجرام من وزن الجسم</p>
+                <p><strong>الرياضيون:</strong> 1.2-2 جرام/كجم (حسب نوع الرياضة وشدتها)</p>
+                <p><strong>كبار السن:</strong> 1-1.2 جرام/كجم (لمنع فقدان الكتلة العضلية)</p>
+
+                <h3>أفضل مصادر البروتين:</h3>
+                
+                <h4>مصادر حيوانية (بروتين كامل):</h4>
+                <ul>
+                    <li><strong>الدجاج والديك الرومي:</strong> 30 جم بروتين/100 جم، قليل الدهون</li>
+                    <li><strong>الأسماك:</strong> سلمون (25 جم)، تونة (30 جم)، غني بأوميغا-3</li>
+                    <li><strong>البيض:</strong> 6 جم بروتين/بيضة، يحتوي على جميع الأحماض الأمينية</li>
+                    <li><strong>اللحوم الحمراء الخالية من الدهون:</strong> 26 جم/100 جم، غني بالحديد</li>
+                    <li><strong>منتجات الألبان:</strong> الحليب، الزبادي اليوناني، الجبن القريش</li>
+                </ul>
+
+                <h4>مصادر نباتية:</h4>
+                <ul>
+                    <li><strong>البقوليات:</strong> العدس (18 جم/كوب)، الفاصوليا (15 جم/كوب)، الحمص</li>
+                    <li><strong>التوفو والإداماميه:</strong> 20 جم/كوب توفو، بروتين كامل نباتي</li>
+                    <li><strong>الكينوا:</strong> 8 جم/كوب، بروتين كامل نادر في النباتات</li>
+                    <li><strong>المكسرات والبذور:</strong> اللوز (6 جم/28 جم)، بذور القنب</li>
+                    <li><strong>الحبوب الكاملة:</strong> الشوفان، الأرز البني</li>
+                </ul>
+
+                <h3>توقيت تناول البروتين:</h3>
+                <ol>
+                    <li><strong>بعد التمرين:</strong> خلال 30-60 دقيقة لتعزيز بناء العضلات</li>
+                    <li><strong>على الإفطار:</strong> لتعزيز الشبع وتقليل الشهية</li>
+                    <li><strong>قبل النوم:</strong> الكازين (من الألبان) يُهضم ببطء ويغذي العضلات طوال الليل</li>
+                    <li><strong>موزع على الوجبات:</strong> 20-30 جم لكل وجبة أفضل من تناول كمية كبيرة مرة واحدة</li>
+                </ol>
+
+                <h3>نصائح لزيادة البروتين:</h3>
+                <ul>
+                    <li>أضف بيضة لوجبة الإفطار</li>
+                    <li>تناول وجبة خفيفة من الزبادي اليوناني والمكسرات</li>
+                    <li>أضف التوفو أو الفول للسلطات</li>
+                    <li>استخدم مسحوق البروتين في العصائر إذا لزم الأمر</li>
+                    <li>اجعل البروتين جزءاً من كل وجبة</li>
+                </ul>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">البروتين</span>
+                <span class="tag-item">العضلات</span>
+                <span class="tag-item">التغذية الرياضية</span>
+                <span class="tag-item">الصحة</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 4 -->
+        <article class="article" id="article-4">
+            <div class="article-header">
+                <div class="article-number">4</div>
+                <div>
+                    <span class="article-category">فقدان الوزن</span>
+                    <h2 class="article-title">خسارة الوزن الصحية والمستدامة</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 15 دقيقة قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&h=400&fit=crop" 
+                 alt="خسارة الوزن الصحية" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> استراتيجيات علمية مثبتة لخسارة الوزن بشكل صحي وآمن دون حرمان أو حميات قاسية
+            </div>
+
+            <div class="article-content">
+                <h2>المبادئ الأساسية لخسارة الوزن</h2>
+                <p>خسارة الوزن الصحية تتطلب نهجاً متوازناً يجمع بين التغذية السليمة والنشاط البدني والنوم الجيد وإدارة التوتر. ليس المهم فقط أن تخسر الوزن، بل أن تحافظ عليه بشكل دائم.</p>
+
+                <h3>القواعد الذهبية:</h3>
+                <ol>
+                    <li><strong>عجز سعري معتدل:</strong> قلل 300-500 سعرة حرارية يومياً (ليس أكثر)</li>
+                    <li><strong>لا تتعجل:</strong> خسارة 0.5-1 كجم أسبوعياً هي الأمثل والأكثر استدامة</li>
+                    <li><strong>وجبات متوازنة:</strong> بروتين + كاربوهيدرات معقدة + دهون صحية في كل وجبة</li>
+                    <li><strong>شرب الماء:</strong> 2-3 لتر يومياً، يزيد الشبع ويعزز الأيض</li>
+                    <li><strong>النوم الكافي:</strong> 7-8 ساعات ليلاً، قلة النوم تزيد هرمون الجوع</li>
+                </ol>
+
+                <h3>نصائح عملية:</h3>
+                <ul>
+                    <li><strong>ابدأ بتسجيل طعامك:</strong> استخدم تطبيق لتسجيل ما تأكله لمدة أسبوع لمعرفة أين المشكلة</li>
+                    <li><strong>احسب احتياجك من السعرات:</strong> استخدم حاسبة BMR ثم اطرح 300-500 سعرة</li>
+                    <li><strong>اختر أطعمة ذات كثافة منخفضة:</strong> خضار وفواكه تملأ المعدة بسعرات أقل</li>
+                    <li><strong>تجنب المشروبات السكرية:</strong> كوب عصير = 150 سعرة بدون شبع</li>
+                    <li><strong>مارس الرياضة 30 دقيقة يومياً:</strong> المشي، الجري، السباحة، أو أي نشاط تحبه</li>
+                </ul>
+
+                <h3>استراتيجيات التحكم بالشهية:</h3>
+                <ol>
+                    <li><strong>ابدأ الوجبة بالسلطة أو الشوربة:</strong> يملأ المعدة ويقلل كمية الطعام</li>
+                    <li><strong>استخدم أطباق أصغر:</strong> خدعة نفسية تجعلك تأكل أقل</li>
+                    <li><strong>امضغ ببطء:</strong> يستغرق الدماغ 20 دقيقة ليشعر بالشبع</li>
+                    <li><strong>لا تفوت وجبات:</strong> التجويع يؤدي للإفراط في الأكل لاحقاً</li>
+                    <li><strong>خطط لوجباتك:</strong> التخطيط المسبق يمنع الخيارات السيئة</li>
+                </ol>
+
+                <h3>أخطاء شائعة يجب تجنبها:</h3>
+                <ul>
+                    <li>❌ <strong>الحميات القاسية:</strong> تفقدك العضلات وتبطئ الأيض</li>
+                    <li>❌ <strong>حذف وجبات كاملة:</strong> يسبب الجوع الشديد والإفراط</li>
+                    <li>❌ <strong>الاعتماد على المكملات فقط:</strong> لا توجد حبوب سحرية</li>
+                    <li>❌ <strong>قياس الوزن يومياً:</strong> الوزن يتأرجح، قس مرة أسبوعياً</li>
+                    <li>❌ <strong>استبعاد مجموعات غذائية:</strong> جسمك يحتاج التنوع</li>
+                </ul>
+
+                <h3>خطة أسبوعية مثالية:</h3>
+                <p><strong>الإفطار (7:00 ص):</strong></p>
+                <ul>
+                    <li>2 بيضة مسلوقة + ربع رغيف أسمر + خيار وطماطم</li>
+                    <li>أو: شوفان بالحليب + موز + ملعقة عسل</li>
+                </ul>
+
+                <p><strong>وجبة خفيفة (10:00 ص):</strong></p>
+                <ul>
+                    <li>تفاحة + 10 حبات لوز</li>
+                </ul>
+
+                <p><strong>الغداء (1:00 م):</strong></p>
+                <ul>
+                    <li>صدر دجاج مشوي + سلطة كبيرة + نصف كوب أرز بني</li>
+                </ul>
+
+                <p><strong>وجبة خفيفة (4:00 م):</strong></p>
+                <ul>
+                    <li>زبادي يوناني + حفنة توت</li>
+                </ul>
+
+                <p><strong>العشاء (7:00 م):</strong></p>
+                <ul>
+                    <li>سمك مشوي + خضار على البخار</li>
+                </ul>
+
+                <h3>تتبع التقدم:</h3>
+                <ul>
+                    <li>قس وزنك مرة أسبوعياً في نفس اليوم والوقت</li>
+                    <li>التقط صوراً شهرية (الصور أفضل من الميزان أحياناً)</li>
+                    <li>قس محيط الخصر والذراعين</li>
+                    <li>لاحظ تحسن مستوى الطاقة والنوم</li>
+                </ul>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">خسارة الوزن</span>
+                <span class="tag-item">الحمية</span>
+                <span class="tag-item">اللياقة</span>
+                <span class="tag-item">الصحة</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 5 -->
+        <article class="article" id="article-5">
+            <div class="article-header">
+                <div class="article-number">5</div>
+                <div>
+                    <span class="article-category">التغذية الصحية</span>
+                    <h2 class="article-title">الدهون الصحية والضارة</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 9 دقائق قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1447078806655-40579c2520d6?w=800&h=400&fit=crop" 
+                 alt="الدهون الصحية" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> الفرق بين أنواع الدهون المختلفة وتأثيرها على صحة القلب والأوعية الدموية
+            </div>
+
+            <div class="article-content">
+                <h2>أنواع الدهون</h2>
+                <p>ليست كل الدهون ضارة! في الواقع، بعضها ضروري جداً لصحة الجسم. المهم أن تعرف الفرق بينها وتختار الأنواع الصحية.</p>
+
+                <h3>الدهون الصحية (احرص عليها):</h3>
+                
+                <h4>1. الدهون الأحادية غير المشبعة:</h4>
+                <ul>
+                    <li><strong>زيت الزيتون:</strong> الخيار الأمثل للطبخ والسلطات</li>
+                    <li><strong>الأفوكادو:</strong> غني بالدهون الصحية والفيتامينات</li>
+                    <li><strong>المكسرات:</strong> لوز، كاجو، بندق، فستق</li>
+                    <li><strong>البذور:</strong> بذور اليقطين، بذور عباد الشمس</li>
+                </ul>
+
+                <h4>2. الدهون المتعددة غير المشبعة (أوميغا-3 وأوميغا-6):</h4>
+                <ul>
+                    <li><strong>السلمون والأسماك الدهنية:</strong> غنية بأوميغا-3 المضاد للالتهاب</li>
+                    <li><strong>بذور الشيا والكتان:</strong> مصدر نباتي لأوميغا-3</li>
+                    <li><strong>الجوز (عين الجمل):</strong> يحتوي على كلا النوعين</li>
+                    <li><strong>زيت الكانولا:</strong> متوازن بين أوميغا-3 و6</li>
+                </ul>
+
+                <h3>فوائد الدهون الصحية:</h3>
+                <ul>
+                    <li><strong>حماية القلب:</strong> تخفض الكوليسترول الضار (LDL) وترفع النافع (HDL)</li>
+                    <li><strong>تحسين وظائف الدماغ:</strong> المخ يتكون من 60% دهون</li>
+                    <li><strong>امتصاص الفيتامينات:</strong> فيتامينات A, D, E, K تحتاج دهون لامتصاصها</li>
+                    <li><strong>تقليل الالتهابات:</strong> خاصة أوميغا-3</li>
+                    <li><strong>صحة الجلد والشعر:</strong> تحافظ على نضارتهما</li>
+                </ul>
+
+                <h3>الدهون الضارة (تجنبها أو قللها):</h3>
+                
+                <h4>1. الدهون المشبعة (قلل منها):</h4>
+                <ul>
+                    <li><strong>اللحوم الدهنية:</strong> اختر القطع الخالية من الدهون</li>
+                    <li><strong>الزبدة والسمن:</strong> استخدم بكميات قليلة</li>
+                    <li><strong>منتجات الألبان كاملة الدسم:</strong> اختر قليلة أو خالية الدسم</li>
+                    <li><strong>جوز الهند وزيته:</strong> رغم أنه نباتي، لكنه عالي بالدهون المشبعة</li>
+                </ul>
+
+                <h4>2. الدهون المتحولة (الأخطر - تجنبها تماماً):</h4>
+                <ul>
+                    <li><strong>الأطعمة المقلية:</strong> البطاطس المقلية، الدونات</li>
+                    <li><strong>المخبوزات المعبأة:</strong> الكيك، البسكويت، الكرواسون الجاهز</li>
+                    <li><strong>المارجرين (الزبدة النباتية):</strong> اقرأ الملصق، تجنب "زيت مهدرج"</li>
+                    <li><strong>الوجبات السريعة:</strong> تحتوي على دهون متحولة مخفية</li>
+                </ul>
+
+                <h3>الكمية الموصى بها:</h3>
+                <ul>
+                    <li><strong>إجمالي الدهون:</strong> 20-35% من السعرات اليومية</li>
+                    <li><strong>الدهون المشبعة:</strong> أقل من 10% من السعرات</li>
+                    <li><strong>الدهون المتحولة:</strong> صفر (تجنبها تماماً)</li>
+                    <li><strong>أوميغا-3:</strong> 250-500 ملجم يومياً (وجبتين سمك أسبوعياً)</li>
+                </ul>
+
+                <h3>نصائح عملية:</h3>
+                <ol>
+                    <li>استبدل الزبدة بزيت الزيتون في الطبخ</li>
+                    <li>تناول حفنة مكسرات (30 جم) يومياً كوجبة خفيفة</li>
+                    <li>أضف الأفوكادو للسلطات والسندويشات</li>
+                    <li>تناول السمك الدهني مرتين أسبوعياً على الأقل</li>
+                    <li>اقرأ الملصقات: تجنب "زيت مهدرج جزئياً"</li>
+                    <li>اطبخ في البيت بدلاً من الوجبات الجاهزة</li>
+                </ol>
+
+                <h3>تحذير مهم:</h3>
+                <p>حتى الدهون الصحية عالية السعرات (9 سعرات/جرام)، لذا تناولها باعتدال ضمن احتياجك اليومي!</p>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">الدهون</span>
+                <span class="tag-item">صحة القلب</span>
+                <span class="tag-item">أوميغا-3</span>
+                <span class="tag-item">التغذية</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 6 -->
+        <article class="article" id="article-6">
+            <div class="article-header">
+                <div class="article-number">6</div>
+                <div>
+                    <span class="article-category">الصحة العامة</span>
+                    <h2 class="article-title">الترطيب وأهمية شرب الماء</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 7 دقائق قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=800&h=400&fit=crop" 
+                 alt="أهمية الماء" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> كمية الماء المناسبة يومياً وفوائد الترطيب الجيد للجسم والعقل
+            </div>
+
+            <div class="article-content">
+                <h2>لماذا الماء مهم؟</h2>
+                <p>الماء يشكل 60% من وزن الجسم ويدخل في جميع العمليات الحيوية. بدون ماء كافٍ، يعاني الجسم والعقل. التجفاف حتى البسيط (1-2%) يؤثر سلباً على الأداء البدني والذهني.</p>
+
+                <h3>فوائد شرب الماء الكافي:</h3>
+                <ul>
+                    <li><strong>تحسين وظائف الكلى:</strong> يساعد على تنقية الدم وطرد السموم عبر البول</li>
+                    <li><strong>تنظيم درجة حرارة الجسم:</strong> عبر التعرق والتنفس</li>
+                    <li><strong>تحسين الأداء البدني:</strong> الجفاف يقلل القوة والقدرة على التحمل</li>
+                    <li><strong>زيادة التركيز والطاقة:</strong> الدماغ 75% ماء، الجفاف يسبب الصداع والتشتت</li>
+                    <li><strong>تحسين صحة البشرة:</strong> يزيد من نضارة ومرونة الجلد</li>
+                    <li><strong>المساعدة في إنقاص الوزن:</strong> يزيد الشعور بالشبع ويعزز الأيض</li>
+                    <li><strong>منع الإمساك:</strong> الماء يساعد على حركة الأمعاء</li>
+                    <li><strong>حماية المفاصل:</strong> السائل الزلالي يحتاج ماء</li>
+                </ul>
+
+                <h3>كم تحتاج من الماء؟</h3>
+                <p><strong>القاعدة العامة:</strong></p>
+                <ul>
+                    <li><strong>الرجال:</strong> 3.7 لتر يومياً (حوالي 15 كوب)</li>
+                    <li><strong>النساء:</strong> 2.7 لتر يومياً (حوالي 11 كوب)</li>
+                    <li><strong>الرياضيون:</strong> أكثر حسب كمية التعرق (أضف 0.5-1 لتر لكل ساعة تمرين)</li>
+                    <li><strong>الطقس الحار:</strong> زد الكمية 20-30%</li>
+                    <li><strong>الحامل والمرضع:</strong> زيادة 300 مل</li>
+                </ul>
+
+                <p><strong>قاعدة بسيطة:</strong> وزنك بالكيلو × 30-35 مل = احتياجك اليومي</p>
+                <p>مثال: شخص 70 كجم = 70 × 35 = 2450 مل (حوالي 10 أكواب)</p>
+
+                <h3>علامات الجفاف:</h3>
+                <ul>
+                    <li>⚠️ <strong>العطش الشديد:</strong> إذا شعرت بالعطش، أنت بالفعل مصاب بجفاف خفيف</li>
+                    <li>⚠️ <strong>البول الداكن:</strong> البول الطبيعي أصفر فاتح أو شفاف</li>
+                    <li>⚠️ <strong>الصداع والدوخة:</strong> من أول علامات نقص الماء</li>
+                    <li>⚠️ <strong>جفاف الفم والشفاه:</strong> علامة واضحة</li>
+                    <li>⚠️ <strong>التعب والإرهاق:</strong> قلة الطاقة والنعاس</li>
+                    <li>⚠️ <strong>قلة التبول:</strong> أقل من 4 مرات يومياً</li>
+                    <li>⚠️ <strong>الإمساك:</strong> البراز الصلب والجاف</li>
+                </ul>
+
+                <h3>نصائح للشرب الكافي:</h3>
+                <ol>
+                    <li><strong>ابدأ يومك بكوبين ماء:</strong> فور الاستيقاظ على معدة فارغة</li>
+                    <li><strong>احمل زجاجة ماء معك:</strong> في العمل، الجامعة، السيارة</li>
+                    <li><strong>اشرب قبل العطش:</strong> لا تنتظر حتى تشعر بالعطش</li>
+                    <li><strong>تناول الفواكه الغنية بالماء:</strong> البطيخ (92% ماء)، الخيار (96%)، البرتقال</li>
+                    <li><strong>اجعل الماء في متناول يدك دائماً:</strong> على المكتب، بجانب السرير</li>
+                    <li><strong>استخدم تطبيق تذكير:</strong> لتنبيهك بشرب الماء كل ساعة</li>
+                    <li><strong>اشرب كوب ماء قبل كل وجبة:</strong> يساعد على الهضم ويقلل الشهية</li>
+                </ol>
+
+                <h3>أخطاء شائعة:</h3>
+                <ul>
+                    <li>❌ <strong>استبدال الماء بالعصائر:</strong> العصائر عالية السكر</li>
+                    <li>❌ <strong>الإفراط في الماء:</strong> أكثر من 4 لتر قد يخفف الأملاح</li>
+                    <li>❌ <strong>شرب الماء فقط مع الأكل:</strong> وزع الشرب على اليوم</li>
+                    <li>❌ <strong>الاعتماد على القهوة:</strong> الكافيين مدر للبول</li>
+                </ul>
+
+                <h3>جدول شرب الماء اليومي:</h3>
+                <p><strong>الاستيقاظ (6:00 ص):</strong> كوبين ماء</p>
+                <p><strong>قبل الإفطار (7:30 ص):</strong> كوب</p>
+                <p><strong>منتصف الصباح (10:00 ص):</strong> كوب</p>
+                <p><strong>قبل الغداء (12:30 م):</strong> كوب</p>
+                <p><strong>بعد الغداء (2:00 م):</strong> كوب</p>
+                <p><strong>منتصف العصر (4:00 م):</strong> كوب</p>
+                <p><strong>قبل العشاء (6:30 م):</strong> كوب</p>
+                <p><strong>المساء (8:00 م):</strong> كوب</p>
+
+                <p><strong>المجموع: 10 أكواب (2.5 لتر) ✅</strong></p>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">الماء</span>
+                <span class="tag-item">الترطيب</span>
+                <span class="tag-item">الصحة العامة</span>
+                <span class="tag-item">الطاقة</span>
+            </div>
+        </article>
+
+        <div class="article-divider">
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
+
+        <!-- Article 7 -->
+        <article class="article" id="article-7">
+            <div class="article-header">
+                <div class="article-number">7</div>
+                <div>
+                    <span class="article-category">الصحة العامة</span>
+                    <h2 class="article-title">النوم الصحي وتأثيره على الصحة</h2>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> د. وسيم حبيب</span>
+                        <span><i class="fas fa-clock"></i> 11 دقيقة قراءة</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=400&fit=crop" 
+                 alt="النوم الصحي" class="article-image">
+
+            <div class="article-summary">
+                <strong>الملخص:</strong> أهمية النوم الجيد وعلاقته بالصحة العامة والوزن والمزاج والإنتاجية
+            </div>
+
+            <div class="article-content">
+                <h2>لماذا النوم مهم؟</h2>
+                <p>النوم ليس رفاهية أو وقت ضائع - إنه ضرورة حيوية للصحة الجسدية والعقلية. أثناء النوم، يقوم الجسم بإصلاح الأنسجة، وتقوية الذاكرة، وتنظيم الهرمونات. قلة النوم المزمنة مرتبطة بأمراض خطيرة.</p>
+
+                <h3>فوائد النوم الجيد:</h3>
+                <ul>
+                    <li><strong>تقوية الذاكرة والتركيز:</strong> النوم يثبت المعلومات ويحسن الأداء الذهني</li>
+                    <li><strong>تعزيز جهاز المناعة:</strong> أثناء النوم ينتج الجسم خلايا مناعية</li>
+                    <li><strong>تنظيم الهرمونات:</strong> خاصة هرمونات الجوع (جريلين وليبتين)</li>
+                    <li><strong>تحسين المزاج:</strong> قلة النوم تزيد القلق والاكتئاب والتوتر</li>
+                    <li><strong>تسريع الشفاء والتعافي:</strong> الجسم يصلح نفسه أثناء النوم</li>
+                    <li><strong>حماية القلب:</strong> يخفض ضغط الدم ويقلل الالتهابات</li>
+                    <li><strong>تحسين الأداء الرياضي:</strong> يزيد القوة والسرعة والدقة</li>
+                </ul>
+
+                <h3>الاحتياج من النوم:</h3>
+                <ul>
+                    <li><strong>البالغون (18-64 سنة):</strong> 7-9 ساعات يومياً</li>
+                    <li><strong>كبار السن (+65):</strong> 7-8 ساعات</li>
+                    <li><strong>المراهقون (14-17):</strong> 8-10 ساعات</li>
+                    <li><strong>الأطفال (6-13):</strong> 9-12 ساعة</li>
+                    <li><strong>الرضع:</strong> 12-16 ساعة</li>
+                </ul>
+
+                <p><strong>ملاحظة:</strong> الجودة أهم من الكمية! 7 ساعات نوم عميق أفضل من 9 ساعات متقطعة.</p>
+
+                <h3>تأثير قلة النوم:</h3>
+                <ul>
+                    <li>❌ <strong>زيادة الوزن:</strong> قلة النوم ترفع هرمون الجريلين (الجوع) وتخفض الليبتين (الشبع)</li>
+                    <li>❌ <strong>ضعف التركيز:</strong> تشتت، نسيان، بطء في اتخاذ القرارات</li>
+                    <li>❌ <strong>زيادة خطر السكري:</strong> تقلل حساسية الإنسولين</li>
+                    <li>❌ <strong>ضعف المناعة:</strong> أكثر عرضة للأمراض</li>
+                    <li>❌ <strong>سوء المزاج والاكتئاب:</strong> التهيج، القلق، الحزن</li>
+                    <li>❌ <strong>زيادة خطر أمراض القلب:</strong> ارتفاع ضغط الدم</li>
+                    <li>❌ <strong>الشيخوخة المبكرة:</strong> التجاعيد، الهالات السوداء</li>
+                </ul>
+
+                <h3>مراحل النوم:</h3>
+                <p>النوم ليس حالة واحدة، بل دورات متكررة:</p>
+                <ol>
+                    <li><strong>النوم الخفيف (N1):</strong> الانتقال من اليقظة للنوم (5-10 دقائق)</li>
+                    <li><strong>النوم المتوسط (N2):</strong> النوم الحقيقي (45-55% من الليل)</li>
+                    <li><strong>النوم العميق (N3):</strong> مرحلة الإصلاح والتجديد (15-25%)</li>
+                    <li><strong>نوم الأحلام (REM):</strong> مهم للذاكرة والتعلم (20-25%)</li>
+                </ol>
+
+                <p>الدورة الكاملة تستغرق 90 دقيقة، تتكرر 4-6 مرات في الليل.</p>
+
+                <h3>نصائح لنوم أفضل:</h3>
+                
+                <h4>قبل النوم (روتين المساء):</h4>
+                <ol>
+                    <li><strong>التزم بموعد ثابت للنوم والاستيقاظ:</strong> حتى في العطلات، اختلاف أكثر من ساعة يؤثر سلباً</li>
+                    <li><strong>اجعل غرفة النوم مظلمة وباردة:</strong> درجة الحرارة المثلى 16-19°C</li>
+                    <li><strong>تجنب الشاشات قبل النوم بساعة:</strong> الضوء الأزرق يثبط الميلاتونين (هرمون النوم)</li>
+                    <li><strong>لا تتناول الكافيين بعد 2 ظهراً:</strong> تأثيره يستمر 6-8 ساعات</li>
+                    <li><strong>مارس الرياضة صباحاً أو عصراً:</strong> التمرين قبل النوم بـ3 ساعات على الأقل</li>
+                    <li><strong>تجنب الوجبات الثقيلة قبل النوم بـ3 ساعات:</strong> الهضم يعيق النوم العميق</li>
+                </ol>
+
+                <h4>روتين الاسترخاء:</h4>
+                <ul>
+                    <li>خذ حمام دافئ قبل النوم بـ90 دقيقة</li>
+                    <li>اقرأ كتاب ورقي (ليس إلكتروني)</li>
+                    <li>استمع لموسيقى هادئة أو أصوات طبيعية</li>
+                    <li>جرب تمارين التنفس العميق (4-7-8)</li>
+                    <li>استخدم زيوت عطرية مهدئة (اللافندر)</li>
+                </ul>
+
+                <h4>بيئة النوم المثالية:</h4>
+                <ul>
+                    <li><strong>السرير:</strong> مريح وداعم للظهر، استبدله كل 7-10 سنوات</li>
+                    <li><strong>الوسادة:</strong> تدعم الرقبة بشكل طبيعي</li>
+                    <li><strong>الستائر:</strong> معتمة تماماً أو استخدم قناع عين</li>
+                    <li><strong>الهدوء:</strong> سدادات أذن إذا كان المكان صاخباً</li>
+                    <li><strong>الاستخدام:</strong> غرفة النوم للنوم فقط، لا للعمل أو مشاهدة التلفاز</li>
+                </ul>
+
+                <h3>الأرق - متى تستشير طبيب؟</h3>
+                <p>إذا استمرت مشاكل النوم لأكثر من 3 أسابيع رغم اتباع النصائح:</p>
+                <ul>
+                    <li>صعوبة النوم لأكثر من 30 دقيقة</li>
+                    <li>الاستيقاظ المتكرر أثناء الليل</li>
+                    <li>الشخير الشديد (قد يشير لانقطاع التنفس)</li>
+                    <li>التعب الشديد رغم ساعات النوم الكافية</li>
+                </ul>
+
+                <h3>خرافات عن النوم:</h3>
+                <ul>
+                    <li>❌ <strong>"يمكنني تعويض النوم في نهاية الأسبوع":</strong> النوم الزائد لا يعوض النقص المتراكم</li>
+                    <li>❌ <strong>"كبار السن يحتاجون نوم أقل":</strong> يحتاجون نفس الكمية، لكن يعانون أكثر من الأرق</li>
+                    <li>❌ <strong>"كأس نبيذ يساعد على النوم":</strong> الكحول يساعد على النعاس لكن يعيق النوم العميق</li>
+                    <li>❌ <strong>"الغفوة نهاراً سيئة":</strong> غفوة 20-30 دقيقة مفيدة، الأطول يعيق النوم ليلاً</li>
+                </ul>
+
+                <h3>الخلاصة:</h3>
+                <p>النوم الجيد ركن أساسي من أركان الصحة، مثل التغذية السليمة والرياضة. استثمر في نومك تستثمر في صحتك!</p>
+            </div>
+
+            <div class="article-tags">
+                <div class="tags-title"><i class="fas fa-tags"></i> الكلمات المفتاحية:</div>
+                <span class="tag-item">النوم</span>
+                <span class="tag-item">الصحة النفسية</span>
+                <span class="tag-item">الراحة</span>
+                <span class="tag-item">الإنتاجية</span>
+            </div>
+        </article>
+
+        <!-- End Message -->
+        <div style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; margin-top: 40px;">
+            <h2 style="font-size: 2em; color: #2c3e50; margin-bottom: 20px;">
+                <i class="fas fa-check-circle" style="color: #2ecc71;"></i>
+                انتهيت من قراءة جميع المقالات!
+            </h2>
+            <p style="font-size: 1.2em; color: #7f8c8d; margin-bottom: 30px;">
+                نتمنى أن تكون المقالات مفيدة لك في رحلتك الصحية 💚
+            </p>
+            <a href="index.html" style="display: inline-block; padding: 15px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 1.1em; transition: transform 0.3s;">
+                <i class="fas fa-home"></i> العودة للرئيسية
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/31645844585?text=مرحباً، أرغب في حجز استشارة صحية" class="whatsapp-float" target="_blank" title="احجز استشارتك">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">احجز استشارة</span>
+    </a>
+
+    <script>
+        // Scroll to Top
+        const scrollTop = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+        
+        scrollTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Auto-hide Header on Scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 150;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                header.classList.add('hide-nav');
+            } else if (currentScroll < lastScrollTop) {
+                header.classList.remove('hide-nav');
+            }
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide-nav');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    </script>
+
+    <!-- Footer متوافق مع AdSense -->
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                من نحن
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                اتصل بنا
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                سياسة الخصوصية
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                شروط الاستخدام
+            </a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
+            © 2024 WiBo Health. جميع الحقوق محفوظة.
+        </p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
+            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+        </p>
+    </footer>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الأطعمة - WiBo Health</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+    
+    <!-- iOS Support -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="WiBo Health">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-gradient-1: #667eea;
+            --bg-gradient-2: #764ba2;
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+            --shadow-hover: rgba(0,0,0,0.2);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-gradient-1: #1a1a2e;
+            --bg-gradient-2: #16213e;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            --shadow: rgba(255,255,255,0.1);
+            --shadow-hover: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            padding: 20px 0;
+            box-shadow: 0 5px 20px var(--shadow);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Auto-hide for navigation */
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .logo-icon svg {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            background: linear-gradient(135deg, var(--primary-color), #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .theme-toggle, .favorites-btn {
+            width: 45px;
+            height: 45px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .theme-toggle,
+        body.dark-mode .favorites-btn {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .theme-toggle:hover, .favorites-btn:hover {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .favorites-btn {
+            position: relative;
+        }
+
+        .favorites-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #e74c3c;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 10px 20px;
+            background: #f3f4f6;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        body.dark-mode .nav-link {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Daily Tip */
+        .daily-tip {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px var(--shadow-hover);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tip-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .tip-content p {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px var(--shadow-hover);
+        }
+
+        .stats-bar h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .big-number {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+        /* Search Box */
+        .search-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s;
+            background: var(--card-bg);
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .search-input {
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--card-bg);
+            border: 2px solid #ecf0f1;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .filter-btn {
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Food Grid */
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .food-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), #3498db);
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-hover);
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        body.dark-mode .favorite-btn {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .favorite-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .favorite-btn.active {
+            color: #e74c3c;
+        }
+
+        .food-icon {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .food-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .food-name-en {
+            font-size: 14px;
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .food-category {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.1);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 13px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .food-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .stat-item {
+            background: rgba(0,0,0,0.05);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        body.dark-mode .stat-item {
+            background: rgba(255,255,255,0.05);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .gi-high { color: #e74c3c !important; }
+        .gi-medium { color: #f39c12 !important; }
+        .gi-low { color: var(--primary-color) !important; }
+
+        /* Footer */
+        footer {
+            background: var(--card-bg);
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 -5px 20px var(--shadow);
+        }
+
+        footer p {
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .food-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            .daily-tip {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5eead4;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="3"/>
+                            <path d="M40 100 L60 100 L68 85 L76 115 L84 100 L100 100 L108 85 L116 115 L124 100 L160 100" stroke="url(#pulseGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.95"/>
+                            <g transform="translate(130, 70)">
+                                <rect x="-3" y="-14" width="6" height="28" fill="white" opacity="0.9" rx="2"/>
+                                <rect x="-14" y="-3" width="28" height="6" fill="white" opacity="0.9" rx="2"/>
+                                <circle cx="0" cy="0" r="18" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+                            </g>
+                            <ellipse cx="80" cy="75" rx="18" ry="28" fill="white" opacity="0.25" transform="rotate(-30 80 75)"/>
+                            <circle cx="70" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <circle cx="130" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>WiBo Health</h1>
+                    </div>
+                </a>
+
+                <div class="header-actions">
+                    <button class="favorites-btn" onclick="showFavorites()" title="المفضلة">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorites-count" id="favCount">0</span>
+                    </button>
+                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="foods.html" class="nav-link active"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
+                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> الحاسبات</a>
+                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
+                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
+                    <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> د. وسيم</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية
+        </a>
+        <a href="foods.html" class="mobile-nav-link">
+            <i class="fas fa-utensils"></i>
+            دليل الأطعمة
+        </a>
+        <a href="calculators.html" class="mobile-nav-link">
+            <i class="fas fa-calculator"></i>
+            الحاسبات الصحية
+        </a>
+        <a href="recipes.html" class="mobile-nav-link">
+            <i class="fas fa-book-open"></i>
+            الوصفات الصحية
+        </a>
+        <a href="articles.html" class="mobile-nav-link">
+            <i class="fas fa-book-medical"></i>
+            المقالات الصحية
+        </a>
+        <a href="doctor.html" class="mobile-nav-link">
+            <i class="fas fa-user-md"></i>
+            د. وسيم حبيب
+        </a>
+        <a href="pricing.html" class="mobile-nav-link">
+            <i class="fas fa-tag"></i>
+            الأسعار
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-info-circle"></i>
+            من نحن
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            اتصل بنا
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Daily Tip -->
+        <div class="daily-tip" id="dailyTip">
+            <div class="tip-icon">💡</div>
+            <div class="tip-content">
+                <h3>نصيحة اليوم</h3>
+                <p id="tipText">جاري التحميل...</p>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <h2>قاعدة بيانات شاملة</h2>
+            <p class="big-number" id="totalCount">118</p>
+            <p>عنصر غذائي مع معلومات غذائية كاملة</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 ابحث عن أي طعام... (مثال: لبن، لحم، أرز)" oninput="filterFoods()">
+        </div>
+
+        <div class="filter-buttons" id="filterButtons"></div>
+
+        <div class="food-grid" id="foodGrid"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                من نحن
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                اتصل بنا
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                سياسة الخصوصية
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                شروط الاستخدام
+            </a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
+            © 2024 WiBo Health. جميع الحقوق محفوظة.
+        </p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
+            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+        </p>
+    </footer>
+
+    <!-- Load static food data -->
+    <script src="js/data.js"></script>
+
+    <script>
+        let allFoods = [];
+        let currentCategory = 'all';
+        let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]');
+
+        // Daily tips
+        const dailyTips = [
+            'الأطعمة ذات المؤشر الجلايسيمي المنخفض تساعد على استقرار مستوى السكر في الدم',
+            'شرب الماء قبل الوجبات يساعد على تقليل كمية الطعام المتناولة',
+            'المشي 30 دقيقة يومياً يحسن من حساسية الجسم للإنسولين',
+            'تناول البروتين في كل وجبة يساعد على الشعور بالشبع لفترة أطول',
+            'النوم الجيد (7-8 ساعات) ضروري للحفاظ على وزن صحي',
+            'الأطعمة الغنية بالألياف تساعد على تحسين عملية الهضم',
+            'تجنب السكريات البسيطة يساعد على تقليل الالتهابات في الجسم'
+        ];
+
+        // Load foods from static data
+        window.addEventListener('DOMContentLoaded', function() {
+            // Load theme
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+            }
+
+            // Show daily tip
+            showDailyTip();
+
+            // Update favorites count
+            updateFavCount();
+
+            // Load foods from static file
+            if (typeof foodsDatabase !== 'undefined' && foodsDatabase.length > 0) {
+                allFoods = foodsDatabase;
+                console.log('✅ تم تحميل ' + allFoods.length + ' عنصر غذائي من الملف الثابت');
+                
+                // Update stats
+                document.getElementById('totalCount').textContent = allFoods.length;
+                
+                initializeFoodsTab();
+                
+                // Auto-hide Header on Scroll
+                let lastScrollTop = 0;
+                const header = document.querySelector('header');
+                const scrollThreshold = 150;
+
+                window.addEventListener('scroll', function() {
+                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                        header.classList.add('hide-nav');
+                    } else if (currentScroll < lastScrollTop) {
+                        header.classList.remove('hide-nav');
+                    }
+                    
+                    if (currentScroll <= 0) {
+                        header.classList.remove('hide-nav');
+                    }
+                    
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }, false);
+            } else {
+                console.error('❌ لم يتم تحميل ملف البيانات الثابت');
+                const grid = document.getElementById('foodGrid');
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 50px; color: white; font-size: 18px;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 50px; margin-bottom: 20px; color: #f39c12;"></i>
+                        <p>عذراً، حدث خطأ في تحميل البيانات</p>
+                        <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">يرجى التأكد من رفع ملف js/foods-data.js</p>
+                    </div>
+                `;
+            }
+        });
+
+        // Show daily tip
+        function showDailyTip() {
+            const today = new Date().getDate();
+            const tipIndex = today % dailyTips.length;
+            document.getElementById('tipText').textContent = dailyTips[tipIndex];
+        }
+
+        // Toggle theme
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+
+        // Toggle favorite
+        function toggleFavorite(foodId) {
+            const index = favorites.indexOf(foodId);
+            
+            if (index > -1) {
+                favorites.splice(index, 1);
+            } else {
+                favorites.push(foodId);
+            }
+            
+            localStorage.setItem('wibo_favorites', JSON.stringify(favorites));
+            updateFavCount();
+            
+            // Update button
+            const btn = document.querySelector(`[data-food-id="${foodId}"]`);
+            if (btn) {
+                btn.classList.toggle('active');
+                btn.innerHTML = favorites.includes(foodId) ? '<i class="fas fa-heart"></i>' : '<i class="far fa-heart"></i>';
+            }
+        }
+
+        // Update favorites count
+        function updateFavCount() {
+            document.getElementById('favCount').textContent = favorites.length;
+        }
+
+        // Show favorites
+        function showFavorites() {
+            if (favorites.length === 0) {
+                alert('لا توجد أطعمة في المفضلة بعد!');
+                return;
+            }
+
+            currentCategory = 'favorites';
+            const favFoods = allFoods.filter(food => favorites.includes(food.id));
+            renderFoods(favFoods);
+
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        // Initialize
+        function initializeFoodsTab() {
+            const categories = ['all', ...new Set(allFoods.map(f => f.category))];
+            
+            const filterContainer = document.getElementById('filterButtons');
+            filterContainer.innerHTML = categories.map((cat, index) => 
+                `<button class="filter-btn ${index === 0 ? 'active' : ''}" onclick="filterByCategory('${cat}')">${cat === 'all' ? 'الكل' : cat}</button>`
+            ).join('');
+
+            renderSampleFoods();
+        }
+
+        // Render samples
+        function renderSampleFoods() {
+            // عرض جميع الأطعمة بدلاً من عينة فقط
+            renderFoods(allFoods);
+        }
+
+        // Filter by category
+        function filterByCategory(category) {
+            currentCategory = category;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            filterFoods();
+        }
+
+        // Filter foods
+        function filterFoods() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            let filtered = allFoods;
+            
+            if (currentCategory !== 'all' && currentCategory !== 'favorites') {
+                filtered = filtered.filter(food => food.category === currentCategory);
+            }
+            
+            if (searchTerm) {
+                filtered = filtered.filter(food => 
+                    food.name.toLowerCase().includes(searchTerm) ||
+                    (food.nameEn && food.nameEn.toLowerCase().includes(searchTerm)) ||
+                    food.category.toLowerCase().includes(searchTerm)
+                );
+            } else if (currentCategory === 'all') {
+                renderSampleFoods();
+                return;
+            }
+            
+            renderFoods(filtered.slice(0, 50));
+        }
+
+        // Render foods
+        function renderFoods(foods) {
+            const grid = document.getElementById('foodGrid');
+            
+            if (!foods || foods.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: white; font-size: 20px;">لم يتم العثور على نتائج</div>';
+                return;
+            }
+            
+            grid.innerHTML = foods.map(food => {
+                const isFavorite = favorites.includes(food.id);
+                return `
+                    <div class="food-card" onclick="window.location.href='food-details.html?id=${food.id}'" style="cursor: pointer;">
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
+                                data-food-id="${food.id}" 
+                                onclick="event.stopPropagation(); toggleFavorite('${food.id}')">
+                            <i class="${isFavorite ? 'fas' : 'far'} fa-heart"></i>
+                        </button>
+                        <div class="food-icon">${food.icon || '🍽️'}</div>
+                        <div class="food-name">${food.name}</div>
+                        ${food.nameEn ? `<div class="food-name-en">${food.nameEn}</div>` : ''}
+                        <center><span class="food-category">${food.category}</span></center>
+                        <div class="food-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">سعرات</div>
+                                <div class="stat-value">${Math.round(food.nutrition?.calories || 0)}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">بروتين</div>
+                                <div class="stat-value">${(food.nutrition?.protein || 0).toFixed(1)}g</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">كربوهيدرات</div>
+                                <div class="stat-value">${(food.nutrition?.carbs || 0).toFixed(1)}g</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">دهون</div>
+                                <div class="stat-value">${(food.nutrition?.fats || 0).toFixed(1)}g</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function getGIClass(value) {
+            if (value >= 70) return 'gi-high';
+            if (value >= 55) return 'gi-medium';
+            return 'gi-low';
+        }
+    </script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script src="js/mobile-menu.js"></script>
+    
+    <!-- PWA Registration -->
+    <script src="js/pwa-register.js"></script>
+</body>
+</html>

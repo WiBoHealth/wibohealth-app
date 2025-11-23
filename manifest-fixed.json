@@ -1,7 +1,7 @@
 {
   "name": "WiBo Health - دليلك الصحي الشامل",
   "short_name": "WiBo Health",
-  "description": "دليل صحي شامل يحتوي على 555 عنصر غذائي وحاسبات صحية متقدمة ووصفات ومقالات تغذوية",
+  "description": "دليل شامل للتغذية الصحية مع قاعدة أغذية ضخمة، حاسبات صحية، وصفات ومقالات تغذوية احترافية",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,24 +10,17 @@
   "theme_color": "#667eea",
   "lang": "ar",
   "dir": "rtl",
-  "categories": [
-    "health",
-    "food",
-    "lifestyle",
-    "medical"
-  ],
+  "categories": ["health", "food", "lifestyle", "medical"],
   "icons": [
     {
       "src": "/images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "/images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
