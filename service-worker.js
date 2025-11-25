@@ -1,7 +1,7 @@
 // Service Worker for WiBo Health PWA
-// Version 2.1.0
+// Version 2.0.0 - 1000 Food Items!
 
-const CACHE_NAME = 'wibo-health-v2.1.0';
+const CACHE_NAME = 'wibo-health-v2.0.0';
 const RUNTIME_CACHE = 'wibo-health-runtime';
 
 // الملفات الأساسية للتخزين المؤقت (Cache)

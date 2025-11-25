@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إخلاء المسؤولية الطبية - WiBo Health</title>
+    <meta name="description" content="إخلاء المسؤولية الطبية - المعلومات المقدمة في WiBo Health هي لأغراض تعليمية فقط">
+    <link rel="canonical" href="https://wibo-health.com/disclaimer.html">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .header i {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(245,87,108,0.3);
+        }
+
+        .warning-box i {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .warning-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .warning-box p {
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h2 i {
+            font-size: 1.2em;
+        }
+
+        .section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-right: 0;
+        }
+
+        .section ul li {
+            color: #555;
+            font-size: 1.05em;
+            padding: 12px 0;
+            padding-right: 35px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .section ul li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-right: 5px solid #667eea;
+            margin: 30px 0;
+        }
+
+        .info-box p {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 1.05em;
+        }
+
+        .contact-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h3 {
+            color: #2c3e50;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(102,126,234,0.6);
+        }
+
+        .back-home {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .back-home a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-home a:hover {
+            color: #764ba2;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .section p, .section ul li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <i class="fas fa-shield-alt"></i>
+            <h1>إخلاء المسؤولية الطبية</h1>
+            <p>Medical Disclaimer</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Warning Box -->
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h2>تنويه هام</h2>
+                <p>
+                    المعلومات المقدمة في موقع WiBo Health هي <strong>لأغراض تعليمية وإعلامية فقط</strong> 
+                    ولا تُعتبر بديلاً عن الاستشارة الطبية أو التشخيص أو العلاج من قبل أخصائي رعاية صحية مؤهل.
+                </p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="section">
+                <h2>
+                    <i class="fas fa-info-circle"></i>
+                    طبيعة المعلومات المقدمة
+                </h2>
+                <p>
+                    جميع المعلومات الغذائية والصحية المتوفرة في هذا الموقع مستمدة من مصادر علمية موثوقة 
+                    (USDA، PubMed، WHO، وغيرها)، لكنها تُقدم <strong>للتوعية العامة فقط</strong>.
+                </p>
+                <p>
+                    لا يُقصد من هذه المعلومات:
+                </p>
+                <ul>
+                    <li>تشخيص أي حالة صحية أو مرض</li>
+                    <li>وصف علاج طبي أو دوائي</li>
+                    <li>استبدال الاستشارة الطبية المتخصصة</li>
+                    <li>تقديم نصائح طبية شخصية</li>
+                </ul>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section">
+                <h2>
+                    <i class="fas fa-user-md"></i>
+                    استشر طبيبك دائماً
+                </h2>
+                <p>
+                    يُرجى <strong>دائماً استشارة طبيبك أو أخصائي التغذية المعتمد</strong> قبل:
+                </p>
+                <ul>
+                    <li>إجراء أي تغييرات جوهرية على نظامك الغذائي</li>
+                    <li>البدء بأي برنامج تخسيس أو حمية غذائية</li>
+                    <li>تناول أي مكملات غذائية أو أعشاب</li>
+                    <li>إيقاف أو تعديل أي أدوية موصوفة</li>
+                    <li>التعامل مع حالات صحية مزمنة (السكري، الضغط، القلب، إلخ)</li>
+                </ul>
+            </div>
+
+            <!-- Info Box -->
+            <div class="info-box">
+                <p>
+                    <i class="fas fa-lightbulb" style="color: #f39c12; margin-left: 10px;"></i>
+                    <strong>ملاحظة هامة:</strong> 
+                    كل شخص فريد في احتياجاته الغذائية وحالته الصحية. ما يناسب شخصاً قد لا يناسب آخر. 
+                    احرص دائماً على الحصول على استشارة طبية مخصصة لحالتك.
+                </p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section">
+                <h2>
+                    <i class="fas fa-exclamation-circle"></i>
+                    الحالات الطبية الخاصة
+                </h2>
+                <p>
+                    إذا كنت تعاني من أي من الحالات التالية، <strong>استشر طبيبك فوراً</strong> قبل اتباع أي نصائح غذائية:
+                </p>
+                <ul>
+                    <li>مرض السكري (النوع الأول أو الثاني)</li>
+                    <li>أمراض القلب والأوعية الدموية</li>
+                    <li>ارتفاع ضغط الدم</li>
+                    <li>أمراض الكلى أو الكبد</li>
+                    <li>الحساسية الغذائية الشديدة</li>
+                    <li>اضطرابات الأكل (فقدان الشهية، الشره، إلخ)</li>
+                    <li>الحمل أو الرضاعة</li>
+                    <li>أي حالة طبية مزمنة أخرى</li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section">
+                <h2>
+                    <i class="fas fa-balance-scale"></i>
+                    دقة المعلومات
+                </h2>
+                <p>
+                    نحن نسعى جاهدين لتوفير معلومات دقيقة وحديثة، لكن:
+                </p>
+                <ul>
+                    <li>القيم الغذائية قد تختلف باختلاف طريقة التحضير والمصدر</li>
+                    <li>المؤشرات الجلايسيمية والأنسولينية قد تختلف من شخص لآخر</li>
+                    <li>المعلومات الطبية تتطور باستمرار مع الأبحاث الجديدة</li>
+                    <li>لا نضمن اكتمال أو دقة جميع المعلومات بنسبة 100%</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section">
+                <h2>
+                    <i class="fas fa-gavel"></i>
+                    إخلاء المسؤولية القانونية
+                </h2>
+                <p>
+                    <strong>WiBo Health</strong> ومالكوه وموظفوه غير مسؤولين عن:
+                </p>
+                <ul>
+                    <li>أي أضرار صحية أو جسدية ناتجة عن استخدام المعلومات في هذا الموقع</li>
+                    <li>أي قرارات غذائية أو صحية تتخذها بناءً على المحتوى المقدم</li>
+                    <li>أي نتائج سلبية من عدم استشارة مختص طبي</li>
+                    <li>دقة أو اكتمال المعلومات من المصادر الخارجية المرتبطة</li>
+                </ul>
+                <p style="margin-top: 20px;">
+                    باستخدامك لهذا الموقع، فإنك توافق على تحمل المسؤولية الكاملة عن قراراتك الصحية 
+                    وتقر بأنك قرأت وفهمت هذا الإخلاء.
+                </p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3>
+                    <i class="fas fa-comments"></i>
+                    هل لديك أسئلة؟
+                </h3>
+                <p>
+                    لأي استفسارات حول المحتوى أو البيانات المقدمة، تواصل معنا
+                </p>
+                <a href="contact.html" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    اتصل بنا
+                </a>
+            </div>
+        </div>
+
+        <!-- Back Home -->
+        <div class="back-home">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                العودة للصفحة الرئيسية
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1813,22 +1813,6 @@ const foodsDatabase = [
         }
     },
     {
-        id: 113,
-        name: 'كشري مصري',
-        nameEn: 'Egyptian Koshari',
-        icon: '🍝',
-        category: 'أطعمة عربية',
-        gi: 52,
-        ii: 58,
-        nutrition: {
-            calories: 267,
-            protein: 11,
-            carbs: 48,
-            fat: 4.2,
-            fiber: 8.5
-        }
-    },
-    {
         id: 114,
         name: 'فول مدمس',
         nameEn: 'Foul Mudammas',
@@ -8941,6 +8925,7997 @@ const foodsDatabase = [
             carbs: 9.9,
             fat: 2.9,
             fiber: 2.8
+        }
+    },
+    // مشروبات صحية (556-580)
+    {
+        id: 556,
+        name: "عصير برتقال طبيعي",
+        nameEn: "Fresh Orange Juice",
+        icon: "🍊",
+        category: "مشروبات",
+        gi: 50,
+        ii: 60,
+        nutrition: {
+            calories: 45,
+            protein: 0.7,
+            carbs: 10.4,
+            fat: 0.2,
+            fiber: 0.2
+        }
+    },
+    {
+        id: 557,
+        name: "عصير رمان طازج",
+        nameEn: "Pomegranate Juice",
+        icon: "🍹",
+        category: "مشروبات",
+        gi: 53,
+        ii: 58,
+        nutrition: {
+            calories: 54,
+            protein: 0.5,
+            carbs: 13.1,
+            fat: 0.3,
+            fiber: 0.1
+        }
+    },
+    {
+        id: 558,
+        name: "شاي أخضر",
+        nameEn: "Green Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 2,
+            protein: 0.2,
+            carbs: 0,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 559,
+        name: "قهوة سوداء",
+        nameEn: "Black Coffee",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 2,
+            protein: 0.3,
+            carbs: 0,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 560,
+        name: "حليب لوز غير محلى",
+        nameEn: "Unsweetened Almond Milk",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 25,
+        ii: 30,
+        nutrition: {
+            calories: 17,
+            protein: 0.6,
+            carbs: 0.6,
+            fat: 1.4,
+            fiber: 0.2
+        }
+    },
+    {
+        id: 561,
+        name: "ماء جوز الهند",
+        nameEn: "Coconut Water",
+        icon: "🥥",
+        category: "مشروبات",
+        gi: 54,
+        ii: 55,
+        nutrition: {
+            calories: 19,
+            protein: 0.7,
+            carbs: 3.7,
+            fat: 0.2,
+            fiber: 1.1
+        }
+    },
+    {
+        id: 562,
+        name: "عصير جزر طازج",
+        nameEn: "Carrot Juice",
+        icon: "🥕",
+        category: "مشروبات",
+        gi: 43,
+        ii: 50,
+        nutrition: {
+            calories: 40,
+            protein: 0.9,
+            carbs: 9.2,
+            fat: 0.2,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 563,
+        name: "عصير تفاح طبيعي",
+        nameEn: "Apple Juice",
+        icon: "🍎",
+        category: "مشروبات",
+        gi: 41,
+        ii: 48,
+        nutrition: {
+            calories: 46,
+            protein: 0.1,
+            carbs: 11.3,
+            fat: 0.1,
+            fiber: 0.2
+        }
+    },
+    {
+        id: 564,
+        name: "سموذي أخضر",
+        nameEn: "Green Smoothie",
+        icon: "🥬",
+        category: "مشروبات",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 55,
+            protein: 1.5,
+            carbs: 11,
+            fat: 0.5,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 565,
+        name: "لبن رائب",
+        nameEn: "Buttermilk",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 32,
+        ii: 35,
+        nutrition: {
+            calories: 40,
+            protein: 3.3,
+            carbs: 4.8,
+            fat: 0.9,
+            fiber: 0
+        }
+    },
+    {
+        id: 566,
+        name: "شاي زنجبيل وليمون",
+        nameEn: "Ginger Lemon Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 10,
+        ii: 15,
+        nutrition: {
+            calories: 5,
+            protein: 0.1,
+            carbs: 1.2,
+            fat: 0,
+            fiber: 0.1
+        }
+    },
+    {
+        id: 567,
+        name: "عصير شمندر",
+        nameEn: "Beetroot Juice",
+        icon: "🍹",
+        category: "مشروبات",
+        gi: 64,
+        ii: 68,
+        nutrition: {
+            calories: 43,
+            protein: 1.6,
+            carbs: 9.6,
+            fat: 0.2,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 568,
+        name: "حليب الصويا غير محلى",
+        nameEn: "Unsweetened Soy Milk",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 33,
+            protein: 3.3,
+            carbs: 1.7,
+            fat: 1.8,
+            fiber: 0.6
+        }
+    },
+    {
+        id: 569,
+        name: "عصير كرنب (ملفوف)",
+        nameEn: "Cabbage Juice",
+        icon: "🥬",
+        category: "مشروبات",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 25,
+            protein: 1.3,
+            carbs: 5.8,
+            fat: 0.1,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 570,
+        name: "قهوة بالحليب (كابتشينو)",
+        nameEn: "Cappuccino",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 30,
+        ii: 40,
+        nutrition: {
+            calories: 73,
+            protein: 4,
+            carbs: 6.5,
+            fat: 4,
+            fiber: 0
+        }
+    },
+    {
+        id: 571,
+        name: "شاي أسود",
+        nameEn: "Black Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 2,
+            protein: 0,
+            carbs: 0.7,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 572,
+        name: "عصير كيوي",
+        nameEn: "Kiwi Juice",
+        icon: "🥝",
+        category: "مشروبات",
+        gi: 47,
+        ii: 52,
+        nutrition: {
+            calories: 53,
+            protein: 0.9,
+            carbs: 12.8,
+            fat: 0.4,
+            fiber: 1.4
+        }
+    },
+    {
+        id: 573,
+        name: "مشروب الشوفان",
+        nameEn: "Oat Milk",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 69,
+        ii: 75,
+        nutrition: {
+            calories: 47,
+            protein: 1,
+            carbs: 7.5,
+            fat: 1.5,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 574,
+        name: "عصير أناناس طازج",
+        nameEn: "Fresh Pineapple Juice",
+        icon: "🍍",
+        category: "مشروبات",
+        gi: 46,
+        ii: 55,
+        nutrition: {
+            calories: 50,
+            protein: 0.4,
+            carbs: 13.1,
+            fat: 0.1,
+            fiber: 0.2
+        }
+    },
+    {
+        id: 575,
+        name: "عصير طماطم",
+        nameEn: "Tomato Juice",
+        icon: "🍅",
+        category: "مشروبات",
+        gi: 38,
+        ii: 42,
+        nutrition: {
+            calories: 17,
+            protein: 0.8,
+            carbs: 3.9,
+            fat: 0.1,
+            fiber: 0.4
+        }
+    },
+    {
+        id: 576,
+        name: "ماء الورد",
+        nameEn: "Rose Water",
+        icon: "🌹",
+        category: "مشروبات",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 0,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 577,
+        name: "شاي بالنعناع",
+        nameEn: "Mint Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 2,
+            protein: 0,
+            carbs: 0.5,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 578,
+        name: "قهوة تركية",
+        nameEn: "Turkish Coffee",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 2,
+            protein: 0.1,
+            carbs: 0.3,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 579,
+        name: "عصير فراولة طازج",
+        nameEn: "Fresh Strawberry Juice",
+        icon: "🍓",
+        category: "مشروبات",
+        gi: 40,
+        ii: 45,
+        nutrition: {
+            calories: 33,
+            protein: 0.7,
+            carbs: 7.7,
+            fat: 0.3,
+            fiber: 2
+        }
+    },
+    {
+        id: 580,
+        name: "عصير ليمون طبيعي",
+        nameEn: "Fresh Lemon Juice",
+        icon: "🍋",
+        category: "مشروبات",
+        gi: 20,
+        ii: 25,
+        nutrition: {
+            calories: 22,
+            protein: 0.4,
+            carbs: 6.9,
+            fat: 0.2,
+            fiber: 0.3
+        }
+    },
+    // وجبات خفيفة وسناك صحي (581-630)
+    {
+        id: 581,
+        name: "فشار بدون زبدة",
+        nameEn: "Air-Popped Popcorn",
+        icon: "🍿",
+        category: "وجبات خفيفة",
+        gi: 65,
+        ii: 54,
+        nutrition: {
+            calories: 31,
+            protein: 1,
+            carbs: 6.2,
+            fat: 0.4,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 582,
+        name: "حمص بالطحينة",
+        nameEn: "Hummus",
+        icon: "🥣",
+        category: "وجبات خفيفة",
+        gi: 6,
+        ii: 20,
+        nutrition: {
+            calories: 177,
+            protein: 4.9,
+            carbs: 20.1,
+            fat: 8.6,
+            fiber: 4
+        }
+    },
+    {
+        id: 583,
+        name: "بابا غنوج",
+        nameEn: "Baba Ghanoush",
+        icon: "🍆",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 25,
+        nutrition: {
+            calories: 90,
+            protein: 1.5,
+            carbs: 8.5,
+            fat: 6.2,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 584,
+        name: "جواكامولي (غواكامولي)",
+        nameEn: "Guacamole",
+        icon: "🥑",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 160,
+            protein: 2,
+            carbs: 8.5,
+            fat: 14.7,
+            fiber: 6.7
+        }
+    },
+    {
+        id: 585,
+        name: "بذور عباد الشمس",
+        nameEn: "Sunflower Seeds",
+        icon: "🌻",
+        category: "وجبات خفيفة",
+        gi: 35,
+        ii: 20,
+        nutrition: {
+            calories: 584,
+            protein: 20.8,
+            carbs: 20,
+            fat: 51.5,
+            fiber: 8.6
+        }
+    },
+    {
+        id: 586,
+        name: "بذور اليقطين (القرع)",
+        nameEn: "Pumpkin Seeds",
+        icon: "🎃",
+        category: "وجبات خفيفة",
+        gi: 25,
+        ii: 15,
+        nutrition: {
+            calories: 559,
+            protein: 30.2,
+            carbs: 10.7,
+            fat: 49,
+            fiber: 6
+        }
+    },
+    {
+        id: 587,
+        name: "بار بروتين",
+        nameEn: "Protein Bar",
+        icon: "🍫",
+        category: "وجبات خفيفة",
+        gi: 43,
+        ii: 55,
+        nutrition: {
+            calories: 200,
+            protein: 20,
+            carbs: 22,
+            fat: 7,
+            fiber: 3
+        }
+    },
+    {
+        id: 588,
+        name: "بار جرانولا",
+        nameEn: "Granola Bar",
+        icon: "🍪",
+        category: "وجبات خفيفة",
+        gi: 61,
+        ii: 70,
+        nutrition: {
+            calories: 120,
+            protein: 2.5,
+            carbs: 20,
+            fat: 4,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 589,
+        name: "كعك الأرز",
+        nameEn: "Rice Cakes",
+        icon: "🍘",
+        category: "وجبات خفيفة",
+        gi: 82,
+        ii: 85,
+        nutrition: {
+            calories: 35,
+            protein: 0.7,
+            carbs: 7.3,
+            fat: 0.3,
+            fiber: 0.4
+        }
+    },
+    {
+        id: 590,
+        name: "مقرمشات القمح الكامل",
+        nameEn: "Whole Wheat Crackers",
+        icon: "🍘",
+        category: "وجبات خفيفة",
+        gi: 67,
+        ii: 72,
+        nutrition: {
+            calories: 71,
+            protein: 1.4,
+            carbs: 11.5,
+            fat: 2.2,
+            fiber: 1.4
+        }
+    },
+    {
+        id: 591,
+        name: "زيتون أخضر",
+        nameEn: "Green Olives",
+        icon: "🫒",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 145,
+            protein: 1,
+            carbs: 3.8,
+            fat: 15.3,
+            fiber: 3.3
+        }
+    },
+    {
+        id: 592,
+        name: "زيتون أسود",
+        nameEn: "Black Olives",
+        icon: "🫒",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 115,
+            protein: 0.8,
+            carbs: 6.3,
+            fat: 10.7,
+            fiber: 3.2
+        }
+    },
+    {
+        id: 593,
+        name: "لبنة",
+        nameEn: "Labneh",
+        icon: "🥛",
+        category: "وجبات خفيفة",
+        gi: 20,
+        ii: 30,
+        nutrition: {
+            calories: 75,
+            protein: 5,
+            carbs: 3,
+            fat: 5,
+            fiber: 0
+        }
+    },
+    {
+        id: 594,
+        name: "جبنة حلوم مشوية",
+        nameEn: "Grilled Halloumi",
+        icon: "🧀",
+        category: "وجبات خفيفة",
+        gi: 0,
+        ii: 55,
+        nutrition: {
+            calories: 316,
+            protein: 21.2,
+            carbs: 2.4,
+            fat: 25.4,
+            fiber: 0
+        }
+    },
+    {
+        id: 595,
+        name: "فلافل مشوي",
+        nameEn: "Baked Falafel",
+        icon: "🧆",
+        category: "وجبات خفيفة",
+        gi: 35,
+        ii: 50,
+        nutrition: {
+            calories: 333,
+            protein: 13.3,
+            carbs: 31.8,
+            fat: 17.8,
+            fiber: 4.9
+        }
+    },
+    {
+        id: 596,
+        name: "خبز البيتا المحمص",
+        nameEn: "Toasted Pita Chips",
+        icon: "🥖",
+        category: "وجبات خفيفة",
+        gi: 57,
+        ii: 65,
+        nutrition: {
+            calories: 327,
+            protein: 10.5,
+            carbs: 62,
+            fat: 4.8,
+            fiber: 4.2
+        }
+    },
+    {
+        id: 597,
+        name: "جزر بيبي",
+        nameEn: "Baby Carrots",
+        icon: "🥕",
+        category: "وجبات خفيفة",
+        gi: 39,
+        ii: 35,
+        nutrition: {
+            calories: 35,
+            protein: 0.6,
+            carbs: 8.2,
+            fat: 0.2,
+            fiber: 2.3
+        }
+    },
+    {
+        id: 598,
+        name: "شرائح خيار",
+        nameEn: "Cucumber Slices",
+        icon: "🥒",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 16,
+            protein: 0.7,
+            carbs: 3.6,
+            fat: 0.1,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 599,
+        name: "كرفس بالزبدة الفول السوداني",
+        nameEn: "Celery with Peanut Butter",
+        icon: "🥜",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 30,
+        nutrition: {
+            calories: 110,
+            protein: 4.5,
+            carbs: 6.5,
+            fat: 8.5,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 600,
+        name: "تفاح مقطع",
+        nameEn: "Apple Slices",
+        icon: "🍎",
+        category: "وجبات خفيفة",
+        gi: 36,
+        ii: 42,
+        nutrition: {
+            calories: 52,
+            protein: 0.3,
+            carbs: 13.8,
+            fat: 0.2,
+            fiber: 2.4
+        }
+    },
+    {
+        id: 601,
+        name: "لوز محمص",
+        nameEn: "Roasted Almonds",
+        icon: "🥜",
+        category: "وجبات خفيفة",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 607,
+            protein: 21.2,
+            carbs: 21.7,
+            fat: 53.4,
+            fiber: 12.2
+        }
+    },
+    {
+        id: 602,
+        name: "فستق مملح قليلاً",
+        nameEn: "Lightly Salted Pistachios",
+        icon: "🥜",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 18,
+        nutrition: {
+            calories: 562,
+            protein: 20.3,
+            carbs: 27.5,
+            fat: 45.4,
+            fiber: 10.3
+        }
+    },
+    {
+        id: 603,
+        name: "تمر محشي بالمكسرات",
+        nameEn: "Dates Stuffed with Nuts",
+        icon: "🌴",
+        category: "وجبات خفيفة",
+        gi: 42,
+        ii: 50,
+        nutrition: {
+            calories: 320,
+            protein: 5.5,
+            carbs: 50,
+            fat: 12,
+            fiber: 7.5
+        }
+    },
+    {
+        id: 604,
+        name: "شيبس الخضار المخبوزة",
+        nameEn: "Baked Veggie Chips",
+        icon: "🥔",
+        category: "وجبات خفيفة",
+        gi: 60,
+        ii: 68,
+        nutrition: {
+            calories: 150,
+            protein: 2,
+            carbs: 18,
+            fat: 8,
+            fiber: 3
+        }
+    },
+    {
+        id: 605,
+        name: "توت مجفف",
+        nameEn: "Dried Berries",
+        icon: "🫐",
+        category: "وجبات خفيفة",
+        gi: 50,
+        ii: 55,
+        nutrition: {
+            calories: 325,
+            protein: 2.5,
+            carbs: 82,
+            fat: 1.5,
+            fiber: 10
+        }
+    },
+    {
+        id: 606,
+        name: "لوح طاقة بالشوفان",
+        nameEn: "Oat Energy Ball",
+        icon: "⚡",
+        category: "وجبات خفيفة",
+        gi: 42,
+        ii: 50,
+        nutrition: {
+            calories: 150,
+            protein: 3.5,
+            carbs: 18,
+            fat: 7.5,
+            fiber: 3
+        }
+    },
+    {
+        id: 607,
+        name: "جوز هند مبشور",
+        nameEn: "Shredded Coconut",
+        icon: "🥥",
+        category: "وجبات خفيفة",
+        gi: 45,
+        ii: 35,
+        nutrition: {
+            calories: 354,
+            protein: 3.3,
+            carbs: 15.2,
+            fat: 33.5,
+            fiber: 9
+        }
+    },
+    {
+        id: 608,
+        name: "كاجو محمص",
+        nameEn: "Roasted Cashews",
+        icon: "🥜",
+        category: "وجبات خفيفة",
+        gi: 25,
+        ii: 20,
+        nutrition: {
+            calories: 553,
+            protein: 18.2,
+            carbs: 30.2,
+            fat: 43.8,
+            fiber: 3.3
+        }
+    },
+    {
+        id: 609,
+        name: "لب أبيض",
+        nameEn: "White Melon Seeds",
+        icon: "🌰",
+        category: "وجبات خفيفة",
+        gi: 10,
+        ii: 15,
+        nutrition: {
+            calories: 557,
+            protein: 24.5,
+            carbs: 4.6,
+            fat: 47.4,
+            fiber: 4
+        }
+    },
+    {
+        id: 610,
+        name: "مكس المكسرات",
+        nameEn: "Mixed Nuts",
+        icon: "🥜",
+        category: "وجبات خفيفة",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 607,
+            protein: 19.5,
+            carbs: 21.5,
+            fat: 54,
+            fiber: 7
+        }
+    },
+    {
+        id: 611,
+        name: "زبيب أسود",
+        nameEn: "Black Raisins",
+        icon: "🍇",
+        category: "وجبات خفيفة",
+        gi: 64,
+        ii: 68,
+        nutrition: {
+            calories: 299,
+            protein: 3.1,
+            carbs: 79.2,
+            fat: 0.5,
+            fiber: 3.7
+        }
+    },
+    {
+        id: 612,
+        name: "قمر الدين (مشمش مجفف)",
+        nameEn: "Apricot Leather",
+        icon: "🍑",
+        category: "وجبات خفيفة",
+        gi: 30,
+        ii: 42,
+        nutrition: {
+            calories: 241,
+            protein: 3.4,
+            carbs: 62.6,
+            fat: 0.5,
+            fiber: 7.3
+        }
+    },
+    {
+        id: 613,
+        name: "جبن أبيض قليل الدسم",
+        nameEn: "Low-Fat White Cheese",
+        icon: "🧀",
+        category: "وجبات خفيفة",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 72,
+            protein: 10.5,
+            carbs: 1.4,
+            fat: 3,
+            fiber: 0
+        }
+    },
+    {
+        id: 614,
+        name: "معمول بالتمر",
+        nameEn: "Date-Filled Cookies",
+        icon: "🍪",
+        category: "وجبات خفيفة",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 125,
+            protein: 1.8,
+            carbs: 18,
+            fat: 5.5,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 615,
+        name: "لوز بالعسل",
+        nameEn: "Honey-Roasted Almonds",
+        icon: "🍯",
+        category: "وجبات خفيفة",
+        gi: 32,
+        ii: 45,
+        nutrition: {
+            calories: 597,
+            protein: 20,
+            carbs: 28,
+            fat: 48,
+            fiber: 11
+        }
+    },
+    {
+        id: 616,
+        name: "كرات جوز الهند",
+        nameEn: "Coconut Balls",
+        icon: "🥥",
+        category: "وجبات خفيفة",
+        gi: 42,
+        ii: 50,
+        nutrition: {
+            calories: 165,
+            protein: 1.5,
+            carbs: 17,
+            fat: 10.5,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 617,
+        name: "بسكويت الشوفان",
+        nameEn: "Oatmeal Cookies",
+        icon: "🍪",
+        category: "وجبات خفيفة",
+        gi: 54,
+        ii: 62,
+        nutrition: {
+            calories: 105,
+            protein: 1.5,
+            carbs: 15.5,
+            fat: 4.5,
+            fiber: 1
+        }
+    },
+    {
+        id: 618,
+        name: "كرات التمر والطحينة",
+        nameEn: "Date & Tahini Balls",
+        icon: "🌴",
+        category: "وجبات خفيفة",
+        gi: 40,
+        ii: 48,
+        nutrition: {
+            calories: 145,
+            protein: 2.5,
+            carbs: 18.5,
+            fat: 7.5,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 619,
+        name: "قطايف محشية بالجوز",
+        nameEn: "Walnut-Stuffed Qatayef",
+        icon: "🥞",
+        category: "وجبات خفيفة",
+        gi: 52,
+        ii: 62,
+        nutrition: {
+            calories: 195,
+            protein: 3.5,
+            carbs: 25,
+            fat: 9.5,
+            fiber: 2
+        }
+    },
+    {
+        id: 620,
+        name: "حلاوة طحينية",
+        nameEn: "Tahini Halva",
+        icon: "🍬",
+        category: "وجبات خفيفة",
+        gi: 50,
+        ii: 58,
+        nutrition: {
+            calories: 469,
+            protein: 12.6,
+            carbs: 58.3,
+            fat: 23,
+            fiber: 3.9
+        }
+    },
+    {
+        id: 621,
+        name: "كنافة بالجبن",
+        nameEn: "Cheese Kunafa",
+        icon: "🧀",
+        category: "وجبات خفيفة",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 285,
+            protein: 6.5,
+            carbs: 35,
+            fat: 13.5,
+            fiber: 1
+        }
+    },
+    {
+        id: 622,
+        name: "بسبوسة",
+        nameEn: "Basbousa",
+        icon: "🍰",
+        category: "وجبات خفيفة",
+        gi: 65,
+        ii: 72,
+        nutrition: {
+            calories: 340,
+            protein: 5,
+            carbs: 48,
+            fat: 15,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 623,
+        name: "لقيمات",
+        nameEn: "Luqaimat",
+        icon: "🍩",
+        category: "وجبات خفيفة",
+        gi: 76,
+        ii: 82,
+        nutrition: {
+            calories: 275,
+            protein: 3.5,
+            carbs: 38,
+            fat: 12.5,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 624,
+        name: "مهلبية",
+        nameEn: "Mahalabia",
+        icon: "🍮",
+        category: "وجبات خفيفة",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 142,
+            protein: 4,
+            carbs: 24,
+            fat: 3.5,
+            fiber: 0.2
+        }
+    },
+    {
+        id: 625,
+        name: "كراميل بودينج",
+        nameEn: "Caramel Pudding",
+        icon: "🍮",
+        category: "وجبات خفيفة",
+        gi: 52,
+        ii: 60,
+        nutrition: {
+            calories: 158,
+            protein: 3.8,
+            carbs: 26,
+            fat: 4.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 626,
+        name: "بودينج الشوكولاتة",
+        nameEn: "Chocolate Pudding",
+        icon: "🍫",
+        category: "وجبات خفيفة",
+        gi: 47,
+        ii: 55,
+        nutrition: {
+            calories: 155,
+            protein: 4,
+            carbs: 25,
+            fat: 5,
+            fiber: 1
+        }
+    },
+    {
+        id: 627,
+        name: "أيس كريم فانيلا قليل الدسم",
+        nameEn: "Low-Fat Vanilla Ice Cream",
+        icon: "🍦",
+        category: "وجبات خفيفة",
+        gi: 50,
+        ii: 60,
+        nutrition: {
+            calories: 140,
+            protein: 3.5,
+            carbs: 24,
+            fat: 3.5,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 628,
+        name: "فروزن يوغرت",
+        nameEn: "Frozen Yogurt",
+        icon: "🍦",
+        category: "وجبات خفيفة",
+        gi: 46,
+        ii: 52,
+        nutrition: {
+            calories: 127,
+            protein: 3.4,
+            carbs: 24,
+            fat: 2,
+            fiber: 0
+        }
+    },
+    {
+        id: 629,
+        name: "سوربيه الفواكه",
+        nameEn: "Fruit Sorbet",
+        icon: "🍧",
+        category: "وجبات خفيفة",
+        gi: 65,
+        ii: 70,
+        nutrition: {
+            calories: 100,
+            protein: 0.2,
+            carbs: 26,
+            fat: 0,
+            fiber: 1
+        }
+    },
+    {
+        id: 630,
+        name: "موس الشوكولاتة الداكنة",
+        nameEn: "Dark Chocolate Mousse",
+        icon: "🍫",
+        category: "وجبات خفيفة",
+        gi: 23,
+        ii: 40,
+        nutrition: {
+            calories: 170,
+            protein: 3,
+            carbs: 18,
+            fat: 10,
+            fiber: 2
+        }
+    },
+    // أطعمة محلية عربية (631-680)
+    {
+        id: 631,
+        name: "ملوخية",
+        nameEn: "Molokhia",
+        icon: "🥬",
+        category: "خضروات",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 37,
+            protein: 4.5,
+            carbs: 6.9,
+            fat: 0.2,
+            fiber: 2
+        }
+    },
+    {
+        id: 632,
+        name: "باميا",
+        nameEn: "Okra",
+        icon: "🌶️",
+        category: "خضروات",
+        gi: 20,
+        ii: 25,
+        nutrition: {
+            calories: 33,
+            protein: 1.9,
+            carbs: 7.5,
+            fat: 0.2,
+            fiber: 3.2
+        }
+    },
+    {
+        id: 633,
+        name: "كوسا محشي",
+        nameEn: "Stuffed Zucchini",
+        icon: "🥒",
+        category: "وجبات رئيسية",
+        gi: 35,
+        ii: 48,
+        nutrition: {
+            calories: 145,
+            protein: 6.5,
+            carbs: 18,
+            fat: 5.5,
+            fiber: 3
+        }
+    },
+    {
+        id: 634,
+        name: "ورق عنب محشي",
+        nameEn: "Stuffed Grape Leaves",
+        icon: "🍃",
+        category: "وجبات رئيسية",
+        gi: 30,
+        ii: 42,
+        nutrition: {
+            calories: 158,
+            protein: 3.2,
+            carbs: 22,
+            fat: 6.8,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 635,
+        name: "كبة نية",
+        nameEn: "Raw Kibbeh",
+        icon: "🍖",
+        category: "لحوم",
+        gi: 0,
+        ii: 70,
+        nutrition: {
+            calories: 245,
+            protein: 18,
+            carbs: 12,
+            fat: 14,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 636,
+        name: "كبة مقلية",
+        nameEn: "Fried Kibbeh",
+        icon: "🍖",
+        category: "لحوم",
+        gi: 0,
+        ii: 75,
+        nutrition: {
+            calories: 345,
+            protein: 15,
+            carbs: 18,
+            fat: 24,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 637,
+        name: "تبولة",
+        nameEn: "Tabbouleh",
+        icon: "🥗",
+        category: "سلطات",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 90,
+            protein: 2.5,
+            carbs: 14,
+            fat: 3.5,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 638,
+        name: "فتوش",
+        nameEn: "Fattoush",
+        icon: "🥗",
+        category: "سلطات",
+        gi: 35,
+        ii: 45,
+        nutrition: {
+            calories: 115,
+            protein: 2.8,
+            carbs: 16,
+            fat: 5,
+            fiber: 3
+        }
+    },
+    {
+        id: 639,
+        name: "مجدرة",
+        nameEn: "Mujadara",
+        icon: "🍚",
+        category: "وجبات رئيسية",
+        gi: 37,
+        ii: 50,
+        nutrition: {
+            calories: 185,
+            protein: 8,
+            carbs: 32,
+            fat: 3,
+            fiber: 6
+        }
+    },
+    {
+        id: 640,
+        name: "كشك",
+        nameEn: "Kishk",
+        icon: "🥣",
+        category: "وجبات رئيسية",
+        gi: 40,
+        ii: 52,
+        nutrition: {
+            calories: 165,
+            protein: 7.5,
+            carbs: 28,
+            fat: 2.5,
+            fiber: 3
+        }
+    },
+    {
+        id: 641,
+        name: "منسف",
+        nameEn: "Mansaf",
+        icon: "🍖",
+        category: "وجبات رئيسية",
+        gi: 45,
+        ii: 72,
+        nutrition: {
+            calories: 385,
+            protein: 28,
+            carbs: 35,
+            fat: 15,
+            fiber: 2
+        }
+    },
+    {
+        id: 642,
+        name: "مقلوبة",
+        nameEn: "Maqluba",
+        icon: "🍚",
+        category: "وجبات رئيسية",
+        gi: 52,
+        ii: 68,
+        nutrition: {
+            calories: 295,
+            protein: 18,
+            carbs: 38,
+            fat: 8.5,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 643,
+        name: "فتة حمص",
+        nameEn: "Fatteh Hummus",
+        icon: "🍲",
+        category: "وجبات رئيسية",
+        gi: 42,
+        ii: 58,
+        nutrition: {
+            calories: 285,
+            protein: 11,
+            carbs: 32,
+            fat: 13,
+            fiber: 7
+        }
+    },
+    {
+        id: 644,
+        name: "شاورما دجاج",
+        nameEn: "Chicken Shawarma",
+        icon: "🌯",
+        category: "وجبات رئيسية",
+        gi: 40,
+        ii: 65,
+        nutrition: {
+            calories: 265,
+            protein: 22,
+            carbs: 18,
+            fat: 12,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 645,
+        name: "شاورما لحم",
+        nameEn: "Beef Shawarma",
+        icon: "🌯",
+        category: "وجبات رئيسية",
+        gi: 40,
+        ii: 70,
+        nutrition: {
+            calories: 295,
+            protein: 24,
+            carbs: 18,
+            fat: 15,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 646,
+        name: "كفتة مشوية",
+        nameEn: "Grilled Kofta",
+        icon: "🍖",
+        category: "لحوم",
+        gi: 0,
+        ii: 65,
+        nutrition: {
+            calories: 255,
+            protein: 22,
+            carbs: 5,
+            fat: 16,
+            fiber: 1
+        }
+    },
+    {
+        id: 647,
+        name: "مشاوي مشكلة",
+        nameEn: "Mixed Grill",
+        icon: "🍖",
+        category: "لحوم",
+        gi: 0,
+        ii: 75,
+        nutrition: {
+            calories: 325,
+            protein: 28,
+            carbs: 0,
+            fat: 23,
+            fiber: 0
+        }
+    },
+    {
+        id: 648,
+        name: "شيش طاووق",
+        nameEn: "Shish Taouk",
+        icon: "🍗",
+        category: "دواجن",
+        gi: 0,
+        ii: 55,
+        nutrition: {
+            calories: 185,
+            protein: 26,
+        carbs: 2,
+            fat: 8,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 649,
+        name: "كباب حلة",
+        nameEn: "Kabab Halla",
+        icon: "🍖",
+        category: "لحوم",
+        gi: 0,
+        ii: 68,
+        nutrition: {
+            calories: 285,
+            protein: 24,
+            carbs: 8,
+            fat: 18,
+            fiber: 2
+        }
+    },
+    {
+        id: 650,
+        name: "صيادية سمك",
+        nameEn: "Fish Sayadieh",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 48,
+        ii: 60,
+        nutrition: {
+            calories: 295,
+            protein: 22,
+            carbs: 32,
+            fat: 8,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 651,
+        name: "سمك مشوي",
+        nameEn: "Grilled Fish",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 145,
+            protein: 26,
+            carbs: 0,
+            fat: 4.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 652,
+        name: "جمبري مشوي",
+        nameEn: "Grilled Shrimp",
+        icon: "🦐",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 42,
+        nutrition: {
+            calories: 99,
+            protein: 20.9,
+            carbs: 0.2,
+            fat: 1.7,
+            fiber: 0
+        }
+    },
+    {
+        id: 653,
+        name: "حبار مقلي",
+        nameEn: "Fried Calamari",
+        icon: "🦑",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 50,
+        nutrition: {
+            calories: 175,
+            protein: 15,
+            carbs: 8,
+            fat: 9.5,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 654,
+        name: "سمك سلمون مدخن",
+        nameEn: "Smoked Salmon",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 40,
+        nutrition: {
+            calories: 117,
+            protein: 18.3,
+            carbs: 0,
+            fat: 4.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 655,
+        name: "تونة معلبة بالماء",
+        nameEn: "Canned Tuna in Water",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 38,
+        nutrition: {
+            calories: 116,
+            protein: 25.5,
+            carbs: 0,
+            fat: 0.8,
+            fiber: 0
+        }
+    },
+    {
+        id: 656,
+        name: "سردين معلب",
+        nameEn: "Canned Sardines",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 42,
+        nutrition: {
+            calories: 208,
+            protein: 24.6,
+            carbs: 0,
+            fat: 11.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 657,
+        name: "محار",
+        nameEn: "Oysters",
+        icon: "🦪",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 35,
+        nutrition: {
+            calories: 68,
+            protein: 7,
+            carbs: 3.9,
+            fat: 2.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 658,
+        name: "بلح البحر",
+        nameEn: "Mussels",
+        icon: "🦪",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 40,
+        nutrition: {
+            calories: 86,
+            protein: 11.9,
+            carbs: 3.7,
+            fat: 2.2,
+            fiber: 0
+        }
+    },
+    {
+        id: 659,
+        name: "سلطعون",
+        nameEn: "Crab",
+        icon: "🦀",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 38,
+        nutrition: {
+            calories: 97,
+            protein: 19.4,
+            carbs: 0,
+            fat: 1.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 660,
+        name: "كافيار",
+        nameEn: "Caviar",
+        icon: "🥚",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 30,
+        nutrition: {
+            calories: 264,
+            protein: 24.6,
+            carbs: 4,
+            fat: 17.9,
+            fiber: 0
+        }
+    },
+    {
+        id: 661,
+        name: "ملوحة (فسيخ)",
+        nameEn: "Salted Fish",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 195,
+            protein: 23,
+            carbs: 0,
+            fat: 11,
+            fiber: 0
+        }
+    },
+    {
+        id: 662,
+        name: "جبنة عكاوي",
+        nameEn: "Akkawi Cheese",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 0,
+        ii: 52,
+        nutrition: {
+            calories: 290,
+            protein: 18,
+            carbs: 1.5,
+            fat: 24,
+            fiber: 0
+        }
+    },
+    {
+        id: 663,
+        name: "جبنة بلدية",
+        nameEn: "Baladi Cheese",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 0,
+        ii: 48,
+        nutrition: {
+            calories: 265,
+            protein: 20,
+            carbs: 2,
+            fat: 20,
+            fiber: 0
+        }
+    },
+    {
+        id: 664,
+        name: "جبنة مجدولة",
+        nameEn: "Majdoule Cheese",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 0,
+        ii: 50,
+        nutrition: {
+            calories: 275,
+            protein: 19.5,
+            carbs: 1.8,
+            fat: 21.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 665,
+        name: "شنكليش",
+        nameEn: "Shanklish",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 0,
+        ii: 35,
+        nutrition: {
+            calories: 195,
+            protein: 17,
+            carbs: 3.5,
+            fat: 13,
+            fiber: 2
+        }
+    },
+    {
+        id: 666,
+        name: "جميد",
+        nameEn: "Jameed",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 245,
+            protein: 22,
+            carbs: 4.5,
+            fat: 16,
+            fiber: 0
+        }
+    },
+    {
+        id: 667,
+        name: "روب (زبادي)",
+        nameEn: "Yogurt",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 33,
+        ii: 40,
+        nutrition: {
+            calories: 61,
+            protein: 3.5,
+            carbs: 4.7,
+            fat: 3.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 668,
+        name: "عيران",
+        nameEn: "Ayran",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 38,
+            protein: 2.2,
+            carbs: 3.5,
+            fat: 1.8,
+            fiber: 0
+        }
+    },
+    {
+        id: 669,
+        name: "جلاش باللحم",
+        nameEn: "Meat Goulash",
+        icon: "🥟",
+        category: "وجبات رئيسية",
+        gi: 52,
+        ii: 68,
+        nutrition: {
+            calories: 315,
+            protein: 14,
+            carbs: 28,
+            fat: 16,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 670,
+        name: "سمبوسك باللحم",
+        nameEn: "Meat Samosa",
+        icon: "🥟",
+        category: "وجبات خفيفة",
+        gi: 60,
+        ii: 72,
+        nutrition: {
+            calories: 252,
+            protein: 9.5,
+            carbs: 23,
+            fat: 14,
+            fiber: 1.8
+        }
+    },
+    {
+        id: 671,
+        name: "سمبوسك بالجبن",
+        nameEn: "Cheese Samosa",
+        icon: "🥟",
+        category: "وجبات خفيفة",
+        gi: 58,
+        ii: 68,
+        nutrition: {
+            calories: 245,
+            protein: 8,
+            carbs: 24,
+            fat: 13.5,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 672,
+        name: "فطاير سبانخ",
+        nameEn: "Spinach Pies",
+        icon: "🥟",
+        category: "وجبات خفيفة",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 195,
+            protein: 5.5,
+            carbs: 26,
+            fat: 7.5,
+            fiber: 3
+        }
+    },
+    {
+        id: 673,
+        name: "فطاير زعتر",
+        nameEn: "Zaatar Pies",
+        icon: "🥟",
+        category: "وجبات خفيفة",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 215,
+            protein: 4.5,
+            carbs: 30,
+            fat: 8.5,
+            fiber: 2
+        }
+    },
+    {
+        id: 674,
+        name: "مناقيش جبن",
+        nameEn: "Cheese Manakish",
+        icon: "🍕",
+        category: "وجبات خفيفة",
+        gi: 62,
+        ii: 72,
+        nutrition: {
+            calories: 285,
+            protein: 11,
+            carbs: 32,
+            fat: 13,
+            fiber: 2
+        }
+    },
+    {
+        id: 675,
+        name: "كعك بسمسم",
+        nameEn: "Sesame Kaak",
+        icon: "🥯",
+        category: "حبوب",
+        gi: 65,
+        ii: 75,
+        nutrition: {
+            calories: 310,
+            protein: 8.5,
+            carbs: 48,
+            fat: 10,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 676,
+        name: "خبز الصاج",
+        nameEn: "Saj Bread",
+        icon: "🫓",
+        category: "حبوب",
+        gi: 68,
+        ii: 78,
+        nutrition: {
+            calories: 275,
+            protein: 8,
+            carbs: 58,
+            fat: 1.5,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 677,
+        name: "خبز طابون",
+        nameEn: "Taboon Bread",
+        icon: "🍞",
+        category: "حبوب",
+        gi: 70,
+        ii: 80,
+        nutrition: {
+            calories: 270,
+            protein: 7.5,
+            carbs: 56,
+            fat: 2,
+            fiber: 3
+        }
+    },
+    {
+        id: 678,
+        name: "خبز تنور",
+        nameEn: "Tandoor Bread",
+        icon: "🫓",
+        category: "حبوب",
+        gi: 68,
+        ii: 78,
+        nutrition: {
+            calories: 265,
+            protein: 8,
+            carbs: 54,
+            fat: 2.5,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 679,
+        name: "رقاق (خبز رقيق)",
+        nameEn: "Raqaq Bread",
+        icon: "🫓",
+        category: "حبوب",
+        gi: 72,
+        ii: 82,
+        nutrition: {
+            calories: 290,
+            protein: 7,
+            carbs: 62,
+            fat: 1,
+            fiber: 2
+        }
+    },
+    {
+        id: 680,
+        name: "خبيزة",
+        nameEn: "Khubeza (Mallow)",
+        icon: "🥬",
+        category: "خضروات",
+        gi: 15,
+        ii: 18,
+        nutrition: {
+            calories: 29,
+            protein: 3.7,
+            carbs: 5.4,
+            fat: 0.3,
+            fiber: 2.8
+        }
+    },
+    // فواكه استوائية ونادرة (681-720)
+    {
+        id: 681,
+        name: "دراغون فروت",
+        nameEn: "Dragon Fruit",
+        icon: "🐉",
+        category: "فواكه",
+        gi: 48,
+        ii: 50,
+        nutrition: {
+            calories: 60,
+            protein: 1.2,
+            carbs: 13,
+            fat: 0,
+            fiber: 3
+        }
+    },
+    {
+        id: 682,
+        name: "باشن فروت",
+        nameEn: "Passion Fruit",
+        icon: "💜",
+        category: "فواكه",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 97,
+            protein: 2.2,
+            carbs: 23.4,
+            fat: 0.7,
+            fiber: 10.4
+        }
+    },
+    {
+        id: 683,
+        name: "ليتشي",
+        nameEn: "Lychee",
+        icon: "🍒",
+        category: "فواكه",
+        gi: 57,
+        ii: 62,
+        nutrition: {
+            calories: 66,
+            protein: 0.8,
+            carbs: 16.5,
+            fat: 0.4,
+            fiber: 1.3
+        }
+    },
+    {
+        id: 684,
+        name: "رامبوتان",
+        nameEn: "Rambutan",
+        icon: "🔴",
+        category: "فواكه",
+        gi: 59,
+        ii: 63,
+        nutrition: {
+            calories: 82,
+            protein: 0.9,
+            carbs: 20.9,
+            fat: 0.2,
+            fiber: 0.9
+        }
+    },
+    {
+        id: 685,
+        name: "مانجوستين",
+        nameEn: "Mangosteen",
+        icon: "💜",
+        category: "فواكه",
+        gi: 46,
+        ii: 52,
+        nutrition: {
+            calories: 73,
+            protein: 0.4,
+            carbs: 17.9,
+            fat: 0.6,
+            fiber: 1.8
+        }
+    },
+    {
+        id: 686,
+        name: "دوريان",
+        nameEn: "Durian",
+        icon: "🌰",
+        category: "فواكه",
+        gi: 49,
+        ii: 55,
+        nutrition: {
+            calories: 147,
+            protein: 1.5,
+            carbs: 27.1,
+            fat: 5.3,
+            fiber: 3.8
+        }
+    },
+    {
+        id: 687,
+        name: "جاك فروت",
+        nameEn: "Jackfruit",
+        icon: "🍈",
+        category: "فواكه",
+        gi: 75,
+        ii: 80,
+        nutrition: {
+            calories: 95,
+            protein: 1.7,
+            carbs: 23.2,
+            fat: 0.6,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 688,
+        name: "كرامبولا (فاكهة النجمة)",
+        nameEn: "Star Fruit",
+        icon: "⭐",
+        category: "فواكه",
+        gi: 45,
+        ii: 48,
+        nutrition: {
+            calories: 31,
+            protein: 1,
+            carbs: 6.7,
+            fat: 0.3,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 689,
+        name: "جوافة",
+        nameEn: "Guava",
+        icon: "🍐",
+        category: "فواكه",
+        gi: 30,
+        ii: 38,
+        nutrition: {
+            calories: 68,
+            protein: 2.6,
+            carbs: 14.3,
+            fat: 1,
+            fiber: 5.4
+        }
+    },
+    {
+        id: 690,
+        name: "بابايا",
+        nameEn: "Papaya",
+        icon: "🟠",
+        category: "فواكه",
+        gi: 60,
+        ii: 65,
+        nutrition: {
+            calories: 43,
+            protein: 0.5,
+            carbs: 10.8,
+            fat: 0.3,
+            fiber: 1.7
+        }
+    },
+    {
+        id: 691,
+        name: "تين شوكي",
+        nameEn: "Prickly Pear",
+        icon: "🌵",
+        category: "فواكه",
+        gi: 45,
+        ii: 50,
+        nutrition: {
+            calories: 41,
+            protein: 0.7,
+            carbs: 9.6,
+            fat: 0.5,
+            fiber: 3.6
+        }
+    },
+    {
+        id: 692,
+        name: "كمكوات",
+        nameEn: "Kumquat",
+        icon: "🟠",
+        category: "فواكه",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 71,
+            protein: 1.9,
+            carbs: 15.9,
+            fat: 0.9,
+            fiber: 6.5
+        }
+    },
+    {
+        id: 693,
+        name: "أكي دنيا (إسكدنيا)",
+        nameEn: "Loquat",
+        icon: "🍊",
+        category: "فواكه",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 47,
+            protein: 0.4,
+            carbs: 12.1,
+            fat: 0.2,
+            fiber: 1.7
+        }
+    },
+    {
+        id: 694,
+        name: "فيجوا",
+        nameEn: "Feijoa",
+        icon: "🥝",
+        category: "فواكه",
+        gi: 40,
+        ii: 45,
+        nutrition: {
+            calories: 55,
+            protein: 1.2,
+            carbs: 13,
+            fat: 0.6,
+            fiber: 6.4
+        }
+    },
+    {
+        id: 695,
+        name: "خرما",
+        nameEn: "Persimmon",
+        icon: "🟠",
+        category: "فواكه",
+        gi: 50,
+        ii: 55,
+        nutrition: {
+            calories: 70,
+            protein: 0.6,
+            carbs: 18.6,
+            fat: 0.2,
+            fiber: 3.6
+        }
+    },
+    {
+        id: 696,
+        name: "كيوانو (خيار أفريقي)",
+        nameEn: "Kiwano",
+        icon: "🥒",
+        category: "فواكه",
+        gi: 25,
+        ii: 30,
+        nutrition: {
+            calories: 44,
+            protein: 1.8,
+            carbs: 7.6,
+            fat: 1.3,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 697,
+        name: "أكاي",
+        nameEn: "Acai Berry",
+        icon: "🫐",
+        category: "فواكه",
+        gi: 42,
+        ii: 45,
+        nutrition: {
+            calories: 70,
+            protein: 1,
+            carbs: 4,
+            fat: 5,
+            fiber: 2
+        }
+    },
+    {
+        id: 698,
+        name: "غوجي بيري",
+        nameEn: "Goji Berry",
+        icon: "🔴",
+        category: "فواكه",
+        gi: 29,
+        ii: 35,
+        nutrition: {
+            calories: 349,
+            protein: 14.3,
+            carbs: 77.1,
+            fat: 0.4,
+            fiber: 13
+        }
+    },
+    {
+        id: 699,
+        name: "تمر هندي",
+        nameEn: "Tamarind",
+        icon: "🌰",
+        category: "فواكه",
+        gi: 23,
+        ii: 30,
+        nutrition: {
+            calories: 239,
+            protein: 2.8,
+            carbs: 62.5,
+            fat: 0.6,
+            fiber: 5.1
+        }
+    },
+    {
+        id: 700,
+        name: "كرز هندي (أملا)",
+        nameEn: "Indian Gooseberry",
+        icon: "🟢",
+        category: "فواكه",
+        gi: 20,
+        ii: 25,
+        nutrition: {
+            calories: 44,
+            protein: 0.9,
+            carbs: 10.2,
+            fat: 0.6,
+            fiber: 4.3
+        }
+    },
+    {
+        id: 701,
+        name: "كوسكوس",
+        nameEn: "Couscous",
+        icon: "🍚",
+        category: "حبوب",
+        gi: 65,
+        ii: 72,
+        nutrition: {
+            calories: 112,
+            protein: 3.8,
+            carbs: 23.2,
+            fat: 0.2,
+            fiber: 1.4
+        }
+    },
+    {
+        id: 702,
+        name: "برغل خشن",
+        nameEn: "Coarse Bulgur",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 342,
+            protein: 12.3,
+            carbs: 75.9,
+            fat: 1.3,
+            fiber: 18.3
+        }
+    },
+    {
+        id: 703,
+        name: "فريكة",
+        nameEn: "Freekeh",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 43,
+        ii: 50,
+        nutrition: {
+            calories: 325,
+            protein: 12.7,
+            carbs: 72,
+            fat: 2.3,
+            fiber: 16.5
+        }
+    },
+    {
+        id: 704,
+        name: "سميد",
+        nameEn: "Semolina",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 60,
+        ii: 68,
+        nutrition: {
+            calories: 360,
+            protein: 12.7,
+            carbs: 72.8,
+            fat: 1.1,
+            fiber: 3.9
+        }
+    },
+    {
+        id: 705,
+        name: "دقيق الذرة",
+        nameEn: "Corn Flour",
+        icon: "🌽",
+        category: "حبوب",
+        gi: 70,
+        ii: 75,
+        nutrition: {
+            calories: 361,
+            protein: 6.9,
+            carbs: 76.9,
+            fat: 3.9,
+            fiber: 7.3
+        }
+    },
+    {
+        id: 706,
+        name: "دقيق الحمص",
+        nameEn: "Chickpea Flour",
+        icon: "🫘",
+        category: "بقوليات",
+        gi: 35,
+        ii: 42,
+        nutrition: {
+            calories: 387,
+            protein: 22.4,
+            carbs: 57.8,
+            fat: 6.7,
+            fiber: 10.8
+        }
+    },
+    {
+        id: 707,
+        name: "دقيق اللوز",
+        nameEn: "Almond Flour",
+        icon: "🥜",
+        category: "مكسرات",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 571,
+            protein: 21.2,
+            carbs: 21.4,
+            fat: 50,
+            fiber: 10.7
+        }
+    },
+    {
+        id: 708,
+        name: "دقيق جوز الهند",
+        nameEn: "Coconut Flour",
+        icon: "🥥",
+        category: "مكسرات",
+        gi: 45,
+        ii: 35,
+        nutrition: {
+            calories: 400,
+            protein: 19.3,
+            carbs: 60,
+            fat: 8.7,
+            fiber: 38.5
+        }
+    },
+    {
+        id: 709,
+        name: "نخالة القمح",
+        nameEn: "Wheat Bran",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 216,
+            protein: 15.6,
+            carbs: 64.5,
+            fat: 4.2,
+            fiber: 42.8
+        }
+    },
+    {
+        id: 710,
+        name: "نخالة الشوفان",
+        nameEn: "Oat Bran",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 55,
+        ii: 60,
+        nutrition: {
+            calories: 246,
+            protein: 17.3,
+            carbs: 66.2,
+            fat: 7,
+            fiber: 15.4
+        }
+    },
+    {
+        id: 711,
+        name: "جنين القمح",
+        nameEn: "Wheat Germ",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 360,
+            protein: 23.2,
+            carbs: 51.8,
+            fat: 9.7,
+            fiber: 13.2
+        }
+    },
+    {
+        id: 712,
+        name: "طحينة سائلة",
+        nameEn: "Liquid Tahini",
+        icon: "🥜",
+        category: "مكسرات",
+        gi: 12,
+        ii: 18,
+        nutrition: {
+            calories: 595,
+            protein: 17,
+            carbs: 21.2,
+            fat: 53.8,
+            fiber: 9.3
+        }
+    },
+    {
+        id: 713,
+        name: "زبدة كاجو",
+        nameEn: "Cashew Butter",
+        icon: "🥜",
+        category: "مكسرات",
+        gi: 27,
+        ii: 32,
+        nutrition: {
+            calories: 587,
+            protein: 17.6,
+            carbs: 27.6,
+            fat: 49.4,
+            fiber: 2
+        }
+    },
+    {
+        id: 714,
+        name: "زبدة اللوز",
+        nameEn: "Almond Butter",
+        icon: "🥜",
+        category: "مكسرات",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 614,
+            protein: 21,
+            carbs: 18.8,
+            fat: 55.5,
+            fiber: 10.3
+        }
+    },
+    {
+        id: 715,
+        name: "زبدة بذور عباد الشمس",
+        nameEn: "Sunflower Seed Butter",
+        icon: "🌻",
+        category: "مكسرات",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 617,
+            protein: 17.2,
+            carbs: 20,
+            fat: 55.8,
+            fiber: 8.8
+        }
+    },
+    {
+        id: 716,
+        name: "شراب القيقب",
+        nameEn: "Maple Syrup",
+        icon: "🍁",
+        category: "محليات",
+        gi: 54,
+        ii: 60,
+        nutrition: {
+            calories: 260,
+            protein: 0,
+            carbs: 67,
+            fat: 0.1,
+            fiber: 0
+        }
+    },
+    {
+        id: 717,
+        name: "دبس الرمان",
+        nameEn: "Pomegranate Molasses",
+        icon: "🍇",
+        category: "محليات",
+        gi: 60,
+        ii: 65,
+        nutrition: {
+            calories: 250,
+            protein: 1,
+            carbs: 65,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 718,
+        name: "دبس التمر",
+        nameEn: "Date Syrup",
+        icon: "🌴",
+        category: "محليات",
+        gi: 68,
+        ii: 72,
+        nutrition: {
+            calories: 287,
+            protein: 2,
+            carbs: 75,
+            fat: 0,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 719,
+        name: "رب البندورة (معجون طماطم)",
+        nameEn: "Tomato Paste",
+        icon: "🍅",
+        category: "خضروات",
+        gi: 27,
+        ii: 35,
+        nutrition: {
+            calories: 82,
+            protein: 4.3,
+            carbs: 18.9,
+            fat: 0.5,
+            fiber: 4.1
+        }
+    },
+    {
+        id: 720,
+        name: "صلصة الصويا",
+        nameEn: "Soy Sauce",
+        icon: "🥫",
+        category: "بهارات",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 53,
+            protein: 5.6,
+            carbs: 4.9,
+            fat: 0.1,
+            fiber: 0.8
+        }
+    },
+    // منتجات ألبان متنوعة (721-730)
+    {
+        id: 721,
+        name: "جبن الكواركيزو",
+        nameEn: "Queso Fresco",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 30,
+        ii: 55,
+        nutrition: {
+            calories: 100,
+            protein: 8,
+            carbs: 2,
+            fat: 7,
+            fiber: 0
+        }
+    },
+    {
+        id: 722,
+        name: "جبن الماسكاربوني",
+        nameEn: "Mascarpone",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 30,
+        ii: 60,
+        nutrition: {
+            calories: 430,
+            protein: 3,
+            carbs: 5,
+            fat: 44,
+            fiber: 0
+        }
+    },
+    {
+        id: 723,
+        name: "زبادي الماعز",
+        nameEn: "Goat Yogurt",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 35,
+        ii: 60,
+        nutrition: {
+            calories: 69,
+            protein: 3.5,
+            carbs: 4.7,
+            fat: 3.8,
+            fiber: 0
+        }
+    },
+    {
+        id: 724,
+        name: "زبادي الأغنام",
+        nameEn: "Sheep Yogurt",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 35,
+        ii: 65,
+        nutrition: {
+            calories: 108,
+            protein: 5.5,
+            carbs: 5.4,
+            fat: 7,
+            fiber: 0
+        }
+    },
+    {
+        id: 725,
+        name: "الكفير",
+        nameEn: "Kefir",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 30,
+        ii: 40,
+        nutrition: {
+            calories: 41,
+            protein: 3.3,
+            carbs: 4.5,
+            fat: 1,
+            fiber: 0
+        }
+    },
+    {
+        id: 726,
+        name: "الأيران (مشروب اللبن)",
+        nameEn: "Ayran",
+        icon: "🥤",
+        category: "ألبان",
+        gi: 35,
+        ii: 50,
+        nutrition: {
+            calories: 38,
+            protein: 1.5,
+            carbs: 1.9,
+            fat: 3,
+            fiber: 0
+        }
+    },
+    {
+        id: 727,
+        name: "جبن الريكوتا قليل الدسم",
+        nameEn: "Low-Fat Ricotta",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 30,
+        ii: 55,
+        nutrition: {
+            calories: 138,
+            protein: 11.4,
+            carbs: 5.1,
+            fat: 8,
+            fiber: 0
+        }
+    },
+    {
+        id: 728,
+        name: "حليب الجاموس",
+        nameEn: "Buffalo Milk",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 40,
+        ii: 70,
+        nutrition: {
+            calories: 97,
+            protein: 3.8,
+            carbs: 5.2,
+            fat: 6.9,
+            fiber: 0
+        }
+    },
+    {
+        id: 729,
+        name: "زبدة الغنم",
+        nameEn: "Sheep Butter",
+        icon: "🧈",
+        category: "ألبان",
+        gi: 0,
+        ii: 25,
+        nutrition: {
+            calories: 717,
+            protein: 0.9,
+            carbs: 0.1,
+            fat: 81,
+            fiber: 0
+        }
+    },
+    {
+        id: 730,
+        name: "اللبنة المصفاة",
+        nameEn: "Strained Labneh",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 30,
+        ii: 55,
+        nutrition: {
+            calories: 80,
+            protein: 5,
+            carbs: 3,
+            fat: 6,
+            fiber: 0
+        }
+    },
+    // مأكولات بحرية متنوعة (731-740)
+    {
+        id: 731,
+        name: "السلمون المدخن",
+        nameEn: "Smoked Salmon",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 50,
+        nutrition: {
+            calories: 117,
+            protein: 18.3,
+            carbs: 0,
+            fat: 4.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 732,
+        name: "سمك الماكريل",
+        nameEn: "Mackerel",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 55,
+        nutrition: {
+            calories: 205,
+            protein: 18.6,
+            carbs: 0,
+            fat: 13.9,
+            fiber: 0
+        }
+    },
+    {
+        id: 733,
+        name: "سمك السردين",
+        nameEn: "Sardines",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 50,
+        nutrition: {
+            calories: 208,
+            protein: 24.6,
+            carbs: 0,
+            fat: 11.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 734,
+        name: "الكافيار",
+        nameEn: "Caviar",
+        icon: "🥚",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 264,
+            protein: 24.6,
+            carbs: 4,
+            fat: 17.9,
+            fiber: 0
+        }
+    },
+    {
+        id: 735,
+        name: "سمك الهلبوت",
+        nameEn: "Halibut",
+        icon: "🐟",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 111,
+            protein: 22.5,
+            carbs: 0,
+            fat: 2.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 736,
+        name: "الحبار (كاليماري)",
+        nameEn: "Squid (Calamari)",
+        icon: "🦑",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 40,
+        nutrition: {
+            calories: 92,
+            protein: 15.6,
+            carbs: 3.1,
+            fat: 1.4,
+            fiber: 0
+        }
+    },
+    {
+        id: 737,
+        name: "الأخطبوط",
+        nameEn: "Octopus",
+        icon: "🐙",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 40,
+        nutrition: {
+            calories: 82,
+            protein: 14.9,
+            carbs: 2.2,
+            fat: 1,
+            fiber: 0
+        }
+    },
+    {
+        id: 738,
+        name: "بلح البحر",
+        nameEn: "Mussels",
+        icon: "🦪",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 50,
+        nutrition: {
+            calories: 86,
+            protein: 11.9,
+            carbs: 3.7,
+            fat: 2.2,
+            fiber: 0
+        }
+    },
+    {
+        id: 739,
+        name: "المحار",
+        nameEn: "Oysters",
+        icon: "🦪",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 68,
+            protein: 7,
+            carbs: 3.9,
+            fat: 2.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 740,
+        name: "سلطعون الثلج",
+        nameEn: "Snow Crab",
+        icon: "🦀",
+        category: "مأكولات بحرية",
+        gi: 0,
+        ii: 48,
+        nutrition: {
+            calories: 90,
+            protein: 18.5,
+            carbs: 0,
+            fat: 1.2,
+            fiber: 0
+        }
+    },
+    // أعشاب وتوابل طبيعية (741-750)
+    {
+        id: 741,
+        name: "الكركم الطازج",
+        nameEn: "Fresh Turmeric",
+        icon: "🟡",
+        category: "بهارات",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 312,
+            protein: 9.7,
+            carbs: 67.1,
+            fat: 3.3,
+            fiber: 22.7
+        }
+    },
+    {
+        id: 742,
+        name: "الزنجبيل الطازج",
+        nameEn: "Fresh Ginger",
+        icon: "🟤",
+        category: "بهارات",
+        gi: 15,
+        ii: 12,
+        nutrition: {
+            calories: 80,
+            protein: 1.8,
+            carbs: 17.8,
+            fat: 0.8,
+            fiber: 2
+        }
+    },
+    {
+        id: 743,
+        name: "القرفة السيلانية",
+        nameEn: "Ceylon Cinnamon",
+        icon: "🟫",
+        category: "بهارات",
+        gi: 5,
+        ii: 5,
+        nutrition: {
+            calories: 247,
+            protein: 4,
+            carbs: 80.6,
+            fat: 1.2,
+            fiber: 53.1
+        }
+    },
+    {
+        id: 744,
+        name: "الهيل الأخضر",
+        nameEn: "Green Cardamom",
+        icon: "💚",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 311,
+            protein: 10.8,
+            carbs: 68.5,
+            fat: 6.7,
+            fiber: 28
+        }
+    },
+    {
+        id: 745,
+        name: "القرنفل",
+        nameEn: "Cloves",
+        icon: "🟤",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 274,
+            protein: 6,
+            carbs: 65.5,
+            fat: 13,
+            fiber: 33.9
+        }
+    },
+    {
+        id: 746,
+        name: "جوزة الطيب",
+        nameEn: "Nutmeg",
+        icon: "🟫",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 525,
+            protein: 5.8,
+            carbs: 49.3,
+            fat: 36.3,
+            fiber: 20.8
+        }
+    },
+    {
+        id: 747,
+        name: "الزعفران",
+        nameEn: "Saffron",
+        icon: "🟡",
+        category: "بهارات",
+        gi: 5,
+        ii: 5,
+        nutrition: {
+            calories: 310,
+            protein: 11.4,
+            carbs: 65.4,
+            fat: 5.9,
+            fiber: 3.9
+        }
+    },
+    {
+        id: 748,
+        name: "الريحان المجفف",
+        nameEn: "Dried Basil",
+        icon: "🌿",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 233,
+            protein: 22.9,
+            carbs: 47.8,
+            fat: 4,
+            fiber: 37.7
+        }
+    },
+    {
+        id: 749,
+        name: "إكليل الجبل المجفف",
+        nameEn: "Dried Rosemary",
+        icon: "🌿",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 331,
+            protein: 4.9,
+            carbs: 64.1,
+            fat: 15.2,
+            fiber: 42.6
+        }
+    },
+    {
+        id: 750,
+        name: "الزعتر البري المجفف",
+        nameEn: "Dried Wild Thyme",
+        icon: "🌿",
+        category: "بهارات",
+        gi: 10,
+        ii: 8,
+        nutrition: {
+            calories: 276,
+            protein: 9.1,
+            carbs: 63.9,
+            fat: 7.4,
+            fiber: 37
+        }
+    },
+    // أطعمة عربية تقليدية إضافية (751-800)
+    {
+        id: 751,
+        name: "الملوخية الطازجة",
+        nameEn: "Fresh Molokhia",
+        icon: "🥬",
+        category: "خضروات",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 58,
+            protein: 4.8,
+            carbs: 9.8,
+            fat: 0.4,
+            fiber: 2
+        }
+    },
+    {
+        id: 752,
+        name: "الملوخية المجففة",
+        nameEn: "Dried Molokhia",
+        icon: "🌿",
+        category: "خضروات",
+        gi: 15,
+        ii: 12,
+        nutrition: {
+            calories: 345,
+            protein: 26,
+            carbs: 58,
+            fat: 4,
+            fiber: 11
+        }
+    },
+    {
+        id: 753,
+        name: "الفتة المصرية",
+        nameEn: "Egyptian Fatta",
+        icon: "🍲",
+        category: "أطباق عربية",
+        gi: 68,
+        ii: 72,
+        nutrition: {
+            calories: 285,
+            protein: 12,
+            carbs: 38,
+            fat: 9,
+            fiber: 3
+        }
+    },
+    {
+        id: 754,
+        name: "الكشري المصري",
+        nameEn: "Egyptian Koshari",
+        icon: "🍝",
+        category: "أطباق عربية",
+        gi: 62,
+        ii: 58,
+        nutrition: {
+            calories: 320,
+            protein: 11,
+            carbs: 58,
+            fat: 5,
+            fiber: 8
+        }
+    },
+    {
+        id: 755,
+        name: "المحشي (ورق عنب)",
+        nameEn: "Stuffed Grape Leaves",
+        icon: "🍃",
+        category: "أطباق عربية",
+        gi: 54,
+        ii: 48,
+        nutrition: {
+            calories: 180,
+            protein: 3.5,
+            carbs: 26,
+            fat: 7,
+            fiber: 4
+        }
+    },
+    {
+        id: 756,
+        name: "المحشي (كوسا)",
+        nameEn: "Stuffed Zucchini",
+        icon: "🥒",
+        category: "أطباق عربية",
+        gi: 50,
+        ii: 45,
+        nutrition: {
+            calories: 155,
+            protein: 5,
+            carbs: 22,
+            fat: 5.5,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 757,
+        name: "المحشي (باذنجان)",
+        nameEn: "Stuffed Eggplant",
+        icon: "🍆",
+        category: "أطباق عربية",
+        gi: 48,
+        ii: 42,
+        nutrition: {
+            calories: 165,
+            protein: 4.5,
+            carbs: 24,
+            fat: 6,
+            fiber: 5
+        }
+    },
+    {
+        id: 758,
+        name: "الفلافل",
+        nameEn: "Falafel",
+        icon: "🧆",
+        category: "أطباق عربية",
+        gi: 45,
+        ii: 40,
+        nutrition: {
+            calories: 333,
+            protein: 13.3,
+            carbs: 31.8,
+            fat: 17.8,
+            fiber: 4.9
+        }
+    },
+    {
+        id: 759,
+        name: "الطعمية المصرية",
+        nameEn: "Egyptian Taamiya",
+        icon: "🧆",
+        category: "أطباق عربية",
+        gi: 42,
+        ii: 38,
+        nutrition: {
+            calories: 315,
+            protein: 14,
+            carbs: 29,
+            fat: 16,
+            fiber: 6
+        }
+    },
+    {
+        id: 760,
+        name: "الشكشوكة",
+        nameEn: "Shakshuka",
+        icon: "🍳",
+        category: "أطباق عربية",
+        gi: 35,
+        ii: 42,
+        nutrition: {
+            calories: 189,
+            protein: 11,
+            carbs: 12,
+            fat: 11,
+            fiber: 3
+        }
+    },
+    {
+        id: 761,
+        name: "المسخن الفلسطيني",
+        nameEn: "Palestinian Musakhan",
+        icon: "🍗",
+        category: "أطباق عربية",
+        gi: 58,
+        ii: 62,
+        nutrition: {
+            calories: 385,
+            protein: 24,
+            carbs: 32,
+            fat: 18,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 762,
+        name: "المجدرة",
+        nameEn: "Mujaddara",
+        icon: "🍚",
+        category: "أطباق عربية",
+        gi: 52,
+        ii: 45,
+        nutrition: {
+            calories: 195,
+            protein: 8,
+            carbs: 35,
+            fat: 2.5,
+            fiber: 6
+        }
+    },
+    {
+        id: 763,
+        name: "المفتول الفلسطيني",
+        nameEn: "Palestinian Maftoul",
+        icon: "🌾",
+        category: "أطباق عربية",
+        gi: 55,
+        ii: 50,
+        nutrition: {
+            calories: 170,
+            protein: 6,
+            carbs: 34,
+            fat: 1,
+            fiber: 4
+        }
+    },
+    {
+        id: 764,
+        name: "الفريكة",
+        nameEn: "Freekeh",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 43,
+        ii: 38,
+        nutrition: {
+            calories: 130,
+            protein: 5,
+            carbs: 26,
+            fat: 0.8,
+            fiber: 8
+        }
+    },
+    {
+        id: 765,
+        name: "البرغل الناعم",
+        nameEn: "Fine Bulgur",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 48,
+        ii: 42,
+        nutrition: {
+            calories: 342,
+            protein: 12.3,
+            carbs: 75.9,
+            fat: 1.3,
+            fiber: 12.5
+        }
+    },
+    {
+        id: 766,
+        name: "البرغل الخشن",
+        nameEn: "Coarse Bulgur",
+        icon: "🌾",
+        category: "حبوب",
+        gi: 46,
+        ii: 40,
+        nutrition: {
+            calories: 342,
+            protein: 12.3,
+            carbs: 75.9,
+            fat: 1.3,
+            fiber: 18.3
+        }
+    },
+    {
+        id: 767,
+        name: "التبولة",
+        nameEn: "Tabbouleh",
+        icon: "🥗",
+        category: "أطباق عربية",
+        gi: 42,
+        ii: 35,
+        nutrition: {
+            calories: 120,
+            protein: 3.5,
+            carbs: 15,
+            fat: 6,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 768,
+        name: "الفتوش",
+        nameEn: "Fattoush",
+        icon: "🥗",
+        category: "أطباق عربية",
+        gi: 48,
+        ii: 40,
+        nutrition: {
+            calories: 98,
+            protein: 2.5,
+            carbs: 12,
+            fat: 5,
+            fiber: 3
+        }
+    },
+    {
+        id: 769,
+        name: "المتبل (بابا غنوج)",
+        nameEn: "Mutabal (Baba Ghanoush)",
+        icon: "🍆",
+        category: "مقبلات",
+        gi: 30,
+        ii: 25,
+        nutrition: {
+            calories: 107,
+            protein: 2.4,
+            carbs: 8.7,
+            fat: 7.9,
+            fiber: 4
+        }
+    },
+    {
+        id: 770,
+        name: "المحمرة",
+        nameEn: "Muhammara",
+        icon: "🌶️",
+        category: "مقبلات",
+        gi: 42,
+        ii: 38,
+        nutrition: {
+            calories: 168,
+            protein: 4.2,
+            carbs: 13,
+            fat: 11.5,
+            fiber: 3
+        }
+    },
+    {
+        id: 771,
+        name: "اللبنة",
+        nameEn: "Labneh",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 30,
+        ii: 55,
+        nutrition: {
+            calories: 80,
+            protein: 5,
+            carbs: 3,
+            fat: 6,
+            fiber: 0
+        }
+    },
+    {
+        id: 772,
+        name: "الجميد (جميد الأردني)",
+        nameEn: "Jameed",
+        icon: "🧀",
+        category: "ألبان",
+        gi: 30,
+        ii: 60,
+        nutrition: {
+            calories: 110,
+            protein: 7,
+            carbs: 4,
+            fat: 8,
+            fiber: 0
+        }
+    },
+    {
+        id: 773,
+        name: "القشطة العربية",
+        nameEn: "Arabic Qashta",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 35,
+        ii: 65,
+        nutrition: {
+            calories: 340,
+            protein: 3,
+            carbs: 5,
+            fat: 35,
+            fiber: 0
+        }
+    },
+    {
+        id: 774,
+        name: "الشنينة (لبن رائب)",
+        nameEn: "Shenina",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 35,
+        ii: 50,
+        nutrition: {
+            calories: 52,
+            protein: 3.2,
+            carbs: 5,
+            fat: 2,
+            fiber: 0
+        }
+    },
+    {
+        id: 775,
+        name: "الكليجا",
+        nameEn: "Kleija",
+        icon: "🥮",
+        category: "حلويات",
+        gi: 72,
+        ii: 75,
+        nutrition: {
+            calories: 415,
+            protein: 5,
+            carbs: 58,
+            fat: 18,
+            fiber: 2
+        }
+    },
+    {
+        id: 776,
+        name: "القطايف",
+        nameEn: "Qatayef",
+        icon: "🥞",
+        category: "حلويات",
+        gi: 70,
+        ii: 72,
+        nutrition: {
+            calories: 295,
+            protein: 4.5,
+            carbs: 48,
+            fat: 10,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 777,
+        name: "الكنافة النابلسية",
+        nameEn: "Nabulsi Kunafa",
+        icon: "🧀",
+        category: "حلويات",
+        gi: 75,
+        ii: 78,
+        nutrition: {
+            calories: 385,
+            protein: 8,
+            carbs: 52,
+            fat: 16,
+            fiber: 1
+        }
+    },
+    {
+        id: 778,
+        name: "البسبوسة",
+        nameEn: "Basbousa",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 72,
+        ii: 75,
+        nutrition: {
+            calories: 345,
+            protein: 5.2,
+            carbs: 48,
+            fat: 15,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 779,
+        name: "الهريسة الحلبية",
+        nameEn: "Aleppian Harissa",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 70,
+        ii: 73,
+        nutrition: {
+            calories: 365,
+            protein: 6,
+            carbs: 50,
+            fat: 16,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 780,
+        name: "القطر (الشيرة)",
+        nameEn: "Sugar Syrup (Qater)",
+        icon: "🍯",
+        category: "حلويات",
+        gi: 85,
+        ii: 90,
+        nutrition: {
+            calories: 260,
+            protein: 0,
+            carbs: 65,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 781,
+        name: "الشاورما (دجاج)",
+        nameEn: "Chicken Shawarma",
+        icon: "🌯",
+        category: "أطباق عربية",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 225,
+            protein: 18,
+            carbs: 12,
+            fat: 12,
+            fiber: 2
+        }
+    },
+    {
+        id: 782,
+        name: "الشاورما (لحم)",
+        nameEn: "Beef Shawarma",
+        icon: "🌯",
+        category: "أطباق عربية",
+        gi: 52,
+        ii: 62,
+        nutrition: {
+            calories: 265,
+            protein: 20,
+            carbs: 10,
+            fat: 16,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 783,
+        name: "الكباب الحلبي",
+        nameEn: "Aleppian Kebab",
+        icon: "🍢",
+        category: "أطباق عربية",
+        gi: 0,
+        ii: 65,
+        nutrition: {
+            calories: 285,
+            protein: 24,
+            carbs: 2,
+            fat: 20,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 784,
+        name: "الكفتة المشوية",
+        nameEn: "Grilled Kofta",
+        icon: "🍢",
+        category: "أطباق عربية",
+        gi: 0,
+        ii: 60,
+        nutrition: {
+            calories: 255,
+            protein: 22,
+            carbs: 4,
+            fat: 17,
+            fiber: 1
+        }
+    },
+    {
+        id: 785,
+        name: "الكبة النية",
+        nameEn: "Raw Kibbeh",
+        icon: "🥩",
+        category: "أطباق عربية",
+        gi: 42,
+        ii: 55,
+        nutrition: {
+            calories: 195,
+            protein: 15,
+            carbs: 18,
+            fat: 7,
+            fiber: 3
+        }
+    },
+    {
+        id: 786,
+        name: "الكبة المقلية",
+        nameEn: "Fried Kibbeh",
+        icon: "🥟",
+        category: "أطباق عربية",
+        gi: 58,
+        ii: 62,
+        nutrition: {
+            calories: 365,
+            protein: 14,
+            carbs: 28,
+            fat: 22,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 787,
+        name: "السمبوسك باللحم",
+        nameEn: "Meat Samosa",
+        icon: "🥟",
+        category: "أطباق عربية",
+        gi: 60,
+        ii: 65,
+        nutrition: {
+            calories: 295,
+            protein: 10,
+            carbs: 26,
+            fat: 17,
+            fiber: 2
+        }
+    },
+    {
+        id: 788,
+        name: "الرقاق باللحم",
+        nameEn: "Ruqaq with Meat",
+        icon: "🥙",
+        category: "أطباق عربية",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 245,
+            protein: 12,
+            carbs: 28,
+            fat: 10,
+            fiber: 2
+        }
+    },
+    {
+        id: 789,
+        name: "الفطير المشلتت",
+        nameEn: "Feteer Meshaltet",
+        icon: "🥐",
+        category: "مخبوزات",
+        gi: 68,
+        ii: 70,
+        nutrition: {
+            calories: 425,
+            protein: 7,
+            carbs: 52,
+            fat: 21,
+            fiber: 2
+        }
+    },
+    {
+        id: 790,
+        name: "الصاج (خبز صاج)",
+        nameEn: "Saj Bread",
+        icon: "🫓",
+        category: "مخبوزات",
+        gi: 70,
+        ii: 68,
+        nutrition: {
+            calories: 265,
+            protein: 8,
+            carbs: 55,
+            fat: 1.5,
+            fiber: 2
+        }
+    },
+    {
+        id: 791,
+        name: "المرقوق",
+        nameEn: "Marqooq",
+        icon: "🍲",
+        category: "أطباق عربية",
+        gi: 58,
+        ii: 55,
+        nutrition: {
+            calories: 215,
+            protein: 11,
+            carbs: 28,
+            fat: 7,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 792,
+        name: "الجريش السعودي",
+        nameEn: "Saudi Jareesh",
+        icon: "🍚",
+        category: "أطباق عربية",
+        gi: 50,
+        ii: 48,
+        nutrition: {
+            calories: 185,
+            protein: 8,
+            carbs: 32,
+            fat: 3,
+            fiber: 4.5
+        }
+    },
+    {
+        id: 793,
+        name: "القرصان",
+        nameEn: "Qursan",
+        icon: "🍲",
+        category: "أطباق عربية",
+        gi: 55,
+        ii: 52,
+        nutrition: {
+            calories: 235,
+            protein: 10,
+            carbs: 34,
+            fat: 7,
+            fiber: 4
+        }
+    },
+    {
+        id: 794,
+        name: "الهريس",
+        nameEn: "Harees",
+        icon: "🥣",
+        category: "أطباق عربية",
+        gi: 62,
+        ii: 65,
+        nutrition: {
+            calories: 245,
+            protein: 12,
+            carbs: 38,
+            fat: 5,
+            fiber: 3
+        }
+    },
+    {
+        id: 795,
+        name: "العريكة",
+        nameEn: "Areeka",
+        icon: "🍯",
+        category: "حلويات",
+        gi: 75,
+        ii: 78,
+        nutrition: {
+            calories: 425,
+            protein: 6,
+            carbs: 55,
+            fat: 20,
+            fiber: 2
+        }
+    },
+    {
+        id: 796,
+        name: "القهوة العربية",
+        nameEn: "Arabic Coffee",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 2,
+            protein: 0.3,
+            carbs: 0,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 797,
+        name: "الشاي بالنعناع",
+        nameEn: "Mint Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 2,
+            protein: 0,
+            carbs: 0.5,
+            fat: 0,
+            fiber: 0
+        }
+    },
+    {
+        id: 798,
+        name: "السحلب",
+        nameEn: "Sahlab",
+        icon: "🥛",
+        category: "مشروبات",
+        gi: 55,
+        ii: 60,
+        nutrition: {
+            calories: 145,
+            protein: 4,
+            carbs: 22,
+            fat: 4.5,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 799,
+        name: "التمر الهندي",
+        nameEn: "Tamarind Drink",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 42,
+        ii: 38,
+        nutrition: {
+            calories: 85,
+            protein: 0.5,
+            carbs: 21,
+            fat: 0.2,
+            fiber: 1
+        }
+    },
+    {
+        id: 800,
+        name: "الخروب",
+        nameEn: "Carob Drink",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 40,
+        ii: 35,
+        nutrition: {
+            calories: 95,
+            protein: 0.8,
+            carbs: 23,
+            fat: 0.3,
+            fiber: 1.5
+        }
+    },
+    // مشروبات كحولية (لأغراض تعليمية وصحية فقط)
+    {
+        id: 801,
+        name: "بيرة عادية",
+        nameEn: "Regular Beer",
+        icon: "🍺",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 43,
+            protein: 0.5,
+            carbs: 3.6,
+            fat: 0,
+            fiber: 0,
+            alcohol: 4.0
+        },
+        warning: "⚠️ يحتوي على كحول (4%). يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 802,
+        name: "بيرة خفيفة",
+        nameEn: "Light Beer",
+        icon: "🍺",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 29,
+            protein: 0.2,
+            carbs: 1.6,
+            fat: 0,
+            fiber: 0,
+            alcohol: 3.5
+        },
+        warning: "⚠️ يحتوي على كحول (3.5%). يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 803,
+        name: "نبيذ أحمر",
+        nameEn: "Red Wine",
+        icon: "🍷",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 3,
+        nutrition: {
+            calories: 85,
+            protein: 0.1,
+            carbs: 2.6,
+            fat: 0,
+            fiber: 0,
+            alcohol: 10.6
+        },
+        warning: "⚠️ يحتوي على كحول (13%). يضر الكبد والقلب والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 804,
+        name: "نبيذ أبيض",
+        nameEn: "White Wine",
+        icon: "🍷",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 3,
+        nutrition: {
+            calories: 82,
+            protein: 0.1,
+            carbs: 2.1,
+            fat: 0,
+            fiber: 0,
+            alcohol: 10.4
+        },
+        warning: "⚠️ يحتوي على كحول (12.5%). يضر الكبد والقلب. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 805,
+        name: "شامبانيا",
+        nameEn: "Champagne",
+        icon: "🍾",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 89,
+            protein: 0.2,
+            carbs: 3.8,
+            fat: 0,
+            fiber: 0,
+            alcohol: 10.0
+        },
+        warning: "⚠️ يحتوي على كحول (12%). يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 806,
+        name: "ويسكي",
+        nameEn: "Whiskey",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 250,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 33.4
+        },
+        warning: "⚠️ يحتوي على كحول (40%). خطر جداً على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 807,
+        name: "فودكا",
+        nameEn: "Vodka",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 231,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 33.4
+        },
+        warning: "⚠️ يحتوي على كحول (40%). خطر جداً على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 808,
+        name: "روم",
+        nameEn: "Rum",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 231,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 33.4
+        },
+        warning: "⚠️ يحتوي على كحول (40%). خطر جداً على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 809,
+        name: "جن",
+        nameEn: "Gin",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 263,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 37.5
+        },
+        warning: "⚠️ يحتوي على كحول (45%). خطر جداً على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 810,
+        name: "تيكيلا",
+        nameEn: "Tequila",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 231,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 33.4
+        },
+        warning: "⚠️ يحتوي على كحول (40%). خطر جداً على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 811,
+        name: "براندي",
+        nameEn: "Brandy",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 231,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 33.4
+        },
+        warning: "⚠️ يحتوي على كحول (40%). خطر جداً على الكبد والقلب. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 812,
+        name: "كونياك",
+        nameEn: "Cognac",
+        icon: "🥃",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 239,
+            protein: 0,
+            carbs: 0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 34.5
+        },
+        warning: "⚠️ يحتوي على كحول (41%). خطر جداً على الكبد والقلب. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 813,
+        name: "ساكي (نبيذ أرز ياباني)",
+        nameEn: "Sake",
+        icon: "🍶",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 134,
+            protein: 0.5,
+            carbs: 5.0,
+            fat: 0,
+            fiber: 0,
+            alcohol: 15.6
+        },
+        warning: "⚠️ يحتوي على كحول (15-20%). يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 814,
+        name: "موهيتو",
+        nameEn: "Mojito",
+        icon: "🍹",
+        category: "مشروبات كحولية",
+        gi: 15,
+        ii: 18,
+        nutrition: {
+            calories: 168,
+            protein: 0.2,
+            carbs: 20,
+            fat: 0.1,
+            fiber: 0,
+            alcohol: 10.0
+        },
+        warning: "⚠️ يحتوي على كحول وسكر عالي. يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 815,
+        name: "مارغريتا",
+        nameEn: "Margarita",
+        icon: "🍹",
+        category: "مشروبات كحولية",
+        gi: 18,
+        ii: 20,
+        nutrition: {
+            calories: 168,
+            protein: 0,
+            carbs: 13,
+            fat: 0.1,
+            fiber: 0.2,
+            alcohol: 11.7
+        },
+        warning: "⚠️ يحتوي على كحول وسكر. يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 816,
+        name: "بينا كولادا",
+        nameEn: "Pina Colada",
+        icon: "🍹",
+        category: "مشروبات كحولية",
+        gi: 25,
+        ii: 28,
+        nutrition: {
+            calories: 245,
+            protein: 0.8,
+            carbs: 32,
+            fat: 2.9,
+            fiber: 0.5,
+            alcohol: 10.0
+        },
+        warning: "⚠️ يحتوي على كحول وسكر ودهون عالية. يضر الكبد. يسبب السمنة والإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 817,
+        name: "كوزموبوليتان",
+        nameEn: "Cosmopolitan",
+        icon: "🍸",
+        category: "مشروبات كحولية",
+        gi: 12,
+        ii: 15,
+        nutrition: {
+            calories: 146,
+            protein: 0,
+            carbs: 10,
+            fat: 0,
+            fiber: 0,
+            alcohol: 13.0
+        },
+        warning: "⚠️ يحتوي على كحول عالي وسكر. يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 818,
+        name: "مارتيني",
+        nameEn: "Martini",
+        icon: "🍸",
+        category: "مشروبات كحولية",
+        gi: 0,
+        ii: 0,
+        nutrition: {
+            calories: 176,
+            protein: 0,
+            carbs: 0.3,
+            fat: 0,
+            fiber: 0,
+            alcohol: 21.5
+        },
+        warning: "⚠️ يحتوي على كحول عالي جداً (26%). خطر على الكبد والدماغ. يسبب الإدمان الشديد. ممنوع للحوامل."
+    },
+    {
+        id: 819,
+        name: "دايكيري",
+        nameEn: "Daiquiri",
+        icon: "🍹",
+        category: "مشروبات كحولية",
+        gi: 20,
+        ii: 22,
+        nutrition: {
+            calories: 186,
+            protein: 0.1,
+            carbs: 15,
+            fat: 0,
+            fiber: 0.1,
+            alcohol: 13.4
+        },
+        warning: "⚠️ يحتوي على كحول وسكر عالي. يضر الكبد والدماغ. يسبب الإدمان. ممنوع للحوامل."
+    },
+    {
+        id: 820,
+        name: "سانجريا",
+        nameEn: "Sangria",
+        icon: "🍷",
+        category: "مشروبات كحولية",
+        gi: 22,
+        ii: 25,
+        nutrition: {
+            calories: 125,
+            protein: 0.3,
+            carbs: 13,
+            fat: 0.2,
+            fiber: 0.5,
+            alcohol: 8.9
+        },
+        warning: "⚠️ يحتوي على كحول وسكر من الفواكه. يضر الكبد. يسبب الإدمان. ممنوع للحوامل."
+    },
+    // أطعمة عالمية شهيرة
+    {
+        id: 821,
+        name: "بيتزا مارغريتا",
+        nameEn: "Pizza Margherita",
+        icon: "🍕",
+        category: "أطعمة إيطالية",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 266,
+            protein: 11,
+            carbs: 33,
+            fat: 10,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 822,
+        name: "بيتزا بيبروني",
+        nameEn: "Pepperoni Pizza",
+        icon: "🍕",
+        category: "أطعمة إيطالية",
+        gi: 60,
+        ii: 75,
+        nutrition: {
+            calories: 298,
+            protein: 12,
+            carbs: 34,
+            fat: 13,
+            fiber: 2.3
+        }
+    },
+    {
+        id: 823,
+        name: "سباغيتي بولونيز",
+        nameEn: "Spaghetti Bolognese",
+        icon: "🍝",
+        category: "أطعمة إيطالية",
+        gi: 52,
+        ii: 58,
+        nutrition: {
+            calories: 182,
+            protein: 8,
+            carbs: 27,
+            fat: 5,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 824,
+        name: "لازانيا باللحم",
+        nameEn: "Meat Lasagna",
+        icon: "🍝",
+        category: "أطعمة إيطالية",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 195,
+            protein: 11,
+            carbs: 18,
+            fat: 9,
+            fiber: 2.2
+        }
+    },
+    {
+        id: 825,
+        name: "فيتوتشيني ألفريدو",
+        nameEn: "Fettuccine Alfredo",
+        icon: "🍝",
+        category: "أطعمة إيطالية",
+        gi: 50,
+        ii: 60,
+        nutrition: {
+            calories: 320,
+            protein: 10,
+            carbs: 38,
+            fat: 14,
+            fiber: 2
+        }
+    },
+    {
+        id: 826,
+        name: "ريزوتو بالفطر",
+        nameEn: "Mushroom Risotto",
+        icon: "🍚",
+        category: "أطعمة إيطالية",
+        gi: 69,
+        ii: 62,
+        nutrition: {
+            calories: 166,
+            protein: 4.5,
+            carbs: 26,
+            fat: 5,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 827,
+        name: "كرواسون سادة",
+        nameEn: "Plain Croissant",
+        icon: "🥐",
+        category: "أطعمة فرنسية",
+        gi: 67,
+        ii: 79,
+        nutrition: {
+            calories: 406,
+            protein: 8,
+            carbs: 46,
+            fat: 21,
+            fiber: 2.6
+        }
+    },
+    {
+        id: 828,
+        name: "كرواسون بالشوكولاتة",
+        nameEn: "Chocolate Croissant",
+        icon: "🥐",
+        category: "أطعمة فرنسية",
+        gi: 70,
+        ii: 85,
+        nutrition: {
+            calories: 450,
+            protein: 7.5,
+            carbs: 52,
+            fat: 24,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 829,
+        name: "باغيت فرنسي",
+        nameEn: "French Baguette",
+        icon: "🥖",
+        category: "أطعمة فرنسية",
+        gi: 75,
+        ii: 95,
+        nutrition: {
+            calories: 272,
+            protein: 9,
+            carbs: 55,
+            fat: 1.6,
+            fiber: 3
+        }
+    },
+    {
+        id: 830,
+        name: "كيش لورين",
+        nameEn: "Quiche Lorraine",
+        icon: "🥧",
+        category: "أطعمة فرنسية",
+        gi: 40,
+        ii: 55,
+        nutrition: {
+            calories: 350,
+            protein: 14,
+            carbs: 22,
+            fat: 23,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 831,
+        name: "كريب بالنوتيلا",
+        nameEn: "Nutella Crepe",
+        icon: "🥞",
+        category: "أطعمة فرنسية",
+        gi: 65,
+        ii: 75,
+        nutrition: {
+            calories: 380,
+            protein: 7,
+            carbs: 52,
+            fat: 16,
+            fiber: 2
+        }
+    },
+    {
+        id: 832,
+        name: "برغر لحم بقري",
+        nameEn: "Beef Burger",
+        icon: "🍔",
+        category: "أطعمة أمريكية",
+        gi: 66,
+        ii: 74,
+        nutrition: {
+            calories: 295,
+            protein: 17,
+            carbs: 24,
+            fat: 14,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 833,
+        name: "تشيز برغر",
+        nameEn: "Cheeseburger",
+        icon: "🍔",
+        category: "أطعمة أمريكية",
+        gi: 66,
+        ii: 80,
+        nutrition: {
+            calories: 354,
+            protein: 20,
+            carbs: 25,
+            fat: 19,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 834,
+        name: "هوت دوج",
+        nameEn: "Hot Dog",
+        icon: "🌭",
+        category: "أطعمة أمريكية",
+        gi: 65,
+        ii: 73,
+        nutrition: {
+            calories: 290,
+            protein: 10,
+            carbs: 25,
+            fat: 17,
+            fiber: 1
+        }
+    },
+    {
+        id: 835,
+        name: "بانكيك بالعسل",
+        nameEn: "Pancakes with Syrup",
+        icon: "🥞",
+        category: "أطعمة أمريكية",
+        gi: 67,
+        ii: 82,
+        nutrition: {
+            calories: 227,
+            protein: 6,
+            carbs: 38,
+            fat: 6,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 836,
+        name: "وافل بلجيكي",
+        nameEn: "Belgian Waffle",
+        icon: "🧇",
+        category: "أطعمة أمريكية",
+        gi: 76,
+        ii: 85,
+        nutrition: {
+            calories: 310,
+            protein: 7,
+            carbs: 41,
+            fat: 13,
+            fiber: 1.8
+        }
+    },
+    {
+        id: 837,
+        name: "ناتشوز بالجبن",
+        nameEn: "Nachos with Cheese",
+        icon: "🧀",
+        category: "أطعمة مكسيكية",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 346,
+            protein: 9,
+            carbs: 36,
+            fat: 19,
+            fiber: 4
+        }
+    },
+    {
+        id: 838,
+        name: "تاكو لحم بقري",
+        nameEn: "Beef Taco",
+        icon: "🌮",
+        category: "أطعمة مكسيكية",
+        gi: 50,
+        ii: 60,
+        nutrition: {
+            calories: 226,
+            protein: 11,
+            carbs: 20,
+            fat: 11,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 839,
+        name: "بوريتو دجاج",
+        nameEn: "Chicken Burrito",
+        icon: "🌯",
+        category: "أطعمة مكسيكية",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 380,
+            protein: 20,
+            carbs: 48,
+            fat: 12,
+            fiber: 5
+        }
+    },
+    {
+        id: 840,
+        name: "كويساديلا بالجبن",
+        nameEn: "Cheese Quesadilla",
+        icon: "🫓",
+        category: "أطعمة مكسيكية",
+        gi: 52,
+        ii: 70,
+        nutrition: {
+            calories: 380,
+            protein: 16,
+            carbs: 32,
+            fat: 21,
+            fiber: 3
+        }
+    },
+    {
+        id: 841,
+        name: "جواكامولي",
+        nameEn: "Guacamole",
+        icon: "🥑",
+        category: "أطعمة مكسيكية",
+        gi: 15,
+        ii: 18,
+        nutrition: {
+            calories: 161,
+            protein: 2,
+            carbs: 9,
+            fat: 15,
+            fiber: 7
+        }
+    },
+    {
+        id: 842,
+        name: "موساكا يونانية",
+        nameEn: "Greek Moussaka",
+        icon: "🍆",
+        category: "أطعمة يونانية",
+        gi: 45,
+        ii: 50,
+        nutrition: {
+            calories: 180,
+            protein: 9,
+            carbs: 12,
+            fat: 11,
+            fiber: 3
+        }
+    },
+    {
+        id: 843,
+        name: "سوفلاكي دجاج",
+        nameEn: "Chicken Souvlaki",
+        icon: "�串",
+        category: "أطعمة يونانية",
+        gi: 40,
+        ii: 45,
+        nutrition: {
+            calories: 230,
+            protein: 28,
+            carbs: 5,
+            fat: 10,
+            fiber: 1
+        }
+    },
+    {
+        id: 844,
+        name: "جيروس (شاورما يونانية)",
+        nameEn: "Gyros",
+        icon: "🥙",
+        category: "أطعمة يونانية",
+        gi: 57,
+        ii: 62,
+        nutrition: {
+            calories: 350,
+            protein: 21,
+            carbs: 35,
+            fat: 13,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 845,
+        name: "سلطة يونانية",
+        nameEn: "Greek Salad",
+        icon: "🥗",
+        category: "أطعمة يونانية",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 156,
+            protein: 5,
+            carbs: 8,
+            fat: 12,
+            fiber: 3
+        }
+    },
+    {
+        id: 846,
+        name: "دولماس (ورق عنب يوناني)",
+        nameEn: "Dolmas",
+        icon: "🍃",
+        category: "أطعمة يونانية",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 90,
+            protein: 2,
+            carbs: 13,
+            fat: 3.5,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 847,
+        name: "باييلا إسبانية",
+        nameEn: "Spanish Paella",
+        icon: "🥘",
+        category: "أطعمة إسبانية",
+        gi: 58,
+        ii: 62,
+        nutrition: {
+            calories: 215,
+            protein: 12,
+            carbs: 28,
+            fat: 6,
+            fiber: 2
+        }
+    },
+    {
+        id: 848,
+        name: "تورتيلا إسبانية",
+        nameEn: "Spanish Tortilla",
+        icon: "🥚",
+        category: "أطعمة إسبانية",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 190,
+            protein: 8,
+            carbs: 15,
+            fat: 11,
+            fiber: 1.8
+        }
+    },
+    {
+        id: 849,
+        name: "تشوروس بالشوكولاتة",
+        nameEn: "Churros with Chocolate",
+        icon: "🍩",
+        category: "أطعمة إسبانية",
+        gi: 75,
+        ii: 85,
+        nutrition: {
+            calories: 380,
+            protein: 5,
+            carbs: 51,
+            fat: 18,
+            fiber: 2
+        }
+    },
+    {
+        id: 850,
+        name: "فلافل",
+        nameEn: "Falafel",
+        icon: "🧆",
+        category: "أطعمة شرق أوسطية",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 333,
+            protein: 13,
+            carbs: 31,
+            fat: 18,
+            fiber: 6
+        }
+    },
+    {
+        id: 851,
+        name: "شاورما دجاج عربية",
+        nameEn: "Chicken Shawarma Wrap",
+        icon: "🌯",
+        category: "أطعمة شرق أوسطية",
+        gi: 57,
+        ii: 65,
+        nutrition: {
+            calories: 350,
+            protein: 24,
+            carbs: 38,
+            fat: 11,
+            fiber: 3
+        }
+    },
+    {
+        id: 852,
+        name: "كباب مشوي",
+        nameEn: "Grilled Kebab",
+        icon: "🍢",
+        category: "أطعمة شرق أوسطية",
+        gi: 0,
+        ii: 35,
+        nutrition: {
+            calories: 270,
+            protein: 25,
+            carbs: 2,
+            fat: 18,
+            fiber: 0
+        }
+    },
+    {
+        id: 853,
+        name: "منسف أردني",
+        nameEn: "Jordanian Mansaf",
+        icon: "🍚",
+        category: "أطعمة شرق أوسطية",
+        gi: 60,
+        ii: 65,
+        nutrition: {
+            calories: 420,
+            protein: 22,
+            carbs: 45,
+            fat: 16,
+            fiber: 2
+        }
+    },
+    {
+        id: 854,
+        name: "سمك مشوي",
+        nameEn: "Grilled Fish",
+        icon: "🐟",
+        category: "أطعمة بحرية",
+        gi: 0,
+        ii: 28,
+        nutrition: {
+            calories: 165,
+            protein: 25,
+            carbs: 0,
+            fat: 6.5,
+            fiber: 0
+        }
+    },
+    {
+        id: 855,
+        name: "روبيان (جمبري) مشوي",
+        nameEn: "Grilled Shrimp",
+        icon: "🍤",
+        category: "أطعمة بحرية",
+        gi: 0,
+        ii: 25,
+        nutrition: {
+            calories: 99,
+            protein: 24,
+            carbs: 0.2,
+            fat: 0.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 856,
+        name: "سلمون مشوي",
+        nameEn: "Grilled Salmon",
+        icon: "🐟",
+        category: "أطعمة بحرية",
+        gi: 0,
+        ii: 30,
+        nutrition: {
+            calories: 206,
+            protein: 22,
+            carbs: 0,
+            fat: 13,
+            fiber: 0
+        }
+    },
+    {
+        id: 857,
+        name: "سي فود مقلي",
+        nameEn: "Fried Seafood",
+        icon: "🦐",
+        category: "أطعمة بحرية",
+        gi: 45,
+        ii: 55,
+        nutrition: {
+            calories: 340,
+            protein: 18,
+            carbs: 22,
+            fat: 20,
+            fiber: 1
+        }
+    },
+    {
+        id: 858,
+        name: "سوشي كاليفورنيا رول",
+        nameEn: "California Roll",
+        icon: "🍣",
+        category: "أطعمة يابانية",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 140,
+            protein: 6,
+            carbs: 19,
+            fat: 4.5,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 859,
+        name: "سوشي سالمون",
+        nameEn: "Salmon Sushi",
+        icon: "🍣",
+        category: "أطعمة يابانية",
+        gi: 52,
+        ii: 55,
+        nutrition: {
+            calories: 180,
+            protein: 9,
+            carbs: 21,
+            fat: 7,
+            fiber: 1
+        }
+    },
+    {
+        id: 860,
+        name: "دجاج تيرياكي",
+        nameEn: "Chicken Teriyaki",
+        icon: "🍗",
+        category: "أطعمة يابانية",
+        gi: 45,
+        ii: 52,
+        nutrition: {
+            calories: 240,
+            protein: 28,
+            carbs: 18,
+            fat: 6,
+            fiber: 1
+        }
+    },
+    {
+        id: 861,
+        name: "دجاج كاتسو",
+        nameEn: "Chicken Katsu",
+        icon: "🍗",
+        category: "أطعمة يابانية",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 320,
+            protein: 22,
+            carbs: 28,
+            fat: 14,
+            fiber: 2
+        }
+    },
+    {
+        id: 862,
+        name: "تشاو مين (نودلز صيني)",
+        nameEn: "Chow Mein",
+        icon: "🍜",
+        category: "أطعمة صينية",
+        gi: 53,
+        ii: 60,
+        nutrition: {
+            calories: 237,
+            protein: 8,
+            carbs: 26,
+            fat: 11,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 863,
+        name: "دجاج بالليمون صيني",
+        nameEn: "Chinese Lemon Chicken",
+        icon: "🍗",
+        category: "أطعمة صينية",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 380,
+            protein: 20,
+            carbs: 42,
+            fat: 15,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 864,
+        name: "سبرينج رول (لفائف ربيع)",
+        nameEn: "Spring Rolls",
+        icon: "🥟",
+        category: "أطعمة صينية",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 140,
+            protein: 4,
+            carbs: 18,
+            fat: 6,
+            fiber: 2
+        }
+    },
+    {
+        id: 865,
+        name: "دمبلنغ (زلابية صينية)",
+        nameEn: "Dumplings",
+        icon: "🥟",
+        category: "أطعمة صينية",
+        gi: 50,
+        ii: 58,
+        nutrition: {
+            calories: 175,
+            protein: 7,
+            carbs: 21,
+            fat: 7,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 866,
+        name: "أرز مقلي صيني",
+        nameEn: "Chinese Fried Rice",
+        icon: "🍚",
+        category: "أطعمة صينية",
+        gi: 68,
+        ii: 72,
+        nutrition: {
+            calories: 228,
+            protein: 5,
+            carbs: 33,
+            fat: 8,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 867,
+        name: "فيش آند تشيبس",
+        nameEn: "Fish and Chips",
+        icon: "🐟",
+        category: "أطعمة بريطانية",
+        gi: 65,
+        ii: 70,
+        nutrition: {
+            calories: 450,
+            protein: 22,
+            carbs: 42,
+            fat: 22,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 868,
+        name: "بيض بنديكت",
+        nameEn: "Eggs Benedict",
+        icon: "🍳",
+        category: "أطعمة أمريكية",
+        gi: 48,
+        ii: 60,
+        nutrition: {
+            calories: 440,
+            protein: 19,
+            carbs: 28,
+            fat: 28,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 869,
+        name: "ساندويش كلوب",
+        nameEn: "Club Sandwich",
+        icon: "🥪",
+        category: "ساندويشات",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 390,
+            protein: 24,
+            carbs: 36,
+            fat: 16,
+            fiber: 3
+        }
+    },
+    {
+        id: 870,
+        name: "ساندويش تونة",
+        nameEn: "Tuna Sandwich",
+        icon: "🥪",
+        category: "ساندويشات",
+        gi: 52,
+        ii: 58,
+        nutrition: {
+            calories: 287,
+            protein: 16,
+            carbs: 29,
+            fat: 12,
+            fiber: 2.5
+        }
+    },
+    // حلويات ومخبوزات عالمية (40 عنصر)
+    {
+        id: 871,
+        name: "كيك شوكولاتة",
+        nameEn: "Chocolate Cake",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 65,
+        ii: 75,
+        nutrition: {
+            calories: 352,
+            protein: 5,
+            carbs: 50,
+            fat: 16,
+            fiber: 2
+        }
+    },
+    {
+        id: 872,
+        name: "كيك فانيليا",
+        nameEn: "Vanilla Cake",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 67,
+        ii: 77,
+        nutrition: {
+            calories: 340,
+            protein: 4.5,
+            carbs: 48,
+            fat: 15,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 873,
+        name: "ريد فلفت كيك",
+        nameEn: "Red Velvet Cake",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 68,
+        ii: 80,
+        nutrition: {
+            calories: 385,
+            protein: 5,
+            carbs: 52,
+            fat: 18,
+            fiber: 1.8
+        }
+    },
+    {
+        id: 874,
+        name: "تشيز كيك",
+        nameEn: "Cheesecake",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 321,
+            protein: 6,
+            carbs: 26,
+            fat: 23,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 875,
+        name: "تيراميسو",
+        nameEn: "Tiramisu",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 240,
+            protein: 5,
+            carbs: 28,
+            fat: 12,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 876,
+        name: "براوني بالشوكولاتة",
+        nameEn: "Chocolate Brownie",
+        icon: "🍫",
+        category: "حلويات",
+        gi: 70,
+        ii: 80,
+        nutrition: {
+            calories: 466,
+            protein: 6,
+            carbs: 60,
+            fat: 24,
+            fiber: 3
+        }
+    },
+    {
+        id: 877,
+        name: "كوكيز شوكولاتة تشيب",
+        nameEn: "Chocolate Chip Cookies",
+        icon: "🍪",
+        category: "حلويات",
+        gi: 65,
+        ii: 72,
+        nutrition: {
+            calories: 488,
+            protein: 5,
+            carbs: 67,
+            fat: 23,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 878,
+        name: "بسكويت أوريو",
+        nameEn: "Oreo Cookies",
+        icon: "🍪",
+        category: "حلويات",
+        gi: 67,
+        ii: 75,
+        nutrition: {
+            calories: 437,
+            protein: 4,
+            carbs: 71,
+            fat: 16,
+            fiber: 2.9
+        }
+    },
+    {
+        id: 879,
+        name: "دونات محلاة",
+        nameEn: "Glazed Donut",
+        icon: "🍩",
+        category: "حلويات",
+        gi: 76,
+        ii: 88,
+        nutrition: {
+            calories: 255,
+            protein: 3.5,
+            carbs: 31,
+            fat: 14,
+            fiber: 0.9
+        }
+    },
+    {
+        id: 880,
+        name: "دونات بالشوكولاتة",
+        nameEn: "Chocolate Donut",
+        icon: "🍩",
+        category: "حلويات",
+        gi: 78,
+        ii: 90,
+        nutrition: {
+            calories: 270,
+            protein: 4,
+            carbs: 35,
+            fat: 15,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 881,
+        name: "كب كيك",
+        nameEn: "Cupcake",
+        icon: "🧁",
+        category: "حلويات",
+        gi: 72,
+        ii: 82,
+        nutrition: {
+            calories: 305,
+            protein: 3.5,
+            carbs: 44,
+            fat: 13,
+            fiber: 1
+        }
+    },
+    {
+        id: 882,
+        name: "مافن توت أزرق",
+        nameEn: "Blueberry Muffin",
+        icon: "🧁",
+        category: "حلويات",
+        gi: 59,
+        ii: 68,
+        nutrition: {
+            calories: 340,
+            protein: 5,
+            carbs: 52,
+            fat: 13,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 883,
+        name: "سينابون",
+        nameEn: "Cinnamon Roll",
+        icon: "🥐",
+        category: "حلويات",
+        gi: 75,
+        ii: 85,
+        nutrition: {
+            calories: 420,
+            protein: 7,
+            carbs: 62,
+            fat: 16,
+            fiber: 2
+        }
+    },
+    {
+        id: 884,
+        name: "آيس كريم فانيليا",
+        nameEn: "Vanilla Ice Cream",
+        icon: "🍦",
+        category: "حلويات",
+        gi: 57,
+        ii: 70,
+        nutrition: {
+            calories: 207,
+            protein: 3.5,
+            carbs: 24,
+            fat: 11,
+            fiber: 0.7
+        }
+    },
+    {
+        id: 885,
+        name: "آيس كريم شوكولاتة",
+        nameEn: "Chocolate Ice Cream",
+        icon: "🍦",
+        category: "حلويات",
+        gi: 60,
+        ii: 73,
+        nutrition: {
+            calories: 216,
+            protein: 3.8,
+            carbs: 28,
+            fat: 11,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 886,
+        name: "آيس كريم فراولة",
+        nameEn: "Strawberry Ice Cream",
+        icon: "🍦",
+        category: "حلويات",
+        gi: 56,
+        ii: 68,
+        nutrition: {
+            calories: 192,
+            protein: 3.2,
+            carbs: 24,
+            fat: 9,
+            fiber: 0.9
+        }
+    },
+    {
+        id: 887,
+        name: "كريم بروليه",
+        nameEn: "Creme Brulee",
+        icon: "🍮",
+        category: "حلويات",
+        gi: 50,
+        ii: 60,
+        nutrition: {
+            calories: 288,
+            protein: 5,
+            carbs: 26,
+            fat: 18,
+            fiber: 0
+        }
+    },
+    {
+        id: 888,
+        name: "بودينغ شوكولاتة",
+        nameEn: "Chocolate Pudding",
+        icon: "🍮",
+        category: "حلويات",
+        gi: 47,
+        ii: 58,
+        nutrition: {
+            calories: 156,
+            protein: 4,
+            carbs: 26,
+            fat: 4.5,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 889,
+        name: "موس شوكولاتة",
+        nameEn: "Chocolate Mousse",
+        icon: "🍫",
+        category: "حلويات",
+        gi: 45,
+        ii: 55,
+        nutrition: {
+            calories: 189,
+            protein: 3,
+            carbs: 17,
+            fat: 13,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 890,
+        name: "إكلير بالشوكولاتة",
+        nameEn: "Chocolate Eclair",
+        icon: "🍩",
+        category: "حلويات",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 262,
+            protein: 6,
+            carbs: 24,
+            fat: 16,
+            fiber: 1
+        }
+    },
+    {
+        id: 891,
+        name: "ميلك شيك شوكولاتة",
+        nameEn: "Chocolate Milkshake",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 55,
+        ii: 68,
+        nutrition: {
+            calories: 270,
+            protein: 8,
+            carbs: 40,
+            fat: 9,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 892,
+        name: "ميلك شيك فانيليا",
+        nameEn: "Vanilla Milkshake",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 52,
+        ii: 65,
+        nutrition: {
+            calories: 254,
+            protein: 8,
+            carbs: 38,
+            fat: 8,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 893,
+        name: "فرابتشينو كراميل",
+        nameEn: "Caramel Frappuccino",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 58,
+        ii: 70,
+        nutrition: {
+            calories: 380,
+            protein: 5,
+            carbs: 58,
+            fat: 15,
+            fiber: 0
+        }
+    },
+    {
+        id: 894,
+        name: "لاتيه كراميل",
+        nameEn: "Caramel Latte",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 45,
+        ii: 55,
+        nutrition: {
+            calories: 250,
+            protein: 9,
+            carbs: 34,
+            fat: 9,
+            fiber: 0
+        }
+    },
+    {
+        id: 895,
+        name: "كابتشينو",
+        nameEn: "Cappuccino",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 120,
+            protein: 6,
+            carbs: 12,
+            fat: 5,
+            fiber: 0
+        }
+    },
+    {
+        id: 896,
+        name: "هوت شوكليت",
+        nameEn: "Hot Chocolate",
+        icon: "☕",
+        category: "مشروبات",
+        gi: 50,
+        ii: 62,
+        nutrition: {
+            calories: 192,
+            protein: 9,
+            carbs: 26,
+            fat: 6,
+            fiber: 2
+        }
+    },
+    {
+        id: 897,
+        name: "بان كيك بالشوكولاتة",
+        nameEn: "Chocolate Pancakes",
+        icon: "🥞",
+        category: "حلويات",
+        gi: 70,
+        ii: 85,
+        nutrition: {
+            calories: 280,
+            protein: 7,
+            carbs: 42,
+            fat: 9,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 898,
+        name: "فرينش توست",
+        nameEn: "French Toast",
+        icon: "🍞",
+        category: "حلويات",
+        gi: 62,
+        ii: 75,
+        nutrition: {
+            calories: 240,
+            protein: 8,
+            carbs: 34,
+            fat: 8,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 899,
+        name: "كرواسون باللوز",
+        nameEn: "Almond Croissant",
+        icon: "🥐",
+        category: "حلويات",
+        gi: 65,
+        ii: 78,
+        nutrition: {
+            calories: 446,
+            protein: 9,
+            carbs: 50,
+            fat: 24,
+            fiber: 3
+        }
+    },
+    {
+        id: 900,
+        name: "دانش (معجنات دانماركية)",
+        nameEn: "Danish Pastry",
+        icon: "🥐",
+        category: "حلويات",
+        gi: 70,
+        ii: 80,
+        nutrition: {
+            calories: 374,
+            protein: 6,
+            carbs: 45,
+            fat: 19,
+            fiber: 2
+        }
+    },
+    {
+        id: 901,
+        name: "بسكويت الزنجبيل",
+        nameEn: "Gingerbread Cookies",
+        icon: "🍪",
+        category: "حلويات",
+        gi: 68,
+        ii: 75,
+        nutrition: {
+            calories: 355,
+            protein: 4,
+            carbs: 62,
+            fat: 10,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 902,
+        name: "ماكارون فرنسي",
+        nameEn: "French Macaron",
+        icon: "🍪",
+        category: "حلويات",
+        gi: 60,
+        ii: 70,
+        nutrition: {
+            calories: 140,
+            protein: 2.5,
+            carbs: 19,
+            fat: 6.5,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 903,
+        name: "بروفيترول",
+        nameEn: "Profiterole",
+        icon: "🍰",
+        category: "حلويات",
+        gi: 58,
+        ii: 68,
+        nutrition: {
+            calories: 175,
+            protein: 4,
+            carbs: 17,
+            fat: 10,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 904,
+        name: "كريم كراميل",
+        nameEn: "Flan (Creme Caramel)",
+        icon: "🍮",
+        category: "حلويات",
+        gi: 45,
+        ii: 55,
+        nutrition: {
+            calories: 150,
+            protein: 4,
+            carbs: 24,
+            fat: 4,
+            fiber: 0
+        }
+    },
+    {
+        id: 905,
+        name: "تارت الفواكه",
+        nameEn: "Fruit Tart",
+        icon: "🥧",
+        category: "حلويات",
+        gi: 55,
+        ii: 62,
+        nutrition: {
+            calories: 250,
+            protein: 3,
+            carbs: 35,
+            fat: 12,
+            fiber: 2
+        }
+    },
+    {
+        id: 906,
+        name: "تارت التفاح",
+        nameEn: "Apple Pie",
+        icon: "🥧",
+        category: "حلويات",
+        gi: 58,
+        ii: 65,
+        nutrition: {
+            calories: 237,
+            protein: 2,
+            carbs: 34,
+            fat: 11,
+            fiber: 2
+        }
+    },
+    {
+        id: 907,
+        name: "سموثي فراولة وموز",
+        nameEn: "Strawberry Banana Smoothie",
+        icon: "🥤",
+        category: "مشروبات",
+        gi: 42,
+        ii: 50,
+        nutrition: {
+            calories: 180,
+            protein: 5,
+            carbs: 36,
+            fat: 2,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 908,
+        name: "بان كيك بالتوت",
+        nameEn: "Berry Pancakes",
+        icon: "🥞",
+        category: "حلويات",
+        gi: 63,
+        ii: 75,
+        nutrition: {
+            calories: 245,
+            protein: 7,
+            carbs: 40,
+            fat: 7,
+            fiber: 3
+        }
+    },
+    {
+        id: 909,
+        name: "شوكولاتة داكنة (70%)",
+        nameEn: "Dark Chocolate 70%",
+        icon: "🍫",
+        category: "حلويات",
+        gi: 23,
+        ii: 25,
+        nutrition: {
+            calories: 598,
+            protein: 8,
+            carbs: 46,
+            fat: 43,
+            fiber: 11
+        }
+    },
+    {
+        id: 910,
+        name: "شوكولاتة بالحليب",
+        nameEn: "Milk Chocolate",
+        icon: "🍫",
+        category: "حلويات",
+        gi: 43,
+        ii: 50,
+        nutrition: {
+            calories: 535,
+            protein: 8,
+            carbs: 59,
+            fat: 30,
+            fiber: 3.5
+        }
+    },
+    // وجبات سريعة Fast Food (30 عنصر)
+    {
+        id: 911,
+        name: "بيج ماك",
+        nameEn: "Big Mac",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 66,
+        ii: 78,
+        nutrition: {
+            calories: 563,
+            protein: 26,
+            carbs: 46,
+            fat: 33,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 912,
+        name: "وابر (برغر كنج)",
+        nameEn: "Whopper",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 68,
+        ii: 80,
+        nutrition: {
+            calories: 657,
+            protein: 28,
+            carbs: 49,
+            fat: 40,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 913,
+        name: "دجاج مقلي (KFC)",
+        nameEn: "Fried Chicken (KFC)",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 45,
+        ii: 60,
+        nutrition: {
+            calories: 320,
+            protein: 24,
+            carbs: 12,
+            fat: 21,
+            fiber: 1
+        }
+    },
+    {
+        id: 914,
+        name: "ناغتس دجاج (6 قطع)",
+        nameEn: "Chicken Nuggets (6pc)",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 50,
+        ii: 65,
+        nutrition: {
+            calories: 287,
+            protein: 15,
+            carbs: 18,
+            fat: 18,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 915,
+        name: "بروست دجاج",
+        nameEn: "Broasted Chicken",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 42,
+        ii: 58,
+        nutrition: {
+            calories: 290,
+            protein: 26,
+            carbs: 10,
+            fat: 17,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 916,
+        name: "فرايز (بطاطس مقلية)",
+        nameEn: "French Fries",
+        icon: "🍟",
+        category: "وجبات سريعة",
+        gi: 75,
+        ii: 89,
+        nutrition: {
+            calories: 312,
+            protein: 3.4,
+            carbs: 41,
+            fat: 15,
+            fiber: 3.8
+        }
+    },
+    {
+        id: 917,
+        name: "أونيون رينجز",
+        nameEn: "Onion Rings",
+        icon: "🧅",
+        category: "وجبات سريعة",
+        gi: 70,
+        ii: 80,
+        nutrition: {
+            calories: 411,
+            protein: 5,
+            carbs: 46,
+            fat: 23,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 918,
+        name: "موزاريلا ستيكس",
+        nameEn: "Mozzarella Sticks",
+        icon: "🧀",
+        category: "وجبات سريعة",
+        gi: 55,
+        ii: 70,
+        nutrition: {
+            calories: 280,
+            protein: 13,
+            carbs: 22,
+            fat: 16,
+            fiber: 1.2
+        }
+    },
+    {
+        id: 919,
+        name: "كرسبي تشيكن ساندويش",
+        nameEn: "Crispy Chicken Sandwich",
+        icon: "🥪",
+        category: "وجبات سريعة",
+        gi: 60,
+        ii: 72,
+        nutrition: {
+            calories: 470,
+            protein: 22,
+            carbs: 42,
+            fat: 24,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 920,
+        name: "فيش فيليه ساندويش",
+        nameEn: "Fish Fillet Sandwich",
+        icon: "🥪",
+        category: "وجبات سريعة",
+        gi: 58,
+        ii: 68,
+        nutrition: {
+            calories: 390,
+            protein: 15,
+            carbs: 39,
+            fat: 19,
+            fiber: 2
+        }
+    },
+    {
+        id: 921,
+        name: "بيتزا هت بيبروني (شريحة)",
+        nameEn: "Pizza Hut Pepperoni (slice)",
+        icon: "🍕",
+        category: "وجبات سريعة",
+        gi: 62,
+        ii: 75,
+        nutrition: {
+            calories: 313,
+            protein: 13,
+            carbs: 30,
+            fat: 16,
+            fiber: 2
+        }
+    },
+    {
+        id: 922,
+        name: "دومينوز بيتزا مارغريتا (شريحة)",
+        nameEn: "Dominos Margherita (slice)",
+        icon: "🍕",
+        category: "وجبات سريعة",
+        gi: 60,
+        ii: 72,
+        nutrition: {
+            calories: 280,
+            protein: 11,
+            carbs: 32,
+            fat: 12,
+            fiber: 2.2
+        }
+    },
+    {
+        id: 923,
+        name: "صب واي دجاج تيرياكي",
+        nameEn: "Subway Chicken Teriyaki",
+        icon: "🥪",
+        category: "وجبات سريعة",
+        gi: 52,
+        ii: 60,
+        nutrition: {
+            calories: 370,
+            protein: 26,
+            carbs: 57,
+            fat: 5,
+            fiber: 4
+        }
+    },
+    {
+        id: 924,
+        name: "صب واي تونة",
+        nameEn: "Subway Tuna",
+        icon: "🥪",
+        category: "وجبات سريعة",
+        gi: 50,
+        ii: 58,
+        nutrition: {
+            calories: 480,
+            protein: 20,
+            carbs: 46,
+            fat: 25,
+            fiber: 4
+        }
+    },
+    {
+        id: 925,
+        name: "بوب آيز دجاج مقلي",
+        nameEn: "Popeyes Fried Chicken",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 45,
+        ii: 62,
+        nutrition: {
+            calories: 340,
+            protein: 24,
+            carbs: 14,
+            fat: 22,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 926,
+        name: "تاكو بل كرانشي تاكو",
+        nameEn: "Taco Bell Crunchy Taco",
+        icon: "🌮",
+        category: "وجبات سريعة",
+        gi: 48,
+        ii: 58,
+        nutrition: {
+            calories: 170,
+            protein: 8,
+            carbs: 13,
+            fat: 10,
+            fiber: 3
+        }
+    },
+    {
+        id: 927,
+        name: "ويندي'ز دجاج كرسبي",
+        nameEn: "Wendy's Crispy Chicken",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 58,
+        ii: 70,
+        nutrition: {
+            calories: 350,
+            protein: 16,
+            carbs: 36,
+            fat: 17,
+            fiber: 2
+        }
+    },
+    {
+        id: 928,
+        name: "برغر مشروم سويس",
+        nameEn: "Mushroom Swiss Burger",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 62,
+        ii: 75,
+        nutrition: {
+            calories: 620,
+            protein: 34,
+            carbs: 42,
+            fat: 34,
+            fiber: 3
+        }
+    },
+    {
+        id: 929,
+        name: "دبل تشيز برغر",
+        nameEn: "Double Cheeseburger",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 68,
+        ii: 82,
+        nutrition: {
+            calories: 440,
+            protein: 25,
+            carbs: 34,
+            fat: 23,
+            fiber: 2
+        }
+    },
+    {
+        id: 930,
+        name: "بيكون برغر",
+        nameEn: "Bacon Burger",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 65,
+        ii: 78,
+        nutrition: {
+            calories: 595,
+            protein: 32,
+            carbs: 42,
+            fat: 32,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 931,
+        name: "تشيكن رانش ساندويش",
+        nameEn: "Chicken Ranch Sandwich",
+        icon: "🥪",
+        category: "وجبات سريعة",
+        gi: 57,
+        ii: 68,
+        nutrition: {
+            calories: 520,
+            protein: 28,
+            carbs: 44,
+            fat: 26,
+            fiber: 3
+        }
+    },
+    {
+        id: 932,
+        name: "كرسبي تشيكن راب",
+        nameEn: "Crispy Chicken Wrap",
+        icon: "🌯",
+        category: "وجبات سريعة",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 440,
+            protein: 22,
+            carbs: 40,
+            fat: 22,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 933,
+        name: "جريلد تشيكن راب",
+        nameEn: "Grilled Chicken Wrap",
+        icon: "🌯",
+        category: "وجبات سريعة",
+        gi: 52,
+        ii: 60,
+        nutrition: {
+            calories: 360,
+            protein: 26,
+            carbs: 38,
+            fat: 12,
+            fiber: 4
+        }
+    },
+    {
+        id: 934,
+        name: "كول سلو",
+        nameEn: "Coleslaw",
+        icon: "🥗",
+        category: "وجبات سريعة",
+        gi: 30,
+        ii: 35,
+        nutrition: {
+            calories: 150,
+            protein: 1.5,
+            carbs: 15,
+            fat: 10,
+            fiber: 2
+        }
+    },
+    {
+        id: 935,
+        name: "بطاطس ودجز",
+        nameEn: "Potato Wedges",
+        icon: "🥔",
+        category: "وجبات سريعة",
+        gi: 70,
+        ii: 82,
+        nutrition: {
+            calories: 240,
+            protein: 3,
+            carbs: 34,
+            fat: 11,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 936,
+        name: "هاش براون",
+        nameEn: "Hash Browns",
+        icon: "🥔",
+        category: "وجبات سريعة",
+        gi: 72,
+        ii: 85,
+        nutrition: {
+            calories: 150,
+            protein: 1.5,
+            carbs: 15,
+            fat: 9,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 937,
+        name: "ماك تشيكن",
+        nameEn: "McChicken",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 58,
+        ii: 70,
+        nutrition: {
+            calories: 400,
+            protein: 14,
+            carbs: 39,
+            fat: 21,
+            fiber: 2
+        }
+    },
+    {
+        id: 938,
+        name: "فيليه أو فيش",
+        nameEn: "Filet-O-Fish",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 380,
+            protein: 15,
+            carbs: 38,
+            fat: 18,
+            fiber: 2
+        }
+    },
+    {
+        id: 939,
+        name: "كوارتر باوندر",
+        nameEn: "Quarter Pounder",
+        icon: "🍔",
+        category: "وجبات سريعة",
+        gi: 66,
+        ii: 78,
+        nutrition: {
+            calories: 520,
+            protein: 30,
+            carbs: 42,
+            fat: 26,
+            fiber: 3
+        }
+    },
+    {
+        id: 940,
+        name: "ماك نوجتس (10 قطع)",
+        nameEn: "Chicken McNuggets (10pc)",
+        icon: "🍗",
+        category: "وجبات سريعة",
+        gi: 52,
+        ii: 68,
+        nutrition: {
+            calories: 470,
+            protein: 24,
+            carbs: 30,
+            fat: 30,
+            fiber: 2
+        }
+    },
+    // منتجات ألبان وأجبان (20 عنصر)
+    {
+        id: 941,
+        name: "جبن موتزاريلا",
+        nameEn: "Mozzarella Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 45,
+        nutrition: {
+            calories: 280,
+            protein: 28,
+            carbs: 2.2,
+            fat: 17,
+            fiber: 0
+        }
+    },
+    {
+        id: 942,
+        name: "جبن بارميزان",
+        nameEn: "Parmesan Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 40,
+        nutrition: {
+            calories: 431,
+            protein: 38,
+            carbs: 4.1,
+            fat: 29,
+            fiber: 0
+        }
+    },
+    {
+        id: 943,
+        name: "جبن شيدر",
+        nameEn: "Cheddar Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 42,
+        nutrition: {
+            calories: 403,
+            protein: 25,
+            carbs: 1.3,
+            fat: 33,
+            fiber: 0
+        }
+    },
+    {
+        id: 944,
+        name: "جبن فيتا",
+        nameEn: "Feta Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 38,
+        nutrition: {
+            calories: 264,
+            protein: 14,
+            carbs: 4.1,
+            fat: 21,
+            fiber: 0
+        }
+    },
+    {
+        id: 945,
+        name: "جبن جودا",
+        nameEn: "Gouda Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 43,
+        nutrition: {
+            calories: 356,
+            protein: 25,
+            carbs: 2.2,
+            fat: 27,
+            fiber: 0
+        }
+    },
+    {
+        id: 946,
+        name: "جبن حلوم",
+        nameEn: "Halloumi Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 39,
+        nutrition: {
+            calories: 316,
+            protein: 21,
+            carbs: 2.7,
+            fat: 25,
+            fiber: 0
+        }
+    },
+    {
+        id: 947,
+        name: "جبن كريمي (Philadelphia)",
+        nameEn: "Cream Cheese",
+        icon: "🧈",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 35,
+        nutrition: {
+            calories: 342,
+            protein: 6,
+            carbs: 4.1,
+            fat: 34,
+            fiber: 0
+        }
+    },
+    {
+        id: 948,
+        name: "جبن ريكوتا",
+        nameEn: "Ricotta Cheese",
+        icon: "🧀",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 30,
+        nutrition: {
+            calories: 174,
+            protein: 11,
+            carbs: 3.0,
+            fat: 13,
+            fiber: 0
+        }
+    },
+    {
+        id: 949,
+        name: "زبادي يوناني كامل الدسم",
+        nameEn: "Full-Fat Greek Yogurt",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 11,
+        ii: 20,
+        nutrition: {
+            calories: 97,
+            protein: 9,
+            carbs: 3.6,
+            fat: 5,
+            fiber: 0
+        }
+    },
+    {
+        id: 950,
+        name: "زبادي يوناني قليل الدسم",
+        nameEn: "Low-Fat Greek Yogurt",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 12,
+        ii: 22,
+        nutrition: {
+            calories: 59,
+            protein: 10,
+            carbs: 3.6,
+            fat: 0.4,
+            fiber: 0
+        }
+    },
+    {
+        id: 951,
+        name: "زبادي بالفواكه",
+        nameEn: "Fruit Yogurt",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 35,
+        ii: 48,
+        nutrition: {
+            calories: 110,
+            protein: 4,
+            carbs: 19,
+            fat: 2,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 952,
+        name: "لبنة",
+        nameEn: "Labneh",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 10,
+        ii: 18,
+        nutrition: {
+            calories: 80,
+            protein: 5,
+            carbs: 3,
+            fat: 6,
+            fiber: 0
+        }
+    },
+    {
+        id: 953,
+        name: "قشطة",
+        nameEn: "Qishta (Clotted Cream)",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 25,
+        nutrition: {
+            calories: 586,
+            protein: 1.6,
+            carbs: 2.3,
+            fat: 64,
+            fiber: 0
+        }
+    },
+    {
+        id: 954,
+        name: "كريمة طازجة",
+        nameEn: "Fresh Cream",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 0,
+        ii: 28,
+        nutrition: {
+            calories: 345,
+            protein: 2.1,
+            carbs: 2.8,
+            fat: 37,
+            fiber: 0
+        }
+    },
+    {
+        id: 955,
+        name: "حليب كامل الدسم",
+        nameEn: "Whole Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 32,
+        ii: 40,
+        nutrition: {
+            calories: 61,
+            protein: 3.2,
+            carbs: 4.8,
+            fat: 3.3,
+            fiber: 0
+        }
+    },
+    {
+        id: 956,
+        name: "حليب قليل الدسم",
+        nameEn: "Low-Fat Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 30,
+        ii: 38,
+        nutrition: {
+            calories: 42,
+            protein: 3.4,
+            carbs: 5,
+            fat: 1,
+            fiber: 0
+        }
+    },
+    {
+        id: 957,
+        name: "حليب خالي الدسم",
+        nameEn: "Skim Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 32,
+        ii: 40,
+        nutrition: {
+            calories: 34,
+            protein: 3.4,
+            carbs: 5,
+            fat: 0.1,
+            fiber: 0
+        }
+    },
+    {
+        id: 958,
+        name: "حليب لوز",
+        nameEn: "Almond Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 25,
+        ii: 30,
+        nutrition: {
+            calories: 15,
+            protein: 0.6,
+            carbs: 1.4,
+            fat: 1.1,
+            fiber: 0.4
+        }
+    },
+    {
+        id: 959,
+        name: "حليب صويا",
+        nameEn: "Soy Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 34,
+        ii: 43,
+        nutrition: {
+            calories: 54,
+            protein: 3.3,
+            carbs: 6,
+            fat: 1.8,
+            fiber: 0.6
+        }
+    },
+    {
+        id: 960,
+        name: "حليب شوفان",
+        nameEn: "Oat Milk",
+        icon: "🥛",
+        category: "ألبان وأجبان",
+        gi: 69,
+        ii: 65,
+        nutrition: {
+            calories: 47,
+            protein: 1,
+            carbs: 7.5,
+            fat: 1.5,
+            fiber: 0.8
+        }
+    },
+    // صلصات ومقبلات (15 عنصر)
+    {
+        id: 961,
+        name: "كاتشب",
+        nameEn: "Ketchup",
+        icon: "🍅",
+        category: "صلصات",
+        gi: 55,
+        ii: 60,
+        nutrition: {
+            calories: 101,
+            protein: 1.1,
+            carbs: 25,
+            fat: 0.1,
+            fiber: 0.3
+        }
+    },
+    {
+        id: 962,
+        name: "مايونيز",
+        nameEn: "Mayonnaise",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 680,
+            protein: 1,
+            carbs: 0.6,
+            fat: 75,
+            fiber: 0
+        }
+    },
+    {
+        id: 963,
+        name: "مستردة",
+        nameEn: "Mustard",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 5,
+        ii: 8,
+        nutrition: {
+            calories: 66,
+            protein: 3.7,
+            carbs: 6,
+            fat: 3.3,
+            fiber: 2.1
+        }
+    },
+    {
+        id: 964,
+        name: "صلصة باربيكيو",
+        nameEn: "BBQ Sauce",
+        icon: "🍖",
+        category: "صلصات",
+        gi: 50,
+        ii: 58,
+        nutrition: {
+            calories: 172,
+            protein: 1,
+            carbs: 41,
+            fat: 0.5,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 965,
+        name: "صلصة صويا",
+        nameEn: "Soy Sauce",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 20,
+        ii: 25,
+        nutrition: {
+            calories: 53,
+            protein: 5.6,
+            carbs: 4.9,
+            fat: 0.1,
+            fiber: 0.8
+        }
+    },
+    {
+        id: 966,
+        name: "صلصة تيرياكي",
+        nameEn: "Teriyaki Sauce",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 45,
+        ii: 52,
+        nutrition: {
+            calories: 89,
+            protein: 2.8,
+            carbs: 15,
+            fat: 0.4,
+            fiber: 0.3
+        }
+    },
+    {
+        id: 967,
+        name: "سريراتشا (صلصة حارة)",
+        nameEn: "Sriracha Hot Sauce",
+        icon: "🌶️",
+        category: "صلصات",
+        gi: 35,
+        ii: 40,
+        nutrition: {
+            calories: 93,
+            protein: 2,
+            carbs: 19,
+            fat: 0.9,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 968,
+        name: "صلصة رانش",
+        nameEn: "Ranch Dressing",
+        icon: "🥗",
+        category: "صلصات",
+        gi: 10,
+        ii: 15,
+        nutrition: {
+            calories: 458,
+            protein: 1.5,
+            carbs: 8,
+            fat: 48,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 969,
+        name: "صلصة سيزر",
+        nameEn: "Caesar Dressing",
+        icon: "🥗",
+        category: "صلصات",
+        gi: 8,
+        ii: 12,
+        nutrition: {
+            calories: 540,
+            protein: 2,
+            carbs: 3,
+            fat: 58,
+            fiber: 0
+        }
+    },
+    {
+        id: 970,
+        name: "طحينة",
+        nameEn: "Tahini",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 595,
+            protein: 17,
+            carbs: 21,
+            fat: 54,
+            fiber: 9.3
+        }
+    },
+    {
+        id: 971,
+        name: "حمص (مقبلات)",
+        nameEn: "Hummus",
+        icon: "🥫",
+        category: "صلصات",
+        gi: 6,
+        ii: 10,
+        nutrition: {
+            calories: 166,
+            protein: 8,
+            carbs: 14,
+            fat: 10,
+            fiber: 6
+        }
+    },
+    {
+        id: 972,
+        name: "بابا غنوج",
+        nameEn: "Baba Ghanoush",
+        icon: "🍆",
+        category: "صلصات",
+        gi: 10,
+        ii: 15,
+        nutrition: {
+            calories: 102,
+            protein: 2.6,
+            carbs: 7,
+            fat: 8,
+            fiber: 3.3
+        }
+    },
+    {
+        id: 973,
+        name: "متبل",
+        nameEn: "Moutabal",
+        icon: "🍆",
+        category: "صلصات",
+        gi: 12,
+        ii: 18,
+        nutrition: {
+            calories: 135,
+            protein: 3,
+            carbs: 9,
+            fat: 11,
+            fiber: 4
+        }
+    },
+    {
+        id: 974,
+        name: "نوتيلا",
+        nameEn: "Nutella",
+        icon: "🍫",
+        category: "صلصات",
+        gi: 55,
+        ii: 65,
+        nutrition: {
+            calories: 539,
+            protein: 6.3,
+            carbs: 57,
+            fat: 31,
+            fiber: 5.4
+        }
+    },
+    {
+        id: 975,
+        name: "مربى فراولة",
+        nameEn: "Strawberry Jam",
+        icon: "🍓",
+        category: "صلصات",
+        gi: 51,
+        ii: 58,
+        nutrition: {
+            calories: 278,
+            protein: 0.4,
+            carbs: 69,
+            fat: 0.1,
+            fiber: 1.1
+        }
+    },
+    // أطعمة صحية ونباتية (25 عنصر)
+    {
+        id: 976,
+        name: "برغر نباتي (Beyond Meat)",
+        nameEn: "Plant-Based Burger",
+        icon: "🍔",
+        category: "أطعمة نباتية",
+        gi: 45,
+        ii: 50,
+        nutrition: {
+            calories: 250,
+            protein: 20,
+            carbs: 15,
+            fat: 14,
+            fiber: 3
+        }
+    },
+    {
+        id: 977,
+        name: "توفو",
+        nameEn: "Tofu",
+        icon: "🧊",
+        category: "أطعمة نباتية",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 76,
+            protein: 8,
+            carbs: 1.9,
+            fat: 4.8,
+            fiber: 0.3
+        }
+    },
+    {
+        id: 978,
+        name: "تمبيه",
+        nameEn: "Tempeh",
+        icon: "🥜",
+        category: "أطعمة نباتية",
+        gi: 18,
+        ii: 22,
+        nutrition: {
+            calories: 193,
+            protein: 20,
+            carbs: 7.6,
+            fat: 11,
+            fiber: 0
+        }
+    },
+    {
+        id: 979,
+        name: "سيتان (بروتين القمح)",
+        nameEn: "Seitan",
+        icon: "🥩",
+        category: "أطعمة نباتية",
+        gi: 25,
+        ii: 30,
+        nutrition: {
+            calories: 370,
+            protein: 75,
+            carbs: 14,
+            fat: 1.9,
+            fiber: 0.6
+        }
+    },
+    {
+        id: 980,
+        name: "كينوا مطبوخة",
+        nameEn: "Cooked Quinoa",
+        icon: "🌾",
+        category: "أطعمة صحية",
+        gi: 53,
+        ii: 55,
+        nutrition: {
+            calories: 120,
+            protein: 4.4,
+            carbs: 21,
+            fat: 1.9,
+            fiber: 2.8
+        }
+    },
+    {
+        id: 981,
+        name: "بذور الشيا",
+        nameEn: "Chia Seeds",
+        icon: "🌱",
+        category: "أطعمة صحية",
+        gi: 1,
+        ii: 5,
+        nutrition: {
+            calories: 486,
+            protein: 17,
+            carbs: 42,
+            fat: 31,
+            fiber: 34
+        }
+    },
+    {
+        id: 982,
+        name: "بذور الكتان",
+        nameEn: "Flax Seeds",
+        icon: "🌱",
+        category: "أطعمة صحية",
+        gi: 35,
+        ii: 38,
+        nutrition: {
+            calories: 534,
+            protein: 18,
+            carbs: 29,
+            fat: 42,
+            fiber: 27
+        }
+    },
+    {
+        id: 983,
+        name: "بودرة البروتين (واي)",
+        nameEn: "Whey Protein Powder",
+        icon: "💪",
+        category: "أطعمة صحية",
+        gi: 15,
+        ii: 35,
+        nutrition: {
+            calories: 412,
+            protein: 80,
+            carbs: 8,
+            fat: 8,
+            fiber: 2
+        }
+    },
+    {
+        id: 984,
+        name: "بروتين بار",
+        nameEn: "Protein Bar",
+        icon: "🍫",
+        category: "أطعمة صحية",
+        gi: 35,
+        ii: 42,
+        nutrition: {
+            calories: 200,
+            protein: 20,
+            carbs: 22,
+            fat: 7,
+            fiber: 3
+        }
+    },
+    {
+        id: 985,
+        name: "جرانولا",
+        nameEn: "Granola",
+        icon: "🥣",
+        category: "أطعمة صحية",
+        gi: 43,
+        ii: 50,
+        nutrition: {
+            calories: 471,
+            protein: 13,
+            carbs: 64,
+            fat: 20,
+            fiber: 11
+        }
+    },
+    {
+        id: 986,
+        name: "إديمامي (فول صويا مسلوق)",
+        nameEn: "Edamame",
+        icon: "🫛",
+        category: "أطعمة نباتية",
+        gi: 18,
+        ii: 22,
+        nutrition: {
+            calories: 121,
+            protein: 11,
+            carbs: 10,
+            fat: 5,
+            fiber: 5
+        }
+    },
+    {
+        id: 987,
+        name: "أفوكادو",
+        nameEn: "Avocado",
+        icon: "🥑",
+        category: "فواكه",
+        gi: 15,
+        ii: 10,
+        nutrition: {
+            calories: 160,
+            protein: 2,
+            carbs: 9,
+            fat: 15,
+            fiber: 7
+        }
+    },
+    {
+        id: 988,
+        name: "زبدة الفول السوداني",
+        nameEn: "Peanut Butter",
+        icon: "🥜",
+        category: "أطعمة صحية",
+        gi: 14,
+        ii: 20,
+        nutrition: {
+            calories: 588,
+            protein: 25,
+            carbs: 20,
+            fat: 50,
+            fiber: 6
+        }
+    },
+    {
+        id: 989,
+        name: "زبدة اللوز",
+        nameEn: "Almond Butter",
+        icon: "🌰",
+        category: "أطعمة صحية",
+        gi: 0,
+        ii: 15,
+        nutrition: {
+            calories: 614,
+            protein: 21,
+            carbs: 19,
+            fat: 56,
+            fiber: 10
+        }
+    },
+    {
+        id: 990,
+        name: "مكسرات مشكلة نيئة",
+        nameEn: "Raw Mixed Nuts",
+        icon: "🥜",
+        category: "أطعمة صحية",
+        gi: 15,
+        ii: 18,
+        nutrition: {
+            calories: 607,
+            protein: 20,
+            carbs: 21,
+            fat: 54,
+            fiber: 7
+        }
+    },
+    {
+        id: 991,
+        name: "لوز محمص",
+        nameEn: "Roasted Almonds",
+        icon: "🌰",
+        category: "أطعمة صحية",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 579,
+            protein: 21,
+            carbs: 22,
+            fat: 50,
+            fiber: 12
+        }
+    },
+    {
+        id: 992,
+        name: "كاجو محمص",
+        nameEn: "Roasted Cashews",
+        icon: "🥜",
+        category: "أطعمة صحية",
+        gi: 22,
+        ii: 25,
+        nutrition: {
+            calories: 553,
+            protein: 18,
+            carbs: 30,
+            fat: 44,
+            fiber: 3.3
+        }
+    },
+    {
+        id: 993,
+        name: "بذور اليقطين",
+        nameEn: "Pumpkin Seeds",
+        icon: "🌱",
+        category: "أطعمة صحية",
+        gi: 25,
+        ii: 28,
+        nutrition: {
+            calories: 559,
+            protein: 30,
+            carbs: 14,
+            fat: 49,
+            fiber: 6
+        }
+    },
+    {
+        id: 994,
+        name: "بذور دوار الشمس",
+        nameEn: "Sunflower Seeds",
+        icon: "🌻",
+        category: "أطعمة صحية",
+        gi: 20,
+        ii: 22,
+        nutrition: {
+            calories: 584,
+            protein: 21,
+            carbs: 20,
+            fat: 51,
+            fiber: 9
+        }
+    },
+    {
+        id: 995,
+        name: "خبز خالي من الجلوتين",
+        nameEn: "Gluten-Free Bread",
+        icon: "🍞",
+        category: "أطعمة صحية",
+        gi: 70,
+        ii: 78,
+        nutrition: {
+            calories: 258,
+            protein: 4,
+            carbs: 50,
+            fat: 4,
+            fiber: 4
+        }
+    },
+    {
+        id: 996,
+        name: "باستا خالية من الجلوتين",
+        nameEn: "Gluten-Free Pasta",
+        icon: "🍝",
+        category: "أطعمة صحية",
+        gi: 54,
+        ii: 58,
+        nutrition: {
+            calories: 348,
+            protein: 7,
+            carbs: 76,
+            fat: 2,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 997,
+        name: "حليب جوز الهند",
+        nameEn: "Coconut Milk",
+        icon: "🥥",
+        category: "ألبان وأجبان",
+        gi: 40,
+        ii: 45,
+        nutrition: {
+            calories: 230,
+            protein: 2.3,
+            carbs: 6,
+            fat: 24,
+            fiber: 2.2
+        }
+    },
+    {
+        id: 998,
+        name: "طحين اللوز",
+        nameEn: "Almond Flour",
+        icon: "🌰",
+        category: "أطعمة صحية",
+        gi: 0,
+        ii: 10,
+        nutrition: {
+            calories: 571,
+            protein: 21,
+            carbs: 21,
+            fat: 50,
+            fiber: 11
+        }
+    },
+    {
+        id: 999,
+        name: "طحين جوز الهند",
+        nameEn: "Coconut Flour",
+        icon: "🥥",
+        category: "أطعمة صحية",
+        gi: 45,
+        ii: 48,
+        nutrition: {
+            calories: 400,
+            protein: 20,
+            carbs: 60,
+            fat: 13,
+            fiber: 40
+        }
+    },
+    {
+        id: 1000,
+        name: "شاي أخضر ماتشا",
+        nameEn: "Matcha Green Tea",
+        icon: "🍵",
+        category: "مشروبات",
+        gi: 0,
+        ii: 5,
+        nutrition: {
+            calories: 3,
+            protein: 0.3,
+            carbs: 0.4,
+            fat: 0,
+            fiber: 0.4
+        }
+    },
+    {
+        id: 1001,
+        name: "معكرونة بالبشاميل",
+        nameEn: "Pasta Bechamel",
+        icon: "🍝",
+        category: "أطعمة عربية",
+        gi: 68,
+        ii: 72,
+        nutrition: {
+            calories: 320,
+            protein: 12,
+            carbs: 38,
+            fat: 14,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1002,
+        name: "أرز بالحليب",
+        nameEn: "Rice Pudding",
+        icon: "🍚",
+        category: "حلويات عربية",
+        gi: 70,
+        ii: 68,
+        nutrition: {
+            calories: 180,
+            protein: 4.5,
+            carbs: 32,
+            fat: 3.8,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 1003,
+        name: "كبدة إسكندراني",
+        nameEn: "Alexandrian Liver",
+        icon: "🥩",
+        category: "أطعمة عربية",
+        gi: 0,
+        ii: 68,
+        nutrition: {
+            calories: 195,
+            protein: 22,
+            carbs: 2.5,
+            fat: 11,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 1004,
+        name: "كفتة داوود باشا",
+        nameEn: "Dawood Basha Kofta",
+        icon: "🧆",
+        category: "أطعمة عربية",
+        gi: 42,
+        ii: 65,
+        nutrition: {
+            calories: 285,
+            protein: 18,
+            carbs: 15,
+            fat: 18,
+            fiber: 3
+        }
+    },
+    {
+        id: 1005,
+        name: "شوربة العدس التركية",
+        nameEn: "Turkish Lentil Soup",
+        icon: "🍲",
+        category: "شوربات",
+        gi: 38,
+        ii: 45,
+        nutrition: {
+            calories: 145,
+            protein: 8,
+            carbs: 22,
+            fat: 3.5,
+            fiber: 5.5
+        }
+    },
+    {
+        id: 1006,
+        name: "كبة نية (نيئة)",
+        nameEn: "Raw Kibbeh",
+        icon: "🥩",
+        category: "أطعمة عربية",
+        gi: 52,
+        ii: 58,
+        nutrition: {
+            calories: 215,
+            protein: 16,
+            carbs: 18,
+            fat: 9,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 1007,
+        name: "فتة المكدوس",
+        nameEn: "Makdous Fatteh",
+        icon: "🍆",
+        category: "أطعمة عربية",
+        gi: 55,
+        ii: 62,
+        nutrition: {
+            calories: 298,
+            protein: 10,
+            carbs: 28,
+            fat: 17,
+            fiber: 5
+        }
+    },
+    {
+        id: 1008,
+        name: "مجدرة",
+        nameEn: "Mujadara",
+        icon: "🍚",
+        category: "أطعمة عربية",
+        gi: 48,
+        ii: 52,
+        nutrition: {
+            calories: 245,
+            protein: 11,
+            carbs: 38,
+            fat: 6,
+            fiber: 8
+        }
+    },
+    {
+        id: 1009,
+        name: "ملوخية بالأرانب",
+        nameEn: "Molokhia with Rabbit",
+        icon: "🥬",
+        category: "أطعمة عربية",
+        gi: 15,
+        ii: 48,
+        nutrition: {
+            calories: 195,
+            protein: 22,
+            carbs: 8,
+            fat: 9,
+            fiber: 4
+        }
+    },
+    {
+        id: 1010,
+        name: "صيادية السمك",
+        nameEn: "Fish Sayadieh",
+        icon: "🐟",
+        category: "أطعمة عربية",
+        gi: 58,
+        ii: 62,
+        nutrition: {
+            calories: 315,
+            protein: 24,
+            carbs: 35,
+            fat: 9,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1011,
+        name: "مسقعة",
+        nameEn: "Moussaka",
+        icon: "🍆",
+        category: "أطعمة عربية",
+        gi: 52,
+        ii: 58,
+        nutrition: {
+            calories: 235,
+            protein: 9,
+            carbs: 18,
+            fat: 15,
+            fiber: 5.5
+        }
+    },
+    {
+        id: 1012,
+        name: "بامية باللحم",
+        nameEn: "Okra with Meat",
+        icon: "🌱",
+        category: "أطعمة عربية",
+        gi: 25,
+        ii: 55,
+        nutrition: {
+            calories: 198,
+            protein: 14,
+            carbs: 12,
+            fat: 11,
+            fiber: 5
+        }
+    },
+    {
+        id: 1013,
+        name: "فاصوليا بيضاء بالصلصة",
+        nameEn: "White Beans in Sauce",
+        icon: "🫘",
+        category: "أطعمة عربية",
+        gi: 38,
+        ii: 48,
+        nutrition: {
+            calories: 185,
+            protein: 10,
+            carbs: 28,
+            fat: 4,
+            fiber: 9
+        }
+    },
+    {
+        id: 1014,
+        name: "شكشوكة",
+        nameEn: "Shakshuka",
+        icon: "🍳",
+        category: "أطعمة عربية",
+        gi: 32,
+        ii: 52,
+        nutrition: {
+            calories: 195,
+            protein: 11,
+            carbs: 10,
+            fat: 13,
+            fiber: 3
+        }
+    },
+    {
+        id: 1015,
+        name: "عكاوي مشوي",
+        nameEn: "Grilled Akawi Cheese",
+        icon: "🧀",
+        category: "أجبان",
+        gi: 0,
+        ii: 55,
+        nutrition: {
+            calories: 285,
+            protein: 18,
+            carbs: 2,
+            fat: 23,
+            fiber: 0
+        }
+    },
+    {
+        id: 1016,
+        name: "مناقيش جبنة",
+        nameEn: "Cheese Manakish",
+        icon: "🫓",
+        category: "مخبوزات",
+        gi: 65,
+        ii: 68,
+        nutrition: {
+            calories: 295,
+            protein: 12,
+            carbs: 35,
+            fat: 12,
+            fiber: 2
+        }
+    },
+    {
+        id: 1017,
+        name: "لبنة بالنعناع",
+        nameEn: "Labneh with Mint",
+        icon: "🥛",
+        category: "ألبان",
+        gi: 15,
+        ii: 42,
+        nutrition: {
+            calories: 118,
+            protein: 7,
+            carbs: 5,
+            fat: 8,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 1018,
+        name: "بيض بالقاورما",
+        nameEn: "Eggs with Qawarma",
+        icon: "🍳",
+        category: "أطعمة عربية",
+        gi: 0,
+        ii: 55,
+        nutrition: {
+            calories: 315,
+            protein: 16,
+            carbs: 1,
+            fat: 28,
+            fiber: 0
+        }
+    },
+    {
+        id: 1019,
+        name: "كبة مقلية",
+        nameEn: "Fried Kibbeh",
+        icon: "🧆",
+        category: "أطعمة عربية",
+        gi: 58,
+        ii: 65,
+        nutrition: {
+            calories: 285,
+            protein: 14,
+            carbs: 22,
+            fat: 16,
+            fiber: 3
+        }
+    },
+    {
+        id: 1020,
+        name: "فتة حمص",
+        nameEn: "Hummus Fatteh",
+        icon: "🍲",
+        category: "أطعمة عربية",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 265,
+            protein: 12,
+            carbs: 32,
+            fat: 10,
+            fiber: 7
+        }
+    },
+    {
+        id: 1021,
+        name: "ورق العنب بالزيت",
+        nameEn: "Vegetarian Stuffed Grape Leaves",
+        icon: "🍃",
+        category: "أطعمة عربية",
+        gi: 42,
+        ii: 48,
+        nutrition: {
+            calories: 165,
+            protein: 3,
+            carbs: 22,
+            fat: 7,
+            fiber: 4
+        }
+    },
+    {
+        id: 1022,
+        name: "كنافة نابلسية",
+        nameEn: "Nabulsi Kunafa",
+        icon: "🥧",
+        category: "حلويات عربية",
+        gi: 72,
+        ii: 75,
+        nutrition: {
+            calories: 385,
+            protein: 8,
+            carbs: 48,
+            fat: 18,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 1023,
+        name: "قطايف محشية",
+        nameEn: "Stuffed Qatayef",
+        icon: "🥮",
+        category: "حلويات عربية",
+        gi: 68,
+        ii: 72,
+        nutrition: {
+            calories: 295,
+            protein: 6,
+            carbs: 42,
+            fat: 12,
+            fiber: 2
+        }
+    },
+    {
+        id: 1024,
+        name: "حلاوة طحينية",
+        nameEn: "Halva",
+        icon: "🍯",
+        category: "حلويات عربية",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 420,
+            protein: 12,
+            carbs: 52,
+            fat: 20,
+            fiber: 5
+        }
+    },
+    {
+        id: 1025,
+        name: "معمول بالتمر",
+        nameEn: "Date Ma'amoul",
+        icon: "🥮",
+        category: "حلويات عربية",
+        gi: 62,
+        ii: 65,
+        nutrition: {
+            calories: 325,
+            protein: 4.5,
+            carbs: 48,
+            fat: 13,
+            fiber: 4
+        }
+    },
+    {
+        id: 1026,
+        name: "زلابية",
+        nameEn: "Zalabia",
+        icon: "🍩",
+        category: "حلويات عربية",
+        gi: 75,
+        ii: 78,
+        nutrition: {
+            calories: 395,
+            protein: 5,
+            carbs: 55,
+            fat: 17,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 1027,
+        name: "بسبوسة",
+        nameEn: "Basbousa",
+        icon: "🍰",
+        category: "حلويات عربية",
+        gi: 70,
+        ii: 72,
+        nutrition: {
+            calories: 365,
+            protein: 6,
+            carbs: 52,
+            fat: 15,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1028,
+        name: "غريبة",
+        nameEn: "Ghorayeba",
+        icon: "🍪",
+        category: "حلويات عربية",
+        gi: 58,
+        ii: 62,
+        nutrition: {
+            calories: 385,
+            protein: 4,
+            carbs: 42,
+            fat: 22,
+            fiber: 1
+        }
+    },
+    {
+        id: 1029,
+        name: "مهلبية",
+        nameEn: "Muhallabia",
+        icon: "🍮",
+        category: "حلويات عربية",
+        gi: 65,
+        ii: 68,
+        nutrition: {
+            calories: 165,
+            protein: 4,
+            carbs: 28,
+            fat: 4,
+            fiber: 0.5
+        }
+    },
+    {
+        id: 1030,
+        name: "حلى الجلي",
+        nameEn: "Jelly Dessert",
+        icon: "🍮",
+        category: "حلويات",
+        gi: 55,
+        ii: 58,
+        nutrition: {
+            calories: 125,
+            protein: 2,
+            carbs: 28,
+            fat: 1,
+            fiber: 0
+        }
+    },
+    {
+        id: 1031,
+        name: "فطيرة بالسبانخ",
+        nameEn: "Spinach Pie",
+        icon: "🥟",
+        category: "مخبوزات",
+        gi: 52,
+        ii: 58,
+        nutrition: {
+            calories: 245,
+            protein: 8,
+            carbs: 32,
+            fat: 10,
+            fiber: 4
+        }
+    },
+    {
+        id: 1032,
+        name: "سمبوسك باللحم",
+        nameEn: "Meat Samosa",
+        icon: "🥟",
+        category: "مخبوزات",
+        gi: 58,
+        ii: 65,
+        nutrition: {
+            calories: 295,
+            protein: 12,
+            carbs: 28,
+            fat: 15,
+            fiber: 2
+        }
+    },
+    {
+        id: 1033,
+        name: "فتة باذنجان",
+        nameEn: "Eggplant Fatteh",
+        icon: "🍆",
+        category: "أطعمة عربية",
+        gi: 48,
+        ii: 55,
+        nutrition: {
+            calories: 285,
+            protein: 9,
+            carbs: 30,
+            fat: 15,
+            fiber: 6
+        }
+    },
+    {
+        id: 1034,
+        name: "مقلوبة بالدجاج",
+        nameEn: "Chicken Maqluba",
+        icon: "🍚",
+        category: "أطعمة عربية",
+        gi: 62,
+        ii: 68,
+        nutrition: {
+            calories: 345,
+            protein: 22,
+            carbs: 38,
+            fat: 12,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 1035,
+        name: "منسف بلحم الغنم",
+        nameEn: "Mansaf with Lamb",
+        icon: "🍚",
+        category: "أطعمة عربية",
+        gi: 58,
+        ii: 65,
+        nutrition: {
+            calories: 425,
+            protein: 28,
+            carbs: 42,
+            fat: 18,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1036,
+        name: "مفركة البطاطا",
+        nameEn: "Mfaraket Batata",
+        icon: "🥔",
+        category: "أطعمة عربية",
+        gi: 55,
+        ii: 60,
+        nutrition: {
+            calories: 225,
+            protein: 7,
+            carbs: 28,
+        fat: 10,
+            fiber: 4
+        }
+    },
+    {
+        id: 1037,
+        name: "لحم بعجين",
+        nameEn: "Lahmacun",
+        icon: "🫓",
+        category: "مخبوزات",
+        gi: 62,
+        ii: 68,
+        nutrition: {
+            calories: 285,
+            protein: 14,
+            carbs: 32,
+            fat: 11,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1038,
+        name: "عجة بالخضار",
+        nameEn: "Vegetable Omelette",
+        icon: "🍳",
+        category: "أطعمة عربية",
+        gi: 25,
+        ii: 48,
+        nutrition: {
+            calories: 185,
+            protein: 12,
+            carbs: 8,
+            fat: 12,
+            fiber: 2.5
+        }
+    },
+    {
+        id: 1039,
+        name: "حمص بالطحينة",
+        nameEn: "Hummus with Tahini",
+        icon: "🫘",
+        category: "مقبلات",
+        gi: 28,
+        ii: 38,
+        nutrition: {
+            calories: 165,
+            protein: 7,
+            carbs: 14,
+            fat: 10,
+            fiber: 6
+        }
+    },
+    {
+        id: 1040,
+        name: "متبل باذنجان",
+        nameEn: "Baba Ganoush",
+        icon: "🍆",
+        category: "مقبلات",
+        gi: 18,
+        ii: 28,
+        nutrition: {
+            calories: 125,
+            protein: 3,
+            carbs: 9,
+            fat: 9,
+            fiber: 4.5
+        }
+    },
+    {
+        id: 1041,
+        name: "محمرة",
+        nameEn: "Muhammara",
+        icon: "🌶️",
+        category: "مقبلات",
+        gi: 35,
+        ii: 42,
+        nutrition: {
+            calories: 185,
+            protein: 4,
+            carbs: 15,
+            fat: 13,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 1042,
+        name: "شاورما دجاج",
+        nameEn: "Chicken Shawarma",
+        icon: "🌯",
+        category: "ساندويشات",
+        gi: 52,
+        ii: 62,
+        nutrition: {
+            calories: 325,
+            protein: 24,
+            carbs: 32,
+            fat: 12,
+            fiber: 3
+        }
+    },
+    {
+        id: 1043,
+        name: "شاورما لحم",
+        nameEn: "Beef Shawarma",
+        icon: "🌯",
+        category: "ساندويشات",
+        gi: 52,
+        ii: 65,
+        nutrition: {
+            calories: 355,
+            protein: 26,
+            carbs: 32,
+            fat: 15,
+            fiber: 3
+        }
+    },
+    {
+        id: 1044,
+        name: "فلافل",
+        nameEn: "Falafel",
+        icon: "🧆",
+        category: "أطعمة عربية",
+        gi: 42,
+        ii: 48,
+        nutrition: {
+            calories: 185,
+            protein: 8,
+            carbs: 18,
+            fat: 10,
+            fiber: 5
+        }
+    },
+    {
+        id: 1045,
+        name: "طرشي مشكل",
+        nameEn: "Mixed Pickles",
+        icon: "🥒",
+        category: "مخللات",
+        gi: 15,
+        ii: 20,
+        nutrition: {
+            calories: 25,
+            protein: 0.8,
+            carbs: 5,
+            fat: 0.2,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 1046,
+        name: "زيتون أخضر محشي",
+        nameEn: "Stuffed Green Olives",
+        icon: "🫒",
+        category: "مقبلات",
+        gi: 15,
+        ii: 22,
+        nutrition: {
+            calories: 145,
+            protein: 1.2,
+            carbs: 3.8,
+            fat: 15,
+            fiber: 3
+        }
+    },
+    {
+        id: 1047,
+        name: "شوربة فريكة",
+        nameEn: "Freekeh Soup",
+        icon: "🍲",
+        category: "شوربات",
+        gi: 42,
+        ii: 48,
+        nutrition: {
+            calories: 165,
+            protein: 9,
+            carbs: 24,
+            fat: 4,
+            fiber: 6
+        }
+    },
+    {
+        id: 1048,
+        name: "رز بالشعيرية",
+        nameEn: "Rice with Vermicelli",
+        icon: "🍚",
+        category: "أطعمة عربية",
+        gi: 65,
+        ii: 68,
+        nutrition: {
+            calories: 195,
+            protein: 4.5,
+            carbs: 38,
+            fat: 3,
+            fiber: 1.5
+        }
+    },
+    {
+        id: 1049,
+        name: "يخنة بامية",
+        nameEn: "Okra Stew",
+        icon: "🍲",
+        category: "أطعمة عربية",
+        gi: 28,
+        ii: 45,
+        nutrition: {
+            calories: 125,
+            protein: 6,
+            carbs: 15,
+            fat: 5,
+            fiber: 5
+        }
+    },
+    {
+        id: 1050,
+        name: "كوسا محشي",
+        nameEn: "Stuffed Zucchini",
+        icon: "🥒",
+        category: "أطعمة عربية",
+        gi: 42,
+        ii: 52,
+        nutrition: {
+            calories: 165,
+            protein: 9,
+            carbs: 18,
+            fat: 7,
+            fiber: 3.5
+        }
+    },
+    {
+        id: 1051,
+        name: "قرنبيط مقلي",
+        nameEn: "Fried Cauliflower",
+        icon: "🥦",
+        category: "أطعمة عربية",
+        gi: 35,
+        ii: 42,
+        nutrition: {
+            calories: 195,
+            protein: 4,
+            carbs: 12,
+            fat: 15,
+            fiber: 3.5
         }
     }
 ];

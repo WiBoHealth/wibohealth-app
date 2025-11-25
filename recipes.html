@@ -30,6 +30,15 @@
     <meta name="theme-color" content="#667eea">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-292WD2SWHN');
+    </script>
+    
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
 
@@ -603,6 +612,141 @@
                 text-align: center;
             }
         }
+
+        /* Recipe Search Styles */
+        .recipe-search-container {
+            max-width: 900px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .recipe-search-box {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 50px;
+            box-shadow: 0 6px 30px var(--shadow);
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-search-box:focus-within {
+            box-shadow: 0 8px 40px rgba(102, 126, 234, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .recipe-search-box i.fa-search {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-left: 15px;
+        }
+
+        .recipe-search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 20px 15px;
+            font-size: 1.15em;
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-dark);
+            background: transparent;
+        }
+
+        .recipe-search-box input::placeholder {
+            color: var(--text-light);
+        }
+
+        .clear-recipe-btn {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
+        }
+
+        .clear-recipe-btn:hover {
+            background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .recipe-search-stats {
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            animation: slideInRecipe 0.3s ease;
+        }
+
+        .recipe-search-stats i {
+            margin-left: 8px;
+        }
+
+        @keyframes slideInRecipe {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .recipe-card.hidden {
+            display: none !important;
+        }
+
+        .recipe-card.highlight {
+            animation: highlightPulseRecipe 0.6s ease;
+        }
+
+        @keyframes highlightPulseRecipe {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px var(--shadow);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 8px 30px rgba(46, 204, 113, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px var(--shadow);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .recipe-search-box {
+                padding: 0 20px;
+            }
+
+            .recipe-search-box input {
+                padding: 16px 12px;
+                font-size: 1em;
+            }
+
+            .recipe-search-box input::placeholder {
+                font-size: 0.95em;
+            }
+
+            .clear-recipe-btn {
+                width: 32px;
+                height: 32px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -722,6 +866,21 @@
             <div class="tip-content">
                 <h3>نصيحة الطبخ</h3>
                 <p id="tipText">استخدم طرق الطهي الصحية مثل الشوي والسلق بدلاً من القلي للحفاظ على القيمة الغذائية</p>
+            </div>
+        </div>
+
+        <!-- Recipe Search Box -->
+        <div class="recipe-search-container">
+            <div class="recipe-search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="recipeSearchInput" placeholder="ابحث عن وصفة... (مثلاً: سلطة، شوربة، دجاج، سمك...)" autocomplete="off">
+                <button id="clearRecipeSearch" class="clear-recipe-btn" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="recipe-search-stats" id="recipeSearchStats" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <span id="recipeSearchStatsText"></span>
             </div>
         </div>
 
@@ -996,6 +1155,118 @@
         }, false);
     </script>
     
+    <!-- Recipe Search JavaScript -->
+    <script>
+        const recipeSearchInput = document.getElementById('recipeSearchInput');
+        const clearRecipeSearch = document.getElementById('clearRecipeSearch');
+        const recipeSearchStats = document.getElementById('recipeSearchStats');
+        const recipeSearchStatsText = document.getElementById('recipeSearchStatsText');
+
+        // Search Function
+        function searchRecipes() {
+            const searchTerm = recipeSearchInput.value.trim().toLowerCase();
+            
+            if (!searchTerm) {
+                // Show all recipes
+                document.querySelectorAll('.recipe-card').forEach(card => {
+                    card.classList.remove('hidden', 'highlight');
+                });
+                recipeSearchStats.style.display = 'none';
+                return;
+            }
+
+            let visibleCount = 0;
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            
+            recipeCards.forEach(card => {
+                const recipeName = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+                const recipeCategory = card.querySelector('.recipe-category') ? card.querySelector('.recipe-category').textContent.toLowerCase() : '';
+                const recipeDescription = card.querySelector('p') ? card.querySelector('p').textContent.toLowerCase() : '';
+                
+                // Search in name, category, and description
+                if (recipeName.includes(searchTerm) || recipeCategory.includes(searchTerm) || recipeDescription.includes(searchTerm)) {
+                    card.classList.remove('hidden');
+                    card.classList.add('highlight');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('highlight');
+                }
+            });
+
+            // Update stats
+            if (visibleCount > 0) {
+                recipeSearchStatsText.textContent = `تم العثور على ${visibleCount} وصفة`;
+                recipeSearchStats.style.display = 'block';
+            } else {
+                recipeSearchStatsText.textContent = 'لم يتم العثور على نتائج. جرب كلمات أخرى...';
+                recipeSearchStats.style.display = 'block';
+            }
+        }
+
+        // Event Listeners
+        recipeSearchInput.addEventListener('input', (e) => {
+            const value = e.target.value;
+            clearRecipeSearch.style.display = value ? 'flex' : 'none';
+            
+            // Debounce search for better performance
+            clearTimeout(window.recipeSearchTimeout);
+            window.recipeSearchTimeout = setTimeout(() => {
+                searchRecipes();
+            }, 300);
+        });
+
+        clearRecipeSearch.addEventListener('click', () => {
+            recipeSearchInput.value = '';
+            clearRecipeSearch.style.display = 'none';
+            searchRecipes();
+            recipeSearchInput.focus();
+        });
+
+        // Keyboard shortcuts
+        recipeSearchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                recipeSearchInput.value = '';
+                clearRecipeSearch.style.display = 'none';
+                searchRecipes();
+                recipeSearchInput.blur();
+            }
+        });
+
+        // Quick search on Ctrl+F or Cmd+F
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                recipeSearchInput.focus();
+            }
+        });
+
+        // Dynamic placeholder suggestions
+        const searchSuggestions = [
+            'سلطة', 'شوربة', 'دجاج', 'سمك', 'خضار', 'لحم', 'معكرونة', 'أرز'
+        ];
+
+        recipeSearchInput.addEventListener('focus', function() {
+            if (!this.value) {
+                const randomSuggestion = searchSuggestions[Math.floor(Math.random() * searchSuggestions.length)];
+                this.placeholder = `ابحث عن وصفة... (مثلاً: ${randomSuggestion})`;
+            }
+        });
+
+        recipeSearchInput.addEventListener('blur', function() {
+            if (!this.value) {
+                this.placeholder = 'ابحث عن وصفة... (مثلاً: سلطة، شوربة، دجاج، سمك...)';
+            }
+        });
+
+        // Remove highlight animation after it completes
+        document.addEventListener('animationend', (e) => {
+            if (e.target.classList.contains('recipe-card')) {
+                e.target.classList.remove('highlight');
+            }
+        });
+    </script>
+
     <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
 </body>
