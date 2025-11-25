@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إخلاء المسؤولية الطبية - WiBo Health</title>
-    <meta name="description" content="إخلاء المسؤولية الطبية - المعلومات المقدمة في WiBo Health هي لأغراض تعليمية فقط">
-    <link rel="canonical" href="https://wibo-health.com/disclaimer.html">
-    
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="إخلاء المسؤولية الطبية والقانونية لموقع WiBo Health - معلومات مهمة قبل استخدام الموقع">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="/images/icon-192.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
     
     <style>
         * {
@@ -19,7 +18,7 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
@@ -33,84 +32,59 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 50px 30px;
+            padding: 40px 30px;
             text-align: center;
-        }
-
-        .header i {
-            font-size: 4em;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
         }
 
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.95;
+        .header .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
         }
 
         .content {
-            padding: 50px 40px;
+            padding: 40px 30px;
         }
 
         .warning-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
             color: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(245,87,108,0.3);
-        }
-
-        .warning-box i {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            display: block;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+            border-right: 6px solid #c92a2a;
         }
 
         .warning-box h2 {
             font-size: 1.8em;
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .warning-box p {
-            font-size: 1.15em;
-            line-height: 1.9;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-right: 5px solid #667eea;
         }
 
         .section h2 {
@@ -119,292 +93,449 @@
             margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
-        .section h2 i {
-            font-size: 1.2em;
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            padding-right: 10px;
+            border-right: 4px solid #764ba2;
         }
 
         .section p {
-            color: #555;
-            font-size: 1.1em;
-            line-height: 1.9;
-            margin-bottom: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.05em;
         }
 
         .section ul {
-            list-style: none;
-            padding-right: 0;
-        }
-
-        .section ul li {
-            color: #555;
-            font-size: 1.05em;
-            padding: 12px 0;
-            padding-right: 35px;
-            position: relative;
-            line-height: 1.8;
-        }
-
-        .section ul li:before {
-            content: "✓";
-            position: absolute;
-            right: 0;
-            color: #2ecc71;
-            font-weight: bold;
-            font-size: 1.3em;
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 25px;
-            border-radius: 12px;
-            border-right: 5px solid #667eea;
-            margin: 30px 0;
-        }
-
-        .info-box p {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 1.05em;
-        }
-
-        .contact-section {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .contact-section h3 {
-            color: #2c3e50;
-            font-size: 1.6em;
+            margin-right: 25px;
             margin-bottom: 15px;
         }
 
-        .contact-section p {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+        .section li {
+            color: #444;
+            margin-bottom: 12px;
+            padding-right: 10px;
+            font-size: 1.05em;
         }
 
-        .contact-btn {
+        .section li::marker {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffd93d 0%, #ffaa00 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-right: 5px solid #ff8800;
+            box-shadow: 0 5px 15px rgba(255,170,0,0.3);
+        }
+
+        .highlight-box p {
+            color: #000;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #4dabf7 0%, #339af0 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-right: 5px solid #1c7ed6;
+        }
+
+        .info-box h3 {
+            color: white !important;
+            border: none;
+            margin-top: 0;
+        }
+
+        .footer-section {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer-section p {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .btn-home {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s;
-            box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.4);
         }
 
-        .contact-btn:hover {
+        .btn-home:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(102,126,234,0.6);
+            box-shadow: 0 8px 20px rgba(102,126,234,0.6);
         }
 
-        .back-home {
+        .date-updated {
             text-align: center;
-            padding: 30px;
-            background: #f8f9fa;
-        }
-
-        .back-home a {
-            color: #667eea;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
-        }
-
-        .back-home a:hover {
-            color: #764ba2;
-            gap: 15px;
+            color: #666;
+            font-style: italic;
+            margin: 30px 0;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 10px;
         }
 
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
             }
-
-            .header p {
-                font-size: 1em;
-            }
-
+            
             .content {
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
 
             .section h2 {
                 font-size: 1.5em;
             }
 
-            .section p, .section ul li {
-                font-size: 1em;
+            .section h3 {
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <i class="fas fa-shield-alt"></i>
-            <h1>إخلاء المسؤولية الطبية</h1>
-            <p>Medical Disclaimer</p>
+            <div class="icon">⚖️</div>
+            <h1>إخلاء المسؤولية الطبية والقانونية</h1>
+            <p>معلومات مهمة - يُرجى القراءة بعناية</p>
         </div>
 
-        <!-- Content -->
         <div class="content">
-            <!-- Warning Box -->
             <div class="warning-box">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h2>تنويه هام</h2>
-                <p>
-                    المعلومات المقدمة في موقع WiBo Health هي <strong>لأغراض تعليمية وإعلامية فقط</strong> 
-                    ولا تُعتبر بديلاً عن الاستشارة الطبية أو التشخيص أو العلاج من قبل أخصائي رعاية صحية مؤهل.
-                </p>
+                <h2>⚠️ تحذير طبي مهم جداً</h2>
+                <p><strong>المعلومات الواردة في هذا الموقع هي لأغراض تعليمية وإعلامية فقط، وليست بديلاً عن الاستشارة الطبية المهنية أو التشخيص أو العلاج. استشر طبيبك دائماً قبل البدء بأي نظام غذائي أو تناول أي مكمل غذائي.</strong></p>
             </div>
 
-            <!-- Section 1 -->
+            <div style="background: linear-gradient(135deg, #4dabf7 0%, #339af0 100%); color: white; padding: 25px; border-radius: 15px; margin-bottom: 30px; border-right: 6px solid #1c7ed6;">
+                <h2 style="color: white; font-size: 1.6em; margin-bottom: 15px;">🎯 طبيعة الخدمات المقدمة</h2>
+                <p style="font-size: 1.1em; line-height: 1.8; color: white;">
+                    <strong>WiBo Health</strong> يقدم نوعين من الخدمات:
+                </p>
+                <div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                        <strong>📚 1. المحتوى العام المجاني (الموقع):</strong><br>
+                        معلومات تعليمية وإعلامية عامة للتثقيف الصحي فقط - ليست استشارة طبية شخصية
+                    </div>
+                    <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                        <strong>🩺 2. خدمات طبية شخصية (بعد التواصل المباشر):</strong><br>
+                        استشارات وخطط فردية مخصصة تُقدم بشكل خاص بعد التقييم الشخصي والموافقة المستنيرة
+                    </div>
+                </div>
+            </div>
+
             <div class="section">
-                <h2>
-                    <i class="fas fa-info-circle"></i>
-                    طبيعة المعلومات المقدمة
-                </h2>
-                <p>
-                    جميع المعلومات الغذائية والصحية المتوفرة في هذا الموقع مستمدة من مصادر علمية موثوقة 
-                    (USDA، PubMed، WHO، وغيرها)، لكنها تُقدم <strong>للتوعية العامة فقط</strong>.
-                </p>
-                <p>
-                    لا يُقصد من هذه المعلومات:
-                </p>
+                <h2>📋 1. طبيعة المحتوى</h2>
+                <p>موقع <strong>WiBo Health</strong> هو منصة تعليمية توفر معلومات عامة حول:</p>
                 <ul>
-                    <li>تشخيص أي حالة صحية أو مرض</li>
-                    <li>وصف علاج طبي أو دوائي</li>
-                    <li>استبدال الاستشارة الطبية المتخصصة</li>
-                    <li>تقديم نصائح طبية شخصية</li>
+                    <li>المكملات الغذائية وفوائدها المحتملة</li>
+                    <li>القيم الغذائية للأطعمة المختلفة</li>
+                    <li>الوصفات الصحية</li>
+                    <li>حاسبات صحية تقريبية (BMI, BMR, السعرات الحرارية)</li>
+                    <li>مقالات تثقيفية حول الصحة والتغذية</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p>⚠️ جميع المعلومات المقدمة هي لأغراض التثقيف الصحي العام فقط ولا تشكل نصيحة طبية متخصصة.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📚 1. المحتوى العام المجاني على الموقع</h2>
+                <p>المحتوى المنشور على هذا الموقع (مقالات، معلومات عن المكملات، وصفات، حاسبات، إلخ) هو:</p>
+                
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 12px; border-right: 4px solid #2196f3; margin: 20px 0;">
+                    <h3 style="color: #1976d2; border: none; margin-top: 0;">✅ ما يشمله المحتوى المجاني:</h3>
+                    <ul style="margin-right: 0; padding-right: 20px;">
+                        <li>📚 معلومات تعليمية وإعلامية عامة</li>
+                        <li>📊 بيانات غذائية موثوقة (1050 عنصر)</li>
+                        <li>💊 معلومات علمية عامة عن 220 مكمل غذائي</li>
+                        <li>🧮 حاسبات صحية تقريبية (BMI, BMR, السعرات)</li>
+                        <li>👨‍🍳 وصفات صحية مع قيمها الغذائية</li>
+                        <li>📖 مقالات تثقيفية حول الصحة والتغذية</li>
+                        <li>🔗 روابط لمصادر علمية موثوقة</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <p>⚠️ <strong>مهم جداً:</strong> المحتوى العام المجاني هو لأغراض التثقيف الصحي فقط، وليس استشارة طبية شخصية، ولا يشكل علاقة طبيب-مريض، ولا يغني عن استشارة مختص.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🩺 2. الخدمات الطبية الشخصية المدفوعة</h2>
+                
+                <p>بالإضافة للمحتوى التعليمي المجاني، نوفر إمكانية الحصول على <strong>خدمات طبية شخصية</strong> تشمل:</p>
+                
+                <div style="background: #fff3e0; padding: 20px; border-radius: 12px; border-right: 4px solid #ff9800; margin: 20px 0;">
+                    <h3 style="color: #f57c00; border: none; margin-top: 0;">💼 الخدمات الطبية الشخصية:</h3>
+                    <ul style="margin-right: 0; padding-right: 20px;">
+                        <li>🩺 استشارات طبية وتغذوية شخصية</li>
+                        <li>📋 خطط علاج وأنظمة غذائية فردية مخصصة</li>
+                        <li>💊 برامج دايت مخصصة</li>
+                        <li>📞 متابعة طبية شخصية</li>
+                        <li>📊 تقييم شخصي للحالة الصحية</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>⚠️ شروط الحصول على الخدمات الطبية الشخصية:</h3>
+                    <ul style="color: white; margin-right: 0; padding-right: 20px;">
+                        <li>✅ تتم بعد <strong>التواصل المباشر</strong> معنا (واتساب، بريد إلكتروني، إلخ)</li>
+                        <li>✅ تتطلب <strong>تقييماً طبياً شخصياً</strong> لحالتك الصحية</li>
+                        <li>✅ تتطلب <strong>موافقة مستنيرة خطية</strong> منك</li>
+                        <li>✅ تُقدم من قبل <strong>مختص مرخص</strong></li>
+                        <li>✅ محمية <strong>بسرية تامة</strong> وفق قوانين حماية البيانات الصحية</li>
+                        <li>✅ تبدأ العلاقة الطبية فقط بعد <strong>الموافقة المتبادلة</strong></li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <p>📌 <strong>ملاحظة مهمة:</strong> المحتوى العام المنشور على الموقع <strong>لا يشكل علاقة طبيب-مريض</strong>. العلاقة الطبية تبدأ فقط بعد التواصل المباشر، التقييم الشخصي، وتوقيع نموذج الموافقة المستنيرة.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>⚖️ 3. الفرق الواضح بين المحتوى المجاني والخدمات المدفوعة</h2>
+                
+                <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                    <thead>
+                        <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                            <th style="padding: 15px; text-align: right; border: 1px solid #ddd;">الجانب</th>
+                            <th style="padding: 15px; text-align: right; border: 1px solid #ddd;">📚 المحتوى المجاني</th>
+                            <th style="padding: 15px; text-align: right; border: 1px solid #ddd;">🩺 الخدمات المدفوعة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">الطبيعة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">معلومات تعليمية عامة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">استشارات طبية شخصية</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">الهدف</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">التثقيف الصحي العام</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">علاج وتقييم حالة محددة</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">التخصيص</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">عام لجميع المستخدمين</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">مخصص لحالتك الفردية</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">التقييم</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">لا يوجد تقييم شخصي</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">تقييم طبي مفصل لحالتك</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">العلاقة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">لا توجد علاقة طبيب-مريض</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">علاقة طبيب-مريض رسمية</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">المسؤولية</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">مسؤوليتك الشخصية</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">مسؤولية مشتركة مع المختص</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">الموافقة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">غير مطلوبة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">موافقة مستنيرة خطية مطلوبة</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd; font-weight: bold;">التكلفة</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #e3f2fd;">مجاني 100%</td>
+                            <td style="padding: 12px; border: 1px solid #ddd; background: #fff3e0;">خدمات مدفوعة</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <h3>✅ متى تحتاج الخدمات الطبية الشخصية؟</h3>
+                    <p style="color: white;"><strong>تواصل معنا مباشرة للحصول على استشارة طبية شخصية إذا كنت:</strong></p>
+                    <ul style="color: white;">
+                        <li>تعاني من حالة صحية تحتاج متابعة</li>
+                        <li>تحتاج خطة غذائية مخصصة لحالتك</li>
+                        <li>تريد برنامج دايت فردي محسوب بدقة</li>
+                        <li>تحتاج استشارة متخصصة عن المكملات المناسبة لك</li>
+                        <li>تغيير نظامك الغذائي</li>
+                        <li>البدء بأي برنامج رياضي</li>
+                        <li>إيقاف أي دواء موصوف</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💊 3. المكملات الغذائية</h2>
+                
+                <h3>⚠️ تحذيرات هامة:</h3>
+                <ul>
+                    <li><strong>الجرعات المذكورة:</strong> هي معلومات عامة مستقاة من الدراسات العلمية، وليست توصيات شخصية. الجرعة المناسبة تختلف حسب العمر، الوزن، الحالة الصحية، والأدوية الأخرى.</li>
+                    
+                    <li><strong>التفاعلات الدوائية:</strong> العديد من المكملات قد تتفاعل مع الأدوية الموصوفة. استشر طبيبك أو الصيدلي قبل تناول أي مكمل.</li>
+                    
+                    <li><strong>الآثار الجانبية:</strong> قد تسبب المكملات آثار جانبية غير مذكورة في الموقع. توقف عن الاستخدام واستشر طبيبك فوراً عند ظهور أي أعراض غير طبيعية.</li>
+                    
+                    <li><strong>الحالات الخاصة:</strong> النساء الحوامل والمرضعات، الأطفال، المسنّين، والأشخاص الذين يعانون من أمراض مزمنة يجب أن يستشيروا الطبيب قبل تناول أي مكمل.</li>
+                    
+                    <li><strong>الجودة والمصدر:</strong> تأكد من شراء المكملات من مصادر موثوقة ومرخصة. الموقع غير مسؤول عن جودة المنتجات المتوفرة في الأسواق.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p>⚠️ <strong>مهم:</strong> المكملات الغذائية لا تخضع لنفس معايير الرقابة الصارمة التي تخضع لها الأدوية. استشر مختصاً قبل الاستخدام.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 4. الحاسبات والأدوات</h2>
+                <p>جميع الحاسبات الموجودة في الموقع (BMI، BMR، حاسبة السعرات) هي:</p>
+                <ul>
+                    <li>أدوات تقريبية للاستخدام الإرشادي فقط</li>
+                    <li>تعتمد على معادلات علمية عامة</li>
+                    <li>قد لا تكون دقيقة 100% لجميع الأفراد</li>
+                    <li>ليست بديلاً عن الفحوصات الطبية المخبرية</li>
+                    <li>يجب استشارة أخصائي تغذية للحصول على تقييم شخصي دقيق</li>
                 </ul>
             </div>
 
-            <!-- Section 2 -->
             <div class="section">
-                <h2>
-                    <i class="fas fa-user-md"></i>
-                    استشر طبيبك دائماً
-                </h2>
-                <p>
-                    يُرجى <strong>دائماً استشارة طبيبك أو أخصائي التغذية المعتمد</strong> قبل:
-                </p>
+                <h2>📚 5. المصادر والمراجع العلمية</h2>
+                <p>المعلومات الواردة في الموقع مستقاة من:</p>
                 <ul>
-                    <li>إجراء أي تغييرات جوهرية على نظامك الغذائي</li>
-                    <li>البدء بأي برنامج تخسيس أو حمية غذائية</li>
-                    <li>تناول أي مكملات غذائية أو أعشاب</li>
-                    <li>إيقاف أو تعديل أي أدوية موصوفة</li>
-                    <li>التعامل مع حالات صحية مزمنة (السكري، الضغط، القلب، إلخ)</li>
+                    <li>أبحاث علمية منشورة (PubMed, NCBI)</li>
+                    <li>منظمة الصحة العالمية (WHO)</li>
+                    <li>مصادر طبية موثوقة (Mayo Clinic, WebMD)</li>
+                    <li>مراجعات علمية ودراسات سريرية</li>
+                </ul>
+
+                <p><strong>ومع ذلك:</strong></p>
+                <ul>
+                    <li>العلم يتطور باستمرار وقد تتغير المعلومات</li>
+                    <li>قد توجد دراسات متضاربة حول بعض المواضيع</li>
+                    <li>النتائج قد تختلف من شخص لآخر</li>
+                    <li>الموقع لا يضمن دقة أو اكتمال المعلومات بنسبة 100%</li>
                 </ul>
             </div>
 
-            <!-- Info Box -->
-            <div class="info-box">
-                <p>
-                    <i class="fas fa-lightbulb" style="color: #f39c12; margin-left: 10px;"></i>
-                    <strong>ملاحظة هامة:</strong> 
-                    كل شخص فريد في احتياجاته الغذائية وحالته الصحية. ما يناسب شخصاً قد لا يناسب آخر. 
-                    احرص دائماً على الحصول على استشارة طبية مخصصة لحالتك.
-                </p>
-            </div>
-
-            <!-- Section 3 -->
             <div class="section">
-                <h2>
-                    <i class="fas fa-exclamation-circle"></i>
-                    الحالات الطبية الخاصة
-                </h2>
-                <p>
-                    إذا كنت تعاني من أي من الحالات التالية، <strong>استشر طبيبك فوراً</strong> قبل اتباع أي نصائح غذائية:
-                </p>
+                <h2>⚖️ 6. إخلاء المسؤولية القانونية</h2>
+                
+                <h3>المسؤولية عن الاستخدام:</h3>
+                <p>باستخدامك لهذا الموقع، فإنك توافق على أن:</p>
                 <ul>
-                    <li>مرض السكري (النوع الأول أو الثاني)</li>
-                    <li>أمراض القلب والأوعية الدموية</li>
-                    <li>ارتفاع ضغط الدم</li>
-                    <li>أمراض الكلى أو الكبد</li>
-                    <li>الحساسية الغذائية الشديدة</li>
-                    <li>اضطرابات الأكل (فقدان الشهية، الشره، إلخ)</li>
-                    <li>الحمل أو الرضاعة</li>
-                    <li>أي حالة طبية مزمنة أخرى</li>
+                    <li>استخدامك للمعلومات الواردة في الموقع هو على مسؤوليتك الشخصية</li>
+                    <li><strong>WiBo Health</strong> غير مسؤول عن أي أضرار مباشرة أو غير مباشرة قد تنتج عن استخدام المعلومات</li>
+                    <li>الموقع غير مسؤول عن أي قرارات تتخذها بناءً على المعلومات المقدمة</li>
+                    <li>الموقع لا يتحمل مسؤولية أي أخطاء أو سهو في المحتوى</li>
+                </ul>
+
+                <h3>عدم المسؤولية عن:</h3>
+                <ul>
+                    <li>❌ الآثار الجانبية أو ردود الفعل التحسسية من المكملات</li>
+                    <li>❌ التفاعلات الدوائية غير المتوقعة</li>
+                    <li>❌ عدم فعالية المكملات أو الأنظمة الغذائية</li>
+                    <li>❌ المشاكل الصحية الناتجة عن سوء الاستخدام</li>
+                    <li>❌ جودة المنتجات المتوفرة في الأسواق</li>
                 </ul>
             </div>
 
-            <!-- Section 4 -->
             <div class="section">
-                <h2>
-                    <i class="fas fa-balance-scale"></i>
-                    دقة المعلومات
-                </h2>
-                <p>
-                    نحن نسعى جاهدين لتوفير معلومات دقيقة وحديثة، لكن:
-                </p>
+                <h2>🚨 7. حالات الطوارئ</h2>
+                <div class="warning-box">
+                    <h2>⚠️ تحذير عاجل</h2>
+                    <p><strong>لا تستخدم هذا الموقع في حالات الطوارئ الطبية!</strong></p>
+                    <p>في حالة الطوارئ، اتصل فوراً بالإسعاف أو اذهب إلى أقرب مستشفى.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📞 8. لا نقدم دعماً طبياً</h2>
+                <p>الموقع لا يوفر:</p>
                 <ul>
-                    <li>القيم الغذائية قد تختلف باختلاف طريقة التحضير والمصدر</li>
-                    <li>المؤشرات الجلايسيمية والأنسولينية قد تختلف من شخص لآخر</li>
-                    <li>المعلومات الطبية تتطور باستمرار مع الأبحاث الجديدة</li>
-                    <li>لا نضمن اكتمال أو دقة جميع المعلومات بنسبة 100%</li>
+                    <li>❌ استشارات طبية عبر البريد الإلكتروني</li>
+                    <li>❌ إجابات على استفسارات طبية خاصة</li>
+                    <li>❌ تشخيص أو علاج الحالات الصحية</li>
+                    <li>❌ متابعة طبية للمستخدمين</li>
+                </ul>
+                <p><strong>للحصول على مشورة طبية:</strong> استشر طبيبك أو أخصائي الرعاية الصحية المعتمد.</p>
+            </div>
+
+            <div class="section">
+                <h2>🔄 9. تحديث المحتوى</h2>
+                <ul>
+                    <li>نسعى لتحديث المعلومات بانتظام</li>
+                    <li>قد لا تعكس بعض المعلومات أحدث الأبحاث العلمية</li>
+                    <li>المعلومات قابلة للتغيير دون إشعار مسبق</li>
+                    <li>نوصي بالتحقق من المصادر الطبية الموثوقة للحصول على أحدث المعلومات</li>
                 </ul>
             </div>
 
-            <!-- Section 5 -->
             <div class="section">
-                <h2>
-                    <i class="fas fa-gavel"></i>
-                    إخلاء المسؤولية القانونية
-                </h2>
-                <p>
-                    <strong>WiBo Health</strong> ومالكوه وموظفوه غير مسؤولين عن:
-                </p>
-                <ul>
-                    <li>أي أضرار صحية أو جسدية ناتجة عن استخدام المعلومات في هذا الموقع</li>
-                    <li>أي قرارات غذائية أو صحية تتخذها بناءً على المحتوى المقدم</li>
-                    <li>أي نتائج سلبية من عدم استشارة مختص طبي</li>
-                    <li>دقة أو اكتمال المعلومات من المصادر الخارجية المرتبطة</li>
-                </ul>
-                <p style="margin-top: 20px;">
-                    باستخدامك لهذا الموقع، فإنك توافق على تحمل المسؤولية الكاملة عن قراراتك الصحية 
-                    وتقر بأنك قرأت وفهمت هذا الإخلاء.
-                </p>
+                <h2>✅ 10. الموافقة على الشروط</h2>
+                <div class="info-box">
+                    <p><strong>باستخدامك لموقع WiBo Health، فإنك توافق على:</strong></p>
+                    <ul>
+                        <li>✅ قراءة وفهم إخلاء المسؤولية هذا</li>
+                        <li>✅ استشارة طبيب قبل اتخاذ أي قرارات صحية</li>
+                        <li>✅ تحمل المسؤولية الكاملة عن استخدام المعلومات</li>
+                        <li>✅ عدم الاعتماد الكلي على المعلومات المقدمة</li>
+                        <li>✅ طلب المشورة الطبية المهنية عند الحاجة</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Contact Section -->
-            <div class="contact-section">
-                <h3>
-                    <i class="fas fa-comments"></i>
-                    هل لديك أسئلة؟
-                </h3>
-                <p>
-                    لأي استفسارات حول المحتوى أو البيانات المقدمة، تواصل معنا
-                </p>
-                <a href="contact.html" class="contact-btn">
-                    <i class="fas fa-envelope"></i>
-                    اتصل بنا
-                </a>
+            <div class="date-updated">
+                <p><strong>📅 آخر تحديث:</strong> 25 نوفمبر 2025</p>
+                <p>Version 1.0</p>
+            </div>
+
+            <div class="warning-box">
+                <h2>📢 رسالة نهائية</h2>
+                <p><strong>صحتك هي أولويتك!</strong> لا تتردد في استشارة الطبيب أو الأخصائي المعتمد للحصول على نصائح طبية شخصية ومخصصة لحالتك الصحية. المعلومات الموجودة في هذا الموقع هي للتثقيف الصحي العام فقط.</p>
             </div>
         </div>
 
-        <!-- Back Home -->
-        <div class="back-home">
-            <a href="index.html">
-                <i class="fas fa-home"></i>
-                العودة للصفحة الرئيسية
-            </a>
+        <div class="footer-section">
+            <p><strong>WiBo Health</strong> - دليلك الصحي الشامل</p>
+            <p>منصة تعليمية للتثقيف الصحي والغذائي</p>
+            <a href="index.html" class="btn-home">🏠 العودة للصفحة الرئيسية</a>
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+                © 2025 WiBo Health. جميع الحقوق محفوظة.
+            </p>
         </div>
     </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V18VQE3J95"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-V18VQE3J95');
+    </script>
 </body>
 </html>

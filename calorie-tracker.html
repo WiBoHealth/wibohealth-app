@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>متتبع السعرات الحرارية - احسب سعراتك اليومية | WiBo Health</title>
+    <meta name="description" content="متتبع سعرات حرارية احترافي مجاني - تتبع وجباتك اليومية، احسب البروتين والكربوهيدرات والدهون، حدد هدفك، وراقب تقدمك بسهولة. 1050 عنصر غذائي عربي.">
+    <meta name="keywords" content="متتبع سعرات، حساب سعرات حرارية، دايت، تتبع وجبات، بروتين، كربوهيدرات، دهون، BMR، TDEE">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="متتبع السعرات الحرارية | WiBo Health">
+    <meta property="og:description" content="تتبع سعراتك اليومية بدقة - 1050 عنصر غذائي عربي">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-292WD2SWHN');
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --card-bg: white;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-bottom: 40px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8em;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Page Title */
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 2.5em;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #fbbf24;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .alert-box i {
+            font-size: 2em;
+            color: #f59e0b;
+        }
+
+        .alert-box .alert-content h3 {
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+
+        .alert-box .alert-content p {
+            color: #78350f;
+            font-size: 0.95em;
+        }
+
+        .alert-box .btn-premium {
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .alert-box .btn-premium:hover {
+            transform: scale(1.05);
+        }
+
+        /* Grid Layout */
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title i {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Daily Goal */
+        .goal-display {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .goal-display h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .goal-display p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+
+        .calories-summary {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .calorie-stat {
+            text-align: center;
+        }
+
+        .calorie-stat .number {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .calorie-stat .label {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        /* Search Box */
+        .search-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1.05em;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-result-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .search-result-item:hover {
+            background: #f9fafb;
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .food-calories {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        /* Meal Sections */
+        .meal-section {
+            margin-bottom: 30px;
+        }
+
+        .meal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .meal-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+
+        .meal-calories {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .meal-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .meal-item {
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .meal-item:hover {
+            background: #f3f4f6;
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .item-details {
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn-delete {
+            background: #fee2e2;
+            color: #dc2626;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-delete:hover {
+            background: #fecaca;
+        }
+
+        .add-meal-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .add-meal-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Macros Distribution */
+        .macros-chart {
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .macros-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        /* History Chart */
+        .history-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .history-tab {
+            flex: 1;
+            padding: 12px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .history-tab.active {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .history-chart {
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-export {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .btn-export:hover {
+            background: #bfdbfe;
+        }
+
+        .btn-import {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .btn-import:hover {
+            background: #a7f3d0;
+        }
+
+        .btn-reset {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .btn-reset:hover {
+            background: #fecaca;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .modal-title {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1em;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-gradient);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tracker-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .alert-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+
+        .empty-state i {
+            font-size: 4em;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .empty-state h3 {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .empty-state p {
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>WiBo Health</span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="foods.html"><i class="fas fa-utensils"></i> الأطعمة</a>
+                <a href="recipes.html"><i class="fas fa-book"></i> الوصفات</a>
+                <a href="calculators.html"><i class="fas fa-calculator"></i> الحاسبات</a>
+                <a href="calorie-tracker.html" style="background: var(--primary-gradient); color: white;"><i class="fas fa-chart-line"></i> متتبع السعرات</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Title -->
+        <div class="page-title">
+            <h1>📊 متتبع السعرات الحرارية</h1>
+            <p>تتبع وجباتك اليومية وراقب تقدمك نحو هدفك</p>
+        </div>
+
+        <!-- Alert Box -->
+        <div class="alert-box">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div class="alert-content">
+                <h3>⚠️ البيانات محفوظة محلياً</h3>
+                <p>بياناتك محفوظة على جهازك فقط. يمكنك تصديرها للحفظ الاحتياطي.</p>
+            </div>
+            <button class="btn-premium" onclick="alert('ميزة التسجيل قريباً! ستتمكن من حفظ بياناتك بشكل دائم ومزامنتها بين الأجهزة.')">
+                <i class="fas fa-crown"></i> سجل دخول (قريباً)
+            </button>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="tracker-grid">
+            <!-- Left Column -->
+            <div>
+                <!-- Daily Goal Card -->
+                <div class="card">
+                    <div class="goal-display">
+                        <p>🎯 هدفك اليومي</p>
+                        <h2 id="dailyGoal">2000</h2>
+                        <p>سعرة حرارية</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%">0%</div>
+                        </div>
+                        <div class="calories-summary">
+                            <div class="calorie-stat">
+                                <div class="number" id="consumedCalories">0</div>
+                                <div class="label">استهلكت</div>
+                            </div>
+                            <div class="calorie-stat">
+                                <div class="number" id="remainingCalories">2000</div>
+                                <div class="label">متبقي</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-meal-btn" onclick="openGoalModal()">
+                        <i class="fas fa-cog"></i> تعديل الهدف
+                    </button>
+                </div>
+
+                <!-- Macros Distribution -->
+                <div class="card" style="margin-top: 30px;">
+                    <div class="card-title">
+                        <i class="fas fa-chart-pie"></i>
+                        التوزيع الغذائي (الماكروز)
+                    </div>
+                    <canvas id="macrosChart" class="macros-chart"></canvas>
+                    <div class="macros-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #ef4444;"></div>
+                            <span>كربوهيدرات: <strong id="carbsAmount">0</strong>جم</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #10b981;"></div>
+                            <span>بروتين: <strong id="proteinAmount">0</strong>جم</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #f59e0b;"></div>
+                            <span>دهون: <strong id="fatAmount">0</strong>جم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Today's Meals -->
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-calendar-day"></i>
+                        وجبات اليوم
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="search-box">
+                        <input type="text" id="foodSearch" placeholder="🔍 ابحث عن طعام..." autocomplete="off">
+                        <i class="fas fa-search"></i>
+                        <div class="search-results" id="searchResults"></div>
+                    </div>
+
+                    <!-- Breakfast -->
+                    <div class="meal-section">
+                        <div class="meal-header">
+                            <div class="meal-title">🍳 الفطور</div>
+                            <div class="meal-calories"><span id="breakfastCalories">0</span> سعرة</div>
+                        </div>
+                        <div class="meal-items" id="breakfastItems">
+                            <div class="empty-state">
+                                <i class="fas fa-utensils"></i>
+                                <p>لم تضف أي طعام للفطور بعد</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lunch -->
+                    <div class="meal-section">
+                        <div class="meal-header">
+                            <div class="meal-title">🍽️ الغداء</div>
+                            <div class="meal-calories"><span id="lunchCalories">0</span> سعرة</div>
+                        </div>
+                        <div class="meal-items" id="lunchItems">
+                            <div class="empty-state">
+                                <i class="fas fa-utensils"></i>
+                                <p>لم تضف أي طعام للغداء بعد</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dinner -->
+                    <div class="meal-section">
+                        <div class="meal-header">
+                            <div class="meal-title">🌙 العشاء</div>
+                            <div class="meal-calories"><span id="dinnerCalories">0</span> سعرة</div>
+                        </div>
+                        <div class="meal-items" id="dinnerItems">
+                            <div class="empty-state">
+                                <i class="fas fa-utensils"></i>
+                                <p>لم تضف أي طعام للعشاء بعد</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Snacks -->
+                    <div class="meal-section">
+                        <div class="meal-header">
+                            <div class="meal-title">🍪 سناكات</div>
+                            <div class="meal-calories"><span id="snacksCalories">0</span> سعرة</div>
+                        </div>
+                        <div class="meal-items" id="snacksItems">
+                            <div class="empty-state">
+                                <i class="fas fa-cookie-bite"></i>
+                                <p>لم تضف أي وجبات خفيفة بعد</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Chart -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-chart-line"></i>
+                سجل السعرات
+            </div>
+            <div class="history-tabs">
+                <button class="history-tab active" onclick="changeHistoryTab('week')">آخر 7 أيام</button>
+                <button class="history-tab" onclick="changeHistoryTab('month')">آخر 30 يوم</button>
+            </div>
+            <canvas id="historyChart" class="history-chart"></canvas>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-tools"></i>
+                إدارة البيانات
+            </div>
+            <div class="action-buttons">
+                <button class="btn-action btn-export" onclick="exportData()">
+                    <i class="fas fa-download"></i>
+                    تصدير بياناتي
+                </button>
+                <button class="btn-action btn-import" onclick="document.getElementById('importFile').click()">
+                    <i class="fas fa-upload"></i>
+                    استيراد بيانات
+                </button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importData(event)">
+                <button class="btn-action btn-reset" onclick="resetData()">
+                    <i class="fas fa-trash-alt"></i>
+                    مسح البيانات
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Food Modal -->
+    <div class="modal" id="addFoodModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">إضافة طعام</h2>
+                <button class="btn-close" onclick="closeAddFoodModal()">×</button>
+            </div>
+            <form id="addFoodForm">
+                <input type="hidden" id="selectedFoodId">
+                <div class="form-group">
+                    <label>الطعام:</label>
+                    <input type="text" id="selectedFoodName" readonly>
+                </div>
+                <div class="form-group">
+                    <label>الوجبة:</label>
+                    <select id="mealType" required>
+                        <option value="breakfast">🍳 الفطور</option>
+                        <option value="lunch">🍽️ الغداء</option>
+                        <option value="dinner">🌙 العشاء</option>
+                        <option value="snacks">🍪 سناكات</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>الكمية (جرام):</label>
+                    <input type="number" id="foodAmount" value="100" min="1" required>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 5px;">
+                        السعرات لـ 100 جرام: <strong id="calories100g">0</strong> سعرة
+                    </p>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-plus"></i> إضافة
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Goal Setting Modal -->
+    <div class="modal" id="goalModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">تحديد الهدف الشخصي</h2>
+                <button class="btn-close" onclick="closeGoalModal()">×</button>
+            </div>
+            <form id="goalForm">
+                <div class="form-group">
+                    <label>الجنس:</label>
+                    <select id="gender" required>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>العمر:</label>
+                    <input type="number" id="age" min="10" max="120" required>
+                </div>
+                <div class="form-group">
+                    <label>الوزن (كجم):</label>
+                    <input type="number" id="weight" min="30" max="300" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label>الطول (سم):</label>
+                    <input type="number" id="height" min="100" max="250" required>
+                </div>
+                <div class="form-group">
+                    <label>مستوى النشاط:</label>
+                    <select id="activityLevel" required>
+                        <option value="1.2">قليل الحركة (لا توجد رياضة)</option>
+                        <option value="1.375">نشاط خفيف (رياضة 1-3 أيام)</option>
+                        <option value="1.55">نشاط متوسط (رياضة 3-5 أيام)</option>
+                        <option value="1.725">نشاط عالي (رياضة 6-7 أيام)</option>
+                        <option value="1.9">نشاط مكثف (رياضيون)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>الهدف:</label>
+                    <select id="goal" required>
+                        <option value="-500">خسارة وزن (نصف كيلو أسبوعياً)</option>
+                        <option value="-250">خسارة وزن بطيئة (ربع كيلو أسبوعياً)</option>
+                        <option value="0">ثبات الوزن</option>
+                        <option value="250">زيادة وزن بطيئة</option>
+                        <option value="500">زيادة وزن سريعة</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-save"></i> حفظ الهدف
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Load Food Database -->
+    <script src="js/data.js"></script>
+    
+    <!-- Mobile Menu Script -->
+    <script src="js/mobile-menu.js"></script>
+
+    <!-- Calorie Tracker Script -->
+    <script>
+        // Global Variables
+        let dailyGoal = 2000;
+        let todayData = {
+            date: new Date().toDateString(),
+            meals: {
+                breakfast: [],
+                lunch: [],
+                dinner: [],
+                snacks: []
+            }
+        };
+        let historyData = [];
+        let macrosChart = null;
+        let historyChart = null;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadData();
+            initCharts();
+            updateUI();
+            setupEventListeners();
+        });
+
+        // Setup Event Listeners
+        function setupEventListeners() {
+            // Food Search
+            const foodSearch = document.getElementById('foodSearch');
+            foodSearch.addEventListener('input', handleFoodSearch);
+            
+            // Close search results when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.search-box')) {
+                    document.getElementById('searchResults').classList.remove('active');
+                }
+            });
+
+            // Forms
+            document.getElementById('addFoodForm').addEventListener('submit', handleAddFood);
+            document.getElementById('goalForm').addEventListener('submit', handleGoalSetting);
+
+            // Food amount change
+            document.getElementById('foodAmount').addEventListener('input', updateCaloriesPreview);
+        }
+
+        // Handle Food Search
+        function handleFoodSearch(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const searchResults = document.getElementById('searchResults');
+            
+            if (searchTerm.length < 2) {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            // Search in foodsDatabase
+            const results = foodsDatabase.filter(food => 
+                food.name.toLowerCase().includes(searchTerm) ||
+                (food.nameEn && food.nameEn.toLowerCase().includes(searchTerm))
+            ).slice(0, 10);
+
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="search-result-item">لم يتم العثور على نتائج</div>';
+            } else {
+                searchResults.innerHTML = results.map(food => `
+                    <div class="search-result-item" onclick="selectFood(${food.id})">
+                        <div class="food-name">${food.name} ${food.icon || ''}</div>
+                        <div class="food-calories">${food.nutrition.calories} سعرة لكل 100 جرام | بروتين: ${food.nutrition.protein}جم | كربوهيدرات: ${food.nutrition.carbs}جم</div>
+                    </div>
+                `).join('');
+            }
+            
+            searchResults.classList.add('active');
+        }
+
+        // Select Food from Search
+        function selectFood(foodId) {
+            const food = foodsDatabase.find(f => f.id === foodId);
+            if (!food) return;
+
+            // Open modal
+            document.getElementById('selectedFoodId').value = foodId;
+            document.getElementById('selectedFoodName').value = food.name;
+            document.getElementById('foodAmount').value = 100;
+            document.getElementById('calories100g').textContent = food.nutrition.calories;
+            document.getElementById('addFoodModal').classList.add('active');
+            document.getElementById('searchResults').classList.remove('active');
+            document.getElementById('foodSearch').value = '';
+        }
+
+        // Update Calories Preview
+        function updateCaloriesPreview() {
+            const foodId = parseInt(document.getElementById('selectedFoodId').value);
+            const amount = parseFloat(document.getElementById('foodAmount').value) || 100;
+            const food = foodsDatabase.find(f => f.id === foodId);
+            
+            if (food) {
+                const calories = Math.round((food.nutrition.calories / 100) * amount);
+                document.getElementById('calories100g').textContent = `${calories} سعرة (لـ ${amount} جرام)`;
+            }
+        }
+
+        // Handle Add Food
+        function handleAddFood(e) {
+            e.preventDefault();
+            
+            const foodId = parseInt(document.getElementById('selectedFoodId').value);
+            const mealType = document.getElementById('mealType').value;
+            const amount = parseFloat(document.getElementById('foodAmount').value);
+            
+            const food = foodsDatabase.find(f => f.id === foodId);
+            if (!food) return;
+
+            // Calculate nutrition based on amount
+            const multiplier = amount / 100;
+            const mealItem = {
+                id: Date.now(),
+                foodId: foodId,
+                name: food.name,
+                amount: amount,
+                calories: Math.round(food.nutrition.calories * multiplier),
+                protein: Math.round(food.nutrition.protein * multiplier),
+                carbs: Math.round(food.nutrition.carbs * multiplier),
+                fat: Math.round(food.nutrition.fat * multiplier),
+                fiber: Math.round(food.nutrition.fiber * multiplier)
+            };
+
+            // Add to meal
+            todayData.meals[mealType].push(mealItem);
+            
+            // Save and update
+            saveData();
+            updateUI();
+            closeAddFoodModal();
+            
+            // Show success message
+            showNotification('✅ تمت الإضافة بنجاح!');
+        }
+
+        // Delete Meal Item
+        function deleteMealItem(mealType, itemId) {
+            if (!confirm('هل تريد حذف هذا العنصر؟')) return;
+            
+            todayData.meals[mealType] = todayData.meals[mealType].filter(item => item.id !== itemId);
+            saveData();
+            updateUI();
+            showNotification('🗑️ تم الحذف');
+        }
+
+        // Update UI
+        function updateUI() {
+            // Update meals display
+            updateMealDisplay('breakfast', '🍳 الفطور', 'breakfastItems', 'breakfastCalories');
+            updateMealDisplay('lunch', '🍽️ الغداء', 'lunchItems', 'lunchCalories');
+            updateMealDisplay('dinner', '🌙 العشاء', 'dinnerItems', 'dinnerCalories');
+            updateMealDisplay('snacks', '🍪 سناكات', 'snacksItems', 'snacksCalories');
+
+            // Update totals
+            updateTotals();
+            
+            // Update charts
+            updateCharts();
+        }
+
+        // Update Meal Display
+        function updateMealDisplay(mealType, mealEmoji, containerId, caloriesId) {
+            const container = document.getElementById(containerId);
+            const meals = todayData.meals[mealType];
+            const totalCalories = meals.reduce((sum, item) => sum + item.calories, 0);
+
+            document.getElementById(caloriesId).textContent = totalCalories;
+
+            if (meals.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-utensils"></i>
+                        <p>لم تضف أي طعام بعد</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = meals.map(item => `
+                    <div class="meal-item">
+                        <div class="item-info">
+                            <div class="item-name">${item.name}</div>
+                            <div class="item-details">
+                                ${item.amount}جم | ${item.calories} سعرة | 
+                                ب: ${item.protein}جم | ك: ${item.carbs}جم | د: ${item.fat}جم
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="btn-delete" onclick="deleteMealItem('${mealType}', ${item.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Update Totals
+        function updateTotals() {
+            let totalCalories = 0;
+            let totalProtein = 0;
+            let totalCarbs = 0;
+            let totalFat = 0;
+
+            Object.values(todayData.meals).forEach(meals => {
+                meals.forEach(item => {
+                    totalCalories += item.calories;
+                    totalProtein += item.protein;
+                    totalCarbs += item.carbs;
+                    totalFat += item.fat;
+                });
+            });
+
+            // Update display
+            document.getElementById('consumedCalories').textContent = totalCalories;
+            document.getElementById('remainingCalories').textContent = Math.max(0, dailyGoal - totalCalories);
+            
+            const percentage = Math.min(100, Math.round((totalCalories / dailyGoal) * 100));
+            const progressFill = document.getElementById('progressFill');
+            progressFill.style.width = percentage + '%';
+            progressFill.textContent = percentage + '%';
+
+            // Update macros
+            document.getElementById('carbsAmount').textContent = totalCarbs;
+            document.getElementById('proteinAmount').textContent = totalProtein;
+            document.getElementById('fatAmount').textContent = totalFat;
+        }
+
+        // Initialize Charts
+        function initCharts() {
+            // Macros Chart
+            const macrosCtx = document.getElementById('macrosChart').getContext('2d');
+            macrosChart = new Chart(macrosCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['كربوهيدرات', 'بروتين', 'دهون'],
+                    datasets: [{
+                        data: [0, 0, 0],
+                        backgroundColor: ['#ef4444', '#10b981', '#f59e0b']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // History Chart
+            const historyCtx = document.getElementById('historyChart').getContext('2d');
+            historyChart = new Chart(historyCtx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'السعرات المستهلكة',
+                        data: [],
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'الهدف اليومي',
+                        data: [],
+                        borderColor: '#10b981',
+                        borderDash: [5, 5],
+                        tension: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update Charts
+        function updateCharts() {
+            // Update Macros Chart
+            let totalProtein = 0;
+            let totalCarbs = 0;
+            let totalFat = 0;
+
+            Object.values(todayData.meals).forEach(meals => {
+                meals.forEach(item => {
+                    totalProtein += item.protein;
+                    totalCarbs += item.carbs;
+                    totalFat += item.fat;
+                });
+            });
+
+            macrosChart.data.datasets[0].data = [totalCarbs, totalProtein, totalFat];
+            macrosChart.update();
+
+            // Update History Chart
+            updateHistoryChart('week');
+        }
+
+        // Change History Tab
+        function changeHistoryTab(period) {
+            document.querySelectorAll('.history-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            updateHistoryChart(period);
+        }
+
+        // Update History Chart
+        function updateHistoryChart(period) {
+            const days = period === 'week' ? 7 : 30;
+            const labels = [];
+            const data = [];
+            const goalData = [];
+
+            for (let i = days - 1; i >= 0; i--) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toDateString();
+                
+                labels.push(formatDate(date));
+                
+                const dayData = historyData.find(h => h.date === dateStr);
+                const calories = dayData ? calculateDayCalories(dayData.meals) : 0;
+                data.push(calories);
+                goalData.push(dailyGoal);
+            }
+
+            historyChart.data.labels = labels;
+            historyChart.data.datasets[0].data = data;
+            historyChart.data.datasets[1].data = goalData;
+            historyChart.update();
+        }
+
+        // Calculate Day Calories
+        function calculateDayCalories(meals) {
+            let total = 0;
+            Object.values(meals).forEach(mealItems => {
+                mealItems.forEach(item => {
+                    total += item.calories;
+                });
+            });
+            return total;
+        }
+
+        // Format Date
+        function formatDate(date) {
+            const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+            return days[date.getDay()];
+        }
+
+        // Goal Setting Modal
+        function openGoalModal() {
+            document.getElementById('goalModal').classList.add('active');
+        }
+
+        function closeGoalModal() {
+            document.getElementById('goalModal').classList.remove('active');
+        }
+
+        function handleGoalSetting(e) {
+            e.preventDefault();
+            
+            const gender = document.getElementById('gender').value;
+            const age = parseInt(document.getElementById('age').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseInt(document.getElementById('height').value);
+            const activityLevel = parseFloat(document.getElementById('activityLevel').value);
+            const goalAdjustment = parseInt(document.getElementById('goal').value);
+
+            // Calculate BMR (Mifflin-St Jeor Equation)
+            let bmr;
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+
+            // Calculate TDEE
+            const tdee = bmr * activityLevel;
+            
+            // Adjust for goal
+            dailyGoal = Math.round(tdee + goalAdjustment);
+
+            // Update display
+            document.getElementById('dailyGoal').textContent = dailyGoal;
+            document.getElementById('remainingCalories').textContent = Math.max(0, dailyGoal - parseInt(document.getElementById('consumedCalories').textContent));
+
+            saveData();
+            updateUI();
+            closeGoalModal();
+            showNotification('✅ تم حفظ الهدف!');
+        }
+
+        // Add Food Modal
+        function closeAddFoodModal() {
+            document.getElementById('addFoodModal').classList.remove('active');
+        }
+
+        // Data Management
+        function saveData() {
+            // Check if we need to save today's data to history
+            const today = new Date().toDateString();
+            if (todayData.date !== today) {
+                // Save previous day to history
+                historyData.push(todayData);
+                
+                // Start new day
+                todayData = {
+                    date: today,
+                    meals: {
+                        breakfast: [],
+                        lunch: [],
+                        dinner: [],
+                        snacks: []
+                    }
+                };
+            }
+
+            // Keep only last 30 days in history
+            if (historyData.length > 30) {
+                historyData = historyData.slice(-30);
+            }
+
+            localStorage.setItem('calorieTracker_todayData', JSON.stringify(todayData));
+            localStorage.setItem('calorieTracker_historyData', JSON.stringify(historyData));
+            localStorage.setItem('calorieTracker_dailyGoal', dailyGoal);
+        }
+
+        function loadData() {
+            const savedTodayData = localStorage.getItem('calorieTracker_todayData');
+            const savedHistoryData = localStorage.getItem('calorieTracker_historyData');
+            const savedDailyGoal = localStorage.getItem('calorieTracker_dailyGoal');
+
+            if (savedTodayData) {
+                todayData = JSON.parse(savedTodayData);
+                
+                // Check if it's a new day
+                const today = new Date().toDateString();
+                if (todayData.date !== today) {
+                    // Save yesterday's data
+                    historyData.push(todayData);
+                    
+                    // Start fresh
+                    todayData = {
+                        date: today,
+                        meals: {
+                            breakfast: [],
+                            lunch: [],
+                            dinner: [],
+                            snacks: []
+                        }
+                    };
+                    saveData();
+                }
+            }
+
+            if (savedHistoryData) {
+                historyData = JSON.parse(savedHistoryData);
+            }
+
+            if (savedDailyGoal) {
+                dailyGoal = parseInt(savedDailyGoal);
+                document.getElementById('dailyGoal').textContent = dailyGoal;
+            }
+        }
+
+        // Export Data
+        function exportData() {
+            const data = {
+                todayData: todayData,
+                historyData: historyData,
+                dailyGoal: dailyGoal,
+                exportDate: new Date().toISOString()
+            };
+
+            const dataStr = JSON.stringify(data, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `calorie-tracker-backup-${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+
+            showNotification('✅ تم تصدير البيانات!');
+        }
+
+        // Import Data
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    if (data.todayData && data.historyData && data.dailyGoal) {
+                        if (confirm('سيتم استبدال جميع بياناتك الحالية. هل تريد المتابعة؟')) {
+                            todayData = data.todayData;
+                            historyData = data.historyData;
+                            dailyGoal = data.dailyGoal;
+                            
+                            saveData();
+                            updateUI();
+                            showNotification('✅ تم استيراد البيانات!');
+                        }
+                    } else {
+                        alert('❌ ملف غير صالح!');
+                    }
+                } catch (error) {
+                    alert('❌ خطأ في قراءة الملف!');
+                }
+            };
+            reader.readAsText(file);
+            
+            // Reset file input
+            event.target.value = '';
+        }
+
+        // Reset Data
+        function resetData() {
+            if (!confirm('⚠️ هل أنت متأكد من مسح جميع البيانات؟ هذا الإجراء لا يمكن التراجع عنه!')) return;
+            
+            if (!confirm('⚠️ تأكيد نهائي: سيتم حذف كل شيء!')) return;
+
+            todayData = {
+                date: new Date().toDateString(),
+                meals: {
+                    breakfast: [],
+                    lunch: [],
+                    dinner: [],
+                    snacks: []
+                }
+            };
+            historyData = [];
+            dailyGoal = 2000;
+
+            localStorage.removeItem('calorieTracker_todayData');
+            localStorage.removeItem('calorieTracker_historyData');
+            localStorage.removeItem('calorieTracker_dailyGoal');
+
+            updateUI();
+            showNotification('🗑️ تم مسح البيانات');
+        }
+
+        // Show Notification
+        function showNotification(message) {
+            // Simple alert for now - can be enhanced with toast notifications
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background: var(--primary-gradient);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                z-index: 3000;
+                animation: slideInUp 0.3s ease;
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideOutDown 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+    </script>
+
+    <style>
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+        }
+    </style>
+</body>
+</html>

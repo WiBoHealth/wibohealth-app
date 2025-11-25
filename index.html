@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>WiBo Health - دليلك الصحي الشامل | 1050 عنصر غذائي، حاسبات صحية، وصفات</title>
+    <title>WiBo Health - دليلك الصحي الشامل | 1050 عنصر غذائي، 110 وصفة، 16 مقالة</title>
     <meta name="title" content="WiBo Health - دليلك الصحي الشامل | 1050 عنصر غذائي">
-    <meta name="description" content="موقع WiBo Health يوفر لك دليل شامل للتغذية الصحية مع 1050 عنصر غذائي كامل بالمعلومات التغذوية، حاسبات صحية متقدمة (BMI، BMR، السعرات)، وصفات صحية لذيذة، ومقالات تغذوية احترافية. دليلك الكامل للصحة والعافية.">
+    <meta name="description" content="موقع WiBo Health يوفر لك دليل شامل للتغذية الصحية مع 1050 عنصر غذائي كامل بالمعلومات التغذوية، حاسبات صحية متقدمة (BMI، BMR، السعرات)، 110 وصفة صحية لذيذة (دايت وحلويات صحية)، و16 مقالة تغذوية احترافية. دليلك الكامل للصحة والعافية.">
     <meta name="keywords" content="تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI, حاسبة السعرات, وصفات صحية, مقالات تغذية, صحة, عناصر غذائية, بروتين, كربوهيدرات, دهون صحية">
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
@@ -902,6 +902,10 @@
                         <i class="fas fa-calculator"></i>
                         الحاسبات
                     </a>
+                    <a href="calorie-tracker.html" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        متتبع السعرات
+                    </a>
                     <a href="recipes.html" class="nav-link">
                         <i class="fas fa-book-open"></i>
                         الوصفات
@@ -909,6 +913,10 @@
                     <a href="articles.html" class="nav-link">
                         <i class="fas fa-book-medical"></i>
                         المقالات
+                    </a>
+                    <a href="supplements.html" class="nav-link">
+                        <i class="fas fa-capsules"></i>
+                        المكملات الغذائية
                     </a>
                     <a href="doctor.html" class="nav-link">
                         <i class="fas fa-user-md"></i>
@@ -945,6 +953,10 @@
             <i class="fas fa-calculator"></i>
             الحاسبات الصحية
         </a>
+        <a href="calorie-tracker.html" class="mobile-nav-link">
+            <i class="fas fa-chart-line"></i>
+            متتبع السعرات
+        </a>
         <a href="recipes.html" class="mobile-nav-link">
             <i class="fas fa-book-open"></i>
             الوصفات الصحية
@@ -952,6 +964,10 @@
         <a href="articles.html" class="mobile-nav-link">
             <i class="fas fa-book-medical"></i>
             المقالات الصحية
+        </a>
+        <a href="supplements.html" class="mobile-nav-link">
+            <i class="fas fa-capsules"></i>
+            دليل المكملات الغذائية
         </a>
         <a href="doctor.html" class="mobile-nav-link">
             <i class="fas fa-user-md"></i>
@@ -1006,8 +1022,17 @@
                     <span class="stat-label-compact">مقالة متخصصة</span>
                 </div>
                 <div class="stat-item-compact">
+                    <i class="fas fa-capsules"></i>
+                    <span class="stat-number-dynamic">
+                        <span class="stat-count" id="supplement-count">0</span>+
+                    </span>
+                    <span class="stat-label-compact">مكمل غذائي</span>
+                </div>
+                <div class="stat-item-compact">
                     <i class="fas fa-calculator"></i>
-                    <span class="stat-number-dynamic">4</span>
+                    <span class="stat-number-dynamic">
+                        <span class="stat-count" id="calculator-count">0</span>+
+                    </span>
                     <span class="stat-label-compact">حاسبات دقيقة</span>
                 </div>
             </div>
@@ -1069,6 +1094,15 @@
                     <h3>مقالات تغذوية متخصصة</h3>
                     <p>محتوى احترافي عن السكري، التغذية، القولون العصبي والصحة العامة</p>
                     <a href="articles.html" class="feature-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="quick-feature-card">
+                    <div class="quick-feature-icon">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <h3>دليل المكملات الغذائية</h3>
+                    <p>دليل شامل لـ 272 مكمل غذائي مع الفوائد، الجرعات، التحذيرات والمصادر الطبيعية</p>
+                    <a href="supplements.html" class="feature-link">استكشف الدليل <i class="fas fa-arrow-left"></i></a>
                 </div>
             </div>
         </section>
@@ -1662,10 +1696,22 @@
                 animateCounter(recipeCountElement, recipeCount);
             }
 
-            // عدد المقالات (ثابت حالياً - يمكن تحديثه لاحقاً)
+            // عدد المقالات (ثابت - 16 مقالة)
             const articleCountElement = document.getElementById('article-count');
             if (articleCountElement) {
-                animateCounter(articleCountElement, 8);
+                animateCounter(articleCountElement, 16);
+            }
+
+            // عدد المكملات الغذائية (272 مكمل - يتم تحديثه تلقائياً)
+            const supplementCountElement = document.getElementById('supplement-count');
+            if (supplementCountElement) {
+                animateCounter(supplementCountElement, 272);
+            }
+
+            // عدد الحاسبات الصحية (4 حاسبات: BMI, BMR, السعرات, الماء)
+            const calculatorCountElement = document.getElementById('calculator-count');
+            if (calculatorCountElement) {
+                animateCounter(calculatorCountElement, 4);
             }
         }
 
