@@ -72,12 +72,6 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "wibohealth-app.vercel.app"
-        }
-      ],
       "destination": "https://wibohealth.com/:path*",
       "permanent": true
     }
