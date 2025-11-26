@@ -69,13 +69,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://wibohealth.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/",
