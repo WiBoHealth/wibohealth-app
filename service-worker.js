@@ -1,14 +1,15 @@
 // Service Worker for WiBo Health PWA
-// Version 2.0.0 - 1000 Food Items!
+// Version 3.0.0 - 426 Dietary Supplements! 💊
 
-const CACHE_NAME = 'wibo-health-v2.0.0';
-const RUNTIME_CACHE = 'wibo-health-runtime';
+const CACHE_NAME = 'wibo-health-v3.0.0';
+const RUNTIME_CACHE = 'wibo-health-runtime-v3';
 
 // الملفات الأساسية للتخزين المؤقت (Cache)
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/foods.html',
+  '/supplements.html',
   '/calculators.html',
   '/recipes.html',
   '/articles.html',
@@ -75,27 +76,42 @@ self.addEventListener('fetch', event => {
   }
 
   event.respondWith(
+    // ✅ استراتيجية جديدة: Network First لصفحات HTML
+    // Cache First للملفات الثابتة فقط (CSS, JS, Images)
     caches.match(event.request)
       .then(cachedResponse => {
-        // إذا موجود في Cache، استخدمه
+        // للصفحات الديناميكية: جرب الشبكة أولاً
+        const isHTMLPage = event.request.url.includes('.html') || 
+                          event.request.url.endsWith('/');
+        
+        if (isHTMLPage) {
+          // Network First: جيب آخر نسخة من السيرفر
+          return fetch(event.request)
+            .then(networkResponse => {
+              // تخزين النسخة الجديدة
+              if (networkResponse && networkResponse.status === 200) {
+                const responseClone = networkResponse.clone();
+                caches.open(RUNTIME_CACHE).then(cache => {
+                  cache.put(event.request, responseClone);
+                });
+              }
+              console.log('🌐 Service Worker: Fresh from network:', event.request.url);
+              return networkResponse;
+            })
+            .catch(error => {
+              // إذا الشبكة مش شغالة، استخدم الـ Cache
+              console.log('💾 Service Worker: Network failed, using cache:', event.request.url);
+              return cachedResponse || caches.match('/index.html');
+            });
+        }
+        
+        // للملفات الثابتة: Cache First
         if (cachedResponse) {
           console.log('💾 Service Worker: Serving from cache:', event.request.url);
-          
-          // جلب نسخة جديدة في الخلفية (Update in background)
-          fetch(event.request).then(networkResponse => {
-            if (networkResponse && networkResponse.status === 200) {
-              caches.open(RUNTIME_CACHE).then(cache => {
-                cache.put(event.request, networkResponse);
-              });
-            }
-          }).catch(() => {
-            // تجاهل أخطاء الشبكة في التحديث الخلفي
-          });
-
           return cachedResponse;
         }
 
-        // إذا مش موجود، جيبه من الشبكة
+        // إذا مش موجود في Cache، جيبه من الشبكة
         console.log('🌐 Service Worker: Fetching from network:', event.request.url);
         return fetch(event.request).then(networkResponse => {
           // تخزين النسخة الجديدة
@@ -108,12 +124,6 @@ self.addEventListener('fetch', event => {
           return networkResponse;
         }).catch(error => {
           console.error('❌ Service Worker: Fetch failed:', error);
-          
-          // صفحة offline بديلة
-          if (event.request.destination === 'document') {
-            return caches.match('/index.html');
-          }
-          
           throw error;
         });
       })
@@ -187,6 +197,22 @@ self.addEventListener('message', event => {
   
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
+
+// 🔄 Clear old cache on message
+self.addEventListener('message', event => {
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => caches.delete(cacheName))
+        );
+      }).then(() => {
+        console.log('🗑️ Service Worker: All caches cleared');
+        event.ports[0].postMessage({ success: true });
+      })
+    );
   }
 });
 

@@ -14209,5 +14209,63 @@
         </div>
     </footer>
 
+    <!-- 🔄 Cache Clear Script for Latest Updates -->
+    <script>
+        // ✅ مسح الـ Cache القديم بعد التحديث
+        if ('serviceWorker' in navigator) {
+            // إرسال رسالة للـ Service Worker لمسح الـ Cache
+            navigator.serviceWorker.ready.then(registration => {
+                // إنشاء قناة اتصال
+                const messageChannel = new MessageChannel();
+                
+                messageChannel.port1.onmessage = (event) => {
+                    if (event.data.success) {
+                        console.log('✅ Cache cleared successfully!');
+                    }
+                };
+                
+                // طلب مسح الـ Cache
+                registration.active.postMessage(
+                    { type: 'CLEAR_CACHE' },
+                    [messageChannel.port2]
+                );
+            });
+            
+            // تحديث الـ Service Worker
+            navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                console.log('✅ Service Worker registered:', registration);
+                
+                // التحقق من وجود تحديث
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+                            // تحديث جديد متاح - أعد تحميل الصفحة
+                            console.log('🔄 New Service Worker activated! Reloading...');
+                            window.location.reload();
+                        }
+                    });
+                });
+            });
+        }
+        
+        // ✅ مسح الـ Browser Cache عند التحميل
+        window.addEventListener('load', () => {
+            // حذف جميع الـ Caches
+            if ('caches' in window) {
+                caches.keys().then(cacheNames => {
+                    // احتفظ فقط بالـ Cache الجديد
+                    const latestCacheName = 'wibo-health-v3.0.0';
+                    cacheNames.forEach(cacheName => {
+                        if (cacheName !== latestCacheName && !cacheName.includes('v3')) {
+                            caches.delete(cacheName);
+                            console.log('🗑️ Deleted old cache:', cacheName);
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>

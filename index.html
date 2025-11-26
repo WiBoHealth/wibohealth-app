@@ -1921,7 +1921,37 @@
             if (typeof recipesDatabase !== 'undefined') {
                 console.log('✅ عدد الوصفات:', recipesDatabase.length);
             }
+            
+            // 🔄 مسح الـ Browser Cache القديم
+            if ('caches' in window) {
+                caches.keys().then(cacheNames => {
+                    const latestCacheName = 'wibo-health-v3.0.0';
+                    cacheNames.forEach(cacheName => {
+                        if (cacheName !== latestCacheName && !cacheName.includes('v3')) {
+                            caches.delete(cacheName);
+                            console.log('🗑️ Deleted old cache:', cacheName);
+                        }
+                    });
+                });
+            }
         });
+        
+        // ✅ تحديث Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                console.log('✅ Service Worker registered:', registration);
+                
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+                            console.log('🔄 New Service Worker activated!');
+                            window.location.reload();
+                        }
+                    });
+                });
+            });
+        }
     </script>
 </body>
 </html>
