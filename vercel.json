@@ -75,14 +75,6 @@
       "destination": "/index.html"
     },
     {
-      "source": "/en",
-      "destination": "/en/index.html"
-    },
-    {
-      "source": "/en/",
-      "destination": "/en/index.html"
-    },
-    {
       "source": "/.well-known/assetlinks.json",
       "destination": "/well-known/assetlinks.json"
     }
