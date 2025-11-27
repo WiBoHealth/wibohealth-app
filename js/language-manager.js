@@ -92,21 +92,16 @@
 
             // Setup language toggle buttons
             document.addEventListener('DOMContentLoaded', () => {
-                // Find all language toggle links
-                const langLinks = document.querySelectorAll('a[href*="/en/"], a[href^="/"][href$=".html"]');
+                // Find language toggle buttons ONLY (by class names)
+                const langToggleButtons = document.querySelectorAll(
+                    '.lang-switch, .theme-toggle, a[title*="Switch to"], a[title*="التبديل إلى"]'
+                );
                 
-                langLinks.forEach(link => {
-                    const href = link.getAttribute('href');
-                    
-                    // Check if it's a language toggle link
-                    if ((href.startsWith('/en/') && this.getCurrentLanguage() === 'ar') ||
-                        (href.startsWith('/') && !href.startsWith('/en/') && this.getCurrentLanguage() === 'en')) {
-                        
-                        link.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            this.toggleLanguage();
-                        });
-                    }
+                langToggleButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.toggleLanguage();
+                    });
                 });
             });
         }
