@@ -25,18 +25,31 @@
         // Get current page name (without language prefix)
         getCurrentPageName() {
             const path = window.location.pathname;
-            const pageName = path.split('/').pop() || 'index.html';
-            return pageName;
+            // Remove leading/trailing slashes and split
+            const parts = path.replace(/^\/|\/$/g, '').split('/');
+            
+            // If path is like /en/ or /en, return index.html
+            if (parts.length === 1 && (parts[0] === 'en' || parts[0] === '')) {
+                return 'index.html';
+            }
+            
+            // If path is like /en/foods.html, return foods.html
+            // If path is like /foods.html, return foods.html
+            const pageName = parts[parts.length - 1];
+            return pageName || 'index.html';
         },
 
         // Build URL for target language
         buildLanguageUrl(targetLang) {
             const currentPage = this.getCurrentPageName();
             
+            // Clean the page name (remove any 'en' prefix if exists)
+            const cleanPage = currentPage === 'en' ? 'index.html' : currentPage;
+            
             if (targetLang === 'en') {
-                return `/en/${currentPage}`;
+                return `/en/${cleanPage}`;
             } else {
-                return `/${currentPage}`;
+                return `/${cleanPage}`;
             }
         },
 
