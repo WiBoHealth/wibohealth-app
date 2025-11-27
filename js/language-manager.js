@@ -55,8 +55,15 @@
 
         // Check and redirect if needed
         checkAndRedirect() {
+            const currentPath = window.location.pathname;
             const currentLang = this.getCurrentLanguage();
             const savedLang = this.getSavedLanguage();
+
+            // Don't auto-redirect on homepage - let user choose language
+            // Homepage should always be Arabic by default
+            if (currentPath === '/' || currentPath === '/index.html') {
+                return; // Don't redirect on homepage
+            }
 
             // Only redirect if saved language is different from current
             if (savedLang !== currentLang) {
