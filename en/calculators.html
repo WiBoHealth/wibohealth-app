@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>حاسبات صحية مجانية - BMI، BMR، السعرات، الماء | WiBo Health</title>
-    <meta name="description" content="احسب مؤشراتك الصحية مجاناً: مؤشر كتلة الجسم (BMI)، معدل الأيض الأساسي (BMR)، احتياجك اليومي من السعرات والماء - مع إمكانية البحث عن المؤشر الجلايسيمي لأي طعام">
-    <meta name="keywords" content="حاسبة BMI, حاسبة السعرات الحرارية, حاسبة BMR, حاسبة الماء, مؤشر كتلة الجسم, احتياج السعرات, معدل الأيض">
+    <title>Free Health Calculators - BMI, BMR, Calories, Water | WiBo Health</title>
+    <meta name="description" content="Calculate your health indicators for free: Body Mass Index (BMI), Basal Metabolic Rate (BMR), daily calorie and water needs - with glycemic index food search">
+    <meta name="keywords" content="BMI calculator, calorie calculator, BMR calculator, water calculator, body mass index, calorie needs, metabolic rate">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="الحاسبات الصحية المجانية | WiBo Health">
-    <meta property="og:description" content="احسب BMI، BMR، السعرات الحرارية واحتياجك من الماء - مجاناً">
+    <meta property="og:title" content="Free Health Calculators | WiBo Health">
+    <meta property="og:description" content="Calculate BMI, BMR, Calories and Water Needs - Free">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wibo-health.com/calculators.html">
+    <meta property="og:url" content="https://wibohealth.com/en/calculators.html">
+    <meta property="og:locale" content="en_US">
     
     <!-- Additional SEO -->
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wibohealth.com/calculators.html">
+    <link rel="canonical" href="https://wibohealth.com/en/calculators.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/calculators.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/calculators.html">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -59,7 +63,7 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
@@ -141,7 +145,7 @@
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
-            margin-right: 15px;
+            margin-left: 15px;
         }
 
         .lang-switch:hover {
@@ -202,7 +206,7 @@
             border: 2px solid #ecf0f1;
             border-radius: 10px;
             font-size: 16px;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: all 0.3s;
         }
 
@@ -224,7 +228,7 @@
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin-top: 10px;
         }
 
@@ -338,14 +342,14 @@
                     <span></span>
                 </div>
                 
-                <a href="/en/calculators.html" class="lang-switch">🇬🇧 EN</a>
+                <a href="/calculators.html" class="lang-switch">🇸🇦 AR</a>
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-                    <a href="calculators.html" class="nav-link active"><i class="fas fa-calculator"></i> الحاسبات</a>
-                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
-                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
-                    <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> د. وسيم</a>
+                    <a href="/en/" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="/en/foods.html" class="nav-link"><i class="fas fa-utensils"></i> Foods Guide</a>
+                    <a href="/en/calculators.html" class="nav-link active"><i class="fas fa-calculator"></i> Calculators</a>
+                    <a href="/en/recipes.html" class="nav-link"><i class="fas fa-book-open"></i> Recipes</a>
+                    <a href="/en/articles.html" class="nav-link"><i class="fas fa-book-medical"></i> Articles</a>
+                    <a href="/en/doctor.html" class="nav-link"><i class="fas fa-user-md"></i> Dr. Wassim</a>
                 </nav>
             </div>
         </div>
@@ -360,19 +364,19 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
+        <a href="/en/" class="mobile-nav-link">
             <i class="fas fa-home"></i>
-            الصفحة الرئيسية
+            Home
         </a>
-        <a href="foods.html" class="mobile-nav-link">
+        <a href="/en/foods.html" class="mobile-nav-link">
             <i class="fas fa-utensils"></i>
-            دليل الأطعمة
+            Foods Guide
         </a>
-        <a href="calculators.html" class="mobile-nav-link">
+        <a href="/en/calculators.html" class="mobile-nav-link">
             <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
+            Health Calculators
         </a>
-        <a href="recipes.html" class="mobile-nav-link">
+        <a href="/en/recipes.html" class="mobile-nav-link">
             <i class="fas fa-book-open"></i>
             الوصفات الصحية
         </a>
@@ -404,23 +408,23 @@
         <div class="calculator-card">
             <h2>
                 <i class="fas fa-weight"></i>
-                حاسبة مؤشر كتلة الجسم (BMI)
+                BMI Calculator (Body Mass Index)
             </h2>
             
             <div class="form-group">
-                <label>الوزن (كجم)</label>
-                <input type="number" id="weight" placeholder="مثال: 70">
+                <label>Weight (kg)</label>
+                <input type="number" id="weight" placeholder="Example: 70">
             </div>
             
             <div class="form-group">
-                <label>الطول (سم)</label>
-                <input type="number" id="height" placeholder="مثال: 170">
+                <label>Height (cm)</label>
+                <input type="number" id="height" placeholder="Example: 170">
             </div>
             
-            <button class="btn" onclick="calculateBMI()">احسب مؤشر كتلة الجسم</button>
+            <button class="btn" onclick="calculateBMI()">Calculate BMI</button>
             
             <div class="result-box" id="bmiResult">
-                <h3>مؤشر كتلة جسمك</h3>
+                <h3>Your BMI</h3>
                 <div class="result-value" id="bmiValue"></div>
                 <p class="result-label" id="bmiCategory"></p>
             </div>
@@ -430,49 +434,49 @@
         <div class="calculator-card">
             <h2>
                 <i class="fas fa-fire"></i>
-                حاسبة السعرات الحرارية اليومية
+                Daily Calorie Calculator
             </h2>
             
             <div class="form-group">
-                <label>العمر</label>
-                <input type="number" id="age" placeholder="مثال: 30">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Example: 30">
             </div>
             
             <div class="form-group">
-                <label>الجنس</label>
+                <label>Gender</label>
                 <select id="gender">
-                    <option value="male">ذكر</option>
-                    <option value="female">أنثى</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select>
             </div>
             
             <div class="form-group">
-                <label>الوزن (كجم)</label>
-                <input type="number" id="weightCal" placeholder="مثال: 70">
+                <label>Weight (kg)</label>
+                <input type="number" id="weightCal" placeholder="Example: 70">
             </div>
             
             <div class="form-group">
-                <label>الطول (سم)</label>
-                <input type="number" id="heightCal" placeholder="مثال: 170">
+                <label>Height (cm)</label>
+                <input type="number" id="heightCal" placeholder="Example: 170">
             </div>
             
             <div class="form-group">
-                <label>مستوى النشاط</label>
+                <label>Activity Level</label>
                 <select id="activity">
-                    <option value="1.2">قليل الحركة (لا رياضة)</option>
-                    <option value="1.375">نشاط خفيف (1-3 أيام/أسبوع)</option>
-                    <option value="1.55">نشاط متوسط (3-5 أيام/أسبوع)</option>
-                    <option value="1.725">نشاط عالي (6-7 أيام/أسبوع)</option>
-                    <option value="1.9">نشاط عالي جداً (رياضي)</option>
+                    <option value="1.2">Sedentary (no exercise)</option>
+                    <option value="1.375">Light (1-3 days/week)</option>
+                    <option value="1.55">Moderate (3-5 days/week)</option>
+                    <option value="1.725">High (6-7 days/week)</option>
+                    <option value="1.9">Very High (athlete)</option>
                 </select>
             </div>
             
-            <button class="btn" onclick="calculateCalories()">احسب السعرات اليومية</button>
+            <button class="btn" onclick="calculateCalories()">Calculate Daily Calories</button>
             
             <div class="result-box" id="caloriesResult">
-                <h3>احتياجك اليومي</h3>
+                <h3>Your Daily Need</h3>
                 <div class="result-value" id="caloriesValue"></div>
-                <p class="result-label">سعرة حرارية في اليوم</p>
+                <p class="result-label">calories per day</p>
             </div>
         </div>
     </div>
@@ -480,20 +484,20 @@
     <!-- Footer متوافق مع AdSense -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
+            <a href="/en/about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                About Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
+            <a href="/en/contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Contact Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
+            <a href="/en/privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Privacy Policy
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
+            <a href="/en/terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Terms of Use
             </a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">

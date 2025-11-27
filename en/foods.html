@@ -1,16 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل الأطعمة الشامل - المؤشر الجلايسيمي، الأنسولين، السعرات | WiBo Health</title>
-    <meta name="description" content="دليلك الكامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف، فيتامينات ومعادن - قاعدة بيانات غذائية عربية فريدة لمرضى السكري والدايت">
-    <link rel="canonical" href="https://wibohealth.com/foods.html">
-    
-    <!-- Alternate Language Links -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html" />
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/foods.html" />
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods.html" />
+    <title>Complete Foods Guide - Glycemic Index, Insulin Index, Calories | WiBo Health</title>
+    <meta name="description" content="Your complete guide to foods with Glycemic Index (GI) and Insulin Index (II): calories, protein, carbohydrates, fats, fiber, vitamins and minerals - unique nutritional database for diabetics and diet">
+    <link rel="canonical" href="https://wibohealth.com/en/foods.html">
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html" />
@@ -21,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -72,7 +67,7 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
             min-height: 100vh;
             transition: all 0.3s ease;
@@ -308,7 +303,7 @@
             border: 2px solid #ecf0f1;
             border-radius: 10px;
             font-size: 16px;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: all 0.3s;
             background: var(--card-bg);
             color: var(--text-dark);
@@ -526,14 +521,14 @@
 
                 <div class="header-actions">
                     <!-- Language Switcher -->
-                    <a href="/en/foods.html" class="theme-toggle" title="Switch to English" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
-                        🇬🇧
+                    <a href="/foods.html" class="theme-toggle" title="Switch to Arabic" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                        🇸🇦
                     </a>
-                    <button class="favorites-btn" onclick="showFavorites()" title="المفضلة">
+                    <button class="favorites-btn" onclick="showFavorites()" title="Favorites">
                         <i class="fas fa-heart"></i>
                         <span class="favorites-count" id="favCount">0</span>
                     </button>
-                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
                         <i class="fas fa-moon"></i>
                     </button>
                     
@@ -546,12 +541,12 @@
                 </div>
 
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="foods.html" class="nav-link active"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> الحاسبات</a>
-                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
-                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
-                    <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> د. وسيم</a>
+                    <a href="/en/" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="/en/foods.html" class="nav-link active"><i class="fas fa-utensils"></i> Foods Guide</a>
+                    <a href="/en/calculators.html" class="nav-link"><i class="fas fa-calculator"></i> Calculators</a>
+                    <a href="/en/recipes.html" class="nav-link"><i class="fas fa-book-open"></i> Recipes</a>
+                    <a href="/en/articles.html" class="nav-link"><i class="fas fa-book-medical"></i> Articles</a>
+                    <a href="/en/doctor.html" class="nav-link"><i class="fas fa-user-md"></i> Dr. Waseem</a>
                 </nav>
             </div>
         </div>
@@ -566,41 +561,41 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
+        <a href="/en/" class="mobile-nav-link">
             <i class="fas fa-home"></i>
-            الصفحة الرئيسية
+            Home
         </a>
-        <a href="foods.html" class="mobile-nav-link">
+        <a href="/en/foods.html" class="mobile-nav-link">
             <i class="fas fa-utensils"></i>
-            دليل الأطعمة
+            Foods Guide
         </a>
-        <a href="calculators.html" class="mobile-nav-link">
+        <a href="/en/calculators.html" class="mobile-nav-link">
             <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
+            Health Calculators
         </a>
-        <a href="recipes.html" class="mobile-nav-link">
+        <a href="/en/recipes.html" class="mobile-nav-link">
             <i class="fas fa-book-open"></i>
-            الوصفات الصحية
+            Healthy Recipes
         </a>
-        <a href="articles.html" class="mobile-nav-link">
+        <a href="/en/articles.html" class="mobile-nav-link">
             <i class="fas fa-book-medical"></i>
-            المقالات الصحية
+            Health Articles
         </a>
-        <a href="doctor.html" class="mobile-nav-link">
+        <a href="/en/doctor.html" class="mobile-nav-link">
             <i class="fas fa-user-md"></i>
-            د. وسيم حبيب
+            Dr. Waseem Habib
         </a>
-        <a href="pricing.html" class="mobile-nav-link">
+        <a href="/en/pricing.html" class="mobile-nav-link">
             <i class="fas fa-tag"></i>
-            الأسعار
+            Pricing
         </a>
-        <a href="about.html" class="mobile-nav-link">
+        <a href="/en/about.html" class="mobile-nav-link">
             <i class="fas fa-info-circle"></i>
-            من نحن
+            About Us
         </a>
-        <a href="contact.html" class="mobile-nav-link">
+        <a href="/en/contact.html" class="mobile-nav-link">
             <i class="fas fa-envelope"></i>
-            اتصل بنا
+            Contact Us
         </a>
     </nav>
 
@@ -610,23 +605,23 @@
         <div class="daily-tip" id="dailyTip">
             <div class="tip-icon">💡</div>
             <div class="tip-content">
-                <h3>نصيحة اليوم</h3>
-                <p id="tipText">جاري التحميل...</p>
+                <h3>Daily Tip</h3>
+                <p id="tipText">Loading...</p>
             </div>
         </div>
 
         <div class="stats-bar">
-            <h2>قاعدة بيانات شاملة</h2>
+            <h2>Comprehensive Database</h2>
             <p class="big-number" id="totalCount">118</p>
-            <p>عنصر غذائي مع معلومات غذائية كاملة</p>
+            <p>Food Items with Complete Nutritional Information</p>
         </div>
 
         <div class="search-box">
-            <input type="text" id="searchInput" class="search-input" placeholder="🔍 ابحث بالعربي أو English... (مثال: لبن، Milk، أرز، Rice)" oninput="filterFoods()">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search in Arabic or English... (Example: Milk, Rice, Chicken)" oninput="filterFoods()">
             <!-- Search Helper Text -->
             <p style="text-align: center; color: #666; font-size: 0.9em; margin-top: 10px; margin-bottom: 0;">
                 <i class="fas fa-info-circle" style="color: #667eea;"></i>
-                يمكنك البحث بالعربية أو الإنجليزية - ابحث في اسم الطعام أو التصنيف
+                You can search in Arabic or English - Search by food name or category
             </p>
         </div>
 
@@ -634,29 +629,29 @@
     </div>
 
     <!-- Footer -->
-    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Inter', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
+            <a href="/en/about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                About Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
+            <a href="/en/contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Contact Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
+            <a href="/en/privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Privacy Policy
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
+            <a href="/en/terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Terms of Use
             </a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
-            © 2024 WiBo Health. جميع الحقوق محفوظة.
+            © 2024 WiBo Health. All Rights Reserved.
         </p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+            💚 Built with <span style="color: #2ecc71;">♥</span> for Bodi
         </p>
     </footer>
 
