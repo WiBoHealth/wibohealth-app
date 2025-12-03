@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خطط الاشتراك - WiBo Health</title>
+    <title data-i18n="page_title_pricing">خطط الاشتراك - WiBo Health</title>
     <meta name="description" content="اختر خطتك المناسبة للوصول الكامل إلى جميع ميزات WiBo Health - المؤشر الجلايسيمي والأنسولين، المكملات، الوصفات، والمتابعة الشخصية">
     <link rel="canonical" href="https://wibohealth.com/pricing.html">
+    
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/pricing.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/pricing.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/pricing.html">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,10 +33,30 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --accent-color: #667eea;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
         .container {
@@ -42,9 +67,9 @@
 
         /* Header */
         header {
-            background: white;
+            background: var(--card-bg);
             padding: 20px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px var(--shadow);
             margin-bottom: 50px;
             position: sticky;
             top: 0;
@@ -91,10 +116,49 @@
 
         .logo-text h1 {
             font-size: 32px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle, .lang-toggle {
+            background: rgba(46, 204, 113, 0.2);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s;
         }
 
         .nav-menu {
@@ -105,8 +169,8 @@
 
         .nav-link {
             padding: 10px 20px;
-            background: #f3f4f6;
-            color: #2c3e50;
+            background: rgba(46, 204, 113, 0.2);
+            color: var(--text-dark);
             text-decoration: none;
             border-radius: 20px;
             font-weight: 600;
@@ -114,7 +178,7 @@
         }
 
         .nav-link:hover {
-            background: #2ecc71;
+            background: var(--primary-color);
             color: white;
         }
 
@@ -136,6 +200,24 @@
             opacity: 0.95;
         }
 
+        .notice-box {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(245,124,0,0.3);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .notice-box p {
+            margin: 0;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
         /* Pricing Cards */
         .pricing-grid {
             display: grid;
@@ -145,10 +227,10 @@
         }
 
         .pricing-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 25px;
             padding: 40px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px var(--shadow);
             transition: all 0.4s;
             position: relative;
             overflow: hidden;
@@ -156,16 +238,16 @@
 
         .pricing-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 25px 60px var(--shadow);
         }
 
         .pricing-card.featured {
-            border: 3px solid #2ecc71;
+            border: 3px solid var(--primary-color);
             transform: scale(1.05);
         }
 
         .pricing-card.featured::before {
-            content: 'الأكثر شعبية';
+            content: attr(data-label);
             position: absolute;
             top: 20px;
             left: -30px;
@@ -180,26 +262,26 @@
 
         .plan-name {
             font-size: 2rem;
-            color: #2c3e50;
+            color: var(--text-dark);
             margin-bottom: 15px;
             font-weight: 900;
         }
 
         .plan-price {
             font-size: 3.5rem;
-            color: #2ecc71;
+            color: var(--primary-color);
             font-weight: 900;
             margin-bottom: 10px;
         }
 
         .plan-price span {
             font-size: 1.2rem;
-            color: #7f8c8d;
+            color: var(--text-light);
             font-weight: 600;
         }
 
         .plan-description {
-            color: #7f8c8d;
+            color: var(--text-light);
             line-height: 1.6;
             margin-bottom: 30px;
             font-size: 1.05rem;
@@ -212,11 +294,15 @@
 
         .plan-features li {
             padding: 15px 0;
-            border-bottom: 1px solid #ecf0f1;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #2c3e50;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .plan-features li {
+            border-bottom-color: rgba(255,255,255,0.1);
         }
 
         .plan-features li:last-child {
@@ -224,7 +310,7 @@
         }
 
         .plan-features i {
-            color: #2ecc71;
+            color: var(--primary-color);
             font-size: 1.2rem;
         }
 
@@ -239,7 +325,7 @@
         .plan-btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             border-radius: 12px;
@@ -261,17 +347,17 @@
 
         /* Comparison Table */
         .comparison-section {
-            background: white;
+            background: var(--card-bg);
             padding: 50px;
             border-radius: 25px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px var(--shadow);
             margin-bottom: 60px;
         }
 
         .comparison-section h3 {
             text-align: center;
             font-size: 2.5rem;
-            color: #2ecc71;
+            color: var(--primary-color);
             margin-bottom: 40px;
         }
 
@@ -284,11 +370,16 @@
         .comparison-table td {
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #ecf0f1;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .comparison-table th,
+        body.dark-mode .comparison-table td {
+            border-bottom-color: rgba(255,255,255,0.1);
         }
 
         .comparison-table th {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             font-size: 1.3rem;
             font-weight: 700;
@@ -306,11 +397,11 @@
         .comparison-table td:first-child {
             text-align: right;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--text-dark);
         }
 
         .check-icon {
-            color: #2ecc71;
+            color: var(--primary-color);
             font-size: 1.5rem;
         }
 
@@ -321,23 +412,27 @@
 
         /* FAQ */
         .faq-section {
-            background: white;
+            background: var(--card-bg);
             padding: 50px;
             border-radius: 25px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px var(--shadow);
         }
 
         .faq-section h3 {
             text-align: center;
             font-size: 2.5rem;
-            color: #2ecc71;
+            color: var(--primary-color);
             margin-bottom: 40px;
         }
 
         .faq-item {
             margin-bottom: 25px;
-            border-bottom: 2px solid #ecf0f1;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
             padding-bottom: 25px;
+        }
+
+        body.dark-mode .faq-item {
+            border-bottom-color: rgba(255,255,255,0.1);
         }
 
         .faq-item:last-child {
@@ -347,7 +442,7 @@
 
         .faq-question {
             font-size: 1.3rem;
-            color: #2c3e50;
+            color: var(--text-dark);
             font-weight: 700;
             margin-bottom: 15px;
             display: flex;
@@ -356,26 +451,36 @@
         }
 
         .faq-question i {
-            color: #2ecc71;
+            color: var(--primary-color);
         }
 
         .faq-answer {
-            color: #7f8c8d;
+            color: var(--text-light);
             line-height: 1.8;
             font-size: 1.05rem;
         }
 
         /* Footer */
         footer {
-            background: white;
-            padding: 30px 0;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
             margin-top: 60px;
             text-align: center;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
         }
 
         footer p {
-            color: #7f8c8d;
+            color: var(--text-light);
         }
 
         /* Responsive */
@@ -400,8 +505,22 @@
             .comparison-table td {
                 padding: 12px 8px;
             }
+
+            .header-controls {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
         }
     </style>
+    <!-- Unified Language System -->
+    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -446,14 +565,38 @@
                     <span></span>
                     <span></span>
                 </div>
+
+                <div class="header-controls">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                        <span id="langText">EN</span>
+                    </button>
+                </div>
                 
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> الحاسبات</a>
-                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
-                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
-                    <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> استشارات طبية</a>
+                    <a href="index.html" class="nav-link" data-i18n="nav_home">
+                        <i class="fas fa-home"></i> الرئيسية
+                    </a>
+                    <a href="foods.html" class="nav-link" data-i18n="nav_foods">
+                        <i class="fas fa-utensils"></i> دليل الأطعمة
+                    </a>
+                    <a href="calculators.html" class="nav-link" data-i18n="nav_calculators">
+                        <i class="fas fa-calculator"></i> الحاسبات
+                    </a>
+                    <a href="recipes.html" class="nav-link" data-i18n="nav_recipes">
+                        <i class="fas fa-book-open"></i> الوصفات
+                    </a>
+                    <a href="articles.html" class="nav-link" data-i18n="nav_articles">
+                        <i class="fas fa-book-medical"></i> المقالات
+                    </a>
+                    <a href="doctor.html" class="nav-link" data-i18n="nav_doctor">
+                        <i class="fas fa-user-md"></i> استشارات
+                    </a>
                 </nav>
             </div>
         </div>
@@ -468,39 +611,39 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
+        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
             <i class="fas fa-home"></i>
             الصفحة الرئيسية
         </a>
-        <a href="foods.html" class="mobile-nav-link">
+        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
             <i class="fas fa-utensils"></i>
             دليل الأطعمة
         </a>
-        <a href="calculators.html" class="mobile-nav-link">
+        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
             <i class="fas fa-calculator"></i>
             الحاسبات الصحية
         </a>
-        <a href="recipes.html" class="mobile-nav-link">
+        <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
             <i class="fas fa-book-open"></i>
             الوصفات الصحية
         </a>
-        <a href="articles.html" class="mobile-nav-link">
+        <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
             <i class="fas fa-book-medical"></i>
             المقالات الصحية
         </a>
-        <a href="doctor.html" class="mobile-nav-link">
+        <a href="doctor.html" class="mobile-nav-link" data-i18n="nav_doctor">
             <i class="fas fa-user-md"></i>
             استشارات طبية
         </a>
-        <a href="pricing.html" class="mobile-nav-link">
+        <a href="pricing.html" class="mobile-nav-link" data-i18n="nav_pricing">
             <i class="fas fa-tag"></i>
             الأسعار
         </a>
-        <a href="about.html" class="mobile-nav-link">
+        <a href="about.html" class="mobile-nav-link" data-i18n="nav_about">
             <i class="fas fa-info-circle"></i>
             من نحن
         </a>
-        <a href="contact.html" class="mobile-nav-link">
+        <a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">
             <i class="fas fa-envelope"></i>
             اتصل بنا
         </a>
@@ -510,14 +653,15 @@
     <div class="container">
         <!-- Hero -->
         <div class="pricing-hero">
-            <h2>اختر الخطة المناسبة لك</h2>
-            <p>ابدأ رحلتك الصحية مع WiBo Health</p>
+            <h2 data-i18n="pricing_hero_title">اختر الخطة المناسبة لك</h2>
+            <p data-i18n="pricing_hero_subtitle">ابدأ رحلتك الصحية مع WiBo Health</p>
             
             <!-- Medical Services Notice -->
-            <div style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 15px 25px; border-radius: 12px; margin-top: 20px; box-shadow: 0 5px 20px rgba(245,124,0,0.3); max-width: 700px; margin-left: auto; margin-right: auto;">
-                <p style="margin: 0; font-size: 1.05em; line-height: 1.7;">
+            <div class="notice-box">
+                <p>
                     <i class="fas fa-info-circle" style="margin-left: 8px;"></i>
-                    <strong>ملاحظة:</strong> الخطط المدفوعة تشمل <strong>استشارات طبية شخصية</strong> و<strong>خطط فردية مخصصة</strong>. للحصول على تفاصيل الخدمة والمختص، يرجى <strong>التواصل معنا مباشرة</strong>.
+                    <strong data-i18n="pricing_notice_label">ملاحظة:</strong>
+                    <span data-i18n="pricing_notice_text">الخطط المدفوعة تشمل استشارات طبية شخصية وخطط فردية مخصصة. للحصول على تفاصيل الخدمة والمختص، يرجى التواصل معنا مباشرة.</span>
                 </p>
             </div>
         </div>
@@ -526,118 +670,118 @@
         <div class="pricing-grid">
             <!-- Free Plan -->
             <div class="pricing-card">
-                <h3 class="plan-name">خطة مجانية</h3>
-                <div class="plan-price">$0<span>/شهر</span></div>
-                <p class="plan-description">مثالية للمبتدئين الذين يريدون استكشاف المنصة</p>
+                <h3 class="plan-name" data-i18n="pricing_free_name">خطة مجانية</h3>
+                <div class="plan-price">$0<span data-i18n="pricing_per_month">/شهر</span></div>
+                <p class="plan-description" data-i18n="pricing_free_desc">مثالية للمبتدئين الذين يريدون استكشاف المنصة</p>
                 
                 <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> قاعدة بيانات 50 طعام</li>
-                    <li><i class="fas fa-check-circle"></i> بحث أساسي</li>
-                    <li><i class="fas fa-check-circle"></i> حاسبة BMI</li>
-                    <li><i class="fas fa-check-circle"></i> 10 وصفات صحية</li>
-                    <li class="unavailable"><i class="fas fa-times-circle"></i> رسوم بيانية تفاعلية</li>
-                    <li class="unavailable"><i class="fas fa-times-circle"></i> خطط غذائية مخصصة</li>
-                    <li class="unavailable"><i class="fas fa-times-circle"></i> استشارات طبية شخصية</li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_free_feature_1">قاعدة بيانات 50 طعام</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_free_feature_2">بحث أساسي</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_free_feature_3">حاسبة BMI</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_free_feature_4">10 وصفات صحية</span></li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> <span data-i18n="pricing_free_feature_5">رسوم بيانية تفاعلية</span></li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> <span data-i18n="pricing_free_feature_6">خطط غذائية مخصصة</span></li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> <span data-i18n="pricing_free_feature_7">استشارات طبية شخصية</span></li>
                 </ul>
 
-                <button class="plan-btn secondary" onclick="subscribe('free')">ابدأ مجاناً</button>
+                <button class="plan-btn secondary" onclick="subscribe('free')" data-i18n="pricing_free_btn">ابدأ مجاناً</button>
             </div>
 
             <!-- Premium Plan -->
-            <div class="pricing-card featured">
-                <h3 class="plan-name">خطة بريميوم</h3>
-                <div class="plan-price">$4.99<span>/شهر</span></div>
-                <p class="plan-description">للجادين في تحسين صحتهم وأسلوب حياتهم</p>
+            <div class="pricing-card featured" data-label="الأكثر شعبية">
+                <h3 class="plan-name" data-i18n="pricing_premium_name">خطة بريميوم</h3>
+                <div class="plan-price">$4.99<span data-i18n="pricing_per_month">/شهر</span></div>
+                <p class="plan-description" data-i18n="pricing_premium_desc">للجادين في تحسين صحتهم وأسلوب حياتهم</p>
                 
                 <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> قاعدة بيانات 505 طعام</li>
-                    <li><i class="fas fa-check-circle"></i> بحث متقدم وفلترة ذكية</li>
-                    <li><i class="fas fa-check-circle"></i> جميع الحاسبات الصحية</li>
-                    <li><i class="fas fa-check-circle"></i> +50 وصفة صحية</li>
-                    <li><i class="fas fa-check-circle"></i> رسوم بيانية تفاعلية</li>
-                    <li><i class="fas fa-check-circle"></i> خطط غذائية مخصصة</li>
-                    <li><i class="fas fa-check-circle"></i> نصائح يومية</li>
-                    <li><i class="fas fa-check-circle"></i> دعم فني 24/7</li>
-                    <li><i class="fas fa-check-circle"></i> خصم 20% على الاستشارات الطبية</li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_1">قاعدة بيانات 505 طعام</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_2">بحث متقدم وفلترة ذكية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_3">جميع الحاسبات الصحية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_4">+50 وصفة صحية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_5">رسوم بيانية تفاعلية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_6">خطط غذائية مخصصة</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_7">نصائح يومية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_8">دعم فني 24/7</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_premium_feature_9">خصم 20% على الاستشارات الطبية</span></li>
                 </ul>
 
-                <button class="plan-btn" onclick="subscribe('premium')">اشترك الآن</button>
+                <button class="plan-btn" onclick="subscribe('premium')" data-i18n="pricing_subscribe_btn">اشترك الآن</button>
             </div>
 
             <!-- Pro Plan -->
             <div class="pricing-card">
-                <h3 class="plan-name">خطة احترافية</h3>
-                <div class="plan-price">$12.99<span>/شهر</span></div>
-                <p class="plan-description">للحصول على تجربة شاملة مع متابعة طبية</p>
+                <h3 class="plan-name" data-i18n="pricing_pro_name">خطة احترافية</h3>
+                <div class="plan-price">$12.99<span data-i18n="pricing_per_month">/شهر</span></div>
+                <p class="plan-description" data-i18n="pricing_pro_desc">للحصول على تجربة شاملة مع متابعة طبية</p>
                 
                 <ul class="plan-features">
-                    <li><i class="fas fa-check-circle"></i> كل مميزات البريميوم</li>
-                    <li><i class="fas fa-check-circle"></i> استشارة طبية شهرية</li>
-                    <li><i class="fas fa-check-circle"></i> خطة غذائية مفصلة</li>
-                    <li><i class="fas fa-check-circle"></i> متابعة أسبوعية</li>
-                    <li><i class="fas fa-check-circle"></i> تقارير تقدم شهرية</li>
-                    <li><i class="fas fa-check-circle"></i> دعم واتساب مباشر</li>
-                    <li><i class="fas fa-check-circle"></i> أولوية في الحجز</li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_1">كل مميزات البريميوم</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_2">استشارة طبية شهرية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_3">خطة غذائية مفصلة</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_4">متابعة أسبوعية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_5">تقارير تقدم شهرية</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_6">دعم واتساب مباشر</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="pricing_pro_feature_7">أولوية في الحجز</span></li>
                 </ul>
 
-                <button class="plan-btn" onclick="subscribe('pro')">اشترك الآن</button>
+                <button class="plan-btn" onclick="subscribe('pro')" data-i18n="pricing_subscribe_btn">اشترك الآن</button>
             </div>
         </div>
 
         <!-- Comparison Table -->
         <div class="comparison-section">
-            <h3>مقارنة الخطط</h3>
+            <h3 data-i18n="pricing_comparison_title">مقارنة الخطط</h3>
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>الميزة</th>
-                        <th>مجاني</th>
-                        <th>بريميوم</th>
-                        <th>احترافي</th>
+                        <th data-i18n="pricing_table_feature">الميزة</th>
+                        <th data-i18n="pricing_free_name">مجاني</th>
+                        <th data-i18n="pricing_premium_name">بريميوم</th>
+                        <th data-i18n="pricing_pro_name">احترافي</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>قاعدة بيانات الأطعمة</td>
-                        <td>50 طعام</td>
-                        <td>505 طعام</td>
-                        <td>505 طعام</td>
+                        <td data-i18n="pricing_table_food_db">قاعدة بيانات الأطعمة</td>
+                        <td data-i18n="pricing_table_free_foods">50 طعام</td>
+                        <td data-i18n="pricing_table_premium_foods">505 طعام</td>
+                        <td data-i18n="pricing_table_pro_foods">505 طعام</td>
                     </tr>
                     <tr>
-                        <td>الوصفات الصحية</td>
-                        <td>10 وصفات</td>
-                        <td>50+ وصفة</td>
-                        <td>50+ وصفة</td>
+                        <td data-i18n="pricing_table_recipes">الوصفات الصحية</td>
+                        <td data-i18n="pricing_table_free_recipes">10 وصفات</td>
+                        <td data-i18n="pricing_table_premium_recipes">50+ وصفة</td>
+                        <td data-i18n="pricing_table_pro_recipes">50+ وصفة</td>
                     </tr>
                     <tr>
-                        <td>الحاسبات الصحية</td>
+                        <td data-i18n="pricing_table_calculators">الحاسبات الصحية</td>
                         <td><i class="check-icon fas fa-check"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                     </tr>
                     <tr>
-                        <td>رسوم بيانية</td>
+                        <td data-i18n="pricing_table_charts">رسوم بيانية</td>
                         <td><i class="cross-icon fas fa-times"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                     </tr>
                     <tr>
-                        <td>خطط غذائية</td>
+                        <td data-i18n="pricing_table_meal_plans">خطط غذائية</td>
                         <td><i class="cross-icon fas fa-times"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                         <td><i class="check-icon fas fa-check"></i></td>
                     </tr>
                     <tr>
-                        <td>استشارة طبية شخصية</td>
+                        <td data-i18n="pricing_table_consultation">استشارة طبية شخصية</td>
                         <td><i class="cross-icon fas fa-times"></i></td>
-                        <td>خصم 20%</td>
-                        <td>استشارة شهرية</td>
+                        <td data-i18n="pricing_table_discount_20">خصم 20%</td>
+                        <td data-i18n="pricing_table_monthly">استشارة شهرية</td>
                     </tr>
                     <tr>
-                        <td>الدعم الفني</td>
-                        <td>بريد إلكتروني</td>
-                        <td>24/7</td>
-                        <td>واتساب مباشر</td>
+                        <td data-i18n="pricing_table_support">الدعم الفني</td>
+                        <td data-i18n="pricing_table_email">بريد إلكتروني</td>
+                        <td data-i18n="pricing_table_24_7">24/7</td>
+                        <td data-i18n="pricing_table_whatsapp">واتساب مباشر</td>
                     </tr>
                 </tbody>
             </table>
@@ -645,14 +789,14 @@
 
         <!-- FAQ -->
         <div class="faq-section">
-            <h3>الأسئلة الشائعة</h3>
+            <h3 data-i18n="pricing_faq_title">الأسئلة الشائعة</h3>
 
             <div class="faq-item">
                 <div class="faq-question">
                     <i class="fas fa-question-circle"></i>
-                    هل يمكنني تغيير خطتي لاحقاً؟
+                    <span data-i18n="pricing_faq_q1">هل يمكنني تغيير خطتي لاحقاً؟</span>
                 </div>
-                <div class="faq-answer">
+                <div class="faq-answer" data-i18n="pricing_faq_a1">
                     نعم، يمكنك الترقية أو تخفيض خطتك في أي وقت. سيتم تطبيق التغييرات فوراً.
                 </div>
             </div>
@@ -660,9 +804,9 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <i class="fas fa-question-circle"></i>
-                    هل هناك التزام طويل الأجل؟
+                    <span data-i18n="pricing_faq_q2">هل هناك التزام طويل الأجل؟</span>
                 </div>
-                <div class="faq-answer">
+                <div class="faq-answer" data-i18n="pricing_faq_a2">
                     لا، جميع خططنا شهرية ويمكنك الإلغاء في أي وقت بدون أي رسوم إضافية.
                 </div>
             </div>
@@ -670,9 +814,9 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <i class="fas fa-question-circle"></i>
-                    كيف أحصل على الاستشارة الشهرية في الخطة الاحترافية؟
+                    <span data-i18n="pricing_faq_q3">كيف أحصل على الاستشارة الشهرية في الخطة الاحترافية؟</span>
                 </div>
-                <div class="faq-answer">
+                <div class="faq-answer" data-i18n="pricing_faq_a3">
                     بعد الاشتراك، ستتلقى رابطاً لحجز موعد استشارتك الطبية الشهرية.
                 </div>
             </div>
@@ -680,9 +824,9 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <i class="fas fa-question-circle"></i>
-                    هل البيانات آمنة؟
+                    <span data-i18n="pricing_faq_q4">هل البيانات آمنة؟</span>
                 </div>
-                <div class="faq-answer">
+                <div class="faq-answer" data-i18n="pricing_faq_a4">
                     نعم، نستخدم أعلى معايير الأمان لحماية بياناتك الشخصية والصحية.
                 </div>
             </div>
@@ -690,57 +834,310 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <i class="fas fa-question-circle"></i>
-                    هل يمكنني تجربة الخطة المدفوعة قبل الشراء؟
+                    <span data-i18n="pricing_faq_q5">هل يمكنني تجربة الخطة المدفوعة قبل الشراء؟</span>
                 </div>
-                <div class="faq-answer">
+                <div class="faq-answer" data-i18n="pricing_faq_a5">
                     نعم، نوفر فترة تجريبية مجانية لمدة 7 أيام للخطة البريميوم والاحترافية.
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer متوافق مع AdSense -->
-    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+    <!-- Footer -->
+    <footer>
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
-            </a>
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
-            </a>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
-            </a>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
-            </a>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
-            © 2024 WiBo Health. جميع الحقوق محفوظة.
+            <span data-i18n="footer_copyright">© 2024 WiBo Health. جميع الحقوق محفوظة.</span>
         </p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+            💚 <span data-i18n="footer_made_with">مُطور بـ</span> <span style="color: var(--primary-color);">♥</span> <span data-i18n="footer_for_body">من أجل بودي</span>
         </p>
     </footer>
 
     <script>
+        // ===== Language System =====
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        // Complete translations for both languages
+        const translations = {
+            ar: {
+                page_title_pricing: "خطط الاشتراك - WiBo Health",
+                nav_home: "الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات",
+                nav_recipes: "الوصفات",
+                nav_articles: "المقالات",
+                nav_doctor: "استشارات",
+                nav_pricing: "الأسعار",
+                nav_about: "من نحن",
+                nav_contact: "اتصل بنا",
+                pricing_hero_title: "اختر الخطة المناسبة لك",
+                pricing_hero_subtitle: "ابدأ رحلتك الصحية مع WiBo Health",
+                pricing_notice_label: "ملاحظة:",
+                pricing_notice_text: "الخطط المدفوعة تشمل استشارات طبية شخصية وخطط فردية مخصصة. للحصول على تفاصيل الخدمة والمختص، يرجى التواصل معنا مباشرة.",
+                pricing_per_month: "/شهر",
+                pricing_free_name: "خطة مجانية",
+                pricing_free_desc: "مثالية للمبتدئين الذين يريدون استكشاف المنصة",
+                pricing_free_feature_1: "قاعدة بيانات 50 طعام",
+                pricing_free_feature_2: "بحث أساسي",
+                pricing_free_feature_3: "حاسبة BMI",
+                pricing_free_feature_4: "10 وصفات صحية",
+                pricing_free_feature_5: "رسوم بيانية تفاعلية",
+                pricing_free_feature_6: "خطط غذائية مخصصة",
+                pricing_free_feature_7: "استشارات طبية شخصية",
+                pricing_free_btn: "ابدأ مجاناً",
+                pricing_premium_name: "خطة بريميوم",
+                pricing_premium_desc: "للجادين في تحسين صحتهم وأسلوب حياتهم",
+                pricing_premium_feature_1: "قاعدة بيانات 505 طعام",
+                pricing_premium_feature_2: "بحث متقدم وفلترة ذكية",
+                pricing_premium_feature_3: "جميع الحاسبات الصحية",
+                pricing_premium_feature_4: "+50 وصفة صحية",
+                pricing_premium_feature_5: "رسوم بيانية تفاعلية",
+                pricing_premium_feature_6: "خطط غذائية مخصصة",
+                pricing_premium_feature_7: "نصائح يومية",
+                pricing_premium_feature_8: "دعم فني 24/7",
+                pricing_premium_feature_9: "خصم 20% على الاستشارات الطبية",
+                pricing_pro_name: "خطة احترافية",
+                pricing_pro_desc: "للحصول على تجربة شاملة مع متابعة طبية",
+                pricing_pro_feature_1: "كل مميزات البريميوم",
+                pricing_pro_feature_2: "استشارة طبية شهرية",
+                pricing_pro_feature_3: "خطة غذائية مفصلة",
+                pricing_pro_feature_4: "متابعة أسبوعية",
+                pricing_pro_feature_5: "تقارير تقدم شهرية",
+                pricing_pro_feature_6: "دعم واتساب مباشر",
+                pricing_pro_feature_7: "أولوية في الحجز",
+                pricing_subscribe_btn: "اشترك الآن",
+                pricing_comparison_title: "مقارنة الخطط",
+                pricing_table_feature: "الميزة",
+                pricing_table_food_db: "قاعدة بيانات الأطعمة",
+                pricing_table_free_foods: "50 طعام",
+                pricing_table_premium_foods: "505 طعام",
+                pricing_table_pro_foods: "505 طعام",
+                pricing_table_recipes: "الوصفات الصحية",
+                pricing_table_free_recipes: "10 وصفات",
+                pricing_table_premium_recipes: "50+ وصفة",
+                pricing_table_pro_recipes: "50+ وصفة",
+                pricing_table_calculators: "الحاسبات الصحية",
+                pricing_table_charts: "رسوم بيانية",
+                pricing_table_meal_plans: "خطط غذائية",
+                pricing_table_consultation: "استشارة طبية شخصية",
+                pricing_table_discount_20: "خصم 20%",
+                pricing_table_monthly: "استشارة شهرية",
+                pricing_table_support: "الدعم الفني",
+                pricing_table_email: "بريد إلكتروني",
+                pricing_table_24_7: "24/7",
+                pricing_table_whatsapp: "واتساب مباشر",
+                pricing_faq_title: "الأسئلة الشائعة",
+                pricing_faq_q1: "هل يمكنني تغيير خطتي لاحقاً؟",
+                pricing_faq_a1: "نعم، يمكنك الترقية أو تخفيض خطتك في أي وقت. سيتم تطبيق التغييرات فوراً.",
+                pricing_faq_q2: "هل هناك التزام طويل الأجل؟",
+                pricing_faq_a2: "لا، جميع خططنا شهرية ويمكنك الإلغاء في أي وقت بدون أي رسوم إضافية.",
+                pricing_faq_q3: "كيف أحصل على الاستشارة الشهرية في الخطة الاحترافية؟",
+                pricing_faq_a3: "بعد الاشتراك، ستتلقى رابطاً لحجز موعد استشارتك الطبية الشهرية.",
+                pricing_faq_q4: "هل البيانات آمنة؟",
+                pricing_faq_a4: "نعم، نستخدم أعلى معايير الأمان لحماية بياناتك الشخصية والصحية.",
+                pricing_faq_q5: "هل يمكنني تجربة الخطة المدفوعة قبل الشراء؟",
+                pricing_faq_a5: "نعم، نوفر فترة تجريبية مجانية لمدة 7 أيام للخطة البريميوم والاحترافية.",
+                footer_about: "من نحن",
+                footer_contact: "اتصل بنا",
+                footer_privacy: "سياسة الخصوصية",
+                footer_terms: "شروط الاستخدام",
+                footer_copyright: "© 2024 WiBo Health. جميع الحقوق محفوظة.",
+                footer_made_with: "مُطور بـ",
+                footer_for_body: "من أجل بودي"
+            },
+            en: {
+                page_title_pricing: "Pricing Plans - WiBo Health",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Calculators",
+                nav_recipes: "Recipes",
+                nav_articles: "Articles",
+                nav_doctor: "Consultations",
+                nav_pricing: "Pricing",
+                nav_about: "About",
+                nav_contact: "Contact",
+                pricing_hero_title: "Choose Your Plan",
+                pricing_hero_subtitle: "Start Your Health Journey with WiBo Health",
+                pricing_notice_label: "Note:",
+                pricing_notice_text: "Paid plans include personal medical consultations and customized individual plans. For service details and specialist information, please contact us directly.",
+                pricing_per_month: "/month",
+                pricing_free_name: "Free Plan",
+                pricing_free_desc: "Perfect for beginners who want to explore the platform",
+                pricing_free_feature_1: "Database of 50 foods",
+                pricing_free_feature_2: "Basic search",
+                pricing_free_feature_3: "BMI calculator",
+                pricing_free_feature_4: "10 healthy recipes",
+                pricing_free_feature_5: "Interactive charts",
+                pricing_free_feature_6: "Customized meal plans",
+                pricing_free_feature_7: "Personal medical consultations",
+                pricing_free_btn: "Start Free",
+                pricing_premium_name: "Premium Plan",
+                pricing_premium_desc: "For those serious about improving their health and lifestyle",
+                pricing_premium_feature_1: "Database of 505 foods",
+                pricing_premium_feature_2: "Advanced search and smart filtering",
+                pricing_premium_feature_3: "All health calculators",
+                pricing_premium_feature_4: "+50 healthy recipes",
+                pricing_premium_feature_5: "Interactive charts",
+                pricing_premium_feature_6: "Customized meal plans",
+                pricing_premium_feature_7: "Daily tips",
+                pricing_premium_feature_8: "24/7 technical support",
+                pricing_premium_feature_9: "20% discount on medical consultations",
+                pricing_pro_name: "Professional Plan",
+                pricing_pro_desc: "For a comprehensive experience with medical follow-up",
+                pricing_pro_feature_1: "All Premium features",
+                pricing_pro_feature_2: "Monthly medical consultation",
+                pricing_pro_feature_3: "Detailed meal plan",
+                pricing_pro_feature_4: "Weekly follow-up",
+                pricing_pro_feature_5: "Monthly progress reports",
+                pricing_pro_feature_6: "Direct WhatsApp support",
+                pricing_pro_feature_7: "Priority booking",
+                pricing_subscribe_btn: "Subscribe Now",
+                pricing_comparison_title: "Plan Comparison",
+                pricing_table_feature: "Feature",
+                pricing_table_food_db: "Food Database",
+                pricing_table_free_foods: "50 foods",
+                pricing_table_premium_foods: "505 foods",
+                pricing_table_pro_foods: "505 foods",
+                pricing_table_recipes: "Healthy Recipes",
+                pricing_table_free_recipes: "10 recipes",
+                pricing_table_premium_recipes: "50+ recipes",
+                pricing_table_pro_recipes: "50+ recipes",
+                pricing_table_calculators: "Health Calculators",
+                pricing_table_charts: "Charts",
+                pricing_table_meal_plans: "Meal Plans",
+                pricing_table_consultation: "Personal Medical Consultation",
+                pricing_table_discount_20: "20% discount",
+                pricing_table_monthly: "Monthly",
+                pricing_table_support: "Technical Support",
+                pricing_table_email: "Email",
+                pricing_table_24_7: "24/7",
+                pricing_table_whatsapp: "Direct WhatsApp",
+                pricing_faq_title: "Frequently Asked Questions",
+                pricing_faq_q1: "Can I change my plan later?",
+                pricing_faq_a1: "Yes, you can upgrade or downgrade your plan at any time. Changes will be applied immediately.",
+                pricing_faq_q2: "Is there a long-term commitment?",
+                pricing_faq_a2: "No, all our plans are monthly and you can cancel anytime without any additional fees.",
+                pricing_faq_q3: "How do I get the monthly consultation in the professional plan?",
+                pricing_faq_a3: "After subscribing, you will receive a link to book your monthly medical consultation.",
+                pricing_faq_q4: "Is the data safe?",
+                pricing_faq_a4: "Yes, we use the highest security standards to protect your personal and health data.",
+                pricing_faq_q5: "Can I try the paid plan before purchasing?",
+                pricing_faq_a5: "Yes, we offer a free 7-day trial for both Premium and Professional plans.",
+                footer_about: "About Us",
+                footer_contact: "Contact Us",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Use",
+                footer_copyright: "© 2024 WiBo Health. All rights reserved.",
+                footer_made_with: "Developed with",
+                footer_for_body: "for your body"
+            }
+        };
+
+        // Translation function
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Update page language
+        function updatePageLanguage() {
+            // Update title
+            document.title = t('page_title_pricing');
+
+            // Update language button
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = t(key);
+                if (element.tagName === 'TITLE') {
+                    document.title = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+
+            // Update featured card label
+            const featuredCard = document.querySelector('.pricing-card.featured');
+            if (featuredCard) {
+                const label = currentLang === 'ar' ? 'الأكثر شعبية' : 'Most Popular';
+                featuredCard.setAttribute('data-label', label);
+            }
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('themeToggle');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+
+        // Initialize language
+        function initializeLanguage() {
+            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Apply translations immediately on page load
+            updatePageLanguage();
+        }
+
+        // Subscribe function
         function subscribe(plan) {
-            // يمكن استبدال هذا بنظام دفع حقيقي (Stripe, PayPal)
             const plans = {
-                free: 'الخطة المجانية',
-                premium: 'الخطة البريميوم - $4.99/شهر',
-                pro: 'الخطة الاحترافية - $12.99/شهر'
+                free: currentLang === 'ar' ? 'الخطة المجانية' : 'Free Plan',
+                premium: currentLang === 'ar' ? 'الخطة البريميوم - $4.99/شهر' : 'Premium Plan - $4.99/month',
+                pro: currentLang === 'ar' ? 'الخطة الاحترافية - $12.99/شهر' : 'Professional Plan - $12.99/month'
             };
 
-            alert(`شكراً لاختيارك ${plans[plan]}!\n\nسيتم تحويلك إلى صفحة الدفع...`);
+            const message = currentLang === 'ar' 
+                ? `شكراً لاختيارك ${plans[plan]}!\n\nسيتم تحويلك إلى صفحة الدفع...`
+                : `Thank you for choosing ${plans[plan]}!\n\nYou will be redirected to the payment page...`;
             
-            // هنا يمكن إضافة الكود الخاص بنظام الدفع
-            // window.location.href = 'checkout.html?plan=' + plan;
+            alert(message);
         }
         
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+            updatePageLanguage();
+        });
+
         // Auto-hide Header on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');

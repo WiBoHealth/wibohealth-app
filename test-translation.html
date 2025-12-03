@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار نظام الترجمة - WiBo Health</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .header h1 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .lang-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .lang-btn.active {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #foodGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .food-item {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .food-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .food-icon {
+            font-size: 2.5rem;
+        }
+
+        .food-name {
+            font-size: 1.25rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .food-indexes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .index-badge {
+            padding: 0.75rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .index-badge.low {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        .index-badge.medium {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+        }
+
+        .index-badge.high {
+            background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+            color: white;
+        }
+
+        .index-badge small {
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .index-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nutrition-info {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .nutrition-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .nutrition-value {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .status {
+            text-align: center;
+            padding: 1rem;
+            background: #e8f5e9;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 اختبار نظام الترجمة</h1>
+            <p>قم بالتبديل بين اللغتين لاختبار الترجمة الكاملة للبطاقات</p>
+            
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang-toggle="ar">🇸🇦 العربية</button>
+                <button class="lang-btn" data-lang-toggle="en">🇬🇧 English</button>
+            </div>
+
+            <div class="status" id="status">
+                ✅ جاري التحميل...
+            </div>
+        </div>
+
+        <div id="foodGrid"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/data-enhancer.js"></script>
+    <script src="js/unified-language-system.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Update status after everything loads
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const status = document.getElementById('status');
+                const currentLang = window.UnifiedLanguageSystem.currentLang;
+                const langText = currentLang === 'ar' ? 'العربية' : 'English';
+                status.textContent = `✅ تم تحميل ${foodsDatabase.length} عنصر غذائي | اللغة الحالية: ${langText}`;
+            }, 500);
+        });
+
+        // Update status on language change
+        window.addEventListener('languageChanged', function(e) {
+            const status = document.getElementById('status');
+            const langText = e.detail.language === 'ar' ? 'العربية' : 'English';
+            status.textContent = `✅ تم تغيير اللغة إلى: ${langText} | ${foodsDatabase.length} عنصر غذائي`;
+        });
+    </script>
+</body>
+</html>

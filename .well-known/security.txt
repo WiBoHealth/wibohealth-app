@@ -1,0 +1,12 @@
+Contact: mailto:support@wibohealth.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: ar, en
+Canonical: https://wibohealth.com/.well-known/security.txt
+Policy: https://wibohealth.com/privacy.html
+
+# WiBo Health - Educational Health & Nutrition Website
+# This is a legitimate, non-commercial website providing:
+# - Nutritional information database
+# - Health calculators
+# - Dietary supplements guide
+# - Healthy recipes and articles

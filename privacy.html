@@ -3,192 +3,660 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - WiBo Health</title>
+    <title data-i18n="page_title_privacy">سياسة الخصوصية - WiBo Health</title>
     <meta name="description" content="سياسة الخصوصية وحماية البيانات في WiBo Health - نلتزم بحماية خصوصيتك وبياناتك الشخصية">
     <link rel="canonical" href="https://wibohealth.com/privacy.html">
+    
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#667eea">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="stylesheet" href="css/mobile-menu.css">
+    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --accent-color: #667eea;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             font-family: 'Cairo', sans-serif;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
         }
+
+        body.dark-mode {
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px var(--shadow);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle, .lang-toggle {
+            background: rgba(46, 204, 113, 0.2);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* Privacy Container */
         .privacy-container {
             max-width: 900px;
-            margin: 50px auto 50px;
-            background: white;
+            margin: 30px auto 50px;
+            background: var(--card-bg);
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px var(--shadow);
         }
-        h1 {
-            color: #2ecc71;
+
+        .privacy-container h1 {
+            color: var(--primary-color);
             font-size: 2.5em;
             margin-bottom: 10px;
             text-align: center;
         }
+
         .last-update {
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-light);
             margin-bottom: 30px;
+            font-size: 0.95em;
         }
-        h2 {
-            color: #667eea;
+
+        .privacy-container h2 {
+            color: var(--accent-color);
             font-size: 1.6em;
             margin-top: 30px;
             margin-bottom: 15px;
+            border-bottom: 3px solid rgba(46, 204, 113, 0.2);
+            padding-bottom: 10px;
         }
-        p, li {
-            color: #2c3e50;
+
+        .privacy-container p, 
+        .privacy-container li {
+            color: var(--text-dark);
             font-size: 1.05em;
             line-height: 1.8;
             margin-bottom: 15px;
         }
-        ul {
+
+        .privacy-container ul {
             margin-right: 30px;
         }
+
+        .privacy-container li {
+            margin-bottom: 12px;
+        }
+
+        .privacy-container strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .privacy-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .privacy-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
+        .privacy-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(46, 204, 113, 0.2);
+        }
+
+        .privacy-footer p {
+            color: var(--text-light);
+        }
+
+        /* Back Button */
         .back-btn {
             display: inline-block;
             padding: 15px 30px;
-            background: #2ecc71;
+            background: var(--primary-color);
             color: white;
             text-decoration: none;
             border-radius: 10px;
-            margin-top: 30px;
+            margin-top: 20px;
             font-weight: bold;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1em;
         }
+
         .back-btn:hover {
-            background: #27ae60;
+            background: var(--secondary-color);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 30px 20px;
+            }
+
+            .privacy-container h1 {
+                font-size: 1.8em;
+            }
+
+            .privacy-container h2 {
+                font-size: 1.3em;
+            }
+
+            .privacy-container p,
+            .privacy-container li {
+                font-size: 0.95em;
+            }
+
+            .header-controls {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .privacy-container ul {
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <a href="index.html" style="text-decoration: none; color: #2ecc71; font-size: 24px; font-weight: bold;">💚 WiBo Health</a>
-            <div class="hamburger-menu" onclick="toggleMobileMenu()" style="display: flex; flex-direction: column; cursor: pointer; padding: 10px;">
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link" title="WiBo Health">
+                💚 WiBo Health
+            </a>
+            
+            <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header-controls">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                    <span id="langText">EN</span>
+                </button>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
     <nav class="mobile-nav-menu" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
-        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
-        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> الحاسبات الصحية</a>
-        <a href="privacy.html" class="mobile-nav-link"><i class="fas fa-shield-alt"></i> سياسة الخصوصية</a>
-        <a href="terms.html" class="mobile-nav-link"><i class="fas fa-file-contract"></i> الشروط والأحكام</a>
-    </nav>
-    <div class="privacy-container">
-        <h1>🔒 سياسة الخصوصية</h1>
-        <p class="last-update">آخر تحديث: 24 نوفمبر 2025</p>
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
         
-        <p>
+        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية
+        </a>
+        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
+            <i class="fas fa-utensils"></i>
+            دليل الأطعمة
+        </a>
+        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
+            <i class="fas fa-calculator"></i>
+            الحاسبات الصحية
+        </a>
+        <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
+            <i class="fas fa-book-open"></i>
+            الوصفات الصحية
+        </a>
+        <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
+            <i class="fas fa-book-medical"></i>
+            المقالات الصحية
+        </a>
+        <a href="privacy.html" class="mobile-nav-link" data-i18n="nav_privacy">
+            <i class="fas fa-shield-alt"></i>
+            سياسة الخصوصية
+        </a>
+        <a href="terms.html" class="mobile-nav-link" data-i18n="nav_terms">
+            <i class="fas fa-file-contract"></i>
+            الشروط والأحكام
+        </a>
+    </nav>
+
+    <!-- Privacy Container -->
+    <div class="privacy-container">
+        <h1 data-i18n="privacy_title">🔒 سياسة الخصوصية</h1>
+        <p class="last-update">
+            <span data-i18n="privacy_last_update">آخر تحديث:</span> 24 نوفمبر 2025
+        </p>
+        
+        <p data-i18n="privacy_intro">
             في <strong>WiBo Health</strong>، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. 
             توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك.
         </p>
 
-        <h2>1. المعلومات التي نجمعها</h2>
-        <p>نحن نجمع المعلومات التالية:</p>
+        <!-- Section 1 -->
+        <h2 data-i18n="privacy_section1_title">1. المعلومات التي نجمعها</h2>
+        <p data-i18n="privacy_section1_intro">نحن نجمع المعلومات التالية:</p>
         <ul>
-            <li><strong>معلومات الاستخدام:</strong> الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح</li>
-            <li><strong>معلومات الجهاز:</strong> نوع الجهاز، نظام التشغيل، عنوان IP</li>
-            <li><strong>معلومات الاتصال:</strong> البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)</li>
+            <li>
+                <strong data-i18n="privacy_usage_info">معلومات الاستخدام:</strong>
+                <span data-i18n="privacy_usage_info_desc">الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح</span>
+            </li>
+            <li>
+                <strong data-i18n="privacy_device_info">معلومات الجهاز:</strong>
+                <span data-i18n="privacy_device_info_desc">نوع الجهاز، نظام التشغيل، عنوان IP</span>
+            </li>
+            <li>
+                <strong data-i18n="privacy_contact_info">معلومات الاتصال:</strong>
+                <span data-i18n="privacy_contact_info_desc">البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)</span>
+            </li>
         </ul>
 
-        <h2>2. كيف نستخدم المعلومات</h2>
-        <p>نستخدم المعلومات المجمعة لـ:</p>
+        <!-- Section 2 -->
+        <h2 data-i18n="privacy_section2_title">2. كيف نستخدم المعلومات</h2>
+        <p data-i18n="privacy_section2_intro">نستخدم المعلومات المجمعة لـ:</p>
         <ul>
-            <li>تحسين تجربة المستخدم وتطوير الموقع</li>
-            <li>تحليل استخدام الموقع وفهم احتياجات الزوار</li>
-            <li>الرد على استفساراتكم وتقديم الدعم</li>
-            <li>إرسال تحديثات ونصائح صحية (بموافقتكم فقط)</li>
+            <li data-i18n="privacy_section2_item1">تحسين تجربة المستخدم وتطوير الموقع</li>
+            <li data-i18n="privacy_section2_item2">تحليل استخدام الموقع وفهم احتياجات الزوار</li>
+            <li data-i18n="privacy_section2_item3">الرد على استفساراتكم وتقديم الدعم</li>
+            <li data-i18n="privacy_section2_item4">إرسال تحديثات ونصائح صحية (بموافقتكم فقط)</li>
         </ul>
 
-        <h2>3. ملفات الكوكيز (Cookies)</h2>
-        <p>
+        <!-- Section 3 -->
+        <h2 data-i18n="privacy_section3_title">3. ملفات الكوكيز (Cookies)</h2>
+        <p data-i18n="privacy_section3_text">
             نستخدم ملفات الكوكيز لتحسين تجربتك على الموقع. يمكنك تعطيل الكوكيز من إعدادات متصفحك، 
             لكن هذا قد يؤثر على بعض وظائف الموقع.
         </p>
 
-        <h2>4. مشاركة المعلومات</h2>
-        <p>
-            نحن <strong>لا نبيع أو نشارك</strong> معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
+        <!-- Section 4 -->
+        <h2 data-i18n="privacy_section4_title">4. مشاركة المعلومات</h2>
+        <p data-i18n="privacy_section4_intro">
+            نحن <strong data-i18n="privacy_section4_strong">لا نبيع أو نشارك</strong> معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
         </p>
         <ul>
-            <li>بموافقتك الصريحة</li>
-            <li>لتقديم خدمات أساسية (مثل خدمات الاستضافة)</li>
-            <li>عند الطلب القانوني من الجهات المختصة</li>
+            <li data-i18n="privacy_section4_item1">بموافقتك الصريحة</li>
+            <li data-i18n="privacy_section4_item2">لتقديم خدمات أساسية (مثل خدمات الاستضافة)</li>
+            <li data-i18n="privacy_section4_item3">عند الطلب القانوني من الجهات المختصة</li>
         </ul>
 
-        <h2>5. أدوات التحليل والإعلانات</h2>
-        <p>
+        <!-- Section 5 -->
+        <h2 data-i18n="privacy_section5_title">5. أدوات التحليل والإعلانات</h2>
+        <p data-i18n="privacy_section5_text">
             نستخدم خدمات مثل <strong>Google Analytics</strong> و <strong>Google AdSense</strong> 
             لتحليل الزيارات وعرض إعلانات ملائمة. هذه الخدمات قد تجمع معلومات مجهولة عن استخدامك للموقع.
         </p>
 
-        <h2>6. حماية البيانات</h2>
-        <p>
+        <!-- Section 6 -->
+        <h2 data-i18n="privacy_section6_title">6. حماية البيانات</h2>
+        <p data-i18n="privacy_section6_intro">
             نتخذ إجراءات أمنية مناسبة لحماية معلوماتك من الوصول غير المصرح به، بما في ذلك:
         </p>
         <ul>
-            <li>استخدام بروتوكول HTTPS لتشفير البيانات</li>
-            <li>تخزين البيانات على خوادم آمنة</li>
-            <li>مراجعة دورية للإجراءات الأمنية</li>
+            <li data-i18n="privacy_section6_item1">استخدام بروتوكول HTTPS لتشفير البيانات</li>
+            <li data-i18n="privacy_section6_item2">تخزين البيانات على خوادم آمنة</li>
+            <li data-i18n="privacy_section6_item3">مراجعة دورية للإجراءات الأمنية</li>
         </ul>
 
-        <h2>7. حقوقك</h2>
-        <p>لديك الحق في:</p>
+        <!-- Section 7 -->
+        <h2 data-i18n="privacy_section7_title">7. حقوقك</h2>
+        <p data-i18n="privacy_section7_intro">لديك الحق في:</p>
         <ul>
-            <li>الوصول إلى بياناتك الشخصية</li>
-            <li>طلب تصحيح أو حذف بياناتك</li>
-            <li>إلغاء الاشتراك في النشرات البريدية في أي وقت</li>
-            <li>الاعتراض على معالجة بياناتك</li>
+            <li data-i18n="privacy_section7_item1">الوصول إلى بياناتك الشخصية</li>
+            <li data-i18n="privacy_section7_item2">طلب تصحيح أو حذف بياناتك</li>
+            <li data-i18n="privacy_section7_item3">إلغاء الاشتراك في النشرات البريدية في أي وقت</li>
+            <li data-i18n="privacy_section7_item4">الاعتراض على معالجة بياناتك</li>
         </ul>
 
-        <h2>8. روابط المواقع الأخرى</h2>
-        <p>
+        <!-- Section 8 -->
+        <h2 data-i18n="privacy_section8_title">8. روابط المواقع الأخرى</h2>
+        <p data-i18n="privacy_section8_text">
             قد يحتوي موقعنا على روابط لمواقع خارجية. نحن غير مسؤولين عن سياسات الخصوصية 
             الخاصة بهذه المواقع.
         </p>
 
-        <h2>9. التغييرات على سياسة الخصوصية</h2>
-        <p>
+        <!-- Section 9 -->
+        <h2 data-i18n="privacy_section9_title">9. التغييرات على سياسة الخصوصية</h2>
+        <p data-i18n="privacy_section9_text">
             قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية 
             عبر نشر النسخة المحدثة على هذه الصفحة.
         </p>
 
-        <h2>10. تواصل معنا</h2>
-        <p>
+        <!-- Section 10 -->
+        <h2 data-i18n="privacy_section10_title">10. تواصل معنا</h2>
+        <p data-i18n="privacy_section10_intro">
             إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:
         </p>
         <ul>
-            <li>البريد الإلكتروني: wibohealth@gmail.com</li>
-            <li>واتساب: <a href="https://wa.me/31645844585" target="_blank" style="color: #2ecc71;">اضغط هنا</a></li>
+            <li>
+                <span data-i18n="privacy_email">البريد الإلكتروني:</span> 
+                <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
+            </li>
+            <li>
+                <span data-i18n="privacy_whatsapp">واتساب:</span>
+                <a href="https://wa.me/31645844585" target="_blank" data-i18n="privacy_whatsapp_link">اضغط هنا</a>
+            </li>
         </ul>
 
-        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
-            <p style="color: #7f8c8d;">
+        <!-- Footer Section -->
+        <div class="privacy-footer">
+            <p data-i18n="privacy_footer_agreement">
                 بمواصلة استخدام موقع WiBo Health، فإنك توافق على سياسة الخصوصية هذه.
             </p>
             <a href="index.html" class="back-btn">
-                <i class="fas fa-home"></i> العودة للرئيسية
+                <i class="fas fa-home"></i> <span data-i18n="privacy_back_home">العودة للرئيسية</span>
             </a>
         </div>
     </div>
-    
+
     <script>
+        // ===== Language System =====
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        // Complete translations for both languages
+        const translations = {
+            ar: {
+                page_title_privacy: "سياسة الخصوصية - WiBo Health",
+                nav_home: "الصفحة الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات الصحية",
+                nav_recipes: "الوصفات الصحية",
+                nav_articles: "المقالات الصحية",
+                nav_privacy: "سياسة الخصوصية",
+                nav_terms: "الشروط والأحكام",
+                privacy_title: "🔒 سياسة الخصوصية",
+                privacy_last_update: "آخر تحديث:",
+                privacy_intro: "في WiBo Health، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك.",
+                privacy_section1_title: "1. المعلومات التي نجمعها",
+                privacy_section1_intro: "نحن نجمع المعلومات التالية:",
+                privacy_usage_info: "معلومات الاستخدام:",
+                privacy_usage_info_desc: "الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح",
+                privacy_device_info: "معلومات الجهاز:",
+                privacy_device_info_desc: "نوع الجهاز، نظام التشغيل، عنوان IP",
+                privacy_contact_info: "معلومات الاتصال:",
+                privacy_contact_info_desc: "البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)",
+                privacy_section2_title: "2. كيف نستخدم المعلومات",
+                privacy_section2_intro: "نستخدم المعلومات المجمعة لـ:",
+                privacy_section2_item1: "تحسين تجربة المستخدم وتطوير الموقع",
+                privacy_section2_item2: "تحليل استخدام الموقع وفهم احتياجات الزوار",
+                privacy_section2_item3: "الرد على استفساراتكم وتقديم الدعم",
+                privacy_section2_item4: "إرسال تحديثات ونصائح صحية (بموافقتكم فقط)",
+                privacy_section3_title: "3. ملفات الكوكيز (Cookies)",
+                privacy_section3_text: "نستخدم ملفات الكوكيز لتحسين تجربتك على الموقع. يمكنك تعطيل الكوكيز من إعدادات متصفحك، لكن هذا قد يؤثر على بعض وظائف الموقع.",
+                privacy_section4_title: "4. مشاركة المعلومات",
+                privacy_section4_intro: "نحن لا نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:",
+                privacy_section4_strong: "لا نبيع أو نشارك",
+                privacy_section4_item1: "بموافقتك الصريحة",
+                privacy_section4_item2: "لتقديم خدمات أساسية (مثل خدمات الاستضافة)",
+                privacy_section4_item3: "عند الطلب القانوني من الجهات المختصة",
+                privacy_section5_title: "5. أدوات التحليل والإعلانات",
+                privacy_section5_text: "نستخدم خدمات مثل Google Analytics و Google AdSense لتحليل الزيارات وعرض إعلانات ملائمة. هذه الخدمات قد تجمع معلومات مجهولة عن استخدامك للموقع.",
+                privacy_section6_title: "6. حماية البيانات",
+                privacy_section6_intro: "نتخذ إجراءات أمنية مناسبة لحماية معلوماتك من الوصول غير المصرح به، بما في ذلك:",
+                privacy_section6_item1: "استخدام بروتوكول HTTPS لتشفير البيانات",
+                privacy_section6_item2: "تخزين البيانات على خوادم آمنة",
+                privacy_section6_item3: "مراجعة دورية للإجراءات الأمنية",
+                privacy_section7_title: "7. حقوقك",
+                privacy_section7_intro: "لديك الحق في:",
+                privacy_section7_item1: "الوصول إلى بياناتك الشخصية",
+                privacy_section7_item2: "طلب تصحيح أو حذف بياناتك",
+                privacy_section7_item3: "إلغاء الاشتراك في النشرات البريدية في أي وقت",
+                privacy_section7_item4: "الاعتراض على معالجة بياناتك",
+                privacy_section8_title: "8. روابط المواقع الأخرى",
+                privacy_section8_text: "قد يحتوي موقعنا على روابط لمواقع خارجية. نحن غير مسؤولين عن سياسات الخصوصية الخاصة بهذه المواقع.",
+                privacy_section9_title: "9. التغييرات على سياسة الخصوصية",
+                privacy_section9_text: "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عبر نشر النسخة المحدثة على هذه الصفحة.",
+                privacy_section10_title: "10. تواصل معنا",
+                privacy_section10_intro: "إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:",
+                privacy_email: "البريد الإلكتروني:",
+                privacy_whatsapp: "واتساب:",
+                privacy_whatsapp_link: "اضغط هنا",
+                privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health، فإنك توافق على سياسة الخصوصية هذه.",
+                privacy_back_home: "العودة للرئيسية"
+            },
+            en: {
+                page_title_privacy: "Privacy Policy - WiBo Health",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Health Calculators",
+                nav_recipes: "Healthy Recipes",
+                nav_articles: "Health Articles",
+                nav_privacy: "Privacy Policy",
+                nav_terms: "Terms & Conditions",
+                privacy_title: "🔒 Privacy Policy",
+                privacy_last_update: "Last Updated:",
+                privacy_intro: "At WiBo Health, we are committed to protecting your privacy and personal data. This privacy policy explains how we collect, use, and protect your information.",
+                privacy_section1_title: "1. Information We Collect",
+                privacy_section1_intro: "We collect the following information:",
+                privacy_usage_info: "Usage Information:",
+                privacy_usage_info_desc: "Pages you visit, time spent, browser type",
+                privacy_device_info: "Device Information:",
+                privacy_device_info_desc: "Device type, operating system, IP address",
+                privacy_contact_info: "Contact Information:",
+                privacy_contact_info_desc: "Email or phone number (only when contacting us)",
+                privacy_section2_title: "2. How We Use Information",
+                privacy_section2_intro: "We use collected information to:",
+                privacy_section2_item1: "Improve user experience and develop the website",
+                privacy_section2_item2: "Analyze website usage and understand visitor needs",
+                privacy_section2_item3: "Respond to inquiries and provide support",
+                privacy_section2_item4: "Send updates and health tips (with your consent only)",
+                privacy_section3_title: "3. Cookies",
+                privacy_section3_text: "We use cookies to enhance your experience on our website. You can disable cookies in your browser settings, but this may affect some website functionality.",
+                privacy_section4_title: "4. Information Sharing",
+                privacy_section4_intro: "We do not sell or share your personal information with third parties except in the following cases:",
+                privacy_section4_strong: "do not sell or share",
+                privacy_section4_item1: "With your explicit consent",
+                privacy_section4_item2: "To provide essential services (such as hosting services)",
+                privacy_section4_item3: "Upon legal request from authorities",
+                privacy_section5_title: "5. Analytics and Advertising Tools",
+                privacy_section5_text: "We use services like Google Analytics and Google AdSense to analyze visits and display relevant ads. These services may collect anonymized information about your website usage.",
+                privacy_section6_title: "6. Data Protection",
+                privacy_section6_intro: "We take appropriate security measures to protect your information from unauthorized access, including:",
+                privacy_section6_item1: "Using HTTPS protocol to encrypt data",
+                privacy_section6_item2: "Storing data on secure servers",
+                privacy_section6_item3: "Regular security reviews",
+                privacy_section7_title: "7. Your Rights",
+                privacy_section7_intro: "You have the right to:",
+                privacy_section7_item1: "Access your personal data",
+                privacy_section7_item2: "Request correction or deletion of your data",
+                privacy_section7_item3: "Unsubscribe from newsletters at any time",
+                privacy_section7_item4: "Object to processing of your data",
+                privacy_section8_title: "8. External Website Links",
+                privacy_section8_text: "Our website may contain links to external sites. We are not responsible for the privacy policies of these websites.",
+                privacy_section9_title: "9. Changes to Privacy Policy",
+                privacy_section9_text: "We may update this privacy policy from time to time. We will notify you of any significant changes by posting the updated version on this page.",
+                privacy_section10_title: "10. Contact Us",
+                privacy_section10_intro: "If you have any questions about this privacy policy, please contact us via:",
+                privacy_email: "Email:",
+                privacy_whatsapp: "WhatsApp:",
+                privacy_whatsapp_link: "Click here",
+                privacy_footer_agreement: "By continuing to use the WiBo Health website, you agree to this privacy policy.",
+                privacy_back_home: "Back to Home"
+            }
+        };
+
+        // Translation function
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Update page language
+        function updatePageLanguage() {
+            // Update title
+            document.title = t('page_title_privacy');
+
+            // Update language button
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = t(key);
+                if (element.tagName === 'TITLE') {
+                    document.title = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('themeToggle');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+
+        // Initialize language
+        function initializeLanguage() {
+            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Apply translations immediately on page load
+            updatePageLanguage();
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+            updatePageLanguage();
+        });
+
         // Auto-hide Header on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
@@ -210,6 +678,8 @@
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
     </script>
+
+    <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
 </body>
 </html>

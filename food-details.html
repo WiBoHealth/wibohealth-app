@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفاصيل الطعام - WiBo Health</title>
+    <title data-i18n="page_title_food_details">تفاصيل الطعام - WiBo Health</title>
     <meta name="description" content="تفاصيل كاملة عن الطعام: المؤشر الجلايسيمي، مؤشر الأنسولين، السعرات الحرارية، البروتين، الكربوهيدرات، الدهون، الفيتامينات والمعادن - معلومات شاملة لكل عنصر غذائي">
     <link rel="canonical" href="https://wibohealth.com/food-details.html">
+    
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/food-details.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/food-details.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/food-details.html">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -117,6 +122,12 @@
             font-weight: 900;
         }
 
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
         .back-btn {
             padding: 10px 25px;
             background: var(--primary-color);
@@ -133,6 +144,23 @@
         .back-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        .theme-toggle, .lang-toggle {
+            background: rgba(46, 204, 113, 0.2);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
         }
 
         /* Food Hero */
@@ -323,6 +351,26 @@
             line-height: 1.7;
         }
 
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #2ecc71;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .charts-section {
@@ -332,8 +380,16 @@
             .chart-container {
                 height: 250px;
             }
+
+            .header-controls {
+                order: 3;
+                width: 100%;
+                justify-content: flex-end;
+            }
         }
     </style>
+    <!-- Unified Language System -->
+    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -378,11 +434,23 @@
                     <span></span>
                     <span></span>
                 </div>
-                
-                <a href="foods.html" class="back-btn">
-                    <i class="fas fa-arrow-right"></i>
-                    العودة للأطعمة
-                </a>
+
+                <div class="header-controls">
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Language Toggle -->
+                    <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                        <span id="langText">EN</span>
+                    </button>
+                    
+                    <a href="foods.html" class="back-btn">
+                        <i class="fas fa-arrow-right"></i>
+                        <span data-i18n="nav_back_to_foods">العودة للأطعمة</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -396,39 +464,39 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
+        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
             <i class="fas fa-home"></i>
             الصفحة الرئيسية
         </a>
-        <a href="foods.html" class="mobile-nav-link">
+        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
             <i class="fas fa-utensils"></i>
             دليل الأطعمة
         </a>
-        <a href="calculators.html" class="mobile-nav-link">
+        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
             <i class="fas fa-calculator"></i>
             الحاسبات الصحية
         </a>
-        <a href="recipes.html" class="mobile-nav-link">
+        <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
             <i class="fas fa-book-open"></i>
             الوصفات الصحية
         </a>
-        <a href="articles.html" class="mobile-nav-link">
+        <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
             <i class="fas fa-book-medical"></i>
             المقالات الصحية
         </a>
-        <a href="doctor.html" class="mobile-nav-link">
+        <a href="doctor.html" class="mobile-nav-link" data-i18n="nav_doctor">
             <i class="fas fa-user-md"></i>
             د. وسيم حبيب
         </a>
-        <a href="pricing.html" class="mobile-nav-link">
+        <a href="pricing.html" class="mobile-nav-link" data-i18n="nav_pricing">
             <i class="fas fa-tag"></i>
             الأسعار
         </a>
-        <a href="about.html" class="mobile-nav-link">
+        <a href="about.html" class="mobile-nav-link" data-i18n="nav_about">
             <i class="fas fa-info-circle"></i>
             من نحن
         </a>
-        <a href="contact.html" class="mobile-nav-link">
+        <a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">
             <i class="fas fa-envelope"></i>
             اتصل بنا
         </a>
@@ -439,49 +507,49 @@
         <!-- Food Hero -->
         <div class="food-hero">
             <div class="food-icon-large" id="foodIcon">🍚</div>
-            <h2 id="foodName">أرز أبيض مطبوخ</h2>
-            <h3 id="foodNameEn">White Rice</h3>
-            <span class="food-category-badge" id="foodCategory">حبوب</span>
+            <h2 id="foodName" data-i18n="food_name">أرز أبيض مطبوخ</h2>
+            <h3 id="foodNameEn" data-i18n="food_name_en">White Rice</h3>
+            <span class="food-category-badge" id="foodCategory" data-i18n="food_category">حبوب</span>
         </div>
 
         <!-- Stats Grid -->
         <div class="stats-grid">
             <div class="stat-card">
-                <h4>المؤشر الجلايسيمي</h4>
+                <h4 data-i18n="stat_gi">المؤشر الجلايسيمي</h4>
                 <div class="stat-value medium" id="giValue">73</div>
-                <div class="stat-label" id="giLabel">متوسط</div>
+                <div class="stat-label" id="giLabel" data-i18n="gi_medium">متوسط</div>
             </div>
 
             <div class="stat-card">
-                <h4>مؤشر الأنسولين</h4>
+                <h4 data-i18n="stat_ii">مؤشر الأنسولين</h4>
                 <div class="stat-value high" id="iiValue">79</div>
-                <div class="stat-label" id="iiLabel">مرتفع</div>
+                <div class="stat-label" id="iiLabel" data-i18n="ii_high">مرتفع</div>
             </div>
 
             <div class="stat-card">
-                <h4>السعرات الحرارية</h4>
+                <h4 data-i18n="stat_calories">السعرات الحرارية</h4>
                 <div class="stat-value" style="color: #3498db;" id="caloriesValue">130</div>
-                <div class="stat-label">لكل 100 جرام</div>
+                <div class="stat-label" data-i18n="per_100g">لكل 100 جرام</div>
             </div>
 
             <div class="stat-card">
-                <h4>البروتين</h4>
+                <h4 data-i18n="stat_protein">البروتين</h4>
                 <div class="stat-value" style="color: #9b59b6;" id="proteinValue">2.7</div>
-                <div class="stat-label">جرام</div>
+                <div class="stat-label" data-i18n="gram">جرام</div>
             </div>
         </div>
 
         <!-- Charts Section -->
         <div class="charts-section">
             <div class="chart-card">
-                <h3>المؤشرات الصحية</h3>
+                <h3 data-i18n="chart_health_indicators">المؤشرات الصحية</h3>
                 <div class="chart-container">
                     <canvas id="indexChart"></canvas>
                 </div>
             </div>
 
             <div class="chart-card">
-                <h3>القيم الغذائية</h3>
+                <h3 data-i18n="chart_nutrition">القيم الغذائية</h3>
                 <div class="chart-container">
                     <canvas id="nutritionChart"></canvas>
                 </div>
@@ -490,34 +558,34 @@
 
         <!-- Nutrition Table -->
         <div class="nutrition-section">
-            <h3>المعلومات الغذائية الكاملة</h3>
+            <h3 data-i18n="nutrition_complete_info">المعلومات الغذائية الكاملة</h3>
             <table class="nutrition-table">
                 <thead>
                     <tr>
-                        <th>العنصر الغذائي</th>
-                        <th>الكمية (لكل 100 جرام)</th>
+                        <th data-i18n="nutrition_element">العنصر الغذائي</th>
+                        <th data-i18n="nutrition_quantity">الكمية (لكل 100 جرام)</th>
                     </tr>
                 </thead>
                 <tbody id="nutritionTableBody">
                     <tr>
-                        <td>السعرات الحرارية</td>
-                        <td>130 سعرة</td>
+                        <td data-i18n="nut_calories">السعرات الحرارية</td>
+                        <td id="nutCalories">130 سعرة</td>
                     </tr>
                     <tr>
-                        <td>البروتين</td>
-                        <td>2.7 جرام</td>
+                        <td data-i18n="nut_protein">البروتين</td>
+                        <td id="nutProtein">2.7 جرام</td>
                     </tr>
                     <tr>
-                        <td>الكربوهيدرات</td>
-                        <td>28 جرام</td>
+                        <td data-i18n="nut_carbs">الكربوهيدرات</td>
+                        <td id="nutCarbs">28 جرام</td>
                     </tr>
                     <tr>
-                        <td>الدهون</td>
-                        <td>0.3 جرام</td>
+                        <td data-i18n="nut_fat">الدهون</td>
+                        <td id="nutFat">0.3 جرام</td>
                     </tr>
                     <tr>
-                        <td>الألياف</td>
-                        <td>0.4 جرام</td>
+                        <td data-i18n="nut_fiber">الألياف</td>
+                        <td id="nutFiber">0.4 جرام</td>
                     </tr>
                 </tbody>
             </table>
@@ -525,44 +593,264 @@
 
         <!-- Health Tips -->
         <div class="tips-section">
-            <h3>نصائح صحية</h3>
+            <h3 data-i18n="health_tips">نصائح صحية</h3>
             
             <div class="tip-item">
                 <h4>
                     <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
-                    توصيات الاستهلاك
+                    <span data-i18n="tip_consumption">توصيات الاستهلاك</span>
                 </h4>
-                <p id="consumptionTip">يُنصح بتناول الأرز الأبيض بكميات معتدلة وتفضيل الأرز البني للحصول على قيمة غذائية أعلى وألياف أكثر.</p>
+                <p id="consumptionTip" data-i18n="tip_consumption_text">يُنصح بتناول الأرز الأبيض بكميات معتدلة وتفضيل الأرز البني للحصول على قيمة غذائية أعلى وألياف أكثر.</p>
             </div>
 
             <div class="tip-item">
                 <h4>
                     <i class="fas fa-utensils" style="color: var(--accent-color);"></i>
-                    أفضل طرق التحضير
+                    <span data-i18n="tip_preparation">أفضل طرق التحضير</span>
                 </h4>
-                <p id="preparationTip">للتقليل من المؤشر الجلايسيمي، يمكن طهي الأرز ثم تبريده قبل تناوله، أو إضافة الخضروات والبروتين معه.</p>
+                <p id="preparationTip" data-i18n="tip_preparation_text">للتقليل من المؤشر الجلايسيمي، يمكن طهي الأرز ثم تبريده قبل تناوله، أو إضافة الخضروات والبروتين معه.</p>
             </div>
 
             <div class="tip-item">
                 <h4>
                     <i class="fas fa-exclamation-triangle" style="color: #f39c12;"></i>
-                    تحذيرات
+                    <span data-i18n="tip_warning">تحذيرات</span>
                 </h4>
-                <p id="warningTip">مرضى السكري يُنصحون بالتقليل من الأرز الأبيض واستبداله بالأرز البني أو الحبوب الكاملة الأخرى.</p>
+                <p id="warningTip" data-i18n="tip_warning_text">مرضى السكري يُنصحون بالتقليل من الأرز الأبيض واستبداله بالأرز البني أو الحبوب الكاملة الأخرى.</p>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
+            <span data-i18n="footer_copyright">© 2024 WiBo Health. جميع الحقوق محفوظة.</span>
+        </p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
+            💚 <span data-i18n="footer_made_with">مُطور بـ</span> <span style="color: #2ecc71;">♥</span> <span data-i18n="footer_for_body">من أجل بودي</span>
+        </p>
+    </footer>
+
     <script src="js/data.js"></script>
     <script>
-        // Get food ID from URL
+        // ===== Language System =====
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        // Complete translations for both languages
+        const translations = {
+            ar: {
+                page_title_food_details: "تفاصيل الطعام - WiBo Health",
+                nav_back_to_foods: "العودة للأطعمة",
+                nav_home: "الصفحة الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات الصحية",
+                nav_recipes: "الوصفات الصحية",
+                nav_articles: "المقالات الصحية",
+                nav_doctor: "د. وسيم حبيب",
+                nav_pricing: "الأسعار",
+                nav_about: "من نحن",
+                nav_contact: "اتصل بنا",
+                food_name: "أرز أبيض مطبوخ",
+                food_name_en: "White Rice",
+                food_category: "حبوب",
+                stat_gi: "المؤشر الجلايسيمي",
+                stat_ii: "مؤشر الأنسولين",
+                stat_calories: "السعرات الحرارية",
+                stat_protein: "البروتين",
+                gi_low: "منخفض",
+                gi_medium: "متوسط",
+                gi_high: "مرتفع",
+                ii_high: "مرتفع",
+                per_100g: "لكل 100 جرام",
+                gram: "جرام",
+                chart_health_indicators: "المؤشرات الصحية",
+                chart_nutrition: "القيم الغذائية",
+                nutrition_complete_info: "المعلومات الغذائية الكاملة",
+                nutrition_element: "العنصر الغذائي",
+                nutrition_quantity: "الكمية (لكل 100 جرام)",
+                nut_calories: "السعرات الحرارية",
+                nut_protein: "البروتين",
+                nut_carbs: "الكربوهيدرات",
+                nut_fat: "الدهون",
+                nut_fiber: "الألياف",
+                health_tips: "نصائح صحية",
+                tip_consumption: "توصيات الاستهلاك",
+                tip_consumption_text: "يُنصح بتناول الأرز الأبيض بكميات معتدلة وتفضيل الأرز البني للحصول على قيمة غذائية أعلى وألياف أكثر.",
+                tip_preparation: "أفضل طرق التحضير",
+                tip_preparation_text: "للتقليل من المؤشر الجلايسيمي، يمكن طهي الأرز ثم تبريده قبل تناوله، أو إضافة الخضروات والبروتين معه.",
+                tip_warning: "تحذيرات",
+                tip_warning_text: "مرضى السكري يُنصحون بالتقليل من الأرز الأبيض واستبداله بالأرز البني أو الحبوب الكاملة الأخرى.",
+                footer_about: "من نحن",
+                footer_contact: "اتصل بنا",
+                footer_privacy: "سياسة الخصوصية",
+                footer_terms: "شروط الاستخدام",
+                footer_copyright: "© 2024 WiBo Health. جميع الحقوق محفوظة.",
+                footer_made_with: "مُطور بـ",
+                footer_for_body: "من أجل بودي",
+                chart_label_gi: "المؤشر الجلايسيمي",
+                chart_label_ii: "مؤشر الأنسولين",
+                chart_label_protein: "بروتين",
+                chart_label_carbs: "كربوهيدرات",
+                chart_label_fat: "دهون",
+                chart_label_fiber: "ألياف"
+            },
+            en: {
+                page_title_food_details: "Food Details - WiBo Health",
+                nav_back_to_foods: "Back to Foods",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Health Calculators",
+                nav_recipes: "Healthy Recipes",
+                nav_articles: "Health Articles",
+                nav_doctor: "Dr. Waseem Habib",
+                nav_pricing: "Pricing",
+                nav_about: "About Us",
+                nav_contact: "Contact Us",
+                food_name: "Cooked White Rice",
+                food_name_en: "White Rice",
+                food_category: "Grains",
+                stat_gi: "Glycemic Index",
+                stat_ii: "Insulin Index",
+                stat_calories: "Calories",
+                stat_protein: "Protein",
+                gi_low: "Low",
+                gi_medium: "Medium",
+                gi_high: "High",
+                ii_high: "High",
+                per_100g: "per 100g",
+                gram: "gram",
+                chart_health_indicators: "Health Indicators",
+                chart_nutrition: "Nutritional Values",
+                nutrition_complete_info: "Complete Nutritional Information",
+                nutrition_element: "Nutrient",
+                nutrition_quantity: "Quantity (per 100g)",
+                nut_calories: "Calories",
+                nut_protein: "Protein",
+                nut_carbs: "Carbohydrates",
+                nut_fat: "Fat",
+                nut_fiber: "Fiber",
+                health_tips: "Health Tips",
+                tip_consumption: "Consumption Recommendations",
+                tip_consumption_text: "It is recommended to consume white rice in moderate quantities and prefer brown rice for higher nutritional value and more fiber.",
+                tip_preparation: "Best Preparation Methods",
+                tip_preparation_text: "To reduce the glycemic index, you can cook rice and then cool it before eating, or add vegetables and protein to it.",
+                tip_warning: "Warnings",
+                tip_warning_text: "Diabetic patients are advised to reduce white rice consumption and replace it with brown rice or other whole grains.",
+                footer_about: "About Us",
+                footer_contact: "Contact Us",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Use",
+                footer_copyright: "© 2024 WiBo Health. All rights reserved.",
+                footer_made_with: "Developed with",
+                footer_for_body: "for your body",
+                chart_label_gi: "Glycemic Index",
+                chart_label_ii: "Insulin Index",
+                chart_label_protein: "Protein",
+                chart_label_carbs: "Carbohydrates",
+                chart_label_fat: "Fat",
+                chart_label_fiber: "Fiber"
+            }
+        };
+
+        // Translation function
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Update page language
+        function updatePageLanguage() {
+            // Update title
+            document.title = t('page_title_food_details');
+
+            // Update language button
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = t(key);
+                if (element.tagName === 'TITLE') {
+                    document.title = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+
+            // Update charts if they exist
+            if (window.indexChartInstance) {
+                createCharts(currentFood);
+            }
+
+            // Update food details
+            if (currentFood) {
+                displayFoodDetails(currentFood);
+            }
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('themeToggle');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+
+        // Initialize language
+        function initializeLanguage() {
+            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Apply translations immediately on page load
+            updatePageLanguage();
+        }
+
+        // ===== Food Details Logic =====
         const urlParams = new URLSearchParams(window.location.search);
         const foodId = parseInt(urlParams.get('id')) || 1;
 
         let currentFood = null;
+        let indexChartInstance = null;
+        let nutritionChartInstance = null;
 
         // Load food data
         window.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+
             if (typeof foodsDatabase !== 'undefined') {
                 currentFood = foodsDatabase.find(f => f.id === foodId);
                 if (currentFood) {
@@ -577,7 +865,8 @@
             document.getElementById('foodIcon').textContent = food.icon || '🍽️';
             document.getElementById('foodName').textContent = food.name;
             document.getElementById('foodNameEn').textContent = food.nameEn || '';
-            document.getElementById('foodCategory').textContent = food.category;
+            const currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
+            document.getElementById('foodCategory').textContent = currentLang === 'en' ? (food.categoryEn || food.category) : food.category;
             
             // GI
             document.getElementById('giValue').textContent = food.gi;
@@ -593,14 +882,12 @@
             document.getElementById('caloriesValue').textContent = food.nutrition.calories;
             document.getElementById('proteinValue').textContent = food.nutrition.protein;
             
-            // Nutrition table
-            document.getElementById('nutritionTableBody').innerHTML = `
-                <tr><td>السعرات الحرارية</td><td>${food.nutrition.calories} سعرة</td></tr>
-                <tr><td>البروتين</td><td>${food.nutrition.protein} جرام</td></tr>
-                <tr><td>الكربوهيدرات</td><td>${food.nutrition.carbs} جرام</td></tr>
-                <tr><td>الدهون</td><td>${food.nutrition.fat} جرام</td></tr>
-                <tr><td>الألياف</td><td>${food.nutrition.fiber} جرام</td></tr>
-            `;
+            // Update nutrition values
+            document.getElementById('nutCalories').textContent = food.nutrition.calories + ' ' + t('chart_label_carbs');
+            document.getElementById('nutProtein').textContent = food.nutrition.protein + ' ' + t('gram');
+            document.getElementById('nutCarbs').textContent = food.nutrition.carbs + ' ' + t('gram');
+            document.getElementById('nutFat').textContent = food.nutrition.fat + ' ' + t('gram');
+            document.getElementById('nutFiber').textContent = food.nutrition.fiber + ' ' + t('gram');
         }
 
         function getGIClass(value) {
@@ -610,21 +897,25 @@
         }
 
         function getGIText(value) {
-            if (value >= 70) return 'مرتفع';
-            if (value >= 55) return 'متوسط';
-            return 'منخفض';
+            if (value >= 70) return t('gi_high');
+            if (value >= 55) return t('gi_medium');
+            return t('gi_low');
         }
 
         // Create charts
         function createCharts(food) {
+            // Destroy existing charts
+            if (indexChartInstance) indexChartInstance.destroy();
+            if (nutritionChartInstance) nutritionChartInstance.destroy();
+
             // Index Chart
             const indexCtx = document.getElementById('indexChart').getContext('2d');
-            new Chart(indexCtx, {
+            indexChartInstance = new Chart(indexCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['المؤشر الجلايسيمي', 'مؤشر الأنسولين'],
+                    labels: [t('chart_label_gi'), t('chart_label_ii')],
                     datasets: [{
-                        label: 'القيمة',
+                        label: t('stat_protein'),
                         data: [food.gi, food.ii],
                         backgroundColor: [
                             food.gi >= 70 ? '#e74c3c' : food.gi >= 55 ? '#f39c12' : '#2ecc71',
@@ -659,10 +950,10 @@
 
             // Nutrition Chart
             const nutritionCtx = document.getElementById('nutritionChart').getContext('2d');
-            new Chart(nutritionCtx, {
+            nutritionChartInstance = new Chart(nutritionCtx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['بروتين', 'كربوهيدرات', 'دهون', 'ألياف'],
+                    labels: [t('chart_label_protein'), t('chart_label_carbs'), t('chart_label_fat'), t('chart_label_fiber')],
                     datasets: [{
                         data: [
                             food.nutrition.protein,
@@ -695,36 +986,7 @@
                 }
             });
         }
-    </script>
 
-    <!-- Footer متوافق مع AdSense -->
-    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
-        <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
-            </a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
-            </a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
-            </a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
-            </a>
-        </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
-            © 2024 WiBo Health. جميع الحقوق محفوظة.
-        </p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
-        </p>
-    </footer>
-    
-    <script>
         // Auto-hide Header on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
@@ -746,7 +1008,7 @@
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
     </script>
-    
+
     <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
 </body>

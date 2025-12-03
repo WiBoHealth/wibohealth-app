@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
+    <meta name="description" content="موقعك الصحي الفريد: المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية - دليلك الشامل للتغذية">
+    <link rel="canonical" href="https://wibohealth.com/">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            transition: font-family 0.3s ease;
+        }
+
+        /* Hide elements based on language */
+        [data-lang="en"] {
+            display: none;
+        }
+
+        html[lang="en"] [data-lang="ar"] {
+            display: none;
+        }
+
+        html[lang="en"] [data-lang="en"] {
+            display: block;
+        }
+
+        html[lang="en"] body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #667eea;
+            font-size: 32px;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .lang-toggle {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+
+        .lang-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 80px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .feature-desc {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* RTL Support */
+        html[dir="rtl"] {
+            direction: rtl;
+        }
+
+        html[dir="ltr"] {
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>💚 WiBo Health</h1>
+                    <!-- Arabic Tagline -->
+                    <p class="tagline" data-lang="ar">دليلك الصحي الشامل للتغذية السليمة</p>
+                    <!-- English Tagline -->
+                    <p class="tagline" data-lang="en">Your Complete Guide to Proper Nutrition</p>
+                </div>
+                
+                <div class="header-controls">
+                    <!-- Language Toggle Button -->
+                    <button class="lang-toggle" data-lang-toggle="en" data-lang="ar">
+                        🇬🇧 EN
+                    </button>
+                    <button class="lang-toggle" data-lang-toggle="ar" data-lang="en">
+                        🇸🇦 AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Arabic Hero -->
+            <div data-lang="ar">
+                <h2>دليلك الشامل للتغذية الصحية</h2>
+                <p>1051 عنصر غذائي | 442 مكمل | 110 وصفة | 19 مقالة | 5 حاسبات صحية</p>
+                <a href="foods.html" class="cta-button">استكشف الآن</a>
+            </div>
+            
+            <!-- English Hero -->
+            <div data-lang="en">
+                <h2>Your Complete Guide to Healthy Nutrition</h2>
+                <p>1051 Food Items | 442 Supplements | 110 Recipes | 19 Articles | 5 Health Calculators</p>
+                <a href="foods.html" class="cta-button">Explore Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <!-- Arabic Title -->
+            <h2 style="text-align: center; font-size: 36px; color: #2c3e50;" data-lang="ar">
+                ماذا يقدم WiBo Health؟
+            </h2>
+            <!-- English Title -->
+            <h2 style="text-align: center; font-size: 36px; color: #2c3e50;" data-lang="en">
+                What Does WiBo Health Offer?
+            </h2>
+
+            <div class="features-grid">
+                <!-- Feature 1: Food Database -->
+                <div class="feature-card">
+                    <div class="feature-icon">🍎</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">قاعدة بيانات ضخمة للأطعمة</h3>
+                    <p class="feature-desc" data-lang="ar">1051 عنصر غذائي مع معلومات تفصيلية كاملة</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">Massive Food Database</h3>
+                    <p class="feature-desc" data-lang="en">1051 food items with complete detailed information</p>
+                </div>
+
+                <!-- Feature 2: Calculators -->
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">حاسبات صحية دقيقة</h3>
+                    <p class="feature-desc" data-lang="ar">5 حاسبات مجانية: BMI، BMR، السعرات، الماء، الدهون</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">Accurate Health Calculators</h3>
+                    <p class="feature-desc" data-lang="en">5 free calculators: BMI, BMR, Calories, Water, Body Fat</p>
+                </div>
+
+                <!-- Feature 3: Recipes -->
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">110 وصفة صحية</h3>
+                    <p class="feature-desc" data-lang="ar">وصفات دايت وحلويات صحية مع القيم الغذائية</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">110 Healthy Recipes</h3>
+                    <p class="feature-desc" data-lang="en">Diet recipes and healthy desserts with nutritional values</p>
+                </div>
+
+                <!-- Feature 4: Supplements -->
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">دليل المكملات الغذائية</h3>
+                    <p class="feature-desc" data-lang="ar">442 مكمل غذائي مع الفوائد والجرعات</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">Supplements Guide</h3>
+                    <p class="feature-desc" data-lang="en">442 supplements with benefits and dosages</p>
+                </div>
+
+                <!-- Feature 5: Articles -->
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">19 مقالة تغذوية احترافية</h3>
+                    <p class="feature-desc" data-lang="ar">مقالات متخصصة عن السكري والقلب والمزيد</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">19 Professional Articles</h3>
+                    <p class="feature-desc" data-lang="en">Specialized articles about diabetes, heart health, and more</p>
+                </div>
+
+                <!-- Feature 6: Tracker -->
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <!-- Arabic -->
+                    <h3 class="feature-title" data-lang="ar">متتبع سعرات احترافي</h3>
+                    <p class="feature-desc" data-lang="ar">تتبع سعراتك اليومية مع رسوم بيانية</p>
+                    <!-- English -->
+                    <h3 class="feature-title" data-lang="en">Professional Calorie Tracker</h3>
+                    <p class="feature-desc" data-lang="en">Track your daily calories with interactive charts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1051</div>
+                    <p class="stat-label" data-lang="ar">عنصر غذائي</p>
+                    <p class="stat-label" data-lang="en">Food Items</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">442</div>
+                    <p class="stat-label" data-lang="ar">مكمل غذائي</p>
+                    <p class="stat-label" data-lang="en">Supplements</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">110</div>
+                    <p class="stat-label" data-lang="ar">وصفة صحية</p>
+                    <p class="stat-label" data-lang="en">Healthy Recipes</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">19</div>
+                    <p class="stat-label" data-lang="ar">مقالة تغذوية</p>
+                    <p class="stat-label" data-lang="en">Nutrition Articles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Arabic -->
+            <p data-lang="ar">© 2025 WiBo Health. جميع الحقوق محفوظة.</p>
+            <!-- English -->
+            <p data-lang="en">© 2025 WiBo Health. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * WiBo Health - Language Switcher (Embedded)
+         * Version: 5.0.0
+         */
+        (function() {
+            'use strict';
+
+            const LanguageSwitcher = {
+                currentLang: 'ar',
+
+                getSavedLanguage() {
+                    return localStorage.getItem('wibohealth_language') || 'ar';
+                },
+
+                saveLanguage(lang) {
+                    localStorage.setItem('wibohealth_language', lang);
+                    this.currentLang = lang;
+                },
+
+                applyLanguage(lang) {
+                    const html = document.documentElement;
+                    
+                    if (lang === 'en') {
+                        html.setAttribute('lang', 'en');
+                        html.setAttribute('dir', 'ltr');
+                        
+                        document.querySelectorAll('[data-lang="ar"]').forEach(el => {
+                            el.style.display = 'none';
+                        });
+                        
+                        document.querySelectorAll('[data-lang="en"]').forEach(el => {
+                            el.style.display = 'block';
+                        });
+                        
+                        document.body.style.fontFamily = "'Inter', sans-serif";
+                        
+                    } else {
+                        html.setAttribute('lang', 'ar');
+                        html.setAttribute('dir', 'rtl');
+                        
+                        document.querySelectorAll('[data-lang="en"]').forEach(el => {
+                            el.style.display = 'none';
+                        });
+                        
+                        document.querySelectorAll('[data-lang="ar"]').forEach(el => {
+                            el.style.display = 'block';
+                        });
+                        
+                        document.body.style.fontFamily = "'Cairo', sans-serif";
+                    }
+                    
+                    this.saveLanguage(lang);
+                    this.updateLanguageButtons();
+                },
+
+                toggleLanguage() {
+                    const newLang = this.currentLang === 'ar' ? 'en' : 'ar';
+                    this.applyLanguage(newLang);
+                },
+
+                updateLanguageButtons() {
+                    document.querySelectorAll('[data-lang-toggle]').forEach(button => {
+                        const targetLang = button.getAttribute('data-lang-toggle');
+                        if (targetLang === this.currentLang) {
+                            button.style.opacity = '0.5';
+                            button.style.pointerEvents = 'none';
+                        } else {
+                            button.style.opacity = '1';
+                            button.style.pointerEvents = 'auto';
+                        }
+                    });
+                },
+
+                init() {
+                    const savedLang = this.getSavedLanguage();
+                    this.currentLang = savedLang;
+                    
+                    document.addEventListener('DOMContentLoaded', () => {
+                        this.applyLanguage(savedLang);
+                        
+                        document.querySelectorAll('[data-lang-toggle]').forEach(button => {
+                            button.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const targetLang = button.getAttribute('data-lang-toggle');
+                                this.applyLanguage(targetLang);
+                            });
+                        });
+                        
+                        console.log('✅ Language Switcher initialized:', savedLang);
+                    });
+                }
+            };
+
+            LanguageSwitcher.init();
+            window.LanguageSwitcher = LanguageSwitcher;
+        })();
+    </script>
+</body>
+</html>
