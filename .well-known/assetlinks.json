@@ -1,11 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.wibohealth.app",
       "sha256_cert_fingerprints": [
-        "48:34:4B:E5:DB:73:9D:CD:3E:AD:A9:0F:04:4E:AB:A3:A2:7A:4B:6E:E1:F0:E2:CC:4C:3B:7F:41:E9:F3:A8:35"
+        "48:34:4B:E5:DB:73:9D:CD:3E:AD:A9:0F:04:4E:AB:A3:A2:7A:4B:6E:E1:F0:E2:CC:4C:3B:7F:41:E9:F3:A8:35",
+        "E5:30:E3:A8:29:DB:2B:44:97:D4:4A:93:81:A5:D6:CA:BD:01:26:93:F4:18:6A:83:64:67:7F:18:06:5A:3B:01"
       ]
     }
   }
