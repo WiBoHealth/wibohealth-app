@@ -335,6 +335,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px var(--shadow);
             margin-bottom: 20px;
+            position: relative;
         }
 
         .search-input {
@@ -369,6 +370,241 @@
 
         body.dark-mode .search-helper {
             color: #b8b8b8;
+        }
+
+        /* Smart Search Suggestions - Foods */
+        .foods-suggestions {
+            position: absolute;
+            top: calc(100% - 10px);
+            left: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            z-index: 1000;
+            border: 2px solid #ecf0f1;
+            border-top: none;
+        }
+
+        body.dark-mode .foods-suggestions {
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .foods-suggestions.show {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .food-suggestion-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        body.dark-mode .food-suggestion-item {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .food-suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-suggestion-item:hover,
+        .food-suggestion-item.active {
+            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        body.dark-mode .food-suggestion-item:hover,
+        body.dark-mode .food-suggestion-item.active {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.1));
+        }
+
+        .food-sug-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .food-sug-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .food-sug-name-ar {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 16px;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .food-sug-name-en {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        body.dark-mode .food-sug-name-en {
+            color: #9ca3af;
+        }
+
+        .food-sug-name-ar mark,
+        .food-sug-name-en mark {
+            background: #fef08a;
+            color: #ca8a04;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+
+        body.dark-mode .food-sug-name-ar mark,
+        body.dark-mode .food-sug-name-en mark {
+            background: #854d0e;
+            color: #fef08a;
+        }
+
+        .food-sug-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .food-category {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        body.dark-mode .food-category {
+            background: rgba(99, 102, 241, 0.3);
+            color: #c7d2fe;
+        }
+
+        .gi-badge {
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .gi-badge.gi-low {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .gi-badge.gi-medium {
+            background: #fed7aa;
+            color: #9a3412;
+        }
+
+        .gi-badge.gi-high {
+            background: #fecaca;
+            color: #991b1b;
+        }
+
+        body.dark-mode .gi-badge.gi-low {
+            background: rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+        }
+
+        body.dark-mode .gi-badge.gi-medium {
+            background: rgba(245, 158, 11, 0.3);
+            color: #fcd34d;
+        }
+
+        body.dark-mode .gi-badge.gi-high {
+            background: rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+
+        .cal-badge {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+
+        body.dark-mode .cal-badge {
+            background: rgba(59, 130, 246, 0.3);
+            color: #93c5fd;
+        }
+
+        .food-sug-arrow {
+            color: var(--primary-color);
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            flex-shrink: 0;
+        }
+
+        .food-suggestion-item:hover .food-sug-arrow,
+        .food-suggestion-item.active .food-sug-arrow {
+            opacity: 1;
+        }
+
+        .food-no-results {
+            padding: 30px 20px;
+            text-align: center;
+            color: #6b7280;
+        }
+
+        body.dark-mode .food-no-results {
+            color: #9ca3af;
+        }
+
+        .food-no-results i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .food-no-results p {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .food-no-results small {
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        /* Scrollbar styling for suggestions */
+        .foods-suggestions::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .foods-suggestions::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        body.dark-mode .foods-suggestions::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .foods-suggestions::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .foods-suggestions::-webkit-scrollbar-thumb:hover {
+            background: #27ae60;
         }
 
         /* Food Grid */
@@ -626,6 +862,126 @@
             color: var(--text-light);
         }
 
+        /* Smart Search Suggestions */
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--card-bg);
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-height: 400px;
+            overflow-y: auto;
+            z-index: 1000;
+            border: 2px solid #ecf0f1;
+            border-top: none;
+            display: none;
+            margin-top: 2px;
+        }
+
+        body.dark-mode .search-suggestions {
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .suggestion-header {
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            background: rgba(0,0,0,0.02);
+            border-bottom: 1px solid #f0f0f0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        body.dark-mode .suggestion-header {
+            background: rgba(255,255,255,0.05);
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .suggestion-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        body.dark-mode .suggestion-item {
+            border-bottom-color: rgba(255,255,255,0.05);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover,
+        .suggestion-item.active {
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .suggestion-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .suggestion-content {
+            flex: 1;
+        }
+
+        .suggestion-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .suggestion-details {
+            display: flex;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .suggestion-category {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .suggestion-calories {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .suggestion-item.no-results {
+            justify-content: center;
+            color: var(--text-light);
+            padding: 25px;
+            cursor: default;
+        }
+
+        .suggestion-item.no-results:hover {
+            background: transparent;
+        }
+
+        .suggestion-item mark {
+            background: rgba(46, 204, 113, 0.3);
+            color: var(--text-dark);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -646,6 +1002,15 @@
             
             .nav-menu {
                 display: none;
+            }
+
+            .search-suggestions {
+                max-height: 300px;
+            }
+
+            .suggestion-item {
+                padding: 12px 15px;
+                gap: 10px;
             }
         }
     </style>
@@ -759,7 +1124,7 @@
             <p class="subtitle-text">food items with complete nutritional information</p>
         </div>
 
-        <div class="search-box">
+        <div class="search-box" style="position: relative;">
             <input type="text" id="searchInput" class="search-input" data-i18n="search_placeholder" placeholder="🔍 ابحث بالعربي أو English..." oninput="filterFoods()">
             <p class="search-helper">
                 <i class="fas fa-info-circle" style="color: #667eea;"></i>
@@ -790,7 +1155,7 @@
     <script src="js/data-enhancer.js"></script>
 
     <script>
-        let allFoods = [];
+        window.allFoods = [];
         let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]');
         
         // Get current language from unified system
@@ -1045,6 +1410,9 @@
     
     <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
+    
+    <!-- Smart Search Feature -->
+    <script src="js/foods-smart-search.js"></script>
     
     <!-- PWA Registration -->
     <script src="js/pwa-register.js"></script>

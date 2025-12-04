@@ -5,6 +5,9 @@
 [![Recipes](https://img.shields.io/badge/recipes-110-green.svg)](recipes.html)
 [![Languages](https://img.shields.io/badge/languages-Arabic%20%2B%20English-orange.svg)](recipes.html)
 [![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg)](manifest.json)
+[![Smart Search](https://img.shields.io/badge/Smart%20Search-NEW-brightgreen.svg)](foods.html)
+
+> 🔥 **تحديث جديد (4 ديسمبر 2025)**: تم إضافة بحث ذكي متقدم لدليل الأطعمة مع اقتراحات فورية وتنقل بالأسهم! 
 
 ---
 
@@ -35,11 +38,16 @@
 
 ### 🎯 Core Features / الميزات الأساسية
 
-- ✅ **110 وصفة صحية كاملة** / **110 Complete Healthy Recipes**
+- ✅ **1050 عنصر غذائي + 110 وصفة صحية** / **1050 Food Items + 110 Healthy Recipes**
 - 🌐 **نظام ثنائي اللغة متقدم** / **Advanced Bilingual System** (Arabic ↔ English)
-- 🔍 **بحث ذكي وفلترة متقدمة** / **Smart Search & Advanced Filtering**
-- 📊 **معلومات غذائية تفصيلية** / **Detailed Nutritional Information**
-- 📱 **تصميم متجاوب** / **Fully Responsive Design**
+- 🔍 **بحث ذكي متقدم لدليل الأطعمة** / **Advanced Smart Search for Foods Guide** ⚡ **NEW - Dec 4, 2025**
+  - 🧠 كشف تلقائي للغة البحث / Auto language detection
+  - ⚡ اقتراحات فورية / Instant suggestions
+  - 📝 بحث في الأطعمة والتصنيفات / Search in foods & categories  
+  - 🎨 تمييز النص / Text highlighting
+  - ⌨️ تنقل بالأسهم / Keyboard navigation
+- 📊 **معلومات غذائية تفصيلية (GI، II، السعرات)** / **Detailed Nutrition (GI, II, Calories)**
+- 📱 **تصميم متجاوب + Dark Mode** / **Fully Responsive Design + Dark Mode**
 - 💾 **تطبيق ويب تقدمي (PWA)** / **Progressive Web App**
 - ⚡ **أداء عالي وسرعة تحميل** / **High Performance & Fast Loading**
 - 🎨 **واجهة مستخدم حديثة وجذابة** / **Modern & Attractive UI**
@@ -184,9 +192,12 @@ The program can be accessed from:
 
 ### Features Implementation
 
+- **Smart Search System** - نظام بحث ذكي مع اقتراحات فورية / Intelligent search with auto-suggestions
 - **Responsive Design** - تصميم متجاوب كامل / Fully responsive
+- **Dark Mode** - وضع داكن للعين / Dark mode support
 - **Lazy Loading** - تحميل تدريجي للصور / Progressive image loading
 - **Local Storage** - حفظ تفضيلات المستخدم / Save user preferences
+- **Keyboard Navigation** - تنقل سريع بالكيبورد / Fast keyboard navigation
 - **Dynamic Search** - بحث ديناميكي / Real-time search
 - **Category Filtering** - فلترة حسب الفئة / Category-based filtering
 - **Modal Dialogs** - نوافذ منبثقة للتفاصيل / Detail modal windows
@@ -210,6 +221,9 @@ WiBo Health/
 │   └── responsive.css              # استجابة الشاشات
 │
 ├── 📁 js/                           # ملفات JavaScript
+│   ├── data.js                     # بيانات الأطعمة (1050 عنصر) / Foods data
+│   ├── data-enhancer.js            # محسّن البيانات / Data enhancer
+│   ├── foods-smart-search.js       # البحث الذكي للأطعمة ⚡ NEW / Smart food search
 │   ├── recipes-data-part1.js       # وصفات 1-20
 │   ├── recipes-data-part2.js       # وصفات 21-35
 │   ├── recipes-data-part3.js       # وصفات 36-55
@@ -369,14 +383,26 @@ const translations = {
 
 ## 🔮 التطوير المستقبلي / Future Development
 
+### ✅ المميزات المنجزة / Completed Features
+
+#### ديسمبر 2025 / December 2025
+- ✅ **1050 عنصر غذائي** / 1050 Food items database
+- ✅ **دليل شامل للأطعمة** / Comprehensive food guide
+- ✅ **المؤشر الجلايسيمي (GI)** / Glycemic Index
+- ✅ **مؤشر الأنسولين (II)** / Insulin Index
+- ✅ **بحث ذكي بالاقتراحات الفورية** ⚡ / Smart search with auto-suggestions
+- ✅ **تنقل بلوحة المفاتيح** / Keyboard navigation
+- ✅ **دعم الوضع الداكن** / Dark mode support
+- ✅ **حفظ الأطعمة المفضلة** / Save favorite foods
+
 ### المميزات المخططة / Planned Features
 
-#### المرحلة الثانية / Phase 2
-- [ ] **حساب المؤشر الجلايسيمي** / Glycemic Index calculation
-- [ ] **مؤشر الأنسولين** / Insulin Index
-- [ ] **حفظ الوصفات المفضلة** / Save favorite recipes
-- [ ] **طباعة الوصفات** / Print recipes
-- [ ] **مشاركة الوصفات** / Share recipes
+#### المرحلة القادمة / Next Phase
+- [ ] **البحث الصوتي** / Voice search
+- [ ] **تاريخ البحث** / Search history
+- [ ] **فلترة متقدمة حسب GI** / Advanced GI filtering
+- [ ] **طباعة قوائم الأطعمة** / Print food lists
+- [ ] **مشاركة الأطعمة** / Share foods
 
 #### المرحلة الثالثة / Phase 3
 - [ ] **خطط وجبات أسبوعية** / Weekly meal plans
