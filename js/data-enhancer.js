@@ -62,7 +62,7 @@
      */
     function enhanceFoodsDatabase() {
         if (typeof window.foodsDatabase === 'undefined') {
-            console.warn('foodsDatabase not found. Data enhancer waiting...');
+            // Silently exit - Normal for pages that don't use foodsDatabase (like index.html)
             return false;
         }
 

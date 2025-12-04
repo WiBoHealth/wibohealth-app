@@ -28,6 +28,9 @@
 
     <!-- Translations System -->
     <script>
+        // Language System
+        let currentLang = localStorage.getItem('wibo_health_lang') || 'ar';
+        
         const translations = {
             ar: {
                 // Navigation
@@ -197,6 +200,26 @@
             updatePageLanguage();
         }
 
+        // Change Language Function
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_health_lang', lang);
+            
+            // Update page direction and lang attribute
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update all translations
+            updatePageLanguage();
+            
+            // Update active button
+            document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeBtn = document.querySelector(`[data-lang-toggle="${lang}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+        
         function updatePageLanguage() {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 el.textContent = t(el.getAttribute('data-i18n'));
@@ -204,6 +227,10 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
             updatePageLanguage();
             const currentBtn = document.querySelector(`[data-lang-toggle="${currentLang}"]`);
             if (currentBtn) currentBtn.classList.add('active');

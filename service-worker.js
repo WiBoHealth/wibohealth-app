@@ -1,10 +1,10 @@
 // Service Worker for WiBo Health PWA
-// Version 6.0.1 - إصلاح المكملات! 💚🏆
+// Version 6.0.2 - Fix Console Errors (Google Analytics, Manifest) 🔧✅
 
-const CACHE_NAME = 'wibo-health-v6.0.1';
-const RUNTIME_CACHE = 'wibo-health-runtime-v6.0.1';
-const IMAGE_CACHE = 'wibo-health-images-v6.0.1';
-const API_CACHE = 'wibo-health-api-v6.0.1';
+const CACHE_NAME = 'wibo-health-v6.0.2';
+const RUNTIME_CACHE = 'wibo-health-runtime-v6.0.2';
+const IMAGE_CACHE = 'wibo-health-images-v6.0.2';
+const API_CACHE = 'wibo-health-api-v6.0.2';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -33,7 +33,7 @@ const PRECACHE_URLS = [
 // 🔧 INSTALL EVENT - التثبيت الأولي
 // ============================================
 self.addEventListener('install', event => {
-  console.log('✅ Service Worker: Installing v4.0.0...');
+  console.log('✅ Service Worker: Installing v6.0.2...');
   
   event.waitUntil(
     Promise.all([
@@ -62,7 +62,7 @@ self.addEventListener('install', event => {
 // 🔄 ACTIVATE EVENT - التفعيل والتنظيف
 // ============================================
 self.addEventListener('activate', event => {
-  console.log('🔄 Service Worker: Activating v6.0.0 - دليل المكملات الكامل 452 مكمل!');
+  console.log('🔄 Service Worker: Activating v6.0.2 - Console Errors Fixed! ✅');
   
   event.waitUntil(
     caches.keys()
@@ -102,6 +102,19 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
+
+  // تجاهل Google Analytics و Google Tag Manager (لا نخزنهم في Cache)
+  const excludedDomains = [
+    'googletagmanager.com',
+    'google-analytics.com',
+    'analytics.google.com',
+    'www.googletagmanager.com',
+    'www.google-analytics.com'
+  ];
+  
+  if (excludedDomains.some(domain => request.url.includes(domain))) {
+    return; // دع المتصفح يتعامل معها بشكل طبيعي
+  }
 
   // تجاهل الطلبات الخارجية والبروتوكولات المختلفة
   if (!url.origin.includes(self.location.origin) && 
