@@ -186,6 +186,17 @@
             border-bottom-color: #764ba2;
         }
 
+        /* دعم الألوان والتظليل */
+        .article-content span[style*="color"] {
+            font-weight: 600;
+        }
+
+        .article-content mark {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
         .no-articles {
             text-align: center;
             padding: 100px 20px;
@@ -261,7 +272,7 @@
     </div>
 
     <script>
-        // تحويل Markdown إلى HTML
+        // تحويل Markdown + HTML إلى HTML
         function parseMarkdown(text) {
             // عناوين
             text = text.replace(/^## (.+)$/gm, '<h2>$1</h2>');
@@ -270,7 +281,7 @@
             // صور
             text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
             
-            // روابط
+            // روابط (تجنب تحويل الروابط داخل HTML tags)
             text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
             
             // نص عريض
@@ -283,9 +294,9 @@
             text = text.replace(/^- (.+)$/gm, '<li>$1</li>');
             text = text.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
             
-            // فقرات
+            // فقرات (تجنب تحويل الفقرات التي تحتوي على HTML tags)
             text = text.split('\n\n').map(para => {
-                if (!para.startsWith('<') && para.trim()) {
+                if (!para.startsWith('<') && para.trim() && !para.includes('<span') && !para.includes('<mark')) {
                     return '<p>' + para + '</p>';
                 }
                 return para;
@@ -294,23 +305,58 @@
             return text;
         }
 
-        // تحميل وعرض المقالات
-        function loadArticles() {
+        // تحميل وعرض المقالات من السيرفر
+        async function loadArticles() {
             const urlParams = new URLSearchParams(window.location.search);
             const isPreview = urlParams.get('preview') === 'true';
+            const container = document.getElementById('articlesContainer');
+            
+            // عرض رسالة تحميل
+            container.innerHTML = `
+                <div class="no-articles">
+                    <i class="fas fa-spinner fa-spin" style="color: #667eea;"></i>
+                    <h2 style="color: #667eea;">جاري تحميل المقالات...</h2>
+                </div>
+            `;
             
             let articles = [];
             
             if (isPreview) {
+                // معاينة من localStorage
                 const previewArticle = localStorage.getItem('previewArticle');
                 if (previewArticle) {
                     articles = [JSON.parse(previewArticle)];
                 }
             } else {
-                articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+                // تحميل من السيرفر
+                try {
+                    const response = await fetch('/tables/dr_wassim_articles?limit=100&sort=-created_at');
+                    if (!response.ok) throw new Error('فشل التحميل');
+                    
+                    const data = await response.json();
+                    articles = data.data || [];
+                    
+                    // تحويل التاريخ للصيغة العربية
+                    articles = articles.map(article => ({
+                        ...article,
+                        date: new Date(article.published_date).toLocaleDateString('ar-EG', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        })
+                    }));
+                } catch (error) {
+                    console.error('خطأ في تحميل المقالات:', error);
+                    container.innerHTML = `
+                        <div class="no-articles">
+                            <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i>
+                            <h2 style="color: #dc3545;">فشل تحميل المقالات</h2>
+                            <p style="color: #999; margin-top: 10px;">الرجاء المحاولة لاحقاً</p>
+                        </div>
+                    `;
+                    return;
+                }
             }
-
-            const container = document.getElementById('articlesContainer');
 
             if (articles.length === 0) {
                 container.innerHTML = `

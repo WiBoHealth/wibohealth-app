@@ -314,6 +314,16 @@
             transition: all 0.3s;
         }
 
+        .color-btn {
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .color-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8em;
@@ -391,6 +401,12 @@
                         <button onclick="insertLink()" title="إضافة رابط">
                             <i class="fas fa-link"></i> رابط
                         </button>
+                        <button onclick="openColorModal()" title="لون النص" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">
+                            <i class="fas fa-palette"></i> لون
+                        </button>
+                        <button onclick="insertHighlight()" title="تظليل النص" style="background: linear-gradient(135deg, #feca57, #48dbfb);">
+                            <i class="fas fa-highlighter"></i> تظليل
+                        </button>
                     </div>
                 </div>
 
@@ -451,14 +467,49 @@
         </div>
     </div>
 
+    <!-- Modal للألوان -->
+    <div class="modal" id="colorModal">
+        <div class="modal-content">
+            <h3><i class="fas fa-palette"></i> اختر لون النص</h3>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0;">
+                <button class="color-btn" onclick="insertColor('#ff6b6b')" style="background: #ff6b6b; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر"></button>
+                <button class="color-btn" onclick="insertColor('#ee5a6f')" style="background: #ee5a6f; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر وردي"></button>
+                <button class="color-btn" onclick="insertColor('#ff8c42')" style="background: #ff8c42; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="برتقالي"></button>
+                <button class="color-btn" onclick="insertColor('#feca57')" style="background: #feca57; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أصفر"></button>
+                <button class="color-btn" onclick="insertColor('#48dbfb')" style="background: #48dbfb; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أزرق فاتح"></button>
+                
+                <button class="color-btn" onclick="insertColor('#0abde3')" style="background: #0abde3; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أزرق"></button>
+                <button class="color-btn" onclick="insertColor('#667eea')" style="background: #667eea; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي"></button>
+                <button class="color-btn" onclick="insertColor('#764ba2')" style="background: #764ba2; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي غامق"></button>
+                <button class="color-btn" onclick="insertColor('#00d2d3')" style="background: #00d2d3; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="تركواز"></button>
+                <button class="color-btn" onclick="insertColor('#1dd1a1')" style="background: #1dd1a1; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أخضر فاتح"></button>
+                
+                <button class="color-btn" onclick="insertColor('#10ac84')" style="background: #10ac84; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أخضر"></button>
+                <button class="color-btn" onclick="insertColor('#222f3e')" style="background: #222f3e; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أسود"></button>
+                <button class="color-btn" onclick="insertColor('#5f27cd')" style="background: #5f27cd; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي ملكي"></button>
+                <button class="color-btn" onclick="insertColor('#c23616')" style="background: #c23616; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر غامق"></button>
+                <button class="color-btn" onclick="insertColor('#e1b12c')" style="background: #e1b12c; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="ذهبي"></button>
+            </div>
+            <input type="text" id="customColor" placeholder="أو أدخل كود اللون (مثال: #ff0000)" style="margin-bottom: 15px;">
+            <div class="modal-buttons">
+                <button style="background: #28a745; color: white;" onclick="insertCustomColor()">
+                    <i class="fas fa-check"></i> تطبيق
+                </button>
+                <button style="background: #6c757d; color: white;" onclick="closeColorModal()">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // تحميل المقالات عند فتح الصفحة
         window.onload = function() {
-            loadArticles();
+            loadArticlesFromServer();
         };
 
-        // حفظ المقال
-        function saveArticle() {
+        // حفظ المقال على السيرفر
+        async function saveArticle() {
             const title = document.getElementById('articleTitle').value.trim();
             const content = document.getElementById('articleContent').value.trim();
 
@@ -468,32 +519,36 @@
             }
 
             const article = {
-                id: Date.now(),
                 title: title,
                 content: content,
                 author: 'د. وسيم',
-                date: new Date().toLocaleDateString('ar-EG', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                })
+                published_date: new Date().toISOString()
             };
 
-            // حفظ في localStorage
-            let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
-            articles.unshift(article);
-            localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
+            try {
+                // حفظ على السيرفر عبر RESTful API
+                const response = await fetch('/tables/dr_wassim_articles', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(article)
+                });
 
-            // عرض رسالة نجاح
-            const msg = document.getElementById('successMsg');
-            msg.style.display = 'block';
-            setTimeout(() => {
-                msg.style.display = 'none';
-            }, 3000);
+                if (!response.ok) throw new Error('فشل الحفظ');
 
-            // مسح النموذج وتحديث القائمة
-            clearForm();
-            loadArticles();
+                // عرض رسالة نجاح
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم النشر بنجاح! الآن يمكن للجميع مشاهدة المقال 🎉';
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 4000);
+
+                // مسح النموذج وتحديث القائمة
+                clearForm();
+                loadArticlesFromServer();
+            } catch (error) {
+                alert('❌ حدث خطأ في الحفظ: ' + error.message);
+            }
         }
 
         // تصدير المقال كملف JSON
@@ -543,54 +598,147 @@
             window.open('my-articles.html?preview=true', '_blank');
         }
 
-        // تحميل المقالات
-        function loadArticles() {
-            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
-            const listDiv = document.getElementById('articlesList');
+        // تحميل المقالات من السيرفر
+        async function loadArticlesFromServer() {
+            try {
+                const response = await fetch('/tables/dr_wassim_articles?limit=100&sort=-created_at');
+                const data = await response.json();
+                const articles = data.data || [];
+                const listDiv = document.getElementById('articlesList');
 
-            if (articles.length === 0) {
-                listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 30px;">لا توجد مقالات محفوظة بعد</p>';
-                return;
+                if (articles.length === 0) {
+                    listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 30px;">لا توجد مقالات محفوظة بعد</p>';
+                    return;
+                }
+
+                listDiv.innerHTML = articles.map(article => {
+                    const date = new Date(article.published_date).toLocaleDateString('ar-EG', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    return `
+                        <div class="article-item">
+                            <div class="article-info">
+                                <h3>${article.title}</h3>
+                                <p><i class="fas fa-calendar"></i> ${date}</p>
+                            </div>
+                            <div class="article-actions">
+                                <button class="btn-edit" onclick="editArticle('${article.id}')">
+                                    <i class="fas fa-edit"></i> تعديل
+                                </button>
+                                <button class="btn-delete" onclick="deleteArticle('${article.id}')">
+                                    <i class="fas fa-trash"></i> حذف
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('خطأ في تحميل المقالات:', error);
+                document.getElementById('articlesList').innerHTML = '<p style="color: #dc3545; text-align: center; padding: 30px;">❌ فشل تحميل المقالات</p>';
             }
-
-            listDiv.innerHTML = articles.map(article => `
-                <div class="article-item">
-                    <div class="article-info">
-                        <h3>${article.title}</h3>
-                        <p><i class="fas fa-calendar"></i> ${article.date}</p>
-                    </div>
-                    <div class="article-actions">
-                        <button class="btn-edit" onclick="editArticle(${article.id})">
-                            <i class="fas fa-edit"></i> تعديل
-                        </button>
-                        <button class="btn-delete" onclick="deleteArticle(${article.id})">
-                            <i class="fas fa-trash"></i> حذف
-                        </button>
-                    </div>
-                </div>
-            `).join('');
         }
 
         // تعديل مقال
-        function editArticle(id) {
-            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
-            const article = articles.find(a => a.id === id);
+        async function editArticle(id) {
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${id}`);
+                const article = await response.json();
 
-            if (article) {
-                document.getElementById('articleTitle').value = article.title;
-                document.getElementById('articleContent').value = article.content;
-                deleteArticle(id);
-                window.scrollTo({top: 0, behavior: 'smooth'});
+                if (article) {
+                    document.getElementById('articleTitle').value = article.title;
+                    document.getElementById('articleContent').value = article.content;
+                    
+                    // حفظ ID للتعديل
+                    window.editingArticleId = id;
+                    
+                    // تغيير نص الزر
+                    const saveBtn = document.querySelector('.btn-save');
+                    saveBtn.innerHTML = '<i class="fas fa-sync-alt"></i> تحديث المقال';
+                    saveBtn.onclick = updateArticle;
+                    
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
+            } catch (error) {
+                alert('❌ فشل تحميل المقال للتعديل');
             }
         }
 
-        // حذف مقال
-        function deleteArticle(id) {
-            if (confirm('هل أنت متأكد من حذف هذا المقال؟')) {
-                let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
-                articles = articles.filter(a => a.id !== id);
-                localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
-                loadArticles();
+        // تحديث مقال موجود
+        async function updateArticle() {
+            const title = document.getElementById('articleTitle').value.trim();
+            const content = document.getElementById('articleContent').value.trim();
+
+            if (!title || !content) {
+                alert('⚠️ الرجاء ملء العنوان والمحتوى!');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${window.editingArticleId}`, {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        title: title,
+                        content: content,
+                        author: 'د. وسيم',
+                        published_date: new Date().toISOString()
+                    })
+                });
+
+                if (!response.ok) throw new Error('فشل التحديث');
+
+                // عرض رسالة نجاح
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم تحديث المقال بنجاح!';
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 3000);
+
+                // إعادة ضبط الزر
+                const saveBtn = document.querySelector('.btn-save');
+                saveBtn.innerHTML = '<i class="fas fa-save"></i> حفظ المقال';
+                saveBtn.onclick = saveArticle;
+                delete window.editingArticleId;
+
+                clearForm();
+                loadArticlesFromServer();
+            } catch (error) {
+                alert('❌ حدث خطأ في التحديث: ' + error.message);
+            }
+        }
+
+        // حذف مقال من السيرفر
+        async function deleteArticle(id) {
+            if (!confirm('هل أنت متأكد من حذف هذا المقال؟ سيتم حذفه نهائياً!')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('فشل الحذف');
+
+                // عرض رسالة نجاح
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم حذف المقال بنجاح';
+                msg.style.display = 'block';
+                msg.style.background = '#f8d7da';
+                msg.style.color = '#721c24';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                    msg.style.background = '#d4edda';
+                    msg.style.color = '#155724';
+                }, 3000);
+
+                loadArticlesFromServer();
+            } catch (error) {
+                alert('❌ حدث خطأ في الحذف: ' + error.message);
             }
         }
 
@@ -673,6 +821,65 @@
                 const content = textarea.value;
                 
                 textarea.value = content.substring(0, start) + `[${text}](${url})` + content.substring(start);
+                textarea.focus();
+            }
+        }
+
+        // فتح نافذة الألوان
+        function openColorModal() {
+            document.getElementById('colorModal').style.display = 'flex';
+        }
+
+        // إغلاق نافذة الألوان
+        function closeColorModal() {
+            document.getElementById('colorModal').style.display = 'none';
+            document.getElementById('customColor').value = '';
+        }
+
+        // إضافة لون للنص
+        function insertColor(color) {
+            const textarea = document.getElementById('articleContent');
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+            const text = textarea.value;
+            const selectedText = text.substring(start, end) || 'نص ملون';
+
+            textarea.value = text.substring(0, start) + `<span style="color: ${color};">${selectedText}</span>` + text.substring(end);
+            textarea.focus();
+            closeColorModal();
+        }
+
+        // إضافة لون مخصص
+        function insertCustomColor() {
+            const color = document.getElementById('customColor').value.trim();
+            if (!color) {
+                alert('⚠️ الرجاء إدخال كود اللون!');
+                return;
+            }
+            insertColor(color);
+        }
+
+        // تظليل النص
+        function insertHighlight() {
+            const colors = [
+                { name: 'أصفر', color: '#fff3cd' },
+                { name: 'أخضر', color: '#d4edda' },
+                { name: 'أزرق', color: '#d1ecf1' },
+                { name: 'برتقالي', color: '#ffe5d0' },
+                { name: 'وردي', color: '#f8d7da' }
+            ];
+
+            const choice = prompt('اختر لون التظليل:\n1 - أصفر\n2 - أخضر\n3 - أزرق\n4 - برتقالي\n5 - وردي', '1');
+            
+            if (choice && choice >= 1 && choice <= 5) {
+                const selectedColor = colors[parseInt(choice) - 1];
+                const textarea = document.getElementById('articleContent');
+                const start = textarea.selectionStart;
+                const end = textarea.selectionEnd;
+                const text = textarea.value;
+                const selectedText = text.substring(start, end) || 'نص مظلل';
+
+                textarea.value = text.substring(0, start) + `<mark style="background-color: ${selectedColor.color}; padding: 2px 6px; border-radius: 4px;">${selectedText}</mark>` + text.substring(end);
                 textarea.focus();
             }
         }
