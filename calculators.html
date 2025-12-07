@@ -630,8 +630,8 @@
 
                 <div class="header-actions">
                     <!-- Language Toggle Buttons -->
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    <button class="lang-btn" data-lang-toggle="ar" title="العربية">🇪🇬</button>
+                    <button class="lang-btn" data-lang-toggle="en" title="English">🇬🇧</button>
                     
                     <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                         <i class="fas fa-moon"></i>
@@ -864,6 +864,45 @@
                 document.body.classList.add('dark-mode');
                 document.querySelector('.theme-toggle i').className = 'fas fa-sun';
             }
+            
+            // Initialize language system
+            updateCalculatorLanguage();
+        });
+        
+        // Update calculator language
+        function updateCalculatorLanguage() {
+            const lang = window.UnifiedLanguageSystem ? window.UnifiedLanguageSystem.currentLang : 'ar';
+            
+            // Update data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = tc(key);
+                if (translation && translation !== key) {
+                    el.textContent = translation;
+                }
+            });
+            
+            // Update calculator-specific elements
+            updateCalculatorInputs(lang);
+        }
+        
+        // Update calculator inputs and labels
+        function updateCalculatorInputs(lang) {
+            // Update BMI calculator
+            const bmiTitle = document.querySelector('#bmiCalculator h2');
+            if (bmiTitle) bmiTitle.textContent = tc('bmi_title');
+            
+            // Update placeholders
+            document.querySelectorAll('input[placeholder]').forEach(input => {
+                const id = input.id;
+                if (id.includes('weight')) input.placeholder = tc('bmi_weight_placeholder');
+                if (id.includes('height')) input.placeholder = tc('bmi_height_placeholder');
+            });
+        }
+        
+        // Listen to language changes
+        window.addEventListener('languageChanged', function(e) {
+            updateCalculatorLanguage();
         });
         
         // Auto-hide Header on Scroll

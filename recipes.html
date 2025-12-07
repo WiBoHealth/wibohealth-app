@@ -21,7 +21,6 @@
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/recipes.html" />
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/recipes.html" />
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/recipes.html" />
     
     <!-- Font Awesome -->
@@ -1120,8 +1119,9 @@
                     const targetLang = this.getAttribute('data-lang-toggle');
                     console.log('Language button clicked! Switching to:', targetLang);
                     
-                    // Update localStorage
-                    localStorage.setItem('wibo_language', targetLang);
+                    // Update localStorage (use unified system key)
+                    localStorage.setItem('wibohealth_language', targetLang);
+                    localStorage.setItem('wibo_language', targetLang); // Backwards compatibility
                     
                     // Update current language
                     currentLang = targetLang;
@@ -1169,8 +1169,8 @@
         
         // Load theme and initialize
         window.addEventListener('DOMContentLoaded', function() {
-            // Get current language from localStorage
-            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            // Get current language from localStorage (check unified system first)
+            currentLang = localStorage.getItem('wibohealth_language') || localStorage.getItem('wibo_language') || 'ar';
             console.log('Page loaded with language:', currentLang);
             
             // Setup language toggle buttons
