@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans - WiBo Health</title>
+    <meta name="description" content="Choose your suitable plan for full access to all WiBo Health features - Glycemic and Insulin Index, Supplements, Recipes, and Personal Follow-up">
+    <link rel="canonical" href="https://wibohealth.com/en/pricing.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/pricing.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/pricing.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/pricing.html">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Mobile Menu CSS -->
+    <link rel="stylesheet" href="css/mobile-menu.css">
+
+    <!-- Language Manager - Auto Language Switcher -->
+    <script src="/js/language-manager.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            margin-bottom: 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Auto-hide for navigation */
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .logo-icon svg {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
+        }
+
+        .logo-text h1 {
+            font-size: 32px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .lang-switch {
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-left: 15px;
+        }
+
+        .lang-switch:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 10px 20px;
+            background: #f3f4f6;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #2ecc71;
+            color: white;
+        }
+
+        /* Hero Section */
+        .pricing-hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .pricing-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .pricing-hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #2ecc71;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'الأكثر شعبية';
+            position: absolute;
+            top: 20px;
+            left: -30px;
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 8px 40px;
+            transform: rotate(-45deg);
+            font-weight: 700;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .plan-name {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .plan-price {
+            font-size: 3.5rem;
+            color: #2ecc71;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .plan-price span {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        .plan-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+
+        .plan-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #2c3e50;
+        }
+
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+
+        .plan-features i {
+            color: #2ecc71;
+            font-size: 1.2rem;
+        }
+
+        .plan-features .unavailable {
+            opacity: 0.4;
+        }
+
+        .plan-features .unavailable i {
+            color: #e74c3c;
+        }
+
+        .plan-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .plan-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+        }
+
+        .plan-btn.secondary {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            margin-bottom: 60px;
+        }
+
+        .comparison-section h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 40px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .comparison-table th:first-child {
+            text-align: right;
+            border-radius: 15px 0 0 0;
+        }
+
+        .comparison-table th:last-child {
+            border-radius: 0 15px 0 0;
+        }
+
+        .comparison-table td:first-child {
+            text-align: right;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .check-icon {
+            color: #2ecc71;
+            font-size: 1.5rem;
+        }
+
+        .cross-icon {
+            color: #e74c3c;
+            font-size: 1.5rem;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        }
+
+        .faq-section h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 25px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-question i {
+            color: #2ecc71;
+        }
+
+        .faq-answer {
+            color: #7f8c8d;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            padding: 30px 0;
+            margin-top: 60px;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+
+        footer p {
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-hero h2 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5eead4;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="3"/>
+                            <path d="M40 100 L60 100 L68 85 L76 115 L84 100 L100 100 L108 85 L116 115 L124 100 L160 100" stroke="url(#pulseGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.95"/>
+                            <g transform="translate(130, 70)">
+                                <rect x="-3" y="-14" width="6" height="28" fill="white" opacity="0.9" rx="2"/>
+                                <rect x="-14" y="-3" width="28" height="6" fill="white" opacity="0.9" rx="2"/>
+                                <circle cx="0" cy="0" r="18" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+                            </g>
+                            <ellipse cx="80" cy="75" rx="18" ry="28" fill="white" opacity="0.25" transform="rotate(-30 80 75)"/>
+                            <circle cx="70" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <circle cx="130" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>WiBo Health</h1>
+                    </div>
+                </a>
+                
+                <!-- Hamburger Menu Button (Mobile Only) -->
+                <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <a href="/pricing.html" class="lang-switch">🇸🇦 AR</a>
+                <nav class="nav-menu">
+                    <a href="/en/" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                    <a href="/en/foods.html" class="nav-link"><i class="fas fa-utensils"></i> Foods</a>
+                    <a href="/en/calculators.html" class="nav-link"><i class="fas fa-calculator"></i> Calculators</a>
+                    <a href="/en/recipes.html" class="nav-link"><i class="fas fa-book-open"></i> Recipes</a>
+                    <a href="/en/articles.html" class="nav-link"><i class="fas fa-book-medical"></i> Articles</a>
+                    <a href="/en/doctor.html" class="nav-link"><i class="fas fa-user-md"></i> Consultations</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="index.html" class="mobile-nav-link">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية
+        </a>
+        <a href="foods.html" class="mobile-nav-link">
+            <i class="fas fa-utensils"></i>
+            دليل الأطعمة
+        </a>
+        <a href="calculators.html" class="mobile-nav-link">
+            <i class="fas fa-calculator"></i>
+            الحاسبات الصحية
+        </a>
+        <a href="recipes.html" class="mobile-nav-link">
+            <i class="fas fa-book-open"></i>
+            الوصفات الصحية
+        </a>
+        <a href="/en/articles.html" class="mobile-nav-link">
+            <i class="fas fa-book-medical"></i>
+            Health Articles
+        </a>
+        <a href="/en/doctor.html" class="mobile-nav-link">
+            <i class="fas fa-user-md"></i>
+            Medical Consultations
+        </a>
+        <a href="/en/pricing.html" class="mobile-nav-link">
+            <i class="fas fa-tag"></i>
+            Pricing
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+            <i class="fas fa-info-circle"></i>
+            من نحن
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+            <i class="fas fa-envelope"></i>
+            اتصل بنا
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero -->
+        <div class="pricing-hero">
+            <h2>Choose Your Suitable Plan</h2>
+            <p>Start your health journey with WiBo Health</p>
+            
+            <!-- Medical Services Notice -->
+            <div style="background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 15px 25px; border-radius: 12px; margin-top: 20px; box-shadow: 0 5px 20px rgba(245,124,0,0.3); max-width: 700px; margin-left: auto; margin-right: auto;">
+                <p style="margin: 0; font-size: 1.05em; line-height: 1.7;">
+                    <i class="fas fa-info-circle" style="margin-left: 8px;"></i>
+                    <strong>ملاحظة:</strong> الخطط المدفوعة تشمل <strong>استشارات طبية شخصية</strong> و<strong>خطط فردية مخصصة</strong>. للحصول على تفاصيل الخدمة والمختص، يرجى <strong>التواصل معنا مباشرة</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Free Plan</h3>
+                <div class="plan-price">$0<span>/شهر</span></div>
+                <p class="plan-description">مثالية للمبتدئين الذين يريدون استكشاف المنصة</p>
+                
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> قاعدة بيانات 50 طعام</li>
+                    <li><i class="fas fa-check-circle"></i> بحث أساسي</li>
+                    <li><i class="fas fa-check-circle"></i> حاسبة BMI</li>
+                    <li><i class="fas fa-check-circle"></i> 10 وصفات صحية</li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> رسوم بيانية تفاعلية</li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> خطط غذائية مخصصة</li>
+                    <li class="unavailable"><i class="fas fa-times-circle"></i> استشارات طبية شخصية</li>
+                </ul>
+
+                <button class="plan-btn secondary" onclick="subscribe('free')">ابدأ مجاناً</button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card featured">
+                <h3 class="plan-name">Premium Plan</h3>
+                <div class="plan-price">$4.99<span>/شهر</span></div>
+                <p class="plan-description">للجادين في تحسين صحتهم وأسلوب حياتهم</p>
+                
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> قاعدة بيانات 505 طعام</li>
+                    <li><i class="fas fa-check-circle"></i> بحث متقدم وفلترة ذكية</li>
+                    <li><i class="fas fa-check-circle"></i> جميع الحاسبات الصحية</li>
+                    <li><i class="fas fa-check-circle"></i> +50 وصفة صحية</li>
+                    <li><i class="fas fa-check-circle"></i> رسوم بيانية تفاعلية</li>
+                    <li><i class="fas fa-check-circle"></i> خطط غذائية مخصصة</li>
+                    <li><i class="fas fa-check-circle"></i> نصائح يومية</li>
+                    <li><i class="fas fa-check-circle"></i> دعم فني 24/7</li>
+                    <li><i class="fas fa-check-circle"></i> خصم 20% على الاستشارات الطبية</li>
+                </ul>
+
+                <button class="plan-btn" onclick="subscribe('premium')">اشترك الآن</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card">
+                <h3 class="plan-name">Professional Plan</h3>
+                <div class="plan-price">$12.99<span>/شهر</span></div>
+                <p class="plan-description">للحصول على تجربة شاملة مع متابعة طبية</p>
+                
+                <ul class="plan-features">
+                    <li><i class="fas fa-check-circle"></i> All Premium Features</li>
+                    <li><i class="fas fa-check-circle"></i> Monthly Medical Consultation</li>
+                    <li><i class="fas fa-check-circle"></i> Detailed Nutrition Plan</li>
+                    <li><i class="fas fa-check-circle"></i> Weekly Follow-up</li>
+                    <li><i class="fas fa-check-circle"></i> Monthly Progress Reports</li>
+                    <li><i class="fas fa-check-circle"></i> Direct WhatsApp Support</li>
+                    <li><i class="fas fa-check-circle"></i> Booking Priority</li>
+                </ul>
+
+                <button class="plan-btn" onclick="subscribe('pro')">اشترك الآن</button>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-section">
+            <h3>مقارنة الخطط</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>الميزة</th>
+                        <th>مجاني</th>
+                        <th>بريميوم</th>
+                        <th>احترافي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>قاعدة بيانات الأطعمة</td>
+                        <td>50 طعام</td>
+                        <td>505 طعام</td>
+                        <td>505 طعام</td>
+                    </tr>
+                    <tr>
+                        <td>الوصفات الصحية</td>
+                        <td>10 وصفات</td>
+                        <td>50+ وصفة</td>
+                        <td>50+ وصفة</td>
+                    </tr>
+                    <tr>
+                        <td>الحاسبات الصحية</td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>رسوم بيانية</td>
+                        <td><i class="cross-icon fas fa-times"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>خطط غذائية</td>
+                        <td><i class="cross-icon fas fa-times"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                        <td><i class="check-icon fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>استشارة طبية شخصية</td>
+                        <td><i class="cross-icon fas fa-times"></i></td>
+                        <td>خصم 20%</td>
+                        <td>استشارة شهرية</td>
+                    </tr>
+                    <tr>
+                        <td>الدعم الفني</td>
+                        <td>بريد إلكتروني</td>
+                        <td>24/7</td>
+                        <td>واتساب مباشر</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+            <h3>الأسئلة الشائعة</h3>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    هل يمكنني تغيير خطتي لاحقاً؟
+                </div>
+                <div class="faq-answer">
+                    نعم، يمكنك الترقية أو تخفيض خطتك في أي وقت. سيتم تطبيق التغييرات فوراً.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    هل هناك التزام طويل الأجل؟
+                </div>
+                <div class="faq-answer">
+                    لا، جميع خططنا شهرية ويمكنك الإلغاء في أي وقت بدون أي رسوم إضافية.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    كيف أحصل على الاستشارة الشهرية في الخطة الاحترافية؟
+                </div>
+                <div class="faq-answer">
+                    بعد الاشتراك، ستتلقى رابطاً لحجز موعد استشارتك الطبية الشهرية.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    هل البيانات آمنة؟
+                </div>
+                <div class="faq-answer">
+                    نعم، نستخدم أعلى معايير الأمان لحماية بياناتك الشخصية والصحية.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    هل يمكنني تجربة الخطة المدفوعة قبل الشراء؟
+                </div>
+                <div class="faq-answer">
+                    نعم، نوفر فترة تجريبية مجانية لمدة 7 أيام للخطة البريميوم والاحترافية.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer متوافق مع AdSense -->
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                من نحن
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                اتصل بنا
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                سياسة الخصوصية
+            </a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                شروط الاستخدام
+            </a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
+            © 2024 WiBo Health. جميع الحقوق محفوظة.
+        </p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
+            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+        </p>
+    </footer>
+
+    <script>
+        function subscribe(plan) {
+            // يمكن استبدال هذا بنظام دفع حقيقي (Stripe, PayPal)
+            const plans = {
+                free: 'الخطة المجانية',
+                premium: 'الخطة البريميوم - $4.99/شهر',
+                pro: 'الخطة الاحترافية - $12.99/شهر'
+            };
+
+            alert(`شكراً لاختيارك ${plans[plan]}!\n\nسيتم تحويلك إلى صفحة الدفع...`);
+            
+            // هنا يمكن إضافة الكود الخاص بنظام الدفع
+            // window.location.href = 'checkout.html?plan=' + plan;
+        }
+        
+        // Auto-hide Header on Scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 150;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                header.classList.add('hide-nav');
+            } else if (currentScroll < lastScrollTop) {
+                header.classList.remove('hide-nav');
+            }
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide-nav');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    </script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>
