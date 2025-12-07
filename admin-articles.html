@@ -91,6 +91,30 @@
             line-height: 1.8;
         }
 
+        #articleContent[contenteditable] {
+            min-height: 300px;
+            max-height: 600px;
+            overflow-y: auto;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            line-height: 1.8;
+            font-size: 1em;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #articleContent[contenteditable]:focus {
+            border-color: #667eea;
+        }
+
+        #articleContent[contenteditable]:empty:before {
+            content: attr(data-placeholder);
+            color: #999;
+        }
+
         .toolbar {
             display: flex;
             gap: 10px;
@@ -383,16 +407,19 @@
                         <i class="fas fa-tools"></i> أدوات التنسيق
                     </label>
                     <div class="toolbar">
-                        <button onclick="insertFormat('**', '**')" title="نص عريض">
+                        <button onclick="formatText('bold')" title="نص عريض">
                             <i class="fas fa-bold"></i> عريض
                         </button>
-                        <button onclick="insertFormat('*', '*')" title="نص مائل">
+                        <button onclick="formatText('italic')" title="نص مائل">
                             <i class="fas fa-italic"></i> مائل
+                        </button>
+                        <button onclick="formatText('underline')" title="تحته خط">
+                            <i class="fas fa-underline"></i> تحته خط
                         </button>
                         <button onclick="insertHeading()" title="عنوان فرعي">
                             <i class="fas fa-heading"></i> عنوان فرعي
                         </button>
-                        <button onclick="insertList()" title="قائمة">
+                        <button onclick="formatText('insertUnorderedList')" title="قائمة">
                             <i class="fas fa-list"></i> قائمة
                         </button>
                         <button onclick="openImageModal()" title="إضافة صورة">
@@ -404,7 +431,7 @@
                         <button onclick="openColorModal()" title="لون النص" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">
                             <i class="fas fa-palette"></i> لون
                         </button>
-                        <button onclick="insertHighlight()" title="تظليل النص" style="background: linear-gradient(135deg, #feca57, #48dbfb);">
+                        <button onclick="openHighlightModal()" title="تظليل النص" style="background: linear-gradient(135deg, #feca57, #48dbfb);">
                             <i class="fas fa-highlighter"></i> تظليل
                         </button>
                     </div>
@@ -414,15 +441,9 @@
                     <label for="articleContent">
                         <i class="fas fa-file-alt"></i> محتوى المقال
                     </label>
-                    <textarea id="articleContent" placeholder="اكتب محتوى المقال هنا...
+                    <div id="articleContent" contenteditable="true" data-placeholder="اكتب محتوى المقال هنا...
 
-يمكنك استخدام:
-- **نص عريض** للتأكيد
-- *نص مائل* للإبراز
-- ## عنوان فرعي
-- قوائم ونقاط
-
-استخدم أزرار التنسيق في الأعلى لتسهيل الكتابة!"></textarea>
+استخدم أزرار التنسيق في الأعلى لتلوين وتنسيق النص!"></div>
                 </div>
 
                 <div class="action-buttons">
@@ -502,6 +523,38 @@
         </div>
     </div>
 
+    <!-- Modal للتظليل -->
+    <div class="modal" id="highlightModal">
+        <div class="modal-content">
+            <h3><i class="fas fa-highlighter"></i> اختر لون التظليل</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+                <button class="color-btn" onclick="insertHighlight('#fff3cd')" style="background: #fff3cd; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #856404;" title="أصفر">
+                    🟡 أصفر
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#d4edda')" style="background: #d4edda; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #155724;" title="أخضر">
+                    🟢 أخضر
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#d1ecf1')" style="background: #d1ecf1; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #0c5460;" title="أزرق">
+                    🔵 أزرق
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#ffe5d0')" style="background: #ffe5d0; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #8b4513;" title="برتقالي">
+                    🟠 برتقالي
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#f8d7da')" style="background: #f8d7da; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #721c24;" title="وردي">
+                    🔴 وردي
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#e8daef')" style="background: #e8daef; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #4a235a;" title="بنفسجي">
+                    🟣 بنفسجي
+                </button>
+            </div>
+            <div class="modal-buttons">
+                <button style="background: #6c757d; color: white;" onclick="closeHighlightModal()">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // تحميل المقالات عند فتح الصفحة
         window.onload = function() {
@@ -511,7 +564,7 @@
         // حفظ المقال على السيرفر
         async function saveArticle() {
             const title = document.getElementById('articleTitle').value.trim();
-            const content = document.getElementById('articleContent').value.trim();
+            const content = document.getElementById('articleContent').innerHTML.trim();
 
             if (!title || !content) {
                 alert('⚠️ الرجاء ملء العنوان والمحتوى!');
@@ -554,7 +607,7 @@
         // تصدير المقال كملف JSON
         function exportArticle() {
             const title = document.getElementById('articleTitle').value.trim();
-            const content = document.getElementById('articleContent').value.trim();
+            const content = document.getElementById('articleContent').innerHTML.trim();
 
             if (!title || !content) {
                 alert('⚠️ الرجاء ملء العنوان والمحتوى أولاً!');
@@ -580,7 +633,7 @@
         // معاينة المقال
         function previewArticle() {
             const title = document.getElementById('articleTitle').value.trim();
-            const content = document.getElementById('articleContent').value.trim();
+            const content = document.getElementById('articleContent').innerHTML.trim();
 
             if (!title || !content) {
                 alert('⚠️ الرجاء ملء العنوان والمحتوى أولاً!');
@@ -649,7 +702,7 @@
 
                 if (article) {
                     document.getElementById('articleTitle').value = article.title;
-                    document.getElementById('articleContent').value = article.content;
+                    document.getElementById('articleContent').innerHTML = article.content;
                     
                     // حفظ ID للتعديل
                     window.editingArticleId = id;
@@ -745,39 +798,48 @@
         // مسح النموذج
         function clearForm() {
             document.getElementById('articleTitle').value = '';
-            document.getElementById('articleContent').value = '';
+            document.getElementById('articleContent').innerHTML = '';
         }
 
-        // إضافة تنسيق
-        function insertFormat(before, after) {
-            const textarea = document.getElementById('articleContent');
-            const start = textarea.selectionStart;
-            const end = textarea.selectionEnd;
-            const text = textarea.value;
-            const selectedText = text.substring(start, end) || 'نص';
+        // تنسيق النص
+        function formatText(command) {
+            document.execCommand(command, false, null);
+            document.getElementById('articleContent').focus();
+        }
 
-            textarea.value = text.substring(0, start) + before + selectedText + after + text.substring(end);
-            textarea.focus();
+        // إضافة تنسيق (محفوظة للتوافق)
+        function insertFormat(before, after) {
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص';
+                const span = document.createElement('span');
+                span.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(span);
+            }
+            editor.focus();
         }
 
         // إضافة عنوان فرعي
         function insertHeading() {
-            const textarea = document.getElementById('articleContent');
-            const start = textarea.selectionStart;
-            const text = textarea.value;
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
             
-            textarea.value = text.substring(0, start) + '\n\n## عنوان فرعي\n\n' + text.substring(start);
-            textarea.focus();
+            const h2 = document.createElement('h2');
+            h2.textContent = 'عنوان فرعي';
+            h2.style.cssText = 'color: #2c3e50; margin-top: 20px; margin-bottom: 10px; font-size: 1.5em; border-right: 4px solid #667eea; padding-right: 15px;';
+            
+            range.insertNode(h2);
+            range.collapse(false);
+            editor.focus();
         }
 
-        // إضافة قائمة
+        // إضافة قائمة (محفوظة)
         function insertList() {
-            const textarea = document.getElementById('articleContent');
-            const start = textarea.selectionStart;
-            const text = textarea.value;
-            
-            textarea.value = text.substring(0, start) + '\n- نقطة أولى\n- نقطة ثانية\n- نقطة ثالثة\n' + text.substring(start);
-            textarea.focus();
+            formatText('insertUnorderedList');
         }
 
         // فتح نافذة الصورة
@@ -800,28 +862,41 @@
                 return;
             }
 
-            const textarea = document.getElementById('articleContent');
-            const start = textarea.selectionStart;
-            const text = textarea.value;
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
             
-            const imageCode = `\n\n![صورة](images/${imageName})\n\n`;
-            textarea.value = text.substring(0, start) + imageCode + text.substring(start);
+            const img = document.createElement('img');
+            img.src = `images/${imageName}`;
+            img.alt = 'صورة';
+            img.style.cssText = 'max-width: 100%; height: auto; border-radius: 10px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);';
+            
+            range.insertNode(img);
+            range.collapse(false);
             
             closeImageModal();
-            textarea.focus();
+            editor.focus();
         }
 
         // إضافة رابط
         function insertLink() {
             const url = prompt('أدخل الرابط:');
             if (url) {
-                const text = prompt('أدخل نص الرابط:', 'اضغط هنا');
-                const textarea = document.getElementById('articleContent');
-                const start = textarea.selectionStart;
-                const content = textarea.value;
+                const selection = window.getSelection();
+                const selectedText = selection.toString() || 'اضغط هنا';
                 
-                textarea.value = content.substring(0, start) + `[${text}](${url})` + content.substring(start);
-                textarea.focus();
+                const a = document.createElement('a');
+                a.href = url;
+                a.textContent = selectedText;
+                a.target = '_blank';
+                a.style.cssText = 'color: #667eea; text-decoration: none; border-bottom: 2px solid #667eea;';
+                
+                const range = selection.getRangeAt(0);
+                range.deleteContents();
+                range.insertNode(a);
+                range.collapse(false);
+                
+                document.getElementById('articleContent').focus();
             }
         }
 
@@ -838,14 +913,22 @@
 
         // إضافة لون للنص
         function insertColor(color) {
-            const textarea = document.getElementById('articleContent');
-            const start = textarea.selectionStart;
-            const end = textarea.selectionEnd;
-            const text = textarea.value;
-            const selectedText = text.substring(start, end) || 'نص ملون';
-
-            textarea.value = text.substring(0, start) + `<span style="color: ${color};">${selectedText}</span>` + text.substring(end);
-            textarea.focus();
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص ملون';
+                
+                const span = document.createElement('span');
+                span.style.color = color;
+                span.style.fontWeight = '600';
+                span.textContent = selectedText;
+                
+                range.deleteContents();
+                range.insertNode(span);
+                range.collapse(false);
+            }
+            
+            document.getElementById('articleContent').focus();
             closeColorModal();
         }
 
@@ -859,29 +942,37 @@
             insertColor(color);
         }
 
+        // فتح نافذة التظليل
+        function openHighlightModal() {
+            document.getElementById('highlightModal').style.display = 'flex';
+        }
+
+        // إغلاق نافذة التظليل
+        function closeHighlightModal() {
+            document.getElementById('highlightModal').style.display = 'none';
+        }
+
         // تظليل النص
-        function insertHighlight() {
-            const colors = [
-                { name: 'أصفر', color: '#fff3cd' },
-                { name: 'أخضر', color: '#d4edda' },
-                { name: 'أزرق', color: '#d1ecf1' },
-                { name: 'برتقالي', color: '#ffe5d0' },
-                { name: 'وردي', color: '#f8d7da' }
-            ];
-
-            const choice = prompt('اختر لون التظليل:\n1 - أصفر\n2 - أخضر\n3 - أزرق\n4 - برتقالي\n5 - وردي', '1');
-            
-            if (choice && choice >= 1 && choice <= 5) {
-                const selectedColor = colors[parseInt(choice) - 1];
-                const textarea = document.getElementById('articleContent');
-                const start = textarea.selectionStart;
-                const end = textarea.selectionEnd;
-                const text = textarea.value;
-                const selectedText = text.substring(start, end) || 'نص مظلل';
-
-                textarea.value = text.substring(0, start) + `<mark style="background-color: ${selectedColor.color}; padding: 2px 6px; border-radius: 4px;">${selectedText}</mark>` + text.substring(end);
-                textarea.focus();
+        function insertHighlight(color) {
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص مظلل';
+                
+                const mark = document.createElement('mark');
+                mark.style.backgroundColor = color;
+                mark.style.padding = '2px 6px';
+                mark.style.borderRadius = '4px';
+                mark.style.fontWeight = '600';
+                mark.textContent = selectedText;
+                
+                range.deleteContents();
+                range.insertNode(mark);
+                range.collapse(false);
             }
+            
+            document.getElementById('articleContent').focus();
+            closeHighlightModal();
         }
     </script>
 </body>

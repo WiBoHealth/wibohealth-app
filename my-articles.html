@@ -197,6 +197,26 @@
             font-weight: 600;
         }
 
+        /* دعم القوائم */
+        .article-content ul {
+            margin: 20px 0;
+            padding-right: 30px;
+        }
+
+        .article-content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* دعم العناوين من المحرر */
+        .article-content h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-right: 4px solid #667eea;
+            padding-right: 15px;
+        }
+
         .no-articles {
             text-align: center;
             padding: 100px 20px;
@@ -272,36 +292,10 @@
     </div>
 
     <script>
-        // تحويل Markdown + HTML إلى HTML
+        // عرض المحتوى (دعم HTML مباشر)
         function parseMarkdown(text) {
-            // عناوين
-            text = text.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-            text = text.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-            
-            // صور
-            text = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
-            
-            // روابط (تجنب تحويل الروابط داخل HTML tags)
-            text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
-            
-            // نص عريض
-            text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-            
-            // نص مائل
-            text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
-            
-            // قوائم
-            text = text.replace(/^- (.+)$/gm, '<li>$1</li>');
-            text = text.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
-            
-            // فقرات (تجنب تحويل الفقرات التي تحتوي على HTML tags)
-            text = text.split('\n\n').map(para => {
-                if (!para.startsWith('<') && para.trim() && !para.includes('<span') && !para.includes('<mark')) {
-                    return '<p>' + para + '</p>';
-                }
-                return para;
-            }).join('\n');
-            
+            // المحتوى الآن HTML جاهز من المحرر
+            // لا حاجة لتحويل Markdown
             return text;
         }
 
