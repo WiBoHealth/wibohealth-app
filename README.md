@@ -1,520 +1,233 @@
-# 🍽️ WiBo Health - Healthy Recipes Platform
-# منصة WiBo Health للوصفات الصحية
+# 🏥 WiBo Health - دليلك الصحي الشامل
 
-[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/wibohealth)
-[![Recipes](https://img.shields.io/badge/recipes-110-green.svg)](recipes.html)
-[![Languages](https://img.shields.io/badge/languages-Arabic%20%2B%20English-orange.svg)](recipes.html)
-[![PWA](https://img.shields.io/badge/PWA-enabled-purple.svg)](manifest.json)
-[![Smart Search](https://img.shields.io/badge/Smart%20Search-NEW-brightgreen.svg)](foods.html)
+> **منصة صحية عربية متكاملة تضم أضخم قاعدة بيانات غذائية عربية وعالمية**
 
-> 🔥 **تحديث جديد (4 ديسمبر 2025)**: تم إضافة بحث ذكي متقدم لدليل الأطعمة مع اقتراحات فورية وتنقل بالأسهم! 
+[![النسخة](https://img.shields.io/badge/النسخة-7.5-blue.svg)](https://wibohealth.com)
+[![الحالة](https://img.shields.io/badge/الحالة-نشط-success.svg)](https://wibohealth.com)
+[![اللغة](https://img.shields.io/badge/اللغة-عربي-orange.svg)](https://wibohealth.com)
 
 ---
 
-## 📋 المحتويات / Table of Contents
+## 🌐 **الموقع الرسمي**
 
-- [نظرة عامة / Overview](#overview)
-- [الميزات / Features](#features)
-- [الوصفات / Recipes](#recipes)
-- [برنامج بودي / Body Program](#body-program)
-- [التقنيات المستخدمة / Technologies](#technologies)
-- [بنية المشروع / Project Structure](#structure)
-- [التثبيت والتشغيل / Installation](#installation)
-- [الاستخدام / Usage](#usage)
-- [نظام اللغة / Language System](#language-system)
-- [التطوير المستقبلي / Future Development](#future-development)
+🔗 **[wibohealth.com](https://wibohealth.com)**
 
 ---
 
-## 🌟 نظرة عامة / Overview
+## ✨ **المميزات الرئيسية**
 
-**WiBo Health** is a comprehensive bilingual (Arabic/English) platform providing **110 healthy recipes** designed for people with diabetes, insulin resistance, and those following healthy diets. Each recipe includes detailed nutritional information, step-by-step instructions, and helpful tips.
+### 📊 **قاعدة بيانات ضخمة:**
+- 🍎 **1050 عنصر غذائي** مع معلومات تفصيلية كاملة
+- 💊 **426 مكمل غذائي** (أضخم دليل عربي وعالمي)
+- 🍽️ **110 وصفة صحية** (دايت وحلويات صحية)
+- 📰 **16 مقالة صحية** متخصصة
 
-**WiBo Health** هي منصة ثنائية اللغة (عربي/إنجليزي) شاملة توفر **110 وصفة صحية** مصممة لمرضى السكري ومقاومة الأنسولين ومتبعي الأنظمة الصحية. كل وصفة تتضمن معلومات غذائية تفصيلية وتعليمات خطوة بخطوة ونصائح مفيدة.
+### 🧮 **حاسبات صحية متقدمة:**
+- حساب BMI، BMR، TDEE
+- حساب الوزن المثالي والسعرات
+- حاسبات متخصصة للرياضيين
 
----
+### 🔍 **ميزات ذكية:**
+- ✅ **بحث ذكي متقدم** مع اقتراحات فورية
+- ✅ **كشف تلقائي للغة** (عربي/إنجليزي)
+- ✅ **مقارنة تفاعلية** بين الأطعمة
+- ✅ **متتبع سعرات احترافي**
+- ✅ **نظام PWA كامل** (يعمل بدون إنترنت)
+- ✅ **تصميم عصري responsive**
+- ✅ **Dark Mode**
 
-## ✨ الميزات الرئيسية / Key Features
-
-### 🎯 Core Features / الميزات الأساسية
-
-- ✅ **1050 عنصر غذائي + 110 وصفة صحية** / **1050 Food Items + 110 Healthy Recipes**
-- 🌐 **نظام ثنائي اللغة متقدم** / **Advanced Bilingual System** (Arabic ↔ English)
-- 🔍 **بحث ذكي متقدم لدليل الأطعمة** / **Advanced Smart Search for Foods Guide** ⚡ **NEW - Dec 4, 2025**
-  - 🧠 كشف تلقائي للغة البحث / Auto language detection
-  - ⚡ اقتراحات فورية / Instant suggestions
-  - 📝 بحث في الأطعمة والتصنيفات / Search in foods & categories  
-  - 🎨 تمييز النص / Text highlighting
-  - ⌨️ تنقل بالأسهم / Keyboard navigation
-- 📊 **معلومات غذائية تفصيلية (GI، II، السعرات)** / **Detailed Nutrition (GI, II, Calories)**
-- 📱 **تصميم متجاوب + Dark Mode** / **Fully Responsive Design + Dark Mode**
-- 💾 **تطبيق ويب تقدمي (PWA)** / **Progressive Web App**
-- ⚡ **أداء عالي وسرعة تحميل** / **High Performance & Fast Loading**
-- 🎨 **واجهة مستخدم حديثة وجذابة** / **Modern & Attractive UI**
-
-### 📊 معلومات كل وصفة / Recipe Information
-
-كل وصفة تحتوي على / Each recipe contains:
-- **العنوان والوصف** / Title & Description
-- **وقت التحضير** / Preparation Time
-- **عدد الحصص** / Servings
-- **السعرات الحرارية** / Calories
-- **القيم الغذائية** / Nutritional Values:
-  - البروتين / Protein
-  - الكربوهيدرات / Carbohydrates
-  - الدهون / Fats
-  - الألياف / Fiber
-- **المكونات التفصيلية** / Detailed Ingredients
-- **خطوات التحضير** / Preparation Steps
-- **نصائح مفيدة** / Helpful Tips
+### ✍️ **ميزة جديدة:**
+- 📝 **بقلمي - د. وسيم**: صفحة خاصة لمقالات الدكتور وسيم
+  - لوحة تحكم للكتابة والتحرير (`admin-articles.html`)
+  - عرض احترافي للمقالات (`my-articles.html`)
 
 ---
 
-## 🍳 الوصفات / Recipes Database
+## 📁 **هيكل المشروع**
 
-### 📈 الإحصائيات / Statistics
-
-| Category | العدد / Count |
-|----------|---------------|
-| **إجمالي الوصفات / Total Recipes** | **110** |
-| فطور صحي / Healthy Breakfast | ~15 |
-| سلطات / Salads | ~12 |
-| شوربات / Soups | ~10 |
-| أطباق رئيسية / Main Dishes | ~25 |
-| سناكات صحية / Healthy Snacks | ~15 |
-| حلويات صحية / Healthy Desserts | ~23 |
-| أطباق عربية / Arabic Dishes | ~10 |
-
-### 📦 توزيع الوصفات / Recipes Distribution
-
-الوصفات مقسمة إلى 6 أجزاء / Recipes are divided into 6 parts:
-
-1. **Part 1**: وصفات 1-20 (20 وصفة)
-2. **Part 2**: وصفات 21-35 (15 وصفة)
-3. **Part 3**: وصفات 36-55 (20 وصفة)
-4. **Part 4**: وصفات 56-70 (15 وصفة)
-5. **Part 5**: وصفات 71-91 (21 وصفة)
-6. **Part 6**: وصفات 92-110 (19 وصفة)
-
-### 🎯 أمثلة على الوصفات / Sample Recipes
-
-#### فطور صحي / Healthy Breakfast
-- شوفان بالتوت والمكسرات / Oatmeal with Berries and Nuts
-- أومليت بياض البيض بالخضار / Vegetable Egg White Omelet
-- توست الأفوكادو بالبيض / Avocado Toast with Egg
-- سموذي التوت الأزرق والسبانخ / Blueberry Spinach Smoothie
-
-#### أطباق رئيسية / Main Dishes
-- سلمون مشوي بالليمون / Grilled Lemon Salmon
-- دجاج تندوري / Tandoori Chicken
-
----
-
-## 🌟 برنامج بودي / Body Program
-
-### برنامج غذائي شامل لمدة 3 أشهر / Complete 3-Month Dietary Program
-
-تم إضافة **برنامج بودي** - برنامج غذائي متكامل مخصص للقولون العصبي والإمساك.
-
-**Body Program** has been added - a complete dietary program designed for IBS and constipation.
-
-#### المحتوى / Content:
-
-1. **📋 معلومات المريضة** / Patient Information
-2. **🧘‍♀️ إدارة التوتر والتنفس** / Stress Management & Breathing Exercises
-3. **💊 برنامج المكملات الغذائية** / Supplements Program
-   - المرحلة الأولى: خل التفاح (أيام 1-15)
-   - المرحلة الثانية: البروبايوتيك (أيام 16-30)
-   - مكملات إضافية: مغنيسيوم، أوميغا 3، فيتامين د
-4. **🍽️ برنامج غذائي مفصل لـ 21 يوم** / Detailed 21-Day Meal Plan
-   - 105 وجبة مفصلة (5 وجبات يومياً × 21 يوم)
-   - كل وجبة مع المكونات والكميات
-5. **💪 النشاط البدني** / Physical Activity
-   - مشي يومي 30 دقيقة
-   - تمارين البطن (3 مرات أسبوعياً)
-   - اليوجا للجهاز الهضمي
-6. **🛒 قائمة التسوق الكاملة** / Complete Shopping List
-7. **⚠️ تحذيرات وملاحظات مهمة** / Important Warnings & Notes
-
-#### المميزات / Features:
-
-- ✅ برنامج كامل لمدة 3 شهور (يُكرر كل 3 أسابيع)
-- ✅ وجبات مفصلة بالكميات والأوقات
-- ✅ برنامج مكملات غذائية متكامل
-- ✅ تمارين رياضية مناسبة
-- ✅ نصائح لإدارة التوتر والنوم
-- ✅ تصميم احترافي وجميل
-- ✅ قابل للطباعة
-- ✅ متوافق مع الموبايل
-
-#### الوصول للبرنامج / Access:
-
-يمكن الوصول للبرنامج من:
-- الصفحة الرئيسية → زر **🌟 برنامج بودي**
-- الرابط المباشر: `body-program.html`
-
-The program can be accessed from:
-- Home Page → **🌟 Body Program** button
-- Direct link: `body-program.html`
-- فاهيتا الدجاج / Chicken Fajitas
-- كفتة الدجاج المشوية / Grilled Chicken Kofta
-
-#### حلويات صحية / Healthy Desserts
-- براونيز الفاصوليا السوداء / Black Bean Brownies
-- كوكيز الشوفان بالموز / Banana Oatmeal Cookies
-- بودينغ الشيا بالفانيليا / Vanilla Chia Pudding
-- كرات الطاقة بالتمر واللوز / Date and Almond Energy Balls
-
-#### أطباق عربية / Arabic Dishes
-- مجدرة لبنانية / Lebanese Mujadara
-- فتة مصرية / Egyptian Fatta
-- حريرة مغربية / Moroccan Harira Soup
-- فلافل سورية أصلية / Original Syrian Falafel
-- مقلوبة فلسطينية / Palestinian Maqluba
-
----
-
-## 🛠️ التقنيات المستخدمة / Technologies Used
-
-### Frontend Technologies
-
-- **HTML5** - بنية صفحات حديثة / Modern page structure
-- **CSS3** - تصميم متقدم ومتجاوب / Advanced responsive design
-- **JavaScript (ES6+)** - وظائف تفاعلية / Interactive functionality
-- **PWA (Progressive Web App)** - تطبيق ويب تقدمي / Progressive features
-- **Service Worker** - العمل دون اتصال / Offline functionality
-
-### Libraries & Frameworks
-
-- **Font Awesome 6.4.0** - الأيقونات / Icons
-- **Google Fonts (Cairo)** - الخطوط العربية / Arabic fonts
-- **Google Analytics** - تحليلات الموقع / Site analytics
-
-### Features Implementation
-
-- **Smart Search System** - نظام بحث ذكي مع اقتراحات فورية / Intelligent search with auto-suggestions
-- **Responsive Design** - تصميم متجاوب كامل / Fully responsive
-- **Dark Mode** - وضع داكن للعين / Dark mode support
-- **Lazy Loading** - تحميل تدريجي للصور / Progressive image loading
-- **Local Storage** - حفظ تفضيلات المستخدم / Save user preferences
-- **Keyboard Navigation** - تنقل سريع بالكيبورد / Fast keyboard navigation
-- **Dynamic Search** - بحث ديناميكي / Real-time search
-- **Category Filtering** - فلترة حسب الفئة / Category-based filtering
-- **Modal Dialogs** - نوافذ منبثقة للتفاصيل / Detail modal windows
-
----
-
-## 📁 بنية المشروع / Project Structure
-
+### **الصفحات الرئيسية:**
 ```
-WiBo Health/
-│
-├── 📄 index.html                    # الصفحة الرئيسية / Home page
-├── 📄 recipes.html                  # صفحة الوصفات (110 وصفة) / Recipes page
-├── 📄 manifest.json                 # PWA manifest
-├── 📄 sw.js                         # Service Worker
-├── 📄 README.md                     # هذا الملف / This file
-│
-├── 📁 css/                          # ملفات التصميم / CSS files
-│   ├── style.css                   # تصميم عام
-│   ├── mobile-menu.css             # قائمة الموبايل
-│   └── responsive.css              # استجابة الشاشات
-│
-├── 📁 js/                           # ملفات JavaScript
-│   ├── data.js                     # بيانات الأطعمة (1050 عنصر) / Foods data
-│   ├── data-enhancer.js            # محسّن البيانات / Data enhancer
-│   ├── foods-smart-search.js       # البحث الذكي للأطعمة ⚡ NEW / Smart food search
-│   ├── recipes-data-part1.js       # وصفات 1-20
-│   ├── recipes-data-part2.js       # وصفات 21-35
-│   ├── recipes-data-part3.js       # وصفات 36-55
-│   ├── recipes-data-part4.js       # وصفات 56-70
-│   ├── recipes-data-part5.js       # وصفات 71-91
-│   ├── recipes-data-part6.js       # وصفات 92-110
-│   ├── recipes-data-complete.js    # محمّل الوصفات الكامل / Complete loader
-│   ├── unified-language-system.js  # نظام اللغة الموحد / Language system
-│   ├── main.js                     # JavaScript رئيسي
-│   ├── mobile-menu.js              # وظائف القائمة
-│   └── pwa-register.js             # تسجيل PWA
-│
-├── 📁 images/                       # الصور والأيقونات / Images
-│   ├── logo.png
-│   ├── hero-bg.jpg
-│   └── apple-touch-icon.png
-│
-└── 📁 docs/                         # التوثيق / Documentation
-    ├── TRANSLATION-SYSTEM-README.md
-    ├── QUICK-TRANSLATION-GUIDE.md
-    └── PROJECT-SUMMARY.md
+index.html              الصفحة الرئيسية
+foods.html              دليل الأطعمة (1050 عنصر)
+supplements.html        دليل المكملات (426 منتج)
+recipes.html            الوصفات الصحية (110 وصفة)
+articles.html           المقالات الصحية (16 مقالة)
+calculators.html        الحاسبات الصحية
+doctor.html             استشارات طبية
+body-program.html       برامج خاصة
+diet-plan.html          خطط غذائية
+calorie-tracker.html    متتبع السعرات
+food-details.html       تفاصيل الطعام
+pricing.html            الأسعار
+about.html              من نحن
+contact.html            اتصل بنا
+privacy.html            سياسة الخصوصية
+terms.html              الشروط والأحكام
+disclaimer.html         إخلاء المسؤولية
+admin-articles.html     لوحة كتابة المقالات (خاص)
+my-articles.html        عرض المقالات (د. وسيم)
+```
+
+### **المجلدات:**
+```
+css/                    ملفات التنسيق
+js/                     ملفات JavaScript
+  ├── foods-smart-search.js    البحث الذكي
+  └── ...
+images/                 الصور والأيقونات
+.well-known/           ملفات التحقق
+  └── assetlinks.json   (Google Play Console)
+```
+
+### **ملفات الإعدادات:**
+```
+manifest.json          إعدادات PWA
+service-worker.js      للعمل بدون إنترنت
+sitemap.xml            خريطة الموقع
+robots.txt             إعدادات محركات البحث
+vercel.json            إعدادات النشر
+.htaccess              إعدادات الخادم
+.nojekyll              تفعيل مجلد .well-known
 ```
 
 ---
 
-## 🚀 التثبيت والتشغيل / Installation & Setup
+## 🚀 **آخر التحديثات**
 
-### المتطلبات / Requirements
+### **تحديث 7 ديسمبر 2024:**
+✅ **تنظيف شامل للموقع:**
+- ✅ إزالة جميع روابط `/en/` من 13 ملف HTML
+- ✅ إزالة مجلد `/en/` بالكامل
+- ✅ فحص وتأكيد ملفات Google:
+  - `sitemap.xml` ✅ نظيف 100%
+  - `robots.txt` ✅ صحيح
+  - `manifest.json` ✅ مضبوط
+  - `service-worker.js` ✅ خالي من روابط /en/
 
-- متصفح ويب حديث / Modern web browser (Chrome, Firefox, Safari, Edge)
-- خادم ويب محلي (اختياري) / Local web server (optional)
+### **تحديث 6 ديسمبر 2024:**
+✅ **ميزة "بقلمي - د. وسيم":**
+- صفحة إدارة المقالات مع محرر نصوص متقدم
+- عرض احترافي للمقالات
+- زر رئيسي في الصفحة الرئيسية
 
-### خطوات التشغيل / Setup Steps
-
-#### 1. استنساخ المشروع / Clone Repository
-```bash
-git clone https://github.com/wibohealth/recipes.git
-cd recipes
-```
-
-#### 2. فتح الموقع / Open Website
-
-**طريقة 1: فتح مباشر / Direct Opening**
-- افتح `index.html` في المتصفح / Open `index.html` in browser
-
-**طريقة 2: خادم محلي / Local Server**
-```bash
-# باستخدام Python / Using Python
-python -m http.server 8000
-
-# باستخدام Node.js / Using Node.js
-npx http-server -p 8000
-
-# ثم افتح / Then open
-# http://localhost:8000
-```
-
-#### 3. الوصول إلى الوصفات / Access Recipes
-- انتقل إلى صفحة الوصفات / Navigate to recipes page
-- استخدم البحث والفلاتر / Use search and filters
-- بدّل بين العربية والإنجليزية / Toggle between Arabic and English
+### **تحديث 4 ديسمبر 2024:**
+✅ **البحث الذكي للأطعمة:**
+- كشف تلقائي للغة البحث
+- اقتراحات فورية أثناء الكتابة
+- بحث في الأسماء والفئات
+- تمييز النتائج
+- تنقل بلوحة المفاتيح
 
 ---
 
-## 📱 الاستخدام / Usage Guide
+## 🔧 **التقنيات المستخدمة**
 
-### 🔍 البحث عن الوصفات / Recipe Search
-
-1. **البحث النصي** / Text Search
-   - اكتب في صندوق البحث / Type in search box
-   - البحث يعمل على العناوين والمكونات / Searches titles and ingredients
-
-2. **الفلترة حسب الفئة** / Category Filtering
-   - اضغط على زر الفئة / Click category button
-   - عرض الوصفات المطابقة / Display matching recipes
-
-3. **عرض الكل** / Show All
-   - اضغط "الكل" لعرض جميع الوصفات / Click "All" to show all recipes
-
-### 🌐 تبديل اللغة / Language Toggle
-
-- **اضغط على زر اللغة** في الأعلى / Click language button at top
-- **التبديل التلقائي** لجميع النصوص / Automatic switch of all text
-- **يحفظ التفضيل** في المتصفح / Saves preference in browser
-
-### 📖 عرض تفاصيل الوصفة / View Recipe Details
-
-1. اضغط على بطاقة الوصفة / Click on recipe card
-2. تظهر نافذة منبثقة بالتفاصيل / Modal window shows details
-3. اقرأ المكونات والخطوات / Read ingredients and steps
-4. اضغط "×" أو خارج النافذة للإغلاق / Click "×" or outside to close
+- **HTML5** - هيكل الموقع
+- **CSS3** - التصميم والتنسيق
+- **JavaScript (Vanilla)** - الوظائف التفاعلية
+- **PWA** - تطبيق ويب تقدمي
+- **Service Worker** - للعمل بدون إنترنت
+- **localStorage** - تخزين البيانات محلياً
+- **GitHub Pages / Vercel** - الاستضافة
 
 ---
 
-## 🌐 نظام اللغة / Language System
+## 📱 **التوافق**
 
-### كيفية العمل / How It Works
+✅ **جميع المتصفحات الحديثة:**
+- Chrome / Edge
+- Firefox
+- Safari
+- Opera
 
-نظام اللغة الموحد يوفر / Unified language system provides:
-
-1. **تخزين تلقائي للتفضيل** / Auto-save preference
-2. **تبديل سلس دون إعادة تحميل** / Smooth switch without reload
-3. **دعم كامل لجميع العناصر** / Full support for all elements
-4. **ترجمات احترافية** / Professional translations
-
-### الملفات الرئيسية / Main Files
-
-- `js/unified-language-system.js` - النظام الرئيسي / Main system
-- `localStorage: wibo_language` - حفظ التفضيل / Save preference
-
-### إضافة ترجمات جديدة / Add New Translations
-
-```javascript
-// في unified-language-system.js
-const translations = {
-    ar: {
-        'new_key': 'النص العربي'
-    },
-    en: {
-        'new_key': 'English Text'
-    }
-};
-```
+✅ **جميع الأجهزة:**
+- 💻 Desktop
+- 📱 Mobile
+- 📱 Tablet
 
 ---
 
-## 📊 معلومات إضافية / Additional Information
+## 🔐 **الأمان والخصوصية**
 
-### حجم الملفات / File Sizes
-
-| الملف / File | الحجم / Size |
-|--------------|--------------|
-| recipes-data-part1.js | ~37 KB |
-| recipes-data-part2.js | ~30 KB |
-| recipes-data-part3.js | ~63 KB |
-| recipes-data-part4.js | ~37 KB |
-| recipes-data-part5.js | ~47 KB |
-| recipes-data-part6.js | ~43 KB |
-| **المجموع / Total** | **~257 KB** |
-
-### الأداء / Performance
-
-- ⚡ **وقت التحميل**: أقل من 2 ثانية / Load time: < 2 seconds
-- 📱 **متجاوب**: يعمل على جميع الأجهزة / Responsive: Works on all devices
-- 🔍 **بحث سريع**: نتائج فورية / Fast search: Instant results
-- 💾 **ذاكرة التخزين**: محسّنة / Cache: Optimized
-
-### المتصفحات المدعومة / Supported Browsers
-
-- ✅ Chrome 90+ (مدعوم بالكامل / Fully supported)
-- ✅ Firefox 88+ (مدعوم بالكامل / Fully supported)
-- ✅ Safari 14+ (مدعوم بالكامل / Fully supported)
-- ✅ Edge 90+ (مدعوم بالكامل / Fully supported)
-- ✅ Opera 76+ (مدعوم بالكامل / Fully supported)
+- ✅ HTTPS (اتصال آمن)
+- ✅ `.well-known/assetlinks.json` للتحقق من النطاق
+- ✅ سياسة خصوصية شاملة
+- ✅ إخلاء مسؤولية طبية واضح
 
 ---
 
-## 🔮 التطوير المستقبلي / Future Development
+## 📞 **التواصل**
 
-### ✅ المميزات المنجزة / Completed Features
-
-#### ديسمبر 2025 / December 2025
-- ✅ **1050 عنصر غذائي** / 1050 Food items database
-- ✅ **دليل شامل للأطعمة** / Comprehensive food guide
-- ✅ **المؤشر الجلايسيمي (GI)** / Glycemic Index
-- ✅ **مؤشر الأنسولين (II)** / Insulin Index
-- ✅ **بحث ذكي بالاقتراحات الفورية** ⚡ / Smart search with auto-suggestions
-- ✅ **تنقل بلوحة المفاتيح** / Keyboard navigation
-- ✅ **دعم الوضع الداكن** / Dark mode support
-- ✅ **حفظ الأطعمة المفضلة** / Save favorite foods
-
-### المميزات المخططة / Planned Features
-
-#### المرحلة القادمة / Next Phase
-- [ ] **البحث الصوتي** / Voice search
-- [ ] **تاريخ البحث** / Search history
-- [ ] **فلترة متقدمة حسب GI** / Advanced GI filtering
-- [ ] **طباعة قوائم الأطعمة** / Print food lists
-- [ ] **مشاركة الأطعمة** / Share foods
-
-#### المرحلة الثالثة / Phase 3
-- [ ] **خطط وجبات أسبوعية** / Weekly meal plans
-- [ ] **قائمة تسوق تلقائية** / Automatic shopping list
-- [ ] **حساب السعرات اليومية** / Daily calorie calculator
-- [ ] **تطبيق موبايل** / Mobile app
-
-#### المرحلة الرابعة / Phase 4
-- [ ] **تسجيل دخول المستخدمين** / User authentication
-- [ ] **تحميل وصفات المستخدمين** / User recipe uploads
-- [ ] **تقييمات وتعليقات** / Ratings and comments
-- [ ] **مجتمع تفاعلي** / Interactive community
+- 🌐 **الموقع:** [wibohealth.com](https://wibohealth.com)
+- 📧 **البريد:** [contact@wibohealth.com](https://wibohealth.com/contact.html)
+- 💬 **صفحة الاتصال:** [wibohealth.com/contact.html](https://wibohealth.com/contact.html)
 
 ---
 
-## 🎯 حالة المشروع الحالية / Current Project Status
+## 📊 **إحصائيات المشروع**
 
-### ✅ مكتمل / Completed
-
-- [x] جميع الـ 110 وصفة مترجمة بالكامل / All 110 recipes fully translated
-- [x] نظام لغة متقدم وموحد / Advanced unified language system
-- [x] تصميم متجاوب 100% / 100% responsive design
-- [x] بحث وفلترة ديناميكية / Dynamic search and filtering
-- [x] معلومات غذائية تفصيلية / Detailed nutritional info
-- [x] PWA كامل الوظائف / Fully functional PWA
-- [x] اختبار شامل بدون أخطاء / Comprehensive testing with no errors
-
-### 📝 ملاحظات / Notes
-
-- **الإصدار الحالي**: 2.0 / Current version: 2.0
-- **آخر تحديث**: 29 يناير 2025 / Last updated: January 29, 2025
-- **حالة الجودة**: جاهز للإنتاج / Quality status: Production ready
-- **الاختبارات**: نجحت جميع الاختبارات / Tests: All passed
+| المحتوى | العدد |
+|---------|------|
+| عناصر غذائية | 1050 |
+| مكملات غذائية | 426 |
+| وصفات صحية | 110 |
+| مقالات صحية | 16 |
+| صفحات HTML | 19 |
+| حاسبات صحية | 8+ |
 
 ---
 
-## 🌟 الميزات البارزة / Highlighted Features
+## ✅ **الحالة الحالية**
 
-### 🎨 تجربة مستخدم استثنائية / Exceptional UX
+🟢 **الموقع جاهز للإنتاج بنسبة 100%**
 
-- واجهة عصرية وسهلة الاستخدام / Modern and user-friendly interface
-- ألوان متناسقة ومريحة للعين / Harmonious and eye-friendly colors
-- أيقونات واضحة ومعبرة / Clear and expressive icons
-- رسوم متحركة سلسة / Smooth animations
+### **ما تم إنجازه:**
+✅ جميع الصفحات تعمل بكفاءة  
+✅ البحث الذكي مفعّل  
+✅ PWA كامل  
+✅ تصميم responsive  
+✅ Dark Mode  
+✅ ملفات Google مضبوطة  
+✅ روابط `/en/` محذوفة بالكامل  
+✅ ميزة المقالات (د. وسيم) جاهزة  
 
-### ⚡ أداء عالي / High Performance
-
-- تحميل سريع للصفحات / Fast page loading
-- بحث فوري بدون تأخير / Instant search without delay
-- تحسين الصور والموارد / Optimized images and resources
-- ذاكرة تخزين ذكية / Smart caching
-
-### 📱 دعم كامل للأجهزة المحمولة / Full Mobile Support
-
-- تصميم متجاوب 100% / 100% responsive design
-- قوائم محسّنة للموبايل / Mobile-optimized menus
-- أزرار كبيرة وسهلة الضغط / Large, easy-to-tap buttons
-- تجربة تطبيق أصلي / Native app experience
+### **التحسينات المستقبلية (اختيارية):**
+⏳ إضافة المزيد من المقالات  
+⏳ تطوير نظام حجز استشارات  
+⏳ إضافة مكملات جديدة  
 
 ---
 
-## 📞 التواصل والدعم / Contact & Support
+## 📝 **ملاحظات مهمة**
 
-### للاستفسارات / For Inquiries
+### **ملفات Google:**
+- ✅ `sitemap.xml` - محدّث وخالي من روابط `/en/`
+- ✅ `robots.txt` - يشير إلى `wibohealth.com` فقط
+- ✅ `.well-known/assetlinks.json` - صحيح لـ Google Play Console
 
-- **الموقع**: https://wibohealth.com
-- **البريد**: info@wibohealth.com
-- **تويتر**: @WiBoHealth
-- **فيسبوك**: /WiBoHealth
+### **النطاق:**
+- ✅ النطاق الرئيسي: `wibohealth.com`
+- ❌ النطاق القديم: `wibohealth-app.vercel.app` (موقوف)
+- ❌ مجلد `/en/` - محذوف بالكامل
 
-### المساهمة / Contributing
-
-نرحب بالمساهمات! / We welcome contributions!
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
----
-
-## 📜 الترخيص / License
-
-© 2025 WiBo Health. All rights reserved.
-
-جميع الحقوق محفوظة لشركة WiBo Health.
+### **بعد رفع التحديثات:**
+1. ⏰ انتظر 24-48 ساعة لتحديث Google Search Console
+2. 🔍 استخدم أداة Google: [https://search.google.com/search-console](https://search.google.com/search-console)
+3. 🗑️ احذف روابط `/en/` من الفهرسة يدوياً إذا استمرت
 
 ---
 
-## 🙏 شكر وتقدير / Acknowledgments
+## 🎉 **النسخ المتاحة**
 
-شكراً لجميع من ساهم في تطوير هذا المشروع!
-
-Thanks to everyone who contributed to this project!
-
----
-
-## 🚀 جاهز للنشر / Ready to Deploy
-
-المشروع **جاهز بالكامل** للنشر والاستخدام الفوري!
-
-The project is **fully ready** for immediate deployment and use!
-
-### خطوات النشر / Deployment Steps
-
-1. ارفع الملفات إلى خادم الويب / Upload files to web server
-2. تأكد من تفعيل HTTPS / Ensure HTTPS is enabled
-3. اختبر جميع الوظائف / Test all functionality
-4. شارك الرابط مع المستخدمين / Share link with users
+- 🟢 **النسخة الحالية:** 7.5 (7 ديسمبر 2024)
+- 📦 **النسخ السابقة:** متوفرة في Git History
 
 ---
 
-**🎉 استمتع بتصفح 110 وصفة صحية بلغتين! / Enjoy browsing 110 healthy recipes in two languages!**
+## 📄 **الترخيص**
+
+© 2024 WiBo Health. جميع الحقوق محفوظة.
 
 ---
 
-*آخر تحديث: 29 يناير 2025 / Last Updated: January 29, 2025*
+**صُنع بـ ❤️ في العالم العربي | Made with ❤️ in the Arab World**
