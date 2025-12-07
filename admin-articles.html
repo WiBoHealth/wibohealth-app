@@ -564,10 +564,17 @@
         // حفظ المقال على السيرفر
         async function saveArticle() {
             const title = document.getElementById('articleTitle').value.trim();
-            const content = document.getElementById('articleContent').innerHTML.trim();
+            const contentElement = document.getElementById('articleContent');
+            const content = contentElement.innerHTML.trim();
+            const textContent = contentElement.textContent.trim();
 
-            if (!title || !content) {
-                alert('⚠️ الرجاء ملء العنوان والمحتوى!');
+            if (!title) {
+                alert('⚠️ الرجاء كتابة عنوان المقال!');
+                return;
+            }
+
+            if (!textContent || textContent.length < 10) {
+                alert('⚠️ الرجاء كتابة محتوى المقال! (على الأقل 10 أحرف)');
                 return;
             }
 
