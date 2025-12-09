@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- الصفحة الرئيسية -->
+  <!-- Homepage -->
   <url>
     <loc>https://wibohealth.com/</loc>
     <lastmod>2025-12-09</lastmod>
@@ -20,7 +20,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- الصفحات الرئيسية المهمة -->
+  <!-- Main Pages -->
   <url>
     <loc>https://wibohealth.com/supplements.html</loc>
     <lastmod>2025-12-04</lastmod>
@@ -46,7 +46,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- الأدوات والحاسبات -->
+  <!-- Tools and Calculators -->
   <url>
     <loc>https://wibohealth.com/calculators.html</loc>
     <lastmod>2025-11-26</lastmod>
@@ -60,7 +60,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- صفحات المعلومات -->
+  <!-- Information Pages -->
   <url>
     <loc>https://wibohealth.com/about.html</loc>
     <lastmod>2025-11-26</lastmod>
@@ -92,7 +92,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- صفحات إضافية -->
+  <!-- Additional Pages -->
   <url>
     <loc>https://wibohealth.com/doctor.html</loc>
     <lastmod>2025-12-04</lastmod>
