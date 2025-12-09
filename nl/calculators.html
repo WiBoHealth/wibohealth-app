@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gezondheidscalculators - BMI, Calorieën, BMR | WiBo Health</title>
+    <meta name="description" content="Gratis gezondheidscalculators: BMI, BMR, dagelijkse calorieën, waterinname en meer. Bereken je gezondheidsindicatoren in seconden!">
+    <link rel="canonical" href="https://wibohealth.com/nl/calculators.html">
+    <link rel="icon" type="image/png" href="../images/icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-292WD2SWHN');</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header><nav><a href="index.html" class="logo"><i class="fas fa-heartbeat"></i> WiBo Health</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="voedingsmiddelen.html">Voedingsmiddelen</a></li><li><a href="supplementen.html">Supplementen</a></li><li><a href="recepten.html">Recepten</a></li><li><a href="calculators.html" class="active">Calculators</a></li><li><a href="artikelen.html">Artikelen</a></li><li><a href="over-ons.html">Over Ons</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
+    <main style="max-width: 1200px; margin: 3rem auto; padding: 0 2rem;">
+        <h1 style="font-size: 3rem; color: #fbbf24; text-align: center; margin-bottom: 2rem;">🧮 Gezondheidscalculators</h1>
+        <p style="text-align: center; font-size: 1.2rem; color: #cbd5e1; margin-bottom: 3rem;">Bereken je BMI, dagelijkse calorieën, waterinname en meer - helemaal gratis!</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <!-- BMI Calculator -->
+            <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.3)); border: 2px solid #fbbf24; border-radius: 16px; padding: 2rem;">
+                <h2 style="color: #fbbf24; margin-bottom: 1.5rem;"><i class="fas fa-weight"></i> BMI Calculator</h2>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Gewicht (kg):</label><input type="number" id="bmiWeight" placeholder="70" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Lengte (cm):</label><input type="number" id="bmiHeight" placeholder="170" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <button onclick="calculateBMI()" style="width: 100%; padding: 1rem; background: #fbbf24; color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Bereken BMI</button>
+                <div id="bmiResult" style="margin-top: 1.5rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; display: none;"></div>
+            </div>
+            
+            <!-- Calorie Calculator -->
+            <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.3)); border: 2px solid #fbbf24; border-radius: 16px; padding: 2rem;">
+                <h2 style="color: #fbbf24; margin-bottom: 1.5rem;"><i class="fas fa-fire"></i> Calorieëncalculator</h2>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Leeftijd:</label><input type="number" id="calAge" placeholder="30" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Gewicht (kg):</label><input type="number" id="calWeight" placeholder="70" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Lengte (cm):</label><input type="number" id="calHeight" placeholder="170" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Geslacht:</label><select id="calGender" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"><option value="male">Man</option><option value="female">Vrouw</option></select></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Activiteitsniveau:</label><select id="calActivity" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"><option value="1.2">Zittend (weinig beweging)</option><option value="1.375">Licht actief (1-3x/week)</option><option value="1.55">Matig actief (3-5x/week)</option><option value="1.725">Zeer actief (6-7x/week)</option><option value="1.9">Extreem actief (2x/dag)</option></select></div>
+                <button onclick="calculateCalories()" style="width: 100%; padding: 1rem; background: #fbbf24; color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Bereken Calorieën</button>
+                <div id="calResult" style="margin-top: 1.5rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; display: none;"></div>
+            </div>
+            
+            <!-- Water Calculator -->
+            <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.3)); border: 2px solid #fbbf24; border-radius: 16px; padding: 2rem;">
+                <h2 style="color: #fbbf24; margin-bottom: 1.5rem;"><i class="fas fa-tint"></i> Waterinname Calculator</h2>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Gewicht (kg):</label><input type="number" id="waterWeight" placeholder="70" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Activiteitsniveau:</label><select id="waterActivity" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"><option value="30">Laag</option><option value="35">Matig</option><option value="40">Hoog</option></select></div>
+                <button onclick="calculateWater()" style="width: 100%; padding: 1rem; background: #fbbf24; color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Bereken Water</button>
+                <div id="waterResult" style="margin-top: 1.5rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; display: none;"></div>
+            </div>
+            
+            <!-- Body Fat Calculator -->
+            <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.3)); border: 2px solid #fbbf24; border-radius: 16px; padding: 2rem;">
+                <h2 style="color: #fbbf24; margin-bottom: 1.5rem;"><i class="fas fa-percentage"></i> Lichaamsvet Calculator</h2>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Leeftijd:</label><input type="number" id="bfAge" placeholder="30" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">Geslacht:</label><select id="bfGender" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"><option value="male">Man</option><option value="female">Vrouw</option></select></div>
+                <div style="margin-bottom: 1rem;"><label style="color: #cbd5e1; display: block; margin-bottom: 0.5rem;">BMI:</label><input type="number" id="bfBMI" placeholder="25" step="0.1" style="width: 100%; padding: 0.8rem; border: 2px solid #fbbf24; border-radius: 8px; background: rgba(255,255,255,0.05); color: #fff;"></div>
+                <button onclick="calculateBodyFat()" style="width: 100%; padding: 1rem; background: #fbbf24; color: #0f172a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer;">Bereken Lichaamsvet</button>
+                <div id="bfResult" style="margin-top: 1.5rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-radius: 8px; display: none;"></div>
+            </div>
+        </div>
+    </main>
+    <footer style="background: linear-gradient(135deg, #0f172a, #0a0f1f); color: #fff; padding: 2rem 0; margin-top: 4rem; border-top: 3px solid #fbbf24; text-align: center;"><p>&copy; 2025 WiBo Health. Alle rechten voorbehouden.</p></footer>
+    <script>
+    function calculateBMI(){const w=parseFloat(document.getElementById('bmiWeight').value);const h=parseFloat(document.getElementById('bmiHeight').value)/100;if(!w||!h){alert('Vul gewicht en lengte in');return;}const bmi=(w/(h*h)).toFixed(1);let cat='',color='';if(bmi<18.5){cat='Ondergewicht';color='#fbbf24';}else if(bmi<25){cat='Normaal (Gezond ✓)';color='#22c55e';}else if(bmi<30){cat='Overgewicht';color='#f59e0b';}else{cat='Obesitas';color='#ef4444';}document.getElementById('bmiResult').innerHTML=`<div style="text-align:center;"><div style="font-size:2.5rem;font-weight:900;color:${color};margin-bottom:0.5rem;">${bmi}</div><div style="font-size:1.2rem;color:#cbd5e1;">${cat}</div></div>`;document.getElementById('bmiResult').style.display='block';}
+    function calculateCalories(){const age=parseInt(document.getElementById('calAge').value);const weight=parseFloat(document.getElementById('calWeight').value);const height=parseFloat(document.getElementById('calHeight').value);const gender=document.getElementById('calGender').value;const activity=parseFloat(document.getElementById('calActivity').value);if(!age||!weight||!height){alert('Vul alle velden in');return;}let bmr;if(gender==='male'){bmr=10*weight+6.25*height-5*age+5;}else{bmr=10*weight+6.25*height-5*age-161;}const tdee=(bmr*activity).toFixed(0);const loss=(tdee-500).toFixed(0);const gain=(parseInt(tdee)+500).toFixed(0);document.getElementById('calResult').innerHTML=`<div style="color:#cbd5e1;line-height:1.8;"><strong style="color:#fbbf24;">Onderhoud:</strong> ${tdee} kcal/dag<br><strong style="color:#fbbf24;">Afvallen:</strong> ${loss} kcal/dag<br><strong style="color:#fbbf24;">Aankomen:</strong> ${gain} kcal/dag</div>`;document.getElementById('calResult').style.display='block';}
+    function calculateWater(){const weight=parseFloat(document.getElementById('waterWeight').value);const activity=parseInt(document.getElementById('waterActivity').value);if(!weight){alert('Vul gewicht in');return;}const water=(weight*activity).toFixed(0);const glasses=(water/250).toFixed(1);document.getElementById('waterResult').innerHTML=`<div style="color:#cbd5e1;text-align:center;line-height:1.8;"><div style="font-size:2rem;font-weight:900;color:#fbbf24;margin-bottom:0.5rem;">${water} ml</div><div>≈ ${glasses} glazen water per dag</div></div>`;document.getElementById('waterResult').style.display='block';}
+    function calculateBodyFat(){const age=parseInt(document.getElementById('bfAge').value);const gender=document.getElementById('bfGender').value;const bmi=parseFloat(document.getElementById('bfBMI').value);if(!age||!bmi){alert('Vul alle velden in');return;}let bf;if(gender==='male'){bf=(1.20*bmi)+(0.23*age)-16.2;}else{bf=(1.20*bmi)+(0.23*age)-5.4;}bf=bf.toFixed(1);let cat='',color='';if(gender==='male'){if(bf<6){cat='Essentieel vet';color='#fbbf24';}else if(bf<14){cat='Atleet';color='#22c55e';}else if(bf<18){cat='Fitness';color='#22c55e';}else if(bf<25){cat='Gemiddeld';color='#f59e0b';}else{cat='Obesitas';color='#ef4444';}}else{if(bf<14){cat='Essentieel vet';color='#fbbf24';}else if(bf<21){cat='Atleet';color='#22c55e';}else if(bf<25){cat='Fitness';color='#22c55e';}else if(bf<32){cat='Gemiddeld';color='#f59e0b';}else{cat='Obesitas';color='#ef4444';}}document.getElementById('bfResult').innerHTML=`<div style="text-align:center;"><div style="font-size:2.5rem;font-weight:900;color:${color};margin-bottom:0.5rem;">${bf}%</div><div style="font-size:1.2rem;color:#cbd5e1;">${cat}</div></div>`;document.getElementById('bfResult').style.display='block';}
+    </script>
+</body>
+</html>

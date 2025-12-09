@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gezondheidsartikelen - Voeding & Supplementen | WiBo Health</title>
+    <meta name="description" content="Lees onze professionele artikelen over voeding, supplementen en gezonde levensstijl. Wetenschappelijk onderbouwd en praktisch toepasbaar.">
+    <link rel="canonical" href="https://wibohealth.com/nl/artikelen.html">
+    <link rel="icon" type="image/png" href="../images/icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-292WD2SWHN');</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><i class="fas fa-heartbeat"></i> WiBo Health</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="voedingsmiddelen.html">Voedingsmiddelen</a></li>
+                <li><a href="supplementen.html">Supplementen</a></li>
+                <li><a href="recepten.html">Recepten</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="artikelen.html" class="active">Artikelen</a></li>
+                <li><a href="over-ons.html">Over Ons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main style="max-width: 1200px; margin: 3rem auto; padding: 0 2rem;">
+        <h1 style="font-size: 3rem; color: #fbbf24; text-align: center; margin-bottom: 1rem;">📚 Gezondheidsartikelen</h1>
+        <p style="text-align: center; font-size: 1.2rem; color: #cbd5e1; margin-bottom: 3rem;">Wetenschappelijk onderbouwde artikelen over voeding, supplementen en een gezonde levensstijl</p>
+        
+        <div id="articlesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <div class="loading" style="text-align: center; padding: 3rem; font-size: 1.5rem; color: #fbbf24;">
+                <i class="fas fa-spinner fa-spin"></i> Artikelen laden...
+            </div>
+        </div>
+    </main>
+    
+    <footer style="background: linear-gradient(135deg, #0f172a 0%, #0a0f1f 100%); color: #fff; padding: 2rem 0; margin-top: 4rem; border-top: 3px solid #fbbf24; text-align: center;">
+        <p>&copy; 2025 WiBo Health. Alle rechten voorbehouden.</p>
+    </footer>
+    
+    <script>
+        // Sample articles (in production, load from dr_wassim_articles table)
+        const articles = [
+            {
+                id: 1,
+                title: "Complete Gids voor Eiwitinname",
+                summary: "Alles wat je moet weten over eiwitten: bronnen, hoeveelheden en timing voor optimale resultaten.",
+                category: "Voeding",
+                date: "2025-12-01",
+                readTime: "8 min"
+            },
+            {
+                id: 2,
+                title: "Creatine: Wetenschap en Gebruik",
+                summary: "Wetenschappelijk bewezen voordelen van creatine, dosering en beste tijdstip voor inname.",
+                category: "Supplementen",
+                date: "2025-11-28",
+                readTime: "10 min"
+            },
+            {
+                id: 3,
+                title: "Glycemische Index Uitgelegd",
+                summary: "Wat is de glycemische index en hoe kun je deze gebruiken voor beter bloedsuikerbeheer?",
+                category: "Voeding",
+                date: "2025-11-25",
+                readTime: "12 min"
+            },
+            {
+                id: 4,
+                title: "Omega-3 Vetzuren: Essentieel voor Gezondheid",
+                summary: "Ontdek de voordelen van omega-3, beste bronnen en aanbevolen dagelijkse inname.",
+                category: "Supplementen",
+                date: "2025-11-20",
+                readTime: "9 min"
+            },
+            {
+                id: 5,
+                title: "Complete Gids voor Vitamine D",
+                summary: "Vitamine D tekort, symptomen, bronnen en optimale suppletie voor betere gezondheid.",
+                category: "Vitamines",
+                date: "2025-11-15",
+                readTime: "11 min"
+            },
+            {
+                id: 6,
+                title: "Pre-Workout Voeding: Wat Werkt?",
+                summary: "Optimaliseer je training met de juiste pre-workout voeding en timing.",
+                category: "Sport",
+                date: "2025-11-10",
+                readTime: "7 min"
+            },
+            {
+                id: 7,
+                title: "Calorieën Tellen: Complete Handleiding",
+                summary: "Leer hoe je effectief calorieën telt voor gewichtsverlies of spieropbouw.",
+                category: "Voeding",
+                date: "2025-11-05",
+                readTime: "15 min"
+            },
+            {
+                id: 8,
+                title: "BCAA's: Nodig of Niet?",
+                summary: "Wetenschappelijke analyse van BCAA supplementen en wanneer ze nuttig zijn.",
+                category: "Supplementen",
+                date: "2025-11-01",
+                readTime: "8 min"
+            },
+            {
+                id: 9,
+                title: "Magnesium: Het Vergeten Mineraal",
+                summary: "Voordelen van magnesium, tekorten herkennen en beste supplementvormen.",
+                category: "Supplementen",
+                date: "2025-10-28",
+                readTime: "10 min"
+            },
+            {
+                id: 10,
+                title: "Intermittent Fasting: Voor- en Nadelen",
+                summary: "Alles over intermittent fasting: wetenschappelijke voordelen en praktische tips.",
+                category: "Voeding",
+                date: "2025-10-25",
+                readTime: "13 min"
+            },
+            {
+                id: 11,
+                title: "Post-Workout Voeding Geoptimaliseerd",
+                summary: "Maximaliseer herstel met de juiste post-workout voeding en supplementen.",
+                category: "Sport",
+                date: "2025-10-20",
+                readTime: "9 min"
+            },
+            {
+                id: 12,
+                title: "Probiotica en Darmgezondheid",
+                summary: "Het belang van darmgezondheid en hoe probiotica kunnen helpen.",
+                category: "Supplementen",
+                date: "2025-10-15",
+                readTime: "11 min"
+            },
+            {
+                id: 13,
+                title: "Koolhydraten: Vriend of Vijand?",
+                summary: "De waarheid over koolhydraten en hoe je ze slim kunt gebruiken.",
+                category: "Voeding",
+                date: "2025-10-10",
+                readTime: "14 min"
+            },
+            {
+                id: 14,
+                title: "Zink: Immuunsysteem Booster",
+                summary: "Hoe zink je immuunsysteem versterkt en welke dosis je nodig hebt.",
+                category: "Vitamines",
+                date: "2025-10-05",
+                readTime: "8 min"
+            },
+            {
+                id: 15,
+                title: "Vetten in je Dieet: Welke en Hoeveel?",
+                summary: "Gezonde vetten, onge tweede vetten en optimale verhoudingen in je dieet.",
+                category: "Voeding",
+                date: "2025-10-01",
+                readTime: "12 min"
+            },
+            {
+                id: 16,
+                title: "Multivitamines: Noodzaak of Marketing?",
+                summary: "Wetenschappelijke analyse: wanneer zijn multivitamines wel of niet nuttig?",
+                category: "Supplementen",
+                date: "2025-09-28",
+                readTime: "10 min"
+            }
+        ];
+        
+        function displayArticles() {
+            const grid = document.getElementById('articlesGrid');
+            grid.innerHTML = articles.map(article => `
+                <div style="background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(15, 23, 42, 0.3)); border: 2px solid #fbbf24; border-radius: 16px; padding: 2rem; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 28px rgba(251, 191, 36, 0.3)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <span style="background: #fbbf24; color: #0f172a; padding: 0.3rem 0.8rem; border-radius: 8px; font-size: 0.85rem; font-weight: 700;">${article.category}</span>
+                        <span style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-clock"></i> ${article.readTime}</span>
+                    </div>
+                    <h3 style="font-size: 1.5rem; color: #fbbf24; margin-bottom: 1rem;">${article.title}</h3>
+                    <p style="color: #cbd5e1; line-height: 1.8; margin-bottom: 1rem;">${article.summary}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid rgba(251, 191, 36, 0.2);">
+                        <span style="color: #94a3b8; font-size: 0.9rem;"><i class="fas fa-calendar"></i> ${new Date(article.date).toLocaleDateString('nl-NL', {year: 'numeric', month: 'long', day: 'numeric'})}</span>
+                        <a href="#" style="color: #fbbf24; text-decoration: none; font-weight: 600; transition: color 0.3s ease;" onmouseover="this.style.color='#fcd34d';" onmouseout="this.style.color='#fbbf24';">Lees meer <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            `).join('');
+        }
+        
+        // Display articles on load
+        document.addEventListener('DOMContentLoaded', function() {
+            displayArticles();
+        });
+    </script>
+</body>
+</html>
