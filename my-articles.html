@@ -322,33 +322,32 @@
                     articles = [JSON.parse(previewArticle)];
                 }
             } else {
-                // تحميل من السيرفر
+                // محاولة تحميل من السيرفر أولاً
                 try {
                     const response = await fetch('/tables/dr_wassim_articles?limit=100&sort=-created_at');
-                    if (!response.ok) throw new Error('فشل التحميل');
-                    
-                    const data = await response.json();
-                    articles = data.data || [];
-                    
-                    // تحويل التاريخ للصيغة العربية
-                    articles = articles.map(article => ({
-                        ...article,
-                        date: new Date(article.published_date).toLocaleDateString('ar-EG', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        })
-                    }));
+                    if (response.ok) {
+                        const data = await response.json();
+                        articles = data.data || [];
+                        
+                        // تحويل التاريخ للصيغة العربية
+                        articles = articles.map(article => ({
+                            ...article,
+                            date: new Date(article.published_date).toLocaleDateString('ar-EG', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            })
+                        }));
+                    } else {
+                        throw new Error('Server API not available');
+                    }
                 } catch (error) {
-                    console.error('خطأ في تحميل المقالات:', error);
-                    container.innerHTML = `
-                        <div class="no-articles">
-                            <i class="fas fa-exclamation-triangle" style="color: #dc3545;"></i>
-                            <h2 style="color: #dc3545;">فشل تحميل المقالات</h2>
-                            <p style="color: #999; margin-top: 10px;">الرجاء المحاولة لاحقاً</p>
-                        </div>
-                    `;
-                    return;
+                    console.warn('Server API not available, using localStorage:', error);
+                    // Fallback: تحميل من localStorage
+                    const localArticles = localStorage.getItem('drWaseemArticles');
+                    if (localArticles) {
+                        articles = JSON.parse(localArticles);
+                    }
                 }
             }
 

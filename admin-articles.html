@@ -557,9 +557,41 @@
 
     <script>
         // تحميل المقالات عند فتح الصفحة
-        window.onload = function() {
-            loadArticlesFromServer();
+        window.onload = async function() {
+            try {
+                const response = await fetch('/tables/dr_wassim_articles?limit=10');
+                if (response.ok) {
+                    loadArticlesFromServer();
+                } else {
+                    loadArticlesFromLocalStorage();
+                }
+            } catch (error) {
+                loadArticlesFromLocalStorage();
+            }
         };
+
+        // حذف مقال محلي
+        function deleteLocalArticle(id) {
+            if (!confirm('هل أنت متأكد من حذف هذا المقال؟')) return;
+            
+            let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            articles = articles.filter(a => a.id !== id);
+            localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
+            loadArticlesFromLocalStorage();
+        }
+
+        // تعديل مقال محلي
+        function editLocalArticle(id) {
+            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            const article = articles.find(a => a.id === id);
+
+            if (article) {
+                document.getElementById('articleTitle').value = article.title;
+                document.getElementById('articleContent').innerHTML = article.content;
+                deleteLocalArticle(id);
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        }
 
         // حفظ المقال على السيرفر
         async function saveArticle() {
@@ -585,27 +617,57 @@
                 published_date: new Date().toISOString()
             };
 
+            // محاولة الحفظ على السيرفر أولاً
             try {
-                // حفظ على السيرفر عبر RESTful API
                 const response = await fetch('/tables/dr_wassim_articles', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(article)
                 });
 
-                if (!response.ok) throw new Error('فشل الحفظ');
+                if (response.ok) {
+                    // نجح الحفظ على السيرفر
+                    const msg = document.getElementById('successMsg');
+                    msg.innerHTML = '<i class="fas fa-check-circle"></i> تم النشر بنجاح! الآن يمكن للجميع مشاهدة المقال 🎉';
+                    msg.style.display = 'block';
+                    setTimeout(() => {
+                        msg.style.display = 'none';
+                    }, 4000);
 
-                // عرض رسالة نجاح
+                    clearForm();
+                    loadArticlesFromServer();
+                    return;
+                }
+            } catch (error) {
+                console.warn('Server API not available, using localStorage:', error);
+            }
+
+            // Fallback: حفظ في localStorage
+            try {
+                article.id = Date.now();
+                article.date = new Date().toLocaleDateString('ar-EG', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+                articles.unshift(article);
+                localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
+
                 const msg = document.getElementById('successMsg');
-                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم النشر بنجاح! الآن يمكن للجميع مشاهدة المقال 🎉';
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم الحفظ محلياً! (للاختبار فقط - لن يشاهده الزوار)';
                 msg.style.display = 'block';
+                msg.style.background = '#fff3cd';
+                msg.style.color = '#856404';
                 setTimeout(() => {
                     msg.style.display = 'none';
+                    msg.style.background = '#d4edda';
+                    msg.style.color = '#155724';
                 }, 4000);
 
-                // مسح النموذج وتحديث القائمة
                 clearForm();
-                loadArticlesFromServer();
+                loadArticlesFromLocalStorage();
             } catch (error) {
                 alert('❌ حدث خطأ في الحفظ: ' + error.message);
             }
@@ -656,6 +718,38 @@
 
             localStorage.setItem('previewArticle', JSON.stringify(article));
             window.open('my-articles.html?preview=true', '_blank');
+        }
+
+        // تحميل المقالات من localStorage (Fallback)
+        function loadArticlesFromLocalStorage() {
+            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            const listDiv = document.getElementById('articlesList');
+
+            if (articles.length === 0) {
+                listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 30px;">لا توجد مقالات محفوظة بعد</p>';
+                return;
+            }
+
+            listDiv.innerHTML = articles.map(article => {
+                const date = article.date || new Date(article.published_date).toLocaleDateString('ar-EG');
+
+                return `
+                    <div class="article-item">
+                        <div class="article-info">
+                            <h3>${article.title}</h3>
+                            <p><i class="fas fa-calendar"></i> ${date} <span style="color: #ffc107; margin-right: 10px;">📝 محفوظ محلياً</span></p>
+                        </div>
+                        <div class="article-actions">
+                            <button class="btn-edit" onclick="editLocalArticle(${article.id})">
+                                <i class="fas fa-edit"></i> تعديل
+                            </button>
+                            <button class="btn-delete" onclick="deleteLocalArticle(${article.id})">
+                                <i class="fas fa-trash"></i> حذف
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         // تحميل المقالات من السيرفر
