@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
+    <!-- Version 8.1.0 - No Dutch Language -->
     <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
     <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
     <meta name="description" content="موقعك الصحي الفريد: المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي - دليلك الشامل للتغذية الصحية والدايت">
@@ -1585,13 +1586,24 @@
     <script src="js/data-enhancer.js"></script>
     <script src="js/recipes-data.js"></script>
     
-    <!-- Service Worker Registration -->
+    <!-- DISABLED: Service Worker temporarily removed for cache debugging -->
+    <!-- <script src="/sw-disable.js"></script> -->
     <script>
+    // Forcefully disable and remove all Service Workers
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(reg => console.log('✅ Service Worker registered'))
-                .catch(err => console.log('❌ SW registration failed:', err));
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                console.log('🗑️ Emergency: Unregistering Service Worker');
+                registration.unregister();
+            }
+        });
+        
+        // Clear all caches
+        caches.keys().then(function(cacheNames) {
+            cacheNames.forEach(function(cacheName) {
+                console.log('🗑️ Deleting cache:', cacheName);
+                caches.delete(cacheName);
+            });
         });
     }
     </script>

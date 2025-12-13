@@ -1,0 +1,5 @@
+{
+  "buildCommand": "echo 'Building WiBo Health v8.1.0'",
+  "outputDirectory": ".",
+  "framework": null
+}
