@@ -6,15 +6,3 @@ AddCharset UTF-8 .html .htm .js .css .json
 <FilesMatch "\.(html|htm)$">
     Header set Content-Type "text/html; charset=utf-8"
 </FilesMatch>
-
-# Clean URLs (remove .html extension)
-RewriteEngine On
-
-# Redirect /nl/ to main site (Dutch version removed)
-RewriteRule ^nl/?$ / [R=301,L]
-RewriteRule ^nl/(.*)$ /$1 [R=301,L]
-
-# Clean URLs
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC,L]

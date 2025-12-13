@@ -1,6 +1,6 @@
 {
   "packageId": "com.wibohealth.app",
-  "host": "wibohealth.com",
+  "host": "wibohealth-app.vercel.app",
   "name": "WiBo Health",
   "launcherName": "WiBo Health",
   "display": "standalone",
@@ -11,8 +11,8 @@
   "backgroundColor": "#ffffff",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://wibohealth.com/images/icon-512.png",
-  "maskableIconUrl": "https://wibohealth.com/images/icon-512.png",
+  "iconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
+  "maskableIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
   "splashScreenFadeOutDuration": 300,
   "appVersionName": "1.0.0",
   "appVersionCode": 1,
@@ -21,25 +21,25 @@
       "name": "دليل الأطعمة",
       "shortName": "أطعمة",
       "url": "/foods.html",
-      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
     },
     {
       "name": "الحاسبات الصحية",
       "shortName": "حاسبات",
       "url": "/calculators.html",
-      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
     },
     {
       "name": "الوصفات الصحية",
       "shortName": "وصفات",
       "url": "/recipes.html",
-      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
     },
     {
       "name": "المقالات الصحية",
       "shortName": "مقالات",
       "url": "/articles.html",
-      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
     }
   ],
   "orientation": "portrait",
