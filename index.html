@@ -1602,29 +1602,20 @@
     <script src="js/data-enhancer.js"></script>
     <script src="js/recipes-data.js"></script>
     
-    <!-- Force Service Worker Update -->
+    <!-- 🔥 EMERGENCY: Disable Service Worker temporarily -->
     <script>
     if ('serviceWorker' in navigator) {
-        // حذف جميع Service Workers القديمة
+        // حذف جميع Service Workers (تعطيل كامل مؤقتاً)
         navigator.serviceWorker.getRegistrations().then(function(registrations) {
             for(let registration of registrations) {
-                console.log('🗑️ Unregistering old Service Worker...');
+                console.log('🗑️ EMERGENCY: Unregistering ALL Service Workers...');
                 registration.unregister();
             }
+            console.log('✅ All Service Workers removed! Site running without SW.');
         });
         
-        // تسجيل Service Worker الجديد بعد ثانية
-        setTimeout(function() {
-            navigator.serviceWorker.register('/service-worker.js', { updateViaCache: 'none' })
-                .then(function(registration) {
-                    console.log('✅ Service Worker v8.0.0 registered successfully!');
-                    // إجبار التحديث الفوري
-                    registration.update();
-                })
-                .catch(function(error) {
-                    console.error('❌ Service Worker registration failed:', error);
-                });
-        }, 1000);
+        // مؤقتاً: لا نسجل Service Worker جديد - نخلي الموقع يشتغل بدون SW
+        // رح نرجع نفعله بعد ما نتأكد إنو الموقع شغال
     }
     </script>
 </body>

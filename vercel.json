@@ -1,6 +1,8 @@
 {
   "version": 2,
   "public": true,
+  "cleanUrls": false,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/well-known/assetlinks.json",
@@ -101,50 +103,8 @@
       "destination": "/index.html"
     },
     {
-      "source": "/foods",
-      "destination": "/foods.html"
-    },
-    {
-      "source": "/calculators",
-      "destination": "/calculators.html"
-    },
-    {
-      "source": "/recipes",
-      "destination": "/recipes.html"
-    },
-    {
-      "source": "/articles",
-      "destination": "/articles.html"
-    },
-    {
-      "source": "/supplements",
-      "destination": "/supplements.html"
-    },
-    {
-      "source": "/doctor",
-      "destination": "/doctor.html"
-    },
-    {
-      "source": "/about",
-      "destination": "/about.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms.html"
-    },
-    {
       "source": "/.well-known/assetlinks.json",
       "destination": "/well-known/assetlinks.json"
     }
-  ],
-  "cleanUrls": false,
-  "trailingSlash": false
+  ]
 }
