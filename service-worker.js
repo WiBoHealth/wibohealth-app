@@ -1,10 +1,10 @@
 // Service Worker for WiBo Health PWA
-// Version 7.1.2 - Fixed All TypeError Issues (Response Objects) 🐛✅
+// Version 8.0.0 - Arabic & English Only (No Dutch) 🇪🇬🇬🇧✅
 
-const CACHE_NAME = 'wibo-health-v7.1.2-all-fixed';
-const RUNTIME_CACHE = 'wibo-health-runtime-v7.1.2';
-const IMAGE_CACHE = 'wibo-health-images-v7.1.2';
-const API_CACHE = 'wibo-health-api-v7.1.2';
+const CACHE_NAME = 'wibo-health-v8.0.0-ar-en-only';
+const RUNTIME_CACHE = 'wibo-health-runtime-v8.0.0';
+const IMAGE_CACHE = 'wibo-health-images-v8.0.0';
+const API_CACHE = 'wibo-health-api-v8.0.0';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -33,7 +33,7 @@ const PRECACHE_URLS = [
 // 🔧 INSTALL EVENT - التثبيت الأولي
 // ============================================
 self.addEventListener('install', event => {
-  console.log('✅ Service Worker: Installing v7.1.2 (All TypeError Fixed)...');
+  console.log('✅ Service Worker: Installing v8.0.0 (Arabic & English Only)...');
   
   event.waitUntil(
     Promise.all([
@@ -62,7 +62,7 @@ self.addEventListener('install', event => {
 // 🔄 ACTIVATE EVENT - التفعيل والتنظيف
 // ============================================
 self.addEventListener('activate', event => {
-  console.log('🔄 Service Worker: Activating v7.1.2 - All TypeError Fixed! ✅');
+  console.log('🔄 Service Worker: Activating v8.0.0 - Arabic & English Only! ✅');
   
   event.waitUntil(
     caches.keys()
