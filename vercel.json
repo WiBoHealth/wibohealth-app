@@ -101,6 +101,6 @@
       "destination": "/well-known/assetlinks.json"
     }
   ],
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false
 }
