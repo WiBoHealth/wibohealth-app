@@ -1531,6 +1531,21 @@
                 document.body.classList.add('dark-mode');
                 document.querySelector('.theme-toggle i').className = 'fas fa-sun';
             }
+            
+            // 🔥 EMERGENCY FIX: حذف أي زر هولندي ظاهر من الكاش القديم
+            setTimeout(function() {
+                document.querySelectorAll('[data-lang-toggle="nl"]').forEach(btn => {
+                    console.log('⚠️ حذف زر هولندي من الكاش القديم');
+                    btn.remove();
+                });
+                // حذف أي زر يحتوي على 🇳🇱
+                document.querySelectorAll('button').forEach(btn => {
+                    if (btn.textContent.includes('🇳🇱') || btn.textContent.includes('NL')) {
+                        console.log('⚠️ حذف زر هولندي (🇳🇱)');
+                        btn.remove();
+                    }
+                });
+            }, 100);
         });
 
         // Toggle theme
@@ -1586,5 +1601,31 @@
     <script src="js/data.js"></script>
     <script src="js/data-enhancer.js"></script>
     <script src="js/recipes-data.js"></script>
+    
+    <!-- Force Service Worker Update -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        // حذف جميع Service Workers القديمة
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                console.log('🗑️ Unregistering old Service Worker...');
+                registration.unregister();
+            }
+        });
+        
+        // تسجيل Service Worker الجديد بعد ثانية
+        setTimeout(function() {
+            navigator.serviceWorker.register('/service-worker.js', { updateViaCache: 'none' })
+                .then(function(registration) {
+                    console.log('✅ Service Worker v8.0.0 registered successfully!');
+                    // إجبار التحديث الفوري
+                    registration.update();
+                })
+                .catch(function(error) {
+                    console.error('❌ Service Worker registration failed:', error);
+                });
+        }, 1000);
+    }
+    </script>
 </body>
 </html>
