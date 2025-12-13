@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 Force Update - WiBo Health</title>
+    <style>
+        body {
+            font-family: 'Cairo', Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #764ba2;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Force Update System</h1>
+        <p>هذه الصفحة تزيل جميع الـ Caches القديمة وتحدث الموقع بالكامل</p>
+        
+        <button onclick="forceClearAll()">🗑️ حذف جميع الـ Caches</button>
+        <button onclick="unregisterAllSW()">🚫 حذف جميع Service Workers</button>
+        <button onclick="fullReset()">🔥 Reset كامل</button>
+        <button onclick="goToHome()">🏠 العودة للموقع</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script>
+        const status = document.getElementById('status');
+
+        function showStatus(message, type = 'info') {
+            status.className = type;
+            status.innerHTML = message;
+        }
+
+        async function forceClearAll() {
+            showStatus('🔄 جاري حذف جميع الـ Caches...', 'info');
+            
+            try {
+                const cacheNames = await caches.keys();
+                console.log('Found caches:', cacheNames);
+                
+                await Promise.all(
+                    cacheNames.map(cacheName => {
+                        console.log('Deleting cache:', cacheName);
+                        return caches.delete(cacheName);
+                    })
+                );
+                
+                showStatus(`✅ تم حذف ${cacheNames.length} Caches بنجاح!`, 'success');
+            } catch (error) {
+                showStatus(`❌ فشل: ${error.message}`, 'error');
+            }
+        }
+
+        async function unregisterAllSW() {
+            showStatus('🔄 جاري حذف جميع Service Workers...', 'info');
+            
+            try {
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    console.log('Found SW registrations:', registrations);
+                    
+                    await Promise.all(
+                        registrations.map(registration => {
+                            console.log('Unregistering SW:', registration);
+                            return registration.unregister();
+                        })
+                    );
+                    
+                    showStatus(`✅ تم حذف ${registrations.length} Service Workers بنجاح!`, 'success');
+                } else {
+                    showStatus('⚠️ Service Workers غير مدعومة في هذا المتصفح', 'error');
+                }
+            } catch (error) {
+                showStatus(`❌ فشل: ${error.message}`, 'error');
+            }
+        }
+
+        async function fullReset() {
+            showStatus('🔄 جاري إعادة ضبط كاملة...', 'info');
+            
+            try {
+                // 1. Delete all caches
+                const cacheNames = await caches.keys();
+                await Promise.all(cacheNames.map(name => caches.delete(name)));
+                
+                // 2. Unregister all service workers
+                if ('serviceWorker' in navigator) {
+                    const registrations = await navigator.serviceWorker.getRegistrations();
+                    await Promise.all(registrations.map(reg => reg.unregister()));
+                }
+                
+                // 3. Clear localStorage
+                localStorage.clear();
+                
+                // 4. Clear sessionStorage
+                sessionStorage.clear();
+                
+                showStatus('✅ تم Reset كامل بنجاح! سيتم التحديث الآن...', 'success');
+                
+                // Reload after 2 seconds
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 2000);
+            } catch (error) {
+                showStatus(`❌ فشل: ${error.message}`, 'error');
+            }
+        }
+
+        function goToHome() {
+            window.location.href = '/';
+        }
+
+        // Auto-run on page load
+        window.addEventListener('load', () => {
+            showStatus('📋 جاهز للتحديث. اضغط على أي زر للبدء.', 'info');
+        });
+    </script>
+</body>
+</html>

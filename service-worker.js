@@ -1,31 +1,25 @@
 // Service Worker for WiBo Health PWA
-// Version 8.0.0 - Arabic & English Only (No Dutch) 🇪🇬🇬🇧✅
+// Version 8.1.0 - FINAL FIX - Arabic & English Only 🇪🇬🇬🇧✅
 
-const CACHE_NAME = 'wibo-health-v8.0.0-ar-en-only';
-const RUNTIME_CACHE = 'wibo-health-runtime-v8.0.0';
-const IMAGE_CACHE = 'wibo-health-images-v8.0.0';
-const API_CACHE = 'wibo-health-api-v8.0.0';
+const CACHE_NAME = 'wibo-health-v8.1.0-final';
+const RUNTIME_CACHE = 'wibo-health-runtime-v8.1.0';
+const IMAGE_CACHE = 'wibo-health-images-v8.1.0';
+const API_CACHE = 'wibo-health-api-v8.1.0';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/foods.html',
   '/food-details.html',
-  '/supplements-v6-new.html',
+  '/supplements.html',
   '/calculators.html',
   '/recipes.html',
   '/articles.html',
   '/doctor.html',
-  '/pricing.html',
   '/about.html',
   '/contact.html',
-  '/privacy.html',
-  '/terms.html',
   '/css/style.css',
-  '/css/mobile-menu.css',
   '/js/main.js',
   '/js/data.js',
-  '/js/mobile-menu.js',
-  '/js/language-manager.js',
   '/manifest.json'
 ];
 
@@ -33,7 +27,7 @@ const PRECACHE_URLS = [
 // 🔧 INSTALL EVENT - التثبيت الأولي
 // ============================================
 self.addEventListener('install', event => {
-  console.log('✅ Service Worker: Installing v8.0.0 (Arabic & English Only)...');
+  console.log('✅ Service Worker: Installing v8.1.0 - FINAL FIX...');
   
   event.waitUntil(
     Promise.all([
@@ -62,7 +56,7 @@ self.addEventListener('install', event => {
 // 🔄 ACTIVATE EVENT - التفعيل والتنظيف
 // ============================================
 self.addEventListener('activate', event => {
-  console.log('🔄 Service Worker: Activating v8.0.0 - Arabic & English Only! ✅');
+  console.log('🔄 Service Worker: Activating v8.1.0 - FINAL FIX! ✅');
   
   event.waitUntil(
     caches.keys()
