@@ -1,24 +1,1586 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>WiBo Health</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
+    <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
+    <meta name="description" content="موقعك الصحي الفريد: المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي - دليلك الشامل للتغذية الصحية والدايت">
+    <meta name="keywords" content="تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI, حاسبة السعرات, وصفات صحية, مقالات تغذية, صحة, عناصر غذائية, بروتين, كربوهيدرات, دهون صحية">
+    <meta name="author" content="WiBo Health">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Arabic">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://wibohealth.com/">
+    
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wibohealth.com/">
+    <meta property="og:title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
+    <meta property="og:description" content="دليل شامل للتغذية الصحية: أطعمة، مكملات، وصفات، حاسبات صحية، ومقالات تغذوية احترافية">
+    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="WiBo Health">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wibohealth.com/">
+    <meta name="twitter:title" content="WiBo Health - دليلك الصحي الشامل">
+    <meta name="twitter:description" content="دليلك الشامل للتغذية: أطعمة، مكملات، حاسبات، وصفات ومقالات صحية">
+    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="MQd6BB5wsUN99944QBMWkBlroNdCuMdtdVGmRZkiXhKU" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-292WD2SWHN');
+    </script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Hero Improvements CSS -->
+    <link rel="stylesheet" href="/css/hero-improvements.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+    
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="WiBo Health">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="WiBo Health">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+
+    <!-- Unified Language System - Disabled (Arabic Only) -->
+    <!-- <script src="js/unified-language-system.js"></script> -->
+
+    <!-- Translations System -->
+    <script>
+        const translations = {
+            ar: {
+                // Navigation
+                'nav_home': 'الرئيسية',
+                'nav_foods': 'دليل الأطعمة',
+                'nav_calculators': 'الحاسبات',
+                'nav_recipes': 'الوصفات',
+                'nav_articles': 'المقالات',
+                'nav_supplements': 'المكملات الغذائية',
+                'nav_doctor': 'د. وسيم حبيب',
+                'nav_body_program': '🌟 برنامج خاص',
+                'nav_free_diet': 'دايت مجاني 🎁',
+
+                // Header
+                'logo_subtitle': 'دليلك الصحي الشامل للتغذية السليمة',
+
+                // Hero Section
+                'compare_title': '🆕 ميزة حصرية: قارن بين المكملات!',
+                'compare_desc': 'اختر 2-5 مكملات غذائية وقارنها جنباً إلى جنب - الفوائد، الجرعات، التحذيرات، والتفاعلات الدوائية',
+                'compare_btn': 'جرب الآن',
+                'stat_foods': 'عنصر غذائي',
+                'stat_recipes': 'وصفة صحية',
+                'stat_articles': 'مقالة متخصصة',
+                'stat_supplements': 'مكمل غذائي',
+                'browse_foods': 'تصفح الأطعمة',
+                'get_free_diet': 'احصل على دايت مجاني',
+                'install_app': 'ثبّت التطبيق على هاتفك',
+
+                // Features Section
+                'feature_gi_title': 'الجلايسيميك إندكس (GI)',
+                'feature_gi_desc': 'مقياس يوضح سرعة تأثير الطعام على مستوى السكر في الدم من 0 إلى 100. الأطعمة ذات المؤشر المنخفض (أقل من 55) تساعد على استقرار مستوى السكر.',
+                'feature_ii_title': 'الإنسولين إندكس (II)',
+                'feature_ii_desc': 'مقياس يوضح كمية الإنسولين التي يحتاجها الجسم لهضم الطعام. معرفة هذا المؤشر مهم لمرضى السكري ومن يريد التحكم بالوزن.',
+                'feature_nutrition_title': 'المعلومات الغذائية',
+                'feature_nutrition_desc': 'قاعدة بيانات شاملة تحتوي على السعرات الحرارية، البروتينات، الكربوهيدرات، الدهون والألياف لجميع الأطعمة.',
+
+                // Info Section
+                'info_title': 'فهم المؤشرات الصحية',
+                'info_gi_box': 'الجلايسيميك إندكس',
+                'info_gi_low': 'منخفض (0-55): بطيء الامتصاص، مثالي للصحة',
+                'info_gi_medium': 'متوسط (56-69): امتصاص معتدل',
+                'info_gi_high': 'مرتفع (70+): سريع الامتصاص، يرفع السكر بسرعة',
+                'info_ii_box': 'الإنسولين إندكس',
+                'info_ii_low': 'منخفض (0-55): إفراز إنسولين قليل',
+                'info_ii_medium': 'متوسط (56-69): إفراز إنسولين معتدل',
+                'info_ii_high': 'مرتفع (70+): إفراز إنسولين عالي',
+                'info_why_title': 'لماذا يهمك؟',
+                'info_why_1': '✓ التحكم في الوزن بشكل صحي',
+                'info_why_2': '✓ إدارة مرض السكري',
+                'info_why_3': '✓ تحسين مستوى الطاقة',
+                'info_why_4': '✓ الوقاية من الأمراض',
+
+                // CTA Section
+                'cta_title': 'ابدأ رحلتك الصحية الآن',
+                'cta_subtitle': 'اكتشف المؤشرات الصحية لأطعمتك المفضلة',
+                'cta_btn1': 'احصل على دايت مجاني لأسبوع! 🎁',
+                'cta_btn2': 'تصفح الأطعمة',
+                'cta_btn3': 'احسب احتياجك اليومي',
+                'cta_btn4': 'وصفات صحية',
+                'cta_btn5': 'المقالات الصحية',
+                'cta_btn6': 'استشر د. وسيم حبيب',
+
+                // Footer
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2024 WiBo Health. جميع الحقوق محفوظة.',
+
+            },
+            en: {
+                // Navigation
+                'nav_home': 'Home',
+                'nav_foods': 'Food Guide',
+                'nav_calculators': 'Calculators',
+                'nav_recipes': 'Recipes',
+                'nav_articles': 'Articles',
+                'nav_supplements': 'Supplements',
+                'nav_doctor': 'Drs. Wassim Habib',
+                'nav_body_program': '🌟 Special Program',
+                'nav_free_diet': 'Free Diet Plan 🎁',
+
+                // Header
+                'logo_subtitle': 'Your comprehensive health guide for proper nutrition',
+
+                // Hero Section
+                'compare_title': '🆕 Exclusive Feature: Compare Supplements!',
+                'compare_desc': 'Choose 2-5 supplements and compare them side by side - benefits, dosages, warnings, and drug interactions',
+                'compare_btn': 'Try Now',
+                'stat_foods': 'Foods',
+                'stat_recipes': 'Recipes',
+                'stat_articles': 'Articles',
+                'stat_supplements': 'Supplements',
+                'browse_foods': 'Browse Foods',
+                'get_free_diet': 'Get Free Diet Plan',
+                'install_app': 'Install App on Your Phone',
+
+                // Features Section
+                'feature_gi_title': 'Glycemic Index (GI)',
+                'feature_gi_desc': 'A measure showing how fast a food raises blood sugar levels from 0 to 100. Low GI foods (less than 55) help stabilize blood sugar levels.',
+                'feature_ii_title': 'Insulin Index (II)',
+                'feature_ii_desc': 'A measure showing how much insulin your body needs to digest food. Knowing this index is important for diabetics and those managing weight.',
+                'feature_nutrition_title': 'Nutritional Information',
+                'feature_nutrition_desc': 'A comprehensive database containing calories, proteins, carbohydrates, fats and fiber for all foods.',
+
+                // Info Section
+                'info_title': 'Understanding Health Indicators',
+                'info_gi_box': 'Glycemic Index',
+                'info_gi_low': 'Low (0-55): Slow absorption, ideal for health',
+                'info_gi_medium': 'Medium (56-69): Moderate absorption',
+                'info_gi_high': 'High (70+): Fast absorption, raises blood sugar quickly',
+                'info_ii_box': 'Insulin Index',
+                'info_ii_low': 'Low (0-55): Low insulin secretion',
+                'info_ii_medium': 'Medium (56-69): Moderate insulin secretion',
+                'info_ii_high': 'High (70+): High insulin secretion',
+                'info_why_title': 'Why Does It Matter?',
+                'info_why_1': '✓ Healthy weight management',
+                'info_why_2': '✓ Diabetes management',
+                'info_why_3': '✓ Improved energy levels',
+                'info_why_4': '✓ Disease prevention',
+
+                // CTA Section
+                'cta_title': 'Start Your Health Journey Now',
+                'cta_subtitle': 'Discover health indicators for your favorite foods',
+                'cta_btn1': 'Get Free 1-Week Diet Plan! 🎁',
+                'cta_btn2': 'Browse Foods',
+                'cta_btn3': 'Calculate Your Daily Needs',
+                'cta_btn4': 'Healthy Recipes',
+                'cta_btn5': 'Health Articles',
+                'cta_btn6': 'Consult Drs. Wassim Habib',
+
+                // Footer
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2024 WiBo Health. All rights reserved.'
+            }
+        };
+
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        function t(key) {
+            return translations[currentLang]?.[key] || key;
+        }
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.textContent = t(el.getAttribute('data-i18n'));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePageLanguage();
+            const currentBtn = document.querySelector(`[data-lang-toggle="${currentLang}"]`);
+            if (currentBtn) currentBtn.classList.add('active');
+        });
+    </script>
+
     <style>
-      * {
-        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: white;
+            --card-bg: white;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --hero-text: white;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --header-bg: #0f3460;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            --hero-text: white;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--hero-text);
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--header-bg);
+            padding: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease, transform 0.3s ease;
+        }
+
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+            grid-row: 1;
+        }
+        
+        .header-controls {
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            position: relative;
+            overflow: visible;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .logo-icon svg {
+            width: 120px;
+            height: 120px;
+            filter: drop-shadow(0 5px 20px rgba(46, 204, 113, 0.6));
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .dedication {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dedication::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.05), rgba(52, 152, 219, 0.05));
+            z-index: 0;
+        }
+
+        .dedication-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .dedication p {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            line-height: 2;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        body.dark-mode .dedication {
+            background: rgba(15, 52, 96, 0.95);
+        }
+
+        .bodi-name {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #2ecc71;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background: rgba(46, 204, 113, 0.1);
+            user-select: none;
+        }
+
+        .bodi-name:hover {
+            transform: scale(1.1);
+            background: rgba(46, 204, 113, 0.25);
+            box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+        }
+
+        .bodi-name:active {
+            transform: scale(1.2);
+            background: rgba(46, 204, 113, 0.3);
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                transform: translateY(-30px) scale(1.2) rotate(10deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-100px) scale(1.5) rotate(20deg);
+                opacity: 1;
+            }
+            80% {
+                transform: translateY(-180px) scale(1.1) rotate(35deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-250px) scale(0.5) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .heart {
+            position: fixed;
+            font-size: 35px;
+            pointer-events: none;
+            z-index: 999999;
+            user-select: none;
+            will-change: transform, opacity;
+        }
+
+        .logo-text h1 {
+            font-size: 48px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(46, 204, 113, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .logo-text h1:hover {
+            letter-spacing: 2px;
+            transform: scale(1.05);
+        }
+
+        .logo-text p {
+            color: var(--text-light);
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* Language Buttons */
+        .lang-btn {
+            width: 50px;
+            height: 50px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .lang-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .lang-btn[style*="opacity: 0.5"] {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .theme-toggle {
+            width: 50px;
+            height: 50px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(20deg);
+            background: #2ecc71;
+            color: white;
+        }
+
+        .lang-btn {
+            width: 50px;
+            height: 50px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            transform: scale(1.1);
+            background: #2ecc71;
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-link {
+            padding: 12px 25px;
+            background: #f3f4f6;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        body.dark-mode .nav-link {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .hamburger-menu span {
+            background: white;
+        }
+
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100%;
+            background: var(--card-bg);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-menu.active {
+            right: 0;
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--text-dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-close:hover {
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .mobile-nav-link {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .mobile-nav-link i {
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .pwa-install-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+            transition: all 0.3s ease;
+            font-family: 'Cairo', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            animation: pulse-install 2s infinite;
+        }
+
+        .pwa-install-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(46, 204, 113, 0.6);
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+        }
+
+        .pwa-install-btn:active {
+            transform: translateY(0);
+        }
+
+        .pwa-install-btn i {
+            font-size: 1.3em;
+        }
+
+        @keyframes pulse-install {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(46, 204, 113, 0.7);
+            }
+        }
+
+        .compare-feature-card {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+            backdrop-filter: blur(10px);
+            padding: 25px 30px;
+            border-radius: 20px;
+            border: 3px solid #ffd700;
+            margin: 30px auto;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3), 0 0 0 1px rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .compare-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #ffd700, #ffed4e);
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .compare-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4), 0 0 30px rgba(102, 126, 234, 0.3);
+            border-color: #ffed4e;
+        }
+
+        .compare-feature-icon {
+            font-size: 48px;
+            min-width: 60px;
+            text-align: center;
+            animation: scaleIcon 2s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.5));
+        }
+
+        @keyframes scaleIcon {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .compare-feature-content {
+            flex: 1;
+            text-align: right;
+        }
+
+        .compare-feature-content h3 {
+            color: #ffd700;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .compare-feature-content p {
+            color: #ffffff;
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.6;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .compare-feature-btn {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+            color: #1e3c72;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .compare-feature-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6);
+            background: linear-gradient(135deg, #ffed4e 0%, #ffd700 50%, #ffed4e 100%);
+        }
+
+        .compare-feature-btn i {
+            font-size: 18px;
+            animation: balanceScale 2s ease-in-out infinite;
+        }
+
+        @keyframes balanceScale {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(-10deg);
+            }
+            75% {
+                transform: rotate(10deg);
+            }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            color: var(--text-dark);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .feature-card h3 {
+            color: #2ecc71;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .info-section {
+            background: var(--card-bg);
+            color: var(--text-dark);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .info-section h2 {
+            color: #2ecc71;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .info-box {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-right: 5px solid #2ecc71;
+        }
+
+        .info-box h3 {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: var(--text-light);
+        }
+
+        body.dark-mode .info-box {
+            background: rgba(255,255,255,0.05);
+        }
+
+        body.dark-mode .info-box li {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
+
+        .info-box li:last-child {
+            border-bottom: none;
+        }
+
+        .level-indicator {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .level-low { background: #2ecc71; }
+        .level-medium { background: #f39c12; }
+        .level-high { background: #e74c3c; }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cta-btn {
+            padding: 18px 40px;
+            background: white;
+            color: #2ecc71;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            background: #2ecc71;
+            color: white;
+        }
+
+        footer {
+            background: var(--header-bg);
+            color: var(--text-dark);
+            padding: 40px 0;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; }
+            .header-content { 
+                grid-template-rows: auto auto;
+                gap: 15px;
+            }
+            
+            .logo {
+                justify-content: center;
+            }
+            .features { grid-template-columns: 1fr; }
+            .info-grid { grid-template-columns: 1fr; }
+            
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+
+            header {
+                padding: 15px 0;
+            }
+
+            .logo-text h1 {
+                font-size: 32px;
+            }
+
+            .logo-text p {
+                font-size: 13px;
+            }
+
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-icon svg {
+                width: 70px;
+                height: 70px;
+            }
+
+            .theme-toggle {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .header-controls {
+                gap: 10px;
+            }
+
+            .compare-feature-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                gap: 15px;
+                border-width: 2px;
+            }
+
+            .compare-feature-card::before {
+                width: 100%;
+                height: 5px;
+                top: 0;
+                left: 0;
+                background: linear-gradient(90deg, #ffd700, #ffed4e);
+            }
+
+            .compare-feature-content {
+                text-align: center;
+            }
+
+            .compare-feature-content h3 {
+                font-size: 17px;
+            }
+
+            .compare-feature-content p {
+                font-size: 13px;
+            }
+
+            .compare-feature-icon {
+                font-size: 40px;
+            }
+
+            .compare-feature-btn {
+                padding: 10px 24px;
+                font-size: 14px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5eead4;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="3"/>
+                            
+                            <path d="M40 100 L60 100 L68 85 L76 115 L84 100 L100 100 L108 85 L116 115 L124 100 L160 100" stroke="url(#pulseGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.95"/>
+                            
+                            <g transform="translate(130, 70)">
+                                <rect x="-3" y="-14" width="6" height="28" fill="white" opacity="0.9" rx="2"/>
+                                <rect x="-14" y="-3" width="28" height="6" fill="white" opacity="0.9" rx="2"/>
+                                <circle cx="0" cy="0" r="18" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
+                            </g>
+                            
+                            <ellipse cx="80" cy="75" rx="18" ry="28" fill="white" opacity="0.25" transform="rotate(-30 80 75)"/>
+                            
+                            <circle cx="70" cy="100" r="3" fill="white" opacity="0.8">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+                            </circle>
+                            <circle cx="130" cy="100" r="3" fill="white" opacity="0.8">
+                                <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+                            </circle>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>WiBo Health</h1>
+                        <p data-i18n="logo_subtitle">دليلك الصحي الشامل للتغذية السليمة</p>
+                    </div>
+                </div>
+
+                <div class="header-controls">
+                    <!-- Language Toggle Buttons (Arabic & English Only) -->
+                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="nav-menu">
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                        <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+                        <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                        <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
+                        <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                        <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
+                        <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+                        <a href="my-articles.html" class="nav-link" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4); border-radius: 10px; font-weight: 700;"><i class="fas fa-pen-fancy"></i> <span>✍️ بقلمي - د. وسيم</span></a>
+                        <a href="body-program.html" class="nav-link" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); border-radius: 10px; font-weight: 700;"><i class="fas fa-star"></i> <span data-i18n="nav_body_program">🌟 برنامج خاص</span></a>
+                        <a href="diet-plan.html" class="nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);"><i class="fas fa-gift"></i> <span data-i18n="nav_free_diet">دايت مجاني 🎁</span></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Language Switcher Script -->
+    <script>
+        // Change language function
+        function changeLanguage(lang) {
+            // Update HTML lang and dir attributes
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            // Update font
+            document.body.style.fontFamily = lang === 'ar' ? "'Cairo', sans-serif" : "'Inter', sans-serif";
+            
+            // Save preference
+            localStorage.setItem('preferred_language', lang);
+            
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update language button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.style.opacity = '0.5';
+                    btn.style.pointerEvents = 'none';
+                } else {
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                }
+            });
+        }
+        
+        // Check for saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferred_language') || 'ar';
+            if (savedLang !== 'ar') {
+                changeLanguage(savedLang);
+            }
+        });
+    </script>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
+        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
+        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
+        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
+        <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">دليل المكملات الغذائية</span></a>
+        <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+        <a href="my-articles.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; font-weight: 700;"><i class="fas fa-pen-fancy"></i> <span>✍️ بقلمي - د. وسيم</span></a>
+        <a href="body-program.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-weight: 700;"><i class="fas fa-star"></i> <span data-i18n="nav_body_program">🌟 برنامج خاص</span></a>
+        <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">احصل على دايت مجاني 🎁</span></a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">اتصل بنا</span></a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <!-- Compare Feature Highlight (Main Hero) -->
+            <div class="compare-feature-card">
+                <div class="compare-feature-icon">⚖️</div>
+                <div class="compare-feature-content">
+                    <h3 data-i18n="compare_title">🆕 ميزة حصرية: قارن بين المكملات!</h3>
+                    <p data-i18n="compare_desc">اختر 2-5 مكملات غذائية وقارنها جنباً إلى جنب - الفوائد، الجرعات، التحذيرات، والتفاعلات الدوائية</p>
+                </div>
+                <a href="supplements.html?v=6.0" class="compare-feature-btn" data-i18n="compare_btn">جرب الآن</a>
+            </div>
+
+            <!-- Compact Animated Stats -->
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-number" id="food-count">1051</span>
+                    <span class="stat-label" data-i18n="stat_foods">عنصر غذائي</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="recipe-count">110</span>
+                    <span class="stat-label" data-i18n="stat_recipes">وصفة صحية</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="article-count">19</span>
+                    <span class="stat-label" data-i18n="stat_articles">مقالة متخصصة</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="supplement-count">426</span>
+                    <span class="stat-label" data-i18n="stat_supplements">مكمل غذائي</span>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="cta-buttons">
+                <a href="foods.html" class="cta-btn" data-i18n="browse_foods"><i class="fas fa-utensils"></i> تصفح الأطعمة</a>
+                <a href="diet-plan.html" class="cta-btn" data-i18n="get_free_diet"><i class="fas fa-gift"></i> احصل على دايت مجاني</a>
+            </div>
+
+            <!-- PWA Install Button -->
+            <button id="install-button" class="pwa-install-btn" data-i18n="install_app">
+                <i class="fas fa-download"></i>
+                ثبّت التطبيق على هاتفك
+            </button>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 data-i18n="feature_gi_title">الجلايسيميك إندكس (GI)</h3>
+                <p data-i18n="feature_gi_desc">مقياس يوضح سرعة تأثير الطعام على مستوى السكر في الدم من 0 إلى 100. الأطعمة ذات المؤشر المنخفض (أقل من 55) تساعد على استقرار مستوى السكر.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-syringe"></i>
+                </div>
+                <h3 data-i18n="feature_ii_title">الإنسولين إندكس (II)</h3>
+                <p data-i18n="feature_ii_desc">مقياس يوضح كمية الإنسولين التي يحتاجها الجسم لهضم الطعام. معرفة هذا المؤشر مهم لمرضى السكري ومن يريد التحكم بالوزن.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 data-i18n="feature_nutrition_title">المعلومات الغذائية</h3>
+                <p data-i18n="feature_nutrition_desc">قاعدة بيانات شاملة تحتوي على السعرات الحرارية، البروتينات، الكربوهيدرات، الدهون والألياف لجميع الأطعمة.</p>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <h2 data-i18n="info_title">فهم المؤشرات الصحية</h2>
+            
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3 data-i18n="info_gi_box"><i class="fas fa-leaf"></i> الجلايسيميك إندكس</h3>
+                    <ul>
+                        <li><span class="level-indicator level-low"></span> <strong data-i18n="info_gi_low">منخفض (0-55): بطيء الامتصاص، مثالي للصحة</strong></li>
+                        <li><span class="level-indicator level-medium"></span> <strong data-i18n="info_gi_medium">متوسط (56-69): امتصاص معتدل</strong></li>
+                        <li><span class="level-indicator level-high"></span> <strong data-i18n="info_gi_high">مرتفع (70+): سريع الامتصاص، يرفع السكر بسرعة</strong></li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3 data-i18n="info_ii_box"><i class="fas fa-heartbeat"></i> الإنسولين إندكس</h3>
+                    <ul>
+                        <li><span class="level-indicator level-low"></span> <strong data-i18n="info_ii_low">منخفض (0-55): إفراز إنسولين قليل</strong></li>
+                        <li><span class="level-indicator level-medium"></span> <strong data-i18n="info_ii_medium">متوسط (56-69): إفراز إنسولين معتدل</strong></li>
+                        <li><span class="level-indicator level-high"></span> <strong data-i18n="info_ii_high">مرتفع (70+): إفراز إنسولين عالي</strong></li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3 data-i18n="info_why_title"><i class="fas fa-apple-alt"></i> لماذا يهمك؟</h3>
+                    <ul>
+                        <li data-i18n="info_why_1">✓ التحكم في الوزن بشكل صحي</li>
+                        <li data-i18n="info_why_2">✓ إدارة مرض السكري</li>
+                        <li data-i18n="info_why_3">✓ تحسين مستوى الطاقة</li>
+                        <li data-i18n="info_why_4">✓ الوقاية من الأمراض</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 data-i18n="cta_title">ابدأ رحلتك الصحية الآن</h2>
+            <p style="font-size: 1.2rem; margin-top: 15px;" data-i18n="cta_subtitle">اكتشف المؤشرات الصحية لأطعمتك المفضلة</p>
+            
+            <div class="cta-buttons">
+                <a href="diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; font-size: 1.1em; padding: 15px 30px; box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);" data-i18n="cta_btn1"><i class="fas fa-gift"></i> احصل على دايت مجاني لأسبوع! 🎁</a>
+                <a href="foods.html" class="cta-btn" data-i18n="cta_btn2"><i class="fas fa-utensils"></i> تصفح الأطعمة</a>
+                <a href="calculators.html" class="cta-btn" data-i18n="cta_btn3"><i class="fas fa-calculator"></i> احسب احتياجك اليومي</a>
+                <a href="recipes.html" class="cta-btn" data-i18n="cta_btn4"><i class="fas fa-book-open"></i> وصفات صحية</a>
+                <a href="articles.html" class="cta-btn" data-i18n="cta_btn5"><i class="fas fa-book-medical"></i> المقالات الصحية</a>
+                <a href="doctor.html" class="cta-btn" data-i18n="cta_btn6"><i class="fas fa-user-md"></i> استشر د. وسيم حبيب</a>
+            </div>
+        </section>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #34495e;">
+            <h4 style="color: #2ecc71; margin-bottom: 15px; font-size: 1.1em;">📚 المصادر العلمية</h4>
+            <p style="color: #95a5a6; font-size: 0.85em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                جميع المعلومات الغذائية والصحية في هذا الموقع مستمدة من مصادر علمية موثوقة بما في ذلك:
+                <br>
+                <strong style="color: #ecf0f1;">USDA FoodData Central</strong> (قاعدة بيانات وزارة الزراعة الأمريكية)،
+                <strong style="color: #ecf0f1;">National Institutes of Health (NIH)</strong>،
+                <strong style="color: #ecf0f1;">World Health Organization (WHO)</strong>،
+                <strong style="color: #ecf0f1;">Mayo Clinic</strong>،
+                <strong style="color: #ecf0f1;">Harvard Medical School</strong>،
+                <strong style="color: #ecf0f1;">PubMed/NCBI</strong>
+                وغيرها من المراجع الطبية المعتمدة.
+            </p>
+        </div>
+
+    </footer>
+
+    <script>
+        // Load theme
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+            }
+        });
+
+        // Toggle theme
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const body = document.body;
+            
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+
+
+        // Auto-hide Header on Scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const scrollThreshold = 150;
+
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                header.classList.add('hide-nav');
+            } else if (currentScroll < lastScrollTop) {
+                header.classList.remove('hide-nav');
+            }
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide-nav');
+            }
+            
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }, false);
+    </script>
+
+    <!-- Load Databases -->
+    <script src="js/data.js"></script>
+    <script src="js/data-enhancer.js"></script>
+    <script src="js/recipes-data.js"></script>
+</body>
 </html>

@@ -1,10 +1,10 @@
 // Service Worker for WiBo Health PWA
-// Version 6.0.2 - Fix Console Errors (Google Analytics, Manifest) 🔧✅
+// Version 7.1.0 - Language Buttons Removed from Header 🚀✅
 
-const CACHE_NAME = 'wibo-health-v6.0.2';
-const RUNTIME_CACHE = 'wibo-health-runtime-v6.0.2';
-const IMAGE_CACHE = 'wibo-health-images-v6.0.2';
-const API_CACHE = 'wibo-health-api-v6.0.2';
+const CACHE_NAME = 'wibo-health-v7.1.0-no-lang-buttons';
+const RUNTIME_CACHE = 'wibo-health-runtime-v7.1.0';
+const IMAGE_CACHE = 'wibo-health-images-v7.1.0';
+const API_CACHE = 'wibo-health-api-v7.1.0';
 const PRECACHE_URLS = [
   '/',
   '/index.html',
@@ -33,7 +33,7 @@ const PRECACHE_URLS = [
 // 🔧 INSTALL EVENT - التثبيت الأولي
 // ============================================
 self.addEventListener('install', event => {
-  console.log('✅ Service Worker: Installing v6.0.2...');
+  console.log('✅ Service Worker: Installing v7.1.0 (No Language Buttons)...');
   
   event.waitUntil(
     Promise.all([

@@ -79,6 +79,16 @@
       "source": "/en",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/nl/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/nl",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "rewrites": [
