@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Cache Buster v8.0.0 - 2025-12-13 -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
+
     <!-- Primary Meta Tags -->
     <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
     <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
@@ -1532,20 +1528,7 @@
                 document.querySelector('.theme-toggle i').className = 'fas fa-sun';
             }
             
-            // 🔥 EMERGENCY FIX: حذف أي زر هولندي ظاهر من الكاش القديم
-            setTimeout(function() {
-                document.querySelectorAll('[data-lang-toggle="nl"]').forEach(btn => {
-                    console.log('⚠️ حذف زر هولندي من الكاش القديم');
-                    btn.remove();
-                });
-                // حذف أي زر يحتوي على 🇳🇱
-                document.querySelectorAll('button').forEach(btn => {
-                    if (btn.textContent.includes('🇳🇱') || btn.textContent.includes('NL')) {
-                        console.log('⚠️ حذف زر هولندي (🇳🇱)');
-                        btn.remove();
-                    }
-                });
-            }, 100);
+
         });
 
         // Toggle theme
@@ -1602,20 +1585,14 @@
     <script src="js/data-enhancer.js"></script>
     <script src="js/recipes-data.js"></script>
     
-    <!-- 🔥 EMERGENCY: Disable Service Worker temporarily -->
+    <!-- Service Worker Registration -->
     <script>
     if ('serviceWorker' in navigator) {
-        // حذف جميع Service Workers (تعطيل كامل مؤقتاً)
-        navigator.serviceWorker.getRegistrations().then(function(registrations) {
-            for(let registration of registrations) {
-                console.log('🗑️ EMERGENCY: Unregistering ALL Service Workers...');
-                registration.unregister();
-            }
-            console.log('✅ All Service Workers removed! Site running without SW.');
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log('✅ Service Worker registered'))
+                .catch(err => console.log('❌ SW registration failed:', err));
         });
-        
-        // مؤقتاً: لا نسجل Service Worker جديد - نخلي الموقع يشتغل بدون SW
-        // رح نرجع نفعله بعد ما نتأكد إنو الموقع شغال
     }
     </script>
 </body>
