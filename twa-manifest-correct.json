@@ -1,0 +1,82 @@
+{
+  "packageId": "com.wibohealth.app",
+  "host": "wibohealth-app.vercel.app",
+  "name": "WiBo Health",
+  "launcherName": "WiBo Health",
+  "display": "standalone",
+  "themeColor": "#667EEA",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#667EEA",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
+  "maskableIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\Users\\Admin\\android.keystore",
+    "alias": "wibohealth"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "دليل الأطعمة",
+      "shortName": "أطعمة",
+      "url": "https://wibohealth-app.vercel.app/foods.html",
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+    },
+    {
+      "name": "الحاسبات الصحية",
+      "shortName": "حاسبات",
+      "url": "https://wibohealth-app.vercel.app/calculators.html",
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+    },
+    {
+      "name": "الوصفات الصحية",
+      "shortName": "وصفات",
+      "url": "https://wibohealth-app.vercel.app/recipes.html",
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+    },
+    {
+      "name": "المقالات الصحية",
+      "shortName": "مقالات",
+      "url": "https://wibohealth-app.vercel.app/articles.html",
+      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://wibohealth-app.vercel.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://wibohealth-app.vercel.app/",
+  "minSdkVersion": 21,
+  "shareTarget": {
+    "action": "https://wibohealth-app.vercel.app/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "orientation": "portrait-primary",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": [],
+  "appVersion": "1"
+}
