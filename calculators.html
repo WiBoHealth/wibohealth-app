@@ -13,12 +13,17 @@
     <meta property="og:title" content="الحاسبات الصحية المجانية | WiBo Health">
     <meta property="og:description" content="احسب BMI، BMR، السعرات الحرارية واحتياجك من الماء - مجاناً">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wibo-health.com/calculators.html">
+    <meta property="og:url" content="https://wibohealth.com/calculators.html">
     
     <!-- Additional SEO -->
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wibohealth.com/calculators.html">
+    
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html" />
+
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/calculators.html" />
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,6 +53,86 @@
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
 
+    <!-- Page-specific translations -->
+    <script>
+        const calculatorTranslations = {
+            ar: {
+                // BMI Calculator
+                'bmi_title': 'حاسبة مؤشر كتلة الجسم (BMI)',
+                'bmi_weight': 'الوزن (كجم)',
+                'bmi_weight_placeholder': 'مثال: 70',
+                'bmi_height': 'الطول (سم)',
+                'bmi_height_placeholder': 'مثال: 170',
+                'bmi_calculate': 'احسب مؤشر كتلة الجسم',
+                'bmi_your_result': 'مؤشر كتلة جسمك',
+                'bmi_underweight': 'نحيف - وزن أقل من الطبيعي',
+                'bmi_normal': 'طبيعي - وزن مثالي ✓',
+                'bmi_overweight': 'زيادة وزن',
+                'bmi_obese': 'سمنة - يُنصح بمراجعة طبيب',
+                'bmi_error': 'الرجاء إدخال الوزن والطول',
+                
+                // Calories Calculator
+                'cal_title': 'حاسبة السعرات الحرارية اليومية',
+                'cal_age': 'العمر',
+                'cal_age_placeholder': 'مثال: 30',
+                'cal_gender': 'الجنس',
+                'cal_gender_male': 'ذكر',
+                'cal_gender_female': 'أنثى',
+                'cal_weight': 'الوزن (كجم)',
+                'cal_weight_placeholder': 'مثال: 70',
+                'cal_height': 'الطول (سم)',
+                'cal_height_placeholder': 'مثال: 170',
+                'cal_activity': 'مستوى النشاط',
+                'cal_activity_1': 'قليل الحركة (لا رياضة)',
+                'cal_activity_2': 'نشاط خفيف (1-3 أيام/أسبوع)',
+                'cal_activity_3': 'نشاط متوسط (3-5 أيام/أسبوع)',
+                'cal_activity_4': 'نشاط عالي (6-7 أيام/أسبوع)',
+                'cal_activity_5': 'نشاط عالي جداً (رياضي)',
+                'cal_calculate': 'احسب السعرات اليومية',
+                'cal_your_needs': 'احتياجك اليومي',
+                'cal_per_day': 'سعرة حرارية في اليوم',
+                'cal_error': 'الرجاء إدخال جميع البيانات'
+            },
+            en: {
+                // BMI Calculator
+                'bmi_title': 'Body Mass Index (BMI) Calculator',
+                'bmi_weight': 'Weight (kg)',
+                'bmi_weight_placeholder': 'Example: 70',
+                'bmi_height': 'Height (cm)',
+                'bmi_height_placeholder': 'Example: 170',
+                'bmi_calculate': 'Calculate BMI',
+                'bmi_your_result': 'Your BMI',
+                'bmi_underweight': 'Underweight',
+                'bmi_normal': 'Normal - Ideal weight ✓',
+                'bmi_overweight': 'Overweight',
+                'bmi_obese': 'Obesity - consult a doctor',
+                'bmi_error': 'Please enter weight and height',
+                
+                // Calories Calculator
+                'cal_title': 'Daily Calorie Calculator',
+                'cal_age': 'Age',
+                'cal_age_placeholder': 'Example: 30',
+                'cal_gender': 'Gender',
+                'cal_gender_male': 'Male',
+                'cal_gender_female': 'Female',
+                'cal_weight': 'Weight (kg)',
+                'cal_weight_placeholder': 'Example: 70',
+                'cal_height': 'Height (cm)',
+                'cal_height_placeholder': 'Example: 170',
+                'cal_activity': 'Activity Level',
+                'cal_activity_1': 'Sedentary (no exercise)',
+                'cal_activity_2': 'Light Activity (1-3 days/week)',
+                'cal_activity_3': 'Moderate Activity (3-5 days/week)',
+                'cal_activity_4': 'High Activity (6-7 days/week)',
+                'cal_activity_5': 'Very High Activity (Athlete)',
+                'cal_calculate': 'Calculate Daily Calories',
+                'cal_your_needs': 'Your Daily Needs',
+                'cal_per_day': 'calories per day',
+                'cal_error': 'Please enter all data'
+            }
+        };
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -55,10 +140,34 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-gradient-1: #667eea;
+            --bg-gradient-2: #764ba2;
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+            --shadow-hover: rgba(0,0,0,0.2);
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
             min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            --bg-gradient-1: #1a1a2e;
+            --bg-gradient-2: #16213e;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            --shadow: rgba(255,255,255,0.1);
+            --shadow-hover: rgba(255,255,255,0.2);
         }
 
         .container {
@@ -69,9 +178,9 @@
 
         /* Header */
         header {
-            background: white;
+            background: var(--card-bg);
             padding: 20px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 20px var(--shadow);
             margin-bottom: 30px;
             position: sticky;
             top: 0;
@@ -79,7 +188,6 @@
             transition: all 0.3s ease, transform 0.3s ease;
         }
         
-        /* Auto-hide for navigation */
         header.hide-nav {
             transform: translateY(-100%);
         }
@@ -118,22 +226,84 @@
 
         .logo-text h1 {
             font-size: 32px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .lang-btn {
+            width: 45px;
+            height: 45px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .theme-toggle {
+            width: 45px;
+            height: 45px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
         }
 
         .nav-menu {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .nav-link {
             padding: 10px 20px;
             background: #f3f4f6;
-            color: #2c3e50;
+            color: var(--text-dark);
             text-decoration: none;
             border-radius: 20px;
             font-weight: 600;
@@ -141,27 +311,149 @@
             font-size: 14px;
         }
 
+        body.dark-mode .nav-link {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+        }
+
         .nav-link:hover, .nav-link.active {
-            background: #2ecc71;
+            background: var(--primary-color);
             color: white;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .hamburger-menu span {
+            background: white;
+        }
+
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100%;
+            background: var(--card-bg);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-menu.active {
+            right: 0;
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--text-dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-close:hover {
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .mobile-nav-link {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .mobile-nav-link i {
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
         }
 
         /* Calculator Card */
         .calculator-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px var(--shadow);
             margin-bottom: 30px;
+            transition: all 0.3s ease;
         }
 
         .calculator-card h2 {
-            color: #2ecc71;
+            color: var(--text-dark);
             font-size: 2rem;
             margin-bottom: 30px;
             display: flex;
             align-items: center;
             gap: 15px;
+        }
+
+        .calculator-card h2 i {
+            color: var(--primary-color);
         }
 
         .form-group {
@@ -172,7 +464,7 @@
             display: block;
             margin-bottom: 10px;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--text-dark);
             font-size: 1.1rem;
         }
 
@@ -185,19 +477,26 @@
             font-size: 16px;
             font-family: 'Cairo', sans-serif;
             transition: all 0.3s;
+            background: var(--card-bg);
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group select {
+            border-color: rgba(255,255,255,0.2);
         }
 
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #2ecc71;
+            border-color: var(--primary-color);
             box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
         }
 
         .btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             border-radius: 10px;
@@ -215,7 +514,7 @@
         }
 
         .result-box {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 30px;
             border-radius: 15px;
@@ -252,15 +551,15 @@
 
         /* Footer */
         footer {
-            background: white;
+            background: var(--card-bg);
             padding: 30px 0;
             margin-top: 50px;
             text-align: center;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 -5px 20px var(--shadow);
         }
 
         footer p {
-            color: #7f8c8d;
+            color: var(--text-light);
         }
 
         /* Responsive */
@@ -271,6 +570,14 @@
             }
             .calculator-card {
                 padding: 25px;
+            }
+            
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
             }
         }
     </style>
@@ -311,23 +618,33 @@
                         <h1>WiBo Health</h1>
                     </div>
                 </a>
-                
-                <!-- Hamburger Menu Button (Mobile Only) -->
-                <div class="hamburger-menu" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                <div class="header-actions">
+                    <!-- Language Toggle Buttons (Arabic & English Only) -->
+                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    
+                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-                
-                <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-                    <a href="calculators.html" class="nav-link active"><i class="fas fa-calculator"></i> الحاسبات</a>
-                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
-                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
-                    <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> د. وسيم</a>
-                </nav>
             </div>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+                <a href="calculators.html" class="nav-link active"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
+                <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم</span></a>
+            </nav>
         </div>
     </header>
 
@@ -340,42 +657,14 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
-            <i class="fas fa-home"></i>
-            الصفحة الرئيسية
-        </a>
-        <a href="foods.html" class="mobile-nav-link">
-            <i class="fas fa-utensils"></i>
-            دليل الأطعمة
-        </a>
-        <a href="calculators.html" class="mobile-nav-link">
-            <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
-        </a>
-        <a href="recipes.html" class="mobile-nav-link">
-            <i class="fas fa-book-open"></i>
-            الوصفات الصحية
-        </a>
-        <a href="articles.html" class="mobile-nav-link">
-            <i class="fas fa-book-medical"></i>
-            المقالات الصحية
-        </a>
-        <a href="doctor.html" class="mobile-nav-link">
-            <i class="fas fa-user-md"></i>
-            د. وسيم حبيب
-        </a>
-        <a href="pricing.html" class="mobile-nav-link">
-            <i class="fas fa-tag"></i>
-            الأسعار
-        </a>
-        <a href="about.html" class="mobile-nav-link">
-            <i class="fas fa-info-circle"></i>
-            من نحن
-        </a>
-        <a href="contact.html" class="mobile-nav-link">
-            <i class="fas fa-envelope"></i>
-            اتصل بنا
-        </a>
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
+        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
+        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
+        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
+        <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">من نحن</span></a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
     </nav>
 
     <!-- Main Content -->
@@ -384,23 +673,25 @@
         <div class="calculator-card">
             <h2>
                 <i class="fas fa-weight"></i>
-                حاسبة مؤشر كتلة الجسم (BMI)
+                <span data-i18n="bmi_title">حاسبة مؤشر كتلة الجسم (BMI)</span>
             </h2>
             
             <div class="form-group">
-                <label>الوزن (كجم)</label>
-                <input type="number" id="weight" placeholder="مثال: 70">
+                <label data-i18n="bmi_weight">الوزن (كجم)</label>
+                <input type="number" id="weight" data-i18n-placeholder="bmi_weight_placeholder" placeholder="مثال: 70">
             </div>
             
             <div class="form-group">
-                <label>الطول (سم)</label>
-                <input type="number" id="height" placeholder="مثال: 170">
+                <label data-i18n="bmi_height">الطول (سم)</label>
+                <input type="number" id="height" data-i18n-placeholder="bmi_height_placeholder" placeholder="مثال: 170">
             </div>
             
-            <button class="btn" onclick="calculateBMI()">احسب مؤشر كتلة الجسم</button>
+            <button class="btn" onclick="calculateBMI()">
+                <span data-i18n="bmi_calculate">احسب مؤشر كتلة الجسم</span>
+            </button>
             
             <div class="result-box" id="bmiResult">
-                <h3>مؤشر كتلة جسمك</h3>
+                <h3 data-i18n="bmi_your_result">مؤشر كتلة جسمك</h3>
                 <div class="result-value" id="bmiValue"></div>
                 <p class="result-label" id="bmiCategory"></p>
             </div>
@@ -410,78 +701,68 @@
         <div class="calculator-card">
             <h2>
                 <i class="fas fa-fire"></i>
-                حاسبة السعرات الحرارية اليومية
+                <span data-i18n="cal_title">حاسبة السعرات الحرارية اليومية</span>
             </h2>
             
             <div class="form-group">
-                <label>العمر</label>
-                <input type="number" id="age" placeholder="مثال: 30">
+                <label data-i18n="cal_age">العمر</label>
+                <input type="number" id="age" data-i18n-placeholder="cal_age_placeholder" placeholder="مثال: 30">
             </div>
             
             <div class="form-group">
-                <label>الجنس</label>
+                <label data-i18n="cal_gender">الجنس</label>
                 <select id="gender">
-                    <option value="male">ذكر</option>
-                    <option value="female">أنثى</option>
+                    <option value="male" data-i18n="cal_gender_male">ذكر</option>
+                    <option value="female" data-i18n="cal_gender_female">أنثى</option>
                 </select>
             </div>
             
             <div class="form-group">
-                <label>الوزن (كجم)</label>
-                <input type="number" id="weightCal" placeholder="مثال: 70">
+                <label data-i18n="cal_weight">الوزن (كجم)</label>
+                <input type="number" id="weightCal" data-i18n-placeholder="cal_weight_placeholder" placeholder="مثال: 70">
             </div>
             
             <div class="form-group">
-                <label>الطول (سم)</label>
-                <input type="number" id="heightCal" placeholder="مثال: 170">
+                <label data-i18n="cal_height">الطول (سم)</label>
+                <input type="number" id="heightCal" data-i18n-placeholder="cal_height_placeholder" placeholder="مثال: 170">
             </div>
             
             <div class="form-group">
-                <label>مستوى النشاط</label>
+                <label data-i18n="cal_activity">مستوى النشاط</label>
                 <select id="activity">
-                    <option value="1.2">قليل الحركة (لا رياضة)</option>
-                    <option value="1.375">نشاط خفيف (1-3 أيام/أسبوع)</option>
-                    <option value="1.55">نشاط متوسط (3-5 أيام/أسبوع)</option>
-                    <option value="1.725">نشاط عالي (6-7 أيام/أسبوع)</option>
-                    <option value="1.9">نشاط عالي جداً (رياضي)</option>
+                    <option value="1.2" data-i18n="cal_activity_1">قليل الحركة (لا رياضة)</option>
+                    <option value="1.375" data-i18n="cal_activity_2">نشاط خفيف (1-3 أيام/أسبوع)</option>
+                    <option value="1.55" data-i18n="cal_activity_3">نشاط متوسط (3-5 أيام/أسبوع)</option>
+                    <option value="1.725" data-i18n="cal_activity_4">نشاط عالي (6-7 أيام/أسبوع)</option>
+                    <option value="1.9" data-i18n="cal_activity_5">نشاط عالي جداً (رياضي)</option>
                 </select>
             </div>
             
-            <button class="btn" onclick="calculateCalories()">احسب السعرات اليومية</button>
+            <button class="btn" onclick="calculateCalories()">
+                <span data-i18n="cal_calculate">احسب السعرات اليومية</span>
+            </button>
             
             <div class="result-box" id="caloriesResult">
-                <h3>احتياجك اليومي</h3>
+                <h3 data-i18n="cal_your_needs">احتياجك اليومي</h3>
                 <div class="result-value" id="caloriesValue"></div>
-                <p class="result-label">سعرة حرارية في اليوم</p>
+                <p class="result-label" data-i18n="cal_per_day">سعرة حرارية في اليوم</p>
             </div>
         </div>
     </div>
 
-    <!-- Footer متوافق مع AdSense -->
+    <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
-            </a>
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_about">من نحن</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
-            </a>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_contact">اتصل بنا</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
-            </a>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
-            </a>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
-            © 2024 WiBo Health. جميع الحقوق محفوظة.
-        </p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
-        </p>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_developed">💚 مُطور بـ ♥ من أجل بودي</p>
     </footer>
 
     <script>
@@ -491,20 +772,28 @@
             const height = parseFloat(document.getElementById('height').value) / 100;
             
             if (!weight || !height) {
-                alert('الرجاء إدخال الوزن والطول');
+                alert(tc('bmi_error'));
                 return;
             }
             
             const bmi = (weight / (height * height)).toFixed(1);
-            let category = '';
+            let categoryKey = '';
             
-            if (bmi < 18.5) category = 'نحيف - وزن أقل من الطبيعي';
-            else if (bmi < 25) category = 'طبيعي - وزن مثالي ✓';
-            else if (bmi < 30) category = 'زيادة وزن';
-            else category = 'سمنة - يُنصح بمراجعة طبيب';
+            if (bmi < 18.5) {
+                categoryKey = 'bmi_underweight';
+            }
+            else if (bmi < 25) {
+                categoryKey = 'bmi_normal';
+            }
+            else if (bmi < 30) {
+                categoryKey = 'bmi_overweight';
+            }
+            else {
+                categoryKey = 'bmi_obese';
+            }
             
             document.getElementById('bmiValue').textContent = bmi;
-            document.getElementById('bmiCategory').textContent = category;
+            document.getElementById('bmiCategory').textContent = tc(categoryKey);
             document.getElementById('bmiResult').classList.add('show');
         }
 
@@ -517,7 +806,7 @@
             const activity = parseFloat(document.getElementById('activity').value);
             
             if (!age || !weight || !height) {
-                alert('الرجاء إدخال جميع البيانات');
+                alert(tc('cal_error'));
                 return;
             }
             
@@ -533,6 +822,100 @@
             document.getElementById('caloriesValue').textContent = calories;
             document.getElementById('caloriesResult').classList.add('show');
         }
+
+        // Toggle theme
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const body = document.body;
+            
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Load theme
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+            }
+            
+            // Initialize language system
+            updateCalculatorLanguage();
+        });
+        
+        // Change language function
+        function changeLanguage(lang) {
+            // Update HTML attributes
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.body.style.fontFamily = lang === 'ar' ? "'Cairo', sans-serif" : "'Inter', sans-serif";
+            
+            // Save preference
+            localStorage.setItem('preferred_language', lang);
+            
+            // Update all data-i18n elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (calculatorTranslations[lang] && calculatorTranslations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = calculatorTranslations[lang][key];
+                    } else {
+                        el.textContent = calculatorTranslations[lang][key];
+                    }
+                }
+            });
+            
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (calculatorTranslations[lang] && calculatorTranslations[lang][key]) {
+                    el.placeholder = calculatorTranslations[lang][key];
+                }
+            });
+            
+            // Update language button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.style.opacity = '0.5';
+                    btn.style.pointerEvents = 'none';
+                } else {
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                }
+            });
+        }
+        
+        // Update calculator language
+        function updateCalculatorLanguage() {
+            const savedLang = localStorage.getItem('preferred_language') || 'ar';
+            if (savedLang !== 'ar') {
+                changeLanguage(savedLang);
+            }
+        }
+
+        
+        // Listen to language changes
+        window.addEventListener('languageChanged', function(e) {
+            updateCalculatorLanguage();
+        });
         
         // Auto-hide Header on Scroll
         let lastScrollTop = 0;

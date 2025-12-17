@@ -1,39 +1,42 @@
 {
   "version": 2,
-  "public": true,
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/en/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/en",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/nl",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
-      "source": "/well-known/assetlinks.json",
+      "source": "/(.*)",
       "headers": [
         {
-          "key": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
-      "source": "/manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/json"
-        }
-      ]
-    },
-    {
-      "source": "/service-worker.js",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        },
-        {
-          "key": "Service-Worker-Allowed",
-          "value": "/"
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     },
@@ -47,38 +50,17 @@
       ]
     },
     {
-      "source": "/sitemap.xml",
+      "source": "/service-worker.js",
       "headers": [
         {
-          "key": "Content-Type",
-          "value": "application/xml"
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         },
         {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
-      "source": "/robots.txt",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/plain"
+          "key": "Service-Worker-Allowed",
+          "value": "/"
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/.well-known/assetlinks.json",
-      "destination": "/well-known/assetlinks.json"
-    }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }

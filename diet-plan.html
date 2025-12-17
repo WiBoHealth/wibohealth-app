@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ابدأ رحلتك الصحية - WiBo Health</title>
+    <title data-i18n="page_title_diet_plan">ابدأ رحلتك الصحية - WiBo Health</title>
     <meta name="description" content="ابدأ رحلتك الصحية مع خطة دايت مخصصة: استخدام المؤشر الجلايسيمي والأنسولين، متابعة يومية، وصفات صحية، ونصائح احترافية - جرب أسبوع مجاني!">
     <link rel="canonical" href="https://wibohealth.com/diet-plan.html">
+    
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/diet-plan.html">
+
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diet-plan.html">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,17 +39,82 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --accent-color: #667eea;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.8;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px var(--shadow);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle, .lang-toggle {
+            background: rgba(46, 204, 113, 0.2);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
         }
 
         /* Hero Section */
@@ -90,13 +160,17 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        .hero .intro-text p {
+            margin-bottom: 15px;
+        }
+
         /* Pricing Section */
         .pricing-section {
-            background: white;
+            background: var(--card-bg);
             border-radius: 20px;
             padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px var(--shadow);
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
@@ -113,13 +187,13 @@
 
         .pricing-section h2 {
             text-align: center;
-            color: #2ecc71;
+            color: var(--primary-color);
             font-size: 2.2em;
             margin-bottom: 30px;
         }
 
         .free-week {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 25px;
             border-radius: 15px;
@@ -145,26 +219,31 @@
             transition: all 0.3s;
         }
 
+        body.dark-mode .plan-card {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+
         .plan-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px var(--shadow);
         }
 
         .plan-card h3 {
-            color: #2c3e50;
+            color: var(--text-dark);
             font-size: 1.5em;
             margin-bottom: 10px;
         }
 
         .plan-card .price {
-            color: #2ecc71;
+            color: var(--primary-color);
             font-size: 2.5em;
             font-weight: 900;
             margin-bottom: 15px;
         }
 
         .plan-card .description {
-            color: #7f8c8d;
+            color: var(--text-light);
             font-size: 1.05em;
             line-height: 1.7;
         }
@@ -186,16 +265,16 @@
 
         /* Form Section */
         .form-container {
-            background: white;
+            background: var(--card-bg);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px var(--shadow);
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
         .form-container h2 {
             text-align: center;
-            color: #2ecc71;
+            color: var(--primary-color);
             font-size: 2em;
             margin-bottom: 30px;
         }
@@ -205,7 +284,7 @@
         }
 
         .form-section h3 {
-            color: #2c3e50;
+            color: var(--text-dark);
             font-size: 1.5em;
             margin-bottom: 20px;
             display: flex;
@@ -214,7 +293,7 @@
         }
 
         .form-section h3 i {
-            color: #2ecc71;
+            color: var(--primary-color);
         }
 
         .form-group {
@@ -223,7 +302,7 @@
 
         .form-group label {
             display: block;
-            color: #2c3e50;
+            color: var(--text-dark);
             font-weight: 600;
             margin-bottom: 10px;
             font-size: 1.1em;
@@ -240,15 +319,30 @@
             font-family: 'Cairo', sans-serif;
             transition: all 0.3s;
             background: #f8f9fa;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group select,
+        body.dark-mode .form-group textarea {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: white;
         }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #2ecc71;
+            border-color: var(--primary-color);
             background: white;
             box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+        }
+
+        body.dark-mode .form-group input:focus,
+        body.dark-mode .form-group select:focus,
+        body.dark-mode .form-group textarea:focus {
+            background: rgba(255,255,255,0.15);
         }
 
         .form-group textarea {
@@ -262,23 +356,27 @@
             gap: 20px;
         }
 
-        .radio-group {
+        .radio-group,
+        .checkbox-group {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 15px;
             margin-top: 10px;
         }
 
-        .radio-option {
+        .radio-option,
+        .checkbox-option {
             position: relative;
         }
 
-        .radio-option input[type="radio"] {
+        .radio-option input[type="radio"],
+        .checkbox-option input[type="checkbox"] {
             position: absolute;
             opacity: 0;
         }
 
-        .radio-option label {
+        .radio-option label,
+        .checkbox-option label {
             display: block;
             padding: 15px;
             background: #f8f9fa;
@@ -288,54 +386,27 @@
             cursor: pointer;
             transition: all 0.3s;
             font-weight: 600;
+            color: var(--text-dark);
         }
 
-        .radio-option input[type="radio"]:checked + label {
-            background: #2ecc71;
+        body.dark-mode .radio-option label,
+        body.dark-mode .checkbox-option label {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
             color: white;
-            border-color: #2ecc71;
+        }
+
+        .radio-option input[type="radio"]:checked + label,
+        .checkbox-option input[type="checkbox"]:checked + label {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
             transform: scale(1.05);
         }
 
-        .radio-option label:hover {
-            border-color: #2ecc71;
-        }
-
-        .checkbox-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .checkbox-option {
-            position: relative;
-        }
-
-        .checkbox-option input[type="checkbox"] {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .checkbox-option label {
-            display: block;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-        }
-
-        .checkbox-option input[type="checkbox"]:checked + label {
-            background: #2ecc71;
-            color: white;
-            border-color: #2ecc71;
-        }
-
+        .radio-option label:hover,
         .checkbox-option label:hover {
-            border-color: #2ecc71;
+            border-color: var(--primary-color);
         }
 
         .bmi-result {
@@ -354,7 +425,7 @@
             text-align: center;
             margin: 30px 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--accent-color), #764ba2);
             color: white;
             border-radius: 12px;
             font-size: 1.2em;
@@ -365,7 +436,7 @@
         .submit-btn {
             width: 100%;
             padding: 20px;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
             border-radius: 15px;
@@ -388,7 +459,7 @@
         }
 
         .helper-text {
-            color: #7f8c8d;
+            color: var(--text-light);
             font-size: 0.95em;
             margin-top: 8px;
             font-style: italic;
@@ -441,106 +512,133 @@
             .checkbox-group {
                 grid-template-columns: 1fr;
             }
+
+            .header-controls {
+                display: flex;
+            }
         }
     </style>
+    <!-- Unified Language System -->
+    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" style="text-decoration: none; color: var(--primary-color); font-size: 24px; font-weight: bold;">
+                💚 WiBo Health
+            </a>
+
+            <div class="header-controls">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                    <span id="langText">EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         <!-- Hero Section -->
         <div class="hero">
-            <h1>🌟 ابدأ رحلتك نحو صحة أفضل</h1>
-            <p class="subtitle">مع د. وسيم حبيب - أخصائي التغذية العلاجية</p>
+            <h1 data-i18n="diet_hero_title">🌟 ابدأ رحلتك نحو صحة أفضل</h1>
+            <p class="subtitle" data-i18n="diet_hero_subtitle">مع د. وسيم حبيب - أخصائي التغذية العلاجية</p>
             <div class="intro-text">
-                <p><strong>مرحباً بك! 💚</strong></p>
-                <p>نحن هنا لمساعدتك في الوصول لأهدافك الصحية بطريقة آمنة وصحية.</p>
-                <p>خلّينا نتعرف عليك أكثر عشان نقدر نحضّر لك خطة غذائية مناسبة 100% لحالتك!</p>
-                <p><strong>✨ الاستشارة الأولى والأسبوع الأول من الدايت مجاناً تماماً!</strong></p>
+                <p><strong data-i18n="diet_hero_greeting">مرحباً بك! 💚</strong></p>
+                <p data-i18n="diet_hero_intro_1">نحن هنا لمساعدتك في الوصول لأهدافك الصحية بطريقة آمنة وصحية.</p>
+                <p data-i18n="diet_hero_intro_2">خلّينا نتعرف عليك أكثر عشان نقدر نحضّر لك خطة غذائية مناسبة 100% لحالتك!</p>
+                <p><strong data-i18n="diet_hero_special">✨ الاستشارة الأولى والأسبوع الأول من الدايت مجاناً تماماً!</strong></p>
             </div>
         </div>
 
         <!-- Pricing Section -->
         <div class="pricing-section">
-            <h2>💰 خطط الدايت</h2>
+            <h2 data-i18n="diet_pricing_title">💰 خطط الدايت</h2>
             
-            <div class="free-week">
+            <div class="free-week" data-i18n="diet_free_week">
                 🎁 أسبوع دايت مجاني - لجميع الحالات!
             </div>
 
             <div class="pricing-plans">
                 <div class="plan-card">
-                    <h3>📌 دايت لخسارة الوزن</h3>
-                    <div class="price">$50<span style="font-size: 0.4em; font-weight: 400;">/شهر</span></div>
+                    <h3 data-i18n="diet_plan_1_title">📌 دايت لخسارة الوزن</h3>
+                    <div class="price">$50<span style="font-size: 0.4em; font-weight: 400;" data-i18n="diet_per_month">/شهر</span></div>
                     <p class="description">
-                        • خطة غذائية أسبوعية<br>
-                        • قائمة تسوق مفصلة<br>
-                        • متابعة أسبوعية<br>
-                        • تعديلات حسب التقدم
+                        <span data-i18n="diet_plan_1_feature_1">• خطة غذائية أسبوعية</span><br>
+                        <span data-i18n="diet_plan_1_feature_2">• قائمة تسوق مفصلة</span><br>
+                        <span data-i18n="diet_plan_1_feature_3">• متابعة أسبوعية</span><br>
+                        <span data-i18n="diet_plan_1_feature_4">• تعديلات حسب التقدم</span>
                     </p>
                 </div>
 
                 <div class="plan-card">
-                    <h3>🏥 دايت علاجي</h3>
-                    <div class="price">$100<span style="font-size: 0.4em; font-weight: 400;">/شهر</span></div>
+                    <h3 data-i18n="diet_plan_2_title">🏥 دايت علاجي</h3>
+                    <div class="price">$100<span style="font-size: 0.4em; font-weight: 400;" data-i18n="diet_per_month">/شهر</span></div>
                     <p class="description">
-                        • لمن يعاني من أمراض مزمنة<br>
-                        • خطة علاجية مخصصة<br>
-                        • متابعة يومية/أسبوعية<br>
-                        • استشارات عبر واتساب
+                        <span data-i18n="diet_plan_2_feature_1">• لمن يعاني من أمراض مزمنة</span><br>
+                        <span data-i18n="diet_plan_2_feature_2">• خطة علاجية مخصصة</span><br>
+                        <span data-i18n="diet_plan_2_feature_3">• متابعة يومية/أسبوعية</span><br>
+                        <span data-i18n="diet_plan_2_feature_4">• استشارات عبر واتساب</span>
                     </p>
                 </div>
             </div>
 
             <div class="discount-offer">
-                <strong>🔥 عرض خاص: خصم 20% عند الاشتراك لـ 3 شهور!</strong>
-                • دايت عادي 3 شهور: <strong>$120</strong> بدلاً من $150 (توفير $30)<br>
-                • دايت علاجي 3 شهور: <strong>$240</strong> بدلاً من $300 (توفير $60)
+                <strong data-i18n="diet_discount_title">🔥 عرض خاص: خصم 20% عند الاشتراك لـ 3 شهور!</strong>
+                <div data-i18n="diet_discount_text">• دايت عادي 3 شهور: <strong>$120</strong> بدلاً من $150 (توفير $30)<br>
+                • دايت علاجي 3 شهور: <strong>$240</strong> بدلاً من $300 (توفير $60)</div>
             </div>
         </div>
 
         <!-- Form Section -->
         <div class="form-container">
-            <h2>📋 عرّفنا عن نفسك</h2>
+            <h2 data-i18n="diet_form_title">📋 عرّفنا عن نفسك</h2>
             
             <form id="dietForm">
                 <!-- Personal Info -->
                 <div class="form-section">
-                    <h3><i class="fas fa-user"></i> معلومات شخصية</h3>
+                    <h3><i class="fas fa-user"></i> <span data-i18n="diet_personal_info">معلومات شخصية</span></h3>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label>شو اسمك؟ 😊</label>
+                            <label data-i18n="diet_label_name">شو اسمك؟ 😊</label>
                             <input type="text" id="name" name="name" placeholder="مثال: محمد أحمد" required>
                         </div>
                         
                         <div class="form-group">
-                            <label>كم عمرك؟</label>
+                            <label data-i18n="diet_label_age">كم عمرك؟</label>
                             <input type="number" id="age" name="age" placeholder="مثال: 35" min="15" max="100" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>الجنس</label>
+                        <label data-i18n="diet_label_gender">الجنس</label>
                         <div class="radio-group">
                             <div class="radio-option">
                                 <input type="radio" id="male" name="gender" value="ذكر" required>
-                                <label for="male">ذكر 👨</label>
+                                <label for="male" data-i18n="diet_gender_male">ذكر 👨</label>
                             </div>
                             <div class="radio-option">
                                 <input type="radio" id="female" name="gender" value="أنثى">
-                                <label for="female">أنثى 👩</label>
+                                <label for="female" data-i18n="diet_gender_female">أنثى 👩</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>رقم الواتساب 📱</label>
+                            <label data-i18n="diet_label_whatsapp">رقم الواتساب 📱</label>
                             <input type="tel" id="whatsapp" name="whatsapp" placeholder="+966501234567" required>
-                            <p class="helper-text">رح نتواصل معك عبر الواتساب</p>
+                            <p class="helper-text" data-i18n="diet_helper_whatsapp">رح نتواصل معك عبر الواتساب</p>
                         </div>
                         
                         <div class="form-group">
-                            <label>البريد الإلكتروني (اختياري) 📧</label>
+                            <label data-i18n="diet_label_email">البريد الإلكتروني (اختياري) 📧</label>
                             <input type="email" id="email" name="email" placeholder="example@email.com">
                         </div>
                     </div>
@@ -548,21 +646,21 @@
 
                 <!-- Health Info -->
                 <div class="form-section">
-                    <h3><i class="fas fa-heartbeat"></i> معلومات صحية</h3>
+                    <h3><i class="fas fa-heartbeat"></i> <span data-i18n="diet_health_info">معلومات صحية</span></h3>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label>شو وزنك الحالي؟ (كجم) ⚖️</label>
+                            <label data-i18n="diet_label_weight">شو وزنك الحالي؟ (كجم) ⚖️</label>
                             <input type="number" id="weight" name="weight" placeholder="مثال: 85" min="30" max="300" step="0.1" required>
                         </div>
                         
                         <div class="form-group">
-                            <label>شو طولك؟ (سم) 📏</label>
+                            <label data-i18n="diet_label_height">شو طولك؟ (سم) 📏</label>
                             <input type="number" id="height" name="height" placeholder="مثال: 175" min="100" max="250" required>
                         </div>
                         
                         <div class="form-group">
-                            <label>شو الوزن اللي بدك توصله؟ (كجم) 🎯</label>
+                            <label data-i18n="diet_label_target_weight">شو الوزن اللي بدك توصله؟ (كجم) 🎯</label>
                             <input type="number" id="targetWeight" name="targetWeight" placeholder="مثال: 75" min="30" max="300" step="0.1" required>
                         </div>
                     </div>
@@ -572,139 +670,139 @@
 
                 <!-- Activity Level -->
                 <div class="form-section">
-                    <h3><i class="fas fa-running"></i> كيف نشاطك اليومي؟</h3>
+                    <h3><i class="fas fa-running"></i> <span data-i18n="diet_activity_title">كيف نشاطك اليومي؟</span></h3>
                     
                     <div class="radio-group">
                         <div class="radio-option">
                             <input type="radio" id="sedentary" name="activity" value="قليل الحركة (مكتبي)" required>
-                            <label for="sedentary">قليل الحركة<br>(مكتبي) 🪑</label>
+                            <label for="sedentary" data-i18n="diet_activity_sedentary">قليل الحركة<br>(مكتبي) 🪑</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="light" name="activity" value="نشاط خفيف (1-3 أيام/أسبوع)">
-                            <label for="light">نشاط خفيف<br>(1-3 أيام) 🚶</label>
+                            <label for="light" data-i18n="diet_activity_light">نشاط خفيف<br>(1-3 أيام) 🚶</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="moderate" name="activity" value="نشاط متوسط (3-5 أيام/أسبوع)">
-                            <label for="moderate">نشاط متوسط<br>(3-5 أيام) 🏃</label>
+                            <label for="moderate" data-i18n="diet_activity_moderate">نشاط متوسط<br>(3-5 أيام) 🏃</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="active" name="activity" value="نشاط عالي (6-7 أيام/أسبوع)">
-                            <label for="active">نشاط عالي<br>(6-7 أيام) 💪</label>
+                            <label for="active" data-i18n="diet_activity_high">نشاط عالي<br>(6-7 أيام) 💪</label>
                         </div>
                     </div>
                 </div>
 
                 <!-- Goal -->
                 <div class="form-section">
-                    <h3><i class="fas fa-bullseye"></i> شو هدفك؟</h3>
+                    <h3><i class="fas fa-bullseye"></i> <span data-i18n="diet_goal_title">شو هدفك؟</span></h3>
                     
                     <div class="radio-group">
                         <div class="radio-option">
                             <input type="radio" id="lose" name="goal" value="خسارة وزن" required>
-                            <label for="lose">خسارة وزن 📉</label>
+                            <label for="lose" data-i18n="diet_goal_lose">خسارة وزن 📉</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="gain" name="goal" value="زيادة وزن">
-                            <label for="gain">زيادة وزن 📈</label>
+                            <label for="gain" data-i18n="diet_goal_gain">زيادة وزن 📈</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="maintain" name="goal" value="الحفاظ على الوزن">
-                            <label for="maintain">الحفاظ على الوزن ➡️</label>
+                            <label for="maintain" data-i18n="diet_goal_maintain">الحفاظ على الوزن ➡️</label>
                         </div>
                         <div class="radio-option">
                             <input type="radio" id="muscle" name="goal" value="بناء عضلات">
-                            <label for="muscle">بناء عضلات 💪</label>
+                            <label for="muscle" data-i18n="diet_goal_muscle">بناء عضلات 💪</label>
                         </div>
                     </div>
                 </div>
 
                 <!-- Medical Conditions -->
                 <div class="form-section">
-                    <h3><i class="fas fa-notes-medical"></i> هل تعاني من أمراض مزمنة؟</h3>
+                    <h3><i class="fas fa-notes-medical"></i> <span data-i18n="diet_conditions_title">هل تعاني من أمراض مزمنة؟</span></h3>
                     
                     <div class="checkbox-group">
                         <div class="checkbox-option">
                             <input type="checkbox" id="none" name="conditions" value="لا يوجد">
-                            <label for="none">لا يوجد ✅</label>
+                            <label for="none" data-i18n="diet_conditions_none">لا يوجد ✅</label>
                         </div>
                         <div class="checkbox-option">
                             <input type="checkbox" id="diabetes" name="conditions" value="سكري">
-                            <label for="diabetes">سكري 🩸</label>
+                            <label for="diabetes" data-i18n="diet_conditions_diabetes">سكري 🩸</label>
                         </div>
                         <div class="checkbox-option">
                             <input type="checkbox" id="pressure" name="conditions" value="ضغط دم">
-                            <label for="pressure">ضغط دم 💓</label>
+                            <label for="pressure" data-i18n="diet_conditions_pressure">ضغط دم 💓</label>
                         </div>
                         <div class="checkbox-option">
                             <input type="checkbox" id="cholesterol" name="conditions" value="كوليسترول">
-                            <label for="cholesterol">كوليسترول 🧪</label>
+                            <label for="cholesterol" data-i18n="diet_conditions_cholesterol">كوليسترول 🧪</label>
                         </div>
                         <div class="checkbox-option">
                             <input type="checkbox" id="ibs" name="conditions" value="قولون عصبي">
-                            <label for="ibs">قولون عصبي 🤕</label>
+                            <label for="ibs" data-i18n="diet_conditions_ibs">قولون عصبي 🤕</label>
                         </div>
                         <div class="checkbox-option">
                             <input type="checkbox" id="thyroid" name="conditions" value="غدة درقية">
-                            <label for="thyroid">غدة درقية 🦋</label>
+                            <label for="thyroid" data-i18n="diet_conditions_thyroid">غدة درقية 🦋</label>
                         </div>
                     </div>
 
                     <div class="form-group" style="margin-top: 20px;">
-                        <label>أمراض أخرى (إن وجدت)</label>
+                        <label data-i18n="diet_label_other_conditions">أمراض أخرى (إن وجدت)</label>
                         <textarea id="otherConditions" name="otherConditions" placeholder="مثال: حساسية الربو، التهاب المفاصل..."></textarea>
                     </div>
                 </div>
 
                 <!-- Allergies & Medications -->
                 <div class="form-section">
-                    <h3><i class="fas fa-allergies"></i> الحساسيات والأدوية</h3>
+                    <h3><i class="fas fa-allergies"></i> <span data-i18n="diet_allergies_title">الحساسيات والأدوية</span></h3>
                     
                     <div class="form-group">
-                        <label>هل لديك حساسية من أطعمة معينة? 🚫</label>
+                        <label data-i18n="diet_label_allergies">هل لديك حساسية من أطعمة معينة? 🚫</label>
                         <textarea id="allergies" name="allergies" placeholder="مثال: حساسية من الفول السوداني، البيض، الحليب..."></textarea>
-                        <p class="helper-text">إذا ما في حساسية، اكتب "لا يوجد"</p>
+                        <p class="helper-text" data-i18n="diet_helper_allergies">إذا ما في حساسية، اكتب "لا يوجد"</p>
                     </div>
 
                     <div class="form-group">
-                        <label>هل تتناول أدوية حالياً؟ 💊</label>
+                        <label data-i18n="diet_label_medications">هل تتناول أدوية حالياً؟ 💊</label>
                         <textarea id="medications" name="medications" placeholder="مثال: ميتفورمين 500mg، أسبرين..."></textarea>
-                        <p class="helper-text">إذا ما في أدوية، اكتب "لا يوجد"</p>
+                        <p class="helper-text" data-i18n="diet_helper_medications">إذا ما في أدوية، اكتب "لا يوجد"</p>
                     </div>
                 </div>
 
                 <!-- Dietary Preferences -->
                 <div class="form-section">
-                    <h3><i class="fas fa-utensils"></i> تفضيلاتك الغذائية</h3>
+                    <h3><i class="fas fa-utensils"></i> <span data-i18n="diet_preferences_title">تفضيلاتك الغذائية</span></h3>
                     
                     <div class="form-group">
-                        <label>هل تفضل نظام غذائي معين؟ 🥗</label>
+                        <label data-i18n="diet_label_diet_type">هل تفضل نظام غذائي معين؟ 🥗</label>
                         <div class="radio-group">
                             <div class="radio-option">
                                 <input type="radio" id="balanced" name="dietType" value="متوازن" required>
-                                <label for="balanced">متوازن ⚖️</label>
+                                <label for="balanced" data-i18n="diet_type_balanced">متوازن ⚖️</label>
                             </div>
                             <div class="radio-option">
                                 <input type="radio" id="vegetarian" name="dietType" value="نباتي">
-                                <label for="vegetarian">نباتي 🥬</label>
+                                <label for="vegetarian" data-i18n="diet_type_vegetarian">نباتي 🥬</label>
                             </div>
                             <div class="radio-option">
                                 <input type="radio" id="lowcarb" name="dietType" value="قليل الكربوهيدرات">
-                                <label for="lowcarb">قليل الكربوهيدرات 🥩</label>
+                                <label for="lowcarb" data-i18n="diet_type_lowcarb">قليل الكربوهيدرات 🥩</label>
                             </div>
                             <div class="radio-option">
                                 <input type="radio" id="keto" name="dietType" value="كيتو">
-                                <label for="keto">كيتو 🥑</label>
+                                <label for="keto" data-i18n="diet_type_keto">كيتو 🥑</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>أطعمة تحبها ❤️</label>
+                        <label data-i18n="diet_label_favorites">أطعمة تحبها ❤️</label>
                         <textarea id="favorites" name="favorites" placeholder="مثال: دجاج مشوي، سلطة، تفاح، لوز..."></textarea>
                     </div>
 
                     <div class="form-group">
-                        <label>أطعمة لا تحبها ❌</label>
+                        <label data-i18n="diet_label_dislikes">أطعمة لا تحبها ❌</label>
                         <textarea id="dislikes" name="dislikes" placeholder="مثال: الباذنجان، القرنبيط، السمك..."></textarea>
                     </div>
                 </div>
@@ -713,7 +811,7 @@
                 <div id="progressIndicator" class="progress-indicator"></div>
 
                 <!-- Submit Button -->
-                <button type="submit" class="submit-btn">
+                <button type="submit" class="submit-btn" data-i18n="diet_submit_btn">
                     ابدأ رحلتي الصحية! 🚀
                 </button>
             </form>
@@ -723,12 +821,256 @@
         <div class="back-home">
             <a href="index.html">
                 <i class="fas fa-home"></i>
-                العودة للصفحة الرئيسية
+                <span data-i18n="diet_back_home">العودة للصفحة الرئيسية</span>
             </a>
         </div>
     </div>
 
     <script>
+        // ===== Language System =====
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        // Complete translations for both languages
+        const translations = {
+            ar: {
+                page_title_diet_plan: "ابدأ رحلتك الصحية - WiBo Health",
+                diet_hero_title: "🌟 ابدأ رحلتك نحو صحة أفضل",
+                diet_hero_subtitle: "مع د. وسيم حبيب - أخصائي التغذية العلاجية",
+                diet_hero_greeting: "مرحباً بك! 💚",
+                diet_hero_intro_1: "نحن هنا لمساعدتك في الوصول لأهدافك الصحية بطريقة آمنة وصحية.",
+                diet_hero_intro_2: "خلّينا نتعرف عليك أكثر عشان نقدر نحضّر لك خطة غذائية مناسبة 100% لحالتك!",
+                diet_hero_special: "✨ الاستشارة الأولى والأسبوع الأول من الدايت مجاناً تماماً!",
+                diet_pricing_title: "💰 خطط الدايت",
+                diet_free_week: "🎁 أسبوع دايت مجاني - لجميع الحالات!",
+                diet_per_month: "/شهر",
+                diet_plan_1_title: "📌 دايت لخسارة الوزن",
+                diet_plan_1_feature_1: "• خطة غذائية أسبوعية",
+                diet_plan_1_feature_2: "• قائمة تسوق مفصلة",
+                diet_plan_1_feature_3: "• متابعة أسبوعية",
+                diet_plan_1_feature_4: "• تعديلات حسب التقدم",
+                diet_plan_2_title: "🏥 دايت علاجي",
+                diet_plan_2_feature_1: "• لمن يعاني من أمراض مزمنة",
+                diet_plan_2_feature_2: "• خطة علاجية مخصصة",
+                diet_plan_2_feature_3: "• متابعة يومية/أسبوعية",
+                diet_plan_2_feature_4: "• استشارات عبر واتساب",
+                diet_discount_title: "🔥 عرض خاص: خصم 20% عند الاشتراك لـ 3 شهور!",
+                diet_discount_text: "• دايت عادي 3 شهور: <strong>$120</strong> بدلاً من $150 (توفير $30)<br>• دايت علاجي 3 شهور: <strong>$240</strong> بدلاً من $300 (توفير $60)",
+                diet_form_title: "📋 عرّفنا عن نفسك",
+                diet_personal_info: "معلومات شخصية",
+                diet_label_name: "شو اسمك؟ 😊",
+                diet_label_age: "كم عمرك؟",
+                diet_label_gender: "الجنس",
+                diet_gender_male: "ذكر 👨",
+                diet_gender_female: "أنثى 👩",
+                diet_label_whatsapp: "رقم الواتساب 📱",
+                diet_helper_whatsapp: "رح نتواصل معك عبر الواتساب",
+                diet_label_email: "البريد الإلكتروني (اختياري) 📧",
+                diet_health_info: "معلومات صحية",
+                diet_label_weight: "شو وزنك الحالي؟ (كجم) ⚖️",
+                diet_label_height: "شو طولك؟ (سم) 📏",
+                diet_label_target_weight: "شو الوزن اللي بدك توصله؟ (كجم) 🎯",
+                diet_activity_title: "كيف نشاطك اليومي؟",
+                diet_activity_sedentary: "قليل الحركة<br>(مكتبي) 🪑",
+                diet_activity_light: "نشاط خفيف<br>(1-3 أيام) 🚶",
+                diet_activity_moderate: "نشاط متوسط<br>(3-5 أيام) 🏃",
+                diet_activity_high: "نشاط عالي<br>(6-7 أيام) 💪",
+                diet_goal_title: "شو هدفك؟",
+                diet_goal_lose: "خسارة وزن 📉",
+                diet_goal_gain: "زيادة وزن 📈",
+                diet_goal_maintain: "الحفاظ على الوزن ➡️",
+                diet_goal_muscle: "بناء عضلات 💪",
+                diet_conditions_title: "هل تعاني من أمراض مزمنة؟",
+                diet_conditions_none: "لا يوجد ✅",
+                diet_conditions_diabetes: "سكري 🩸",
+                diet_conditions_pressure: "ضغط دم 💓",
+                diet_conditions_cholesterol: "كوليسترول 🧪",
+                diet_conditions_ibs: "قولون عصبي 🤕",
+                diet_conditions_thyroid: "غدة درقية 🦋",
+                diet_label_other_conditions: "أمراض أخرى (إن وجدت)",
+                diet_allergies_title: "الحساسيات والأدوية",
+                diet_label_allergies: "هل لديك حساسية من أطعمة معينة? 🚫",
+                diet_helper_allergies: "إذا ما في حساسية، اكتب 'لا يوجد'",
+                diet_label_medications: "هل تتناول أدوية حالياً؟ 💊",
+                diet_helper_medications: "إذا ما في أدوية، اكتب 'لا يوجد'",
+                diet_preferences_title: "تفضيلاتك الغذائية",
+                diet_label_diet_type: "هل تفضل نظام غذائي معين؟ 🥗",
+                diet_type_balanced: "متوازن ⚖️",
+                diet_type_vegetarian: "نباتي 🥬",
+                diet_type_lowcarb: "قليل الكربوهيدرات 🥩",
+                diet_type_keto: "كيتو 🥑",
+                diet_label_favorites: "أطعمة تحبها ❤️",
+                diet_label_dislikes: "أطعمة لا تحبها ❌",
+                diet_submit_btn: "ابدأ رحلتي الصحية! 🚀",
+                diet_back_home: "العودة للصفحة الرئيسية",
+                bmi_underweight: "نحيف",
+                bmi_normal: "وزن طبيعي",
+                bmi_overweight: "وزن زائد",
+                bmi_obese: "سمنة",
+                diet_progress_1: "رائع! كمّل معنا 💪",
+                diet_progress_2: "ممتاز! نص الطريق وصلنا 🎯",
+                diet_progress_3: "يلا كمّل! خلصنا تقريباً 🌟",
+                diet_success: "✅ تم! رح نتواصل معك قريب 💚"
+            },
+            en: {
+                page_title_diet_plan: "Start Your Health Journey - WiBo Health",
+                diet_hero_title: "🌟 Start Your Journey to Better Health",
+                diet_hero_subtitle: "With Dr. Waseem Habib - Clinical Nutrition Specialist",
+                diet_hero_greeting: "Welcome! 💚",
+                diet_hero_intro_1: "We're here to help you achieve your health goals safely and effectively.",
+                diet_hero_intro_2: "Let's get to know you better so we can create a personalized nutrition plan 100% tailored to your needs!",
+                diet_hero_special: "✨ First consultation and first week of diet completely free!",
+                diet_pricing_title: "💰 Diet Plans",
+                diet_free_week: "🎁 Free diet week - For all cases!",
+                diet_per_month: "/month",
+                diet_plan_1_title: "📌 Weight Loss Diet",
+                diet_plan_1_feature_1: "• Weekly meal plan",
+                diet_plan_1_feature_2: "• Detailed shopping list",
+                diet_plan_1_feature_3: "• Weekly follow-up",
+                diet_plan_1_feature_4: "• Adjustments based on progress",
+                diet_plan_2_title: "🏥 Therapeutic Diet",
+                diet_plan_2_feature_1: "• For those with chronic diseases",
+                diet_plan_2_feature_2: "• Customized therapeutic plan",
+                diet_plan_2_feature_3: "• Daily/weekly follow-up",
+                diet_plan_2_feature_4: "• WhatsApp consultations",
+                diet_discount_title: "🔥 Special Offer: 20% discount when subscribing for 3 months!",
+                diet_discount_text: "• Regular diet 3 months: <strong>$120</strong> instead of $150 (save $30)<br>• Therapeutic diet 3 months: <strong>$240</strong> instead of $300 (save $60)",
+                diet_form_title: "📋 Tell Us About Yourself",
+                diet_personal_info: "Personal Information",
+                diet_label_name: "What's your name? 😊",
+                diet_label_age: "How old are you?",
+                diet_label_gender: "Gender",
+                diet_gender_male: "Male 👨",
+                diet_gender_female: "Female 👩",
+                diet_label_whatsapp: "WhatsApp Number 📱",
+                diet_helper_whatsapp: "We'll contact you via WhatsApp",
+                diet_label_email: "Email (Optional) 📧",
+                diet_health_info: "Health Information",
+                diet_label_weight: "What's your current weight? (kg) ⚖️",
+                diet_label_height: "What's your height? (cm) 📏",
+                diet_label_target_weight: "What's your target weight? (kg) 🎯",
+                diet_activity_title: "What's your daily activity level?",
+                diet_activity_sedentary: "Sedentary<br>(Desk job) 🪑",
+                diet_activity_light: "Light Activity<br>(1-3 days) 🚶",
+                diet_activity_moderate: "Moderate Activity<br>(3-5 days) 🏃",
+                diet_activity_high: "High Activity<br>(6-7 days) 💪",
+                diet_goal_title: "What's your goal?",
+                diet_goal_lose: "Weight Loss 📉",
+                diet_goal_gain: "Weight Gain 📈",
+                diet_goal_maintain: "Maintain Weight ➡️",
+                diet_goal_muscle: "Build Muscle 💪",
+                diet_conditions_title: "Do you have any chronic diseases?",
+                diet_conditions_none: "None ✅",
+                diet_conditions_diabetes: "Diabetes 🩸",
+                diet_conditions_pressure: "Blood Pressure 💓",
+                diet_conditions_cholesterol: "Cholesterol 🧪",
+                diet_conditions_ibs: "Irritable Bowel 🤕",
+                diet_conditions_thyroid: "Thyroid 🦋",
+                diet_label_other_conditions: "Other diseases (if any)",
+                diet_allergies_title: "Allergies and Medications",
+                diet_label_allergies: "Do you have food allergies? 🚫",
+                diet_helper_allergies: "If no allergies, write 'None'",
+                diet_label_medications: "Are you taking medications? 💊",
+                diet_helper_medications: "If no medications, write 'None'",
+                diet_preferences_title: "Your Dietary Preferences",
+                diet_label_diet_type: "Do you prefer a specific diet? 🥗",
+                diet_type_balanced: "Balanced ⚖️",
+                diet_type_vegetarian: "Vegetarian 🥬",
+                diet_type_lowcarb: "Low Carb 🥩",
+                diet_type_keto: "Keto 🥑",
+                diet_label_favorites: "Foods you love ❤️",
+                diet_label_dislikes: "Foods you dislike ❌",
+                diet_submit_btn: "Start My Health Journey! 🚀",
+                diet_back_home: "Back to Home",
+                bmi_underweight: "Underweight",
+                bmi_normal: "Normal weight",
+                bmi_overweight: "Overweight",
+                bmi_obese: "Obese",
+                diet_progress_1: "Great! Keep going with us 💪",
+                diet_progress_2: "Excellent! Halfway there 🎯",
+                diet_progress_3: "Almost done! 🌟",
+                diet_success: "✅ Done! We'll contact you soon 💚"
+            }
+        };
+
+        // Translation function
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Update page language
+        function updatePageLanguage() {
+            document.title = t('page_title_diet_plan');
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = t(key);
+                if (element.tagName === 'TITLE') {
+                    document.title = text;
+                } else {
+                    // Check if it contains HTML
+                    if (text.includes('<')) {
+                        element.innerHTML = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('themeToggle');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+
+        // Initialize language
+        function initializeLanguage() {
+            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Apply translations immediately on page load
+            updatePageLanguage();
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+            updatePageLanguage();
+        });
+
+        // ============================================
+        // Form Logic
+        // ============================================
+
         // Auto-calculate BMI
         const weightInput = document.getElementById('weight');
         const heightInput = document.getElementById('height');
@@ -736,7 +1078,7 @@
 
         function calculateBMI() {
             const weight = parseFloat(weightInput.value);
-            const height = parseFloat(heightInput.value) / 100; // convert cm to m
+            const height = parseFloat(heightInput.value) / 100;
 
             if (weight && height) {
                 const bmi = (weight / (height * height)).toFixed(1);
@@ -744,20 +1086,20 @@
                 let emoji = '';
 
                 if (bmi < 18.5) {
-                    category = 'نحيف';
+                    category = t('bmi_underweight');
                     emoji = '😟';
                 } else if (bmi < 25) {
-                    category = 'وزن طبيعي';
+                    category = t('bmi_normal');
                     emoji = '😊';
                 } else if (bmi < 30) {
-                    category = 'وزن زائد';
+                    category = t('bmi_overweight');
                     emoji = '😐';
                 } else {
-                    category = 'سمنة';
+                    category = t('bmi_obese');
                     emoji = '😔';
                 }
 
-                bmiResult.innerHTML = `${emoji} مؤشر كتلة الجسم (BMI): <strong>${bmi}</strong> - ${category}`;
+                bmiResult.innerHTML = `${emoji} ${currentLang === 'ar' ? 'مؤشر كتلة الجسم (BMI)' : 'BMI'}: <strong>${bmi}</strong> - ${category}`;
                 bmiResult.style.display = 'block';
             }
         }
@@ -767,9 +1109,9 @@
 
         // Progress messages
         const progressMessages = [
-            "رائع! كمّل معنا 💪",
-            "ممتاز! نص الطريق وصلنا 🎯",
-            "يلا كمّل! خلصنا تقريباً 🌟"
+            () => t('diet_progress_1'),
+            () => t('diet_progress_2'),
+            () => t('diet_progress_3')
         ];
 
         let messageIndex = 0;
@@ -778,7 +1120,7 @@
         document.querySelectorAll('input, select, textarea').forEach((input, index) => {
             input.addEventListener('change', () => {
                 if (index % 5 === 0 && messageIndex < progressMessages.length) {
-                    progressIndicator.textContent = progressMessages[messageIndex];
+                    progressIndicator.textContent = progressMessages[messageIndex]();
                     progressIndicator.style.display = 'block';
                     messageIndex++;
 
@@ -811,7 +1153,6 @@
         document.getElementById('dietForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Collect form data
             const formData = {
                 name: document.getElementById('name').value,
                 age: document.getElementById('age').value,
@@ -832,7 +1173,6 @@
                 dislikes: document.getElementById('dislikes').value || 'لم يذكر'
             };
 
-            // Calculate BMI
             const weight = parseFloat(formData.weight);
             const height = parseFloat(formData.height) / 100;
             const bmi = (weight / (height * height)).toFixed(1);
@@ -842,7 +1182,6 @@
             else if (bmi < 30) bmiCategory = 'وزن زائد';
             else bmiCategory = 'سمنة';
 
-            // Create WhatsApp message
             const date = new Date().toLocaleString('ar-SA', { 
                 year: 'numeric', 
                 month: 'long', 
@@ -886,16 +1225,13 @@ ${formData.otherConditions !== 'لا يوجد' ? '• أمراض أخرى: ' + f
 ━━━━━━━━━━━━━━━
 ⏰ *التاريخ:* ${date}`;
 
-            // WhatsApp number (replace with your actual number)
-            const whatsappNumber = '31645844585'; // رقم د. وسيم
+            const whatsappNumber = '31645844585';
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-            // Show success message
-            progressIndicator.innerHTML = '✅ تم! رح نتواصل معك قريب 💚';
+            progressIndicator.innerHTML = t('diet_success');
             progressIndicator.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
             progressIndicator.style.display = 'block';
 
-            // Redirect to WhatsApp
             setTimeout(() => {
                 window.open(whatsappURL, '_blank');
             }, 1500);

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خدمات طبية متخصصة - استشارات تغذوية | WiBo Health</title>
     <meta name="description" content="احصل على استشارات تغذوية متخصصة من خبراء معتمدين - خطط دايت مخصصة، متابعة دورية، نصائح باستخدام المؤشر الجلايسيمي والأنسولين - ابدأ رحلتك الصحية">
+    
+    <!-- Hreflang for Multilingual SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html">
+
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html">
     <link rel="canonical" href="https://wibohealth.com/doctor.html">
     
     <!-- Font Awesome -->
@@ -20,6 +25,217 @@
     
     <!-- Mobile Menu CSS -->
     <link rel="stylesheet" href="css/mobile-menu.css">
+
+    <!-- Translations System -->
+    <script>
+        // Language System
+        let currentLang = localStorage.getItem('wibo_health_lang') || 'ar';
+        
+        const translations = {
+            ar: {
+                // Navigation
+                'nav_home': 'الرئيسية',
+                'nav_foods': 'دليل الأطعمة',
+                'nav_calculators': 'الحاسبات',
+                'nav_recipes': 'الوصفات',
+                'nav_articles': 'المقالات',
+                'nav_doctor': 'د. وسيم حبيب',
+                'nav_about': 'من نحن',
+                'nav_contact': 'اتصل بنا',
+                'nav_home_mobile': 'الصفحة الرئيسية',
+                
+                // Doctor Hero
+                'doctor_title': '🩺 خدمات طبية متخصصة',
+                'doctor_subtitle': 'استشارات تغذوية شخصية',
+                'doctor_licensed': 'طبيب مرخص',
+                'doctor_specialist': 'متخصص في الطب الوظيفي',
+                'doctor_experience': 'خبرة واسعة',
+                'doctor_desc': 'نقدم خدمات طبية متخصصة في التغذية والطب الوظيفي، مع خبرة في علاج السمنة، مرض السكري، واضطرابات الأيض. نتبع نهجاً شاملاً يجمع بين الطب الحديث والتغذية السليمة لتحقيق أفضل النتائج. للحصول على معلومات تفصيلية عن المختص، تواصل معنا مباشرة.',
+                'doctor_book': 'احجز استشارة',
+                'doctor_whatsapp': 'واتساب',
+                
+                // Expertise
+                'expertise_title': 'مجالات الخبرة',
+                'expertise_1_title': 'التغذية المتخصصة',
+                'expertise_1_desc': 'وضع خطط غذائية مخصصة لكل شخص حسب حالته الصحية وأهدافه',
+                'expertise_2_title': 'مرض السكري',
+                'expertise_2_desc': 'إدارة شاملة لمرض السكري من النوع الأول والثاني باستخدام التغذية والعلاج',
+                'expertise_3_title': 'إدارة الوزن',
+                'expertise_3_desc': 'برامج علمية لإنقاص الوزن الصحي وعلاج السمنة بطرق آمنة وفعالة',
+                'expertise_4_title': 'الطب الوظيفي',
+                'expertise_4_desc': 'نهج شامل لفهم الأسباب الجذرية للأمراض المزمنة وعلاجها',
+                'expertise_5_title': 'اضطرابات الأيض',
+                'expertise_5_desc': 'تشخيص وعلاج متلازمة الأيض واضطرابات الهرمونات',
+                'expertise_6_title': 'صحة القلب',
+                'expertise_6_desc': 'الوقاية من أمراض القلب والأوعية الدموية من خلال التغذية والنمط الحياتي',
+                'expertise_7_title': 'أمراض الغدة الدرقية',
+                'expertise_7_desc': 'تشخيص وعلاج اضطرابات الغدة الدرقية (فرط النشاط، قصور الغدة) وتنظيم الهرمونات بالتغذية السليمة',
+                
+                // Services
+                'services_title': 'الخدمات الطبية',
+                'service_1_title': 'استشارة أونلاين (عن بُعد)',
+                'service_1_desc': 'استشارة طبية شاملة عبر الفيديو، تتضمن تقييم الحالة الصحية، وضع خطة مخصصة، ومتابعة دورية. مدة الجلسة 45-60 دقيقة.',
+                'service_1_price': '$30 - $50',
+                'service_2_title': 'خطة غذائية مخصصة',
+                'service_2_desc': 'خطة غذائية مفصلة حسب حالتك الصحية وأهدافك، مع متابعة أسبوعية لمدة شهر وتعديل الخطة حسب التقدم.',
+                'service_2_price': '$80 - $120',
+                'service_3_title': 'برنامج متابعة شامل (3 أشهر)',
+                'service_3_desc': 'برنامج متكامل يشمل 8 استشارات، خطة غذائية مفصلة، متابعة أسبوعية، وتحليل شامل للتقدم مع تعديل مستمر للخطة.',
+                'service_3_price': '$200 - $300',
+                'service_4_title': 'استشارة سريعة (15 دقيقة)',
+                'service_4_desc': 'استشارة قصيرة للإجابة على أسئلة محددة أو متابعة سريعة للحالة.',
+                'service_4_price': '$20',
+                
+                // Booking
+                'booking_title': 'جاهز لبدء رحلتك الصحية؟',
+                'booking_desc': 'احجز استشارتك الأولى الآن واحصل على تقييم شامل لحالتك الصحية',
+                'booking_btn': 'احجز موعدك الآن',
+                
+                // Testimonials
+                'testimonials_title': 'آراء المرضى',
+                'testimonial_1': '"د. وسيم ساعدني في التخلص من 25 كجم بطريقة صحية وآمنة. الخطة الغذائية كانت متنوعة وسهلة الالتزام، والمتابعة المستمرة جعلتني أحافظ على وزني المثالي."',
+                'testimonial_1_author': 'أحمد م. - الرياض',
+                'testimonial_2': '"بفضل برنامج د. وسيم، استطعت التحكم بمستوى السكر دون الحاجة لزيادة جرعات الدواء. التركيز على التغذية السليمة غيّر حياتي تماماً."',
+                'testimonial_2_author': 'فاطمة ع. - جدة',
+                'testimonial_3': '"طبيب متمكن وصبور، يستمع لك ويفهم حالتك جيداً. الاستشارة الأونلاين كانت مريحة جداً ووفرت علي الوقت والجهد."',
+                'testimonial_3_author': 'خالد ب. - دبي',
+                
+                // Footer
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2024 WiBo Health. جميع الحقوق محفوظة.',
+                'footer_developed': '💚 مُطور بـ ♥ من أجل صحتك'
+            },
+            en: {
+                // Navigation
+                'nav_home': 'Home',
+                'nav_foods': 'Foods Guide',
+                'nav_calculators': 'Calculators',
+                'nav_recipes': 'Recipes',
+                'nav_articles': 'Articles',
+                'nav_doctor': 'Drs. Wassim Habib',
+                'nav_about': 'About Us',
+                'nav_contact': 'Contact Us',
+                'nav_home_mobile': 'Home',
+                
+                // Doctor Hero
+                'doctor_title': '🩺 Specialized Medical Services',
+                'doctor_subtitle': 'Personal Nutritional Consultations',
+                'doctor_licensed': 'Licensed Doctor',
+                'doctor_specialist': 'Specialist in Functional Medicine',
+                'doctor_experience': 'Extensive Experience',
+                'doctor_desc': 'We provide specialized medical services in nutrition and functional medicine, with experience in treating obesity, diabetes, and metabolic disorders. We follow a comprehensive approach that combines modern medicine and proper nutrition to achieve the best results. For detailed information about the specialist, please contact us directly.',
+                'doctor_book': 'Book Consultation',
+                'doctor_whatsapp': 'WhatsApp',
+                
+                // Expertise
+                'expertise_title': 'Areas of Expertise',
+                'expertise_1_title': 'Specialized Nutrition',
+                'expertise_1_desc': 'Creating customized dietary plans for each person according to their health condition and goals',
+                'expertise_2_title': 'Diabetes',
+                'expertise_2_desc': 'Comprehensive management of type 1 and 2 diabetes using nutrition and treatment',
+                'expertise_3_title': 'Weight Management',
+                'expertise_3_desc': 'Scientific programs for healthy weight loss and obesity treatment in safe and effective ways',
+                'expertise_4_title': 'Functional Medicine',
+                'expertise_4_desc': 'A comprehensive approach to understanding and treating the root causes of chronic diseases',
+                'expertise_5_title': 'Metabolic Disorders',
+                'expertise_5_desc': 'Diagnosis and treatment of metabolic syndrome and hormonal disorders',
+                'expertise_6_title': 'Heart Health',
+                'expertise_6_desc': 'Prevention of heart and cardiovascular diseases through nutrition and lifestyle',
+                'expertise_7_title': 'Thyroid Diseases',
+                'expertise_7_desc': 'Diagnosis and treatment of thyroid disorders and hormone regulation through proper nutrition',
+                
+                // Services
+                'services_title': 'Medical Services',
+                'service_1_title': 'Online Consultation (Remote)',
+                'service_1_desc': 'Comprehensive medical consultation via video, including health assessment, custom plan creation, and regular follow-up. Session duration 45-60 minutes.',
+                'service_1_price': '$30 - $50',
+                'service_2_title': 'Customized Meal Plan',
+                'service_2_desc': 'Detailed dietary plan tailored to your health condition and goals, with weekly follow-up for one month and plan adjustments based on progress.',
+                'service_2_price': '$80 - $120',
+                'service_3_title': 'Comprehensive Follow-up Program (3 months)',
+                'service_3_desc': 'Integrated program including 8 consultations, detailed meal plan, weekly follow-up, and comprehensive progress analysis with continuous plan adjustments.',
+                'service_3_price': '$200 - $300',
+                'service_4_title': 'Quick Consultation (15 minutes)',
+                'service_4_desc': 'Short consultation to answer specific questions or provide quick follow-up on your case.',
+                'service_4_price': '$20',
+                
+                // Booking
+                'booking_title': 'Ready to Start Your Health Journey?',
+                'booking_desc': 'Book your first consultation now and get a comprehensive assessment of your health condition',
+                'booking_btn': 'Book Your Appointment Now',
+                
+                // Testimonials
+                'testimonials_title': 'Patient Reviews',
+                'testimonial_1': '"Drs. Wassim helped me lose 25 kg in a healthy and safe way. The meal plan was diverse and easy to follow, and continuous monitoring helped me maintain my ideal weight."',
+                'testimonial_1_author': 'Ahmed M. - Riyadh',
+                'testimonial_2': '"Thanks to Drs. Wassim\'s program, I was able to control my blood sugar without increasing medication doses. Focus on proper nutrition completely changed my life."',
+                'testimonial_2_author': 'Fatima A. - Jeddah',
+                'testimonial_3': '"A competent and patient doctor who listens to you and understands your condition well. The online consultation was very convenient and saved me time and effort."',
+                'testimonial_3_author': 'Khalid B. - Dubai',
+                
+                // Footer
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2024 WiBo Health. All rights reserved.',
+                'footer_developed': '💚 Developed with ♥ for your health'
+            }
+        };
+
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        function t(key) {
+            return translations[currentLang]?.[key] || key;
+        }
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Change Language Function
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_health_lang', lang);
+            
+            // Update page direction and lang attribute
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Update all translations
+            updatePageLanguage();
+            
+            // Update active button
+            document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeBtn = document.querySelector(`[data-lang-toggle="${lang}"]`);
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+        
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                el.textContent = t(el.getAttribute('data-i18n'));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            updatePageLanguage();
+            const currentBtn = document.querySelector(`[data-lang-toggle="${currentLang}"]`);
+            if (currentBtn) currentBtn.classList.add('active');
+        });
+    </script>
 
     <style>
         * {
@@ -74,7 +290,6 @@
             transition: all 0.3s ease, transform 0.3s ease;
         }
         
-        /* Auto-hide for navigation */
         header.hide-nav {
             transform: translateY(-100%);
         }
@@ -119,6 +334,40 @@
             font-weight: 900;
         }
 
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .lang-btn {
+            width: 45px;
+            height: 45px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            transform: scale(1.1);
+            background: var(--primary-color);
+            color: white;
+        }
+
         .theme-toggle {
             width: 45px;
             height: 45px;
@@ -149,6 +398,7 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
+            width: 100%;
         }
 
         .nav-link {
@@ -170,6 +420,118 @@
         .nav-link:hover, .nav-link.active {
             background: var(--primary-color);
             color: white;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .hamburger-menu span {
+            background: white;
+        }
+
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100%;
+            background: var(--card-bg);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-menu.active {
+            right: 0;
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: var(--text-dark);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-close:hover {
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 18px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .mobile-nav-link {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        .mobile-nav-link:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            transform: translateX(-5px);
+        }
+
+        .mobile-nav-link i {
+            font-size: 20px;
+            width: 25px;
+            text-align: center;
         }
 
         /* Doctor Hero Section */
@@ -484,6 +846,20 @@
             color: var(--text-light);
         }
 
+        footer a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        body.dark-mode footer a {
+            color: #ecf0f1;
+        }
+
+        footer a:hover {
+            color: var(--primary-color);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -515,8 +891,30 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .doctor-info h2 {
+                font-size: 2rem;
+            }
+
+            .booking-section {
+                padding: 30px;
+            }
+
+            .booking-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
         }
     </style>
+    <!-- Unified Language System -->
+    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -555,24 +953,30 @@
                     </div>
                 </a>
 
-                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <!-- Hamburger Menu Button (Mobile Only) -->
-                <div class="hamburger-menu" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="header-actions">
+                    <!-- Language Toggle Buttons -->
+                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
 
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> الحاسبات</a>
-                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> الوصفات</a>
-                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> المقالات</a>
-                    <a href="doctor.html" class="nav-link active"><i class="fas fa-user-md"></i> د. وسيم حبيب</a>
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
+                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                    <a href="doctor.html" class="nav-link active"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
                 </nav>
             </div>
         </div>
@@ -587,42 +991,14 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
-            <i class="fas fa-home"></i>
-            الصفحة الرئيسية
-        </a>
-        <a href="foods.html" class="mobile-nav-link">
-            <i class="fas fa-utensils"></i>
-            دليل الأطعمة
-        </a>
-        <a href="calculators.html" class="mobile-nav-link">
-            <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
-        </a>
-        <a href="recipes.html" class="mobile-nav-link">
-            <i class="fas fa-book-open"></i>
-            الوصفات الصحية
-        </a>
-        <a href="articles.html" class="mobile-nav-link">
-            <i class="fas fa-book-medical"></i>
-            المقالات الصحية
-        </a>
-        <a href="doctor.html" class="mobile-nav-link">
-            <i class="fas fa-user-md"></i>
-            د. وسيم حبيب
-        </a>
-        <a href="pricing.html" class="mobile-nav-link">
-            <i class="fas fa-tag"></i>
-            الأسعار
-        </a>
-        <a href="about.html" class="mobile-nav-link">
-            <i class="fas fa-info-circle"></i>
-            من نحن
-        </a>
-        <a href="contact.html" class="mobile-nav-link">
-            <i class="fas fa-envelope"></i>
-            اتصل بنا
-        </a>
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home_mobile">الصفحة الرئيسية</span></a>
+        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
+        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
+        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
+        <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">من نحن</span></a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
     </nav>
 
     <!-- Main Content -->
@@ -631,38 +1007,36 @@
         <div class="doctor-hero">
             <div class="doctor-image">👨‍⚕️</div>
             <div class="doctor-info">
-                <h2>🩺 خدمات طبية متخصصة</h2>
-                <h3>استشارات تغذوية شخصية</h3>
+                <h2 data-i18n="doctor_title">🩺 خدمات طبية متخصصة</h2>
+                <h3 data-i18n="doctor_subtitle">استشارات تغذوية شخصية</h3>
                 
                 <div class="credentials">
                     <span class="credential-badge">
                         <i class="fas fa-user-md"></i>
-                        طبيب مرخص
+                        <span data-i18n="doctor_licensed">طبيب مرخص</span>
                     </span>
                     <span class="credential-badge">
-                        <i class="fas fa="certificate"></i>
-                        متخصص في الطب الوظيفي
+                        <i class="fas fa-certificate"></i>
+                        <span data-i18n="doctor_specialist">متخصص في الطب الوظيفي</span>
                     </span>
                     <span class="credential-badge">
                         <i class="fas fa-heartbeat"></i>
-                        خبرة واسعة
+                        <span data-i18n="doctor_experience">خبرة واسعة</span>
                     </span>
                 </div>
 
-                <p class="doctor-description">
-                    نقدم <strong>خدمات طبية متخصصة</strong> في التغذية والطب الوظيفي، مع خبرة في علاج السمنة، مرض السكري، 
-                    واضطرابات الأيض. نتبع نهجاً شاملاً يجمع بين الطب الحديث والتغذية السليمة 
-                    لتحقيق أفضل النتائج. <strong>للحصول على معلومات تفصيلية عن المختص، تواصل معنا مباشرة.</strong>
+                <p class="doctor-description" data-i18n="doctor_desc">
+                    نقدم خدمات طبية متخصصة في التغذية والطب الوظيفي، مع خبرة في علاج السمنة، مرض السكري، واضطرابات الأيض. نتبع نهجاً شاملاً يجمع بين الطب الحديث والتغذية السليمة لتحقيق أفضل النتائج. للحصول على معلومات تفصيلية عن المختص، تواصل معنا مباشرة.
                 </p>
 
                 <div class="contact-buttons">
                     <a href="#booking" class="contact-btn">
                         <i class="fas fa-calendar-check"></i>
-                        احجز استشارة
+                        <span data-i18n="doctor_book">احجز استشارة</span>
                     </a>
                     <a href="https://wa.me/31645844585" class="contact-btn secondary" target="_blank">
                         <i class="fab fa-whatsapp"></i>
-                        واتساب
+                        <span data-i18n="doctor_whatsapp">واتساب</span>
                     </a>
                 </div>
             </div>
@@ -670,65 +1044,64 @@
 
         <!-- Expertise -->
         <div class="expertise-section">
-            <h2>مجالات الخبرة</h2>
+            <h2 data-i18n="expertise_title">مجالات الخبرة</h2>
             <div class="expertise-grid">
                 <div class="expertise-card">
                     <div class="expertise-icon">🍎</div>
-                    <h3>التغذية المتخصصة</h3>
-                    <p>وضع خطط غذائية مخصصة لكل شخص حسب حالته الصحية وأهدافه</p>
+                    <h3 data-i18n="expertise_1_title">التغذية المتخصصة</h3>
+                    <p data-i18n="expertise_1_desc">وضع خطط غذائية مخصصة لكل شخص حسب حالته الصحية وأهدافه</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">💉</div>
-                    <h3>مرض السكري</h3>
-                    <p>إدارة شاملة لمرض السكري من النوع الأول والثاني باستخدام التغذية والعلاج</p>
+                    <h3 data-i18n="expertise_2_title">مرض السكري</h3>
+                    <p data-i18n="expertise_2_desc">إدارة شاملة لمرض السكري من النوع الأول والثاني باستخدام التغذية والعلاج</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">⚖️</div>
-                    <h3>إدارة الوزن</h3>
-                    <p>برامج علمية لإنقاص الوزن الصحي وعلاج السمنة بطرق آمنة وفعالة</p>
+                    <h3 data-i18n="expertise_3_title">إدارة الوزن</h3>
+                    <p data-i18n="expertise_3_desc">برامج علمية لإنقاص الوزن الصحي وعلاج السمنة بطرق آمنة وفعالة</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">🧬</div>
-                    <h3>الطب الوظيفي</h3>
-                    <p>نهج شامل لفهم الأسباب الجذرية للأمراض المزمنة وعلاجها</p>
+                    <h3 data-i18n="expertise_4_title">الطب الوظيفي</h3>
+                    <p data-i18n="expertise_4_desc">نهج شامل لفهم الأسباب الجذرية للأمراض المزمنة وعلاجها</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">💊</div>
-                    <h3>اضطرابات الأيض</h3>
-                    <p>تشخيص وعلاج متلازمة الأيض واضطرابات الهرمونات</p>
+                    <h3 data-i18n="expertise_5_title">اضطرابات الأيض</h3>
+                    <p data-i18n="expertise_5_desc">تشخيص وعلاج متلازمة الأيض واضطرابات الهرمونات</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">❤️</div>
-                    <h3>صحة القلب</h3>
-                    <p>الوقاية من أمراض القلب والأوعية الدموية من خلال التغذية والنمط الحياتي</p>
+                    <h3 data-i18n="expertise_6_title">صحة القلب</h3>
+                    <p data-i18n="expertise_6_desc">الوقاية من أمراض القلب والأوعية الدموية من خلال التغذية والنمط الحياتي</p>
                 </div>
 
                 <div class="expertise-card">
                     <div class="expertise-icon">🦋</div>
-                    <h3>أمراض الغدة الدرقية</h3>
-                    <p>تشخيص وعلاج اضطرابات الغدة الدرقية (فرط النشاط، قصور الغدة) وتنظيم الهرمونات بالتغذية السليمة</p>
+                    <h3 data-i18n="expertise_7_title">أمراض الغدة الدرقية</h3>
+                    <p data-i18n="expertise_7_desc">تشخيص وعلاج اضطرابات الغدة الدرقية (فرط النشاط، قصور الغدة) وتنظيم الهرمونات بالتغذية السليمة</p>
                 </div>
             </div>
         </div>
 
         <!-- Services -->
         <div class="services-section">
-            <h2>الخدمات الطبية</h2>
+            <h2 data-i18n="services_title">الخدمات الطبية</h2>
 
             <div class="service-item">
                 <div class="service-icon">
                     <i class="fas fa-video"></i>
                 </div>
                 <div class="service-content">
-                    <h3>استشارة أونلاين (عن بُعد)</h3>
-                    <p>استشارة طبية شاملة عبر الفيديو، تتضمن تقييم الحالة الصحية، وضع خطة مخصصة، 
-                    ومتابعة دورية. مدة الجلسة 45-60 دقيقة.</p>
-                    <span class="service-price">$30 - $50</span>
+                    <h3 data-i18n="service_1_title">استشارة أونلاين (عن بُعد)</h3>
+                    <p data-i18n="service_1_desc">استشارة طبية شاملة عبر الفيديو، تتضمن تقييم الحالة الصحية، وضع خطة مخصصة، ومتابعة دورية. مدة الجلسة 45-60 دقيقة.</p>
+                    <span class="service-price" data-i18n="service_1_price">$30 - $50</span>
                 </div>
             </div>
 
@@ -737,10 +1110,9 @@
                     <i class="fas fa-clipboard-check"></i>
                 </div>
                 <div class="service-content">
-                    <h3>خطة غذائية مخصصة</h3>
-                    <p>خطة غذائية مفصلة حسب حالتك الصحية وأهدافك، مع متابعة أسبوعية لمدة شهر 
-                    وتعديل الخطة حسب التقدم.</p>
-                    <span class="service-price">$80 - $120</span>
+                    <h3 data-i18n="service_2_title">خطة غذائية مخصصة</h3>
+                    <p data-i18n="service_2_desc">خطة غذائية مفصلة حسب حالتك الصحية وأهدافك، مع متابعة أسبوعية لمدة شهر وتعديل الخطة حسب التقدم.</p>
+                    <span class="service-price" data-i18n="service_2_price">$80 - $120</span>
                 </div>
             </div>
 
@@ -749,10 +1121,9 @@
                     <i class="fas fa-chart-line"></i>
                 </div>
                 <div class="service-content">
-                    <h3>برنامج متابعة شامل (3 أشهر)</h3>
-                    <p>برنامج متكامل يشمل 8 استشارات، خطة غذائية مفصلة، متابعة أسبوعية، 
-                    وتحليل شامل للتقدم مع تعديل مستمر للخطة.</p>
-                    <span class="service-price">$200 - $300</span>
+                    <h3 data-i18n="service_3_title">برنامج متابعة شامل (3 أشهر)</h3>
+                    <p data-i18n="service_3_desc">برنامج متكامل يشمل 8 استشارات، خطة غذائية مفصلة، متابعة أسبوعية، وتحليل شامل للتقدم مع تعديل مستمر للخطة.</p>
+                    <span class="service-price" data-i18n="service_3_price">$200 - $300</span>
                 </div>
             </div>
 
@@ -761,85 +1132,82 @@
                     <i class="fas fa-phone"></i>
                 </div>
                 <div class="service-content">
-                    <h3>استشارة سريعة (15 دقيقة)</h3>
-                    <p>استشارة قصيرة للإجابة على أسئلة محددة أو متابعة سريعة للحالة.</p>
-                    <span class="service-price">$20</span>
+                    <h3 data-i18n="service_4_title">استشارة سريعة (15 دقيقة)</h3>
+                    <p data-i18n="service_4_desc">استشارة قصيرة للإجابة على أسئلة محددة أو متابعة سريعة للحالة.</p>
+                    <span class="service-price" data-i18n="service_4_price">$20</span>
                 </div>
             </div>
         </div>
 
         <!-- Booking CTA -->
         <div class="booking-section" id="booking">
-            <h2>جاهز لبدء رحلتك الصحية؟</h2>
-            <p>احجز استشارتك الأولى الآن واحصل على تقييم شامل لحالتك الصحية</p>
+            <h2 data-i18n="booking_title">جاهز لبدء رحلتك الصحية؟</h2>
+            <p data-i18n="booking_desc">احجز استشارتك الأولى الآن واحصل على تقييم شامل لحالتك الصحية</p>
             <button class="booking-btn" onclick="bookAppointment()">
-                احجز موعدك الآن
+                <span data-i18n="booking_btn">احجز موعدك الآن</span>
             </button>
         </div>
 
         <!-- Testimonials -->
         <div class="testimonials-section">
-            <h2>آراء المرضى</h2>
+            <h2 data-i18n="testimonials_title">آراء المرضى</h2>
 
             <div class="testimonial-item">
-                <p class="testimonial-text">
-                    "د. وسيم ساعدني في التخلص من 25 كجم بطريقة صحية وآمنة. الخطة الغذائية كانت متنوعة وسهلة الالتزام، 
-                    والمتابعة المستمرة جعلتني أحافظ على وزني المثالي."
+                <p class="testimonial-text" data-i18n="testimonial_1">
+                    "د. وسيم ساعدني في التخلص من 25 كجم بطريقة صحية وآمنة. الخطة الغذائية كانت متنوعة وسهلة الالتزام، والمتابعة المستمرة جعلتني أحافظ على وزني المثالي."
                 </p>
                 <div class="testimonial-author">
-                    <span>أحمد م. - الرياض</span>
+                    <span data-i18n="testimonial_1_author">أحمد م. - الرياض</span>
                     <span class="stars">⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
 
             <div class="testimonial-item">
-                <p class="testimonial-text">
-                    "بفضل برنامج د. وسيم، استطعت التحكم بمستوى السكر دون الحاجة لزيادة جرعات الدواء. 
-                    التركيز على التغذية السليمة غيّر حياتي تماماً."
+                <p class="testimonial-text" data-i18n="testimonial_2">
+                    "بفضل برنامج د. وسيم، استطعت التحكم بمستوى السكر دون الحاجة لزيادة جرعات الدواء. التركيز على التغذية السليمة غيّر حياتي تماماً."
                 </p>
                 <div class="testimonial-author">
-                    <span>فاطمة ع. - جدة</span>
+                    <span data-i18n="testimonial_2_author">فاطمة ع. - جدة</span>
                     <span class="stars">⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
 
             <div class="testimonial-item">
-                <p class="testimonial-text">
-                    "طبيب متمكن وصبور، يستمع لك ويفهم حالتك جيداً. الاستشارة الأونلاين كانت مريحة جداً 
-                    ووفرت علي الوقت والجهد."
+                <p class="testimonial-text" data-i18n="testimonial_3">
+                    "طبيب متمكن وصبور، يستمع لك ويفهم حالتك جيداً. الاستشارة الأونلاين كانت مريحة جداً ووفرت علي الوقت والجهد."
                 </p>
                 <div class="testimonial-author">
-                    <span>خالد ب. - دبي</span>
+                    <span data-i18n="testimonial_3_author">خالد ب. - دبي</span>
                     <span class="stars">⭐⭐⭐⭐⭐</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer متوافق مع AdSense -->
+    <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_about">
                 من نحن
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_contact">
                 اتصل بنا
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_privacy">
                 سياسة الخصوصية
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_terms">
                 شروط الاستخدام
             </a>
         </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">
             © 2024 WiBo Health. جميع الحقوق محفوظة.
         </p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_developed">
+            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل صحتك
         </p>
     </footer>
 
@@ -867,11 +1235,21 @@
             }
         }
 
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const body = document.body;
+            
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
         // Book appointment
         function bookAppointment() {
-            // يمكن استبدال هذا برابط نظام حجز حقيقي
-            const whatsappNumber = '31645844585'; // رقم الواتساب
-            const message = 'مرحباً، أرغب في حجز استشارة طبية';
+            const whatsappNumber = '31645844585';
+            const message = t('booking_btn');
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
         }
         
