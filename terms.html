@@ -3,213 +3,671 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شروط الاستخدام - WiBo Health</title>
+    <title data-i18n="page_title_terms">شروط الاستخدام - WiBo Health</title>
     <meta name="description" content="شروط وأحكام استخدام موقع WiBo Health - اقرأ الشروط والأحكام قبل استخدام خدماتنا">
     <link rel="canonical" href="https://wibohealth.com/terms.html">
+    
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html">
+
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/terms.html">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/mobile-menu.css">
     
-    <!-- Language Manager - Auto Language Switcher -->
-    <script src="/js/language-manager.js"></script>
-    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2ecc71;
+            --secondary-color: #27ae60;
+            --accent-color: #667eea;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             font-family: 'Cairo', sans-serif;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
         }
+
+        body.dark-mode {
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #b8b8b8;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px var(--shadow);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.hide-nav {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle, .lang-toggle {
+            background: rgba(46, 204, 113, 0.2);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        /* Terms Container */
         .terms-container {
             max-width: 900px;
-            margin: 50px auto 50px;
-            background: white;
+            margin: 30px auto 50px;
+            background: var(--card-bg);
             padding: 50px;
             border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px var(--shadow);
         }
-        h1 {
-            color: #2ecc71;
+
+        .terms-container h1 {
+            color: var(--primary-color);
             font-size: 2.5em;
             margin-bottom: 10px;
             text-align: center;
         }
+
         .last-update {
             text-align: center;
-            color: #7f8c8d;
+            color: var(--text-light);
             margin-bottom: 30px;
+            font-size: 0.95em;
         }
-        h2 {
-            color: #667eea;
+
+        .terms-container h2 {
+            color: var(--accent-color);
             font-size: 1.6em;
             margin-top: 30px;
             margin-bottom: 15px;
+            border-bottom: 3px solid rgba(46, 204, 113, 0.2);
+            padding-bottom: 10px;
         }
-        p, li {
-            color: #2c3e50;
+
+        .terms-container p,
+        .terms-container li {
+            color: var(--text-dark);
             font-size: 1.05em;
             line-height: 1.8;
             margin-bottom: 15px;
         }
-        ul {
+
+        .terms-container ul {
             margin-right: 30px;
         }
+
+        .terms-container li {
+            margin-bottom: 12px;
+        }
+
+        .terms-container strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .terms-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .terms-container a:hover {
+            text-decoration: underline;
+        }
+
         .warning {
-            background: #fff3cd;
+            background: rgba(255, 193, 7, 0.15);
             border-right: 4px solid #ffc107;
             padding: 15px;
             border-radius: 5px;
             margin: 20px 0;
+            color: var(--text-dark);
         }
+
+        body.dark-mode .warning {
+            background: rgba(255, 193, 7, 0.1);
+        }
+
+        .warning strong {
+            color: #f39c12;
+        }
+
+        .warning p {
+            margin: 0;
+        }
+
+        .warning ul {
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        .terms-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(46, 204, 113, 0.2);
+        }
+
+        .terms-footer p {
+            color: var(--text-light);
+        }
+
+        /* Back Button */
         .back-btn {
             display: inline-block;
             padding: 15px 30px;
-            background: #2ecc71;
+            background: var(--primary-color);
             color: white;
             text-decoration: none;
             border-radius: 10px;
-            margin-top: 30px;
+            margin-top: 20px;
             font-weight: bold;
             transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1em;
         }
+
         .back-btn:hover {
-            background: #27ae60;
+            background: var(--secondary-color);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 30px 20px;
+            }
+
+            .terms-container h1 {
+                font-size: 1.8em;
+            }
+
+            .terms-container h2 {
+                font-size: 1.3em;
+            }
+
+            .terms-container p,
+            .terms-container li {
+                font-size: 0.95em;
+            }
+
+            .header-controls {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .terms-container ul {
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <a href="index.html" style="text-decoration: none; color: #2ecc71; font-size: 24px; font-weight: bold;">💚 WiBo Health</a>
-            <a href="/en/terms.html" style="padding: 8px 15px; background: #f0f0f0; border-radius: 8px; text-decoration: none; color: #2c3e50; font-weight: 600;">🇬🇧 EN</a>
-            <div class="hamburger-menu" onclick="toggleMobileMenu()" style="display: flex; flex-direction: column; cursor: pointer; padding: 10px;">
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link" title="WiBo Health">
+                💚 WiBo Health
+            </a>
+            
+            <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="header-controls">
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                    <span id="langText">EN</span>
+                </button>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Mobile Navigation Menu -->
     <nav class="mobile-nav-menu" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
-        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
-        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> الحاسبات الصحية</a>
-        <a href="privacy.html" class="mobile-nav-link"><i class="fas fa-shield-alt"></i> سياسة الخصوصية</a>
-        <a href="terms.html" class="mobile-nav-link"><i class="fas fa-file-contract"></i> الشروط والأحكام</a>
-    </nav>
-    <div class="terms-container">
-        <h1>📜 شروط الاستخدام</h1>
-        <p class="last-update">آخر تحديث: 15 نوفمبر 2024</p>
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+            <i class="fas fa-times"></i>
+        </button>
         
-        <p>
+        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
+            <i class="fas fa-home"></i>
+            الصفحة الرئيسية
+        </a>
+        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
+            <i class="fas fa-utensils"></i>
+            دليل الأطعمة
+        </a>
+        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
+            <i class="fas fa-calculator"></i>
+            الحاسبات الصحية
+        </a>
+        <a href="privacy.html" class="mobile-nav-link" data-i18n="nav_privacy">
+            <i class="fas fa-shield-alt"></i>
+            سياسة الخصوصية
+        </a>
+        <a href="terms.html" class="mobile-nav-link" data-i18n="nav_terms">
+            <i class="fas fa-file-contract"></i>
+            الشروط والأحكام
+        </a>
+    </nav>
+
+    <!-- Terms Container -->
+    <div class="terms-container">
+        <h1 data-i18n="terms_title">📜 شروط الاستخدام</h1>
+        <p class="last-update">
+            <span data-i18n="terms_last_update">آخر تحديث:</span> 15 نوفمبر 2024
+        </p>
+        
+        <p data-i18n="terms_intro">
             مرحباً بكم في <strong>WiBo Health</strong>. باستخدامك لهذا الموقع، فإنك توافق على الالتزام 
             بشروط الاستخدام التالية. يرجى قراءتها بعناية.
         </p>
 
-        <h2>1. قبول الشروط</h2>
-        <p>
+        <!-- Section 1 -->
+        <h2 data-i18n="terms_section1_title">1. قبول الشروط</h2>
+        <p data-i18n="terms_section1_text">
             بدخولك واستخدامك لموقع WiBo Health، فإنك تقر بأنك قد قرأت وفهمت ووافقت على هذه الشروط.
             إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام الموقع.
         </p>
 
-        <h2>2. استخدام الموقع</h2>
-        <p>يُسمح لك باستخدام الموقع للأغراض التالية:</p>
+        <!-- Section 2 -->
+        <h2 data-i18n="terms_section2_title">2. استخدام الموقع</h2>
+        <p data-i18n="terms_section2_intro">يُسمح لك باستخدام الموقع للأغراض التالية:</p>
         <ul>
-            <li>البحث عن معلومات غذائية وصحية</li>
-            <li>استخدام الحاسبات الطبية المجانية</li>
-            <li>قراءة المقالات والوصفات الصحية</li>
-            <li>التواصل لطلب الاستشارات الطبية</li>
+            <li data-i18n="terms_section2_item1">البحث عن معلومات غذائية وصحية</li>
+            <li data-i18n="terms_section2_item2">استخدام الحاسبات الطبية المجانية</li>
+            <li data-i18n="terms_section2_item3">قراءة المقالات والوصفات الصحية</li>
+            <li data-i18n="terms_section2_item4">التواصل لطلب الاستشارات الطبية</li>
         </ul>
 
         <div class="warning">
-            <strong>⚠️ تنبيه مهم:</strong> المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط 
-            ولا تغني عن استشارة الطبيب المختص.
+            <strong data-i18n="terms_important_warning">⚠️ تنبيه مهم:</strong>
+            <span data-i18n="terms_warning_text">المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب المختص.</span>
         </div>
 
-        <h2>3. الاستخدام المحظور</h2>
-        <p>يُحظر عليك:</p>
+        <!-- Section 3 -->
+        <h2 data-i18n="terms_section3_title">3. الاستخدام المحظور</h2>
+        <p data-i18n="terms_section3_intro">يُحظر عليك:</p>
         <ul>
-            <li>نسخ أو إعادة نشر محتوى الموقع دون إذن كتابي</li>
-            <li>استخدام الموقع لأغراض غير قانونية</li>
-            <li>محاولة اختراق أو تعطيل الموقع</li>
-            <li>جمع معلومات المستخدمين الآخرين</li>
-            <li>إرسال محتوى مسيء أو غير لائق</li>
+            <li data-i18n="terms_section3_item1">نسخ أو إعادة نشر محتوى الموقع دون إذن كتابي</li>
+            <li data-i18n="terms_section3_item2">استخدام الموقع لأغراض غير قانونية</li>
+            <li data-i18n="terms_section3_item3">محاولة اختراق أو تعطيل الموقع</li>
+            <li data-i18n="terms_section3_item4">جمع معلومات المستخدمين الآخرين</li>
+            <li data-i18n="terms_section3_item5">إرسال محتوى مسيء أو غير لائق</li>
         </ul>
 
-        <h2>4. حقوق الملكية الفكرية</h2>
-        <p>
+        <!-- Section 4 -->
+        <h2 data-i18n="terms_section4_title">4. حقوق الملكية الفكرية</h2>
+        <p data-i18n="terms_section4_text">
             جميع المحتويات الموجودة على الموقع (نصوص، صور، شعارات، أكواد) هي ملك لـ <strong>WiBo Health</strong> 
             ومحمية بموجب قوانين حقوق النشر والملكية الفكرية.
         </p>
 
-        <h2>5. إخلاء المسؤولية الطبية</h2>
+        <!-- Section 5 -->
+        <h2 data-i18n="terms_section5_title">5. إخلاء المسؤولية الطبية</h2>
         <div class="warning">
             <p>
-                <strong>المعلومات الطبية:</strong> المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط.
+                <strong data-i18n="terms_medical_info">المعلومات الطبية:</strong>
+                <span data-i18n="terms_medical_text">المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط.</span>
             </p>
             <ul style="margin-top: 10px;">
-                <li>لا تعتبر بديلاً عن الاستشارة الطبية المتخصصة</li>
-                <li>استشر طبيبك دائماً قبل اتخاذ أي قرارات صحية</li>
-                <li>لا نتحمل مسؤولية أي أضرار ناتجة عن استخدام المعلومات</li>
+                <li data-i18n="terms_medical_item1">لا تعتبر بديلاً عن الاستشارة الطبية المتخصصة</li>
+                <li data-i18n="terms_medical_item2">استشر طبيبك دائماً قبل اتخاذ أي قرارات صحية</li>
+                <li data-i18n="terms_medical_item3">لا نتحمل مسؤولية أي أضرار ناتجة عن استخدام المعلومات</li>
             </ul>
         </div>
 
-        <h2>6. دقة المعلومات</h2>
-        <p>
+        <!-- Section 6 -->
+        <h2 data-i18n="terms_section6_title">6. دقة المعلومات</h2>
+        <p data-i18n="terms_section6_text">
             نبذل قصارى جهدنا لضمان دقة المعلومات المقدمة، لكننا لا نضمن أن تكون المعلومات 
             خالية تماماً من الأخطاء. نحتفظ بالحق في تعديل المعلومات في أي وقت.
         </p>
 
-        <h2>7. الإعلانات</h2>
-        <p>
+        <!-- Section 7 -->
+        <h2 data-i18n="terms_section7_title">7. الإعلانات</h2>
+        <p data-i18n="terms_section7_text">
             يحتوي الموقع على إعلانات من <strong>Google AdSense</strong> وشركاء آخرين. 
             نحن غير مسؤولين عن محتوى هذه الإعلانات أو المواقع التي تؤدي إليها.
         </p>
 
-        <h2>8. الروابط الخارجية</h2>
-        <p>
+        <!-- Section 8 -->
+        <h2 data-i18n="terms_section8_title">8. الروابط الخارجية</h2>
+        <p data-i18n="terms_section8_text">
             قد يحتوي الموقع على روابط لمواقع خارجية. نحن غير مسؤولين عن محتوى أو سياسات 
             الخصوصية الخاصة بهذه المواقع.
         </p>
 
-        <h2>9. تعديل الشروط</h2>
-        <p>
+        <!-- Section 9 -->
+        <h2 data-i18n="terms_section9_title">9. تعديل الشروط</h2>
+        <p data-i18n="terms_section9_text">
             نحتفظ بالحق في تعديل هذه الشروط في أي وقت. استمرارك في استخدام الموقع بعد 
             التعديلات يعني موافقتك على الشروط المحدثة.
         </p>
 
-        <h2>10. إنهاء الوصول</h2>
-        <p>
+        <!-- Section 10 -->
+        <h2 data-i18n="terms_section10_title">10. إنهاء الوصول</h2>
+        <p data-i18n="terms_section10_text">
             نحتفظ بالحق في إنهاء أو تعليق وصولك إلى الموقع في أي وقت، دون إشعار مسبق، 
             في حالة انتهاك هذه الشروط.
         </p>
 
-        <h2>11. القانون الساري</h2>
-        <p>
+        <!-- Section 11 -->
+        <h2 data-i18n="terms_section11_title">11. القانون الساري</h2>
+        <p data-i18n="terms_section11_text">
             تخضع هذه الشروط للقوانين المعمول بها، وأي نزاع سيتم حله وفقاً للأنظمة القانونية المختصة.
         </p>
 
-        <h2>12. تواصل معنا</h2>
-        <p>
+        <!-- Section 12 -->
+        <h2 data-i18n="terms_section12_title">12. تواصل معنا</h2>
+        <p data-i18n="terms_section12_intro">
             إذا كان لديك أي أسئلة حول شروط الاستخدام، يرجى التواصل معنا:
         </p>
         <ul>
-            <li>البريد الإلكتروني: wibohealth@gmail.com</li>
-            <li>واتساب: <a href="https://wa.me/31645844585" target="_blank" style="color: #2ecc71;">اضغط هنا</a></li>
+            <li>
+                <span data-i18n="terms_email">البريد الإلكتروني:</span> 
+                <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
+            </li>
+            <li>
+                <span data-i18n="terms_whatsapp">واتساب:</span> 
+                <a href="https://wa.me/31645844585" target="_blank" data-i18n="terms_whatsapp_link">اضغط هنا</a>
+            </li>
         </ul>
 
-        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
-            <p style="color: #7f8c8d;">
+        <!-- Footer Section -->
+        <div class="terms-footer">
+            <p data-i18n="terms_footer_text">
                 شكراً لاستخدامك WiBo Health. نتمنى لك تجربة صحية مفيدة! 💚
             </p>
             <a href="index.html" class="back-btn">
-                <i class="fas fa-home"></i> العودة للرئيسية
+                <i class="fas fa-home"></i> <span data-i18n="terms_back_home">العودة للرئيسية</span>
             </a>
         </div>
     </div>
-    
+
     <script>
+        // ===== Language System =====
+        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+
+        // Complete translations for both languages
+        const translations = {
+            ar: {
+                page_title_terms: "شروط الاستخدام - WiBo Health",
+                nav_home: "الصفحة الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات الصحية",
+                nav_privacy: "سياسة الخصوصية",
+                nav_terms: "الشروط والأحكام",
+                terms_title: "📜 شروط الاستخدام",
+                terms_last_update: "آخر تحديث:",
+                terms_intro: "مرحباً بكم في WiBo Health. باستخدامك لهذا الموقع، فإنك توافق على الالتزام بشروط الاستخدام التالية. يرجى قراءتها بعناية.",
+                terms_section1_title: "1. قبول الشروط",
+                terms_section1_text: "بدخولك واستخدامك لموقع WiBo Health، فإنك تقر بأنك قد قرأت وفهمت ووافقت على هذه الشروط. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام الموقع.",
+                terms_section2_title: "2. استخدام الموقع",
+                terms_section2_intro: "يُسمح لك باستخدام الموقع للأغراض التالية:",
+                terms_section2_item1: "البحث عن معلومات غذائية وصحية",
+                terms_section2_item2: "استخدام الحاسبات الطبية المجانية",
+                terms_section2_item3: "قراءة المقالات والوصفات الصحية",
+                terms_section2_item4: "التواصل لطلب الاستشارات الطبية",
+                terms_important_warning: "⚠️ تنبيه مهم:",
+                terms_warning_text: "المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب المختص.",
+                terms_section3_title: "3. الاستخدام المحظور",
+                terms_section3_intro: "يُحظر عليك:",
+                terms_section3_item1: "نسخ أو إعادة نشر محتوى الموقع دون إذن كتابي",
+                terms_section3_item2: "استخدام الموقع لأغراض غير قانونية",
+                terms_section3_item3: "محاولة اختراق أو تعطيل الموقع",
+                terms_section3_item4: "جمع معلومات المستخدمين الآخرين",
+                terms_section3_item5: "إرسال محتوى مسيء أو غير لائق",
+                terms_section4_title: "4. حقوق الملكية الفكرية",
+                terms_section4_text: "جميع المحتويات الموجودة على الموقع (نصوص، صور، شعارات، أكواد) هي ملك لـ WiBo Health ومحمية بموجب قوانين حقوق النشر والملكية الفكرية.",
+                terms_section5_title: "5. إخلاء المسؤولية الطبية",
+                terms_medical_info: "المعلومات الطبية:",
+                terms_medical_text: "المعلومات المقدمة على هذا الموقع هي لأغراض تعليمية فقط.",
+                terms_medical_item1: "لا تعتبر بديلاً عن الاستشارة الطبية المتخصصة",
+                terms_medical_item2: "استشر طبيبك دائماً قبل اتخاذ أي قرارات صحية",
+                terms_medical_item3: "لا نتحمل مسؤولية أي أضرار ناتجة عن استخدام المعلومات",
+                terms_section6_title: "6. دقة المعلومات",
+                terms_section6_text: "نبذل قصارى جهدنا لضمان دقة المعلومات المقدمة، لكننا لا نضمن أن تكون المعلومات خالية تماماً من الأخطاء. نحتفظ بالحق في تعديل المعلومات في أي وقت.",
+                terms_section7_title: "7. الإعلانات",
+                terms_section7_text: "يحتوي الموقع على إعلانات من Google AdSense وشركاء آخرين. نحن غير مسؤولين عن محتوى هذه الإعلانات أو المواقع التي تؤدي إليها.",
+                terms_section8_title: "8. الروابط الخارجية",
+                terms_section8_text: "قد يحتوي الموقع على روابط لمواقع خارجية. نحن غير مسؤولين عن محتوى أو سياسات الخصوصية الخاصة بهذه المواقع.",
+                terms_section9_title: "9. تعديل الشروط",
+                terms_section9_text: "نحتفظ بالحق في تعديل هذه الشروط في أي وقت. استمرارك في استخدام الموقع بعد التعديلات يعني موافقتك على الشروط المحدثة.",
+                terms_section10_title: "10. إنهاء الوصول",
+                terms_section10_text: "نحتفظ بالحق في إنهاء أو تعليق وصولك إلى الموقع في أي وقت، دون إشعار مسبق، في حالة انتهاك هذه الشروط.",
+                terms_section11_title: "11. القانون الساري",
+                terms_section11_text: "تخضع هذه الشروط للقوانين المعمول بها، وأي نزاع سيتم حله وفقاً للأنظمة القانونية المختصة.",
+                terms_section12_title: "12. تواصل معنا",
+                terms_section12_intro: "إذا كان لديك أي أسئلة حول شروط الاستخدام، يرجى التواصل معنا:",
+                terms_email: "البريد الإلكتروني:",
+                terms_whatsapp: "واتساب:",
+                terms_whatsapp_link: "اضغط هنا",
+                terms_footer_text: "شكراً لاستخدامك WiBo Health. نتمنى لك تجربة صحية مفيدة! 💚",
+                terms_back_home: "العودة للرئيسية"
+            },
+            en: {
+                page_title_terms: "Terms of Use - WiBo Health",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Health Calculators",
+                nav_privacy: "Privacy Policy",
+                nav_terms: "Terms & Conditions",
+                terms_title: "📜 Terms of Use",
+                terms_last_update: "Last Updated:",
+                terms_intro: "Welcome to WiBo Health. By using this website, you agree to comply with the following terms of use. Please read them carefully.",
+                terms_section1_title: "1. Acceptance of Terms",
+                terms_section1_text: "By accessing and using the WiBo Health website, you acknowledge that you have read, understood, and agreed to these terms. If you do not agree to any part of these terms, please do not use the website.",
+                terms_section2_title: "2. Website Use",
+                terms_section2_intro: "You are permitted to use the website for the following purposes:",
+                terms_section2_item1: "Search for nutritional and health information",
+                terms_section2_item2: "Use free medical calculators",
+                terms_section2_item3: "Read health articles and recipes",
+                terms_section2_item4: "Contact us for medical consultations",
+                terms_important_warning: "⚠️ Important Notice:",
+                terms_warning_text: "The information provided on this website is for educational purposes only and is not a substitute for professional medical advice.",
+                terms_section3_title: "3. Prohibited Use",
+                terms_section3_intro: "You are prohibited from:",
+                terms_section3_item1: "Copying or republishing website content without written permission",
+                terms_section3_item2: "Using the website for illegal purposes",
+                terms_section3_item3: "Attempting to hack or disrupt the website",
+                terms_section3_item4: "Collecting information from other users",
+                terms_section3_item5: "Sending abusive or inappropriate content",
+                terms_section4_title: "4. Intellectual Property Rights",
+                terms_section4_text: "All content on the website (text, images, logos, codes) is the property of WiBo Health and is protected by copyright and intellectual property laws.",
+                terms_section5_title: "5. Medical Disclaimer",
+                terms_medical_info: "Medical Information:",
+                terms_medical_text: "The information provided on this website is for educational purposes only.",
+                terms_medical_item1: "It is not a substitute for professional medical consultation",
+                terms_medical_item2: "Always consult your doctor before making any health decisions",
+                terms_medical_item3: "We are not liable for any damages resulting from the use of this information",
+                terms_section6_title: "6. Information Accuracy",
+                terms_section6_text: "We make every effort to ensure the accuracy of the information provided, but we do not guarantee that the information is completely free of errors. We reserve the right to modify information at any time.",
+                terms_section7_title: "7. Advertisements",
+                terms_section7_text: "The website contains advertisements from Google AdSense and other partners. We are not responsible for the content of these advertisements or the websites they link to.",
+                terms_section8_title: "8. External Links",
+                terms_section8_text: "The website may contain links to external websites. We are not responsible for the content or privacy policies of these websites.",
+                terms_section9_title: "9. Modification of Terms",
+                terms_section9_text: "We reserve the right to modify these terms at any time. Your continued use of the website after modifications means you agree to the updated terms.",
+                terms_section10_title: "10. Termination of Access",
+                terms_section10_text: "We reserve the right to terminate or suspend your access to the website at any time, without prior notice, in case of violation of these terms.",
+                terms_section11_title: "11. Applicable Law",
+                terms_section11_text: "These terms are subject to applicable law, and any disputes will be resolved according to the competent legal authorities.",
+                terms_section12_title: "12. Contact Us",
+                terms_section12_intro: "If you have any questions about the terms of use, please contact us:",
+                terms_email: "Email:",
+                terms_whatsapp: "WhatsApp:",
+                terms_whatsapp_link: "Click here",
+                terms_footer_text: "Thank you for using WiBo Health. We wish you a beneficial health experience! 💚",
+                terms_back_home: "Back to Home"
+            }
+        };
+
+        // Translation function
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        }
+
+        // Change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+        }
+
+        // Update page language
+        function updatePageLanguage() {
+            // Update title
+            document.title = t('page_title_terms');
+
+            // Update language button
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = t(key);
+                if (element.tagName === 'TITLE') {
+                    document.title = text;
+                } else {
+                    element.textContent = text;
+                }
+            });
+        }
+
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('themeToggle');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // Initialize theme
+        function initializeTheme() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+            updateThemeIcon();
+        }
+
+        // Initialize language
+        function initializeLanguage() {
+            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Apply translations immediately on page load
+            updatePageLanguage();
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeLanguage();
+            updatePageLanguage();
+        });
+
         // Auto-hide Header on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
@@ -231,6 +689,8 @@
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
     </script>
+
+    <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
 </body>
 </html>
