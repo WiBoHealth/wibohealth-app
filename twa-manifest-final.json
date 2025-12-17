@@ -1,6 +1,6 @@
 {
   "packageId": "com.wibohealth.app",
-  "host": "wibohealth.com",
+  "host": "wibohealth-app.vercel.app",
   "name": "WiBo Health",
   "launcherName": "WiBo Health",
   "display": "standalone",
@@ -13,8 +13,8 @@
   "backgroundColor": "#667EEA",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://wibohealth.com/images/icon-512.png",
-  "maskableIconUrl": "https://wibohealth.com/images/icon-512.png",
+  "iconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
+  "maskableIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "C:\\Users\\Admin\\wibohealth-new.keystore",
@@ -24,7 +24,7 @@
   "appVersionCode": 1,
   "shortcuts": [],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://wibohealth.com/manifest.json",
+  "webManifestUrl": "https://wibohealth-app.vercel.app/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -33,10 +33,10 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://wibohealth.com/",
+  "fullScopeUrl": "https://wibohealth-app.vercel.app/",
   "minSdkVersion": 21,
   "shareTarget": {
-    "action": "https://wibohealth.com/",
+    "action": "https://wibohealth-app.vercel.app/",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {

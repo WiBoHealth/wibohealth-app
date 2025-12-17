@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
-    <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
-    <meta name="description" content="موقعك الصحي الفريد: المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي - دليلك الشامل للتغذية الصحية والدايت">
-    <meta name="keywords" content="تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI, حاسبة السعرات, وصفات صحية, مقالات تغذية, صحة, عناصر غذائية, بروتين, كربوهيدرات, دهون صحية">
+    <title>WiBo Health - Your Complete Health Guide with Glycemic & Insulin Index</title>
+    <meta name="title" content="WiBo Health - Your Comprehensive Guide to Nutrition & Health">
+    <meta name="description" content="Your unique health platform: Glycemic & Insulin Index for every food, dietary supplements guide, healthy recipes, free calculators, professional calorie tracker - Your complete guide to healthy nutrition & diet">
+    <meta name="keywords" content="healthy nutrition, diet, weight loss, glycemic index, insulin index, calories, BMI calculator, calorie calculator, healthy recipes, nutrition articles, health, nutrients, protein, carbohydrates, healthy fats">
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="Arabic">
+    <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
-    <link rel="canonical" href="https://wibohealth.com/">
+    <link rel="canonical" href="https://wibohealth.com/en/">
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/" />
@@ -22,18 +22,18 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wibohealth.com/">
-    <meta property="og:title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
-    <meta property="og:description" content="دليل شامل للتغذية الصحية: أطعمة، مكملات، وصفات، حاسبات صحية، ومقالات تغذوية احترافية">
+    <meta property="og:url" content="https://wibohealth.com/en/">
+    <meta property="og:title" content="WiBo Health - Your Comprehensive Guide to Nutrition & Health">
+    <meta property="og:description" content="Complete nutrition guide: Foods, supplements, recipes, health calculators, and professional nutrition articles">
     <meta property="og:image" content="https://wibohealth.com/images/logo.png">
-    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="WiBo Health">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://wibohealth.com/">
-    <meta name="twitter:title" content="WiBo Health - دليلك الصحي الشامل">
-    <meta name="twitter:description" content="دليلك الشامل للتغذية: أطعمة، مكملات، حاسبات، وصفات ومقالات صحية">
+    <meta name="twitter:url" content="https://wibohealth.com/en/">
+    <meta name="twitter:title" content="WiBo Health - Your Complete Health Guide">
+    <meta name="twitter:description" content="Your complete guide to nutrition: Foods, supplements, calculators, recipes and health articles">
     <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
     
     <!-- Google Site Verification -->
@@ -52,10 +52,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
     <!-- Hero Improvements CSS -->
     <link rel="stylesheet" href="/css/hero-improvements.css">
+
+    <!-- Language Manager - Auto Language Switcher -->
+    <script src="/js/language-manager.js"></script>
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -77,9 +80,6 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
-
-    <!-- Language Manager - Auto Language Switcher -->
-    <script src="/js/language-manager.js"></script>
 
     <style>
         * {
@@ -107,7 +107,7 @@
         }
 
         body {
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--primary-gradient);
             min-height: 100vh;
             color: var(--hero-text);
@@ -312,6 +312,34 @@
             gap: 15px;
         }
 
+        /* Language Switcher */
+        .lang-switcher {
+            width: 50px;
+            height: 50px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        body.dark-mode .lang-switcher {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .lang-switcher:hover {
+            transform: scale(1.1);
+            background: #2ecc71;
+            color: white;
+        }
+
         .theme-toggle {
             width: 50px;
             height: 50px;
@@ -395,7 +423,7 @@
             display: none;
             position: fixed;
             top: 0;
-            right: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.5);
@@ -412,25 +440,25 @@
         .mobile-nav-menu {
             position: fixed;
             top: 0;
-            right: -100%;
+            left: -100%;
             width: 280px;
             height: 100%;
             background: var(--card-bg);
-            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            box-shadow: 5px 0 15px rgba(0,0,0,0.3);
             z-index: 1000;
             padding: 80px 20px 20px;
-            transition: right 0.3s ease;
+            transition: left 0.3s ease;
             overflow-y: auto;
         }
 
         .mobile-nav-menu.active {
-            right: 0;
+            left: 0;
         }
 
         .mobile-nav-close {
             position: absolute;
             top: 20px;
-            right: 20px;
+            left: 20px;
             background: none;
             border: none;
             font-size: 30px;
@@ -473,7 +501,7 @@
         .mobile-nav-link:hover {
             background: linear-gradient(135deg, #2ecc71, #27ae60);
             color: white;
-            transform: translateX(-5px);
+            transform: translateX(5px);
         }
 
         .mobile-nav-link i {
@@ -547,7 +575,7 @@
             margin-top: 30px;
             box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
             transition: all 0.3s ease;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
             display: inline-flex;
             align-items: center;
             gap: 12px;
@@ -631,7 +659,7 @@
 
         .compare-feature-content {
             flex: 1;
-            text-align: right;
+            text-align: left;
         }
 
         .compare-feature-content h3 {
@@ -814,7 +842,7 @@
             padding: 30px;
             background: #f8f9fa;
             border-radius: 15px;
-            border-right: 5px solid #2ecc71;
+            border-left: 5px solid #2ecc71;
         }
 
         .info-box h3 {
@@ -854,7 +882,7 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .level-low { background: #2ecc71; }
@@ -989,7 +1017,7 @@
                 height: 70px;
             }
 
-            .theme-toggle {
+            .theme-toggle, .lang-switcher {
                 width: 45px;
                 height: 45px;
                 font-size: 18px;
@@ -1064,17 +1092,17 @@
                     </div>
                     <div class="logo-text">
                         <h1>WiBo Health</h1>
-                        <p>دليلك الصحي الشامل للتغذية السليمة</p>
+                        <p>Your Complete Guide to Proper Nutrition</p>
                     </div>
                 </div>
 
                 <div class="header-controls">
                     <!-- Language Switcher -->
-                    <a href="/en/" class="theme-toggle" title="Switch to English" style="text-decoration: none;">
-                        🇬🇧
+                    <a href="/" class="lang-switcher" title="Switch to Arabic">
+                        🇸🇦
                     </a>
 
-                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
                         <i class="fas fa-moon"></i>
                     </button>
 
@@ -1087,37 +1115,37 @@
 
                     <!-- Desktop Navigation -->
                     <nav class="nav-menu">
-                    <a href="foods.html" class="nav-link">
+                    <a href="/en/foods.html" class="nav-link">
                         <i class="fas fa-utensils"></i>
-                        دليل الأطعمة
+                        Foods Guide
                     </a>
-                    <a href="calculators.html" class="nav-link">
+                    <a href="/en/calculators.html" class="nav-link">
                         <i class="fas fa-calculator"></i>
-                        الحاسبات
+                        Calculators
                     </a>
-                    <a href="calorie-tracker.html" class="nav-link">
+                    <a href="/en/calorie-tracker.html" class="nav-link">
                         <i class="fas fa-chart-line"></i>
-                        متتبع السعرات
+                        Calorie Tracker
                     </a>
-                    <a href="recipes.html" class="nav-link">
+                    <a href="/en/recipes.html" class="nav-link">
                         <i class="fas fa-book-open"></i>
-                        الوصفات
+                        Recipes
                     </a>
-                    <a href="articles.html" class="nav-link">
+                    <a href="/en/articles.html" class="nav-link">
                         <i class="fas fa-book-medical"></i>
-                        المقالات
+                        Articles
                     </a>
-                    <a href="supplements.html" class="nav-link">
+                    <a href="/en/supplements.html" class="nav-link">
                         <i class="fas fa-capsules"></i>
-                        المكملات الغذائية
+                        Supplements
                     </a>
-                    <a href="doctor.html" class="nav-link">
+                    <a href="/en/doctor.html" class="nav-link">
                         <i class="fas fa-user-md"></i>
-                        د. وسيم حبيب
+                        Dr. Waseem Habib
                     </a>
-                    <a href="diet-plan.html" class="nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);">
+                    <a href="/en/diet-plan.html" class="nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);">
                         <i class="fas fa-gift"></i>
-                        دايت مجاني 🎁
+                        Free Diet Plan 🎁
                     </a>
                     </nav>
                 </div>
@@ -1134,53 +1162,53 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <a href="index.html" class="mobile-nav-link">
+        <a href="/en/index.html" class="mobile-nav-link">
             <i class="fas fa-home"></i>
-            الصفحة الرئيسية
+            Home
         </a>
-        <a href="foods.html" class="mobile-nav-link">
+        <a href="/en/foods.html" class="mobile-nav-link">
             <i class="fas fa-utensils"></i>
-            دليل الأطعمة
+            Foods Guide
         </a>
-        <a href="calculators.html" class="mobile-nav-link">
+        <a href="/en/calculators.html" class="mobile-nav-link">
             <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
+            Health Calculators
         </a>
-        <a href="calorie-tracker.html" class="mobile-nav-link">
+        <a href="/en/calorie-tracker.html" class="mobile-nav-link">
             <i class="fas fa-chart-line"></i>
-            متتبع السعرات
+            Calorie Tracker
         </a>
-        <a href="recipes.html" class="mobile-nav-link">
+        <a href="/en/recipes.html" class="mobile-nav-link">
             <i class="fas fa-book-open"></i>
-            الوصفات الصحية
+            Healthy Recipes
         </a>
-        <a href="articles.html" class="mobile-nav-link">
+        <a href="/en/articles.html" class="mobile-nav-link">
             <i class="fas fa-book-medical"></i>
-            المقالات الصحية
+            Health Articles
         </a>
-        <a href="supplements.html" class="mobile-nav-link">
+        <a href="/en/supplements.html" class="mobile-nav-link">
             <i class="fas fa-capsules"></i>
-            دليل المكملات الغذائية
+            Supplements Guide
         </a>
-        <a href="doctor.html" class="mobile-nav-link">
+        <a href="/en/doctor.html" class="mobile-nav-link">
             <i class="fas fa-user-md"></i>
-            د. وسيم حبيب
+            Dr. Waseem Habib
         </a>
-        <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;">
+        <a href="/en/diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;">
             <i class="fas fa-leaf"></i>
-            احصل على دايت مجاني 🎁
+            Get Free Diet Plan 🎁
         </a>
-        <a href="pricing.html" class="mobile-nav-link">
+        <a href="/en/pricing.html" class="mobile-nav-link">
             <i class="fas fa-tag"></i>
-            الأسعار
+            Pricing
         </a>
-        <a href="about.html" class="mobile-nav-link">
+        <a href="/en/about.html" class="mobile-nav-link">
             <i class="fas fa-info-circle"></i>
-            من نحن
+            About Us
         </a>
-        <a href="contact.html" class="mobile-nav-link">
+        <a href="/en/contact.html" class="mobile-nav-link">
             <i class="fas fa-envelope"></i>
-            اتصل بنا
+            Contact Us
         </a>
     </nav>
 
@@ -1192,12 +1220,12 @@
             <div class="compare-feature-card">
                 <div class="compare-feature-icon">⚖️</div>
                 <div class="compare-feature-content">
-                    <h3>🆕 ميزة حصرية: قارن بين المكملات!</h3>
-                    <p>اختر 2-5 مكملات غذائية وقارنها جنباً إلى جنب - الفوائد، الجرعات، التحذيرات، والتفاعلات الدوائية</p>
+                    <h3>🆕 Exclusive Feature: Compare Supplements!</h3>
+                    <p>Select 2-5 dietary supplements and compare them side by side - benefits, dosages, warnings, and drug interactions</p>
                 </div>
-                <a href="supplements.html" class="compare-feature-btn">
+                <a href="/en/supplements.html" class="compare-feature-btn">
                     <i class="fas fa-balance-scale"></i>
-                    جرب الآن
+                    Try Now
                 </a>
             </div>
             
@@ -1208,104 +1236,104 @@
                     <span class="stat-number-dynamic">
                         <span class="stat-count" id="food-count">0</span>+
                     </span>
-                    <span class="stat-label-compact">عنصر غذائي</span>
+                    <span class="stat-label-compact">Food Items</span>
                 </div>
                 <div class="stat-item-compact">
                     <i class="fas fa-book-open"></i>
                     <span class="stat-number-dynamic">
                         <span class="stat-count" id="recipe-count">0</span>+
                     </span>
-                    <span class="stat-label-compact">وصفة صحية</span>
+                    <span class="stat-label-compact">Healthy Recipes</span>
                 </div>
                 <div class="stat-item-compact">
                     <i class="fas fa-newspaper"></i>
                     <span class="stat-number-dynamic">
                         <span class="stat-count" id="article-count">0</span>+
                     </span>
-                    <span class="stat-label-compact">مقالة متخصصة</span>
+                    <span class="stat-label-compact">Health Articles</span>
                 </div>
                 <div class="stat-item-compact">
                     <i class="fas fa-capsules"></i>
                     <span class="stat-number-dynamic">
                         <span class="stat-count" id="supplement-count">0</span>+
                     </span>
-                    <span class="stat-label-compact">مكمل غذائي</span>
+                    <span class="stat-label-compact">Supplements</span>
                 </div>
                 <div class="stat-item-compact">
                     <i class="fas fa-calculator"></i>
                     <span class="stat-number-dynamic">
                         <span class="stat-count" id="calculator-count">0</span>+
                     </span>
-                    <span class="stat-label-compact">حاسبات دقيقة</span>
+                    <span class="stat-label-compact">Accurate Calculators</span>
                 </div>
             </div>
 
             <!-- CTA Buttons -->
             <div class="hero-cta-buttons">
-                <a href="foods.html" class="cta-btn cta-primary">
+                <a href="/en/foods.html" class="cta-btn cta-primary">
                     <i class="fas fa-utensils"></i>
-                    تصفح الأطعمة
+                    Browse Foods
                 </a>
-                <a href="diet-plan.html" class="cta-btn cta-secondary">
+                <a href="/en/diet-plan.html" class="cta-btn cta-secondary">
                     <i class="fas fa-gift"></i>
-                    احصل على دايت مجاني
+                    Get Free Diet Plan
                 </a>
             </div>
 
             <!-- PWA Install Button -->
             <button id="install-button" class="pwa-install-btn">
                 <i class="fas fa-download"></i>
-                ثبّت التطبيق على هاتفك
+                Install App on Your Phone
             </button>
         </section>
 
         <!-- Quick Features Grid -->
         <section class="quick-features">
-            <h2 class="section-title">✨ لماذا WiBo Health؟ ✨</h2>
+            <h2 class="section-title">✨ Why WiBo Health? ✨</h2>
             <div class="quick-features-grid">
                 <div class="quick-feature-card">
                     <div class="quick-feature-icon">
                         <i class="fas fa-database"></i>
                     </div>
-                    <h3>قاعدة بيانات شاملة</h3>
-                    <p>آلاف العناصر الغذائية مع مؤشر السكر والأنسولين والقيم الغذائية الكاملة</p>
-                    <a href="foods.html" class="feature-link">تصفح الآن <i class="fas fa-arrow-left"></i></a>
+                    <h3>Comprehensive Database</h3>
+                    <p>Thousands of food items with glycemic index, insulin index, and complete nutritional values</p>
+                    <a href="/en/foods.html" class="feature-link">Browse Now <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="quick-feature-card">
                     <div class="quick-feature-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <h3>وصفات صحية متنوعة</h3>
-                    <p>مجموعة كبيرة من الوصفات العربية والعالمية مع القيم الغذائية الكاملة</p>
-                    <a href="recipes.html" class="feature-link">شاهد الوصفات <i class="fas fa-arrow-left"></i></a>
+                    <h3>Diverse Healthy Recipes</h3>
+                    <p>Large collection of Arabic and international recipes with complete nutritional values</p>
+                    <a href="/en/recipes.html" class="feature-link">View Recipes <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="quick-feature-card">
                     <div class="quick-feature-icon">
                         <i class="fas fa-calculator"></i>
                     </div>
-                    <h3>حاسبات صحية متقدمة</h3>
-                    <p>احسب BMI، BMR، السعرات اليومية، واحتياج الماء بدقة عالية</p>
-                    <a href="calculators.html" class="feature-link">ابدأ الحساب <i class="fas fa-arrow-left"></i></a>
+                    <h3>Advanced Health Calculators</h3>
+                    <p>Calculate BMI, BMR, daily calories, and water intake with high accuracy</p>
+                    <a href="/en/calculators.html" class="feature-link">Start Calculating <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="quick-feature-card">
                     <div class="quick-feature-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
-                    <h3>مقالات تغذوية متخصصة</h3>
-                    <p>محتوى احترافي عن السكري، التغذية، القولون العصبي والصحة العامة</p>
-                    <a href="articles.html" class="feature-link">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    <h3>Specialized Nutrition Articles</h3>
+                    <p>Professional content about diabetes, nutrition, IBS, and general health</p>
+                    <a href="/en/articles.html" class="feature-link">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="quick-feature-card">
                     <div class="quick-feature-icon">
                         <i class="fas fa-capsules"></i>
                     </div>
-                    <h3>دليل المكملات الغذائية</h3>
-                    <p>دليل شامل للمكملات الغذائية مع الفوائد، الجرعات، التحذيرات والمصادر الطبيعية</p>
-                    <a href="supplements.html" class="feature-link">استكشف الدليل <i class="fas fa-arrow-left"></i></a>
+                    <h3>Dietary Supplements Guide</h3>
+                    <p>Comprehensive guide to dietary supplements with benefits, dosages, warnings, and natural sources</p>
+                    <a href="/en/supplements.html" class="feature-link">Explore Guide <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -1316,49 +1344,49 @@
                 <div class="feature-icon">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3>الجلايسيميك إندكس (GI)</h3>
-                <p>مقياس يوضح سرعة تأثير الطعام على مستوى السكر في الدم من 0 إلى 100. الأطعمة ذات المؤشر المنخفض (أقل من 55) تساعد على استقرار مستوى السكر.</p>
+                <h3>Glycemic Index (GI)</h3>
+                <p>A scale that shows how quickly food affects blood sugar levels from 0 to 100. Foods with low GI (less than 55) help stabilize blood sugar levels.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-syringe"></i>
                 </div>
-                <h3>الإنسولين إندكس (II)</h3>
-                <p>مقياس يوضح كمية الإنسولين التي يحتاجها الجسم لهضم الطعام. معرفة هذا المؤشر مهم لمرضى السكري ومن يريد التحكم بالوزن.</p>
+                <h3>Insulin Index (II)</h3>
+                <p>A scale that shows how much insulin the body needs to digest food. Knowing this index is important for diabetics and those who want to control weight.</p>
             </div>
 
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
-                <h3>المعلومات الغذائية</h3>
-                <p>قاعدة بيانات شاملة تحتوي على السعرات الحرارية، البروتينات، الكربوهيدرات، الدهون والألياف لجميع الأطعمة.</p>
+                <h3>Nutritional Information</h3>
+                <p>Comprehensive database containing calories, proteins, carbohydrates, fats, and fiber for all foods.</p>
             </div>
         </section>
 
         <!-- Info Section -->
         <section class="info-section">
-            <h2>فهم المؤشرات الصحية</h2>
+            <h2>Understanding Health Indices</h2>
             
             <div class="info-grid">
                 <div class="info-box">
                     <h3>
                         <i class="fas fa-leaf"></i>
-                        الجلايسيميك إندكس
+                        Glycemic Index
                     </h3>
                     <ul>
                         <li>
                             <span class="level-indicator level-low"></span>
-                            <strong>منخفض (0-55):</strong> بطيء الامتصاص، مثالي للصحة
+                            <strong>Low (0-55):</strong> Slow absorption, ideal for health
                         </li>
                         <li>
                             <span class="level-indicator level-medium"></span>
-                            <strong>متوسط (56-69):</strong> امتصاص معتدل
+                            <strong>Medium (56-69):</strong> Moderate absorption
                         </li>
                         <li>
                             <span class="level-indicator level-high"></span>
-                            <strong>مرتفع (70+):</strong> سريع الامتصاص، يرفع السكر بسرعة
+                            <strong>High (70+):</strong> Fast absorption, raises sugar quickly
                         </li>
                     </ul>
                 </div>
@@ -1366,20 +1394,20 @@
                 <div class="info-box">
                     <h3>
                         <i class="fas fa-heartbeat"></i>
-                        الإنسولين إندكس
+                        Insulin Index
                     </h3>
                     <ul>
                         <li>
                             <span class="level-indicator level-low"></span>
-                            <strong>منخفض (0-55):</strong> إفراز إنسولين قليل
+                            <strong>Low (0-55):</strong> Low insulin release
                         </li>
                         <li>
                             <span class="level-indicator level-medium"></span>
-                            <strong>متوسط (56-69):</strong> إفراز إنسولين معتدل
+                            <strong>Medium (56-69):</strong> Moderate insulin release
                         </li>
                         <li>
                             <span class="level-indicator level-high"></span>
-                            <strong>مرتفع (70+):</strong> إفراز إنسولين عالي
+                            <strong>High (70+):</strong> High insulin release
                         </li>
                     </ul>
                 </div>
@@ -1387,13 +1415,13 @@
                 <div class="info-box">
                     <h3>
                         <i class="fas fa-apple-alt"></i>
-                        لماذا يهمك؟
+                        Why Does It Matter?
                     </h3>
                     <ul>
-                        <li>✓ التحكم في الوزن بشكل صحي</li>
-                        <li>✓ إدارة مرض السكري</li>
-                        <li>✓ تحسين مستوى الطاقة</li>
-                        <li>✓ الوقاية من الأمراض</li>
+                        <li>✓ Healthy weight control</li>
+                        <li>✓ Diabetes management</li>
+                        <li>✓ Improved energy levels</li>
+                        <li>✓ Disease prevention</li>
                     </ul>
                 </div>
             </div>
@@ -1401,33 +1429,33 @@
 
         <!-- CTA Section -->
         <section class="cta-section">
-            <h2>ابدأ رحلتك الصحية الآن</h2>
-            <p style="font-size: 1.2rem; margin-top: 15px;">اكتشف المؤشرات الصحية لأطعمتك المفضلة</p>
+            <h2>Start Your Health Journey Now</h2>
+            <p style="font-size: 1.2rem; margin-top: 15px;">Discover the health indices of your favorite foods</p>
             
             <div class="cta-buttons">
-                <a href="diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); font-size: 1.2em; padding: 18px 35px; box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);">
+                <a href="/en/diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); font-size: 1.2em; padding: 18px 35px; box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);">
                     <i class="fas fa-gift"></i>
-                    احصل على دايت مجاني لأسبوع! 🎁
+                    Get Free Weekly Diet Plan! 🎁
                 </a>
-                <a href="foods.html" class="cta-btn">
+                <a href="/en/foods.html" class="cta-btn">
                     <i class="fas fa-utensils"></i>
-                    تصفح الأطعمة
+                    Browse Foods
                 </a>
-                <a href="calculators.html" class="cta-btn">
+                <a href="/en/calculators.html" class="cta-btn">
                     <i class="fas fa-calculator"></i>
-                    احسب احتياجك اليومي
+                    Calculate Daily Needs
                 </a>
-                <a href="recipes.html" class="cta-btn">
+                <a href="/en/recipes.html" class="cta-btn">
                     <i class="fas fa-book-open"></i>
-                    وصفات صحية
+                    Healthy Recipes
                 </a>
-                <a href="articles.html" class="cta-btn">
+                <a href="/en/articles.html" class="cta-btn">
                     <i class="fas fa-book-medical"></i>
-                    المقالات الصحية
+                    Health Articles
                 </a>
-                <a href="doctor.html" class="cta-btn">
+                <a href="/en/doctor.html" class="cta-btn">
                     <i class="fas fa-user-md"></i>
-                    استشر د. وسيم حبيب
+                    Consult Dr. Waseem Habib
                 </a>
             </div>
         </section>
@@ -1435,10 +1463,10 @@
         <!-- Dedication Section -->
         <section class="dedication">
             <div class="dedication-content">
-                <p>إلى الروح التي عانقت روحي...</p>
-                <p>إلى اليد التي أوقدت شعلة عواطفي...</p>
+                <p>To the soul that embraced my soul...</p>
+                <p>To the hand that ignited my emotions...</p>
                 <div class="bodi-name" id="bodiName">
-                    💚 بودي 💚
+                    💚 Bodi 💚
                 </div>
             </div>
         </section>
@@ -1447,30 +1475,30 @@
     </div>
 
     <!-- Footer -->
-    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
+    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Inter', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                من نحن
+            <a href="/en/about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                About Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                اتصل بنا
+            <a href="/en/contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Contact Us
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                سياسة الخصوصية
+            <a href="/en/privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Privacy Policy
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                شروط الاستخدام
+            <a href="/en/terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Terms of Use
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="disclaimer.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
-                إخلاء المسؤولية
+            <a href="/en/disclaimer.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+                Disclaimer
             </a>
         </div>
         <div class="social-links" style="display: flex; justify-content: center; gap: 15px; margin: 20px 0;">
-            <a href="https://wa.me/31645844585?text=مرحباً، أرغب في الاستفسار عن خدماتكم الصحية" target="_blank" style="width: 40px; height: 40px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <a href="https://wa.me/31645844585?text=Hello, I would like to inquire about your health services" target="_blank" style="width: 40px; height: 40px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
                 <i class="fab fa-whatsapp"></i>
             </a>
             <a href="#" style="width: 40px; height: 40px; background: #3b5998; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -1481,13 +1509,13 @@
             </a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">
-            © 2024 WiBo Health. جميع الحقوق محفوظة.
+            © 2024 WiBo Health. All Rights Reserved.
         </p>
         <p style="margin: 5px 0; color: #7f8c8d; font-size: 0.75em; opacity: 0.8;">
-            المصادر العلمية: USDA • PubMed • WHO • Glycemic Index Foundation • Nutritionix
+            Scientific Sources: USDA • PubMed • WHO • Glycemic Index Foundation • Nutritionix
         </p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي
+            💚 Built with <span style="color: #2ecc71;">♥</span> for Bodi
         </p>
     </footer>
 
@@ -1526,10 +1554,10 @@
             body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
         }
 
-        // Create floating hearts when clicking on "بودي"
+        // Create floating hearts when clicking on "Bodi"
         function createHearts(event) {
             event.preventDefault();
-            console.log('💚 بودي! Creating hearts animation...');
+            console.log('💚 Bodi! Creating hearts animation...');
             
             const rect = event.target.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
@@ -1587,21 +1615,18 @@
         // ============================================
         let lastScrollTop = 0;
         const header = document.querySelector('header');
-        const scrollThreshold = 150; // بعد 150px من التمرير
+        const scrollThreshold = 150;
 
         window.addEventListener('scroll', function() {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             
-            // السحب لأسفل - إخفاء Header
             if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
                 header.classList.add('hide-nav');
             } 
-            // السحب لأعلى - إظهار Header
             else if (currentScroll < lastScrollTop) {
                 header.classList.remove('hide-nav');
             }
             
-            // عند الوصول لأعلى الصفحة - إظهار Header
             if (currentScroll <= 0) {
                 header.classList.remove('hide-nav');
             }
@@ -1611,12 +1636,12 @@
     </script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/31645844585?text=مرحباً، أرغب في حجز استشارة صحية مع د. وسيم حبيب" 
+    <a href="https://wa.me/31645844585?text=Hello, I would like to book a health consultation with Dr. Waseem Habib" 
        class="whatsapp-float" 
        target="_blank"
-       title="احجز استشارتك عبر واتساب">
+       title="Book consultation via WhatsApp">
         <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-text">احجز استشارة</span>
+        <span class="whatsapp-text">Book Consultation</span>
     </a>
 
     <style>
@@ -1624,7 +1649,7 @@
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
-            left: 30px;
+            right: 30px;
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: white;
             width: 200px;
@@ -1641,7 +1666,7 @@
             z-index: 10000;
             transition: all 0.3s ease;
             animation: pulse-whatsapp 2s infinite;
-            font-family: 'Cairo', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .whatsapp-float:hover {
@@ -1680,7 +1705,7 @@
                 width: 60px;
                 height: 60px;
                 bottom: 20px;
-                left: 20px;
+                right: 20px;
                 border-radius: 50%;
             }
 
@@ -1703,13 +1728,11 @@
                     .then(function(registration) {
                         console.log('✅ PWA: Service Worker registered successfully:', registration.scope);
                         
-                        // التحقق من وجود تحديثات
                         registration.addEventListener('updatefound', () => {
                             const newWorker = registration.installing;
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     console.log('🔄 PWA: New version available! Please refresh.');
-                                    // يمكن إضافة إشعار للمستخدم هنا
                                 }
                             });
                         });
@@ -1719,8 +1742,6 @@
                     });
             });
         }
-
-        // Old PWA code removed - using new improved code below
     </script>
 
     <style>
@@ -1760,14 +1781,12 @@
 
     <!-- PWA Service Worker Registration -->
     <script>
-        // تسجيل Service Worker للـ PWA
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js')
                     .then(registration => {
                         console.log('✅ PWA: Service Worker registered successfully:', registration.scope);
                         
-                        // التحقق من التحديثات
                         registration.addEventListener('updatefound', () => {
                             const newWorker = registration.installing;
                             console.log('🔄 PWA: New Service Worker installing...');
@@ -1776,8 +1795,7 @@
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     console.log('🆕 PWA: New version available! Please refresh.');
                                     
-                                    // يمكن إضافة إشعار للمستخدم هنا
-                                    if (confirm('يوجد تحديث جديد للتطبيق! هل تريد التحديث الآن؟')) {
+                                    if (confirm('New update available for the app! Would you like to update now?')) {
                                         newWorker.postMessage({ type: 'SKIP_WAITING' });
                                         window.location.reload();
                                     }
@@ -1790,7 +1808,6 @@
                     });
             });
 
-            // إعادة تحميل الصفحة عند تفعيل Service Worker الجديد
             let refreshing;
             navigator.serviceWorker.addEventListener('controllerchange', () => {
                 if (refreshing) return;
@@ -1801,7 +1818,6 @@
             console.warn('⚠️ PWA: Service Workers are not supported in this browser.');
         }
 
-        // إظهار زر التثبيت (Install Prompt)
         let deferredPrompt;
         const installButton = document.getElementById('install-button');
 
@@ -1810,13 +1826,11 @@
             e.preventDefault();
             deferredPrompt = e;
             
-            // إظهار زر التثبيت
             if (installButton) {
                 installButton.style.display = 'block';
             }
         });
 
-        // معالج زر التثبيت
         if (installButton) {
             installButton.addEventListener('click', async () => {
                 if (!deferredPrompt) {
@@ -1840,18 +1854,14 @@
             });
         }
 
-        // تتبع حالة التطبيق (Online/Offline)
         window.addEventListener('online', () => {
             console.log('🌐 PWA: App is online');
-            // يمكن إضافة إشعار للمستخدم
         });
 
         window.addEventListener('offline', () => {
             console.log('📴 PWA: App is offline - Using cached content');
-            // يمكن إضافة إشعار للمستخدم
         });
 
-        // تسجيل تثبيت التطبيق
         window.addEventListener('appinstalled', () => {
             console.log('🎉 PWA: App installed successfully!');
             deferredPrompt = null;
@@ -1859,15 +1869,14 @@
     </script>
 
     <!-- Load Databases -->
-    <script src="js/data.js"></script>
-    <script src="js/recipes-data.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/recipes-data.js"></script>
 
     <!-- Dynamic Counter Script -->
     <script>
-        // Dynamic Counter - يحسب تلقائياً من قاعدة البيانات
         function animateCounter(element, target) {
-            const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60 FPS
+            const duration = 2000;
+            const increment = target / (duration / 16);
             let current = 0;
 
             const updateCounter = () => {
@@ -1883,42 +1892,35 @@
             updateCounter();
         }
 
-        // حساب الأعداد تلقائياً من قواعد البيانات
         function updateDynamicCounts() {
-            // عدد الأطعمة من foodsDatabase
             const foodCountElement = document.getElementById('food-count');
             if (foodCountElement && typeof foodsDatabase !== 'undefined') {
                 const foodCount = foodsDatabase.length;
                 animateCounter(foodCountElement, foodCount);
             }
 
-            // عدد الوصفات من recipesDatabase
             const recipeCountElement = document.getElementById('recipe-count');
             if (recipeCountElement && typeof recipesDatabase !== 'undefined') {
                 const recipeCount = recipesDatabase.length;
                 animateCounter(recipeCountElement, recipeCount);
             }
 
-            // عدد المقالات
             const articleCountElement = document.getElementById('article-count');
             if (articleCountElement) {
                 animateCounter(articleCountElement, 19);
             }
 
-            // عدد المكملات الغذائية
             const supplementCountElement = document.getElementById('supplement-count');
             if (supplementCountElement) {
                 animateCounter(supplementCountElement, 442);
             }
 
-            // عدد الحاسبات الصحية (4 حاسبات: BMI, BMR, السعرات, الماء)
             const calculatorCountElement = document.getElementById('calculator-count');
             if (calculatorCountElement) {
                 animateCounter(calculatorCountElement, 4);
             }
         }
 
-        // Intersection Observer to trigger animation when visible
         const observerOptions = {
             threshold: 0.3,
             rootMargin: '0px'
@@ -1933,9 +1935,7 @@
             });
         }, observerOptions);
 
-        // تحميل قواعد البيانات ثم بدء العد
         document.addEventListener('DOMContentLoaded', () => {
-            // انتظار تحميل data.js و recipes-data.js
             const checkDatabasesLoaded = setInterval(() => {
                 if (typeof foodsDatabase !== 'undefined' && typeof recipesDatabase !== 'undefined') {
                     clearInterval(checkDatabasesLoaded);
@@ -1948,16 +1948,14 @@
             }, 100);
         });
 
-        // إضافة console.log لعرض الأعداد (اختياري - للتأكد)
         window.addEventListener('load', () => {
             if (typeof foodsDatabase !== 'undefined') {
-                console.log('✅ عدد الأطعمة:', foodsDatabase.length);
+                console.log('✅ Food count:', foodsDatabase.length);
             }
             if (typeof recipesDatabase !== 'undefined') {
-                console.log('✅ عدد الوصفات:', recipesDatabase.length);
+                console.log('✅ Recipe count:', recipesDatabase.length);
             }
             
-            // 🔄 مسح الـ Browser Cache القديم
             if ('caches' in window) {
                 caches.keys().then(cacheNames => {
                     const latestCacheName = 'wibo-health-v3.0.0';
@@ -1971,7 +1969,6 @@
             }
         });
         
-        // ✅ تحديث Service Worker
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js').then(registration => {
                 console.log('✅ Service Worker registered:', registration);
