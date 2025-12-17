@@ -1,6 +1,6 @@
 {
   "packageId": "com.wibohealth.app",
-  "host": "wibohealth-app.vercel.app",
+  "host": "wibohealth.com",
   "name": "WiBo Health",
   "launcherName": "WiBo Health",
   "display": "standalone",
@@ -13,8 +13,8 @@
   "backgroundColor": "#667EEA",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
-  "maskableIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png",
+  "iconUrl": "https://wibohealth.com/images/icon-512.png",
+  "maskableIconUrl": "https://wibohealth.com/images/icon-512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "C:\\Users\\Admin\\android.keystore",
@@ -26,30 +26,30 @@
     {
       "name": "دليل الأطعمة",
       "shortName": "أطعمة",
-      "url": "https://wibohealth-app.vercel.app/foods.html",
-      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+      "url": "https://wibohealth.com/foods.html",
+      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
     },
     {
       "name": "الحاسبات الصحية",
       "shortName": "حاسبات",
-      "url": "https://wibohealth-app.vercel.app/calculators.html",
-      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+      "url": "https://wibohealth.com/calculators.html",
+      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
     },
     {
       "name": "الوصفات الصحية",
       "shortName": "وصفات",
-      "url": "https://wibohealth-app.vercel.app/recipes.html",
-      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+      "url": "https://wibohealth.com/recipes.html",
+      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
     },
     {
       "name": "المقالات الصحية",
       "shortName": "مقالات",
-      "url": "https://wibohealth-app.vercel.app/articles.html",
-      "chosenIconUrl": "https://wibohealth-app.vercel.app/images/icon-512.png"
+      "url": "https://wibohealth.com/articles.html",
+      "chosenIconUrl": "https://wibohealth.com/images/icon-512.png"
     }
   ],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://wibohealth-app.vercel.app/manifest.json",
+  "webManifestUrl": "https://wibohealth.com/manifest.json",
   "fallbackType": "customtabs",
   "features": {},
   "alphaDependencies": {
@@ -58,10 +58,10 @@
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
-  "fullScopeUrl": "https://wibohealth-app.vercel.app/",
+  "fullScopeUrl": "https://wibohealth.com/",
   "minSdkVersion": 21,
   "shareTarget": {
-    "action": "https://wibohealth-app.vercel.app/",
+    "action": "https://wibohealth.com/",
     "method": "GET",
     "enctype": "application/x-www-form-urlencoded",
     "params": {

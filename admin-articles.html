@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المقالات - د. وسيم | WiBo Health</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .editor-section {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            min-height: 300px;
+            resize: vertical;
+            line-height: 1.8;
+        }
+
+        #articleContent[contenteditable] {
+            min-height: 300px;
+            max-height: 600px;
+            overflow-y: auto;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            line-height: 1.8;
+            font-size: 1em;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #articleContent[contenteditable]:focus {
+            border-color: #667eea;
+        }
+
+        #articleContent[contenteditable]:empty:before {
+            content: attr(data-placeholder);
+            color: #999;
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .toolbar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-save {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-export {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-export:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-preview {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-preview:hover {
+            background: #e0a800;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .btn-clear {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-clear:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+        }
+
+        .articles-list {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .articles-list h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .article-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .article-item:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .article-info h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .article-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .article-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .article-actions button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-edit {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background: #138496;
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background: #c82333;
+        }
+
+        .success-msg {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .color-btn {
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .color-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .article-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .article-actions {
+                width: 100%;
+            }
+
+            .article-actions button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-pen-fancy"></i> لوحة تحكم المقالات</h1>
+            <p>د. وسيم - WiBo Health</p>
+        </div>
+
+        <div class="main-content">
+            <div class="success-msg" id="successMsg">
+                <i class="fas fa-check-circle"></i> تم الحفظ بنجاح!
+            </div>
+
+            <div class="editor-section">
+                <h2 style="margin-bottom: 20px; color: #333;">
+                    <i class="fas fa-edit"></i> كتابة مقال جديد
+                </h2>
+
+                <div class="form-group">
+                    <label for="articleTitle">
+                        <i class="fas fa-heading"></i> عنوان المقال
+                    </label>
+                    <input type="text" id="articleTitle" placeholder="اكتب عنوان المقال هنا...">
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <i class="fas fa-tools"></i> أدوات التنسيق
+                    </label>
+                    <div class="toolbar">
+                        <button onclick="formatText('bold')" title="نص عريض">
+                            <i class="fas fa-bold"></i> عريض
+                        </button>
+                        <button onclick="formatText('italic')" title="نص مائل">
+                            <i class="fas fa-italic"></i> مائل
+                        </button>
+                        <button onclick="formatText('underline')" title="تحته خط">
+                            <i class="fas fa-underline"></i> تحته خط
+                        </button>
+                        <button onclick="insertHeading()" title="عنوان فرعي">
+                            <i class="fas fa-heading"></i> عنوان فرعي
+                        </button>
+                        <button onclick="formatText('insertUnorderedList')" title="قائمة">
+                            <i class="fas fa-list"></i> قائمة
+                        </button>
+                        <button onclick="openImageModal()" title="إضافة صورة">
+                            <i class="fas fa-image"></i> صورة
+                        </button>
+                        <button onclick="insertLink()" title="إضافة رابط">
+                            <i class="fas fa-link"></i> رابط
+                        </button>
+                        <button onclick="openColorModal()" title="لون النص" style="background: linear-gradient(135deg, #ff6b6b, #feca57);">
+                            <i class="fas fa-palette"></i> لون
+                        </button>
+                        <button onclick="openHighlightModal()" title="تظليل النص" style="background: linear-gradient(135deg, #feca57, #48dbfb);">
+                            <i class="fas fa-highlighter"></i> تظليل
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="articleContent">
+                        <i class="fas fa-file-alt"></i> محتوى المقال
+                    </label>
+                    <div id="articleContent" contenteditable="true" data-placeholder="اكتب محتوى المقال هنا...
+
+استخدم أزرار التنسيق في الأعلى لتلوين وتنسيق النص!"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-save" onclick="saveArticle()">
+                        <i class="fas fa-save"></i> حفظ المقال
+                    </button>
+                    <button class="btn btn-export" onclick="exportArticle()">
+                        <i class="fas fa-download"></i> تصدير JSON
+                    </button>
+                    <button class="btn btn-preview" onclick="previewArticle()">
+                        <i class="fas fa-eye"></i> معاينة
+                    </button>
+                    <button class="btn btn-clear" onclick="clearForm()">
+                        <i class="fas fa-trash"></i> مسح الكل
+                    </button>
+                </div>
+            </div>
+
+            <div class="articles-list">
+                <h2><i class="fas fa-list-alt"></i> المقالات المحفوظة</h2>
+                <div id="articlesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal للصور -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <h3><i class="fas fa-image"></i> إضافة صورة</h3>
+            <input type="text" id="imageName" placeholder="اسم الصورة (مثال: photo1.jpg)">
+            <p style="color: #666; font-size: 0.9em; margin-bottom: 15px;">
+                ملاحظة: ارفع الصورة أولاً في مجلد images/ ثم اكتب اسمها هنا
+            </p>
+            <div class="modal-buttons">
+                <button style="background: #28a745; color: white;" onclick="insertImage()">
+                    <i class="fas fa-check"></i> إضافة
+                </button>
+                <button style="background: #6c757d; color: white;" onclick="closeImageModal()">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal للألوان -->
+    <div class="modal" id="colorModal">
+        <div class="modal-content">
+            <h3><i class="fas fa-palette"></i> اختر لون النص</h3>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0;">
+                <button class="color-btn" onclick="insertColor('#ff6b6b')" style="background: #ff6b6b; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر"></button>
+                <button class="color-btn" onclick="insertColor('#ee5a6f')" style="background: #ee5a6f; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر وردي"></button>
+                <button class="color-btn" onclick="insertColor('#ff8c42')" style="background: #ff8c42; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="برتقالي"></button>
+                <button class="color-btn" onclick="insertColor('#feca57')" style="background: #feca57; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أصفر"></button>
+                <button class="color-btn" onclick="insertColor('#48dbfb')" style="background: #48dbfb; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أزرق فاتح"></button>
+                
+                <button class="color-btn" onclick="insertColor('#0abde3')" style="background: #0abde3; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أزرق"></button>
+                <button class="color-btn" onclick="insertColor('#667eea')" style="background: #667eea; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي"></button>
+                <button class="color-btn" onclick="insertColor('#764ba2')" style="background: #764ba2; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي غامق"></button>
+                <button class="color-btn" onclick="insertColor('#00d2d3')" style="background: #00d2d3; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="تركواز"></button>
+                <button class="color-btn" onclick="insertColor('#1dd1a1')" style="background: #1dd1a1; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أخضر فاتح"></button>
+                
+                <button class="color-btn" onclick="insertColor('#10ac84')" style="background: #10ac84; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أخضر"></button>
+                <button class="color-btn" onclick="insertColor('#222f3e')" style="background: #222f3e; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أسود"></button>
+                <button class="color-btn" onclick="insertColor('#5f27cd')" style="background: #5f27cd; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="بنفسجي ملكي"></button>
+                <button class="color-btn" onclick="insertColor('#c23616')" style="background: #c23616; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="أحمر غامق"></button>
+                <button class="color-btn" onclick="insertColor('#e1b12c')" style="background: #e1b12c; height: 50px; border: none; border-radius: 8px; cursor: pointer;" title="ذهبي"></button>
+            </div>
+            <input type="text" id="customColor" placeholder="أو أدخل كود اللون (مثال: #ff0000)" style="margin-bottom: 15px;">
+            <div class="modal-buttons">
+                <button style="background: #28a745; color: white;" onclick="insertCustomColor()">
+                    <i class="fas fa-check"></i> تطبيق
+                </button>
+                <button style="background: #6c757d; color: white;" onclick="closeColorModal()">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal للتظليل -->
+    <div class="modal" id="highlightModal">
+        <div class="modal-content">
+            <h3><i class="fas fa-highlighter"></i> اختر لون التظليل</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+                <button class="color-btn" onclick="insertHighlight('#fff3cd')" style="background: #fff3cd; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #856404;" title="أصفر">
+                    🟡 أصفر
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#d4edda')" style="background: #d4edda; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #155724;" title="أخضر">
+                    🟢 أخضر
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#d1ecf1')" style="background: #d1ecf1; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #0c5460;" title="أزرق">
+                    🔵 أزرق
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#ffe5d0')" style="background: #ffe5d0; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #8b4513;" title="برتقالي">
+                    🟠 برتقالي
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#f8d7da')" style="background: #f8d7da; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #721c24;" title="وردي">
+                    🔴 وردي
+                </button>
+                <button class="color-btn" onclick="insertHighlight('#e8daef')" style="background: #e8daef; height: 60px; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; font-weight: 600; color: #4a235a;" title="بنفسجي">
+                    🟣 بنفسجي
+                </button>
+            </div>
+            <div class="modal-buttons">
+                <button style="background: #6c757d; color: white;" onclick="closeHighlightModal()">
+                    <i class="fas fa-times"></i> إلغاء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تحميل المقالات عند فتح الصفحة
+        window.onload = async function() {
+            try {
+                const response = await fetch('/tables/dr_wassim_articles?limit=10');
+                if (response.ok) {
+                    loadArticlesFromServer();
+                } else {
+                    loadArticlesFromLocalStorage();
+                }
+            } catch (error) {
+                loadArticlesFromLocalStorage();
+            }
+        };
+
+        // حذف مقال محلي
+        function deleteLocalArticle(id) {
+            if (!confirm('هل أنت متأكد من حذف هذا المقال؟')) return;
+            
+            let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            articles = articles.filter(a => a.id !== id);
+            localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
+            loadArticlesFromLocalStorage();
+        }
+
+        // تعديل مقال محلي
+        function editLocalArticle(id) {
+            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            const article = articles.find(a => a.id === id);
+
+            if (article) {
+                document.getElementById('articleTitle').value = article.title;
+                document.getElementById('articleContent').innerHTML = article.content;
+                deleteLocalArticle(id);
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            }
+        }
+
+        // حفظ المقال على السيرفر
+        async function saveArticle() {
+            const title = document.getElementById('articleTitle').value.trim();
+            const contentElement = document.getElementById('articleContent');
+            const content = contentElement.innerHTML.trim();
+            const textContent = contentElement.textContent.trim();
+
+            if (!title) {
+                alert('⚠️ الرجاء كتابة عنوان المقال!');
+                return;
+            }
+
+            if (!textContent || textContent.length < 10) {
+                alert('⚠️ الرجاء كتابة محتوى المقال! (على الأقل 10 أحرف)');
+                return;
+            }
+
+            const article = {
+                title: title,
+                content: content,
+                author: 'د. وسيم',
+                published_date: new Date().toISOString()
+            };
+
+            // محاولة الحفظ على السيرفر أولاً
+            try {
+                const response = await fetch('/tables/dr_wassim_articles', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(article)
+                });
+
+                if (response.ok) {
+                    // نجح الحفظ على السيرفر
+                    const msg = document.getElementById('successMsg');
+                    msg.innerHTML = '<i class="fas fa-check-circle"></i> تم النشر بنجاح! الآن يمكن للجميع مشاهدة المقال 🎉';
+                    msg.style.display = 'block';
+                    setTimeout(() => {
+                        msg.style.display = 'none';
+                    }, 4000);
+
+                    clearForm();
+                    loadArticlesFromServer();
+                    return;
+                }
+            } catch (error) {
+                console.warn('Server API not available, using localStorage:', error);
+            }
+
+            // Fallback: حفظ في localStorage
+            try {
+                article.id = Date.now();
+                article.date = new Date().toLocaleDateString('ar-EG', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                let articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+                articles.unshift(article);
+                localStorage.setItem('drWaseemArticles', JSON.stringify(articles));
+
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم الحفظ محلياً! (للاختبار فقط - لن يشاهده الزوار)';
+                msg.style.display = 'block';
+                msg.style.background = '#fff3cd';
+                msg.style.color = '#856404';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                    msg.style.background = '#d4edda';
+                    msg.style.color = '#155724';
+                }, 4000);
+
+                clearForm();
+                loadArticlesFromLocalStorage();
+            } catch (error) {
+                alert('❌ حدث خطأ في الحفظ: ' + error.message);
+            }
+        }
+
+        // تصدير المقال كملف JSON
+        function exportArticle() {
+            const title = document.getElementById('articleTitle').value.trim();
+            const content = document.getElementById('articleContent').innerHTML.trim();
+
+            if (!title || !content) {
+                alert('⚠️ الرجاء ملء العنوان والمحتوى أولاً!');
+                return;
+            }
+
+            const article = {
+                title: title,
+                content: content,
+                author: 'د. وسيم',
+                date: new Date().toISOString()
+            };
+
+            const dataStr = JSON.stringify(article, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `article-${Date.now()}.json`;
+            link.click();
+        }
+
+        // معاينة المقال
+        function previewArticle() {
+            const title = document.getElementById('articleTitle').value.trim();
+            const content = document.getElementById('articleContent').innerHTML.trim();
+
+            if (!title || !content) {
+                alert('⚠️ الرجاء ملء العنوان والمحتوى أولاً!');
+                return;
+            }
+
+            const article = {
+                title: title,
+                content: content,
+                author: 'د. وسيم',
+                date: new Date().toLocaleDateString('ar-EG')
+            };
+
+            localStorage.setItem('previewArticle', JSON.stringify(article));
+            window.open('my-articles.html?preview=true', '_blank');
+        }
+
+        // تحميل المقالات من localStorage (Fallback)
+        function loadArticlesFromLocalStorage() {
+            const articles = JSON.parse(localStorage.getItem('drWaseemArticles') || '[]');
+            const listDiv = document.getElementById('articlesList');
+
+            if (articles.length === 0) {
+                listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 30px;">لا توجد مقالات محفوظة بعد</p>';
+                return;
+            }
+
+            listDiv.innerHTML = articles.map(article => {
+                const date = article.date || new Date(article.published_date).toLocaleDateString('ar-EG');
+
+                return `
+                    <div class="article-item">
+                        <div class="article-info">
+                            <h3>${article.title}</h3>
+                            <p><i class="fas fa-calendar"></i> ${date} <span style="color: #ffc107; margin-right: 10px;">📝 محفوظ محلياً</span></p>
+                        </div>
+                        <div class="article-actions">
+                            <button class="btn-edit" onclick="editLocalArticle(${article.id})">
+                                <i class="fas fa-edit"></i> تعديل
+                            </button>
+                            <button class="btn-delete" onclick="deleteLocalArticle(${article.id})">
+                                <i class="fas fa-trash"></i> حذف
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // تحميل المقالات من السيرفر
+        async function loadArticlesFromServer() {
+            try {
+                const response = await fetch('/tables/dr_wassim_articles?limit=100&sort=-created_at');
+                const data = await response.json();
+                const articles = data.data || [];
+                const listDiv = document.getElementById('articlesList');
+
+                if (articles.length === 0) {
+                    listDiv.innerHTML = '<p style="color: #666; text-align: center; padding: 30px;">لا توجد مقالات محفوظة بعد</p>';
+                    return;
+                }
+
+                listDiv.innerHTML = articles.map(article => {
+                    const date = new Date(article.published_date).toLocaleDateString('ar-EG', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+
+                    return `
+                        <div class="article-item">
+                            <div class="article-info">
+                                <h3>${article.title}</h3>
+                                <p><i class="fas fa-calendar"></i> ${date}</p>
+                            </div>
+                            <div class="article-actions">
+                                <button class="btn-edit" onclick="editArticle('${article.id}')">
+                                    <i class="fas fa-edit"></i> تعديل
+                                </button>
+                                <button class="btn-delete" onclick="deleteArticle('${article.id}')">
+                                    <i class="fas fa-trash"></i> حذف
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('خطأ في تحميل المقالات:', error);
+                document.getElementById('articlesList').innerHTML = '<p style="color: #dc3545; text-align: center; padding: 30px;">❌ فشل تحميل المقالات</p>';
+            }
+        }
+
+        // تعديل مقال
+        async function editArticle(id) {
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${id}`);
+                const article = await response.json();
+
+                if (article) {
+                    document.getElementById('articleTitle').value = article.title;
+                    document.getElementById('articleContent').innerHTML = article.content;
+                    
+                    // حفظ ID للتعديل
+                    window.editingArticleId = id;
+                    
+                    // تغيير نص الزر
+                    const saveBtn = document.querySelector('.btn-save');
+                    saveBtn.innerHTML = '<i class="fas fa-sync-alt"></i> تحديث المقال';
+                    saveBtn.onclick = updateArticle;
+                    
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
+            } catch (error) {
+                alert('❌ فشل تحميل المقال للتعديل');
+            }
+        }
+
+        // تحديث مقال موجود
+        async function updateArticle() {
+            const title = document.getElementById('articleTitle').value.trim();
+            const content = document.getElementById('articleContent').value.trim();
+
+            if (!title || !content) {
+                alert('⚠️ الرجاء ملء العنوان والمحتوى!');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${window.editingArticleId}`, {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        title: title,
+                        content: content,
+                        author: 'د. وسيم',
+                        published_date: new Date().toISOString()
+                    })
+                });
+
+                if (!response.ok) throw new Error('فشل التحديث');
+
+                // عرض رسالة نجاح
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم تحديث المقال بنجاح!';
+                msg.style.display = 'block';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                }, 3000);
+
+                // إعادة ضبط الزر
+                const saveBtn = document.querySelector('.btn-save');
+                saveBtn.innerHTML = '<i class="fas fa-save"></i> حفظ المقال';
+                saveBtn.onclick = saveArticle;
+                delete window.editingArticleId;
+
+                clearForm();
+                loadArticlesFromServer();
+            } catch (error) {
+                alert('❌ حدث خطأ في التحديث: ' + error.message);
+            }
+        }
+
+        // حذف مقال من السيرفر
+        async function deleteArticle(id) {
+            if (!confirm('هل أنت متأكد من حذف هذا المقال؟ سيتم حذفه نهائياً!')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/tables/dr_wassim_articles/${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('فشل الحذف');
+
+                // عرض رسالة نجاح
+                const msg = document.getElementById('successMsg');
+                msg.innerHTML = '<i class="fas fa-check-circle"></i> تم حذف المقال بنجاح';
+                msg.style.display = 'block';
+                msg.style.background = '#f8d7da';
+                msg.style.color = '#721c24';
+                setTimeout(() => {
+                    msg.style.display = 'none';
+                    msg.style.background = '#d4edda';
+                    msg.style.color = '#155724';
+                }, 3000);
+
+                loadArticlesFromServer();
+            } catch (error) {
+                alert('❌ حدث خطأ في الحذف: ' + error.message);
+            }
+        }
+
+        // مسح النموذج
+        function clearForm() {
+            document.getElementById('articleTitle').value = '';
+            document.getElementById('articleContent').innerHTML = '';
+        }
+
+        // تنسيق النص
+        function formatText(command) {
+            document.execCommand(command, false, null);
+            document.getElementById('articleContent').focus();
+        }
+
+        // إضافة تنسيق (محفوظة للتوافق)
+        function insertFormat(before, after) {
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص';
+                const span = document.createElement('span');
+                span.textContent = selectedText;
+                range.deleteContents();
+                range.insertNode(span);
+            }
+            editor.focus();
+        }
+
+        // إضافة عنوان فرعي
+        function insertHeading() {
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
+            
+            const h2 = document.createElement('h2');
+            h2.textContent = 'عنوان فرعي';
+            h2.style.cssText = 'color: #2c3e50; margin-top: 20px; margin-bottom: 10px; font-size: 1.5em; border-right: 4px solid #667eea; padding-right: 15px;';
+            
+            range.insertNode(h2);
+            range.collapse(false);
+            editor.focus();
+        }
+
+        // إضافة قائمة (محفوظة)
+        function insertList() {
+            formatText('insertUnorderedList');
+        }
+
+        // فتح نافذة الصورة
+        function openImageModal() {
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        // إغلاق نافذة الصورة
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.getElementById('imageName').value = '';
+        }
+
+        // إضافة صورة
+        function insertImage() {
+            const imageName = document.getElementById('imageName').value.trim();
+            
+            if (!imageName) {
+                alert('⚠️ الرجاء إدخال اسم الصورة!');
+                return;
+            }
+
+            const editor = document.getElementById('articleContent');
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
+            
+            const img = document.createElement('img');
+            img.src = `images/${imageName}`;
+            img.alt = 'صورة';
+            img.style.cssText = 'max-width: 100%; height: auto; border-radius: 10px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);';
+            
+            range.insertNode(img);
+            range.collapse(false);
+            
+            closeImageModal();
+            editor.focus();
+        }
+
+        // إضافة رابط
+        function insertLink() {
+            const url = prompt('أدخل الرابط:');
+            if (url) {
+                const selection = window.getSelection();
+                const selectedText = selection.toString() || 'اضغط هنا';
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.textContent = selectedText;
+                a.target = '_blank';
+                a.style.cssText = 'color: #667eea; text-decoration: none; border-bottom: 2px solid #667eea;';
+                
+                const range = selection.getRangeAt(0);
+                range.deleteContents();
+                range.insertNode(a);
+                range.collapse(false);
+                
+                document.getElementById('articleContent').focus();
+            }
+        }
+
+        // فتح نافذة الألوان
+        function openColorModal() {
+            document.getElementById('colorModal').style.display = 'flex';
+        }
+
+        // إغلاق نافذة الألوان
+        function closeColorModal() {
+            document.getElementById('colorModal').style.display = 'none';
+            document.getElementById('customColor').value = '';
+        }
+
+        // إضافة لون للنص
+        function insertColor(color) {
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص ملون';
+                
+                const span = document.createElement('span');
+                span.style.color = color;
+                span.style.fontWeight = '600';
+                span.textContent = selectedText;
+                
+                range.deleteContents();
+                range.insertNode(span);
+                range.collapse(false);
+            }
+            
+            document.getElementById('articleContent').focus();
+            closeColorModal();
+        }
+
+        // إضافة لون مخصص
+        function insertCustomColor() {
+            const color = document.getElementById('customColor').value.trim();
+            if (!color) {
+                alert('⚠️ الرجاء إدخال كود اللون!');
+                return;
+            }
+            insertColor(color);
+        }
+
+        // فتح نافذة التظليل
+        function openHighlightModal() {
+            document.getElementById('highlightModal').style.display = 'flex';
+        }
+
+        // إغلاق نافذة التظليل
+        function closeHighlightModal() {
+            document.getElementById('highlightModal').style.display = 'none';
+        }
+
+        // تظليل النص
+        function insertHighlight(color) {
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const selectedText = range.toString() || 'نص مظلل';
+                
+                const mark = document.createElement('mark');
+                mark.style.backgroundColor = color;
+                mark.style.padding = '2px 6px';
+                mark.style.borderRadius = '4px';
+                mark.style.fontWeight = '600';
+                mark.textContent = selectedText;
+                
+                range.deleteContents();
+                range.insertNode(mark);
+                range.collapse(false);
+            }
+            
+            document.getElementById('articleContent').focus();
+            closeHighlightModal();
+        }
+    </script>
+</body>
+</html>
