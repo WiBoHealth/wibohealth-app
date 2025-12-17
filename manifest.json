@@ -1,7 +1,7 @@
 {
   "name": "WiBo Health - دليلك الصحي الشامل",
   "short_name": "WiBo Health",
-  "description": "دليل صحي شامل يحتوي على 1050 عنصر غذائي وحاسبات صحية متقدمة و110 وصفة صحية (دايت وحلويات صحية) و16 مقالة متخصصة ودليل شامل لـ 426 مكمل غذائي - أضخم دليل عربي وعالمي! متتبع سعرات احترافي وميزة المقارنة التفاعلية",
+  "description": "دليل صحي شامل يحتوي على 1050 عنصر غذائي وحاسبات صحية متقدمة و110 وصفة صحية (دايت وحلويات صحية) و16 مقالة متخصصة ودليل شامل لـ 426 مكمل غذائي - أضخم دليل عربي وعالمي! (بما فيها مكملات الغدة الدرقية والأنيميا والضغط والكوليسترول والشعر والعالم العربي والكبد والكلى والبروستاتا وصحة المرأة والذاكرة والمناعة ومضادات الأكسدة والأداء الرياضي والنوم والاسترخاء وصحة العين والجهاز الهضمي والطاقة والميتوكوندريا ومضادة للشيخوخة والبشرة والتوتر وصحة القلب والخصوبة وصحة العظام المتقدمة والسكري والأنسولين الشامل) ومتتبع سعرات احترافي وميزة المقارنة التفاعلية",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -16,110 +16,18 @@
     "lifestyle",
     "medical"
   ],
-  "screenshots": [
-    {
-      "src": "/images/screenshot-1.png",
-      "sizes": "540x720",
-      "type": "image/png",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "/images/screenshot-2.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    }
-  ],
   "icons": [
     {
       "src": "/images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any"
     },
     {
       "src": "/images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any"
-    },
-    {
-      "src": "/images/icon-maskable-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/images/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
-  ],
-  "shortcuts": [
-    {
-      "name": "دليل الأطعمة",
-      "short_name": "الأطعمة",
-      "description": "ابحث عن معلومات غذائية شاملة",
-      "url": "/foods.html",
-      "icons": [
-        {
-          "src": "/images/shortcut-foods.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "الحاسبات الصحية",
-      "short_name": "الحاسبات",
-      "description": "استخدم الحاسبات الطبية المجانية",
-      "url": "/calculators.html",
-      "icons": [
-        {
-          "src": "/images/shortcut-calculators.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "الوصفات الصحية",
-      "short_name": "الوصفات",
-      "description": "اكتشف وصفات صحية لذيذة",
-      "url": "/recipes.html",
-      "icons": [
-        {
-          "src": "/images/shortcut-recipes.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "المقالات الصحية",
-      "short_name": "المقالات",
-      "description": "اقرأ مقالات صحية متخصصة",
-      "url": "/articles.html",
-      "icons": [
-        {
-          "src": "/images/shortcut-articles.png",
-          "sizes": "192x192",
-          "type": "image/png"
-        }
-      ]
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  },
-  "prefer_related_applications": false,
-  "related_applications": []
+  ]
 }

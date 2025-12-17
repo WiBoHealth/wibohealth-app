@@ -230,83 +230,49 @@ function createFoodCard(food) {
     const giLevel = getIndexLevel(food.gi);
     const iiLevel = getIndexLevel(food.ii);
     
-    // Get current language
-    const currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
-    
-    // Get translated content
-    const foodName = currentLang === 'en' ? (food.nameEn || food.name) : food.name;
-    const foodCategory = currentLang === 'en' ? (food.categoryEn || food.category) : food.category;
-    const indexLevelText = getIndexLevelText(food.gi, currentLang);
-    const indexLevelText2 = getIndexLevelText(food.ii, currentLang);
-    
-    // Translated labels
-    const labels = currentLang === 'en' ? {
-        gi: 'GI - Glycemic',
-        ii: 'II - Insulin',
-        calories: 'Calories',
-        protein: 'Protein',
-        carbs: 'Carbs',
-        fats: 'Fats',
-        fiber: 'Fiber',
-        category: 'Category',
-        kcal: 'kcal',
-        g: 'g'
-    } : {
-        gi: 'GI - جلايسيميك',
-        ii: 'II - إنسولين',
-        calories: 'سعرات حرارية',
-        protein: 'بروتين',
-        carbs: 'كربوهيدرات',
-        fats: 'دهون',
-        fiber: 'ألياف',
-        category: 'الفئة',
-        kcal: 'كيلو كالوري',
-        g: 'جم'
-    };
-    
     card.innerHTML = `
         <div class="food-header">
             <span class="food-icon">${food.icon}</span>
-            <h3 class="food-name">${foodName}</h3>
+            <h3 class="food-name">${food.name}</h3>
         </div>
         
         <div class="food-indexes">
             <div class="index-badge ${giLevel}">
-                <small>${labels.gi}</small>
+                <small>GI - جلايسيميك</small>
                 <span class="index-value">${food.gi}</span>
-                <small>${indexLevelText}</small>
+                <small>${getIndexLevelText(food.gi)}</small>
             </div>
             <div class="index-badge ${iiLevel}">
-                <small>${labels.ii}</small>
+                <small>II - إنسولين</small>
                 <span class="index-value">${food.ii}</span>
-                <small>${indexLevelText2}</small>
+                <small>${getIndexLevelText(food.ii)}</small>
             </div>
         </div>
         
         <div class="nutrition-info">
             <div class="nutrition-item">
-                <span>${labels.calories}</span>
-                <span class="nutrition-value">${food.nutrition.calories} ${labels.kcal}</span>
+                <span>سعرات حرارية</span>
+                <span class="nutrition-value">${food.nutrition.calories} كيلو كالوري</span>
             </div>
             <div class="nutrition-item">
-                <span>${labels.protein}</span>
-                <span class="nutrition-value">${food.nutrition.protein} ${labels.g}</span>
+                <span>بروتين</span>
+                <span class="nutrition-value">${food.nutrition.protein} جم</span>
             </div>
             <div class="nutrition-item">
-                <span>${labels.carbs}</span>
-                <span class="nutrition-value">${food.nutrition.carbs} ${labels.g}</span>
+                <span>كربوهيدرات</span>
+                <span class="nutrition-value">${food.nutrition.carbs} جم</span>
             </div>
             <div class="nutrition-item">
-                <span>${labels.fats}</span>
-                <span class="nutrition-value">${food.nutrition.fat} ${labels.g}</span>
+                <span>دهون</span>
+                <span class="nutrition-value">${food.nutrition.fat} جم</span>
             </div>
             <div class="nutrition-item">
-                <span>${labels.fiber}</span>
-                <span class="nutrition-value">${food.nutrition.fiber} ${labels.g}</span>
+                <span>ألياف</span>
+                <span class="nutrition-value">${food.nutrition.fiber} جم</span>
             </div>
             <div class="nutrition-item">
-                <span>${labels.category}</span>
-                <span class="nutrition-value">${foodCategory}</span>
+                <span>الفئة</span>
+                <span class="nutrition-value">${food.category}</span>
             </div>
         </div>
     `;
@@ -359,19 +325,13 @@ function filterFoods() {
     foodGrid.innerHTML = '';
     
     if (filteredFoods.length === 0) {
-        // Get current language
-        const currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
-        const noResultsText = currentLang === 'en' ? `No results found for "${searchTerm}"` : `لم يتم العثور على نتائج لـ "${searchTerm}"`;
-        const tryAgainText = currentLang === 'en' ? 'Try searching with different keywords' : 'جرب البحث بكلمة أخرى';
-        const clearButtonText = currentLang === 'en' ? '<i class="fas fa-redo"></i> Clear search and show samples' : '<i class="fas fa-redo"></i> مسح البحث وعرض العينات';
-        
         foodGrid.innerHTML = `
             <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
                 <i class="fas fa-search" style="font-size: 4rem; color: var(--gray-300); margin-bottom: 1rem;"></i>
-                <p style="font-size: 1.25rem; color: var(--gray-600);">${noResultsText}</p>
-                <p style="color: var(--gray-500);">${tryAgainText}</p>
+                <p style="font-size: 1.25rem; color: var(--gray-600);">لم يتم العثور على نتائج لـ "${searchTerm}"</p>
+                <p style="color: var(--gray-500);">جرب البحث بكلمة أخرى</p>
                 <button onclick="document.getElementById('foodSearch').value=''; filterFoods();" style="margin-top: 1rem; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; font-weight: 600;">
-                    ${clearButtonText}
+                    <i class="fas fa-redo"></i> مسح البحث وعرض العينات
                 </button>
             </div>
         `;
@@ -385,18 +345,14 @@ function filterFoods() {
         
         // إذا كان هناك المزيد من النتائج
         if (filteredFoods.length > 50) {
-            const currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
-            const showingText = currentLang === 'en' ? `Showing first 50 results of ${filteredFoods.length} items` : `يتم عرض أول 50 نتيجة من ${filteredFoods.length} عنصر`;
-            const refineText = currentLang === 'en' ? 'Refine your search for more specific results' : 'حدد كلمات البحث للحصول على نتائج أدق';
-            
             const moreDiv = document.createElement('div');
             moreDiv.style.cssText = 'grid-column: 1 / -1; text-align: center; padding: 2rem;';
             moreDiv.innerHTML = `
                 <p style="color: var(--gray-600); font-size: 1.1rem;">
                     <i class="fas fa-info-circle"></i> 
-                    ${showingText}
+                    يتم عرض أول 50 نتيجة من ${filteredFoods.length} عنصر
                 </p>
-                <p style="color: var(--gray-500); margin-top: 0.5rem;">${refineText}</p>
+                <p style="color: var(--gray-500); margin-top: 0.5rem;">حدد كلمات البحث للحصول على نتائج أدق</p>
             `;
             foodGrid.appendChild(moreDiv);
         }

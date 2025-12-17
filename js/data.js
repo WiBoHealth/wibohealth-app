@@ -16930,18 +16930,12 @@ function getIndexLevel(value) {
 }
 
 /**
- * دالة للحصول على نص المستوى بالعربية أو الإنجليزية
+ * دالة للحصول على نص المستوى بالعربية
  */
-function getIndexLevelText(value, lang = 'ar') {
-    if (lang === 'en') {
-        if (value <= 55) return 'Low';
-        if (value <= 69) return 'Medium';
-        return 'High';
-    } else {
-        if (value <= 55) return 'منخفض';
-        if (value <= 69) return 'متوسط';
-        return 'مرتفع';
-    }
+function getIndexLevelText(value) {
+    if (value <= 55) return 'منخفض';
+    if (value <= 69) return 'متوسط';
+    return 'مرتفع';
 }
 
 /**
