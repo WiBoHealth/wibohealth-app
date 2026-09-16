@@ -2,7 +2,7 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "com.wibohealth.app",
-        "sha256_cert_fingerprints": ["89:7E:42:16:9B:28:7E:A3:A6:EA:0C:05:BB:30:9B:B7:16:2F:C8:DD:51:52:D1:69:9A:9E:82:96:1D:9C:31:9F"]
+        "package_name": "com.wibohealth.official",
+        "sha256_cert_fingerprints": ["2A:E9:2C:0D:7D:FC:F0:F3:21:C0:11:8A:72:44:A1:CF:B6:A7:DF:03:68:69:62:54:B2:13:38:83:33:2B:5E:23"]
       }
     }]
