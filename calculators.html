@@ -22,8 +22,26 @@
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html" />
-
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/calculators.html" />
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/calculators.html" />
+
+    <!-- Google Structured Data (Schema.org) لتحسين الأرشفة والظهور على غوغل -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "حاسبة مؤشر كتلة الجسم والسعرات الحرارية - WiBo Health",
+      "url": "https://wibohealth.com/calculators.html",
+      "description": "أداة مجانية لحساب مؤشر كتلة الجسم BMI واحتياج السعرات الحرارية ومعدل الأيض الأساسي BMR.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -57,6 +75,15 @@
     <script>
         const calculatorTranslations = {
             ar: {
+                'nav_home': 'الرئيسية',
+                'nav_foods': 'دليل الأطعمة',
+                'nav_calculators': 'الحاسبات',
+                'nav_recipes': 'الوصفات',
+                'nav_articles': 'المقالات',
+                'nav_doctor': 'د. وسيم',
+                'nav_about': 'من نحن',
+                'nav_contact': 'اتصل بنا',
+                
                 // BMI Calculator
                 'bmi_title': 'حاسبة مؤشر كتلة الجسم (BMI)',
                 'bmi_weight': 'الوزن (كجم)',
@@ -69,7 +96,7 @@
                 'bmi_normal': 'طبيعي - وزن مثالي ✓',
                 'bmi_overweight': 'زيادة وزن',
                 'bmi_obese': 'سمنة - يُنصح بمراجعة طبيب',
-                'bmi_error': 'الرجاء إدخال الوزن والطول',
+                'bmi_error': 'الرجاء إدخال الوزن والطول بشكل صحيح',
                 
                 // Calories Calculator
                 'cal_title': 'حاسبة السعرات الحرارية اليومية',
@@ -91,9 +118,18 @@
                 'cal_calculate': 'احسب السعرات اليومية',
                 'cal_your_needs': 'احتياجك اليومي',
                 'cal_per_day': 'سعرة حرارية في اليوم',
-                'cal_error': 'الرجاء إدخال جميع البيانات'
+                'cal_error': 'الرجاء إدخال جميع البيانات بشكل صحيح'
             },
             en: {
+                'nav_home': 'Home',
+                'nav_foods': 'Food Guide',
+                'nav_calculators': 'Calculators',
+                'nav_recipes': 'Recipes',
+                'nav_articles': 'Articles',
+                'nav_doctor': 'Dr. Wassim',
+                'nav_about': 'About Us',
+                'nav_contact': 'Contact Us',
+
                 // BMI Calculator
                 'bmi_title': 'Body Mass Index (BMI) Calculator',
                 'bmi_weight': 'Weight (kg)',
@@ -106,7 +142,7 @@
                 'bmi_normal': 'Normal - Ideal weight ✓',
                 'bmi_overweight': 'Overweight',
                 'bmi_obese': 'Obesity - consult a doctor',
-                'bmi_error': 'Please enter weight and height',
+                'bmi_error': 'Please enter valid weight and height',
                 
                 // Calories Calculator
                 'cal_title': 'Daily Calorie Calculator',
@@ -128,9 +164,21 @@
                 'cal_calculate': 'Calculate Daily Calories',
                 'cal_your_needs': 'Your Daily Needs',
                 'cal_per_day': 'calories per day',
-                'cal_error': 'Please enter all data'
+                'cal_error': 'Please enter all required data'
             }
         };
+
+        // دالة الترجمة التي كانت مفقودة ومسببة لتعطل الحاسبة
+        function tc(key) {
+            const currentLang = localStorage.getItem('preferred_language') || 'ar';
+            if (calculatorTranslations[currentLang] && calculatorTranslations[currentLang][key]) {
+                return calculatorTranslations[currentLang][key];
+            }
+            if (calculatorTranslations['ar'] && calculatorTranslations['ar'][key]) {
+                return calculatorTranslations['ar'][key];
+            }
+            return key;
+        }
     </script>
 
     <style>
@@ -620,7 +668,6 @@
                 </a>
 
                 <div class="header-actions">
-                    <!-- Language Toggle Buttons (Arabic & English Only) -->
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
                     
@@ -628,7 +675,6 @@
                         <i class="fas fa-moon"></i>
                     </button>
                     
-                    <!-- Hamburger Menu Button (Mobile Only) -->
                     <div class="hamburger-menu" onclick="toggleMobileMenu()">
                         <span></span>
                         <span></span>
@@ -678,12 +724,12 @@
             
             <div class="form-group">
                 <label data-i18n="bmi_weight">الوزن (كجم)</label>
-                <input type="number" id="weight" data-i18n-placeholder="bmi_weight_placeholder" placeholder="مثال: 70">
+                <input type="number" id="weight" data-i18n-placeholder="bmi_weight_placeholder" placeholder="مثال: 70" step="any" min="1">
             </div>
             
             <div class="form-group">
                 <label data-i18n="bmi_height">الطول (سم)</label>
-                <input type="number" id="height" data-i18n-placeholder="bmi_height_placeholder" placeholder="مثال: 170">
+                <input type="number" id="height" data-i18n-placeholder="bmi_height_placeholder" placeholder="مثال: 170" step="any" min="1">
             </div>
             
             <button class="btn" onclick="calculateBMI()">
@@ -706,7 +752,7 @@
             
             <div class="form-group">
                 <label data-i18n="cal_age">العمر</label>
-                <input type="number" id="age" data-i18n-placeholder="cal_age_placeholder" placeholder="مثال: 30">
+                <input type="number" id="age" data-i18n-placeholder="cal_age_placeholder" placeholder="مثال: 30" min="1">
             </div>
             
             <div class="form-group">
@@ -719,12 +765,12 @@
             
             <div class="form-group">
                 <label data-i18n="cal_weight">الوزن (كجم)</label>
-                <input type="number" id="weightCal" data-i18n-placeholder="cal_weight_placeholder" placeholder="مثال: 70">
+                <input type="number" id="weightCal" data-i18n-placeholder="cal_weight_placeholder" placeholder="مثال: 70" step="any" min="1">
             </div>
             
             <div class="form-group">
                 <label data-i18n="cal_height">الطول (سم)</label>
-                <input type="number" id="heightCal" data-i18n-placeholder="cal_height_placeholder" placeholder="مثال: 170">
+                <input type="number" id="heightCal" data-i18n-placeholder="cal_height_placeholder" placeholder="مثال: 170" step="any" min="1">
             </div>
             
             <div class="form-group">
@@ -753,25 +799,28 @@
     <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_about">من نحن</a>
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_about">من نحن</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_contact">اتصل بنا</a>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_contact">اتصل بنا</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_terms">شروط الاستخدام</a>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_developed">💚 مُطور بـ ♥ من أجل بودي</p>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ ♥ من أجل بودي</p>
     </footer>
 
     <script>
         // BMI Calculator
         function calculateBMI() {
-            const weight = parseFloat(document.getElementById('weight').value);
-            const height = parseFloat(document.getElementById('height').value) / 100;
+            const weightInput = document.getElementById('weight').value;
+            const heightInput = document.getElementById('height').value;
             
-            if (!weight || !height) {
+            const weight = parseFloat(weightInput);
+            const height = parseFloat(heightInput) / 100;
+            
+            if (!weight || !height || weight <= 0 || height <= 0) {
                 alert(tc('bmi_error'));
                 return;
             }
@@ -805,7 +854,7 @@
             const height = parseFloat(document.getElementById('heightCal').value);
             const activity = parseFloat(document.getElementById('activity').value);
             
-            if (!age || !weight || !height) {
+            if (!age || !weight || !height || age <= 0 || weight <= 0 || height <= 0) {
                 alert(tc('cal_error'));
                 return;
             }
@@ -848,12 +897,13 @@
             body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
         }
 
-        // Load theme
+        // Load theme & setup
         window.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('wibo_theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
             }
             
             // Initialize language system
@@ -862,12 +912,10 @@
         
         // Change language function
         function changeLanguage(lang) {
-            // Update HTML attributes
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-            document.body.style.fontFamily = lang === 'ar' ? "'Cairo', sans-serif" : "'Inter', sans-serif";
+            document.body.style.fontFamily = lang === 'ar' ? "'Cairo', sans-serif" : "'Cairo', sans-serif";
             
-            // Save preference
             localStorage.setItem('preferred_language', lang);
             
             // Update all data-i18n elements
@@ -906,12 +954,9 @@
         // Update calculator language
         function updateCalculatorLanguage() {
             const savedLang = localStorage.getItem('preferred_language') || 'ar';
-            if (savedLang !== 'ar') {
-                changeLanguage(savedLang);
-            }
+            changeLanguage(savedLang);
         }
 
-        
         // Listen to language changes
         window.addEventListener('languageChanged', function(e) {
             updateCalculatorLanguage();
