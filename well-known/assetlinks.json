@@ -1,12 +1,8 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.wibohealth.app",
-      "sha256_cert_fingerprints": [
-        "PLACEHOLDER_FINGERPRINT_WILL_BE_UPDATED_AFTER_BUILDING"
-      ]
-    }
-  }
-]
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.wibohealth.app",
+        "sha256_cert_fingerprints": ["89:7E:42:16:9B:28:7E:A3:A6:EA:0C:05:BB:30:9B:B7:16:2F:C8:DD:51:52:D1:69:9A:9E:82:96:1D:9C:31:9F"]
+      }
+    }]
