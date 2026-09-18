@@ -1,8 +1,33 @@
-/**
- * WiBo Health - Unified Translations & Language System
- * Version: 6.0.0 - Production Ready
+﻿/**
+ * WiBo Health - Unified Translations & Smart Auto-Language Engine
+ * Version: 7.0.0 - Auto-Detect Phone Language (Dutch/Foreign -> English, Arabic -> Arabic)
  */
 
+// ============================================
+// 1. الكشف التلقائي الذكي عن لغة هاتف الزائر
+// ============================================
+function detectInitialLanguage() {
+    // 1. إذا كان الزائر قد اختار لغة بنفسه سابقاً، نحترم اختياره فوراً
+    const saved = localStorage.getItem('preferred_language');
+    if (saved && (saved === 'ar' || saved === 'en')) {
+        return saved;
+    }
+
+    // 2. إذا كانت أول زيارة، نفحص لغة الهاتف / المتصفح
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+
+    // إذا كانت لغة الهاتف عربية
+    if (browserLang.startsWith('ar')) {
+        return 'ar';
+    }
+
+    // إذا كان هاتف الزائر هولندياً (nl) أو إنجليزياً أو أي لغة أجنبية، يفتح إنجليزي فوراً وبشكل كامل!
+    return 'en';
+}
+
+// ============================================
+// 2. قاموس النصوص والترجمات
+// ============================================
 const translations = {
     // Header & Logo
     tagline: {
@@ -89,23 +114,28 @@ const translations = {
     
     // Footer
     footer: {
-        about: { ar: 'عن WiBo Health', en: 'About WiBo Health' },
+        about: { ar: 'من نحن', en: 'About Us' },
         aboutDesc: { ar: 'منصتك الصحية الشاملة للتغذية السليمة والحياة الصحية', en: 'Your comprehensive health platform for proper nutrition and healthy living' },
         quickLinks: { ar: 'روابط سريعة', en: 'Quick Links' },
         contact: { ar: 'اتصل بنا', en: 'Contact Us' },
         privacy: { ar: 'سياسة الخصوصية', en: 'Privacy Policy' },
         terms: { ar: 'الشروط والأحكام', en: 'Terms & Conditions' },
         disclaimer: { ar: 'إخلاء المسؤولية', en: 'Disclaimer' },
-        copyright: { ar: '© 2025 WiBo Health. جميع الحقوق محفوظة.', en: '© 2025 WiBo Health. All rights reserved.' }
+        copyright: { ar: '© 2026 WiBo Health. جميع الحقوق محفوظة.', en: '© 2026 WiBo Health. All rights reserved.' }
     }
 };
 
 // ============================================
-// محرك إدارة اللغات الموحد (Unified Language Engine)
+// 3. محرك إدارة وتطبيق اللغات الذكي
 // ============================================
 const LanguageManager = {
     get currentLang() {
-        return localStorage.getItem('preferred_language') || 'ar';
+        let lang = localStorage.getItem('preferred_language');
+        if (!lang) {
+            lang = detectInitialLanguage();
+            localStorage.setItem('preferred_language', lang);
+        }
+        return lang;
     },
 
     set currentLang(lang) {
@@ -120,7 +150,7 @@ const LanguageManager = {
     applyLanguage(lang, triggerEvent = true) {
         this.currentLang = lang;
 
-        // تحديث اتجاه الصفحة ولغتها
+        // تحديث اتجاه الصفحة ولغتها (يمين لليسار للعربي، ويسار لليمين للإنجليزي)
         document.documentElement.setAttribute('lang', lang);
         document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
@@ -146,7 +176,7 @@ const LanguageManager = {
             }
         });
 
-        // تحديث مظهر أزرار التبديل
+        // تحديث مظهر أزرار الأعلام
         document.querySelectorAll('.lang-btn, [data-lang-toggle]').forEach(btn => {
             const btnLang = btn.getAttribute('data-lang-toggle');
             if (btnLang === lang) {
@@ -160,7 +190,7 @@ const LanguageManager = {
             }
         });
 
-        // إطلاق حدث عام ليتم تحديث الأطعمة والوصفات بالجافاسكريبت تلقائياً
+        // إطلاق حدث عام لتحديث كروت الأطعمة فوراً باللغة الجديدة
         if (triggerEvent) {
             window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
         }
@@ -195,10 +225,17 @@ function t(key, lang = null) {
     return value || key;
 }
 
-// دالة التحويل العامة
+// دالة التحويل العامة التي تستدعيها الأزرار
 function changeLanguage(lang) {
     LanguageManager.changeLanguage(lang);
 }
+
+// ضبط اتجاه الصفحة فوراً في أول لحظة لمنع وميض الشاشة
+(function applyImmediateDirection() {
+    const immediateLang = LanguageManager.currentLang;
+    document.documentElement.setAttribute('lang', immediateLang);
+    document.documentElement.setAttribute('dir', immediateLang === 'ar' ? 'rtl' : 'ltr');
+})();
 
 // توافق كامل مع الكائنات القديمة
 window.LanguageSwitcher = LanguageManager;
