@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <!-- Version 8.3.0 - With Barcode Scanner -->
+    <!-- Version 8.4.0 - Smart Floating Scanner Button -->
     <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
     <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
     <meta name="description" content="موقعك الصحي الفريد: ماسح الباركود وفحص الحلال، المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي">
@@ -83,6 +83,10 @@
                 // Header
                 'logo_subtitle': 'دليلك الصحي الشامل للتغذية السليمة',
 
+                // Scanner Floating Button
+                'floating_scanner_text': 'امسح الباركود (فحص الحلال)',
+                'new_badge': 'جديد 🔥',
+
                 // Scanner Hero Banner
                 'scanner_banner_title': '🔍 ميزة جديدة: ماسح الباركود وفحص الحلال!',
                 'scanner_banner_desc': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته وهل يحتوي على خنزير أو مواد مشبوهة مع السعرات',
@@ -130,6 +134,10 @@
 
                 // Header
                 'logo_subtitle': 'Your comprehensive health guide for proper nutrition',
+
+                // Scanner Floating Button
+                'floating_scanner_text': 'Scan Barcode (Halal Check)',
+                'new_badge': 'NEW 🔥',
 
                 // Scanner Hero Banner
                 'scanner_banner_title': '🔍 New: Barcode & Halal Scanner!',
@@ -441,35 +449,57 @@
             background: #f0fdf4;
         }
 
-        /* Floating Barcode Button for Mobile */
+        /* 🔥 NEW: Smart Pill Floating Barcode Button with Text & Badge */
         .floating-scanner-btn {
             position: fixed;
             bottom: 25px;
             left: 25px;
             background: linear-gradient(135deg, #10b981, #059669);
             color: white;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
+            padding: 12px 22px;
+            border-radius: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 28px;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 800;
             box-shadow: 0 10px 30px rgba(16, 185, 129, 0.6);
             z-index: 99999;
             text-decoration: none;
-            border: 3px solid white;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: pulse-scanner 2s infinite;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            animation: pulse-scanner 2.5s infinite;
         }
 
         .floating-scanner-btn:hover {
-            transform: scale(1.15) rotate(10deg);
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, #059669, #10b981);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.8);
+        }
+
+        .floating-scanner-badge {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            background: #e11d48;
+            color: white;
+            font-size: 11px;
+            font-weight: 900;
+            padding: 2px 8px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(225, 29, 72, 0.5);
+            border: 1px solid white;
+            animation: badge-bounce 1.5s infinite;
+        }
+
+        @keyframes badge-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
         }
 
         @keyframes pulse-scanner {
-            0%, 100% { box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5); }
-            50% { box-shadow: 0 10px 40px rgba(16, 185, 129, 0.9); }
+            0%, 100% { box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5); }
+            50% { box-shadow: 0 8px 35px rgba(16, 185, 129, 0.9); }
         }
 
         .compare-feature-card {
@@ -742,13 +772,21 @@
             .scanner-feature-content, .compare-feature-content {
                 text-align: center !important;
             }
+            .floating-scanner-btn {
+                bottom: 20px;
+                left: 15px;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Floating Barcode Scanner Button for Mobile / Supermarket -->
-    <a href="scanner.html" class="floating-scanner-btn" title="ماسح الباركود">
-        <i class="fas fa-barcode"></i>
+    <!-- 🔥 NEW: Floating Barcode Scanner Pill Button with Text & Badge -->
+    <a href="scanner.html" class="floating-scanner-btn">
+        <span class="floating-scanner-badge" data-i18n="new_badge">جديد 🔥</span>
+        <i class="fas fa-barcode" style="font-size: 20px;"></i>
+        <span data-i18n="floating_scanner_text">امسح الباركود (فحص الحلال)</span>
     </a>
 
     <!-- Header -->
@@ -796,7 +834,6 @@
 
                     <nav class="nav-menu">
                         <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
-                        <!-- Scanner in Nav -->
                         <a href="scanner.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود</span></a>
                         <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
                         <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
@@ -816,7 +853,6 @@
     <nav class="mobile-nav-menu" id="mobileNav">
         <button class="mobile-nav-close" onclick="toggleMobileMenu()">&times;</button>
         <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
-        <!-- Scanner in Mobile Nav -->
         <a href="scanner.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود وفحص الحلال</span></a>
         <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
         <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
