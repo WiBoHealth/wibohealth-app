@@ -9,8 +9,12 @@
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html" />
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/foods.html" />
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods.html" />
     
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -43,7 +47,7 @@
     <link rel="stylesheet" href="css/mobile-menu.css">
 
     <!-- Unified Language System -->
-    <script src="js/unified-language-system.js"></script>
+    <script src="js/translations.js"></script>
 
     <style>
         * {
@@ -304,26 +308,21 @@
         }
 
         .stats-bar h2 {
-            font-size: 2rem;
-            margin-bottom: 5px;
-        }
-
-        .stats-bar .subtitle {
-            font-size: 1.3rem;
-            color: #3498db;
-            margin-bottom: 15px;
-            font-weight: 400;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
         }
 
         .big-number {
             font-size: 4rem;
             font-weight: 900;
             margin: 10px 0;
+            letter-spacing: 2px;
         }
 
-        .stats-bar .subtitle-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+        .stats-bar .stats-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
             margin-top: 5px;
         }
 
@@ -369,241 +368,6 @@
 
         body.dark-mode .search-helper {
             color: #b8b8b8;
-        }
-
-        /* Smart Search Suggestions - Foods */
-        .foods-suggestions {
-            position: absolute;
-            top: calc(100% - 10px);
-            left: 20px;
-            right: 20px;
-            background: var(--card-bg);
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            z-index: 1000;
-            border: 2px solid #ecf0f1;
-            border-top: none;
-        }
-
-        body.dark-mode .foods-suggestions {
-            border-color: rgba(255,255,255,0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .foods-suggestions.show {
-            max-height: 500px;
-            overflow-y: auto;
-        }
-
-        .food-suggestion-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 20px;
-            cursor: pointer;
-            transition: all 0.2s;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        body.dark-mode .food-suggestion-item {
-            border-bottom-color: rgba(255,255,255,0.1);
-        }
-
-        .food-suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        .food-suggestion-item:hover,
-        .food-suggestion-item.active {
-            background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-            border-right: 4px solid var(--primary-color);
-        }
-
-        body.dark-mode .food-suggestion-item:hover,
-        body.dark-mode .food-suggestion-item.active {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.1));
-        }
-
-        .food-sug-icon {
-            font-size: 32px;
-            flex-shrink: 0;
-        }
-
-        .food-sug-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .food-sug-name-ar {
-            font-weight: 700;
-            color: var(--text-dark);
-            font-size: 16px;
-            margin-bottom: 4px;
-            line-height: 1.3;
-        }
-
-        .food-sug-name-en {
-            font-size: 13px;
-            color: #6b7280;
-            margin-bottom: 6px;
-            line-height: 1.2;
-        }
-
-        body.dark-mode .food-sug-name-en {
-            color: #9ca3af;
-        }
-
-        .food-sug-name-ar mark,
-        .food-sug-name-en mark {
-            background: #fef08a;
-            color: #ca8a04;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-weight: 800;
-        }
-
-        body.dark-mode .food-sug-name-ar mark,
-        body.dark-mode .food-sug-name-en mark {
-            background: #854d0e;
-            color: #fef08a;
-        }
-
-        .food-sug-meta {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            align-items: center;
-            font-size: 12px;
-        }
-
-        .food-category {
-            background: #e0e7ff;
-            color: #4338ca;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-        }
-
-        body.dark-mode .food-category {
-            background: rgba(99, 102, 241, 0.3);
-            color: #c7d2fe;
-        }
-
-        .gi-badge {
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .gi-badge.gi-low {
-            background: #d1fae5;
-            color: #065f46;
-        }
-
-        .gi-badge.gi-medium {
-            background: #fed7aa;
-            color: #9a3412;
-        }
-
-        .gi-badge.gi-high {
-            background: #fecaca;
-            color: #991b1b;
-        }
-
-        body.dark-mode .gi-badge.gi-low {
-            background: rgba(16, 185, 129, 0.3);
-            color: #6ee7b7;
-        }
-
-        body.dark-mode .gi-badge.gi-medium {
-            background: rgba(245, 158, 11, 0.3);
-            color: #fcd34d;
-        }
-
-        body.dark-mode .gi-badge.gi-high {
-            background: rgba(239, 68, 68, 0.3);
-            color: #fca5a5;
-        }
-
-        .cal-badge {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-weight: 600;
-        }
-
-        body.dark-mode .cal-badge {
-            background: rgba(59, 130, 246, 0.3);
-            color: #93c5fd;
-        }
-
-        .food-sug-arrow {
-            color: var(--primary-color);
-            font-size: 16px;
-            opacity: 0;
-            transition: opacity 0.2s;
-            flex-shrink: 0;
-        }
-
-        .food-suggestion-item:hover .food-sug-arrow,
-        .food-suggestion-item.active .food-sug-arrow {
-            opacity: 1;
-        }
-
-        .food-no-results {
-            padding: 30px 20px;
-            text-align: center;
-            color: #6b7280;
-        }
-
-        body.dark-mode .food-no-results {
-            color: #9ca3af;
-        }
-
-        .food-no-results i {
-            font-size: 40px;
-            margin-bottom: 15px;
-            opacity: 0.5;
-        }
-
-        .food-no-results p {
-            font-size: 16px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .food-no-results small {
-            font-size: 13px;
-            opacity: 0.7;
-        }
-
-        /* Scrollbar styling for suggestions */
-        .foods-suggestions::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .foods-suggestions::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        body.dark-mode .foods-suggestions::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-        }
-
-        .foods-suggestions::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 3px;
-        }
-
-        .foods-suggestions::-webkit-scrollbar-thumb:hover {
-            background: #27ae60;
         }
 
         /* Food Grid */
@@ -677,18 +441,11 @@
         }
 
         .food-name {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--text-dark);
             text-align: center;
-            margin-bottom: 5px;
-        }
-
-        .food-name-en {
-            font-size: 14px;
-            color: var(--text-light);
-            text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
         .food-category {
@@ -721,20 +478,16 @@
         }
 
         .stat-label {
-            font-size: 11px;
+            font-size: 12px;
             color: var(--text-light);
             margin-bottom: 5px;
         }
 
         .stat-value {
-            font-size: 20px;
-            font-weight: 700;
+            font-size: 19px;
+            font-weight: 800;
             color: var(--primary-color);
         }
-
-        .gi-high { color: #e74c3c !important; }
-        .gi-medium { color: #f39c12 !important; }
-        .gi-low { color: var(--primary-color) !important; }
 
         /* Hamburger Menu */
         .hamburger-menu {
@@ -861,126 +614,6 @@
             color: var(--text-light);
         }
 
-        /* Smart Search Suggestions */
-        .search-suggestions {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--card-bg);
-            border-radius: 0 0 15px 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            max-height: 400px;
-            overflow-y: auto;
-            z-index: 1000;
-            border: 2px solid #ecf0f1;
-            border-top: none;
-            display: none;
-            margin-top: 2px;
-        }
-
-        body.dark-mode .search-suggestions {
-            border-color: rgba(255,255,255,0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-        .suggestion-header {
-            padding: 10px 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            background: rgba(0,0,0,0.02);
-            border-bottom: 1px solid #f0f0f0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        body.dark-mode .suggestion-header {
-            background: rgba(255,255,255,0.05);
-            border-bottom-color: rgba(255,255,255,0.1);
-        }
-
-        .suggestion-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px 20px;
-            cursor: pointer;
-            transition: all 0.2s;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        body.dark-mode .suggestion-item {
-            border-bottom-color: rgba(255,255,255,0.05);
-        }
-
-        .suggestion-item:last-child {
-            border-bottom: none;
-        }
-
-        .suggestion-item:hover,
-        .suggestion-item.active {
-            background: rgba(46, 204, 113, 0.1);
-        }
-
-        .suggestion-item i {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            width: 24px;
-            text-align: center;
-        }
-
-        .suggestion-content {
-            flex: 1;
-        }
-
-        .suggestion-name {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 5px;
-        }
-
-        .suggestion-details {
-            display: flex;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        .suggestion-category {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .suggestion-calories {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .suggestion-item.no-results {
-            justify-content: center;
-            color: var(--text-light);
-            padding: 25px;
-            cursor: default;
-        }
-
-        .suggestion-item.no-results:hover {
-            background: transparent;
-        }
-
-        .suggestion-item mark {
-            background: rgba(46, 204, 113, 0.3);
-            color: var(--text-dark);
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: 700;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -994,22 +627,11 @@
                 flex-direction: column;
                 text-align: center;
             }
-            
             .hamburger-menu {
                 display: flex;
             }
-            
             .nav-menu {
                 display: none;
-            }
-
-            .search-suggestions {
-                max-height: 300px;
-            }
-
-            .suggestion-item {
-                padding: 12px 15px;
-                gap: 10px;
             }
         }
     </style>
@@ -1100,8 +722,8 @@
         <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
         <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
         <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
-        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">من نحن</span></a>
-        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">اتصل بنا</span></a>
     </nav>
 
     <!-- Main Content -->
@@ -1110,24 +732,23 @@
         <div class="daily-tip" id="dailyTip">
             <div class="tip-icon">💡</div>
             <div class="tip-content">
-                <h3 data-i18n="daily_tip">نصيحة اليوم</h3>
-                <p id="tipText" data-i18n="loading">جاري التحميل...</p>
+                <h3 data-i18n="daily_tip_title">نصيحة اليوم</h3>
+                <p id="tipText">جاري التحميل...</p>
             </div>
         </div>
 
+        <!-- Single Language Stats Bar with 100% Protected Numbers -->
         <div class="stats-bar">
-            <h2>قاعدة بيانات شاملة</h2>
-            <div class="subtitle">Comprehensive Database</div>
-            <p class="big-number" id="totalCount">118</p>
-            <p>عنصر غذائي مع معلومات غذائية كاملة</p>
-            <p class="subtitle-text">food items with complete nutritional information</p>
+            <h2 data-i18n="stats_db_title">قاعدة بيانات شاملة</h2>
+            <p class="big-number" id="totalCount">1050</p>
+            <p class="stats-subtitle" data-i18n="stats_db_subtitle">عنصر غذائي مع معلومات غذائية كاملة</p>
         </div>
 
         <div class="search-box" style="position: relative;">
-            <input type="text" id="searchInput" class="search-input" data-i18n="search_placeholder" placeholder="🔍 ابحث بالعربي أو English..." oninput="filterFoods()">
+            <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 ابحث عن أي طعام..." oninput="filterFoods()">
             <p class="search-helper">
                 <i class="fas fa-info-circle" style="color: #667eea;"></i>
-                <span data-i18n="search_helper">يمكنك البحث بالعربية أو الإنجليزية - ابحث في اسم الطعام أو التصنيف</span>
+                <span data-i18n="search_helper">يمكنك البحث في اسم الطعام أو التصنيف</span>
             </p>
         </div>
 
@@ -1137,27 +758,22 @@
     <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_about">من نحن</a>
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_about">من نحن</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_contact">اتصل بنا</a>
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_contact">اتصل بنا</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'" data-i18n="footer_terms">شروط الاستخدام</a>
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_developed">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">© 2026 WiBo Health. جميع الحقوق محفوظة.</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #34495e;">
-            <h4 style="color: #2ecc71; margin-bottom: 15px; font-size: 1.1em;">📚 المصادر العلمية للبيانات الغذائية</h4>
-            <p style="color: #95a5a6; font-size: 0.85em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
-                البيانات الغذائية الخاصة بـ <strong style="color: #ecf0f1;">1050 عنصر غذائي</strong> مستمدة من:
-                <br>
-                <strong style="color: #ecf0f1;">USDA FoodData Central</strong> (قاعدة البيانات الرسمية لوزارة الزراعة الأمريكية)،
-                <strong style="color: #ecf0f1;">USDA SR Legacy</strong> (مرجع البيانات القديم)،
-                <strong style="color: #ecf0f1;">Nutritionix API</strong>،
-                وقواعد بيانات معتمدة أخرى.
-                جميع القيم الغذائية محدثة ومراجعة علمياً.
+            <h4 style="color: #2ecc71; margin-bottom: 15px; font-size: 1.1em;" data-i18n="sources_title">📚 المصادر العلمية للبيانات الغذائية</h4>
+            <p style="color: #95a5a6; font-size: 0.85em; line-height: 1.8; max-width: 800px; margin: 0 auto;" data-i18n="sources_desc">
+                البيانات الغذائية الخاصة بـ 1050 عنصر غذائي مستمدة من مراجع موثوقة:
+                USDA FoodData Central، Mayo Clinic، و Harvard Medical School.
             </p>
         </div>
     </footer>
@@ -1170,113 +786,138 @@
         window.allFoods = [];
         let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]');
         
-        // Get current language from unified system
-        let currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
-        
-        // Translation helper function
-        function t(key) {
-            return (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.t(key)) || key;
+        // قاموس النصوص الخاص بصفحة الأطعمة
+        const foodsTranslations = {
+            ar: {
+                'nav_home': 'الرئيسية',
+                'nav_foods': 'دليل الأطعمة',
+                'nav_calculators': 'الحاسبات',
+                'nav_recipes': 'الوصفات',
+                'nav_articles': 'المقالات',
+                'nav_doctor': 'د. وسيم',
+                'daily_tip_title': '💡 نصيحة اليوم',
+                'stats_db_title': 'قاعدة بيانات شاملة',
+                'stats_db_subtitle': 'عنصر غذائي مع معلومات غذائية كاملة',
+                'search_placeholder': '🔍 ابحث عن أي طعام أو تصنيف...',
+                'search_helper': 'يمكنك البحث في اسم الطعام أو التصنيف',
+                'no_results': 'لم يتم العثور على أي طعام يطابق بحثك',
+                'no_favorites': 'لم تقم بإضافة أي أطعمة للمفضلة بعد',
+                'calories': 'سعرات',
+                'protein': 'بروتين',
+                'carbs': 'كربوهيدرات',
+                'fats': 'دهون',
+                'unit_g': 'جم',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'sources_title': '📚 المصادر العلمية للبيانات الغذائية',
+                'sources_desc': 'البيانات الغذائية لـ 1050 عنصر غذائي مستمدة من: USDA FoodData Central و Harvard Medical School.'
+            },
+            en: {
+                'nav_home': 'Home',
+                'nav_foods': 'Food Guide',
+                'nav_calculators': 'Calculators',
+                'nav_recipes': 'Recipes',
+                'nav_articles': 'Articles',
+                'nav_doctor': 'Dr. Wassim',
+                'daily_tip_title': '💡 Daily Tip',
+                'stats_db_title': 'Comprehensive Database',
+                'stats_db_subtitle': 'food items with complete nutritional information',
+                'search_placeholder': '🔍 Search any food or category...',
+                'search_helper': 'Search by food name or category',
+                'no_results': 'No food found matching your search',
+                'no_favorites': 'No favorite foods added yet',
+                'calories': 'Calories',
+                'protein': 'Protein',
+                'carbs': 'Carbs',
+                'fats': 'Fat',
+                'unit_g': 'g',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'sources_title': '📚 Scientific Nutritional Sources',
+                'sources_desc': 'Nutritional data for 1050 items is sourced from USDA FoodData Central and Harvard Medical School.'
+            }
+        };
+
+        // الكشف الذكي التلقائي عن لغة الهاتف
+        function getInitialLanguage() {
+            const saved = localStorage.getItem('preferred_language');
+            if (saved && (saved === 'ar' || saved === 'en')) {
+                return saved;
+            }
+            const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            return phoneLang.startsWith('ar') ? 'ar' : 'en';
         }
-        
-        // Listen for language changes
-        window.addEventListener('languageChanged', function(e) {
-            currentLang = e.detail.language;
+
+        let currentLang = getInitialLanguage();
+
+        function t(key) {
+            return (foodsTranslations[currentLang] && foodsTranslations[currentLang][key]) || key;
+        }
+
+        // تحويل اللغة وتحديث النصوص بالكامل
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
+            
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            // تحديث كل النصوص التي تحتوي على data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (foodsTranslations[lang] && foodsTranslations[lang][key]) {
+                    el.textContent = foodsTranslations[lang][key];
+                }
+            });
+
+            // تحديث مربعات البحث
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (foodsTranslations[lang] && foodsTranslations[lang][key]) {
+                    el.placeholder = foodsTranslations[lang][key];
+                }
+            });
+
+            // تحديث حالة أزرار الأعلام
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                    btn.style.opacity = '1';
+                } else {
+                    btn.classList.remove('active');
+                    btn.style.opacity = '0.5';
+                }
+            });
+
             showDailyTip();
             if (allFoods.length > 0) {
                 renderFoods(allFoods);
             }
-        });
+        }
 
-        // Daily tips (60 tips - تتغير يومياً تلقائياً)
+        // نصائح يومية باللغتين
         const dailyTips = {
             ar: [
                 'الأطعمة ذات المؤشر الجلايسيمي المنخفض تساعد على استقرار مستوى السكر في الدم',
                 'شرب الماء قبل الوجبات يساعد على تقليل كمية الطعام المتناولة',
                 'المشي 30 دقيقة يومياً يحسن من حساسية الجسم للإنسولين',
                 'تناول البروتين في كل وجبة يساعد على الشعور بالشبع لفترة أطول',
-                'النوم الجيد (7-8 ساعات) ضروري للحفاظ على وزن صحي',
-                'الأطعمة الغنية بالألياف تساعد على تحسين عملية الهضم',
-                'تجنب السكريات البسيطة يساعد على تقليل الالتهابات في الجسم',
-                'الخضروات الورقية الخضراء غنية بالفيتامينات والمعادن الأساسية',
-                'المكسرات النيئة وجبة خفيفة صحية غنية بالدهون المفيدة',
-                'التوت والفراولة من أفضل الفواكه لمرضى السكري'
+                'النوم الجيد (7-8 ساعات) ضروري للحفاظ على وزن صحي'
             ],
             en: [
                 'Low glycemic index foods help stabilize blood sugar levels',
                 'Drinking water before meals helps reduce food intake',
                 'Walking 30 minutes daily improves insulin sensitivity',
                 'Eating protein with each meal helps you feel full longer',
-                'Good sleep (7-8 hours) is essential for maintaining a healthy weight',
-                'Fiber-rich foods help improve digestion',
-                'Avoiding simple sugars helps reduce inflammation in the body',
-                'Leafy greens are rich in essential vitamins and minerals',
-                'Raw nuts are a healthy snack rich in beneficial fats',
-                'Berries are among the best fruits for diabetics'
+                'Good sleep (7-8 hours) is essential for maintaining a healthy weight'
             ]
         };
 
-        // Load foods from static data
-        window.addEventListener('DOMContentLoaded', function() {
-            // Load theme
-            const savedTheme = localStorage.getItem('wibo_theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
-            }
-
-            // Wait for unified system to be ready, then sync
-            setTimeout(() => {
-                if (window.UnifiedLanguageSystem) {
-                    currentLang = window.UnifiedLanguageSystem.currentLang;
-                    // Force apply language to all elements
-                    window.UnifiedLanguageSystem.applyLanguage(currentLang);
-                }
-                
-                // Show daily tip with correct language
-                showDailyTip();
-            }, 100);
-
-            // Update favorites count
-            updateFavCount();
-
-            // Load foods from static file
-            if (typeof foodsDatabase !== 'undefined' && foodsDatabase.length > 0) {
-                allFoods = foodsDatabase;
-                console.log('✅ تم تحميل ' + allFoods.length + ' عنصر غذائي من الملف الثابت');
-                
-                // Update stats
-                document.getElementById('totalCount').textContent = allFoods.length;
-                
-                initializeFoodsTab();
-                
-                // Auto-hide Header on Scroll
-                let lastScrollTop = 0;
-                const header = document.querySelector('header');
-                const scrollThreshold = 150;
-
-                window.addEventListener('scroll', function() {
-                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-                        header.classList.add('hide-nav');
-                    } else if (currentScroll < lastScrollTop) {
-                        header.classList.remove('hide-nav');
-                    }
-                    
-                    if (currentScroll <= 0) {
-                        header.classList.remove('hide-nav');
-                    }
-                    
-                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-                }, false);
-            } else {
-                console.error('❌ لم يتم تحميل ملف البيانات الثابت');
-                const grid = document.getElementById('foodGrid');
-                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: white; font-size: 18px;"><i class="fas fa-exclamation-triangle" style="font-size: 50px; margin-bottom: 20px; color: #f39c12;"></i><p>${t('no_results')}</p></div>`;
-            }
-        });
-
-        // Show daily tip
         function showDailyTip() {
             const now = new Date();
             const start = new Date(now.getFullYear(), 0, 0);
@@ -1286,14 +927,56 @@
             
             const tips = dailyTips[currentLang] || dailyTips.ar;
             const tipIndex = dayOfYear % tips.length;
-            document.getElementById('tipText').textContent = tips[tipIndex];
+            const tipEl = document.getElementById('tipText');
+            if (tipEl) tipEl.textContent = tips[tipIndex];
         }
+
+        // تحميل الأطعمة عند فتح الصفحة
+        window.addEventListener('DOMContentLoaded', function() {
+            // تفعيل الثيم
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
+
+            // تطبيق اللغة المكتشفة تلقائياً
+            changeLanguage(currentLang);
+
+            updateFavCount();
+
+            // تحميل قائمة الأطعمة
+            if (typeof foodsDatabase !== 'undefined' && foodsDatabase.length > 0) {
+                allFoods = foodsDatabase;
+                const totalCountEl = document.getElementById('totalCount');
+                if (totalCountEl) totalCountEl.textContent = allFoods.length;
+                renderFoods(allFoods);
+            } else {
+                const grid = document.getElementById('foodGrid');
+                if (grid) {
+                    grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: white; font-size: 18px;"><p>${t('no_results')}</p></div>`;
+                }
+            }
+
+            // Auto-hide Header on Scroll
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > lastScrollTop && currentScroll > 150) {
+                    header.classList.add('hide-nav');
+                } else if (currentScroll < lastScrollTop) {
+                    header.classList.remove('hide-nav');
+                }
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            }, false);
+        });
 
         // Toggle theme
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const icon = document.querySelector('.theme-toggle i');
-            
             if (document.body.classList.contains('dark-mode')) {
                 icon.className = 'fas fa-sun';
                 localStorage.setItem('wibo_theme', 'dark');
@@ -1307,28 +990,23 @@
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
             const overlay = document.querySelector('.mobile-nav-overlay');
-            const body = document.body;
-            
             mobileNav.classList.toggle('active');
             overlay.classList.toggle('active');
-            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
         }
 
         // Toggle favorite
         function toggleFavorite(foodId) {
-            event.stopPropagation();
+            if (event) event.stopPropagation();
             const index = favorites.indexOf(foodId);
-            
             if (index > -1) {
                 favorites.splice(index, 1);
             } else {
                 favorites.push(foodId);
             }
-            
             localStorage.setItem('wibo_favorites', JSON.stringify(favorites));
             updateFavCount();
             
-            // Update button
             const btn = document.querySelector(`[data-food-id="${foodId}"]`);
             if (btn) {
                 btn.classList.toggle('active');
@@ -1336,55 +1014,61 @@
             }
         }
 
-        // Update favorites count
         function updateFavCount() {
-            document.getElementById('favCount').textContent = favorites.length;
+            const el = document.getElementById('favCount');
+            if (el) el.textContent = favorites.length;
         }
 
-        // Show favorites
         function showFavorites() {
             if (favorites.length === 0) {
                 alert(t('no_favorites'));
                 return;
             }
-
             const favFoods = allFoods.filter(food => favorites.includes(food.id));
             renderFoods(favFoods);
         }
 
-        // Initialize
-        function initializeFoodsTab() {
-            renderFoods(allFoods);
-        }
-
-        // Filter foods by search
+        // فلترة الأطعمة بالبحث
         function filterFoods() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
             let filtered = allFoods;
             
             if (searchTerm) {
                 filtered = filtered.filter(food => 
-                    food.name.toLowerCase().includes(searchTerm) ||
+                    (food.name && food.name.toLowerCase().includes(searchTerm)) ||
                     (food.nameEn && food.nameEn.toLowerCase().includes(searchTerm)) ||
                     (food.category && food.category.toLowerCase().includes(searchTerm)) ||
                     (food.categoryEn && food.categoryEn.toLowerCase().includes(searchTerm))
                 );
             }
-            
             renderFoods(filtered);
         }
 
-        // Render foods
+        // دالة رسم الأطعمة بلغة واحدة حصرية وبدون نصوص مزدوجة مع حماية الأرقام
         function renderFoods(foods) {
             const grid = document.getElementById('foodGrid');
+            if (!grid) return;
             
             if (!foods || foods.length === 0) {
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: white; font-size: 20px;">${t('no_results')}</div>`;
                 return;
             }
             
+            const unitGram = currentLang === 'en' ? 'g' : 'جم';
+            
             grid.innerHTML = foods.map(food => {
                 const isFavorite = favorites.includes(food.id);
+                
+                // اسم حصري واحد فقط بحسب اللغة النشطة
+                const foodTitle = (currentLang === 'en' && food.nameEn) ? food.nameEn : food.name;
+                const categoryTitle = (currentLang === 'en' && food.categoryEn) ? food.categoryEn : food.category;
+                
+                // الأرقام الرياضية والغذائية محفوظة ومحسوبة بدقة 100%
+                const caloriesVal = Math.round(food.nutrition?.calories || 0);
+                const proteinVal = (food.nutrition?.protein || 0).toFixed(1);
+                const carbsVal = (food.nutrition?.carbs || 0).toFixed(1);
+                const fatsVal = (food.nutrition?.fats || 0).toFixed(1);
+
                 return `
                     <div class="food-card" onclick="window.location.href='food-details.html?id=${food.id}'" style="cursor: pointer;">
                         <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
@@ -1393,25 +1077,24 @@
                             <i class="${isFavorite ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                         <div class="food-icon">${food.icon || '🍽️'}</div>
-                        <div class="food-name">${food.name}</div>
-                        ${food.nameEn ? `<div class="food-name-en">${food.nameEn}</div>` : ''}
-                        <center><span class="food-category">${currentLang === 'en' ? (food.categoryEn || food.category) : food.category}</span></center>
+                        <div class="food-name">${foodTitle}</div>
+                        <center><span class="food-category">${categoryTitle || ''}</span></center>
                         <div class="food-stats">
                             <div class="stat-item">
                                 <div class="stat-label">${t('calories')}</div>
-                                <div class="stat-value">${Math.round(food.nutrition?.calories || 0)}</div>
+                                <div class="stat-value">${caloriesVal}</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-label">${t('protein')}</div>
-                                <div class="stat-value">${(food.nutrition?.protein || 0).toFixed(1)}g</div>
+                                <div class="stat-value">${proteinVal}${unitGram}</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-label">${t('carbs')}</div>
-                                <div class="stat-value">${(food.nutrition?.carbs || 0).toFixed(1)}g</div>
+                                <div class="stat-value">${carbsVal}${unitGram}</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-label">${t('fats')}</div>
-                                <div class="stat-value">${(food.nutrition?.fats || 0).toFixed(1)}g</div>
+                                <div class="stat-value">${fatsVal}${unitGram}</div>
                             </div>
                         </div>
                     </div>
