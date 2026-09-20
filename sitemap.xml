@@ -7,6 +7,13 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- ماسح الباركود وفحص الحلال (الميزة الجديدة) -->
+  <url>
+    <loc>https://wibohealth.com/scanner.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <!-- الصفحات الأساسية للأطعمة والوصفات والمكملات -->
   <url>
     <loc>https://wibohealth.com/foods.html</loc>

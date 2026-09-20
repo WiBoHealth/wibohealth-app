@@ -3,10 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير | WiBo Health</title>
-    <meta name="description" content="امسح باركود أي منتج غذائي في السوبرماركت واعرف فوراً هل يحتوي على خنزير أو جيلاتين أو مواد مشبوهة، مع عرض كامل للسعرات والقيم الغذائية">
+
+    <!-- SEO Meta Tags الخارقة للظهور في بحث غوغل -->
+    <title>ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health</title>
+    <meta name="title" content="ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health">
+    <meta name="description" content="أقوى ماسح باركود غذائي مجاني: امسح باركود أي منتج في السوبرماركت واكتشف فوراً هل يحتوي على خنزير، جيلاتين خنزير، أو مواد مشبوهة، مع جدول السعرات والقيم الغذائية.">
+    <meta name="keywords" content="ماسح باركود, فحص الخنزير بالباركود, كاشف الحلال, جيلاتين خنزير, فحص المنتجات في هولندا, سوبرماركت هولندا, باركود الأطعمة, كاشف المكونات الغذائية, حلال ام حرام, Open Food Facts, E441, E120">
+    <meta name="author" content="Dr. Wassim Habib - WiBo Health">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://wibohealth.com/scanner.html">
     
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/scanner.html" />
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/scanner.html" />
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/scanner.html" />
+
+    <!-- Google Structured Data (Schema.org) لتصدر نتائج غوغل الأولى -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ماسح الباركود الذكي وفاحص الحلال - WiBo Health",
+      "url": "https://wibohealth.com/scanner.html",
+      "description": "أداة ذكية مجانية لقراءة باركود المنتجات الغذائية في السوبرماركت وتحليل المكونات للكشف عن مشتقات الخنزير والجيلاتين والمواد المشبوهة وقيم السعرات.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Wassim Habib"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+    
+    <!-- Google AdSense Official Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-292WD2SWHN');
+    </script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -216,7 +261,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Status Banners */
         .status-badge {
             padding: 15px 20px;
             border-radius: 15px;
@@ -387,35 +431,28 @@
             <h2><i class="fas fa-barcode"></i> <span data-i18n="title">ماسح الباركود وفحص الحلال</span></h2>
             <p data-i18n="subtitle">وجه كاميرا الهاتف نحو باركود المنتج لمعرفة مكوناته وهل يحتوي على خنزير أو مواد مشبوهة</p>
 
-            <!-- منطقة الكاميرا -->
             <div id="reader"></div>
 
-            <!-- زر تشغيل/إيقاف الكاميرا -->
             <button id="toggleCameraBtn" onclick="toggleCamera()" style="
                 background: linear-gradient(135deg, var(--primary), var(--secondary));
                 color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: inherit;">
                 <i class="fas fa-camera"></i> <span id="cameraBtnText">تشغيل الكاميرا</span>
             </button>
 
-            <!-- إدخال يدوي في حال تعذر تشغيل الكاميرا -->
             <div class="manual-input-box">
                 <input type="text" id="manualBarcodeInput" placeholder="أو اكتب رقم الباركود هنا (مثال: 8710400...)" inputmode="numeric">
                 <button onclick="fetchProductData(document.getElementById('manualBarcodeInput').value)"><i class="fas fa-search"></i> <span data-i18n="search">فحص</span></button>
             </div>
         </div>
 
-        <!-- Loading -->
         <div class="loading-spinner" id="loadingSpinner">
             <i class="fas fa-spinner"></i>
             <span data-i18n="loading">جاري فحص المنتج في قاعدة البيانات العالمية...</span>
         </div>
 
-        <!-- Result Card -->
         <div class="result-card" id="resultCard">
-            <!-- حالة الحلال ومشتقات الخنزير -->
             <div class="status-badge" id="statusBadge"></div>
 
-            <!-- معلومات المنتج -->
             <div class="product-meta">
                 <img id="productImg" src="" alt="Product" class="product-img">
                 <div class="product-info">
@@ -425,7 +462,6 @@
                 </div>
             </div>
 
-            <!-- شبكة السعرات والمكونات الغذائية لكل 100 غرام -->
             <h4 style="margin-top: 15px; color: var(--text-dark); font-size: 16px;" data-i18n="nutrition_title">📊 القيم الغذائية (لكل 100 غرام):</h4>
             <div class="nutrition-grid">
                 <div class="nutri-box">
@@ -454,11 +490,9 @@
                 </div>
             </div>
 
-            <!-- قائمة المكونات الكاملة مع التمييز اللوني للمواد المشبوهة -->
             <h4 style="margin-top: 20px; color: var(--text-dark); font-size: 16px;" data-i18n="ingredients_title">📝 المكونات المسجلة:</h4>
             <div class="ingredients-box" id="ingredientsText"></div>
 
-            <!-- زر لإعادة المسح -->
             <button onclick="resetScanner()" style="margin-top: 25px; width: 100%; padding: 14px; background: #64748b; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: inherit;">
                 <i class="fas fa-redo"></i> <span data-i18n="scan_again">مسح منتج آخر</span>
             </button>
@@ -466,7 +500,6 @@
     </div>
 
     <script>
-        // قاموس اللغات لصفحة الماسح
         const scannerTranslations = {
             ar: {
                 'home': 'الرئيسية',
@@ -522,7 +555,6 @@
             }
         };
 
-        // الكشف التلقائي الذكي عن لغة الهاتف
         function getDeviceLanguage() {
             const saved = localStorage.getItem('preferred_language');
             if (saved === 'ar' || saved === 'en') return saved;
@@ -565,23 +597,15 @@
             }
         }
 
-        // قاموس الكلمات المشبوهة ومشتقات الخنزير بكل اللغات (هولندي، تركي، إنجليزي، عربي، ألماني، فرنسي)
         const porkKeywords = [
-            // Dutch (الهولندية)
             'varken', 'varkensvlees', 'varkensvet', 'varkensgelatine', 'spek', 'reuzel', 'bacon', 'ham',
-            // Turkish (التركية)
             'domuz', 'domuz eti', 'domuz yağı', 'domuz jelatini', 'domuz kıkırdağı',
-            // English (الإنجليزية)
             'pork', 'porcine', 'lard', 'pork gelatin', 'pork fat', 'pig',
-            // Arabic (العربية)
             'خنزير', 'لحم خنزير', 'شحم خنزير', 'دهن خنزير', 'جيلاتين خنزير',
-            // German (الألمانية)
             'schwein', 'schweinefleisch', 'schweinegelatine', 'schweineschmalz', 'speck',
-            // French (الفرنسية)
             'porc', 'gélatine de porc', 'saindoux', 'viande de porc'
         ];
 
-        // الرموز والإضافات المشبوهة (قد تكون نباتية أو حيوانية)
         const suspiciousKeywords = [
             'e441', 'e120', 'carmine', 'cochineal', 'e471', 'e472', 'gelatine', 'gelatin', 'stremsel', 'rennet', 'dierlijk stremsel'
         ];
@@ -628,7 +652,6 @@
             fetchProductData(decodedText);
         }
 
-        // جلب بيانات المنتج من قاعدة البيانات العالمية
         async function fetchProductData(barcode) {
             if (!barcode || barcode.trim() === '') {
                 alert('يرجى إدخال رقم باركود صحيح');
@@ -657,7 +680,6 @@
             }
         }
 
-        // تحليل المكونات وعرض النتيجة بالألوان والنصوص
         function renderProductResult(product, barcode) {
             const card = document.getElementById('resultCard');
             const badge = document.getElementById('statusBadge');
@@ -666,7 +688,6 @@
             const brand = product.brands || '';
             const img = product.image_url || '/images/icon-192.png';
             
-            // جمع نصوص المكونات بجميع اللغات المتوفرة
             const ingredients = (product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || product.ingredients_text_de || '').toLowerCase();
             const additives = (product.additives_tags || []).map(a => a.toLowerCase()).join(' ');
             const combinedText = `${ingredients} ${additives}`;
@@ -676,7 +697,6 @@
             document.getElementById('barcodeNumber').textContent = `Barcode: ${barcode}`;
             document.getElementById('productImg').src = img;
 
-            // فحص مشتقات الخنزير
             let hasPork = false;
             let detectedPorkWord = '';
             for (let word of porkKeywords) {
@@ -687,7 +707,6 @@
                 }
             }
 
-            // فحص المواد المشبوهة
             let hasSuspicious = false;
             let detectedSuspiciousWord = '';
             if (!hasPork) {
@@ -700,7 +719,6 @@
                 }
             }
 
-            // عرض الشارة والنتيجة
             if (hasPork) {
                 badge.className = 'status-badge status-danger';
                 badge.innerHTML = `
@@ -730,7 +748,6 @@
                 `;
             }
 
-            // عرض القيم الغذائية لكل 100 غرام
             const nutriments = product.nutriments || {};
             document.getElementById('nutriCalories').textContent = nutriments['energy-kcal_100g'] ? `${Math.round(nutriments['energy-kcal_100g'])} kcal` : '-';
             document.getElementById('nutriProtein').textContent = nutriments['proteins_100g'] ? `${nutriments['proteins_100g']} g` : '-';
@@ -739,7 +756,6 @@
             document.getElementById('nutriFat').textContent = nutriments['fat_100g'] ? `${nutriments['fat_100g']} g` : '-';
             document.getElementById('nutriSalt').textContent = nutriments['salt_100g'] ? `${nutriments['salt_100g']} g` : '-';
 
-            // تلوين الكلمات في قائمة المكونات
             let formattedIngredients = product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || 'لم يتم تسجيل قائمة مكونات نصية لهذا المنتج.';
             
             porkKeywords.forEach(word => {
@@ -807,7 +823,6 @@
             }
         }
 
-        // تطبيق اللغة والثيم فور التحميل
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('wibo_theme');
             if (savedTheme === 'dark') {
