@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags الخارقة للظهور في بحث غوغل -->
     <title>ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health</title>
     <meta name="title" content="ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health">
     <meta name="description" content="أقوى ماسح باركود غذائي مجاني: امسح باركود أي منتج في السوبرماركت واكتشف فوراً هل يحتوي على خنزير، جيلاتين خنزير، أو مواد مشبوهة، مع جدول السعرات والقيم الغذائية.">
@@ -18,7 +17,7 @@
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/scanner.html" />
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/scanner.html" />
 
-    <!-- Google Structured Data (Schema.org) لتصدر نتائج غوغل الأولى -->
+    <!-- Google Structured Data (Schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +39,7 @@
     }
     </script>
     
-    <!-- Google AdSense Official Code -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
 
     <!-- Google Analytics -->
@@ -110,7 +109,6 @@
             padding: 15px;
         }
 
-        /* Header */
         header {
             background: var(--card-bg);
             padding: 15px 0;
@@ -179,7 +177,6 @@
             color: white;
         }
 
-        /* Scanner Box */
         .scanner-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -202,7 +199,26 @@
         .scanner-card p {
             color: var(--text-light);
             font-size: 1rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
+        .camera-tip {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 13px;
+            margin-bottom: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #bfdbfe;
+        }
+
+        body.dark-mode .camera-tip {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border-color: rgba(59, 130, 246, 0.3);
         }
 
         #reader {
@@ -245,7 +261,6 @@
             font-family: inherit;
         }
 
-        /* Result Card */
         .result-card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -431,25 +446,35 @@
             <h2><i class="fas fa-barcode"></i> <span data-i18n="title">ماسح الباركود وفحص الحلال</span></h2>
             <p data-i18n="subtitle">وجه كاميرا الهاتف نحو باركود المنتج لمعرفة مكوناته وهل يحتوي على خنزير أو مواد مشبوهة</p>
 
+            <div class="camera-tip">
+                <i class="fas fa-lightbulb" style="color: #3b82f6;"></i>
+                <span data-i18n="camera_tip_text">💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!</span>
+            </div>
+
+            <!-- منطقة الكاميرا -->
             <div id="reader"></div>
 
+            <!-- زر تشغيل/إيقاف الكاميرا -->
             <button id="toggleCameraBtn" onclick="toggleCamera()" style="
                 background: linear-gradient(135deg, var(--primary), var(--secondary));
                 color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: inherit;">
                 <i class="fas fa-camera"></i> <span id="cameraBtnText">تشغيل الكاميرا</span>
             </button>
 
+            <!-- إدخال يدوي في حال تعذر تشغيل الكاميرا -->
             <div class="manual-input-box">
                 <input type="text" id="manualBarcodeInput" placeholder="أو اكتب رقم الباركود هنا (مثال: 8710400...)" inputmode="numeric">
                 <button onclick="fetchProductData(document.getElementById('manualBarcodeInput').value)"><i class="fas fa-search"></i> <span data-i18n="search">فحص</span></button>
             </div>
         </div>
 
+        <!-- Loading -->
         <div class="loading-spinner" id="loadingSpinner">
             <i class="fas fa-spinner"></i>
             <span data-i18n="loading">جاري فحص المنتج في قاعدة البيانات العالمية...</span>
         </div>
 
+        <!-- Result Card -->
         <div class="result-card" id="resultCard">
             <div class="status-badge" id="statusBadge"></div>
 
@@ -505,6 +530,7 @@
                 'home': 'الرئيسية',
                 'title': 'ماسح الباركود وفحص الحلال',
                 'subtitle': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته وهل يحتوي على خنزير أو مواد مشبوهة',
+                'camera_tip_text': '💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!',
                 'camera_start': 'تشغيل الكاميرا',
                 'camera_stop': 'إيقاف الكاميرا',
                 'search': 'فحص',
@@ -531,6 +557,7 @@
                 'home': 'Home',
                 'title': 'Smart Barcode & Halal Scanner',
                 'subtitle': 'Scan any product in the supermarket to check ingredients, pork derivatives, and nutrition',
+                'camera_tip_text': '💡 Camera Tip: Keep your phone about 15-20 cm away from the barcode so the lens focuses sharply!',
                 'camera_start': 'Start Camera',
                 'camera_stop': 'Stop Camera',
                 'search': 'Scan',
@@ -621,11 +648,43 @@
             }
         }
 
+        // إعدادات محسنة خصيصاً للآيفون وسفاري مع دعم جميع أنواع الباركود الدولية
         function startCamera() {
             if (!html5QrCode) {
-                html5QrCode = new Html5Qrcode("reader");
+                const formatsToSupport = [
+                    Html5QrcodeSupportedFormats.EAN_13,
+                    Html5QrcodeSupportedFormats.EAN_8,
+                    Html5QrcodeSupportedFormats.UPC_A,
+                    Html5QrcodeSupportedFormats.UPC_E,
+                    Html5QrcodeSupportedFormats.CODE_128,
+                    Html5QrcodeSupportedFormats.QR_CODE
+                ];
+                html5QrCode = new Html5Qrcode("reader", {
+                    formatsToSupport: formatsToSupport,
+                    experimentalFeatures: {
+                        useBarCodeDetectorIfSupported: true // تشغيل معالج آبل السريع
+                    },
+                    verbose: false
+                });
             }
-            const config = { fps: 10, qrbox: { width: 280, height: 180 } };
+
+            // صندوق مسح مستطيل مريح لخطوط الباركود
+            const qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+                const width = Math.floor(viewfinderWidth * 0.85);
+                const height = Math.floor(viewfinderHeight * 0.45);
+                return { width: width, height: Math.max(height, 150) };
+            };
+
+            const config = {
+                fps: 15,
+                qrbox: qrboxFunction,
+                aspectRatio: 1.333334,
+                videoConstraints: {
+                    facingMode: "environment",
+                    width: { min: 640, ideal: 1280, max: 1920 },
+                    height: { min: 480, ideal: 720, max: 1080 }
+                }
+            };
 
             html5QrCode.start({ facingMode: "environment" }, config, onScanSuccess)
                 .then(() => {
