@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <!-- Version 8.4.0 - Smart Floating Scanner Button -->
+    <!-- Version 8.5.0 - Full Navigation Restored -->
     <title>WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
     <meta name="title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
-    <meta name="description" content="موقعك الصحي الفريد: ماسح الباركود وفحص الحلال، المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي">
-    <meta name="keywords" content="ماسح باركود, فحص خنزير, حلال, تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI, حاسبة السعرات, وصفات صحية, مقالات تغذية">
-    <meta name="author" content="WiBo Health">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Arabic">
-    <meta name="revisit-after" content="7 days">
+    <meta name="description" content="موقعك الصحي الفريد: ماسح الباركود وفحص الحلال، المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، مقالات د. وسيم، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية">
+    <meta name="keywords" content="د. وسيم حبيب, ماسح باركود, فحص خنزير, حلال, تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI">
+    <meta name="author" content="د. وسيم حبيب - WiBo Health">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://wibohealth.com/">
     
     <!-- Alternate Language Links -->
@@ -25,7 +23,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/">
     <meta property="og:title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
-    <meta property="og:description" content="دليل شامل للتغذية: ماسح الباركود الذكي، أطعمة، مكملات، وصفات، حاسبات صحية">
+    <meta property="og:description" content="دليل شامل للتغذية: مقالات د. وسيم، ماسح الباركود، أطعمة، مكملات، وصفات، حاسبات صحية">
     <meta property="og:image" content="https://wibohealth.com/images/logo.png">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:site_name" content="WiBo Health">
@@ -46,7 +44,7 @@
     </script>
     
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -57,8 +55,6 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#667eea">
-    
-    <!-- PWA Icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -68,7 +64,6 @@
     <script>
         const translations = {
             ar: {
-                // Navigation
                 'nav_home': 'الرئيسية',
                 'nav_scanner': '📷 ماسح الباركود',
                 'nav_foods': 'دليل الأطعمة',
@@ -77,22 +72,15 @@
                 'nav_articles': 'المقالات',
                 'nav_supplements': 'المكملات الغذائية',
                 'nav_doctor': 'د. وسيم حبيب',
+                'nav_my_articles': '✍️ بقلمي - د. وسيم',
                 'nav_body_program': '🌟 برنامج خاص',
                 'nav_free_diet': 'دايت مجاني 🎁',
-
-                // Header
                 'logo_subtitle': 'دليلك الصحي الشامل للتغذية السليمة',
-
-                // Scanner Floating Button
                 'floating_scanner_text': 'امسح الباركود (فحص الحلال)',
                 'new_badge': 'جديد 🔥',
-
-                // Scanner Hero Banner
                 'scanner_banner_title': '🔍 ميزة جديدة: ماسح الباركود وفحص الحلال!',
                 'scanner_banner_desc': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته وهل يحتوي على خنزير أو مواد مشبوهة مع السعرات',
                 'scanner_banner_btn': 'امسح الآن 📷',
-
-                // Compare Section
                 'compare_title': '🆕 قارن بين المكملات الغذائية!',
                 'compare_desc': 'اختر 2-5 مكملات غذائية وقارنها جنباً إلى جنب - الفوائد، الجرعات، والتحذيرات',
                 'compare_btn': 'جرب الآن',
@@ -102,17 +90,12 @@
                 'stat_supplements': 'مكمل غذائي',
                 'browse_foods': 'تصفح الأطعمة',
                 'get_free_diet': 'احصل على دايت مجاني',
-                'install_app': 'ثبّت التطبيق على هاتفك',
-
-                // Features Section
                 'feature_gi_title': 'الجلايسيميك إندكس (GI)',
                 'feature_gi_desc': 'مقياس يوضح سرعة تأثير الطعام على مستوى السكر في الدم من 0 إلى 100.',
                 'feature_ii_title': 'الإنسولين إندكس (II)',
                 'feature_ii_desc': 'مقياس يوضح كمية الإنسولين التي يحتاجها الجسم لهضم الطعام لمرضى السكري والدايت.',
                 'feature_nutrition_title': 'المعلومات الغذائية',
                 'feature_nutrition_desc': 'قاعدة بيانات شاملة تحتوي على السعرات، البروتينات، الكربوهيدرات، والدهون.',
-
-                // Footer
                 'footer_about': 'من نحن',
                 'footer_contact': 'اتصل بنا',
                 'footer_privacy': 'سياسة الخصوصية',
@@ -120,7 +103,6 @@
                 'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة.'
             },
             en: {
-                // Navigation
                 'nav_home': 'Home',
                 'nav_scanner': '📷 Barcode Scanner',
                 'nav_foods': 'Food Guide',
@@ -129,22 +111,15 @@
                 'nav_articles': 'Articles',
                 'nav_supplements': 'Supplements',
                 'nav_doctor': 'Dr. Wassim Habib',
+                'nav_my_articles': '✍️ By Dr. Wassim',
                 'nav_body_program': '🌟 Special Program',
                 'nav_free_diet': 'Free Diet Plan 🎁',
-
-                // Header
                 'logo_subtitle': 'Your comprehensive health guide for proper nutrition',
-
-                // Scanner Floating Button
                 'floating_scanner_text': 'Scan Barcode (Halal Check)',
                 'new_badge': 'NEW 🔥',
-
-                // Scanner Hero Banner
                 'scanner_banner_title': '🔍 New: Barcode & Halal Scanner!',
                 'scanner_banner_desc': 'Scan any supermarket barcode to instantly check ingredients, pork derivatives, and nutrition facts',
                 'scanner_banner_btn': 'Scan Now 📷',
-
-                // Compare Section
                 'compare_title': '🆕 Compare Supplements Side by Side!',
                 'compare_desc': 'Compare 2-5 supplements together - benefits, dosages, and interactions',
                 'compare_btn': 'Try Now',
@@ -154,17 +129,12 @@
                 'stat_supplements': 'Supplements',
                 'browse_foods': 'Browse Foods',
                 'get_free_diet': 'Get Free Diet Plan',
-                'install_app': 'Install App on Your Phone',
-
-                // Features Section
                 'feature_gi_title': 'Glycemic Index (GI)',
                 'feature_gi_desc': 'A measure showing how fast a food raises blood sugar levels from 0 to 100.',
                 'feature_ii_title': 'Insulin Index (II)',
                 'feature_ii_desc': 'A measure showing how much insulin your body needs to digest food.',
                 'feature_nutrition_title': 'Nutritional Information',
                 'feature_nutrition_desc': 'Comprehensive database containing calories, proteins, carbs, and fats.',
-
-                // Footer
                 'footer_about': 'About Us',
                 'footer_contact': 'Contact Us',
                 'footer_privacy': 'Privacy Policy',
@@ -254,7 +224,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -284,7 +254,7 @@
             grid-row: 1;
             text-decoration: none;
         }
-        
+
         .header-controls {
             grid-row: 2;
             display: flex;
@@ -353,10 +323,11 @@
             gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: center;
         }
 
         .nav-link {
-            padding: 10px 20px;
+            padding: 10px 18px;
             background: #f3f4f6;
             color: var(--text-dark);
             text-decoration: none;
@@ -449,7 +420,7 @@
             background: #f0fdf4;
         }
 
-        /* 🔥 NEW: Smart Pill Floating Barcode Button with Text & Badge */
+        /* Floating Barcode Button */
         .floating-scanner-btn {
             position: fixed;
             bottom: 25px;
@@ -782,7 +753,7 @@
     </style>
 </head>
 <body>
-    <!-- 🔥 NEW: Floating Barcode Scanner Pill Button with Text & Badge -->
+    <!-- Floating Barcode Scanner Pill Button -->
     <a href="scanner.html" class="floating-scanner-btn">
         <span class="floating-scanner-badge" data-i18n="new_badge">جديد 🔥</span>
         <i class="fas fa-barcode" style="font-size: 20px;"></i>
@@ -832,8 +803,10 @@
                         <span></span>
                     </div>
 
+                    <!-- Desktop Navigation (كل الأزرار مستعادة بالكامل!) -->
                     <nav class="nav-menu">
                         <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                        <!-- ماسح الباركود -->
                         <a href="scanner.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود</span></a>
                         <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
                         <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
@@ -841,6 +814,18 @@
                         <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
                         <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
                         <a href="doctor.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+                        
+                        <!-- زر بقلمي الوردي الفخم -->
+                        <a href="my-articles.html" class="nav-link" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4); font-weight: 800;">
+                            <i class="fas fa-pen-fancy"></i> <span data-i18n="nav_my_articles">✍️ بقلمي - د. وسيم</span>
+                        </a>
+
+                        <!-- زر برنامج خاص البنفسجي -->
+                        <a href="body-program.html" class="nav-link" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); font-weight: 800;">
+                            <i class="fas fa-star"></i> <span data-i18n="nav_body_program">🌟 برنامج خاص</span>
+                        </a>
+
+                        <!-- دايت مجاني -->
                         <a href="diet-plan.html" class="nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;"><i class="fas fa-gift"></i> <span data-i18n="nav_free_diet">دايت مجاني 🎁</span></a>
                     </nav>
                 </div>
@@ -854,11 +839,23 @@
         <button class="mobile-nav-close" onclick="toggleMobileMenu()">&times;</button>
         <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
         <a href="scanner.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود وفحص الحلال</span></a>
+        
+        <!-- بقلمي للموبايل -->
+        <a href="my-articles.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; font-weight: 800;">
+            <i class="fas fa-pen-fancy"></i> <span data-i18n="nav_my_articles">✍️ بقلمي - د. وسيم</span>
+        </a>
+
+        <!-- برنامج خاص للموبايل -->
+        <a href="body-program.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; font-weight: 800;">
+            <i class="fas fa-star"></i> <span data-i18n="nav_body_program">🌟 برنامج خاص</span>
+        </a>
+
         <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
         <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
         <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
         <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
         <a href="doctor.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">د. وسيم حبيب</span></a>
+        <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;"><i class="fas fa-gift"></i> <span data-i18n="nav_free_diet">دايت مجاني 🎁</span></a>
         <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
         <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">اتصل بنا</span></a>
     </nav>
@@ -942,45 +939,4 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">شروط الاستخدام</a>
-        </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة.</p>
-    </footer>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('wibo_theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                document.querySelector('.theme-toggle i').className = 'fas fa-sun';
-            }
-        });
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            const icon = document.querySelector('.theme-toggle i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('wibo_theme', 'dark');
-            } else {
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('wibo_theme', 'light');
-            }
-        }
-
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            const overlay = document.querySelector('.mobile-nav-overlay');
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        }
-    </script>
-
-    <!-- Load Databases -->
-    <script src="js/data.js"></script>
-    <script src="js/data-enhancer.js"></script>
-    <script src="js/recipes-data.js"></script>
-    <script src="js/pwa-register.js"></script>
-</body>
-</html>
+            <a href="terms.html" style="color: #ecf0f1; ma
