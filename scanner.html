@@ -895,7 +895,7 @@
         }
 
         // =========================================================================
-        // 🧠 محرك الفرز الذكي التلقائي: يحدد نوع الطعام بدقة ويقترح البديل المطابق 100%
+        // 🧠 محرك الفرز الجذري الدقيق: يقترح بدائل من نفس العائلة حصراً، وإلا يُغلق الصندوق
         // =========================================================================
         function getSmartAlternatives(product, sugars, carbs, fat, calories) {
             if (typeof foodsDatabase === 'undefined' || !foodsDatabase || foodsDatabase.length === 0) {
@@ -904,80 +904,103 @@
 
             const pName = ((product.product_name || '') + ' ' + (product.product_name_en || '') + ' ' + (product.product_name_nl || '')).toLowerCase();
             const pCats = ((product.categories || '') + ' ' + (product.categories_tags || []).join(' ')).toLowerCase();
-            const pIngredients = (product.ingredients_text || '').toLowerCase();
-            const searchField = `${pName} ${pCats} ${pIngredients}`;
+            
+            // نجمع الاسم والتصنيفات فقط دون نصوص المكونات لتجنب الخلط العشوائي
+            const targetText = `${pName} ${pCats}`;
 
-            // الأطعمة الآمنة منخفضة الجلايسيميك (GI <= 55)
+            // الأطعمة الآمنة منخفضة الجلايسيميك فقط (GI <= 55)
             const safeFoods = foodsDatabase.filter(f => f.gi && f.gi <= 55);
 
-            // 1. فئة السيروب، العسل، المحليات، السكر، والمربى (مثل Schenkstroop, Stroop, Syrup, Jam, Honey)
-            const isSyrupOrSweetener = /stroop|schenkstroop|syrup|sirop|honey|miel|jam|marmalade|sugar|suiker|spread|sweet-spread|caramel|محلى|سيروب|عسل|مربى|قطر|سكر/.test(searchField) || (sugars >= 45 && fat < 5);
+            // 1. فئة السيروب، العسل، المحليات، والمربى (مثل Schenkstroop, Stroop, Syrup, Honey, Jam)
+            const isSyrupOrSweetener = /stroop|schenkstroop|syrup|sirop|honey|miel|jam|marmalade|sweet-spread|pancake-syrup|سيروب|عسل|مربى|شيرة|قطر/.test(targetText) || (sugars >= 45 && fat < 5);
             if (isSyrupOrSweetener) {
-                const sweetAlts = safeFoods.filter(f => 
+                const alts = safeFoods.filter(f => 
                     (f.name && /ستيفيا|عسل|فراولة|توت|شوكولاتة داكنة/.test(f.name)) ||
                     (f.nameEn && /stevia|honey|strawberry|berry|dark chocolate/.test(f.nameEn.toLowerCase()))
                 );
-                if (sweetAlts.length > 0) return sweetAlts.slice(0, 3);
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
-            // 2. فئة المشروبات والكولا والصودا والعصائر
-            const isBeverage = /cola|coca|pepsi|soda|frisdrank|drink|beverage|juice|fanta|sprite|limonade|عصير|كولا|مشروب|غازي|صودا/.test(searchField);
+            // 2. فئة المشروبات والكولا والصودا والعصائر (سوائل حصراً)
+            const isBeverage = /cola|coca|pepsi|soda|frisdrank|beverages|drinks|juice|fanta|sprite|limonade|عصير|كولا|مشروب|غازي|صودا/.test(targetText);
             if (isBeverage) {
-                const drinkAlts = safeFoods.filter(f => 
+                const alts = safeFoods.filter(f => 
                     (f.category && f.category.includes('مشروبات')) ||
                     (f.name && /شاي|ماء|عصير ليمون|كركديه|قرفة/.test(f.name)) ||
                     (f.nameEn && /tea|water|lemon|drink|juice/.test(f.nameEn.toLowerCase()))
                 );
-                if (drinkAlts.length > 0) return drinkAlts.slice(0, 3);
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
             // 3. فئة الخبز، التوست، المعجنات، الفطائر (Pita, Pszenna, Brood, Bread)
-            const isBakery = /bread|brood|pita|pszenna|bakery|toast|wrap|tortilla|baguette|croissant|bun|خبز|توست|فطير|صمون|طحين|مخبوز/.test(searchField);
+            const isBakery = /bread|brood|pita|pszenna|bakery|toast|wrap|tortilla|baguette|croissant|bun|خبز|توست|فطير|صمون|طحين|مخبوز/.test(targetText);
             if (isBakery) {
-                const breadAlts = safeFoods.filter(f => 
+                const alts = safeFoods.filter(f => 
                     (f.name && /خبز أسمر|خبز شوفان|خبز شعير|توست أسمر|نخالة|حبوب كاملة/.test(f.name)) ||
                     (f.nameEn && /whole grain|oat bread|barley bread|brown bread|toast/.test(f.nameEn.toLowerCase()))
                 );
-                if (breadAlts.length > 0) return breadAlts.slice(0, 3);
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
-            // 4. فئة المايونيز والصلصات والزيوت المفرطة
-            const isSauce = /mayo|mayonnaise|sauce|saus|dressing|ketchup|صلصة|مايونيز|كاتشب|صوص|تتبيلة/.test(searchField) || (fat >= 30 && carbs < 20);
+            // 4. فئة المعكرونة والباستا والنودلز (Pastas, Noodles)
+            const isPasta = /pasta|pastas|noodle|noodles|spaghetti|macaroni|vermicelli|معكرونة|باستا|نودلز|سباغيتي/.test(targetText);
+            if (isPasta) {
+                const alts = safeFoods.filter(f => 
+                    (f.name && /معكرونة القمح الكامل|نودلز الشوفان|باستا العدس|حبوب كاملة/.test(f.name)) ||
+                    (f.nameEn && /whole wheat pasta|oat noodle|lentil pasta/.test(f.nameEn.toLowerCase()))
+                );
+                if (alts.length > 0) return alts.slice(0, 3);
+            }
+
+            // 5. فئة الأرز والحبوب المطبوخة (Rice, Grains, Quinoa)
+            const isRice = /rice|rijst|quinoa|bulgur|couscous|أرز|كينوا|برغل|كسكسي/.test(targetText);
+            if (isRice) {
+                const alts = safeFoods.filter(f => 
+                    (f.name && /أرز بني|كينوا|برغل/.test(f.name)) ||
+                    (f.nameEn && /brown rice|quinoa|bulgur/.test(f.nameEn.toLowerCase()))
+                );
+                if (alts.length > 0) return alts.slice(0, 3);
+            }
+
+            // 6. فئة المايونيز والصلصات والزيوت المفرطة (Sauces, Dressings, Mayo)
+            const isSauce = /mayo|mayonnaise|sauce|saus|dressing|ketchup|صلصة|مايونيز|كاتشب|صوص|تتبيلة/.test(targetText) || (fat >= 30 && carbs < 20);
             if (isSauce) {
-                const sauceAlts = safeFoods.filter(f => 
+                const alts = safeFoods.filter(f => 
                     (f.name && /زبادي|طحينة|خردل|زيت زيتون|لبنة/.test(f.name)) ||
                     (f.nameEn && /yogurt|mustard|tahini|olive oil/.test(f.nameEn.toLowerCase()))
                 );
-                if (sauceAlts.length > 0) return sauceAlts.slice(0, 3);
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
-            // 5. فئة البسكويت والشوكولاتة والحلويات والكيك
-            const isSweetOrSnack = /biscuit|cookie|koek|chocolate|chocolat|snoep|candy|cake|bonbon|chips|crisps|بسكويت|شوكولاتة|كيك|حلوى|سوس|شيبس/.test(searchField);
+            // 7. فئة البسكويت والشوكولاتة والحلويات والكيك
+            const isSweetOrSnack = /biscuit|cookie|koek|chocolate|chocolat|snoep|candy|cake|bonbon|بسكويت|شوكولاتة|كيك|حلوى|سوس/.test(targetText);
             if (isSweetOrSnack) {
-                const snackAlts = safeFoods.filter(f => 
+                const alts = safeFoods.filter(f => 
                     (f.name && /شوكولاتة داكنة|فراولة|توت|لوز|جوز|فول سوداني|مكسرات/.test(f.name)) ||
                     (f.nameEn && /dark chocolate|berry|almond|walnut|peanut|nuts/.test(f.nameEn.toLowerCase()))
                 );
-                if (snackAlts.length > 0) return snackAlts.slice(0, 3);
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
-            // 6. فئة الألبان والأجبان
-            const isDairy = /milk|melk|cheese|kaas|lait|fromage|زبادي|جبن|حليب|لبن/.test(searchField);
+            // 8. فئة الشيبس والمقرمشات المالحة (Chips, Crisps, Crackers)
+            const isChips = /chips|crisps|crackers|popcorn|شيبس|مقرمشات|كرتون|فشار/.test(targetText);
+            if (isChips) {
+                const alts = safeFoods.filter(f => 
+                    (f.name && /لوز|جوز|فستق|حمص|بذور/.test(f.name)) ||
+                    (f.nameEn && /almond|walnut|chickpea|seeds/.test(f.nameEn.toLowerCase()))
+                );
+                if (alts.length > 0) return alts.slice(0, 3);
+            }
+
+            // 9. فئة الألبان والأجبان (Dairy, Milk, Cheese)
+            const isDairy = /milk|melk|cheese|kaas|lait|fromage|زبادي|جبن|حليب|لبن/.test(targetText);
             if (isDairy) {
-                const dairyAlts = safeFoods.filter(f => f.category && f.category.includes('ألبان'));
-                if (dairyAlts.length > 0) return dairyAlts.slice(0, 3);
+                const alts = safeFoods.filter(f => f.category && f.category.includes('ألبان'));
+                if (alts.length > 0) return alts.slice(0, 3);
             }
 
-            // خط الأمان الذكي: إذا لم يتطابق أي صنف، نحدد بناءً على البصمة الغذائية (سكر عالي أو دهن عالي)
-            if (sugars >= 20) {
-                // منتج سكري: اقترح فواكه ومحليات منخفضة السكر
-                return safeFoods.filter(f => f.name && /توت|فراولة|تفاح|ستيفيا/.test(f.name)).slice(0, 3);
-            } else if (carbs >= 30) {
-                // نشويات: اقترح نشويات بطيئة الامتصاص
-                return safeFoods.filter(f => f.name && /شوفان|كينوا|أرز بني/.test(f.name)).slice(0, 3);
-            }
-
-            return safeFoods.slice(0, 3);
+            // 🛑 القاعدة الذهبية: إذا لم يتعرف النظام على الصنف بنسبة 100%، لا يقترح أي بديل على الإطلاق!
+            return [];
         }
 
         // تحليل المنتج وتقييم السكر والدهون وعرض البدائل بدقة
@@ -1076,27 +1099,24 @@
                 glycemicBadge.innerHTML = `<i class="fas fa-check-double" style="font-size: 20px;"></i> <span>${t('gi_low')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
             }
 
-            // 4. استخراج البدائل الصحية التلقائية بحسب نوع الطعام
-            if (sugars >= 4 || carbs >= 20 || isDrink || isFattySauce || isSweetItem || fat >= 20) {
-                const alternatives = getSmartAlternatives(product, sugars, carbs, fat, calories);
-                if (alternatives.length > 0) {
-                    altList.innerHTML = alternatives.map(alt => {
-                        const title = currentLang === 'en' ? (alt.nameEn || alt.name) : alt.name;
-                        return `
-                            <a href="food-details.html?id=${alt.id}" class="alt-food-item" target="_blank">
-                                <span class="alt-food-icon">${alt.icon || '🥗'}</span>
-                                <div class="alt-food-details">
-                                    <div class="alt-food-title">${title}</div>
-                                    <span class="alt-food-gi">GI: ${alt.gi || 'منخفض'} ✓</span>
-                                </div>
-                            </a>
-                        `;
-                    }).join('');
-                    altContainer.style.display = 'block';
-                } else {
-                    altContainer.style.display = 'none';
-                }
+            // 4. استخراج البدائل الصحية: تظهر فقط وفقط إذا وُجد بديل مطابق 100% لنفس العائلة
+            const alternatives = getSmartAlternatives(product, sugars, carbs, fat, calories);
+            if (alternatives.length > 0 && (sugars >= 4 || carbs >= 20 || isDrink || isFattySauce || isSweetItem || fat >= 20)) {
+                altList.innerHTML = alternatives.map(alt => {
+                    const title = currentLang === 'en' ? (alt.nameEn || alt.name) : alt.name;
+                    return `
+                        <a href="food-details.html?id=${alt.id}" class="alt-food-item" target="_blank">
+                            <span class="alt-food-icon">${alt.icon || '🥗'}</span>
+                            <div class="alt-food-details">
+                                <div class="alt-food-title">${title}</div>
+                                <span class="alt-food-gi">GI: ${alt.gi || 'منخفض'} ✓</span>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+                altContainer.style.display = 'block';
             } else {
+                // إذا لم يتعرف على العائلة بدقة، يقفل الصندوق نهائياً ولا يخمن أي شيء خطأ
                 altContainer.style.display = 'none';
             }
 
