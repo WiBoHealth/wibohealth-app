@@ -177,7 +177,6 @@
             color: white;
         }
 
-        /* كارد الماسح مع توسيط الكاميرا الفخم في قلب الشاشة */
         .scanner-card {
             background: var(--card-bg);
             border-radius: 24px;
@@ -307,7 +306,6 @@
             border-right: 6px solid #f59e0b;
         }
 
-        /* كارت تقييم المؤشر الجلايسيمي وسكر الدم */
         .glycemic-eval-badge {
             padding: 14px 18px;
             border-radius: 14px;
@@ -400,7 +398,7 @@
             color: var(--text-dark);
         }
 
-        /* كرت البدائل الصحية الذكية المقترحة */
+        /* كرت البدائل الصحية الذكية المحصورة بنفس نوع الطعام */
         .alternatives-container {
             background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
             border: 2px solid #a7f3d0;
@@ -659,10 +657,10 @@
                 </div>
             </div>
 
-            <!-- 3. كرت البدائل الصحية الذكية من د. وسيم (يظهر عند الأطعمة مرتفعة السكر) -->
+            <!-- 3. كرت البدائل الصحية الذكية المحصورة بنفس فئة الطعام بالضبط -->
             <div class="alternatives-container" id="alternativesContainer" style="display: none;">
                 <h4><i class="fas fa-heartbeat"></i> <span data-i18n="alt_title">💡 بدائل صحية مقترحة من د. وسيم:</span></h4>
-                <p data-i18n="alt_desc">هذا المنتج يرفع السكر أو الأنسولين بسرعة. إليك أفضل الخيارات الصحية البديلة منخفضة المؤشر الجلايسيمي:</p>
+                <p data-i18n="alt_desc">هذا المنتج يرفع السكر أو الأنسولين أو عالي الدهون. إليك أفضل الخيارات الصحية البديلة من نفس الفئة:</p>
                 <div class="alt-food-list" id="altFoodList"></div>
             </div>
 
@@ -681,7 +679,7 @@
             ar: {
                 'home': 'الرئيسية',
                 'title': 'ماسح الباركود وفحص الحلال',
-                'subtitle': 'وجه كاميرا الهاتف نحو باركود المنتج لمعرفة مكوناته، تأثيره على السكر، وهل يحتوي على خنزير',
+                'subtitle': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته، تأثيره على السكر، وهل يحتوي على خنزير',
                 'camera_tip_text': '💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود فوراً!',
                 'camera_start': 'تشغيل الكاميرا',
                 'camera_stop': 'إيقاف الكاميرا',
@@ -708,7 +706,7 @@
                 'gi_med': '🟡 تأثير جلايسيمي متوسط (يحتوي على نسبة سكر معتدلة - يُنصح بالاعتدال)',
                 'gi_high': '🔴 تأثير جلايسيمي مرتفع (يرفع السكر والأنسولين سريعاً ويخزن الدهون)',
                 'alt_title': '💡 بدائل صحية مقترحة من د. وسيم:',
-                'alt_desc': 'هذا المنتج يرفع السكر أو الأنسولين بسرعة. إليك أفضل البدائل الطبيعية منخفضة الجلايسيميك من موقعنا:'
+                'alt_desc': 'هذا المنتج يرفع السكر أو الأنسولين أو عالي الدهون. إليك أفضل البدائل الطبيعية من نفس الفئة من موقعنا:'
             },
             en: {
                 'home': 'Home',
@@ -740,7 +738,7 @@
                 'gi_med': '🟡 Moderate Glycemic Impact (Moderate Sugar - Consume in moderation)',
                 'gi_high': '🔴 High Glycemic Impact (Spikes blood sugar & insulin rapidly)',
                 'alt_title': '💡 Healthy Alternatives by Dr. Wassim:',
-                'alt_desc': 'This product spikes insulin rapidly. Here are top low-GI alternatives from our database:'
+                'alt_desc': 'This product spikes insulin or is high in fat. Here are top healthy alternatives in the same food category:'
             }
         };
 
@@ -899,36 +897,73 @@
             }
         }
 
-        // دالة استخراج البدائل الصحية الذكية من قاعدة بيانات الموقع
-        function getSmartAlternatives(product, sugars, carbs) {
+        // دالة حصر البدائل الصحية الذكية بنفس فئة ونوع الطعام بدقة طبية
+        function getSmartAlternatives(product, sugars, carbs, fat, calories) {
             if (typeof foodsDatabase === 'undefined' || !foodsDatabase || foodsDatabase.length === 0) {
                 return [];
             }
 
-            const prodName = (product.product_name || product.product_name_en || '').toLowerCase();
-            const prodCats = (product.categories || '').toLowerCase();
+            const pName = ((product.product_name || '') + ' ' + (product.product_name_en || '') + ' ' + (product.product_name_nl || '')).toLowerCase();
+            const pCats = ((product.categories || '') + ' ' + (product.categories_tags || []).join(' ')).toLowerCase();
+            const pIngredients = (product.ingredients_text || '').toLowerCase();
+            const searchField = `${pName} ${pCats} ${pIngredients}`;
 
-            // فلترة الأطعمة الصحية منخفضة الجلايسيميك (GI <= 55)
-            let safeFoods = foodsDatabase.filter(f => f.gi && f.gi <= 55);
+            // الأطعمة الآمنة منخفضة الجلايسيميك (GI <= 55)
+            const safeFoods = foodsDatabase.filter(f => f.gi && f.gi <= 55);
 
-            // مطابقة التصنيف الذكي
-            let categoryMatched = [];
-            if (prodCats.includes('cereal') || prodCats.includes('breakfast') || prodName.includes('oat') || prodName.includes('flake')) {
-                categoryMatched = safeFoods.filter(f => f.category && (f.category.includes('حبوب') || f.category.includes('نشويات')));
-            } else if (prodCats.includes('biscuit') || prodCats.includes('cookie') || prodCats.includes('sweet') || prodCats.includes('snack') || prodCats.includes('chocolate')) {
-                categoryMatched = safeFoods.filter(f => f.category && (f.category.includes('مكسرات') || f.category.includes('فواكه') || f.category.includes('سناك')));
-            } else if (prodCats.includes('beverage') || prodCats.includes('drink') || prodCats.includes('soda') || prodCats.includes('juice')) {
-                categoryMatched = safeFoods.filter(f => f.category && f.category.includes('مشروبات'));
-            } else if (prodCats.includes('bread') || prodCats.includes('bakery')) {
-                categoryMatched = safeFoods.filter(f => f.category && (f.category.includes('حبوب') || f.category.includes('نشويات')));
+            // 1. الخبز، التوست، المعجنات، الفطائر والنشويات المخبوزة (يشمل pita, pszenna, brood, bread)
+            const isBakery = /bread|brood|pita|pszenna|bakery|toast|wrap|tortilla|baguette|croissant|bun|خبز|توست|فطير|صمون|طحين|مخبوز/.test(searchField);
+            if (isBakery) {
+                const breadAlts = safeFoods.filter(f => 
+                    (f.name && /خبز|توست|شعير|شوفان|حبوب كاملة|نخالة/.test(f.name)) ||
+                    (f.nameEn && /bread|toast|oat|barley|whole grain|rye/.test(f.nameEn.toLowerCase()))
+                );
+                if (breadAlts.length > 0) return breadAlts.slice(0, 3);
             }
 
-            // إذا تطابق التصنيف نأخذ منه، وإلا نأخذ أفضل 3 خيارات منخفضة السكر والـ GI
-            const pool = categoryMatched.length >= 2 ? categoryMatched : safeFoods;
-            return pool.sort(() => 0.5 - Math.random()).slice(0, 3);
+            // 2. المشروبات، الكولا، الصودا، والعصائر
+            const isBeverage = /cola|coca|pepsi|soda|frisdrank|drink|beverage|juice|fanta|sprite|عصير|كولا|مشروب|غازي|صودا/.test(searchField);
+            if (isBeverage) {
+                const drinkAlts = safeFoods.filter(f => 
+                    (f.category && f.category.includes('مشروبات')) ||
+                    (f.name && /شاي|ماء|عصير|ليمون|كركديه|قرفة/.test(f.name)) ||
+                    (f.nameEn && /tea|water|lemon|drink|juice/.test(f.nameEn.toLowerCase()))
+                );
+                if (drinkAlts.length > 0) return drinkAlts.slice(0, 3);
+            }
+
+            // 3. المايونيز، الصلصات، الصوصات والزيوت المفرطة
+            const isSauce = /mayo|mayonnaise|sauce|saus|dressing|ketchup|spread|صلصة|مايونيز|كاتشب|صوص|تتبيلة|دهن/.test(searchField) || fat >= 25;
+            if (isSauce) {
+                const sauceAlts = safeFoods.filter(f => 
+                    (f.name && /زبادي|طحينة|خردل|زيت زيتون|لبنة|خل/.test(f.name)) ||
+                    (f.nameEn && /yogurt|mustard|tahini|olive oil|dressing/.test(f.nameEn.toLowerCase()))
+                );
+                if (sauceAlts.length > 0) return sauceAlts.slice(0, 3);
+            }
+
+            // 4. البسكويت، الكوكيز، الشوكولاتة، الكيك والحلويات
+            const isSweetOrSnack = /biscuit|cookie|koek|chocolate|chocolat|snoep|sweet|candy|cake|bonbon|chips|crisps|بسكويت|شوكولاتة|كيك|حلوى|سوس|شيبس/.test(searchField);
+            if (isSweetOrSnack) {
+                const sweetAlts = safeFoods.filter(f => 
+                    (f.name && /داكنة|فراولة|توت|لوز|جوز|فول سوداني|مكسرات/.test(f.name)) ||
+                    (f.nameEn && /dark chocolate|berry|almond|walnut|peanut|nuts/.test(f.nameEn.toLowerCase()))
+                );
+                if (sweetAlts.length > 0) return sweetAlts.slice(0, 3);
+            }
+
+            // 5. الألبان والأجبان
+            const isDairy = /milk|melk|cheese|kaas|lait|fromage|زبادي|جبن|حليب|لبن/.test(searchField);
+            if (isDairy) {
+                const dairyAlts = safeFoods.filter(f => f.category && f.category.includes('ألبان'));
+                if (dairyAlts.length > 0) return dairyAlts.slice(0, 3);
+            }
+
+            // إذا لم يكن من الفئات السابقة، نأخذ 3 خيارات خفيفة من نفس الفئة العامة
+            return safeFoods.slice(0, 3);
         }
 
-        // تحليل المنتج وتقييم السكر واقتراح البدائل
+        // تحليل المنتج وتقييم السكر والدهون وعرض البدائل بدقة
         function renderProductResult(product, barcode) {
             const card = document.getElementById('resultCard');
             const badge = document.getElementById('statusBadge');
@@ -1002,15 +1037,20 @@
                 `;
             }
 
-            // 3. تحليل المؤشر الجلايسيمي وتأثير السكر
+            // 3. تحليل المؤشر الجلايسيمي والدهون والسعرات
             const nutriments = product.nutriments || {};
             const sugars = parseFloat(nutriments['sugars_100g']) || 0;
             const carbs = parseFloat(nutriments['carbohydrates_100g']) || 0;
+            const fat = parseFloat(nutriments['fat_100g']) || 0;
+            const calories = Math.round(nutriments['energy-kcal_100g'] || 0);
 
-            if (sugars >= 15 || (carbs >= 55 && sugars >= 10)) {
+            const isDrink = /cola|soda|frisdrank|drink|beverage|juice/.test((name + ' ' + (product.categories || '')).toLowerCase());
+            const isFattySauce = /mayo|mayonnaise|sauce|saus|dressing/.test((name + ' ' + (product.categories || '')).toLowerCase()) || fat >= 20;
+
+            if (sugars >= 12 || (carbs >= 50 && sugars >= 6) || (isDrink && sugars >= 4)) {
                 glycemicBadge.className = 'glycemic-eval-badge gi-high-badge';
                 glycemicBadge.innerHTML = `<i class="fas fa-chart-line" style="font-size: 20px;"></i> <span>${t('gi_high')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
-            } else if (sugars >= 5 || carbs >= 25) {
+            } else if (sugars >= 4 || carbs >= 20) {
                 glycemicBadge.className = 'glycemic-eval-badge gi-med-badge';
                 glycemicBadge.innerHTML = `<i class="fas fa-chart-line" style="font-size: 20px;"></i> <span>${t('gi_med')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
             } else {
@@ -1018,9 +1058,9 @@
                 glycemicBadge.innerHTML = `<i class="fas fa-check-double" style="font-size: 20px;"></i> <span>${t('gi_low')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
             }
 
-            // 4. اقتراح البدائل الصحية الذكية إذا كان المنتج يرفع السكر أو يحتوي على سكريات
-            if (sugars >= 8 || carbs >= 35) {
-                const alternatives = getSmartAlternatives(product, sugars, carbs);
+            // 4. استخراج البدائل الصحية إذا كان المنتج عالي السكر أو نشويات أو كولا أو مايونيز
+            if (sugars >= 4 || carbs >= 20 || isDrink || isFattySauce || fat >= 20) {
+                const alternatives = getSmartAlternatives(product, sugars, carbs, fat, calories);
                 if (alternatives.length > 0) {
                     altList.innerHTML = alternatives.map(alt => {
                         const title = currentLang === 'en' ? (alt.nameEn || alt.name) : alt.name;
@@ -1043,11 +1083,11 @@
             }
 
             // 5. عرض القيم الغذائية
-            document.getElementById('nutriCalories').textContent = nutriments['energy-kcal_100g'] ? `${Math.round(nutriments['energy-kcal_100g'])} kcal` : '-';
+            document.getElementById('nutriCalories').textContent = calories ? `${calories} kcal` : '-';
             document.getElementById('nutriProtein').textContent = nutriments['proteins_100g'] ? `${nutriments['proteins_100g']} g` : '-';
             document.getElementById('nutriCarbs').textContent = carbs ? `${carbs.toFixed(1)} g` : '-';
             document.getElementById('nutriSugars').textContent = sugars ? `${sugars.toFixed(1)} g` : '-';
-            document.getElementById('nutriFat').textContent = nutriments['fat_100g'] ? `${nutriments['fat_100g']} g` : '-';
+            document.getElementById('nutriFat').textContent = fat ? `${fat.toFixed(1)} g` : '-';
             document.getElementById('nutriSalt').textContent = nutriments['salt_100g'] ? `${nutriments['salt_100g']} g` : '-';
 
             // تلوين الكلمات في قائمة المكونات
