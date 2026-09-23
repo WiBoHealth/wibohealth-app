@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health</title>
-    <meta name="title" content="ماسح الباركود الذكي - فحص المكونات ومشتقات الخنزير والحلال | WiBo Health">
-    <meta name="description" content="أقوى ماسح باركود غذائي مجاني: امسح باركود أي منتج في السوبرماركت واكتشف فوراً هل يحتوي على خنزير، جيلاتين خنزير، أو مواد مشبوهة، مع فحص المؤشر الجلايسيمي وبدائل صحية.">
-    <meta name="keywords" content="ماسح باركود, فحص الخنزير بالباركود, كاشف الحلال, جيلاتين خنزير, المؤشر الجلايسيمي, بدائل صحية, سوبرماركت هولندا, WiBo Health, E441, E120">
+    <title>ماسح الباركود الذكي - فحص المكونات والمؤشر الجلايسيمي ومشتقات الخنزير والحلال | WiBo Health</title>
+    <meta name="title" content="ماسح الباركود الذكي - فحص المكونات والمؤشر الجلايسيمي ومشتقات الخنزير والحلال | WiBo Health">
+    <meta name="description" content="أقوى ماسح باركود غذائي مجاني: امسح باركود أي منتج واكتشف فوراً التأثير الجلايسيمي ومؤشر الأنسولين والبدائل الصحية، بالإضافة إلى فحص مشتقات الخنزير والمواد المشبوهة.">
+    <meta name="keywords" content="ماسح باركود, المؤشر الجلايسيمي, مؤشر الأنسولين, بدائل صحية, فحص الخنزير بالباركود, كاشف الحلال, Open Food Facts, WiBo Health">
     <meta name="author" content="Dr. Wassim Habib - WiBo Health">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://wibohealth.com/scanner.html">
@@ -22,9 +22,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "ماسح الباركود الذكي وفاحص الحلال والبدائل الصحية - WiBo Health",
+      "name": "ماسح الباركود الذكي وفاحص الحلال والجلايسيميك - WiBo Health",
       "url": "https://wibohealth.com/scanner.html",
-      "description": "أداة ذكية لتحليل باركود الأغذية والكشف عن مشتقات الخنزير والجيلاتين وتقييم المؤشر الجلايسيمي واقتراح بدائل صحية لمرضى السكري.",
+      "description": "أداة ذكية مجانية لقراءة باركود الأطعمة وتحليل التأثير الجلايسيمي واقتراح البدائل المنخفضة للأنسولين وكشف مشتقات الخنزير.",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "All",
       "author": {
@@ -79,8 +79,8 @@
             --bg-gradient-1: #667eea;
             --bg-gradient-2: #764ba2;
             --card-bg: #ffffff;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
             --danger: #ef4444;
             --warning: #f59e0b;
             --success: #10b981;
@@ -96,11 +96,11 @@
         }
 
         body.dark-mode {
-            --bg-gradient-1: #0f172a;
-            --bg-gradient-2: #1e1b4b;
-            --card-bg: #1e293b;
+            --bg-gradient-1: #1a1a2e;
+            --bg-gradient-2: #16213e;
+            --card-bg: #0f3460;
             --text-dark: #ffffff;
-            --text-light: #94a3b8;
+            --text-light: #b8b8b8;
         }
 
         .container {
@@ -154,7 +154,7 @@
         .lang-btn, .theme-toggle {
             width: 42px;
             height: 42px;
-            background: #f1f5f9;
+            background: #f3f4f6;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -179,16 +179,16 @@
 
         .scanner-card {
             background: var(--card-bg);
-            border-radius: 24px;
+            border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             margin-bottom: 25px;
         }
 
         .scanner-card h2 {
             font-size: 1.8rem;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: var(--text-dark);
             display: flex;
             align-items: center;
@@ -205,7 +205,7 @@
         .camera-tip {
             background: #eff6ff;
             color: #1e40af;
-            padding: 10px 18px;
+            padding: 10px 15px;
             border-radius: 12px;
             font-size: 13px;
             margin-bottom: 18px;
@@ -223,28 +223,27 @@
 
         #reader {
             width: 100%;
-            max-width: 480px;
-            margin: 15px auto 25px;
-            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
             overflow: hidden;
             border: 3px dashed var(--primary);
-            background: #000000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            background: #000;
         }
 
         .manual-input-box {
             display: flex;
             gap: 10px;
-            max-width: 480px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         .manual-input-box input {
             flex: 1;
             padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 16px;
             font-family: inherit;
             background: var(--card-bg);
             color: var(--text-dark);
@@ -254,9 +253,9 @@
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             border: none;
-            padding: 12px 22px;
-            border-radius: 12px;
-            font-size: 15px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             font-family: inherit;
@@ -264,9 +263,9 @@
 
         .result-card {
             background: var(--card-bg);
-            border-radius: 24px;
+            border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             display: none;
             animation: slideUp 0.4s ease;
             margin-bottom: 25px;
@@ -278,13 +277,13 @@
         }
 
         .status-badge {
-            padding: 16px 20px;
-            border-radius: 16px;
+            padding: 15px 20px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             gap: 15px;
             font-weight: bold;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             margin-bottom: 15px;
         }
 
@@ -306,39 +305,37 @@
             border-right: 6px solid #f59e0b;
         }
 
-        .glycemic-eval-badge {
+        /* تنسيق بطاقة التحليل الجلايسيمي والأنسوليني */
+        .metabolic-badge {
             padding: 14px 18px;
-            border-radius: 14px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 700;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 1rem;
             margin-bottom: 20px;
-            border: 1px solid transparent;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .gi-low-badge {
-            background: #f0fdf4;
-            color: #15803d;
-            border-color: #bbf7d0;
+        .metabolic-low {
+            background: rgba(46, 204, 113, 0.15);
+            color: #27ae60;
+            border: 1px solid #2ecc71;
         }
 
-        .gi-med-badge {
-            background: #fffbeb;
+        .metabolic-medium {
+            background: rgba(245, 158, 11, 0.15);
             color: #b45309;
-            border-color: #fde68a;
+            border: 1px solid #f59e0b;
         }
 
-        .gi-high-badge {
-            background: #fef2f2;
+        .metabolic-high {
+            background: rgba(239, 68, 68, 0.15);
             color: #b91c1c;
-            border-color: #fecaca;
+            border: 1px solid #ef4444;
         }
-
-        body.dark-mode .gi-low-badge { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3); }
-        body.dark-mode .gi-med-badge { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border-color: rgba(245, 158, 11, 0.3); }
-        body.dark-mode .gi-high-badge { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border-color: rgba(239, 68, 68, 0.3); }
 
         .product-meta {
             display: flex;
@@ -349,16 +346,16 @@
         }
 
         .product-img {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             object-fit: contain;
-            border-radius: 14px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background: #f8f9fa;
+            border: 1px solid #e5e7eb;
         }
 
         .product-info h3 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             color: var(--text-dark);
             margin-bottom: 5px;
         }
@@ -370,9 +367,9 @@
 
         .nutrition-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
         .nutri-box {
@@ -390,125 +387,92 @@
             display: block;
             color: var(--text-light);
             font-size: 12px;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .nutri-box strong {
-            font-size: 15px;
+            font-size: 16px;
             color: var(--text-dark);
         }
 
+        /* كروت البدائل الصحية الذكية */
         .alternatives-container {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
-            border: 2px solid #a7f3d0;
-            border-radius: 18px;
-            padding: 20px;
             margin-top: 25px;
-            text-align: right;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+            padding: 18px;
+            background: rgba(46, 204, 113, 0.08);
+            border: 2px dashed #2ecc71;
+            border-radius: 15px;
         }
-
-        [dir="ltr"] .alternatives-container { text-align: left; }
 
         body.dark-mode .alternatives-container {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.12) 100%);
-            border-color: rgba(52, 211, 153, 0.3);
+            background: rgba(46, 204, 113, 0.05);
+            border-color: rgba(46, 204, 113, 0.4);
         }
 
-        .alternatives-container h4 {
-            color: #047857;
-            font-size: 1.15rem;
-            margin-bottom: 6px;
+        .alternatives-title {
+            color: #27ae60;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        body.dark-mode .alternatives-container h4 { color: #34d399; }
-
-        .alternatives-container p {
-            font-size: 13px;
-            color: #065f46;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-
-        body.dark-mode .alternatives-container p { color: #a7f3d0; }
-
-        .alt-food-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 12px;
-        }
-
-        .alt-food-item {
-            background: white;
-            border-radius: 14px;
-            padding: 12px 15px;
+        .alt-card {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s;
-            cursor: pointer;
+            background: var(--card-bg);
+            padding: 12px 16px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            margin-bottom: 10px;
             text-decoration: none;
-        }
-
-        body.dark-mode .alt-food-item {
-            background: #1e293b;
-            border-color: rgba(255,255,255,0.08);
-        }
-
-        .alt-food-item:hover {
-            transform: translateY(-2px);
-        }
-
-        .alt-food-icon {
-            font-size: 32px;
-            min-width: 40px;
-            text-align: center;
-        }
-
-        .alt-food-details {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .alt-food-title {
-            font-size: 14px;
-            font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
         }
 
-        .alt-food-gi {
-            display: inline-block;
+        body.dark-mode .alt-card {
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        .alt-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .alt-badge-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .alt-pill {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .alt-pill-gi {
             background: #dcfce7;
             color: #15803d;
-            font-size: 11px;
-            font-weight: 800;
-            padding: 2px 8px;
-            border-radius: 10px;
         }
 
-        body.dark-mode .alt-food-gi {
-            background: rgba(16, 185, 129, 0.25);
-            color: #6ee7b7;
+        .alt-pill-ii {
+            background: #e0e7ff;
+            color: #4338ca;
         }
 
         .ingredients-box {
             margin-top: 20px;
             padding: 15px;
-            border-radius: 14px;
+            border-radius: 12px;
             background: rgba(0,0,0,0.02);
-            font-size: 13.5px;
+            font-size: 14px;
             line-height: 1.6;
             color: var(--text-dark);
-            border: 1px solid #e2e8f0;
+            border: 1px solid #ecf0f1;
         }
 
         body.dark-mode .ingredients-box {
@@ -536,7 +500,7 @@
             display: none;
             padding: 30px;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             color: white;
             font-weight: bold;
         }
@@ -548,7 +512,9 @@
             display: block;
         }
 
-        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -578,23 +544,25 @@
     <div class="container">
         <!-- Scanner Card -->
         <div class="scanner-card">
-            <h2><i class="fas fa-barcode"></i> <span data-i18n="title">ماسح الباركود وفحص الحلال</span></h2>
-            <p data-i18n="subtitle">وجه كاميرا الهاتف نحو باركود المنتج لمعرفة مكوناته، تأثيره على السكر، وهل يحتوي على خنزير</p>
+            <h2><i class="fas fa-barcode"></i> <span data-i18n="title">ماسح الباركود والتحليل الجلايسيمي والحلال</span></h2>
+            <p data-i18n="subtitle">امسح باركود أي منتج لمعرفة مكوناته، تأثيره على سكر الدم والأنسولين، والبدائل الصحية الأفضل</p>
 
             <div class="camera-tip">
                 <i class="fas fa-lightbulb" style="color: #3b82f6;"></i>
-                <span data-i18n="camera_tip_text">💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود فوراً!</span>
+                <span data-i18n="camera_tip_text">💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!</span>
             </div>
 
-            <!-- منطقة الكاميرا المتمركزة في منتصف الشاشة -->
+            <!-- منطقة الكاميرا -->
             <div id="reader"></div>
 
+            <!-- زر تشغيل/إيقاف الكاميرا -->
             <button id="toggleCameraBtn" onclick="toggleCamera()" style="
                 background: linear-gradient(135deg, var(--primary), var(--secondary));
-                color: white; border: none; padding: 12px 28px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: inherit;">
+                color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: inherit;">
                 <i class="fas fa-camera"></i> <span id="cameraBtnText">تشغيل الكاميرا</span>
             </button>
 
+            <!-- إدخال يدوي في حال تعذر تشغيل الكاميرا -->
             <div class="manual-input-box">
                 <input type="text" id="manualBarcodeInput" placeholder="أو اكتب رقم الباركود هنا (مثال: 8710400...)" inputmode="numeric">
                 <button onclick="fetchProductData(document.getElementById('manualBarcodeInput').value)"><i class="fas fa-search"></i> <span data-i18n="search">فحص</span></button>
@@ -609,13 +577,12 @@
 
         <!-- Result Card -->
         <div class="result-card" id="resultCard">
-            <!-- 1. شارة الخنزير والحلال -->
+            <!-- شارة فحص الحلال والمكونات المشبوهة -->
             <div class="status-badge" id="statusBadge"></div>
 
-            <!-- 2. تقييم المؤشر الجلايسيمي وتأثير السكر والأنسولين -->
-            <div class="glycemic-eval-badge" id="glycemicBadge"></div>
+            <!-- شارة التحليل الجلايسيمي وحمل الأنسولين التقديري -->
+            <div class="metabolic-badge" id="metabolicBadge"></div>
 
-            <!-- معلومات المنتج الأساسية -->
             <div class="product-meta">
                 <img id="productImg" src="" alt="Product" class="product-img">
                 <div class="product-info">
@@ -625,8 +592,7 @@
                 </div>
             </div>
 
-            <!-- شبكة السعرات والمكونات لكل 100 غرام -->
-            <h4 style="margin-top: 15px; color: var(--text-dark); font-size: 15px;" data-i18n="nutrition_title">📊 القيم الغذائية (لكل 100 غرام):</h4>
+            <h4 style="margin-top: 15px; color: var(--text-dark); font-size: 16px;" data-i18n="nutrition_title">📊 القيم الغذائية (لكل 100 غرام):</h4>
             <div class="nutrition-grid">
                 <div class="nutri-box">
                     <small data-i18n="energy">السعرات</small>
@@ -654,15 +620,10 @@
                 </div>
             </div>
 
-            <!-- 3. كرت البدائل الصحية الذكية المحصورة بنفس فئة ونوع الطعام بدقة -->
-            <div class="alternatives-container" id="alternativesContainer" style="display: none;">
-                <h4><i class="fas fa-heartbeat"></i> <span data-i18n="alt_title">💡 بدائل صحية مقترحة من د. وسيم:</span></h4>
-                <p data-i18n="alt_desc">هذا المنتج يرفع السكر أو الأنسولين أو عالي الدهون. إليك أفضل البدائل الطبيعية من نفس الفئة من موقعنا:</p>
-                <div class="alt-food-list" id="altFoodList"></div>
-            </div>
+            <!-- صندوق البدائل الصحية الذكية لنفس الفئة -->
+            <div id="smartAlternativesContainer"></div>
 
-            <!-- قائمة المكونات الكاملة -->
-            <h4 style="margin-top: 22px; color: var(--text-dark); font-size: 15px;" data-i18n="ingredients_title">📝 قائمة المكونات المسجلة:</h4>
+            <h4 style="margin-top: 20px; color: var(--text-dark); font-size: 16px;" data-i18n="ingredients_title">📝 المكونات المسجلة:</h4>
             <div class="ingredients-box" id="ingredientsText"></div>
 
             <button onclick="resetScanner()" style="margin-top: 25px; width: 100%; padding: 14px; background: #64748b; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: inherit;">
@@ -671,19 +632,22 @@
         </div>
     </div>
 
+    <!-- استدعاء قاعدة البيانات الأصلية للموقع js/data.js -->
+    <script src="js/data.js"></script>
+
     <script>
         const scannerTranslations = {
             ar: {
                 'home': 'الرئيسية',
-                'title': 'ماسح الباركود وفحص الحلال',
-                'subtitle': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته، تأثيره على السكر، وهل يحتوي على خنزير',
-                'camera_tip_text': '💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود فوراً!',
+                'title': 'ماسح الباركود والتحليل الجلايسيمي والحلال',
+                'subtitle': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته، تأثيره على سكر الدم والأنسولين، والبدائل الصحية الأفضل',
+                'camera_tip_text': '💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!',
                 'camera_start': 'تشغيل الكاميرا',
                 'camera_stop': 'إيقاف الكاميرا',
                 'search': 'فحص',
-                'loading': 'جاري فحص المنتج في قاعدة البيانات العالمية...',
+                'loading': 'جاري فحص المنتج وتحليل التأثير الجلايسيمي...',
                 'nutrition_title': '📊 القيم الغذائية (لكل 100 غرام):',
-                'ingredients_title': '📝 قائمة المكونات المسجلة:',
+                'ingredients_title': '📝 قائمة المكونات:',
                 'scan_again': 'مسح منتج آخر',
                 'energy': 'سعرات',
                 'protein': 'بروتين',
@@ -692,28 +656,30 @@
                 'fat': 'دهون',
                 'salt': 'ملح',
                 'safe_title': 'خالٍ من مشتقات الخنزير ✔️ (Pork-Free)',
-                'safe_desc': 'لم يتم العثور على أي مشتقات خنزير أو جيلاتين أو شحوم خنزير في المكونات.',
+                'safe_desc': 'لم يتم العثور على أي مشتقات خنزير أو جيلاتين أو شحوم خنزير في المكونات المسجلة.',
                 'danger_title': 'تنبيه: يحتوي على مشتقات الخنزير! ❌ (Contains Pork)',
                 'danger_desc': 'تم اكتشاف مكونات مشتقة من الخنزير في قائمة المكونات (انظر التمييز الأحمر أدناه).',
                 'warning_title': 'تنبيه: يحتوي على مواد مشبوهة تحتاج تدقيق ⚠️',
                 'warning_desc': 'يحتوي المنتج على مثبتات أو جيلاتين غير محدد المصدر (قد يكون حيواني أو نباتي).',
                 'not_found_title': 'المنتج غير مسجل بعد في قاعدة البيانات 🔍',
                 'not_found_desc': 'لم نتمكن من العثور على بيانات هذا الباركود، يُرجى فحص ملصق المكونات يدوياً.',
-                'gi_low': '🟢 تأثير جلايسيمي منخفض (صديق لمرضى السكري والدايت)',
-                'gi_med': '🟡 تأثير جلايسيمي متوسط (يحتوي على نسبة سكر معتدلة - يُنصح بالاعتدال)',
-                'gi_high': '🔴 تأثير جلايسيمي مرتفع (يرفع السكر والأنسولين سريعاً ويخزن الدهون)',
-                'alt_title': '💡 بدائل صحية مقترحة من د. وسيم:',
-                'alt_desc': 'هذا المنتج يرفع السكر أو الأنسولين أو عالي الدهون. إليك أفضل البدائل الطبيعية من نفس الفئة من موقعنا:'
+                'meta_low_title': 'تأثير جلايسيمي منخفض 🟢 (Low Glycemic Impact)',
+                'meta_low_desc': 'امتصاص هادئ ومستقر لسكر الدم وحمل أنسولين آمن.',
+                'meta_medium_title': 'تأثير جلايسيمي معتدل 🟡 (Moderate Glycemic Impact)',
+                'meta_medium_desc': 'يُفضل تناوله باعتدال أو دمجه مع مصادر ألياف أو بروتين.',
+                'meta_high_title': 'تحذير: تحفيز حاد للأنسولين وسكر الدم! 🔴',
+                'meta_high_desc': 'نسبة سكريات أو نشويات سريعة الامتصاص قد تسبب قفزة أنسولينية وهبوطاً لاحقاً.',
+                'alt_title': '💡 بدائل صحية ذكية من قاعدة بيانات WiBo (أقل تأثيراً على الأنسولين):'
             },
             en: {
                 'home': 'Home',
-                'title': 'Smart Barcode & Halal Scanner',
-                'subtitle': 'Scan any supermarket barcode to check ingredients, glycemic impact, and pork derivatives',
+                'title': 'Smart Barcode & Glycemic Scanner',
+                'subtitle': 'Scan any product to check ingredients, glycemic impact, insulin spike, and smart alternatives',
                 'camera_tip_text': '💡 Camera Tip: Keep your phone about 15-20 cm away from the barcode so the lens focuses sharply!',
                 'camera_start': 'Start Camera',
                 'camera_stop': 'Stop Camera',
                 'search': 'Scan',
-                'loading': 'Checking product in global database...',
+                'loading': 'Checking product and calculating glycemic impact...',
                 'nutrition_title': '📊 Nutrition Facts (per 100g):',
                 'ingredients_title': '📝 Ingredients List:',
                 'scan_again': 'Scan Another Product',
@@ -731,11 +697,13 @@
                 'warning_desc': 'Product contains additives (e.g. E471 or unspecified gelatin) that may be animal or plant-derived.',
                 'not_found_title': 'Product Not Found in Database 🔍',
                 'not_found_desc': 'We could not find this barcode yet. Please check the label manually.',
-                'gi_low': '🟢 Low Glycemic Impact (Friendly for Diabetics & Weight Loss)',
-                'gi_med': '🟡 Moderate Glycemic Impact (Moderate Sugar - Consume in moderation)',
-                'gi_high': '🔴 High Glycemic Impact (Spikes blood sugar & insulin rapidly)',
-                'alt_title': '💡 Healthy Alternatives by Dr. Wassim:',
-                'alt_desc': 'This product spikes insulin or is high in fat. Here are top healthy alternatives in the same food category:'
+                'meta_low_title': 'Low Glycemic Impact 🟢',
+                'meta_low_desc': 'Steady glucose release with a safe insulin response.',
+                'meta_medium_title': 'Moderate Glycemic Impact 🟡',
+                'meta_medium_desc': 'Consume moderately or pair with fiber and protein.',
+                'meta_high_title': 'Alert: High Insulin & Sugar Spike! 🔴',
+                'meta_high_desc': 'High fast sugars/carbs that trigger a rapid insulin spike.',
+                'alt_title': '💡 Smart Low-Insulin Swaps from WiBo Database:'
             }
         };
 
@@ -894,122 +862,140 @@
             }
         }
 
-        // =========================================================================
-        // 🧠 محرك الفرز الجذري الدقيق: يقترح بدائل من نفس العائلة حصراً، وإلا يُغلق الصندوق
-        // =========================================================================
-        function getSmartAlternatives(product, sugars, carbs, fat, calories) {
-            if (typeof foodsDatabase === 'undefined' || !foodsDatabase || foodsDatabase.length === 0) {
-                return [];
+        // ==========================================
+        // محرك التحليل الجلايسيمي والبدائل الذكية
+        // ==========================================
+        const SmartSwapEngine = {
+            // ربط وسوم وكلمات Open Food Facts بتصنيفات Wibo
+            categoryMap: {
+                'bread': 'حبوب',
+                'bakery': 'مخبوزات',
+                'brood': 'حبوب',
+                'cereal': 'حبوب',
+                'pasta': 'حبوب',
+                'rice': 'حبوب',
+                'rijst': 'حبوب',
+                'dairy': 'ألبان',
+                'zuivel': 'ألبان',
+                'cheese': 'ألبان',
+                'kaas': 'ألبان',
+                'yogurt': 'ألبان',
+                'yoghurt': 'ألبان',
+                'milk': 'ألبان',
+                'melk': 'ألبان',
+                'fruit': 'فواكه',
+                'vegetable': 'خضروات',
+                'groente': 'خضروات',
+                'legume': 'بقوليات',
+                'nut': 'مكسرات',
+                'noten': 'مكسرات',
+                'meat': 'بروتين',
+                'vlees': 'بروتين',
+                'fish': 'مأكولات بحرية',
+                'vis': 'مأكولات بحرية',
+                'sauce': 'صلصات',
+                'saus': 'صلصات',
+                'ketchup': 'صلصات',
+                'mayo': 'صلصات',
+                'sweet': 'حلويات',
+                'snack': 'وجبات خفيفة',
+                'chip': 'وجبات خفيفة',
+                'biscuit': 'وجبات خفيفة',
+                'koek': 'حلويات',
+                'chocolate': 'حلويات',
+                'chocolade': 'حلويات',
+                'soda': 'مشروبات',
+                'beverage': 'مشروبات',
+                'drank': 'مشروبات',
+                'juice': 'مشروبات',
+                'sap': 'مشروبات'
+            },
+
+            detectCategory: function(product) {
+                const tags = (product.categories_tags || []).join(' ').toLowerCase();
+                const name = (product.product_name || product.product_name_nl || product.product_name_en || '').toLowerCase();
+                const combined = `${tags} ${name}`;
+
+                for (let key in this.categoryMap) {
+                    if (combined.includes(key)) {
+                        return this.categoryMap[key];
+                    }
+                }
+                return 'وجبات خفيفة';
+            },
+
+            // تقدير التأثير الجلايسيمي وحمل الأنسولين (Insulin Load)
+            evaluateMetabolicImpact: function(nutriments) {
+                const carbs = parseFloat(nutriments['carbohydrates_100g'] || 0);
+                const sugars = parseFloat(nutriments['sugars_100g'] || 0);
+                const fiber = parseFloat(nutriments['fiber_100g'] || 0);
+                const protein = parseFloat(nutriments['proteins_100g'] || 0);
+                const fat = parseFloat(nutriments['fat_100g'] || 0);
+
+                const netCarbs = Math.max(0, carbs - fiber);
+                // معادلة حمل الأنسولين التقديري:
+                const insulinLoad = netCarbs + (0.56 * protein) + (0.1 * fat);
+
+                let level = 'low';
+                // إذا كان السكر أكثر من 12غ أو حمل الأنسولين يفوق 22غ لكل 100غ
+                if (sugars > 14 || insulinLoad > 28) {
+                    level = 'high';
+                } else if (sugars > 6 || insulinLoad > 14) {
+                    level = 'medium';
+                }
+
+                return {
+                    level: level,
+                    insulinLoad: Math.round(insulinLoad),
+                    netCarbs: netCarbs.toFixed(1)
+                };
+            },
+
+            // استخراج 2 إلى 3 بدائل ذكية من foodsDatabase
+            findAlternatives: function(category, max = 3) {
+                if (typeof foodsDatabase === 'undefined' || !Array.isArray(foodsDatabase)) {
+                    return [];
+                }
+
+                let matches = foodsDatabase.filter(item => {
+                    const isSameCat = (item.category === category) || 
+                                     (category === 'صلصات' && (item.category === 'معلبات' || item.category === 'مقبلات')) ||
+                                     (category === 'مخبوزات' && item.category === 'حبوب') ||
+                                     (category === 'حلويات' && item.category === 'وجبات خفيفة');
+                    return isSameCat && item.gi <= 50 && item.ii <= 50;
+                });
+
+                // في حال عدم وجود عدد كافٍ في نفس الفئة، نقترح من قسم الأطعمة الصحية والمكسرات
+                if (matches.length < max) {
+                    const fallbackItems = foodsDatabase.filter(item => 
+                        (item.category === 'أطعمة صحية' || item.category === 'مكسرات' || item.category === 'خضروات') &&
+                        item.gi <= 35 && item.ii <= 35
+                    );
+                    matches = matches.concat(fallbackItems);
+                }
+
+                // فرز البدائل حسب الأقل تحفيزاً للأنسولين والـ GI
+                matches.sort((a, b) => (a.ii + a.gi) - (b.ii + b.gi));
+
+                // استبعاد التكرار واختيار العدد المطلوب
+                const unique = [];
+                const seenIds = new Set();
+                for (let item of matches) {
+                    if (!seenIds.has(item.id)) {
+                        seenIds.add(item.id);
+                        unique.push(item);
+                        if (unique.length === max) break;
+                    }
+                }
+                return unique;
             }
+        };
 
-            const pName = ((product.product_name || '') + ' ' + (product.product_name_en || '') + ' ' + (product.product_name_nl || '')).toLowerCase();
-            const pCats = ((product.categories || '') + ' ' + (product.categories_tags || []).join(' ')).toLowerCase();
-            
-            // نجمع الاسم والتصنيفات فقط دون نصوص المكونات لتجنب الخلط العشوائي
-            const targetText = `${pName} ${pCats}`;
-
-            // الأطعمة الآمنة منخفضة الجلايسيميك فقط (GI <= 55)
-            const safeFoods = foodsDatabase.filter(f => f.gi && f.gi <= 55);
-
-            // 1. فئة السيروب، العسل، المحليات، والمربى (مثل Schenkstroop, Stroop, Syrup, Honey, Jam)
-            const isSyrupOrSweetener = /stroop|schenkstroop|syrup|sirop|honey|miel|jam|marmalade|sweet-spread|pancake-syrup|سيروب|عسل|مربى|شيرة|قطر/.test(targetText) || (sugars >= 45 && fat < 5);
-            if (isSyrupOrSweetener) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /ستيفيا|عسل|فراولة|توت|شوكولاتة داكنة/.test(f.name)) ||
-                    (f.nameEn && /stevia|honey|strawberry|berry|dark chocolate/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 2. فئة المشروبات والكولا والصودا والعصائر (سوائل حصراً)
-            const isBeverage = /cola|coca|pepsi|soda|frisdrank|beverages|drinks|juice|fanta|sprite|limonade|عصير|كولا|مشروب|غازي|صودا/.test(targetText);
-            if (isBeverage) {
-                const alts = safeFoods.filter(f => 
-                    (f.category && f.category.includes('مشروبات')) ||
-                    (f.name && /شاي|ماء|عصير ليمون|كركديه|قرفة/.test(f.name)) ||
-                    (f.nameEn && /tea|water|lemon|drink|juice/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 3. فئة الخبز، التوست، المعجنات، الفطائر (Pita, Pszenna, Brood, Bread)
-            const isBakery = /bread|brood|pita|pszenna|bakery|toast|wrap|tortilla|baguette|croissant|bun|خبز|توست|فطير|صمون|طحين|مخبوز/.test(targetText);
-            if (isBakery) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /خبز أسمر|خبز شوفان|خبز شعير|توست أسمر|نخالة|حبوب كاملة/.test(f.name)) ||
-                    (f.nameEn && /whole grain|oat bread|barley bread|brown bread|toast/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 4. فئة المعكرونة والباستا والنودلز (Pastas, Noodles)
-            const isPasta = /pasta|pastas|noodle|noodles|spaghetti|macaroni|vermicelli|معكرونة|باستا|نودلز|سباغيتي/.test(targetText);
-            if (isPasta) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /معكرونة القمح الكامل|نودلز الشوفان|باستا العدس|حبوب كاملة/.test(f.name)) ||
-                    (f.nameEn && /whole wheat pasta|oat noodle|lentil pasta/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 5. فئة الأرز والحبوب المطبوخة (Rice, Grains, Quinoa)
-            const isRice = /rice|rijst|quinoa|bulgur|couscous|أرز|كينوا|برغل|كسكسي/.test(targetText);
-            if (isRice) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /أرز بني|كينوا|برغل/.test(f.name)) ||
-                    (f.nameEn && /brown rice|quinoa|bulgur/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 6. فئة المايونيز والصلصات والزيوت المفرطة (Sauces, Dressings, Mayo)
-            const isSauce = /mayo|mayonnaise|sauce|saus|dressing|ketchup|صلصة|مايونيز|كاتشب|صوص|تتبيلة/.test(targetText) || (fat >= 30 && carbs < 20);
-            if (isSauce) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /زبادي|طحينة|خردل|زيت زيتون|لبنة/.test(f.name)) ||
-                    (f.nameEn && /yogurt|mustard|tahini|olive oil/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 7. فئة البسكويت والشوكولاتة والحلويات والكيك
-            const isSweetOrSnack = /biscuit|cookie|koek|chocolate|chocolat|snoep|candy|cake|bonbon|بسكويت|شوكولاتة|كيك|حلوى|سوس/.test(targetText);
-            if (isSweetOrSnack) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /شوكولاتة داكنة|فراولة|توت|لوز|جوز|فول سوداني|مكسرات/.test(f.name)) ||
-                    (f.nameEn && /dark chocolate|berry|almond|walnut|peanut|nuts/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 8. فئة الشيبس والمقرمشات المالحة (Chips, Crisps, Crackers)
-            const isChips = /chips|crisps|crackers|popcorn|شيبس|مقرمشات|كرتون|فشار/.test(targetText);
-            if (isChips) {
-                const alts = safeFoods.filter(f => 
-                    (f.name && /لوز|جوز|فستق|حمص|بذور/.test(f.name)) ||
-                    (f.nameEn && /almond|walnut|chickpea|seeds/.test(f.nameEn.toLowerCase()))
-                );
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 9. فئة الألبان والأجبان (Dairy, Milk, Cheese)
-            const isDairy = /milk|melk|cheese|kaas|lait|fromage|زبادي|جبن|حليب|لبن/.test(targetText);
-            if (isDairy) {
-                const alts = safeFoods.filter(f => f.category && f.category.includes('ألبان'));
-                if (alts.length > 0) return alts.slice(0, 3);
-            }
-
-            // 🛑 القاعدة الذهبية: إذا لم يتعرف النظام على الصنف بنسبة 100%، لا يقترح أي بديل على الإطلاق!
-            return [];
-        }
-
-        // تحليل المنتج وتقييم السكر والدهون وعرض البدائل بدقة
         function renderProductResult(product, barcode) {
             const card = document.getElementById('resultCard');
             const badge = document.getElementById('statusBadge');
-            const glycemicBadge = document.getElementById('glycemicBadge');
-            const altContainer = document.getElementById('alternativesContainer');
-            const altList = document.getElementById('altFoodList');
+            const metabolicBadge = document.getElementById('metabolicBadge');
+            const altContainer = document.getElementById('smartAlternativesContainer');
 
             const name = product.product_name || product.product_name_en || product.product_name_nl || 'منتج غير مسمى';
             const brand = product.brands || '';
@@ -1024,7 +1010,7 @@
             document.getElementById('barcodeNumber').textContent = `Barcode: ${barcode}`;
             document.getElementById('productImg').src = img;
 
-            // 1. فحص الخنزير
+            // 1. فحص مشتقات الخنزير والـ E-Numbers
             let hasPork = false;
             let detectedPorkWord = '';
             for (let word of porkKeywords) {
@@ -1035,7 +1021,6 @@
                 }
             }
 
-            // 2. فحص المواد المشبوهة
             let hasSuspicious = false;
             let detectedSuspiciousWord = '';
             if (!hasPork) {
@@ -1077,58 +1062,81 @@
                 `;
             }
 
-            // 3. تحليل المؤشر الجلايسيمي والدهون والسعرات
+            // 2. تحديث جدول القيم الغذائية
             const nutriments = product.nutriments || {};
-            const sugars = parseFloat(nutriments['sugars_100g']) || 0;
-            const carbs = parseFloat(nutriments['carbohydrates_100g']) || 0;
-            const fat = parseFloat(nutriments['fat_100g']) || 0;
-            const calories = Math.round(nutriments['energy-kcal_100g'] || 0);
-
-            const isDrink = /cola|soda|frisdrank|drink|beverage|juice/.test((name + ' ' + (product.categories || '')).toLowerCase());
-            const isFattySauce = /mayo|mayonnaise|sauce|saus|dressing/.test((name + ' ' + (product.categories || '')).toLowerCase()) || fat >= 20;
-            const isSweetItem = sugars >= 12 || /stroop|syrup|sweet|sugar|jam|honey/.test((name + ' ' + (product.categories || '')).toLowerCase());
-
-            if (sugars >= 12 || (carbs >= 45 && sugars >= 6) || (isDrink && sugars >= 4)) {
-                glycemicBadge.className = 'glycemic-eval-badge gi-high-badge';
-                glycemicBadge.innerHTML = `<i class="fas fa-chart-line" style="font-size: 20px;"></i> <span>${t('gi_high')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
-            } else if (sugars >= 4 || carbs >= 20) {
-                glycemicBadge.className = 'glycemic-eval-badge gi-med-badge';
-                glycemicBadge.innerHTML = `<i class="fas fa-chart-line" style="font-size: 20px;"></i> <span>${t('gi_med')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
-            } else {
-                glycemicBadge.className = 'glycemic-eval-badge gi-low-badge';
-                glycemicBadge.innerHTML = `<i class="fas fa-check-double" style="font-size: 20px;"></i> <span>${t('gi_low')} (سكر: ${sugars.toFixed(1)}g / 100g)</span>`;
-            }
-
-            // 4. استخراج البدائل الصحية: تظهر فقط وفقط إذا وُجد بديل مطابق 100% لنفس العائلة
-            const alternatives = getSmartAlternatives(product, sugars, carbs, fat, calories);
-            if (alternatives.length > 0 && (sugars >= 4 || carbs >= 20 || isDrink || isFattySauce || isSweetItem || fat >= 20)) {
-                altList.innerHTML = alternatives.map(alt => {
-                    const title = currentLang === 'en' ? (alt.nameEn || alt.name) : alt.name;
-                    return `
-                        <a href="food-details.html?id=${alt.id}" class="alt-food-item" target="_blank">
-                            <span class="alt-food-icon">${alt.icon || '🥗'}</span>
-                            <div class="alt-food-details">
-                                <div class="alt-food-title">${title}</div>
-                                <span class="alt-food-gi">GI: ${alt.gi || 'منخفض'} ✓</span>
-                            </div>
-                        </a>
-                    `;
-                }).join('');
-                altContainer.style.display = 'block';
-            } else {
-                // إذا لم يتعرف على العائلة بدقة، يقفل الصندوق نهائياً ولا يخمن أي شيء خطأ
-                altContainer.style.display = 'none';
-            }
-
-            // 5. عرض القيم الغذائية
-            document.getElementById('nutriCalories').textContent = calories ? `${calories} kcal` : '-';
+            document.getElementById('nutriCalories').textContent = nutriments['energy-kcal_100g'] ? `${Math.round(nutriments['energy-kcal_100g'])} kcal` : '-';
             document.getElementById('nutriProtein').textContent = nutriments['proteins_100g'] ? `${nutriments['proteins_100g']} g` : '-';
-            document.getElementById('nutriCarbs').textContent = carbs ? `${carbs.toFixed(1)} g` : '-';
-            document.getElementById('nutriSugars').textContent = sugars ? `${sugars.toFixed(1)} g` : '-';
-            document.getElementById('nutriFat').textContent = fat ? `${fat.toFixed(1)} g` : '-';
+            document.getElementById('nutriCarbs').textContent = nutriments['carbohydrates_100g'] ? `${nutriments['carbohydrates_100g']} g` : '-';
+            document.getElementById('nutriSugars').textContent = nutriments['sugars_100g'] ? `${nutriments['sugars_100g']} g` : '-';
+            document.getElementById('nutriFat').textContent = nutriments['fat_100g'] ? `${nutriments['fat_100g']} g` : '-';
             document.getElementById('nutriSalt').textContent = nutriments['salt_100g'] ? `${nutriments['salt_100g']} g` : '-';
 
-            // تلوين الكلمات في قائمة المكونات
+            // 3. التحليل الجلايسيمي والأنسوليني
+            const meta = SmartSwapEngine.evaluateMetabolicImpact(nutriments);
+            let metaClass = 'metabolic-low';
+            let metaTitle = t('meta_low_title');
+            let metaDesc = t('meta_low_desc');
+
+            if (meta.level === 'high') {
+                metaClass = 'metabolic-high';
+                metaTitle = t('meta_high_title');
+                metaDesc = t('meta_high_desc');
+            } else if (meta.level === 'medium') {
+                metaClass = 'metabolic-medium';
+                metaTitle = t('meta_medium_title');
+                metaDesc = t('meta_medium_desc');
+            }
+
+            metabolicBadge.className = `metabolic-badge ${metaClass}`;
+            metabolicBadge.innerHTML = `
+                <div>
+                    <div>${metaTitle}</div>
+                    <small style="font-size: 13px; font-weight: normal;">${metaDesc}</small>
+                </div>
+                <div style="font-size: 13px; text-align: left; background: rgba(0,0,0,0.05); padding: 5px 10px; border-radius: 8px;">
+                    حمل الأنسولين التقديري: ~<strong>${meta.insulinLoad}</strong>
+                </div>
+            `;
+
+            // 4. اقتراح البدائل الصحية إذا كان المنتج عالي أو متوسط التأثير
+            const detectedCat = SmartSwapEngine.detectCategory(product);
+            if (meta.level === 'high' || meta.level === 'medium') {
+                const alternatives = SmartSwapEngine.findAlternatives(detectedCat, 3);
+                if (alternatives && alternatives.length > 0) {
+                    let altsHTML = `
+                        <div class="alternatives-container">
+                            <div class="alternatives-title">
+                                <i class="fas fa-heartbeat"></i> <strong>${t('alt_title')}</strong>
+                            </div>
+                    `;
+
+                    alternatives.forEach(alt => {
+                        const altName = (currentLang === 'en' && alt.nameEn) ? alt.nameEn : alt.name;
+                        altsHTML += `
+                            <a href="food-details.html?id=${alt.id}" class="alt-card" title="عرض تفاصيل ${altName}">
+                                <div>
+                                    <span style="font-size: 20px; margin-left: 8px;">${alt.icon || '🥗'}</span>
+                                    <strong>${altName}</strong>
+                                    <small style="color: var(--text-light); margin-right: 5px;">(${alt.category})</small>
+                                </div>
+                                <div class="alt-badge-group">
+                                    <span class="alt-pill alt-pill-gi">GI: ${alt.gi}</span>
+                                    <span class="alt-pill alt-pill-ii">II: ${alt.ii}</span>
+                                </div>
+                            </a>
+                        `;
+                    });
+
+                    altsHTML += `</div>`;
+                    altContainer.innerHTML = altsHTML;
+                } else {
+                    altContainer.innerHTML = '';
+                }
+            } else {
+                altContainer.innerHTML = '';
+            }
+
+            // 5. تظليل الكلمات في قائمة المكونات
             let formattedIngredients = product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || 'لم يتم تسجيل قائمة مكونات نصية لهذا المنتج.';
             
             porkKeywords.forEach(word => {
@@ -1150,8 +1158,8 @@
         function renderNotFound(barcode) {
             const card = document.getElementById('resultCard');
             const badge = document.getElementById('statusBadge');
-            const glycemicBadge = document.getElementById('glycemicBadge');
-            const altContainer = document.getElementById('alternativesContainer');
+            const metabolicBadge = document.getElementById('metabolicBadge');
+            const altContainer = document.getElementById('smartAlternativesContainer');
 
             badge.className = 'status-badge';
             badge.style.background = '#e2e8f0';
@@ -1166,8 +1174,9 @@
                 </div>
             `;
 
-            glycemicBadge.style.display = 'none';
-            altContainer.style.display = 'none';
+            metabolicBadge.className = 'metabolic-badge';
+            metabolicBadge.style.display = 'none';
+            altContainer.innerHTML = '';
 
             document.getElementById('productTitle').textContent = 'منتج غير مسجل';
             document.getElementById('productBrand').textContent = '';
@@ -1212,8 +1221,6 @@
         });
     </script>
 
-    <!-- استدعاء قاعدة بيانات أطعمة الموقع لاستخراج البدائل الصحية الذكية تلقائياً -->
-    <script src="js/data.js"></script>
     <!-- Mobile Menu JavaScript -->
     <script src="js/mobile-menu.js"></script>
     <!-- PWA Registration -->
