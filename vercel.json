@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "cleanUrls": false,
+  "trailingSlash": false,
   "github": {
     "silent": true
   },
@@ -10,12 +12,22 @@
       "permanent": true
     },
     {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/nl/:path*",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/nl",
+      "source": "/http\\::path*",
       "destination": "/",
       "permanent": true
     },
@@ -40,11 +52,24 @@
       ]
     },
     {
+      "source": "/(.*)\\.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/sitemap.xml",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     },
@@ -54,6 +79,10 @@
         {
           "key": "Content-Type",
           "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
         }
       ]
     }

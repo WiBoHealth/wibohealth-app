@@ -11,11 +11,6 @@
     <meta name="author" content="Dr. Wassim Habib - WiBo Health">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://wibohealth.com/scanner.html">
-    
-    <!-- Alternate Language Links -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/scanner.html" />
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/scanner.html" />
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/scanner.html" />
 
     <!-- Google Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -276,7 +271,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* شارة الحلال والمكونات المشبوهة */
         .status-badge {
             padding: 15px 20px;
             border-radius: 15px;
@@ -306,7 +300,6 @@
             border-right: 6px solid #f59e0b;
         }
 
-        /* شارة التحليل الجلايسيمي - وضوح تام 100% بخطوط بيضاء ناصعة */
         .metabolic-badge {
             padding: 16px 20px;
             border-radius: 15px;
@@ -326,17 +319,17 @@
         }
 
         .metabolic-low {
-            background: #059669 !important; /* أخضر زمردي غني */
+            background: #059669 !important;
             border: 2px solid #047857 !important;
         }
 
         .metabolic-medium {
-            background: #d97706 !important; /* برتقالي كهرماني فاقع */
+            background: #d97706 !important;
             border: 2px solid #b45309 !important;
         }
 
         .metabolic-high {
-            background: #dc2626 !important; /* أحمر تحذيري قوي */
+            background: #dc2626 !important;
             border: 2px solid #991b1b !important;
             box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
         }
@@ -468,6 +461,61 @@
         @keyframes spin {
             100% { transform: rotate(360deg); }
         }
+
+        /* SEO Informational Section */
+        .seo-info-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-top: 30px;
+            line-height: 1.8;
+        }
+
+        .seo-info-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .seo-info-card p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .seo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .seo-grid-item {
+            background: rgba(0,0,0,0.02);
+            padding: 15px;
+            border-radius: 12px;
+            border-right: 4px solid var(--primary);
+        }
+
+        body.dark-mode .seo-grid-item {
+            background: rgba(255,255,255,0.04);
+        }
+
+        .seo-grid-item h4 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+            color: var(--primary);
+        }
+
+        .seo-grid-item p {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
     </style>
 </head>
 <body>
@@ -475,7 +523,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <img src="/images/icon-192.png" alt="WiBo" class="logo-icon" onerror="this.style.display='none'">
                     <div class="logo-text">
                         <h1>WiBo Health</h1>
@@ -486,7 +534,7 @@
                     <button class="lang-btn" data-lang-toggle="ar" onclick="switchLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="switchLanguage('en')" title="English">🇬🇧</button>
                     <button class="theme-toggle" onclick="toggleTheme()" title="Theme"><i class="fas fa-moon"></i></button>
-                    <a href="index.html" style="background: var(--primary); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold;">
+                    <a href="/" style="background: var(--primary); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold;">
                         <i class="fas fa-home"></i> <span data-i18n="home">الرئيسية</span>
                     </a>
                 </div>
@@ -580,6 +628,28 @@
                 <i class="fas fa-redo"></i> <span data-i18n="scan_again">مسح منتج آخر</span>
             </button>
         </div>
+
+        <!-- قسم توضيحي دائم للأرشفة ومحركات البحث (SEO Indexable Content) -->
+        <article class="seo-info-card">
+            <h3>دليل فحص الأغذية الذكي والمؤشر الجلايسيمي</h3>
+            <p>
+                تم تصميم ماسح باركود <strong>WiBo Health</strong> لتمكين المستهلكين ومرضى السكري والمهتمين بالصحة الأيضية من فحص المنتجات الغذائية لحظياً أثناء التسوق في السوبرماركت الأوروبي والعربي، مع التركيز على السلامة الغذائية والأيضية.
+            </p>
+            <div class="seo-grid">
+                <div class="seo-grid-item">
+                    <h4>فحص الحلال ومشتقات الخنزير</h4>
+                    <p>خوارزمية كشف فورية لمشتقات الخنزير الصريحة والمستترة (Varkensvlees, Lard, Gelatine) ومثبتات القوام والمواد الحافظة المشبوهة مثل E441 و E120 و E471.</p>
+                </div>
+                <div class="seo-grid-item">
+                    <h4>حمل الأنسولين التقديري</h4>
+                    <p>حساب أثر صافي الكربوهيدرات والسكريات ونسب البروتين على إفراز هرمون الأنسولين لتجنب الهبوط المفاجئ وتراكم الدهون الحشوية.</p>
+                </div>
+                <div class="seo-grid-item">
+                    <h4>القيم الغذائية المعتمدة</h4>
+                    <p>قراءة مباشرة لقاعدة بيانات الأطعمة المفتوحة لتحليل السعرات الحرارية، الدهون المشبعة، الصوديوم، والألياف لكل 100 غرام بدقة تامة.</p>
+                </div>
+            </div>
+        </article>
     </div>
 
     <script>
@@ -807,7 +877,6 @@
             }
         }
 
-        // حساب الحمل الأنسوليني والتأثير الجلايسيمي التقديري
         function evaluateMetabolicImpact(nutriments) {
             const carbs = parseFloat(nutriments['carbohydrates_100g'] || 0);
             const sugars = parseFloat(nutriments['sugars_100g'] || 0);
@@ -816,7 +885,6 @@
             const fat = parseFloat(nutriments['fat_100g'] || 0);
 
             const netCarbs = Math.max(0, carbs - fiber);
-            // معادلة حمل الأنسولين التقديري:
             const insulinLoad = netCarbs + (0.56 * protein) + (0.1 * fat);
 
             let level = 'low';
@@ -850,7 +918,6 @@
             document.getElementById('barcodeNumber').textContent = `Barcode: ${barcode}`;
             document.getElementById('productImg').src = img;
 
-            // 1. فحص مشتقات الخنزير والـ E-Numbers
             let hasPork = false;
             let detectedPorkWord = '';
             for (let word of porkKeywords) {
@@ -902,7 +969,6 @@
                 `;
             }
 
-            // 2. تحديث جدول القيم الغذائية
             const nutriments = product.nutriments || {};
             document.getElementById('nutriCalories').textContent = nutriments['energy-kcal_100g'] ? `${Math.round(nutriments['energy-kcal_100g'])} kcal` : '-';
             document.getElementById('nutriProtein').textContent = nutriments['proteins_100g'] ? `${nutriments['proteins_100g']} g` : '-';
@@ -911,7 +977,6 @@
             document.getElementById('nutriFat').textContent = nutriments['fat_100g'] ? `${nutriments['fat_100g']} g` : '-';
             document.getElementById('nutriSalt').textContent = nutriments['salt_100g'] ? `${nutriments['salt_100g']} g` : '-';
 
-            // 3. التحليل الجلايسيمي والأنسوليني بألوان واضحة ناصعة
             const meta = evaluateMetabolicImpact(nutriments);
             let metaClass = 'metabolic-low';
             let metaTitle = t('meta_low_title');
@@ -939,7 +1004,6 @@
                 </div>
             `;
 
-            // 4. تظليل الكلمات في قائمة المكونات
             let formattedIngredients = product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || 'لم يتم تسجيل قائمة مكونات نصية لهذا المنتج.';
             
             porkKeywords.forEach(word => {
