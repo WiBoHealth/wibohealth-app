@@ -98,7 +98,10 @@
                 'card_title_hba1c': 'السكر التراكمي ومقاومة الإنسولين',
                 'card_desc_hba1c': 'دليلك السريري الشامل لفهم أرقام التحليل، وأعراض مقاومة الإنسولين الخفية، وخطة استعادة حساسية الخلايا.',
                 'card_btn_hba1c': 'اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i>',
-
+'card_badge_fatty_liver': 'دليل سريري 🩺',
+        'card_title_fatty_liver': 'الكبد الدهني الخفي والفركتوز',
+        'card_desc_fatty_liver': 'كيف يحوّل الكبد السكر السائل إلى دهون حشوية؟ وخطة التعافي السريرية لخفض إنزيمات الكبد وعكس التشحم.',
+        'card_btn_fatty_liver': 'اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i>',
                 'stat_recipes': 'وصفة صحية',
                 'stat_articles': 'مقالة متخصصة',
                 'stat_supplements': 'مكمل غذائي',
@@ -166,7 +169,10 @@
                 'card_title_hba1c': 'HbA1c & Insulin Resistance',
                 'card_desc_hba1c': 'Comprehensive guide to understanding lab values, covert resistance signs, and metabolic recovery.',
                 'card_btn_hba1c': 'Click to Read Full Article <i class="fa-solid fa-arrow-right"></i>',
-
+'card_badge_fatty_liver': 'Clinical Guide 🩺',
+        'card_title_fatty_liver': 'Silent Fatty Liver & Fructose',
+        'card_desc_fatty_liver': 'How the liver turns liquid sugars into visceral fat, and the clinical roadmap to reversing steatosis.',
+        'card_btn_fatty_liver': 'Click to Read Full Article <i class="fa-solid fa-arrow-right"></i>',
                 'stat_recipes': 'Recipes',
                 'stat_articles': 'Articles',
                 'stat_supplements': 'Supplements',
@@ -1339,11 +1345,18 @@
                     </div>
                 </a>
 
-                <!-- المربع الثاني -->
-                <div class="stat-box">
-                    <span class="stat-number" id="recipe-count">110</span>
-                    <span class="stat-label" data-i18n="stat_recipes">وصفة صحية</span>
-                </div>
+               <!-- المربع الثاني: تحوّل إلى نافذة لمقال الكبد الدهني الخفي -->
+                <a href="fatty-liver.html" class="stat-box article-stat-box">
+                    <div class="stat-article-badge" data-i18n="card_badge_fatty_liver">دليل سريري 🩺</div>
+                    <div class="stat-thumb-container">
+                        <img src="images/fatty-liver-lifestyle.jpeg" alt="الكبد الدهني الخفي والفركتوز" class="stat-article-img" loading="lazy">
+                    </div>
+                    <div class="stat-article-details">
+                        <h4 data-i18n="card_title_fatty_liver">الكبد الدهني الخفي والفركتوز</h4>
+                        <p data-i18n="card_desc_fatty_liver">كيف يحوّل الكبد السكر السائل إلى دهون حشوية؟ وخطة التعافي السريرية لخفض إنزيمات الكبد وعكس التشحم.</p>
+                        <span class="stat-read-more" data-i18n="card_btn_fatty_liver">اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i></span>
+                    </div>
+                </a>
 
                 <!-- المربع الثالث -->
                 <div class="stat-box">
