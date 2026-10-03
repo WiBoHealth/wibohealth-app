@@ -6,7 +6,7 @@
     <title data-i18n="meta_title">السكر التراكمي ومقاومة الإنسولين: الدليل الشامل | WiBo Health</title>
     <meta name="description" content="دليل سريري شامل لفهم السكر التراكمي HbA1c، أعراض مقاومة الإنسولين الخفية، والخطة الغذائية والتمارين لخفض السكر وتحسين حساسية الخلايا. بقلم د. وسيم حبيب.">
     <meta name="keywords" content="السكر التراكمي, مقاومة الإنسولين, دكتور وسيم حبيب, ويبو هيلث, WiBo Health, HbA1c, أعراض مقاومة الإنسولين, خفض السكر">
-    <meta name="author" content="WiBo Health | د. وسيم حبيب">
+    <meta name="author" content="د. وسيم حبيب | WiBo Health">
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,42 +15,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        :root {
-            --bg-main: #0b132b;
-            --bg-card: #1c2541;
-            --bg-elevated: #243256;
-            --primary-emerald: #10b981;
-            --primary-teal: #00c49f;
-            --accent-gold: #f59e0b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --shadow-glow: 0 8px 32px 0 rgba(0, 196, 159, 0.15);
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #64748b;
+            --hero-text: #ffffff;
+            --primary-teal: #059669;
+            --primary-accent: #10b981;
+            --table-header: #f1f5f9;
+            --table-border: #e2e8f0;
+            --box-bg: #f8fafc;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --header-bg: #0f3460;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #cbd5e1;
+            --hero-text: #ffffff;
+            --primary-teal: #2dd4bf;
+            --primary-accent: #10b981;
+            --table-header: #1a2942;
+            --table-border: rgba(255, 255, 255, 0.1);
+            --box-bg: rgba(255, 255, 255, 0.05);
+        }
+
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-primary);
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--text-dark);
             line-height: 1.85;
             transition: all 0.3s ease;
         }
 
-        /* Header & Navigation */
+        /* Header Navigation */
         .site-header {
-            background: rgba(11, 19, 43, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            background: var(--header-bg);
+            padding: 16px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 14px 20px;
+            transition: all 0.3s ease;
         }
 
         .header-container {
@@ -65,98 +81,116 @@
         .brand-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
-            color: var(--text-primary);
         }
 
-        .brand-logo i {
-            font-size: 26px;
-            color: var(--primary-teal);
+        .brand-logo h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
         }
 
-        .brand-title {
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .header-actions {
+        .header-controls {
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        /* Language Switcher Buttons */
+        /* Language and Theme Buttons matching index.html */
         .lang-btn {
-            width: 40px;
-            height: 40px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border-color);
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
             border-radius: 50%;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 20px;
             transition: all 0.3s;
-            opacity: 0.5;
         }
 
-        .lang-btn:hover {
-            transform: scale(1.1);
-            opacity: 0.85;
-            border-color: var(--primary-teal);
+        body.dark-mode .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .lang-btn.active {
-            opacity: 1;
-            border-color: var(--primary-teal);
-            box-shadow: 0 0 10px rgba(0, 196, 159, 0.4);
+            background: #2ecc71;
+            color: white;
             transform: scale(1.05);
         }
 
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(20deg);
+            background: #2ecc71;
+            color: white;
+        }
+
         .nav-back-btn {
-            background: linear-gradient(135deg, #10b981, #00c49f);
-            color: #0b132b;
-            padding: 8px 18px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 9px 20px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 700;
             font-size: 14px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
-            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
         }
 
         .nav-back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 196, 159, 0.4);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5);
         }
 
-        /* Article Wrapper */
+        /* Article Container */
         .article-wrapper {
-            max-width: 860px;
+            max-width: 880px;
             margin: 40px auto;
             padding: 0 20px 80px;
         }
 
         .article-hero {
-            background: var(--bg-card);
+            background: var(--card-bg);
             border-radius: 20px;
             padding: 35px 30px;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-glow);
-            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
         }
 
         .article-badge {
             display: inline-block;
             background: rgba(16, 185, 129, 0.15);
-            color: var(--primary-teal);
-            padding: 6px 14px;
+            color: #10b981;
+            padding: 6px 16px;
             border-radius: 30px;
             font-size: 13px;
             font-weight: 700;
@@ -168,7 +202,7 @@
             font-size: 28px;
             font-weight: 900;
             line-height: 1.45;
-            color: #ffffff;
+            color: var(--text-dark);
             margin-bottom: 20px;
         }
 
@@ -176,34 +210,35 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--table-border);
             padding-top: 18px;
-            color: var(--text-secondary);
+            color: var(--text-light);
             font-size: 14px;
         }
 
         .author-icon {
-            width: 42px;
-            height: 42px;
-            background: #243256;
-            color: var(--primary-teal);
+            width: 44px;
+            height: 44px;
+            background: rgba(46, 204, 113, 0.15);
+            color: #10b981;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
-            border: 2px solid var(--primary-teal);
+            font-size: 20px;
+            border: 2px solid #10b981;
             flex-shrink: 0;
         }
 
         /* Article Content */
         .article-content {
-            background: var(--bg-card);
+            background: var(--card-bg);
             border-radius: 20px;
-            padding: 35px 30px;
-            border: 1px solid var(--border-color);
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             font-size: 17px;
-            color: #e2e8f0;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
         }
 
         .article-content p {
@@ -214,26 +249,26 @@
         .article-content h2 {
             font-size: 22px;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--text-dark);
             margin: 36px 0 18px;
             display: flex;
             align-items: center;
             gap: 10px;
-            padding-right: 12px;
-            border-right: 4px solid var(--primary-teal);
+            padding-right: 14px;
+            border-right: 4px solid #10b981;
         }
 
         [dir="ltr"] .article-content h2 {
             padding-right: 0;
-            padding-left: 12px;
+            padding-left: 14px;
             border-right: none;
-            border-left: 4px solid var(--primary-teal);
+            border-left: 4px solid #10b981;
         }
 
         .article-content h3 {
             font-size: 18px;
             font-weight: 700;
-            color: var(--primary-teal);
+            color: #10b981;
             margin: 24px 0 12px;
         }
 
@@ -241,24 +276,25 @@
         .article-img-box {
             margin: 30px 0;
             text-align: center;
-            background: #111a33;
-            padding: 12px;
+            background: var(--box-bg);
+            padding: 14px;
             border-radius: 16px;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--table-border);
         }
 
         .article-img-box img {
             width: 100%;
-            max-height: 460px;
+            max-height: 480px;
             object-fit: contain;
             border-radius: 12px;
         }
 
         .img-caption {
             font-size: 13px;
-            color: var(--text-secondary);
+            color: var(--text-light);
             margin-top: 10px;
             display: block;
+            font-weight: 600;
         }
 
         /* Table Styling */
@@ -270,18 +306,19 @@
         .medical-table {
             width: 100%;
             border-collapse: collapse;
-            background: #151e39;
+            background: var(--box-bg);
             border-radius: 12px;
             overflow: hidden;
+            border: 1px solid var(--table-border);
         }
 
         .medical-table th {
-            background: #243256;
-            color: var(--primary-teal);
+            background: var(--table-header);
+            color: var(--text-dark);
             padding: 14px;
-            font-weight: 700;
+            font-weight: 800;
             text-align: right;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--table-border);
         }
 
         [dir="ltr"] .medical-table th {
@@ -290,13 +327,13 @@
 
         .medical-table td {
             padding: 14px;
-            border-bottom: 1px solid var(--border-color);
-            color: #cbd5e1;
+            border-bottom: 1px solid var(--table-border);
+            color: var(--text-dark);
             font-size: 15px;
         }
 
         .status-badge {
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 14px;
             font-size: 13px;
             font-weight: 700;
@@ -305,7 +342,7 @@
         }
 
         .status-safe { background: rgba(16, 185, 129, 0.2); color: #10b981; }
-        .status-warning { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .status-warning { background: rgba(245, 158, 11, 0.2); color: #d97706; }
         .status-danger { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
 
         /* Feature List */
@@ -318,14 +355,14 @@
             position: relative;
             padding-right: 26px;
             margin-bottom: 14px;
-            color: #cbd5e1;
+            color: var(--text-dark);
         }
 
         .article-list li::before {
             content: "✓";
             position: absolute;
             right: 0;
-            color: var(--primary-teal);
+            color: #10b981;
             font-weight: 900;
         }
 
@@ -341,16 +378,16 @@
 
         /* FAQ Box */
         .faq-card {
-            background: #151e39;
+            background: var(--box-bg);
             border-radius: 14px;
             padding: 20px;
             margin-bottom: 16px;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--table-border);
         }
 
         .faq-q {
-            font-weight: 700;
-            color: var(--text-primary);
+            font-weight: 800;
+            color: var(--text-dark);
             margin-bottom: 8px;
             display: flex;
             align-items: center;
@@ -358,11 +395,11 @@
         }
 
         .faq-q i {
-            color: var(--accent-gold);
+            color: #f59e0b;
         }
 
         .faq-a {
-            color: var(--text-secondary);
+            color: var(--text-light);
             font-size: 15px;
             line-height: 1.8;
             margin: 0;
@@ -370,7 +407,7 @@
 
         /* Disclaimer Card */
         .disclaimer-card {
-            background: rgba(245, 158, 11, 0.08);
+            background: rgba(245, 158, 11, 0.1);
             border: 1px solid rgba(245, 158, 11, 0.3);
             border-radius: 14px;
             padding: 20px;
@@ -378,29 +415,35 @@
             display: flex;
             align-items: flex-start;
             gap: 14px;
-            color: #e2e8f0;
+            color: var(--text-dark);
             font-size: 14px;
         }
 
         .disclaimer-card i {
-            color: var(--accent-gold);
-            font-size: 22px;
-            margin-top: 4px;
+            color: #f59e0b;
+            font-size: 24px;
+            margin-top: 2px;
             flex-shrink: 0;
         }
 
         /* Footer */
-        .site-footer {
-            border-top: 1px solid var(--border-color);
-            text-align: center;
+        footer {
+            background: #2c3e50;
+            color: white;
             padding: 30px 20px;
-            color: var(--text-secondary);
-            font-size: 14px;
+            margin-top: 60px;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
         }
 
-        .site-footer a {
-            color: var(--primary-teal);
+        footer a {
+            color: #ecf0f1;
             text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #2ecc71;
         }
 
         @media (max-width: 768px) {
@@ -408,7 +451,7 @@
             .article-content { padding: 25px 20px; font-size: 16px; }
             .article-hero { padding: 25px 20px; }
             .nav-back-btn span { display: none; }
-            .nav-back-btn { padding: 8px 12px; }
+            .nav-back-btn { padding: 8px 14px; }
         }
     </style>
 </head>
@@ -418,12 +461,16 @@
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="brand-logo">
-                <i class="fa-solid fa-heart-pulse"></i>
-                <span class="brand-title">WiBo Health</span>
+                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #2ecc71;"></i>
+                <h1>WiBo Health</h1>
             </a>
-            <div class="header-actions">
+            <div class="header-controls">
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
 
                 <a href="index.html" class="nav-back-btn">
                     <i class="fa-solid fa-arrow-right" id="backIcon"></i>
@@ -445,7 +492,7 @@
                     <i class="fa-solid fa-user-doctor"></i>
                 </div>
                 <div>
-                    <strong style="color: #ffffff;" data-i18n="author_name">بقلم: د. وسيم حبيب</strong>
+                    <strong data-i18n="author_name">بقلم: د. وسيم حبيب</strong>
                     <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة سريرية</div>
                 </div>
             </div>
@@ -542,7 +589,7 @@
                 تشير الدراسات السريرية إلى أن ترتيب تناول الطعام يغير كلياً من استجابة الإنسولين: ابدأ وجبتك دائماً بطبق السلطة (ألياف)، يليه البروتين والدهون الصحية (مثل الدجاج وزيت الزيتون)، واجعل الكربوهيدرات في نهاية الوجبة. هذه الخطوة البسيطة تقلل من قفزات السكر بنسبة تصل إلى 50%.
             </p>
 
-            <!-- Exercise Image Display -->
+            <!-- Exercise Image (صورة البنت والتمارين) -->
             <div class="article-img-box">
                 <img src="images/exercise-insulin.jpg" alt="ممارسة الرياضة وتحسين حساسية الإنسولين" loading="lazy">
                 <span class="img-caption" data-i18n="img_caption_exercise">النشاط البدني وتمارين المقاومة: مفتاحك الطبي المباشر لإدخال السكر للعضلات دون إجهاد البنكرياس</span>
@@ -593,16 +640,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <p data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف د. وسيم حبيب</p>
-        <p style="margin-top: 8px; font-size: 13px;">
-            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a> | 
-            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a> | 
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
             <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
-        </p>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف د. وسيم حبيب</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
     </footer>
 
-    <!-- Translations & Smart Auto-Language Engine -->
+    <!-- Translations & Theme Engine -->
     <script>
         const translations = {
             ar: {
@@ -661,10 +713,11 @@
                 'faq_a2': 'نعم، في أغلب الحالات التي لم تصل إلى مرحلة استنفاد خلايا بيتا في البنكرياس، يؤدي خسارة 7-10% من وزن الجسم وبناء كتلة عضلية إلى استعادة حساسية الخلايا وتصحيح قراءات السكر بشكل دائم.',
                 'disclaimer_title': 'تنويه وإخلاء مسؤولية طبية:',
                 'disclaimer_text': 'المعلومات الواردة في هذا الدليل مقدمة لأغراض التثقيف الصحي والغذائي فقط، ولا تغني عن الاستشارة الطبية المباشرة، التشخيص السريري، أو تعديل الجرعات الدوائية المقررة من قبل طبيبك المعالج.',
-                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف د. وسيم حبيب',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
                 'footer_privacy': 'سياسة الخصوصية',
                 'footer_terms': 'شروط الاستخدام',
-                'footer_contact': 'اتصل بنا'
+                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف د. وسيم حبيب'
             },
             en: {
                 'meta_title': 'HbA1c & Insulin Resistance: Comprehensive Clinical Guide | WiBo Health',
@@ -722,10 +775,11 @@
                 'faq_a2': 'Yes. In the majority of individuals whose pancreatic beta cells have not suffered severe irreversible apoptosis, shedding 7-10% of body weight and increasing skeletal muscle mass can permanently restore physiological insulin sensitivity.',
                 'disclaimer_title': 'Clinical Notice & Medical Disclaimer:',
                 'disclaimer_text': 'The information in this guide is provided strictly for educational and dietary guidance purposes. It does not constitute direct medical advice, clinical diagnosis, or replacement for prescribed medical protocols formulated by your personal physician.',
-                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by Dr. Wassim Habib',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
                 'footer_privacy': 'Privacy Policy',
                 'footer_terms': 'Terms of Use',
-                'footer_contact': 'Contact Us'
+                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by Dr. Wassim Habib'
             }
         };
 
@@ -747,7 +801,6 @@
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             
-            // Toggle back button arrow direction
             const backIcon = document.getElementById('backIcon');
             if (backIcon) {
                 backIcon.className = lang === 'ar' ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left';
@@ -773,15 +826,34 @@
                 }
             });
 
-            // Update title specifically if needed
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
                 document.title = translations[currentLang]['meta_title'];
             }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        /* Dark / Light Mode Engine identical to index.html */
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
             changeLanguage(currentLang);
         });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                if (icon) icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                if (icon) icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
     </script>
 </body>
 </html>
