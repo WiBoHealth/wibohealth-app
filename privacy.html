@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page_title_privacy">سياسة الخصوصية - WiBo Health</title>
-    <meta name="description" content="سياسة الخصوصية وحماية البيانات في WiBo Health - نلتزم بحماية خصوصيتك وبياناتك الشخصية">
+    <meta name="description" content="سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و EU MDR">
     <link rel="canonical" href="https://wibohealth.com/privacy.html">
     
     <!-- Hreflang Tags for SEO -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
-
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/privacy.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,6 +37,11 @@
             --white: #ffffff;
             --card-bg: #ffffff;
             --shadow: rgba(0,0,0,0.1);
+            --boodi-green: #15803d;
+            --boodi-light: #dcfce7;
+            --warning-bg: #fffbeb;
+            --warning-border: #f59e0b;
+            --warning-text: #92400e;
         }
 
         body {
@@ -51,6 +56,9 @@
             --card-bg: #0f3460;
             --text-dark: #ffffff;
             --text-light: #b8b8b8;
+            --boodi-light: rgba(46, 204, 113, 0.2);
+            --warning-bg: rgba(245, 158, 11, 0.15);
+            --warning-text: #fde68a;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
 
@@ -163,6 +171,13 @@
             padding-bottom: 10px;
         }
 
+        .privacy-container h3 {
+            color: var(--primary-color);
+            font-size: 1.25em;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
         .privacy-container p, 
         .privacy-container li {
             color: var(--text-dark);
@@ -173,6 +188,11 @@
 
         .privacy-container ul {
             margin-right: 30px;
+        }
+
+        [dir="ltr"] .privacy-container ul {
+            margin-right: 0;
+            margin-left: 30px;
         }
 
         .privacy-container li {
@@ -193,6 +213,56 @@
 
         .privacy-container a:hover {
             text-decoration: underline;
+        }
+
+        /* Specific Highlight Boxes for EU Compliance */
+        .compliance-card {
+            background: var(--warning-bg);
+            border-right: 4px solid var(--warning-border);
+            padding: 18px 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        [dir="ltr"] .compliance-card {
+            border-right: none;
+            border-left: 4px solid var(--warning-border);
+        }
+
+        .compliance-card h4 {
+            color: var(--warning-text);
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .compliance-card p {
+            color: var(--warning-text);
+            font-size: 1em;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .rectification-card {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1.5px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 20px 0;
+        }
+
+        .rectification-card h4 {
+            color: var(--accent-color);
+            font-size: 1.15em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .rectification-card p {
+            color: var(--text-dark);
+            font-size: 1em;
+            margin: 0;
+            line-height: 1.7;
         }
 
         /* Footer Section */
@@ -244,7 +314,7 @@
                 font-size: 1.3em;
             }
 
-            .privacy-container p,
+            .privacy-container p, 
             .privacy-container li {
                 font-size: 0.95em;
             }
@@ -259,6 +329,10 @@
 
             .privacy-container ul {
                 margin-right: 20px;
+            }
+
+            [dir="ltr"] .privacy-container ul {
+                margin-left: 20px;
             }
         }
     </style>
@@ -334,12 +408,12 @@
     <div class="privacy-container">
         <h1 data-i18n="privacy_title">🔒 سياسة الخصوصية</h1>
         <p class="last-update">
-            <span data-i18n="privacy_last_update">آخر تحديث:</span> 24 نوفمبر 2025
+            <span data-i18n="privacy_last_update">آخر تحديث:</span> <span data-i18n="privacy_last_update_date">أكتوبر 2026</span>
         </p>
         
         <p data-i18n="privacy_intro">
             في <strong>WiBo Health</strong>، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. 
-            توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك.
+            توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك على موقعنا وتطبيقاتنا التابعة.
         </p>
 
         <!-- Section 1 -->
@@ -430,6 +504,45 @@
             عبر نشر النسخة المحدثة على هذه الصفحة.
         </p>
 
+        <!-- ============================================================= -->
+        <!-- Section 11: Special Regulatory & Mobile App (boodi 💚) Policy -->
+        <!-- ============================================================= -->
+        <h2 data-i18n="privacy_boodi_title">11. تطبيق boodi 💚 والامتثال للوائح الاتحاد الأوروبي (EU Compliance)</h2>
+        <p data-i18n="privacy_boodi_intro">
+            يخضع تطبيق الهواتف المحمولة <strong>boodi 💚</strong> (المسجل برقم حزمة <code>com.wibohealth.boodi</code>) لسياسات خصوصية صارمة وأطر قانونية أوروبية لضمان أعلى مستويات الأمان وحماية المستهلك:
+        </p>
+
+        <!-- Medical Disclaimer -->
+        <div class="compliance-card">
+            <h4 data-i18n="privacy_boodi_mdr_h">⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)</h4>
+            <p data-i18n="privacy_boodi_mdr_p">
+                تطبيق boodi 💚 هو أداة توجيه استرشادية لنمط الحياة والتغذية الصحية، و<strong>ليس جهازاً طبياً أو برمجية تشخيصية سريرية (Not a Medical Device / SaMD بموجب اللائحة الأوروبية EU MDR 2017/745)</strong>. لا يقدم التطبيق تشخيصاً لأي حالة مرضية، ولا يحسب جرعات الأنسولين أو الأدوية، ولا يشكل بديلاً عن استشارة الطبيب المعالج أو أخصائي التغذية المعتمد. يجب على المستخدمين، وخاصة مرضى السكري والحساسية الشديدة، استشارة الفريق الطبي المختص والتحقق دائماً من المكونات المطبوعة على عبوة المنتج الأصلية.
+            </p>
+        </div>
+
+        <h3 data-i18n="privacy_boodi_local_h">أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)</h3>
+        <p data-i18n="privacy_boodi_local_p">
+            امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.
+        </p>
+
+        <h3 data-i18n="privacy_boodi_sources_h">ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)</h3>
+        <p data-i18n="privacy_boodi_sources_p">
+            تُستخرج القيم الغذائية للأطعمة آلياً من قواعد البيانات الدولية المفتوحة (Open Food Facts بموجب ترخيص ODbL). وامتثالاً لقواعد هيئة المستهلك والأسواق الهولندية (ACM) والتوجيه الأوروبي 2006/114/EC بشأن المنافسة العادلة، يقترح التطبيق بدائل صحية كأصناف عامة مجردة (Generic Categories) في نفس المتجر دون تفضيل أو تشويه أو ذكر لعلامات تجارية منافسة.
+        </p>
+
+        <!-- Manufacturer Notice and Rectification Box -->
+        <div class="rectification-card">
+            <h4 data-i18n="privacy_boodi_rect_h">📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)</h4>
+            <p data-i18n="privacy_boodi_rect_p">
+                تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: <strong>support@wibohealth.com</strong> متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).
+            </p>
+        </div>
+
+        <h3 data-i18n="privacy_boodi_billing_h">ج. الاشتراكات والفوترة الآمنة والإعلانات</h3>
+        <p data-i18n="privacy_boodi_billing_p">
+            تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.
+        </p>
+
         <!-- Section 10 -->
         <h2 data-i18n="privacy_section10_title">10. تواصل معنا</h2>
         <p data-i18n="privacy_section10_intro">
@@ -437,8 +550,8 @@
         </p>
         <ul>
             <li>
-                <span data-i18n="privacy_email">البريد الإلكتروني:</span> 
-                <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
+                <span data-i18n="privacy_email">البريد الإلكتروني المعتمد للدعم والتصحيح:</span> 
+                <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
             </li>
             <li>
                 <span data-i18n="privacy_whatsapp">واتساب:</span>
@@ -449,7 +562,7 @@
         <!-- Footer Section -->
         <div class="privacy-footer">
             <p data-i18n="privacy_footer_agreement">
-                بمواصلة استخدام موقع WiBo Health، فإنك توافق على سياسة الخصوصية هذه.
+                بمواصلة استخدام موقع WiBo Health وتطبيق boodi، فإنك توافق على سياسة الخصوصية هذه.
             </p>
             <a href="index.html" class="back-btn">
                 <i class="fas fa-home"></i> <span data-i18n="privacy_back_home">العودة للرئيسية</span>
@@ -474,7 +587,8 @@
                 nav_terms: "الشروط والأحكام",
                 privacy_title: "🔒 سياسة الخصوصية",
                 privacy_last_update: "آخر تحديث:",
-                privacy_intro: "في WiBo Health، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك.",
+                privacy_last_update_date: "أكتوبر 2026",
+                privacy_intro: "في WiBo Health، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك على موقعنا وتطبيقاتنا التابعة.",
                 privacy_section1_title: "1. المعلومات التي نجمعها",
                 privacy_section1_intro: "نحن نجمع المعلومات التالية:",
                 privacy_usage_info: "معلومات الاستخدام:",
@@ -516,11 +630,23 @@
                 privacy_section9_text: "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عبر نشر النسخة المحدثة على هذه الصفحة.",
                 privacy_section10_title: "10. تواصل معنا",
                 privacy_section10_intro: "إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:",
-                privacy_email: "البريد الإلكتروني:",
+                privacy_email: "البريد الإلكتروني المعتمد للدعم والتصحيح:",
                 privacy_whatsapp: "واتساب:",
                 privacy_whatsapp_link: "اضغط هنا",
-                privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health، فإنك توافق على سياسة الخصوصية هذه.",
-                privacy_back_home: "العودة للرئيسية"
+                privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi، فإنك توافق على سياسة الخصوصية هذه.",
+                privacy_back_home: "العودة للرئيسية",
+                privacy_boodi_title: "11. تطبيق boodi 💚 والامتثال للوائح الاتحاد الأوروبي (EU Compliance)",
+                privacy_boodi_intro: "يخضع تطبيق الهواتف المحمولة boodi 💚 (المسجل برقم حزمة com.wibohealth.boodi) لسياسات خصوصية صارمة وأطر قانونية أوروبية لضمان أعلى مستويات الأمان وحماية المستهلك:",
+                privacy_boodi_mdr_h: "⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)",
+                privacy_boodi_mdr_p: "تطبيق boodi 💚 هو أداة توجيه استرشادية لنمط الحياة والتغذية الصحية، وليس جهازاً طبياً أو برمجية تشخيصية سريرية (Not a Medical Device / SaMD بموجب اللائحة الأوروبية EU MDR 2017/745). لا يقدم التطبيق تشخيصاً لأي حالة مرضية، ولا يحسب جرعات الأنسولين أو الأدوية، ولا يشكل بديلاً عن استشارة الطبيب المعالج أو أخصائي التغذية المعتمد. يجب على المستخدمين، وخاصة مرضى السكري والحساسية الشديدة، استشارة الفريق الطبي المختص والتحقق دائماً من المكونات المطبوعة على عبوة المنتج الأصلية.",
+                privacy_boodi_local_h: "أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)",
+                privacy_boodi_local_p: "امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.",
+                privacy_boodi_sources_h: "ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)",
+                privacy_boodi_sources_p: "تُستخرج القيم الغذائية للأطعمة آلياً من قواعد البيانات الدولية المفتوحة (Open Food Facts بموجب ترخيص ODbL). وامتثالاً لقواعد هيئة المستهلك والأسواق الهولندية (ACM) والتوجيه الأوروبي 2006/114/EC بشأن المنافسة العادلة، يقترح التطبيق بدائل صحية كأصناف عامة مجردة (Generic Categories) في نفس المتجر دون تفضيل أو تشويه أو ذكر لعلامات تجارية منافسة.",
+                privacy_boodi_rect_h: "📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)",
+                privacy_boodi_rect_p: "تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: support@wibohealth.com متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).",
+                privacy_boodi_billing_h: "ج. الاشتراكات والفوترة الآمنة والإعلانات",
+                privacy_boodi_billing_p: "تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي."
             },
             en: {
                 page_title_privacy: "Privacy Policy - WiBo Health",
@@ -533,7 +659,8 @@
                 nav_terms: "Terms & Conditions",
                 privacy_title: "🔒 Privacy Policy",
                 privacy_last_update: "Last Updated:",
-                privacy_intro: "At WiBo Health, we are committed to protecting your privacy and personal data. This privacy policy explains how we collect, use, and protect your information.",
+                privacy_last_update_date: "October 2026",
+                privacy_intro: "At WiBo Health, we are committed to protecting your privacy and personal data. This privacy policy explains how we collect, use, and protect your information across our website and affiliated mobile applications.",
                 privacy_section1_title: "1. Information We Collect",
                 privacy_section1_intro: "We collect the following information:",
                 privacy_usage_info: "Usage Information:",
@@ -575,11 +702,23 @@
                 privacy_section9_text: "We may update this privacy policy from time to time. We will notify you of any significant changes by posting the updated version on this page.",
                 privacy_section10_title: "10. Contact Us",
                 privacy_section10_intro: "If you have any questions about this privacy policy, please contact us via:",
-                privacy_email: "Email:",
+                privacy_email: "Certified Support & Rectification Email:",
                 privacy_whatsapp: "WhatsApp:",
                 privacy_whatsapp_link: "Click here",
-                privacy_footer_agreement: "By continuing to use the WiBo Health website, you agree to this privacy policy.",
-                privacy_back_home: "Back to Home"
+                privacy_footer_agreement: "By continuing to use the WiBo Health website and boodi app, you agree to this privacy policy.",
+                privacy_back_home: "Back to Home",
+                privacy_boodi_title: "11. boodi 💚 App & EU Regulatory Compliance",
+                privacy_boodi_intro: "The boodi 💚 mobile application (package ID: com.wibohealth.boodi) adheres to strict European privacy policies and regulatory frameworks ensuring consumer safety and full legal compliance:",
+                privacy_boodi_mdr_h: "⚠️ Medical Disclaimer & EU MDR 2017/745 Exemption",
+                privacy_boodi_mdr_p: "boodi 💚 is an educational nutritional and lifestyle guidance tool and NOT a medical device (Not SaMD under EU MDR 2017/745). The application does not diagnose conditions, calculate insulin or medication dosages, nor substitute for professional medical consultation. Users, particularly diabetics and individuals with severe allergies, must consult their physician and verify original product packaging.",
+                privacy_boodi_local_h: "A. Strict Health Privacy & Local-First Architecture (GDPR Art. 9)",
+                privacy_boodi_local_p: "In full compliance with Article 9 of the EU General Data Protection Regulation (GDPR Art. 9) regarding sensitive health-related data: your scan history, inspected food list, and health goals are stored exclusively locally on your device (Local-First). We do not transmit, profile, or sell your scan logs on remote servers.",
+                privacy_boodi_sources_h: "B. Open Data Sources & Generic Alternatives (ACM & Directive 2006/114/EC)",
+                privacy_boodi_sources_p: "Nutritional facts are retrieved from open international databases (Open Food Facts under ODbL). Complying with Dutch Authority for Consumers & Markets (ACM) rules and EU Directive 2006/114/EC on fair competition, the app recommends generic food categories in the same store without brand favoritism, commercial bias, or competitor disparagement.",
+                privacy_boodi_rect_h: "📢 Manufacturer Notice & Rectification Procedure (Notice & Action)",
+                privacy_boodi_rect_p: "WiBo Health is committed to the highest data accuracy. If you are a brand manufacturer noticing outdated or inaccurate nutritional facts for your product derived from public registries, we provide an expedited verification procedure. Contact us directly at: support@wibohealth.com with the barcode and packaging documentation. Our team will verify and rectify the record promptly in accordance with the EU Digital Services Act (DSA).",
+                privacy_boodi_billing_h: "C. Secure Billing, Subscriptions & Advertisements",
+                privacy_boodi_billing_p: "In-app purchases and VIP subscriptions are processed securely via Google Play Billing and RevenueCat without storing credit card details. Advertisements are served via Google AdMob in full adherence to European privacy guidelines."
             }
         };
 
