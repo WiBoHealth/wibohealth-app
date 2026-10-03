@@ -7,11 +7,6 @@
     <meta name="description" content="دليلك الكامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف، فيتامينات ومعادن - قاعدة بيانات غذائية عربية فريدة لمرضى السكري والدايت">
     <link rel="canonical" href="https://wibohealth.com/foods.html">
     
-    <!-- Alternate Language Links -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html" />
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/foods.html" />
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods.html" />
-    
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
 
@@ -327,7 +322,7 @@
             margin-top: 5px;
         }
 
-        /* Filter Tabs (الكل vs المفضلة) */
+        /* Filter Tabs */
         .filter-tabs {
             display: flex;
             justify-content: center;
@@ -418,7 +413,7 @@
             color: #b8b8b8;
         }
 
-        /* Food Grid */
+        /* Food Grid & Cards */
         .food-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -434,7 +429,9 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .food-card::before {
@@ -705,7 +702,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <div class="logo-icon">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -730,11 +727,9 @@
                 </a>
 
                 <div class="header-actions">
-                    <!-- Language Toggle Buttons -->
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
                     
-                    <!-- زر المفضلة في الهيدر -->
                     <button class="favorites-btn" onclick="toggleFavoritesView()" title="المفضلة">
                         <i class="fas fa-heart" style="color: #ef4444;"></i>
                         <span class="favorites-count" id="favCount">0</span>
@@ -752,7 +747,7 @@
                 </div>
 
                 <nav class="nav-menu">
-                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                    <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
                     <a href="foods.html" class="nav-link active"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
                     <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
                     <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
@@ -767,7 +762,7 @@
     <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
     <nav class="mobile-nav-menu" id="mobileNav">
         <button class="mobile-nav-close" onclick="toggleMobileMenu()">&times;</button>
-        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
+        <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
         <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
         <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
         <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
@@ -795,7 +790,7 @@
             <p class="stats-subtitle" data-i18n="stats_db_subtitle">عنصر غذائي مع معلومات غذائية كاملة</p>
         </div>
 
-        <!-- أزرار التبويب الذكية: كل الأطعمة vs المفضلة -->
+        <!-- أزرار التبويب الذكية -->
         <div class="filter-tabs">
             <button class="tab-btn active" id="allFoodsTabBtn" onclick="switchFoodTab('all')">
                 <i class="fas fa-utensils"></i>
@@ -818,8 +813,35 @@
             </p>
         </div>
 
-        <!-- Food Grid -->
-        <div class="food-grid" id="foodGrid"></div>
+        <!-- Food Grid مع محتوى تمهيدي مهيكل لأرشفة Googlebot الفورية -->
+        <div class="food-grid" id="foodGrid">
+            <article class="food-card" style="cursor: default;">
+                <div class="food-icon">🌾</div>
+                <h2 class="food-name" style="font-size: 1.15rem;">المؤشر الجلايسيمي والحبوب الكاملة</h2>
+                <center><span class="food-category">كربوهيدرات معقدة</span></center>
+                <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-top: 10px;">
+                    فحص دقيق لقيم المؤشر الجلايسيمي (GI) للشوفان، الأرز البني، الكينوا، وتأثيرها على استقرار سكر الدم وإفراز الأنسولين.
+                </p>
+            </article>
+
+            <article class="food-card" style="cursor: default;">
+                <div class="food-icon">🥑</div>
+                <h2 class="food-name" style="font-size: 1.15rem;">الدهون الصحية والألياف لمرضى السكري</h2>
+                <center><span class="food-category">أغذية صحية</span></center>
+                <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-top: 10px;">
+                    دليل الأفوكادو، زيت الزيتون، المكسرات والبذور وقيمها من السعرات والدهون الصحية وحساب استجابة الأنسولين اليومية.
+                </p>
+            </article>
+
+            <article class="food-card" style="cursor: default;">
+                <div class="food-icon">🥩</div>
+                <h2 class="food-name" style="font-size: 1.15rem;">البروتينات ومؤشر الأنسولين (II)</h2>
+                <center><span class="food-category">بروتينات</span></center>
+                <p style="font-size: 13px; color: var(--text-light); text-align: center; margin-top: 10px;">
+                    حساب مؤشر الأنسولين للحوم، الأسماك، البيض، ومنتجات الألبان لمتبعي حمية الكيتو والصيام المتقطع.
+                </p>
+            </article>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -843,9 +865,8 @@
 
     <script>
         window.allFoods = [];
-        // توحيد حفظ المفضلة كنصوص لتفادي أي خطأ في الحذف والتبديل
         let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]').map(String);
-        let currentTab = 'all'; // 'all' أو 'fav'
+        let currentTab = 'all';
 
         const foodsTranslations = {
             ar: {
@@ -963,9 +984,6 @@
             if (tipEl) tipEl.textContent = tips[day % tips.length];
         }
 
-        // ==================== المفضلة وحذف القلوب وإدارتها ====================
-
-        // دالة وضع وحذف القلب السلسة بدون أي أخطاء
         function toggleFavorite(event, foodId) {
             if (event) {
                 event.stopPropagation();
@@ -975,19 +993,17 @@
             const index = favorites.indexOf(foodId);
 
             if (index > -1) {
-                favorites.splice(index, 1); // حذف من المفضلة
+                favorites.splice(index, 1);
             } else {
-                favorites.push(foodId); // إضافة للمفضلة
+                favorites.push(foodId);
             }
 
             localStorage.setItem('wibo_favorites', JSON.stringify(favorites));
             updateFavCount();
 
-            // إذا كنا في شاشة المفضلة، أعد الفلترة لإخفاء العنصر المحذوف فوراً
             if (currentTab === 'fav') {
                 filterFoods();
             } else {
-                // تحديث شكل الزر في الشاشة فوراً
                 const btn = document.querySelector(`[data-food-id="${foodId}"]`);
                 if (btn) {
                     const isFav = favorites.includes(foodId);
@@ -1005,7 +1021,6 @@
             if (tabCount) tabCount.textContent = count;
         }
 
-        // التبديل بين كل الأطعمة والمفضلة
         function switchFoodTab(tab) {
             currentTab = tab;
             document.getElementById('allFoodsTabBtn').classList.toggle('active', tab === 'all');
@@ -1017,17 +1032,14 @@
             switchFoodTab(currentTab === 'all' ? 'fav' : 'all');
         }
 
-        // فلترة الأطعمة وعرضها
         function filterFoods() {
             const term = (document.getElementById('searchInput').value || '').toLowerCase().trim();
             
-            // تحديد القائمة الأساسية (إما الكل أو المفضلة فقط)
             let baseList = allFoods;
             if (currentTab === 'fav') {
                 baseList = allFoods.filter(f => favorites.includes(String(f.id)));
             }
 
-            // تطبيق البحث
             let filtered = baseList;
             if (term) {
                 filtered = baseList.filter(f => 
@@ -1041,7 +1053,6 @@
             renderFoods(filtered);
         }
 
-        // دالة رسم الكروت لغة واحدة حصرية وحماية تامة للأرقام
         function renderFoods(foods) {
             const grid = document.getElementById('foodGrid');
             if (!grid) return;
@@ -1065,15 +1076,16 @@
                 const fatVal = (food.nutrition?.fats || 0).toFixed(1);
 
                 return `
-                    <div class="food-card" onclick="window.location.href='food-details.html?id=${food.id}'">
+                    <a href="food-details.html?id=${encodeURIComponent(food.id)}" class="food-card">
                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
                                 data-food-id="${food.id}" 
                                 onclick="toggleFavorite(event, '${food.id}')"
-                                title="المفضلة">
+                                title="المفضلة"
+                                type="button">
                             <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                         <div class="food-icon">${food.icon || '🍽️'}</div>
-                        <div class="food-name">${foodTitle}</div>
+                        <h3 class="food-name">${foodTitle}</h3>
                         <center><span class="food-category">${catTitle || ''}</span></center>
                         <div class="food-stats">
                             <div class="stat-item">
@@ -1093,12 +1105,11 @@
                                 <div class="stat-value">${fatVal}${unitGram}</div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 `;
             }).join('');
         }
 
-        // البداية والتشغيل
         window.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('wibo_theme');
             if (savedTheme === 'dark') {
@@ -1119,7 +1130,6 @@
             }
             updateFavCount();
 
-            // برداية الهيدر
             let lastScrollTop = 0;
             const header = document.querySelector('header');
             window.addEventListener('scroll', function() {
