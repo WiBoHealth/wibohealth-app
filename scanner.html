@@ -3,513 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ماسح الباركود الذكي - فحص المكونات والمؤشر الجلايسيمي ومشتقات الخنزير والحلال | WiBo Health</title>
-    <meta name="title" content="ماسح الباركود الذكي - فحص المكونات والمؤشر الجلايسيمي ومشتقات الخنزير والحلال | WiBo Health">
-    <meta name="description" content="أقوى ماسح باركود غذائي مجاني: امسح باركود أي منتج واكتشف فوراً التأثير الجلايسيمي ومؤشر الأنسولين والبدائل الصحية، بالإضافة إلى فحص مشتقات الخنزير والمواد المشبوهة.">
-    <meta name="keywords" content="ماسح باركود, المؤشر الجلايسيمي, مؤشر الأنسولين, بدائل صحية, فحص الخنزير بالباركود, كاشف الحلال, Open Food Facts, WiBo Health">
-    <meta name="author" content="Dr. Wassim Habib - WiBo Health">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="https://wibohealth.com/scanner.html">
+    <title>ترقية ماسح الباركود إلى تطبيق بودي الرسمي | WiBo Health</title>
+    <meta name="description" content="تمت ترقية ماسح الباركود وفحص الحلال في WiBo Health إلى تطبيق بودي (boodi) السريري المعتمد. جاري تحويلك إلى صفحة التطبيق.">
     
-    <!-- Alternate Language Links -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/scanner.html" />
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/scanner.html" />
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/scanner.html" />
+    <!-- تحويل تلقائي فوري بعد ثانيتين -->
+    <meta http-equiv="refresh" content="2;url=boodi.html">
 
-    <!-- Google Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "ماسح الباركود الذكي وفاحص الحلال والجلايسيميك - WiBo Health",
-      "url": "https://wibohealth.com/scanner.html",
-      "description": "أداة ذكية مجانية لقراءة باركود الأطعمة وتحليل التأثير الجلايسيمي واقتراح البدائل المنخفضة للأنسولين وكشف مشتقات الخنزير.",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "All",
-      "author": {
-        "@type": "Person",
-        "name": "Dr. Wassim Habib"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      }
-    }
-    </script>
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-292WD2SWHN');
-    </script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
-    <link rel="icon" type="image/png" href="/images/icon-192.png">
-    
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
-    <!-- مكتبة مسح الباركود بالكاميرا -->
-    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #2ecc71;
-            --secondary: #27ae60;
-            --bg-gradient-1: #667eea;
-            --bg-gradient-2: #764ba2;
-            --card-bg: #ffffff;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-            --success: #10b981;
         }
 
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            background: linear-gradient(135deg, #09122c 0%, #162447 100%);
             min-height: 100vh;
-            color: var(--text-dark);
-            padding-bottom: 50px;
-            transition: all 0.3s ease;
-        }
-
-        body.dark-mode {
-            --bg-gradient-1: #1a1a2e;
-            --bg-gradient-2: #16213e;
-            --card-bg: #0f3460;
-            --text-dark: #ffffff;
-            --text-light: #b8b8b8;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 15px;
-        }
-
-        header {
-            background: var(--card-bg);
-            padding: 15px 0;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-        }
-
-        .logo-text h1 {
-            font-size: 24px;
-            background: linear-gradient(135deg, var(--primary), #3498db);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .lang-btn, .theme-toggle {
-            width: 42px;
-            height: 42px;
-            background: #f3f4f6;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: var(--text-dark);
-            transition: all 0.2s;
-        }
-
-        body.dark-mode .lang-btn, body.dark-mode .theme-toggle {
-            background: rgba(255,255,255,0.1);
-            color: white;
-        }
-
-        .lang-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .scanner-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: #ffffff;
             text-align: center;
-            margin-bottom: 25px;
+            padding: 20px;
         }
 
-        .scanner-card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .redirect-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            border-radius: 24px;
+            padding: 50px 35px;
+            max-width: 580px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.2);
+            animation: fadeIn 0.8s ease;
         }
 
-        .scanner-card p {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-
-        .camera-tip {
-            background: #eff6ff;
-            color: #1e40af;
-            padding: 10px 15px;
-            border-radius: 12px;
-            font-size: 13px;
-            margin-bottom: 18px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid #bfdbfe;
-        }
-
-        body.dark-mode .camera-tip {
-            background: rgba(59, 130, 246, 0.2);
-            color: #93c5fd;
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-
-        #reader {
-            width: 100%;
-            max-width: 500px;
-            margin: 0 auto 20px;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 3px dashed var(--primary);
-            background: #000;
-        }
-
-        .manual-input-box {
-            display: flex;
-            gap: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .manual-input-box input {
-            flex: 1;
-            padding: 12px 15px;
-            border: 2px solid #ecf0f1;
-            border-radius: 10px;
-            font-size: 16px;
-            font-family: inherit;
-            background: var(--card-bg);
-            color: var(--text-dark);
-        }
-
-        .manual-input-box button {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: inherit;
-        }
-
-        .result-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            display: none;
-            animation: slideUp 0.4s ease;
-            margin-bottom: 25px;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .status-badge {
-            padding: 15px 20px;
-            border-radius: 15px;
+        .icon-pulse-box {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 2px solid #10b981;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            justify-content: center;
+            font-size: 40px;
+            color: #10b981;
+            animation: pulse 2s infinite;
         }
 
-        .status-safe {
-            background: #d1fae5;
-            color: #065f46;
-            border-right: 6px solid #10b981;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+            50% { transform: scale(1.08); box-shadow: 0 0 30px 10px rgba(16, 185, 129, 0.2); }
         }
 
-        .status-danger {
-            background: #fee2e2;
-            color: #991b1b;
-            border-right: 6px solid #ef4444;
-        }
-
-        .status-warning {
-            background: #fef3c7;
-            color: #92400e;
-            border-right: 6px solid #f59e0b;
-        }
-
-        /* تنسيق بطاقة التحليل الجلايسيمي والأنسوليني */
-        .metabolic-badge {
-            padding: 14px 18px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .metabolic-low {
-            background: rgba(46, 204, 113, 0.15);
-            color: #27ae60;
-            border: 1px solid #2ecc71;
-        }
-
-        .metabolic-medium {
-            background: rgba(245, 158, 11, 0.15);
-            color: #b45309;
-            border: 1px solid #f59e0b;
-        }
-
-        .metabolic-high {
-            background: rgba(239, 68, 68, 0.15);
-            color: #b91c1c;
-            border: 1px solid #ef4444;
-        }
-
-        .product-meta {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .product-img {
-            width: 110px;
-            height: 110px;
-            object-fit: contain;
-            border-radius: 12px;
-            background: #f8f9fa;
-            border: 1px solid #e5e7eb;
-        }
-
-        .product-info h3 {
-            font-size: 1.4rem;
-            color: var(--text-dark);
-            margin-bottom: 5px;
-        }
-
-        .product-brand {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        .nutrition-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .nutri-box {
-            background: rgba(0,0,0,0.03);
-            padding: 12px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        body.dark-mode .nutri-box {
-            background: rgba(255,255,255,0.05);
-        }
-
-        .nutri-box small {
-            display: block;
-            color: var(--text-light);
-            font-size: 12px;
-            margin-bottom: 4px;
-        }
-
-        .nutri-box strong {
-            font-size: 16px;
-            color: var(--text-dark);
-        }
-
-        /* كروت البدائل الصحية الذكية */
-        .alternatives-container {
-            margin-top: 25px;
-            padding: 18px;
-            background: rgba(46, 204, 113, 0.08);
-            border: 2px dashed #2ecc71;
-            border-radius: 15px;
-        }
-
-        body.dark-mode .alternatives-container {
-            background: rgba(46, 204, 113, 0.05);
-            border-color: rgba(46, 204, 113, 0.4);
-        }
-
-        .alternatives-title {
-            color: #27ae60;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .alt-card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--card-bg);
-            padding: 12px 16px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: var(--text-dark);
-            border: 1px solid #e2e8f0;
-            transition: all 0.2s ease;
-        }
-
-        body.dark-mode .alt-card {
-            border-color: rgba(255,255,255,0.1);
-        }
-
-        .alt-card:hover {
-            transform: translateY(-2px);
-            border-color: var(--primary);
-        }
-
-        .alt-badge-group {
-            display: flex;
-            gap: 8px;
-        }
-
-        .alt-pill {
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
+        .badge-upgrade {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 13px;
             font-weight: 800;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(110, 231, 183, 0.4);
         }
 
-        .alt-pill-gi {
-            background: #dcfce7;
-            color: #15803d;
+        h1 {
+            font-size: 26px;
+            font-weight: 900;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            color: #ffffff;
         }
 
-        .alt-pill-ii {
-            background: #e0e7ff;
-            color: #4338ca;
+        h1 span {
+            color: #10b981;
         }
 
-        .ingredients-box {
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 12px;
-            background: rgba(0,0,0,0.02);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            border: 1px solid #ecf0f1;
+        p {
+            color: #cbd5e1;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 30px;
         }
 
-        body.dark-mode .ingredients-box {
-            background: rgba(255,255,255,0.03);
-            border-color: rgba(255,255,255,0.1);
+        .redirect-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            border: 2px solid #6ee7b7;
+            transition: all 0.3s ease;
         }
 
-        .highlight-danger {
-            background: #fecaca;
-            color: #991b1b;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
+        .redirect-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.6);
         }
 
-        .highlight-warning {
-            background: #fde68a;
-            color: #92400e;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
+        .spinner-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 25px;
         }
 
-        .loading-spinner {
-            display: none;
-            padding: 30px;
-            text-align: center;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-        }
-
-        .loading-spinner i {
-            font-size: 35px;
+        .spinner-line i {
             animation: spin 1s linear infinite;
-            margin-bottom: 10px;
-            display: block;
         }
 
         @keyframes spin {
@@ -518,712 +142,37 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="/images/icon-192.png" alt="WiBo" class="logo-icon" onerror="this.style.display='none'">
-                    <div class="logo-text">
-                        <h1>WiBo Health</h1>
-                    </div>
-                </a>
 
-                <div class="header-actions">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="switchLanguage('ar')" title="العربية">🇪🇬</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="switchLanguage('en')" title="English">🇬🇧</button>
-                    <button class="theme-toggle" onclick="toggleTheme()" title="Theme"><i class="fas fa-moon"></i></button>
-                    <a href="index.html" style="background: var(--primary); color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-size: 14px; font-weight: bold;">
-                        <i class="fas fa-home"></i> <span data-i18n="home">الرئيسية</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Scanner Card -->
-        <div class="scanner-card">
-            <h2><i class="fas fa-barcode"></i> <span data-i18n="title">ماسح الباركود والتحليل الجلايسيمي والحلال</span></h2>
-            <p data-i18n="subtitle">امسح باركود أي منتج لمعرفة مكوناته، تأثيره على سكر الدم والأنسولين، والبدائل الصحية الأفضل</p>
-
-            <div class="camera-tip">
-                <i class="fas fa-lightbulb" style="color: #3b82f6;"></i>
-                <span data-i18n="camera_tip_text">💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!</span>
-            </div>
-
-            <!-- منطقة الكاميرا -->
-            <div id="reader"></div>
-
-            <!-- زر تشغيل/إيقاف الكاميرا -->
-            <button id="toggleCameraBtn" onclick="toggleCamera()" style="
-                background: linear-gradient(135deg, var(--primary), var(--secondary));
-                color: white; border: none; padding: 12px 25px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 20px; font-family: inherit;">
-                <i class="fas fa-camera"></i> <span id="cameraBtnText">تشغيل الكاميرا</span>
-            </button>
-
-            <!-- إدخال يدوي في حال تعذر تشغيل الكاميرا -->
-            <div class="manual-input-box">
-                <input type="text" id="manualBarcodeInput" placeholder="أو اكتب رقم الباركود هنا (مثال: 8710400...)" inputmode="numeric">
-                <button onclick="fetchProductData(document.getElementById('manualBarcodeInput').value)"><i class="fas fa-search"></i> <span data-i18n="search">فحص</span></button>
-            </div>
+    <div class="redirect-card">
+        <div class="icon-pulse-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
 
-        <!-- Loading -->
-        <div class="loading-spinner" id="loadingSpinner">
-            <i class="fas fa-spinner"></i>
-            <span data-i18n="loading">جاري فحص المنتج في قاعدة البيانات العالمية...</span>
-        </div>
+        <span class="badge-upgrade">✨ ترقية تكنولوجية كبرى</span>
 
-        <!-- Result Card -->
-        <div class="result-card" id="resultCard">
-            <!-- شارة فحص الحلال والمكونات المشبوهة -->
-            <div class="status-badge" id="statusBadge"></div>
+        <h1>تمت ترقية ماسح الباركود إلى <span>تطبيق بودي (boodi 💚)</span></h1>
 
-            <!-- شارة التحليل الجلايسيمي وحمل الأنسولين التقديري -->
-            <div class="metabolic-badge" id="metabolicBadge"></div>
+        <p>
+            حرصاً على تقديم أعلى دقة سريرية وفحص فوري لمكونات الحلال والبدائل الصحية الحقيقية، تم نقل الماسح رسمياً إلى تطبيق الهاتف الذكي المعتمد من <strong>WiBo Health Group</strong>.
+        </p>
 
-            <div class="product-meta">
-                <img id="productImg" src="" alt="Product" class="product-img">
-                <div class="product-info">
-                    <h3 id="productTitle"></h3>
-                    <p class="product-brand" id="productBrand"></p>
-                    <p id="barcodeNumber" style="font-size: 13px; color: var(--text-light); margin-top: 4px;"></p>
-                </div>
-            </div>
+        <a href="boodi.html" class="redirect-btn">
+            <span>انتقل لتطبيق بودي الآن</span>
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
 
-            <h4 style="margin-top: 15px; color: var(--text-dark); font-size: 16px;" data-i18n="nutrition_title">📊 القيم الغذائية (لكل 100 غرام):</h4>
-            <div class="nutrition-grid">
-                <div class="nutri-box">
-                    <small data-i18n="energy">السعرات</small>
-                    <strong id="nutriCalories">-</strong>
-                </div>
-                <div class="nutri-box">
-                    <small data-i18n="protein">بروتين</small>
-                    <strong id="nutriProtein">-</strong>
-                </div>
-                <div class="nutri-box">
-                    <small data-i18n="carbs">كربوهيدرات</small>
-                    <strong id="nutriCarbs">-</strong>
-                </div>
-                <div class="nutri-box">
-                    <small data-i18n="sugars">سكر</small>
-                    <strong id="nutriSugars">-</strong>
-                </div>
-                <div class="nutri-box">
-                    <small data-i18n="fat">دهون</small>
-                    <strong id="nutriFat">-</strong>
-                </div>
-                <div class="nutri-box">
-                    <small data-i18n="salt">ملح</small>
-                    <strong id="nutriSalt">-</strong>
-                </div>
-            </div>
-
-            <!-- صندوق البدائل الصحية الذكية لنفس الفئة -->
-            <div id="smartAlternativesContainer"></div>
-
-            <h4 style="margin-top: 20px; color: var(--text-dark); font-size: 16px;" data-i18n="ingredients_title">📝 المكونات المسجلة:</h4>
-            <div class="ingredients-box" id="ingredientsText"></div>
-
-            <button onclick="resetScanner()" style="margin-top: 25px; width: 100%; padding: 14px; background: #64748b; color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; font-family: inherit;">
-                <i class="fas fa-redo"></i> <span data-i18n="scan_again">مسح منتج آخر</span>
-            </button>
+        <div class="spinner-line">
+            <i class="fa-solid fa-spinner"></i>
+            <span>جاري نقلك تلقائياً خلال ثانيتين...</span>
         </div>
     </div>
 
-    <!-- استدعاء قاعدة البيانات الأصلية للموقع js/data.js -->
-    <script src="js/data.js"></script>
-
     <script>
-        const scannerTranslations = {
-            ar: {
-                'home': 'الرئيسية',
-                'title': 'ماسح الباركود والتحليل الجلايسيمي والحلال',
-                'subtitle': 'امسح باركود أي منتج في السوبرماركت لمعرفة مكوناته، تأثيره على سكر الدم والأنسولين، والبدائل الصحية الأفضل',
-                'camera_tip_text': '💡 نصيحة للكاميرا: أبقِ الهاتف على مسافة 15 إلى 20 سم (مسافة شبر) لتوضيح خطوط الباركود وقراءته فوراً!',
-                'camera_start': 'تشغيل الكاميرا',
-                'camera_stop': 'إيقاف الكاميرا',
-                'search': 'فحص',
-                'loading': 'جاري فحص المنتج وتحليل التأثير الجلايسيمي...',
-                'nutrition_title': '📊 القيم الغذائية (لكل 100 غرام):',
-                'ingredients_title': '📝 قائمة المكونات:',
-                'scan_again': 'مسح منتج آخر',
-                'energy': 'سعرات',
-                'protein': 'بروتين',
-                'carbs': 'كربوهيدرات',
-                'sugars': 'سكر',
-                'fat': 'دهون',
-                'salt': 'ملح',
-                'safe_title': 'خالٍ من مشتقات الخنزير ✔️ (Pork-Free)',
-                'safe_desc': 'لم يتم العثور على أي مشتقات خنزير أو جيلاتين أو شحوم خنزير في المكونات المسجلة.',
-                'danger_title': 'تنبيه: يحتوي على مشتقات الخنزير! ❌ (Contains Pork)',
-                'danger_desc': 'تم اكتشاف مكونات مشتقة من الخنزير في قائمة المكونات (انظر التمييز الأحمر أدناه).',
-                'warning_title': 'تنبيه: يحتوي على مواد مشبوهة تحتاج تدقيق ⚠️',
-                'warning_desc': 'يحتوي المنتج على مثبتات أو جيلاتين غير محدد المصدر (قد يكون حيواني أو نباتي).',
-                'not_found_title': 'المنتج غير مسجل بعد في قاعدة البيانات 🔍',
-                'not_found_desc': 'لم نتمكن من العثور على بيانات هذا الباركود، يُرجى فحص ملصق المكونات يدوياً.',
-                'meta_low_title': 'تأثير جلايسيمي منخفض 🟢 (Low Glycemic Impact)',
-                'meta_low_desc': 'امتصاص هادئ ومستقر لسكر الدم وحمل أنسولين آمن.',
-                'meta_medium_title': 'تأثير جلايسيمي معتدل 🟡 (Moderate Glycemic Impact)',
-                'meta_medium_desc': 'يُفضل تناوله باعتدال أو دمجه مع مصادر ألياف أو بروتين.',
-                'meta_high_title': 'تحذير: تحفيز حاد للأنسولين وسكر الدم! 🔴',
-                'meta_high_desc': 'نسبة سكريات أو نشويات سريعة الامتصاص قد تسبب قفزة أنسولينية وهبوطاً لاحقاً.',
-                'alt_title': '💡 بدائل صحية ذكية من قاعدة بيانات WiBo (أقل تأثيراً على الأنسولين):'
-            },
-            en: {
-                'home': 'Home',
-                'title': 'Smart Barcode & Glycemic Scanner',
-                'subtitle': 'Scan any product to check ingredients, glycemic impact, insulin spike, and smart alternatives',
-                'camera_tip_text': '💡 Camera Tip: Keep your phone about 15-20 cm away from the barcode so the lens focuses sharply!',
-                'camera_start': 'Start Camera',
-                'camera_stop': 'Stop Camera',
-                'search': 'Scan',
-                'loading': 'Checking product and calculating glycemic impact...',
-                'nutrition_title': '📊 Nutrition Facts (per 100g):',
-                'ingredients_title': '📝 Ingredients List:',
-                'scan_again': 'Scan Another Product',
-                'energy': 'Calories',
-                'protein': 'Protein',
-                'carbs': 'Carbs',
-                'sugars': 'Sugars',
-                'fat': 'Fat',
-                'salt': 'Salt',
-                'safe_title': 'Pork-Free / Halal Friendly ✔️',
-                'safe_desc': 'No pork, pork gelatin, or lard detected in the ingredients.',
-                'danger_title': 'Warning: Contains Pork Derivatives! ❌',
-                'danger_desc': 'Porcine / pork ingredients were detected (see red highlights below).',
-                'warning_title': 'Caution: Contains Questionable Additives ⚠️',
-                'warning_desc': 'Product contains additives (e.g. E471 or unspecified gelatin) that may be animal or plant-derived.',
-                'not_found_title': 'Product Not Found in Database 🔍',
-                'not_found_desc': 'We could not find this barcode yet. Please check the label manually.',
-                'meta_low_title': 'Low Glycemic Impact 🟢',
-                'meta_low_desc': 'Steady glucose release with a safe insulin response.',
-                'meta_medium_title': 'Moderate Glycemic Impact 🟡',
-                'meta_medium_desc': 'Consume moderately or pair with fiber and protein.',
-                'meta_high_title': 'Alert: High Insulin & Sugar Spike! 🔴',
-                'meta_high_desc': 'High fast sugars/carbs that trigger a rapid insulin spike.',
-                'alt_title': '💡 Smart Low-Insulin Swaps from WiBo Database:'
-            }
-        };
-
-        function getDeviceLanguage() {
-            const saved = localStorage.getItem('preferred_language');
-            if (saved === 'ar' || saved === 'en') return saved;
-            const phone = (navigator.language || '').toLowerCase();
-            return phone.startsWith('ar') ? 'ar' : 'en';
-        }
-
-        let currentLang = getDeviceLanguage();
-
-        function t(key) {
-            return scannerTranslations[currentLang]?.[key] || key;
-        }
-
-        function switchLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('preferred_language', lang);
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const k = el.getAttribute('data-i18n');
-                if (scannerTranslations[lang][k]) el.textContent = scannerTranslations[lang][k];
-            });
-
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                const bLang = btn.getAttribute('data-lang-toggle');
-                btn.classList.toggle('active', bLang === lang);
-                btn.style.opacity = bLang === lang ? '1' : '0.5';
-            });
-            
-            updateCameraBtnText();
-        }
-
-        function updateCameraBtnText() {
-            const textEl = document.getElementById('cameraBtnText');
-            if (html5QrCode && isScanning) {
-                textEl.textContent = t('camera_stop');
-            } else {
-                textEl.textContent = t('camera_start');
-            }
-        }
-
-        const porkKeywords = [
-            'varken', 'varkensvlees', 'varkensvet', 'varkensgelatine', 'spek', 'reuzel', 'bacon', 'ham',
-            'domuz', 'domuz eti', 'domuz yağı', 'domuz jelatini', 'domuz kıkırdağı',
-            'pork', 'porcine', 'lard', 'pork gelatin', 'pork fat', 'pig',
-            'خنزير', 'لحم خنزير', 'شحم خنزير', 'دهن خنزير', 'جيلاتين خنزير',
-            'schwein', 'schweinefleisch', 'schweinegelatine', 'schweineschmalz', 'speck',
-            'porc', 'gélatine de porc', 'saindoux', 'viande de porc'
-        ];
-
-        const suspiciousKeywords = [
-            'e441', 'e120', 'carmine', 'cochineal', 'e471', 'e472', 'gelatine', 'gelatin', 'stremsel', 'rennet', 'dierlijk stremsel'
-        ];
-
-        let html5QrCode = null;
-        let isScanning = false;
-
-        function toggleCamera() {
-            if (isScanning) {
-                stopCamera();
-            } else {
-                startCamera();
-            }
-        }
-
-        function startCamera() {
-            if (!html5QrCode) {
-                const formatsToSupport = [
-                    Html5QrcodeSupportedFormats.EAN_13,
-                    Html5QrcodeSupportedFormats.EAN_8,
-                    Html5QrcodeSupportedFormats.UPC_A,
-                    Html5QrcodeSupportedFormats.UPC_E,
-                    Html5QrcodeSupportedFormats.CODE_128,
-                    Html5QrcodeSupportedFormats.QR_CODE
-                ];
-                html5QrCode = new Html5Qrcode("reader", {
-                    formatsToSupport: formatsToSupport,
-                    experimentalFeatures: {
-                        useBarCodeDetectorIfSupported: true
-                    },
-                    verbose: false
-                });
-            }
-
-            const qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-                const width = Math.floor(viewfinderWidth * 0.85);
-                const height = Math.floor(viewfinderHeight * 0.45);
-                return { width: width, height: Math.max(height, 150) };
-            };
-
-            const config = {
-                fps: 15,
-                qrbox: qrboxFunction,
-                aspectRatio: 1.333334,
-                videoConstraints: {
-                    facingMode: "environment",
-                    width: { min: 640, ideal: 1280, max: 1920 },
-                    height: { min: 480, ideal: 720, max: 1080 }
-                }
-            };
-
-            html5QrCode.start({ facingMode: "environment" }, config, onScanSuccess)
-                .then(() => {
-                    isScanning = true;
-                    updateCameraBtnText();
-                })
-                .catch(err => {
-                    console.error("Camera error:", err);
-                    alert("تعذر فتح الكاميرا. يُرجى السماح بإذن الكاميرا أو استخدام الإدخال اليدوي.");
-                });
-        }
-
-        function stopCamera() {
-            if (html5QrCode && isScanning) {
-                html5QrCode.stop().then(() => {
-                    isScanning = false;
-                    updateCameraBtnText();
-                }).catch(err => console.error(err));
-            }
-        }
-
-        function onScanSuccess(decodedText) {
-            stopCamera();
-            fetchProductData(decodedText);
-        }
-
-        async function fetchProductData(barcode) {
-            if (!barcode || barcode.trim() === '') {
-                alert('يرجى إدخال رقم باركود صحيح');
-                return;
-            }
-            barcode = barcode.trim();
-
-            document.getElementById('loadingSpinner').style.display = 'block';
-            document.getElementById('resultCard').style.display = 'none';
-
-            try {
-                const response = await fetch(`https://world.openfoodfacts.org/api/v2/product/${barcode}.json`);
-                const data = await response.json();
-
-                document.getElementById('loadingSpinner').style.display = 'none';
-
-                if (data.status === 1 && data.product) {
-                    renderProductResult(data.product, barcode);
-                } else {
-                    renderNotFound(barcode);
-                }
-            } catch (error) {
-                console.error('API Error:', error);
-                document.getElementById('loadingSpinner').style.display = 'none';
-                renderNotFound(barcode);
-            }
-        }
-
-        // ==========================================
-        // محرك التحليل الجلايسيمي والبدائل الذكية
-        // ==========================================
-        const SmartSwapEngine = {
-            // ربط وسوم وكلمات Open Food Facts بتصنيفات Wibo
-            categoryMap: {
-                'bread': 'حبوب',
-                'bakery': 'مخبوزات',
-                'brood': 'حبوب',
-                'cereal': 'حبوب',
-                'pasta': 'حبوب',
-                'rice': 'حبوب',
-                'rijst': 'حبوب',
-                'dairy': 'ألبان',
-                'zuivel': 'ألبان',
-                'cheese': 'ألبان',
-                'kaas': 'ألبان',
-                'yogurt': 'ألبان',
-                'yoghurt': 'ألبان',
-                'milk': 'ألبان',
-                'melk': 'ألبان',
-                'fruit': 'فواكه',
-                'vegetable': 'خضروات',
-                'groente': 'خضروات',
-                'legume': 'بقوليات',
-                'nut': 'مكسرات',
-                'noten': 'مكسرات',
-                'meat': 'بروتين',
-                'vlees': 'بروتين',
-                'fish': 'مأكولات بحرية',
-                'vis': 'مأكولات بحرية',
-                'sauce': 'صلصات',
-                'saus': 'صلصات',
-                'ketchup': 'صلصات',
-                'mayo': 'صلصات',
-                'sweet': 'حلويات',
-                'snack': 'وجبات خفيفة',
-                'chip': 'وجبات خفيفة',
-                'biscuit': 'وجبات خفيفة',
-                'koek': 'حلويات',
-                'chocolate': 'حلويات',
-                'chocolade': 'حلويات',
-                'soda': 'مشروبات',
-                'beverage': 'مشروبات',
-                'drank': 'مشروبات',
-                'juice': 'مشروبات',
-                'sap': 'مشروبات'
-            },
-
-            detectCategory: function(product) {
-                const tags = (product.categories_tags || []).join(' ').toLowerCase();
-                const name = (product.product_name || product.product_name_nl || product.product_name_en || '').toLowerCase();
-                const combined = `${tags} ${name}`;
-
-                for (let key in this.categoryMap) {
-                    if (combined.includes(key)) {
-                        return this.categoryMap[key];
-                    }
-                }
-                return 'وجبات خفيفة';
-            },
-
-            // تقدير التأثير الجلايسيمي وحمل الأنسولين (Insulin Load)
-            evaluateMetabolicImpact: function(nutriments) {
-                const carbs = parseFloat(nutriments['carbohydrates_100g'] || 0);
-                const sugars = parseFloat(nutriments['sugars_100g'] || 0);
-                const fiber = parseFloat(nutriments['fiber_100g'] || 0);
-                const protein = parseFloat(nutriments['proteins_100g'] || 0);
-                const fat = parseFloat(nutriments['fat_100g'] || 0);
-
-                const netCarbs = Math.max(0, carbs - fiber);
-                // معادلة حمل الأنسولين التقديري:
-                const insulinLoad = netCarbs + (0.56 * protein) + (0.1 * fat);
-
-                let level = 'low';
-                // إذا كان السكر أكثر من 12غ أو حمل الأنسولين يفوق 22غ لكل 100غ
-                if (sugars > 14 || insulinLoad > 28) {
-                    level = 'high';
-                } else if (sugars > 6 || insulinLoad > 14) {
-                    level = 'medium';
-                }
-
-                return {
-                    level: level,
-                    insulinLoad: Math.round(insulinLoad),
-                    netCarbs: netCarbs.toFixed(1)
-                };
-            },
-
-            // استخراج 2 إلى 3 بدائل ذكية من foodsDatabase
-            findAlternatives: function(category, max = 3) {
-                if (typeof foodsDatabase === 'undefined' || !Array.isArray(foodsDatabase)) {
-                    return [];
-                }
-
-                let matches = foodsDatabase.filter(item => {
-                    const isSameCat = (item.category === category) || 
-                                     (category === 'صلصات' && (item.category === 'معلبات' || item.category === 'مقبلات')) ||
-                                     (category === 'مخبوزات' && item.category === 'حبوب') ||
-                                     (category === 'حلويات' && item.category === 'وجبات خفيفة');
-                    return isSameCat && item.gi <= 50 && item.ii <= 50;
-                });
-
-                // في حال عدم وجود عدد كافٍ في نفس الفئة، نقترح من قسم الأطعمة الصحية والمكسرات
-                if (matches.length < max) {
-                    const fallbackItems = foodsDatabase.filter(item => 
-                        (item.category === 'أطعمة صحية' || item.category === 'مكسرات' || item.category === 'خضروات') &&
-                        item.gi <= 35 && item.ii <= 35
-                    );
-                    matches = matches.concat(fallbackItems);
-                }
-
-                // فرز البدائل حسب الأقل تحفيزاً للأنسولين والـ GI
-                matches.sort((a, b) => (a.ii + a.gi) - (b.ii + b.gi));
-
-                // استبعاد التكرار واختيار العدد المطلوب
-                const unique = [];
-                const seenIds = new Set();
-                for (let item of matches) {
-                    if (!seenIds.has(item.id)) {
-                        seenIds.add(item.id);
-                        unique.push(item);
-                        if (unique.length === max) break;
-                    }
-                }
-                return unique;
-            }
-        };
-
-        function renderProductResult(product, barcode) {
-            const card = document.getElementById('resultCard');
-            const badge = document.getElementById('statusBadge');
-            const metabolicBadge = document.getElementById('metabolicBadge');
-            const altContainer = document.getElementById('smartAlternativesContainer');
-
-            const name = product.product_name || product.product_name_en || product.product_name_nl || 'منتج غير مسمى';
-            const brand = product.brands || '';
-            const img = product.image_url || '/images/icon-192.png';
-            
-            const ingredients = (product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || product.ingredients_text_de || '').toLowerCase();
-            const additives = (product.additives_tags || []).map(a => a.toLowerCase()).join(' ');
-            const combinedText = `${ingredients} ${additives}`;
-
-            document.getElementById('productTitle').textContent = name;
-            document.getElementById('productBrand').textContent = brand;
-            document.getElementById('barcodeNumber').textContent = `Barcode: ${barcode}`;
-            document.getElementById('productImg').src = img;
-
-            // 1. فحص مشتقات الخنزير والـ E-Numbers
-            let hasPork = false;
-            let detectedPorkWord = '';
-            for (let word of porkKeywords) {
-                if (combinedText.includes(word)) {
-                    hasPork = true;
-                    detectedPorkWord = word;
-                    break;
-                }
-            }
-
-            let hasSuspicious = false;
-            let detectedSuspiciousWord = '';
-            if (!hasPork) {
-                for (let word of suspiciousKeywords) {
-                    if (combinedText.includes(word)) {
-                        hasSuspicious = true;
-                        detectedSuspiciousWord = word;
-                        break;
-                    }
-                }
-            }
-
-            if (hasPork) {
-                badge.className = 'status-badge status-danger';
-                badge.innerHTML = `
-                    <i class="fas fa-times-circle" style="font-size: 32px;"></i>
-                    <div>
-                        <div>${t('danger_title')}</div>
-                        <small style="font-size: 13px; font-weight: normal;">${t('danger_desc')} (المكون المكتشف: <strong>${detectedPorkWord}</strong>)</small>
-                    </div>
-                `;
-            } else if (hasSuspicious) {
-                badge.className = 'status-badge status-warning';
-                badge.innerHTML = `
-                    <i class="fas fa-exclamation-triangle" style="font-size: 32px;"></i>
-                    <div>
-                        <div>${t('warning_title')}</div>
-                        <small style="font-size: 13px; font-weight: normal;">${t('warning_desc')} (الرمز: <strong>${detectedSuspiciousWord}</strong>)</small>
-                    </div>
-                `;
-            } else {
-                badge.className = 'status-badge status-safe';
-                badge.innerHTML = `
-                    <i class="fas fa-check-circle" style="font-size: 32px;"></i>
-                    <div>
-                        <div>${t('safe_title')}</div>
-                        <small style="font-size: 13px; font-weight: normal;">${t('safe_desc')}</small>
-                    </div>
-                `;
-            }
-
-            // 2. تحديث جدول القيم الغذائية
-            const nutriments = product.nutriments || {};
-            document.getElementById('nutriCalories').textContent = nutriments['energy-kcal_100g'] ? `${Math.round(nutriments['energy-kcal_100g'])} kcal` : '-';
-            document.getElementById('nutriProtein').textContent = nutriments['proteins_100g'] ? `${nutriments['proteins_100g']} g` : '-';
-            document.getElementById('nutriCarbs').textContent = nutriments['carbohydrates_100g'] ? `${nutriments['carbohydrates_100g']} g` : '-';
-            document.getElementById('nutriSugars').textContent = nutriments['sugars_100g'] ? `${nutriments['sugars_100g']} g` : '-';
-            document.getElementById('nutriFat').textContent = nutriments['fat_100g'] ? `${nutriments['fat_100g']} g` : '-';
-            document.getElementById('nutriSalt').textContent = nutriments['salt_100g'] ? `${nutriments['salt_100g']} g` : '-';
-
-            // 3. التحليل الجلايسيمي والأنسوليني
-            const meta = SmartSwapEngine.evaluateMetabolicImpact(nutriments);
-            let metaClass = 'metabolic-low';
-            let metaTitle = t('meta_low_title');
-            let metaDesc = t('meta_low_desc');
-
-            if (meta.level === 'high') {
-                metaClass = 'metabolic-high';
-                metaTitle = t('meta_high_title');
-                metaDesc = t('meta_high_desc');
-            } else if (meta.level === 'medium') {
-                metaClass = 'metabolic-medium';
-                metaTitle = t('meta_medium_title');
-                metaDesc = t('meta_medium_desc');
-            }
-
-            metabolicBadge.className = `metabolic-badge ${metaClass}`;
-            metabolicBadge.innerHTML = `
-                <div>
-                    <div>${metaTitle}</div>
-                    <small style="font-size: 13px; font-weight: normal;">${metaDesc}</small>
-                </div>
-                <div style="font-size: 13px; text-align: left; background: rgba(0,0,0,0.05); padding: 5px 10px; border-radius: 8px;">
-                    حمل الأنسولين التقديري: ~<strong>${meta.insulinLoad}</strong>
-                </div>
-            `;
-
-            // 4. اقتراح البدائل الصحية إذا كان المنتج عالي أو متوسط التأثير
-            const detectedCat = SmartSwapEngine.detectCategory(product);
-            if (meta.level === 'high' || meta.level === 'medium') {
-                const alternatives = SmartSwapEngine.findAlternatives(detectedCat, 3);
-                if (alternatives && alternatives.length > 0) {
-                    let altsHTML = `
-                        <div class="alternatives-container">
-                            <div class="alternatives-title">
-                                <i class="fas fa-heartbeat"></i> <strong>${t('alt_title')}</strong>
-                            </div>
-                    `;
-
-                    alternatives.forEach(alt => {
-                        const altName = (currentLang === 'en' && alt.nameEn) ? alt.nameEn : alt.name;
-                        altsHTML += `
-                            <a href="food-details.html?id=${alt.id}" class="alt-card" title="عرض تفاصيل ${altName}">
-                                <div>
-                                    <span style="font-size: 20px; margin-left: 8px;">${alt.icon || '🥗'}</span>
-                                    <strong>${altName}</strong>
-                                    <small style="color: var(--text-light); margin-right: 5px;">(${alt.category})</small>
-                                </div>
-                                <div class="alt-badge-group">
-                                    <span class="alt-pill alt-pill-gi">GI: ${alt.gi}</span>
-                                    <span class="alt-pill alt-pill-ii">II: ${alt.ii}</span>
-                                </div>
-                            </a>
-                        `;
-                    });
-
-                    altsHTML += `</div>`;
-                    altContainer.innerHTML = altsHTML;
-                } else {
-                    altContainer.innerHTML = '';
-                }
-            } else {
-                altContainer.innerHTML = '';
-            }
-
-            // 5. تظليل الكلمات في قائمة المكونات
-            let formattedIngredients = product.ingredients_text || product.ingredients_text_nl || product.ingredients_text_en || 'لم يتم تسجيل قائمة مكونات نصية لهذا المنتج.';
-            
-            porkKeywords.forEach(word => {
-                const regex = new RegExp(`(${word})`, 'gi');
-                formattedIngredients = formattedIngredients.replace(regex, '<span class="highlight-danger">$1</span>');
-            });
-
-            suspiciousKeywords.forEach(word => {
-                const regex = new RegExp(`(${word})`, 'gi');
-                formattedIngredients = formattedIngredients.replace(regex, '<span class="highlight-warning">$1</span>');
-            });
-
-            document.getElementById('ingredientsText').innerHTML = formattedIngredients;
-
-            card.style.display = 'block';
-            card.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function renderNotFound(barcode) {
-            const card = document.getElementById('resultCard');
-            const badge = document.getElementById('statusBadge');
-            const metabolicBadge = document.getElementById('metabolicBadge');
-            const altContainer = document.getElementById('smartAlternativesContainer');
-
-            badge.className = 'status-badge';
-            badge.style.background = '#e2e8f0';
-            badge.style.color = '#334155';
-            badge.style.borderRight = '6px solid #64748b';
-
-            badge.innerHTML = `
-                <i class="fas fa-question-circle" style="font-size: 32px;"></i>
-                <div>
-                    <div>${t('not_found_title')}</div>
-                    <small style="font-size: 13px; font-weight: normal;">${t('not_found_desc')} (Barcode: ${barcode})</small>
-                </div>
-            `;
-
-            metabolicBadge.className = 'metabolic-badge';
-            metabolicBadge.style.display = 'none';
-            altContainer.innerHTML = '';
-
-            document.getElementById('productTitle').textContent = 'منتج غير مسجل';
-            document.getElementById('productBrand').textContent = '';
-            document.getElementById('barcodeNumber').textContent = `Barcode: ${barcode}`;
-            document.getElementById('productImg').src = '/images/icon-192.png';
-            document.getElementById('ingredientsText').textContent = 'لا توجد مكونات مسجلة لهذا الباركود بعد.';
-
-            ['nutriCalories', 'nutriProtein', 'nutriCarbs', 'nutriSugars', 'nutriFat', 'nutriSalt'].forEach(id => {
-                document.getElementById(id).textContent = '-';
-            });
-
-            card.style.display = 'block';
-            card.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function resetScanner() {
-            document.getElementById('resultCard').style.display = 'none';
-            document.getElementById('manualBarcodeInput').value = '';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            const icon = document.querySelector('.theme-toggle i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('wibo_theme', 'dark');
-            } else {
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('wibo_theme', 'light');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('wibo_theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                const tIcon = document.querySelector('.theme-toggle i');
-                if (tIcon) tIcon.className = 'fas fa-sun';
-            }
-            switchLanguage(currentLang);
-        });
+        // تحويل جافاسكريبت سريع ومباشر
+        setTimeout(function() {
+            window.location.href = "boodi.html";
+        }, 1800);
     </script>
 
-    <!-- Mobile Menu JavaScript -->
-    <script src="js/mobile-menu.js"></script>
-    <!-- PWA Registration -->
-    <script src="js/pwa-register.js"></script>
 </body>
 </html>

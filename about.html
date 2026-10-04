@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="page_title_about">من نحن - WiBo Health</title>
-    <meta name="description" content="تعرف على WiBo Health - موقعك الصحي الفريد الذي يوفر المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، وحاسبات مجانية - دليلك الشامل للتغذية الصحية">
+    <meta name="description" content="تعرف على WiBo Health - المنصة الصحية السريرية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي لفحص الأطعمة والبدائل.">
     <link rel="canonical" href="https://wibohealth.com/about.html">
     
     <!-- Hreflang Tags for SEO -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html">
-
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -189,38 +188,46 @@
             color: var(--accent-color);
         }
 
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .feature-card {
-            background: rgba(46, 204, 113, 0.05);
+        /* Boodi App Feature Box */
+        .boodi-spotlight-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(46, 204, 113, 0.15) 100%);
+            border: 2px solid #2ecc71;
+            border-radius: 16px;
             padding: 25px;
-            border-radius: 15px;
-            border-left: 4px solid var(--primary-color);
-            transition: all 0.3s;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .feature-card:hover {
-            background: rgba(46, 204, 113, 0.15);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px var(--shadow);
+        .boodi-spotlight-text {
+            flex: 2;
+            min-width: 250px;
         }
 
-        .feature-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            font-size: 1.1em;
+        .boodi-spotlight-text h3 {
+            color: #2ecc71;
+            font-size: 1.4em;
+            margin-bottom: 8px;
         }
 
-        .feature-card p {
-            color: var(--text-light);
-            font-size: 0.95em;
-            line-height: 1.6;
+        .boodi-spotlight-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 800;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .boodi-spotlight-btn:hover {
+            transform: translateY(-2px);
         }
 
         /* Back Button */
@@ -280,14 +287,8 @@
             .about-container ul {
                 margin-right: 20px;
             }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
-    <!-- Unified Language System -->
-    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -327,36 +328,28 @@
         </button>
         
         <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
-            <i class="fas fa-home"></i>
-            الصفحة الرئيسية
+            <i class="fas fa-home"></i> الصفحة الرئيسية
         </a>
         <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
-            <i class="fas fa-utensils"></i>
-            دليل الأطعمة
+            <i class="fas fa-utensils"></i> دليل الأطعمة
         </a>
         <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
-            <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
+            <i class="fas fa-calculator"></i> الحاسبات الصحية
         </a>
         <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
-            <i class="fas fa-book-open"></i>
-            الوصفات الصحية
+            <i class="fas fa-book-open"></i> الوصفات الصحية
         </a>
         <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
-            <i class="fas fa-book-medical"></i>
-            المقالات الصحية
+            <i class="fas fa-book-medical"></i> المقالات الصحية
         </a>
-        <a href="doctor.html" class="mobile-nav-link" data-i18n="nav_doctor">
-            <i class="fas fa-user-md"></i>
-            د. وسيم حبيب
+        <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;">
+            <i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span>
         </a>
         <a href="about.html" class="mobile-nav-link" data-i18n="nav_about">
-            <i class="fas fa-info-circle"></i>
-            من نحن
+            <i class="fas fa-info-circle"></i> من نحن
         </a>
         <a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">
-            <i class="fas fa-envelope"></i>
-            اتصل بنا
+            <i class="fas fa-envelope"></i> اتصل بنا
         </a>
     </nav>
 
@@ -365,61 +358,73 @@
         <h1 data-i18n="about_title">💚 من نحن</h1>
         
         <p data-i18n="about_intro">
-            <strong>WiBo Health</strong> هي منصة صحية شاملة متخصصة في تقديم معلومات غذائية دقيقة وموثوقة 
-            لمساعدة الأشخاص على اتخاذ قرارات صحية أفضل في حياتهم اليومية.
+            <strong>WiBo Health Group</strong> هي منظومة صحية سريرية متخصصة في تقديم توجيه غذائي دقيق وموثوق، 
+            لمساعدة الأفراد على اتخاذ قرارات صحية واعية ومبنية على أحدث الأبحاث العلمية.
         </p>
 
         <!-- Vision Section -->
         <h2 data-i18n="about_vision_title">🎯 رؤيتنا</h2>
         <p data-i18n="about_vision_text">
-            نسعى لأن نكون المرجع الأول والأكثر موثوقية في العالم العربي لكل ما يتعلق بالمؤشر الجلايسيمي 
-            ومؤشر الأنسولين والتغذية الصحية المتوازنة.
+            نسعى لأن نكون المرجع الطبي والغذائي الأول والأكثر موثوقية في العالم العربي وأوروبا لكل ما يتعلق بالمؤشر الجلايسيمي، 
+            ومؤشر الأنسولين، وضبط المسار الأيضي، والتغذية السليمة المتوازنة.
         </p>
 
         <!-- Mission Section -->
         <h2 data-i18n="about_mission_title">✨ مهمتنا</h2>
         <p data-i18n="about_mission_text">
-            تقديم معلومات غذائية شاملة ودقيقة لأكثر من 500 عنصر غذائي، مع توفير أدوات حسابية مجانية 
-            ومقالات علمية موثوقة لمساعدة الجميع في رحلتهم نحو حياة صحية أفضل.
+            تمكين المجتمع من فهم فيزيولوجيا الغذاء وتأثيره الحقيقي على الهرمونات وسكر الدم، من خلال أدوات حسابية سريرية مجانية، 
+            ومقالات وبحوث دورية موثقة، وتطبيقات ذكية مخصصة للتسوق الصحي الآمن.
         </p>
+
+        <!-- Spotlight on Boodi App -->
+        <div class="boodi-spotlight-box">
+            <div class="boodi-spotlight-text">
+                <h3 data-i18n="about_boodi_spotlight_title">📱 تطبيق بودي (boodi 💚)</h3>
+                <p style="margin: 0; font-size: 0.95em;" data-i18n="about_boodi_spotlight_desc">
+                    الرفيق السريري الذكي في هاتفك لفحص باركود المنتجات، رصد الحلال والمكونات المشبوهة، وتحليل مؤشر السكر والإنسولين، واقتراح بدائل صحية ذكية من نفس الرف.
+                </p>
+            </div>
+            <a href="boodi.html" class="boodi-spotlight-btn">
+                <span data-i18n="about_boodi_btn">اكتشف التطبيق ⬅️</span>
+            </a>
+        </div>
 
         <!-- What We Offer Section -->
         <h2 data-i18n="about_services_title">📊 ما نقدمه</h2>
         <ul>
             <li>
-                <strong data-i18n="about_service_1_title">🍽️ 505 عنصر غذائي</strong>
-                <span data-i18n="about_service_1_desc"> مع معلومات كاملة</span>
+                <strong data-i18n="about_service_1_title">🍽️ قاعدة بيانات الأغذية</strong>
+                <span data-i18n="about_service_1_desc"> معلومات دقيقة حول المؤشر الجلايسيمي والإنسوليني</span>
             </li>
             <li>
-                <strong data-i18n="about_service_2_title">📰 مقالات صحية متخصصة</strong>
-                <span data-i18n="about_service_2_desc"> مكتوبة بعناية</span>
+                <strong data-i18n="about_service_2_title">📰 أبحاث ومقالات سريرية</strong>
+                <span data-i18n="about_service_2_desc"> مراجعة دورية لأحدث الدراسات الطبية</span>
             </li>
             <li>
                 <strong data-i18n="about_service_3_title">🧮 حاسبات طبية مجانية</strong>
-                <span data-i18n="about_service_3_desc"> (BMI, BMR, السعرات، الماء)</span>
+                <span data-i18n="about_service_3_desc"> (BMI, BMR, متتبع السعرات والماء)</span>
             </li>
             <li>
-                <strong data-i18n="about_service_4_title">📖 وصفات صحية</strong>
-                <span data-i18n="about_service_4_desc"> سهلة التحضير</span>
+                <strong data-i18n="about_service_4_title">📖 وصفات صحية علاجية</strong>
+                <span data-i18n="about_service_4_desc"> مصممة لدعم استقرار سكر الدم ونقاء الكبد</span>
             </li>
             <li>
-                <strong data-i18n="about_service_5_title">👨‍⚕️ استشارات طبية</strong>
-                <span data-i18n="about_service_5_desc"> مع د. وسيم حبيب</span>
+                <strong data-i18n="about_service_5_title">📱 تطبيق بودي الذكي (boodi)</strong>
+                <span data-i18n="about_service_5_desc"> ماسح الباركود وفحص الحلال والبدائل الفورية</span>
             </li>
         </ul>
 
         <!-- Team Section -->
         <h2 data-i18n="about_team_title">💚 فريق العمل</h2>
         <p data-i18n="about_team_text">
-            يقود المنصة <strong data-i18n="about_team_leader">د. وسيم حبيب (بودي)</strong>، الخبير في التغذية والصحة، 
-            مع فريق من المتخصصين الملتزمين بتقديم أفضل محتوى صحي ممكن.
+            يقود المنصة <strong data-i18n="about_team_leader">فريق WiBo Health الطبي والسريري</strong>، 
+            وهو فريق متخصص في التغذية السريرية وعلوم الأيض وهندسة الحلول الصحية الرقمية، ملتزم بتقديم أرقى المعايير الطبية الأوروبية لحماية صحة عائلتك.
         </p>
 
         <!-- Contact Section -->
         <h2 data-i18n="about_contact_title">📞 تواصل معنا</h2>
         <p data-i18n="about_contact_text">
-            نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية.
-            يمكنكم التواصل معنا عبر واتساب أو صفحة الاتصال.
+            نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية عبر البريد الرسمي المعتمد أو صفحة الاتصال.
         </p>
 
         <!-- Back Button -->
@@ -431,10 +436,8 @@
     </div>
 
     <script>
-        // ===== Language System =====
         let currentLang = localStorage.getItem('wibo_language') || 'ar';
 
-        // Complete translations for both languages
         const translations = {
             ar: {
                 page_title_about: "من نحن - WiBo Health",
@@ -443,31 +446,34 @@
                 nav_calculators: "الحاسبات الصحية",
                 nav_recipes: "الوصفات الصحية",
                 nav_articles: "المقالات الصحية",
-                nav_doctor: "د. وسيم حبيب",
+                nav_boodi_app: "تطبيق بودي 💚",
                 nav_about: "من نحن",
                 nav_contact: "اتصل بنا",
                 about_title: "💚 من نحن",
-                about_intro: "WiBo Health هي منصة صحية شاملة متخصصة في تقديم معلومات غذائية دقيقة وموثوقة لمساعدة الأشخاص على اتخاذ قرارات صحية أفضل في حياتهم اليومية.",
+                about_intro: "WiBo Health Group هي منظومة صحية سريرية متخصصة في تقديم توجيه غذائي دقيق وموثوق، لمساعدة الأفراد على اتخاذ قرارات صحية واعية ومبنية على أحدث الأبحاث العلمية.",
                 about_vision_title: "🎯 رؤيتنا",
-                about_vision_text: "نسعى لأن نكون المرجع الأول والأكثر موثوقية في العالم العربي لكل ما يتعلق بالمؤشر الجلايسيمي ومؤشر الأنسولين والتغذية الصحية المتوازنة.",
+                about_vision_text: "نسعى لأن نكون المرجع الطبي والغذائي الأول والأكثر موثوقية في العالم العربي وأوروبا لكل ما يتعلق بالمؤشر الجلايسيمي، ومؤشر الأنسولين، وضبط المسار الأيضي، والتغذية السليمة المتوازنة.",
                 about_mission_title: "✨ مهمتنا",
-                about_mission_text: "تقديم معلومات غذائية شاملة ودقيقة لأكثر من 500 عنصر غذائي، مع توفير أدوات حسابية مجانية ومقالات علمية موثوقة لمساعدة الجميع في رحلتهم نحو حياة صحية أفضل.",
+                about_mission_text: "تمكين المجتمع من فهم فيزيولوجيا الغذاء وتأثيره الحقيقي على الهرمونات وسكر الدم، من خلال أدوات حسابية سريرية مجانية، ومقالات وبحوث دورية موثقة، وتطبيقات ذكية مخصصة للتسوق الصحي الآمن.",
+                about_boodi_spotlight_title: "📱 تطبيق بودي (boodi 💚)",
+                about_boodi_spotlight_desc: "الرفيق السريري الذكي في هاتفك لفحص باركود المنتجات، رصد الحلال والمكونات المشبوهة، وتحليل مؤشر السكر والإنسولين، واقتراح بدائل صحية ذكية من نفس الرف.",
+                about_boodi_btn: "اكتشف التطبيق ⬅️",
                 about_services_title: "📊 ما نقدمه",
-                about_service_1_title: "🍽️ 505 عنصر غذائي",
-                about_service_1_desc: " مع معلومات كاملة",
-                about_service_2_title: "📰 مقالات صحية متخصصة",
-                about_service_2_desc: " مكتوبة بعناية",
+                about_service_1_title: "🍽️ قاعدة بيانات الأغذية",
+                about_service_1_desc: " معلومات دقيقة حول المؤشر الجلايسيمي والإنسوليني",
+                about_service_2_title: "📰 أبحاث ومقالات سريرية",
+                about_service_2_desc: " مراجعة دورية لأحدث الدراسات الطبية",
                 about_service_3_title: "🧮 حاسبات طبية مجانية",
-                about_service_3_desc: " (BMI, BMR, السعرات، الماء)",
-                about_service_4_title: "📖 وصفات صحية",
-                about_service_4_desc: " سهلة التحضير",
-                about_service_5_title: "👨‍⚕️ استشارات طبية",
-                about_service_5_desc: " مع د. وسيم حبيب",
+                about_service_3_desc: " (BMI, BMR, متتبع السعرات والماء)",
+                about_service_4_title: "📖 وصفات صحية علاجية",
+                about_service_4_desc: " مصممة لدعم استقرار سكر الدم ونقاء الكبد",
+                about_service_5_title: "📱 تطبيق بودي الذكي (boodi)",
+                about_service_5_desc: " ماسح الباركود وفحص الحلال والبدائل الفورية",
                 about_team_title: "💚 فريق العمل",
-                about_team_text: "يقود المنصة د. وسيم حبيب (بودي)، الخبير في التغذية والصحة، مع فريق من المتخصصين الملتزمين بتقديم أفضل محتوى صحي ممكن.",
-                about_team_leader: "د. وسيم حبيب (بودي)",
+                about_team_text: "يقود المنصة فريق WiBo Health الطبي والسريري، وهو فريق متخصص في التغذية السريرية وعلوم الأيض وهندسة الحلول الصحية الرقمية، ملتزم بتقديم أرقى المعايير الطبية الأوروبية لحماية صحة عائلتك.",
+                about_team_leader: "فريق WiBo Health الطبي والسريري",
                 about_contact_title: "📞 تواصل معنا",
-                about_contact_text: "نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية. يمكنكم التواصل معنا عبر واتساب أو صفحة الاتصال.",
+                about_contact_text: "نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية عبر البريد الرسمي المعتمد أو صفحة الاتصال.",
                 about_back_home: "العودة للرئيسية"
             },
             en: {
@@ -477,41 +483,42 @@
                 nav_calculators: "Health Calculators",
                 nav_recipes: "Healthy Recipes",
                 nav_articles: "Health Articles",
-                nav_doctor: "Dr. Waseem Habib",
+                nav_boodi_app: "boodi App 💚",
                 nav_about: "About Us",
                 nav_contact: "Contact Us",
                 about_title: "💚 About Us",
-                about_intro: "WiBo Health is a comprehensive health platform specialized in providing accurate and reliable nutritional information to help people make better health decisions in their daily lives.",
+                about_intro: "WiBo Health Group is a specialized clinical health organization dedicated to providing evidence-based nutritional guidance to empower conscious metabolic decisions.",
                 about_vision_title: "🎯 Our Vision",
-                about_vision_text: "We aspire to be the first and most trusted reference in the Arab world for everything related to the Glycemic Index, Insulin Index, and balanced healthy nutrition.",
+                about_vision_text: "To serve as the primary and most trustworthy medical reference in the Arab world and Europe for Glycemic Index, Insulin Index, and metabolic health.",
                 about_mission_title: "✨ Our Mission",
-                about_mission_text: "To provide comprehensive and accurate nutritional information for over 500 food items, along with free calculation tools and reliable scientific articles to help everyone on their journey to a better healthy life.",
+                about_mission_text: "Empowering communities to understand food physiology and hormonal health through validated clinical calculators, evidence-based research articles, and smart dietary applications.",
+                about_boodi_spotlight_title: "📱 boodi 💚 Smart App",
+                about_boodi_spotlight_desc: "Your smart clinical shopping companion for instant barcode scanning, Halal & additive verification, glycemic response tracking, and same-shelf healthy alternatives.",
+                about_boodi_btn: "Explore boodi App ➡️",
                 about_services_title: "📊 What We Offer",
-                about_service_1_title: "🍽️ 505 Food Items",
-                about_service_1_desc: " with complete information",
-                about_service_2_title: "📰 Specialized Health Articles",
-                about_service_2_desc: " carefully written",
-                about_service_3_title: "🧮 Free Medical Calculators",
-                about_service_3_desc: " (BMI, BMR, Calories, Water)",
-                about_service_4_title: "📖 Healthy Recipes",
-                about_service_4_desc: " easy to prepare",
-                about_service_5_title: "👨‍⚕️ Medical Consultations",
-                about_service_5_desc: " with Dr. Waseem Habib",
+                about_service_1_title: "🍽️ Comprehensive Food Database",
+                about_service_1_desc: " precise Glycemic & Insulin Index metrics",
+                about_service_2_title: "📰 Clinical Research Articles",
+                about_service_2_desc: " continuous evidence-based reviews",
+                about_service_3_title: "🧮 Free Clinical Calculators",
+                about_service_3_desc: " (BMI, BMR, Calorie and Hydration Trackers)",
+                about_service_4_title: "📖 Therapeutic Recipes",
+                about_service_4_desc: " crafted for glycemic stability and hepatic health",
+                about_service_5_title: "📱 boodi Smart Food Scanner",
+                about_service_5_desc: " real-time barcode, Halal, and alternative recommendations",
                 about_team_title: "💚 Our Team",
-                about_team_text: "The platform is led by Dr. Waseem Habib (Boody), an expert in nutrition and health, with a team of specialists committed to providing the best possible health content.",
-                about_team_leader: "Dr. Waseem Habib (Boody)",
+                about_team_text: "The platform is led by the WiBo Health Medical & Clinical Team, specializing in metabolic sciences, clinical nutrition, and digital health engineering adhering to European healthcare standards.",
+                about_team_leader: "WiBo Health Medical & Clinical Team",
                 about_contact_title: "📞 Contact Us",
-                about_contact_text: "We are always here to answer your questions and help you on your health journey. You can contact us via WhatsApp or our contact page.",
+                about_contact_text: "We are always here to support your metabolic journey through our official support channel or contact page.",
                 about_back_home: "Back to Home"
             }
         };
 
-        // Translation function
         function t(key) {
             return translations[currentLang]?.[key] || translations['ar'][key] || key;
         }
 
-        // Change language
         function changeLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('wibo_language', lang);
@@ -520,27 +527,20 @@
             updatePageLanguage();
         }
 
-        // Update page language
         function updatePageLanguage() {
-            // Update title
             document.title = t('page_title_about');
-
-            // Update language button
             document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
-
-            // Update all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 const text = t(key);
                 if (element.tagName === 'TITLE') {
                     document.title = text;
                 } else {
-                    element.textContent = text;
+                    element.innerHTML = text;
                 }
             });
         }
 
-        // Theme toggle
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
@@ -554,7 +554,6 @@
             themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
         }
 
-        // Initialize theme
         function initializeTheme() {
             const isDarkMode = localStorage.getItem('darkMode') === 'true';
             if (isDarkMode) {
@@ -563,46 +562,41 @@
             updateThemeIcon();
         }
 
-        // Initialize language
         function initializeLanguage() {
             currentLang = localStorage.getItem('wibo_language') || 'ar';
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            
-            // Apply translations immediately on page load
             updatePageLanguage();
         }
 
-        // Initialize on page load
         window.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
             initializeLanguage();
-            updatePageLanguage();
         });
 
-        // Auto-hide Header on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
         const scrollThreshold = 150;
 
         window.addEventListener('scroll', function() {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
             if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
                 header.classList.add('hide-nav');
             } else if (currentScroll < lastScrollTop) {
                 header.classList.remove('hide-nav');
             }
-            
             if (currentScroll <= 0) {
                 header.classList.remove('hide-nav');
             }
-            
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
-    </script>
 
-    <!-- Mobile Menu JavaScript -->
-    <script src="js/mobile-menu.js"></script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO & App Discovery Tags -->
+    <title data-i18n="meta_title">تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health</title>
+    <meta name="description" content="حمّل تطبيق بودي boodi الرسمي من WiBo Health Group: ماسح الباركود السريري الذكي لفحص الحلال، المؤشر الجلايسيمي، واكتشاف البدائل الصحية الأقل سكراً من نفس المتجر.">
+    <meta name="keywords" content="تطبيق بودي, boodi, boodi app, ماسح باركود, فحص حلال, المؤشر الجلايسيمي, ويبو هيلث, WiBo Health, بدائل صحية, دايت, سكري">
+    <meta name="author" content="WiBo Health Group">
+    <link rel="canonical" href="https://wibohealth.com/boodi.html">
+
+    <!-- Google Structured Data (SoftwareApplication Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "boodi",
+      "operatingSystem": "Android",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "WiBo Health Group"
+      },
+      "description": "تطبيق التوجيه الغذائي السريري الذكي لفحص الباركود، رصد الحلال، وتقديم بدائل ذكية للمحافظة على سكر الدم واستقرار الإنسولين."
+    }
+    </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #09122c 0%, #162447 100%);
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --primary-emerald: #10b981;
+            --primary-teal: #059669;
+            --accent-gold: #f59e0b;
+            --box-bg: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #070d1e 0%, #0d1b2a 100%);
+            --header-bg: #0d1b2a;
+            --card-bg: #132238;
+            --text-dark: #ffffff;
+            --text-light: #94a3b8;
+            --primary-emerald: #10b981;
+            --primary-teal: #2dd4bf;
+            --accent-gold: #fbbf24;
+            --box-bg: rgba(255, 255, 255, 0.04);
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+
+        /* Header Navigation */
+        .site-header {
+            background: var(--header-bg);
+            padding: 16px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lang-btn {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn.active {
+            background: #2ecc71;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(20deg);
+            background: #2ecc71;
+            color: white;
+        }
+
+        .nav-back-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 9px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .nav-back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5);
+        }
+
+        /* Hero Showcase Section */
+        .hero-showcase {
+            max-width: 1100px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-poster-box {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-poster-img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.2);
+            border: 3px solid rgba(16, 185, 129, 0.4);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-poster-img:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .app-badge-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 8px 18px;
+            border-radius: 40px;
+            width: fit-content;
+        }
+
+        .app-logo-mini {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #10b981;
+        }
+
+        .app-badge-text {
+            color: #10b981;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .app-main-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.25;
+            color: #ffffff;
+        }
+
+        .app-main-title span {
+            background: linear-gradient(135deg, #10b981, #6ee7b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .app-description {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .cta-download-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .btn-google-play {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+            border: 2px solid #6ee7b7;
+            transition: all 0.3s ease;
+        }
+
+        .btn-google-play:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.6);
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+
+        .btn-direct-apk {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-direct-apk:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features-container {
+            max-width: 1100px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: #10b981;
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+        }
+
+        .feature-icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Banner Box */
+        .smart-banner-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.2) 100%);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .smart-banner-text {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .smart-banner-text h3 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .smart-banner-text p {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #2ecc71;
+        }
+
+        @media (max-width: 900px) {
+            .hero-showcase {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content {
+                align-items: center;
+            }
+            .app-main-title {
+                font-size: 2.2rem;
+            }
+            .cta-download-box {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #2ecc71;"></i>
+                <h1>WiBo Health</h1>
+            </a>
+            <div class="header-controls">
+                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="index.html" class="nav-back-btn">
+                    <i class="fa-solid fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="nav_back_home">العودة للرئيسية</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <main>
+        <section class="hero-showcase">
+            <!-- Left: Poster Display -->
+            <div class="hero-poster-box">
+                <img src="images/boodi-app-poster.jpeg" alt="تطبيق بودي الرسمي - WiBo Health Group" class="hero-poster-img" loading="lazy">
+            </div>
+
+            <!-- Right: App Introduction & CTAs -->
+            <div class="hero-content">
+                <div class="app-badge-box">
+                    <img src="images/boodi-app-logo.jpeg" alt="شعار تطبيق بودي" class="app-logo-mini">
+                    <span class="app-badge-text" data-i18n="badge_official">تطبيق التوجيه الغذائي والسريري الذكي</span>
+                </div>
+
+                <h1 class="app-main-title" data-i18n="hero_title">
+                    تطبيق <span>بودي 💚 (boodi)</span><br>
+                    رفيقك الصحي للتسوق الذكي
+                </h1>
+
+                <p class="app-description" data-i18n="hero_desc">
+                    ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص مشتقات الخنزير والشبهات بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.
+                </p>
+
+                <div class="cta-download-box">
+                    <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" class="btn-google-play">
+                        <i class="fa-brands fa-google-play" style="font-size: 22px;"></i>
+                        'btn_google_play': 'قريباً على Google Play (ترقبوا الإطلاق 🚀)',
+                    </a>
+                    <a href="privacy.html" class="btn-direct-apk">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span data-i18n="btn_privacy_badge">أمان وخصوصية أوروبية 100%</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Showcase Section -->
+        <section class="features-container">
+            <div class="section-header">
+                <h2 data-i18n="features_heading">لماذا تطبيق بودي هو خيارك الأذكى؟</h2>
+                <p data-i18n="features_subheading">ذكاء سريري متطور صُمم لحماية صحتك وصحة عائلتك</p>
+            </div>
+
+            <div class="features-grid">
+                
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-barcode"></i>
+                    </div>
+                    <h3 data-i18n="feat_1_title">ماسح باركود ذكي ولحظي</h3>
+                    <p data-i18n="feat_1_desc">
+                        قراءة فورية لبيانات الأغذية الدولية عبر أكبر قواعد البيانات العالمية، مع تفكيك دقيق للقيم الغذائية والسكريات الخفية في ثوانٍ معدودة.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <h3 data-i18n="feat_2_title">فحص الحلال والمكونات المشبوهة</h3>
+                    <p data-i18n="feat_2_desc">
+                        تحليل مخبري دقيق لرموز (E-Numbers) ومشتقات الجيلاتين الحيواني والدهون الخنزيرية والكحول المستتر لتتسوق باطمئنان وراحة بال تامة.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="feat_3_title">المؤشر الجلايسيمي وحمل الإنسولين</h3>
+                    <p data-i18n="feat_3_desc">
+                        أداة حيوية لمرضى السكري والمهتمين بالرشاقة لمعرفة سرعة تحول الطعام إلى سكر في مجرى الدم وحجم إفراز البنكرياس للإنسولين.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                    </div>
+                    <h3 data-i18n="feat_4_title">محرك البدائل الصحية المتطابق</h3>
+                    <p data-i18n="feat_4_desc">
+                        خوارزمية ذكية لا تقترح بدائل عشوائية؛ إذا مسحت صنفاً عالي السكر، يقترح لك فوراً بديلاً صحياً من نفس الرف والتصنيف بمعدل سكر أقل!
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Smart Banner Box -->
+            <div class="smart-banner-card">
+                <div class="smart-banner-text">
+                    <h3 data-i18n="banner_title">خصوصية كاملة وامتثال للمعايير الأوروبية</h3>
+                    <p data-i18n="banner_desc">
+                        تطبيق بودي يلتزم بأعلى معايير حماية البيانات الأوروبية (GDPR)؛ لا نسجل بياناتك الحساسة، وسجل مسحاتك محفوظ بأمان محلياً على هاتفك فقط.
+                    </p>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" class="btn-google-play">
+                    <i class="fa-solid fa-download"></i>
+                    <span data-i18n="btn_install_now">تثبيت التطبيق مجاناً</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة | تطبيق بودي 💚</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+    </footer>
+
+    <!-- Translations & Theme Engine -->
+    <script>
+        const translations = {
+            ar: {
+                'meta_title': 'تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health',
+                'nav_back_home': 'العودة للرئيسية',
+                'badge_official': 'تطبيق التوجيه الغذائي والسريري الذكي',
+                'hero_title': 'تطبيق <span>بودي 💚 (boodi)</span><br>رفيقك الصحي للتسوق الذكي',
+                'hero_desc': 'ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص مشتقات الخنزير والشبهات بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.',
+                'btn_google_play': 'تحميل من Google Play',
+                'btn_privacy_badge': 'أمان وخصوصية أوروبية 100%',
+                'features_heading': 'لماذا تطبيق بودي هو خيارك الأذكى؟',
+                'features_subheading': 'ذكاء سريري متطور صُمم لحماية صحتك وصحة عائلتك',
+                'feat_1_title': 'ماسح باركود ذكي ولحظي',
+                'feat_1_desc': 'قراءة فورية لبيانات الأغذية الدولية عبر أكبر قواعد البيانات العالمية، مع تفكيك دقيق للقيم الغذائية والسكريات الخفية في ثوانٍ معدودة.',
+                'feat_2_title': 'فحص الحلال والمكونات المشبوهة',
+                'feat_2_desc': 'تحليل مخبري دقيق لرموز (E-Numbers) ومشتقات الجيلاتين الحيواني والدهون الخنزيرية والكحول المستتر لتتسوق باطمئنان وراحة بال تامة.',
+                'feat_3_title': 'المؤشر الجلايسيمي وحمل الإنسولين',
+                'feat_3_desc': 'أداة حيوية لمرضى السكري والمهتمين بالرشاقة لمعرفة سرعة تحول الطعام إلى سكر في مجرى الدم وحجم إفراز البنكرياس للإنسولين.',
+                'feat_4_title': 'محرك البدائل الصحية المتطابق',
+                'feat_4_desc': 'خوارزمية ذكية لا تقترح بدائل عشوائية؛ إذا مسحت صنفاً عالي السكر، يقترح لك فوراً بديلاً صحياً من نفس الرف والتصنيف بمعدل سكر أقل!',
+                'banner_title': 'خصوصية كاملة وامتثال للمعايير الأوروبية',
+                'banner_desc': 'تطبيق بودي يلتزم بأعلى معايير حماية البيانات الأوروبية (GDPR)؛ لا نسجل بياناتك الحساسة، وسجل مسحاتك محفوظ بأمان محلياً على هاتفك فقط.',
+                'btn_install_now': 'تثبيت التطبيق مجاناً',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2026 WiBo Health Group. جميع الحقوق محفوظة | تطبيق بودي 💚'
+            },
+            en: {
+                'meta_title': 'boodi App | Smart Health & Food Scanner Companion | WiBo Health',
+                'nav_back_home': 'Back to Home',
+                'badge_official': 'Clinical & Smart Dietary Guidance App',
+                'hero_title': 'Meet <span>boodi 💚 App</span><br>Your Smart Shopping Health Companion',
+                'hero_desc': 'No more supermarket dilemmas! Scan any barcode instantly and let boodi reveal true nutritional facts, glycemic speed, insulin index impact, strict halal and pork-derivative screening, and intelligent healthier alternatives from the exact same shelf.',
+                'btn_google_play': 'Coming Soon to Google Play 🚀',
+                'btn_privacy_badge': '100% EU GDPR Privacy Standard',
+                'features_heading': 'Why is boodi Your Smartest Choice?',
+                'features_subheading': 'Advanced clinical intelligence engineered to safeguard you and your family',
+                'feat_1_title': 'Instant Smart Barcode Scanning',
+                'feat_1_desc': 'Real-time global food data scanning connected to leading international databases, deconstructing calories and hidden sugars within seconds.',
+                'feat_2_title': 'Halal & Additive Verification',
+                'feat_2_desc': 'Screening of food additives (E-Numbers), animal gelatin, hidden pork derivatives, and concealed alcohol so you shop with absolute peace of mind.',
+                'feat_3_title': 'Glycemic Index & Insulin Response',
+                'feat_3_desc': 'Vital tool for diabetes management and metabolic health, visualizing how rapidly foods spike blood glucose and insulin demand.',
+                'feat_4_title': 'Same-Category Smart Alternatives',
+                'feat_4_desc': 'No random suggestions! If you scan a high-sugar item, boodi recommends a healthier lower-sugar alternative strictly within the same grocery category.',
+                'banner_title': 'Strict European Privacy & MDR Compliance',
+                'banner_desc': 'boodi operates in full compliance with European GDPR standards; we never store your private health data remotely—your scan history stays on your phone only.',
+                'btn_install_now': 'Install boodi Free',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2026 WiBo Health Group. All rights reserved | boodi 💚'
+            }
+        };
+
+        function detectInitialLang() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+            if (saved && (saved === 'ar' || saved === 'en')) {
+                return saved;
+            }
+            const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            return phoneLang.startsWith('ar') ? 'ar' : 'en';
+        }
+
+        let currentLang = detectInitialLang();
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) {
+                backIcon.className = lang === 'ar' ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left';
+            }
+
+            updatePageLanguage();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            if (translations[currentLang] && translations[currentLang]['meta_title']) {
+                document.title = translations[currentLang]['meta_title'];
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
+            changeLanguage(currentLang);
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                if (icon) icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                if (icon) icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>
