@@ -102,6 +102,14 @@
         'card_title_fatty_liver': 'الكبد الدهني الخفي والفركتوز',
         'card_desc_fatty_liver': 'كيف يحوّل الكبد السكر السائل إلى دهون حشوية؟ وخطة التعافي السريرية لخفض إنزيمات الكبد وعكس التشحم.',
         'card_btn_fatty_liver': 'اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i>',
+        'card_badge_cortisol': 'دليل هرموني 🩺',
+                'card_title_cortisol': 'الكورتيزول والكرش العصبي',
+                'card_desc_cortisol': 'لغز هرمون التوتر وعلاقته المباشرة بثبات الوزن وتراكم دهون البطن، والفرق بينه وبين دواء الكورتيزون.',
+                'card_btn_cortisol': 'اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i>',
+                'card_badge_magnesium': 'دليل المكملات 💊',
+             'card_title_magnesium': 'أنواع المغنيسيوم واختيار الأنسب',
+             'card_desc_magnesium': 'محتار أي مغنيسيوم تشتري؟ دليلك لاختيار النوع الصح للنوم، العضلات، أو التوتر، وتجنب فخ الأنواع الرديئة.',
+             'card_btn_magnesium': 'اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i>',
                 'stat_recipes': 'وصفة صحية',
                 'stat_articles': 'مقالة متخصصة',
                 'stat_supplements': 'مكمل غذائي',
@@ -173,6 +181,14 @@
         'card_title_fatty_liver': 'Silent Fatty Liver & Fructose',
         'card_desc_fatty_liver': 'How the liver turns liquid sugars into visceral fat, and the clinical roadmap to reversing steatosis.',
         'card_btn_fatty_liver': 'Click to Read Full Article <i class="fa-solid fa-arrow-right"></i>',
+        'card_badge_cortisol': 'Hormonal Guide 🩺',
+                'card_title_cortisol': 'Cortisol & Stress Belly',
+                'card_desc_cortisol': 'The stress hormone mystery, stubborn weight plateaus, visceral fat, and how it differs from medicinal cortisone.',
+                'card_btn_cortisol': 'Click to Read Full Article <i class="fa-solid fa-arrow-right"></i>',
+                'card_badge_magnesium': 'Supplements Guide 💊',
+             'card_title_magnesium': 'Magnesium Types & Best Choice',
+             'card_desc_magnesium': 'Confused about which magnesium to buy? Your guide to choosing the right form for sleep, muscles, or stress, and avoiding low-grade traps.',
+             'card_btn_magnesium': 'Click to Read Full Article <i class="fa-solid fa-arrow-right"></i>',
                 'stat_recipes': 'Recipes',
                 'stat_articles': 'Articles',
                 'stat_supplements': 'Supplements',
@@ -1358,18 +1374,31 @@
                     </div>
                 </a>
 
-                <!-- المربع الثالث -->
-                <div class="stat-box">
-                    <span class="stat-number" id="article-count">19</span>
-                    <span class="stat-label" data-i18n="stat_articles">مقالة متخصصة</span>
-                </div>
-
-                <!-- المربع الرابع -->
-                <div class="stat-box">
-                    <span class="stat-number" id="supplement-count">426</span>
-                    <span class="stat-label" data-i18n="stat_supplements">مكمل غذائي</span>
-                </div>
+                <!-- المربع الثالث: تحول إلى نافذة لمقال الكورتيزول والكرش العصبي -->
+        <a href="cortisol-stress.html" class="stat-box article-stat-box">
+            <div class="stat-article-badge" data-i18n="card_badge_cortisol">دليل هرموني 🩺</div>
+            <div class="stat-thumb-container">
+                <img src="images/cortisol-lifestyle.jpeg" alt="الكورتيزول والكرش العصبي" class="stat-article-img" loading="lazy">
             </div>
+            <div class="stat-article-details">
+                <h4 data-i18n="card_title_cortisol">الكورتيزول والكرش العصبي</h4>
+                <p data-i18n="card_desc_cortisol">لغز هرمون التوتر وعلاقته المباشرة بثبات الوزن وتراكم دهون البطن، والفرق بينه وبين دواء الكورتيزون.</p>
+                <span class="stat-read-more" data-i18n="card_btn_cortisol">اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+        </a>
+
+               <!-- المربع الرابع: تحول إلى نافذة لمقال أنواع المغنيسيوم -->
+        <a href="magnesium-types.html" class="stat-box article-stat-box">
+            <div class="stat-article-badge" data-i18n="card_badge_magnesium">دليل المكملات 💊</div>
+            <div class="stat-thumb-container">
+                <img src="images/magnesium-lifestyle.jpeg" alt="دليل أنواع المغنيسيوم" class="stat-article-img" loading="lazy">
+            </div>
+            <div class="stat-article-details">
+                <h4 data-i18n="card_title_magnesium">أنواع المغنيسيوم واختيار الأنسب</h4>
+                <p data-i18n="card_desc_magnesium">محتار أي مغنيسيوم تشتري؟ دليلك لاختيار النوع الصح للنوم، العضلات، أو التوتر، وتجنب فخ الأنواع الرديئة.</p>
+                <span class="stat-read-more" data-i18n="card_btn_magnesium">اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i></span>
+            </div>
+        </a>
 
             <div class="cta-buttons">
                 <a href="scanner.html" class="cta-btn" style="background: #10b981; color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">ماسح الباركود</span></a>

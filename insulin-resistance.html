@@ -99,7 +99,7 @@
             gap: 12px;
         }
 
-        /* Language and Theme Buttons matching index.html */
+        /* Language and Theme Buttons */
         .lang-btn {
             width: 44px;
             height: 44px;
@@ -297,41 +297,7 @@
             font-weight: 600;
         }
 
-        /* Table Styling */
-        .table-responsive {
-            overflow-x: auto;
-            margin: 25px 0;
-        }
-
-        .medical-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--box-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--table-border);
-        }
-
-        .medical-table th {
-            background: var(--table-header);
-            color: var(--text-dark);
-            padding: 14px;
-            font-weight: 800;
-            text-align: right;
-            border-bottom: 2px solid var(--table-border);
-        }
-
-        [dir="ltr"] .medical-table th {
-            text-align: left;
-        }
-
-        .medical-table td {
-            padding: 14px;
-            border-bottom: 1px solid var(--table-border);
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
+        /* Mobile-Friendly Status Badges */
         .status-badge {
             padding: 5px 12px;
             border-radius: 14px;
@@ -521,33 +487,43 @@
             </div>
 
             <h2 data-i18n="h2_readings">دلالات أرقام فحص السكر التراكمي</h2>
-            <div class="table-responsive">
-                <table class="medical-table">
-                    <thead>
-                        <tr>
-                            <th data-i18n="th_condition">الحالة الطبية</th>
-                            <th data-i18n="th_percentage">نسبة التراكمي (HbA1c)</th>
-                            <th data-i18n="th_interpretation">التفسير السريري</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="status-badge status-safe" data-i18n="status_normal">طبيعي (سليم)</span></td>
-                            <td><strong data-i18n="val_normal">أقل من 5.7%</strong></td>
-                            <td data-i18n="desc_normal">الخلايا تستجيب للإنسولين بشكل ممتاز، والتمثيل الغذائي صحي.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="status-badge status-warning" data-i18n="status_prediabetes">مرحلة ما قبل السكري</span></td>
-                            <td><strong data-i18n="val_prediabetes">5.7% إلى 6.4%</strong></td>
-                            <td data-i18n="desc_prediabetes">جرس إنذار مبكر. هناك مقاومة للإنسولين، والبنكرياس يجهد لخفض السكر.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="status-badge status-danger" data-i18n="status_diabetes">مرض السكري</span></td>
-                            <td><strong data-i18n="val_diabetes">6.5% فأكثر</strong></td>
-                            <td data-i18n="desc_diabetes">البنكرياس لم يعد قادراً على التغلب على مقاومة الخلايا، والسكر يتراكم بالدم.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <!-- بطاقات مستويات التراكمي البديلة عن الجداول (متوافقة 100% مع الموبايل واللغتين) -->
+            <div style="display: flex; flex-direction: column; gap: 15px; margin: 25px 0;">
+                
+                <!-- المستوى الطبيعي -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #10b981; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-safe" data-i18n="status_normal">طبيعي (سليم)</span>
+                        <strong style="color: #10b981; font-size: 16px;" data-i18n="val_normal">أقل من 5.7%</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="desc_normal">
+                        الخلايا تستجيب للإنسولين بشكل ممتاز، والتمثيل الغذائي صحي.
+                    </p>
+                </div>
+
+                <!-- مرحلة ما قبل السكري -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #f59e0b; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-warning" data-i18n="status_prediabetes">مرحلة ما قبل السكري</span>
+                        <strong style="color: #d97706; font-size: 16px;" data-i18n="val_prediabetes">5.7% إلى 6.4%</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="desc_prediabetes">
+                        جرس إنذار مبكر. هناك مقاومة للإنسولين، والبنكرياس يجهد لخفض السكر.
+                    </p>
+                </div>
+
+                <!-- مرحلة السكري -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #ef4444; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-danger" data-i18n="status_diabetes">مرض السكري</span>
+                        <strong style="color: #ef4444; font-size: 16px;" data-i18n="val_diabetes">6.5% فأكثر</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="desc_diabetes">
+                        البنكرياس لم يعد قادراً على التغلب على مقاومة الخلايا، والسكر يتراكم بالدم.
+                    </p>
+                </div>
+
             </div>
 
             <h2 data-i18n="h2_culprit">مقاومة الإنسولين: الجاني الخفي وراء ارتفاع التراكمي</h2>
@@ -671,9 +647,6 @@
                 'desc_hba1c_2': 'ونظراً لأن دورة حياة خلية الدم الحمراء تقارب 120 يوماً، فإن قياس نسبة الهيموجلوبين "المُسكّر" يعطينا صورة دقيقة وطويلة الأمد عن حالة التحكم في سكر الدم، على عكس فحص السكر الصائم الذي يعكس حالة لحظية قد تتأثر بوجبة البارحة أو حتى التوتر.',
                 'img_caption_chart': 'مخطط مستويات السكر التراكمي ومخاطر الإصابة بالسكري',
                 'h2_readings': 'دلالات أرقام فحص السكر التراكمي',
-                'th_condition': 'الحالة الطبية',
-                'th_percentage': 'نسبة التراكمي (HbA1c)',
-                'th_interpretation': 'التفسير السريري',
                 'status_normal': 'طبيعي (سليم)',
                 'val_normal': 'أقل من 5.7%',
                 'desc_normal': 'الخلايا تستجيب للإنسولين بشكل ممتاز، والتمثيل الغذائي صحي.',
@@ -733,9 +706,6 @@
                 'desc_hba1c_2': 'Since red blood cells have an average lifespan of about 120 days, measuring this "glycated hemoglobin" provides an accurate, long-term picture of glycemic control—unlike fasting glucose, which reflects a momentary snapshot easily influenced by yesterday’s dinner or stress.',
                 'img_caption_chart': 'HbA1c Levels Chart and Progression Risks to Diabetes',
                 'h2_readings': 'Clinical Interpretation of HbA1c Test Values',
-                'th_condition': 'Clinical Status',
-                'th_percentage': 'HbA1c Range',
-                'th_interpretation': 'Clinical Interpretation',
                 'status_normal': 'Normal (Healthy)',
                 'val_normal': 'Below 5.7%',
                 'desc_normal': 'Optimal cellular insulin sensitivity and healthy glucose metabolism.',
@@ -831,7 +801,7 @@
             }
         }
 
-        /* Dark / Light Mode Engine identical to index.html */
+        /* Dark / Light Mode Engine */
         window.addEventListener('DOMContentLoaded', function() {
             const savedTheme = localStorage.getItem('wibo_theme');
             if (savedTheme === 'dark') {

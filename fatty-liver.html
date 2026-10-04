@@ -350,40 +350,6 @@
             font-weight: 600;
         }
 
-        .table-responsive {
-            overflow-x: auto;
-            margin: 25px 0;
-        }
-
-        .medical-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--box-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--table-border);
-        }
-
-        .medical-table th {
-            background: var(--table-header);
-            color: var(--text-dark);
-            padding: 14px;
-            font-weight: 800;
-            text-align: right;
-            border-bottom: 2px solid var(--table-border);
-        }
-
-        [dir="ltr"] .medical-table th {
-            text-align: left;
-        }
-
-        .medical-table td {
-            padding: 14px;
-            border-bottom: 1px solid var(--table-border);
-            color: var(--text-dark);
-            font-size: 15px;
-        }
-
         .status-badge {
             padding: 5px 12px;
             border-radius: 14px;
@@ -578,33 +544,43 @@
             </p>
 
             <h2 data-i18n="h2_stages">المراحل السريرية لتطور الكبد الدهني</h2>
-            <div class="table-responsive">
-                <table class="medical-table">
-                    <thead>
-                        <tr>
-                            <th data-i18n="th_stage">المرحلة السريرية</th>
-                            <th data-i18n="th_findings">الوصف النسيجي والمخبري</th>
-                            <th data-i18n="th_prognosis">قابلية الشفاء والعكس</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><span class="status-badge status-safe" data-i18n="stage_1_title">تشحم الكبد البسيط (Steatosis)</span></td>
-                            <td data-i18n="stage_1_desc">تراكم قطرات الدهون بنسبة تفوق 5% من وزن الكبد، دون وجود التهاب أو أضرار نسيجية.</td>
-                            <td data-i18n="stage_1_prog">قابلة للعكس والشفاء التام 100% بتعديل الغذاء.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="status-badge status-warning" data-i18n="stage_2_title">التهاب الكبد الدهني (MASH / NASH)</span></td>
-                            <td data-i18n="stage_2_desc">الدهون تؤكسد الخلايا وتحدث استجابة مناعية والتهاب وتضخم بالخلايا (Ballooning).</td>
-                            <td data-i18n="stage_2_prog">قابلة للعكس بالعلاج السريري الصارم وتخفيف الوزن.</td>
-                        </tr>
-                        <tr>
-                            <td><span class="status-badge status-danger" data-i18n="stage_3_title">تليف الكبد وتشمعه (Fibrosis / Cirrhosis)</span></td>
-                            <td data-i18n="stage_3_desc">استبدال النسيج الوظيفي بندبات ليفية صلبة تعيق تدفق الدم ووظائف الكبد الحيوية.</td>
-                            <td data-i18n="stage_3_prog">مرحلة متقدمة تتطلب إدارة تخصصية لمنع الفشل الكبدي.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <!-- بطاقات المراحل السريرية الذكية البديلة عن الجداول (متوافقة 100% مع الموبايل واللغتين) -->
+            <div style="display: flex; flex-direction: column; gap: 15px; margin: 25px 0;">
+                
+                <!-- المرحلة الأولى -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #10b981; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-safe" data-i18n="stage_1_title">تشحم الكبد البسيط (Steatosis)</span>
+                        <strong style="color: #10b981; font-size: 14px;" data-i18n="stage_1_prog">قابلة للعكس والشفاء التام 100% بتعديل الغذاء.</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="stage_1_desc">
+                        تراكم قطرات الدهون بنسبة تفوق 5% من وزن الكبد، دون وجود التهاب أو أضرار نسيجية.
+                    </p>
+                </div>
+
+                <!-- المرحلة الثانية -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #f59e0b; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-warning" data-i18n="stage_2_title">التهاب الكبد الدهني (MASH / NASH)</span>
+                        <strong style="color: #d97706; font-size: 14px;" data-i18n="stage_2_prog">قابلة للعكس بالعلاج السريري الصارم وتخفيف الوزن.</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="stage_2_desc">
+                        الدهون تؤكسد الخلايا وتحدث استجابة مناعية والتهاب وتضخم بالخلايا (Ballooning).
+                    </p>
+                </div>
+
+                <!-- المرحلة الثالثة -->
+                <div style="background: var(--box-bg); border-inline-start: 5px solid #ef4444; border-radius: 12px; padding: 18px 20px; border-top: 1px solid var(--table-border); border-bottom: 1px solid var(--table-border); border-inline-end: 1px solid var(--table-border);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
+                        <span class="status-badge status-danger" data-i18n="stage_3_title">تليف الكبد وتشمعه (Fibrosis / Cirrhosis)</span>
+                        <strong style="color: #ef4444; font-size: 14px;" data-i18n="stage_3_prog">مرحلة متقدمة تتطلب إدارة تخصصية لمنع الفشل الكبدي.</strong>
+                    </div>
+                    <p style="color: var(--text-dark); font-size: 14px; margin: 0; line-height: 1.6;" data-i18n="stage_3_desc">
+                        استبدال النسيج الوظيفي بندبات ليفية صلبة تعيق تدفق الدم ووظائف الكبد الحيوية.
+                    </p>
+                </div>
+
             </div>
 
             <!-- الصورة الأولى: رسم توضيحي للمقارنة -->
@@ -723,9 +699,6 @@
                 'desc_insulin_cycle_1': 'تراكم قطيرات الدهون الثلاثية داخل الخلايا الكبدية يعطل مسارات استقبال الإنسولين، فتصبح خلايا الكبد "مقاومة للإنسولين". في الحالة الطبيعية، يُصدر الإنسولين أمراً للكبد بالتوقف عن إنتاج الجلوكوز بعد الأكل. أما في الكبد الدهني، يفقد الكبد القدرة على سماع هذا الأمر، فيستمر في ضخ السكر بالدم حتى وأنت صائم!',
                 'desc_insulin_cycle_2': 'يدخل الجسم حينها في حلقة مفرغة مدمرة: ارتفاع السكر يجبر البنكرياس على ضخ مزيد من الإنسولين، والإنسولين العالي يُنشط جينات تصنيع الدهون بالكبد، مما يراكم دهوناً إضافية ويعمق المقاومة أكثر فأكثر.',
                 'h2_stages': 'المراحل السريرية لتطور الكبد الدهني',
-                'th_stage': 'المرحلة السريرية',
-                'th_findings': 'الوصف النسيجي والمخبري',
-                'th_prognosis': 'قابلية الشفاء والعكس',
                 'stage_1_title': 'تشحم الكبد البسيط (Steatosis)',
                 'stage_1_desc': 'تراكم قطرات الدهون بنسبة تفوق 5% من وزن الكبد، دون وجود التهاب أو أضرار نسيجية.',
                 'stage_1_prog': 'قابلة للعكس والشفاء التام 100% بتعديل الغذاء.',
@@ -784,9 +757,6 @@
                 'desc_insulin_cycle_1': 'Intracellular accumulation of diacylglycerols and ceramides disrupts insulin receptor signaling, rendering hepatocytes profoundly insulin resistant. Physiologically, postprandial insulin suppresses hepatic gluconeogenesis. In hepatic steatosis, the liver loses sensitivity to this signal, uninhibitedly producing endogenous glucose even during prolonged fasting.',
                 'desc_insulin_cycle_2': 'This triggers a catastrophic feedback loop: persistent hyperglycemia compels the pancreas to secrete compensatory insulin; chronic hyperinsulinemia upregulates SREBP-1c, further accelerating lipid synthesis within hepatocytes.',
                 'h2_stages': 'Clinical Stages of Hepatic Steatosis Progression',
-                'th_stage': 'Clinical Stage',
-                'th_findings': 'Histological & Laboratory Hallmarks',
-                'th_prognosis': 'Reversibility & Clinical Prognosis',
                 'stage_1_title': 'Simple Steatosis (NAFL / MASL)',
                 'stage_1_desc': 'Intrahepatic triglyceride accumulation exceeding 5% of liver weight without necroinflammation.',
                 'stage_1_prog': '100% reversible through targeted nutritional and lifestyle intervention.',
