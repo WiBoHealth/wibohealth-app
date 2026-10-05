@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+            const phone = (navigator.language || '').toLowerCase();
+            const lang = (saved === 'ar' || saved === 'en' || saved === 'nl') ? saved : (phone.startsWith('ar') ? 'ar' : (phone.startsWith('nl') ? 'nl' : 'en'));
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+        })();
+    </script>
     <title>دليل الأطعمة الشامل - المؤشر الجلايسيمي، الأنسولين، السعرات | WiBo Health</title>
     <meta name="description" content="دليلك الكامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف، فيتامينات ومعادن - قاعدة بيانات غذائية عربية فريدة لمرضى السكري والدايت">
     <link rel="canonical" href="https://wibohealth.com/foods.html">
@@ -1177,16 +1186,17 @@
                 if (tIcon) tIcon.className = 'fas fa-sun';
             }
 
-            changeLanguage(currentLang);
-
+            // 1. تجهيز الأطعمة أولاً
             if (typeof foodsDatabase !== 'undefined' && foodsDatabase.length > 0) {
                 allFoods = foodsDatabase;
                 const totalCountEl = document.getElementById('totalCount');
                 const allFoodsCount = document.getElementById('allFoodsCount');
                 if (totalCountEl) totalCountEl.textContent = allFoods.length;
                 if (allFoodsCount) allFoodsCount.textContent = allFoods.length;
-                filterFoods();
             }
+
+            // 2. تطبيق اللغة والرسم مرة واحدة فقط بسرعة فائقة
+            changeLanguage(currentLang);
             updateFavCount();
 
             let lastScrollTop = 0;
