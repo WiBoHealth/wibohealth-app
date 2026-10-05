@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta_title">ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health</title>
+    <meta name="description" content="دليل سريري شامل لكشف لغز الجوع المستمر ومقاومة هرمون اللبتين، والفرق بين سكر الفواكه الطبيعي والفركتوز السائل، مع خطة إعادة حساسية مستقبلات الشبع. بقلم فريق ويبو هيلث الطبي.">
+    <meta name="keywords" content="مقاومة اللبتين, هرمون الشبع, الجوع المستمر, سكر الفركتوز, ويبو هيلث, دكتور وسيم حبيب, WiBo Health, leptin resistance">
+    <meta name="author" content="فريق ويبو هيلث الطبي | WiBo Health">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #64748b;
+            --table-border: #e2e8f0;
+            --box-bg: #f8fafc;
+        }
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --header-bg: #0f3460;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #cbd5e1;
+            --table-border: rgba(255, 255, 255, 0.1);
+            --box-bg: rgba(255, 255, 255, 0.05);
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.85;
+            transition: all 0.3s ease;
+        }
+        .site-header {
+            background: var(--header-bg);
+            padding: 16px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .brand-logo h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .lang-btn {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        body.dark-mode .lang-btn { background: rgba(255, 255, 255, 0.1); }
+        .lang-btn.active {
+            background: #2ecc71;
+            color: white;
+            transform: scale(1.05);
+        }
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--text-dark);
+            transition: all 0.3s;
+        }
+        body.dark-mode .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+        .nav-back-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 9px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            transition: all 0.3s ease;
+        }
+        .article-wrapper {
+            max-width: 880px;
+            margin: 40px auto;
+            padding: 0 20px 80px;
+        }
+        .article-hero {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+        }
+        .article-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .article-title {
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.45;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .article-author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid var(--table-border);
+            padding-top: 18px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        .author-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(46, 204, 113, 0.15);
+            color: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border: 2px solid #10b981;
+        }
+        .article-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            font-size: 17px;
+            color: var(--text-dark);
+        }
+        .article-content p { margin-bottom: 24px; line-height: 1.9; }
+        .article-content h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 36px 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 14px;
+            border-right: 4px solid #10b981;
+        }
+        [dir="ltr"] .article-content h2 {
+            padding-right: 0;
+            padding-left: 14px;
+            border-right: none;
+            border-left: 4px solid #10b981;
+        }
+        .article-img-box {
+            margin: 30px 0;
+            text-align: center;
+            background: var(--box-bg);
+            padding: 14px;
+            border-radius: 16px;
+            border: 1px solid var(--table-border);
+        }
+        .article-img-box img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .img-caption {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 10px;
+            display: block;
+            font-weight: 600;
+        }
+        .highlight-card {
+            background: var(--box-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 22px;
+            border-inline-start: 5px solid #10b981;
+            border-top: 1px solid var(--table-border);
+            border-bottom: 1px solid var(--table-border);
+            border-inline-end: 1px solid var(--table-border);
+        }
+        .article-list { list-style: none; margin: 18px 0 25px; }
+        .article-list li {
+            position: relative;
+            padding-right: 26px;
+            margin-bottom: 14px;
+            color: var(--text-dark);
+        }
+        .article-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #10b981;
+            font-weight: 900;
+        }
+        [dir="ltr"] .article-list li { padding-right: 0; padding-left: 26px; }
+        [dir="ltr"] .article-list li::before { right: auto; left: 0; }
+        .disclaimer-card {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 14px;
+        }
+        .disclaimer-card i { color: #f59e0b; font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        footer a { color: #ecf0f1; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: #2ecc71; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 22px; }
+            .article-content { padding: 25px 20px; font-size: 16px; }
+            .article-hero { padding: 25px 20px; }
+            .nav-back-btn span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #2ecc71;"></i>
+                <h1>WiBo Health</h1>
+            </a>
+            <div class="header-controls">
+                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="index.html" class="nav-back-btn">
+                    <i class="fa-solid fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="nav_back_home">العودة للرئيسية</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main class="article-wrapper">
+        <article class="article-hero">
+            <span class="article-badge" data-i18n="badge_specialized">
+                <i class="fa-solid fa-brain"></i> مقال سريري وبحثي
+            </span>
+            <h1 class="article-title" data-i18n="article_main_title">ليش عم آكل وما عم أشبع؟! لغز هرمون اللبتين والدماغ الأطرش! 🩺🧠</h1>
+            <div class="article-author-meta">
+                <div class="author-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                    <strong data-i18n="author_name">بقلم: فريق ويبو هيلث الطبي</strong>
+                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة سريرية</div>
+                </div>
+            </div>
+        </article>
+
+        <section class="article-content">
+            <p data-i18n="intro_p1">
+                «خلصت صحن الغدا، شربت الشاي، وقعدت لترتاح.. عشر دقايق ما في غيرهن، ولا شعورياً بتلاقي حالك قمت فزيت وركضت عالبراد عم تنبش بين الرفوف! بيجي حدا بقلك: <em>يا زلمة إنت ما عندك إرادة ومفجوع وبس بدك تفش خلقك بالأكل!</em>»
+            </p>
+            <p data-i18n="intro_p2">
+                استنوا شوي.. تعوا لأصدمكن صدمة سريرية تالتة ورابعة: <strong>الموضوع مالو علاقة بضعف الإرادة ولا بنكلة!</strong> 😁
+            </p>
+            <p data-i18n="intro_p3">
+                لما حدا يتهمك بضعف الإرادة لأنك عم تجوع بسرعة، اعطوه كف بقفا إيدكن فوراً! القصة كلها فيزيولوجيا بحتة ولعبة هرمونات في غرف القيادة بالدماغ.
+            </p>
+
+            <!-- Hero Image -->
+            <div class="article-img-box">
+                <img src="images/leptin-hero.jpeg" alt="الجوع الليلي ومقاومة هرمون الشبع" loading="lazy">
+                <span class="img-caption" data-i18n="img_caption_hero">الجوع الليلي والنقرشة المستمرة ليسا ضعف إرادة، بل إشارات عصبية مشوشة من مستقبلات الشبع في الدماغ</span>
+            </div>
+
+            <h2 data-i18n="h2_what_is_leptin">1. شو هوي هرمون اللبتين (Leptin)؟</h2>
+            <p data-i18n="desc_leptin_1">
+                سبحان الخالق العظيم، خلايانا الدهنية بالجسم بتفرز هرمون ذكي جداً اسمو <strong>اللبتين (Leptin)</strong>. هاد الهرمون هو "سفير الشبع"؛ شغلته يطلع بالدم لعند غرفة العمليات بالدماغ (منطقة الهايبوثلاموس) ويقله: <em>"يا ريس، عنا طاقة كافية ومخازن مليانة، سكر التموين وطفي إشارات الجوع وافتح بوابات الحرق!"</em>.
+            </p>
+            <p data-i18n="desc_leptin_2">
+                بالوضع الطبيعي، بتشبع وبتقوم عن السفرة وأنت مرتاح 5 إلى 6 ساعات بدون تفكير بالأكل.
+            </p>
+
+            <h2 data-i18n="h2_deaf_brain">2. الكارثة: ليش دماغك صار "أطرش"؟</h2>
+            <p data-i18n="desc_deaf_1">
+                المشكلة مو إنك ما عندك لبتين.. المشكلة إنو جسمك مليان لبتين لسابع سما، بس <strong>دماغك صار أطرش وما عم يسمعه!</strong> هي الحالة بالطب منسميها: <strong>مقاومة اللبتين (Leptin Resistance)</strong>.
+            </p>
+
+            <!-- Brain 3D Infographic Image -->
+            <div class="article-img-box">
+                <img src="images/leptin-brain.jpeg" alt="آلية عمل هرمون اللبتين وحاجز الدهون الثلاثية بالدماغ" loading="lazy">
+                <span class="img-caption" data-i18n="img_caption_brain">كيف تمنع الدهون الثلاثية والالتهابات هرمون اللبتين من الوصول لمستقبلات الشبع في الهايبوثلاموس</span>
+            </div>
+
+            <div class="highlight-card" style="border-inline-start-color: #ef4444;">
+                <strong style="color: #ef4444; font-size: 16px;" data-i18n="card_block_title">مين المجرم اللي عم يقطع اتصال الشبع بالدماغ؟</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_block_desc">
+                    1. <strong>الدهون الثلاثية المرتفعة (Triglycerides):</strong> الناتجة عن سكر الفركتوز السائل والزيوت المهدرجة، بتعمل حاجز إسمنتي على بوابات الدماغ وبتمنع اللبتين يدخل!<br>
+                    2. <strong>التهابات الزيوت النباتية المكررة:</strong> زيوت القلي التجارية بتعمل التهاب مزمن بمستقبلات الدماغ فبتبطل تقرأ إشارات الشبع.
+                </p>
+            </div>
+
+            <h2 data-i18n="h2_starving_brain">3. الصدمة الكبرى: دماغك مفكر حالك بمجاعة بالصحراء!</h2>
+            <p data-i18n="desc_starving_1">
+                تخيل معي الكارثة: أنت وزنك زايد وعندك دهون تكفيك طاقة شهور.. بس لأنو دماغك أطرش ومو واصلته رسالة الشبع، بيفكر إنك عم <strong>تموت من الجوع بصحراء قاحلة!</strong>
+            </p>
+            <p data-i18n="desc_starving_2">
+                كرد فعل دفاعي للبقاء، الدماغ بيفرز هرمون الجوع الشرس <strong>(الغريلين - Ghrelin)</strong> ليخليك تاكل الأخضر واليابس وتشتهي نشويات وسكريات حصراً، وبيهبط الحرق والأيض للصفر مشان يوفر طاقة وما تموت! أنت عم تاكل لأن خلايا دماغك عم تصرخ جوع حقيقي مو دلع!
+            </p>
+
+            <h2 data-i18n="h2_fructose_truth">4. حقيقة سكر الفواكه (الفركتوز).. توضيح سريري هام!</h2>
+            <div class="highlight-card" style="border-inline-start-color: #f59e0b;">
+                <strong style="color: #d97706; font-size: 16px;" data-i18n="card_fructose_title">لا تنطوا تقولو: يعني الفواكه مضرة وما عاد نعرف شو ناكل؟!</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_fructose_desc">
+                    الفواكه الكاملة باعتدال (حبة تفاح، شوية توت) ممتازة لأن فيها ألياف بتبطئ الامتصاص. مصيبتنا مو بحبة الفاكهة.. مصيبتنا بـ <strong>عصير الفواكه (المصفى من الألياف)</strong> اللي هو عبارة عن 5 حبات معصورين بكاسة عم تشربهن بثواني، ومصيبتنا بـ <strong>سكر الفركتوز المصنّع وسيرب الذرة</strong> المخبأ بالبسكوت والحلويات والمعلبات؛ هاد هو اللي بيصنع دهون ثلاثية ويطّرش الدماغ فوراً!
+                </p>
+            </div>
+
+            <h2 data-i18n="h2_symptoms">5. علامات إنك واقع بفخ مقاومة اللبتين:</h2>
+            <ul class="article-list">
+                <li data-i18n="symp_1">بتخلص وجبتك، وبعد نص ساعة بتلاقي حالك عم تدور ع أي نقرشة أو حبة حلو.</li>
+                <li data-i18n="symp_2">دهون عنيدة بأسفل البطن والخواصر ما عم تنزل مع أي دايت سعرات تقليدي.</li>
+                <li data-i18n="symp_3">خمول شديد ورغبة بالتسطيح والنوم بعد الوجبات مباشرة.</li>
+                <li data-i18n="symp_4">نوبات جوع ليلية مفاجئة (بتصير تفز عالبراد بنصاص الليالي).</li>
+            </ul>
+
+            <h2 data-i18n="h2_protocol">6. الروشتة السريرية: كيف نرجع سمع الدماغ ونطفي الجوع الكاذب؟</h2>
+            <ul class="article-list">
+                <li data-i18n="proto_1"><strong>كبوا زيوت القلي بالزبالة:</strong> اعتمدوا حصراً الدهون الطبيعية (زيت زيتون بكر ممتاز، سمن بلدي حيواني، زبدة طبيعية) لإطفاء التهاب المستقبلات.</li>
+                <li data-i18n="proto_2"><strong>اقفلوا حنفية العصائر والسكريات السائلة:</strong> كلوا الفاكهة كاملة بأليافها وابتعدوا تماماً عن عصائر العلب وسيرب الذرة.</li>
+                <li data-i18n="proto_3"><strong>الصيام المتقطع مع رشة ملح بحري:</strong> خفض الأنسولين يزيل الدهون الثلاثية من مجرى الدم فيفتح بوابات الدماغ للبتين.</li>
+                <li data-i18n="proto_4"><strong>النوم المبكر في ظلام تام:</strong> السهر وأضواء الشاشات يرفعان الكورتيزول ويشلان عمل اللبتين طوال اليوم التالي.</li>
+            </ul>
+
+            <div class="highlight-card" style="border-inline-start-color: #10b981;">
+                <strong style="color: #10b981; font-size: 16px;" data-i18n="card_final_title">المعادلة السريرية الواضحة:</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_final_desc">
+                    صلحوا دهونكن، صوموا، وناموا منيح.. بتلاقوا الشبع رجع لحاله ودماغكن طفى صفارات الإنذار.. <strong>سهلة عليكن ولا صعبة؟؟ 👍🏻</strong>
+                </p>
+            </div>
+
+            <!-- Disclaimer Card -->
+            <div class="disclaimer-card">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div>
+                    <strong data-i18n="disclaimer_title">تنويه وإخلاء مسؤولية طبية:</strong>
+                    <p style="margin: 4px 0 0;" data-i18n="disclaimer_text">
+                        المعلومات الواردة في هذا الدليل مقدمة لأغراض التثقيف الصحي والغذائي فقط، ولا تغني عن الاستشارة الطبية المباشرة، التشخيص السريري، أو تعديل الجرعات الدوائية المقررة من قبل طبيبك المعالج.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+    </footer>
+
+    <!-- Translations & Theme Engine -->
+    <script>
+        const translations = {
+            ar: {
+                'meta_title': 'ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health',
+                'nav_back_home': 'العودة للرئيسية',
+                'badge_specialized': '<i class="fa-solid fa-brain"></i> مقال سريري وبحثي',
+                'article_main_title': 'ليش عم آكل وما عم أشبع؟! لغز هرمون اللبتين والدماغ الأطرش! 🩺🧠',
+                'author_name': 'بقلم: فريق ويبو هيلث الطبي',
+                'author_subtitle': 'دليل طبي شامل ومحدث | مراجعة سريرية',
+                'intro_p1': '«خلصت صحن الغدا، شربت الشاي، وقعدت لترتاح.. عشر دقايق ما في غيرهن، ولا شعورياً بتلاقي حالك قمت فزيت وركضت عالبراد عم تنبش بين الرفوف! بيجي حدا بقلك: <em>يا زلمة إنت ما عندك إرادة ومفجوع وبس بدك تفش خلقك بالأكل!</em>»',
+                'intro_p2': 'استنوا شوي.. تعوا لأصدمكن صدمة سريرية تالتة ورابعة: <strong>الموضوع مالو علاقة بضعف الإرادة ولا بنكلة!</strong> 😁',
+                'intro_p3': 'لما حدا يتهمك بضعف الإرادة لأنك عم تجوع بسرعة، اعطوه كف بقفا إيدكن فوراً! القصة كلها فيزيولوجيا بحتة ولعبة هرمونات في غرف القيادة بالدماغ.',
+                'img_caption_hero': 'الجوع الليلي والنقرشة المستمرة ليسا ضعف إرادة، بل إشارات عصبية مشوشة من مستقبلات الشبع في الدماغ',
+                'h2_what_is_leptin': '1. شو هوي هرمون اللبتين (Leptin)؟',
+                'desc_leptin_1': 'سبحان الخالق العظيم، خلايانا الدهنية بالجسم بتفرز هرمون ذكي جداً اسمو <strong>اللبتين (Leptin)</strong>. هاد الهرمون هو "سفير الشبع"؛ شغلته يطلع بالدم لعند غرفة العمليات بالدماغ (منطقة الهايبوثلاموس) ويقله: <em>"يا ريس، عنا طاقة كافية ومخازن مليانة، سكر التموين وطفي إشارات الجوع وافتح بوابات الحرق!"</em>.',
+                'desc_leptin_2': 'بالوضع الطبيعي، بتشبع وبتقوم عن السفرة وأنت مرتاح 5 إلى 6 ساعات بدون تفكير بالأكل.',
+                'h2_deaf_brain': '2. الكارثة: ليش دماغك صار "أطرش"؟',
+                'desc_deaf_1': 'المشكلة مو إنك ما عندك لبتين.. المشكلة إنو جسمك مليان لبتين لسابع سما، بس <strong>دماغك صار أطرش وما عم يسمعه!</strong> هي الحالة بالطب منسميها: <strong>مقاومة اللبتين (Leptin Resistance)</strong>.',
+                'img_caption_brain': 'كيف تمنع الدهون الثلاثية والالتهابات هرمون اللبتين من الوصول لمستقبلات الشبع في الهايبوثلاموس',
+                'card_block_title': 'مين المجرم اللي عم يقطع اتصال الشبع بالدماغ؟',
+                'card_block_desc': '1. <strong>الدهون الثلاثية المرتفعة (Triglycerides):</strong> الناتجة عن سكر الفركتوز السائل والزيوت المهدرجة، بتعمل حاجز إسمنتي على بوابات الدماغ وبتمنع اللبتين يدخل!<br>2. <strong>التهابات الزيوت النباتية المكررة:</strong> زيوت القلي التجارية بتعمل التهاب مزمن بمستقبلات الدماغ فبتبطل تقرأ إشارات الشبع.',
+                'h2_starving_brain': '3. الصدمة الكبرى: دماغك مفكر حالك بمجاعة بالصحراء!',
+                'desc_starving_1': 'تخيل معي الكارثة: أنت وزنك زايد وعندك دهون تكفيك طاقة شهور.. بس لأنو دماغك أطرش ومو واصلته رسالة الشبع، بيفكر إنك عم <strong>تموت من الجوع بصحراء قاحلة!</strong>',
+                'desc_starving_2': 'كرد فعل دفاعي للبقاء، الدماغ بيفرز هرمون الجوع الشرس <strong>(الغريلين - Ghrelin)</strong> ليخليك تاكل الأخضر واليابس وتشتهي نشويات وسكريات حصراً، وبيهبط الحرق والأيض للصفر مشان يوفر طاقة وما تموت! أنت عم تاكل لأن خلايا دماغك عم تصرخ جوع حقيقي مو دلع!',
+                'h2_fructose_truth': '4. حقيقة سكر الفواكه (الفركتوز).. توضيح سريري هام!',
+                'card_fructose_title': 'لا تنطوا تقولو: يعني الفواكه مضرة وما عاد نعرف شو ناكل؟! ',
+                'card_fructose_desc': 'الفواكه الكاملة باعتدال (حبة تفاح، شوية توت) ممتازة لأن فيها ألياف بتبطئ الامتصاص. مصيبتنا مو بحبة الفاكهة.. مصيبتنا بـ <strong>عصير الفواكه (المصفى من الألياف)</strong> اللي هو عبارة عن 5 حبات معصورين بكاسة عم تشربهن بثواني، ومصيبتنا بـ <strong>سكر الفركتوز المصنّع وسيرب الذرة</strong> المخبأ بالبسكوت والحلويات والمعلبات؛ هاد هو اللي بيصنع دهون ثلاثية ويطّرش الدماغ فوراً!',
+                'h2_symptoms': '5. علامات إنك واقع بفخ مقاومة اللبتين:',
+                'symp_1': 'بتخلص وجبتك، وبعد نص ساعة بتلاقي حالك عم تدور ع أي نقرشة أو حبة حلو.',
+                'symp_2': 'دهون عنيدة بأسفل البطن والخواصر ما عم تنزل مع أي دايت سعرات تقليدي.',
+                'symp_3': 'خمول شديد ورغبة بالتسطيح والنوم بعد الوجبات مباشرة.',
+                'symp_4': 'نوبات جوع ليلية مفاجئة (بتصير تفز عالبراد بنصاص الليالي).',
+                'h2_protocol': '6. الروشتة السريرية: كيف نرجع سمع الدماغ ونطفي الجوع الكاذب؟',
+                'proto_1': '<strong>كبوا زيوت القلي بالزبالة:</strong> اعتمدوا حصراً الدهون الطبيعية (زيت زيتون بكر ممتاز، سمن بلدي حيواني، زبدة طبيعية) لإطفاء التهاب المستقبلات.',
+                'proto_2': '<strong>اقفلوا حنفية العصائر والسكريات السائلة:</strong> كلوا الفاكهة كاملة بأليافها وابتعدوا تماماً عن عصائر العلب وسيرب الذرة.',
+                'proto_3': '<strong>الصيام المتقطع مع رشة ملح بحري:</strong> خفض الأنسولين يزيل الدهون الثلاثية من مجرى الدم فيفتح بوابات الدماغ للبتين.',
+                'proto_4': '<strong>النوم المبكر في ظلام تام:</strong> السهر وأضواء الشاشات يرفعان الكورتيزول ويشلان عمل اللبتين طوال اليوم التالي.',
+                'card_final_title': 'المعادلة السريرية الواضحة:',
+                'card_final_desc': 'صلحوا دهونكن، صوموا، وناموا منيح.. بتلاقوا الشبع رجع لحاله ودماغكن طفى صفارات الإنذار.. <strong>سهلة عليكن ولا صعبة؟؟ 👍🏻</strong>',
+                'disclaimer_title': 'تنويه وإخلاء مسؤولية طبية:',
+                'disclaimer_text': 'المعلومات الواردة في هذا الدليل مقدمة لأغراض التثقيف الصحي والغذائي فقط، ولا تغني عن الاستشارة الطبية المباشرة، التشخيص السريري، أو تعديل الجرعات الدوائية المقررة من قبل طبيبك المعالج.',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي'
+            },
+            en: {
+                'meta_title': 'Why Am I Always Hungry? The Leptin Resistance Mystery | WiBo Health',
+                'nav_back_home': 'Back to Home',
+                'badge_specialized': '<i class="fa-solid fa-brain"></i> Clinical & Research Article',
+                'article_main_title': 'Why Am I Always Hungry?! The Leptin Mystery & The Deaf Brain! 🩺🧠',
+                'author_name': 'By: WiBo Health Medical Team',
+                'author_subtitle': 'Comprehensive Evidence-Based Guide | Clinical Review',
+                'intro_p1': '"You just finished a large lunch, had your tea, and sat down to relax.. Ten minutes later, you find yourself raiding the fridge pantry! Someone tells you: You have zero willpower and just love overeating!"',
+                'intro_p2': 'Hold on a second.. Let us give you another clinical shock: <strong>This has absolutely nothing to do with weak willpower!</strong> 😁',
+                'intro_p3': 'When someone blames your willpower for constant hunger, dismiss them immediately! It is pure neuro-endocrinology and a communication failure in the hypothalamic control center.',
+                'img_caption_hero': 'Late-night cravings and incessant grazing are not behavioral failures; they stem from blunted hypothalamic satiety signaling.',
+                'h2_what_is_leptin': '1. What is Leptin Hormone?',
+                'desc_leptin_1': 'Adipose tissue secretes a master hormone called <strong>Leptin</strong>. Leptin acts as the ambassador of satiety, traveling via the bloodstream to the hypothalamus to signal: <em>"Energy reserves are full; halt hunger cues and stimulate metabolic expenditure!"</em>.',
+                'desc_leptin_2': 'Under normal physiology, you stay fully satiated and energetic for 5 to 6 hours without obsessing over food.',
+                'h2_deaf_brain': '2. The Crisis: Why Does the Brain Become "Deaf"?',
+                'desc_deaf_1': 'The problem is not a lack of leptin. In fact, systemic leptin levels are sky-high, but <strong>the brain has become deaf to the signal!</strong> Clinically, this is termed <strong>Leptin Resistance</strong>.',
+                'img_caption_brain': 'How elevated triglycerides and systemic neuroinflammation block leptin transport across the blood-brain barrier',
+                'card_block_title': 'Who are the culprits severing the satiety signal?',
+                'card_block_desc': '1. <strong>Elevated Serum Triglycerides:</strong> Driven by liquid fructose and hydrogenated fats, triglycerides physically obstruct leptin transport across the blood-brain barrier.<br>2. <strong>Refined Seed Oil Inflammation:</strong> Industrial vegetable oils provoke hypothalamic neuroinflammation, dulling receptor sensitivity.',
+                'h2_starving_brain': '3. The Biological Shock: The Brain Thinks You Are Starving in a Desert!',
+                'desc_starving_1': 'Imagine the evolutionary dilemma: You carry abundant adipose reserves, but because the brain never receives the satiety memo, it assumes you are facing acute starvation in a barren wasteland!',
+                'desc_starving_2': 'As an ancient survival reflex, the brain floods the system with <strong>Ghrelin (the hunger hormone)</strong>, compelling relentless carb cravings while suppressing basal metabolic rate to conserve survival energy. You are eating because your neurons are screaming starvation!',
+                'h2_fructose_truth': '4. The Truth About Fruit Sugar (Fructose): Clinical Clarification!',
+                'card_fructose_title': 'Do not jump to conclusions: Are fruits toxic now?!',
+                'card_fructose_desc': 'Whole fruits consumed moderately (apples, wild berries) are excellent due to intact cellular fiber slowing absorption. The danger lies in <strong>fiberless liquid fruit juices</strong> (drinking 5 oranges in seconds) and <strong>manufactured high-fructose corn syrup (HFCS)</strong> hidden in ultra-processed snacks. That is what spikes triglycerides and silences the brain!',
+                'h2_symptoms': '5. Hallmarks of Leptin Resistance:',
+                'symp_1': 'Intense hunger or sweet cravings within 30-60 minutes after a meal.',
+                'symp_2': 'Stubborn visceral lower belly fat unresponsive to generic caloric restriction.',
+                'symp_3': 'Severe postprandial fatigue and lethargy following food consumption.',
+                'symp_4': 'Compulsive nocturnal snacking impulses late at night.',
+                'h2_protocol': '6. Clinical Protocol: Restoring Leptin Sensitivity and Quelling False Hunger',
+                'proto_1': '<strong>Eliminate Industrial Seed Oils:</strong> Switch strictly to extra virgin olive oil, grass-fed ghee, and natural butter to extinguish receptor inflammation.',
+                'proto_2': '<strong>Eliminate Liquid Fructose & Juices:</strong> Consume whole fruit with fiber; discard packaged juices and high-fructose syrups completely.',
+                'proto_3': '<strong>Intermittent Fasting & Electrolytes:</strong> Lowering baseline insulin rapidly clears circulating triglycerides, opening receptor gates for leptin.',
+                'proto_4': '<strong>Early Circadian Sleep in Full Darkness:</strong> Screen light and sleep deprivation spike cortisol, rendering leptin completely ineffective the following day.',
+                'card_final_title': 'The Clear Clinical Formula:',
+                'card_final_desc': 'Optimize your dietary fats, practice intermittent fasting, and prioritize restorative sleep. Satiety will naturally return, and your brain will silence the alarm bells.. <strong>Easy or hard? You decide! 👍🏻</strong>',
+                'disclaimer_title': 'Clinical Notice & Medical Disclaimer:',
+                'disclaimer_text': 'The information in this guide is provided strictly for educational and dietary guidance purposes. It does not constitute direct medical advice, clinical diagnosis, or replacement for prescribed medical protocols formulated by your personal physician.',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by WiBo Health Medical Team'
+            }
+        };
+
+        function detectInitialLang() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+            if (saved && (saved === 'ar' || saved === 'en')) return saved;
+            const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            return phoneLang.startsWith('ar') ? 'ar' : 'en';
+        }
+
+        let currentLang = detectInitialLang();
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) {
+                backIcon.className = lang === 'ar' ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left';
+            }
+
+            updatePageLanguage();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            if (translations[currentLang] && translations[currentLang]['meta_title']) {
+                document.title = translations[currentLang]['meta_title'];
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
+            changeLanguage(currentLang);
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                if (icon) icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                if (icon) icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>
