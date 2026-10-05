@@ -454,10 +454,11 @@
             padding: 20px;
         }
 
+       /* Modern Slim Header 2.0 */
         header {
             background: var(--header-bg);
-            padding: 20px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -469,124 +470,94 @@
         }
 
         .header-content {
-            display: grid;
-            grid-template-rows: auto auto;
-            gap: 20px;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            gap: 15px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
-            justify-content: center;
-            grid-row: 1;
+            gap: 10px;
             text-decoration: none;
-        }
-        
-        .header-controls {
-            grid-row: 2;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: center;
         }
 
         .logo-icon {
-            width: 120px;
-            height: 120px;
+            width: 42px;
+            height: 42px;
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: pulse 2s infinite;
-            position: relative;
-            overflow: visible;
             transition: transform 0.3s ease;
         }
 
         .logo-icon:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.08);
         }
 
         .logo-icon svg {
-            width: 120px;
-            height: 120px;
-            filter: drop-shadow(0 5px 20px rgba(46, 204, 113, 0.6));
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            width: 42px;
+            height: 42px;
+            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.4));
         }
 
         .logo-text h1 {
-            font-size: 48px;
+            font-size: 22px;
             background: linear-gradient(135deg, #2ecc71, #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 10px rgba(46, 204, 113, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .logo-text h1:hover {
-            letter-spacing: 2px;
-            transform: scale(1.05);
+            line-height: 1.2;
         }
 
         .logo-text p {
-            color: var(--text-light);
-            font-size: 16px;
-            font-weight: 500;
-            margin-top: 5px;
+            display: none;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .lang-btn {
-            width: 50px;
-            height: 50px;
+            width: 38px;
+            height: 38px;
+            font-size: 15px;
+            border-radius: 50%;
             background: #f3f4f6;
             border: none;
-            border-radius: 50%;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            transition: all 0.3s;
-            font-family: 'Cairo', sans-serif;
+            transition: all 0.2s;
         }
 
         body.dark-mode .lang-btn {
             background: rgba(255,255,255,0.1);
         }
 
-        .lang-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-        }
-
         .lang-btn.active {
-            transform: scale(1.1);
             background: #2ecc71;
             color: white;
+            transform: scale(1.05);
         }
 
         .theme-toggle {
-            width: 50px;
-            height: 50px;
+            width: 38px;
+            height: 38px;
+            font-size: 17px;
+            border-radius: 50%;
             background: #f3f4f6;
             border: none;
-            border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
-            transition: all 0.3s;
             color: var(--text-dark);
-            font-family: 'Cairo', sans-serif;
-            font-weight: 600;
+            transition: all 0.2s;
         }
 
         body.dark-mode .theme-toggle {
@@ -594,31 +565,22 @@
             color: white;
         }
 
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(20deg);
-            background: #2ecc71;
-            color: white;
-        }
-
         .nav-menu {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
+            gap: 8px;
             align-items: center;
         }
 
         .nav-link {
-            padding: 12px 25px;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
             background: #f3f4f6;
             color: var(--text-dark);
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
         }
 
         body.dark-mode .nav-link {
@@ -630,7 +592,11 @@
             background: linear-gradient(135deg, #2ecc71, #27ae60);
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none; }
+            .hamburger-menu { display: flex; }
         }
 
         /* كرت مقال اللبتين الملكي VIP */
@@ -1202,9 +1168,11 @@
     </a>
 
     <!-- Header -->
+   <!-- Header Slim 2.0 -->
     <header>
         <div class="container">
             <div class="header-content">
+                <!-- Logo Compact -->
                 <a href="/" class="logo">
                     <div class="logo-icon">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -1214,36 +1182,33 @@
                                     <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
                                     <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
                                 </linearGradient>
-                                <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
-                                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
-                                </linearGradient>
                             </defs>
-                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="3"/>
-                            <path d="M40 100 L60 100 L68 85 L76 115 L84 100 L100 100 L108 85 L116 115 L124 100 L160 100" stroke="url(#pulseGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.95"/>
-                            <g transform="translate(130, 70)">
-                                <rect x="-3" y="-14" width="6" height="28" fill="white" opacity="0.9" rx="2"/>
-                                <rect x="-14" y="-3" width="28" height="6" fill="white" opacity="0.9" rx="2"/>
-                                <circle cx="0" cy="0" r="18" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
-                            </g>
-                            <ellipse cx="80" cy="75" rx="18" ry="28" fill="white" opacity="0.25" transform="rotate(-30 80 75)"/>
-                            <circle cx="70" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/></circle>
-                            <circle cx="130" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="4"/>
                         </svg>
                     </div>
                     <div class="logo-text">
                         <h1>WiBo Health</h1>
-                        <p data-i18n="logo_subtitle">دليلك الصحي الشامل للتغذية السليمة</p>
                     </div>
                 </a>
 
+                <!-- Navigation Desktop -->
+                <nav class="nav-menu">
+                    <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">الأطعمة</span></a>
+                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
+                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                    <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات</span></a>
+                    <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
+                </nav>
+
+                <!-- Controls & Mobile Toggle -->
                 <div class="header-controls">
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
                     <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
 
-                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>
                     </button>
 
@@ -1252,19 +1217,6 @@
                         <span></span>
                         <span></span>
                     </div>
-
-                   <nav class="nav-menu">
-                        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
-                        <a href="scanner.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود</span></a>
-                        <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
-                        <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
-                        <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
-                        <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
-                        <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
-                        <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
-                        <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px 22px; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); border-radius: 25px; font-weight: 800; border: 1px solid #6ee7b7;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
-                        <a href="diet-plan.html" class="nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; padding: 12px 20px; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);"><i class="fas fa-gift"></i> <span data-i18n="nav_free_diet">دايت مجاني 🎁</span></a>
-                    </nav>
                 </div>
             </div>
         </div>
