@@ -297,6 +297,71 @@ const foodsDatabase = [
     { id: 248, name: 'سحلب ساخن بالقرفة والمكسرات', nameEn: 'Sahlab Drink', nameNl: 'Sahlab warme melkdrank', icon: '🥛', category: 'مشروبات', categoryNl: 'Dranken', gi: 55, ii: 60, nutrition: { calories: 145, protein: 4, carbs: 22, fat: 4.5, fiber: 0.5 } },
     { id: 249, name: 'قهوة عربية شقراء بالهيل', nameEn: 'Arabic Coffee with Cardamom', nameNl: 'Arabische koffie met kardemom', icon: '☕', category: 'مشروبات', categoryNl: 'Dranken', gi: 0, ii: 15, nutrition: { calories: 2, protein: 0.3, carbs: 0, fat: 0, fiber: 0 } },
     { id: 250, name: 'شاي كرك بالحليب والتوابل', nameEn: 'Karak Tea', nameNl: 'Karak chai met specerijen', icon: '🍵', category: 'مشروبات', categoryNl: 'Dranken', gi: 50, ii: 60, nutrition: { calories: 78, protein: 1.8, carbs: 14, fat: 2, fiber: 0 } }
+// === فواكه استوائية ونادرة (Exotisch Fruit) ===
+    { id: 251, name: 'رامبوتان استوائي', nameEn: 'Rambutan', nameNl: 'Rambutan', icon: '🍒', category: 'فواكه', categoryNl: 'Fruit', gi: 50, ii: 45, nutrition: { calories: 82, protein: 0.7, carbs: 20.9, fat: 0.2, fiber: 0.9 } },
+    { id: 252, name: 'كمكوات (برتقال ياباني صغير)', nameEn: 'Kumquat', nameNl: 'Kumquat', icon: '🍊', category: 'فواكه', categoryNl: 'Fruit', gi: 30, ii: 32, nutrition: { calories: 71, protein: 1.9, carbs: 15.9, fat: 0.9, fiber: 6.5 } },
+    { id: 253, name: 'دوريان استوائي', nameEn: 'Durian', nameNl: 'Doerian', icon: '🥥', category: 'فواكه', categoryNl: 'Fruit', gi: 49, ii: 45, nutrition: { calories: 147, protein: 1.5, carbs: 27.1, fat: 5.3, fiber: 3.8 } },
+    { id: 254, name: 'فاكهة النجمة (كرامبولا)', nameEn: 'Star Fruit', nameNl: 'Carambola (Stervrucht)', icon: '⭐', category: 'فواكه', categoryNl: 'Fruit', gi: 45, ii: 40, nutrition: { calories: 31, protein: 1, carbs: 6.7, fat: 0.3, fiber: 2.8 } },
+    { id: 255, name: 'جاك فروت (خبزية)', nameEn: 'Jackfruit', nameNl: 'Jackfruit', icon: '🍈', category: 'فواكه', categoryNl: 'Fruit', gi: 75, ii: 80, nutrition: { calories: 95, protein: 1.7, carbs: 23.2, fat: 0.6, fiber: 1.5 } },
+    { id: 256, name: 'مانجوستين ملكي', nameEn: 'Mangosteen', nameNl: 'Mangistan', icon: '💜', category: 'فواكه', categoryNl: 'Fruit', gi: 46, ii: 52, nutrition: { calories: 73, protein: 0.4, carbs: 17.9, fat: 0.6, fiber: 1.8 } },
+    { id: 257, name: 'خرما (كاكا طازجة)', nameEn: 'Persimmon (Kaki)', nameNl: 'Kaki fruit', icon: '🟠', category: 'فواكه', categoryNl: 'Fruit', gi: 50, ii: 55, nutrition: { calories: 70, protein: 0.6, carbs: 18.6, fat: 0.2, fiber: 3.6 } },
+    { id: 258, name: 'إسكدنيا (أكي دنيا)', nameEn: 'Loquat', nameNl: 'Mispel (Loquat)', icon: '🍊', category: 'فواكه', categoryNl: 'Fruit', gi: 55, ii: 58, nutrition: { calories: 47, protein: 0.4, carbs: 12.1, fat: 0.2, fiber: 1.7 } },
+    { id: 259, name: 'كيوانو (خيار مقرن أفريقي)', nameEn: 'Kiwano', nameNl: 'Kiwano (Gehoornde meloen)', icon: '🥒', category: 'فواكه', categoryNl: 'Fruit', gi: 25, ii: 30, nutrition: { calories: 44, protein: 1.8, carbs: 7.6, fat: 1.3, fiber: 0.5 } },
+    { id: 260, name: 'توت الأكاي المركز', nameEn: 'Acai Berry', nameNl: 'Açaí bessen', icon: '🫐', category: 'فواكه', categoryNl: 'Fruit', gi: 42, ii: 45, nutrition: { calories: 70, protein: 1, carbs: 4, fat: 5, fiber: 2 } },
+
+    // === خضروات وجذور إضافية (Groenten & Wortels) ===
+    { id: 261, name: 'كحلبي (لفت ألماني)', nameEn: 'Kohlrabi', nameNl: 'Koolrabi', icon: '🥔', category: 'خضروات', categoryNl: 'Groenten', gi: 15, ii: 22, nutrition: { calories: 27, protein: 1.7, carbs: 6.2, fat: 0.1, fiber: 3.6 } },
+    { id: 262, name: 'كراث بلدي (كرات)', nameEn: 'Leeks', nameNl: 'Prei', icon: '🧅', category: 'خضروات', categoryNl: 'Groenten', gi: 15, ii: 22, nutrition: { calories: 61, protein: 1.5, carbs: 14.2, fat: 0.3, fiber: 1.8 } },
+    { id: 263, name: 'ملفوف بنفسجي أحمر', nameEn: 'Red Cabbage', nameNl: 'Rode kool', icon: '🥬', category: 'خضروات', categoryNl: 'Groenten', gi: 10, ii: 18, nutrition: { calories: 31, protein: 1.4, carbs: 7.4, fat: 0.2, fiber: 2.1 } },
+    { id: 264, name: 'فجل أحمر مقرمش', nameEn: 'Red Radish', nameNl: 'Rode radijs', icon: '🥕', category: 'خضروات', categoryNl: 'Groenten', gi: 15, ii: 18, nutrition: { calories: 16, protein: 0.7, carbs: 3.4, fat: 0.1, fiber: 1.6 } },
+    { id: 265, name: 'خبيزة برية مطبوخة بزيت الزيتون', nameEn: 'Khubeza (Mallow)', nameNl: 'Kaasjeskruid (Khubeza)', icon: '🥬', category: 'خضروات', categoryNl: 'Groenten', gi: 15, ii: 18, nutrition: { calories: 29, protein: 3.7, carbs: 5.4, fat: 0.3, fiber: 2.8 } },
+    { id: 266, name: 'قرنبيط مقلي مقرمش بالكمون', nameEn: 'Fried Cauliflower', nameNl: 'Gebakken bloemkool met komijn', icon: '🥦', category: 'خضروات', categoryNl: 'Groenten', gi: 35, ii: 42, nutrition: { calories: 195, protein: 4, carbs: 12, fat: 15, fiber: 3.5 } },
+
+    // === توابل وبهارات طبية (Geneeskrachtige Kruiden) ===
+    { id: 267, name: 'قرنفل مسامير حب', nameEn: 'Cloves', nameNl: 'Kruidnagel', icon: '🟤', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 274, protein: 6, carbs: 65.5, fat: 13, fiber: 33.9 } },
+    { id: 268, name: 'جوزة الطيب مبشورة', nameEn: 'Nutmeg', nameNl: 'Nootmuskaat', icon: '🟫', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 525, protein: 5.8, carbs: 49.3, fat: 36.3, fiber: 20.8 } },
+    { id: 269, name: 'إكليل الجبل (روزماري مجفف)', nameEn: 'Dried Rosemary', nameNl: 'Gedroogde rozemarijn', icon: '🌿', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 331, protein: 4.9, carbs: 64.1, fat: 15.2, fiber: 42.6 } },
+    { id: 270, name: 'ريحان مجفف بلدي', nameEn: 'Dried Basil', nameNl: 'Gedroogde basilicum', icon: '🌿', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 233, protein: 22.9, carbs: 47.8, fat: 4, fiber: 37.7 } },
+    { id: 271, name: 'حبة البركة (الحبة السوداء)', nameEn: 'Black Seed (Nigella)', nameNl: 'Nigellazaad (Zwarte komijn)', icon: '🖤', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 345, protein: 16, carbs: 52, fat: 15, fiber: 8 } },
+    { id: 272, name: 'سماق بلدي حامض', nameEn: 'Sumac', nameNl: 'Sumak poeder', icon: '🔴', category: 'بهارات', categoryNl: 'Specerijen', gi: 10, ii: 8, nutrition: { calories: 240, protein: 3.5, carbs: 40, fat: 7, fiber: 14 } },
+
+    // === أسماك ومأكولات بحرية إضافية (Extra Zeevruchten) ===
+    { id: 273, name: 'سمك البلطي الطازج المشوي', nameEn: 'Tilapia', nameNl: 'Tilapiafilet', icon: '🐟', category: 'بروتين', categoryNl: 'Eiwitten', gi: 0, ii: 59, nutrition: { calories: 96, protein: 20.1, carbs: 0, fat: 1.7, fiber: 0 } },
+    { id: 274, name: 'سمك الهامور الفاخر', nameEn: 'Grouper Fish', nameNl: 'Tandbaars filet (Grouper)', icon: '🐟', category: 'بروتين', categoryNl: 'Eiwitten', gi: 0, ii: 59, nutrition: { calories: 92, protein: 19.4, carbs: 0, fat: 1, fiber: 0 } },
+    { id: 275, name: 'أخطبوط مشوي بالزيت والليمون', nameEn: 'Grilled Octopus', nameNl: 'Gegrilde octopus', icon: '🐙', category: 'بروتين', categoryNl: 'Eiwitten', gi: 0, ii: 60, nutrition: { calories: 82, protein: 14.9, carbs: 2.2, fat: 1, fiber: 0 } },
+    { id: 276, name: 'حبار مقلي (كاليماري مقرمش)', nameEn: 'Fried Calamari', nameNl: 'Gefrituurde inktvisringen', icon: '🦑', category: 'بروتين', categoryNl: 'Eiwitten', gi: 15, ii: 50, nutrition: { calories: 175, protein: 15, carbs: 8, fat: 9.5, fiber: 0.5 } },
+    { id: 277, name: 'كافيار سمك أصلي فخم', nameEn: 'Black Caviar', nameNl: 'Zwarte kaviaar', icon: '🥚', category: 'بروتين', categoryNl: 'Eiwitten', gi: 0, ii: 30, nutrition: { calories: 264, protein: 24.6, carbs: 4, fat: 17.9, fiber: 0 } },
+    { id: 278, name: 'سمك أنشوفة مملح (Ansjovis)', nameEn: 'Anchovies', nameNl: 'Ansjovis in olijfolie', icon: '🐟', category: 'بروتين', categoryNl: 'Eiwitten', gi: 0, ii: 59, nutrition: { calories: 131, protein: 20.4, carbs: 0, fat: 4.8, fiber: 0 } },
+
+    // === وجبات عربية خاصة ومميزة (Authentieke Gerechten) ===
+    { id: 279, name: 'كبدة إسكندراني حارة بالفلفل', nameEn: 'Alexandrian Liver', nameNl: 'Pittige runderlever Alexandrië', icon: '🥩', category: 'أطعمة عربية', categoryNl: 'Arabische Gerechten', gi: 0, ii: 68, nutrition: { calories: 195, protein: 22, carbs: 2.5, fat: 11, fiber: 0.5 } },
+    { id: 280, name: 'فتة المكدوس باللحم واللبن', nameEn: 'Makdous Fatteh', nameNl: 'Makdous fatteh met aubergine', icon: '🍆', category: 'أطعمة عربية', categoryNl: 'Arabische Gerechten', gi: 55, ii: 62, nutrition: { calories: 298, protein: 10, carbs: 28, fat: 17, fiber: 5 } },
+    { id: 281, name: 'شاكرية لحم غنم باللبن والنشا', nameEn: 'Shakriyyeh (Lamb in Yogurt)', nameNl: 'Shakriyyeh (Lamsvlees in warme yoghurt)', icon: '🍲', category: 'أطعمة عربية', categoryNl: 'Arabische Gerechten', gi: 52, ii: 68, nutrition: { calories: 289, protein: 20, carbs: 18, fat: 16, fiber: 1.2 } },
+    { id: 282, name: 'جريش سعودي بالسمن والبصل', nameEn: 'Saudi Jareesh', nameNl: 'Saoedische Jareesh tarwepap', icon: '🍚', category: 'أطعمة عربية', categoryNl: 'Arabische Gerechten', gi: 50, ii: 48, nutrition: { calories: 185, protein: 8, carbs: 32, fat: 3, fiber: 4.5 } },
+    { id: 283, name: 'عريكة ملكية بالتمر والعسل والسمن', nameEn: 'Areeka with Dates', nameNl: 'Areeka dadeldessert', icon: '🍯', category: 'حلويات', categoryNl: 'Desserts', gi: 75, ii: 78, nutrition: { calories: 425, protein: 6, carbs: 55, fat: 20, fiber: 2 } },
+
+    // === مكملات وبدائل حمية الكيتو (Keto & Supplementen) ===
+    { id: 284, name: 'خميرة غذائية مدعمة (Nutritional Yeast)', nameEn: 'Nutritional Yeast', nameNl: 'Edelgistvlokken (B-vitamines)', icon: '🌾', category: 'مكملات', categoryNl: 'Supplementen', gi: 10, ii: 15, nutrition: { calories: 340, protein: 50, carbs: 36, fat: 4, fiber: 20 } },
+    { id: 285, name: 'خل تفاح عضوي غير مفلتر مع الأم', nameEn: 'Organic Apple Cider Vinegar', nameNl: 'Biologische appelazijn (ongefilterd)', icon: '🍎', category: 'مكملات', categoryNl: 'Supplementen', gi: 0, ii: 0, nutrition: { calories: 22, protein: 0, carbs: 0.9, fat: 0, fiber: 0 } },
+    { id: 286, name: 'بروتين بار بنكهة الشوكولاتة والكراميل', nameEn: 'Chocolate Protein Bar', nameNl: 'Eiwitreep chocolade karamel', icon: '🍫', category: 'مكملات', categoryNl: 'Supplementen', gi: 35, ii: 42, nutrition: { calories: 200, protein: 20, carbs: 22, fat: 7, fiber: 3 } },
+    { id: 287, name: 'خبز كيتو خالي من الجلوتين', nameEn: 'Gluten-Free Keto Bread', nameNl: 'Keto glutenvrij brood', icon: '🍞', category: 'مخبوزات', categoryNl: 'Bakkerij', gi: 25, ii: 30, nutrition: { calories: 210, protein: 12, carbs: 6, fat: 15, fiber: 9 } },
+    { id: 288, name: 'معكرونة خالية من الجلوتين (أرز وذرة)', nameEn: 'Gluten-Free Pasta', nameNl: 'Glutenvrije pasta', icon: '🍝', category: 'حبوب', categoryNl: 'Granen', gi: 54, ii: 58, nutrition: { calories: 348, protein: 7, carbs: 76, fat: 2, fiber: 3.5 } },
+
+    // === صلصات ومقبلات (Sauzen & Toppings) ===
+    { id: 289, name: 'دبس رمان طبيعي مركز بدون سكر', nameEn: 'Pomegranate Molasses', nameNl: 'Granaatappelmelasse', icon: '🍇', category: 'صلصات', categoryNl: 'Sauzen', gi: 55, ii: 58, nutrition: { calories: 250, protein: 1, carbs: 65, fat: 0, fiber: 0 } },
+    { id: 290, name: 'صلصة صويا مخمرة طبيعياً (Kikkoman)', nameEn: 'Naturally Brewed Soy Sauce', nameNl: 'Natuurlijk gebrouwen sojasaus', icon: '🥫', category: 'صلصات', categoryNl: 'Sauzen', gi: 15, ii: 15, nutrition: { calories: 53, protein: 5.6, carbs: 4.9, fat: 0.1, fiber: 0.8 } },
+    { id: 291, name: 'صلصة سريراتشا حارة', nameEn: 'Sriracha Hot Sauce', nameNl: 'Sriracha hete chilisaus', icon: '🌶️', category: 'صلصات', categoryNl: 'Sauzen', gi: 35, ii: 40, nutrition: { calories: 93, protein: 2, carbs: 19, fat: 0.9, fiber: 1.5 } },
+    { id: 292, name: 'مخلل خيار بلدي مقرمش', nameEn: 'Pickled Cucumbers (Gherkins)', nameNl: 'Augurken (zout/zuur)', icon: '🥒', category: 'صلصات', categoryNl: 'Sauzen', gi: 15, ii: 15, nutrition: { calories: 11, protein: 0.3, carbs: 2.3, fat: 0.2, fiber: 1.2 } },
+    { id: 293, name: 'زيتون كلاماتا يوناني أسود', nameEn: 'Kalamata Olives', nameNl: 'Kalamata olijven', icon: '🫒', category: 'صلصات', categoryNl: 'Sauzen', gi: 15, ii: 10, nutrition: { calories: 115, protein: 0.8, carbs: 6.3, fat: 10.7, fiber: 3.2 } },
+
+    // === مشروبات كحولية (لأغراض سريرية وتحذيرية صحية) ===
+    { id: 294, name: 'بيرة عادية (Pilsener)', nameEn: 'Regular Beer', nameNl: 'Pilsener bier (alcohol)', icon: '🍺', category: 'مشروبات كحولية', categoryNl: 'Alcoholische Dranken', gi: 89, ii: 15, nutrition: { calories: 43, protein: 0.5, carbs: 3.6, fat: 0, fiber: 0 }, warning: '⚠️ يحتوي على كحول (5%). يرفع حمض اليوريك والدهون الثلاثية على الكبد.' },
+    { id: 295, name: 'نبيذ أحمر جاف', nameEn: 'Dry Red Wine', nameNl: 'Droge rode wijn', icon: '🍷', category: 'مشروبات كحولية', categoryNl: 'Alcoholische Dranken', gi: 0, ii: 3, nutrition: { calories: 85, protein: 0.1, carbs: 2.6, fat: 0, fiber: 0 }, warning: '⚠️ يحتوي على كحول (13%). استهلاك الكحول يجهد إنزيمات الكبد ومسارات الحرق.' },
+    { id: 296, name: 'مشروب عرق سوس بلدي طبيعي', nameEn: 'Licorice Drink', nameNl: 'Zoethout drank (Licorice)', icon: '🥤', category: 'مشروبات', categoryNl: 'Dranken', gi: 35, ii: 40, nutrition: { calories: 38, protein: 0.2, carbs: 10, fat: 0, fiber: 0.3 } },
+    { id: 297, name: 'شاي كركديه بارد أحمر', nameEn: 'Hibiscus Iced Tea', nameNl: 'Hibiscusthee koud', icon: '🌺', category: 'مشروبات', categoryNl: 'Dranken', gi: 10, ii: 15, nutrition: { calories: 15, protein: 0.2, carbs: 3.5, fat: 0, fiber: 0.2 } },
+    { id: 298, name: 'منقوع بابونج مهدئ للأعصاب', nameEn: 'Chamomile Tea', nameNl: 'Kamille thee kalmerend', icon: '🌼', category: 'مشروبات', categoryNl: 'Dranken', gi: 0, ii: 0, nutrition: { calories: 1, protein: 0, carbs: 0.2, fat: 0, fiber: 0 } },
+    { id: 299, name: 'قهوة تركية بالهيل', nameEn: 'Turkish Coffee with Cardamom', nameNl: 'Turkse koffie met kardemom', icon: '☕', category: 'مشروبات', categoryNl: 'Dranken', gi: 0, ii: 5, nutrition: { calories: 2, protein: 0.1, carbs: 0.3, fat: 0, fiber: 0 } },
+    { id: 300, name: 'شاي أخضر بالنعناع المغربي', nameEn: 'Moroccan Mint Green Tea', nameNl: 'Marokkaanse muntthee', icon: '🍵', category: 'مشروبات', categoryNl: 'Dranken', gi: 0, ii: 0, nutrition: { calories: 2, protein: 0.2, carbs: 0.4, fat: 0, fiber: 0 } }
 ];
 
 /**
