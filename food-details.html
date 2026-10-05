@@ -441,10 +441,12 @@
                         <i class="fas fa-moon"></i>
                     </button>
 
-                    <!-- Language Toggle -->
-                    <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
-                        <span id="langText">EN</span>
-                    </button>
+                   <!-- Tri-Lingual Toggle (AR / EN / NL) -->
+        <div class="lang-switcher" style="display: flex; gap: 6px; align-items: center;">
+            <button type="button" class="lang-btn" onclick="changeLanguage('ar')" title="العربية" style="background: rgba(46, 204, 113, 0.15); border: 1px solid rgba(46, 204, 113, 0.3); border-radius: 12px; padding: 6px 10px; cursor: pointer; font-size: 1rem; transition: all 0.2s;">🇸🇾</button>
+            <button type="button" class="lang-btn" onclick="changeLanguage('en')" title="English" style="background: rgba(46, 204, 113, 0.15); border: 1px solid rgba(46, 204, 113, 0.3); border-radius: 12px; padding: 6px 10px; cursor: pointer; font-size: 1rem; transition: all 0.2s;">🇬🇧</button>
+            <button type="button" class="lang-btn" onclick="changeLanguage('nl')" title="Nederlands" style="background: rgba(46, 204, 113, 0.15); border: 1px solid rgba(46, 204, 113, 0.3); border-radius: 12px; padding: 6px 10px; cursor: pointer; font-size: 1rem; transition: all 0.2s;">🇳🇱</button>
+        </div>
                     
                     <a href="foods.html" class="back-btn">
                         <i class="fas fa-arrow-right"></i>
@@ -758,6 +760,62 @@
                 chart_label_carbs: "Carbohydrates",
                 chart_label_fat: "Fat",
                 chart_label_fiber: "Fiber"
+            },
+            nl: {
+                page_title_food_details: "Voedingsdetails - WiBo Health",
+                nav_back_to_foods: "Terug naar voeding",
+                nav_home: "Home",
+                nav_foods: "Voedingsgids",
+                nav_calculators: "Gezondheidscalculators",
+                nav_recipes: "Gezonde recepten",
+                nav_articles: "Medische artikelen",
+                nav_doctor: "Medisch team",
+                nav_pricing: "Prijzen",
+                nav_about: "Over ons",
+                nav_contact: "Contact",
+                food_name: "Voedingsmiddel",
+                food_name_en: "Voedingsmiddel",
+                food_category: "Categorie",
+                stat_gi: "Glykemische Index",
+                stat_ii: "Insuline Index",
+                stat_calories: "Calorieën",
+                stat_protein: "Eiwitten",
+                gi_low: "Laag",
+                gi_medium: "Gemiddeld",
+                gi_high: "Hoog",
+                ii_high: "Hoog",
+                per_100g: "per 100g",
+                gram: "g",
+                chart_health_indicators: "Gezondheidsindicatoren",
+                chart_nutrition: "Voedingswaarden",
+                nutrition_complete_info: "Volledige Voedingsinformatie",
+                nutrition_element: "Voedingsstof",
+                nutrition_quantity: "Hoeveelheid (per 100g)",
+                nut_calories: "Calorieën",
+                nut_protein: "Eiwitten",
+                nut_carbs: "Koolhydraten",
+                nut_fat: "Vetten",
+                nut_fiber: "Vezels",
+                health_tips: "Gezondheidstips",
+                tip_consumption: "Consumptieadvies",
+                tip_consumption_text: "Het wordt aanbevolen om met mate te consumeren en te kiezen voor volkoren varianten voor maximale vezels en voedingswaarde.",
+                tip_preparation: "Bereidingstips",
+                tip_preparation_text: "Om de glykemische index te verlagen, combineer koolhydraten met gezonde vetten, eiwitten en vezelrijke groenten.",
+                tip_warning: "Aandachtspunten",
+                tip_warning_text: "Diabetici en mensen met insulineresistentie dienen rekening te houden met de glykemische lading van de portie.",
+                footer_about: "Over ons",
+                footer_contact: "Contact",
+                footer_privacy: "Privacybeleid",
+                footer_terms: "Gebruiksvoorwaarden",
+                footer_copyright: "© 2026 WiBo Health. Alle rechten voorbehouden.",
+                footer_made_with: "Ontwikkeld met",
+                footer_for_body: "voor Boodi",
+                chart_label_gi: "Glykemische Index",
+                chart_label_ii: "Insuline Index",
+                chart_label_protein: "Eiwitten",
+                chart_label_carbs: "Koolhydraten",
+                chart_label_fat: "Vetten",
+                chart_label_fiber: "Vezels"
             }
         };
 
@@ -775,13 +833,10 @@
             updatePageLanguage();
         }
 
-        // Update page language
+       // Update page language
         function updatePageLanguage() {
             // Update title
             document.title = t('page_title_food_details');
-
-            // Update language button
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
 
             // Update all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -804,7 +859,7 @@
                 displayFoodDetails(currentFood);
             }
         }
-
+      
         // Theme toggle
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
@@ -861,12 +916,25 @@
         });
 
         // Display food details
+       // Display food details (AR / EN / NL)
         function displayFoodDetails(food) {
+            if (!food) return;
             document.getElementById('foodIcon').textContent = food.icon || '🍽️';
-            document.getElementById('foodName').textContent = food.name;
-            document.getElementById('foodNameEn').textContent = food.nameEn || '';
-            const currentLang = (window.UnifiedLanguageSystem && window.UnifiedLanguageSystem.currentLang) || 'ar';
-            document.getElementById('foodCategory').textContent = currentLang === 'en' ? (food.categoryEn || food.category) : food.category;
+
+            // Dutch / English / Arabic Names & Categories
+            if (currentLang === 'nl') {
+                document.getElementById('foodName').textContent = food.nameNl || food.nameEn || food.name;
+                document.getElementById('foodNameEn').textContent = food.nameEn || food.name;
+                document.getElementById('foodCategory').textContent = food.categoryNl || food.categoryEn || food.category;
+            } else if (currentLang === 'en') {
+                document.getElementById('foodName').textContent = food.nameEn || food.name;
+                document.getElementById('foodNameEn').textContent = food.name;
+                document.getElementById('foodCategory').textContent = food.categoryEn || food.category;
+            } else {
+                document.getElementById('foodName').textContent = food.name;
+                document.getElementById('foodNameEn').textContent = food.nameEn || '';
+                document.getElementById('foodCategory').textContent = food.category;
+            }
             
             // GI
             document.getElementById('giValue').textContent = food.gi;
@@ -878,16 +946,18 @@
             document.getElementById('iiValue').className = 'stat-value ' + getGIClass(food.ii);
             document.getElementById('iiLabel').textContent = getGIText(food.ii);
             
-            // Nutrition
+            // Quick Stats
             document.getElementById('caloriesValue').textContent = food.nutrition.calories;
             document.getElementById('proteinValue').textContent = food.nutrition.protein;
             
-            // Update nutrition values
-            document.getElementById('nutCalories').textContent = food.nutrition.calories + ' ' + t('chart_label_carbs');
-            document.getElementById('nutProtein').textContent = food.nutrition.protein + ' ' + t('gram');
-            document.getElementById('nutCarbs').textContent = food.nutrition.carbs + ' ' + t('gram');
-            document.getElementById('nutFat').textContent = food.nutrition.fat + ' ' + t('gram');
-            document.getElementById('nutFiber').textContent = food.nutrition.fiber + ' ' + t('gram');
+            // Table Values & Accurate Units
+            const calUnit = currentLang === 'ar' ? 'سعرة' : 'kcal';
+            const gUnit = t('gram');
+            document.getElementById('nutCalories').textContent = food.nutrition.calories + ' ' + calUnit;
+            document.getElementById('nutProtein').textContent = food.nutrition.protein + ' ' + gUnit;
+            document.getElementById('nutCarbs').textContent = food.nutrition.carbs + ' ' + gUnit;
+            document.getElementById('nutFat').textContent = food.nutrition.fat + ' ' + gUnit;
+            document.getElementById('nutFiber').textContent = food.nutrition.fiber + ' ' + gUnit;
         }
 
         function getGIClass(value) {
