@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta_title">الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health</title>
+    <meta name="description" content="دليل طبي شامل لتفكيك خرافات الصيام المتقطع، وفهم آليات الأنسولين وهرمون النمو والالتهام الذاتي، مع تصحيح أخطاء كسر الصيام ونصائح خاصة للسيدات. بقلم فريق ويبو هيلث الطبي.">
+    <meta name="keywords" content="الصيام المتقطع, خرافات الصيام, ويبو هيلث, دكتور وسيم حبيب, WiBo Health, الالتهام الذاتي, هرمون النمو, مقاومة الانسولين, كسر الصيام">
+    <meta name="author" content="فريق ويبو هيلث الطبي | WiBo Health">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #64748b;
+            --hero-text: #ffffff;
+            --primary-teal: #059669;
+            --primary-accent: #10b981;
+            --table-header: #f1f5f9;
+            --table-border: #e2e8f0;
+            --box-bg: #f8fafc;
+        }
+
+        body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --header-bg: #0f3460;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #cbd5e1;
+            --hero-text: #ffffff;
+            --primary-teal: #2dd4bf;
+            --primary-accent: #10b981;
+            --table-header: #1a2942;
+            --table-border: rgba(255, 255, 255, 0.1);
+            --box-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.85;
+            transition: all 0.3s ease;
+        }
+
+        /* Header Navigation */
+        .site-header {
+            background: var(--header-bg);
+            padding: 16px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo h1 {
+            font-size: 24px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lang-btn {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        body.dark-mode .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn.active {
+            background: #2ecc71;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(20deg);
+            background: #2ecc71;
+            color: white;
+        }
+
+        .nav-back-btn {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 9px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .nav-back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.5);
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 880px;
+            margin: 40px auto;
+            padding: 0 20px 80px;
+        }
+
+        .article-hero {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .article-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .article-title {
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.45;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .article-author-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid var(--table-border);
+            padding-top: 18px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .author-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(46, 204, 113, 0.15);
+            color: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            border: 2px solid #10b981;
+            flex-shrink: 0;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            font-size: 17px;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+            line-height: 1.9;
+        }
+
+        .article-content h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 36px 0 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-right: 14px;
+            border-right: 4px solid #10b981;
+        }
+
+        [dir="ltr"] .article-content h2 {
+            padding-right: 0;
+            padding-left: 14px;
+            border-right: none;
+            border-left: 4px solid #10b981;
+        }
+
+        /* Images Inside Article */
+        .article-img-box {
+            margin: 30px 0;
+            text-align: center;
+            background: var(--box-bg);
+            padding: 14px;
+            border-radius: 16px;
+            border: 1px solid var(--table-border);
+        }
+
+        .article-img-box img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .img-caption {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 10px;
+            display: block;
+            font-weight: 600;
+        }
+
+        /* Responsive Highlight Card */
+        .highlight-card {
+            background: var(--box-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 22px;
+            border-inline-start: 5px solid #10b981;
+            border-top: 1px solid var(--table-border);
+            border-bottom: 1px solid var(--table-border);
+            border-inline-end: 1px solid var(--table-border);
+        }
+
+        /* Feature List */
+        .article-list {
+            list-style: none;
+            margin: 18px 0 25px;
+        }
+
+        .article-list li {
+            position: relative;
+            padding-right: 26px;
+            margin-bottom: 14px;
+            color: var(--text-dark);
+        }
+
+        .article-list li::before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #10b981;
+            font-weight: 900;
+        }
+
+        [dir="ltr"] .article-list li {
+            padding-right: 0;
+            padding-left: 26px;
+        }
+
+        [dir="ltr"] .article-list li::before {
+            right: auto;
+            left: 0;
+        }
+
+        /* Social / TikTok Link Box */
+        .tiktok-box {
+            background: linear-gradient(135deg, rgba(238, 29, 82, 0.08), rgba(105, 201, 208, 0.08));
+            border: 1px solid rgba(238, 29, 82, 0.25);
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin: 24px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .tiktok-box i {
+            font-size: 32px;
+            color: #ee1d52;
+            flex-shrink: 0;
+        }
+
+        .tiktok-link {
+            color: #ee1d52;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .tiktok-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Box */
+        .faq-card {
+            background: var(--box-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid var(--table-border);
+        }
+
+        .faq-q {
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-q i {
+            color: #f59e0b;
+        }
+
+        .faq-a {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Disclaimer Card */
+        .disclaimer-card {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .disclaimer-card i {
+            color: #f59e0b;
+            font-size: 24px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 60px;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #2ecc71;
+        }
+
+        @media (max-width: 768px) {
+            .article-title { font-size: 22px; }
+            .article-content { padding: 25px 20px; font-size: 16px; }
+            .article-hero { padding: 25px 20px; }
+            .nav-back-btn span { display: none; }
+            .nav-back-btn { padding: 8px 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #2ecc71;"></i>
+                <h1>WiBo Health</h1>
+            </a>
+            <div class="header-controls">
+                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+
+                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <a href="index.html" class="nav-back-btn">
+                    <i class="fa-solid fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="nav_back_home">العودة للرئيسية</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Article Body -->
+    <main class="article-wrapper">
+        <article class="article-hero">
+            <span class="article-badge" data-i18n="badge_specialized">
+                <i class="fa-solid fa-notes-medical"></i> مقال سريري متخصص
+            </span>
+            <h1 class="article-title" data-i18n="article_main_title">الصيام المتقطع وخرافات السوشيال ميديا.. تعوا لأصدمكن شوي! 🩺🔥</h1>
+            <div class="article-author-meta">
+                <div class="author-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                    <strong data-i18n="author_name">بقلم: فريق ويبو هيلث الطبي</strong>
+                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة سريرية</div>
+                </div>
+            </div>
+        </article>
+
+        <section class="article-content">
+            <p data-i18n="intro_p1">
+                «جوعانين؟ خايفين يوقف الحرق؟ خايفين تدوب عضلاتكن؟ .. يالله ركض عالبراد، ولازم تاكلو كل ساعتين مشان يضل الأيض شغال، وأوعكن تفوتو وجبة الفطور ترى هي أهم وجبة بالكون!!» 
+            </p>
+            <p data-i18n="intro_p2">
+                لحظة استنوا شوي.. تعوا لأصدمكن صدمة تانية: <strong>كل هالحكي تخريف وهبل ومجرد تسويق تجاري بحت!</strong> 😁
+            </p>
+            <p data-i18n="intro_p3">
+                لما حدا يوقف قدامكن ويقلكن: <em>"إذا ما فطرت الصبح رح يوقف حرق جسمك وتهدم عضلاتك"</em>، اعطوه كف بقفا إيدكن فوراً! لانو علمياً وفيزيولوجياً ما في أي ترابط بين إراحة الجسم لساعات وبين هبوط الحرق أو ضياع العضلات.
+            </p>
+
+            <!-- Hero Image Inside Article -->
+            <div class="article-img-box">
+                <img src="images/fasting-hero.jpeg" alt="الصيام المتقطع ونشاط الجسم والحيوية" loading="lazy">
+                <span class="img-caption" data-i18n="img_caption_hero">الصيام المتقطع ليس حرماناً أو تجويعاً، بل هو وسيلة لتجديد النشاط وإعادة التوازن البيولوجي للجسم</span>
+            </div>
+
+            <h2 data-i18n="h2_insulin_master">1. الصيام مو دايت تجويع.. الصيام مفتاح هرموني!</h2>
+            <p data-i18n="desc_insulin_1">
+                الناس مفكرة القصة حساب سعرات وورقة وقلم.. القصة كلها مدفونة بهرمون واحد اسمو: <strong>الأنسولين</strong>.
+            </p>
+            <p data-i18n="desc_insulin_2">
+                طول ما عم تاكل وتنقرش (حتى لو لقمة صغيرة أو موزة أو بسكوتة دايت)، الأنسولين بالسما. ولما الأنسولين يكون طالع، الكبد بيسكر بوابات حرق الدهون بقفل ومفتاح! الجسم مستحيل يحرق غرام دهن واحد بوجود الأنسولين.
+            </p>
+            <div class="highlight-card">
+                <strong style="color: #10b981; font-size: 16px;" data-i18n="card_insulin_title">شو بيصير لما نصوم 14 إلى 16 ساعة؟</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_insulin_desc">
+                    الأنسولين بينزل لسابع أرض.. وهون البنكرياس بيفرز هرمون تاني اسمو <strong>الجلوكاغون (Glucagon)</strong>؛ هاد الهرمون هو المعلم الكبير اللي بيفوت على مخازن الدهون القديمة وبيبلش يحرقها ويحولها لطاقة نظيفة اسمها <strong>الكيتونات</strong>.
+                </p>
+            </div>
+
+            <h2 data-i18n="h2_muscles_autophagy">2. العضلات عم تدوب؟! كذبة من كذبات العصر!</h2>
+            <p data-i18n="desc_muscles_1">
+                بتعرفو شو بيفرز الجسم لما نصوم؟ بيرتفع إفراز <strong>هرمون النمو (HGH - Human Growth Hormone)</strong> بنسبة بتوصل لـ 300% وحتى 500% أحياناً! 
+            </p>
+            <p data-i18n="desc_muscles_2">
+                سبحان الخالق العظيم، الجسم ذكي جداً ومصمم للبقاء؛ لما يشوف ما في أكل خارجي، بيرفع هرمون النمو ليحمي الكتلة العضلية وما يفرط فيها، وبيبلش ياكل الدهون المتراكمة والأوساخ الخلوية.
+            </p>
+
+            <!-- Autophagy 3D Image -->
+            <div class="article-img-box">
+                <img src="images/fasting-autophagy.jpeg" alt="عملية الالتهام الذاتي والتنظيف الخلوي Autophagy" loading="lazy">
+                <span class="img-caption" data-i18n="img_caption_autophagy">الالتهام الذاتي (Autophagy): التعزيلة الخلوية الكبرى لتنظيف الأوساخ وتجديد طاقة الخلايا</span>
+            </div>
+
+            <div class="highlight-card" style="border-inline-start-color: #8b5cf6;">
+                <strong style="color: #8b5cf6; font-size: 16px;" data-i18n="card_autophagy_title">الالتهام الذاتي (Autophagy) والشباب الدائم:</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_autophagy_desc">
+                    عملية تنظيف الأوساخ اسمها العلمي (الالتهام الذاتي).. الخلايا التالفة والمهترئة والمسببة للشيخوخة.. <strong>سمعتوا؟؟ المسببة للشيخووووخة والأورام!</strong> جسمك بياكلها وينظفها كأنو عم يعمل تعزيلة عميقة للبيت!
+                </p>
+            </div>
+
+            <h2 data-i18n="h2_breakfast_myth">3. مين اخترع كذبة "الفطور أهم وجبة باليوم"؟</h2>
+            <p data-i18n="desc_breakfast_1">
+                شركات حبوب الإفطار والكورن فليكس بأمريكا بالقرن الماضي! سوقوا الفكرة ليربحوا مليارات وصرنا نركض وراهن عمى ع العمياني. 
+            </p>
+            <p data-i18n="desc_breakfast_2">
+                أجدادنا زمان ما كان عندن برادات مفتوحة 24 ساعة؛ كانوا يصحوا يتحركوا ويشتغلوا وما ياكلوا إلا بعد الظهر لما يصطادوا أو يطبخوا. أكل كل 3 ساعات والسناكات المستمرة هي السبب الأول لـ: <strong>مقاومة الأنسولين، الكبد الدهني، والكرش اللي مو راضي ينزل!</strong>
+            </p>
+
+            <h2 data-i18n="h2_breaking_fast">4. الطامة الكبرى: كارثة كسر الصيام!</h2>
+            <p data-i18n="desc_breaking_1">
+                بيجي شخص بيصوم 18 ساعة، وبس يخلص الصيام، بيروح بيكسر صيامو على: كاسة عصير كوكتيل مليانة سكر، أو صحن تمر ومعجنات، أو قطايف وكنافة! 🤯
+            </p>
+            <p data-i18n="desc_breaking_2">
+                هون أنت عملت جريمة بحق خلاياك، وبحق حالك، وبحقي وبحق جيرانك، وبحق إي آي ستوديو كمان! الأنسولين كان نايم ومرتاح، قمت صدمتو بصاروخ سكري، فبيخزن كل الأكل دهون فوراً وبيجيك هبوط طاقة ونعاس ودوخة بعد الوجبة.
+            </p>
+            <ul class="article-list">
+                <li data-i18n="list_break_1"><strong>ابدأ بالسوائل الدافئة:</strong> كوب ماء دافئ أو شوربة عظام غنية بالمعادن والكولاجين لتهيئة المعدة.</li>
+                <li data-i18n="list_break_2"><strong>الألياف والدهون الصحية:</strong> صحن سلطة بزيت الزيتون البكر الممتاز ورشة ملح بحري غير مكرر.</li>
+                <li data-i18n="list_break_3"><strong>البروتين النظيف:</strong> بيض، لحم بقري، دجاج، أو سمك لرفع الشبع بدون إحداث قفزة مفاجئة بالأنسولين.</li>
+            </ul>
+
+            <h2 data-i18n="h2_headache_salt">5. صداع الصيام ووجع الراس.. شو سببو والحل السحري؟</h2>
+            <p data-i18n="desc_headache_1">
+                كتير ناس بيصوموا وبيقولوا: <em>"يا دكتور راسي رح ينفجر وحاسس بدوخة وتعب!"</em> ويفكروا السبب نقص سكر؟ <strong>طبعاً لأ!</strong>
+            </p>
+            <p data-i18n="desc_headache_2">
+                السبب هو نقص الإلكترولايت (المعادن). لما ينزل الأنسولين، الكلى بتطرح كميات كبيرة من الماء والصوديوم، فالحل مو تروح تبلع بنادول!
+            </p>
+
+            <div class="highlight-card" style="border-inline-start-color: #3b82f6;">
+                <strong style="color: #3b82f6; font-size: 16px;" data-i18n="card_salt_title">الجرعة الإسعافية السحرية للصداع:</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_salt_desc">
+                    حطوا <strong>ربع ملعقة صغيرة من الملح البحري غير المكرر أو ملح الهملايا</strong> بكاسة مي واشربوها (طبعاً هاد الكلام <strong>للناس اللي ما عندن مشاكل بارتفاع ضغط الدم</strong>). وشوفوا السحر كيف الصداع بيختفي فوراً، والملح والمي سعراتهن صفر يعني صيامكن بأمان!
+                </p>
+            </div>
+
+            <!-- TikTok Account Callout -->
+            <div class="tiktok-box">
+                <i class="fa-brands fa-tiktok"></i>
+                <div>
+                    <span style="font-weight: 800; display: block; margin-bottom: 4px;" data-i18n="tiktok_title">خايف من الملح والضغط؟ تعال لتيك توك!</span>
+                    <p style="margin: 0; font-size: 14px; line-height: 1.6;" data-i18n="tiktok_desc">
+                        إذا مو مرتاح لهي الحركة أو من جماعة "الملح بيعلي الضغط"، نط فوراً على حسابنا بتيك توك 
+                        <a href="https://www.tiktok.com/@wibohealth" target="_blank" class="tiktok-link">@wibohealth</a> 
+                        رح تلاقي فيديو مثبت شارحلك القصة بالتفصيل السريري العلمي!
+                    </p>
+                </div>
+            </div>
+
+            <h2 data-i18n="h2_ladies_advice">6. نصيحة للمدامات والصبايا (لأنكن غاليات على قلب بودي وعلينا)</h2>
+            <p data-i18n="desc_ladies_1">
+                الصيام المتقطع رائع، بس عند الإناث بدنا شوية حكمة سريرية؛ جسم المرأة حساس جداً لأي إشارات مجاعة حادة بسبب هرمونات الإباضة والغدة الدرقية. 
+            </p>
+            <p data-i18n="desc_ladies_2">
+                لا تضغطي ع حالك بصيام 20 و 24 ساعة يومياً! 14 إلى 16 ساعة كافية جداً، وقبل الدورة الشهرية بأسبوع خففي الصيام وركزي على الكارب المعقد الصحي (متل البطاطا الحلوة والكينوا) مشان كورتيزولك ما يرتفع وتتخربط هرموناتك.
+            </p>
+
+            <div class="highlight-card" style="border-inline-start-color: #ec4899;">
+                <strong style="color: #ec4899; font-size: 16px;" data-i18n="card_summary_title">المعادلة السريرية البسيطة:</strong>
+                <p style="margin: 8px 0 0; font-size: 15px;" data-i18n="card_summary_desc">
+                    صوموا 16 ساعة، اشربوا مي ورشة ملح بحري، كلوا وجبتين مشبعتين ببروتين ودهون صحية، وحركوا رجليكن بالمشي نص ساعة باليوم.. <strong>سهلة عليكن ولا صعبة؟؟ 👍🏻</strong>
+                </p>
+            </div>
+
+            <!-- FAQ Section -->
+            <h2 data-i18n="h2_faq">أسئلة شائعة يجيب عنها فريق ويبو هيلث الطبي</h2>
+            
+            <div class="faq-card">
+                <div class="faq-q">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span data-i18n="faq_q1">هل شرب القهوة والشاي يكسر الصيام المتقطع؟</span>
+                </div>
+                <p class="faq-a" data-i18n="faq_a1">
+                    القهوة السادة، الشاي الأخضر أو الأسود، والماء مع الملح البحري لا تكسر الصيام نهائياً طالما أنها بدون سكر أو حليب أو محليات صناعية تستفز الأنسولين.
+                </p>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-q">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span data-i18n="faq_q2">هل الصيام المتقطع مناسب للجميع بدون استثناء؟</span>
+                </div>
+                <p class="faq-a" data-i18n="faq_a2">
+                    الصيام آمن لمعظم البالغين، لكنه غير موصى به للحوامل والمرضعات، أو المصابين باضطرابات الأكل السابقة، أو مرضى السكري من النوع الأول والذين يتناولون أدوية تخفيض السكر دون إشراف طبي مباشر.
+                </p>
+            </div>
+
+            <!-- Disclaimer Card -->
+            <div class="disclaimer-card">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div>
+                    <strong data-i18n="disclaimer_title">تنويه وإخلاء مسؤولية طبية:</strong>
+                    <p style="margin: 4px 0 0;" data-i18n="disclaimer_text">
+                        المعلومات الواردة في هذا الدليل مقدمة لأغراض التثقيف الصحي والغذائي فقط، ولا تغني عن الاستشارة الطبية المباشرة، التشخيص السريري، أو تعديل الجرعات الدوائية المقررة من قبل طبيبك المعالج.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+    </footer>
+
+    <!-- Translations & Theme Engine -->
+    <script>
+        const translations = {
+            ar: {
+                'meta_title': 'الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health',
+                'nav_back_home': 'العودة للرئيسية',
+                'badge_specialized': '<i class="fa-solid fa-notes-medical"></i> مقال سريري متخصص',
+                'article_main_title': 'الصيام المتقطع وخرافات السوشيال ميديا.. تعوا لأصدمكن شوي! 🩺🔥',
+                'author_name': 'بقلم: فريق ويبو هيلث الطبي',
+                'author_subtitle': 'دليل طبي شامل ومحدث | مراجعة سريرية',
+                'intro_p1': '«جوعانين؟ خايفين يوقف الحرق؟ خايفين تدوب عضلاتكن؟ .. يالله ركض عالبراد، ولازم تاكلو كل ساعتين مشان يضل الأيض شغال، وأوعكن تفوتو وجبة الفطور ترى هي أهم وجبة بالكون!!»',
+                'intro_p2': 'لحظة استنوا شوي.. تعوا لأصدمكن صدمة تانية: <strong>كل هالحكي تخريف وهبل ومجرد تسويق تجاري بحت!</strong> 😁',
+                'intro_p3': 'لما حدا يوقف قدامكن ويقلكن: <em>"إذا ما فطرت الصبح رح يوقف حرق جسمك وتهدم عضلاتك"</em>، اعطوه كف بقفا إيدكن فوراً! لانو علمياً وفيزيولوجياً ما في أي ترابط بين إراحة الجسم لساعات وبين هبوط الحرق أو ضياع العضلات.',
+                'img_caption_hero': 'الصيام المتقطع ليس حرماناً أو تجويعاً، بل هو وسيلة لتجديد النشاط وإعادة التوازن البيولوجي للجسم',
+                'h2_insulin_master': '1. الصيام مو دايت تجويع.. الصيام مفتاح هرموني!',
+                'desc_insulin_1': 'الناس مفكرة القصة حساب سعرات وورقة وقلم.. القصة كلها مدفونة بهرمون واحد اسمو: <strong>الأنسولين</strong>.',
+                'desc_insulin_2': 'طول ما عم تاكل وتنقرش (حتى لو لقمة صغيرة أو موزة أو بسكوتة دايت)، الأنسولين بالسما. ولما الأنسولين يكون طالع، الكبد بيسكر بوابات حرق الدهون بقفل ومفتاح! الجسم مستحيل يحرق غرام دهن واحد بوجود الأنسولين.',
+                'card_insulin_title': 'شو بيصير لما نصوم 14 إلى 16 ساعة؟',
+                'card_insulin_desc': 'الأنسولين بينزل لسابع أرض.. وهون البنكرياس بيفرز هرمون تاني اسمو <strong>الجلوكاغون (Glucagon)</strong>؛ هاد الهرمون هو المعلم الكبير اللي بيفوت على مخازن الدهون القديمة وبيبلش يحرقها ويحولها لطاقة نظيفة اسمها <strong>الكيتونات</strong>.',
+                'h2_muscles_autophagy': '2. العضلات عم تدوب؟! كذبة من كذبات العصر!',
+                'desc_muscles_1': 'بتعرفو شو بيفرز الجسم لما نصوم؟ بيرتفع إفراز <strong>هرمون النمو (HGH - Human Growth Hormone)</strong> بنسبة بتوصل لـ 300% وحتى 500% أحياناً!',
+                'desc_muscles_2': 'سبحان الخالق العظيم، الجسم ذكي جداً ومصمم للبقاء؛ لما يشوف ما في أكل خارجي، بيرفع هرمون النمو ليحمي الكتلة العضلية وما يفرط فيها، وبيبلش ياكل الدهون المتراكمة والأوساخ الخلوية.',
+                'img_caption_autophagy': 'الالتهام الذاتي (Autophagy): التعزيلة الخلوية الكبرى لتنظيف الأوساخ وتجديد طاقة الخلايا',
+                'card_autophagy_title': 'الالتهام الذاتي (Autophagy) والشباب الدائم:',
+                'card_autophagy_desc': 'عملية تنظيف الأوساخ اسمها العلمي (الالتهام الذاتي).. الخلايا التالفة والمهترئة والمسببة للشيخوخة.. <strong>سمعتوا؟؟ المسببة للشيخووووخة والأورام!</strong> جسمك بياكلها وينظفها كأنو عم يعمل تعزيلة عميقة للبيت!',
+                'h2_breakfast_myth': '3. مين اخترع كذبة "الفطور أهم وجبة باليوم"؟',
+                'desc_breakfast_1': 'شركات حبوب الإفطار والكورن فليكس بأمريكا بالقرن الماضي! سوقوا الفكرة ليربحوا مليارات وصرنا نركض وراهن عمى ع العمياني.',
+                'desc_breakfast_2': 'أجدادنا زمان ما كان عندن برادات مفتوحة 24 ساعة؛ كانوا يصحوا يتحركوا ويشتغلوا وما ياكلوا إلا بعد الظهر لما يصطادوا أو يطبخوا. أكل كل 3 ساعات والسناكات المستمرة هي السبب الأول لـ: <strong>مقاومة الأنسولين، الكبد الدهني، والكرش اللي مو راضي ينزل!</strong>',
+                'h2_breaking_fast': '4. الطامة الكبرى: كارثة كسر الصيام!',
+                'desc_breaking_1': 'بيجي شخص بيصوم 18 ساعة، وبس يخلص الصيام، بيروح بيكسر صيامو على: كاسة عصير كوكتيل مليانة سكر، أو صحن تمر ومعجنات، أو قطايف وكنافة! 🤯',
+                'desc_breaking_2': 'هون أنت عملت جريمة بحق خلاياك، وبحق حالك، وبحقي وبحق جيرانك، وبحق إي آي ستوديو كمان! الأنسولين كان نايم ومرتاح، قمت صدمتو بصاروخ سكري، فبيخزن كل الأكل دهون فوراً وبيجيك هبوط طاقة ونعاس ودوخة بعد الوجبة.',
+                'list_break_1': '<strong>ابدأ بالسوائل الدافئة:</strong> كوب ماء دافئ أو شوربة عظام غنية بالمعادن والكولاجين لتهيئة المعدة.',
+                'list_break_2': '<strong>الألياف والدهون الصحية:</strong> صحن سلطة بزيت الزيتون البكر الممتاز ورشة ملح بحري غير مكرر.',
+                'list_break_3': '<strong>البروتين النظيف:</strong> بيض، لحم بقري، دجاج، أو سمك لرفع الشبع بدون إحداث قفزة مفاجئة بالأنسولين.',
+                'h2_headache_salt': '5. صداع الصيام ووجع الراس.. شو سببو والحل السحري؟',
+                'desc_headache_1': 'كتير ناس بيصوموا وبيقولوا: <em>"يا دكتور راسي رح ينفجر وحاسس بدوخة وتعب!"</em> ويفكروا السبب نقص سكر؟ <strong>طبعاً لأ!</strong>',
+                'desc_headache_2': 'السبب هو نقص الإلكترولايت (المعادن). لما ينزل الأنسولين، الكلى بتطرح كميات كبيرة من الماء والصوديوم، فالحل مو تروح تبلع بنادول!',
+                'card_salt_title': 'الجرعة الإسعافية السحرية للصداع:',
+                'card_salt_desc': 'حطوا <strong>ربع ملعقة صغيرة من الملح البحري غير المكرر أو ملح الهملايا</strong> بكاسة مي واشربوها (طبعاً هاد الكلام <strong>للناس اللي ما عندن مشاكل بارتفاع ضغط الدم</strong>). وشوفوا السحر كيف الصداع بيختفي فوراً، والملح والمي سعراتهن صفر يعني صيامكن بأمان!',
+                'tiktok_title': 'خايف من الملح والضغط؟ تعال لتيك توك!',
+                'tiktok_desc': 'إذا مو مرتاح لهي الحركة أو من جماعة "الملح بيعلي الضغط"، نط فوراً على حسابنا بتيك توك <a href="https://www.tiktok.com/@wibohealth" target="_blank" class="tiktok-link">@wibohealth</a> رح تلاقي فيديو مثبت شارحلك القصة بالتفصيل السريري العلمي!',
+                'h2_ladies_advice': '6. نصيحة للمدامات والصبايا (لأنكن غاليات على قلب بودي وعلينا)',
+                'desc_ladies_1': 'الصيام المتقطع رائع، بس عند الإناث بدنا شوية حكمة سريرية؛ جسم المرأة حساس جداً لأي إشارات مجاعة حادة بسبب هرمونات الإباضة والغدة الدرقية.',
+                'desc_ladies_2': 'لا تضغطي ع حالك بصيام 20 و 24 ساعة يومياً! 14 إلى 16 ساعة كافية جداً، وقبل الدورة الشهرية بأسبوع خففي الصيام وركزي على الكارب المعقد الصحي (متل البطاطا الحلوة والكينوا) مشان كورتيزولك ما يرتفع وتتخربط هرموناتك.',
+                'card_summary_title': 'المعادلة السريرية البسيطة:',
+                'card_summary_desc': 'صوموا 16 ساعة، اشربوا مي ورشة ملح بحري، كلوا وجبتين مشبعتين ببروتين ودهون صحية، وحركوا رجليكن بالمشي نص ساعة باليوم.. <strong>سهلة عليكن ولا صعبة؟؟ 👍🏻</strong>',
+                'h2_faq': 'أسئلة شائعة يجيب عنها فريق ويبو هيلث الطبي',
+                'faq_q1': 'هل شرب القهوة والشاي يكسر الصيام المتقطع؟',
+                'faq_a1': 'القهوة السادة، الشاي الأخضر أو الأسود، والماء مع الملح البحري لا تكسر الصيام نهائياً طالما أنها بدون سكر أو حليب أو محليات صناعية تستفز الأنسولين.',
+                'faq_q2': 'هل الصيام المتقطع مناسب للجميع بدون استثناء؟',
+                'faq_a2': 'الصيام آمن لمعظم البالغين، لكنه غير موصى به للحوامل والمرضعات، أو المصابين باضطرابات الأكل السابقة، أو مرضى السكري من النوع الأول والذين يتناولون أدوية تخفيض السكر دون إشراف طبي مباشر.',
+                'disclaimer_title': 'تنويه وإخلاء مسؤولية طبية:',
+                'disclaimer_text': 'المعلومات الواردة في هذا الدليل مقدمة لأغراض التثقيف الصحي والغذائي فقط، ولا تغني عن الاستشارة الطبية المباشرة، التشخيص السريري، أو تعديل الجرعات الدوائية المقررة من قبل طبيبك المعالج.',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي'
+            },
+            en: {
+                'meta_title': 'Intermittent Fasting & Social Media Myths: Clinical Guide | WiBo Health',
+                'nav_back_home': 'Back to Home',
+                'badge_specialized': '<i class="fa-solid fa-notes-medical"></i> Specialized Clinical Article',
+                'article_main_title': 'Intermittent Fasting & Social Media Myths: Time for a Clinical Reality Check! 🩺🔥',
+                'author_name': 'By: WiBo Health Medical Team',
+                'author_subtitle': 'Comprehensive Evidence-Based Guide | Clinical Review',
+                'intro_p1': '"Starving? Afraid your metabolism will crash? Scared your muscles will melt away? .. Run to the fridge! Eat every two hours to keep your metabolism stoked, and whatever you do, never skip breakfast because it’s the most important meal of the day!"',
+                'intro_p2': 'Hold on a second.. Let us give you a clinical reality check: <strong>all of that is pure myth, marketing hype, and biological nonsense!</strong> 😁',
+                'intro_p3': 'When someone claims that skipping breakfast halts fat burning or dissolves muscle mass, dismiss it immediately! There is zero physiological evidence linking prolonged meal spacing to metabolic slowdown or muscle loss.',
+                'img_caption_hero': 'Intermittent Fasting is not starvation or deprivation; it is a clinical tool for cellular renewal and metabolic balance',
+                'h2_insulin_master': '1. Fasting is Not Calorie Deprivation.. It is a Hormonal Switch!',
+                'desc_insulin_1': 'People assume weight loss is just arithmetic and calorie counting. The entire metabolic secret is governed by one master hormone: <strong>Insulin</strong>.',
+                'desc_insulin_2': 'As long as you graze and snack throughout the day, insulin stays elevated. And when insulin is high, the liver locks down lipolysis (fat burning) with a deadbolt! The human body cannot oxidize a single gram of stored fat in a hyperinsulinemic state.',
+                'card_insulin_title': 'What happens during a 14 to 16-hour fast?',
+                'card_insulin_desc': 'Insulin levels drop dramatically. This allows the pancreas to release <strong>Glucagon</strong>—the master regulator that unlocks adipose reserves, mobilizing stored fat to be converted into clean ketone energy.',
+                'h2_muscles_autophagy': '2. Muscle Melting Away?! The Biggest Modern Fallacy!',
+                'desc_muscles_1': 'Do you know what your body secretes during fasting? Secretion of <strong>Human Growth Hormone (HGH)</strong> spikes by 300% to 500%!',
+                'desc_muscles_2': 'Human physiology is brilliantly designed for survival. When external caloric intake halts, the body elevates HGH specifically to preserve lean skeletal muscle while aggressively burning visceral fat and recycling cellular debris.',
+                'img_caption_autophagy': 'Autophagy: The ultimate cellular deep-clean, recycling senescent debris and optimizing mitochondrial function',
+                'card_autophagy_title': 'Autophagy and Cellular Longevity:',
+                'card_autophagy_desc': 'This cellular cleansing is scientifically known as Autophagy. Your body consumes damaged, dysfunctional components linked to premature aging and abnormal cell proliferation. It is literally a deep molecular spring-cleaning!',
+                'h2_breakfast_myth': '3. Who Invented the "Breakfast is the Most Important Meal" Myth?',
+                'desc_breakfast_1': 'Commercial cereal conglomerates in 20th-century America! They heavily marketed the narrative to generate billions in packaged food sales.',
+                'desc_breakfast_2': 'Our ancestors never had 24/7 pantries. They woke up, engaged in physical effort, and ate later in the day. Constant grazing every 3 hours is the leading driver of: <strong>Insulin Resistance, Fatty Liver, and stubborn visceral fat!</strong>',
+                'h2_breaking_fast': '4. The Critical Blunder: Breaking the Fast Incorrectly!',
+                'desc_breaking_1': 'Someone fasts rigorously for 18 hours, only to break it with high-glycemic fruit smoothies, pastries, dates, and refined carbs! 🤯',
+                'desc_breaking_2': 'That is an insult to your metabolism! While insulin was resting peacefully, you hit it with a high-sugar shockwave, forcing instant lipogenesis (fat storage) followed by acute reactive hypoglycemia and lethargy.',
+                'list_break_1': '<strong>Start with warm fluids:</strong> Warm water or mineral-rich bone broth to gently prime digestion.',
+                'list_break_2': '<strong>Fiber & healthy lipids:</strong> Fresh green salad with extra virgin olive oil and unrefined sea salt.',
+                'list_break_3': '<strong>Clean protein:</strong> Eggs, lean beef, wild fish, or poultry to maximize satiety without triggering hyperinsulinemia.',
+                'h2_headache_salt': '5. Fasting Headaches & Fatigue: The Cause & The Quick Fix',
+                'desc_headache_1': 'Many beginners complain: <em>"Doctor, my head is throbbing and I feel lightheaded!"</em> and assume it is hypoglycemia? <strong>Absolutely not!</strong>',
+                'desc_headache_2': 'It is electrolyte depletion (natriuresis of fasting). As insulin drops, the kidneys excrete significant amounts of sodium and water. Popping painkillers is not the answer!',
+                'card_salt_title': 'The Electrolyte Rescue Protocol:',
+                'card_salt_desc': 'Add <strong>1/4 teaspoon of unrefined sea salt or Himalayan pink salt</strong> to a glass of water and drink it (strictly for individuals without unmanaged hypertension). Watch the headache vanish within minutes. Pure salt and water contain zero calories and will not break your fast!',
+                'tiktok_title': 'Skeptical about salt and blood pressure? Visit our TikTok!',
+                'tiktok_desc': 'If you are concerned about sodium and hypertension, visit our official TikTok channel <a href="https://www.tiktok.com/@wibohealth" target="_blank" class="tiktok-link">@wibohealth</a> where our pinned clinical video explains the physiology in detail!',
+                'h2_ladies_advice': '6. Clinical Advice for Women (Because You Matter to Boodi and All of Us)',
+                'desc_ladies_1': 'Intermittent fasting is potent, but female biology requires clinical nuance. The female hypothalamic-pituitary-ovarian axis is exquisitely sensitive to acute starvation signals.',
+                'desc_ladies_2': 'Avoid extreme 20-24 hour fasts daily! A 14 to 16-hour window is optimal. One week prior to menstruation, shorten the fasting window and incorporate complex healthy carbs (sweet potatoes, quinoa) to prevent cortisol spikes and cycle irregularities.',
+                'card_summary_title': 'The Simple Clinical Formula:',
+                'card_summary_desc': 'Fast for 16 hours, hydrate with water and a pinch of unrefined sea salt, eat two nutrient-dense meals with clean protein and healthy fats, and walk briskly for 30 minutes daily.. <strong>Easy or hard? You decide! 👍🏻</strong>',
+                'h2_faq': 'Frequently Asked Clinical Questions with WiBo Health Medical Team',
+                'faq_q1': 'Do black coffee and tea break intermittent fasting?',
+                'faq_a1': 'Black coffee, plain green/black tea, and water with sea salt contain virtually zero calories and do not trigger insulin release, meaning they will not break your metabolic fast.',
+                'faq_q2': 'Is intermittent fasting suitable for everyone?',
+                'faq_a2': 'While safe for most healthy adults, fasting is contraindicated during pregnancy, lactation, active eating disorders, or for Type 1 Diabetics without direct physician supervision.',
+                'disclaimer_title': 'Clinical Notice & Medical Disclaimer:',
+                'disclaimer_text': 'The information in this guide is provided strictly for educational and dietary guidance purposes. It does not constitute direct medical advice, clinical diagnosis, or replacement for prescribed medical protocols formulated by your personal physician.',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by WiBo Health Medical Team'
+            }
+        };
+
+        function detectInitialLang() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+            if (saved && (saved === 'ar' || saved === 'en')) {
+                return saved;
+            }
+            const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            return phoneLang.startsWith('ar') ? 'ar' : 'en';
+        }
+
+        let currentLang = detectInitialLang();
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
+            localStorage.setItem('wibo_language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) {
+                backIcon.className = lang === 'ar' ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left';
+            }
+
+            updatePageLanguage();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            if (translations[currentLang] && translations[currentLang]['meta_title']) {
+                document.title = translations[currentLang]['meta_title'];
+            }
+        }
+
+        /* Dark / Light Mode Engine */
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
+            changeLanguage(currentLang);
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                if (icon) icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                if (icon) icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>
