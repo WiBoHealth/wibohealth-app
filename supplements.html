@@ -38,7 +38,6 @@
             box-sizing: border-box;
         }
 
-        /* توحيد متغيرات الألوان بالمللي مع index.html */
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --header-bg: #ffffff;
@@ -81,7 +80,6 @@
             padding: 0 20px;
         }
 
-        /* Modern Slim Header 2.0 الموحد في سطر واحد */
         header {
             background: var(--header-bg);
             padding: 10px 0;
@@ -242,7 +240,6 @@
             background: white;
         }
 
-        /* Mobile Drawer */
         .mobile-nav-overlay {
             display: none;
             position: fixed;
@@ -312,7 +309,6 @@
             color: white;
         }
 
-        /* Hero Section */
         .hero {
             padding: 35px 20px 20px;
             text-align: center;
@@ -354,7 +350,6 @@
         .stat-card h3 { font-size: 28px; font-weight: 900; margin: 4px 0; }
         .stat-card p { font-size: 13px; margin: 0; opacity: 0.9; }
 
-        /* Search Section المتجاوب مع الاتجاهات */
         .search-section {
             max-width: 850px;
             margin: 10px auto 25px;
@@ -418,7 +413,6 @@
         [dir="rtl"] .search-box i { right: 18px; left: auto; }
         [dir="ltr"] .search-box i { left: 18px; right: auto; }
 
-        /* Compare Hint */
         .compare-hint-box {
             background: rgba(46, 204, 113, 0.15);
             padding: 14px 20px;
@@ -436,7 +430,6 @@
             border-left: 4px solid var(--primary-color);
         }
 
-        /* Supplements Grid */
         .supplements-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -448,9 +441,11 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             border: 1px solid rgba(255,255,255,0.1);
+            content-visibility: auto; /* تحسين تسريع المتصفح */
+            contain-intrinsic-size: 320px;
         }
 
         .supplement-card:hover {
@@ -541,7 +536,6 @@
 
         .read-more-btn:hover { transform: scale(1.05); }
 
-        /* Compare Checkbox */
         .compare-checkbox-wrapper {
             position: absolute;
             top: 14px;
@@ -571,7 +565,6 @@
         }
         .compare-checkbox:checked + .compare-label i { display: block; }
 
-        /* Compare Floating Button */
         .compare-float-btn {
             position: fixed;
             bottom: 30px;
@@ -599,7 +592,6 @@
             border-radius: 12px;
         }
 
-        /* Modal Dialog & Fixes */
         .modal {
             display: none;
             position: fixed;
@@ -658,9 +650,7 @@
         .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
         .modal-subtitle { font-size: 14px; opacity: 0.9; }
 
-        .modal-body {
-            padding: 25px;
-        }
+        .modal-body { padding: 25px; }
 
         [dir="rtl"] .modal-body { text-align: right; }
         [dir="ltr"] .modal-body { text-align: left; }
@@ -732,7 +722,6 @@
 
         .warning-box li { color: #92400e !important; }
 
-        /* Comparison Table */
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
@@ -764,7 +753,6 @@
             width: 140px;
         }
 
-        /* Loading */
         .loading {
             text-align: center;
             padding: 40px;
@@ -773,6 +761,15 @@
             font-size: 32px;
         }
         .loading.show { display: block; }
+
+        .infinite-scroll-loader {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            display: none;
+        }
+
         .no-results {
             text-align: center;
             padding: 50px 20px;
@@ -791,11 +788,10 @@
 </head>
 <body>
 
-    <!-- Unified Slim Header 2.0 (Exact Index Architecture) -->
+    <!-- Unified Slim Header 2.0 -->
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- Logo Compact -->
                 <a href="index.html" class="logo">
                     <div class="logo-icon">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -814,7 +810,6 @@
                     </div>
                 </a>
 
-                <!-- Navigation Desktop Single-Row -->
                 <nav class="nav-menu">
                     <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
                     <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">الأطعمة</span></a>
@@ -825,7 +820,6 @@
                     <a href="boodi.html" class="nav-link boodi-link"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
                 </nav>
 
-                <!-- Controls & Switchers -->
                 <div class="header-controls">
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">&#127466;&#127468;</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
@@ -845,7 +839,7 @@
         </div>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
     <nav class="mobile-nav-menu" id="mobileNav">
         <button class="mobile-nav-close" onclick="toggleMobileMenu()">
@@ -912,10 +906,15 @@
         </div>
     </div>
 
-    <!-- Supplements Grid -->
+    <!-- Supplements Grid Container -->
     <div class="container">
         <div class="loading show"><i class="fas fa-spinner fa-spin"></i></div>
         <div id="supplementsGrid" class="supplements-grid"></div>
+        
+        <!-- Sentinel for ultra-fast progressive batch loading -->
+        <div id="infiniteScrollSentinel" style="height: 20px; margin: 25px 0;"></div>
+        <div id="scrollLoader" class="infinite-scroll-loader"><i class="fas fa-circle-notch fa-spin"></i></div>
+
         <div class="no-results" id="noResults">
             <i class="fas fa-search" style="font-size: 48px; margin-bottom: 15px; opacity: 0.7;"></i>
             <h3 data-i18n="no_results_title">لم يتم العثور على نتائج</h3>
@@ -960,7 +959,7 @@
         </div>
     </div>
 
-   <!-- Compact Medical Warning (Tri-Lingual) -->
+    <!-- Medical Warning -->
     <div class="container" style="margin-top: 40px;">
         <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; padding: 15px 20px; border-radius: 14px; box-shadow: 0 4px 15px rgba(255,107,107,0.25); display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
             <div style="display: flex; align-items: center; gap: 12px;">
@@ -976,7 +975,7 @@
         </div>
     </div>
 
-    <!-- Unified Footer Matching Index (Tri-Lingual) -->
+    <!-- Unified Footer -->
     <footer style="background: #2c3e50; color: white; padding: 35px 20px; margin-top: 50px; text-align: center;">
         <div class="container">
             <div style="margin-bottom: 15px;">
@@ -996,9 +995,8 @@
     <!-- Clean External Data -->
     <script src="js/supplements-data.js"></script>
 
-    <!-- Logic & Multi-Language Engine -->
+    <!-- Logic & Ultra-Fast Progressive Engine -->
     <script>
-        // Multi-Language Strings
         const translations = {
             ar: {
                 nav_home: "الرئيسية",
@@ -1042,14 +1040,14 @@
                 cat_diabetes: "السكري والأنسولين",
                 cat_herbs: "أعشاب وزيوت علاجية",
                 warn_title: "تحذير طبي مهم",
-        warn_desc: "المعلومات هنا تعليمية عامة فقط وليست استشارة طبية شخصية. استشر طبيبك دائماً.",
-        warn_btn: "إخلاء المسؤولية",
-        footer_about: "من نحن",
-        footer_contact: "اتصل بنا",
-        footer_privacy: "سياسة الخصوصية",
-        footer_terms: "شروط الاستخدام",
-        footer_rights: "© 2026 WiBo Health. جميع الحقوق محفوظة.",
-        footer_boodi: "مُطور بـ ♥ من أجل بودي"
+                warn_desc: "المعلومات هنا تعليمية عامة فقط وليست استشارة طبية شخصية. استشر طبيبك دائماً.",
+                warn_btn: "إخلاء المسؤولية",
+                footer_about: "من نحن",
+                footer_contact: "اتصل بنا",
+                footer_privacy: "سياسة الخصوصية",
+                footer_terms: "شروط الاستخدام",
+                footer_rights: "© 2026 WiBo Health. جميع الحقوق محفوظة.",
+                footer_boodi: "مُطور بـ ♥ من أجل بودي"
             },
             en: {
                 nav_home: "Home",
@@ -1093,14 +1091,14 @@
                 cat_diabetes: "Diabetes & Insulin",
                 cat_herbs: "Herbs & Essential Oils",
                 warn_title: "Important Medical Warning",
-        warn_desc: "This information is educational only and does not constitute medical advice. Always consult your doctor.",
-        warn_btn: "Disclaimer",
-        footer_about: "About Us",
-        footer_contact: "Contact Us",
-        footer_privacy: "Privacy Policy",
-        footer_terms: "Terms of Use",
-        footer_rights: "© 2026 WiBo Health. All rights reserved.",
-        footer_boodi: "Developed with ♥ for boodi"
+                warn_desc: "This information is educational only and does not constitute medical advice. Always consult your doctor.",
+                warn_btn: "Disclaimer",
+                footer_about: "About Us",
+                footer_contact: "Contact Us",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Use",
+                footer_rights: "© 2026 WiBo Health. All rights reserved.",
+                footer_boodi: "Developed with ♥ for boodi"
             },
             nl: {
                 nav_home: "Home",
@@ -1144,30 +1142,23 @@
                 cat_diabetes: "Diabetes & Insuline",
                 cat_herbs: "Kruiden & Oliën",
                 warn_title: "Belangrijke medische waarschuwing",
-        warn_desc: "Deze informatie is uitsluitend educatief en vervangt geen medisch advies. Raadpleeg altijd een arts.",
-        warn_btn: "Disclaimer",
-        footer_about: "Over Ons",
-        footer_contact: "Contact",
-        footer_privacy: "Privacybeleid",
-        footer_terms: "Gebruiksvoorwaarden",
-        footer_rights: "© 2026 WiBo Health. Alle rechten voorbehouden.",
-        footer_boodi: "Ontwikkeld met ♥ voor boodi"
+                warn_desc: "Deze informatie is uitsluitend educatief en vervangt geen medisch advies. Raadpleeg altijd een arts.",
+                warn_btn: "Disclaimer",
+                footer_about: "Over Ons",
+                footer_contact: "Contact",
+                footer_privacy: "Privacybeleid",
+                footer_terms: "Gebruiksvoorwaarden",
+                footer_rights: "© 2026 WiBo Health. Alle rechten voorbehouden.",
+                footer_boodi: "Ontwikkeld met ♥ voor boodi"
             }
         };
 
-        // Smart Clinical Term Translator (Translates dosage & timings on the fly)
         function smartClinicalTranslate(text, lang) {
             if (!text || lang === 'ar') return text;
-            
             let res = String(text);
-            
-            // Units
             res = res.replace(/جرام|جم/g, 'g').replace(/ملغ|ملغم/g, 'mg').replace(/ميكروجرام/g, 'mcg');
-            res = res.replace(/كبسولة/g, lang === 'nl' ? 'capsule' : 'capsule');
-            res = res.replace(/كبسولات/g, lang === 'nl' ? 'capsules' : 'capsules');
-            res = res.replace(/حبة/g, lang === 'nl' ? 'tablet' : 'tablet');
+            res = res.replace(/كبسولة/g, 'capsule').replace(/كبسولات/g, 'capsules').replace(/حبة/g, 'tablet');
             
-            // Frequencies & Timing
             const dict = {
                 nl: {
                     'قبل النوم': 'Voor het slapengaan',
@@ -1215,11 +1206,9 @@
             for (const [arKey, translatedVal] of Object.entries(langDict)) {
                 res = res.split(arKey).join(translatedVal);
             }
-
             return res;
         }
 
-        // Language State Management
         function detectInitialLang() {
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) return saved;
@@ -1264,10 +1253,10 @@
                 }
             });
 
-            displaySupplements();
+            // إعادة عرض فورية خفيفة بدون لاغ
+            displaySupplements(true);
         }
 
-        // Theme Toggle (Syncs exactly with index.html)
         function initializeTheme() {
             const savedTheme = localStorage.getItem('wibo_theme');
             if (savedTheme === 'dark') {
@@ -1299,7 +1288,6 @@
             }
         }
 
-        // Category Translation Mapper
         function getCategoryName(category) {
             const catMap = {
                 'بناء-عضلات': 'cat_muscle',
@@ -1319,11 +1307,6 @@
             return key ? t(key) : category;
         }
 
-        // Supplements Grid Rendering
-        let searchTerm = '';
-        window.selectedSupplements = new Set();
-
-       // قاموس ذكي لترجمة وسوم الكروت تلقائياً للهولندية والإنجليزية
         const tagTranslations = {
             nl: {
                 'بروتين': 'Eiwit', 'بناء عضلات': 'Spieropbouw', 'تعافي': 'Herstel',
@@ -1351,7 +1334,77 @@
             }
         };
 
-        function displaySupplements() {
+        // ==========================================
+        // محرك الرندرة فائق السرعة (Chunked Infinite Engine)
+        // ==========================================
+        const BATCH_SIZE = 24; // تحميل 24 مكملاً في كل دفعة
+        let currentRenderIndex = 0;
+        let currentFilteredSupplements = [];
+        let searchTerm = '';
+        window.selectedSupplements = new Set();
+        let scrollObserver = null;
+
+        function buildCardHtml(supp, arrowIcon) {
+            const isChecked = window.selectedSupplements.has(supp.id) ? 'checked' : '';
+            
+            let title = supp.name;
+            let subtitle = supp.englishName || '';
+            
+            if (currentLang === 'nl') {
+                title = supp.nameNl || supp.englishName || supp.name;
+                subtitle = supp.englishName !== title ? (supp.englishName || '') : '';
+            } else if (currentLang === 'en') {
+                title = supp.englishName || supp.name;
+                subtitle = '';
+            }
+
+            const summary = (currentLang === 'nl' && supp.summaryNl) ? supp.summaryNl :
+                            (currentLang === 'en' && supp.summaryEn) ? supp.summaryEn :
+                            (supp.summary || '');
+
+            const tagsList = (supp.tags || []).map(tag => {
+                const translatedTag = tagTranslations[currentLang]?.[tag] || tag;
+                return `<span class="tag">${translatedTag}</span>`;
+            }).join('');
+            
+            return `
+            <div class="supplement-card">
+                <div class="compare-checkbox-wrapper">
+                    <input type="checkbox" 
+                           class="compare-checkbox" 
+                           id="compare-${supp.id}" 
+                           value="${supp.id}"
+                           ${isChecked}
+                           onchange="toggleSupplementCompare(${supp.id}, this)">
+                    <label for="compare-${supp.id}" class="compare-label">
+                        <i class="fas fa-check"></i>
+                    </label>
+                </div>
+                <div class="card-content" onclick="openModal(${supp.id})" style="cursor: pointer;">
+                    <div class="supplement-header">
+                        <div class="supplement-icon">${supp.icon || '💊'}</div>
+                        <h3>${title}</h3>
+                        ${subtitle ? `<p class="english-name">${subtitle}</p>` : ''}
+                    </div>
+                    <div class="supplement-body">
+                        <span class="supplement-category">${getCategoryName(supp.category)}</span>
+                        <p class="supplement-summary">${summary}</p>
+                        <div class="supplement-tags">
+                            ${tagsList}
+                        </div>
+                        <div class="supplement-footer">
+                            <span class="read-more-btn">
+                                ${t('read_more')}
+                                <i class="fas ${arrowIcon}"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+
+        function displaySupplements(reset = true) {
             const grid = document.getElementById('supplementsGrid');
             const loading = document.querySelector('.loading');
             const noResults = document.getElementById('noResults');
@@ -1362,100 +1415,78 @@
             const totalEl = document.getElementById('supplementsTotalCount');
             if (totalEl) totalEl.textContent = supplementsData.length;
 
-            const term = (searchTerm || '').toLowerCase().trim();
-            
-            const filtered = supplementsData.filter(supp => {
-                if (!term) return true;
-                const nameMatch = supp.name && supp.name.toLowerCase().includes(term);
-                const enMatch = supp.englishName && supp.englishName.toLowerCase().includes(term);
-                const nlMatch = supp.nameNl && supp.nameNl.toLowerCase().includes(term);
-                const tagMatch = supp.tags && supp.tags.some(tag => tag.toLowerCase().includes(term));
-                return nameMatch || enMatch || nlMatch || tagMatch;
-            });
-            
-            if (filtered.length === 0) {
-                if (noResults) noResults.classList.add('show');
+            if (reset) {
+                const term = (searchTerm || '').toLowerCase().trim();
+                currentFilteredSupplements = supplementsData.filter(supp => {
+                    if (!term) return true;
+                    const nameMatch = supp.name && supp.name.toLowerCase().includes(term);
+                    const enMatch = supp.englishName && supp.englishName.toLowerCase().includes(term);
+                    const nlMatch = supp.nameNl && supp.nameNl.toLowerCase().includes(term);
+                    const tagMatch = supp.tags && supp.tags.some(tag => tag.toLowerCase().includes(term));
+                    return nameMatch || enMatch || nlMatch || tagMatch;
+                });
+
                 grid.innerHTML = '';
-                return;
-            } else {
-                if (noResults) noResults.classList.remove('show');
-            }
-            
-            const arrowIcon = currentLang === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right';
-            
-            grid.innerHTML = filtered.map(supp => {
-                const isChecked = window.selectedSupplements.has(supp.id) ? 'checked' : '';
-                
-                // ضبط العناوين ومنع ظهور العربي بالواجهة الهولندية
-                let title = supp.name;
-                let subtitle = supp.englishName || '';
-                
-                if (currentLang === 'nl') {
-                    title = supp.nameNl || supp.englishName || supp.name;
-                    subtitle = supp.englishName !== title ? (supp.englishName || '') : '';
-                } else if (currentLang === 'en') {
-                    title = supp.englishName || supp.name;
-                    subtitle = '';
+                currentRenderIndex = 0;
+
+                if (currentFilteredSupplements.length === 0) {
+                    if (noResults) noResults.classList.add('show');
+                    return;
+                } else {
+                    if (noResults) noResults.classList.remove('show');
                 }
+            }
 
-                // قراءة الملخص الهولندي النقي
-                const summary = (currentLang === 'nl' && supp.summaryNl) ? supp.summaryNl :
-                                (currentLang === 'en' && supp.summaryEn) ? supp.summaryEn :
-                                (supp.summary || '');
-
-                // ترجمة الوسوم
-                const tagsList = (supp.tags || []).map(tag => {
-                    const translatedTag = tagTranslations[currentLang]?.[tag] || tag;
-                    return `<span class="tag">${translatedTag}</span>`;
-                }).join('');
-                
-                return `
-                <div class="supplement-card">
-                    <div class="compare-checkbox-wrapper">
-                        <input type="checkbox" 
-                               class="compare-checkbox" 
-                               id="compare-${supp.id}" 
-                               value="${supp.id}"
-                               ${isChecked}
-                               onchange="toggleSupplementCompare(${supp.id}, this)">
-                        <label for="compare-${supp.id}" class="compare-label">
-                            <i class="fas fa-check"></i>
-                        </label>
-                    </div>
-                    <div class="card-content" onclick="openModal(${supp.id})" style="cursor: pointer;">
-                        <div class="supplement-header">
-                            <div class="supplement-icon">${supp.icon || '💊'}</div>
-                            <h3>${title}</h3>
-                            ${subtitle ? `<p class="english-name">${subtitle}</p>` : ''}
-                        </div>
-                        <div class="supplement-body">
-                            <span class="supplement-category">${getCategoryName(supp.category)}</span>
-                            <p class="supplement-summary">${summary}</p>
-                            <div class="supplement-tags">
-                                ${tagsList}
-                            </div>
-                            <div class="supplement-footer">
-                                <span class="read-more-btn">
-                                    ${t('read_more')}
-                                    <i class="fas ${arrowIcon}"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }).join('');
+            // حقن دفعة سريعة (Batch)
+            renderNextBatch();
         }
 
-        // Details Modal Logic (Clean LTR / RTL Directional Harmony)
-       function openModal(id) {
+        function renderNextBatch() {
+            const grid = document.getElementById('supplementsGrid');
+            const scrollLoader = document.getElementById('scrollLoader');
+            if (!grid || currentRenderIndex >= currentFilteredSupplements.length) {
+                if (scrollLoader) scrollLoader.style.display = 'none';
+                return;
+            }
+
+            const arrowIcon = currentLang === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right';
+            const nextBatch = currentFilteredSupplements.slice(currentRenderIndex, currentRenderIndex + BATCH_SIZE);
+            currentRenderIndex += nextBatch.length;
+
+            const batchHtml = nextBatch.map(supp => buildCardHtml(supp, arrowIcon)).join('');
+            grid.insertAdjacentHTML('beforeend', batchHtml);
+
+            if (scrollLoader) {
+                scrollLoader.style.display = (currentRenderIndex < currentFilteredSupplements.length) ? 'block' : 'none';
+            }
+        }
+
+        // إعداد مراقب السكرول اللانهائي فائق الخفة
+        function initScrollObserver() {
+            const sentinel = document.getElementById('infiniteScrollSentinel');
+            if (!sentinel) return;
+
+            if (scrollObserver) scrollObserver.disconnect();
+
+            scrollObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    if (currentRenderIndex < currentFilteredSupplements.length) {
+                        renderNextBatch();
+                    }
+                }
+            }, { rootMargin: '400px' });
+
+            scrollObserver.observe(sentinel);
+        }
+
+        // Details Modal Logic
+        function openModal(id) {
             const supp = supplementsData.find(s => s.id === id);
             if (!supp) return;
             
             const modal = document.getElementById('supplementModal');
             document.getElementById('modalIcon').textContent = supp.icon || '💊';
             
-            // الاسم والعنوان
             if (currentLang === 'ar') {
                 document.getElementById('modalTitle').textContent = supp.name;
                 document.getElementById('modalSubtitle').textContent = supp.englishName || '';
@@ -1467,12 +1498,10 @@
                 document.getElementById('modalSubtitle').textContent = supp.name || '';
             }
             
-            // الفوائد حسب اللغة
             const benefitsList = (currentLang === 'nl' && supp.benefitsNl) ? supp.benefitsNl :
                                  (currentLang === 'en' && supp.benefitsEn) ? supp.benefitsEn :
                                  (supp.benefits || []);
 
-            // الجرعات والتوقيت حسب اللغة
             const recVal = (currentLang === 'nl' && supp.dosageNl?.recommended) ? supp.dosageNl.recommended :
                            (currentLang === 'en' && supp.dosageEn?.recommended) ? supp.dosageEn.recommended :
                            smartClinicalTranslate(supp.dosage?.recommended || '-', currentLang);
@@ -1485,12 +1514,10 @@
                             (currentLang === 'en' && supp.dosageEn?.frequency) ? supp.dosageEn.frequency :
                             smartClinicalTranslate(supp.dosage?.frequency || '-', currentLang);
 
-            // التحذيرات حسب اللغة
             const warningsList = (currentLang === 'nl' && supp.warningsNl) ? supp.warningsNl :
                                  (currentLang === 'en' && supp.warningsEn) ? supp.warningsEn :
                                  (supp.warnings || []);
 
-            // التفاعلات والمصادر
             const interVal = (currentLang === 'nl' && supp.interactionsNl) ? supp.interactionsNl :
                              (currentLang === 'en' && supp.interactionsEn) ? supp.interactionsEn :
                              smartClinicalTranslate(supp.interactions || '-', currentLang);
@@ -1559,10 +1586,15 @@
             if (e.target === this) closeModal();
         });
 
-        // Search Input Listener
+        // Search Input Debouncing (لمنع التجميد أثناء الكتابة)
+        let searchDebounceTimer = null;
         document.getElementById('searchInput').addEventListener('input', function(e) {
-            searchTerm = e.target.value;
-            displaySupplements();
+            const val = e.target.value;
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(() => {
+                searchTerm = val;
+                displaySupplements(true);
+            }, 180);
         });
 
         // Compare Functions
@@ -1664,7 +1696,6 @@
             `;
         }
 
-        // Escape Key Listener
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
@@ -1672,19 +1703,19 @@
             }
         });
 
-      // منع المتصفح من تذكر مكان النزول وإرجاع الصفحة للقمة دائماً
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
 
         // Initialize on DOM Ready
         window.addEventListener('DOMContentLoaded', function() {
-            window.scrollTo(0, 0); // صعود فوري لأعلى الصفحة
+            window.scrollTo(0, 0);
             const searchInput = document.getElementById('searchInput');
-            if (searchInput) searchInput.value = ''; // تصفير مربع البحث
+            if (searchInput) searchInput.value = '';
             searchTerm = '';
             
             initializeTheme();
+            initScrollObserver();
             changeLanguage(currentLang);
         });
     </script>
