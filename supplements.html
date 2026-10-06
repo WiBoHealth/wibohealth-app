@@ -1647,16 +1647,18 @@
             document.body.style.overflow = 'auto';
         }
 
-        function displayComparisonTable(supplements) {
+       function displayComparisonTable(supplements) {
             const body = document.getElementById('compareModalBody');
             const isAr = currentLang === 'ar';
+            const isNl = currentLang === 'nl';
+            const isEn = currentLang === 'en';
             
             const lbl = {
-                crit: isAr ? 'المعيار' : (currentLang === 'nl' ? 'Criterium' : 'Criterion'),
-                cat: isAr ? 'التصنيف' : (currentLang === 'nl' ? 'Categorie' : 'Category'),
-                dos: isAr ? 'الجرعة' : (currentLang === 'nl' ? 'Dosering' : 'Dosage'),
-                tim: isAr ? 'التوقيت' : (currentLang === 'nl' ? 'Innamemoment' : 'Timing'),
-                warn: isAr ? 'التحذيرات' : (currentLang === 'nl' ? 'Waarschuwingen' : 'Warnings')
+                crit: isAr ? 'المعيار' : (isNl ? 'Criterium' : 'Criterion'),
+                cat: isAr ? 'التصنيف' : (isNl ? 'Categorie' : 'Category'),
+                dos: isAr ? 'الجرعة' : (isNl ? 'Dosering' : 'Dosage'),
+                tim: isAr ? 'التوقيت' : (isNl ? 'Innamemoment' : 'Timing'),
+                warn: isAr ? 'التحذيرات' : (isNl ? 'Waarschuwingen' : 'Warnings')
             };
 
             body.innerHTML = `
@@ -1665,12 +1667,18 @@
                         <thead>
                             <tr>
                                 <th>${lbl.crit}</th>
-                                ${supplements.map(s => `
+                                ${supplements.map(s => {
+                                    let suppTitle = s.name;
+                                    if (isNl) suppTitle = s.nameNl || s.englishName || s.name;
+                                    else if (isEn) suppTitle = s.englishName || s.name;
+
+                                    return `
                                     <th>
-                                        <div style="font-size: 28px;">${s.icon || '💊'}</div>
-                                        <div>${isAr ? s.name : (s.englishName || s.name)}</div>
+                                        <div style="font-size: 28px; margin-bottom: 5px;">${s.icon || '💊'}</div>
+                                        <div style="font-weight: 800; font-size: 15px;">${suppTitle}</div>
                                     </th>
-                                `).join('')}
+                                    `;
+                                }).join('')}
                             </tr>
                         </thead>
                         <tbody>
@@ -1680,15 +1688,30 @@
                             </tr>
                             <tr>
                                 <td><i class="fas fa-prescription-bottle"></i> ${lbl.dos}</td>
-                                ${supplements.map(s => `<td><strong>${smartClinicalTranslate(s.dosage?.recommended || '-', currentLang)}</strong></td>`).join('')}
+                                ${supplements.map(s => {
+                                    const recVal = (isNl && s.dosageNl?.recommended) ? s.dosageNl.recommended :
+                                                   (isEn && s.dosageEn?.recommended) ? s.dosageEn.recommended :
+                                                   (s.dosage?.recommended || '-');
+                                    return `<td><strong>${recVal}</strong></td>`;
+                                }).join('')}
                             </tr>
                             <tr>
                                 <td><i class="fas fa-clock"></i> ${lbl.tim}</td>
-                                ${supplements.map(s => `<td>${smartClinicalTranslate(s.dosage?.timing || '-', currentLang)}</td>`).join('')}
+                                ${supplements.map(s => {
+                                    const timVal = (isNl && s.dosageNl?.timing) ? s.dosageNl.timing :
+                                                   (isEn && s.dosageEn?.timing) ? s.dosageEn.timing :
+                                                   (s.dosage?.timing || '-');
+                                    return `<td>${timVal}</td>`;
+                                }).join('')}
                             </tr>
                             <tr>
                                 <td><i class="fas fa-triangle-exclamation"></i> ${lbl.warn}</td>
-                                ${supplements.map(s => `<td>${(s.warnings || []).slice(0, 2).join('<br>')}</td>`).join('')}
+                                ${supplements.map(s => {
+                                    const warnList = (isNl && s.warningsNl && s.warningsNl.length > 0) ? s.warningsNl :
+                                                     (isEn && s.warningsEn && s.warningsEn.length > 0) ? s.warningsEn :
+                                                     (s.warnings || []);
+                                    return `<td><ul style="padding-${isAr ? 'right' : 'left'}: 16px; margin: 0; font-size: 13px; line-height: 1.5;">${warnList.slice(0, 2).map(w => `<li>${w}</li>`).join('')}</ul></td>`;
+                                }).join('')}
                             </tr>
                         </tbody>
                     </table>
