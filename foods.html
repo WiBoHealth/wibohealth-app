@@ -107,7 +107,7 @@
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.8;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         html[lang="en"] body, html[lang="nl"] body {
@@ -131,7 +131,7 @@
             padding: 20px;
         }
 
-        /* Slim Header 2.0 (Height: 60px - Unified Single Row) */
+        /* Slim Header 2.0 (Height: 60px) */
         header {
             background: var(--card-bg);
             height: 60px;
@@ -189,7 +189,6 @@
             white-space: nowrap;
         }
 
-        /* Desktop Nav Menu */
         .nav-menu {
             display: flex;
             gap: 8px;
@@ -487,12 +486,12 @@
             margin-bottom: 0;
         }
 
-        /* Food Grid & Cards */
+        /* Food Grid & High-Speed Virtual Cards */
         .food-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 22px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .food-card {
@@ -500,13 +499,16 @@
             border-radius: 18px;
             padding: 20px;
             box-shadow: 0 5px 20px var(--shadow);
-            transition: all 0.25s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
             position: relative;
             overflow: hidden;
             text-decoration: none;
             color: inherit;
             display: block;
             border: 1px solid var(--border-color);
+            /* تسريع محرك المتصفح لتخطي رسم البطاقات البعيدة عن الشاشة */
+            content-visibility: auto;
+            contain-intrinsic-size: 280px 340px;
         }
 
         .food-card::before {
@@ -594,6 +596,18 @@
         .stat-label { font-size: 11px; color: var(--text-light); margin-bottom: 3px; font-weight: 600; }
         .stat-value { font-size: 17px; font-weight: 800; color: var(--primary-color); }
 
+        /* Sentinel for Infinite Scroll */
+        #scrollSentinel {
+            grid-column: 1 / -1;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
         /* Boodi App Conversion Banner */
         .boodi-food-banner {
             background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.1) 100%);
@@ -639,7 +653,6 @@
             padding: 35px 20px;
             margin-top: 60px;
             text-align: center;
-            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
 
@@ -766,7 +779,7 @@
 
         <!-- Search Box -->
         <div class="search-box">
-            <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 ابحث عن أي طعام أو تصنيف..." oninput="filterFoods()">
+            <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 ابحث عن أي طعام أو تصنيف..." oninput="onSearchInput()">
             <p class="search-helper">
                 <i class="fas fa-info-circle" style="color: #667eea;"></i>
                 <span data-i18n="search_helper">يمكنك البحث في اسم الطعام أو التصنيف (عربي / English / Nederlands)</span>
@@ -775,6 +788,11 @@
 
         <!-- Food Grid -->
         <div class="food-grid" id="foodGrid"></div>
+
+        <!-- Scroll Sentinel for Infinite Scrolling -->
+        <div id="scrollSentinel">
+            <span id="sentinelText"></span>
+        </div>
 
         <!-- Conversion Card -->
         <div class="boodi-food-banner">
@@ -804,17 +822,23 @@
         <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
     </footer>
 
-    <!-- Load External Food Database -->
+    <!-- Load Food Database -->
     <script src="js/data.js"></script>
-    <script src="js/data-enhancer.js"></script>
 
-    <!-- Core Logic & Progressive Localization & Zero-Arabic Shield -->
+    <!-- High-Performance Lazy Rendering & Zero-Arabic Shield Logic -->
     <script>
         window.allFoods = [];
         let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]').map(String);
         let currentTab = 'all';
 
-        /* القاموس السريري المعياري لترجمة الفئات - الدرع المناعي ضد تسرب العربية */
+        // محرك التحميل اللانهائي الذكي (36 بطاقة في البداية = استجابة فورية 0 ثانية)
+        const CHUNK_SIZE = 36;
+        let visibleCount = CHUNK_SIZE;
+        let currentFilteredList = [];
+        let searchDebounceTimer = null;
+        let scrollObserver = null;
+
+        /* الدرع السريري الشامل لترجمة الفئات - استئصال تسرب العربية */
         const clinicalCategoryShield = {
             'حبوب': { en: 'Grains & Starches', nl: 'Granen & Zetmeel' },
             'بقوليات': { en: 'Legumes & Pulses', nl: 'Peulvruchten' },
@@ -887,6 +911,7 @@
                 "protein": "بروتين",
                 "carbs": "كربوهيدرات",
                 "fats": "دهون",
+                "loading_more": "جاري تحميل المزيد من الأطعمة...",
                 "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
                 "boodi_banner_desc": "قراءة الأرقام ممتازة، ولكن فحص الباركود في المتجر أسرع! تطبيق بودي يحلل لك المؤشر الجلايسيمي، يفحص الحلال، ويقترح بدائل صحية أقل سكراً فوراً من نفس الرف.",
                 "boodi_banner_btn": "اكتشف تطبيق بودي مجاناً",
@@ -918,6 +943,7 @@
                 "protein": "Protein",
                 "carbs": "Carbs",
                 "fats": "Fat",
+                "loading_more": "Loading more foods...",
                 "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
                 "boodi_banner_desc": "Checking charts is great, but scanning in the supermarket aisle is faster! boodi deconstructs Glycemic Index, screens Halal status, and discovers healthier alternatives on the spot.",
                 "boodi_banner_btn": "Discover boodi App Free",
@@ -949,6 +975,7 @@
                 "protein": "Eiwit",
                 "carbs": "Koolhydraten",
                 "fats": "Vetten",
+                "loading_more": "Meer voedingsmiddelen laden...",
                 "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
                 "boodi_banner_desc": "Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert halal-status en tipt gezondere alternatieven direct uit hetzelfde schap.",
                 "boodi_banner_btn": "Ontdek boodi App Gratis",
@@ -963,17 +990,12 @@
         function getInitialLanguage() {
             const urlParams = new URLSearchParams(window.location.search);
             const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) {
-                return queryLang;
-            }
+            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) return queryLang;
 
-            const saved = localStorage.getItem('preferred_language') || 
-                          localStorage.getItem('wibo_language') || 
-                          localStorage.getItem('selected_language');
-
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) return saved;
             
-            const phone = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const phone = (navigator.language || '').toLowerCase();
             if (phone.startsWith('nl')) return 'nl';
             if (phone.startsWith('ar')) return 'ar';
             return 'en';
@@ -989,7 +1011,6 @@
             currentLang = lang;
             localStorage.setItem('preferred_language', lang);
             localStorage.setItem('wibo_language', lang);
-            localStorage.setItem('selected_language', lang);
             
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
@@ -1009,26 +1030,17 @@
             });
 
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                const b = btn.getAttribute('data-lang-toggle');
-                btn.classList.toggle('active', b === lang);
+                btn.classList.toggle('active', btn.getAttribute('data-lang-toggle') === lang);
             });
 
             if (foodsTranslations[lang] && foodsTranslations[lang]['meta_title']) {
                 document.title = foodsTranslations[lang]['meta_title'];
             }
 
-            const metaDesc = document.getElementById('metaDescription');
-            if (metaDesc) {
-                if (lang === 'en') {
-                    metaDesc.setAttribute('content', 'Explore our comprehensive 1,050 food database: Glycemic Index (GI), Insulin Index (II), calories, protein, carbs, fats, and dietary fibers.');
-                } else if (lang === 'nl') {
-                    metaDesc.setAttribute('content', 'Wetenschappelijke voedingswijzer met 1.050 voedingsmiddelen: Glykemische Index (GI), Insuline Index (II), calorieën, eiwitten, koolhydraten en vetten.');
-                } else {
-                    metaDesc.setAttribute('content', 'دليلك الكامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف - قاعدة بيانات غذائية سريرية لمرضى السكري والدايت.');
-                }
-            }
-
             showDailyTip();
+            
+            // عند تبديل اللغة: إعادة تعيين العرض للدفعة الأولى فوراً لمنع أي تجمد (0ms lag)
+            visibleCount = CHUNK_SIZE;
             filterFoods();
             updateStructuredDataForSEO();
         }
@@ -1079,6 +1091,7 @@
             updateFavCount();
 
             if (currentTab === 'fav') {
+                visibleCount = CHUNK_SIZE;
                 filterFoods();
             } else {
                 const btn = document.querySelector(`[data-food-id="${foodId}"]`);
@@ -1100,6 +1113,7 @@
 
         function switchFoodTab(tab) {
             currentTab = tab;
+            visibleCount = CHUNK_SIZE;
             document.getElementById('allFoodsTabBtn').classList.toggle('active', tab === 'all');
             document.getElementById('favFoodsTabBtn').classList.toggle('active', tab === 'fav');
             filterFoods();
@@ -1107,6 +1121,15 @@
 
         function toggleFavoritesView() {
             switchFoodTab(currentTab === 'all' ? 'fav' : 'all');
+        }
+
+        // بحث سريع ومخفف للضغط (Debounced Search)
+        function onSearchInput() {
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(() => {
+                visibleCount = CHUNK_SIZE;
+                filterFoods();
+            }, 120);
         }
 
         function filterFoods() {
@@ -1117,9 +1140,10 @@
                 baseList = allFoods.filter(f => favorites.includes(String(f.id)));
             }
 
-            let filtered = baseList;
-            if (term) {
-                filtered = baseList.filter(f => 
+            if (!term) {
+                currentFilteredList = baseList;
+            } else {
+                currentFilteredList = baseList.filter(f => 
                     (f.name && f.name.toLowerCase().includes(term)) ||
                     (f.nameEn && f.nameEn.toLowerCase().includes(term)) ||
                     (f.nameNl && f.nameNl.toLowerCase().includes(term)) ||
@@ -1133,22 +1157,27 @@
                 );
             }
 
-            renderFoods(filtered);
+            renderFoodsIncremental();
         }
 
-        function renderFoods(foods) {
+        // محرك الرندرة الفوري فائق الخفة
+        function renderFoodsIncremental() {
             const grid = document.getElementById('foodGrid');
+            const sentinelText = document.getElementById('sentinelText');
             if (!grid) return;
 
-            if (!foods || foods.length === 0) {
+            if (!currentFilteredList || currentFilteredList.length === 0) {
                 const msg = currentTab === 'fav' && favorites.length === 0 ? t('no_favorites') : t('no_results');
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: white; font-size: 19px; background: rgba(0,0,0,0.15); border-radius: 20px;"><i class="fas fa-heart-broken" style="font-size: 40px; margin-bottom: 15px; color: #fca5a5; display: block;"></i>${msg}</div>`;
+                if (sentinelText) sentinelText.textContent = '';
                 return;
             }
 
+            // اقتطاع الدفعة المرئية فقط (مثلاً أول 36 صنفاً = رندرة لحظية في 5ms!)
+            const foodsToShow = currentFilteredList.slice(0, visibleCount);
             const unitGram = currentLang === 'ar' ? 'جم' : 'g';
 
-            grid.innerHTML = foods.map(food => {
+            grid.innerHTML = foodsToShow.map(food => {
                 const isFav = favorites.includes(String(food.id));
                 
                 let foodTitle = food.name;
@@ -1158,10 +1187,7 @@
                     foodTitle = food.nameNl || food.nameEn || food.name;
                 }
 
-                // الحماية الكاملة لاسم التصنيف - منع ظهور العربية نهائياً في EN و NL
                 const catTitle = getSafeCategoryName(food, currentLang);
-
-                // إصلاح خطأ قراءة الدهون الحقيقي (قراءة food.nutrition.fat بدقة)
                 const calVal = Math.round(food.nutrition?.calories || 0);
                 const protVal = (food.nutrition?.protein || 0).toFixed(1);
                 const carbVal = (food.nutrition?.carbs || 0).toFixed(1);
@@ -1200,9 +1226,41 @@
                     </a>
                 `;
             }).join('');
+
+            // تحديث حالة السكرول اللانهائي
+            if (sentinelText) {
+                if (visibleCount < currentFilteredList.length) {
+                    sentinelText.textContent = t('loading_more');
+                } else {
+                    sentinelText.textContent = '';
+                }
+            }
         }
 
-        /* توليد بيانات Structured Data للأغذية لتسهيل زحف محرك جوجل */
+        // إعداد IntersectionObserver للتمرير اللانهائي الخفيف
+        function setupInfiniteScroll() {
+            const sentinel = document.getElementById('scrollSentinel');
+            if (!sentinel) return;
+
+            if (scrollObserver) scrollObserver.disconnect();
+
+            scrollObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    if (visibleCount < currentFilteredList.length) {
+                        visibleCount += CHUNK_SIZE;
+                        renderFoodsIncremental();
+                    }
+                }
+            }, {
+                root: null,
+                rootMargin: '400px',
+                threshold: 0.1
+            });
+
+            scrollObserver.observe(sentinel);
+        }
+
+        // Schema.org Structured Data للأغذية لتسهيل زحف Googlebot
         function updateStructuredDataForSEO() {
             const schemaEl = document.getElementById('foodsItemListSchema');
             if (!schemaEl || !allFoods || allFoods.length === 0) return;
@@ -1253,10 +1311,8 @@
                 if (tIcon) tIcon.className = 'fas fa-sun';
             }
 
-            // تحميل وتجهيز قاعدة البيانات ديناميكياً
             const dbCandidates = (typeof foodsDatabase !== 'undefined') ? foodsDatabase :
-                                 (typeof window.foodsDatabase !== 'undefined') ? window.foodsDatabase :
-                                 (typeof allFoodsData !== 'undefined') ? allFoodsData : [];
+                                 (typeof window.foodsDatabase !== 'undefined') ? window.foodsDatabase : [];
 
             if (dbCandidates.length > 0) {
                 allFoods = dbCandidates;
@@ -1268,7 +1324,7 @@
 
             changeLanguage(currentLang);
             updateFavCount();
-            updateStructuredDataForSEO();
+            setupInfiniteScroll();
         });
 
         function toggleTheme() {
