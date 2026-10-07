@@ -3,23 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title_privacy">سياسة الخصوصية - WiBo Health</title>
-    <meta name="description" content="سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و EU MDR">
+
+    <!-- Primary Meta Tags & SEO -->
+    <title id="pageTitle">سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App</title>
+    <meta name="title" content="سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App">
+    <meta name="description" id="pageDescription" content="سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و AVG و EU MDR.">
+    <meta name="keywords" content="سياسة الخصوصية, WiBo Health, تطبيق بودي, GDPR, AVG, حماية البيانات, EU MDR 2017/745, Privacybeleid Boodi, Autoriteit Persoonsgegevens">
+    <meta name="author" content="WiBo Health Medical Team">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://wibohealth.com/privacy.html">
     
-    <!-- Hreflang Tags for SEO -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/privacy.html">
+    <!-- Multilingual Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html?lang=ar">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/privacy.html?lang=nl">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/privacy.html?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wibohealth.com/privacy.html">
+    <meta property="og:title" id="ogTitle" content="سياسة الخصوصية | WiBo Health & Boodi App">
+    <meta property="og:description" id="ogDescription" content="التزامنا الكامل بحماية بياناتك الصحية والامتثال للوائح الاتحاد الأوروبي الصارمة.">
+    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:site_name" content="WiBo Health">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wibohealth.com/privacy.html">
+    <meta name="twitter:title" id="twTitle" content="Privacy Policy | WiBo Health & Boodi App">
+    <meta name="twitter:description" id="twDescription" content="Official Privacy Policy, GDPR & AVG compliance for WiBo Health and Boodi App.">
+    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+
+    <!-- Structured Data (JSON-LD Schema) for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "WiBo Health & Boodi App Privacy Policy",
+      "url": "https://wibohealth.com/privacy.html",
+      "description": "Privacy policy, AVG, GDPR and EU regulatory compliance details for WiBo Health Group and Boodi App.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WiBo Health Group",
+        "url": "https://wibohealth.com",
+        "logo": "https://wibohealth.com/images/logo.png"
+      }
+    }
+    </script>
+
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- PWA Manifest -->
+    <!-- PWA Manifest & Favicons -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#667eea">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/mobile-menu.css">
     
     <style>
         * {
@@ -29,49 +71,58 @@
         }
 
         :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --accent-color: #667eea;
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
-            --white: #ffffff;
-            --card-bg: #ffffff;
-            --shadow: rgba(0,0,0,0.1);
-            --boodi-green: #15803d;
-            --boodi-light: #dcfce7;
+            --accent-green: #2ecc71;
+            --secondary-green: #27ae60;
+            --accent-blue: #667eea;
+            --boodi-green: #059669;
             --warning-bg: #fffbeb;
             --warning-border: #f59e0b;
             --warning-text: #92400e;
-        }
-
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            font-family: 'Cairo', sans-serif;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
+            --border-color: rgba(0, 0, 0, 0.08);
         }
 
         body.dark-mode {
+            --primary-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --header-bg: #0f3460;
             --card-bg: #0f3460;
             --text-dark: #ffffff;
             --text-light: #b8b8b8;
-            --boodi-light: rgba(46, 204, 113, 0.2);
             --warning-bg: rgba(245, 158, 11, 0.15);
             --warning-text: #fde68a;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --border-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Header */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            color: var(--text-dark);
+            transition: background 0.3s ease, color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Slim Header 2.0 (Matched with index.html) */
         header {
-            background: var(--card-bg);
-            padding: 15px 0;
-            box-shadow: 0 2px 10px var(--shadow);
-            margin-bottom: 20px;
+            background: var(--header-bg);
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: all 0.3s ease, transform 0.3s ease;
         }
 
         header.hide-nav {
@@ -79,47 +130,125 @@
         }
 
         .header-content {
-            max-width: 900px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            gap: 15px;
         }
 
-        .logo-link {
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
-            color: var(--primary-color);
-            font-size: 24px;
-            font-weight: bold;
-            transition: all 0.3s;
         }
 
-        .logo-link:hover {
-            transform: scale(1.05);
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-icon svg {
+            width: 42px;
+            height: 42px;
+            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.4));
+        }
+
+        .logo-text h1 {
+            font-size: 22px;
+            background: linear-gradient(135deg, #2ecc71, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            line-height: 1.2;
         }
 
         .header-controls {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 8px;
         }
 
-        .theme-toggle, .lang-toggle {
-            background: rgba(46, 204, 113, 0.2);
+        .lang-btn {
+            width: 38px;
+            height: 38px;
+            font-size: 15px;
+            border-radius: 50%;
+            background: #f3f4f6;
             border: none;
-            padding: 10px 15px;
-            border-radius: 20px;
             cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            color: var(--text-dark);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
         }
 
-        .theme-toggle:hover, .lang-toggle:hover {
-            background: var(--primary-color);
+        body.dark-mode .lang-btn {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .lang-btn.active {
+            background: #2ecc71;
             color: white;
             transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+        }
+
+        .theme-toggle {
+            width: 38px;
+            height: 38px;
+            font-size: 17px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            transition: all 0.2s;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 20px;
+            background: #f3f4f6;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        body.dark-mode .nav-link {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            transform: translateY(-2px);
         }
 
         .hamburger-menu {
@@ -127,10 +256,11 @@
             flex-direction: column;
             cursor: pointer;
             padding: 10px;
+            z-index: 1001;
         }
 
         .hamburger-menu span {
-            width: 30px;
+            width: 28px;
             height: 3px;
             background: var(--text-dark);
             margin: 3px 0;
@@ -138,19 +268,113 @@
             transition: all 0.3s;
         }
 
-        /* Privacy Container */
-        .privacy-container {
-            max-width: 900px;
-            margin: 30px auto 50px;
+        body.dark-mode .hamburger-menu span {
+            background: white;
+        }
+
+        /* Mobile Drawer */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mobile-nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .mobile-nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 290px;
+            height: 100%;
             background: var(--card-bg);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px var(--shadow);
+            box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        [dir="ltr"] .mobile-nav-menu {
+            right: auto;
+            left: -100%;
+            box-shadow: 5px 0 20px rgba(0,0,0,0.3);
+            transition: left 0.3s ease;
+        }
+
+        .mobile-nav-menu.active {
+            right: 0;
+        }
+
+        [dir="ltr"] .mobile-nav-menu.active {
+            left: 0;
+        }
+
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 26px;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        [dir="ltr"] .mobile-nav-close {
+            right: auto;
+            left: 20px;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .mobile-nav-link {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+
+        /* Main Privacy Content */
+        .main-wrapper {
+            flex: 1;
+            padding: 40px 0 60px;
+        }
+
+        .privacy-container {
+            max-width: 920px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 50px 45px;
+            border-radius: 24px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+            border: 1px solid var(--border-color);
         }
 
         .privacy-container h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
+            color: var(--accent-green);
+            font-size: 2.4rem;
+            font-weight: 900;
             margin-bottom: 10px;
             text-align: center;
         }
@@ -163,31 +387,34 @@
         }
 
         .privacy-container h2 {
-            color: var(--accent-color);
-            font-size: 1.6em;
-            margin-top: 30px;
+            color: var(--accent-blue);
+            font-size: 1.55em;
+            font-weight: 800;
+            margin-top: 35px;
             margin-bottom: 15px;
             border-bottom: 3px solid rgba(46, 204, 113, 0.2);
             padding-bottom: 10px;
         }
 
         .privacy-container h3 {
-            color: var(--primary-color);
+            color: var(--accent-green);
             font-size: 1.25em;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            font-weight: 800;
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
 
         .privacy-container p, 
         .privacy-container li {
             color: var(--text-dark);
             font-size: 1.05em;
-            line-height: 1.8;
+            line-height: 1.85;
             margin-bottom: 15px;
         }
 
         .privacy-container ul {
             margin-right: 30px;
+            margin-bottom: 20px;
         }
 
         [dir="ltr"] .privacy-container ul {
@@ -196,19 +423,19 @@
         }
 
         .privacy-container li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .privacy-container strong {
-            color: var(--accent-color);
+            color: var(--accent-blue);
             font-weight: 700;
         }
 
         .privacy-container a {
-            color: var(--primary-color);
+            color: var(--accent-green);
             text-decoration: none;
             transition: all 0.3s;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .privacy-container a:hover {
@@ -218,113 +445,168 @@
         /* Specific Highlight Boxes for EU Compliance */
         .compliance-card {
             background: var(--warning-bg);
-            border-right: 4px solid var(--warning-border);
-            padding: 18px 20px;
-            border-radius: 12px;
-            margin: 20px 0;
+            border-right: 5px solid var(--warning-border);
+            padding: 22px 24px;
+            border-radius: 14px;
+            margin: 25px 0;
         }
 
         [dir="ltr"] .compliance-card {
             border-right: none;
-            border-left: 4px solid var(--warning-border);
+            border-left: 5px solid var(--warning-border);
         }
 
         .compliance-card h4 {
             color: var(--warning-text);
-            font-size: 1.15em;
-            margin-bottom: 8px;
-            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: 800;
         }
 
         .compliance-card p {
             color: var(--warning-text);
-            font-size: 1em;
+            font-size: 1.02em;
             margin: 0;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .rectification-card {
-            background: rgba(102, 126, 234, 0.1);
-            border: 1.5px solid var(--accent-color);
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin: 20px 0;
+            background: rgba(102, 126, 234, 0.08);
+            border: 2px solid var(--accent-blue);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 25px 0;
         }
 
         .rectification-card h4 {
-            color: var(--accent-color);
-            font-size: 1.15em;
-            margin-bottom: 8px;
-            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: 800;
         }
 
         .rectification-card p {
             color: var(--text-dark);
-            font-size: 1em;
+            font-size: 1.02em;
             margin: 0;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* Footer Section */
-        .privacy-footer {
+        /* Footer Section inside container */
+        .privacy-footer-box {
             text-align: center;
             margin-top: 40px;
             padding-top: 30px;
             border-top: 2px solid rgba(46, 204, 113, 0.2);
         }
 
-        .privacy-footer p {
+        .privacy-footer-box p {
             color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 20px;
         }
 
-        /* Back Button */
-        .back-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: var(--primary-color);
+        .bottom-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-action-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-weight: bold;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.35);
             transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-family: 'Cairo', sans-serif;
-            font-size: 1em;
         }
 
-        .back-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+        .btn-action-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.5);
+        }
+
+        .btn-action-boodi {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+            transition: all 0.3s;
+        }
+
+        .btn-action-boodi:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 35px 20px;
+            margin-top: auto;
+            text-align: center;
+            font-family: 'Cairo', sans-serif;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #2ecc71;
+        }
+
+        .footer-divider {
+            color: #7f8c8d;
         }
 
         /* Responsive */
+        @media (max-width: 992px) {
+            .nav-menu { display: none; }
+            .hamburger-menu { display: flex; }
+        }
+
         @media (max-width: 768px) {
             .privacy-container {
                 padding: 30px 20px;
             }
 
             .privacy-container h1 {
-                font-size: 1.8em;
+                font-size: 1.9em;
             }
 
             .privacy-container h2 {
-                font-size: 1.3em;
+                font-size: 1.35em;
             }
 
             .privacy-container p, 
             .privacy-container li {
-                font-size: 0.95em;
-            }
-
-            .header-controls {
-                display: none;
-            }
-
-            .hamburger-menu {
-                display: flex;
+                font-size: 0.98em;
             }
 
             .privacy-container ul {
@@ -338,303 +620,339 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Slim 2.0 -->
     <header>
-        <div class="header-content">
-            <a href="index.html" class="logo-link" title="WiBo Health">
-                💚 WiBo Health
-            </a>
-            
-            <div class="hamburger-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="index.html" class="logo" title="WiBo Health">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#5eead4;stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>WiBo Health</h1>
+                    </div>
+                </a>
 
-            <div class="header-controls">
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
-                    <i class="fas fa-moon"></i>
-                </button>
+                <!-- Navigation Desktop -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">الأطعمة</span></a>
+                    <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                    <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
+                    <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                    <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات</span></a>
+                    <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
+                </nav>
 
-                <!-- Language Toggle -->
-                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
-                    <span id="langText">EN</span>
-                </button>
+                <!-- Controls & Language Selector -->
+                <div class="header-controls">
+                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
+
+                    <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
+                        <i class="fas fa-moon"></i>
+                    </button>
+
+                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
-
     <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
     <nav class="mobile-nav-menu" id="mobileNav">
         <button class="mobile-nav-close" onclick="toggleMobileMenu()">
             <i class="fas fa-times"></i>
         </button>
-        
-        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
-            <i class="fas fa-home"></i>
-            الصفحة الرئيسية
-        </a>
-        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
-            <i class="fas fa-utensils"></i>
-            دليل الأطعمة
-        </a>
-        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
-            <i class="fas fa-calculator"></i>
-            الحاسبات الصحية
-        </a>
-        <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
-            <i class="fas fa-book-open"></i>
-            الوصفات الصحية
-        </a>
-        <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
-            <i class="fas fa-book-medical"></i>
-            المقالات الصحية
-        </a>
-        <a href="privacy.html" class="mobile-nav-link" data-i18n="nav_privacy">
-            <i class="fas fa-shield-alt"></i>
-            سياسة الخصوصية
-        </a>
-        <a href="terms.html" class="mobile-nav-link" data-i18n="nav_terms">
-            <i class="fas fa-file-contract"></i>
-            الشروط والأحكام
-        </a>
+        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
+        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
+        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
+        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
+        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
+        <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">دليل المكملات</span></a>
+        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
+        <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
+        <a href="privacy.html" class="mobile-nav-link" style="background: rgba(46, 204, 113, 0.15); font-weight: 800;"><i class="fas fa-shield-alt"></i> <span data-i18n="nav_privacy">سياسة الخصوصية</span></a>
+        <a href="terms.html" class="mobile-nav-link"><i class="fas fa-file-contract"></i> <span data-i18n="nav_terms">الشروط والأحكام</span></a>
+        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
     </nav>
 
-    <!-- Privacy Container -->
-    <div class="privacy-container">
-        <h1 data-i18n="privacy_title">🔒 سياسة الخصوصية</h1>
-        <p class="last-update">
-            <span data-i18n="privacy_last_update">آخر تحديث:</span> <span data-i18n="privacy_last_update_date">أكتوبر 2026</span>
-        </p>
-        
-        <p data-i18n="privacy_intro">
-            في <strong>WiBo Health</strong>، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. 
-            توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك على موقعنا وتطبيقاتنا التابعة.
-        </p>
+    <!-- Main Content -->
+    <main class="main-wrapper">
+        <div class="container">
+            <div class="privacy-container">
+                <h1 data-i18n="privacy_title">🔒 سياسة الخصوصية وحماية البيانات</h1>
+                <p class="last-update">
+                    <span data-i18n="privacy_last_update">آخر تحديث:</span> <span data-i18n="privacy_last_update_date">أكتوبر 2026</span>
+                </p>
+                
+                <p data-i18n="privacy_intro">
+                    في منظومة <strong>WiBo Health</strong> وتطبيق <strong>boodi 💚</strong>، نحن ملتزمون بأعلى معايير حماية خصوصيتك وبياناتك الشخصية والصحية. توضح هذه الوثيقة القانونية المعتمدة كيفية جمع واستخدام وحماية معلوماتك وفقاً للوائح حماية البيانات العامة في الاتحاد الأوروبي (GDPR) وقانون حماية البيانات الهولندي (AVG).
+                </p>
 
-        <!-- Section 1 -->
-        <h2 data-i18n="privacy_section1_title">1. المعلومات التي نجمعها</h2>
-        <p data-i18n="privacy_section1_intro">نحن نجمع المعلومات التالية:</p>
-        <ul>
-            <li>
-                <strong data-i18n="privacy_usage_info">معلومات الاستخدام:</strong>
-                <span data-i18n="privacy_usage_info_desc">الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح</span>
-            </li>
-            <li>
-                <strong data-i18n="privacy_device_info">معلومات الجهاز:</strong>
-                <span data-i18n="privacy_device_info_desc">نوع الجهاز، نظام التشغيل، عنوان IP</span>
-            </li>
-            <li>
-                <strong data-i18n="privacy_contact_info">معلومات الاتصال:</strong>
-                <span data-i18n="privacy_contact_info_desc">البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)</span>
-            </li>
-        </ul>
+                <!-- Section 1 -->
+                <h2 data-i18n="privacy_section1_title">1. المعلومات التي نجمعها</h2>
+                <p data-i18n="privacy_section1_intro">نحن نجمع البيانات التقنية الأساسية والضرورية فقط لتقديم الخدمة:</p>
+                <ul>
+                    <li>
+                        <strong data-i18n="privacy_usage_info">معلومات الاستخدام:</strong>
+                        <span data-i18n="privacy_usage_info_desc">الصفحات التي تزورها، الوقت المستغرق، لغة المتصفح، وإحصاءات التفاعل العامة.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="privacy_device_info">معلومات الجهاز:</strong>
+                        <span data-i18n="privacy_device_info_desc">نوع الجهاز، نظام التشغيل، عنوان IP المجهول، ومعرفات الجهاز التقنية لخدمات PWA.</span>
+                    </li>
+                    <li>
+                        <strong data-i18n="privacy_contact_info">معلومات الاتصال:</strong>
+                        <span data-i18n="privacy_contact_info_desc">البريد الإلكتروني أو رقم الهاتف عند التواصل معنا لطلب الدعم السريري أو التقني فقط.</span>
+                    </li>
+                </ul>
 
-        <!-- Section 2 -->
-        <h2 data-i18n="privacy_section2_title">2. كيف نستخدم المعلومات</h2>
-        <p data-i18n="privacy_section2_intro">نستخدم المعلومات المجمعة لـ:</p>
-        <ul>
-            <li data-i18n="privacy_section2_item1">تحسين تجربة المستخدم وتطوير الموقع</li>
-            <li data-i18n="privacy_section2_item2">تحليل استخدام الموقع وفهم احتياجات الزوار</li>
-            <li data-i18n="privacy_section2_item3">الرد على استفساراتكم وتقديم الدعم</li>
-            <li data-i18n="privacy_section2_item4">إرسال تحديثات ونصائح صحية (بموافقتكم فقط)</li>
-        </ul>
+                <!-- Section 2 -->
+                <h2 data-i18n="privacy_section2_title">2. كيف نستخدم المعلومات</h2>
+                <p data-i18n="privacy_section2_intro">نستخدم المعلومات المجمعة للأغراض المشروعة التالية:</p>
+                <ul>
+                    <li data-i18n="privacy_section2_item1">تحسين تجربة المستخدم وتقديم نتائج بحث وتصفح سريعة ودقيقة</li>
+                    <li data-i18n="privacy_section2_item2">تحليل الأداء الفني ومراقبة استقرار الخوادم وقواعد البيانات السريرية</li>
+                    <li data-i18n="privacy_section2_item3">الرد المباشر على استفسارات المستخدمين ومتابعة طلبات التصحيح</li>
+                    <li data-i18n="privacy_section2_item4">إرسال التحديثات السريرية والنصائح التغذوية (بموافقتك الصريحة فقط)</li>
+                </ul>
 
-        <!-- Section 3 -->
-        <h2 data-i18n="privacy_section3_title">3. ملفات الكوكيز (Cookies)</h2>
-        <p data-i18n="privacy_section3_text">
-            نستخدم ملفات الكوكيز لتحسين تجربتك على الموقع. يمكنك تعطيل الكوكيز من إعدادات متصفحك، 
-            لكن هذا قد يؤثر على بعض وظائف الموقع.
-        </p>
+                <!-- Section 3 -->
+                <h2 data-i18n="privacy_section3_title">3. ملفات تعريف الارتباط (Cookies & Local Storage)</h2>
+                <p data-i18n="privacy_section3_text">
+                    نستخدم تقنيات التخزين المحلي (Local Storage) وملفات الكوكيز الوظيفية لحفظ تفضيلاتك الأساسية مثل اللغة المختارة (العربية، الإنجليزية، الهولندية) والمظهر الليلي/النهاري، دون تتبع أنشطتك عبر مواقع خارجية. يمكنك تعطيل الكوكيز من إعدادات متصفحك في أي وقت.
+                </p>
 
-        <!-- Section 4 -->
-        <h2 data-i18n="privacy_section4_title">4. مشاركة المعلومات</h2>
-        <p data-i18n="privacy_section4_intro">
-            نحن <strong data-i18n="privacy_section4_strong">لا نبيع أو نشارك</strong> معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
-        </p>
-        <ul>
-            <li data-i18n="privacy_section4_item1">بموافقتك الصريحة</li>
-            <li data-i18n="privacy_section4_item2">لتقديم خدمات أساسية (مثل خدمات الاستضافة)</li>
-            <li data-i18n="privacy_section4_item3">عند الطلب القانوني من الجهات المختصة</li>
-        </ul>
+                <!-- Section 4 -->
+                <h2 data-i18n="privacy_section4_title">4. مشاركة المعلومات وعدم بيع البيانات</h2>
+                <p data-i18n="privacy_section4_intro">
+                    نحن <strong data-i18n="privacy_section4_strong">لا نبيع ولا نؤجر إطلاقاً</strong> بياناتك الشخصية لأي طرف ثالث. تتم مشاركة البيانات التقنية المحدودة فقط في الحالات التالية:
+                </p>
+                <ul>
+                    <li data-i18n="privacy_section4_item1">بموافقتك الصريحة والمستنيرة</li>
+                    <li data-i18n="privacy_section4_item2">لمزودي البنية التحتية السحابية الموثوقين الملتزمين بالـ GDPR (مثل استضافة الخوادم في ألمانيا/الاتحاد الأوروبي)</li>
+                    <li data-i18n="privacy_section4_item3">عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة</li>
+                </ul>
 
-        <!-- Section 5 -->
-        <h2 data-i18n="privacy_section5_title">5. أدوات التحليل والإعلانات</h2>
-        <p data-i18n="privacy_section5_text">
-            نستخدم خدمات مثل <strong>Google Analytics</strong> و <strong>Google AdSense</strong> 
-            لتحليل الزيارات وعرض إعلانات ملائمة. هذه الخدمات قد تجمع معلومات مجهولة عن استخدامك للموقع.
-        </p>
+                <!-- Section 5 -->
+                <h2 data-i18n="privacy_section5_title">5. أدوات التحليل والإعلانات</h2>
+                <p data-i18n="privacy_section5_text">
+                    نستخدم خدمات Google Analytics لقياس الزيارات بشكل مجهول الهوية، وخدمات Google AdSense / AdMob المعتمدة لعرض إعلانات تتوافق مع اللوائح الأوروبية ومعايير حماية الخصوصية للمستخدمين داخل المنطقة الاقتصادية الأوروبية (EEA).
+                </p>
 
-        <!-- Section 6 -->
-        <h2 data-i18n="privacy_section6_title">6. حماية البيانات</h2>
-        <p data-i18n="privacy_section6_intro">
-            نتخذ إجراءات أمنية مناسبة لحماية معلوماتك من الوصول غير المصرح به، بما في ذلك:
-        </p>
-        <ul>
-            <li data-i18n="privacy_section6_item1">استخدام بروتوكول HTTPS لتشفير البيانات</li>
-            <li data-i18n="privacy_section6_item2">تخزين البيانات على خوادم آمنة</li>
-            <li data-i18n="privacy_section6_item3">مراجعة دورية للإجراءات الأمنية</li>
-        </ul>
+                <!-- Section 6 -->
+                <h2 data-i18n="privacy_section6_title">6. حماية البيانات والأمان السيبراني</h2>
+                <p data-i18n="privacy_section6_intro">
+                    نطبق بروتوكولات حماية تقنية وتنظيمية متقدمة لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الفقدان، وتشمل:
+                </p>
+                <ul>
+                    <li data-i18n="privacy_section6_item1">تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم</li>
+                    <li data-i18n="privacy_section6_item2">تخزين البيانات والنسخ الاحتياطية على خوادم سحابية محمية في فرانكفورت (الاتحاد الأوروبي)</li>
+                    <li data-i18n="privacy_section6_item3">مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)</li>
+                </ul>
 
-        <!-- Section 7 -->
-        <h2 data-i18n="privacy_section7_title">7. حقوقك</h2>
-        <p data-i18n="privacy_section7_intro">لديك الحق في:</p>
-        <ul>
-            <li data-i18n="privacy_section7_item1">الوصول إلى بياناتك الشخصية</li>
-            <li data-i18n="privacy_section7_item2">طلب تصحيح أو حذف بياناتك</li>
-            <li data-i18n="privacy_section7_item3">إلغاء الاشتراك في النشرات البريدية في أي وقت</li>
-            <li data-i18n="privacy_section7_item4">الاعتراض على معالجة بياناتك</li>
-        </ul>
+                <!-- Section 7 -->
+                <h2 data-i18n="privacy_section7_title">7. حقوقك القانونية بموجب اللائحة الأوروبية (GDPR / AVG)</h2>
+                <p data-i18n="privacy_section7_intro">وفقاً للائحة العامة لحماية البيانات، يحق لك ممارسة الحقوق التالية مجاناً:</p>
+                <ul>
+                    <li data-i18n="privacy_section7_item1">حق الوصول والاطلاع على بياناتك الشخصية المحفوظة لدينا</li>
+                    <li data-i18n="privacy_section7_item2">حق طلب تصحيح أو استكمال البيانات غير الدقيقة</li>
+                    <li data-i18n="privacy_section7_item3">حق طلب حذف بياناتك نهائياً (الحق في النسيان)</li>
+                    <li data-i18n="privacy_section7_item4">حق تقييد أو الاعتراض على معالجة البيانات، وحق نقل البيانات</li>
+                </ul>
 
-        <!-- Section 8 -->
-        <h2 data-i18n="privacy_section8_title">8. روابط المواقع الأخرى</h2>
-        <p data-i18n="privacy_section8_text">
-            قد يحتوي موقعنا على روابط لمواقع خارجية. نحن غير مسؤولين عن سياسات الخصوصية 
-            الخاصة بهذه المواقع.
-        </p>
+                <!-- Section 8 -->
+                <h2 data-i18n="privacy_section8_title">8. الروابط الخارجية</h2>
+                <p data-i18n="privacy_section8_text">
+                    قد يحتوي موقعنا وتطبيقنا على روابط لمواقع أو مصادر خارجية موثوقة (مثل مراجع USDA أو Voedingscentrum). نحن غير مسؤولين عن ممارسات وسياسات الخصوصية الخاصة بتلك المواقع الخارجية.
+                </p>
 
-        <!-- Section 9 -->
-        <h2 data-i18n="privacy_section9_title">9. التغييرات على سياسة الخصوصية</h2>
-        <p data-i18n="privacy_section9_text">
-            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية 
-            عبر نشر النسخة المحدثة على هذه الصفحة.
-        </p>
+                <!-- Section 9 -->
+                <h2 data-i18n="privacy_section9_title">9. التحديثات والتعديلات</h2>
+                <p data-i18n="privacy_section9_text">
+                    قد نقوم بتحديث هذه السياسة من وقت لآخر لتعكس التطورات التنظيمية والتقنية. يُعلن عن أي تعديل جوهري بنشر التاريخ المحدث على هذه الصفحة.
+                </p>
 
-        <!-- ============================================================= -->
-        <!-- Section 11: Special Regulatory & Mobile App (boodi 💚) Policy -->
-        <!-- ============================================================= -->
-        <h2 data-i18n="privacy_boodi_title">11. تطبيق boodi 💚 والامتثال للوائح الاتحاد الأوروبي (EU Compliance)</h2>
-        <p data-i18n="privacy_boodi_intro">
-            يخضع تطبيق الهواتف المحمولة <strong>boodi 💚</strong> (المسجل برقم حزمة <code>com.wibohealth.boodi</code>) لسياسات خصوصية صارمة وأطر قانونية أوروبية لضمان أعلى مستويات الأمان وحماية المستهلك:
-        </p>
+                <!-- ============================================================= -->
+                <!-- Section 11: Special Regulatory & Mobile App (boodi 💚) Policy -->
+                <!-- ============================================================= -->
+                <h2 data-i18n="privacy_boodi_title">11. تطبيق boodi 💚 والامتثال للوائح الاتحاد الأوروبي (EU Compliance)</h2>
+                <p data-i18n="privacy_boodi_intro">
+                    يخضع تطبيق الهواتف المحمولة <strong>boodi 💚</strong> (المسجل برقم حزمة <code>com.wibohealth.boodi</code>) لسياسات خصوصية صارمة وأطر قانونية أوروبية لضمان أعلى مستويات الأمان وحماية المستهلك:
+                </p>
 
-        <!-- Medical Disclaimer -->
-        <div class="compliance-card">
-            <h4 data-i18n="privacy_boodi_mdr_h">⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)</h4>
-            <p data-i18n="privacy_boodi_mdr_p">
-                تطبيق boodi 💚 هو أداة توجيه استرشادية لنمط الحياة والتغذية الصحية، و<strong>ليس جهازاً طبياً أو برمجية تشخيصية سريرية (Not a Medical Device / SaMD بموجب اللائحة الأوروبية EU MDR 2017/745)</strong>. لا يقدم التطبيق تشخيصاً لأي حالة مرضية، ولا يحسب جرعات الأنسولين أو الأدوية، ولا يشكل بديلاً عن استشارة الطبيب المعالج أو أخصائي التغذية المعتمد. يجب على المستخدمين، وخاصة مرضى السكري والحساسية الشديدة، استشارة الفريق الطبي المختص والتحقق دائماً من المكونات المطبوعة على عبوة المنتج الأصلية.
-            </p>
+                <!-- Medical Disclaimer -->
+                <div class="compliance-card">
+                    <h4 data-i18n="privacy_boodi_mdr_h">⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)</h4>
+                    <p data-i18n="privacy_boodi_mdr_p">
+                        تطبيق boodi 💚 هو أداة توجيه استرشادية لنمط الحياة والتغذية الصحية، و<strong>ليس جهازاً طبياً أو برمجية تشخيصية سريرية (Not a Medical Device / SaMD بموجب اللائحة الأوروبية EU MDR 2017/745)</strong>. لا يقدم التطبيق تشخيصاً لأي حالة مرضية، ولا يحسب جرعات الأنسولين أو الأدوية، ولا يشكل بديلاً عن استشارة الطبيب المعالج أو أخصائي التغذية المعتمد. يجب على المستخدمين، وخاصة مرضى السكري والحساسية الشديدة، استشارة الفريق الطبي المختص والتحقق دائماً من المكونات المطبوعة على عبوة المنتج الأصلية.
+                    </p>
+                </div>
+
+                <h3 data-i18n="privacy_boodi_local_h">أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)</h3>
+                <p data-i18n="privacy_boodi_local_p">
+                    امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.
+                </p>
+
+                <h3 data-i18n="privacy_boodi_sources_h">ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)</h3>
+                <p data-i18n="privacy_boodi_sources_p">
+                    تُستخرج القيم الغذائية للأطعمة آلياً من قواعد البيانات الدولية المفتوحة (Open Food Facts بموجب ترخيص ODbL). وامتثالاً لقواعد هيئة المستهلك والأسواق الهولندية (ACM) والتوجيه الأوروبي 2006/114/EC بشأن المنافسة العادلة، يقترح التطبيق بدائل صحية كأصناف عامة مجردة (Generic Categories) في نفس المتجر دون تفضيل أو تشويه أو ذكر لعلامات تجارية منافسة.
+                </p>
+
+                <!-- Manufacturer Notice and Rectification Box -->
+                <div class="rectification-card">
+                    <h4 data-i18n="privacy_boodi_rect_h">📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)</h4>
+                    <p data-i18n="privacy_boodi_rect_p">
+                        تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: <strong>support@wibohealth.com</strong> متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).
+                    </p>
+                </div>
+
+                <h3 data-i18n="privacy_boodi_billing_h">ج. الاشتراكات والفوترة الآمنة والإعلانات</h3>
+                <p data-i18n="privacy_boodi_billing_p">
+                    تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.
+                </p>
+
+                <!-- Section 10 -->
+                <h2 data-i18n="privacy_section10_title">10. تواصل معنا ومسؤول حماية البيانات (DPO)</h2>
+                <p data-i18n="privacy_section10_intro">
+                    لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:
+                </p>
+                <ul>
+                    <li>
+                        <span data-i18n="privacy_email">البريد الإلكتروني المعتمد للدعم والتصحيح:</span> 
+                        <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
+                    </li>
+                    <li>
+                        <span data-i18n="privacy_whatsapp">واتساب الدعم السريري المباشر:</span>
+                        <a href="https://wa.me/31645844585" target="_blank" data-i18n="privacy_whatsapp_link">+31 6 45844585</a>
+                    </li>
+                </ul>
+
+                <!-- Footer Section inside container -->
+                <div class="privacy-footer-box">
+                    <p data-i18n="privacy_footer_agreement">
+                        بمواصلة استخدام موقع WiBo Health وتطبيق boodi 💚، فإنك تقر بعلمك وموافقتك الكاملة على بنود سياسة الخصوصية هذه.
+                    </p>
+                    <div class="bottom-actions">
+                        <a href="boodi.html" class="btn-action-boodi">
+                            <i class="fas fa-barcode"></i> <span data-i18n="btn_explore_boodi">اكتشف تطبيق بودي 💚</span>
+                        </a>
+                        <a href="index.html" class="btn-action-primary">
+                            <i class="fas fa-home"></i> <span data-i18n="privacy_back_home">العودة للرئيسية</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <h3 data-i18n="privacy_boodi_local_h">أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)</h3>
-        <p data-i18n="privacy_boodi_local_p">
-            امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.
-        </p>
-
-        <h3 data-i18n="privacy_boodi_sources_h">ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)</h3>
-        <p data-i18n="privacy_boodi_sources_p">
-            تُستخرج القيم الغذائية للأطعمة آلياً من قواعد البيانات الدولية المفتوحة (Open Food Facts بموجب ترخيص ODbL). وامتثالاً لقواعد هيئة المستهلك والأسواق الهولندية (ACM) والتوجيه الأوروبي 2006/114/EC بشأن المنافسة العادلة، يقترح التطبيق بدائل صحية كأصناف عامة مجردة (Generic Categories) في نفس المتجر دون تفضيل أو تشويه أو ذكر لعلامات تجارية منافسة.
-        </p>
-
-        <!-- Manufacturer Notice and Rectification Box -->
-        <div class="rectification-card">
-            <h4 data-i18n="privacy_boodi_rect_h">📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)</h4>
-            <p data-i18n="privacy_boodi_rect_p">
-                تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: <strong>support@wibohealth.com</strong> متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).
-            </p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html" data-i18n="footer_about">من نحن</a>
+                <span class="footer-divider">|</span>
+                <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+                <span class="footer-divider">|</span>
+                <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+                <span class="footer-divider">|</span>
+                <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+            </div>
+            <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group & Boodi App. جميع الحقوق محفوظة.</p>
+            <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_supervised"></p>
+            
+            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #34495e;">
+                <p style="color: #95a5a6; font-size: 0.82em; line-height: 1.7; max-width: 820px; margin: 0 auto;" data-i18n="footer_medical_disclaimer">
+                    إخلاء مسؤولية سريري: منصة WiBo Health وتطبيق بودي أدوات توجيهية استرشادية بيانية تعتمد على مراجع Voedingscentrum وقواعد البيانات الدولية. الاستشارات لا تحل محل الفحص السريري المباشر في حالات الطوارئ الطبية الحرجة.
+                </p>
+            </div>
         </div>
+    </footer>
 
-        <h3 data-i18n="privacy_boodi_billing_h">ج. الاشتراكات والفوترة الآمنة والإعلانات</h3>
-        <p data-i18n="privacy_boodi_billing_p">
-            تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.
-        </p>
-
-        <!-- Section 10 -->
-        <h2 data-i18n="privacy_section10_title">10. تواصل معنا</h2>
-        <p data-i18n="privacy_section10_intro">
-            إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:
-        </p>
-        <ul>
-            <li>
-                <span data-i18n="privacy_email">البريد الإلكتروني المعتمد للدعم والتصحيح:</span> 
-                <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
-            </li>
-            <li>
-                <span data-i18n="privacy_whatsapp">واتساب:</span>
-                <a href="https://wa.me/31645844585" target="_blank" data-i18n="privacy_whatsapp_link">اضغط هنا</a>
-            </li>
-        </ul>
-
-        <!-- Footer Section -->
-        <div class="privacy-footer">
-            <p data-i18n="privacy_footer_agreement">
-                بمواصلة استخدام موقع WiBo Health وتطبيق boodi، فإنك توافق على سياسة الخصوصية هذه.
-            </p>
-            <a href="index.html" class="back-btn">
-                <i class="fas fa-home"></i> <span data-i18n="privacy_back_home">العودة للرئيسية</span>
-            </a>
-        </div>
-    </div>
-
+    <!-- Multilingual Translation Engine & State Sync -->
     <script>
-        // ===== Language System =====
-        let currentLang = localStorage.getItem('wibo_language') || 'ar';
-
-        // Complete translations for both languages
         const translations = {
             ar: {
-                page_title_privacy: "سياسة الخصوصية - WiBo Health",
-                nav_home: "الصفحة الرئيسية",
-                nav_foods: "دليل الأطعمة",
-                nav_calculators: "الحاسبات الصحية",
-                nav_recipes: "الوصفات الصحية",
-                nav_articles: "المقالات الصحية",
+                page_title: "سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App",
+                page_desc: "سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و AVG و EU MDR.",
+                nav_home: "الرئيسية",
+                nav_foods: "الأطعمة",
+                nav_calculators: "الحاسبات",
+                nav_recipes: "الوصفات",
+                nav_articles: "المقالات",
+                nav_supplements: "المكملات",
+                nav_boodi_app: "بودي 💚",
                 nav_privacy: "سياسة الخصوصية",
                 nav_terms: "الشروط والأحكام",
-                privacy_title: "🔒 سياسة الخصوصية",
+                nav_contact: "اتصل بنا",
+                privacy_title: "🔒 سياسة الخصوصية وحماية البيانات",
                 privacy_last_update: "آخر تحديث:",
                 privacy_last_update_date: "أكتوبر 2026",
-                privacy_intro: "في WiBo Health، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك على موقعنا وتطبيقاتنا التابعة.",
+                privacy_intro: "في منظومة WiBo Health وتطبيق boodi 💚، نحن ملتزمون بأعلى معايير حماية خصوصيتك وبياناتك الشخصية والصحية. توضح هذه الوثيقة القانونية المعتمدة كيفية جمع واستخدام وحماية معلوماتك وفقاً للوائح حماية البيانات العامة في الاتحاد الأوروبي (GDPR) وقانون حماية البيانات الهولندي (AVG).",
                 privacy_section1_title: "1. المعلومات التي نجمعها",
-                privacy_section1_intro: "نحن نجمع المعلومات التالية:",
+                privacy_section1_intro: "نحن نجمع البيانات التقنية الأساسية والضرورية فقط لتقديم الخدمة:",
                 privacy_usage_info: "معلومات الاستخدام:",
-                privacy_usage_info_desc: "الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح",
+                privacy_usage_info_desc: "الصفحات التي تزورها، الوقت المستغرق، لغة المتصفح، وإحصاءات التفاعل العامة.",
                 privacy_device_info: "معلومات الجهاز:",
-                privacy_device_info_desc: "نوع الجهاز، نظام التشغيل، عنوان IP",
+                privacy_device_info_desc: "نوع الجهاز، نظام التشغيل، عنوان IP المجهول، ومعرفات الجهاز التقنية لخدمات PWA.",
                 privacy_contact_info: "معلومات الاتصال:",
-                privacy_contact_info_desc: "البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)",
+                privacy_contact_info_desc: "البريد الإلكتروني أو رقم الهاتف عند التواصل معنا لطلب الدعم السريري أو التقني فقط.",
                 privacy_section2_title: "2. كيف نستخدم المعلومات",
-                privacy_section2_intro: "نستخدم المعلومات المجمعة لـ:",
-                privacy_section2_item1: "تحسين تجربة المستخدم وتطوير الموقع",
-                privacy_section2_item2: "تحليل استخدام الموقع وفهم احتياجات الزوار",
-                privacy_section2_item3: "الرد على استفساراتكم وتقديم الدعم",
-                privacy_section2_item4: "إرسال تحديثات ونصائح صحية (بموافقتكم فقط)",
-                privacy_section3_title: "3. ملفات الكوكيز (Cookies)",
-                privacy_section3_text: "نستخدم ملفات الكوكيز لتحسين تجربتك على الموقع. يمكنك تعطيل الكوكيز من إعدادات متصفحك، لكن هذا قد يؤثر على بعض وظائف الموقع.",
-                privacy_section4_title: "4. مشاركة المعلومات",
-                privacy_section4_intro: "نحن لا نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:",
-                privacy_section4_strong: "لا نبيع أو نشارك",
-                privacy_section4_item1: "بموافقتك الصريحة",
-                privacy_section4_item2: "لتقديم خدمات أساسية (مثل خدمات الاستضافة)",
-                privacy_section4_item3: "عند الطلب القانوني من الجهات المختصة",
+                privacy_section2_intro: "نستخدم المعلومات المجمعة للأغراض المشروعة التالية:",
+                privacy_section2_item1: "تحسين تجربة المستخدم وتقديم نتائج بحث وتصفح سريعة ودقيقة",
+                privacy_section2_item2: "تحليل الأداء الفني ومراقبة استقرار الخوادم وقواعد البيانات السريرية",
+                privacy_section2_item3: "الرد المباشر على استفسارات المستخدمين ومتابعة طلبات التصحيح",
+                privacy_section2_item4: "إرسال التحديثات السريرية والنصائح التغذوية (بموافقتك الصريحة فقط)",
+                privacy_section3_title: "3. ملفات تعريف الارتباط (Cookies & Local Storage)",
+                privacy_section3_text: "نستخدم تقنيات التخزين المحلي (Local Storage) وملفات الكوكيز الوظيفية لحفظ تفضيلاتك الأساسية مثل اللغة المختارة (العربية، الإنجليزية، الهولندية) والمظهر الليلي/النهاري، دون تتبع أنشطتك عبر مواقع خارجية. يمكنك تعطيل الكوكيز من إعدادات متصفحك في أي وقت.",
+                privacy_section4_title: "4. مشاركة المعلومات وعدم بيع البيانات",
+                privacy_section4_intro: "نحن لا نبيع ولا نؤجر إطلاقاً بياناتك الشخصية لأي طرف ثالث. تتم مشاركة البيانات التقنية المحدودة فقط في الحالات التالية:",
+                privacy_section4_strong: "لا نبيع ولا نؤجر إطلاقاً",
+                privacy_section4_item1: "بموافقتك الصريحة والمستنيرة",
+                privacy_section4_item2: "لمزودي البنية التحتية السحابية الموثوقين الملتزمين بالـ GDPR (مثل استضافة الخوادم في ألمانيا/الاتحاد الأوروبي)",
+                privacy_section4_item3: "عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة",
                 privacy_section5_title: "5. أدوات التحليل والإعلانات",
-                privacy_section5_text: "نستخدم خدمات مثل Google Analytics و Google AdSense لتحليل الزيارات وعرض إعلانات ملائمة. هذه الخدمات قد تجمع معلومات مجهولة عن استخدامك للموقع.",
-                privacy_section6_title: "6. حماية البيانات",
-                privacy_section6_intro: "نتخذ إجراءات أمنية مناسبة لحماية معلوماتك من الوصول غير المصرح به، بما في ذلك:",
-                privacy_section6_item1: "استخدام بروتوكول HTTPS لتشفير البيانات",
-                privacy_section6_item2: "تخزين البيانات على خوادم آمنة",
-                privacy_section6_item3: "مراجعة دورية للإجراءات الأمنية",
-                privacy_section7_title: "7. حقوقك",
-                privacy_section7_intro: "لديك الحق في:",
-                privacy_section7_item1: "الوصول إلى بياناتك الشخصية",
-                privacy_section7_item2: "طلب تصحيح أو حذف بياناتك",
-                privacy_section7_item3: "إلغاء الاشتراك في النشرات البريدية في أي وقت",
-                privacy_section7_item4: "الاعتراض على معالجة بياناتك",
-                privacy_section8_title: "8. روابط المواقع الأخرى",
-                privacy_section8_text: "قد يحتوي موقعنا على روابط لمواقع خارجية. نحن غير مسؤولين عن سياسات الخصوصية الخاصة بهذه المواقع.",
-                privacy_section9_title: "9. التغييرات على سياسة الخصوصية",
-                privacy_section9_text: "قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية عبر نشر النسخة المحدثة على هذه الصفحة.",
-                privacy_section10_title: "10. تواصل معنا",
-                privacy_section10_intro: "إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:",
+                privacy_section5_text: "نستخدم خدمات Google Analytics لقياس الزيارات بشكل مجهول الهوية، وخدمات Google AdSense / AdMob المعتمدة لعرض إعلانات تتوافق مع اللوائح الأوروبية ومعايير حماية الخصوصية للمستخدمين داخل المنطقة الاقتصادية الأوروبية (EEA).",
+                privacy_section6_title: "6. حماية البيانات والأمان السيبراني",
+                privacy_section6_intro: "نطبق بروتوكولات حماية تقنية وتنظيمية متقدمة لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الفقدان، وتشمل:",
+                privacy_section6_item1: "تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم",
+                privacy_section6_item2: "تخزين البيانات والنسخ الاحتياطية على خوادم سحابية محمية في فرانكفورت (الاتحاد الأوروبي)",
+                privacy_section6_item3: "مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)",
+                privacy_section7_title: "7. حقوقك القانونية بموجب اللائحة الأوروبية (GDPR / AVG)",
+                privacy_section7_intro: "وفقاً للائحة العامة لحماية البيانات، يحق لك ممارسة الحقوق التالية مجاناً:",
+                privacy_section7_item1: "حق الوصول والاطلاع على بياناتك الشخصية المحفوظة لدينا",
+                privacy_section7_item2: "حق طلب تصحيح أو استكمال البيانات غير الدقيقة",
+                privacy_section7_item3: "حق طلب حذف بياناتك نهائياً (الحق في النسيان)",
+                privacy_section7_item4: "حق تقييد أو الاعتراض على معالجة البيانات، وحق نقل البيانات",
+                privacy_section8_title: "8. الروابط الخارجية",
+                privacy_section8_text: "قد يحتوي موقعنا وتطبيقنا على روابط لمواقع أو مصادر خارجية موثوقة (مثل مراجع USDA أو Voedingscentrum). نحن غير مسؤولين عن ممارسات وسياسات الخصوصية الخاصة بتلك المواقع الخارجية.",
+                privacy_section9_title: "9. التحديثات والتعديلات",
+                privacy_section9_text: "قد نقوم بتحديث هذه السياسة من وقت لآخر لتعكس التطورات التنظيمية والتقنية. يُعلن عن أي تعديل جوهري بنشر التاريخ المحدث على هذه الصفحة.",
+                privacy_section10_title: "10. تواصل معنا ومسؤول حماية البيانات (DPO)",
+                privacy_section10_intro: "لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:",
                 privacy_email: "البريد الإلكتروني المعتمد للدعم والتصحيح:",
-                privacy_whatsapp: "واتساب:",
-                privacy_whatsapp_link: "اضغط هنا",
-                privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi، فإنك توافق على سياسة الخصوصية هذه.",
+                privacy_whatsapp: "واتساب الدعم السريري المباشر:",
+                privacy_whatsapp_link: "+31 6 45844585",
+                privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi 💚، فإنك تقر بعلمك وموافقتك الكاملة على بنود سياسة الخصوصية هذه.",
                 privacy_back_home: "العودة للرئيسية",
+                btn_explore_boodi: "اكتشف تطبيق بودي 💚",
                 privacy_boodi_title: "11. تطبيق boodi 💚 والامتثال للوائح الاتحاد الأوروبي (EU Compliance)",
                 privacy_boodi_intro: "يخضع تطبيق الهواتف المحمولة boodi 💚 (المسجل برقم حزمة com.wibohealth.boodi) لسياسات خصوصية صارمة وأطر قانونية أوروبية لضمان أعلى مستويات الأمان وحماية المستهلك:",
                 privacy_boodi_mdr_h: "⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)",
@@ -646,67 +964,79 @@
                 privacy_boodi_rect_h: "📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)",
                 privacy_boodi_rect_p: "تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: support@wibohealth.com متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).",
                 privacy_boodi_billing_h: "ج. الاشتراكات والفوترة الآمنة والإعلانات",
-                privacy_boodi_billing_p: "تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي."
+                privacy_boodi_billing_p: "تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.",
+                footer_about: "من نحن",
+                footer_contact: "اتصل بنا",
+                footer_privacy: "سياسة الخصوصية",
+                footer_terms: "شروط الاستخدام",
+                footer_rights: "© 2026 WiBo Health Group & Boodi App. جميع الحقوق محفوظة.",
+                footer_supervised: "💚 مُطور بإشراف سريري من قِبل فريق ويبو هيلث الطبي | هولندا 🇳🇱",
+                footer_medical_disclaimer: "إخلاء مسؤولية سريري: منصة WiBo Health وتطبيق بودي أدوات توجيهية استرشادية بيانية تعتمد على مراجع Voedingscentrum وقواعد البيانات الدولية. الاستشارات لا تحل محل الفحص السريري المباشر في حالات الطوارئ الطبية الحرجة."
             },
             en: {
-                page_title_privacy: "Privacy Policy - WiBo Health",
+                page_title: "Privacy & Data Protection Policy | WiBo Health & Boodi App",
+                page_desc: "Official Privacy Policy for WiBo Health and Boodi App. Full GDPR, Dutch AVG, EU MDR 2017/745 compliance, local health data storage, and consumer safety.",
                 nav_home: "Home",
-                nav_foods: "Food Guide",
-                nav_calculators: "Health Calculators",
-                nav_recipes: "Healthy Recipes",
-                nav_articles: "Health Articles",
+                nav_foods: "Foods Guide",
+                nav_calculators: "Calculators",
+                nav_recipes: "Recipes",
+                nav_articles: "Articles",
+                nav_supplements: "Supplements",
+                nav_boodi_app: "boodi App 💚",
                 nav_privacy: "Privacy Policy",
                 nav_terms: "Terms & Conditions",
-                privacy_title: "🔒 Privacy Policy",
+                nav_contact: "Contact Us",
+                privacy_title: "🔒 Privacy & Data Protection Policy",
                 privacy_last_update: "Last Updated:",
                 privacy_last_update_date: "October 2026",
-                privacy_intro: "At WiBo Health, we are committed to protecting your privacy and personal data. This privacy policy explains how we collect, use, and protect your information across our website and affiliated mobile applications.",
+                privacy_intro: "At WiBo Health and boodi 💚 app, we are committed to the highest standards of protecting your personal and health privacy. This legal policy outlines how your information is collected, processed, and protected in full accordance with the EU General Data Protection Regulation (GDPR) and the Dutch Data Protection Act (AVG).",
                 privacy_section1_title: "1. Information We Collect",
-                privacy_section1_intro: "We collect the following information:",
+                privacy_section1_intro: "We collect only minimal and technically necessary information to provide our services:",
                 privacy_usage_info: "Usage Information:",
-                privacy_usage_info_desc: "Pages you visit, time spent, browser type",
+                privacy_usage_info_desc: "Visited pages, time spent, browser language preferences, and aggregated analytical statistics.",
                 privacy_device_info: "Device Information:",
-                privacy_device_info_desc: "Device type, operating system, IP address",
+                privacy_device_info_desc: "Device model, operating system, anonymized IP address, and technical identifiers for PWA functionality.",
                 privacy_contact_info: "Contact Information:",
-                privacy_contact_info_desc: "Email or phone number (only when contacting us)",
+                privacy_contact_info_desc: "Email address or phone number only when voluntarily submitting technical or clinical support requests.",
                 privacy_section2_title: "2. How We Use Information",
-                privacy_section2_intro: "We use collected information to:",
-                privacy_section2_item1: "Improve user experience and develop the website",
-                privacy_section2_item2: "Analyze website usage and understand visitor needs",
-                privacy_section2_item3: "Respond to inquiries and provide support",
-                privacy_section2_item4: "Send updates and health tips (with your consent only)",
-                privacy_section3_title: "3. Cookies",
-                privacy_section3_text: "We use cookies to enhance your experience on our website. You can disable cookies in your browser settings, but this may affect some website functionality.",
-                privacy_section4_title: "4. Information Sharing",
-                privacy_section4_intro: "We do not sell or share your personal information with third parties except in the following cases:",
-                privacy_section4_strong: "do not sell or share",
-                privacy_section4_item1: "With your explicit consent",
-                privacy_section4_item2: "To provide essential services (such as hosting services)",
-                privacy_section4_item3: "Upon legal request from authorities",
+                privacy_section2_intro: "We process collected information for legitimate and transparent purposes:",
+                privacy_section2_item1: "Improving user experience and delivering high-speed, reliable search results",
+                privacy_section2_item2: "Monitoring system performance and ensuring database stability across European servers",
+                privacy_section2_item3: "Responding promptly to support inquiries and handling brand data verification requests",
+                privacy_section2_item4: "Distributing educational nutritional updates (only with your explicit consent)",
+                privacy_section3_title: "3. Cookies & Local Storage",
+                privacy_section3_text: "We utilize modern Local Storage and essential functional cookies to remember your key preferences (such as selected language and dark/light theme) without tracking your browsing activity across third-party websites. You can disable cookies at any time via your browser settings.",
+                privacy_section4_title: "4. Information Sharing & Zero Data Selling",
+                privacy_section4_intro: "We strictly DO NOT sell, rent, or monetize your personal information. Limited technical data is shared only under the following strict conditions:",
+                privacy_section4_strong: "strictly DO NOT sell or rent",
+                privacy_section4_item1: "With your explicit and informed consent",
+                privacy_section4_item2: "To certified, GDPR-compliant cloud infrastructure providers (servers located in Frankfurt, EU)",
+                privacy_section4_item3: "When legally mandated by European judicial or regulatory authorities",
                 privacy_section5_title: "5. Analytics and Advertising Tools",
-                privacy_section5_text: "We use services like Google Analytics and Google AdSense to analyze visits and display relevant ads. These services may collect anonymized information about your website usage.",
-                privacy_section6_title: "6. Data Protection",
-                privacy_section6_intro: "We take appropriate security measures to protect your information from unauthorized access, including:",
-                privacy_section6_item1: "Using HTTPS protocol to encrypt data",
-                privacy_section6_item2: "Storing data on secure servers",
-                privacy_section6_item3: "Regular security reviews",
-                privacy_section7_title: "7. Your Rights",
-                privacy_section7_intro: "You have the right to:",
-                privacy_section7_item1: "Access your personal data",
-                privacy_section7_item2: "Request correction or deletion of your data",
-                privacy_section7_item3: "Unsubscribe from newsletters at any time",
-                privacy_section7_item4: "Object to processing of your data",
+                privacy_section5_text: "We use Google Analytics with IP anonymization to evaluate traffic patterns, and Google AdSense/AdMob to deliver relevant advertisements in full compliance with European privacy standards and Consent Frameworks for EEA users.",
+                privacy_section6_title: "6. Data Security & Technical Measures",
+                privacy_section6_intro: "We implement advanced organizational and technical security measures to safeguard your information against unauthorized access, loss, or alteration:",
+                privacy_section6_item1: "End-to-end data transmission encryption via modern HTTPS / TLS protocols",
+                privacy_section6_item2: "Encrypted server storage and automated backups hosted in Frankfurt, Germany (EU)",
+                privacy_section6_item3: "Regular security assessments and strict adherence to the data minimization principle",
+                privacy_section7_title: "7. Your Rights Under GDPR & AVG",
+                privacy_section7_intro: "Under European privacy legislation, you have the right to exercise the following rights free of charge:",
+                privacy_section7_item1: "Right of access to your personal data held by us",
+                privacy_section7_item2: "Right to rectification of incomplete or inaccurate data",
+                privacy_section7_item3: "Right to erasure (right to be forgotten)",
+                privacy_section7_item4: "Right to restriction of processing, objection, and data portability",
                 privacy_section8_title: "8. External Website Links",
-                privacy_section8_text: "Our website may contain links to external sites. We are not responsible for the privacy policies of these websites.",
-                privacy_section9_title: "9. Changes to Privacy Policy",
-                privacy_section9_text: "We may update this privacy policy from time to time. We will notify you of any significant changes by posting the updated version on this page.",
-                privacy_section10_title: "10. Contact Us",
-                privacy_section10_intro: "If you have any questions about this privacy policy, please contact us via:",
+                privacy_section8_text: "Our website may reference reputable external resources (such as USDA or Dutch Voedingscentrum databases). We are not responsible for the privacy practices of external websites.",
+                privacy_section9_title: "9. Policy Updates",
+                privacy_section9_text: "We may update this policy periodically to reflect evolving legal and technological requirements. Significant updates will be notified via this page.",
+                privacy_section10_title: "10. Contact Us & Data Protection",
+                privacy_section10_intro: "To exercise your legal data rights or submit privacy-related inquiries, please contact our support team via:",
                 privacy_email: "Certified Support & Rectification Email:",
-                privacy_whatsapp: "WhatsApp:",
-                privacy_whatsapp_link: "Click here",
-                privacy_footer_agreement: "By continuing to use the WiBo Health website and boodi app, you agree to this privacy policy.",
+                privacy_whatsapp: "Direct Clinical WhatsApp:",
+                privacy_whatsapp_link: "+31 6 45844585",
+                privacy_footer_agreement: "By continuing to use WiBo Health and boodi 💚 app, you acknowledge and agree to this Privacy Policy.",
                 privacy_back_home: "Back to Home",
+                btn_explore_boodi: "Discover Boodi App 💚",
                 privacy_boodi_title: "11. boodi 💚 App & EU Regulatory Compliance",
                 privacy_boodi_intro: "The boodi 💚 mobile application (package ID: com.wibohealth.boodi) adheres to strict European privacy policies and regulatory frameworks ensuring consumer safety and full legal compliance:",
                 privacy_boodi_mdr_h: "⚠️ Medical Disclaimer & EU MDR 2017/745 Exemption",
@@ -718,90 +1048,201 @@
                 privacy_boodi_rect_h: "📢 Manufacturer Notice & Rectification Procedure (Notice & Action)",
                 privacy_boodi_rect_p: "WiBo Health is committed to the highest data accuracy. If you are a brand manufacturer noticing outdated or inaccurate nutritional facts for your product derived from public registries, we provide an expedited verification procedure. Contact us directly at: support@wibohealth.com with the barcode and packaging documentation. Our team will verify and rectify the record promptly in accordance with the EU Digital Services Act (DSA).",
                 privacy_boodi_billing_h: "C. Secure Billing, Subscriptions & Advertisements",
-                privacy_boodi_billing_p: "In-app purchases and VIP subscriptions are processed securely via Google Play Billing and RevenueCat without storing credit card details. Advertisements are served via Google AdMob in full adherence to European privacy guidelines."
+                privacy_boodi_billing_p: "In-app purchases and VIP subscriptions are processed securely via Google Play Billing and RevenueCat without storing credit card details. Advertisements are served via Google AdMob in full adherence to European privacy guidelines.",
+                footer_about: "About Us",
+                footer_contact: "Contact Us",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service",
+                footer_rights: "© 2026 WiBo Health Group & Boodi App. All rights reserved.",
+                footer_supervised: "💚 Developed under clinical supervision by WiBo Health Medical Team | Netherlands 🇳🇱",
+                footer_medical_disclaimer: "Clinical Disclaimer: WiBo Health platform and Boodi App provide evidence-based guidance aligned with Voedingscentrum standards. Online advice does not replace emergency in-person medical evaluation."
+            },
+            nl: {
+                page_title: "Privacybeleid & Gegevensbescherming | WiBo Health & Boodi App",
+                page_desc: "Officieel privacybeleid voor WiBo Health en Boodi App. Volledige AVG/GDPR-naleving, EU MDR disclaimer, lokale gegevensopslag en consumentenbescherming in Nederland.",
+                nav_home: "Home",
+                nav_foods: "Voedingswijzer",
+                nav_calculators: "Calculators",
+                nav_recipes: "Recepten",
+                nav_articles: "Artikelen",
+                nav_supplements: "Supplementen",
+                nav_boodi_app: "boodi App 💚",
+                nav_privacy: "Privacybeleid",
+                nav_terms: "Gebruiksvoorwaarden",
+                nav_contact: "Contact",
+                privacy_title: "🔒 Privacybeleid & Gegevensbescherming",
+                privacy_last_update: "Laatst bijgewerkt:",
+                privacy_last_update_date: "Oktober 2026",
+                privacy_intro: "Bij WiBo Health en de boodi 💚 app zetten wij ons in voor de hoogste standaarden van privacy en bescherming van jouw persoons- en gezondheidsgegevens. Dit juridische document legt uit hoe jouw gegevens worden verzameld, verwerkt en beveiligd in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR) en de Nederlandse Uitvoeringswet AVG.",
+                privacy_section1_title: "1. Gegevens die wij verzamelen",
+                privacy_section1_intro: "Wij verzamelen uitsluitend minimale, technisch noodzakelijke gegevens om onze diensten optimaal te leveren:",
+                privacy_usage_info: "Gebruiksgegevens:",
+                privacy_usage_info_desc: "Bezochte pagina's, bezoektijd, taalinstellingen van de browser en algemene geaggregeerde websitestatistieken.",
+                privacy_device_info: "Apparaatgegevens:",
+                privacy_device_info_desc: "Apparaattype, besturingssysteem, geanonimiseerd IP-adres en technische parameters voor PWA-functionaliteit.",
+                privacy_contact_info: "Contactgegevens:",
+                privacy_contact_info_desc: "E-mailadres of telefoonnummer wanneer je zelfstandig contact met ons opneemt voor technische of medische ondersteuning.",
+                privacy_section2_title: "2. Doeleinden van gegevensverwerking",
+                privacy_section2_intro: "Wij verwerken de verzamelde gegevens uitsluitend voor de volgende gerechtvaardigde doelen:",
+                privacy_section2_item1: "Het optimaliseren van de gebruikerservaring en het leveren van snelle, nauwkeurige zoekresultaten",
+                privacy_section2_item2: "Het bewaken van de technische stabiliteit van onze Europese servers en klinische databases",
+                privacy_section2_item3: "Het beantwoorden van vragen van gebruikers en de afhandeling van rectificatieverzoeken",
+                privacy_section2_item4: "Het versturen van wetenschappelijke gezondheidstips (uitsluitend met jouw uitdrukkelijke toestemming)",
+                privacy_section3_title: "3. Cookies & Lokale Gegevensopslag (Local Storage)",
+                privacy_section3_text: "Wij maken gebruik van Local Storage en functionele cookies om jouw voorkeuren (zoals gekozen taal en dag/nachtmodus) lokaal op te slaan. Wij volgen je surfgedrag niet op externe websites. Je kunt cookies te allen tijde uitschakelen via je browserinstellingen.",
+                privacy_section4_title: "4. Gegevensdeling & Verbod op Verkoop van Gegevens",
+                privacy_section4_intro: "Wij verkopen of verhuren jouw persoonsgegevens NOOIT aan derden. Beperkte technische gegevens worden uitsluitend gedeeld onder strikte voorwaarden:",
+                privacy_section4_strong: "verkopen of verhuren jouw persoonsgegevens NOOIT",
+                privacy_section4_item1: "Met jouw uitdrukkelijke en geïnformeerde toestemming",
+                privacy_section4_item2: "Met gecertificeerde cloudproviders die voldoen aan de AVG (servers gehost in Frankfurt, EU)",
+                privacy_section4_item3: "Wanneer dit wettelijk verplicht is door bevoegde Europese gerechtelijke of toezichthoudende autoriteiten",
+                privacy_section5_title: "5. Analytische Diensten & Advertenties",
+                privacy_section5_text: "Wij gebruiken Google Analytics met IP-anonimisering voor bezoekersanalyses, en Google AdSense / AdMob voor advertenties die volledig voldoen aan de Europese privacykaders voor gebruikers binnen de Europese Economische Ruimte (EER).",
+                privacy_section6_title: "6. Beveiliging & Cyberveiligheid",
+                privacy_section6_intro: "Wij hanteren geavanceerde technische en organisatorische maatregelen om jouw gegevens te beschermen tegen ongeautoriseerde toegang, verlies of wijziging:",
+                privacy_section6_item1: "Volledige versleuteling van dataverkeer via geavanceerde HTTPS / TLS-protocollen",
+                privacy_section6_item2: "Beveiligde serveropslag en back-ups binnen de Europese Unie (Frankfurt, Duitsland)",
+                privacy_section6_item3: "Regelmatige veiligheidscontroles en strikte naleving van het beginsel van minimale gegevensverwerking",
+                privacy_section7_title: "7. Jouw Rechten onder de AVG",
+                privacy_section7_intro: "Onder de Europese privacywetgeving heb je het recht om de volgende rechten kosteloos uit te oefenen:",
+                privacy_section7_item1: "Recht op inzage in jouw persoonsgegevens die wij verwerken",
+                privacy_section7_item2: "Recht op rectificatie en aanvulling van onjuiste gegevens",
+                privacy_section7_item3: "Recht op gegevenswissing ('het recht om vergeten te worden')",
+                privacy_section7_item4: "Recht op beperking van de verwerking, bezwaar en gegevensoverdraagbaarheid",
+                privacy_section8_title: "8. Externe Links",
+                privacy_section8_text: "Onze website kan links bevatten naar externe, betrouwbare bronnen (zoals het Voedingscentrum of USDA). Wij zijn niet verantwoordelijk voor het privacybeleid van deze externe websites.",
+                privacy_section9_title: "9. Wijzigingen in dit Beleid",
+                privacy_section9_text: "Wij kunnen dit privacybeleid periodiek bijwerken om te voldoen aan veranderende wetgeving en technologie. Wijzigingen treden in werking op het moment van publicatie op deze pagina.",
+                privacy_section10_title: "10. Contact & Functionaris voor Gegevensbescherming",
+                privacy_section10_intro: "Voor het uitoefenen van jouw AVG-rechten of vragen over gegevensbescherming kun je contact opnemen met ons juridisch en technisch team:",
+                privacy_email: "Officieel e-mailadres voor support en rectificatie:",
+                privacy_whatsapp: "Direct klinisch WhatsApp-contact:",
+                privacy_whatsapp_link: "+31 6 45844585",
+                privacy_footer_agreement: "Door het gebruik van WiBo Health en de boodi 💚 app voort te zetten, ga je akkoord met de voorwaarden van dit privacybeleid.",
+                privacy_back_home: "Terug naar Home",
+                btn_explore_boodi: "Ontdek Boodi App 💚",
+                privacy_boodi_title: "11. Boodi 💚 App & Europese Regelgeving (EU Compliance)",
+                privacy_boodi_intro: "De mobiele applicatie boodi 💚 (pakket-ID: com.wibohealth.boodi) voldoet aan strikte Europese privacyregels en wetgevende kaders om consumentenveiligheid en transparantie te garanderen:",
+                privacy_boodi_mdr_h: "⚠️ Medische Disclaimer & EU MDR 2017/745 Uitzondering",
+                privacy_boodi_mdr_p: "boodi 💚 is een educatief instrument voor voedingsvoorlichting en gezonde leefstijl en is NADRUKKELIJK GEEN medisch hulpmiddel (Geen SaMD onder EU MDR 2017/745). De app stelt geen diagnoses, berekent geen insuline- of medicatiedoseringen en vervangt nooit een behandelend arts of diëtist. Gebruikers (vooral diabetici en mensen met ernstige allergieën) dienen altijd hun arts te raadplegen en de fysieke verpakking te controleren.",
+                privacy_boodi_local_h: "A. Strikte Gezondheidsprivacy & Lokale Gegevensopslag (AVG Art. 9)",
+                privacy_boodi_local_p: "Conform Artikel 9 van de Algemene Verordening Gegevensbescherming (AVG/GDPR) betreffende bijzondere persoonsgegevens: je scangeschiedenis, gecontroleerde producten en gezondheidsdoelen worden uitsluitend lokaal op je eigen apparaat opgeslagen (Local-First). Wij slaan deze gevoelige scanlogs niet op externe servers op en verkopen deze nooit.",
+                privacy_boodi_sources_h: "B. Open Databronnen & Generieke Alternatieven (ACM & Richtlijn 2006/114/EG)",
+                privacy_boodi_sources_p: "Voedingswaarden worden automatisch opgehaald uit openbare internationale databases (Open Food Facts onder ODbL-licentie). Conform de richtlijnen van de Autoriteit Consument & Markt (ACM) en Europese Richtlijn 2006/114/EG inzake eerlijke mededinging adviseert de app gezondere alternatieven uitsluitend als neutrale productcategorieën binnen dezelfde winkel, zonder commerciële voorkeur of merkaantasting.",
+                privacy_boodi_rect_h: "📢 Rectificatie- en Kennisgevingsprocedure voor Fabrikanten (Notice & Action)",
+                privacy_boodi_rect_p: "WiBo Health hecht aan maximale betrouwbaarheid. Indien je als fabrikant of merkhouder onjuiste of verouderde productinformatie constateert afkomstig uit openbare registers, bieden wij een directe rectificatieprocedure. Neem contact op via: support@wibohealth.com onder vermelding van de barcode en officiële verpakkingsspecificaties. Ons team verifieert en corrigeert de gegevens direct conform de Europese Digital Services Act (DSA).",
+                privacy_boodi_billing_h: "C. Veilige Betalingen, Abonnementen & Advertenties",
+                privacy_boodi_billing_p: "Abonnementen en in-app aankopen worden veilig verwerkt via Google Play Billing en RevenueCat zonder opslag van creditcardgegevens. Advertenties worden conform Europese privacyrichtlijnen weergegeven via Google AdMob.",
+                footer_about: "Over Ons",
+                footer_contact: "Contact",
+                footer_privacy: "Privacybeleid",
+                footer_terms: "Gebruiksvoorwaarden",
+                footer_rights: "© 2026 WiBo Health Group & Boodi App. Alle rechten voorbehouden.",
+                footer_supervised: "💚 Ontwikkeld onder klinisch toezicht door het WiBo Health Medisch Team | Nederland 🇳🇱",
+                footer_medical_disclaimer: "Klinische Disclaimer: Het WiBo Health platform en de Boodi App zijn informatieve hulpmiddelen gebaseerd op de Richtlijnen Goede Voeding (Voedingscentrum) en wetenschappelijke standaarden. Online advies vervangt nooit een spoedeisend consult bij een behandelend arts."
             }
         };
 
-        // Translation function
-        function t(key) {
-            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        // Determine Initial Language
+        function detectInitialLang() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang && ['ar', 'en', 'nl'].includes(urlLang)) {
+                return urlLang;
+            }
+
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+            if (saved && ['ar', 'en', 'nl'].includes(saved)) {
+                return saved;
+            }
+
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (browserLang.startsWith('ar')) return 'ar';
+            if (browserLang.startsWith('nl')) return 'nl';
+            return 'en';
         }
 
-        // Change language
+        let currentLang = detectInitialLang();
+
+        function t(key) {
+            return translations[currentLang]?.[key] || translations['ar']?.[key] || key;
+        }
+
         function changeLanguage(lang) {
             currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
             localStorage.setItem('wibo_language', lang);
+            
             document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            updatePageLanguage();
-        }
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            
+            // Update Page Meta for Googlebot
+            document.title = t('page_title');
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', t('page_desc'));
 
-        // Update page language
-        function updatePageLanguage() {
-            // Update title
-            document.title = t('page_title_privacy');
+            // Update UI Elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
 
-            // Update language button
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
-
-            // Update all elements with data-i18n
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                const text = t(key);
-                if (element.tagName === 'TITLE') {
-                    document.title = text;
+            // Update Active Flag Buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                    btn.style.opacity = '1';
                 } else {
-                    element.textContent = text;
+                    btn.classList.remove('active');
+                    btn.style.opacity = '0.5';
                 }
             });
         }
 
-        // Theme toggle
+        // Theme Switcher Sync
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const themeIcon = document.querySelector('.theme-toggle i');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+            }
+        }
+
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-            updateThemeIcon();
-        }
-
-        function updateThemeIcon() {
-            const themeToggle = document.getElementById('themeToggle');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        }
-
-        // Initialize theme
-        function initializeTheme() {
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
-            if (isDarkMode) {
-                document.body.classList.add('dark-mode');
-            }
-            updateThemeIcon();
-        }
-
-        // Initialize language
-        function initializeLanguage() {
-            currentLang = localStorage.getItem('wibo_language') || 'ar';
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            const icon = document.querySelector('.theme-toggle i');
             
-            // Apply translations immediately on page load
-            updatePageLanguage();
+            if (document.body.classList.contains('dark-mode')) {
+                if (icon) icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                if (icon) icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
         }
 
-        // Initialize on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            initializeTheme();
-            initializeLanguage();
-            updatePageLanguage();
-        });
+        // Mobile Menu Drawer
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const body = document.body;
+            
+            if (mobileNav) mobileNav.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+            if (body) body.style.overflow = (mobileNav && mobileNav.classList.contains('active')) ? 'hidden' : '';
+        }
 
-        // Auto-hide Header on Scroll
+        // Header Hide/Show on Scroll
         let lastScrollTop = 0;
         const header = document.querySelector('header');
         const scrollThreshold = 150;
 
         window.addEventListener('scroll', function() {
+            if (!header) return;
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             
             if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
@@ -816,9 +1257,12 @@
             
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
-    </script>
 
-    <!-- Mobile Menu JavaScript -->
-    <script src="js/mobile-menu.js"></script>
+        // Lifecycle Init
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            changeLanguage(currentLang);
+        });
+    </script>
 </body>
 </html>
