@@ -571,7 +571,10 @@
     <main class="container">
         <!-- Food Hero -->
         <div class="food-hero">
-            <div class="food-icon-large" id="foodIcon">🍽️</div>
+          <div id="foodMediaContainer" style="width: 140px; height: 140px; margin: 0 auto 15px auto; border-radius: 22px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.18); border: 2px solid rgba(46, 204, 113, 0.3); display: none;">
+    <img id="foodRealImage" src="" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+<div class="food-icon-large" id="foodIcon">🍽️</div>
             <h2 id="foodName">جاري التحميل...</h2>
             <h3 id="foodNameSubtitle"></h3>
             <span class="food-category-badge" id="foodCategory"></span>
@@ -970,7 +973,24 @@
         function displayFoodDetails(food) {
             if (!food) return;
 
-            document.getElementById('foodIcon').textContent = food.icon || '🍽️';
+          const mediaContainer = document.getElementById('foodMediaContainer');
+const realImg = document.getElementById('foodRealImage');
+const iconEl = document.getElementById('foodIcon');
+
+if (food.image) {
+    realImg.src = food.image;
+   realImg.alt = food.name;
+    mediaContainer.style.display = 'block';
+    iconEl.style.display = 'none';
+    realImg.onerror = function() {
+        mediaContainer.style.display = 'none';
+        iconEl.style.display = 'block';
+    };
+} else {
+    mediaContainer.style.display = 'none';
+    iconEl.style.display = 'block';
+    iconEl.textContent = food.icon || '🍽️';
+}
 
             const titleEl = document.getElementById('foodName');
             const subtitleEl = document.getElementById('foodNameSubtitle');
