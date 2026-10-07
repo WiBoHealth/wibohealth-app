@@ -1,44 +1,37 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>حاسبات صحية مجانية - BMI، BMR، السعرات، الماء | WiBo Health</title>
-    <meta name="description" content="احسب مؤشراتك الصحية مجاناً: مؤشر كتلة الجسم (BMI)، معدل الأيض الأساسي (BMR)، احتياجك اليومي من السعرات والماء - مع إمكانية البحث عن المؤشر الجلايسيمي لأي طعام">
-    <meta name="keywords" content="حاسبة BMI, حاسبة السعرات الحرارية, حاسبة BMR, حاسبة الماء, مؤشر كتلة الجسم, احتياج السعرات, معدل الأيض">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="الحاسبات الصحية المجانية | WiBo Health">
-    <meta property="og:description" content="احسب BMI، BMR، السعرات الحرارية واحتياجك من الماء - مجاناً">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wibohealth.com/calculators.html">
-    
-    <!-- Additional SEO -->
-    <meta name="author" content="WiBo Health">
+    <title id="seo_title" data-i18n="seo_title">حاسبات صحية وسريرية معتمدة - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health</title>
+    <meta name="description" id="seo_desc" content="حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.">
+    <meta name="keywords" content="حاسبة BMI, حاسبة السعرات الحرارية, حاسبة الماكروز, حاسبة BMR, حاسبة الماء, نسبة الخصر للطول, WHtR, مقاومة الإنسولين, WiBo Health">
+    <meta name="author" content="WiBo Health Group">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wibohealth.com/calculators.html">
     
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html" />
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/calculators.html" />
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/calculators.html" />
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/calculators.html" />
 
-    <!-- Google Structured Data (Schema.org) لتحسين الأرشفة والظهور على غوغل -->
+    <!-- Google Structured Data (Schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "حاسبة مؤشر كتلة الجسم والسعرات الحرارية - WiBo Health",
+      "name": "WiBo Health Clinical Calculators",
       "url": "https://wibohealth.com/calculators.html",
-      "description": "أداة مجانية لحساب مؤشر كتلة الجسم BMI واحتياج السعرات الحرارية ومعدل الأيض الأساسي BMR.",
+      "description": "Evidence-based metabolic and clinical health calculators (BMI, BMR/TDEE with Macro breakdown, WHtR, Water Intake).",
       "applicationCategory": "HealthApplication",
       "operatingSystem": "All",
       "offers": {
         "@type": "Offer",
         "price": "0",
-        "priceCurrency": "USD"
+        "priceCurrency": "EUR"
       }
     }
     </script>
@@ -47,947 +40,1589 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- PWA Manifest -->
+    <!-- PWA Manifest & Icons -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#0f172a">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="WiBo Health">
-    
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-292WD2SWHN"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-292WD2SWHN');
-    </script>
-    
-    <!-- Mobile Menu CSS -->
-    <link rel="stylesheet" href="css/mobile-menu.css">
-
-    <!-- Page-specific translations -->
-    <script>
-        const calculatorTranslations = {
-            ar: {
-                'nav_home': 'الرئيسية',
-                'nav_foods': 'دليل الأطعمة',
-                'nav_calculators': 'الحاسبات',
-                'nav_recipes': 'الوصفات',
-                'nav_articles': 'المقالات',
-                'nav_doctor': 'من نحن',
-                'nav_about': 'من نحن',
-                'nav_contact': 'اتصل بنا',
-                
-                // BMI Calculator
-                'bmi_title': 'حاسبة مؤشر كتلة الجسم (BMI)',
-                'bmi_weight': 'الوزن (كجم)',
-                'bmi_weight_placeholder': 'مثال: 70',
-                'bmi_height': 'الطول (سم)',
-                'bmi_height_placeholder': 'مثال: 170',
-                'bmi_calculate': 'احسب مؤشر كتلة الجسم',
-                'bmi_your_result': 'مؤشر كتلة جسمك',
-                'bmi_underweight': 'نحيف - وزن أقل من الطبيعي',
-                'bmi_normal': 'طبيعي - وزن مثالي ✓',
-                'bmi_overweight': 'زيادة وزن',
-                'bmi_obese': 'سمنة - يُنصح بمراجعة طبيب',
-                'bmi_error': 'الرجاء إدخال الوزن والطول بشكل صحيح',
-                
-                // Calories Calculator
-                'cal_title': 'حاسبة السعرات الحرارية اليومية',
-                'cal_age': 'العمر',
-                'cal_age_placeholder': 'مثال: 30',
-                'cal_gender': 'الجنس',
-                'cal_gender_male': 'ذكر',
-                'cal_gender_female': 'أنثى',
-                'cal_weight': 'الوزن (كجم)',
-                'cal_weight_placeholder': 'مثال: 70',
-                'cal_height': 'الطول (سم)',
-                'cal_height_placeholder': 'مثال: 170',
-                'cal_activity': 'مستوى النشاط',
-                'cal_activity_1': 'قليل الحركة (لا رياضة)',
-                'cal_activity_2': 'نشاط خفيف (1-3 أيام/أسبوع)',
-                'cal_activity_3': 'نشاط متوسط (3-5 أيام/أسبوع)',
-                'cal_activity_4': 'نشاط عالي (6-7 أيام/أسبوع)',
-                'cal_activity_5': 'نشاط عالي جداً (رياضي)',
-                'cal_calculate': 'احسب السعرات اليومية',
-                'cal_your_needs': 'احتياجك اليومي',
-                'cal_per_day': 'سعرة حرارية في اليوم',
-                'cal_error': 'الرجاء إدخال جميع البيانات بشكل صحيح'
-            },
-            en: {
-                'nav_home': 'Home',
-                'nav_foods': 'Food Guide',
-                'nav_calculators': 'Calculators',
-                'nav_recipes': 'Recipes',
-                'nav_articles': 'Articles',
-                'nav_doctor': 'About Us',
-                'nav_about': 'About Us',
-                'nav_contact': 'Contact Us',
-
-                // BMI Calculator
-                'bmi_title': 'Body Mass Index (BMI) Calculator',
-                'bmi_weight': 'Weight (kg)',
-                'bmi_weight_placeholder': 'Example: 70',
-                'bmi_height': 'Height (cm)',
-                'bmi_height_placeholder': 'Example: 170',
-                'bmi_calculate': 'Calculate BMI',
-                'bmi_your_result': 'Your BMI',
-                'bmi_underweight': 'Underweight',
-                'bmi_normal': 'Normal - Ideal weight ✓',
-                'bmi_overweight': 'Overweight',
-                'bmi_obese': 'Obesity - consult a doctor',
-                'bmi_error': 'Please enter valid weight and height',
-                
-                // Calories Calculator
-                'cal_title': 'Daily Calorie Calculator',
-                'cal_age': 'Age',
-                'cal_age_placeholder': 'Example: 30',
-                'cal_gender': 'Gender',
-                'cal_gender_male': 'Male',
-                'cal_gender_female': 'Female',
-                'cal_weight': 'Weight (kg)',
-                'cal_weight_placeholder': 'Example: 70',
-                'cal_height': 'Height (cm)',
-                'cal_height_placeholder': 'Example: 170',
-                'cal_activity': 'Activity Level',
-                'cal_activity_1': 'Sedentary (no exercise)',
-                'cal_activity_2': 'Light Activity (1-3 days/week)',
-                'cal_activity_3': 'Moderate Activity (3-5 days/week)',
-                'cal_activity_4': 'High Activity (6-7 days/week)',
-                'cal_activity_5': 'Very High Activity (Athlete)',
-                'cal_calculate': 'Calculate Daily Calories',
-                'cal_your_needs': 'Your Daily Needs',
-                'cal_per_day': 'calories per day',
-                'cal_error': 'Please enter all required data'
-            }
-        };
-
-        // دالة الترجمة التي كانت مفقودة ومسببة لتعطل الحاسبة
-        function tc(key) {
-            const currentLang = localStorage.getItem('preferred_language') || 'ar';
-            if (calculatorTranslations[currentLang] && calculatorTranslations[currentLang][key]) {
-                return calculatorTranslations[currentLang][key];
-            }
-            if (calculatorTranslations['ar'] && calculatorTranslations['ar'][key]) {
-                return calculatorTranslations['ar'][key];
-            }
-            return key;
-        }
-    </script>
 
     <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131c2e;
+            --bg-input: #1e293b;
+            --header-bg: rgba(11, 15, 25, 0.85);
+            --tabs-bg: rgba(19, 28, 46, 0.6);
+            --result-bg: rgba(30, 41, 59, 0.5);
+            --breakdown-bg: rgba(19, 28, 46, 0.7);
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --primary-glow: rgba(16, 185, 129, 0.25);
+            --secondary: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --note-bg: rgba(6, 182, 212, 0.08);
+            --note-border: rgba(6, 182, 212, 0.2);
+            --note-text: #bae6fd;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+        }
+
+        html[data-theme="light"] {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --tabs-bg: #e2e8f0;
+            --result-bg: #f8fafc;
+            --breakdown-bg: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: rgba(0, 0, 0, 0.09);
+            --note-bg: rgba(6, 182, 212, 0.1);
+            --note-border: rgba(6, 182, 212, 0.25);
+            --note-text: #0369a1;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-gradient-1: #667eea;
-            --bg-gradient-2: #764ba2;
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --white: #ffffff;
-            --card-bg: #ffffff;
-            --shadow: rgba(0,0,0,0.1);
-            --shadow-hover: rgba(0,0,0,0.2);
-        }
-
         body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             min-height: 100vh;
-            transition: all 0.3s ease;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        body.dark-mode {
-            --bg-gradient-1: #1a1a2e;
-            --bg-gradient-2: #16213e;
-            --card-bg: #0f3460;
-            --text-dark: #ffffff;
-            --text-light: #b8b8b8;
-            --shadow: rgba(255,255,255,0.1);
-            --shadow-hover: rgba(255,255,255,0.2);
+        html[lang="en"] body, html[lang="nl"] body {
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
+        /* Slim Header 2.0 */
         header {
-            background: var(--card-bg);
-            padding: 20px 0;
-            box-shadow: 0 5px 20px var(--shadow);
-            margin-bottom: 30px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease, transform 0.3s ease;
-        }
-        
-        header.hide-nav {
-            transform: translateY(-100%);
+            height: 60px;
+            background: var(--header-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
-        .header-content {
+        .header-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
         }
 
-        .logo {
+        .brand-link {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             text-decoration: none;
         }
 
-        .logo-icon {
-            width: 70px;
-            height: 70px;
-            background: transparent;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
+        .brand-logo-svg {
+            width: 36px;
+            height: 36px;
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.3));
         }
 
-        .logo-icon svg {
-            width: 70px;
-            height: 70px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
-        }
-
-        .logo-text h1 {
-            font-size: 32px;
-            background: linear-gradient(135deg, var(--primary-color), #3498db);
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-weight: 900;
+            letter-spacing: -0.5px;
         }
 
         .header-actions {
             display: flex;
-            gap: 15px;
             align-items: center;
+            gap: 10px;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .lang-switcher-container {
+            display: inline-flex;
+            align-items: center;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 2px;
+            gap: 2px;
         }
 
         .lang-btn {
-            width: 45px;
-            height: 45px;
-            background: #f3f4f6;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            transition: all 0.3s;
-            color: var(--text-dark);
-            font-family: 'Cairo', sans-serif;
-            font-weight: 600;
-        }
-
-        body.dark-mode .lang-btn {
-            background: rgba(255,255,255,0.1);
-            color: white;
-        }
-
-        .lang-btn:hover, .lang-btn.active {
-            transform: scale(1.1);
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .theme-toggle {
-            width: 45px;
-            height: 45px;
-            background: #f3f4f6;
+            gap: 4px;
+            padding: 4px 10px;
             border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s;
-            color: var(--text-dark);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.8rem;
             font-weight: 600;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        body.dark-mode .theme-toggle {
-            background: rgba(255,255,255,0.1);
-            color: var(--white);
+        .lang-btn:hover {
+            color: var(--text-main);
         }
 
-        .theme-toggle:hover {
-            transform: scale(1.1);
-            background: var(--primary-color);
-            color: white;
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 8px var(--primary-glow);
         }
 
-        .nav-menu {
+        .nav-links-bar {
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            width: 100%;
+            gap: 8px;
+            align-items: center;
         }
 
         .nav-link {
-            padding: 10px 20px;
-            background: #f3f4f6;
-            color: var(--text-dark);
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
             text-decoration: none;
-            border-radius: 20px;
+            font-size: 0.88rem;
             font-weight: 600;
-            transition: all 0.3s;
-            font-size: 14px;
-        }
-
-        body.dark-mode .nav-link {
-            background: rgba(255,255,255,0.1);
-            color: var(--white);
+            transition: all 0.2s;
         }
 
         .nav-link:hover, .nav-link.active {
-            background: var(--primary-color);
-            color: white;
+            color: var(--text-main);
+            background: rgba(16, 185, 129, 0.1);
         }
 
-        /* Hamburger Menu */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
+        .nav-link.active {
+            color: var(--primary);
         }
 
-        .hamburger-menu span {
-            width: 30px;
-            height: 3px;
-            background: var(--text-dark);
-            margin: 3px 0;
-            border-radius: 3px;
-            transition: all 0.3s ease;
+        /* Page Layout */
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px 80px;
         }
 
-        body.dark-mode .hamburger-menu span {
-            background: white;
+        .hero-section {
+            text-align: center;
+            margin-bottom: 35px;
         }
 
-        .mobile-nav-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 5px 14px;
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
-        .mobile-nav-overlay.active {
-            display: block;
-            opacity: 1;
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
         }
 
-        .mobile-nav-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100%;
-            background: var(--card-bg);
-            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-            z-index: 1000;
-            padding: 80px 20px 20px;
-            transition: right 0.3s ease;
-            overflow-y: auto;
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 760px;
+            margin: 0 auto;
         }
 
-        .mobile-nav-menu.active {
-            right: 0;
+        /* Tabs */
+        .calculator-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+            background: var(--tabs-bg);
+            padding: 6px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
         }
 
-        .mobile-nav-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 30px;
-            color: var(--text-dark);
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
+        .tab-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-nav-close:hover {
-            background: rgba(231, 76, 60, 0.1);
-            color: #e74c3c;
-        }
-
-        .mobile-nav-link {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 18px 20px;
-            color: var(--text-dark);
-            text-decoration: none;
-            border-radius: 12px;
-            margin-bottom: 10px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-        }
-
-        body.dark-mode .mobile-nav-link {
-            background: rgba(255,255,255,0.05);
-            color: white;
-        }
-
-        .mobile-nav-link:hover {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            transform: translateX(-5px);
-        }
-
-        .mobile-nav-link i {
-            font-size: 20px;
-            width: 25px;
-            text-align: center;
-        }
-
-        /* Calculator Card */
-        .calculator-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px var(--shadow);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .calculator-card h2 {
-            color: var(--text-dark);
-            font-size: 2rem;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .calculator-card h2 i {
-            color: var(--primary-color);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #ecf0f1;
-            border-radius: 10px;
-            font-size: 16px;
-            font-family: 'Cairo', sans-serif;
-            transition: all 0.3s;
-            background: var(--card-bg);
-            color: var(--text-dark);
-        }
-
-        body.dark-mode .form-group input,
-        body.dark-mode .form-group select {
-            border-color: rgba(255,255,255,0.2);
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
-        }
-
-        .btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            gap: 8px;
+            padding: 12px 14px;
             border: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.92rem;
             font-weight: 700;
+            border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Cairo', sans-serif;
-            margin-top: 10px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: inherit;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+        .tab-btn:hover {
+            color: var(--text-main);
         }
 
-        .result-box {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 25px;
-            text-align: center;
+        .tab-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 4px 14px var(--primary-glow);
+        }
+
+        /* Panel Card */
+        .calc-panel {
             display: none;
-            animation: fadeIn 0.5s ease;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.3s ease;
         }
 
-        .result-box.show {
+        .calc-panel.active-panel {
             display: block;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .result-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .result-value {
-            font-size: 3.5rem;
+        .panel-title-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .panel-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.12);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .panel-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+
+        .clinical-badge {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            background: rgba(6, 182, 212, 0.12);
+            color: var(--secondary);
+            font-weight: 600;
+            border: 1px solid rgba(6, 182, 212, 0.25);
+        }
+
+        /* Form Controls */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 13px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-main);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
+        }
+
+        .calc-submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .calc-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Results */
+        .result-view {
+            display: none;
+            margin-top: 30px;
+            padding: 24px;
+            border-radius: var(--radius-lg);
+            background: var(--result-bg);
+            border: 1px solid var(--border-color);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .result-view.active {
+            display: block;
+        }
+
+        .result-main {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .result-big-value {
+            font-size: 3.2rem;
             font-weight: 900;
-            margin: 20px 0;
+            line-height: 1;
+            margin: 10px 0;
+            color: var(--primary);
         }
 
-        .result-label {
-            font-size: 1.1rem;
-            opacity: 0.95;
+        .result-status-pill {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
+
+        .status-optimal { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .status-warning { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .status-danger { background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .status-info { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); }
+
+        .result-breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .breakdown-box {
+            background: var(--breakdown-bg);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .breakdown-label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .breakdown-val {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        /* Macronutrient Section */
+        .macros-card {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: var(--radius-md);
+            background: var(--breakdown-bg);
+            border: 1px solid var(--border-color);
+        }
+
+        .macros-header {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+        }
+
+        .macros-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .macro-pill {
+            padding: 12px 8px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+        }
+
+        .macro-name { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+        .macro-grams { font-size: 1.2rem; font-weight: 900; }
+        .macro-cal { font-size: 0.72rem; color: var(--text-muted); }
+
+        /* Clinical Explainer Banner */
+        .clinical-note-box {
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            background: var(--note-bg);
+            border: 1px solid var(--note-border);
+            color: var(--note-text);
+            font-size: 0.88rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .clinical-note-box i {
+            font-size: 1.1rem;
+            margin-top: 3px;
+            color: var(--secondary);
+        }
+
+        /* Boodi App Banner */
+        .boodi-funnel-card {
+            margin-top: 45px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .funnel-info { max-width: 650px; }
+        .funnel-info h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 8px; color: var(--text-main); }
+        .funnel-info p { color: var(--text-muted); font-size: 0.95rem; }
+
+        .funnel-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 24px;
+            background: #10b981;
+            color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px var(--primary-glow);
+        }
+
+        .funnel-btn:hover { background: #059669; transform: translateY(-2px); }
 
         /* Footer */
         footer {
-            background: var(--card-bg);
-            padding: 30px 0;
-            margin-top: 50px;
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 -5px 20px var(--shadow);
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        footer p {
-            color: var(--text-light);
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .calculator-card {
-                padding: 25px;
-            }
-            
-            .hamburger-menu {
-                display: flex;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
+        .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 860px) {
+            .calculator-tabs { grid-template-columns: repeat(2, 1fr); }
+            .hero-title { font-size: 1.8rem; }
+            .nav-links-bar { display: none; }
+            .calc-panel { padding: 22px; }
+            .macros-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#5eead4;stop-opacity:1" />
-                                    <stop offset="50%" style="stop-color:#2dd4bf;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
-                                </linearGradient>
-                                <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7" />
-                                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
-                                </linearGradient>
-                            </defs>
-                            <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#heartGradient)" stroke="#14b8a6" stroke-width="3"/>
-                            <path d="M40 100 L60 100 L68 85 L76 115 L84 100 L100 100 L108 85 L116 115 L124 100 L160 100" stroke="url(#pulseGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.95"/>
-                            <g transform="translate(130, 70)">
-                                <rect x="-3" y="-14" width="6" height="28" fill="white" opacity="0.9" rx="2"/>
-                                <rect x="-14" y="-3" width="28" height="6" fill="white" opacity="0.9" rx="2"/>
-                                <circle cx="0" cy="0" r="18" fill="none" stroke="white" stroke-width="3" opacity="0.6"/>
-                            </g>
-                            <ellipse cx="80" cy="75" rx="18" ry="28" fill="white" opacity="0.25" transform="rotate(-30 80 75)"/>
-                            <circle cx="70" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/></circle>
-                            <circle cx="130" cy="100" r="3" fill="white" opacity="0.8"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <h1>WiBo Health</h1>
-                    </div>
-                </a>
 
-                <div class="header-actions">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
-                    
-                    <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
-                        <i class="fas fa-moon"></i>
+    <!-- Slim Header 2.0 -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="brand-link">
+                <svg class="brand-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#brandGrad)" />
+                    <path d="M45 100 L65 100 L72 85 L80 115 L88 100 L102 100 L110 85 L118 115 L126 100 L155 100" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" />
+                </svg>
+                <span class="brand-title">WiBo Health</span>
+            </a>
+
+            <nav class="nav-links-bar">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="foods.html" class="nav-link" data-i18n="nav_foods">دليل الأطعمة</a>
+                <a href="calculators.html" class="nav-link active" data-i18n="nav_calculators">الحاسبات</a>
+                <a href="supplements.html" class="nav-link" data-i18n="nav_supplements">المكملات</a>
+                <a href="articles.html" class="nav-link" data-i18n="nav_articles">المقالات</a>
+                <a href="boodi.html" class="nav-link" data-i18n="nav_boodi">تطبيق بودي 💚</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل المظهر" aria-label="Toggle Theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+
+                <div class="lang-switcher-container">
+                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
+                        <span>🇪🇬</span> <span>AR</span>
                     </button>
-                    
-                    <div class="hamburger-menu" onclick="toggleMobileMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
+                        <span>🇳🇱</span> <span>NL</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
+                        <span>🇬🇧</span> <span>EN</span>
+                    </button>
                 </div>
             </div>
-
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
-                <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
-                <a href="calculators.html" class="nav-link active"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
-                <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
-                <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
-                <a href="about.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">من نحن</span></a>
-            </nav>
         </div>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
-
-    <!-- Mobile Navigation Menu -->
-    <nav class="mobile-nav-menu" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
-            <i class="fas fa-times"></i>
-        </button>
+    <!-- Page Content -->
+    <main class="page-wrapper">
         
-        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
-        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
-        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
-        <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
-        <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
-        <a href="about.html" class="mobile-nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">فريق ويبو هيلث الطبي</span></a>
-        <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="nav_about">من نحن</span></a>
-        <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
-    </nav>
+        <section class="hero-section">
+            <div class="hero-badge">
+                <i class="fas fa-stethoscope"></i>
+                <span data-i18n="hero_badge">منظومة الحسابات السريرية المعتمدة</span>
+            </div>
+            <h1 class="hero-title" data-i18n="hero_title">الحاسبات الأيضية والصحية الذكية</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">أدوات تحليل استرشادية مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية لسلامة الأغذية (EFSA) وإرشادات المعهد الوطني للصحة والرعاية (NICE).</p>
+        </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- BMI Calculator -->
-        <div class="calculator-card">
-            <h2>
-                <i class="fas fa-weight"></i>
-                <span data-i18n="bmi_title">حاسبة مؤشر كتلة الجسم (BMI)</span>
-            </h2>
-            
-            <div class="form-group">
-                <label data-i18n="bmi_weight">الوزن (كجم)</label>
-                <input type="number" id="weight" data-i18n-placeholder="bmi_weight_placeholder" placeholder="مثال: 70" step="any" min="1">
-            </div>
-            
-            <div class="form-group">
-                <label data-i18n="bmi_height">الطول (سم)</label>
-                <input type="number" id="height" data-i18n-placeholder="bmi_height_placeholder" placeholder="مثال: 170" step="any" min="1">
-            </div>
-            
-            <button class="btn" onclick="calculateBMI()">
-                <span data-i18n="bmi_calculate">احسب مؤشر كتلة الجسم</span>
+        <!-- Tabs -->
+        <div class="calculator-tabs" role="tablist">
+            <button class="tab-btn active" onclick="switchCalculator('bmi', this)">
+                <i class="fas fa-weight-scale"></i>
+                <span data-i18n="tab_bmi">كتلة الجسم (BMI)</span>
             </button>
-            
-            <div class="result-box" id="bmiResult">
-                <h3 data-i18n="bmi_your_result">مؤشر كتلة جسمك</h3>
-                <div class="result-value" id="bmiValue"></div>
-                <p class="result-label" id="bmiCategory"></p>
-            </div>
+            <button class="tab-btn" onclick="switchCalculator('calories', this)">
+                <i class="fas fa-fire-flame-curved"></i>
+                <span data-i18n="tab_cal">السعرات والأيض (TDEE)</span>
+            </button>
+            <button class="tab-btn" onclick="switchCalculator('water', this)">
+                <i class="fas fa-droplet"></i>
+                <span data-i18n="tab_water">احتياج الماء (EFSA)</span>
+            </button>
+            <button class="tab-btn" onclick="switchCalculator('whtr', this)">
+                <i class="fas fa-ruler-combined"></i>
+                <span data-i18n="tab_whtr">نسبة الخصر (WHtR)</span>
+            </button>
         </div>
 
-        <!-- Calories Calculator -->
-        <div class="calculator-card">
-            <h2>
-                <i class="fas fa-fire"></i>
-                <span data-i18n="cal_title">حاسبة السعرات الحرارية اليومية</span>
-            </h2>
-            
-            <div class="form-group">
-                <label data-i18n="cal_age">العمر</label>
-                <input type="number" id="age" data-i18n-placeholder="cal_age_placeholder" placeholder="مثال: 30" min="1">
+        <!-- 1. BMI CALCULATOR -->
+        <section class="calc-panel active-panel" id="panel-bmi">
+            <div class="panel-header">
+                <div class="panel-title-group">
+                    <div class="panel-icon"><i class="fas fa-weight-scale"></i></div>
+                    <div>
+                        <h2 class="panel-title" data-i18n="bmi_title">حاسبة مؤشر كتلة الجسم (BMI)</h2>
+                        <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="bmi_sub">مقياس التناسق الحجمي بين الطول والوزن</div>
+                    </div>
+                </div>
+                <span class="clinical-badge">WHO Standard</span>
             </div>
-            
-            <div class="form-group">
-                <label data-i18n="cal_gender">الجنس</label>
-                <select id="gender">
-                    <option value="male" data-i18n="cal_gender_male">ذكر</option>
-                    <option value="female" data-i18n="cal_gender_female">أنثى</option>
-                </select>
+
+            <form id="bmiForm" onsubmit="handleBMISubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="bmi_weight" data-i18n="lbl_weight">الوزن الحالي (كجم)</label>
+                        <input type="number" id="bmi_weight" class="form-control" step="0.1" min="20" max="350" required data-i18n-placeholder="ph_weight" placeholder="مثال: 78">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="bmi_height" data-i18n="lbl_height">الطول (سم)</label>
+                        <input type="number" id="bmi_height" class="form-control" step="0.5" min="80" max="250" required data-i18n-placeholder="ph_height" placeholder="مثال: 175">
+                    </div>
+                </div>
+                <button type="submit" class="calc-submit-btn">
+                    <i class="fas fa-calculator"></i>
+                    <span data-i18n="btn_calc_bmi">احسب مؤشر كتلة الجسم الآن</span>
+                </button>
+            </form>
+
+            <div class="result-view" id="bmiResultView">
+                <div class="result-main">
+                    <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_bmi_heading">مؤشر كتلة جسمك المحسوب</div>
+                    <div class="result-big-value" id="bmiDisplayVal">0.0</div>
+                    <div class="result-status-pill" id="bmiStatusPill">--</div>
+                </div>
+                <div class="breakdown-box" style="margin-top: 15px;">
+                    <div class="breakdown-label" data-i18n="bmi_ideal_range_label">نطاق الوزن الطبيعي الموصى به لطولك (BMI 18.5 - 24.9)</div>
+                    <div class="breakdown-val" style="color: var(--primary);" id="bmiIdealRangeVal">--</div>
+                </div>
+                <div class="clinical-note-box">
+                    <i class="fas fa-circle-info"></i>
+                    <span id="bmiClinicalNote">--</span>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label data-i18n="cal_weight">الوزن (كجم)</label>
-                <input type="number" id="weightCal" data-i18n-placeholder="cal_weight_placeholder" placeholder="مثال: 70" step="any" min="1">
+        </section>
+
+        <!-- 2. CALORIES & METABOLISM & MACROS (Mifflin-St Jeor) -->
+        <section class="calc-panel" id="panel-calories">
+            <div class="panel-header">
+                <div class="panel-title-group">
+                    <div class="panel-icon"><i class="fas fa-fire-flame-curved"></i></div>
+                    <div>
+                        <h2 class="panel-title" data-i18n="cal_title">حاسبة السعرات ومعدل الأيض والماكروز (BMR/TDEE)</h2>
+                        <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="cal_sub">معادلة ميفلين-سانت جور مع التوزيع السريري للماكروز</div>
+                    </div>
+                </div>
+                <span class="clinical-badge">Mifflin-St Jeor Gold Standard</span>
             </div>
-            
-            <div class="form-group">
-                <label data-i18n="cal_height">الطول (سم)</label>
-                <input type="number" id="heightCal" data-i18n-placeholder="cal_height_placeholder" placeholder="مثال: 170" step="any" min="1">
+
+            <form id="caloriesForm" onsubmit="handleCaloriesSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="cal_gender" data-i18n="lbl_gender">الجنس البيولوجي</label>
+                        <select id="cal_gender" class="form-control" required>
+                            <option value="male" data-i18n="opt_male">ذكر</option>
+                            <option value="female" data-i18n="opt_female">أنثى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cal_age" data-i18n="lbl_age">العمر (سنوات)</label>
+                        <input type="number" id="cal_age" class="form-control" min="12" max="110" required data-i18n-placeholder="ph_age" placeholder="مثال: 34">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cal_weight" data-i18n="lbl_weight">الوزن (كجم)</label>
+                        <input type="number" id="cal_weight" class="form-control" step="0.1" min="25" max="300" required data-i18n-placeholder="ph_weight_cal" placeholder="مثال: 75">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cal_height" data-i18n="lbl_height">الطول (سم)</label>
+                        <input type="number" id="cal_height" class="form-control" step="0.5" min="90" max="240" required data-i18n-placeholder="ph_height_cal" placeholder="مثال: 172">
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label class="form-label" for="cal_activity" data-i18n="lbl_activity">مستوى النشاط البدني اليومي (PAL)</label>
+                        <select id="cal_activity" class="form-control" required>
+                            <option value="1.2" data-i18n="act_sedentary">خامل / قليل الحركة جداً (عمل مكتبي، دون تمرين)</option>
+                            <option value="1.375" data-i18n="act_light">نشاط خفيف (تمارين خفيفة 1-3 أيام في الأسبوع)</option>
+                            <option value="1.55" selected data-i18n="act_moderate">نشاط معتدل (تمارين منتظمة 3-5 أيام في الأسبوع)</option>
+                            <option value="1.725" data-i18n="act_heavy">نشاط عالي (تمارين مكثفة 6-7 أيام في الأسبوع)</option>
+                            <option value="1.9" data-i18n="act_athlete">نشاط شاق جداً (رياضي محترف أو عمل يدوي شاق)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="calc-submit-btn">
+                    <i class="fas fa-calculator"></i>
+                    <span data-i18n="btn_calc_cal">تحليل احتياج السعرات والماكروز</span>
+                </button>
+            </form>
+
+            <div class="result-view" id="caloriesResultView">
+                <div class="result-main">
+                    <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_tdee_heading">إجمالي استهلاك الطاقة اليومي (TDEE)</div>
+                    <div class="result-big-value" id="tdeeDisplayVal">0</div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="kcal_day">سعرة حرارية / اليوم للحفاظ على الوزن الحالي</div>
+                </div>
+
+                <div class="result-breakdown-grid">
+                    <div class="breakdown-box">
+                        <div class="breakdown-label" data-i18n="res_bmr_label">معدل الأيض الأساسي (BMR)</div>
+                        <div class="breakdown-val" id="bmrDisplayVal">--</div>
+                        <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;" data-i18n="res_bmr_sub">الحرق أثناء الراحة التامة للبقاء</div>
+                    </div>
+                    <div class="breakdown-box" style="border-color: rgba(16, 185, 129, 0.4);">
+                        <div class="breakdown-label" style="color: #10b981;" data-i18n="res_deficit_label">عجز معتدل لخسارة الدهون (20%)</div>
+                        <div class="breakdown-val" style="color: #10b981;" id="deficitDisplayVal">--</div>
+                        <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;" data-i18n="res_deficit_sub">خسارة آمنة دون كبح كفاءة الحرق</div>
+                    </div>
+                    <div class="breakdown-box" style="border-color: rgba(6, 182, 212, 0.4);">
+                        <div class="breakdown-label" style="color: #06b6d4;" data-i18n="res_surplus_label">فائض معتدل للبناء العضلي (+15%)</div>
+                        <div class="breakdown-val" style="color: #06b6d4;" id="surplusDisplayVal">--</div>
+                        <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;" data-i18n="res_surplus_sub">زيادة كتلة نقية مع تدريب مقاومة</div>
+                    </div>
+                </div>
+
+                <!-- Clinical Macronutrient Split -->
+                <div class="macros-card">
+                    <div class="macros-header">
+                        <i class="fas fa-chart-pie" style="color: var(--primary);"></i>
+                        <span data-i18n="macros_header">توزيع الماكروز السريري الموصى به لخسارة الدهون مع الحفاظ على العضلات:</span>
+                    </div>
+                    <div class="macros-grid">
+                        <div class="macro-pill">
+                            <div class="macro-name" style="color: #38bdf8;" data-i18n="macro_protein">البروتين (1.8g/kg)</div>
+                            <div class="macro-grams" style="color: #38bdf8;" id="macroProteinVal">-- g</div>
+                            <div class="macro-cal" id="macroProteinCal">-- kcal</div>
+                        </div>
+                        <div class="macro-pill">
+                            <div class="macro-name" style="color: #f59e0b;" data-i18n="macro_fats">الدهون الصحية (25%)</div>
+                            <div class="macro-grams" style="color: #f59e0b;" id="macroFatsVal">-- g</div>
+                            <div class="macro-cal" id="macroFatsCal">-- kcal</div>
+                        </div>
+                        <div class="macro-pill">
+                            <div class="macro-name" style="color: #10b981;" data-i18n="macro_carbs">الكربوهيدرات المعقدة</div>
+                            <div class="macro-grams" style="color: #10b981;" id="macroCarbsVal">-- g</div>
+                            <div class="macro-cal" id="macroCarbsCal">-- kcal</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label data-i18n="cal_activity">مستوى النشاط</label>
-                <select id="activity">
-                    <option value="1.2" data-i18n="cal_activity_1">قليل الحركة (لا رياضة)</option>
-                    <option value="1.375" data-i18n="cal_activity_2">نشاط خفيف (1-3 أيام/أسبوع)</option>
-                    <option value="1.55" data-i18n="cal_activity_3">نشاط متوسط (3-5 أيام/أسبوع)</option>
-                    <option value="1.725" data-i18n="cal_activity_4">نشاط عالي (6-7 أيام/أسبوع)</option>
-                    <option value="1.9" data-i18n="cal_activity_5">نشاط عالي جداً (رياضي)</option>
-                </select>
+        </section>
+
+        <!-- 3. DAILY WATER INTAKE CALCULATOR (EFSA) -->
+        <section class="calc-panel" id="panel-water">
+            <div class="panel-header">
+                <div class="panel-title-group">
+                    <div class="panel-icon"><i class="fas fa-droplet"></i></div>
+                    <div>
+                        <h2 class="panel-title" data-i18n="water_title">حاسبة الاحتياج المائي اليومي الدقيق</h2>
+                        <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="water_sub">توصيات الهيئة الأوروبية لسلامة الأغذية (EFSA)</div>
+                    </div>
+                </div>
+                <span class="clinical-badge">EFSA Standard</span>
             </div>
-            
-            <button class="btn" onclick="calculateCalories()">
-                <span data-i18n="cal_calculate">احسب السعرات اليومية</span>
-            </button>
-            
-            <div class="result-box" id="caloriesResult">
-                <h3 data-i18n="cal_your_needs">احتياجك اليومي</h3>
-                <div class="result-value" id="caloriesValue"></div>
-                <p class="result-label" data-i18n="cal_per_day">سعرة حرارية في اليوم</p>
+
+            <form id="waterForm" onsubmit="handleWaterSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="water_weight" data-i18n="lbl_weight">الوزن الحالي (كجم)</label>
+                        <input type="number" id="water_weight" class="form-control" step="0.1" min="20" max="300" required data-i18n-placeholder="ph_weight_water" placeholder="مثال: 70">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="water_activity" data-i18n="lbl_exercise_duration">مدة التمرين أو المجهود البدني</label>
+                        <select id="water_activity" class="form-control" required>
+                            <option value="0" data-i18n="water_act_none">بدون تمرين / مجهود مكتبي</option>
+                            <option value="350" selected data-i18n="water_act_30">30 دقيقة نشاط معتدل (+350 مل)</option>
+                            <option value="650" data-i18n="water_act_60">60 دقيقة تمرين نشط (+650 مل)</option>
+                            <option value="1000" data-i18n="water_act_90">90 دقيقة فما فوق أو طقس حار (+1000 مل)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="calc-submit-btn">
+                    <i class="fas fa-glass-water"></i>
+                    <span data-i18n="btn_calc_water">احسب احتياجك من الماء</span>
+                </button>
+            </form>
+
+            <div class="result-view" id="waterResultView">
+                <div class="result-main">
+                    <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_water_heading">احتياجك اليومي الموصى به من السوائل الصافية</div>
+                    <div class="result-big-value" id="waterDisplayVal">0.0 L</div>
+                    <div class="result-status-pill status-info" id="waterCupsPill">0 أكواب</div>
+                </div>
+                <div class="clinical-note-box">
+                    <i class="fas fa-droplet"></i>
+                    <span data-i18n="water_clinical_tip">يوصى بتوزيع شرب الماء بانتظام طوال اليوم وعدم انتظار الشعور بالعطش، خصوصاً لمرضى السكري والرياضيين لدعم الترشيح الكلوي ومنع لزوجة الدم.</span>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- 4. WAIST-TO-HEIGHT RATIO (WHtR) CALCULATOR -->
+        <section class="calc-panel" id="panel-whtr">
+            <div class="panel-header">
+                <div class="panel-title-group">
+                    <div class="panel-icon"><i class="fas fa-ruler-combined"></i></div>
+                    <div>
+                        <h2 class="panel-title" data-i18n="whtr_title">حاسبة نسبة الخصر إلى الطول (WHtR)</h2>
+                        <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="whtr_sub">المعيار الذهبي للكشف عن الدهون الحشوية ومقاومة الإنسولين</div>
+                    </div>
+                </div>
+                <span class="clinical-badge">NICE Guidelines 2023</span>
+            </div>
+
+            <form id="whtrForm" onsubmit="handleWHtRSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="whtr_waist" data-i18n="lbl_waist">محيط الخصر (سم - عند مستوى السرة)</label>
+                        <input type="number" id="whtr_waist" class="form-control" step="0.5" min="40" max="220" required data-i18n-placeholder="ph_waist" placeholder="عند مستوى السرة: مثال 84">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="whtr_height" data-i18n="lbl_height">الطول (سم)</label>
+                        <input type="number" id="whtr_height" class="form-control" step="0.5" min="90" max="240" required data-i18n-placeholder="ph_height_whtr" placeholder="مثال: 175">
+                    </div>
+                </div>
+                <button type="submit" class="calc-submit-btn">
+                    <i class="fas fa-heart-pulse"></i>
+                    <span data-i18n="btn_calc_whtr">تقييم مخاطر الدهون الحشوية</span>
+                </button>
+            </form>
+
+            <div class="result-view" id="whtrResultView">
+                <div class="result-main">
+                    <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_whtr_heading">نسبة محيط خصرك إلى طولك</div>
+                    <div class="result-big-value" id="whtrDisplayVal">0.00</div>
+                    <div class="result-status-pill" id="whtrStatusPill">--</div>
+                </div>
+                <div class="breakdown-box" style="margin-top: 15px;">
+                    <div class="breakdown-label" data-i18n="whtr_target_label">الحد الأقصى الصحي لمحيط خصرك (أقل من نصف الطول)</div>
+                    <div class="breakdown-val" style="color: var(--primary);" id="whtrTargetVal">-- cm</div>
+                </div>
+                <div class="clinical-note-box">
+                    <i class="fas fa-shield-heart"></i>
+                    <span id="whtrClinicalNote">--</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Conversion Funnel Card for Boodi App -->
+        <section class="boodi-funnel-card">
+            <div class="funnel-info">
+                <h3 data-i18n="funnel_title">تطبيق بودي 💚 فاحص الباركود والمؤشر الجلايسيمي</h3>
+                <p data-i18n="funnel_desc">الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت واكشف الحلال والبدائل الصحية بنقرة واحدة عبر هاتفك.</p>
+            </div>
+            <a href="boodi.html" class="funnel-btn">
+                <i class="fas fa-barcode"></i>
+                <span data-i18n="funnel_cta">اكتشف تطبيق بودي</span>
+            </a>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
-        <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_about">من نحن</a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_contact">اتصل بنا</a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_privacy">سياسة الخصوصية</a>
-            <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" data-i18n="footer_terms">شروط الاستخدام</a>
+    <footer>
+        <div class="footer-links">
+            <a href="about.html" data-i18n="nav_doctor">من نحن</a>
+            <span>•</span>
+            <a href="foods.html" data-i18n="nav_foods">دليل الأطعمة</a>
+            <span>•</span>
+            <a href="supplements.html" data-i18n="nav_supplements">المكملات الغذائية</a>
+            <span>•</span>
+            <a href="articles.html" data-i18n="nav_articles">المقالات الطبية</a>
+            <span>•</span>
+            <a href="privacy.html" data-i18n="footer_privacy">الخصوصية والامتثال السريري</a>
         </div>
-        <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;">© 2024 WiBo Health. جميع الحقوق محفوظة.</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ ♥ من أجل بودي</p>
+        <p>© 2026 WiBo Health Group. Burgerlijk Wetboek Art. 6:162 & EU MDR 2017/745 Compliant.</p>
+        <p style="font-size: 0.8rem; margin-top: 8px; color: var(--text-muted);" id="footerDisclaimerText" data-i18n="footer_clinical_disclaimer">هذه الحاسبات الطبية والغذائية أدوات تحليل استرشادية مبنية على مؤشرات سريرية عامة، ولا تُغني عن الاستشارة الطبية الفردية أو الفحوصات المخبرية.</p>
     </footer>
 
+    <!-- Clinical Logic and Localization Engine -->
     <script>
-        // BMI Calculator
-        function calculateBMI() {
-            const weightInput = document.getElementById('weight').value;
-            const heightInput = document.getElementById('height').value;
-            
-            const weight = parseFloat(weightInput);
-            const height = parseFloat(heightInput) / 100;
-            
-            if (!weight || !height || weight <= 0 || height <= 0) {
-                alert(tc('bmi_error'));
-                return;
-            }
-            
-            const bmi = (weight / (height * height)).toFixed(1);
-            let categoryKey = '';
-            
-            if (bmi < 18.5) {
-                categoryKey = 'bmi_underweight';
-            }
-            else if (bmi < 25) {
-                categoryKey = 'bmi_normal';
-            }
-            else if (bmi < 30) {
-                categoryKey = 'bmi_overweight';
-            }
-            else {
-                categoryKey = 'bmi_obese';
-            }
-            
-            document.getElementById('bmiValue').textContent = bmi;
-            document.getElementById('bmiCategory').textContent = tc(categoryKey);
-            document.getElementById('bmiResult').classList.add('show');
+        'use strict';
+
+        // 1. Theme Management (Synced with localStorage across the whole site)
+        function initTheme() {
+            const savedTheme = localStorage.getItem('wibo_theme') || 'dark';
+            applyTheme(savedTheme);
         }
 
-        // Calories Calculator
-        function calculateCalories() {
-            const age = parseFloat(document.getElementById('age').value);
-            const gender = document.getElementById('gender').value;
-            const weight = parseFloat(document.getElementById('weightCal').value);
-            const height = parseFloat(document.getElementById('heightCal').value);
-            const activity = parseFloat(document.getElementById('activity').value);
-            
-            if (!age || !weight || !height || age <= 0 || weight <= 0 || height <= 0) {
-                alert(tc('cal_error'));
-                return;
-            }
-            
-            let bmr;
-            if (gender === 'male') {
-                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
-            } else {
-                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
-            }
-            
-            const calories = Math.round(bmr * activity);
-            
-            document.getElementById('caloriesValue').textContent = calories;
-            document.getElementById('caloriesResult').classList.add('show');
-        }
-
-        // Toggle theme
         function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            const icon = document.querySelector('.theme-toggle i');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('wibo_theme', 'dark');
-            } else {
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('wibo_theme', 'light');
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            localStorage.setItem('wibo_theme', nextTheme);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.getElementById('themeIcon');
+            if (icon) {
+                icon.className = (theme === 'light') ? 'fas fa-moon' : 'fas fa-sun';
             }
         }
 
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            const overlay = document.querySelector('.mobile-nav-overlay');
-            const body = document.body;
-            
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        // 2. Master Clinical Dictionary (Tri-Lingual: AR, NL, EN)
+        const i18nDictionary = {
+            ar: {
+                seo_title: "حاسبات صحية وسريرية معتمدة - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health",
+                seo_desc: "حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.",
+                nav_home: "الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات",
+                nav_supplements: "المكملات الغذائية",
+                nav_articles: "المقالات",
+                nav_boodi: "تطبيق بودي 💚",
+                nav_doctor: "من نحن",
+                footer_privacy: "الخصوصية والامتثال السريري",
+                footer_clinical_disclaimer: "هذه الحاسبات الطبية والغذائية أدوات تحليل استرشادية مبنية على مؤشرات سريرية عامة، ولا تُغني عن الاستشارة الطبية الفردية أو الفحوصات المخبرية.",
+                hero_badge: "منظومة الحسابات السريرية المعتمدة",
+                hero_title: "الحاسبات الأيضية والصحية الذكية",
+                hero_subtitle: "أدوات تحليل استرشادية مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية لسلامة الأغذية (EFSA) وإرشادات المعهد الوطني للصحة والرعاية (NICE).",
+                tab_bmi: "كتلة الجسم (BMI)",
+                tab_cal: "السعرات والماكروز (TDEE)",
+                tab_water: "احتياج الماء (EFSA)",
+                tab_whtr: "نسبة الخصر (WHtR)",
+                lbl_weight: "الوزن الحالي (كجم)",
+                lbl_height: "الطول (سم)",
+                lbl_waist: "محيط الخصر (سم - عند مستوى السرة)",
+                lbl_gender: "الجنس البيولوجي",
+                opt_male: "ذكر",
+                opt_female: "أنثى",
+                lbl_age: "العمر (سنوات)",
+                lbl_activity: "مستوى النشاط البدني اليومي (PAL)",
+                act_sedentary: "خامل / قليل الحركة جداً (عمل مكتبي، دون تمرين)",
+                act_light: "نشاط خفيف (تمارين خفيفة 1-3 أيام في الأسبوع)",
+                act_moderate: "نشاط معتدل (تمارين منتظمة 3-5 أيام في الأسبوع)",
+                act_heavy: "نشاط عالي (تمارين مكثفة 6-7 أيام في الأسبوع)",
+                act_athlete: "نشاط شاق جداً (رياضي محترف أو عمل يدوي شاق)",
+                lbl_exercise_duration: "مدة التمرين أو المجهود البدني",
+                water_act_none: "بدون تمرين / مجهود مكتبي",
+                water_act_30: "30 دقيقة نشاط معتدل (+350 مل)",
+                water_act_60: "60 دقيقة تمرين نشط (+650 مل)",
+                water_act_90: "90 دقيقة فما فوق أو طقس حار (+1000 مل)",
+                bmi_title: "حاسبة مؤشر كتلة الجسم (BMI)",
+                bmi_sub: "مقياس التناسق الحجمي بين الطول والوزن",
+                btn_calc_bmi: "احسب مؤشر كتلة الجسم الآن",
+                res_bmi_heading: "مؤشر كتلة جسمك المحسوب",
+                bmi_ideal_range_label: "نطاق الوزن الطبيعي الموصى به لطولك (BMI 18.5 - 24.9)",
+                bmi_underweight: "نقص وزن (أقل من المعدل الطبيعي)",
+                bmi_normal: "وزن مثالي وطبيعي ✓",
+                bmi_overweight: "زيادة وزن (فوق المعدل الموصى به)",
+                bmi_obese: "سمنة - يُنصح باستشارة طبية ومراجعة نمط الحياة",
+                bmi_tip_under: "مؤشرك أقل من 18.5؛ يُنصح بزيادة التغذية البروتينية وفحص نقص العناصر الغذائية.",
+                bmi_tip_norm: "مؤشرك بين 18.5 و 24.9؛ وزنك سليم وضمن النطاق الوقائي للأمراض المزمنة.",
+                bmi_tip_over: "مؤشرك بين 25 و 29.9؛ خفض النشويات المكررة وممارسة نشاط بدني يساعد في الحماية الأيضية.",
+                bmi_tip_obese: "مؤشرك 30 أو أعلى؛ يُوصى بفحص مقاومة الإنسولين وضبط المؤشر الجلايسيمي للوجبات.",
+                cal_title: "حاسبة السعرات ومعدل الأيض والماكروز (BMR/TDEE)",
+                cal_sub: "معادلة ميفلين-سانت جور مع التوزيع السريري للماكروز",
+                btn_calc_cal: "تحليل احتياج السعرات والماكروز",
+                res_tdee_heading: "إجمالي استهلاك الطاقة اليومي (TDEE)",
+                kcal_day: "سعرة حرارية / اليوم للحفاظ على الوزن الحالي",
+                res_bmr_label: "معدل الأيض الأساسي (BMR)",
+                res_bmr_sub: "الحرق أثناء الراحة التامة للبقاء",
+                res_deficit_label: "عجز معتدل لخسارة الدهون (20%)",
+                res_deficit_sub: "خسارة آمنة دون كبح كفاءة الحرق",
+                res_surplus_label: "فائض معتدل للبناء العضلي (+15%)",
+                res_surplus_sub: "زيادة كتلة نقية مع تدريب مقاومة",
+                macros_header: "توزيع الماكروز السريري الموصى به لخسارة الدهون مع الحفاظ على العضلات:",
+                macro_protein: "البروتين (1.8g/kg)",
+                macro_fats: "الدهون الصحية (25%)",
+                macro_carbs: "الكربوهيدرات المعقدة",
+                water_title: "حاسبة الاحتياج المائي اليومي الدقيق",
+                water_sub: "توصيات الهيئة الأوروبية لسلامة الأغذية (EFSA)",
+                btn_calc_water: "احسب احتياجك من الماء",
+                res_water_heading: "احتياجك اليومي الموصى به من السوائل الصافية",
+                water_clinical_tip: "يوصى بتوزيع شرب الماء بانتظام طوال اليوم وعدم انتظار الشعور بالعطش، خصوصاً لمرضى السكري والرياضيين لدعم الترشيح الكلوي ومنع لزوجة الدم.",
+                whtr_title: "حاسبة نسبة الخصر إلى الطول (WHtR)",
+                whtr_sub: "المعيار الذهبي للكشف عن الدهون الحشوية ومقاومة الإنسولين",
+                btn_calc_whtr: "تقييم مخاطر الدهون الحشوية",
+                res_whtr_heading: "نسبة محيط خصرك إلى طولك",
+                whtr_target_label: "الحد الأقصى الصحي لمحيط خصرك (أقل من نصف الطول)",
+                whtr_under: "نحافة مفرطة (أقل من 0.40)",
+                whtr_healthy: "نطاق صحي ومثالي (أقل من نصف الطول) ✓",
+                whtr_increased: "خطر أيضي متزايد (تراكم دهون حشوية)",
+                whtr_high: "خطر أيضي مرتفع جداً (مؤشر قوي لمقاومة الإنسولين)",
+                whtr_tip_healthy: "محيط خصرك أقل من نصف طولك؛ مؤشر ممتاز لسلامة الكبد وغياب الدهون الحشوية الضارة.",
+                whtr_tip_increased: "نسبتك بين 0.50 و 0.59؛ تشير الإرشادات السريرية إلى بدء تراكم دهون البطن وخطر متزايد لمقاومة الإنسولين.",
+                whtr_tip_high: "نسبتك 0.60 فما فوق؛ تدل على سمنة حشوية ملحوظة تستدعي اعتماد حمية منخفضة المؤشر الجلايسيمي فوراً.",
+                funnel_title: "تطبيق بودي 💚 فاحص الباركود والمؤشر الجلايسيمي",
+                funnel_desc: "الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت واكشف الحلال والبدائل الصحية بنقرة واحدة عبر هاتفك.",
+                funnel_cta: "اكتشف تطبيق بودي",
+                ph_weight: "مثال: 78",
+                ph_height: "مثال: 175",
+                ph_age: "مثال: 34",
+                ph_weight_cal: "مثال: 75",
+                ph_height_cal: "مثال: 172",
+                ph_weight_water: "مثال: 70",
+                ph_waist: "عند مستوى السرة: مثال 84",
+                ph_height_whtr: "مثال: 175"
+            },
+            nl: {
+                seo_title: "Klinische Gezondheidscalculators - BMI, Calorieën, Macro's, Water & WHtR | WiBo Health",
+                seo_desc: "Klinisch gevalideerde rekentools conform WHO-, EFSA- en Gezondheidsraad-richtlijnen: Body Mass Index (BMI), Energie- en Macroverdeling (BMR/TDEE), Taille-lengteverhouding en Vochtbehoefte.",
+                nav_home: "Home",
+                nav_foods: "Voedingsgids",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplementen",
+                nav_articles: "Artikelen",
+                nav_boodi: "Boodi App 💚",
+                nav_doctor: "Over Ons",
+                footer_privacy: "Privacy & Klinische Richtlijnen",
+                footer_clinical_disclaimer: "Deze medische en voedingscalculatoren zijn uitsluitend bedoeld als informatieve indicatoren en vervangen geen professioneel medisch consult of laboratoriumonderzoek.",
+                hero_badge: "Gevalideerd Klinisch Rekensysteem",
+                hero_title: "Klinische & Metabole Gezondheidscalculators",
+                hero_subtitle: "Wetenschappelijk onderbouwde analysetools gebaseerd op standaarden van de WHO, de Europese Voedselveiligheidsautoriteit (EFSA) en NICE-richtlijnen.",
+                tab_bmi: "BMI (Body Mass)",
+                tab_cal: "Calorieën & Macro's (TDEE)",
+                tab_water: "Vochtbehoefte (EFSA)",
+                tab_whtr: "Taille-Lengte (WHtR)",
+                lbl_weight: "Huidig gewicht (kg)",
+                lbl_height: "Lengte (cm)",
+                lbl_waist: "Middelomtrek (cm - ter hoogte van de navel)",
+                lbl_gender: "Biologisch geslacht",
+                opt_male: "Man",
+                opt_female: "Vrouw",
+                lbl_age: "Leeftijd (jaren)",
+                lbl_activity: "Dagelijkse fysieke activiteit (PAL)",
+                act_sedentary: "Zittend / Weinig beweging (kantoorwerk, geen sport)",
+                act_light: "Licht actief (1-3 dagen lichte sport/week)",
+                act_moderate: "Matig actief (3-5 dagen regelmatige sport/week)",
+                act_heavy: "Zeer actief (6-7 dagen intensieve sport/week)",
+                act_athlete: "Extreem actief (topsport of zware fysieke arbeid)",
+                lbl_exercise_duration: "Duur van dagelijkse inspanning",
+                water_act_none: "Geen training / kantoorwerk",
+                water_act_30: "30 min matige training (+350 ml)",
+                water_act_60: "60 min actieve sport (+650 ml)",
+                water_act_90: "90+ min intensief of warm weer (+1000 ml)",
+                bmi_title: "Body Mass Index (BMI) Calculator",
+                bmi_sub: "Verhouding tussen lichaamslengte en gewicht",
+                btn_calc_bmi: "Bereken BMI Direct",
+                res_bmi_heading: "Uw Berekende Body Mass Index",
+                bmi_ideal_range_label: "Gezond streefgewicht voor uw lengte (BMI 18.5 - 24.9)",
+                bmi_underweight: "Ondergewicht (lager dan normaal)",
+                bmi_normal: "Gezond streefgewicht ✓",
+                bmi_overweight: "Overgewicht (boven streefwaarde)",
+                bmi_obese: "Obesitas (medisch consult aanbevolen)",
+                bmi_tip_under: "Uw BMI is lager dan 18.5; focus op volwaardige eiwitten en controleer op voedingstekorten.",
+                bmi_tip_norm: "Uw BMI ligt tussen 18.5 en 24.9; u heeft een gezond lichaamsgewicht.",
+                bmi_tip_over: "Uw BMI ligt tussen 25 en 29.9; vermindering van geraffineerde suikers ondersteunt het metabolisme.",
+                bmi_tip_obese: "Uw BMI is 30 of hoger; controleer uw nuchtere glucose en kies voor een lage glykemische index.",
+                cal_title: "Calorieën, Stofwisseling & Macro's (BMR/TDEE)",
+                cal_sub: "Klinisch gevalideerde Mifflin-St Jeor formule met macroverdeling",
+                btn_calc_cal: "Analyseer Energie- en Macrobehoefte",
+                res_tdee_heading: "Totale Dagelijkse Energiebehoefte (TDEE)",
+                kcal_day: "kcal / dag voor gewichtsbehoud",
+                res_bmr_label: "Basaal Rustmetabolisme (BMR)",
+                res_bmr_sub: "Verbranding in absolute rusttoestand",
+                res_deficit_label: "Veilig calorietekort (-20%)",
+                res_deficit_sub: "Vetverlies met behoud van stofwisselingssnelheid",
+                res_surplus_label: "Spieropbouw overschot (+15%)",
+                res_surplus_sub: "Schone spiermassaopbouw met krachttraining",
+                macros_header: "Klinisch aanbevolen macroverdeling voor vetverlies en spierbehoud:",
+                macro_protein: "Eiwitten (1.8g/kg)",
+                macro_fats: "Gezonde Vetten (25%)",
+                macro_carbs: "Complexe Koolhydraten",
+                water_title: "Dagelijkse Vochtbehoefte Calculator",
+                water_sub: "Conform EFSA- en Gezondheidsraad-normen",
+                btn_calc_water: "Bereken Uw Vochtbehoefte",
+                res_water_heading: "Aanbevolen dagelijkse vochtinname",
+                water_clinical_tip: "Spreid uw waterinname gelijkmatig over de dag. Voldoende hydratatie ondersteunt de nierfiltratie en stofwisseling.",
+                whtr_title: "Taille-Lengteverhouding (WHtR)",
+                whtr_sub: "Gouden standaard voor visceraal buikvet en insulineresistentie",
+                btn_calc_whtr: "Beoordeel Visceraal Vetrisico",
+                res_whtr_heading: "Uw Taille-tot-Lengte Ratio",
+                whtr_target_label: "Maximale gezonde middelomtrek (Minder dan de helft van de lengte)",
+                whtr_under: "Ondergemiddeld (< 0.40)",
+                whtr_healthy: "Gezond & Optimaal (Minder dan de helft) ✓",
+                whtr_increased: "Verhoogd gezondheidsrisico (Visceraal vet)",
+                whtr_high: "Zeer hoog metabool risico (Insulineresistentie)",
+                whtr_tip_healthy: "Uw middelomtrek is minder dan de helft van uw lengte; uitstekend bewijs van lage viscerale vetopslag.",
+                whtr_tip_increased: "Uw score ligt tussen 0.50 en 0.59; dit duidt op vetophoping rond de buikorganen en een verhoogd risico.",
+                whtr_tip_high: "Uw score is 0.60 of hoger; een voedingspatroon met een lage glykemische lading wordt dringend aangeraden.",
+                funnel_title: "Boodi App 💚 Barcode Scanner & Glykemische Index",
+                funnel_desc: "Calorieën vertellen niet het hele verhaal. Wat u eet beïnvloedt uw hormonen en insulinepieken. Scan supermarktproducten en ontdek gezondere alternatieven direct op uw mobiel.",
+                funnel_cta: "Ontdek Boodi App",
+                ph_weight: "Bijv: 78",
+                ph_height: "Bijv: 175",
+                ph_age: "Bijv: 34",
+                ph_weight_cal: "Bijv: 75",
+                ph_height_cal: "Bijv: 172",
+                ph_weight_water: "Bijv: 70",
+                ph_waist: "Ter hoogte van navel: bijv. 84",
+                ph_height_whtr: "Bijv: 175"
+            },
+            en: {
+                seo_title: "Clinical Health Calculators - BMI, Calories, Macros, Water & WHtR | WiBo Health",
+                seo_desc: "Evidence-based clinical calculators compliant with WHO, EFSA, and NICE standards: Body Mass Index (BMI), Energy & Macro Split (BMR/TDEE), Waist-to-Height Ratio (WHtR), and Water Intake.",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplements Guide",
+                nav_articles: "Articles",
+                nav_boodi: "Boodi App 💚",
+                nav_doctor: "About Us",
+                footer_privacy: "Privacy & Clinical Compliance",
+                footer_clinical_disclaimer: "These clinical and nutritional calculators are informational assessment tools and do not substitute for personalized medical advice or laboratory testing.",
+                hero_badge: "Validated Clinical Calculator Suite",
+                hero_title: "Smart Metabolic & Health Calculators",
+                hero_subtitle: "Guidance tools built strictly on WHO, European Food Safety Authority (EFSA), and NICE clinical guidelines.",
+                tab_bmi: "BMI (Body Mass)",
+                tab_cal: "Calories & Macros (TDEE)",
+                tab_water: "Water Intake (EFSA)",
+                tab_whtr: "Waist-to-Height (WHtR)",
+                lbl_weight: "Current Weight (kg)",
+                lbl_height: "Height (cm)",
+                lbl_waist: "Waist Circumference (cm - at navel level)",
+                lbl_gender: "Biological Sex",
+                opt_male: "Male",
+                opt_female: "Female",
+                lbl_age: "Age (years)",
+                lbl_activity: "Daily Activity Level (PAL)",
+                act_sedentary: "Sedentary (desk job, no formal exercise)",
+                act_light: "Lightly Active (light exercise 1-3 days/week)",
+                act_moderate: "Moderately Active (regular workout 3-5 days/week)",
+                act_heavy: "Very Active (hard exercise 6-7 days/week)",
+                act_athlete: "Extremely Active (professional athlete or manual labor)",
+                lbl_exercise_duration: "Daily Workout / Physical Activity",
+                water_act_none: "No workout / desk work",
+                water_act_30: "30 mins moderate workout (+350 ml)",
+                water_act_60: "60 mins active workout (+650 ml)",
+                water_act_90: "90+ mins intense or hot weather (+1000 ml)",
+                bmi_title: "Body Mass Index (BMI) Calculator",
+                bmi_sub: "Volumetric ratio of body weight to stature",
+                btn_calc_bmi: "Calculate BMI Now",
+                res_bmi_heading: "Your Calculated Body Mass Index",
+                bmi_ideal_range_label: "Healthy Weight Range for Your Height (BMI 18.5 - 24.9)",
+                bmi_underweight: "Underweight (below normal threshold)",
+                bmi_normal: "Normal & Ideal Weight ✓",
+                bmi_overweight: "Overweight (above recommended threshold)",
+                bmi_obese: "Obesity (clinical review recommended)",
+                bmi_tip_under: "Your BMI is under 18.5; prioritize nutrient-dense whole foods and assess dietary intake.",
+                bmi_tip_norm: "Your BMI is between 18.5 and 24.9; you fall within the optimal physiological range.",
+                bmi_tip_over: "Your BMI is between 25 and 29.9; reducing refined starches and sugar helps mitigate metabolic risk.",
+                bmi_tip_obese: "Your BMI is 30 or above; clinical guidelines advise monitoring fasting insulin and glycemic index.",
+                cal_title: "Calories, Metabolism & Macros (BMR/TDEE)",
+                cal_sub: "Clinically validated Mifflin-St Jeor equation with macronutrient split",
+                btn_calc_cal: "Analyze Energy & Macronutrient Needs",
+                res_tdee_heading: "Total Daily Energy Expenditure (TDEE)",
+                kcal_day: "kcal / day for weight maintenance",
+                res_bmr_label: "Basal Metabolic Rate (BMR)",
+                res_bmr_sub: "Calories burned at complete physiological rest",
+                res_deficit_label: "Safe Deficit for Fat Loss (-20%)",
+                res_deficit_sub: "Sustainable fat loss preserving resting metabolism",
+                res_surplus_label: "Moderate Surplus for Muscle (+15%)",
+                res_surplus_sub: "Clean mass gain paired with progressive resistance",
+                macros_header: "Recommended Clinical Macronutrient Split for Fat Loss & Muscle Preservation:",
+                macro_protein: "Protein (1.8g/kg)",
+                macro_fats: "Healthy Fats (25%)",
+                macro_carbs: "Complex Carbs",
+                water_title: "Daily Water Intake Calculator",
+                water_sub: "European Food Safety Authority (EFSA) Guidelines",
+                btn_calc_water: "Calculate Hydration Target",
+                res_water_heading: "Recommended Daily Water Intake",
+                water_clinical_tip: "Distribute your hydration evenly throughout waking hours. Adequate fluid intake optimizes renal clearance and metabolic equilibrium.",
+                whtr_title: "Waist-to-Height Ratio (WHtR)",
+                whtr_sub: "Gold standard for assessing visceral adiposity and insulin resistance",
+                btn_calc_whtr: "Assess Visceral Fat Risk",
+                res_whtr_heading: "Your Waist-to-Height Ratio",
+                whtr_target_label: "Maximum Healthy Waist Circumference (Less than half your height)",
+                whtr_under: "Take Care / Slim (< 0.40)",
+                whtr_healthy: "Healthy & Optimal (Less than half your height) ✓",
+                whtr_increased: "Increased Metabolic Risk (Visceral fat accumulation)",
+                whtr_high: "Very High Metabolic Risk (Strong indicator of insulin resistance)",
+                whtr_tip_healthy: "Your waist is less than half your height; indicates low visceral fat and optimal metabolic health.",
+                whtr_tip_increased: "Your ratio is between 0.50 and 0.59; clinical evidence indicates abdominal fat accumulation.",
+                whtr_tip_high: "Your ratio is 0.60 or higher; signifies central visceral obesity warranting a low glycemic lifestyle.",
+                funnel_title: "Boodi App 💚 Barcode Scanner & Glycemic Index",
+                funnel_desc: "Calories don't tell the full metabolic story; hormones and insulin spikes dictate fat storage. Scan food barcodes and detect Halal status and clean alternatives instantly.",
+                funnel_cta: "Discover Boodi App",
+                ph_weight: "e.g. 78",
+                ph_height: "e.g. 175",
+                ph_age: "e.g. 34",
+                ph_weight_cal: "e.g. 75",
+                ph_height_cal: "e.g. 172",
+                ph_weight_water: "e.g. 70",
+                ph_waist: "At navel level: e.g. 84",
+                ph_height_whtr: "e.g. 175"
+            }
+        };
+
+        // 3. Localization Core (Syncing with localStorage & other pages)
+        let currentLocale = 'ar';
+
+        function initLocalization() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
+            setLocale(saved, false);
         }
 
-        // Load theme & setup
-        window.addEventListener('DOMContentLoaded', function() {
-            const savedTheme = localStorage.getItem('wibo_theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                const themeIcon = document.querySelector('.theme-toggle i');
-                if (themeIcon) themeIcon.className = 'fas fa-sun';
+        function setLocale(lang, saveToStorage = true) {
+            if (!['ar', 'nl', 'en'].includes(lang)) lang = 'ar';
+            currentLocale = lang;
+
+            if (saveToStorage) {
+                localStorage.setItem('preferred_language', lang);
+                localStorage.setItem('wibo_language', lang);
+                localStorage.setItem('selected_language', lang);
+                localStorage.setItem('lang', lang);
             }
-            
-            // Initialize language system
-            updateCalculatorLanguage();
-        });
-        
-        // Change language function
-        function changeLanguage(lang) {
+
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-            document.body.style.fontFamily = lang === 'ar' ? "'Cairo', sans-serif" : "'Cairo', sans-serif";
-            
-            localStorage.setItem('preferred_language', lang);
-            
-            // Update all data-i18n elements
+
+            // Update Language Switcher Buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update all DOM translated text nodes
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (calculatorTranslations[lang] && calculatorTranslations[lang][key]) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = calculatorTranslations[lang][key];
-                    } else {
-                        el.textContent = calculatorTranslations[lang][key];
-                    }
+                if (i18nDictionary[lang] && i18nDictionary[lang][key]) {
+                    el.textContent = i18nDictionary[lang][key];
                 }
             });
-            
-            // Update placeholders
+
+            // Update all input placeholders
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (calculatorTranslations[lang] && calculatorTranslations[lang][key]) {
-                    el.placeholder = calculatorTranslations[lang][key];
+                if (i18nDictionary[lang] && i18nDictionary[lang][key]) {
+                    el.placeholder = i18nDictionary[lang][key];
                 }
             });
-            
-            // Update language button states
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                const btnLang = btn.getAttribute('data-lang-toggle');
-                if (btnLang === lang) {
-                    btn.style.opacity = '0.5';
-                    btn.style.pointerEvents = 'none';
-                } else {
-                    btn.style.opacity = '1';
-                    btn.style.pointerEvents = 'auto';
-                }
-            });
-        }
-        
-        // Update calculator language
-        function updateCalculatorLanguage() {
-            const savedLang = localStorage.getItem('preferred_language') || 'ar';
-            changeLanguage(savedLang);
+
+            // Re-render active results to match the new language dynamically
+            refreshActiveResults();
         }
 
-        // Listen to language changes
-        window.addEventListener('languageChanged', function(e) {
-            updateCalculatorLanguage();
+        function t(key) {
+            return (i18nDictionary[currentLocale] && i18nDictionary[currentLocale][key]) || key;
+        }
+
+        // 4. Tab Switching Logic
+        function switchCalculator(targetKey, btnElement) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active-panel'));
+
+            btnElement.classList.add('active');
+            const targetPanel = document.getElementById(`panel-${targetKey}`);
+            if (targetPanel) {
+                targetPanel.classList.add('active-panel');
+            }
+        }
+
+        // 5. Clinical Computation Engines
+
+        // --- BMI Logic with Healthy Weight Range ---
+        let lastBMIData = null;
+        function handleBMISubmit(e) {
+            e.preventDefault();
+            const weight = parseFloat(document.getElementById('bmi_weight').value);
+            const heightCm = parseFloat(document.getElementById('bmi_height').value);
+
+            if (!weight || !heightCm || weight <= 0 || heightCm <= 0) return;
+
+            const heightM = heightCm / 100;
+            const bmi = weight / (heightM * heightM);
+            const minHealthyWeight = 18.5 * (heightM * heightM);
+            const maxHealthyWeight = 24.9 * (heightM * heightM);
+
+            lastBMIData = {
+                bmi: bmi,
+                minWeight: minHealthyWeight.toFixed(1),
+                maxWeight: maxHealthyWeight.toFixed(1)
+            };
+            renderBMIResult();
+        }
+
+        function renderBMIResult() {
+            if (!lastBMIData) return;
+            const bmi = lastBMIData.bmi;
+            const valDisplay = document.getElementById('bmiDisplayVal');
+            const pill = document.getElementById('bmiStatusPill');
+            const note = document.getElementById('bmiClinicalNote');
+            const idealRange = document.getElementById('bmiIdealRangeVal');
+            const view = document.getElementById('bmiResultView');
+
+            valDisplay.textContent = bmi.toFixed(1);
+            idealRange.textContent = `${lastBMIData.minWeight} - ${lastBMIData.maxWeight} kg`;
+
+            pill.className = 'result-status-pill';
+            if (bmi < 18.5) {
+                pill.textContent = t('bmi_underweight');
+                pill.classList.add('status-warning');
+                note.textContent = t('bmi_tip_under');
+            } else if (bmi < 25.0) {
+                pill.textContent = t('bmi_normal');
+                pill.classList.add('status-optimal');
+                note.textContent = t('bmi_tip_norm');
+            } else if (bmi < 30.0) {
+                pill.textContent = t('bmi_overweight');
+                pill.classList.add('status-warning');
+                note.textContent = t('bmi_tip_over');
+            } else {
+                pill.textContent = t('bmi_obese');
+                pill.classList.add('status-danger');
+                note.textContent = t('bmi_tip_obese');
+            }
+
+            view.classList.add('active');
+        }
+
+        // --- Calories & BMR & Clinical Macronutrient Split ---
+        let lastCalData = null;
+        function handleCaloriesSubmit(e) {
+            e.preventDefault();
+            const gender = document.getElementById('cal_gender').value;
+            const age = parseFloat(document.getElementById('cal_age').value);
+            const weight = parseFloat(document.getElementById('cal_weight').value);
+            const height = parseFloat(document.getElementById('cal_height').value);
+            const activity = parseFloat(document.getElementById('cal_activity').value);
+
+            if (!age || !weight || !height || age <= 0 || weight <= 0 || height <= 0) return;
+
+            // Mifflin-St Jeor Clinical Standard
+            let bmr = 0;
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+
+            const tdee = bmr * activity;
+            // 20% Deficit for safe, muscle-preserving fat loss, strictly never below BMR
+            const deficit = Math.max(Math.round(bmr), Math.round(tdee * 0.80));
+            // 15% Surplus for lean muscle synthesis
+            const surplus = Math.round(tdee * 1.15);
+
+            // Clinical Macronutrient Split for Deficit Calories:
+            // 1. Protein: 1.8g per kg bodyweight (4 kcal/g)
+            const proteinGrams = Math.round(weight * 1.8);
+            const proteinKcal = proteinGrams * 4;
+
+            // 2. Healthy Fats: 25% of total deficit energy (9 kcal/g)
+            const fatKcal = Math.round(deficit * 0.25);
+            const fatGrams = Math.round(fatKcal / 9);
+
+            // 3. Complex Carbs: Remaining calories (4 kcal/g)
+            const carbKcal = Math.max(0, deficit - proteinKcal - fatKcal);
+            const carbGrams = Math.round(carbKcal / 4);
+
+            lastCalData = {
+                bmr: Math.round(bmr),
+                tdee: Math.round(tdee),
+                deficit: deficit,
+                surplus: surplus,
+                proteinG: proteinGrams,
+                proteinCal: proteinKcal,
+                fatG: fatGrams,
+                fatCal: fatKcal,
+                carbG: carbGrams,
+                carbCal: carbKcal
+            };
+
+            renderCaloriesResult();
+        }
+
+        function renderCaloriesResult() {
+            if (!lastCalData) return;
+            document.getElementById('tdeeDisplayVal').textContent = lastCalData.tdee.toLocaleString();
+            document.getElementById('bmrDisplayVal').textContent = lastCalData.bmr.toLocaleString() + ' kcal';
+            document.getElementById('deficitDisplayVal').textContent = lastCalData.deficit.toLocaleString() + ' kcal';
+            document.getElementById('surplusDisplayVal').textContent = lastCalData.surplus.toLocaleString() + ' kcal';
+
+            document.getElementById('macroProteinVal').textContent = lastCalData.proteinG + ' g';
+            document.getElementById('macroProteinCal').textContent = lastCalData.proteinCal + ' kcal';
+
+            document.getElementById('macroFatsVal').textContent = lastCalData.fatG + ' g';
+            document.getElementById('macroFatsCal').textContent = lastCalData.fatCal + ' kcal';
+
+            document.getElementById('macroCarbsVal').textContent = lastCalData.carbG + ' g';
+            document.getElementById('macroCarbsCal').textContent = lastCalData.carbCal + ' kcal';
+
+            document.getElementById('caloriesResultView').classList.add('active');
+        }
+
+        // --- Water Intake (EFSA European Standard) ---
+        let lastWaterData = null;
+        function handleWaterSubmit(e) {
+            e.preventDefault();
+            const weight = parseFloat(document.getElementById('water_weight').value);
+            const extraMl = parseFloat(document.getElementById('water_activity').value);
+
+            if (!weight || weight <= 0) return;
+
+            // EFSA baseline: ~35ml per kg body weight + physical activity offset
+            const baseMl = weight * 35;
+            const totalMl = baseMl + extraMl;
+            const liters = (totalMl / 1000).toFixed(1);
+            const cups = Math.round(totalMl / 250);
+
+            lastWaterData = { liters: liters, cups: cups };
+            renderWaterResult();
+        }
+
+        function renderWaterResult() {
+            if (!lastWaterData) return;
+            document.getElementById('waterDisplayVal').textContent = lastWaterData.liters + ' L';
+            
+            let cupsLabel = '';
+            if (currentLocale === 'nl') {
+                cupsLabel = `${lastWaterData.cups} glazen (~250ml)`;
+            } else if (currentLocale === 'en') {
+                cupsLabel = `${lastWaterData.cups} standard cups (~250ml)`;
+            } else {
+                cupsLabel = `${lastWaterData.cups} أكواب معيارية (~250 مل)`;
+            }
+
+            document.getElementById('waterCupsPill').textContent = cupsLabel;
+            document.getElementById('waterResultView').classList.add('active');
+        }
+
+        // --- WHtR (Waist-to-Height Ratio - Ashwell & NICE 2023) ---
+        let lastWHtRData = null;
+        function handleWHtRSubmit(e) {
+            e.preventDefault();
+            const waist = parseFloat(document.getElementById('whtr_waist').value);
+            const height = parseFloat(document.getElementById('whtr_height').value);
+
+            if (!waist || !height || waist <= 0 || height <= 0) return;
+
+            const ratio = waist / height;
+            const maxHealthyWaist = (height * 0.50).toFixed(1);
+
+            lastWHtRData = {
+                ratio: ratio,
+                targetWaist: maxHealthyWaist
+            };
+            renderWHtRResult();
+        }
+
+        function renderWHtRResult() {
+            if (!lastWHtRData) return;
+            const ratio = lastWHtRData.ratio;
+            const valDisplay = document.getElementById('whtrDisplayVal');
+            const pill = document.getElementById('whtrStatusPill');
+            const note = document.getElementById('whtrClinicalNote');
+            const targetVal = document.getElementById('whtrTargetVal');
+            const view = document.getElementById('whtrResultView');
+
+            valDisplay.textContent = ratio.toFixed(2);
+            targetVal.textContent = `< ${lastWHtRData.targetWaist} cm`;
+
+            pill.className = 'result-status-pill';
+            if (ratio < 0.40) {
+                pill.textContent = t('whtr_under');
+                pill.classList.add('status-warning');
+                note.textContent = t('whtr_tip_healthy');
+            } else if (ratio < 0.50) {
+                pill.textContent = t('whtr_healthy');
+                pill.classList.add('status-optimal');
+                note.textContent = t('whtr_tip_healthy');
+            } else if (ratio < 0.60) {
+                pill.textContent = t('whtr_increased');
+                pill.classList.add('status-warning');
+                note.textContent = t('whtr_tip_increased');
+            } else {
+                pill.textContent = t('whtr_high');
+                pill.classList.add('status-danger');
+                note.textContent = t('whtr_tip_high');
+            }
+
+            view.classList.add('active');
+        }
+
+        function refreshActiveResults() {
+            renderBMIResult();
+            renderCaloriesResult();
+            renderWaterResult();
+            renderWHtRResult();
+        }
+
+        // Listen for storage changes across browser tabs
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
+                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
+                    setLocale(e.newValue, false);
+                }
+            }
+            if (e.key === 'wibo_theme') {
+                if (e.newValue) applyTheme(e.newValue);
+            }
         });
-        
-        // Auto-hide Header on Scroll
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        const scrollThreshold = 150;
 
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-                header.classList.add('hide-nav');
-            } else if (currentScroll < lastScrollTop) {
-                header.classList.remove('hide-nav');
-            }
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('hide-nav');
-            }
-            
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
+        // Initialize on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLocalization();
+        });
     </script>
-    
-    <!-- Mobile Menu JavaScript -->
-    <script src="js/mobile-menu.js"></script>
-    
-    <!-- PWA Registration -->
-    <script src="js/pwa-register.js"></script>
 </body>
 </html>

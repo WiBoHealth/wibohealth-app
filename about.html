@@ -1,602 +1,867 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title_about">من نحن - WiBo Health</title>
-    <meta name="description" content="تعرف على WiBo Health - المنصة الصحية السريرية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي لفحص الأطعمة والبدائل.">
+    <title data-i18n="page_title_about">من نحن | WiBo Health Group & تطبيق بودي (boodi)</title>
+    <meta name="description" id="seo_desc" content="تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.">
     <link rel="canonical" href="https://wibohealth.com/about.html">
     
     <!-- Hreflang Tags for SEO -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/about.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/about.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html">
     
+    <!-- Icons & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- PWA Manifest -->
+    <!-- PWA Manifest & Icons -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/mobile-menu.css">
-    
+
     <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131c2e;
+            --bg-input: #1e293b;
+            --header-bg: rgba(11, 15, 25, 0.85);
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --primary-glow: rgba(16, 185, 129, 0.25);
+            --secondary: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        html[data-theme="light"] {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: rgba(0, 0, 0, 0.09);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --accent-color: #667eea;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --white: #ffffff;
-            --card-bg: #ffffff;
-            --shadow: rgba(0,0,0,0.1);
-        }
-
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             min-height: 100vh;
-            font-family: 'Cairo', sans-serif;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
+            line-height: 1.8;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        body.dark-mode {
-            --card-bg: #0f3460;
-            --text-dark: #ffffff;
-            --text-light: #b8b8b8;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        html[lang="en"] body, html[lang="nl"] body {
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
         }
 
-        /* Header */
+        /* Slim Header 2.0 (Height: 60px) */
         header {
-            background: var(--card-bg);
-            padding: 15px 0;
-            box-shadow: 0 2px 10px var(--shadow);
-            margin-bottom: 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
+            height: 60px;
+            background: var(--header-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease;
         }
 
-        header.hide-nav {
-            transform: translateY(-100%);
-        }
-
-        .header-content {
-            max-width: 900px;
+        .header-container {
+            max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo-svg {
+            width: 36px;
+            height: 36px;
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.3));
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .lang-switcher-container {
+            display: inline-flex;
+            align-items: center;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 2px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover { color: var(--text-main); }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 8px var(--primary-glow);
+        }
+
+        .nav-links-bar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-main);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .nav-link.active { color: var(--primary); }
+
+        /* Main Container */
+        .page-wrapper {
+            max-width: 960px;
+            margin: 30px auto 70px;
             padding: 0 20px;
         }
 
-        .logo-link {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-size: 24px;
-            font-weight: bold;
-            transition: all 0.3s;
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 45px;
+            box-shadow: var(--shadow);
         }
 
-        .logo-link:hover {
-            transform: scale(1.05);
+        .about-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .header-controls {
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .about-title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 35px 0 15px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
-        .theme-toggle, .lang-toggle {
-            background: rgba(46, 204, 113, 0.2);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            color: var(--text-dark);
+        .about-card p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            line-height: 1.85;
         }
 
-        .theme-toggle:hover, .lang-toggle:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .hamburger-menu span {
-            width: 30px;
-            height: 3px;
-            background: var(--text-dark);
-            margin: 3px 0;
-            border-radius: 3px;
-            transition: all 0.3s;
-        }
-
-        /* About Container */
-        .about-container {
-            max-width: 900px;
-            margin: 30px auto 50px;
-            background: var(--card-bg);
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px var(--shadow);
-        }
-
-        .about-container h1 {
-            color: var(--primary-color);
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .about-container h2 {
-            color: var(--accent-color);
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 3px solid rgba(46, 204, 113, 0.2);
-            padding-bottom: 10px;
-        }
-
-        .about-container p {
-            color: var(--text-dark);
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .about-container strong {
-            color: var(--accent-color);
+        .about-card strong {
+            color: var(--primary);
             font-weight: 700;
         }
 
-        .about-container ul {
-            font-size: 1.1em;
-            line-height: 2;
-            color: var(--text-dark);
-            margin-right: 30px;
-        }
-
-        .about-container li {
-            margin-bottom: 12px;
-            transition: all 0.3s;
-        }
-
-        .about-container li:hover {
-            transform: translateX(-10px);
-            color: var(--primary-color);
-        }
-
-        .about-container li strong {
-            color: var(--accent-color);
-        }
-
-        /* Boodi App Feature Box */
-        .boodi-spotlight-box {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(46, 204, 113, 0.15) 100%);
-            border: 2px solid #2ecc71;
-            border-radius: 16px;
-            padding: 25px;
-            margin: 30px 0;
+        /* Official Boodi App Banner */
+        .boodi-official-banner {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin: 35px 0;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
         }
 
-        .boodi-spotlight-text {
+        .boodi-banner-content {
             flex: 2;
-            min-width: 250px;
+            min-width: 280px;
         }
 
-        .boodi-spotlight-text h3 {
-            color: #2ecc71;
-            font-size: 1.4em;
+        .boodi-tag-official {
+            display: inline-block;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .boodi-banner-content h3 {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--text-main);
             margin-bottom: 8px;
         }
 
-        .boodi-spotlight-btn {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
+        .boodi-banner-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .boodi-cta-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 800;
+            font-size: 0.95rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-            transition: transform 0.2s;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transition: all 0.25s ease;
         }
 
-        .boodi-spotlight-btn:hover {
+        .boodi-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Pillars List */
+        .pillars-list {
+            list-style: none;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .pillar-item {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pillar-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .pillar-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pillar-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Support Contact Card */
+        .support-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .support-email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 800;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            transition: all 0.2s;
+        }
+
+        .support-email-link:hover {
+            background: var(--primary);
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
-        /* Back Button */
-        .back-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            font-family: 'Cairo', sans-serif;
-            font-size: 1em;
-        }
-
-        .back-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
-        }
-
-        .button-container {
+        .back-home-box {
             text-align: center;
+            margin-top: 40px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .about-container {
-                padding: 30px 20px;
-            }
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-input);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
 
-            .about-container h1 {
-                font-size: 1.8em;
-            }
+        .back-home-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
 
-            .about-container h2 {
-                font-size: 1.3em;
-            }
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding: 35px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
 
-            .about-container p,
-            .about-container li {
-                font-size: 0.95em;
-            }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
 
-            .header-controls {
-                display: none;
-            }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
 
-            .hamburger-menu {
-                display: flex;
-            }
+        .footer-links a:hover { color: var(--primary); }
 
-            .about-container ul {
-                margin-right: 20px;
-            }
+        @media (max-width: 860px) {
+            .about-card { padding: 25px 20px; }
+            .about-title { font-size: 1.8rem; }
+            .nav-links-bar { display: none; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Slim Header 2.0 -->
     <header>
-        <div class="header-content">
-            <a href="index.html" class="logo-link" title="WiBo Health">
-                💚 WiBo Health
+        <div class="header-container">
+            <a href="index.html" class="brand-link">
+                <svg class="brand-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#brandGrad)" />
+                    <path d="M45 100 L65 100 L72 85 L80 115 L88 100 L102 100 L110 85 L118 115 L126 100 L155 100" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" />
+                </svg>
+                <span class="brand-title">WiBo Health</span>
             </a>
-            
-            <div class="hamburger-menu" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
 
-            <div class="header-controls">
-                <!-- Theme Toggle -->
-                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل الوضع">
-                    <i class="fas fa-moon"></i>
+            <nav class="nav-links-bar">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="foods.html" class="nav-link" data-i18n="nav_foods">دليل الأطعمة</a>
+                <a href="calculators.html" class="nav-link" data-i18n="nav_calculators">الحاسبات</a>
+                <a href="supplements.html" class="nav-link" data-i18n="nav_supplements">المكملات</a>
+                <a href="articles.html" class="nav-link" data-i18n="nav_articles">المقالات</a>
+                <a href="boodi.html" class="nav-link" data-i18n="nav_boodi">تطبيق بودي 💚</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل المظهر" aria-label="Toggle Theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
                 </button>
 
-                <!-- Language Toggle -->
-                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
-                    <span id="langText">EN</span>
-                </button>
+                <div class="lang-switcher-container">
+                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
+                        <span>🇪🇬</span> <span>AR</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
+                        <span>🇳🇱</span> <span>NL</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
+                        <span>🇬🇧</span> <span>EN</span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
-
-    <!-- Mobile Navigation Menu -->
-    <nav class="mobile-nav-menu" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMobileMenu()">
-            <i class="fas fa-times"></i>
-        </button>
-        
-        <a href="index.html" class="mobile-nav-link" data-i18n="nav_home">
-            <i class="fas fa-home"></i> الصفحة الرئيسية
-        </a>
-        <a href="foods.html" class="mobile-nav-link" data-i18n="nav_foods">
-            <i class="fas fa-utensils"></i> دليل الأطعمة
-        </a>
-        <a href="calculators.html" class="mobile-nav-link" data-i18n="nav_calculators">
-            <i class="fas fa-calculator"></i> الحاسبات الصحية
-        </a>
-        <a href="recipes.html" class="mobile-nav-link" data-i18n="nav_recipes">
-            <i class="fas fa-book-open"></i> الوصفات الصحية
-        </a>
-        <a href="articles.html" class="mobile-nav-link" data-i18n="nav_articles">
-            <i class="fas fa-book-medical"></i> المقالات الصحية
-        </a>
-        <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;">
-            <i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span>
-        </a>
-        <a href="about.html" class="mobile-nav-link" data-i18n="nav_about">
-            <i class="fas fa-info-circle"></i> من نحن
-        </a>
-        <a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">
-            <i class="fas fa-envelope"></i> اتصل بنا
-        </a>
-    </nav>
-
-    <!-- About Container -->
-    <div class="about-container">
-        <h1 data-i18n="about_title">💚 من نحن</h1>
-        
-        <p data-i18n="about_intro">
-            <strong>WiBo Health Group</strong> هي منظومة صحية سريرية متخصصة في تقديم توجيه غذائي دقيق وموثوق، 
-            لمساعدة الأفراد على اتخاذ قرارات صحية واعية ومبنية على أحدث الأبحاث العلمية.
-        </p>
-
-        <!-- Vision Section -->
-        <h2 data-i18n="about_vision_title">🎯 رؤيتنا</h2>
-        <p data-i18n="about_vision_text">
-            نسعى لأن نكون المرجع الطبي والغذائي الأول والأكثر موثوقية في العالم العربي وأوروبا لكل ما يتعلق بالمؤشر الجلايسيمي، 
-            ومؤشر الأنسولين، وضبط المسار الأيضي، والتغذية السليمة المتوازنة.
-        </p>
-
-        <!-- Mission Section -->
-        <h2 data-i18n="about_mission_title">✨ مهمتنا</h2>
-        <p data-i18n="about_mission_text">
-            تمكين المجتمع من فهم فيزيولوجيا الغذاء وتأثيره الحقيقي على الهرمونات وسكر الدم، من خلال أدوات حسابية سريرية مجانية، 
-            ومقالات وبحوث دورية موثقة، وتطبيقات ذكية مخصصة للتسوق الصحي الآمن.
-        </p>
-
-        <!-- Spotlight on Boodi App -->
-        <div class="boodi-spotlight-box">
-            <div class="boodi-spotlight-text">
-                <h3 data-i18n="about_boodi_spotlight_title">📱 تطبيق بودي (boodi 💚)</h3>
-                <p style="margin: 0; font-size: 0.95em;" data-i18n="about_boodi_spotlight_desc">
-                    الرفيق السريري الذكي في هاتفك لفحص باركود المنتجات، رصد الحلال والمكونات المشبوهة، وتحليل مؤشر السكر والإنسولين، واقتراح بدائل صحية ذكية من نفس الرف.
-                </p>
+    <main class="page-wrapper">
+        <div class="about-card">
+            <div class="about-header">
+                <div class="about-badge">
+                    <i class="fas fa-shield-heart"></i>
+                    <span data-i18n="about_badge">المنظومة السريرية والرقمية المعتمدة</span>
+                </div>
+                <h1 class="about-title" data-i18n="about_title">من نحن - WiBo Health Group</h1>
+                <p class="about-subtitle" data-i18n="about_intro">المنصة الطبية والسريرية الرائدة المتخصصة في الاستقرار الأيضي، علوم التغذية القائمة على الأدلة، والحلول الرقمية الذكية.</p>
             </div>
-            <a href="boodi.html" class="boodi-spotlight-btn">
-                <span data-i18n="about_boodi_btn">اكتشف التطبيق ⬅️</span>
-            </a>
+
+            <!-- Leadership & Clinical Philosophy -->
+            <h2 class="section-title">
+                <i class="fas fa-user-doctor"></i>
+                <span data-i18n="about_leadership_title">القيادة الطبية والرسالة السريرية</span>
+            </h2>
+            <p data-i18n="about_leadership_text">
+                تأسست المنصة تحت إشراف وقيادة <strong>د. وسيم حبيب (Dr. Wassim Habib)</strong>، بهدف سد الفجوة بين الأبحاث السريرية المتقدمة واختيارات المستهلك اليومية في العالم العربي وأوروبا (هولندا). نؤمن بأن الأرقام المجردة لا تكفي؛ بل إن كيمياء الطعام واستجابة هرمون الإنسولين هي العامل الحاسم في الوقاية من السكري، وحماية الكبد، وإطالة العمر الصحي.
+            </p>
+
+            <!-- Official Boodi App Ownership Banner -->
+            <div class="boodi-official-banner">
+                <div class="boodi-banner-content">
+                    <span class="boodi-tag-official" data-i18n="boodi_tag">التطبيق الرسمي المعتمد</span>
+                    <h3 data-i18n="about_boodi_banner_title">تطبيق بودي الذكي (boodi 💚 App)</h3>
+                    <p data-i18n="about_boodi_banner_desc">
+                        تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة <strong>WiBo Health Group</strong>؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص الحلال والمشتقات المحرمة، وكشف البدائل الصحية الأقل سكراً من نفس الرف.
+                    </p>
+                </div>
+                <a href="boodi.html" class="boodi-cta-btn">
+                    <i class="fas fa-mobile-screen-button"></i>
+                    <span data-i18n="about_boodi_btn">اكتشف تطبيق بودي</span>
+                </a>
+            </div>
+
+            <!-- Vision Section -->
+            <h2 class="section-title">
+                <i class="fas fa-bullseye"></i>
+                <span data-i18n="about_vision_title">رؤيتنا</span>
+            </h2>
+            <p data-i18n="about_vision_text">
+                أن نكون المرجع الطبي والأيضي الأكثر موثوقية وابتكاراً في أوروبا والشرق الأوسط لكل ما يتعلق بالمؤشر الجلايسيمي، والتحكم في إفراز الإنسولين، وضمان سلامة الغذاء الاستهلاكي بأعلى معايير الشفافية العلمية.
+            </p>
+
+            <!-- Mission Section -->
+            <h2 class="section-title">
+                <i class="fas fa-compass"></i>
+                <span data-i18n="about_mission_title">مهمتنا</span>
+            </h2>
+            <p data-i18n="about_mission_text">
+                تمكين الأفراد والعائلات من اتخاذ قرارات غذائية واعية تحمي صحتهم الأيضية، عبر أدوات حسابية سريرية دقيقة، وموسوعات مكملات خالية من التضليل، وتطبيقات ذكاء اصطناعي ترافق المستهلك في كل خطوة تسوق.
+            </p>
+
+            <!-- What We Offer -->
+            <h2 class="section-title">
+                <i class="fas fa-cubes"></i>
+                <span data-i18n="about_services_title">ركائز المنظومة السريرية</span>
+            </h2>
+            <div class="pillars-list">
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-utensils"></i> <span data-i18n="serv_1_title">دليل الأغذية والمؤشر الجلايسيمي</span></div>
+                    <div class="pillar-desc" data-i18n="serv_1_desc">تحليل دقيق لسرعة تحول الأطعمة إلى سكر وتأثيرها على استقرار البنكرياس.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-capsules"></i> <span data-i18n="serv_2_title">موسوعة المكملات الكبرى</span></div>
+                    <div class="pillar-desc" data-i18n="serv_2_desc">453 مكملاً غذائياً موثقاً بـ 3 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-calculator"></i> <span data-i18n="serv_3_title">الحاسبات الأيضية المعتمدة</span></div>
+                    <div class="pillar-desc" data-i18n="serv_3_desc">معادلات سريرية دقيقة للـ BMI، واحتياج السعرات والماكروز (Mifflin-St Jeor)، ونسبة الخصر (WHtR).</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-barcode"></i> <span data-i18n="serv_4_title">تطبيق بودي الذكي (Boodi App)</span></div>
+                    <div class="pillar-desc" data-i18n="serv_4_desc">ماسح الباركود الأوروبي لرصد الحلال، بدائل السوبرماركت، والتحليل الكيميائي الفوري.</div>
+                </div>
+            </div>
+
+            <!-- Contact & Support Section -->
+            <h2 class="section-title">
+                <i class="fas fa-headset"></i>
+                <span data-i18n="about_contact_title">الدعم الطبي والتواصل المؤسسي</span>
+            </h2>
+            <p data-i18n="about_contact_text">
+                فريقنا السريري والتقني متاح دائماً للإجابة على استفساراتكم الطبية، اقتراحات التعاون، أو الدعم الفني الخاص بتطبيق بودي عبر بريد الدعم الرسمي المعتمد:
+            </p>
+
+            <div class="support-card">
+                <div>
+                    <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-main);" data-i18n="support_label">بريد الدعم والتواصل الرسمي:</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="support_sub">فريق الاستجابة الطبية والتقنية - WiBo Health</div>
+                </div>
+                <a href="mailto:support@wibohealth.com" class="support-email-link">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>support@wibohealth.com</span>
+                </a>
+            </div>
+
+            <!-- Back to Home Button -->
+            <div class="back-home-box">
+                <a href="index.html" class="back-home-btn">
+                    <i class="fas fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="about_back_home">العودة للصفحة الرئيسية</span>
+                </a>
+            </div>
         </div>
+    </main>
 
-        <!-- What We Offer Section -->
-        <h2 data-i18n="about_services_title">📊 ما نقدمه</h2>
-        <ul>
-            <li>
-                <strong data-i18n="about_service_1_title">🍽️ قاعدة بيانات الأغذية</strong>
-                <span data-i18n="about_service_1_desc"> معلومات دقيقة حول المؤشر الجلايسيمي والإنسوليني</span>
-            </li>
-            <li>
-                <strong data-i18n="about_service_2_title">📰 أبحاث ومقالات سريرية</strong>
-                <span data-i18n="about_service_2_desc"> مراجعة دورية لأحدث الدراسات الطبية</span>
-            </li>
-            <li>
-                <strong data-i18n="about_service_3_title">🧮 حاسبات طبية مجانية</strong>
-                <span data-i18n="about_service_3_desc"> (BMI, BMR, متتبع السعرات والماء)</span>
-            </li>
-            <li>
-                <strong data-i18n="about_service_4_title">📖 وصفات صحية علاجية</strong>
-                <span data-i18n="about_service_4_desc"> مصممة لدعم استقرار سكر الدم ونقاء الكبد</span>
-            </li>
-            <li>
-                <strong data-i18n="about_service_5_title">📱 تطبيق بودي الذكي (boodi)</strong>
-                <span data-i18n="about_service_5_desc"> ماسح الباركود وفحص الحلال والبدائل الفورية</span>
-            </li>
-        </ul>
-
-        <!-- Team Section -->
-        <h2 data-i18n="about_team_title">💚 فريق العمل</h2>
-        <p data-i18n="about_team_text">
-            يقود المنصة <strong data-i18n="about_team_leader">فريق WiBo Health الطبي والسريري</strong>، 
-            وهو فريق متخصص في التغذية السريرية وعلوم الأيض وهندسة الحلول الصحية الرقمية، ملتزم بتقديم أرقى المعايير الطبية الأوروبية لحماية صحة عائلتك.
-        </p>
-
-        <!-- Contact Section -->
-        <h2 data-i18n="about_contact_title">📞 تواصل معنا</h2>
-        <p data-i18n="about_contact_text">
-            نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية عبر البريد الرسمي المعتمد أو صفحة الاتصال.
-        </p>
-
-        <!-- Back Button -->
-        <div class="button-container">
-            <a href="index.html" class="back-btn">
-                <i class="fas fa-home"></i> <span data-i18n="about_back_home">العودة للرئيسية</span>
-            </a>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+            <span>•</span>
+            <a href="foods.html" data-i18n="nav_foods">دليل الأطعمة</a>
+            <span>•</span>
+            <a href="calculators.html" data-i18n="nav_calculators">الحاسبات</a>
+            <span>•</span>
+            <a href="supplements.html" data-i18n="nav_supplements">المكملات</a>
+            <span>•</span>
+            <a href="boodi.html" data-i18n="nav_boodi">تطبيق بودي 💚</a>
+            <span>•</span>
+            <a href="privacy.html" data-i18n="footer_privacy">الخصوصية والامتثال السريري</a>
         </div>
-    </div>
+        <p>© 2026 WiBo Health Group. Burgerlijk Wetboek Art. 6:162 & EU MDR 2017/745 Compliant.</p>
+        <p style="font-size: 0.8rem; margin-top: 6px; color: var(--text-muted);" data-i18n="footer_disclaimer">جميع الحقوق محفوظة لمنظومة WiBo Health Group وتطبيق بودي الرسمي (boodi App 💚).</p>
+    </footer>
 
+    <!-- Translations & Synchronization Engine -->
     <script>
-        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+        'use strict';
 
-        const translations = {
+        // 1. Theme Management (Synced with localStorage across the whole site)
+        function initTheme() {
+            const savedTheme = localStorage.getItem('wibo_theme') || 'dark';
+            applyTheme(savedTheme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            localStorage.setItem('wibo_theme', nextTheme);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.getElementById('themeIcon');
+            if (icon) {
+                icon.className = (theme === 'light') ? 'fas fa-moon' : 'fas fa-sun';
+            }
+        }
+
+        // 2. Master Trilingual Clinical Dictionary (AR, NL, EN)
+        const i18nDictionary = {
             ar: {
-                page_title_about: "من نحن - WiBo Health",
-                nav_home: "الصفحة الرئيسية",
+                page_title_about: "من نحن | WiBo Health Group & تطبيق بودي (boodi)",
+                seo_desc: "تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.",
+                nav_home: "الرئيسية",
                 nav_foods: "دليل الأطعمة",
-                nav_calculators: "الحاسبات الصحية",
-                nav_recipes: "الوصفات الصحية",
-                nav_articles: "المقالات الصحية",
-                nav_boodi_app: "تطبيق بودي 💚",
-                nav_about: "من نحن",
-                nav_contact: "اتصل بنا",
-                about_title: "💚 من نحن",
-                about_intro: "WiBo Health Group هي منظومة صحية سريرية متخصصة في تقديم توجيه غذائي دقيق وموثوق، لمساعدة الأفراد على اتخاذ قرارات صحية واعية ومبنية على أحدث الأبحاث العلمية.",
-                about_vision_title: "🎯 رؤيتنا",
-                about_vision_text: "نسعى لأن نكون المرجع الطبي والغذائي الأول والأكثر موثوقية في العالم العربي وأوروبا لكل ما يتعلق بالمؤشر الجلايسيمي، ومؤشر الأنسولين، وضبط المسار الأيضي، والتغذية السليمة المتوازنة.",
-                about_mission_title: "✨ مهمتنا",
-                about_mission_text: "تمكين المجتمع من فهم فيزيولوجيا الغذاء وتأثيره الحقيقي على الهرمونات وسكر الدم، من خلال أدوات حسابية سريرية مجانية، ومقالات وبحوث دورية موثقة، وتطبيقات ذكية مخصصة للتسوق الصحي الآمن.",
-                about_boodi_spotlight_title: "📱 تطبيق بودي (boodi 💚)",
-                about_boodi_spotlight_desc: "الرفيق السريري الذكي في هاتفك لفحص باركود المنتجات، رصد الحلال والمكونات المشبوهة، وتحليل مؤشر السكر والإنسولين، واقتراح بدائل صحية ذكية من نفس الرف.",
-                about_boodi_btn: "اكتشف التطبيق ⬅️",
-                about_services_title: "📊 ما نقدمه",
-                about_service_1_title: "🍽️ قاعدة بيانات الأغذية",
-                about_service_1_desc: " معلومات دقيقة حول المؤشر الجلايسيمي والإنسوليني",
-                about_service_2_title: "📰 أبحاث ومقالات سريرية",
-                about_service_2_desc: " مراجعة دورية لأحدث الدراسات الطبية",
-                about_service_3_title: "🧮 حاسبات طبية مجانية",
-                about_service_3_desc: " (BMI, BMR, متتبع السعرات والماء)",
-                about_service_4_title: "📖 وصفات صحية علاجية",
-                about_service_4_desc: " مصممة لدعم استقرار سكر الدم ونقاء الكبد",
-                about_service_5_title: "📱 تطبيق بودي الذكي (boodi)",
-                about_service_5_desc: " ماسح الباركود وفحص الحلال والبدائل الفورية",
-                about_team_title: "💚 فريق العمل",
-                about_team_text: "يقود المنصة فريق WiBo Health الطبي والسريري، وهو فريق متخصص في التغذية السريرية وعلوم الأيض وهندسة الحلول الصحية الرقمية، ملتزم بتقديم أرقى المعايير الطبية الأوروبية لحماية صحة عائلتك.",
-                about_team_leader: "فريق WiBo Health الطبي والسريري",
-                about_contact_title: "📞 تواصل معنا",
-                about_contact_text: "نحن دائماً هنا للإجابة على استفساراتكم ومساعدتكم في رحلتكم الصحية عبر البريد الرسمي المعتمد أو صفحة الاتصال.",
-                about_back_home: "العودة للرئيسية"
+                nav_calculators: "الحاسبات",
+                nav_supplements: "المكملات",
+                nav_articles: "المقالات",
+                nav_boodi: "تطبيق بودي 💚",
+                footer_privacy: "الخصوصية والامتثال السريري",
+                footer_disclaimer: "جميع الحقوق محفوظة لمنظومة WiBo Health Group وتطبيق بودي الرسمي (boodi App 💚).",
+                about_badge: "المنظومة السريرية والرقمية المعتمدة",
+                about_title: "من نحن - WiBo Health Group",
+                about_intro: "المنصة الطبية والسريرية الرائدة المتخصصة في الاستقرار الأيضي، علوم التغذية القائمة على الأدلة، والحلول الرقمية الذكية.",
+                about_leadership_title: "القيادة الطبية والرسالة السريرية",
+                about_leadership_text: "تأسست المنصة تحت إشراف وقيادة د. وسيم حبيب (Dr. Wassim Habib)، بهدف سد الفجوة بين الأبحاث السريرية المتقدمة واختيارات المستهلك اليومية في العالم العربي وأوروبا (هولندا). نؤمن بأن الأرقام المجردة لا تكفي؛ بل إن كيمياء الطعام واستجابة هرمون الإنسولين هي العامل الحاسم في الوقاية من السكري، وحماية الكبد، وإطالة العمر الصحي.",
+                boodi_tag: "التطبيق الرسمي التابع للمنظومة",
+                about_boodi_banner_title: "تطبيق بودي الذكي (boodi 💚 App)",
+                about_boodi_banner_desc: "تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة WiBo Health Group؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص الحلال والمشتقات المحرمة، وكشف البدائل الصحية الأقل سكراً من نفس الرف.",
+                about_boodi_btn: "اكتشف تطبيق بودي",
+                about_vision_title: "رؤيتنا",
+                about_vision_text: "أن نكون المرجع الطبي والأيضي الأكثر موثوقية وابتكاراً في أوروبا والشرق الأوسط لكل ما يتعلق بالمؤشر الجلايسيمي، والتحكم في إفراز الإنسولين، وضمان سلامة الغذاء الاستهلاكي بأعلى معايير الشفافية العلمية.",
+                about_mission_title: "مهمتنا",
+                about_mission_text: "تمكين الأفراد والعائلات من اتخاذ قرارات غذائية واعية تحمي صحتهم الأيضية، عبر أدوات حسابية سريرية دقيقة، وموسوعات مكملات خالية من التضليل، وتطبيقات ذكاء اصطناعي ترافق المستهلك في كل خطوة تسوق.",
+                about_services_title: "ركائز المنظومة السريرية",
+                serv_1_title: "دليل الأغذية والمؤشر الجلايسيمي",
+                serv_1_desc: "تحليل دقيق لسرعة تحول الأطعمة إلى سكر وتأثيرها على استقرار البنكرياس.",
+                serv_2_title: "موسوعة المكملات الكبرى",
+                serv_2_desc: "453 مكملاً غذائياً موثقاً بـ 3 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.",
+                serv_3_title: "الحاسبات الأيضية المعتمدة",
+                serv_3_desc: "معادلات سريرية دقيقة للـ BMI، واحتياج السعرات والماكروز (Mifflin-St Jeor)، ونسبة الخصر (WHtR).",
+                serv_4_title: "تطبيق بودي الذكي (boodi App)",
+                serv_4_desc: "ماسح الباركود الأوروبي لرصد الحلال، بدائل السوبرماركت، والتحليل الكيميائي الفوري.",
+                about_contact_title: "الدعم الطبي والتواصل المؤسسي",
+                about_contact_text: "فريقنا السريري والتقني متاح دائماً للإجابة على استفساراتكم الطبية، اقتراحات التعاون، أو الدعم الفني الخاص بتطبيق بودي عبر بريد الدعم الرسمي المعتمد:",
+                support_label: "بريد الدعم والتواصل الرسمي:",
+                support_sub: "فريق الاستجابة الطبية والتقنية - WiBo Health",
+                about_back_home: "العودة للصفحة الرئيسية"
+            },
+            nl: {
+                page_title_about: "Over Ons | WiBo Health Group & boodi App",
+                seo_desc: "Maak kennis met WiBo Health Group onder leiding van dr. Wassim Habib: Het Europese klinische platform voor glykemische controle, metabole gezondheid en de officiële boodi app.",
+                nav_home: "Home",
+                nav_foods: "Voedingsgids",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplementen",
+                nav_articles: "Artikelen",
+                nav_boodi: "boodi App 💚",
+                footer_privacy: "Privacy & Klinische Conformiteit",
+                footer_disclaimer: "Alle rechten voorbehouden aan WiBo Health Group en de officiële boodi app (boodi App 💚).",
+                about_badge: "Gevalideerd Klinisch & Digitaal Systeem",
+                about_title: "Over Ons - WiBo Health Group",
+                about_intro: "Het toonaangevende medische en klinische platform gespecialiseerd in metabole stabiliteit, evidence-based voedingsleer en slimme digitale gezondheidsoplossingen.",
+                about_leadership_title: "Medisch Leiderschap & Klinische Missie",
+                about_leadership_text: "Het platform is opgericht onder directe supervisie en leiding van dr. Wassim Habib (Dr. Wassim Habib), met als doel de kloof te overbruggen tussen geavanceerd klinisch onderzoek en dagelijkse voedingskeuzes in Nederland en Europa. Wij geloven dat geïsoleerde cijfers niet volstaan; de biochemie van voeding en de insulinerespons zijn bepalend voor preventie en een langdurig vitaal leven.",
+                boodi_tag: "Officieel Onderdeel van de Groep",
+                about_boodi_banner_title: "boodi App 💚 (Officiële Mobiele Applicatie)",
+                about_boodi_banner_desc: "De boodi app is de officiële mobiele applicatie van WiBo Health Group. Ontwikkeld als directe klinische assistent in uw broekzak om barcodes in de supermarkt te scannen, halal- en additievenstatus te verifiëren en gezondere alternatieven uit hetzelfde schap aan te bevelen.",
+                about_boodi_btn: "Ontdek boodi App",
+                about_vision_title: "Onze Visie",
+                about_vision_text: "De meest betrouwbare en innovatieve metabole referentie zijn in Europa en de Arabische wereld voor glykemische index, insulinebeheersing en gegarandeerde voedseltransparantie.",
+                about_mission_title: "Onze Missie",
+                about_mission_text: "Gezinnen in staat stellen bewuste voedingskeuzes te maken die hun metabole gezondheid beschermen, door middel van gevalideerde rekentools, onafhankelijke supplementengidsen en intelligente mobiele scanners.",
+                about_services_title: "Pijlers van ons Klinisch Platform",
+                serv_1_title: "Voedingsgids & Glykemische Index",
+                serv_1_desc: "Nauwkeurige analyse van hoe snel voedingsmiddelen bloedsuikerpieken en insulineproductie beïnvloeden.",
+                serv_2_title: "Grote Voedingssupplementengids",
+                serv_2_desc: "453 geverifieerde supplementen in 3 talen met doseringen, interacties en klinische waarschuwingen.",
+                serv_3_title: "Gevalideerde Gezondheidscalculators",
+                serv_3_desc: "Klinische formules voor BMI, energie- en macrobehoefte (Mifflin-St Jeor) en taille-lengteverhouding (WHtR).",
+                serv_4_title: "boodi App Voedingsscanner",
+                serv_4_desc: "Europese barcodescanner voor halal-monitoring, E-nummers en directe supermarkt-alternatieven.",
+                about_contact_title: "Klinische Ondersteuning & Contact",
+                about_contact_text: "Ons medische en technische team staat klaar om uw vragen te beantwoorden of ondersteuning te bieden voor de boodi app via ons officiële contactadres:",
+                support_label: "Officieel Support- en Contactadres:",
+                support_sub: "Medisch & Technisch Responsteam - WiBo Health",
+                about_back_home: "Terug naar Home"
             },
             en: {
-                page_title_about: "About Us - WiBo Health",
+                page_title_about: "About Us | WiBo Health Group & boodi App",
+                seo_desc: "Learn about WiBo Health Group led by Dr. Wassim Habib: The European clinical metabolic platform and its official flagship mobile scanner, boodi App.",
                 nav_home: "Home",
                 nav_foods: "Food Guide",
-                nav_calculators: "Health Calculators",
-                nav_recipes: "Healthy Recipes",
-                nav_articles: "Health Articles",
-                nav_boodi_app: "boodi App 💚",
-                nav_about: "About Us",
-                nav_contact: "Contact Us",
-                about_title: "💚 About Us",
-                about_intro: "WiBo Health Group is a specialized clinical health organization dedicated to providing evidence-based nutritional guidance to empower conscious metabolic decisions.",
-                about_vision_title: "🎯 Our Vision",
-                about_vision_text: "To serve as the primary and most trustworthy medical reference in the Arab world and Europe for Glycemic Index, Insulin Index, and metabolic health.",
-                about_mission_title: "✨ Our Mission",
-                about_mission_text: "Empowering communities to understand food physiology and hormonal health through validated clinical calculators, evidence-based research articles, and smart dietary applications.",
-                about_boodi_spotlight_title: "📱 boodi 💚 Smart App",
-                about_boodi_spotlight_desc: "Your smart clinical shopping companion for instant barcode scanning, Halal & additive verification, glycemic response tracking, and same-shelf healthy alternatives.",
-                about_boodi_btn: "Explore boodi App ➡️",
-                about_services_title: "📊 What We Offer",
-                about_service_1_title: "🍽️ Comprehensive Food Database",
-                about_service_1_desc: " precise Glycemic & Insulin Index metrics",
-                about_service_2_title: "📰 Clinical Research Articles",
-                about_service_2_desc: " continuous evidence-based reviews",
-                about_service_3_title: "🧮 Free Clinical Calculators",
-                about_service_3_desc: " (BMI, BMR, Calorie and Hydration Trackers)",
-                about_service_4_title: "📖 Therapeutic Recipes",
-                about_service_4_desc: " crafted for glycemic stability and hepatic health",
-                about_service_5_title: "📱 boodi Smart Food Scanner",
-                about_service_5_desc: " real-time barcode, Halal, and alternative recommendations",
-                about_team_title: "💚 Our Team",
-                about_team_text: "The platform is led by the WiBo Health Medical & Clinical Team, specializing in metabolic sciences, clinical nutrition, and digital health engineering adhering to European healthcare standards.",
-                about_team_leader: "WiBo Health Medical & Clinical Team",
-                about_contact_title: "📞 Contact Us",
-                about_contact_text: "We are always here to support your metabolic journey through our official support channel or contact page.",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplements Guide",
+                nav_articles: "Articles",
+                nav_boodi: "boodi App 💚",
+                footer_privacy: "Privacy & Clinical Compliance",
+                footer_disclaimer: "All rights reserved to WiBo Health Group and the official boodi app (boodi App 💚).",
+                about_badge: "Validated Clinical & Digital Health Ecosystem",
+                about_title: "About Us - WiBo Health Group",
+                about_intro: "The premier clinical medical platform dedicated to metabolic equilibrium, evidence-based nutritional science, and intelligent digital health tools.",
+                about_leadership_title: "Clinical Leadership & Medical Philosophy",
+                about_leadership_text: "Founded under the medical leadership of Dr. Wassim Habib, WiBo Health bridges advanced clinical endocrinology and everyday grocery decisions across Europe (Netherlands) and the Arab world. We believe that calories alone do not tell the story; food biochemistry and insulin responses dictate long-term metabolic health.",
+                boodi_tag: "Official Flagship Application",
+                about_boodi_banner_title: "boodi 💚 Smart Mobile App",
+                about_boodi_banner_desc: "boodi is the official flagship application owned and operated by WiBo Health Group. Engineered as an instant clinical supermarket assistant for barcode scanning, Halal & additive screening, and same-shelf healthier alternatives.",
+                about_boodi_btn: "Explore boodi App",
+                about_vision_title: "Our Vision",
+                about_vision_text: "To serve as the most trusted and innovative metabolic authority in Europe and the Middle East for glycemic index metrics, insulin optimization, and consumer food transparency.",
+                about_mission_title: "Our Mission",
+                about_mission_text: "Empowering individuals and families to make informed dietary choices through precise clinical calculators, unbiased supplement reviews, and smart supermarket AI applications.",
+                about_services_title: "Core Clinical Pillars",
+                serv_1_title: "Glycemic & Food Index Guide",
+                serv_1_desc: "Precise physiological tracking of blood sugar spikes and pancreatic insulin demands.",
+                serv_2_title: "Comprehensive Supplements Guide",
+                serv_2_desc: "453 evidence-based dietary supplements documented in 3 languages with dosages and clinical warnings.",
+                serv_3_title: "Validated Health Calculators",
+                serv_3_desc: "Clinically rigorous formulas for BMI, TDEE/Macros (Mifflin-St Jeor), and Waist-to-Height Ratio (WHtR).",
+                serv_4_title: "boodi Smart Food Scanner",
+                serv_4_desc: "Real-time European barcode scanning, Halal integrity, and healthy supermarket substitution.",
+                about_contact_title: "Clinical Support & Institutional Contact",
+                about_contact_text: "Our medical and engineering team is always available to answer clinical inquiries, collaboration proposals, or boodi app user support via our verified channel:",
+                support_label: "Official Support & Inquiries Channel:",
+                support_sub: "Clinical & Technical Response Team - WiBo Health",
                 about_back_home: "Back to Home"
             }
         };
 
-        function t(key) {
-            return translations[currentLang]?.[key] || translations['ar'][key] || key;
+        // 3. Localization Core (Syncing with localStorage & other pages)
+        let currentLocale = 'ar';
+
+        function initLocalization() {
+            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
+            setLocale(saved, false);
         }
 
-        function changeLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('wibo_language', lang);
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            updatePageLanguage();
-        }
+        function setLocale(lang, saveToStorage = true) {
+            if (!['ar', 'nl', 'en'].includes(lang)) lang = 'ar';
+            currentLocale = lang;
 
-        function updatePageLanguage() {
-            document.title = t('page_title_about');
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                const text = t(key);
-                if (element.tagName === 'TITLE') {
-                    document.title = text;
+            if (saveToStorage) {
+                localStorage.setItem('preferred_language', lang);
+                localStorage.setItem('wibo_language', lang);
+                localStorage.setItem('selected_language', lang);
+                localStorage.setItem('lang', lang);
+            }
+
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Back arrow direction
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) {
+                backIcon.className = (lang === 'ar') ? 'fas fa-arrow-right' : 'fas fa-arrow-left';
+            }
+
+            // Update Language Switcher Buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
                 } else {
-                    element.innerHTML = text;
+                    btn.classList.remove('active');
                 }
             });
-        }
 
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
-            updateThemeIcon();
-        }
+            // Update all DOM translated text nodes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18nDictionary[lang] && i18nDictionary[lang][key]) {
+                    el.textContent = i18nDictionary[lang][key];
+                }
+            });
 
-        function updateThemeIcon() {
-            const themeToggle = document.getElementById('themeToggle');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        }
-
-        function initializeTheme() {
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
-            if (isDarkMode) {
-                document.body.classList.add('dark-mode');
+            const seoDesc = document.getElementById('seo_desc');
+            if (seoDesc && i18nDictionary[lang]?.seo_desc) {
+                seoDesc.setAttribute('content', i18nDictionary[lang].seo_desc);
             }
-            updateThemeIcon();
         }
 
-        function initializeLanguage() {
-            currentLang = localStorage.getItem('wibo_language') || 'ar';
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-            updatePageLanguage();
-        }
-
-        window.addEventListener('DOMContentLoaded', function() {
-            initializeTheme();
-            initializeLanguage();
+        // Listen for storage changes across browser tabs
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
+                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
+                    setLocale(e.newValue, false);
+                }
+            }
+            if (e.key === 'wibo_theme') {
+                if (e.newValue) applyTheme(e.newValue);
+            }
         });
 
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        const scrollThreshold = 150;
-
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-                header.classList.add('hide-nav');
-            } else if (currentScroll < lastScrollTop) {
-                header.classList.remove('hide-nav');
-            }
-            if (currentScroll <= 0) {
-                header.classList.remove('hide-nav');
-            }
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
-
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            const overlay = document.querySelector('.mobile-nav-overlay');
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
+        // Initialize on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLocalization();
+        });
     </script>
 </body>
 </html>

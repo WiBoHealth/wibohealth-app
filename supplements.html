@@ -126,6 +126,7 @@
             font-size: 22px;
             background: linear-gradient(135deg, #2ecc71, #3498db);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
             line-height: 1.2;
@@ -444,7 +445,7 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             position: relative;
             border: 1px solid rgba(255,255,255,0.1);
-            content-visibility: auto; /* تحسين تسريع المتصفح */
+            content-visibility: auto;
             contain-intrinsic-size: 320px;
         }
 
@@ -1307,37 +1308,100 @@
             return key ? t(key) : category;
         }
 
+        // ==========================================
+        // القاموس السريري الشامل لترجمة وسوم المكملات (Universal Tag Engine)
+        // ==========================================
         const tagTranslations = {
             nl: {
-                'بروتين': 'Eiwit', 'بناء عضلات': 'Spieropbouw', 'تعافي': 'Herstel',
-                'بطيء الامتصاص': 'Langzame afgifte', 'قبل النوم': 'Voor het slapen',
-                'قوة': 'Kracht', 'أداء': 'Prestatie', 'كتلة عضلية': 'Spiermassa',
-                'أحماض أمينية': 'Aminozuren', 'منع الهدم': 'Anti-katabool',
-                'تحمل عضلي': 'Uithoudingsvermogen', 'فيتامينات': 'Vitaminen',
-                'معادن': 'Mineralen', 'صحة عامة': 'Gezondheid', 'أوميغا 3': 'Omega-3',
-                'قلب': 'Hart', 'دماغ': 'Brein', 'مضاد التهاب': 'Ontstekingsremmend',
-                'فيتامين د': 'Vitamine D', 'عظام': 'Botten', 'مناعة': 'Weerstand',
-                'مزاج': 'Stemming', 'نوم': 'Slaap', 'عضلات': 'Spieren', 'طاقة': 'Energie',
-                'هرمونات': 'Hormonen', 'بشرة': 'Huid', 'حرق دهون': 'Vetverbranding', 'أيض': 'Metabolisme'
+                'بروتين': 'Eiwit', 'بناء عضلات': 'Spieropbouw', 'تعافي': 'Herstel', 'استشفاء': 'Herstel',
+                'بطيء الامتصاص': 'Langzame afgifte', 'قبل النوم': 'Voor het slapen', 'قوة': 'Kracht',
+                'أداء': 'Prestatie', 'كتلة عضلية': 'Spiermassa', 'أحماض أمينية': 'Aminozuren',
+                'منع الهدم': 'Anti-katabool', 'تحمل عضلي': 'Uithoudingsvermogen', 'فيتامينات': 'Vitaminen',
+                'معادن': 'Mineralen', 'صحة عامة': 'Algemene Gezondheid', 'أوميغا 3': 'Omega-3',
+                'قلب': 'Hart', 'صحة القلب': 'Hartgezondheid', 'دماغ': 'Brein', 'صحة الدماغ': 'Hersenfunctie',
+                'مضاد التهاب': 'Ontstekingsremmend', 'فيتامين د': 'Vitamine D', 'عظام': 'Botten',
+                'صحة العظام': 'Botgezondheid', 'مناعة': 'Weerstand', 'مزاج': 'Stemming', 'نوم': 'Slaap',
+                'عضلات': 'Spieren', 'طاقة': 'Energie', 'نشاط': 'Vitaliteit', 'هرمونات': 'Hormonen',
+                'بشرة': 'Huid', 'حرق دهون': 'Vetverbranding', 'أيض': 'Metabolisme', 'تمثيل غذائي': 'Metabolisme',
+                'مضاد أكسدة': 'Antioxidant', 'مضادات أكسدة': 'Antioxidanten', 'حفظ عضلات': 'Spierbehoud',
+                'تحسين جسم': 'Lichaamssamenstelling', 'تركيب الجسم': 'Lichaamssamenstelling',
+                'مفاصل': 'Gewrichten', 'غضاريف': 'Kraakbeen', 'تركيز': 'Focus', 'ذاكرة': 'Geheugen',
+                'هضم': 'Spijsvertering', 'صحة الأمعاء': 'Darmgezondheid', 'كبد': 'Lever', 'صحة الكبد': 'Leverfunctie',
+                'كلى': 'Nieren', 'توتر': 'Anti-stress', 'قلق': 'Rustgevend', 'استرخاء': 'Ontspanning',
+                'حيوية': 'Vitaliteit', 'شعر': 'Haar', 'أظافر': 'Nagels', 'خصوبة': 'Vruchtbaarheid',
+                'تستوستيرون': 'Testosteron', 'أستروجين': 'Oestrogeenbalans', 'سكر الدم': 'Bloedsuikerspiegel',
+                'حساسية الإنسولين': 'Insulinegevoeligheid', 'كوليسترول': 'Cholesterol', 'ضغط الدم': 'Bloeddruk',
+                'دورة دموية': 'Bloedsomloop', 'أداء رياضي': 'Sportprestaties', 'كولاجين': 'Collageen',
+                'ألياف': 'Vezels', 'بروبيوتيك': 'Probiotica', 'إنزيمات': 'Enzymen', 'زنك': 'Zink',
+                'حديد': 'IJzer', 'مغنيسيوم': 'Magnesium', 'كالسيوم': 'Calcium', 'كبح شهية': 'Eetlustbeheersing',
+                'وزن': 'Gewichtsverlies', 'تخسيس': 'Afslanken', 'طبيعي': 'Natuurlijk', 'أعشاب': 'Kruiden'
             },
             en: {
-                'بروتين': 'Protein', 'بناء عضلات': 'Muscle Building', 'تعافي': 'Recovery',
-                'بطيء الامتصاص': 'Slow Release', 'قبل النوم': 'Bedtime',
-                'قوة': 'Strength', 'أداء': 'Performance', 'كتلة عضلية': 'Muscle Mass',
-                'أحماض أمينية': 'Amino Acids', 'منع الهدم': 'Anti-catabolic',
-                'تحمل عضلي': 'Endurance', 'فيتامينات': 'Vitamins',
+                'بروتين': 'Protein', 'بناء عضلات': 'Muscle Building', 'تعافي': 'Recovery', 'استشفاء': 'Recovery',
+                'بطيء الامتصاص': 'Slow Release', 'قبل النوم': 'Bedtime', 'قوة': 'Strength',
+                'أداء': 'Performance', 'كتلة عضلية': 'Muscle Mass', 'أحماض أمينية': 'Amino Acids',
+                'منع الهدم': 'Anti-catabolic', 'تحمل عضلي': 'Endurance', 'فيتامينات': 'Vitamins',
                 'معادن': 'Minerals', 'صحة عامة': 'General Health', 'أوميغا 3': 'Omega-3',
-                'قلب': 'Heart', 'دماغ': 'Brain', 'مضاد التهاب': 'Anti-inflammatory',
-                'فيتامين د': 'Vitamin D', 'عظام': 'Bones', 'مناعة': 'Immunity',
-                'مزاج': 'Mood', 'نوم': 'Sleep', 'عضلات': 'Muscles', 'طاقة': 'Energy',
-                'هرمونات': 'Hormones', 'بشرة': 'Skin', 'حرق دهون': 'Fat Burn', 'أيض': 'Metabolism'
+                'قلب': 'Heart', 'صحة القلب': 'Heart Health', 'دماغ': 'Brain', 'صحة الدماغ': 'Brain Function',
+                'مضاد التهاب': 'Anti-inflammatory', 'فيتامين د': 'Vitamin D', 'عظام': 'Bones',
+                'صحة العظام': 'Bone Health', 'مناعة': 'Immunity', 'مزاج': 'Mood', 'نوم': 'Sleep',
+                'عضلات': 'Muscles', 'طاقة': 'Energy', 'نشاط': 'Vitality', 'هرمونات': 'Hormones',
+                'بشرة': 'Skin', 'حرق دهون': 'Fat Burn', 'أيض': 'Metabolism', 'تمثيل غذائي': 'Metabolism',
+                'مضاد أكسدة': 'Antioxidant', 'مضادات أكسدة': 'Antioxidants', 'حفظ عضلات': 'Muscle Preservation',
+                'تحسين جسم': 'Body Composition', 'تركيب الجسم': 'Body Composition',
+                'مفاصل': 'Joints', 'غضاريف': 'Cartilage', 'تركيز': 'Focus', 'ذاكرة': 'Memory',
+                'هضم': 'Digestion', 'صحة الأمعاء': 'Gut Health', 'كبد': 'Liver', 'صحة الكبد': 'Liver Support',
+                'كلى': 'Kidneys', 'توتر': 'Anti-stress', 'قلق': 'Calming', 'استرخاء': 'Relaxation',
+                'حيوية': 'Vitality', 'شعر': 'Hair', 'أظافر': 'Nails', 'خصوبة': 'Fertility',
+                'تستوستيرون': 'Testosterone', 'أستروجين': 'Estrogen Balance', 'سكر الدم': 'Blood Sugar',
+                'حساسية الإنسولين': 'Insulin Sensitivity', 'كوليسترول': 'Cholesterol', 'ضغط الدم': 'Blood Pressure',
+                'دورة دموية': 'Circulation', 'أداء رياضي': 'Athletic Performance', 'كولاجين': 'Collageen',
+                'ألياف': 'Fiber', 'بروبيوتيك': 'Probiotics', 'إنزيمات': 'Enzymes', 'زنك': 'Zinc',
+                'حديد': 'Iron', 'مغنيسيوم': 'Magnesium', 'كالسيوم': 'Calcium', 'كبح شهية': 'Appetite Control',
+                'وزن': 'Weight Loss', 'تخسيس': 'Slimming', 'طبيعي': 'Natural', 'أعشاب': 'Herbs'
             }
         };
+
+        // دالة استخراج وترجمة وتطهير الوسوم ومنع تسريب الحروف العربية
+        function renderSupplementTags(supp) {
+            if (currentLang === 'ar') {
+                return (supp.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+            }
+
+            let candidateTags = [];
+            if (currentLang === 'nl' && Array.isArray(supp.tagsNl) && supp.tagsNl.length > 0) {
+                candidateTags = [...supp.tagsNl];
+            } else if (currentLang === 'en' && Array.isArray(supp.tagsEn) && supp.tagsEn.length > 0) {
+                candidateTags = [...supp.tagsEn];
+            } else {
+                candidateTags = [...(supp.tags || [])];
+            }
+
+            const arabicRegex = /[\u0600-\u06FF]/;
+            const finalizedTags = candidateTags.map(tag => {
+                const cleanTag = (tag || '').trim();
+                if (arabicRegex.test(cleanTag)) {
+                    return tagTranslations[currentLang]?.[cleanTag] || tagTranslations['en']?.[cleanTag] || '';
+                }
+                return cleanTag;
+            }).filter(tag => tag && tag.length > 0 && !arabicRegex.test(tag));
+
+            if (finalizedTags.length === 0 && supp.tags && supp.tags.length > 0) {
+                supp.tags.forEach(t => {
+                    const tr = tagTranslations[currentLang]?.[t.trim()] || tagTranslations['en']?.[t.trim()];
+                    if (tr && !arabicRegex.test(tr)) {
+                        finalizedTags.push(tr);
+                    }
+                });
+            }
+
+            return finalizedTags.map(t => `<span class="tag">${t}</span>`).join('');
+        }
 
         // ==========================================
         // محرك الرندرة فائق السرعة (Chunked Infinite Engine)
         // ==========================================
-        const BATCH_SIZE = 24; // تحميل 24 مكملاً في كل دفعة
+        const BATCH_SIZE = 24;
         let currentRenderIndex = 0;
         let currentFilteredSupplements = [];
         let searchTerm = '';
@@ -1352,7 +1416,7 @@
             
             if (currentLang === 'nl') {
                 title = supp.nameNl || supp.englishName || supp.name;
-                subtitle = supp.englishName !== title ? (supp.englishName || '') : '';
+                subtitle = (supp.englishName && supp.englishName !== title) ? supp.englishName : '';
             } else if (currentLang === 'en') {
                 title = supp.englishName || supp.name;
                 subtitle = '';
@@ -1362,10 +1426,7 @@
                             (currentLang === 'en' && supp.summaryEn) ? supp.summaryEn :
                             (supp.summary || '');
 
-            const tagsList = (supp.tags || []).map(tag => {
-                const translatedTag = tagTranslations[currentLang]?.[tag] || tag;
-                return `<span class="tag">${translatedTag}</span>`;
-            }).join('');
+            const tagsList = renderSupplementTags(supp);
             
             return `
             <div class="supplement-card">
@@ -1437,7 +1498,6 @@
                 }
             }
 
-            // حقن دفعة سريعة (Batch)
             renderNextBatch();
         }
 
@@ -1461,7 +1521,6 @@
             }
         }
 
-        // إعداد مراقب السكرول اللانهائي فائق الخفة
         function initScrollObserver() {
             const sentinel = document.getElementById('infiniteScrollSentinel');
             if (!sentinel) return;
@@ -1491,11 +1550,12 @@
                 document.getElementById('modalTitle').textContent = supp.name;
                 document.getElementById('modalSubtitle').textContent = supp.englishName || '';
             } else if (currentLang === 'nl') {
-                document.getElementById('modalTitle').textContent = supp.nameNl || supp.englishName || supp.name;
-                document.getElementById('modalSubtitle').textContent = supp.name || '';
+                const titleNl = supp.nameNl || supp.englishName || supp.name;
+                document.getElementById('modalTitle').textContent = titleNl;
+                document.getElementById('modalSubtitle').textContent = (supp.englishName && supp.englishName !== titleNl) ? supp.englishName : '';
             } else {
                 document.getElementById('modalTitle').textContent = supp.englishName || supp.name;
-                document.getElementById('modalSubtitle').textContent = supp.name || '';
+                document.getElementById('modalSubtitle').textContent = '';
             }
             
             const benefitsList = (currentLang === 'nl' && supp.benefitsNl) ? supp.benefitsNl :
@@ -1586,7 +1646,7 @@
             if (e.target === this) closeModal();
         });
 
-        // Search Input Debouncing (لمنع التجميد أثناء الكتابة)
+        // Search Input Debouncing
         let searchDebounceTimer = null;
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const val = e.target.value;
@@ -1647,7 +1707,7 @@
             document.body.style.overflow = 'auto';
         }
 
-       function displayComparisonTable(supplements) {
+        function displayComparisonTable(supplements) {
             const body = document.getElementById('compareModalBody');
             const isAr = currentLang === 'ar';
             const isNl = currentLang === 'nl';
