@@ -2,9 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-    <!-- Language Initializer -->
+    <!-- Language Initializer & Zero-Shift RTL Reset -->
     <script>
         (function() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -16,11 +16,19 @@
                          (phone.startsWith('ar') ? 'ar' : (phone.startsWith('nl') ? 'nl' : 'en')));
             document.documentElement.lang = lang;
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            if (window.scrollTo) {
+                window.scrollTo(0, 0);
+            }
         })();
     </script>
 
+    <!-- Primary SEO & Googlebot Crawling Tags -->
     <title data-i18n="page_title_food_details">تفاصيل الطعام - WiBo Health</title>
-    <meta name="description" id="metaDescription" content="تفاصيل كاملة عن الطعام: المؤشر الجلايسيمي، مؤشر الأنسولين، السعرات الحرارية، البروتين، الكربوهيدرات، الدهون، الألياف - تحليل سريري موثوق من WiBo Health.">
+    <meta name="description" id="metaDescription" content="تفاصيل سريرية كاملة عن الطعام: المؤشر الجلايسيمي، مؤشر الأنسولين، السعرات الحرارية، البروتين، الكربوهيدرات، الدهون، الألياف - تحليل سريري موثوق من فريق ويبو هيلث الطبي.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="فريق ويبو هيلث الطبي">
+    
+    <!-- Self-Referencing Canonical Tag -->
     <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/food-details.html">
     
     <!-- Hreflang Tags for SEO & Googlebot -->
@@ -28,8 +36,16 @@
     <link rel="alternate" id="hreflangNl" hreflang="nl" href="https://wibohealth.com/food-details.html?lang=nl">
     <link rel="alternate" id="hreflangEn" hreflang="en" href="https://wibohealth.com/food-details.html?lang=en">
     <link rel="alternate" id="hreflangDefault" hreflang="x-default" href="https://wibohealth.com/food-details.html">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="WiBo Health">
+    <meta property="og:url" id="ogUrl" content="https://wibohealth.com/food-details.html">
+    <meta property="og:title" id="ogTitle" content="تفاصيل الطعام السريرية | WiBo Health">
+    <meta property="og:description" id="ogDesc" content="تحليل سريري معتمد للمؤشر الجلايسيمي ومؤشر الأنسولين والقيم الغذائية من فريق ويبو هيلث الطبي.">
+    <meta property="og:image" content="https://wibohealth.com/images/foods-og.png">
     
-    <!-- Google Structured Data (Dynamic NutritionInformation) -->
+    <!-- Google Structured Data (Schema.org MedicalWebPage & NutritionInformation) -->
     <script type="application/ld+json" id="foodNutritionSchema"></script>
     
     <!-- Font Awesome -->
@@ -43,15 +59,26 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-    <!-- PWA Manifest & Icons -->
-    <link rel="manifest" href="/manifest.json">
+    <!-- PWA Icons -->
     <meta name="theme-color" content="#667eea">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <style>
-        * {
+        /* ==========================================================================
+           1. الدرع العالمي لمنع الانزلاق الأفقي إطلاقاً (Zero Horizontal Overflow)
+           ========================================================================== */
+        html, body {
+            max-width: 100% !important;
+            width: 100% !important;
+            overflow-x: clip !important;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        *, *::before, *::after {
             box-sizing: border-box;
         }
 
@@ -73,7 +100,7 @@
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.8;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         html[lang="en"] body, html[lang="nl"] body {
@@ -90,11 +117,14 @@
 
         .container {
             max-width: 1200px;
+            width: 100%;
             margin: 0 auto;
-            padding: 20px;
+            padding: 18px 12px;
         }
 
-        /* Slim Header 2.0 (Height: 60px) */
+        /* ==========================================================================
+           2. الهيدر النحيف المحصن ضد الطفحان (Slim Header 2.0 Auto-Fit)
+           ========================================================================== */
         header {
             background: var(--card-bg);
             height: 60px;
@@ -104,6 +134,9 @@
             z-index: 1000;
             display: flex;
             align-items: center;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
             transition: all 0.3s ease;
         }
 
@@ -111,37 +144,40 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 15px;
+            gap: 6px;
+            min-width: 0;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             text-decoration: none;
             flex-shrink: 0;
+            min-width: 0;
         }
 
         .logo-icon {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
         .logo-icon svg {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             filter: drop-shadow(0 2px 6px rgba(46, 204, 113, 0.4));
         }
 
         .logo-text h1 {
-            font-size: 21px;
+            font-size: 18px;
             background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
             background-clip: text;
@@ -155,33 +191,37 @@
         .header-controls {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
+            flex-shrink: 1;
+            min-width: 0;
         }
 
+        /* زر العودة الذكي المتجاوب */
         .back-btn {
-            padding: 7px 18px;
+            padding: 6px 12px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             text-decoration: none;
             border-radius: 20px;
             font-weight: 700;
-            font-size: 13px;
+            font-size: 12px;
             transition: all 0.25s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: 0 2px 10px rgba(46, 204, 113, 0.3);
+            gap: 5px;
+            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.45);
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.45);
         }
 
         .lang-btn, .theme-toggle {
-            width: 38px;
-            height: 38px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             background: #f3f4f6;
             border: 1px solid var(--border-color);
@@ -189,9 +229,11 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
             transition: all 0.25s ease;
             color: var(--text-dark);
+            flex-shrink: 0;
+            padding: 0;
         }
 
         body.dark-mode .lang-btn,
@@ -203,44 +245,56 @@
         .lang-btn.active {
             background: #2ecc71;
             color: white;
-            transform: scale(1.08);
             box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.08);
             background: #2ecc71;
             color: white;
         }
 
-        /* Food Hero */
+        /* ترويض الهيدر للشاشات الصغيرة (< 420px) لمنع كسر السطر */
+        @media (max-width: 420px) {
+            .header-content { padding: 0 6px; gap: 4px; }
+            .logo-text h1 { font-size: 15px; }
+            .logo-icon { width: 26px; height: 26px; }
+            .logo-icon svg { width: 26px; height: 26px; }
+            .lang-btn, .theme-toggle { width: 28px; height: 28px; font-size: 12px; }
+            .back-btn { padding: 5px 8px; font-size: 11px; }
+            .back-btn span { display: none; } /* يظهر سهم العودة فقط على الهواتف شديدة الضيق لمنع أي طفحان */
+        }
+
+        /* ==========================================================================
+           3. بطاقة الطعام والبيانات السريرية
+           ========================================================================== */
         .food-hero {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 35px 25px;
+            padding: 30px 18px;
             box-shadow: 0 10px 30px var(--shadow);
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             text-align: center;
             border: 1px solid var(--border-color);
+            width: 100%;
         }
 
         .food-icon-large {
-            font-size: 90px;
-            margin-bottom: 15px;
+            font-size: 78px;
+            margin-bottom: 12px;
             line-height: 1;
         }
 
         .food-hero h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: var(--primary-color);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 900;
         }
 
         .food-hero h3 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-light);
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             font-weight: 600;
         }
 
@@ -248,24 +302,25 @@
             display: inline-block;
             background: rgba(46, 204, 113, 0.12);
             color: var(--primary-color);
-            padding: 6px 22px;
+            padding: 5px 18px;
             border-radius: 20px;
             font-weight: 800;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         /* Stats Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            margin-bottom: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 22px;
+            width: 100%;
         }
 
         .stat-card {
             background: var(--card-bg);
-            padding: 24px 20px;
-            border-radius: 18px;
+            padding: 18px 12px;
+            border-radius: 16px;
             box-shadow: 0 5px 20px var(--shadow);
             text-align: center;
             border: 1px solid var(--border-color);
@@ -273,16 +328,16 @@
 
         .stat-card h4 {
             color: var(--text-light);
-            font-size: 0.85rem;
-            margin-bottom: 8px;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
             font-weight: 700;
             text-transform: uppercase;
         }
 
         .stat-value {
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 900;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             line-height: 1.2;
         }
 
@@ -292,53 +347,63 @@
 
         .stat-label {
             color: var(--text-light);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
         }
 
-        /* Charts Section */
+        /* ==========================================================================
+           4. الرسوم البيانية المحمية من طفحان العرض (Chart Shield)
+           ========================================================================== */
         .charts-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* مُعالج: لا يستخدم 450px إطلاقاً */
+            gap: 18px;
+            margin-bottom: 22px;
+            width: 100%;
         }
 
         .chart-card {
             background: var(--card-bg);
-            padding: 26px;
-            border-radius: 20px;
+            padding: 20px 14px;
+            border-radius: 18px;
             box-shadow: 0 10px 30px var(--shadow);
             border: 1px solid var(--border-color);
+            width: 100%;
+            min-width: 0; /* حاسم جداً لمنع مكتبة Chart.js من كسر حدود الشاشة */
+            overflow: hidden;
         }
 
         .chart-card h3 {
             color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 18px;
+            font-size: 1.15rem;
+            margin-bottom: 14px;
             text-align: center;
             font-weight: 800;
         }
 
         .chart-container {
             position: relative;
-            height: 280px;
+            height: 250px;
+            width: 100%;
+            min-width: 0;
         }
 
         /* Nutrition Table */
         .nutrition-section {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 22px 16px;
+            border-radius: 18px;
             box-shadow: 0 10px 30px var(--shadow);
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             border: 1px solid var(--border-color);
+            width: 100%;
+            overflow-x: auto;
         }
 
         .nutrition-section h3 {
             color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-bottom: 22px;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
             text-align: center;
             font-weight: 900;
         }
@@ -350,8 +415,9 @@
 
         .nutrition-table th,
         .nutrition-table td {
-            padding: 14px 18px;
+            padding: 12px 14px;
             border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
         }
 
         [dir="rtl"] .nutrition-table th, [dir="rtl"] .nutrition-table td { text-align: right; }
@@ -361,7 +427,7 @@
             background: rgba(46, 204, 113, 0.1);
             color: var(--primary-color);
             font-weight: 800;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
         .nutrition-table td:last-child {
@@ -372,70 +438,89 @@
         /* Health Tips */
         .tips-section {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 22px 16px;
+            border-radius: 18px;
             box-shadow: 0 10px 30px var(--shadow);
-            margin-bottom: 25px;
+            margin-bottom: 22px;
             border: 1px solid var(--border-color);
+            width: 100%;
         }
 
         .tips-section h3 {
             color: var(--primary-color);
-            font-size: 1.6rem;
-            margin-bottom: 20px;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
             text-align: center;
             font-weight: 900;
         }
 
         .tip-item {
             background: rgba(46, 204, 113, 0.05);
-            padding: 18px 22px;
+            padding: 16px 18px;
             border-radius: 14px;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             border-inline-start: 4px solid var(--primary-color);
         }
 
         .tip-item h4 {
             color: var(--text-dark);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-weight: 800;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         .tip-item p {
             color: var(--text-light);
-            line-height: 1.7;
-            font-size: 0.95rem;
+            line-height: 1.6;
+            font-size: 0.92rem;
             margin: 0;
+        }
+
+        /* Clinical Disclaimer (EU MDR 2017/745) */
+        .clinical-disclaimer-box {
+            background: rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.6;
+            width: 100%;
+        }
+        body.dark-mode .clinical-disclaimer-box {
+            background: rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
         }
 
         /* Footer */
         footer {
             background: #0f172a;
             color: white;
-            padding: 35px 20px;
-            margin-top: 60px;
+            padding: 35px 16px;
+            margin-top: 50px;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
         }
 
-        footer a { color: #94a3b8; text-decoration: none; margin: 0 10px; transition: color 0.2s; }
+        footer a { color: #94a3b8; text-decoration: none; margin: 0 8px; transition: color 0.2s; }
         footer a:hover { color: #10b981; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .charts-section { grid-template-columns: 1fr; }
-            .chart-container { height: 240px; }
-            .food-hero { padding: 25px 15px; }
-            .food-hero h2 { font-size: 1.7rem; }
+            .chart-container { height: 220px; }
+            .food-hero { padding: 22px 12px; }
+            .food-hero h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Unified Slim Header 2.0 (Height: 60px) -->
+    <!-- Unified Slim Header 2.0 (Zero-Overflow Shield) -->
     <header>
         <div class="header-content">
             <a href="index.html" class="logo">
@@ -468,13 +553,13 @@
                     <i class="fas fa-moon"></i>
                 </button>
 
-                <div style="display: flex; gap: 6px; align-items: center;">
+                <div style="display: flex; gap: 4px; align-items: center;">
                     <button type="button" class="lang-btn" data-lang="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button type="button" class="lang-btn" data-lang="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
                     <button type="button" class="lang-btn" data-lang="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
                 </div>
                 
-                <a href="foods.html" class="back-btn">
+                <a href="foods.html" class="back-btn" id="backToFoodsLink">
                     <i class="fas fa-arrow-right" id="backIcon"></i>
                     <span data-i18n="nav_back_to_foods">العودة للأطعمة</span>
                 </a>
@@ -599,6 +684,11 @@
                 <p id="warningTip" data-i18n="tip_warning_text">مرضى السكري والتمثيل الغذائي يجب عليهم مراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p>
             </div>
         </div>
+
+        <!-- Clinical Disclaimer Note (EU MDR 2017/745 Compliance) -->
+        <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
+            إخلاء مسؤولية سريري: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.
+        </div>
     </main>
 
     <!-- Footer -->
@@ -612,7 +702,7 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
-        <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_copyright">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق WiBo Health الطبي</p>
+        <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_copyright">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي</p>
         <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
     </footer>
 
@@ -704,11 +794,12 @@
                 tip_preparation_text: "طهي الطعام بطرق صحية كالسلق أو الشواء وتجنب القلي بالزيوت المهدرجة يساعد على إبقاء المؤشر الجلايسيمي في النطاق الآمن.",
                 tip_warning: "التنبيه السريري",
                 tip_warning_text: "مرضى السكري والتمثيل الغذائي يجب عليهم مراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.",
+                clinical_disclaimer: "إخلاء مسؤولية سريري: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.",
                 footer_about: "من نحن",
                 footer_contact: "اتصل بنا",
                 footer_privacy: "سياسة الخصوصية",
                 footer_terms: "شروط الاستخدام",
-                footer_copyright: "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق WiBo Health الطبي",
+                footer_copyright: "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي",
                 chart_label_gi: "المؤشر الجلايسيمي",
                 chart_label_ii: "مؤشر الأنسولين",
                 chart_label_protein: "بروتين",
@@ -748,6 +839,7 @@
                 tip_preparation_text: "Gentle steaming or baking preserves micronutrient density and keeps the glycemic load stable compared to ultra-processing.",
                 tip_warning: "Clinical Caution",
                 tip_warning_text: "Diabetic individuals must account for the net Glycemic Load (GL) per portion rather than glycemic index alone.",
+                clinical_disclaimer: "Clinical Disclaimer: This guidance is for nutritional lifestyle orientation and does not constitute a diagnostic medical device under EU Regulation MDR 2017/745.",
                 footer_about: "About Us",
                 footer_contact: "Contact Us",
                 footer_privacy: "Privacy Policy",
@@ -792,6 +884,7 @@
                 tip_preparation_text: "Koken, stomen of roosteren behoudt essentiële micronutriënten en houdt de glykemische respons stabiel.",
                 tip_warning: "Aandachtspunt voor Diabetici",
                 tip_warning_text: "Let bij diabetes of insulineresistentie altijd op de totale glykemische lading (GL) van de portie.",
+                clinical_disclaimer: "Klinische Disclaimer: Deze informatie is uitsluitend bedoeld als voedingsadvies en is geen medisch diagnostisch hulpmiddel volgens EU MDR 2017/745.",
                 footer_about: "Over Ons",
                 footer_contact: "Contact",
                 footer_privacy: "Privacybeleid",
@@ -834,7 +927,16 @@
             document.documentElement.lang = lang;
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
-            // زر العودة
+            // تصفير الانحراف الأفقي فوراً لمنع اهتزاز الشاشة في الموبايل
+            window.scrollTo({
+                left: 0,
+                top: window.scrollY,
+                behavior: 'instant'
+            });
+            document.documentElement.scrollLeft = 0;
+            document.body.scrollLeft = 0;
+
+            // ضبط اتجاه أيقونة زر العودة
             const backIcon = document.getElementById('backIcon');
             if (backIcon) {
                 backIcon.className = (lang === 'ar') ? 'fas fa-arrow-right' : 'fas fa-arrow-left';
@@ -870,7 +972,6 @@
 
             document.getElementById('foodIcon').textContent = food.icon || '🍽️';
 
-            // حماية كاملة من تسرب العربية في النسختين الإنجليزية والهولندية
             const titleEl = document.getElementById('foodName');
             const subtitleEl = document.getElementById('foodNameSubtitle');
             const catEl = document.getElementById('foodCategory');
@@ -881,10 +982,10 @@
 
             if (currentLang === 'en') {
                 mainTitle = food.nameEn || food.name;
-                subTitle = food.nameNl ? `${food.nameNl}` : ''; // الاسم الهولندي كعنوان فرعي أوروبي بدلاً من العربي
+                subTitle = food.nameNl ? `${food.nameNl}` : '';
             } else if (currentLang === 'nl') {
                 mainTitle = food.nameNl || food.nameEn || food.name;
-                subTitle = food.nameEn ? `${food.nameEn}` : ''; // الاسم الإنجليزي كعنوان فرعي دولي بدلاً من العربي
+                subTitle = food.nameEn ? `${food.nameEn}` : '';
             } else {
                 mainTitle = food.name;
                 subTitle = food.nameEn || '';
@@ -895,11 +996,18 @@
             catEl.textContent = catName;
 
             // تحديث العنوان وميتا تاج لمحركات البحث
-            document.title = `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`;
+            const pageTitle = `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`;
+            document.title = pageTitle;
+            const metaDescText = `${mainTitle} (${catName}): GI ${food.gi}, II ${food.ii}, ${Math.round(food.nutrition?.calories || 0)} kcal, ${food.nutrition?.protein || 0}g protein. WiBo Health Medical Team.`;
+            
             const metaDesc = document.getElementById('metaDescription');
-            if (metaDesc) {
-                metaDesc.setAttribute('content', `${mainTitle} (${catName}): GI ${food.gi}, II ${food.ii}, ${food.nutrition?.calories || 0} kcal, ${food.nutrition?.protein || 0}g protein.`);
-            }
+            if (metaDesc) metaDesc.setAttribute('content', metaDescText);
+
+            const ogTitle = document.getElementById('ogTitle');
+            if (ogTitle) ogTitle.setAttribute('content', pageTitle);
+            
+            const ogDesc = document.getElementById('ogDesc');
+            if (ogDesc) ogDesc.setAttribute('content', metaDescText);
 
             // تحديث المؤشرات
             document.getElementById('giValue').textContent = food.gi;
@@ -913,7 +1021,6 @@
             document.getElementById('caloriesValue').textContent = Math.round(food.nutrition?.calories || 0);
             document.getElementById('proteinValue').textContent = (food.nutrition?.protein || 0).toFixed(1);
             
-            // قراءة دقيقة لحقل الدهون (إصلاح خطأ fats إلى fat)
             const fatVal = ((food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0)).toFixed(1);
 
             const calUnit = currentLang === 'ar' ? 'سعرة' : 'kcal';
@@ -925,6 +1032,7 @@
             document.getElementById('nutFiber').textContent = (food.nutrition?.fiber || 0).toFixed(1) + ' ' + gUnit;
 
             updateStructuredData(food, mainTitle, catName, fatVal);
+            updateCanonicalAndHreflang(food.id);
         }
 
         function getGIClass(value) {
@@ -956,18 +1064,42 @@
                 "name": title,
                 "category": category,
                 "url": `https://wibohealth.com/food-details.html?id=${food.id}`,
-                "description": `${title} Glycemic Index: ${food.gi}, Insulin Index: ${food.ii}, Calories: ${food.nutrition?.calories || 0} kcal.`,
+                "description": `${title} Glycemic Index: ${food.gi}, Insulin Index: ${food.ii}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
+                "brand": {
+                    "@type": "Organization",
+                    "name": "WiBo Health Medical Team"
+                },
                 "nutrition": {
                     "@type": "NutritionInformation",
                     "servingSize": "100g",
-                    "calories": `${food.nutrition?.calories || 0} calories`,
-                    "proteinContent": `${food.nutrition?.protein || 0}g`,
-                    "carbohydrateContent": `${food.nutrition?.carbs || 0}g`,
+                    "calories": `${Math.round(food.nutrition?.calories || 0)} calories`,
+                    "proteinContent": `${(food.nutrition?.protein || 0).toFixed(1)}g`,
+                    "carbohydrateContent": `${(food.nutrition?.carbs || 0).toFixed(1)}g`,
                     "fatContent": `${fatVal}g`,
-                    "fiberContent": `${food.nutrition?.fiber || 0}g`
+                    "fiberContent": `${(food.nutrition?.fiber || 0).toFixed(1)}g`
                 }
             };
             schemaEl.textContent = JSON.stringify(schema);
+        }
+
+        function updateCanonicalAndHreflang(fId) {
+            const canonical = document.getElementById('canonicalTag');
+            if (canonical) canonical.href = `https://wibohealth.com/food-details.html?id=${fId}`;
+
+            const arHref = document.getElementById('hreflangAr');
+            if (arHref) arHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=ar`;
+
+            const nlHref = document.getElementById('hreflangNl');
+            if (nlHref) nlHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=nl`;
+
+            const enHref = document.getElementById('hreflangEn');
+            if (enHref) enHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=en`;
+
+            const defHref = document.getElementById('hreflangDefault');
+            if (defHref) defHref.href = `https://wibohealth.com/food-details.html?id=${fId}`;
+
+            const ogUrl = document.getElementById('ogUrl');
+            if (ogUrl) ogUrl.setAttribute('content', `https://wibohealth.com/food-details.html?id=${fId}`);
         }
 
         // Charts
@@ -978,73 +1110,75 @@
             const fontFam = (currentLang === 'ar') ? 'Cairo' : 'Plus Jakarta Sans';
             const fatVal = (food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0);
 
-            // Index Chart
-            const indexCtx = document.getElementById('indexChart').getContext('2d');
-            indexChartInstance = new Chart(indexCtx, {
-                type: 'bar',
-                data: {
-                    labels: [t('chart_label_gi'), t('chart_label_ii')],
-                    datasets: [{
-                        data: [food.gi, food.ii],
-                        backgroundColor: [
-                            food.gi >= 70 ? '#e74c3c' : (food.gi >= 55 ? '#f39c12' : '#2ecc71'),
-                            food.ii >= 70 ? '#e74c3c' : (food.ii >= 55 ? '#f39c12' : '#2ecc71')
-                        ],
-                        borderRadius: 10,
-                        barThickness: 50
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: { font: { family: fontFam } }
-                        },
-                        x: {
-                            ticks: { font: { family: fontFam, weight: 'bold' } }
-                        }
+            const indexCtx = document.getElementById('indexChart')?.getContext('2d');
+            if (indexCtx) {
+                indexChartInstance = new Chart(indexCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: [t('chart_label_gi'), t('chart_label_ii')],
+                        datasets: [{
+                            data: [food.gi, food.ii],
+                            backgroundColor: [
+                                food.gi >= 70 ? '#e74c3c' : (food.gi >= 55 ? '#f39c12' : '#2ecc71'),
+                                food.ii >= 70 ? '#e74c3c' : (food.ii >= 55 ? '#f39c12' : '#2ecc71')
+                            ],
+                            borderRadius: 10,
+                            barThickness: 45
+                        }]
                     },
-                    plugins: {
-                        legend: { display: false }
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: { font: { family: fontFam } }
+                            },
+                            x: {
+                                ticks: { font: { family: fontFam, weight: 'bold' } }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
                     }
-                }
-            });
+                });
+            }
 
-            // Nutrition Chart
-            const nutritionCtx = document.getElementById('nutritionChart').getContext('2d');
-            nutritionChartInstance = new Chart(nutritionCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: [t('chart_label_protein'), t('chart_label_carbs'), t('chart_label_fat'), t('chart_label_fiber')],
-                    datasets: [{
-                        data: [
-                            food.nutrition?.protein || 0,
-                            food.nutrition?.carbs || 0,
-                            fatVal,
-                            food.nutrition?.fiber || 0
-                        ],
-                        backgroundColor: ['#9b59b6', '#3498db', '#e74c3c', '#2ecc71'],
-                        borderWidth: 2,
-                        borderColor: '#fff'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: {
-                                font: { family: fontFam, size: 12, weight: 'bold' },
-                                padding: 12
+            const nutritionCtx = document.getElementById('nutritionChart')?.getContext('2d');
+            if (nutritionCtx) {
+                nutritionChartInstance = new Chart(nutritionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: [t('chart_label_protein'), t('chart_label_carbs'), t('chart_label_fat'), t('chart_label_fiber')],
+                        datasets: [{
+                            data: [
+                                food.nutrition?.protein || 0,
+                                food.nutrition?.carbs || 0,
+                                fatVal,
+                                food.nutrition?.fiber || 0
+                            ],
+                            backgroundColor: ['#9b59b6', '#3498db', '#e74c3c', '#2ecc71'],
+                            borderWidth: 2,
+                            borderColor: '#fff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { family: fontFam, size: 12, weight: 'bold' },
+                                    padding: 10
+                                }
                             }
                         }
                     }
-                }
-            });
+                });
+            }
         }
 
         // Theme
@@ -1070,8 +1204,7 @@
             }
             updateThemeIcon();
 
-            // تحميل بيانات الطعام من قاعدة البيانات
-            if (typeof foodsDatabase !== 'undefined') {
+            if (typeof foodsDatabase !== 'undefined' && Array.isArray(foodsDatabase)) {
                 currentFood = foodsDatabase.find(f => f.id === foodId) || foodsDatabase[0];
             }
 
