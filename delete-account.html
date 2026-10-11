@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حذف الحساب والبيانات | Boodi App - WiBo Health</title>
+  <meta name="description" content="طلب حذف حساب تطبيق بودي (Boodi) وجميع البيانات المرتبطة به - WiBo Health. Delete your Boodi App account and data.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B0F17">
+  <link rel="canonical" href="https://wibohealth.com/delete-account.html">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0F17;
+      --card: #151D2A;
+      --border: #232F42;
+      --primary: #10B981;
+      --danger: #EF4444;
+      --text: #F3F4F6;
+      --muted: #9CA3AF;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Tajawal', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 15px;
+    }
+    .header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      margin-inline-start: auto;
+    }
+    .lang-btn {
+      background: var(--border);
+      border: none;
+      color: var(--text);
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      opacity: 1;
+    }
+    .content-section {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #D1D5DB;
+    }
+    .warning-box {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #FCA5A5;
+    }
+    .btn-action {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      background: var(--danger);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 20px;
+      transition: opacity 0.2s;
+    }
+    .btn-action:hover {
+      opacity: 0.9;
+    }
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <img src="images/logo.png" alt="Boodi App" onerror="this.style.display='none'">
+    <div>
+      <div class="title" id="appTitle">تطبيق بودي (Boodi)</div>
+      <div class="subtitle" id="subtitle">WiBo Health • سياسة حذف الحساب والبيانات</div>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">العربية</button>
+      <button class="lang-btn" data-lang="nl" onclick="setLang('nl')">Nederlands</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+
+  <div id="content" class="content-section">
+    <!-- المحتوى سيُملأ ديناميكياً -->
+  </div>
+
+  <a href="mailto:support@wibohealth.com?subject=Boodi%20App%20Account%20Deletion%20Request" id="emailBtn" class="btn-action">
+    إرسال طلب حذف الحساب عبر البريد
+  </a>
+
+  <div class="footer">
+    © 2026 WiBo Health • <a href="privacy.html" id="privacyLink" style="color:var(--primary);text-decoration:none;">سياسة الخصوصية</a> • <a href="index.html" id="homeLink" style="color:var(--primary);text-decoration:none;">wibohealth.com</a>
+  </div>
+</div>
+
+<script>
+  const translations = {
+    ar: {
+      dir: 'rtl',
+      lang: 'ar',
+      btnText: 'إرسال طلب حذف الحساب عبر البريد',
+      subtitle: 'WiBo Health • سياسة حذف الحساب والبيانات',
+      privacy: 'سياسة الخصوصية',
+      title: 'حذف الحساب والبيانات | Boodi App - WiBo Health',
+      body: `
+        <p>نحن في <strong>WiBo Health</strong> نحترم خصوصيتك بالكامل ونلتزم بلوائح حماية البيانات العامة (GDPR) وسياسات متجر Google Play. يمكنك طلب حذف حسابك وبياناتك المرتبطة بتطبيق <strong>بودي (Boodi)</strong> في أي وقت.</p>
+        
+        <h4 style="color:#fff;margin-bottom:8px;">طريقة الحذف من داخل التطبيق:</h4>
+        <p>يمكنك حذف حسابك فورياً وبنقرة واحدة من داخل التطبيق: اضغط على عداد الرصيد في أعلى الشاشة ⬅️ اختر "حذف حسابي وبياناتي" ⬅️ أكّد العملية، وسيتم مسح كافة بياناتك من خوادمنا تلقائياً.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">طلب الحذف عبر الويب (دون فتح التطبيق):</h4>
+        <p>إذا قمت بحذف التطبيق وترغب في مسح بياناتك السحابية، يرجى الضغط على الزر أدناه وإرسال بريد إلكتروني إلى <code>support@wibohealth.com</code> مع ذكر معرّف حسابك أو البريد المستخدم، وسيتم حذف كافة بياناتك بالكامل خلال 48 ساعة.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">ما هي البيانات التي سيتم حذفها نهائياً من خوادمنا (Supabase – ألمانيا)؟</h4>
+        <ul>
+          <li>ملف الحساب (معرّف الحساب والبريد الإلكتروني عند التسجيل).</li>
+          <li>رصيد المسحات المكتسب.</li>
+          <li>مساهمات المنتجات الغذائية والصور التي قمت برفعها.</li>
+        </ul>
+        <p><strong>سجل المسحات:</strong> لا يُخزَّن على خوادمنا إطلاقاً، بل يُحفظ محلياً في ذاكرة هاتفك فقط، ويُمسح تلقائياً من الهاتف عند تسجيل الخروج أو حذف الحساب.</p>
+
+        <div class="warning-box">
+          ⚠️ <strong>تنبيه هام للاشتراكات:</strong> حذف حسابك لا يلغي الاشتراكات النشطة في متجر Google Play تلقائياً. يرجى إلغاء الاشتراك من خلال حسابك في Google Play لتفادي أي خصم قادم.
+        </div>
+      `
+    },
+    nl: {
+      dir: 'ltr',
+      lang: 'nl',
+      btnText: 'Verzoek tot accountverwijdering via e-mail',
+      subtitle: 'WiBo Health • Account- en gegevensverwijdering',
+      privacy: 'Privacybeleid',
+      title: 'Account Verwijderen | Boodi App - WiBo Health',
+      body: `
+        <p>Bij <strong>WiBo Health</strong> respecteren we uw privacy volledig conform de AVG/GDPR en het Google Play-beleid. U kunt te allen tijde verzoeken om verwijdering van uw <strong>Boodi App</strong>-account en bijbehorende gegevens.</p>
+        
+        <h4 style="color:#fff;margin-bottom:8px;">Verwijderen binnen de app:</h4>
+        <p>U kunt uw account direct verwijderen via de app: tik op de saldoteller bovenaan ➡️ kies "Mijn account en gegevens verwijderen" ➡️ bevestig. Uw gegevens worden direct gewist.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">Verzoek via het web (zonder app):</h4>
+        <p>Heeft u de app verwijderd? Klik op de onderstaande knop of stuur een e-mail naar <code>support@wibohealth.com</code>. Wij verwerken en wissen al uw gegevens binnen 48 uur.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">Welke gegevens worden permanent van onze servers (Supabase – Duitsland) verwijderd?</h4>
+        <ul>
+          <li>Uw accountprofiel (account-ID en e-mailadres bij registratie).</li>
+          <li>Uw scansaldo.</li>
+          <li>Uw productbijdragen en geüploade foto's.</li>
+        </ul>
+        <p><strong>Scangeschiedenis:</strong> wordt nooit op onze servers opgeslagen, maar uitsluitend lokaal in het geheugen van uw telefoon, en wordt automatisch van uw telefoon gewist bij uitloggen of accountverwijdering.</p>
+
+        <div class="warning-box">
+          ⚠️ <strong>Let op:</strong> Het verwijderen van uw account beëindigt een actief Google Play-abonnement niet automatisch. Zeg uw abonnement op via Google Play om toekomstige kosten te voorkomen.
+        </div>
+      `
+    },
+    en: {
+      dir: 'ltr',
+      lang: 'en',
+      btnText: 'Send Account Deletion Request via Email',
+      subtitle: 'WiBo Health • Account & Data Deletion Policy',
+      privacy: 'Privacy Policy',
+      title: 'Delete Account | Boodi App - WiBo Health',
+      body: `
+        <p>At <strong>WiBo Health</strong>, we respect your privacy under GDPR and Google Play Developer Policies. You can request the deletion of your <strong>Boodi App</strong> account and associated data at any time.</p>
+        
+        <h4 style="color:#fff;margin-bottom:8px;">Delete from within the app:</h4>
+        <p>You can instantly delete your account inside the app: tap your balance at the top bar ➡️ select "Delete my account and data" ➡️ confirm. All your data will be purged immediately.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">Web deletion request (without the app):</h4>
+        <p>If you have uninstalled the app, click the button below or email <code>support@wibohealth.com</code>. We will purge all your data from our servers within 48 hours.</p>
+
+        <h4 style="color:#fff;margin-bottom:8px;">What data is permanently deleted from our servers (Supabase – Germany)?</h4>
+        <ul>
+          <li>Your account profile (account ID and email address if you registered).</li>
+          <li>Your scan credit balance.</li>
+          <li>Your product contributions and uploaded photos.</li>
+        </ul>
+        <p><strong>Scan history:</strong> is never stored on our servers. It is kept only locally in your phone's memory and is automatically wiped from your phone when you log out or delete your account.</p>
+
+        <div class="warning-box">
+          ⚠️ <strong>Important Note:</strong> Deleting your account does not automatically cancel an active Google Play subscription. Please manage and cancel your subscriptions in Google Play.
+        </div>
+      `
+    }
+  };
+
+  function setLang(lang) {
+    const t = translations[lang] || translations.en;
+    document.documentElement.dir = t.dir;
+    document.documentElement.lang = t.lang;
+    document.title = t.title;
+    document.getElementById('content').innerHTML = t.body;
+    document.getElementById('emailBtn').textContent = t.btnText;
+    document.getElementById('subtitle').textContent = t.subtitle;
+    document.getElementById('privacyLink').textContent = t.privacy;
+    document.body.style.fontFamily = t.lang === 'ar' ? "'Tajawal', sans-serif" : "'Inter', sans-serif";
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === t.lang);
+    });
+    // مزامنة اللغة مع باقي صفحات الموقع
+    try {
+      localStorage.setItem('preferred_language', t.lang);
+      localStorage.setItem('wibo_language', t.lang);
+    } catch (e) {}
+  }
+
+  // اللغة: ?lang= ثم اللغة المحفوظة في الموقع ثم لغة المتصفح
+  function detectInitialLang() {
+    const supported = ['ar', 'nl', 'en'];
+    const param = new URLSearchParams(window.location.search).get('lang');
+    if (supported.includes(param)) return param;
+    try {
+      const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
+      if (supported.includes(saved)) return saved;
+    } catch (e) {}
+    const browserLang = (navigator.language || '').toLowerCase();
+    if (browserLang.startsWith('ar')) return 'ar';
+    if (browserLang.startsWith('nl')) return 'nl';
+    return 'en';
+  }
+
+  setLang(detectInitialLang());
+</script>
+
+</body>
+</html>

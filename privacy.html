@@ -747,7 +747,7 @@
                 </p>
                 <ul>
                     <li data-i18n="privacy_section4_item1">بموافقتك الصريحة والمستنيرة</li>
-                    <li data-i18n="privacy_section4_item2">لمزودي البنية التحتية السحابية الموثوقين الملتزمين بالـ GDPR (مثل استضافة الخوادم في ألمانيا/الاتحاد الأوروبي)</li>
+                    <li data-i18n="privacy_section4_item2">لمزودي البنية التحتية الموثوقين الملتزمين بالـ GDPR فقط: Supabase لتخزين الحسابات (خوادم في فرانكفورت، ألمانيا)، وGoogle Gemini لتحليل صور الأطعمة فقط</li>
                     <li data-i18n="privacy_section4_item3">عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة</li>
                 </ul>
 
@@ -764,7 +764,7 @@
                 </p>
                 <ul>
                     <li data-i18n="privacy_section6_item1">تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم</li>
-                    <li data-i18n="privacy_section6_item2">تخزين البيانات والنسخ الاحتياطية على خوادم سحابية محمية في فرانكفورت (الاتحاد الأوروبي)</li>
+                    <li data-i18n="privacy_section6_item2">تخزين بيانات الحسابات والنسخ الاحتياطية على خوادم Supabase محمية ومشفرة في فرانكفورت، ألمانيا (الاتحاد الأوروبي)</li>
                     <li data-i18n="privacy_section6_item3">مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)</li>
                 </ul>
 
@@ -808,7 +808,7 @@
 
                 <h3 data-i18n="privacy_boodi_local_h">أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)</h3>
                 <p data-i18n="privacy_boodi_local_p">
-                    امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.
+                    امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). ويُمسح هذا السجل من ذاكرة الهاتف عند تسجيل الخروج. ولا يُخزَّن على خوادم Supabase في ألمانيا سوى: ملف الحساب (معرّف الحساب والبريد الإلكتروني عند التسجيل)، ورصيد المسحات، ومساهمات المنتجات والصور التي ترفعها. نحن لا نقوم بتتبع أو بيع السجل الغذائي الخاص بك.
                 </p>
 
                 <h3 data-i18n="privacy_boodi_sources_h">ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)</h3>
@@ -828,6 +828,15 @@
                 <p data-i18n="privacy_boodi_billing_p">
                     تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.
                 </p>
+
+                <h3 data-i18n="privacy_boodi_infra_h">د. البنية التحتية والأذونات ومعالجة البيانات (مطابقة لاستمارة Data Safety في Google Play)</h3>
+                <p data-i18n="privacy_boodi_infra_p">نوضح فيما يلي بشفافية كاملة الخدمات والأذونات التي يستخدمها التطبيق، وهي مطابقة لما صرّحنا به في قسم أمان البيانات (Data Safety) على متجر Google Play:</p>
+                <ul>
+                    <li data-i18n="privacy_boodi_infra_item1"><strong>تخزين الحسابات (Supabase – ألمانيا):</strong> تُخزَّن بيانات الحساب الأساسية على خوادم Supabase المستضافة في مركز بيانات فرانكفورت بألمانيا داخل الاتحاد الأوروبي، مع تشفير البيانات أثناء النقل (HTTPS/TLS) وأثناء التخزين.</li>
+                    <li data-i18n="privacy_boodi_infra_item2"><strong>تحليل صور الأطعمة (Google Gemini):</strong> عندما تختار تصوير طعام أو وجبة لتحليلها، تُرسَل الصورة فقط إلى خدمة Google Gemini لغرض استخراج التقدير الغذائي، ولا تُستخدم Gemini لأي غرض آخر. لا نُرفق بالصورة اسمك أو بريدك الإلكتروني أو سجلك الصحي، وتُعالَج الصورة لحظياً دون الاحتفاظ بها على خوادمنا.</li>
+                    <li data-i18n="privacy_boodi_infra_item3"><strong>الكاميرا (مسح الباركود محلياً):</strong> يُستخدم إذن الكاميرا لمسح الباركود، وتتم قراءة الرمز محلياً بالكامل على جهازك؛ لا تُسجَّل صور أو مقاطع فيديو من الكاميرا ولا تُرفع إلى أي خادم، ويُستخدم رقم الباركود النصي فقط للبحث عن المنتج في قاعدة Open Food Facts.</li>
+                    <li data-i18n="privacy_boodi_infra_item4"><strong>حذف الحساب:</strong> يمكنك حذف حسابك وجميع بياناتك المخزنة على Supabase (ملف الحساب، رصيد المسحات، ومساهمات المنتجات والصور) في أي وقت من داخل التطبيق أو عبر صفحة <a href="delete-account.html">حذف الحساب والبيانات</a>.</li>
+                </ul>
 
                 <!-- Section 10 -->
                 <h2 data-i18n="privacy_section10_title">10. تواصل معنا ومسؤول حماية البيانات (DPO)</h2>
@@ -926,14 +935,14 @@
                 privacy_section4_intro: "نحن لا نبيع ولا نؤجر إطلاقاً بياناتك الشخصية لأي طرف ثالث. تتم مشاركة البيانات التقنية المحدودة فقط في الحالات التالية:",
                 privacy_section4_strong: "لا نبيع ولا نؤجر إطلاقاً",
                 privacy_section4_item1: "بموافقتك الصريحة والمستنيرة",
-                privacy_section4_item2: "لمزودي البنية التحتية السحابية الموثوقين الملتزمين بالـ GDPR (مثل استضافة الخوادم في ألمانيا/الاتحاد الأوروبي)",
+                privacy_section4_item2: "لمزودي البنية التحتية الموثوقين الملتزمين بالـ GDPR فقط: Supabase لتخزين الحسابات (خوادم في فرانكفورت، ألمانيا)، وGoogle Gemini لتحليل صور الأطعمة فقط",
                 privacy_section4_item3: "عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة",
                 privacy_section5_title: "5. أدوات التحليل والإعلانات",
                 privacy_section5_text: "نستخدم خدمات Google Analytics لقياس الزيارات بشكل مجهول الهوية، وخدمات Google AdSense / AdMob المعتمدة لعرض إعلانات تتوافق مع اللوائح الأوروبية ومعايير حماية الخصوصية للمستخدمين داخل المنطقة الاقتصادية الأوروبية (EEA).",
                 privacy_section6_title: "6. حماية البيانات والأمان السيبراني",
                 privacy_section6_intro: "نطبق بروتوكولات حماية تقنية وتنظيمية متقدمة لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الفقدان، وتشمل:",
                 privacy_section6_item1: "تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم",
-                privacy_section6_item2: "تخزين البيانات والنسخ الاحتياطية على خوادم سحابية محمية في فرانكفورت (الاتحاد الأوروبي)",
+                privacy_section6_item2: "تخزين بيانات الحسابات والنسخ الاحتياطية على خوادم Supabase محمية ومشفرة في فرانكفورت، ألمانيا (الاتحاد الأوروبي)",
                 privacy_section6_item3: "مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)",
                 privacy_section7_title: "7. حقوقك القانونية بموجب اللائحة الأوروبية (GDPR / AVG)",
                 privacy_section7_intro: "وفقاً للائحة العامة لحماية البيانات، يحق لك ممارسة الحقوق التالية مجاناً:",
@@ -958,13 +967,19 @@
                 privacy_boodi_mdr_h: "⚠️ إخلاء المسؤولية الطبي والامتثال للائحة الأجهزة الطبية (EU MDR 2017/745)",
                 privacy_boodi_mdr_p: "تطبيق boodi 💚 هو أداة توجيه استرشادية لنمط الحياة والتغذية الصحية، وليس جهازاً طبياً أو برمجية تشخيصية سريرية (Not a Medical Device / SaMD بموجب اللائحة الأوروبية EU MDR 2017/745). لا يقدم التطبيق تشخيصاً لأي حالة مرضية، ولا يحسب جرعات الأنسولين أو الأدوية، ولا يشكل بديلاً عن استشارة الطبيب المعالج أو أخصائي التغذية المعتمد. يجب على المستخدمين، وخاصة مرضى السكري والحساسية الشديدة، استشارة الفريق الطبي المختص والتحقق دائماً من المكونات المطبوعة على عبوة المنتج الأصلية.",
                 privacy_boodi_local_h: "أ. الخصوصية الصحية الصارمة والحفظ المحلي (GDPR Art. 9 - Local-First Architecture)",
-                privacy_boodi_local_p: "امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). نحن لا نقوم برفع أو تتبع أو بيع السجل الغذائي الخاص بك على خوادم سحابية.",
+                privacy_boodi_local_p: "امتثالاً للمادة 9 من اللائحة العامة لحماية البيانات في الاتحاد الأوروبي (GDPR Art. 9) الخاصة بالبيانات الصحية الحساسة: يُحفظ سجل المسحات وقائمة الأغذية المفحوصة وأهدافك الصحية محلياً وحصرياً على ذاكرة هاتفك (Local Storage). ويُمسح هذا السجل من ذاكرة الهاتف عند تسجيل الخروج. ولا يُخزَّن على خوادم Supabase في ألمانيا سوى: ملف الحساب (معرّف الحساب والبريد الإلكتروني عند التسجيل)، ورصيد المسحات، ومساهمات المنتجات والصور التي ترفعها. نحن لا نقوم بتتبع أو بيع السجل الغذائي الخاص بك.",
                 privacy_boodi_sources_h: "ب. مصادر البيانات والبدائل العامة (ACM & Directive 2006/114/EC)",
                 privacy_boodi_sources_p: "تُستخرج القيم الغذائية للأطعمة آلياً من قواعد البيانات الدولية المفتوحة (Open Food Facts بموجب ترخيص ODbL). وامتثالاً لقواعد هيئة المستهلك والأسواق الهولندية (ACM) والتوجيه الأوروبي 2006/114/EC بشأن المنافسة العادلة، يقترح التطبيق بدائل صحية كأصناف عامة مجردة (Generic Categories) في نفس المتجر دون تفضيل أو تشويه أو ذكر لعلامات تجارية منافسة.",
                 privacy_boodi_rect_h: "📢 آلية الإخطار والتصحيح للشركات والمصنعين (Manufacturer Notice & Rectification Procedure)",
                 privacy_boodi_rect_p: "تلتزم WiBo Health بأعلى معايير الشفافية ودقة البيانات. إذا كنت شركة مصنعة أو وكيلاً لعلامة تجارية غذائية ولاحظت وجود بيانات غير دقيقة أو قديمة لمنتجك مستخرجة من السجلات العامة، فإننا نوفر مساراً مباشراً للتدقيق والتحديث الفوري. يُرجى التواصل معنا عبر البريد الإلكتروني المعتمد: support@wibohealth.com متضمناً رقم الباركود والملصق الرسمي للمنتج، وسيقوم فريقنا بمراجعة وتعديل البيانات فوراً وفق اللائحة الأوروبية للخدمات الرقمية (DSA).",
                 privacy_boodi_billing_h: "ج. الاشتراكات والفوترة الآمنة والإعلانات",
                 privacy_boodi_billing_p: "تتم إدارة الاشتراكات وعمليات الشراء داخل التطبيق بأمان تام عبر منصة Google Play Billing ومنظومة RevenueCat المعتمدة دون حفظ بيانات بطاقاتك الائتمانية. وتُعرض الإعلانات للمستخدمين عبر شبكة Google AdMob الرسمية بما يتوافق مع سياسات الخصوصية المعتمدة في الاتحاد الأوروبي.",
+                privacy_boodi_infra_h: "د. البنية التحتية والأذونات ومعالجة البيانات (مطابقة لاستمارة Data Safety في Google Play)",
+                privacy_boodi_infra_p: "نوضح فيما يلي بشفافية كاملة الخدمات والأذونات التي يستخدمها التطبيق، وهي مطابقة لما صرّحنا به في قسم أمان البيانات (Data Safety) على متجر Google Play:",
+                privacy_boodi_infra_item1: "<strong>تخزين الحسابات (Supabase – ألمانيا):</strong> تُخزَّن بيانات الحساب الأساسية على خوادم Supabase المستضافة في مركز بيانات فرانكفورت بألمانيا داخل الاتحاد الأوروبي، مع تشفير البيانات أثناء النقل (HTTPS/TLS) وأثناء التخزين.",
+                privacy_boodi_infra_item2: "<strong>تحليل صور الأطعمة (Google Gemini):</strong> عندما تختار تصوير طعام أو وجبة لتحليلها، تُرسَل الصورة فقط إلى خدمة Google Gemini لغرض استخراج التقدير الغذائي، ولا تُستخدم Gemini لأي غرض آخر. لا نُرفق بالصورة اسمك أو بريدك الإلكتروني أو سجلك الصحي، وتُعالَج الصورة لحظياً دون الاحتفاظ بها على خوادمنا.",
+                privacy_boodi_infra_item3: "<strong>الكاميرا (مسح الباركود محلياً):</strong> يُستخدم إذن الكاميرا لمسح الباركود، وتتم قراءة الرمز محلياً بالكامل على جهازك؛ لا تُسجَّل صور أو مقاطع فيديو من الكاميرا ولا تُرفع إلى أي خادم، ويُستخدم رقم الباركود النصي فقط للبحث عن المنتج في قاعدة Open Food Facts.",
+                privacy_boodi_infra_item4: "<strong>حذف الحساب:</strong> يمكنك حذف حسابك وجميع بياناتك المخزنة على Supabase (ملف الحساب، رصيد المسحات، ومساهمات المنتجات والصور) في أي وقت من داخل التطبيق أو عبر صفحة <a href=\"delete-account.html\">حذف الحساب والبيانات</a>.",
                 footer_about: "من نحن",
                 footer_contact: "اتصل بنا",
                 footer_privacy: "سياسة الخصوصية",
@@ -1010,14 +1025,14 @@
                 privacy_section4_intro: "We strictly DO NOT sell, rent, or monetize your personal information. Limited technical data is shared only under the following strict conditions:",
                 privacy_section4_strong: "strictly DO NOT sell or rent",
                 privacy_section4_item1: "With your explicit and informed consent",
-                privacy_section4_item2: "To certified, GDPR-compliant cloud infrastructure providers (servers located in Frankfurt, EU)",
+                privacy_section4_item2: "Only with GDPR-compliant infrastructure providers: Supabase for account storage (servers in Frankfurt, Germany) and Google Gemini exclusively for food photo analysis",
                 privacy_section4_item3: "When legally mandated by European judicial or regulatory authorities",
                 privacy_section5_title: "5. Analytics and Advertising Tools",
                 privacy_section5_text: "We use Google Analytics with IP anonymization to evaluate traffic patterns, and Google AdSense/AdMob to deliver relevant advertisements in full compliance with European privacy standards and Consent Frameworks for EEA users.",
                 privacy_section6_title: "6. Data Security & Technical Measures",
                 privacy_section6_intro: "We implement advanced organizational and technical security measures to safeguard your information against unauthorized access, loss, or alteration:",
                 privacy_section6_item1: "End-to-end data transmission encryption via modern HTTPS / TLS protocols",
-                privacy_section6_item2: "Encrypted server storage and automated backups hosted in Frankfurt, Germany (EU)",
+                privacy_section6_item2: "Encrypted account storage and automated backups on Supabase servers hosted in Frankfurt, Germany (EU)",
                 privacy_section6_item3: "Regular security assessments and strict adherence to the data minimization principle",
                 privacy_section7_title: "7. Your Rights Under GDPR & AVG",
                 privacy_section7_intro: "Under European privacy legislation, you have the right to exercise the following rights free of charge:",
@@ -1042,13 +1057,19 @@
                 privacy_boodi_mdr_h: "⚠️ Medical Disclaimer & EU MDR 2017/745 Exemption",
                 privacy_boodi_mdr_p: "boodi 💚 is an educational nutritional and lifestyle guidance tool and NOT a medical device (Not SaMD under EU MDR 2017/745). The application does not diagnose conditions, calculate insulin or medication dosages, nor substitute for professional medical consultation. Users, particularly diabetics and individuals with severe allergies, must consult their physician and verify original product packaging.",
                 privacy_boodi_local_h: "A. Strict Health Privacy & Local-First Architecture (GDPR Art. 9)",
-                privacy_boodi_local_p: "In full compliance with Article 9 of the EU General Data Protection Regulation (GDPR Art. 9) regarding sensitive health-related data: your scan history, inspected food list, and health goals are stored exclusively locally on your device (Local-First). We do not transmit, profile, or sell your scan logs on remote servers.",
+                privacy_boodi_local_p: "In full compliance with Article 9 of the EU General Data Protection Regulation (GDPR Art. 9) regarding sensitive health-related data: your scan history, inspected food list, and health goals are stored exclusively locally on your device (Local-First). This history is wiped from your phone when you log out. Only the following is stored on Supabase servers in Germany: your account profile (account ID and email address if you register), your scan credit balance, and the product contributions and photos you upload. We never profile or sell your food logs.",
                 privacy_boodi_sources_h: "B. Open Data Sources & Generic Alternatives (ACM & Directive 2006/114/EC)",
                 privacy_boodi_sources_p: "Nutritional facts are retrieved from open international databases (Open Food Facts under ODbL). Complying with Dutch Authority for Consumers & Markets (ACM) rules and EU Directive 2006/114/EC on fair competition, the app recommends generic food categories in the same store without brand favoritism, commercial bias, or competitor disparagement.",
                 privacy_boodi_rect_h: "📢 Manufacturer Notice & Rectification Procedure (Notice & Action)",
                 privacy_boodi_rect_p: "WiBo Health is committed to the highest data accuracy. If you are a brand manufacturer noticing outdated or inaccurate nutritional facts for your product derived from public registries, we provide an expedited verification procedure. Contact us directly at: support@wibohealth.com with the barcode and packaging documentation. Our team will verify and rectify the record promptly in accordance with the EU Digital Services Act (DSA).",
                 privacy_boodi_billing_h: "C. Secure Billing, Subscriptions & Advertisements",
                 privacy_boodi_billing_p: "In-app purchases and VIP subscriptions are processed securely via Google Play Billing and RevenueCat without storing credit card details. Advertisements are served via Google AdMob in full adherence to European privacy guidelines.",
+                privacy_boodi_infra_h: "D. Infrastructure, Permissions & Data Processing (matching our Google Play Data Safety form)",
+                privacy_boodi_infra_p: "For full transparency, below are the services and permissions the app uses, exactly as declared in the Data Safety section of our Google Play listing:",
+                privacy_boodi_infra_item1: "<strong>Account storage (Supabase – Germany):</strong> Basic account data is stored on Supabase servers hosted in the Frankfurt, Germany data center within the European Union, encrypted in transit (HTTPS/TLS) and at rest.",
+                privacy_boodi_infra_item2: "<strong>Food photo analysis (Google Gemini):</strong> When you choose to photograph a food or meal for analysis, only that image is sent to Google Gemini to generate a nutritional estimate; Gemini is not used for any other purpose. We never attach your name, email, or health history to the image, and the image is processed ephemerally without being retained on our servers.",
+                privacy_boodi_infra_item3: "<strong>Camera (on-device barcode scanning):</strong> The camera permission is used to scan barcodes, which are decoded entirely on your device. No camera photos or video are recorded or uploaded; only the numeric barcode is used to look up the product in Open Food Facts.",
+                privacy_boodi_infra_item4: "<strong>Account deletion:</strong> You can delete your account and all data stored on Supabase (account profile, scan credit balance, and product contributions and photos) at any time from within the app or via the <a href=\"delete-account.html\">Delete Account</a> page.",
                 footer_about: "About Us",
                 footer_contact: "Contact Us",
                 footer_privacy: "Privacy Policy",
@@ -1094,14 +1115,14 @@
                 privacy_section4_intro: "Wij verkopen of verhuren jouw persoonsgegevens NOOIT aan derden. Beperkte technische gegevens worden uitsluitend gedeeld onder strikte voorwaarden:",
                 privacy_section4_strong: "verkopen of verhuren jouw persoonsgegevens NOOIT",
                 privacy_section4_item1: "Met jouw uitdrukkelijke en geïnformeerde toestemming",
-                privacy_section4_item2: "Met gecertificeerde cloudproviders die voldoen aan de AVG (servers gehost in Frankfurt, EU)",
+                privacy_section4_item2: "Uitsluitend met AVG-conforme infrastructuurproviders: Supabase voor accountopslag (servers in Frankfurt, Duitsland) en Google Gemini uitsluitend voor de analyse van voedselfoto's",
                 privacy_section4_item3: "Wanneer dit wettelijk verplicht is door bevoegde Europese gerechtelijke of toezichthoudende autoriteiten",
                 privacy_section5_title: "5. Analytische Diensten & Advertenties",
                 privacy_section5_text: "Wij gebruiken Google Analytics met IP-anonimisering voor bezoekersanalyses, en Google AdSense / AdMob voor advertenties die volledig voldoen aan de Europese privacykaders voor gebruikers binnen de Europese Economische Ruimte (EER).",
                 privacy_section6_title: "6. Beveiliging & Cyberveiligheid",
                 privacy_section6_intro: "Wij hanteren geavanceerde technische en organisatorische maatregelen om jouw gegevens te beschermen tegen ongeautoriseerde toegang, verlies of wijziging:",
                 privacy_section6_item1: "Volledige versleuteling van dataverkeer via geavanceerde HTTPS / TLS-protocollen",
-                privacy_section6_item2: "Beveiligde serveropslag en back-ups binnen de Europese Unie (Frankfurt, Duitsland)",
+                privacy_section6_item2: "Versleutelde accountopslag en back-ups op Supabase-servers in Frankfurt, Duitsland (EU)",
                 privacy_section6_item3: "Regelmatige veiligheidscontroles en strikte naleving van het beginsel van minimale gegevensverwerking",
                 privacy_section7_title: "7. Jouw Rechten onder de AVG",
                 privacy_section7_intro: "Onder de Europese privacywetgeving heb je het recht om de volgende rechten kosteloos uit te oefenen:",
@@ -1126,13 +1147,19 @@
                 privacy_boodi_mdr_h: "⚠️ Medische Disclaimer & EU MDR 2017/745 Uitzondering",
                 privacy_boodi_mdr_p: "boodi 💚 is een educatief instrument voor voedingsvoorlichting en gezonde leefstijl en is NADRUKKELIJK GEEN medisch hulpmiddel (Geen SaMD onder EU MDR 2017/745). De app stelt geen diagnoses, berekent geen insuline- of medicatiedoseringen en vervangt nooit een behandelend arts of diëtist. Gebruikers (vooral diabetici en mensen met ernstige allergieën) dienen altijd hun arts te raadplegen en de fysieke verpakking te controleren.",
                 privacy_boodi_local_h: "A. Strikte Gezondheidsprivacy & Lokale Gegevensopslag (AVG Art. 9)",
-                privacy_boodi_local_p: "Conform Artikel 9 van de Algemene Verordening Gegevensbescherming (AVG/GDPR) betreffende bijzondere persoonsgegevens: je scangeschiedenis, gecontroleerde producten en gezondheidsdoelen worden uitsluitend lokaal op je eigen apparaat opgeslagen (Local-First). Wij slaan deze gevoelige scanlogs niet op externe servers op en verkopen deze nooit.",
+                privacy_boodi_local_p: "Conform Artikel 9 van de Algemene Verordening Gegevensbescherming (AVG/GDPR) betreffende bijzondere persoonsgegevens: je scangeschiedenis, gecontroleerde producten en gezondheidsdoelen worden uitsluitend lokaal op je eigen apparaat opgeslagen (Local-First). Deze geschiedenis wordt van je telefoon gewist bij uitloggen. Op Supabase-servers in Duitsland wordt uitsluitend opgeslagen: je accountprofiel (account-ID en e-mailadres bij registratie), je scansaldo en de productbijdragen en foto's die je uploadt. Wij profileren of verkopen jouw voedingslogboek nooit.",
                 privacy_boodi_sources_h: "B. Open Databronnen & Generieke Alternatieven (ACM & Richtlijn 2006/114/EG)",
                 privacy_boodi_sources_p: "Voedingswaarden worden automatisch opgehaald uit openbare internationale databases (Open Food Facts onder ODbL-licentie). Conform de richtlijnen van de Autoriteit Consument & Markt (ACM) en Europese Richtlijn 2006/114/EG inzake eerlijke mededinging adviseert de app gezondere alternatieven uitsluitend als neutrale productcategorieën binnen dezelfde winkel, zonder commerciële voorkeur of merkaantasting.",
                 privacy_boodi_rect_h: "📢 Rectificatie- en Kennisgevingsprocedure voor Fabrikanten (Notice & Action)",
                 privacy_boodi_rect_p: "WiBo Health hecht aan maximale betrouwbaarheid. Indien je als fabrikant of merkhouder onjuiste of verouderde productinformatie constateert afkomstig uit openbare registers, bieden wij een directe rectificatieprocedure. Neem contact op via: support@wibohealth.com onder vermelding van de barcode en officiële verpakkingsspecificaties. Ons team verifieert en corrigeert de gegevens direct conform de Europese Digital Services Act (DSA).",
                 privacy_boodi_billing_h: "C. Veilige Betalingen, Abonnementen & Advertenties",
                 privacy_boodi_billing_p: "Abonnementen en in-app aankopen worden veilig verwerkt via Google Play Billing en RevenueCat zonder opslag van creditcardgegevens. Advertenties worden conform Europese privacyrichtlijnen weergegeven via Google AdMob.",
+                privacy_boodi_infra_h: "D. Infrastructuur, Machtigingen & Gegevensverwerking (conform ons Google Play Data Safety-formulier)",
+                privacy_boodi_infra_p: "Voor volledige transparantie vind je hieronder de diensten en machtigingen die de app gebruikt, precies zoals opgegeven in de sectie Gegevensveiligheid (Data Safety) van onze Google Play-vermelding:",
+                privacy_boodi_infra_item1: "<strong>Accountopslag (Supabase – Duitsland):</strong> Basisaccountgegevens worden opgeslagen op Supabase-servers in het datacenter in Frankfurt, Duitsland, binnen de Europese Unie, versleuteld tijdens verzending (HTTPS/TLS) en in opslag.",
+                privacy_boodi_infra_item2: "<strong>Analyse van voedselfoto's (Google Gemini):</strong> Wanneer je ervoor kiest een product of maaltijd te fotograferen voor analyse, wordt uitsluitend die foto naar Google Gemini gestuurd om een voedingsschatting te maken; Gemini wordt voor geen enkel ander doel gebruikt. Wij koppelen nooit je naam, e-mailadres of gezondheidsgegevens aan de foto, en de foto wordt tijdelijk verwerkt zonder op onze servers te worden bewaard.",
+                privacy_boodi_infra_item3: "<strong>Camera (lokaal barcode scannen):</strong> De cameratoestemming wordt gebruikt om barcodes te scannen, die volledig lokaal op je apparaat worden gelezen. Er worden geen camerabeelden of video's opgenomen of geüpload; alleen het barcodenummer wordt gebruikt om het product op te zoeken in Open Food Facts.",
+                privacy_boodi_infra_item4: "<strong>Account verwijderen:</strong> Je kunt je account en alle op Supabase opgeslagen gegevens (accountprofiel, scansaldo en productbijdragen en foto's) op elk moment verwijderen via de app of via de pagina <a href=\"delete-account.html\">Account Verwijderen</a>.",
                 footer_about: "Over Ons",
                 footer_contact: "Contact",
                 footer_privacy: "Privacybeleid",
