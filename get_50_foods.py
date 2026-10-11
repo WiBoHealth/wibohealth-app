@@ -479,9 +479,183 @@ def process_range(start_id, end_id, report_path=None):
     print(f"\n[🎉] مطابقة مباشرة: {counts['ok']} | بعنوان مختصر (للمراجعة): {counts['review']} | "
           f"يحتاج تسمية مخصصة: {counts['failed']} | مربوط مسبقاً: {counts['already']}")
 
+# ===== الجولة الأخيرة: محرك بحث ويكيبيديا + Wikimedia Commons للأصناف بلا صور =====
+
+WIKI_API = "https://en.wikipedia.org/w/api.php"
+COMMONS_API = "https://commons.wikimedia.org/w/api.php"
+
+# كلمات لاحقة عامة تُحذف للوصول إلى اسم الأكلة الأساسي (Focaccia bread -> Focaccia)
+DISH_SUFFIX_WORDS = GENERIC_SINGLE_WORDS | {
+    'gateau', 'infusion', 'decoction', 'brew', 'sticks', 'stick', 'sheets', 'granules',
+    'slices', 'pieces', 'nuts', 'drink', 'beverage', 'platter', 'bowl', 'cup', 'shot',
+    'noodles', 'patties', 'skewers', 'balls', 'bites', 'wedges', 'fillets', 'cubes',
+    'hearts', 'leaves', 'root', 'bulb', 'tart', 'biscuit', 'cutlet', 'casserole', 'naturel',
+    # صفات وصفية تشوش البحث
+    'aged', 'crumbly', 'dry', 'melting', 'alpine', 'slow-roasted', 'braised', 'glazed', 'spicy',
+    'cold-pressed', 'shelled', 'kernels', 'soluble', 'fiber', 'concentrated', 'extract',
+    'ceremonial', 'grade', 'soothing', 'festive', 'unflavored', 'halal', 'bovine', 'sweet',
+    'molten', 'ribbon', 'clay', 'pot', 'parchment', 'detox', 'premium', 'certified',
+}
+
+def api_get(base, params):
+    """طلب API مع إعادة محاولة متزايدة عند 429"""
+    url = base + "?" + urllib.parse.urlencode({**params, "format": "json", "formatversion": 2})
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'WiBoHealthBot/2.0 (Clinical Diet Guide; support@wibohealth.com)'
+    })
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as response:
+                return json.loads(response.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 3:
+                return None
+            time.sleep(10 * (attempt + 1))
+        except Exception:
+            return None
+    return None
+
+def _norm(text):
+    import unicodedata
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+    return re.findall(r"[a-z]{3,}", text)
+
+def key_tokens(query):
+    return {w for w in _norm(query) if w not in SEARCH_STOPWORDS and w not in DISH_SUFFIX_WORDS}
+
+def is_relevant(result_title, query):
+    """يقبل النتيجة فقط إذا شاركت الاستعلام كلمة أساسية واحدة على الأقل (يمنع النتائج العشوائية)"""
+    q = key_tokens(query)
+    if not q:
+        return False
+    title_words = set(_norm(result_title))
+    # مطابقة مرنة للجمع والمفرد (Dates/Date, Mulberries/Mulberry)
+    return any(any(t.startswith(w[:5]) or w.startswith(t[:5]) for t in title_words) for w in q)
+
+def build_core_queries(name_en):
+    """استعلامات بحث: الاسم الأساسي بدون الوصف واللواحق العامة، ثم محتوى الأقواس، ثم الاسم المنظف"""
+    name = name_en.replace("\\'", "'")
+    paren = re.findall(r"\(([^)]*)\)", name)
+    base = re.sub(r"\([^)]*\)", " ", name)
+    base = re.split(r"\s+(?:with|in|on|served)\s+", base, maxsplit=1)[0]
+    words = [w for w in re.split(r"[\s/,]+", base) if w and w not in ("&", "-")]
+    cleaned = [w for w in words if w.lower().strip("-") not in SEARCH_STOPWORDS]
+    core = [w for w in cleaned if w.lower() not in DISH_SUFFIX_WORDS] or cleaned
+
+    queries = []
+    def add(q):
+        q = re.sub(r"\s+", " ", q).strip(" -&")
+        if q and q.lower() not in (x.lower() for x in queries):
+            queries.append(q)
+    add(" ".join(core))
+    for p in paren:
+        add(" ".join(w for w in re.split(r"[\s/,]+", p) if w.lower() not in SEARCH_STOPWORDS))
+    add(" ".join(cleaned))
+    if len(core) > 2:
+        add(" ".join(core[:2]))
+    return queries[:4]
+
+def wiki_search_image(query):
+    """يبحث في محرك ويكيبيديا ويعيد (عنوان المقال, رابط الصورة) لأول نتيجة ذات صلة تملك صورة"""
+    data = api_get(WIKI_API, {"action": "query", "list": "search", "srsearch": query,
+                              "srlimit": 3, "srnamespace": 0})
+    for hit in (data or {}).get("query", {}).get("search", []):
+        title = hit["title"]
+        if not is_relevant(title, query) or title.lower().startswith("list of"):
+            continue
+        time.sleep(1.2)
+        summary = fetch_wiki_summary(title)
+        img = wiki_thumb_url(summary)
+        if img:
+            return summary.get("title", title), img
+    return None, None
+
+def commons_search_image(query):
+    """بديل: صورة حرة من Wikimedia Commons (رخص CC / ملك عام) بمقاس 500px"""
+    data = api_get(COMMONS_API, {
+        "action": "query", "generator": "search", "gsrsearch": f"{query} food filetype:bitmap",
+        "gsrnamespace": 6, "gsrlimit": 5, "prop": "imageinfo",
+        "iiprop": "url|mime", "iiurlwidth": 500,
+    })
+    pages = sorted((data or {}).get("query", {}).get("pages", []), key=lambda p: p.get("index", 99))
+    for page in pages:
+        info = (page.get("imageinfo") or [{}])[0]
+        if info.get("mime") not in ("image/jpeg", "image/png", "image/webp"):
+            continue
+        if not is_relevant(page["title"].replace("File:", ""), query):
+            continue
+        return page["title"], info.get("thumburl") or info.get("url")
+    return None, None
+
+def process_remaining(report_path=None):
+    with open(DATA_FILE, "r", encoding="utf-8", newline="") as f:
+        content = f.read()
+
+    lines = re.findall(r"\{\s*id:\s*\d+,[^\n]*", content)
+    items = []
+    for line in lines:
+        if "image:" in line:
+            continue
+        m = re.search(r"id:\s*(\d+),[^\n]*?nameEn:\s*'((?:[^'\\]|\\.)*)'", line)
+        if m:
+            items.append((int(m.group(1)), m.group(2)))
+    print(f"[*] أصناف بلا صور: {len(items)}", flush=True)
+
+    rows = []  # (id, nameEn, status, source, matched_title, query, file)
+    for idx, (food_id, name_en) in enumerate(items, 1):
+        slug = make_slug(name_en.replace("\\'", ""))
+        dest_filename = f"{slug}.webp"
+        dest_path = os.path.join(OUTPUT_DIR, dest_filename)
+        rel_path = f"images/foods/{dest_filename}"
+
+        status, source, matched, used_query = 'failed', '', '', ''
+        for query in build_core_queries(name_en):
+            for source_name, finder in (("wikipedia", wiki_search_image), ("commons", commons_search_image)):
+                time.sleep(1.2)  # حماية السيرفر من الحظر
+                title, img_url = finder(query)
+                if not img_url:
+                    continue
+                try:
+                    download_to_webp(img_url, slug, dest_path)
+                except Exception as e:
+                    print(f"  [-] {food_id} ({title}) -> خطأ تنزيل: {e}", flush=True)
+                    continue
+                status, source, matched, used_query = 'ok', source_name, title, query
+                break
+            if status == 'ok':
+                break
+
+        if status == 'ok':
+            content, _ = link_image_by_id(content, food_id, rel_path)
+            print(f"  [✓] {idx}/{len(items)} id {food_id} ({name_en}) <- {source}: {matched}", flush=True)
+        else:
+            print(f"  [x] {idx}/{len(items)} id {food_id} ({name_en})", flush=True)
+        rows.append((food_id, name_en, status, source, matched, used_query, dest_filename if status == 'ok' else ''))
+
+        if idx % 25 == 0:
+            with open(DATA_FILE, "w", encoding="utf-8", newline="") as f:
+                f.write(content)
+
+    with open(DATA_FILE, "w", encoding="utf-8", newline="") as f:
+        f.write(content)
+
+    if report_path:
+        import csv
+        with open(report_path, "w", encoding="utf-8-sig", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["id", "nameEn", "status", "source", "matched_title", "query", "file"])
+            w.writerows(rows)
+
+    ok = [r for r in rows if r[2] == 'ok']
+    print(f"\n[🎉] نجح: {len(ok)} (ويكيبيديا: {sum(r[3] == 'wikipedia' for r in ok)} | "
+          f"Commons: {sum(r[3] == 'commons' for r in ok)}) | متبقٍ: {len(rows) - len(ok)}")
+
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) >= 3:
+    if len(sys.argv) >= 2 and sys.argv[1] == "remaining":
+        # مثال: python get_50_foods.py remaining batch_remaining.csv
+        process_remaining(sys.argv[2] if len(sys.argv) > 2 else None)
+    elif len(sys.argv) >= 3:
         # مثال: python get_50_foods.py 151 650 report.csv
         process_range(int(sys.argv[1]), int(sys.argv[2]), sys.argv[3] if len(sys.argv) > 3 else None)
     else:
