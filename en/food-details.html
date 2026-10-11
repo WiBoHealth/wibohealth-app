@@ -588,9 +588,15 @@
             document.getElementById('giLabel').textContent = getGIText(food.gi);
             
             // II
-            document.getElementById('iiValue').textContent = food.ii;
-            document.getElementById('iiValue').className = 'stat-value ' + getGIClass(food.ii);
-            document.getElementById('iiLabel').textContent = getGIText(food.ii);
+            if (hasTestedII(food)) {
+                document.getElementById('iiValue').textContent = food.ii;
+                document.getElementById('iiValue').className = 'stat-value ' + getIIClass(food.ii);
+                document.getElementById('iiLabel').textContent = getIIText(food.ii);
+            } else {
+                document.getElementById('iiValue').textContent = '—';
+                document.getElementById('iiValue').className = 'stat-value';
+                document.getElementById('iiLabel').textContent = 'غير مختبر سريرياً';
+            }
             
             // Nutrition
             document.getElementById('caloriesValue').textContent = food.nutrition.calories;
@@ -618,6 +624,23 @@
             return 'منخفض';
         }
 
+        // مؤشر الإنسولين: <40 منخفض | 40-69 معتدل | ≥70 مرتفع (نفس النسخة الرئيسية)
+        function hasTestedII(food) {
+            return food.ii !== undefined && food.ii !== null && food.ii !== '' && !isNaN(Number(food.ii));
+        }
+
+        function getIIClass(value) {
+            if (value >= 70) return 'high';
+            if (value >= 40) return 'medium';
+            return 'low';
+        }
+
+        function getIIText(value) {
+            if (value >= 70) return 'مرتفع 🔴';
+            if (value >= 40) return 'معتدل 🟡';
+            return 'منخفض 🟢';
+        }
+
         // Create charts
         function createCharts(food) {
             // Index Chart
@@ -625,13 +648,14 @@
             new Chart(indexCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['المؤشر الجلايسيمي', 'مؤشر الأنسولين'],
+                    // عمود الإنسولين يُرسم فقط للأصناف المختبرة سريرياً
+                    labels: hasTestedII(food) ? ['المؤشر الجلايسيمي', 'مؤشر الأنسولين'] : ['المؤشر الجلايسيمي'],
                     datasets: [{
                         label: 'القيمة',
-                        data: [food.gi, food.ii],
+                        data: hasTestedII(food) ? [food.gi, food.ii] : [food.gi],
                         backgroundColor: [
                             food.gi >= 70 ? '#e74c3c' : food.gi >= 55 ? '#f39c12' : '#2ecc71',
-                            food.ii >= 70 ? '#e74c3c' : food.ii >= 55 ? '#f39c12' : '#2ecc71'
+                            ...(hasTestedII(food) ? [food.ii >= 70 ? '#e74c3c' : food.ii >= 40 ? '#f39c12' : '#2ecc71'] : [])
                         ],
                         borderRadius: 10,
                         barThickness: 60
@@ -643,7 +667,7 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 140,
                             ticks: {
                                 font: { family: 'Cairo' }
                             }

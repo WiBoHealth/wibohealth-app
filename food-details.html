@@ -351,6 +351,46 @@
             font-weight: 600;
         }
 
+        /* المراجع السريرية للمؤشر الجلايسيمي (GI Sources) */
+        .gi-sources-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(46, 204, 113, 0.35);
+            border-inline-start: 4px solid var(--primary-color);
+            border-radius: 14px;
+            box-shadow: 0 0 14px rgba(46, 204, 113, 0.15), 0 5px 20px var(--shadow);
+            padding: 12px 16px;
+            margin: -8px 0 22px 0;
+            color: var(--text-light);
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.7;
+            width: 100%;
+            overflow-wrap: anywhere;
+        }
+        body.dark-mode .gi-sources-box {
+            border-color: rgba(46, 204, 113, 0.45);
+            border-inline-start-color: var(--primary-color);
+            box-shadow: 0 0 18px rgba(46, 204, 113, 0.25), 0 5px 20px var(--shadow);
+            color: #cbd5e1;
+        }
+        .ii-sources-box { margin-top: -10px; }
+
+        /* شارة مؤشر الإنسولين المختبر سريرياً (Holt 1997 / Bao 2009) */
+        .ii-tested-badge {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 9px;
+            border-radius: 999px;
+            background: rgba(46, 204, 113, 0.12);
+            border: 1px solid rgba(46, 204, 113, 0.45);
+            color: #1e9e57;
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        body.dark-mode .ii-tested-badge { color: #6ee7a8; }
+        .stat-value.untested { color: var(--text-light); }
+
         /* ==========================================================================
            4. الرسوم البيانية المحمية من طفحان العرض (Chart Shield)
            ========================================================================== */
@@ -592,6 +632,7 @@
                 <h4 data-i18n="stat_ii">مؤشر الأنسولين</h4>
                 <div class="stat-value" id="iiValue">-</div>
                 <div class="stat-label" id="iiLabel"></div>
+                <span class="ii-tested-badge" id="iiBadge" style="display: none;"></span>
             </div>
 
             <div class="stat-card">
@@ -606,6 +647,12 @@
                 <div class="stat-label" data-i18n="gram">جرام</div>
             </div>
         </div>
+
+        <!-- GI Clinical Sources -->
+        <div class="gi-sources-box" data-i18n="gi_sources">📚 المراجع السريرية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).</div>
+
+        <!-- Insulin Index Clinical Sources -->
+        <div class="gi-sources-box ii-sources-box" data-i18n="ii_sources">📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.</div>
 
         <!-- Charts Section -->
         <div class="charts-section">
@@ -775,9 +822,12 @@
                 gi_low: "منخفض",
                 gi_medium: "متوسط",
                 gi_high: "مرتفع",
-                ii_low: "منخفض",
-                ii_medium: "متوسط",
-                ii_high: "مرتفع",
+                ii_low: "منخفض 🟢",
+                ii_medium: "معتدل 🟡",
+                ii_high: "مرتفع 🔴",
+                ii_tested_badge: "مختبر سريرياً (Holt / Bao) ✅",
+                ii_not_tested: "غير مختبر سريرياً",
+                ii_sources: "📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "لكل 100 جرام",
                 gram: "جرام",
                 chart_health_indicators: "المؤشرات السريرية",
@@ -797,6 +847,7 @@
                 tip_preparation_text: "طهي الطعام بطرق صحية كالسلق أو الشواء وتجنب القلي بالزيوت المهدرجة يساعد على إبقاء المؤشر الجلايسيمي في النطاق الآمن.",
                 tip_warning: "التنبيه السريري",
                 tip_warning_text: "مرضى السكري والتمثيل الغذائي يجب عليهم مراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.",
+                gi_sources: "📚 المراجع السريرية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).",
                 clinical_disclaimer: "إخلاء مسؤولية سريري: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.",
                 footer_about: "من نحن",
                 footer_contact: "اتصل بنا",
@@ -820,9 +871,12 @@
                 gi_low: "Low",
                 gi_medium: "Medium",
                 gi_high: "High",
-                ii_low: "Low",
-                ii_medium: "Medium",
-                ii_high: "High",
+                ii_low: "Low 🟢",
+                ii_medium: "Moderate 🟡",
+                ii_high: "High 🔴",
+                ii_tested_badge: "Clinically tested (Holt / Bao) ✅",
+                ii_not_tested: "Not clinically tested",
+                ii_sources: "📚 Insulin Index sources: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
                 gram: "g",
                 chart_health_indicators: "Clinical Indicators",
@@ -842,6 +896,7 @@
                 tip_preparation_text: "Gentle steaming or baking preserves micronutrient density and keeps the glycemic load stable compared to ultra-processing.",
                 tip_warning: "Clinical Caution",
                 tip_warning_text: "Diabetic individuals must account for the net Glycemic Load (GL) per portion rather than glycemic index alone.",
+                gi_sources: "📚 Clinical Sources: International Tables of Glycemic Index (Atkinson et al., Am J Clin Nutr 2021) • Harvard Health Publishing.",
                 clinical_disclaimer: "Clinical Disclaimer: This guidance is for nutritional lifestyle orientation and does not constitute a diagnostic medical device under EU Regulation MDR 2017/745.",
                 footer_about: "About Us",
                 footer_contact: "Contact Us",
@@ -865,9 +920,12 @@
                 gi_low: "Laag",
                 gi_medium: "Gemiddeld",
                 gi_high: "Hoog",
-                ii_low: "Laag",
-                ii_medium: "Gemiddeld",
-                ii_high: "Hoog",
+                ii_low: "Laag 🟢",
+                ii_medium: "Matig 🟡",
+                ii_high: "Hoog 🔴",
+                ii_tested_badge: "Klinisch getest (Holt / Bao) ✅",
+                ii_not_tested: "Niet klinisch getest",
+                ii_sources: "📚 Bronnen insuline-index: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
                 gram: "g",
                 chart_health_indicators: "Klinische Indicatoren",
@@ -887,6 +945,7 @@
                 tip_preparation_text: "Koken, stomen of roosteren behoudt essentiële micronutriënten en houdt de glykemische respons stabiel.",
                 tip_warning: "Aandachtspunt voor Diabetici",
                 tip_warning_text: "Let bij diabetes of insulineresistentie altijd op de totale glykemische lading (GL) van de portie.",
+                gi_sources: "📚 Klinische bronnen: Internationale GI-tabellen (Atkinson et al., Am J Clin Nutr 2021) • Harvard Health Publishing.",
                 clinical_disclaimer: "Klinische Disclaimer: Deze informatie is uitsluitend bedoeld als voedingsadvies en is geen medisch diagnostisch hulpmiddel volgens EU MDR 2017/745.",
                 footer_about: "Over Ons",
                 footer_contact: "Contact",
@@ -1018,7 +1077,8 @@ if (food.image) {
             // تحديث العنوان وميتا تاج لمحركات البحث
             const pageTitle = `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`;
             document.title = pageTitle;
-            const metaDescText = `${mainTitle} (${catName}): GI ${food.gi}, II ${food.ii}, ${Math.round(food.nutrition?.calories || 0)} kcal, ${food.nutrition?.protein || 0}g protein. WiBo Health Medical Team.`;
+            const iiMeta = hasTestedII(food) ? `, II ${food.ii}` : '';
+            const metaDescText = `${mainTitle} (${catName}): GI ${food.gi}${iiMeta}, ${Math.round(food.nutrition?.calories || 0)} kcal, ${food.nutrition?.protein || 0}g protein. WiBo Health Medical Team.`;
             
             const metaDesc = document.getElementById('metaDescription');
             if (metaDesc) metaDesc.setAttribute('content', metaDescText);
@@ -1034,9 +1094,21 @@ if (food.image) {
             document.getElementById('giValue').className = 'stat-value ' + getGIClass(food.gi);
             document.getElementById('giLabel').textContent = getGIText(food.gi);
             
-            document.getElementById('iiValue').textContent = food.ii;
-            document.getElementById('iiValue').className = 'stat-value ' + getGIClass(food.ii);
-            document.getElementById('iiLabel').textContent = getIIText(food.ii);
+            // مؤشر الإنسولين: نعرض الرقم فقط إذا كان مختبراً سريرياً، وإلا "—"
+            const iiValueEl = document.getElementById('iiValue');
+            const iiBadgeEl = document.getElementById('iiBadge');
+            if (hasTestedII(food)) {
+                iiValueEl.textContent = food.ii;
+                iiValueEl.className = 'stat-value ' + getIIClass(food.ii);
+                document.getElementById('iiLabel').textContent = getIIText(food.ii);
+                iiBadgeEl.textContent = t('ii_tested_badge');
+                iiBadgeEl.style.display = 'inline-block';
+            } else {
+                iiValueEl.textContent = '—';
+                iiValueEl.className = 'stat-value untested';
+                document.getElementById('iiLabel').textContent = t('ii_not_tested');
+                iiBadgeEl.style.display = 'none';
+            }
             
             document.getElementById('caloriesValue').textContent = Math.round(food.nutrition?.calories || 0);
             document.getElementById('proteinValue').textContent = (food.nutrition?.protein || 0).toFixed(1);
@@ -1067,10 +1139,27 @@ if (food.image) {
             return t('gi_low');
         }
 
+        // مقياس مؤشر الإنسولين: <40 منخفض | 40-69 معتدل | ≥70 مرتفع
+        function hasTestedII(food) {
+            return food.ii !== undefined && food.ii !== null && food.ii !== '' && !isNaN(Number(food.ii));
+        }
+
+        function getIIClass(value) {
+            if (value >= 70) return 'high';
+            if (value >= 40) return 'medium';
+            return 'low';
+        }
+
         function getIIText(value) {
             if (value >= 70) return t('ii_high');
-            if (value >= 55) return t('ii_medium');
+            if (value >= 40) return t('ii_medium');
             return t('ii_low');
+        }
+
+        function getIIColor(value) {
+            if (value >= 70) return '#e74c3c';
+            if (value >= 40) return '#f39c12';
+            return '#2ecc71';
         }
 
         // Schema.org Structured Data لتصدر محركات البحث Googlebot
@@ -1084,7 +1173,7 @@ if (food.image) {
                 "name": title,
                 "category": category,
                 "url": `https://wibohealth.com/food-details.html?id=${food.id}`,
-                "description": `${title} Glycemic Index: ${food.gi}, Insulin Index: ${food.ii}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
+                "description": `${title} Glycemic Index: ${food.gi}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
                 "brand": {
                     "@type": "Organization",
                     "name": "WiBo Health Medical Team"
@@ -1130,18 +1219,25 @@ if (food.image) {
             const fontFam = (currentLang === 'ar') ? 'Cairo' : 'Plus Jakarta Sans';
             const fatVal = (food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0);
 
+            // عمود الإنسولين يُرسم فقط للأصناف المختبرة سريرياً
+            const indexLabels = [t('chart_label_gi')];
+            const indexData = [food.gi];
+            const indexColors = [food.gi >= 70 ? '#e74c3c' : (food.gi >= 55 ? '#f39c12' : '#2ecc71')];
+            if (hasTestedII(food)) {
+                indexLabels.push(t('chart_label_ii'));
+                indexData.push(food.ii);
+                indexColors.push(getIIColor(food.ii));
+            }
+
             const indexCtx = document.getElementById('indexChart')?.getContext('2d');
             if (indexCtx) {
                 indexChartInstance = new Chart(indexCtx, {
                     type: 'bar',
                     data: {
-                        labels: [t('chart_label_gi'), t('chart_label_ii')],
+                        labels: indexLabels,
                         datasets: [{
-                            data: [food.gi, food.ii],
-                            backgroundColor: [
-                                food.gi >= 70 ? '#e74c3c' : (food.gi >= 55 ? '#f39c12' : '#2ecc71'),
-                                food.ii >= 70 ? '#e74c3c' : (food.ii >= 55 ? '#f39c12' : '#2ecc71')
-                            ],
+                            data: indexData,
+                            backgroundColor: indexColors,
                             borderRadius: 10,
                             barThickness: 45
                         }]
@@ -1152,7 +1248,7 @@ if (food.image) {
                         scales: {
                             y: {
                                 beginAtZero: true,
-                                max: 100,
+                                max: 140, // قيم الإنسولين الحقيقية تتجاوز 100 (البطاطا 121)
                                 ticks: { font: { family: fontFam } }
                             },
                             x: {

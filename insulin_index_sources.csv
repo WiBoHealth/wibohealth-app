@@ -1,0 +1,30 @@
+food_id,nameEn,study,study_food_name,ii_value,verified,notes
+3,White Bread,Holt1997,White bread,100,yes,reference food = 100
+4,Whole Wheat Bread,Holt1997,Whole-meal bread,96,yes,
+1,White Rice,Holt1997,White rice,79,yes,
+2,Brown Rice,Holt1997,Brown rice,62,yes,
+5,White Pasta,Holt1997,White pasta,40,yes,
+26,Boiled Potato,Holt1997,Potatoes,121,yes,
+28,French Fries,Holt1997,French fries,74,yes,
+7,Oatmeal,Holt1997,Porridge,40,yes,
+356,Unsweetened Corn Flakes,Holt1997,Cornflakes,75,yes,
+48,Apple,Holt1997,Apples,59,yes,
+50,Orange,Holt1997,Oranges,60,yes,
+49,Banana,Holt1997,Bananas,81,yes,
+53,Grapes,Holt1997,Grapes,82,yes,
+101,Boiled Egg,Holt1997,Eggs,31,yes,
+92,Grilled Beef Steak,Holt1997,Beef,51,yes,
+96,Cod Fish,Holt1997,Fish,59,yes,
+18,Lentils,Holt1997,Lentils in tomato sauce,58,yes,Holt tested lentils in tomato sauce
+89,Peanuts,Holt1997,Peanuts,20,yes,
+6,Whole Wheat Pasta,Holt1997,Brown pasta,52,yes,owner-approved; CONFLICT: requested 52 but Holt table gives 40
+74,Cheddar Cheese,Holt1997,Cheese,33,yes,owner-approved; CONFLICT: requested 33 but Holt table gives 45 (cheese type unspecified)
+52,Strawberry,Bao2009?,Strawberries,37,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+91,Grilled Chicken Breast,Bao2009?,Chicken breast,26,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+98,Canned Tuna in Water,Bao2009?,Tuna,49,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+80,Raw Almonds,Bao2009?,Almonds,18,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+81,Walnuts,Bao2009?,Walnuts,14,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+69,Whole Milk,Bao2009?,Whole milk,65,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+70,Skim Milk,Bao2009?,Skim milk,90,yes,owner-approved; not in Holt; source unverified; Bao uses glucose = 100 scale
+357,No Added Sugar Swiss Muesli,Holt1997,Muesli,46,,not requested; Holt value 46 if wanted
+156,Butter Croissant,Holt1997,Croissants,79,,not requested; Holt value 79 if wanted

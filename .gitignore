@@ -1,0 +1,6 @@
+# Temporary reports and backups from the image / insulin index scripts
+*.before-ii-cleanup.js
+batch_*.csv
+insulin_index_report.csv
+__pycache__/
+images/foods/temp_*

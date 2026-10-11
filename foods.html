@@ -727,6 +727,29 @@
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
         }
 
+        /* المراجع السريرية للمؤشر الجلايسيمي (نفس شريط food-details.html) */
+        .gi-sources-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(46, 204, 113, 0.35);
+            border-inline-start: 4px solid var(--primary-color);
+            border-radius: 14px;
+            box-shadow: 0 0 14px rgba(46, 204, 113, 0.15), 0 5px 20px var(--shadow);
+            padding: 12px 16px;
+            margin-top: 25px;
+            color: var(--text-light);
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.7;
+            width: 100%;
+            overflow-wrap: anywhere;
+        }
+        body.dark-mode .gi-sources-box {
+            border-color: rgba(46, 204, 113, 0.45);
+            border-inline-start-color: var(--primary-color);
+            box-shadow: 0 0 18px rgba(46, 204, 113, 0.25), 0 5px 20px var(--shadow);
+            color: #cbd5e1;
+        }
+
         /* Disclaimer & Legal Note (EU MDR 2017/745 & BW 6:162) */
         .clinical-disclaimer-box {
             background: rgba(0, 0, 0, 0.04);
@@ -894,6 +917,9 @@
             <span id="sentinelText"></span>
         </div>
 
+        <!-- GI Clinical Sources -->
+        <div class="gi-sources-box" data-i18n="gi_sources">📚 جميع قيم المؤشر الجلايسيمي (GI) مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد.</div>
+
         <!-- Clinical Disclaimer Note (EU MDR 2017/745 Compliance) -->
         <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
             إخلاء مسؤولية سريري: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.
@@ -1016,6 +1042,7 @@
                 "carbs": "كربوهيدرات",
                 "fats": "دهون",
                 "loading_more": "جاري تحميل المزيد من الأطعمة...",
+                "gi_sources": "📚 جميع قيم المؤشر الجلايسيمي (GI) مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد.",
                 "clinical_disclaimer": "إخلاء مسؤولية سريري: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.",
                 "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
                 "boodi_banner_desc": "قراءة الأرقام ممتازة، ولكن فحص الباركود في المتجر أسرع! تطبيق بودي يحلل لك المؤشر الجلايسيمي، يفحص الحلال، ويقترح بدائل صحية أقل سكراً فوراً من نفس الرف.",
@@ -1050,6 +1077,7 @@
                 "carbs": "Carbs",
                 "fats": "Fat",
                 "loading_more": "Loading more foods...",
+                "gi_sources": "📚 All Glycemic Index (GI) values are referenced from the International Tables (Atkinson et al., Am J Clin Nutr 2021) and Harvard Health Publishing.",
                 "clinical_disclaimer": "Clinical Disclaimer: The WiBo Health food database and boodi app are informational lifestyle guidance tools and do not constitute diagnostic medical devices under EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
                 "boodi_banner_desc": "Checking charts is great, but scanning in the supermarket aisle is faster! boodi deconstructs Glycemic Index, screens Halal status, and discovers healthier alternatives on the spot.",
@@ -1084,6 +1112,7 @@
                 "carbs": "Koolhydraten",
                 "fats": "Vetten",
                 "loading_more": "Meer voedingsmiddelen laden...",
+                "gi_sources": "📚 Alle GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing.",
                 "clinical_disclaimer": "Klinische Disclaimer: Deze voedingswijzer en de boodi-app zijn leefstijl- en educatieve hulpmiddelen en vormen geen medisch hulpmiddel volgens EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
                 "boodi_banner_desc": "Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert halal-status en tipt gezondere alternatieven direct uit hetzelfde schap.",
