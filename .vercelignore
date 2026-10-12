@@ -19,3 +19,5 @@ screenshots/
 !/ads.txt
 !/app-ads.txt
 !/.well-known/security.txt
+# Page generator and its editable data (source only, not part of the site)
+scripts/

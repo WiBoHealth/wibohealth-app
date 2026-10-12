@@ -1,0 +1,4 @@
+{
+  "_note": "Per-food overrides for scripts/generate_food_pages.py. Key = food id from js/data.js. Optional fields: slug, tips: {ar: [consumption, preparation, note], en: [...], nl: [...]}. Food-specific tips reviewed by Dr. Wassim replace the group template.",
+  "foods": {}
+}

@@ -22,12 +22,22 @@
       "permanent": true
     },
     {
-      "source": "/en/:path*",
+      "source": "/en",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/nl/:path*",
+      "source": "/en/:path((?!foods/).*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nl",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nl/:path((?!foods/).*)",
       "destination": "/",
       "permanent": true
     },
