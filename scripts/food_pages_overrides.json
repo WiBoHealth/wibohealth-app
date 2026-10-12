@@ -1,4 +1,901 @@
 {
-  "_note": "Per-food overrides for scripts/generate_food_pages.py. Key = food id from js/data.js. Optional fields: slug, tips: {ar: [consumption, preparation, note], en: [...], nl: [...]}. Food-specific tips reviewed by Dr. Wassim replace the group template.",
-  "foods": {}
+  "_note": "Per-food overrides for scripts/generate_food_pages.py. Key = food id from js/data.js. tips: {lang: [consumption, preparation]} (the third tip is the approved group note). Optional: slug.",
+  "foods": {
+    "1": {
+      "tips": {
+        "ar": [
+          "اجعل الأرز ربع الطبق فقط، ونصفه خضار وربعه بروتين؛ هذا التوزيع يخفف الحمل الجلايسيمي للوجبة.",
+          "تبريد الأرز المطبوخ في الثلاجة 12 إلى 24 ساعة ثم إعادة تسخينه يزيد النشا المقاوم، وقد يخفّض استجابة السكر قليلاً."
+        ],
+        "en": [
+          "Keep rice to a quarter of the plate, with half vegetables and a quarter protein; this split lowers the glycemic load of the meal.",
+          "Chilling cooked rice in the fridge for 12 to 24 hours and then reheating it increases resistant starch and may slightly lower the glucose response."
+        ],
+        "nl": [
+          "Houd rijst bij een kwart van het bord, met de helft groenten en een kwart eiwit; deze verdeling verlaagt de glykemische lading van de maaltijd.",
+          "Gekookte rijst 12 tot 24 uur in de koelkast laten afkoelen en daarna opwarmen verhoogt het resistente zetmeel en kan de glucoserespons iets verlagen."
+        ]
+      }
+    },
+    "2": {
+      "tips": {
+        "ar": [
+          "يحتوي الأرز البني على ألياف ومغنيسيوم أكثر من الأرز الأبيض، لكن مؤشره الجلايسيمي قريب منه، فالحصة المعتدلة تبقى مهمة.",
+          "انقعه بضع ساعات قبل الطهي لتقصير وقت الطهي وتحسين القوام، ثم اطبخه بماء أكثر قليلاً من الأرز الأبيض."
+        ],
+        "en": [
+          "Brown rice has more fibre and magnesium than white rice, but its glycemic index is similar, so a moderate portion still matters.",
+          "Soak it for a few hours before cooking to shorten the cooking time and improve the texture, then cook it with slightly more water than white rice."
+        ],
+        "nl": [
+          "Zilvervliesrijst bevat meer vezels en magnesium dan witte rijst, maar de glykemische index ligt dicht bij elkaar, dus een gematigde portie blijft belangrijk.",
+          "Week hem een paar uur voor het koken om de kooktijd te verkorten en de structuur te verbeteren, en kook hem met iets meer water dan witte rijst."
+        ]
+      }
+    },
+    "3": {
+      "tips": {
+        "ar": [
+          "الخبز الأبيض سريع الهضم؛ تناوله مع بيض أو جبن قليل الدسم أو حمّص بدلاً من تناوله وحده أو مع المربى.",
+          "اختر خبز العجينة المخمّرة (الساوردو) أو خبز الحبوب الكاملة كبديل متى أمكن، ولا تُكثر من الشرائح في الوجبة الواحدة."
+        ],
+        "en": [
+          "White bread is digested quickly; eat it with eggs, low-fat cheese or hummus rather than on its own or with jam.",
+          "Choose sourdough or wholegrain bread as an alternative when you can, and limit the number of slices per meal."
+        ],
+        "nl": [
+          "Wit brood wordt snel verteerd; eet het met ei, magere kaas of hummus in plaats van alleen of met jam.",
+          "Kies waar mogelijk zuurdesembrood of volkorenbrood als alternatief, en beperk het aantal sneetjes per maaltijd."
+        ]
+      }
+    },
+    "4": {
+      "tips": {
+        "ar": [
+          "يوفر خبز القمح الكامل أليافاً أكثر من الخبز الأبيض، والأنواع التي تحتوي حبوباً ظاهرة تُهضم أبطأ من الطحين الناعم.",
+          "اقرأ الملصق: يجب أن يكون طحين القمح الكامل أول المكونات، لا الطحين الأبيض المضاف إليه قليل من النخالة."
+        ],
+        "en": [
+          "Wholemeal bread provides more fibre than white bread, and loaves with visible grains are digested more slowly than finely milled flour.",
+          "Read the label: wholemeal flour should be the first ingredient, not white flour with a little added bran."
+        ],
+        "nl": [
+          "Volkorenbrood levert meer vezels dan wit brood, en brood met zichtbare korrels wordt langzamer verteerd dan fijngemalen meel.",
+          "Lees het etiket: volkorenmeel hoort het eerste ingrediënt te zijn, niet bloem met een beetje toegevoegde zemelen."
+        ]
+      }
+    },
+    "5": {
+      "tips": {
+        "ar": [
+          "المعكرونة المصنوعة من القمح القاسي (السميد) متماسكة البنية، لذلك مؤشرها الجلايسيمي أقل من الخبز الأبيض؛ قدّمها مع خضار وبروتين.",
+          "اطبخها متماسكة (ال دنتي) ولا تُفرط في سلقها، فالطهي الزائد يرفع المؤشر الجلايسيمي."
+        ],
+        "en": [
+          "Pasta made from durum wheat semolina has a compact structure, so its glycemic index is lower than white bread; serve it with vegetables and protein.",
+          "Cook it al dente and avoid overcooking, because overcooking raises the glycemic index."
+        ],
+        "nl": [
+          "Pasta van harde tarwe (griesmeel) heeft een compacte structuur, waardoor de glykemische index lager is dan van wit brood; serveer haar met groenten en eiwit.",
+          "Kook haar al dente en niet te lang, want te lang koken verhoogt de glykemische index."
+        ]
+      }
+    },
+    "7": {
+      "tips": {
+        "ar": [
+          "الشوفان غني بألياف بيتا-جلوكان القابلة للذوبان، التي تزيد الشبع وتبطئ الهضم.",
+          "اختر رقائق الشوفان الكاملة أو المقطّعة بدلاً من الشوفان الفوري، وأضف المكسرات أو الحليب بدلاً من السكر."
+        ],
+        "en": [
+          "Oats are rich in soluble beta-glucan fibre, which increases fullness and slows digestion.",
+          "Choose whole rolled or steel-cut oats instead of instant oats, and add nuts or milk instead of sugar."
+        ],
+        "nl": [
+          "Havermout is rijk aan oplosbare bètaglucaanvezels, die de verzadiging verhogen en de vertering vertragen.",
+          "Kies hele of gesneden havervlokken in plaats van instanthavermout, en voeg noten of melk toe in plaats van suiker."
+        ]
+      }
+    },
+    "8": {
+      "tips": {
+        "ar": [
+          "الكينوا تحتوي على جميع الأحماض الأمينية الأساسية، فهي بديل جيد للأرز في الأطباق النباتية.",
+          "اشطفها جيداً قبل الطهي لإزالة طبقة الصابونين المُرّة، واطبخها بنحو كوبين من الماء لكل كوب."
+        ],
+        "en": [
+          "Quinoa contains all the essential amino acids, which makes it a good alternative to rice in plant-based dishes.",
+          "Rinse it well before cooking to remove the bitter saponin coating, and cook it in about two cups of water per cup."
+        ],
+        "nl": [
+          "Quinoa bevat alle essentiële aminozuren en is daarom een goed alternatief voor rijst in plantaardige gerechten.",
+          "Spoel haar goed voor het koken om het bittere saponinelaagje te verwijderen, en kook haar met ongeveer twee kopjes water per kopje."
+        ]
+      }
+    },
+    "9": {
+      "tips": {
+        "ar": [
+          "البرغل قمح مسلوق ومجفف ومجروش يحتفظ بالكثير من أليافه، لذلك مؤشره الجلايسيمي أقل من الأرز الأبيض.",
+          "استخدم البرغل الخشن للطبخ والناعم للتبولة والكبة، وانقع الناعم بدلاً من طهيه طويلاً للحفاظ على قوامه."
+        ],
+        "en": [
+          "Bulgur is wheat that has been boiled, dried and cracked; it keeps much of its fibre, so its glycemic index is lower than white rice.",
+          "Use coarse bulgur for cooked dishes and fine bulgur for tabbouleh and kibbeh, soaking the fine type rather than cooking it for long."
+        ],
+        "nl": [
+          "Bulgur is gekookte, gedroogde en gebroken tarwe die veel van zijn vezels behoudt, waardoor de glykemische index lager is dan van witte rijst.",
+          "Gebruik grove bulgur voor gekookte gerechten en fijne bulgur voor tabouleh en kibbeh, en laat de fijne soort weken in plaats van lang te koken."
+        ]
+      }
+    },
+    "10": {
+      "tips": {
+        "ar": [
+          "الكسكس مصنوع من السميد المطحون، ومؤشره متوسط؛ تقديمه مع الخضار والحمص كما في الطبق المغربي يوازن الوجبة.",
+          "حضّره بالبخار أو بنقعه في الماء المغلي دون إفراط في الزبدة، واختر الكسكس الكامل متى توفر."
+        ],
+        "en": [
+          "Couscous is made from ground semolina and has a medium glycemic index; serving it with vegetables and chickpeas, as in the Moroccan dish, balances the meal.",
+          "Steam it or soak it in boiling water without too much butter, and choose wholewheat couscous when available."
+        ],
+        "nl": [
+          "Couscous wordt gemaakt van gemalen griesmeel en heeft een gemiddelde glykemische index; met groenten en kikkererwten, zoals in het Marokkaanse gerecht, wordt de maaltijd evenwichtiger.",
+          "Stoom hem of laat hem wellen in kokend water zonder veel boter, en kies volkoren couscous als die er is."
+        ]
+      }
+    },
+    "11": {
+      "tips": {
+        "ar": [
+          "الذرة من النشويات وليست من الخضار الورقية؛ كوز واحد يكفي كحصة نشويات في الوجبة.",
+          "اسلقها أو اشوها دون إكثار من الزبدة، وتجنب الذرة المعلبة المضاف إليها السكر."
+        ],
+        "en": [
+          "Corn counts as a starch rather than a leafy vegetable; one cob is enough as the starch portion of a meal.",
+          "Boil or grill it without too much butter, and avoid canned corn with added sugar."
+        ],
+        "nl": [
+          "Maïs telt als zetmeelbron en niet als bladgroente; één kolf is genoeg als zetmeelportie van een maaltijd.",
+          "Kook of gril hem zonder veel boter, en vermijd maïs uit blik met toegevoegde suiker."
+        ]
+      }
+    },
+    "14": {
+      "tips": {
+        "ar": [
+          "البسمتي طويل الحبة أقل التصاقاً من الأرز قصير الحبة، ويميل إلى مؤشر جلايسيمي أقل منه؛ اختره بدلاً منه عند الإمكان.",
+          "اغسله قبل الطهي لإزالة النشا السطحي وتقليل التكتل، واطبخه بماء معتدل حتى ينضج دون أن يتعجن."
+        ],
+        "en": [
+          "Long-grain basmati is less sticky than short-grain rice and tends to have a lower glycemic index; choose it instead when you can.",
+          "Rinse it before cooking to remove surface starch and reduce clumping, and cook it in a moderate amount of water until just tender."
+        ],
+        "nl": [
+          "Langkorrelige basmati plakt minder dan rondkorrelige rijst en heeft meestal een lagere glykemische index; kies hem waar mogelijk.",
+          "Spoel hem voor het koken om oppervlaktezetmeel te verwijderen en klonteren te beperken, en kook hem in een gematigde hoeveelheid water tot hij net gaar is."
+        ]
+      }
+    },
+    "17": {
+      "tips": {
+        "ar": [
+          "نخالة الشوفان أغنى بألياف بيتا-جلوكان من رقائق الشوفان العادية؛ ملعقتان كبيرتان تضيفان أليافاً واضحة إلى الفطور.",
+          "أضفها إلى اللبن أو العصيدة أو العجين، وزد شرب الماء مع زيادة الألياف تدريجياً."
+        ],
+        "en": [
+          "Oat bran is richer in beta-glucan fibre than regular rolled oats; two tablespoons add a clear amount of fibre to breakfast.",
+          "Stir it into yoghurt, porridge or dough, and drink more water as you gradually increase your fibre intake."
+        ],
+        "nl": [
+          "Haverzemelen bevatten meer bètaglucaan dan gewone havervlokken; twee eetlepels voegen duidelijk vezels toe aan het ontbijt.",
+          "Roer ze door yoghurt, pap of deeg en drink meer water terwijl je de vezelinname geleidelijk verhoogt."
+        ]
+      }
+    },
+    "18": {
+      "tips": {
+        "ar": [
+          "العدس من أقل الأطعمة النشوية مؤشراً، وغني بالبروتين والألياف؛ شوربة العدس والمجدرة طريقتان تقليديتان لإدخاله.",
+          "العدس لا يحتاج إلى نقع طويل؛ اغسله واطبخه حتى ينضج، واستخدم البصل المحمّر باعتدال في المجدرة."
+        ],
+        "en": [
+          "Lentils are among the starchy foods with the lowest glycemic index and are rich in protein and fibre; lentil soup and mujaddara are traditional ways to eat them.",
+          "Lentils need no long soaking; rinse and cook them until tender, and use fried onions sparingly in mujaddara."
+        ],
+        "nl": [
+          "Linzen behoren tot de zetmeelrijke producten met de laagste glykemische index en zijn rijk aan eiwit en vezels; linzensoep en mujaddara zijn traditionele bereidingen.",
+          "Linzen hoeven niet lang te weken; spoel ze af en kook ze gaar, en gebruik gebakken ui met mate in mujaddara."
+        ]
+      }
+    },
+    "19": {
+      "tips": {
+        "ar": [
+          "الحمص غني بالبروتين النباتي والألياف؛ الحمص بالطحينة مع الخضار وجبة خفيفة مُشبعة.",
+          "انقعه ليلة كاملة ثم اطبخه حتى يلين، أو اغسل الحمص المعلب جيداً لتقليل الملح."
+        ],
+        "en": [
+          "Chickpeas are rich in plant protein and fibre; hummus with raw vegetables makes a filling snack.",
+          "Soak them overnight and cook until soft, or rinse canned chickpeas well to reduce the salt."
+        ],
+        "nl": [
+          "Kikkererwten zijn rijk aan plantaardig eiwit en vezels; hummus met rauwe groenten is een verzadigende snack.",
+          "Week ze een nacht en kook ze zacht, of spoel kikkererwten uit blik goed af om zout te verminderen."
+        ]
+      }
+    },
+    "22": {
+      "tips": {
+        "ar": [
+          "الفاصولياء الحمراء غنية بالألياف والبروتين، وتصلح لليخنات والسلطات بدلاً من جزء من الأرز.",
+          "انقعها ثم اغلها بقوة 10 دقائق على الأقل قبل الطهي البطيء، لأن الفاصولياء الحمراء غير المطبوخة جيداً تحتوي على مادة مهيّجة للمعدة."
+        ],
+        "en": [
+          "Red kidney beans are rich in fibre and protein and work well in stews and salads in place of some of the rice.",
+          "Soak them, then boil them hard for at least 10 minutes before slow cooking, because undercooked kidney beans contain a substance that irritates the stomach."
+        ],
+        "nl": [
+          "Rode kidneybonen zijn rijk aan vezels en eiwit en passen goed in stoofgerechten en salades in plaats van een deel van de rijst.",
+          "Week ze en kook ze daarna minstens 10 minuten flink door voordat je ze langzaam gaart, want onvoldoende gekookte kidneybonen bevatten een stof die de maag irriteert."
+        ]
+      }
+    },
+    "26": {
+      "tips": {
+        "ar": [
+          "البطاطا المسلوقة مُشبعة جداً ومنخفضة الدهون، لكن مؤشرها مرتفع، فاجمعها مع بروتين وخضار.",
+          "اسلقها بقشرها ثم برّدها قبل تقديمها في السلطة، فالتبريد يزيد النشا المقاوم، وتجنب القلي."
+        ],
+        "en": [
+          "Boiled potatoes are very filling and low in fat, but their glycemic index is high, so combine them with protein and vegetables.",
+          "Boil them in their skins and let them cool before using them in a salad, because cooling increases resistant starch; avoid frying."
+        ],
+        "nl": [
+          "Gekookte aardappelen verzadigen goed en bevatten weinig vet, maar hun glykemische index is hoog; combineer ze met eiwit en groenten.",
+          "Kook ze in de schil en laat ze afkoelen voor een salade, want afkoelen verhoogt het resistente zetmeel; vermijd frituren."
+        ]
+      }
+    },
+    "27": {
+      "tips": {
+        "ar": [
+          "البطاطا الحلوة غنية بالبيتا كاروتين والألياف، لكنها تبقى من النشويات وتحتاج إلى حصة معتدلة.",
+          "السلق أو الطهي بالبخار يعطي مؤشراً أقل من الشوي الطويل في الفرن، فاختر السلق كطريقة أساسية."
+        ],
+        "en": [
+          "Sweet potatoes are rich in beta-carotene and fibre, but they are still a starch and need a moderate portion.",
+          "Boiling or steaming gives a lower glycemic index than long roasting in the oven, so make boiling your main method."
+        ],
+        "nl": [
+          "Zoete aardappelen zijn rijk aan bètacaroteen en vezels, maar blijven een zetmeelbron en vragen om een gematigde portie.",
+          "Koken of stomen geeft een lagere glykemische index dan lang roosteren in de oven; kies dus vooral voor koken."
+        ]
+      }
+    },
+    "29": {
+      "tips": {
+        "ar": [
+          "الهرس يفكك النشا فيصبح أسرع هضماً من البطاطا الكاملة، لذلك يُفضّل التحكم بالحصة.",
+          "استخدم الحليب بدلاً من كثير من الزبدة، واترك بعض القطع أو القشر لزيادة الألياف."
+        ],
+        "en": [
+          "Mashing breaks down the starch so it is digested faster than whole potatoes, so it is best to control the portion.",
+          "Use milk instead of a lot of butter, and leave some chunks or skin in for extra fibre."
+        ],
+        "nl": [
+          "Pureren breekt het zetmeel af, waardoor het sneller verteerd wordt dan hele aardappelen; let daarom op de portie.",
+          "Gebruik melk in plaats van veel boter, en laat wat stukjes of schil erin voor extra vezels."
+        ]
+      }
+    },
+    "30": {
+      "tips": {
+        "ar": [
+          "الطماطم غنية بفيتامين C والليكوبين، وسعراتها منخفضة جداً.",
+          "طهيها مع قليل من زيت الزيتون يزيد امتصاص الليكوبين، كما في صلصة الطماطم المنزلية."
+        ],
+        "en": [
+          "Tomatoes are rich in vitamin C and lycopene and very low in calories.",
+          "Cooking them with a little olive oil increases lycopene absorption, as in a homemade tomato sauce."
+        ],
+        "nl": [
+          "Tomaten zijn rijk aan vitamine C en lycopeen en zeer caloriearm.",
+          "Ze bereiden met een beetje olijfolie verhoogt de opname van lycopeen, zoals in een zelfgemaakte tomatensaus."
+        ]
+      }
+    },
+    "31": {
+      "tips": {
+        "ar": [
+          "الخيار يتكون معظمه من الماء، فهو منعش ومنخفض السعرات جداً.",
+          "تناوله بقشره بعد غسله جيداً، ويمكن إضافته إلى اللبن مع النعناع كطبق جانبي خفيف."
+        ],
+        "en": [
+          "Cucumber is mostly water, which makes it refreshing and very low in calories.",
+          "Eat it with the skin after washing it well, or stir it into yoghurt with mint as a light side dish."
+        ],
+        "nl": [
+          "Komkommer bestaat grotendeels uit water en is daardoor verfrissend en zeer caloriearm.",
+          "Eet hem met schil na goed wassen, of roer hem door yoghurt met munt als licht bijgerecht."
+        ]
+      }
+    },
+    "32": {
+      "tips": {
+        "ar": [
+          "الكوسا منخفضة السعرات ومرنة في الطبخ، وتناسب المحاشي والشوربات.",
+          "يمكن بشرها أو تقطيعها شرائط رفيعة بديلاً جزئياً للمعكرونة في بعض الأطباق."
+        ],
+        "en": [
+          "Courgette is low in calories and versatile, suiting stuffed dishes and soups.",
+          "Grate it or cut it into thin ribbons as a partial substitute for pasta in some dishes."
+        ],
+        "nl": [
+          "Courgette is caloriearm en veelzijdig, en past in gevulde gerechten en soepen.",
+          "Rasp hem of snijd hem in dunne linten als gedeeltelijke vervanger van pasta in sommige gerechten."
+        ]
+      }
+    },
+    "35": {
+      "tips": {
+        "ar": [
+          "البروكلي غني بفيتاميني C وK والألياف ومركبات الكبريت النباتية.",
+          "اطبخه على البخار من 3 إلى 5 دقائق فقط ليبقى أخضر ومقرمشاً ويحتفظ بفيتاميناته."
+        ],
+        "en": [
+          "Broccoli is rich in vitamins C and K, fibre and plant sulphur compounds.",
+          "Steam it for only 3 to 5 minutes so it stays green and crisp and keeps its vitamins."
+        ],
+        "nl": [
+          "Broccoli is rijk aan vitamine C en K, vezels en plantaardige zwavelverbindingen.",
+          "Stoom hem slechts 3 tot 5 minuten zodat hij groen en knapperig blijft en zijn vitamines behoudt."
+        ]
+      }
+    },
+    "36": {
+      "tips": {
+        "ar": [
+          "القرنبيط منخفض الكربوهيدرات جداً، ويمكن استخدامه بديلاً جزئياً للأرز أو البطاطا المهروسة.",
+          "اشوه في الفرن مع الكمون وقليل من الزيت بدلاً من قليه بالزيت الغزير كما في الطريقة التقليدية."
+        ],
+        "en": [
+          "Cauliflower is very low in carbohydrate and can partly replace rice or mashed potatoes.",
+          "Roast it in the oven with cumin and a little oil instead of deep-frying it as in the traditional method."
+        ],
+        "nl": [
+          "Bloemkool bevat zeer weinig koolhydraten en kan rijst of aardappelpuree deels vervangen.",
+          "Rooster hem in de oven met komijn en een beetje olie in plaats van hem te frituren zoals traditioneel gebeurt."
+        ]
+      }
+    },
+    "37": {
+      "tips": {
+        "ar": [
+          "السبانخ غنية بالحديد النباتي وحمض الفوليك وفيتامين K.",
+          "أضف إليها الليمون أو مصدراً لفيتامين C، فهو يحسّن امتصاص الحديد النباتي."
+        ],
+        "en": [
+          "Spinach is rich in plant iron, folate and vitamin K.",
+          "Add lemon or another source of vitamin C, which improves the absorption of plant iron."
+        ],
+        "nl": [
+          "Spinazie is rijk aan plantaardig ijzer, foliumzuur en vitamine K.",
+          "Voeg citroen of een andere bron van vitamine C toe; dat verbetert de opname van plantaardig ijzer."
+        ]
+      }
+    },
+    "38": {
+      "tips": {
+        "ar": [
+          "الملوخية من الورقيات الغنية بالألياف والفيتامينات، وهي أساس طبق شعبي في مصر وبلاد الشام.",
+          "حضّرها بمرق قليل الدسم، وقدّمها مع كمية معتدلة من الأرز أو الخبز لأنها تؤكل عادةً معهما."
+        ],
+        "en": [
+          "Molokhia is a leafy green rich in fibre and vitamins and the base of a popular dish in Egypt and the Levant.",
+          "Cook it in a low-fat broth and serve it with a moderate amount of rice or bread, which usually accompany it."
+        ],
+        "nl": [
+          "Molokhia is een bladgroente, rijk aan vezels en vitamines, en de basis van een geliefd gerecht in Egypte en de Levant.",
+          "Bereid haar in vetarme bouillon en serveer haar met een gematigde hoeveelheid rijst of brood, die er meestal bij gegeten worden."
+        ]
+      }
+    },
+    "39": {
+      "tips": {
+        "ar": [
+          "البامية غنية بالألياف القابلة للذوبان التي تعطيها قوامها اللزج.",
+          "اطبخها بالطماطم مع قليل من الزيت، وإضافة الليمون أو الحامض تقلل لزوجتها."
+        ],
+        "en": [
+          "Okra is rich in soluble fibre, which gives it its slippery texture.",
+          "Cook it with tomatoes and a little oil; adding lemon or another acid reduces the sliminess."
+        ],
+        "nl": [
+          "Okra is rijk aan oplosbare vezels, die zorgen voor de slijmerige structuur.",
+          "Stoof haar met tomaten en een beetje olie; citroen of een ander zuur vermindert de slijmerigheid."
+        ]
+      }
+    },
+    "40": {
+      "tips": {
+        "ar": [
+          "الفطر منخفض السعرات جداً ويضيف نكهة غنية (أومامي) إلى الطبخ دون دهون كثيرة.",
+          "شوّحه على نار عالية بقليل من الزيت حتى يتبخر ماؤه، أو أضفه إلى الصلصات بدلاً من جزء من اللحم المفروم."
+        ],
+        "en": [
+          "Mushrooms are very low in calories and add a rich savoury (umami) flavour to cooking without much fat.",
+          "Sauté them over high heat in a little oil until their water evaporates, or use them in sauces instead of some of the minced meat."
+        ],
+        "nl": [
+          "Champignons zijn zeer caloriearm en geven een rijke hartige (umami) smaak aan gerechten zonder veel vet.",
+          "Bak ze op hoog vuur in weinig olie tot het vocht verdampt, of gebruik ze in sauzen in plaats van een deel van het gehakt."
+        ]
+      }
+    },
+    "48": {
+      "tips": {
+        "ar": [
+          "تناول التفاحة كاملة بقشرها، فالقشر يحتوي على جزء كبير من أليافها ومضادات الأكسدة.",
+          "اجمع شرائح التفاح مع ملعقة زبدة فول سوداني أو حفنة لوز كوجبة خفيفة متوازنة، وتجنب عصير التفاح."
+        ],
+        "en": [
+          "Eat the whole apple with its skin, because the skin holds much of its fibre and antioxidants.",
+          "Pair apple slices with a spoonful of peanut butter or a handful of almonds for a balanced snack, and skip apple juice."
+        ],
+        "nl": [
+          "Eet de hele appel met schil, want in de schil zit een groot deel van de vezels en antioxidanten.",
+          "Combineer appelpartjes met een lepel pindakaas of een handje amandelen voor een evenwichtige snack, en sla appelsap over."
+        ]
+      }
+    },
+    "49": {
+      "tips": {
+        "ar": [
+          "كلما نضج الموز ازداد سكره؛ الموز الأقل نضجاً (أطرافه مخضرّة) أبطأ تأثيراً على سكر الدم.",
+          "موزة متوسطة حصة مناسبة قبل الرياضة أو مع اللبن، وتجنب إضافة العسل أو الشوكولاتة إليها."
+        ],
+        "en": [
+          "The riper a banana, the more sugar it contains; less ripe bananas (with green tips) raise blood sugar more slowly.",
+          "One medium banana is a good portion before exercise or with yoghurt; avoid adding honey or chocolate."
+        ],
+        "nl": [
+          "Hoe rijper de banaan, hoe meer suiker; minder rijpe bananen (met groene puntjes) laten de bloedsuiker langzamer stijgen.",
+          "Eén middelgrote banaan is een goede portie voor het sporten of bij yoghurt; voeg geen honing of chocolade toe."
+        ]
+      }
+    },
+    "50": {
+      "tips": {
+        "ar": [
+          "البرتقال الكامل يوفر الألياف وفيتامين C، وهو أفضل من العصير الذي يفقد معظم أليافه.",
+          "قشّره وتناول الفصوص مع الغشاء الأبيض الرقيق، فهو غني بالألياف."
+        ],
+        "en": [
+          "A whole orange provides fibre and vitamin C and is better than juice, which loses most of its fibre.",
+          "Peel it and eat the segments with the thin white pith, which is rich in fibre."
+        ],
+        "nl": [
+          "Een hele sinaasappel levert vezels en vitamine C en is beter dan sap, dat de meeste vezels kwijtraakt.",
+          "Schil hem en eet de partjes met het dunne witte vlies, dat rijk is aan vezels."
+        ]
+      }
+    },
+    "51": {
+      "tips": {
+        "ar": [
+          "البطيخ غني بالماء ومنخفض السعرات، وكمية الكربوهيدرات في حصته صغيرة نسبياً، لكن الحصص الكبيرة جداً ترفع الحمل الجلايسيمي.",
+          "قدّمه مبرداً كتحلية بعد الوجبة، أو مع جبنة بيضاء قليلة الملح كما في الطبق الشامي التقليدي."
+        ],
+        "en": [
+          "Watermelon is rich in water and low in calories, and a portion holds relatively little carbohydrate, but very large portions raise the glycemic load.",
+          "Serve it chilled as a dessert after a meal, or with a low-salt white cheese as in the traditional Levantine pairing."
+        ],
+        "nl": [
+          "Watermeloen is rijk aan water en caloriearm, en een portie bevat relatief weinig koolhydraten, maar heel grote porties verhogen de glykemische lading.",
+          "Serveer hem gekoeld als toetje na de maaltijd, of met een zoutarme witte kaas zoals in de traditionele Levantijnse combinatie."
+        ]
+      }
+    },
+    "53": {
+      "tips": {
+        "ar": [
+          "العنب صغير الحبة ويسهل الإفراط فيه؛ ضع حصة محددة (نحو كوب صغير) في صحن بدلاً من الأكل من العنقود.",
+          "اغسله جيداً قبل الأكل، ويمكن تجميده كوجبة خفيفة منعشة بدلاً من الحلويات."
+        ],
+        "en": [
+          "Grapes are small and easy to overeat; put a set portion (about a small cup) in a bowl instead of eating from the bunch.",
+          "Wash them well before eating; frozen grapes make a refreshing snack instead of sweets."
+        ],
+        "nl": [
+          "Druiven zijn klein en je eet er snel te veel van; doe een vaste portie (ongeveer een klein kopje) in een schaaltje in plaats van van de tros te eten.",
+          "Was ze goed voor het eten; bevroren druiven zijn een verfrissende snack in plaats van snoep."
+        ]
+      }
+    },
+    "54": {
+      "tips": {
+        "ar": [
+          "الأناناس الطازج يحتوي على فيتامين C وإنزيم البروميلين، لكن تأثيره على السكر يختلف كثيراً حسب النضج والصنف.",
+          "فضّل الأناناس الطازج على المعلّب بالشراب السكري، وإن اخترت المعلّب فاختر المحفوظ بعصيره."
+        ],
+        "en": [
+          "Fresh pineapple contains vitamin C and the enzyme bromelain, but its effect on blood sugar varies a lot with ripeness and variety.",
+          "Prefer fresh pineapple to pineapple canned in syrup; if you buy canned, choose pineapple packed in its own juice."
+        ],
+        "nl": [
+          "Verse ananas bevat vitamine C en het enzym bromelaïne, maar het effect op de bloedsuiker verschilt sterk per rijpheid en ras.",
+          "Kies verse ananas boven ananas op siroop; neem je toch blik, kies dan ananas op eigen sap."
+        ]
+      }
+    },
+    "55": {
+      "tips": {
+        "ar": [
+          "المانجو غنية بفيتاميني A وC لكنها حلوة جداً؛ نصف ثمرة متوسطة حصة مناسبة.",
+          "اختر المانجو الطازجة بدلاً من المجففة أو العصير، وجربها مع اللبن الزبادي."
+        ],
+        "en": [
+          "Mango is rich in vitamins A and C but very sweet; half a medium fruit is a suitable portion.",
+          "Choose fresh mango over dried mango or juice, and try it with yoghurt."
+        ],
+        "nl": [
+          "Mango is rijk aan vitamine A en C maar erg zoet; een halve middelgrote vrucht is een geschikte portie.",
+          "Kies verse mango in plaats van gedroogde mango of sap, en probeer hem met yoghurt."
+        ]
+      }
+    },
+    "59": {
+      "tips": {
+        "ar": [
+          "الأفوكادو غني بالدهون الأحادية غير المشبعة والألياف والبوتاسيوم؛ نصف ثمرة حصة مناسبة.",
+          "أضفه إلى السلطة أو خبز الحبوب الكاملة بدلاً من الزبدة، ورش عليه الليمون لمنع اسوداده."
+        ],
+        "en": [
+          "Avocado is rich in monounsaturated fats, fibre and potassium; half a fruit is a suitable portion.",
+          "Add it to salads or wholegrain bread instead of butter, and sprinkle it with lemon to stop it browning."
+        ],
+        "nl": [
+          "Avocado is rijk aan enkelvoudig onverzadigde vetten, vezels en kalium; een halve vrucht is een geschikte portie.",
+          "Voeg hem toe aan salades of volkorenbrood in plaats van boter, en besprenkel hem met citroen zodat hij niet bruin wordt."
+        ]
+      }
+    },
+    "62": {
+      "tips": {
+        "ar": [
+          "تمرتان إلى ثلاث تمرات حصة معتدلة، وتناولها مع الحليب أو اللبن أو حفنة مكسرات كما في الإفطار التقليدي يوازن الوجبة.",
+          "جرّب التمر مع ملعقة صغيرة من الطحينة أو حبة جوز، فالدهون والبروتين يبطئان امتصاص السكر."
+        ],
+        "en": [
+          "Two to three dates make a moderate portion; eating them with milk, yoghurt or a handful of nuts, as in the traditional iftar, balances the snack.",
+          "Try dates with a teaspoon of tahini or a walnut, because fat and protein slow the absorption of sugar."
+        ],
+        "nl": [
+          "Twee tot drie dadels zijn een gematigde portie; met melk, yoghurt of een handje noten, zoals bij de traditionele iftar, wordt het evenwichtiger.",
+          "Eet dadels met een theelepel tahin of een walnoot, want vet en eiwit vertragen de opname van suiker."
+        ]
+      }
+    },
+    "63": {
+      "tips": {
+        "ar": [
+          "التمر المجفف مركّز السكريات والسعرات؛ احسب كل ثلاث تمرات صغيرة كحصة فاكهة كاملة.",
+          "استخدم معجون التمر بديلاً طبيعياً للسكر في الحلويات المنزلية مع تقليل الكمية الكلية."
+        ],
+        "en": [
+          "Dried dates are concentrated in sugar and calories; count every three small dates as a full portion of fruit.",
+          "Use date paste as a natural sugar substitute in home baking, while reducing the total amount."
+        ],
+        "nl": [
+          "Gedroogde dadels zijn geconcentreerd in suiker en calorieën; tel elke drie kleine dadels als een volledige portie fruit.",
+          "Gebruik dadelpasta als natuurlijke suikervervanger bij zelfgebakken lekkers, en verminder de totale hoeveelheid."
+        ]
+      }
+    },
+    "66": {
+      "tips": {
+        "ar": [
+          "الكمثرى غنية بالألياف، خاصة في قشرها، ومؤشرها الجلايسيمي منخفض.",
+          "تناولها بقشرها بعد غسلها، أو اشوِها في الفرن مع القرفة كتحلية دون سكر مضاف."
+        ],
+        "en": [
+          "Pears are rich in fibre, especially in the skin, and have a low glycemic index.",
+          "Eat them with the skin after washing, or bake them with cinnamon as a dessert without added sugar."
+        ],
+        "nl": [
+          "Peren zijn rijk aan vezels, vooral in de schil, en hebben een lage glykemische index.",
+          "Eet ze met schil na het wassen, of bak ze met kaneel als toetje zonder toegevoegde suiker."
+        ]
+      }
+    },
+    "68": {
+      "tips": {
+        "ar": [
+          "حفنة صغيرة من الزبيب (نحو ملعقتين كبيرتين) تكفي لإضافة حلاوة طبيعية إلى السلطة أو الشوفان.",
+          "أضفه إلى الطبخ أو العجين بدلاً من جزء من السكر، وانقعه قليلاً في الماء ليصبح أطرى."
+        ],
+        "en": [
+          "A small handful of raisins (about two tablespoons) is enough to add natural sweetness to a salad or oatmeal.",
+          "Add them to cooking or dough instead of some of the sugar, soaking them briefly in water to soften them."
+        ],
+        "nl": [
+          "Een klein handje rozijnen (ongeveer twee eetlepels) is genoeg om een salade of havermout natuurlijk zoet te maken.",
+          "Voeg ze toe aan gerechten of deeg in plaats van een deel van de suiker, en laat ze even weken in water om ze zachter te maken."
+        ]
+      }
+    },
+    "69": {
+      "tips": {
+        "ar": [
+          "الحليب يوفر البروتين والكالسيوم وسكر اللاكتوز، ومؤشره الجلايسيمي منخفض.",
+          "اشربه دون إضافة سكر أو منكهات، ويمكن استخدامه مع الشوفان أو القهوة."
+        ],
+        "en": [
+          "Milk provides protein, calcium and the milk sugar lactose, and its glycemic index is low.",
+          "Drink it without added sugar or flavourings; it also works well with oatmeal or coffee."
+        ],
+        "nl": [
+          "Melk levert eiwit, calcium en melksuiker (lactose), en de glykemische index is laag.",
+          "Drink haar zonder toegevoegde suiker of smaakstoffen; ze past ook goed bij havermout of koffie."
+        ]
+      }
+    },
+    "70": {
+      "tips": {
+        "ar": [
+          "الحليب خالي الدسم يحتفظ بالبروتين والكالسيوم مع سعرات أقل من الحليب كامل الدسم.",
+          "مناسب للقهوة والمخفوقات المنزلية؛ تأكد أن النوع الذي تختاره غير محلّى."
+        ],
+        "en": [
+          "Skimmed milk keeps the protein and calcium with fewer calories than whole milk.",
+          "It suits coffee and homemade smoothies; make sure the variety you choose is unsweetened."
+        ],
+        "nl": [
+          "Magere melk behoudt het eiwit en calcium met minder calorieën dan volle melk.",
+          "Geschikt voor koffie en zelfgemaakte smoothies; let erop dat de variant ongezoet is."
+        ]
+      }
+    },
+    "71": {
+      "tips": {
+        "ar": [
+          "اللبن اليوناني المصفّى أغنى بالبروتين من اللبن العادي ويعزز الشبع، لكن نسخة 10% دسم أعلى سعرات.",
+          "أضف إليه الفاكهة الطازجة والمكسرات بدلاً من العسل والسكر، واختر النسخة الأقل دسماً إن أردت سعرات أقل."
+        ],
+        "en": [
+          "Strained Greek yoghurt has more protein than regular yoghurt and helps fullness, although the 10% fat version is higher in calories.",
+          "Top it with fresh fruit and nuts instead of honey or sugar, and choose a lower-fat version if you want fewer calories."
+        ],
+        "nl": [
+          "Uitgelekte Griekse yoghurt bevat meer eiwit dan gewone yoghurt en geeft verzadiging, al is de variant met 10% vet calorierijker.",
+          "Voeg vers fruit en noten toe in plaats van honing of suiker, en kies een magerdere variant als je minder calorieën wilt."
+        ]
+      }
+    },
+    "72": {
+      "tips": {
+        "ar": [
+          "اللبنة لبن مصفّى غني بالبروتين ومتوسط الدسم؛ ملعقتان كبيرتان حصة معتدلة للفطور.",
+          "قدّمها مع قليل من زيت الزيتون والخيار والنعناع وخبز الحبوب الكاملة، واختر الأنواع الأقل ملحاً."
+        ],
+        "en": [
+          "Labneh is a strained yoghurt that is rich in protein and moderate in fat; two tablespoons are a moderate breakfast portion.",
+          "Serve it with a little olive oil, cucumber, mint and wholegrain bread, and choose lower-salt brands."
+        ],
+        "nl": [
+          "Labneh is uitgelekte yoghurt, rijk aan eiwit en matig vet; twee eetlepels zijn een gematigde ontbijtportie.",
+          "Serveer haar met een beetje olijfolie, komkommer, munt en volkorenbrood, en kies zoutarmere merken."
+        ]
+      }
+    },
+    "74": {
+      "tips": {
+        "ar": [
+          "جبنة الشيدر غنية بالكالسيوم والبروتين لكنها مرتفعة الدهون المشبعة والملح؛ شريحة واحدة (نحو 30 غ) تكفي.",
+          "استخدمها مبشورة بكمية صغيرة لإضافة النكهة، فطعمها القوي يغني عن الكميات الكبيرة."
+        ],
+        "en": [
+          "Cheddar is rich in calcium and protein but high in saturated fat and salt; one slice (about 30 g) is enough.",
+          "Use a small amount grated to add flavour; its strong taste means you need less."
+        ],
+        "nl": [
+          "Cheddar is rijk aan calcium en eiwit maar bevat veel verzadigd vet en zout; één plak (ongeveer 30 g) is genoeg.",
+          "Gebruik een kleine hoeveelheid geraspt voor de smaak; door de sterke smaak heb je er minder van nodig."
+        ]
+      }
+    },
+    "77": {
+      "tips": {
+        "ar": [
+          "الحلوم جبن مالح نسبياً وغني بالبروتين؛ حصة صغيرة تكفي مع السلطة أو الفطور.",
+          "اشوه أو حمّره في مقلاة دون زيت لأنه لا يذوب بسهولة، ويمكن نقعه في الماء لتقليل ملوحته."
+        ],
+        "en": [
+          "Halloumi is a fairly salty, protein-rich cheese; a small portion is enough with a salad or breakfast.",
+          "Grill it or fry it in a dry pan, since it does not melt easily, and soak it in water to reduce the saltiness."
+        ],
+        "nl": [
+          "Halloumi is een vrij zoute, eiwitrijke kaas; een kleine portie is genoeg bij een salade of ontbijt.",
+          "Gril hem of bak hem in een droge pan, want hij smelt niet snel, en week hem in water om hem minder zout te maken."
+        ]
+      }
+    },
+    "79": {
+      "tips": {
+        "ar": [
+          "الكفير حليب مخمّر يحتوي على بكتيريا وخمائر نافعة، وقوامه أخف من اللبن الزبادي.",
+          "اشربه بارداً أو أضفه إلى المخفوقات، واختر الكفير الطبيعي غير المحلّى."
+        ],
+        "en": [
+          "Kefir is a fermented milk that contains beneficial bacteria and yeasts and is thinner than yoghurt.",
+          "Drink it chilled or add it to smoothies, and choose plain, unsweetened kefir."
+        ],
+        "nl": [
+          "Kefir is gefermenteerde melk met nuttige bacteriën en gisten, en is dunner dan yoghurt.",
+          "Drink hem gekoeld of voeg hem toe aan smoothies, en kies naturel, ongezoete kefir."
+        ]
+      }
+    },
+    "91": {
+      "tips": {
+        "ar": [
+          "صدر الدجاج من أغنى المصادر بالبروتين وأقلها دهوناً، خاصة بدون الجلد.",
+          "تتبيله بالزبادي والليمون والبهارات قبل الشوي يحافظ على طراوته، واطبخه حتى تصل حرارة داخله إلى 74 درجة مئوية."
+        ],
+        "en": [
+          "Chicken breast is one of the richest and leanest protein sources, especially without the skin.",
+          "Marinating it in yoghurt, lemon and spices before grilling keeps it tender; cook it to an internal temperature of 74 °C."
+        ],
+        "nl": [
+          "Kipfilet is een van de rijkste en magerste eiwitbronnen, vooral zonder vel.",
+          "Marineren in yoghurt, citroen en kruiden voor het grillen houdt hem mals; gaar hem tot een kerntemperatuur van 74 °C."
+        ]
+      }
+    },
+    "92": {
+      "tips": {
+        "ar": [
+          "اللحم البقري غني بالبروتين والحديد وفيتامين B12؛ اختر القطع قليلة الدهن واعتدل في حصص اللحوم الحمراء خلال الأسبوع.",
+          "الشوي على حرارة معتدلة أفضل من التفحيم، وأزل الدهون الظاهرة قبل الطهي."
+        ],
+        "en": [
+          "Beef is rich in protein, iron and vitamin B12; choose lean cuts and keep red meat portions moderate across the week.",
+          "Grilling over moderate heat is better than charring, and trim visible fat before cooking."
+        ],
+        "nl": [
+          "Rundvlees is rijk aan eiwit, ijzer en vitamine B12; kies magere stukken en houd rood vlees gematigd over de week.",
+          "Grillen op matige hitte is beter dan aanbranden, en snijd zichtbaar vet weg voor het bereiden."
+        ]
+      }
+    },
+    "93": {
+      "tips": {
+        "ar": [
+          "لحم الغنم غني بالبروتين لكنه أعلى دهوناً من الدجاج؛ اختر القطع الأقل دهناً كالفخذ المنزوع الدهن.",
+          "اطبخه بالشوي أو الطهي البطيء مع إزالة الدهن الطافي، وقدّمه مع الخضار بدلاً من كميات كبيرة من الأرز."
+        ],
+        "en": [
+          "Lamb is rich in protein but higher in fat than chicken; choose leaner cuts such as trimmed leg.",
+          "Grill or slow-cook it and skim off the fat, and serve it with vegetables rather than large amounts of rice."
+        ],
+        "nl": [
+          "Lamsvlees is rijk aan eiwit maar vetter dan kip; kies magere stukken zoals bijgesneden bout.",
+          "Gril het of stoof het langzaam en schep het vet eraf, en serveer het met groenten in plaats van veel rijst."
+        ]
+      }
+    },
+    "94": {
+      "tips": {
+        "ar": [
+          "السلمون غني بأحماض أوميغا 3 الدهنية والبروتين، وتوصي إرشادات غذائية كثيرة بتناول السمك مرة إلى مرتين أسبوعياً.",
+          "اشوه في الفرن أو على الصاج مع الليمون والأعشاب، ولا تُفرط في طهيه حتى يبقى طرياً."
+        ],
+        "en": [
+          "Salmon is rich in omega-3 fatty acids and protein, and many dietary guidelines recommend eating fish once or twice a week.",
+          "Bake or pan-grill it with lemon and herbs, and do not overcook it so it stays moist."
+        ],
+        "nl": [
+          "Zalm is rijk aan omega-3-vetzuren en eiwit, en veel voedingsrichtlijnen adviseren één tot twee keer per week vis.",
+          "Bak hem in de oven of in de grillpan met citroen en kruiden, en gaar hem niet te lang zodat hij sappig blijft."
+        ]
+      }
+    },
+    "98": {
+      "tips": {
+        "ar": [
+          "التونة المعلبة بالماء مصدر عملي للبروتين بسعرات منخفضة، وتناسب السلطات والسندويشات.",
+          "صفّها جيداً واخلطها مع قليل من زيت الزيتون والليمون بدلاً من المايونيز."
+        ],
+        "en": [
+          "Tuna canned in water is a practical, low-calorie protein source that suits salads and sandwiches.",
+          "Drain it well and mix it with a little olive oil and lemon instead of mayonnaise."
+        ],
+        "nl": [
+          "Tonijn op water is een praktische, caloriearme eiwitbron die past in salades en broodjes.",
+          "Laat hem goed uitlekken en meng hem met wat olijfolie en citroen in plaats van mayonaise."
+        ]
+      }
+    },
+    "101": {
+      "tips": {
+        "ar": [
+          "البيضة الكبيرة توفر نحو 6 غ من البروتين عالي الجودة، وهي خيار عملي للفطور أو الوجبة الخفيفة.",
+          "السلق من أفضل طرق التحضير دون دهون مضافة؛ اتركها 9 إلى 12 دقيقة لبيضة مسلوقة جيداً."
+        ],
+        "en": [
+          "A large egg provides about 6 g of high-quality protein and is a practical choice for breakfast or a snack.",
+          "Boiling is one of the best methods without added fat; cook for 9 to 12 minutes for a hard-boiled egg."
+        ],
+        "nl": [
+          "Een groot ei levert ongeveer 6 g hoogwaardig eiwit en is een praktische keuze voor ontbijt of tussendoor.",
+          "Koken is een van de beste bereidingen zonder toegevoegd vet; kook 9 tot 12 minuten voor een hardgekookt ei."
+        ]
+      }
+    },
+    "128": {
+      "tips": {
+        "ar": [
+          "زيت الزيتون البكر غني بالدهون الأحادية غير المشبعة والبوليفينولات، لكن ملعقة كبيرة واحدة تحتوي على نحو 120 سعرة.",
+          "استخدمه نيئاً على السلطات والحمص أو للطهي على حرارة متوسطة، وقِس الكمية بالملعقة بدلاً من السكب المباشر."
+        ],
+        "en": [
+          "Extra virgin olive oil is rich in monounsaturated fats and polyphenols, but one tablespoon contains about 120 kcal.",
+          "Use it raw on salads and hummus or for cooking over medium heat, and measure it with a spoon rather than pouring freely."
+        ],
+        "nl": [
+          "Extra vierge olijfolie is rijk aan enkelvoudig onverzadigde vetten en polyfenolen, maar één eetlepel bevat ongeveer 120 kcal.",
+          "Gebruik haar rauw over salades en hummus of om op middelhoog vuur te bakken, en meet af met een lepel in plaats van vrij te schenken."
+        ]
+      }
+    },
+    "132": {
+      "tips": {
+        "ar": [
+          "القهوة السوداء دون إضافات لا تكاد تحتوي على سعرات.",
+          "إن أردت الحليب فاختر كمية صغيرة غير محلاة، وتجنب الشراب المنكّه والكريمة."
+        ],
+        "en": [
+          "Black coffee without additions contains almost no calories.",
+          "If you want milk, use a small unsweetened amount, and avoid flavoured syrups and cream."
+        ],
+        "nl": [
+          "Zwarte koffie zonder toevoegingen bevat vrijwel geen calorieën.",
+          "Wil je melk, neem dan een klein ongezoet scheutje, en vermijd smaaksiropen en room."
+        ]
+      }
+    },
+    "133": {
+      "tips": {
+        "ar": [
+          "الشاي الأخضر يحتوي على مضادات أكسدة (الكاتيكينات) وعادةً على كافيين أقل من القهوة.",
+          "انقعه بماء دون درجة الغليان (نحو 80 درجة مئوية) لمدة دقيقتين إلى ثلاث لتجنب المرارة، ودون سكر."
+        ],
+        "en": [
+          "Green tea contains antioxidants (catechins) and usually less caffeine than coffee.",
+          "Steep it in water just below boiling (about 80 °C) for two to three minutes to avoid bitterness, and skip the sugar."
+        ],
+        "nl": [
+          "Groene thee bevat antioxidanten (catechinen) en meestal minder cafeïne dan koffie.",
+          "Laat hem twee tot drie minuten trekken in water net onder het kookpunt (ongeveer 80 °C) om bitterheid te voorkomen, en zonder suiker."
+        ]
+      }
+    },
+    "196": {
+      "tips": {
+        "ar": [
+          "رغيف صغير (نحو 60 غ) حصة معتدلة؛ املأه بالخضار والدجاج المشوي أو الحمص بدلاً من الصلصات الدهنية.",
+          "اختر الخبز العربي الأسمر المصنوع من الطحين الكامل، وسخّنه سريعاً بدلاً من قليه أو تحميصه بالزيت."
+        ],
+        "en": [
+          "One small pita (about 60 g) is a moderate portion; fill it with vegetables and grilled chicken or hummus rather than fatty sauces.",
+          "Choose wholemeal pita and warm it briefly instead of frying it or toasting it in oil."
+        ],
+        "nl": [
+          "Eén klein pitabroodje (ongeveer 60 g) is een gematigde portie; vul het met groenten en gegrilde kip of hummus in plaats van vette sauzen.",
+          "Kies volkoren pitabrood en warm het kort op in plaats van het te bakken of in olie te roosteren."
+        ]
+      }
+    }
+  }
 }

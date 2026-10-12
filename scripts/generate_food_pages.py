@@ -249,6 +249,91 @@ UI = {
 }
 
 
+FAQ = {
+    'ar': dict(
+        title='أسئلة شائعة',
+        q=('هل {name} مناسب لإنقاص الوزن؟', 'كيف يؤثر {name} على سكر الدم؟', 'ما القيمة الغذائية لحصة معتادة من {name}؟'),
+        w_high='يحتوي {name} على {kcal} سعرة لكل 100 غ، أي أنه مرتفع السعرات، لذلك يُدخل في نظام إنقاص الوزن بكميات صغيرة ومقاسة فقط؛ حصة {p} غ تعطي {kcal_p} سعرة.',
+        w_low='نعم، {name} منخفض السعرات جداً ({kcal} سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.',
+        w_protein='يمكن أن يكون جزءاً مفيداً من نظام لإنقاص الوزن، لأنه يوفر {ppk} غ بروتين لكل 100 سعرة، والبروتين يعزز الشبع. حصة {p} غ تعطي {kcal_p} سعرة.',
+        w_fiber='يمكن إدخاله باعتدال، فهو يحتوي على {fiber} غ ألياف لكل 100 غ تساعد على الشبع، وحصة {p} غ تعطي {kcal_p} سعرة.',
+        w_general='يمكن إدخاله ضمن نظام متوازن مع التحكم بالحصة: حصة {p} غ تعطي {kcal_p} سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.',
+        s_measured='مؤشره الجلايسيمي {gi} ({level}) وفق Atkinson 2021. وفي حصة معتادة من {p} غ يبلغ حمله الجلايسيمي {gl} ({gl_level}){advice}',
+        s_advice=('، لذلك يكون تأثير هذه الحصة على سكر الدم محدوداً.', '، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف.',
+                  '، لذلك يُفضّل تقليل الحصة أو تقسيمها وجمعها مع البروتين والألياف.'),
+        s_na_zero='لا يحتوي {name} تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.',
+        s_na='يحتوي {name} على {avail} غ فقط من الكربوهيدرات المتاحة لكل 100 غ، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.',
+        portion='حصة معتادة من {p} غ من {name} تحتوي تقريباً على {kcal_p} سعرة، و{prot_p} غ بروتين، و{carb_p} غ كربوهيدرات، و{fat_p} غ دهون، و{fib_p} غ ألياف.'),
+    'en': dict(
+        title='Frequently asked questions',
+        q=('{Is_} {name} good for weight loss?', 'How {does} {name} affect blood sugar?', 'What is the nutritional value of a typical portion of {name}?'),
+        w_high='{name} {provides} {kcal} kcal per 100 g, so it is high in calories and fits a weight-loss plan only in small, measured amounts; a {p} g portion gives {kcal_p} kcal.',
+        w_low='Yes. {name} {is_} very low in calories ({kcal} kcal per 100 g), so you can eat a generous amount to add volume and fullness to a meal without many calories.',
+        w_protein='It can be a useful part of a weight-loss plan because it provides {ppk} g of protein per 100 kcal, and protein supports fullness. A {p} g portion gives {kcal_p} kcal.',
+        w_fiber='It can be included in moderation: it contains {fiber} g of fibre per 100 g, which supports fullness, and a {p} g portion gives {kcal_p} kcal.',
+        w_general='It can fit a balanced plan with portion control: a {p} g portion gives {kcal_p} kcal, and what matters most is your total daily intake and the rest of the meal.',
+        s_measured='Its glycemic index is {gi} ({level}) according to Atkinson 2021. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
+        s_advice=(', so the effect of this portion on blood sugar is limited.', ', so it is best combined with protein or fibre-rich vegetables.',
+                  ', so it is best to reduce or split the portion and combine it with protein and fibre.'),
+        s_na='{name} {contains} only {avail} g of available carbohydrate per 100 g, so the glycemic index does not apply and its direct effect on blood sugar is minimal. The meal’s effect depends on what you eat with it, such as bread, rice or sweetened sauces.',
+        s_na_zero='{name} {contains} virtually no available carbohydrate, so the glycemic index does not apply and its direct effect on blood sugar is minimal. The meal’s effect depends on what you eat with it, such as bread, rice or sweetened sauces.',
+        portion='A typical {p} g portion of {name} provides about {kcal_p} kcal, {prot_p} g protein, {carb_p} g carbohydrate, {fat_p} g fat and {fib_p} g fibre.'),
+    'nl': dict(
+        title='Veelgestelde vragen',
+        q=('{Is_} {name} geschikt om af te vallen?', 'Wat is het effect van {name} op de bloedsuiker?', 'Wat is de voedingswaarde van een gangbare portie {name}?'),
+        w_high='{name} {levert} {kcal} kcal per 100 g en {is_} dus calorierijk; in een afvalplan past het alleen in kleine, afgemeten hoeveelheden. Een portie van {p} g geeft {kcal_p} kcal.',
+        w_low='Ja. {name} {is_} zeer caloriearm ({kcal} kcal per 100 g), dus je kunt er royaal van eten om een maaltijd volume en verzadiging te geven zonder veel calorieën.',
+        w_protein='Het kan een nuttig onderdeel zijn van een afvalplan, omdat het {ppk} g eiwit per 100 kcal levert en eiwit de verzadiging bevordert. Een portie van {p} g geeft {kcal_p} kcal.',
+        w_fiber='Het past met mate: het bevat {fiber} g vezels per 100 g, wat de verzadiging ondersteunt, en een portie van {p} g geeft {kcal_p} kcal.',
+        w_general='Het past in een evenwichtig eetpatroon met aandacht voor de portie: een portie van {p} g geeft {kcal_p} kcal, en het gaat vooral om je totale dagelijkse inname en de rest van de maaltijd.',
+        s_measured='De glykemische index is {gi} ({level}) volgens Atkinson 2021. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
+        s_advice=(', dus het effect van deze portie op de bloedsuiker is beperkt.', ', dus combineer het bij voorkeur met eiwit of vezelrijke groenten.',
+                  ', dus verklein of verdeel de portie bij voorkeur en combineer haar met eiwit en vezels.'),
+        s_na='{name} {bevat} slechts {avail} g beschikbare koolhydraten per 100 g, dus de glykemische index is niet van toepassing en het directe effect op de bloedsuiker is minimaal. Het effect van de maaltijd hangt af van wat je erbij eet, zoals brood, rijst of gezoete sauzen.',
+        s_na_zero='{name} {bevat} vrijwel geen beschikbare koolhydraten, dus de glykemische index is niet van toepassing en het directe effect op de bloedsuiker is minimaal. Het effect van de maaltijd hangt af van wat je erbij eet, zoals brood, rijst of gezoete sauzen.',
+        portion='Een gangbare portie van {p} g {name} levert ongeveer {kcal_p} kcal, {prot_p} g eiwit, {carb_p} g koolhydraten, {fat_p} g vet en {fib_p} g vezels.'),
+}
+
+
+PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68}, 'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68}}
+VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provides'),
+                dict(is_='are', does='do', contains='contain', provides='provide')),
+         'nl': (dict(is_='is', bevat='bevat', levert='levert'), dict(is_='zijn', bevat='bevatten', levert='leveren')),
+         'ar': (dict(), dict())}
+
+
+def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None):
+    """Three questions whose answers are computed from the food's own numbers."""
+    f, u = FAQ[lang], UI[lang]
+    v = dict(VERBS[lang][1 if food['id'] in PLURAL.get(lang, set()) else 0])
+    if 'is_' in v:
+        v['Is_'] = v['is_'].capitalize()
+    pf = portion / 100.0
+    kcal = food['kcal']
+    kcal_p = round(kcal * pf)
+    ppk = food['protein'] / kcal * 100 if kcal else 0
+    if kcal >= 400:
+        w = f['w_high']
+    elif kcal <= 60:
+        w = f['w_low']
+    elif ppk >= 8:
+        w = f['w_protein']
+    elif food['fiber'] >= 3:
+        w = f['w_fiber']
+    else:
+        w = f['w_general']
+    a1 = w.format(name=name, kcal=round(kcal), p=portion, kcal_p=kcal_p, ppk=fmt(ppk), fiber=fmt(food['fiber']), **v)
+    if measured:
+        a2 = f['s_measured'].format(gi=gi, level=u['levels'][lvl], p=portion, gl=fmt(gl), gl_level=u['levels'][glv],
+                                    advice=f['s_advice'][glv])
+    else:
+        tmpl = f['s_na_zero'] if food['avail'] < 0.5 else f['s_na']
+        a2 = tmpl.format(name=name, avail=fmt(food['avail']), **v)
+    a3 = f['portion'].format(p=portion, name=name, kcal_p=kcal_p, prot_p=fmt(food['protein'] * pf),
+                             carb_p=fmt(food['carbs'] * pf), fat_p=fmt(food['fat'] * pf), fib_p=fmt(food['fiber'] * pf))
+    return [(q.format(name=name, **v), a) for q, a in zip(f['q'], (a1, a2, a3))]
+
+
 def studies_word(n, lang):
     if lang == 'ar':
         return {1: 'دراسة واحدة', 2: 'دراستين'}.get(n, f'{n} دراسات' if 3 <= n <= 10 else f'{n} دراسة')
@@ -375,6 +460,10 @@ PAGE_CSS = """
         }
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
+        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -431,7 +520,9 @@ def build(food, lang, ctx):
     group_name = GROUPS[group][li]
     measured = food['gi_status'] == 'measured' and food['gi'] is not None
     p_factor = portion / 100.0
-    tips = ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li]
+    tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
+    if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
+        tips.append(TIPS[group][li][2])
 
     # -------- numbers
     kcal, protein, avail = round(food['kcal']), fmt(food['protein']), fmt(food['avail'])
@@ -448,6 +539,17 @@ def build(food, lang, ctx):
         lead = u['lead_na'].format(name=name, kcal=kcal, protein=protein)
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
     title = u['title'].format(name=name)
+
+    # -------- FAQ (answers computed from the numbers)
+    if measured:
+        faq = build_faq(food, lang, name, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv)
+    else:
+        faq = build_faq(food, lang, name, portion, False)
+    faq_html = ''.join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
+    faq_schema = {
+        "@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang,
+        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq],
+    }
 
     # -------- comparison & alternatives (within the pilot group)
     peers = [ctx['foods'][i] for i, (g, _) in PILOT.items() if g == group]
@@ -574,6 +676,9 @@ def build(food, lang, ctx):
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
+    <script type="application/ld+json">
+{json.dumps(faq_schema, ensure_ascii=False, indent=4)}
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -648,6 +753,9 @@ def build(food, lang, ctx):
             <p>{esc(compare_txt)}</p>
             <p><strong>{alt_title}</strong></p>
             <ul class="alt-list">{alt_html}</ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>{FAQ[lang]["title"]}</span></h2>
+            <section class="faq-list">{faq_html}</section>
 
             <aside class="boodi-card">
                 <div>

@@ -74,6 +74,39 @@
     }
 }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "ar",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "هل لحم غنم مشوي مناسب لإنقاص الوزن؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "يمكن أن يكون جزءاً مفيداً من نظام لإنقاص الوزن، لأنه يوفر 8.5 غ بروتين لكل 100 سعرة، والبروتين يعزز الشبع. حصة 100 غ تعطي 294 سعرة."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "كيف يؤثر لحم غنم مشوي على سكر الدم؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "لا يحتوي لحم غنم مشوي تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ما القيمة الغذائية لحصة معتادة من لحم غنم مشوي؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "حصة معتادة من 100 غ من لحم غنم مشوي تحتوي تقريباً على 294 سعرة، و25 غ بروتين، و0 غ كربوهيدرات، و21 غ دهون، و0 غ ألياف."
+            }
+        }
+    ]
+}
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -690,6 +723,10 @@
         }
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
+        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -784,7 +821,7 @@
             </section>
 
             <h2 class="section-title"><span>💡 الإرشاد الغذائي الذكي</span></h2>
-            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>مصدر ممتاز للبروتين الذي يعزز الشبع، ووجوده في الوجبة مع النشويات يساعد على إبطاء ارتفاع سكر الدم.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>فضّل الشوي أو السلق أو الطهي بالبخار على القلي العميق، وتجنب التحمير الزائد والتفحّم.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لا يحتاج هذا الصنف إلى مؤشر جلايسيمي، لكن الأطعمة المرافقة له في الوجبة هي التي تحدد أثرها على سكر الدم.</p></div></div>
+            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>لحم الغنم غني بالبروتين لكنه أعلى دهوناً من الدجاج؛ اختر القطع الأقل دهناً كالفخذ المنزوع الدهن.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>اطبخه بالشوي أو الطهي البطيء مع إزالة الدهن الطافي، وقدّمه مع الخضار بدلاً من كميات كبيرة من الأرز.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لا يحتاج هذا الصنف إلى مؤشر جلايسيمي، لكن الأطعمة المرافقة له في الوجبة هي التي تحدد أثرها على سكر الدم.</p></div></div>
 
             <h2 class="section-title"><i class="fas fa-table-list"></i> <span>القيم الغذائية</span></h2>
             <table class="nutrition-table">
@@ -797,6 +834,9 @@
             <p>يوفر 8.5 غ بروتين لكل 100 سعرة، في المرتبة 5 من 6 في فئة اللحوم والأسماك والبيض (الأعلى أولاً).</p>
             <p><strong>أصناف أخرى في الفئة:</strong></p>
             <ul class="alt-list"><li><a href="/foods/canned-tuna-in-water.html">تونة معلبة بالماء<span>116 سعرة</span></a></li><li><a href="/foods/grilled-chicken-breast.html">صدر دجاج مشوي<span>165 سعرة</span></a></li><li><a href="/foods/grilled-beef-steak.html">لحم بقري ستيك مشوي<span>250 سعرة</span></a></li></ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>أسئلة شائعة</span></h2>
+            <section class="faq-list"><div class="faq-item"><h3>هل لحم غنم مشوي مناسب لإنقاص الوزن؟</h3><p>يمكن أن يكون جزءاً مفيداً من نظام لإنقاص الوزن، لأنه يوفر 8.5 غ بروتين لكل 100 سعرة، والبروتين يعزز الشبع. حصة 100 غ تعطي 294 سعرة.</p></div><div class="faq-item"><h3>كيف يؤثر لحم غنم مشوي على سكر الدم؟</h3><p>لا يحتوي لحم غنم مشوي تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.</p></div><div class="faq-item"><h3>ما القيمة الغذائية لحصة معتادة من لحم غنم مشوي؟</h3><p>حصة معتادة من 100 غ من لحم غنم مشوي تحتوي تقريباً على 294 سعرة، و25 غ بروتين، و0 غ كربوهيدرات، و21 غ دهون، و0 غ ألياف.</p></div></section>
 
             <aside class="boodi-card">
                 <div>

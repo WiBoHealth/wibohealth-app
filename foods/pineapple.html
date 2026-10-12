@@ -74,6 +74,39 @@
     }
 }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "ar",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "هل أناناس طازج مناسب لإنقاص الوزن؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، أناناس طازج منخفض السعرات جداً (50 سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "كيف يؤثر أناناس طازج على سكر الدم؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "مؤشره الجلايسيمي 61 (متوسط) وفق Atkinson 2021. وفي حصة معتادة من 150 غ يبلغ حمله الجلايسيمي 10.6 (متوسط)، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ما القيمة الغذائية لحصة معتادة من أناناس طازج؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "حصة معتادة من 150 غ من أناناس طازج تحتوي تقريباً على 75 سعرة، و0.8 غ بروتين، و19.5 غ كربوهيدرات، و0.2 غ دهون، و2.1 غ ألياف."
+            }
+        }
+    ]
+}
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -690,6 +723,10 @@
         }
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
+        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -784,7 +821,7 @@
             </section>
 
             <h2 class="section-title"><span>💡 الإرشاد الغذائي الذكي</span></h2>
-            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>تناول الفاكهة كاملة بقشرها متى أمكن بدلاً من العصير، فالألياف تبطئ امتصاص السكر وتزيد الشبع.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>تناولها طازجة وفي موسمها، ويمكن جمعها مع حفنة مكسرات أو لبن لإبطاء الاستجابة السكرية.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p></div></div>
+            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>الأناناس الطازج يحتوي على فيتامين C وإنزيم البروميلين، لكن تأثيره على السكر يختلف كثيراً حسب النضج والصنف.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>فضّل الأناناس الطازج على المعلّب بالشراب السكري، وإن اخترت المعلّب فاختر المحفوظ بعصيره.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p></div></div>
 
             <h2 class="section-title"><i class="fas fa-table-list"></i> <span>القيم الغذائية</span></h2>
             <table class="nutrition-table">
@@ -797,6 +834,9 @@
             <p>يأتي في المرتبة 8 من 8 صنفاً مقاساً في فئة الفواكه من حيث المؤشر الجلايسيمي (الأقل أولاً).</p>
             <p><strong>بدائل بمؤشر جلايسيمي أقل:</strong></p>
             <ul class="alt-list"><li><a href="/foods/pear.html">كمثرى (إجاص)<span>المؤشر الجلايسيمي 36</span></a></li><li><a href="/foods/apple.html">تفاح أحمر/أخضر<span>المؤشر الجلايسيمي 38</span></a></li><li><a href="/foods/orange.html">برتقال أبو صرة<span>المؤشر الجلايسيمي 42</span></a></li></ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>أسئلة شائعة</span></h2>
+            <section class="faq-list"><div class="faq-item"><h3>هل أناناس طازج مناسب لإنقاص الوزن؟</h3><p>نعم، أناناس طازج منخفض السعرات جداً (50 سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.</p></div><div class="faq-item"><h3>كيف يؤثر أناناس طازج على سكر الدم؟</h3><p>مؤشره الجلايسيمي 61 (متوسط) وفق Atkinson 2021. وفي حصة معتادة من 150 غ يبلغ حمله الجلايسيمي 10.6 (متوسط)، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف.</p></div><div class="faq-item"><h3>ما القيمة الغذائية لحصة معتادة من أناناس طازج؟</h3><p>حصة معتادة من 150 غ من أناناس طازج تحتوي تقريباً على 75 سعرة، و0.8 غ بروتين، و19.5 غ كربوهيدرات، و0.2 غ دهون، و2.1 غ ألياف.</p></div></section>
 
             <aside class="boodi-card">
                 <div>

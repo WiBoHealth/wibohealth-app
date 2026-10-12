@@ -74,6 +74,39 @@
     }
 }
     </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "ar",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "هل كينوا مطبوخة مناسب لإنقاص الوزن؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "يمكن إدخاله ضمن نظام متوازن مع التحكم بالحصة: حصة 150 غ تعطي 180 سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "كيف يؤثر كينوا مطبوخة على سكر الدم؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "مؤشره الجلايسيمي 52 (منخفض) وفق Atkinson 2021. وفي حصة معتادة من 150 غ يبلغ حمله الجلايسيمي 14.2 (متوسط)، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "ما القيمة الغذائية لحصة معتادة من كينوا مطبوخة؟",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "حصة معتادة من 150 غ من كينوا مطبوخة تحتوي تقريباً على 180 سعرة، و6.6 غ بروتين، و31.5 غ كربوهيدرات، و2.8 غ دهون، و4.2 غ ألياف."
+            }
+        }
+    ]
+}
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -690,6 +723,10 @@
         }
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
+        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -784,7 +821,7 @@
             </section>
 
             <h2 class="section-title"><span>💡 الإرشاد الغذائي الذكي</span></h2>
-            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>تناوله ضمن وجبة متوازنة وبحصة معتدلة، واجمعه مع مصدر بروتين وخضار غنية بالألياف لإبطاء ارتفاع سكر الدم.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>اختر الأصناف الكاملة متى أمكن ولا تُفرط في الطهي؛ فالطهي الطويل يرفع المؤشر الجلايسيمي، وتبريد النشويات المطبوخة ثم إعادة تسخينها قد يخفّض استجابة السكر قليلاً.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p></div></div>
+            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> توصيات الاستهلاك</h3><p>الكينوا تحتوي على جميع الأحماض الأمينية الأساسية، فهي بديل جيد للأرز في الأطباق النباتية.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> أفضل طرق التحضير</h3><p>اشطفها جيداً قبل الطهي لإزالة طبقة الصابونين المُرّة، واطبخها بنحو كوبين من الماء لكل كوب.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> ملاحظة غذائية هامة</h3><p>لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p></div></div>
 
             <h2 class="section-title"><i class="fas fa-table-list"></i> <span>القيم الغذائية</span></h2>
             <table class="nutrition-table">
@@ -797,6 +834,9 @@
             <p>يأتي في المرتبة 3 من 13 صنفاً مقاساً في فئة الحبوب والنشويات من حيث المؤشر الجلايسيمي (الأقل أولاً).</p>
             <p><strong>بدائل بمؤشر جلايسيمي أقل:</strong></p>
             <ul class="alt-list"><li><a href="/foods/bulgur.html">برغل مطبوخ<span>المؤشر الجلايسيمي 47</span></a></li><li><a href="/foods/white-pasta.html">معكرونة بيضاء<span>المؤشر الجلايسيمي 49</span></a></li></ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>أسئلة شائعة</span></h2>
+            <section class="faq-list"><div class="faq-item"><h3>هل كينوا مطبوخة مناسب لإنقاص الوزن؟</h3><p>يمكن إدخاله ضمن نظام متوازن مع التحكم بالحصة: حصة 150 غ تعطي 180 سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.</p></div><div class="faq-item"><h3>كيف يؤثر كينوا مطبوخة على سكر الدم؟</h3><p>مؤشره الجلايسيمي 52 (منخفض) وفق Atkinson 2021. وفي حصة معتادة من 150 غ يبلغ حمله الجلايسيمي 14.2 (متوسط)، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف.</p></div><div class="faq-item"><h3>ما القيمة الغذائية لحصة معتادة من كينوا مطبوخة؟</h3><p>حصة معتادة من 150 غ من كينوا مطبوخة تحتوي تقريباً على 180 سعرة، و6.6 غ بروتين، و31.5 غ كربوهيدرات، و2.8 غ دهون، و4.2 غ ألياف.</p></div></section>
 
             <aside class="boodi-card">
                 <div>
