@@ -1158,7 +1158,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #2ecc71;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
     </footer>
 
     <!-- Food Details Modal -->
@@ -1294,6 +1294,8 @@
                 "footer_contact": "اتصل بنا",
                 "footer_privacy": "سياسة الخصوصية",
                 "footer_terms": "شروط الاستخدام",
+                "footer_dev_a": "مُطور بـ",
+                "footer_dev_b": "من أجل بودي",
                 "footer_rights": "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي"
             },
             en: {
@@ -1348,6 +1350,8 @@
                 "footer_contact": "Contact Us",
                 "footer_privacy": "Privacy Policy",
                 "footer_terms": "Terms of Use",
+                "footer_dev_a": "Developed with",
+                "footer_dev_b": "for boodi",
                 "footer_rights": "© 2026 WiBo Health Group. All rights reserved | WiBo Health Medical Team"
             },
             nl: {
@@ -1402,6 +1406,8 @@
                 "footer_contact": "Contact",
                 "footer_privacy": "Privacybeleid",
                 "footer_terms": "Algemene Voorwaarden",
+                "footer_dev_a": "Ontwikkeld met",
+                "footer_dev_b": "voor boodi",
                 "footer_rights": "© 2026 WiBo Health Group. Alle rechten voorbehouden | Medisch Team WiBo Health"
             }
         };
@@ -1744,8 +1750,8 @@
             const nameEn = food.nameEn || '';
             const nameNl = food.nameNl || '';
             let title = nameAr, subtitle = nameEn;
-            if (lang === 'en') { title = nameEn || nameAr; subtitle = nameAr; }
-            else if (lang === 'nl') { title = nameNl || nameEn || nameAr; subtitle = [nameEn !== title ? nameEn : '', nameAr].filter(Boolean).join(' · '); }
+            if (lang === 'en') { title = nameEn || nameAr; subtitle = nameNl && nameNl !== title ? nameNl : ''; }
+            else if (lang === 'nl') { title = nameNl || nameEn || nameAr; subtitle = nameEn && nameEn !== title ? nameEn : ''; }
 
             document.getElementById('foodModalTitle').textContent = title;
             document.getElementById('foodModalSubtitle').textContent = subtitle;

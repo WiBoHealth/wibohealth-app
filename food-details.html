@@ -374,6 +374,12 @@
             color: #cbd5e1;
         }
         .ii-sources-box { margin-top: -10px; }
+        .sources-stack { margin: 0 0 22px; }
+        .sources-stack .gi-sources-box { margin: 0 0 10px; }
+        .sources-stack .gi-sources-box:last-child { margin-bottom: 0; }
+        .sources-link { color: var(--primary-color); font-weight: 800; text-decoration: none; white-space: nowrap; }
+        .sources-link:hover { text-decoration: underline; }
+        body.dark-mode .sources-link { color: #6ee7a8; }
 
         /* شارة مؤشر الإنسولين المختبر سريرياً (Holt 1997 / Bao 2009) */
         .ii-tested-badge {
@@ -693,11 +699,34 @@
             </div>
         </div>
 
-        <!-- GI Clinical Sources -->
-        <div class="gi-sources-box" data-i18n="gi_sources">📚 المراجع العلمية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).</div>
+        <!-- Health Tips -->
+        <div class="tips-section">
+            <h3 data-i18n="health_tips">💡 الإرشاد الغذائي الذكي</h3>
+            
+            <div class="tip-item">
+                <h4>
+                    <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
+                    <span data-i18n="tip_consumption">توصيات الاستهلاك</span>
+                </h4>
+                <p id="consumptionTip" data-i18n="tip_consumption_text">يُنصح بتناول هذا الغذاء ضمن خطة متوازنة ومراعاة استجابة الإنسولين وحجم الحصة.</p>
+            </div>
 
-        <!-- Insulin Index Clinical Sources -->
-        <div class="gi-sources-box ii-sources-box" data-i18n="ii_sources">📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.</div>
+            <div class="tip-item">
+                <h4>
+                    <i class="fas fa-utensils" style="color: var(--accent-color);"></i>
+                    <span data-i18n="tip_preparation">أفضل طرق التحضير</span>
+                </h4>
+                <p id="preparationTip" data-i18n="tip_preparation_text">طهي الطعام بطرق صحية كالسلق أو الشواء وتجنب القلي بالزيوت المهدرجة يساعد على إبقاء المؤشر الجلايسيمي في النطاق الآمن.</p>
+            </div>
+
+            <div class="tip-item">
+                <h4>
+                    <i class="fas fa-exclamation-triangle" style="color: #f39c12;"></i>
+                    <span data-i18n="tip_warning">ملاحظة غذائية هامة</span>
+                </h4>
+                <p id="warningTip" data-i18n="tip_warning_text">لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p>
+            </div>
+        </div>
 
         <!-- Charts Section -->
         <div class="charts-section">
@@ -751,33 +780,10 @@
             </table>
         </div>
 
-        <!-- Health Tips -->
-        <div class="tips-section">
-            <h3 data-i18n="health_tips">💡 الإرشاد الغذائي الذكي</h3>
-            
-            <div class="tip-item">
-                <h4>
-                    <i class="fas fa-check-circle" style="color: var(--primary-color);"></i>
-                    <span data-i18n="tip_consumption">توصيات الاستهلاك</span>
-                </h4>
-                <p id="consumptionTip" data-i18n="tip_consumption_text">يُنصح بتناول هذا الغذاء ضمن خطة متوازنة ومراعاة استجابة الإنسولين وحجم الحصة.</p>
-            </div>
-
-            <div class="tip-item">
-                <h4>
-                    <i class="fas fa-utensils" style="color: var(--accent-color);"></i>
-                    <span data-i18n="tip_preparation">أفضل طرق التحضير</span>
-                </h4>
-                <p id="preparationTip" data-i18n="tip_preparation_text">طهي الطعام بطرق صحية كالسلق أو الشواء وتجنب القلي بالزيوت المهدرجة يساعد على إبقاء المؤشر الجلايسيمي في النطاق الآمن.</p>
-            </div>
-
-            <div class="tip-item">
-                <h4>
-                    <i class="fas fa-exclamation-triangle" style="color: #f39c12;"></i>
-                    <span data-i18n="tip_warning">ملاحظة غذائية هامة</span>
-                </h4>
-                <p id="warningTip" data-i18n="tip_warning_text">لمرضى السكري ومقاومة الإنسولين، يُوصى دائماً بمراعاة الحمل الجلايسيمي (GL) الكلي للوجبة وعدم الاعتماد على المؤشر منفرداً.</p>
-            </div>
+        <!-- Scientific sources (documentation before the disclaimer) -->
+        <div class="sources-stack">
+            <div class="gi-sources-box"><span data-i18n="gi_sources">📚 المراجع العلمية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).</span> <a class="sources-link" href="methodology.html" data-i18n="sources_more">المنهجية والتفاصيل ←</a></div>
+            <div class="gi-sources-box ii-sources-box" data-i18n="ii_sources">📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.</div>
         </div>
 
         <!-- Clinical Disclaimer Note (EU MDR 2017/745 Compliance) -->
@@ -799,7 +805,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_copyright">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #2ecc71;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
     </footer>
 
     <!-- Food Database -->
@@ -879,6 +885,7 @@
                 kcal_per_100g: "سعرة لكل 100 غ",
                 methodology_line: "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
                 methodology_link: "المنهجية والمراجع العلمية",
+                sources_more: "المنهجية والتفاصيل ←",
                 ii_not_tested: "غير مختبر سريرياً",
                 ii_sources: "📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "لكل 100 جرام",
@@ -906,6 +913,8 @@
                 footer_contact: "اتصل بنا",
                 footer_privacy: "سياسة الخصوصية",
                 footer_terms: "شروط الاستخدام",
+                footer_dev_a: "مُطور بـ",
+                footer_dev_b: "من أجل بودي",
                 footer_copyright: "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي",
                 chart_label_gi: "المؤشر الجلايسيمي",
                 chart_label_ii: "مؤشر الأنسولين",
@@ -935,6 +944,7 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Values are measured or calculated using a documented methodology",
                 methodology_link: "Methodology & scientific references",
+                sources_more: "Methodology & details →",
                 ii_not_tested: "Not clinically tested",
                 ii_sources: "📚 Insulin Index sources: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
@@ -962,6 +972,8 @@
                 footer_contact: "Contact Us",
                 footer_privacy: "Privacy Policy",
                 footer_terms: "Terms of Use",
+                footer_dev_a: "Developed with",
+                footer_dev_b: "for boodi",
                 footer_copyright: "© 2026 WiBo Health Group. All rights reserved | WiBo Health Medical Team",
                 chart_label_gi: "Glycemic Index",
                 chart_label_ii: "Insulin Index",
@@ -991,6 +1003,7 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
                 methodology_link: "Methodologie & wetenschappelijke bronnen",
+                sources_more: "Methodologie & details →",
                 ii_not_tested: "Niet klinisch getest",
                 ii_sources: "📚 Bronnen insuline-index: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
@@ -1018,6 +1031,8 @@
                 footer_contact: "Contact",
                 footer_privacy: "Privacybeleid",
                 footer_terms: "Algemene Voorwaarden",
+                footer_dev_a: "Ontwikkeld met",
+                footer_dev_b: "voor boodi",
                 footer_copyright: "© 2026 WiBo Health Group. Alle rechten voorbehouden | Medisch Team WiBo Health",
                 chart_label_gi: "Glykemische Index",
                 chart_label_ii: "Insuline Index",
