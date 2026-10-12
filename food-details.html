@@ -1129,13 +1129,13 @@ if (food.image) {
 
         function getGIClass(value) {
             if (value >= 70) return 'high';
-            if (value >= 55) return 'medium';
+            if (value > 55) return 'medium';
             return 'low';
         }
 
         function getGIText(value) {
             if (value >= 70) return t('gi_high');
-            if (value >= 55) return t('gi_medium');
+            if (value > 55) return t('gi_medium');
             return t('gi_low');
         }
 
@@ -1222,7 +1222,7 @@ if (food.image) {
             // عمود الإنسولين يُرسم فقط للأصناف المختبرة سريرياً
             const indexLabels = [t('chart_label_gi')];
             const indexData = [food.gi];
-            const indexColors = [food.gi >= 70 ? '#e74c3c' : (food.gi >= 55 ? '#f39c12' : '#2ecc71')];
+            const indexColors = [food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#2ecc71')];
             if (hasTestedII(food)) {
                 indexLabels.push(t('chart_label_ii'));
                 indexData.push(food.ii);
