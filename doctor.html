@@ -19,7 +19,7 @@
     <meta property="og:title" content="د. وسيم حبيب | المؤسس والمشرف الطبي - WiBo Health">
     <meta property="og:description" content="تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health والمشرف الطبي على محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.">
     <meta property="og:url" content="https://wibohealth.com/doctor.html">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/dr-wassim.webp">
 
     <!-- Structured data: physician / author profile -->
     <script type="application/ld+json">
@@ -38,6 +38,7 @@
         "name": "Wassim Habib",
         "honorificPrefix": "Dr.",
         "jobTitle": "Founder & Medical Lead",
+        "image": "https://wibohealth.com/images/dr-wassim.webp",
         "url": "https://wibohealth.com/doctor.html",
         "worksFor": {
             "@type": "Organization",
@@ -527,8 +528,9 @@
         }
 
         .doctor-avatar {
-            width: 104px;
-            height: 104px;
+            width: 128px;
+            height: 128px;
+            overflow: hidden;
             flex-shrink: 0;
             border-radius: 50%;
             display: flex;
@@ -538,6 +540,14 @@
             color: #ffffff;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             box-shadow: 0 0 0 6px var(--primary-glow);
+        }
+
+        .doctor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
         }
 
         .doctor-hero-text { flex: 1; min-width: 220px; }
@@ -662,7 +672,7 @@
                     <span data-i18n="doc_badge">الإشراف الطبي والتحريري</span>
                 </div>
                 <div class="doctor-hero">
-                    <div class="doctor-avatar" aria-hidden="true"><i class="fas fa-user-doctor"></i></div>
+                    <div class="doctor-avatar"><img src="images/dr-wassim.webp" alt="د. وسيم حبيب - المشرف الطبي العام | Dr. Wassim Habib" width="500" height="500" fetchpriority="high"></div>
                     <div class="doctor-hero-text">
                         <h1 class="about-title" data-i18n="doc_name">د. وسيم حبيب (Dr. Wassim Habib)</h1>
                         <p class="doctor-role" data-i18n="doc_role">المؤسس والمشرف الطبي - WiBo Health Group</p>
