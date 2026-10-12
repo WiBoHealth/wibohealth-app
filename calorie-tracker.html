@@ -331,9 +331,14 @@
         body.dark-mode header {
             background: linear-gradient(135deg, #1a3a24 0%, #224d32 100%);
         }
+        .tracker-intro { margin: 0 0 25px; line-height: 1.9; opacity: 0.92; }
+        .tracker-intro p { margin-bottom: 10px; }
+        .tracker-intro-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+        .tracker-intro-links a { padding: 8px 18px; border-radius: 20px; border: 1px solid #10b981; color: #10b981; font-weight: 700; text-decoration: none; }
+        .tracker-intro-links a:hover { background: #10b981; color: #fff; }
+
     </style>
     <!-- Unified Language System -->
-    <script src="js/unified-language-system.js"></script>
 </head>
 
 <body>
@@ -352,6 +357,15 @@
     <div class="container">
         <div class="tracker-container">
             <h1 class="section-title" data-i18n="calorie_tracker_title">متتبع السعرات الحرارية</h1>
+            <div class="tracker-intro">
+                <p data-i18n="tracker_intro_1">يساعدك متتبع السعرات الحرارية من WiBo Health على تسجيل وجباتك اليومية ومقارنة ما تتناوله من سعرات وبروتين وكربوهيدرات ودهون بأهدافك الشخصية. المتابعة المنتظمة للمدخول الغذائي من أكثر الوسائل فعالية في إدارة الوزن وضبط سكر الدم، لأنها تكشف مصادر السعرات الخفية وتوضح توازن المغذيات الكبرى على مدار اليوم.</p>
+                <p data-i18n="tracker_intro_2">لتحديد هدفك اليومي بدقة، احسب احتياجك أولاً بحاسبة السعرات (معادلة Mifflin-St Jeor)، ثم اختر أطعمة منخفضة المؤشر الجلايسيمي من دليل الأطعمة. تُحفظ بياناتك على جهازك فقط. هذه الأداة تثقيفية ولا تغني عن استشارة الطبيب أو أخصائي التغذية، خاصة لمرضى السكري والحوامل.</p>
+                <div class="tracker-intro-links">
+                    <a href="calculators.html" data-i18n="tracker_link_calc">احسب احتياجك اليومي</a>
+                    <a href="foods.html" data-i18n="tracker_link_foods">تصفح دليل الأطعمة</a>
+                </div>
+            </div>
+
 
             <!-- Daily Goal Input -->
             <div class="grid">
@@ -506,6 +520,10 @@
         const translations = {
             ar: {
                 calorie_tracker_title: 'متتبع السعرات الحرارية',
+                tracker_intro_1: 'يساعدك متتبع السعرات الحرارية من WiBo Health على تسجيل وجباتك اليومية ومقارنة ما تتناوله من سعرات وبروتين وكربوهيدرات ودهون بأهدافك الشخصية. المتابعة المنتظمة للمدخول الغذائي من أكثر الوسائل فعالية في إدارة الوزن وضبط سكر الدم، لأنها تكشف مصادر السعرات الخفية وتوضح توازن المغذيات الكبرى على مدار اليوم.',
+                tracker_intro_2: 'لتحديد هدفك اليومي بدقة، احسب احتياجك أولاً بحاسبة السعرات (معادلة Mifflin-St Jeor)، ثم اختر أطعمة منخفضة المؤشر الجلايسيمي من دليل الأطعمة. تُحفظ بياناتك على جهازك فقط. هذه الأداة تثقيفية ولا تغني عن استشارة الطبيب أو أخصائي التغذية، خاصة لمرضى السكري والحوامل.',
+                tracker_link_calc: 'احسب احتياجك اليومي',
+                tracker_link_foods: 'تصفح دليل الأطعمة',
                 change_language: 'عربي',
                 dark_mode: 'الوضع الليلي',
                 daily_calorie_goal: 'الهدف اليومي من السعرات:',
@@ -538,6 +556,10 @@
             },
             en: {
                 calorie_tracker_title: 'Calorie Tracker',
+                tracker_intro_1: 'The WiBo Health calorie tracker lets you log your daily meals and compare your calories, protein, carbohydrates and fat against your personal goals. Consistently tracking food intake is one of the most effective tools for weight management and blood sugar control, because it reveals hidden calorie sources and shows your macronutrient balance across the day.',
+                tracker_intro_2: 'To set an accurate daily goal, first calculate your needs with the calorie calculator (Mifflin-St Jeor equation), then choose low-glycemic foods from the food guide. Your data is stored only on your device. This tool is educational and does not replace advice from a doctor or dietitian, especially for people with diabetes or during pregnancy.',
+                tracker_link_calc: 'Calculate your daily needs',
+                tracker_link_foods: 'Browse the food guide',
                 change_language: 'English',
                 dark_mode: 'Dark Mode',
                 daily_calorie_goal: 'Daily Calorie Goal:',

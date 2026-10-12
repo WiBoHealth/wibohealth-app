@@ -8,9 +8,9 @@
     <link rel="canonical" href="https://wibohealth.com/about.html">
     
     <!-- Hreflang Tags for SEO -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html">
-    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/about.html">
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/about.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html?lang=ar">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/about.html?lang=nl">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/about.html?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html">
     
     <!-- Icons & Fonts -->
@@ -479,7 +479,7 @@
     <!-- Slim Header 2.0 -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="brand-link">
+            <a href="/" class="brand-link">
                 <svg class="brand-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -494,7 +494,7 @@
             </a>
 
             <nav class="nav-links-bar">
-                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="/" class="nav-link" data-i18n="nav_home">الرئيسية</a>
                 <a href="foods.html" class="nav-link" data-i18n="nav_foods">دليل الأطعمة</a>
                 <a href="calculators.html" class="nav-link" data-i18n="nav_calculators">الحاسبات</a>
                 <a href="supplements.html" class="nav-link" data-i18n="nav_supplements">المكملات</a>
@@ -621,7 +621,7 @@
 
             <!-- Back to Home Button -->
             <div class="back-home-box">
-                <a href="index.html" class="back-home-btn">
+                <a href="/" class="back-home-btn">
                     <i class="fas fa-arrow-right" id="backIcon"></i>
                     <span data-i18n="about_back_home">العودة للصفحة الرئيسية</span>
                 </a>
@@ -632,7 +632,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+            <a href="/" data-i18n="nav_home">الرئيسية</a>
             <span>•</span>
             <a href="foods.html" data-i18n="nav_foods">دليل الأطعمة</a>
             <span>•</span>
@@ -798,7 +798,8 @@
         let currentLocale = 'ar';
 
         function initLocalization() {
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
+            const urlLang = new URLSearchParams(window.location.search).get('lang');
+            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
             setLocale(saved, false);
         }
 

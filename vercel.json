@@ -17,6 +17,11 @@
       "permanent": true
     },
     {
+      "source": "/scanner.html",
+      "destination": "/boodi.html",
+      "permanent": true
+    },
+    {
       "source": "/en/:path*",
       "destination": "/",
       "permanent": true

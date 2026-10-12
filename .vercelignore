@@ -3,7 +3,19 @@ README.md
 WiboHealth-NEW/
 WiboHealthApp/
 wibo_health/
-C:/
+C_/
 screenshots/
 .git/
 *.md
+
+# Scripts, data and archives are not part of the public site
+*.py
+*.csv
+*.zip
+*.txt
+*.dart
+# ...but these public text files must stay deployed
+!/robots.txt
+!/ads.txt
+!/app-ads.txt
+!/.well-known/security.txt

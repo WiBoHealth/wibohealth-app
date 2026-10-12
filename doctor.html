@@ -1,15 +1,1025 @@
-﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0;url=about.html">
-    <title>من نحن | WiBo Health</title>
-    <script>
-        window.location.replace("about.html");
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">د. وسيم حبيب | المؤسس والمشرف الطبي - WiBo Health</title>
+    <meta name="description" id="seo_desc" content="تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health والمشرف الطبي على محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.">
+    <meta name="author" content="Dr. Wassim Habib">
+    <link rel="canonical" href="https://wibohealth.com/doctor.html">
+
+    <!-- Hreflang Tags for SEO -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html?lang=ar">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/doctor.html?lang=nl">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/doctor.html?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="د. وسيم حبيب | المؤسس والمشرف الطبي - WiBo Health">
+    <meta property="og:description" content="تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health والمشرف الطبي على محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.">
+    <meta property="og:url" content="https://wibohealth.com/doctor.html">
+    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+
+    <!-- Structured data: physician / author profile -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://wibohealth.com/doctor.html",
+    "inLanguage": [
+        "ar",
+        "nl",
+        "en"
+    ],
+    "mainEntity": {
+        "@type": "Person",
+        "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+        "name": "Wassim Habib",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Founder & Medical Lead",
+        "url": "https://wibohealth.com/doctor.html",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/"
+        },
+        "knowsAbout": [
+            "Glycemic index",
+            "Insulin index",
+            "Insulin resistance",
+            "Type 2 diabetes prevention",
+            "Non-alcoholic fatty liver disease",
+            "Metabolic health",
+            "Clinical nutrition"
+        ]
+    }
+}
     </script>
+
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- PWA Manifest & Icons -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-card: #131c2e;
+            --bg-input: #1e293b;
+            --header-bg: rgba(11, 15, 25, 0.85);
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --primary-glow: rgba(16, 185, 129, 0.25);
+            --secondary: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        html[data-theme="light"] {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-input: #f1f5f9;
+            --header-bg: rgba(255, 255, 255, 0.9);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: rgba(0, 0, 0, 0.09);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.8;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        html[lang="en"] body, html[lang="nl"] body {
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+        }
+
+        /* Slim Header 2.0 (Height: 60px) */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 60px;
+            background: var(--header-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .brand-logo-svg {
+            width: 36px;
+            height: 36px;
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.3));
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-size: 0.95rem;
+        }
+
+        .theme-toggle-btn:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .lang-switcher-container {
+            display: inline-flex;
+            align-items: center;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 2px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border: none;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover { color: var(--text-main); }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            box-shadow: 0 2px 8px var(--primary-glow);
+        }
+
+        .nav-links-bar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .nav-link {
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--text-main);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .nav-link.active { color: var(--primary); }
+
+        /* Main Container */
+        .page-wrapper {
+            max-width: 960px;
+            margin: 30px auto 70px;
+            padding: 0 20px;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 45px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .about-title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 35px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-card p {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            line-height: 1.85;
+        }
+
+        .about-card strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Official Boodi App Banner */
+        .boodi-official-banner {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            margin: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .boodi-banner-content {
+            flex: 2;
+            min-width: 280px;
+        }
+
+        .boodi-tag-official {
+            display: inline-block;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .boodi-banner-content h3 {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .boodi-banner-content p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .boodi-cta-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transition: all 0.25s ease;
+        }
+
+        .boodi-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Pillars List */
+        .pillars-list {
+            list-style: none;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .pillar-item {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .pillar-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .pillar-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pillar-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Support Contact Card */
+        .support-card {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .support-email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 800;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            transition: all 0.2s;
+        }
+
+        .support-email-link:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .back-home-box {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-input);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .back-home-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding: 35px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        @media (max-width: 860px) {
+            .about-card { padding: 25px 20px; }
+            .about-title { font-size: 1.8rem; }
+            .nav-links-bar { display: none; }
+        }
+
+        /* ===== Doctor profile ===== */
+        .doctor-hero {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .doctor-avatar {
+            width: 104px;
+            height: 104px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.6rem;
+            color: #ffffff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 0 0 6px var(--primary-glow);
+        }
+
+        .doctor-hero-text { flex: 1; min-width: 220px; }
+        .doctor-hero-text .about-title { margin-bottom: 4px; }
+
+        .doctor-role {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.05rem;
+        }
+
+        .method-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .method-list li {
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-inline-start: 4px solid var(--primary);
+            border-radius: var(--radius-sm);
+            padding: 14px 18px;
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .doctor-articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .doctor-article-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: var(--bg-input);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+
+        .doctor-article-link i { color: var(--primary); }
+
+        .doctor-article-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .medical-note {
+            margin-top: 25px;
+            padding: 16px 18px;
+            border-radius: var(--radius-sm);
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-<body style="background: #0b132b; color: #ffffff; font-family: sans-serif; text-align: center; padding-top: 100px;">
-    <h2>جاري تحويلك إلى صفحة من نحن...</h2>
-    <p><a href="about.html" style="color: #10b981;">اضغط هنا إذا لم يتم تحويلك تلقائياً</a></p>
+<body>
+
+    <!-- Slim Header 2.0 -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="brand-link">
+                <svg class="brand-logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M100 160 L65 120 C55 110 50 95 50 85 C50 65 60 50 75 50 C85 50 92 55 100 65 C108 55 115 50 125 50 C140 50 150 65 150 85 C150 95 145 110 135 120 Z" fill="url(#brandGrad)" />
+                    <path d="M45 100 L65 100 L72 85 L80 115 L88 100 L102 100 L110 85 L118 115 L126 100 L155 100" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" />
+                </svg>
+                <span class="brand-title">WiBo Health</span>
+            </a>
+
+            <nav class="nav-links-bar">
+                <a href="/" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="foods.html" class="nav-link" data-i18n="nav_foods">دليل الأطعمة</a>
+                <a href="calculators.html" class="nav-link" data-i18n="nav_calculators">الحاسبات</a>
+                <a href="supplements.html" class="nav-link" data-i18n="nav_supplements">المكملات</a>
+                <a href="articles.html" class="nav-link" data-i18n="nav_articles">المقالات</a>
+                <a href="boodi.html" class="nav-link" data-i18n="nav_boodi">تطبيق بودي 💚</a>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="تبديل المظهر" aria-label="Toggle Theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+
+                <div class="lang-switcher-container">
+                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
+                        <span>🇪🇬</span> <span>AR</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
+                        <span>🇳🇱</span> <span>NL</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
+                        <span>🇬🇧</span> <span>EN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-wrapper">
+        <article class="about-card">
+            <div class="about-header">
+                <div class="about-badge">
+                    <i class="fas fa-user-doctor"></i>
+                    <span data-i18n="doc_badge">الإشراف الطبي والتحريري</span>
+                </div>
+                <div class="doctor-hero">
+                    <div class="doctor-avatar" aria-hidden="true"><i class="fas fa-user-doctor"></i></div>
+                    <div class="doctor-hero-text">
+                        <h1 class="about-title" data-i18n="doc_name">د. وسيم حبيب (Dr. Wassim Habib)</h1>
+                        <p class="doctor-role" data-i18n="doc_role">المؤسس والمشرف الطبي - WiBo Health Group</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+                E-E-A-T: add verifiable credentials here once available, e.g.
+                medical degree + university, specialty, BIG-register number (Netherlands),
+                years of practice, professional memberships, LinkedIn/ORCID profile and a real photo.
+                Add the same facts to the Person schema above (alumniOf, hasCredential, sameAs, image).
+            -->
+
+            <h2 class="section-title">
+                <i class="fas fa-id-card"></i>
+                <span data-i18n="doc_bio_title">نبذة</span>
+            </h2>
+            <p data-i18n="doc_bio_text">يقود د. وسيم حبيب منصة WiBo Health التي تأسست لسد الفجوة بين الأبحاث السريرية واختيارات الطعام اليومية في العالم العربي وأوروبا (هولندا). يتركز عمله على الصحة الأيضية: المؤشر الجلايسيمي، واستجابة هرمون الإنسولين، والوقاية من السكري من النوع الثاني والكبد الدهني، ويشرف على المحتوى الطبي للمنصة وتطبيق بودي (boodi).</p>
+
+            <h2 class="section-title">
+                <i class="fas fa-stethoscope"></i>
+                <span data-i18n="doc_focus_title">مجالات الاهتمام السريري</span>
+            </h2>
+            <div class="pillars-list">
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-chart-line"></i> <span data-i18n="focus_1_title">المؤشر الجلايسيمي والحمل الجلايسيمي</span></div>
+                    <div class="pillar-desc" data-i18n="focus_1_desc">تقييم سرعة تحول الأطعمة إلى سكر في الدم وأثرها على استقرار الطاقة والشهية.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-syringe"></i> <span data-i18n="focus_2_title">استجابة الإنسولين ومقاومته</span></div>
+                    <div class="pillar-desc" data-i18n="focus_2_desc">فهم مؤشر الإنسولين للأطعمة ودوره في الوقاية من مقاومة الإنسولين والسكري من النوع الثاني.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-heart-pulse"></i> <span data-i18n="focus_3_title">الصحة الأيضية والوزن</span></div>
+                    <div class="pillar-desc" data-i18n="focus_3_desc">الكبد الدهني، والتوازن الهرموني، وإدارة الوزن عبر تغذية قائمة على الأدلة.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><i class="fas fa-capsules"></i> <span data-i18n="focus_4_title">المكملات الغذائية المبنية على الأدلة</span></div>
+                    <div class="pillar-desc" data-i18n="focus_4_desc">الجرعات والتفاعلات الدوائية والتحذيرات السريرية بعيداً عن التسويق المضلل.</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">
+                <i class="fas fa-microscope"></i>
+                <span data-i18n="doc_method_title">منهجية المراجعة العلمية للمحتوى</span>
+            </h2>
+            <ul class="method-list">
+                <li data-i18n="method_1">قيم المؤشر الجلايسيمي مأخوذة من الجداول الدولية للمؤشر الجلايسيمي (Atkinson وآخرون، 2021) وقواعد بيانات جامعة سيدني وهارفارد.</li>
+                <li data-i18n="method_2">قيم مؤشر الإنسولين تُعرض فقط للأطعمة المختبرة سريرياً (Holt وآخرون، 1997؛ Bao وآخرون، 2009)، أما غير المختبرة فتُوسم بوضوح بأنها غير مختبرة.</li>
+                <li data-i18n="method_3">الحاسبات الصحية تعتمد معادلات سريرية معتمدة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).</li>
+                <li data-i18n="method_4">المحتوى تثقيفي ويُراجع ويُحدَّث دورياً، ولا يُعد تشخيصاً أو بديلاً عن الاستشارة الطبية الفردية.</li>
+            </ul>
+
+            <h2 class="section-title">
+                <i class="fas fa-book-medical"></i>
+                <span data-i18n="doc_articles_title">مقالات المنصة الطبية</span>
+            </h2>
+            <div class="doctor-articles">
+                <a href="my-articles.html" class="doctor-article-link"><i class="fas fa-cart-shopping"></i> <span data-i18n="art_1">دليلك الطبي للتسوق والمؤشر الجلايسيمي</span></a>
+                <a href="intermittent-fasting.html" class="doctor-article-link"><i class="fas fa-clock"></i> <span data-i18n="art_2">الصيام المتقطع: الدليل السريري الشامل</span></a>
+                <a href="insulin-resistance.html" class="doctor-article-link"><i class="fas fa-droplet"></i> <span data-i18n="art_3">السكر التراكمي ومقاومة الإنسولين</span></a>
+                <a href="fatty-liver.html" class="doctor-article-link"><i class="fas fa-notes-medical"></i> <span data-i18n="art_4">الكبد الدهني ومقاومة الإنسولين</span></a>
+                <a href="leptin-resistance.html" class="doctor-article-link"><i class="fas fa-brain"></i> <span data-i18n="art_5">هرمون اللبتين ومقاومة الشبع</span></a>
+                <a href="thyroid-health.html" class="doctor-article-link"><i class="fas fa-bolt"></i> <span data-i18n="art_6">خمول الغدة الدرقية وبطء الحرق</span></a>
+                <a href="cortisol-stress.html" class="doctor-article-link"><i class="fas fa-heart-pulse"></i> <span data-i18n="art_7">الكورتيزول وهرمون التوتر</span></a>
+                <a href="magnesium-types.html" class="doctor-article-link"><i class="fas fa-capsules"></i> <span data-i18n="art_8">أنواع المغنيسيوم واستخداماتها</span></a>
+                <a href="bone-health-minerals.html" class="doctor-article-link"><i class="fas fa-bone"></i> <span data-i18n="art_9">صحة العظام والمعادن</span></a>
+            </div>
+
+            <h2 class="section-title">
+                <i class="fas fa-envelope"></i>
+                <span data-i18n="doc_contact_title">التواصل مع الفريق الطبي</span>
+            </h2>
+            <p data-i18n="doc_contact_text">للاستفسارات الطبية العامة أو اقتراحات التعاون أو تصحيح أي معلومة في المحتوى، يمكنكم مراسلتنا عبر البريد الرسمي:</p>
+            <div class="support-card">
+                <div>
+                    <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-main);" data-i18n="support_label">البريد الرسمي للفريق الطبي:</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="support_sub">WiBo Health - الإشراف الطبي والتحريري</div>
+                </div>
+                <a href="mailto:support@wibohealth.com" class="support-email-link">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>support@wibohealth.com</span>
+                </a>
+            </div>
+
+            <p class="medical-note" data-i18n="doc_note">تنبيه طبي: المعلومات في هذا الموقع لأغراض تثقيفية عامة ولا تغني عن زيارة الطبيب المعالج. في الحالات الطارئة اتصل بخدمات الطوارئ فوراً.</p>
+
+            <div class="back-home-box">
+                <a href="/" class="back-home-btn">
+                    <i class="fas fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="about_back_home">العودة للصفحة الرئيسية</span>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="/" data-i18n="nav_home">الرئيسية</a>
+            <span>•</span>
+            <a href="foods.html" data-i18n="nav_foods">دليل الأطعمة</a>
+            <span>•</span>
+            <a href="calculators.html" data-i18n="nav_calculators">الحاسبات</a>
+            <span>•</span>
+            <a href="supplements.html" data-i18n="nav_supplements">المكملات</a>
+            <span>•</span>
+            <a href="boodi.html" data-i18n="nav_boodi">تطبيق بودي 💚</a>
+            <span>•</span>
+            <a href="privacy.html" data-i18n="footer_privacy">الخصوصية والامتثال السريري</a>
+        </div>
+        <p>© 2026 WiBo Health Group. Burgerlijk Wetboek Art. 6:162 & EU MDR 2017/745 Compliant.</p>
+        <p style="font-size: 0.8rem; margin-top: 6px; color: var(--text-muted);" data-i18n="footer_disclaimer">جميع الحقوق محفوظة لمنظومة WiBo Health Group وتطبيق بودي الرسمي (boodi App 💚).</p>
+    </footer>
+
+    <!-- Translations & Synchronization Engine -->
+    <script>
+        'use strict';
+
+        // 1. Theme Management (Synced with localStorage across the whole site)
+        function initTheme() {
+            const savedTheme = localStorage.getItem('wibo_theme') || 'dark';
+            applyTheme(savedTheme);
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(nextTheme);
+            localStorage.setItem('wibo_theme', nextTheme);
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.getElementById('themeIcon');
+            if (icon) {
+                icon.className = (theme === 'light') ? 'fas fa-moon' : 'fas fa-sun';
+            }
+        }
+
+        // 2. Master Trilingual Clinical Dictionary (AR, NL, EN)
+        const i18nDictionary = {
+            ar: {
+                page_title: "د. وسيم حبيب | المؤسس والمشرف الطبي - WiBo Health",
+                seo_desc: "تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health والمشرف الطبي على محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.",
+                doc_badge: "الإشراف الطبي والتحريري",
+                doc_name: "د. وسيم حبيب (Dr. Wassim Habib)",
+                doc_role: "المؤسس والمشرف الطبي - WiBo Health Group",
+                doc_bio_title: "نبذة",
+                doc_bio_text: "يقود د. وسيم حبيب منصة WiBo Health التي تأسست لسد الفجوة بين الأبحاث السريرية واختيارات الطعام اليومية في العالم العربي وأوروبا (هولندا). يتركز عمله على الصحة الأيضية: المؤشر الجلايسيمي، واستجابة هرمون الإنسولين، والوقاية من السكري من النوع الثاني والكبد الدهني، ويشرف على المحتوى الطبي للمنصة وتطبيق بودي (boodi).",
+                doc_focus_title: "مجالات الاهتمام السريري",
+                focus_1_title: "المؤشر الجلايسيمي والحمل الجلايسيمي",
+                focus_1_desc: "تقييم سرعة تحول الأطعمة إلى سكر في الدم وأثرها على استقرار الطاقة والشهية.",
+                focus_2_title: "استجابة الإنسولين ومقاومته",
+                focus_2_desc: "فهم مؤشر الإنسولين للأطعمة ودوره في الوقاية من مقاومة الإنسولين والسكري من النوع الثاني.",
+                focus_3_title: "الصحة الأيضية والوزن",
+                focus_3_desc: "الكبد الدهني، والتوازن الهرموني، وإدارة الوزن عبر تغذية قائمة على الأدلة.",
+                focus_4_title: "المكملات الغذائية المبنية على الأدلة",
+                focus_4_desc: "الجرعات والتفاعلات الدوائية والتحذيرات السريرية بعيداً عن التسويق المضلل.",
+                doc_method_title: "منهجية المراجعة العلمية للمحتوى",
+                method_1: "قيم المؤشر الجلايسيمي مأخوذة من الجداول الدولية للمؤشر الجلايسيمي (Atkinson وآخرون، 2021) وقواعد بيانات جامعة سيدني وهارفارد.",
+                method_2: "قيم مؤشر الإنسولين تُعرض فقط للأطعمة المختبرة سريرياً (Holt وآخرون، 1997؛ Bao وآخرون، 2009)، أما غير المختبرة فتُوسم بوضوح بأنها غير مختبرة.",
+                method_3: "الحاسبات الصحية تعتمد معادلات سريرية معتمدة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).",
+                method_4: "المحتوى تثقيفي ويُراجع ويُحدَّث دورياً، ولا يُعد تشخيصاً أو بديلاً عن الاستشارة الطبية الفردية.",
+                doc_articles_title: "مقالات المنصة الطبية",
+                doc_contact_title: "التواصل مع الفريق الطبي",
+                doc_contact_text: "للاستفسارات الطبية العامة أو اقتراحات التعاون أو تصحيح أي معلومة في المحتوى، يمكنكم مراسلتنا عبر البريد الرسمي:",
+                support_label: "البريد الرسمي للفريق الطبي:",
+                support_sub: "WiBo Health - الإشراف الطبي والتحريري",
+                doc_note: "تنبيه طبي: المعلومات في هذا الموقع لأغراض تثقيفية عامة ولا تغني عن زيارة الطبيب المعالج. في الحالات الطارئة اتصل بخدمات الطوارئ فوراً.",
+                about_back_home: "العودة للصفحة الرئيسية",
+                nav_home: "الرئيسية",
+                nav_foods: "دليل الأطعمة",
+                nav_calculators: "الحاسبات",
+                nav_supplements: "المكملات",
+                nav_articles: "المقالات",
+                nav_boodi: "تطبيق بودي 💚",
+                footer_privacy: "الخصوصية والامتثال السريري",
+                footer_disclaimer: "جميع الحقوق محفوظة لمنظومة WiBo Health Group وتطبيق بودي الرسمي (boodi App 💚).",
+                art_1: "دليلك الطبي للتسوق والمؤشر الجلايسيمي",
+                art_2: "الصيام المتقطع: الدليل السريري الشامل",
+                art_3: "السكر التراكمي ومقاومة الإنسولين",
+                art_4: "الكبد الدهني ومقاومة الإنسولين",
+                art_5: "هرمون اللبتين ومقاومة الشبع",
+                art_6: "خمول الغدة الدرقية وبطء الحرق",
+                art_7: "الكورتيزول وهرمون التوتر",
+                art_8: "أنواع المغنيسيوم واستخداماتها",
+                art_9: "صحة العظام والمعادن"
+            },
+            nl: {
+                page_title: "Dr. Wassim Habib | Oprichter & medisch eindverantwoordelijke - WiBo Health",
+                seo_desc: "Maak kennis met dr. Wassim Habib, oprichter van WiBo Health en medisch verantwoordelijk voor de inhoud over metabole gezondheid, glykemische index en insulinerespons, en onze wetenschappelijke reviewmethode.",
+                doc_badge: "Medisch & redactioneel toezicht",
+                doc_name: "Dr. Wassim Habib",
+                doc_role: "Oprichter & medisch eindverantwoordelijke - WiBo Health Group",
+                doc_bio_title: "Over dr. Habib",
+                doc_bio_text: "Dr. Wassim Habib leidt WiBo Health, opgericht om de kloof te overbruggen tussen klinisch onderzoek en dagelijkse voedingskeuzes in Nederland, Europa en de Arabische wereld. Zijn focus ligt op metabole gezondheid: de glykemische index, de insulinerespons en preventie van diabetes type 2 en leververvetting. Hij houdt toezicht op de medische inhoud van het platform en de boodi app.",
+                doc_focus_title: "Klinische aandachtsgebieden",
+                focus_1_title: "Glykemische index & glykemische last",
+                focus_1_desc: "Hoe snel voedingsmiddelen de bloedsuiker verhogen en wat dat betekent voor energie en eetlust.",
+                focus_2_title: "Insulinerespons & insulineresistentie",
+                focus_2_desc: "De insuline-index van voeding en de rol ervan bij preventie van insulineresistentie en diabetes type 2.",
+                focus_3_title: "Metabole gezondheid & gewicht",
+                focus_3_desc: "Leververvetting, hormonale balans en gewichtsbeheersing via evidence-based voeding.",
+                focus_4_title: "Evidence-based supplementen",
+                focus_4_desc: "Doseringen, interacties en klinische waarschuwingen, zonder misleidende marketing.",
+                doc_method_title: "Onze wetenschappelijke reviewmethode",
+                method_1: "Waarden voor de glykemische index komen uit de International Tables of Glycemic Index (Atkinson e.a., 2021) en de databases van de Universiteit van Sydney en Harvard.",
+                method_2: "Insuline-indexwaarden tonen we alleen voor klinisch geteste voedingsmiddelen (Holt e.a., 1997; Bao e.a., 2009); niet-geteste producten zijn duidelijk als zodanig gemarkeerd.",
+                method_3: "Onze calculators gebruiken gevalideerde klinische formules zoals Mifflin-St Jeor en de taille-lengteverhouding (WHtR).",
+                method_4: "De inhoud is educatief, wordt periodiek herzien en vervangt geen diagnose of persoonlijk medisch advies.",
+                doc_articles_title: "Medische artikelen van het platform",
+                doc_contact_title: "Contact met het medisch team",
+                doc_contact_text: "Voor algemene medische vragen, samenwerkingsvoorstellen of correcties op onze inhoud kunt u ons mailen via ons officiële adres:",
+                support_label: "Officieel adres van het medisch team:",
+                support_sub: "WiBo Health - medisch & redactioneel toezicht",
+                doc_note: "Medische disclaimer: de informatie op deze website is algemeen en educatief en vervangt geen bezoek aan uw behandelend arts. Bel bij spoed direct 112.",
+                about_back_home: "Terug naar Home",
+                nav_home: "Home",
+                nav_foods: "Voedingsgids",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplementen",
+                nav_articles: "Artikelen",
+                nav_boodi: "boodi App 💚",
+                footer_privacy: "Privacy & Klinische Conformiteit",
+                footer_disclaimer: "Alle rechten voorbehouden aan WiBo Health Group en de officiële boodi app (boodi App 💚).",
+                art_1: "Medische boodschappengids & glykemische index",
+                art_2: "Intermittent vasten: de klinische gids",
+                art_3: "HbA1c & insulineresistentie",
+                art_4: "Leververvetting & insulineresistentie",
+                art_5: "Leptineresistentie & verzadiging",
+                art_6: "Trage schildklier & langzame stofwisseling",
+                art_7: "Cortisol & stress",
+                art_8: "Soorten magnesium & toepassingen",
+                art_9: "Botgezondheid & mineralen"
+            },
+            en: {
+                page_title: "Dr. Wassim Habib | Founder & Medical Lead - WiBo Health",
+                seo_desc: "Meet Dr. Wassim Habib, founder of WiBo Health and medical lead for its content on metabolic health, the glycemic index and insulin response, plus our scientific review methodology.",
+                doc_badge: "Medical & Editorial Oversight",
+                doc_name: "Dr. Wassim Habib",
+                doc_role: "Founder & Medical Lead - WiBo Health Group",
+                doc_bio_title: "About Dr. Habib",
+                doc_bio_text: "Dr. Wassim Habib leads WiBo Health, founded to bridge the gap between clinical research and everyday food choices across the Netherlands, Europe and the Arab world. His work focuses on metabolic health: the glycemic index, the insulin response, and the prevention of type 2 diabetes and fatty liver disease. He oversees the medical content of the platform and the boodi app.",
+                doc_focus_title: "Clinical Focus Areas",
+                focus_1_title: "Glycemic Index & Glycemic Load",
+                focus_1_desc: "How quickly foods raise blood sugar and what that means for energy and appetite.",
+                focus_2_title: "Insulin Response & Insulin Resistance",
+                focus_2_desc: "The food insulin index and its role in preventing insulin resistance and type 2 diabetes.",
+                focus_3_title: "Metabolic Health & Weight",
+                focus_3_desc: "Fatty liver, hormonal balance and weight management through evidence-based nutrition.",
+                focus_4_title: "Evidence-Based Supplements",
+                focus_4_desc: "Dosages, drug interactions and clinical warnings, free of misleading marketing.",
+                doc_method_title: "Our Scientific Review Methodology",
+                method_1: "Glycemic index values come from the International Tables of Glycemic Index (Atkinson et al., 2021) and the University of Sydney and Harvard databases.",
+                method_2: "Insulin index values are shown only for clinically tested foods (Holt et al., 1997; Bao et al., 2009); untested foods are clearly labelled as such.",
+                method_3: "Our health calculators use validated clinical formulas such as Mifflin-St Jeor and the waist-to-height ratio (WHtR).",
+                method_4: "Content is educational, reviewed and updated periodically, and is not a diagnosis or a substitute for individual medical advice.",
+                doc_articles_title: "Medical Articles on the Platform",
+                doc_contact_title: "Contact the Medical Team",
+                doc_contact_text: "For general medical questions, collaboration proposals or corrections to our content, email us at our official address:",
+                support_label: "Official medical team address:",
+                support_sub: "WiBo Health - Medical & Editorial Oversight",
+                doc_note: "Medical disclaimer: the information on this website is general and educational and does not replace a visit to your own doctor. In an emergency, call your local emergency number immediately.",
+                about_back_home: "Back to Home",
+                nav_home: "Home",
+                nav_foods: "Food Guide",
+                nav_calculators: "Calculators",
+                nav_supplements: "Supplements Guide",
+                nav_articles: "Articles",
+                nav_boodi: "boodi App 💚",
+                footer_privacy: "Privacy & Clinical Compliance",
+                footer_disclaimer: "All rights reserved to WiBo Health Group and the official boodi app (boodi App 💚).",
+                art_1: "Medical Shopping Guide & Glycemic Index",
+                art_2: "Intermittent Fasting: The Clinical Guide",
+                art_3: "HbA1c & Insulin Resistance",
+                art_4: "Fatty Liver & Insulin Resistance",
+                art_5: "Leptin Resistance & Satiety",
+                art_6: "Underactive Thyroid & Slow Metabolism",
+                art_7: "Cortisol & Stress",
+                art_8: "Types of Magnesium & Their Uses",
+                art_9: "Bone Health & Minerals"
+            }
+        };
+
+        // 3. Localization Core (Syncing with localStorage & other pages)
+        let currentLocale = 'ar';
+
+        function initLocalization() {
+            const urlLang = new URLSearchParams(window.location.search).get('lang');
+            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
+            setLocale(saved, false);
+        }
+
+        function setLocale(lang, saveToStorage = true) {
+            if (!['ar', 'nl', 'en'].includes(lang)) lang = 'ar';
+            currentLocale = lang;
+
+            if (saveToStorage) {
+                localStorage.setItem('preferred_language', lang);
+                localStorage.setItem('wibo_language', lang);
+                localStorage.setItem('selected_language', lang);
+                localStorage.setItem('lang', lang);
+            }
+
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // Back arrow direction
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) {
+                backIcon.className = (lang === 'ar') ? 'fas fa-arrow-right' : 'fas fa-arrow-left';
+            }
+
+            // Update Language Switcher Buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Update all DOM translated text nodes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18nDictionary[lang] && i18nDictionary[lang][key]) {
+                    el.textContent = i18nDictionary[lang][key];
+                }
+            });
+
+            if (i18nDictionary[lang]?.page_title) document.title = i18nDictionary[lang].page_title;
+
+            const seoDesc = document.getElementById('seo_desc');
+            if (seoDesc && i18nDictionary[lang]?.seo_desc) {
+                seoDesc.setAttribute('content', i18nDictionary[lang].seo_desc);
+            }
+        }
+
+        // Listen for storage changes across browser tabs
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
+                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
+                    setLocale(e.newValue, false);
+                }
+            }
+            if (e.key === 'wibo_theme') {
+                if (e.newValue) applyTheme(e.newValue);
+            }
+        });
+
+        // Initialize on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initLocalization();
+        });
+    </script>
 </body>
 </html>

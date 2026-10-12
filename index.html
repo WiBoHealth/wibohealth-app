@@ -12,6 +12,10 @@
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wibohealth.com/">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/?lang=ar">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/?lang=nl">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/?lang=en">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -166,6 +170,11 @@
                 'footer_contact': 'اتصل بنا',
                 'footer_privacy': 'سياسة الخصوصية',
                 'footer_terms': 'شروط الاستخدام',
+                'footer_calorie_tracker': 'متتبع السعرات الحرارية',
+                'trust_title': 'الإشراف الطبي',
+                'trust_text': 'يُراجَع المحتوى الطبي في WiBo Health تحت إشراف د. وسيم حبيب، بالاعتماد على مصادر سريرية موثقة مثل الجداول الدولية للمؤشر الجلايسيمي ودراسات مؤشر الإنسولين.',
+                'trust_btn': 'تعرّف على الطبيب المشرف',
+                'footer_doctor': 'الطبيب المشرف',
                 'footer_delete_account': 'حذف الحساب والبيانات',
                 'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة.'
             },
@@ -264,6 +273,11 @@
                 'footer_contact': 'Contact Us',
                 'footer_privacy': 'Privacy Policy',
                 'footer_terms': 'Terms of Use',
+                'footer_calorie_tracker': 'Calorie Tracker',
+                'trust_title': 'Medical Oversight',
+                'trust_text': 'Medical content on WiBo Health is reviewed under the supervision of Dr. Wassim Habib, based on documented clinical sources such as the International GI Tables and insulin index studies.',
+                'trust_btn': 'Meet our medical lead',
+                'footer_doctor': 'Medical Lead',
                 'footer_delete_account': 'Delete Account',
                 'footer_rights': '© 2026 WiBo Health. All rights reserved.'
             },
@@ -362,12 +376,19 @@
                 'footer_contact': 'Contact',
                 'footer_privacy': 'Privacybeleid',
                 'footer_terms': 'Gebruiksvoorwaarden',
+                'footer_calorie_tracker': 'Calorieënteller',
+                'trust_title': 'Medisch toezicht',
+                'trust_text': 'De medische inhoud van WiBo Health wordt beoordeeld onder toezicht van dr. Wassim Habib, op basis van gedocumenteerde klinische bronnen zoals de internationale GI-tabellen en insuline-indexstudies.',
+                'trust_btn': 'Maak kennis met onze arts',
+                'footer_doctor': 'Medisch verantwoordelijke',
                 'footer_delete_account': 'Account Verwijderen',
                 'footer_rights': '© 2026 WiBo Health. Alle rechten voorbehouden.'
             }
         };
 
         function detectInitialLang() {
+            const urlLang = new URLSearchParams(window.location.search).get('lang');
+            if (['ar', 'en', 'nl'].includes(urlLang)) return urlLang;
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) {
                 return saved;
@@ -1232,7 +1253,7 @@
             <i class="fas fa-times"></i>
         </button>
         <a href="/" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الصفحة الرئيسية</span></a>
-        <a href="scanner.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود وفحص الحلال</span></a>
+        <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 ماسح الباركود وفحص الحلال</span></a>
         <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
         <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
         <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
@@ -1435,6 +1456,18 @@
             </div>
         </section>
 
+        <!-- Medical oversight (E-E-A-T) -->
+        <section style="max-width: 1100px; margin: 40px auto; padding: 0 16px;">
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: 18px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 182, 212, 0.10)); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 5px solid #10b981;">
+                <div style="width: 64px; height: 64px; flex-shrink: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; background: linear-gradient(135deg, #10b981, #06b6d4);" aria-hidden="true"><i class="fas fa-user-doctor"></i></div>
+                <div style="flex: 1; min-width: 220px;">
+                    <h2 style="margin: 0 0 6px; font-size: 1.3rem;" data-i18n="trust_title">الإشراف الطبي</h2>
+                    <p style="margin: 0; line-height: 1.8; opacity: 0.9;" data-i18n="trust_text">يُراجَع المحتوى الطبي في WiBo Health تحت إشراف د. وسيم حبيب، بالاعتماد على مصادر سريرية موثقة مثل الجداول الدولية للمؤشر الجلايسيمي ودراسات مؤشر الإنسولين.</p>
+                </div>
+                <a href="doctor.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);"><i class="fas fa-stethoscope"></i> <span data-i18n="trust_btn">تعرّف على الطبيب المشرف</span></a>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta-section">
             <h2 data-i18n="cta_title">ابدأ رحلتك الصحية الآن</h2>
@@ -1463,6 +1496,10 @@
             <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">شروط الاستخدام</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="delete-account.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_delete_account">حذف الحساب والبيانات</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="calorie-tracker.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_calorie_tracker">متتبع السعرات الحرارية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="doctor.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">الطبيب المشرف</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة.</p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>

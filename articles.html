@@ -13,7 +13,7 @@
     <meta property="og:title" content="مقالات صحية متخصصة | WiBo Health">
     <meta property="og:description" content="محتوى صحي عالي الجودة عن السكري، التغذية، وخسارة الوزن - كتبه خبراء">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wibo-health.com/articles.html">
+    <meta property="og:url" content="https://wibohealth.com/articles.html">
     
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
@@ -125,7 +125,9 @@
                 'privacy': 'سياسة الخصوصية',
                 'terms': 'شروط الاستخدام',
                 'rights': 'جميع الحقوق محفوظة',
-                'developed': 'مُطور بـ ♥ من أجل بودي'
+                'developed': 'مُطور بـ ♥ من أجل بودي',
+                'more_articles_title': 'مقالات طبية متخصصة',
+                'more_articles_sub': 'أدلة سريرية مفصلة يراجعها فريق ويبو هيلث الطبي'
             },
             en: {
                 'home': 'Home',
@@ -202,7 +204,9 @@
                 'privacy': 'Privacy Policy',
                 'terms': 'Terms of Use',
                 'rights': 'All rights reserved',
-                'developed': 'Developed with ♥ for you'
+                'developed': 'Developed with ♥ for you',
+                'more_articles_title': 'In-Depth Medical Articles',
+                'more_articles_sub': 'Detailed clinical guides reviewed by the WiBo Health medical team'
             }
         };
 
@@ -545,6 +549,13 @@
         }
 
         /* Divider */
+        .more-articles-sub { color: #64748b; margin: 6px 0 20px; }
+        .more-articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+        .more-article-card { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 14px; background: #f8fafc; border: 1px solid #e2e8f0; color: #1e293b; font-weight: 700; text-decoration: none; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
+        .more-article-card:hover { transform: translateY(-3px); border-color: #667eea; box-shadow: 0 8px 20px rgba(102, 126, 234, 0.18); }
+        .more-article-icon { font-size: 1.5rem; }
+
+
         .article-divider {
             text-align: center;
             margin: 50px 0;
@@ -829,13 +840,12 @@
         }
     </style>
     <!-- Unified Language System -->
-    <script src="js/unified-language-system.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <h1>💚 WiBo Health</h1>
                 </a>
                 
@@ -851,7 +861,7 @@
                 </div>
                 
                 <nav>
-                    <a href="index.html" data-i18n="home"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="/" data-i18n="home"><i class="fas fa-home"></i> الرئيسية</a>
                     <a href="foods.html" data-i18n="foods"><i class="fas fa-utensils"></i> الأطعمة</a>
                     <a href="calculators.html" data-i18n="calculators"><i class="fas fa-calculator"></i> الحاسبات</a>
                     <a href="recipes.html" data-i18n="recipes"><i class="fas fa-book-open"></i> الوصفات</a>
@@ -1115,6 +1125,24 @@
                 <span class="tag-item">الصحة</span>
             </div>
         </article>
+
+        <!-- Standalone in-depth articles -->
+        <section class="article more-articles" id="more-articles">
+            <h2 class="article-title" data-i18n="more_articles_title">مقالات طبية متخصصة</h2>
+            <p class="more-articles-sub" data-i18n="more_articles_sub">أدلة سريرية مفصلة يراجعها فريق ويبو هيلث الطبي</p>
+            <div class="more-articles-grid">
+                <a href="my-articles.html" class="more-article-card"><span class="more-article-icon">🛒</span><span>دليلك الطبي للتسوق والمؤشر الجلايسيمي</span></a>
+                <a href="intermittent-fasting.html" class="more-article-card"><span class="more-article-icon">⏱️</span><span>الصيام المتقطع وخرافات السوشيال ميديا</span></a>
+                <a href="insulin-resistance.html" class="more-article-card"><span class="more-article-icon">🩸</span><span>السكر التراكمي ومقاومة الإنسولين</span></a>
+                <a href="fatty-liver.html" class="more-article-card"><span class="more-article-icon">🫀</span><span>الكبد الدهني الخفي ومقاومة الإنسولين</span></a>
+                <a href="leptin-resistance.html" class="more-article-card"><span class="more-article-icon">🧠</span><span>لغز هرمون اللبتين والشبع</span></a>
+                <a href="thyroid-health.html" class="more-article-card"><span class="more-article-icon">🦋</span><span>خمول الغدة الدرقية وبطء الحرق</span></a>
+                <a href="cortisol-stress.html" class="more-article-card"><span class="more-article-icon">😮‍💨</span><span>الكورتيزول وهرمون التوتر</span></a>
+                <a href="magnesium-types.html" class="more-article-card"><span class="more-article-icon">💊</span><span>أنواع المغنيسيوم: أيها تختار؟</span></a>
+                <a href="bone-health-minerals.html" class="more-article-card"><span class="more-article-icon">🦴</span><span>صحة العظام والمعادن</span></a>
+            </div>
+        </section>
+
 
         <!-- اجعل باقي المقالات بنفس الطريقة -->
         <!-- Article 4-19 يتابع بنفس الهيكل -->
