@@ -164,13 +164,14 @@ UI = {
         table='القيم الغذائية', nutrient='العنصر الغذائي', col100='لكل 100 غ', colp='لحصة معتادة ({p} غ)',
         rows=('السعرات الحرارية', 'البروتين', 'الكربوهيدرات', 'الكربوهيدرات المتاحة', 'الدهون', 'الألياف الغذائية'),
         ii_row='مؤشر الإنسولين', ii_tested='مختبر سريرياً (Holt / Bao)',
-        compare='مقارنة وبدائل ذكية', alt_lower='بدائل بمؤشر جلايسيمي أقل:', alt_same='أصناف أخرى في الفئة:',
+        compare='مقارنة وبدائل ذكية', alt_lower='بدائل بمؤشر جلايسيمي أقل:', alt_same='أصناف قريبة من نفس العائلة:',
+        alt_family='بدائل ذكية من نفس العائلة:',
         lowest_note='هذا من أقل الأصناف مؤشراً في فئته.',
-        rank_measured='يأتي في المرتبة {rank} من {m} صنفاً مقاساً في فئة {group} من حيث المؤشر الجلايسيمي (الأقل أولاً).',
-        rank_protein='يوفر {v} غ بروتين لكل 100 سعرة، في المرتبة {rank} من {m} في فئة {group} (الأعلى أولاً).',
-        rank_kcal='يحتوي {v} سعرة لكل 100 غ، في المرتبة {rank} من {m} في فئة {group} (الأقل أولاً).',
-        lead_measured='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشره الجلايسيمي {gi} ({level})، وهو متوسط {studies} في الجداول الدولية (Atkinson 2021). وفي حصة معتادة من {p} غ يبلغ حمله الجلايسيمي {gl} ({gl_level}).',
-        lead_na='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{protein} غ بروتين. ولأنه يحتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، فلا ينطبق عليه المؤشر الجلايسيمي، ويكون أثره المباشر على سكر الدم ضئيلاً.',
+        rank_measured='{ya}أتي في المرتبة {rank} من {m_items} في فئة {group} من حيث المؤشر الجلايسيمي (الأقل أولاً).',
+        rank_protein='{ya}وفر {v} غ بروتين لكل 100 سعرة، في المرتبة {rank} من {m} في فئة {group} (الأعلى أولاً).',
+        rank_kcal='{ya}حتوي على {v} سعرة لكل 100 غ، في المرتبة {rank} من {m} في فئة {group} (الأقل أولاً).',
+        lead_measured='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو متوسط {studies} في الجداول الدولية (Atkinson 2021). وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
+        lead_na='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{protein} غ بروتين. ولأن{h} {ya}حتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، فلا ينطبق علي{h} المؤشر الجلايسيمي، ويكون أثر{h} المباشر على سكر الدم ضئيلاً.',
         boodi_title='امسح الباركود في السوبرماركت مع تطبيق بودي 💚',
         boodi_text='يحلل بودي المنتجات المعلّبة فوراً، ويفحص الحلال، ويقترح بدائل أقل سكراً من نفس الرف.',
         boodi_btn='اكتشف تطبيق بودي',
@@ -195,7 +196,8 @@ UI = {
         table='Nutrition facts', nutrient='Nutrient', col100='Per 100 g', colp='Per typical portion ({p} g)',
         rows=('Calories', 'Protein', 'Carbohydrate', 'Available carbohydrate', 'Fat', 'Dietary fibre'),
         ii_row='Insulin index', ii_tested='clinically tested (Holt / Bao)',
-        compare='Comparison & smarter alternatives', alt_lower='Lower-GI alternatives:', alt_same='Other foods in this group:',
+        compare='Comparison & smarter alternatives', alt_lower='Lower-GI alternatives:', alt_same='Related foods from the same family:',
+        alt_family='Smart alternatives from the same family:',
         lowest_note='This is one of the lowest-GI foods in its group.',
         rank_measured='It ranks {rank} of {m} measured foods in {group} by glycemic index (lowest first).',
         rank_protein='It provides {v} g of protein per 100 kcal, ranking {rank} of {m} in {group} (highest first).',
@@ -227,7 +229,7 @@ UI = {
         rows=('Calorieën', 'Eiwit', 'Koolhydraten', 'Beschikbare koolhydraten', 'Vet', 'Voedingsvezels'),
         ii_row='Insuline-index', ii_tested='klinisch getest (Holt / Bao)',
         compare='Vergelijking & slimme alternatieven', alt_lower='Alternatieven met een lagere GI:',
-        alt_same='Andere producten in deze groep:', lowest_note='Dit is een van de producten met de laagste GI in zijn groep.',
+        alt_same='Verwante producten uit dezelfde familie:', alt_family='Slimme alternatieven uit dezelfde familie:', lowest_note='Dit is een van de producten met de laagste GI in zijn groep.',
         rank_measured='Het staat op plaats {rank} van {m} gemeten producten in {group} op glykemische index (laagste eerst).',
         rank_protein='Het levert {v} g eiwit per 100 kcal en staat op plaats {rank} van {m} in {group} (hoogste eerst).',
         rank_kcal='Het bevat {v} kcal per 100 g en staat op plaats {rank} van {m} in {group} (laagste eerst).',
@@ -252,17 +254,17 @@ UI = {
 FAQ = {
     'ar': dict(
         title='أسئلة شائعة',
-        q=('هل {name} مناسب لإنقاص الوزن؟', 'كيف يؤثر {name} على سكر الدم؟', 'ما القيمة الغذائية لحصة معتادة من {name}؟'),
-        w_high='يحتوي {name} على {kcal} سعرة لكل 100 غ، أي أنه مرتفع السعرات، لذلك يُدخل في نظام إنقاص الوزن بكميات صغيرة ومقاسة فقط؛ حصة {p} غ تعطي {kcal_p} سعرة.',
-        w_low='نعم، {name} منخفض السعرات جداً ({kcal} سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.',
-        w_protein='يمكن أن يكون جزءاً مفيداً من نظام لإنقاص الوزن، لأنه يوفر {ppk} غ بروتين لكل 100 سعرة، والبروتين يعزز الشبع. حصة {p} غ تعطي {kcal_p} سعرة.',
-        w_fiber='يمكن إدخاله باعتدال، فهو يحتوي على {fiber} غ ألياف لكل 100 غ تساعد على الشبع، وحصة {p} غ تعطي {kcal_p} سعرة.',
-        w_general='يمكن إدخاله ضمن نظام متوازن مع التحكم بالحصة: حصة {p} غ تعطي {kcal_p} سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.',
-        s_measured='مؤشره الجلايسيمي {gi} ({level}) وفق Atkinson 2021. وفي حصة معتادة من {p} غ يبلغ حمله الجلايسيمي {gl} ({gl_level}){advice}',
-        s_advice=('، لذلك يكون تأثير هذه الحصة على سكر الدم محدوداً.', '، لذلك يُفضّل جمعه مع بروتين أو خضار غنية بالألياف.',
-                  '، لذلك يُفضّل تقليل الحصة أو تقسيمها وجمعها مع البروتين والألياف.'),
-        s_na_zero='لا يحتوي {name} تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.',
-        s_na='يحتوي {name} على {avail} غ فقط من الكربوهيدرات المتاحة لكل 100 غ، لذلك لا ينطبق عليه المؤشر الجلايسيمي وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.',
+        q=('هل {ya}ناسب {name} الدايت وإنقاص الوزن؟', 'كيف {ya}ؤثر {name} على سكر الدم؟', 'ما القيمة الغذائية لحصة معتادة من {name}؟'),
+        w_high='يحتوي {name} على {kcal} سعرة لكل 100 غ، وهي كمية مرتفعة من السعرات، لذلك يُستحسن استخدام كميات صغيرة ومقاسة من{h} في نظام إنقاص الوزن؛ فحصة {p} غ تعطي {kcal_p} سعرة.',
+        w_low='نعم، فسعرات {name} منخفضة جداً ({kcal} سعرة لكل 100 غ)، ويمكن تناول كمية جيدة من{h} لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.',
+        w_protein='يمكن أن {ya}كون جزءاً مفيداً من نظام إنقاص الوزن، لأن{h} {ya}وفر {ppk} غ بروتين لكل 100 سعرة، والبروتين يعزز الشبع. وحصة {p} غ تعطي {kcal_p} سعرة.',
+        w_fiber='يمكن إدخال{h} باعتدال، ف{huwa} {ya}حتوي على {fiber} غ ألياف لكل 100 غ تساعد على الشبع، وحصة {p} غ تعطي {kcal_p} سعرة.',
+        w_general='يمكن إدخال{h} ضمن نظام متوازن مع التحكم بالحصة: حصة {p} غ تعطي {kcal_p} سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.',
+        s_measured='مؤشر{h} الجلايسيمي {gi} ({level}) وفق Atkinson 2021. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
+        s_advice=('، لذلك يكون تأثير هذه الحصة على سكر الدم محدوداً.', '، لذلك يُفضّل تناول{h} مع بروتين أو خضار غنية بالألياف.',
+                  '، لذلك يُفضّل تقليل الحصة أو تقسيمها وتناول{h} مع البروتين والألياف.'),
+        s_na_zero='لا يحتوي {name} تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق علي{h} المؤشر الجلايسيمي، وأثر{h} المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة ل{h} كالخبز والأرز والصلصات المحلاة.',
+        s_na='يحتوي {name} على {avail} غ فقط من الكربوهيدرات المتاحة لكل 100 غ، لذلك لا ينطبق علي{h} المؤشر الجلايسيمي، وأثر{h} المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة ل{h} كالخبز والأرز والصلصات المحلاة.',
         portion='حصة معتادة من {p} غ من {name} تحتوي تقريباً على {kcal_p} سعرة، و{prot_p} غ بروتين، و{carb_p} غ كربوهيدرات، و{fat_p} غ دهون، و{fib_p} غ ألياف.'),
     'en': dict(
         title='Frequently asked questions',
@@ -302,12 +304,13 @@ VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provi
          'ar': (dict(), dict())}
 
 
-def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None):
+def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None, g=None):
     """Three questions whose answers are computed from the food's own numbers."""
     f, u = FAQ[lang], UI[lang]
     v = dict(VERBS[lang][1 if food['id'] in PLURAL.get(lang, set()) else 0])
     if 'is_' in v:
         v['Is_'] = v['is_'].capitalize()
+    v.update(g or {})
     pf = portion / 100.0
     kcal = food['kcal']
     kcal_p = round(kcal * pf)
@@ -325,13 +328,102 @@ def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, g
     a1 = w.format(name=name, kcal=round(kcal), p=portion, kcal_p=kcal_p, ppk=fmt(ppk), fiber=fmt(food['fiber']), **v)
     if measured:
         a2 = f['s_measured'].format(gi=gi, level=u['levels'][lvl], p=portion, gl=fmt(gl), gl_level=u['levels'][glv],
-                                    advice=f['s_advice'][glv])
+                                    advice=f['s_advice'][glv].format(**v), **v)
     else:
         tmpl = f['s_na_zero'] if food['avail'] < 0.5 else f['s_na']
         a2 = tmpl.format(name=name, avail=fmt(food['avail']), **v)
-    a3 = f['portion'].format(p=portion, name=name, kcal_p=kcal_p, prot_p=fmt(food['protein'] * pf),
+    a3 = f['portion'].format(**v, p=portion, name=name, kcal_p=kcal_p, prot_p=fmt(food['protein'] * pf),
                              carb_p=fmt(food['carbs'] * pf), fat_p=fmt(food['fat'] * pf), fib_p=fmt(food['fiber'] * pf))
     return [(q.format(name=name, **v), a) for q, a in zip(f['q'], (a1, a2, a3))]
+
+
+# --------------------------------------------------------------------------------------------
+# Arabic: definite form (ال التعريف) and grammatical gender of a food name, for use inside sentences
+# --------------------------------------------------------------------------------------------
+AR_DEFINITE_OVERRIDES = {          # names whose natural definite form does not follow the rules
+    'ملوخية ورق خضراء': 'الملوخية الخضراء',
+    'لحم بقري ستيك مشوي': 'ستيك اللحم البقري المشوي',
+    'بيض مسلوق كامل': 'البيض المسلوق',
+    'حليب كامل الدسم 3.5%': 'الحليب كامل الدسم',
+    'لبن زبادي يوناني 10%': 'الزبادي اليوناني',
+}
+AR_IDAFA = {('صدر', 'دجاج'), ('زيت', 'زيتون'), ('سمك', 'سلمون'), ('لحم', 'غنم'), ('خبز', 'قمح'),
+            ('جبنة', 'شيدر'), ('جبنة', 'حلوم')}        # construct state: only the second noun takes ال
+AR_STOP = {'على', 'في', 'من', 'مع', 'عن', 'إلى', 'أبو', 'بدون'}   # prepositions / proper names: rest stays as is
+AR_FEMININE_NOUNS = {'كمثرى', 'بطاطا', 'كوسا', 'مانجو', 'كينوا', 'سبانخ', 'فاصوليا'}
+AR_FEMININE_ADJ = {'بيضاء', 'سوداء', 'حمراء', 'خضراء', 'صفراء'}
+
+
+def _core_words(name):
+    name = re.sub(r'\(.*?\)', ' ', name)                     # drop parenthetical alternatives
+    return [w for w in name.split() if '/' not in w]          # drop colour variants like أحمر/أخضر
+
+
+def ar_definite(name):
+    """'أرز أبيض مطبوخ' -> 'الأرز الأبيض المطبوخ'; 'صدر دجاج مشوي' -> 'صدر الدجاج المشوي'."""
+    if name in AR_DEFINITE_OVERRIDES:
+        return AR_DEFINITE_OVERRIDES[name]
+    words = _core_words(name)
+    out, frozen = [], False
+    for i, w in enumerate(words):
+        nxt = words[i + 1] if i + 1 < len(words) else ''
+        if frozen or w in AR_STOP:
+            frozen = True
+            out.append(w)
+        elif re.match(r'^[\d.%]+$', w) or w.startswith(('ال', 'بال', 'لل', 'وال')):
+            out.append(w)
+        elif (w, nxt) in AR_IDAFA or nxt.startswith('ال'):    # first noun of a construct stays indefinite
+            out.append(w)
+        else:
+            out.append('ال' + w)
+    return ' '.join(out)
+
+
+def ar_is_feminine(name):
+    words = _core_words(name)
+    head = words[0] if words else ''
+    if head.endswith('ة') or head in AR_FEMININE_NOUNS:
+        return True
+    return bool(len(words) > 1 and (words[1].endswith('ة') or words[1] in AR_FEMININE_ADJ))
+
+
+def ar_pron(name):
+    """Placeholders for Arabic templates: {h} = ه/ها (its), {ya} = ي/ت (verb prefix), {huwa} = هو/هي."""
+    fem = ar_is_feminine(name)
+    return dict(h='ها' if fem else 'ه', ya='ت' if fem else 'ي', huwa='هي' if fem else 'هو')
+
+
+# --------------------------------------------------------------------------------------------
+# Culinary-aware alternatives: each food's family, in order of preference (curated by hand).
+# Measured foods list lower-GI options first; the heading says "lower GI" only when all are lower.
+# --------------------------------------------------------------------------------------------
+ALTERNATIVES = {
+    1: [14, 2, 8], 14: [8, 9, 2], 2: [8, 9, 14], 8: [9, 18, 14], 9: [18, 8, 14], 10: [9, 8, 5], 5: [9, 18, 8],
+    3: [4, 7, 17], 196: [4, 7, 17], 4: [7, 17, 8], 7: [17, 4, 8], 17: [7, 4, 8],
+    11: [27, 19, 22], 26: [27, 18, 19], 29: [26, 27, 18], 27: [11, 19, 18],
+    18: [19, 22, 9], 19: [18, 22, 9], 22: [18, 19, 8],
+    54: [48, 66, 50], 51: [66, 48, 50], 49: [48, 66, 50], 53: [48, 66, 50], 55: [48, 66, 50],
+    48: [66, 50, 55], 50: [48, 66, 55], 66: [48, 50, 55],
+    62: [66, 48, 50], 63: [62, 66, 48], 68: [62, 48, 53],
+    69: [70, 79, 71], 70: [69, 79, 71], 79: [69, 70, 72],
+    101: [91, 98, 72], 91: [98, 94, 101], 92: [91, 94, 98], 93: [91, 92, 94], 94: [98, 91, 101], 98: [94, 91, 101],
+    128: [59], 59: [128],
+    71: [72, 79, 69], 72: [71, 77, 74], 74: [77, 72, 71], 77: [72, 74, 71],
+    30: [31, 37, 32], 31: [30, 32, 35], 32: [39, 36, 30], 35: [36, 37, 32], 36: [35, 32, 40], 37: [38, 35, 30],
+    38: [37, 39, 32], 39: [32, 38, 30], 40: [32, 35, 36],
+    132: [133], 133: [132],
+}
+
+
+def ar_measured_items(n):
+    """Arabic counted noun: 3-10 take a plural, 11+ a singular accusative."""
+    if n == 1:
+        return 'صنف مقاس واحد'
+    if n == 2:
+        return 'صنفين مقاسين'
+    if 3 <= n <= 10:
+        return f'{n} أصناف مقاسة'
+    return f'{n} صنفاً مقاساً'
 
 
 def studies_word(n, lang):
@@ -514,6 +606,9 @@ def build(food, lang, ctx):
     li = LANGS.index(lang)
     slug, group, portion = ctx['slug'][food['id']], PILOT[food['id']][0], PILOT[food['id']][1]
     name = food[lang] or food['en']
+    # inside Arabic sentences the name takes the definite article; headings keep the display name
+    sname = ar_definite(name) if lang == 'ar' else name
+    g = ar_pron(name) if lang == 'ar' else {}
     subtitle = {'ar': food['en'], 'en': food['nl'], 'nl': food['en']}[lang]
     if subtitle == name:
         subtitle = ''
@@ -532,19 +627,19 @@ def build(food, lang, ctx):
         gl = round(gi * food['avail'] * p_factor / 100, 1)
         glv = gl_level(gl)
         studies = studies_word(int(food['gi_n'] or 1), lang)
-        lead = u['lead_measured'].format(name=name, kcal=kcal, avail=avail, gi=gi, level=u['levels'][lvl], studies=studies,
-                                         p=portion, gl=fmt(gl), gl_level=u['levels'][glv])
+        lead = u['lead_measured'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=u['levels'][lvl], studies=studies,
+                                         p=portion, gl=fmt(gl), gl_level=u['levels'][glv], **g)
         desc = u['desc_measured'].format(name=name, kcal=kcal, gi=gi, level=u['levels'][lvl], gl=fmt(gl), p=portion)
     else:
-        lead = u['lead_na'].format(name=name, kcal=kcal, protein=protein)
+        lead = u['lead_na'].format(name=sname, kcal=kcal, protein=protein, **g)
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
     title = u['title'].format(name=name)
 
     # -------- FAQ (answers computed from the numbers)
     if measured:
-        faq = build_faq(food, lang, name, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv)
+        faq = build_faq(food, lang, sname, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv, g=g)
     else:
-        faq = build_faq(food, lang, name, portion, False)
+        faq = build_faq(food, lang, sname, portion, False, g=g)
     faq_html = ''.join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
     faq_schema = {
         "@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang,
@@ -556,17 +651,20 @@ def build(food, lang, ctx):
     def link_item(f, right):
         return (f'<li><a href="{page_url(ctx["slug"][f["id"]], lang, absolute=False)}">{esc(f[lang] or f["en"])}'
                 f'<span>{right}</span></a></li>')
+    family = [ctx['foods'][i] for i in ALTERNATIVES.get(food['id'], []) if i in PILOT]
     if measured:
         ranked = sorted([f for f in peers if f['gi_status'] == 'measured'], key=lambda f: f['gi'])
         rank = [f['id'] for f in ranked].index(food['id']) + 1
-        compare_txt = u['rank_measured'].format(rank=rank, m=len(ranked), group=group_name)
-        lower = [f for f in ranked if f['gi'] < food['gi']][:3]
-        if lower:
-            alt_title, alts = u['alt_lower'], lower
-        else:
+        compare_txt = u['rank_measured'].format(rank=rank, m=len(ranked), m_items=ar_measured_items(len(ranked)),
+                                                group=group_name, **g)
+        if rank == 1:
             compare_txt += ' ' + u['lowest_note']
-            alt_title, alts = u['alt_same'], [f for f in ranked if f['id'] != food['id']][:3]
-        alt_html = ''.join(link_item(f, f"{u['gi']} {int(f['gi'])}") for f in alts)
+        has_gi = [f for f in family if f['gi_status'] == 'measured']
+        lower = sorted([f for f in has_gi if f['gi'] < food['gi']], key=lambda f: f['gi'])
+        alts = (lower + [f for f in family if f not in lower])[:3]
+        alt_title = u['alt_lower'] if alts and len(lower) == len(alts) else u['alt_family']
+        alt_html = ''.join(link_item(f, f"{u['gi']} {int(f['gi'])}" if f['gi_status'] == 'measured'
+                                     else f"{round(f['kcal'])} {u['kcal_unit']}") for f in alts)
     else:
         if group in ('protein', 'dairy_solid'):
             key = lambda f: -(f['protein'] / f['kcal'] * 100 if f['kcal'] else 0)
@@ -578,10 +676,9 @@ def build(food, lang, ctx):
             v = str(kcal)
             tmpl = u['rank_kcal']
         rank = [f['id'] for f in ranked].index(food['id']) + 1
-        compare_txt = tmpl.format(v=v, rank=rank, m=len(ranked), group=group_name)
+        compare_txt = tmpl.format(v=v, rank=rank, m=len(ranked), group=group_name, **g)
         alt_title = u['alt_same']
-        alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}")
-                           for f in [f for f in ranked if f['id'] != food['id']][:3])
+        alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}") for f in family[:3])
 
     # -------- cards
     if measured:
