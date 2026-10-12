@@ -390,6 +390,45 @@
         }
         body.dark-mode .ii-tested-badge { color: #6ee7a8; }
         .stat-value.untested { color: var(--text-light); }
+        /* GI status badge (measured level / not applicable / not available) */
+        .gi-status-badge {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            line-height: 1.5;
+            border: 1px solid transparent;
+        }
+        .gi-status-badge:empty { display: none; }
+        .gi-status-badge.low { background: rgba(46, 204, 113, 0.12); border-color: rgba(46, 204, 113, 0.45); color: #1e9e57; }
+        .gi-status-badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #b9770e; }
+        .gi-status-badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #c0392b; }
+        .gi-status-badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.5); color: #64748b; }
+        body.dark-mode .gi-status-badge.low { color: #6ee7a8; }
+        body.dark-mode .gi-status-badge.medium { color: #fbbf24; }
+        body.dark-mode .gi-status-badge.high { color: #f87171; }
+        body.dark-mode .gi-status-badge.neutral { color: #cbd5e1; border-color: rgba(203, 213, 225, 0.35); }
+
+        /* One-line pointer to the methodology page (readable on every page gradient) */
+        .methodology-line {
+            margin: 14px auto 0;
+            padding: 9px 16px;
+            width: fit-content;
+            max-width: 100%;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.55);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(226, 232, 240, 0.2);
+            color: #e2e8f0;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .methodology-line a { color: #6ee7a8; font-weight: 700; text-decoration: none; }
+        .methodology-line a:hover { text-decoration: underline; }
 
         /* ==========================================================================
            4. الرسوم البيانية المحمية من طفحان العرض (Chart Shield)
@@ -631,7 +670,7 @@
             <div class="stat-card">
                 <h4 data-i18n="stat_gi">المؤشر الجلايسيمي</h4>
                 <div class="stat-value" id="giValue">-</div>
-                <div class="stat-label" id="giLabel"></div>
+                <span class="gi-status-badge neutral" id="giLabel"></span>
             </div>
 
             <div class="stat-card">
@@ -745,6 +784,7 @@
         <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
             إخلاء مسؤولية: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.
         </div>
+        <p class="methodology-line"><span data-i18n="methodology_line">القيم مقاسة أو محسوبة وفق منهجية موثّقة</span> · <a href="methodology.html" data-i18n="methodology_link">المنهجية والمراجع العلمية</a></p>
     </main>
 
     <!-- Footer -->
@@ -832,6 +872,13 @@
                 ii_medium: "معتدل 🟡",
                 ii_high: "مرتفع 🔴",
                 ii_tested_badge: "مختبر سريرياً (Holt / Bao) ✅",
+                gi_not_applicable: "لا ينطبق",
+                gi_not_available: "غير متوفر",
+                gi_title_na: "المؤشر الجلايسيمي: لا ينطبق",
+                gi_meta_na: "المؤشر الجلايسيمي لا ينطبق (أقل من 5 غ كربوهيدرات متاحة)",
+                kcal_per_100g: "سعرة لكل 100 غ",
+                methodology_line: "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
+                methodology_link: "المنهجية والمراجع العلمية",
                 ii_not_tested: "غير مختبر سريرياً",
                 ii_sources: "📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "لكل 100 جرام",
@@ -881,6 +928,13 @@
                 ii_medium: "Moderate 🟡",
                 ii_high: "High 🔴",
                 ii_tested_badge: "Clinically tested (Holt / Bao) ✅",
+                gi_not_applicable: "Not applicable",
+                gi_not_available: "Not available",
+                gi_title_na: "Glycemic Index: not applicable",
+                gi_meta_na: "GI not applicable (under 5 g available carbohydrate)",
+                kcal_per_100g: "kcal per 100 g",
+                methodology_line: "Values are measured or calculated using a documented methodology",
+                methodology_link: "Methodology & scientific references",
                 ii_not_tested: "Not clinically tested",
                 ii_sources: "📚 Insulin Index sources: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
@@ -930,6 +984,13 @@
                 ii_medium: "Matig 🟡",
                 ii_high: "Hoog 🔴",
                 ii_tested_badge: "Klinisch getest (Holt / Bao) ✅",
+                gi_not_applicable: "Niet van toepassing",
+                gi_not_available: "Niet beschikbaar",
+                gi_title_na: "Glykemische index: niet van toepassing",
+                gi_meta_na: "GI niet van toepassing (minder dan 5 g beschikbare koolhydraten)",
+                kcal_per_100g: "kcal per 100 g",
+                methodology_line: "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
+                methodology_link: "Methodologie & wetenschappelijke bronnen",
                 ii_not_tested: "Niet klinisch getest",
                 ii_sources: "📚 Bronnen insuline-index: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
                 per_100g: "per 100g",
@@ -1081,10 +1142,17 @@ if (food.image) {
             catEl.textContent = catName;
 
             // تحديث العنوان وميتا تاج لمحركات البحث
-            const pageTitle = `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`;
+            const giMeasured = hasMeasuredGI(food);
+            const kcal = Math.round(food.nutrition?.calories || 0);
+            const pageTitle = giMeasured
+                ? `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`
+                : (food.gi_status === 'not_applicable'
+                    ? `${mainTitle} - ${t('gi_title_na')} | WiBo Health`
+                    : `${mainTitle} - ${kcal} ${t('kcal_per_100g')} | WiBo Health`);
             document.title = pageTitle;
             const iiMeta = hasTestedII(food) ? `, II ${food.ii}` : '';
-            const metaDescText = `${mainTitle} (${catName}): GI ${food.gi}${iiMeta}, ${Math.round(food.nutrition?.calories || 0)} kcal, ${food.nutrition?.protein || 0}g protein. WiBo Health Medical Team.`;
+            const giMeta = giMeasured ? `GI ${food.gi} (Atkinson 2021), ` : (food.gi_status === 'not_applicable' ? `${t('gi_meta_na')}, ` : '');
+            const metaDescText = `${mainTitle} (${catName}): ${giMeta}${kcal} kcal, ${food.nutrition?.protein || 0}g protein, ${food.nutrition?.carbs || 0}g carbs${iiMeta}. WiBo Health Medical Team.`;
             
             const metaDesc = document.getElementById('metaDescription');
             if (metaDesc) metaDesc.setAttribute('content', metaDescText);
@@ -1096,9 +1164,19 @@ if (food.image) {
             if (ogDesc) ogDesc.setAttribute('content', metaDescText);
 
             // تحديث المؤشرات
-            document.getElementById('giValue').textContent = food.gi;
-            document.getElementById('giValue').className = 'stat-value ' + getGIClass(food.gi);
-            document.getElementById('giLabel').textContent = getGIText(food.gi);
+            const giValueEl = document.getElementById('giValue');
+            const giLabelEl = document.getElementById('giLabel');
+            if (giMeasured) {
+                giValueEl.textContent = food.gi;
+                giValueEl.className = 'stat-value ' + getGIClass(food.gi);
+                giLabelEl.textContent = getGIText(food.gi);
+                giLabelEl.className = 'gi-status-badge ' + getGIClass(food.gi);
+            } else {
+                giValueEl.textContent = '—';
+                giValueEl.className = 'stat-value untested';
+                giLabelEl.textContent = t(food.gi_status === 'not_applicable' ? 'gi_not_applicable' : 'gi_not_available');
+                giLabelEl.className = 'gi-status-badge neutral';
+            }
             
             // مؤشر الإنسولين: نعرض الرقم فقط إذا كان مختبراً سريرياً، وإلا "—"
             const iiValueEl = document.getElementById('iiValue');
@@ -1131,6 +1209,11 @@ if (food.image) {
 
             updateStructuredData(food, mainTitle, catName, fatVal);
             updateCanonicalAndHreflang(food.id);
+        }
+
+        // GI is shown only when it was measured (Atkinson 2021); otherwise gi is null
+        function hasMeasuredGI(food) {
+            return food.gi_status === 'measured' && typeof food.gi === 'number';
         }
 
         function getGIClass(value) {
@@ -1179,7 +1262,7 @@ if (food.image) {
                 "name": title,
                 "category": category,
                 "url": `https://wibohealth.com/food-details.html?id=${food.id}`,
-                "description": `${title} Glycemic Index: ${food.gi}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
+                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : '')}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
                 "brand": {
                     "@type": "Organization",
                     "name": "WiBo Health Medical Team"
@@ -1226,17 +1309,24 @@ if (food.image) {
             const fatVal = (food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0);
 
             // عمود الإنسولين يُرسم فقط للأصناف المختبرة سريرياً
-            const indexLabels = [t('chart_label_gi')];
-            const indexData = [food.gi];
-            const indexColors = [food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#2ecc71')];
+            const indexLabels = [];
+            const indexData = [];
+            const indexColors = [];
+            if (hasMeasuredGI(food)) {
+                indexLabels.push(t('chart_label_gi'));
+                indexData.push(food.gi);
+                indexColors.push(food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#2ecc71'));
+            }
             if (hasTestedII(food)) {
                 indexLabels.push(t('chart_label_ii'));
                 indexData.push(food.ii);
                 indexColors.push(getIIColor(food.ii));
             }
 
+            const indexCard = document.getElementById('indexChart')?.closest('.chart-card');
+            if (indexCard) indexCard.style.display = indexData.length ? '' : 'none';
             const indexCtx = document.getElementById('indexChart')?.getContext('2d');
-            if (indexCtx) {
+            if (indexCtx && indexData.length) {
                 indexChartInstance = new Chart(indexCtx, {
                     type: 'bar',
                     data: {

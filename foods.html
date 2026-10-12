@@ -766,6 +766,25 @@
             margin-top: 25px;
             line-height: 1.7;
         }
+        /* One-line pointer to the methodology page (readable on every page gradient) */
+        .methodology-line {
+            margin: 14px auto 0;
+            padding: 9px 16px;
+            width: fit-content;
+            max-width: 100%;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.55);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(226, 232, 240, 0.2);
+            color: #e2e8f0;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .methodology-line a { color: #6ee7a8; font-weight: 700; text-decoration: none; }
+        .methodology-line a:hover { text-decoration: underline; }
+
         body.dark-mode .clinical-disclaimer-box {
             background: rgba(15, 23, 42, 0.7);
             border-color: rgba(226, 232, 240, 0.18);
@@ -1112,6 +1131,7 @@
         <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
             إخلاء مسؤولية: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.
         </div>
+        <p class="methodology-line"><span data-i18n="methodology_line">القيم مقاسة أو محسوبة وفق منهجية موثّقة</span> · <a href="methodology.html" data-i18n="methodology_link">المنهجية والمراجع العلمية</a></p>
 
         <!-- Conversion Card -->
         <div class="boodi-food-banner">
@@ -1261,6 +1281,10 @@
                 "ii_not_tested": "غير مختبر سريرياً",
                 "modal_per_100g": "القيم الغذائية لكل 100 جرام",
                 "modal_full_details": "عرض التفاصيل الكاملة والرسوم البيانية",
+                "gi_not_applicable": "لا ينطبق",
+                "gi_not_available": "غير متوفر",
+                "methodology_line": "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
+                "methodology_link": "المنهجية والمراجع العلمية",
                 "gi_sources": "📚 جميع قيم المؤشر الجلايسيمي (GI) مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد.",
                 "clinical_disclaimer": "إخلاء مسؤولية: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.",
                 "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
@@ -1311,6 +1335,10 @@
                 "ii_not_tested": "Not clinically tested",
                 "modal_per_100g": "Nutritional values per 100 g",
                 "modal_full_details": "View full details & charts",
+                "gi_not_applicable": "Not applicable",
+                "gi_not_available": "Not available",
+                "methodology_line": "Values are measured or calculated using a documented methodology",
+                "methodology_link": "Methodology & scientific references",
                 "gi_sources": "📚 All Glycemic Index (GI) values are referenced from the International Tables (Atkinson et al., Am J Clin Nutr 2021) and Harvard Health Publishing.",
                 "clinical_disclaimer": "Disclaimer: The WiBo Health food database and boodi app are informational lifestyle guidance tools and do not constitute diagnostic medical devices under EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
@@ -1361,6 +1389,10 @@
                 "ii_not_tested": "Niet klinisch getest",
                 "modal_per_100g": "Voedingswaarden per 100 g",
                 "modal_full_details": "Bekijk alle details & grafieken",
+                "gi_not_applicable": "Niet van toepassing",
+                "gi_not_available": "Niet beschikbaar",
+                "methodology_line": "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
+                "methodology_link": "Methodologie & wetenschappelijke bronnen",
                 "gi_sources": "📚 Alle GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing.",
                 "clinical_disclaimer": "Algemene disclaimer: Deze voedingswijzer en de boodi-app zijn leefstijl- en educatieve hulpmiddelen en vormen geen medisch hulpmiddel volgens EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
@@ -1730,7 +1762,7 @@
             const n = food.nutrition || {};
             const unitGram = lang === 'ar' ? 'جم' : 'g';
             const gi = Number(food.gi);
-            const giKnown = food.gi !== null && food.gi !== undefined && !isNaN(gi);
+            const giKnown = food.gi_status === 'measured' && food.gi !== null && food.gi !== undefined && !isNaN(gi);
             const giLevel = giKnown ? getGILevel(gi) : '';
             const iiTested = hasTestedII(food);
             const ii = Number(food.ii);
@@ -1741,7 +1773,7 @@
                     <div class="fm-card fm-index ${giLevel}">
                         <div class="fm-label">${t('modal_gi')}</div>
                         <div class="fm-value ${giKnown ? '' : 'untested'}">${giKnown ? gi : '—'}</div>
-                        ${giKnown ? `<span class="fm-level">${t('gi_' + giLevel)}</span>` : ''}
+                        ${giKnown ? `<span class="fm-level">${t('gi_' + giLevel)}</span>` : `<span class="fm-level">${t(food.gi_status === 'not_applicable' ? 'gi_not_applicable' : 'gi_not_available')}</span>`}
                     </div>
                     <div class="fm-card fm-index ${iiLevel}">
                         <div class="fm-label">${t('modal_ii')}</div>
