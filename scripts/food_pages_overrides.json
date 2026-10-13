@@ -382,145 +382,190 @@
     "30": {
       "tips": {
         "ar": [
-          "الطماطم غنية بفيتامين C والليكوبين، وسعراتها منخفضة جداً.",
-          "طهيها مع قليل من زيت الزيتون يزيد امتصاص الليكوبين، كما في صلصة الطماطم المنزلية."
+          "تناولها بحرية في السلطات والوجبات اليومية؛ كربوهيدراتها المنخفضة وأليافها تجعلها آمنة تماماً لأي مريض سكر أو حمية إنقاص وزن.",
+          "طهي الطماطم الخفيف مع زيت الزيتون يضاعف امتصاص مركب الليكوبين في الجسم بمقدار أربع مرات مقارنة بالطماطم النيئة."
         ],
         "en": [
-          "Tomatoes are rich in vitamin C and lycopene and very low in calories.",
-          "Cooking them with a little olive oil increases lycopene absorption, as in a homemade tomato sauce."
+          "Eat them freely in salads and everyday meals; their low carbohydrate content and fibre make them a safe choice for anyone with diabetes or on a weight-loss diet.",
+          "Lightly cooking tomatoes with olive oil can make the body absorb up to four times more lycopene than from raw tomatoes."
         ],
         "nl": [
-          "Tomaten zijn rijk aan vitamine C en lycopeen en zeer caloriearm.",
-          "Ze bereiden met een beetje olijfolie verhoogt de opname van lycopeen, zoals in een zelfgemaakte tomatensaus."
+          "Eet ze vrij in salades en dagelijkse maaltijden; het lage koolhydraatgehalte en de vezels maken ze een veilige keuze voor iedereen met diabetes of op een afvaldieet.",
+          "Tomaten licht koken met olijfolie kan ervoor zorgen dat het lichaam tot vier keer meer lycopeen opneemt dan uit rauwe tomaten."
         ]
+      },
+      "lead": {
+        "ar": "كنز مضادات الأكسدة ومصدر مركب 'الليكوبين' الشهير لحماية الخلايا والقلب. تتكون من 95% ماء وسعراتها تكاد لا تُذكر، مما يجعلها خضاراً حراً خفيفاً تماماً على سكر الدم.",
+        "en": "A treasure of antioxidants and a source of the well-known compound 'lycopene', which helps protect cells and the heart. Tomatoes are 95% water with barely any calories, making them a free vegetable that is completely gentle on blood sugar.",
+        "nl": "Een schatkamer van antioxidanten en een bron van het bekende 'lycopeen', dat helpt cellen en het hart te beschermen. Tomaten bestaan voor 95% uit water en bevatten nauwelijks calorieën, waardoor ze een vrije groente zijn die volledig licht is voor de bloedsuiker."
       }
     },
     "31": {
       "tips": {
         "ar": [
-          "الخيار يتكون معظمه من الماء، فهو منعش ومنخفض السعرات جداً.",
-          "تناوله بقشره بعد غسله جيداً، ويمكن إضافته إلى اللبن مع النعناع كطبق جانبي خفيف."
+          "الخيار السحري للشبع بين الوجبات وعند الشعور برغبة في القرمشة ليلاً؛ تناوله كغموس مع اللبنة أو الحمص بدلاً من رقائق الخبز والبسكويت.",
+          "كُله بقشرته الخضراء دائماً للاستفادة من السيليكا والألياف ومضادات الأكسدة المتركزة في القشرة الخارجية."
         ],
         "en": [
-          "Cucumber is mostly water, which makes it refreshing and very low in calories.",
-          "Eat it with the skin after washing it well, or stir it into yoghurt with mint as a light side dish."
+          "The magic choice for fullness between meals and when you crave something crunchy at night; dip it in labneh or hummus instead of crisps and biscuits.",
+          "Always eat it with its green skin to benefit from the silica, fibre and antioxidants concentrated in the outer peel."
         ],
         "nl": [
-          "Komkommer bestaat grotendeels uit water en is daardoor verfrissend en zeer caloriearm.",
-          "Eet hem met schil na goed wassen, of roer hem door yoghurt met munt als licht bijgerecht."
+          "De magische keuze voor verzadiging tussen de maaltijden en bij trek in iets knapperigs 's avonds; dip hem in labneh of hummus in plaats van chips en koekjes.",
+          "Eet hem altijd met de groene schil om te profiteren van het silicium, de vezels en de antioxidanten die in de buitenste schil zitten."
         ]
+      },
+      "lead": {
+        "ar": "صديق الترطيب الأول؛ ماء وألياف نقية تملأ المعدة وتنعش الجسم بسعرات تقترب من الصفر. لا يرفع الإنسولين ولا يغير قراءات السكر مهما تناولت منه بحرية.",
+        "en": "Your number-one hydration friend: water and pure fibre that fill the stomach and refresh the body with close to zero calories. It hardly affects insulin or blood sugar readings, however freely you eat it.",
+        "nl": "Je hydratatievriend nummer één: water en pure vezels die de maag vullen en het lichaam verfrissen met bijna nul calorieën. Het heeft nauwelijks effect op insuline of bloedsuikerwaarden, hoeveel je er ook van eet."
       }
     },
     "32": {
       "tips": {
         "ar": [
-          "الكوسا منخفضة السعرات ومرنة في الطبخ، وتناسب المحاشي والشوربات.",
-          "يمكن بشرها أو تقطيعها شرائط رفيعة بديلاً جزئياً للمعكرونة في بعض الأطباق."
+          "ممتازة في صواني الفرن والشوربات؛ وتناول كمية وفيرة منها يمنحك امتلاءً معوياً مريحاً يساعد على تنظيف الأمعاء وتوازن السكر.",
+          "قطّعها طولياً على شكل شرائط رفيعة كبديل للمعكرونة (Zoodles) مع صلصة الطماطم الطبيعية، لتحصل على نفس متعة المعكرونة بربع النشويات."
         ],
         "en": [
-          "Courgette is low in calories and versatile, suiting stuffed dishes and soups.",
-          "Grate it or cut it into thin ribbons as a partial substitute for pasta in some dishes."
+          "Excellent in oven trays and soups; eating a generous amount gives a comfortable feeling of fullness and supports regular digestion and steady blood sugar.",
+          "Cut it lengthwise into thin ribbons as a pasta substitute (zoodles) with a natural tomato sauce, for the same pleasure as pasta with a quarter of the starch."
         ],
         "nl": [
-          "Courgette is caloriearm en veelzijdig, en past in gevulde gerechten en soepen.",
-          "Rasp hem of snijd hem in dunne linten als gedeeltelijke vervanger van pasta in sommige gerechten."
+          "Uitstekend in ovenschotels en soepen; een royale portie geeft een prettig vol gevoel en ondersteunt een regelmatige spijsvertering en een stabiele bloedsuiker.",
+          "Snijd hem in de lengte in dunne linten als pastavervanger (zoodles) met een natuurlijke tomatensaus, voor hetzelfde pastaplezier met een kwart van het zetmeel."
         ]
+      },
+      "lead": {
+        "ar": "الخضار المرن الأكثر شعبية في حميات خفض الوزن؛ قوام طري وخفيف وسعرات شبه منعدمة، يجعلها بديلاً عبقرياً لمن يريد تقليل النشويات دون الشعور بفراغ في الطبق.",
+        "en": "The most popular versatile vegetable in weight-loss diets: a soft, light texture and almost no calories make it a brilliant substitute for anyone who wants to cut down on starch without an empty-looking plate.",
+        "nl": "De populairste veelzijdige groente bij afvallen: een zachte, lichte structuur en bijna geen calorieën maken courgette een geniale vervanger voor wie minder zetmeel wil eten zonder een leeg bord."
       }
     },
     "35": {
       "tips": {
         "ar": [
-          "البروكلي غني بفيتاميني C وK والألياف ومركبات الكبريت النباتية.",
-          "اطبخه على البخار من 3 إلى 5 دقائق فقط ليبقى أخضر ومقرمشاً ويحتفظ بفيتاميناته."
+          "تناول طبقاً صغيراً منه في بداية الغداء؛ أليافه تشكل سداً طبيعياً في الأمعاء يمنع حدوث قفزات مفاجئة في سكر الدم بعد الوجبة.",
+          "اطهه على البخار لمدة 4 إلى 5 دقائق فقط حتى يحافظ على لونه الأخضر الزاهي وقرمشته اللطيفة، وتجنب غليه الطويل في الماء حتى لا يفقد فيتامين C ومركباته الحيوية."
         ],
         "en": [
-          "Broccoli is rich in vitamins C and K, fibre and plant sulphur compounds.",
-          "Steam it for only 3 to 5 minutes so it stays green and crisp and keeps its vitamins."
+          "Eat a small plate of it at the start of lunch; its fibre forms a natural barrier in the gut that helps prevent sudden spikes in blood sugar after the meal.",
+          "Steam it for just 4 to 5 minutes so it keeps its bright green colour and pleasant crunch, and avoid long boiling in water so it does not lose its vitamin C and active compounds."
         ],
         "nl": [
-          "Broccoli is rijk aan vitamine C en K, vezels en plantaardige zwavelverbindingen.",
-          "Stoom hem slechts 3 tot 5 minuten zodat hij groen en knapperig blijft en zijn vitamines behoudt."
+          "Eet een klein bordje aan het begin van de lunch; de vezels vormen een natuurlijke barrière in de darm die plotselinge bloedsuikerpieken na de maaltijd helpt voorkomen.",
+          "Stoom hem slechts 4 tot 5 minuten zodat hij zijn heldergroene kleur en lichte bite behoudt, en kook hem niet lang in water, zodat hij zijn vitamine C en actieve stoffen niet verliest."
         ]
+      },
+      "lead": {
+        "ar": "عملاق عائلة الخضروات الصليبية ومصدر مركب السلفورافان المضاد للأكسدة والالتهاب. أليافه الكثيفة تلجم امتصاص السكريات وتغذي البكتيريا المعوية النافعة بكفاءة عالية.",
+        "en": "The giant of the cruciferous vegetable family and a source of sulforaphane, a compound with antioxidant and anti-inflammatory properties. Its dense fibre reins in sugar absorption and feeds beneficial gut bacteria very efficiently.",
+        "nl": "De reus onder de kruisbloemige groenten en een bron van sulforafaan, een stof met antioxiderende en ontstekingsremmende eigenschappen. De dichte vezels remmen de suikeropname af en voeden de nuttige darmbacteriën zeer efficiënt."
       }
     },
     "36": {
       "tips": {
         "ar": [
-          "القرنبيط منخفض الكربوهيدرات جداً، ويمكن استخدامه بديلاً جزئياً للأرز أو البطاطا المهروسة.",
-          "اشوه في الفرن مع الكمون وقليل من الزيت بدلاً من قليه بالزيت الغزير كما في الطريقة التقليدية."
+          "خيار يومي مدهش؛ يمكنك استبدال نصف كمية الأرز في وجبتك بـ 'أرز القرنبيط' لخداع العين والمعدة وخفض نشويات الوجبة إلى النصف فوراً.",
+          "ابرشه بالمبشرة أو محضرة الطعام ليصبح بحجم حبات الأرز وحمصه لدقائق في مقلاة مع زيت زيتون وبصل، أو اسلقه واهرسه كبديل رائع للبطاطا البيوريه."
         ],
         "en": [
-          "Cauliflower is very low in carbohydrate and can partly replace rice or mashed potatoes.",
-          "Roast it in the oven with cumin and a little oil instead of deep-frying it as in the traditional method."
+          "An amazing everyday option: replace half the rice in your meal with 'cauliflower rice' to trick the eye and the stomach and instantly halve the starch in the meal.",
+          "Grate it or pulse it in a food processor to the size of rice grains and sauté it for a few minutes in a pan with olive oil and onion, or boil and mash it as a great alternative to mashed potato."
         ],
         "nl": [
-          "Bloemkool bevat zeer weinig koolhydraten en kan rijst of aardappelpuree deels vervangen.",
-          "Rooster hem in de oven met komijn en een beetje olie in plaats van hem te frituren zoals traditioneel gebeurt."
+          "Een verrassende dagelijkse keuze: vervang de helft van de rijst in je maaltijd door 'bloemkoolrijst' om oog en maag te foppen en het zetmeel van de maaltijd meteen te halveren.",
+          "Rasp hem of maal hem in een keukenmachine tot rijstkorrelgrootte en bak hem een paar minuten in een pan met olijfolie en ui, of kook en pureer hem als heerlijk alternatief voor aardappelpuree."
         ]
+      },
+      "lead": {
+        "ar": "البديل الأذكى عالمياً للأرز والبطاطا؛ يمتلك قواماً غنياً ونشويات شبه منعدمة، مما يجعله الجوكر السحري لمرضى السكري واللوكارب للاستمتاع بأطباقهم المفضلة دون خوف.",
+        "en": "The world's smartest substitute for rice and potatoes: a rich texture with almost no starch makes it the magic joker for people with diabetes and low-carb eaters to enjoy their favourite dishes without worry.",
+        "nl": "De slimste vervanger ter wereld voor rijst en aardappelen: een rijke structuur met bijna geen zetmeel maakt bloemkool de magische joker voor mensen met diabetes en low-carbeters om zorgeloos van hun favoriete gerechten te genieten."
       }
     },
     "37": {
       "tips": {
         "ar": [
-          "السبانخ غنية بالحديد النباتي وحمض الفوليك وفيتامين K.",
-          "أضف إليها الليمون أو مصدراً لفيتامين C، فهو يحسّن امتصاص الحديد النباتي."
+          "تناولها طازجة كقاعدة للسلطات مع الليمون وزيت الزيتون، أو مطبوخة مع الوجبة الرئيسية لتغذية البكتيريا المعوية النافعة بالألياف النظيفة.",
+          "احرص دائماً على إضافة عصير الليمون الحامض إلى السبانخ؛ ففيتامين C يرفع امتصاص الحديد النباتي بشكل ملحوظ، وتجنب غليها الطويل بالماء للحفاظ على فيتاميناتها."
         ],
         "en": [
-          "Spinach is rich in plant iron, folate and vitamin K.",
-          "Add lemon or another source of vitamin C, which improves the absorption of plant iron."
+          "Eat it fresh as a salad base with lemon and olive oil, or cooked with your main meal, to feed your beneficial gut bacteria with clean fibre.",
+          "Always add sour lemon juice to spinach; vitamin C noticeably increases the absorption of plant iron. Avoid boiling it for long in water, to preserve its vitamins."
         ],
         "nl": [
-          "Spinazie is rijk aan plantaardig ijzer, foliumzuur en vitamine K.",
-          "Voeg citroen of een andere bron van vitamine C toe; dat verbetert de opname van plantaardig ijzer."
+          "Eet het vers als basis voor salades met citroen en olijfolie, of gekookt bij je hoofdmaaltijd, om je nuttige darmbacteriën te voeden met zuivere vezels.",
+          "Voeg altijd zuur citroensap toe aan spinazie; vitamine C verhoogt de opname van plantaardig ijzer merkbaar. Kook spinazie niet lang in water, zodat de vitamines behouden blijven."
         ]
+      },
+      "lead": {
+        "ar": "الورقيات الخضراء الأشهر عالمياً بفضل غناها بحمض الفوليك والحديد ومضادات الأكسدة. سعراتها تكاد تنعدم وصفر تأثير جلايسيمي، مما يجعلها الغذاء الأمثل لملء الصحن دون مساس بالإنسولين.",
+        "en": "The world's best-known leafy green, thanks to its folate, iron and antioxidants. It has almost no calories and zero glycemic effect, making it the ideal food for filling your plate without affecting insulin.",
+        "nl": "De bekendste bladgroente ter wereld dankzij het foliumzuur, ijzer en de antioxidanten. Spinazie heeft bijna geen calorieën en nul glykemisch effect, waardoor het ideaal is om je bord te vullen zonder de insuline te beïnvloeden."
       }
     },
     "38": {
       "tips": {
         "ar": [
-          "الملوخية من الورقيات الغنية بالألياف والفيتامينات، وهي أساس طبق شعبي في مصر وبلاد الشام.",
-          "حضّرها بمرق قليل الدسم، وقدّمها مع كمية معتدلة من الأرز أو الخبز لأنها تؤكل عادةً معهما."
+          "طبق يومي رائع لمرضى السكري والدايت؛ يمنح امتلاءً مريحاً للمعدة وشبعاً سريعاً، ويساعد على لجم قفزة السكر عند مشاركته مع كمية أرز معتدلة.",
+          "اطهها بمرق دجاج أو لحم قليل الدهن، واعتمد التقلية بزيت الزيتون والثوم والكزبرة بدلاً من السمن المصنع، مع عصرة ليمون طازجة لمضاعفة امتصاص الحديد."
         ],
         "en": [
-          "Molokhia is a leafy green rich in fibre and vitamins and the base of a popular dish in Egypt and the Levant.",
-          "Cook it in a low-fat broth and serve it with a moderate amount of rice or bread, which usually accompany it."
+          "A wonderful everyday dish for people with diabetes or on a diet; it gives the stomach a comfortable fullness quickly, and helps curb the rise in blood sugar when eaten with a moderate amount of rice.",
+          "Cook it in a low-fat chicken or meat broth, and make the garlic-and-coriander finishing fry with olive oil instead of processed ghee, with a squeeze of fresh lemon to boost iron absorption."
         ],
         "nl": [
-          "Molokhia is een bladgroente, rijk aan vezels en vitamines, en de basis van een geliefd gerecht in Egypte en de Levant.",
-          "Bereid haar in vetarme bouillon en serveer haar met een gematigde hoeveelheid rijst of brood, die er meestal bij gegeten worden."
+          "Een heerlijk dagelijks gerecht voor mensen met diabetes of op dieet; het geeft de maag snel een prettig vol gevoel en helpt de bloedsuikerstijging af te remmen als je het met een gematigde hoeveelheid rijst eet.",
+          "Kook het in magere kippen- of vleesbouillon, bak de afwerking van knoflook en koriander in olijfolie in plaats van bewerkte ghee, en voeg een scheutje vers citroensap toe om de ijzeropname te verhogen."
         ]
+      },
+      "lead": {
+        "ar": "سيدة المائدة الخضراء وأحب الأطباق التراثية إلى القلوب؛ كنز من المغنيسيوم، الحديد، والألياف الطبيعية. تخلو تقريباً من الكربوهيدرات الصافية وتعد خياراً حراً وآمناً كلياً لمريض السكر.",
+        "en": "The queen of the green table and one of the most beloved traditional dishes: a treasure of magnesium, iron and natural fibre. It is almost free of net carbohydrate and is a free, safe choice for people with diabetes.",
+        "nl": "De koningin van de groene tafel en een van de meest geliefde traditionele gerechten: een schatkamer van magnesium, ijzer en natuurlijke vezels. Molokhia bevat bijna geen netto koolhydraten en is een vrije, veilige keuze voor mensen met diabetes."
       }
     },
     "39": {
       "tips": {
         "ar": [
-          "البامية غنية بالألياف القابلة للذوبان التي تعطيها قوامها اللزج.",
-          "اطبخها بالطماطم مع قليل من الزيت، وإضافة الليمون أو الحامض تقلل لزوجتها."
+          "مادة البكتين اللزجة الطبيعية فيها تغلف جدار الأمعاء بلطف، مما يساعد في فرملة امتصاص النشويات والسكريات عند تناولها مع الأرز أو اللحم.",
+          "اطهها مع صلصة الطماطم الطبيعية وزيت الزيتون والثوم والكزبرة، واحرص على عدم قطع رؤوسها بشكل جائر قبل الطهي للحفاظ على قوامها الخفيف."
         ],
         "en": [
-          "Okra is rich in soluble fibre, which gives it its slippery texture.",
-          "Cook it with tomatoes and a little oil; adding lemon or another acid reduces the sliminess."
+          "Its natural, viscous pectin gently coats the gut wall, which helps slow the absorption of starches and sugars when you eat it with rice or meat.",
+          "Cook it with a natural tomato sauce, olive oil, garlic and coriander, and take care not to trim the tops too deeply before cooking, to keep its texture light."
         ],
         "nl": [
-          "Okra is rijk aan oplosbare vezels, die zorgen voor de slijmerige structuur.",
-          "Stoof haar met tomaten en een beetje olie; citroen of een ander zuur vermindert de slijmerigheid."
+          "De natuurlijke, stroperige pectine bekleedt zachtjes de darmwand, wat helpt de opname van zetmeel en suikers te vertragen als je okra met rijst of vlees eet.",
+          "Kook okra met een natuurlijke tomatensaus, olijfolie, knoflook en koriander, en snijd de kopjes voor het koken niet te diep af, zodat de structuur licht blijft."
         ]
+      },
+      "lead": {
+        "ar": "صديقة الجهاز الهضمي الأولى وسكر الدم، تشتهر بقوامها الفريد ومحتواها العالي من الألياف اللزجة، وسعراتها منخفضة جداً مع كربوهيدرات شبه منعدمة تجعل مؤشرها الجلايسيمي لا ينطبق.",
+        "en": "A great friend of the digestive system and of blood sugar, known for its unique texture and high content of viscous fibre. It is very low in calories, and its carbohydrate content is so low that the glycemic index does not apply.",
+        "nl": "Een goede vriend van de spijsvertering en de bloedsuiker, bekend om de unieke structuur en het hoge gehalte aan stroperige vezels. Okra is zeer caloriearm en bevat zo weinig koolhydraten dat de glykemische index niet van toepassing is."
       }
     },
     "40": {
       "tips": {
         "ar": [
-          "الفطر منخفض السعرات جداً ويضيف نكهة غنية (أومامي) إلى الطبخ دون دهون كثيرة.",
-          "شوّحه على نار عالية بقليل من الزيت حتى يتبخر ماؤه، أو أضفه إلى الصلصات بدلاً من جزء من اللحم المفروم."
+          "حيلة ذكية لزيادة حجم وجبتك؛ يمكنك استبدال نصف كمية اللحم المفروم أو النشويات بالفطر المفروم في الصواني والشوربات دون أن تفقد متعة الطعم المشبع.",
+          "اشوه في مقلاة ساخنة مع رشة زيت زيتون وفص ثوم مفروم ورشة زعتر؛ لا تنقعه في الماء طويلاً حتى لا يمتصه ويفقد قرمشته، بل امسحه بمنديل رطب قبل التقطيع."
         ],
         "en": [
-          "Mushrooms are very low in calories and add a rich savoury (umami) flavour to cooking without much fat.",
-          "Sauté them over high heat in a little oil until their water evaporates, or use them in sauces instead of some of the minced meat."
+          "A smart trick to bulk up your meal: replace half the minced meat or starch in oven dishes and soups with chopped mushrooms, without losing the satisfying taste.",
+          "Sear them in a hot pan with a drizzle of olive oil, a minced garlic clove and a pinch of thyme; do not soak them in water for long, or they absorb it and lose their bite. Wipe them with a damp cloth before slicing instead."
         ],
         "nl": [
-          "Champignons zijn zeer caloriearm en geven een rijke hartige (umami) smaak aan gerechten zonder veel vet.",
-          "Bak ze op hoog vuur in weinig olie tot het vocht verdampt, of gebruik ze in sauzen in plaats van een deel van het gehakt."
+          "Een slimme truc om je maaltijd voller te maken: vervang de helft van het gehakt of het zetmeel in ovenschotels en soepen door fijngehakte champignons, zonder het verzadigende smaakplezier te verliezen.",
+          "Bak ze in een hete pan met een scheutje olijfolie, een fijngehakt teentje knoflook en een snufje tijm; laat ze niet lang in water weken, anders zuigen ze het op en verliezen ze hun bite. Veeg ze voor het snijden liever af met een vochtige doek."
         ]
+      },
+      "lead": {
+        "ar": "الغذاء العبقري الذي يجمع بين نكهة اللحم وقوام الخضار وسعرات تقترب من الصفر. غني بالسيلينيوم وفيتامينات B، ويخلو من الكربوهيدرات سريعة الهضم ليكون صديقاً مثالياً لمقاومة الإنسولين.",
+        "en": "A brilliant food that combines a meaty flavour with the texture of a vegetable and close to zero calories. Rich in selenium and B vitamins and free of fast-digesting carbohydrate, it is an ideal friend when you have insulin resistance.",
+        "nl": "Een geniaal voedingsmiddel dat een vlezige smaak combineert met de structuur van een groente en bijna nul calorieën. Rijk aan selenium en B-vitamines en vrij van snel verteerbare koolhydraten: een ideale vriend bij insulineresistentie."
       }
     },
     "48": {
@@ -652,353 +697,463 @@
     "55": {
       "tips": {
         "ar": [
-          "المانجو غنية بفيتاميني A وC لكنها حلوة جداً؛ نصف ثمرة متوسطة حصة مناسبة.",
-          "اختر المانجو الطازجة بدلاً من المجففة أو العصير، وجربها مع اللبن الزبادي."
+          "تناول نصف حبة مانجو مقطعة بعد وجبة غنية بالبروتين، أو مع القليل من المكسرات؛ وتجنب تماماً عصير المانجو الجاهز المضاف إليه سكر.",
+          "تناولها طازجة ومقطعة مع أليافها، وجرب تجميد مكعبات المانجو لتناولها كبديل صحي وبارد للآيس كريم في الصيف."
         ],
         "en": [
-          "Mango is rich in vitamins A and C but very sweet; half a medium fruit is a suitable portion.",
-          "Choose fresh mango over dried mango or juice, and try it with yoghurt."
+          "Eat half a mango, cut up, after a protein-rich meal or with a few nuts, and avoid ready-made mango juice with added sugar altogether.",
+          "Eat it fresh and cut up with its fibre, and try freezing mango cubes as a healthy, cold alternative to ice cream in summer."
         ],
         "nl": [
-          "Mango is rijk aan vitamine A en C maar erg zoet; een halve middelgrote vrucht is een geschikte portie.",
-          "Kies verse mango in plaats van gedroogde mango of sap, en probeer hem met yoghurt."
+          "Eet een halve mango in stukjes na een eiwitrijke maaltijd of met een paar noten, en laat kant-en-klaar mangosap met toegevoegde suiker helemaal staan.",
+          "Eet hem vers en in stukjes, met zijn vezels, en probeer mangoblokjes in te vriezen als gezond en koel alternatief voor ijs in de zomer."
         ]
+      },
+      "lead": {
+        "ar": "الشائع بين الناس أن المانجو فاكهة 'ممنوعة' لمرضى السكري لأنها شديدة الحلاوة، لكن الفحوصات المخبرية فجّرت مفاجأة: مؤشرها الجلايسيمي منخفض (44) بفضل أليافها الطبيعية. السر كله في حجم الحصة والاستمتاع بها بذكاء دون إفراط.",
+        "en": "Many people believe mango is a 'forbidden' fruit for people with diabetes because it is so sweet, but laboratory testing revealed a surprise: its glycemic index is low (44) thanks to its natural fibre. The whole secret lies in the portion size and enjoying it wisely, without overdoing it.",
+        "nl": "Veel mensen denken dat mango 'verboden' fruit is voor mensen met diabetes omdat hij zo zoet is, maar laboratoriumonderzoek bracht een verrassing: de glykemische index is laag (44) dankzij de natuurlijke vezels. Het hele geheim zit in de portiegrootte en er verstandig van genieten, zonder te overdrijven."
       }
     },
     "59": {
       "tips": {
         "ar": [
-          "الأفوكادو غني بالدهون الأحادية غير المشبعة والألياف والبوتاسيوم؛ نصف ثمرة حصة مناسبة.",
-          "أضفه إلى السلطة أو خبز الحبوب الكاملة بدلاً من الزبدة، ورش عليه الليمون لمنع اسوداده."
+          "بديل مثالي للمايونيز والصلصات المصنعة؛ اهرس نصف حبة أفوكادو مع بيض الفطور أو ادهنها على شريحة خبز القمح الكامل.",
+          "رُش عليها قطرات من عصير الليمون ورشة ملح بحري وكمون فور تقطيعها لمنع تأكسدها بالهواء والحفاظ على لونها الأخضر ونكهتها."
         ],
         "en": [
-          "Avocado is rich in monounsaturated fats, fibre and potassium; half a fruit is a suitable portion.",
-          "Add it to salads or wholegrain bread instead of butter, and sprinkle it with lemon to stop it browning."
+          "An ideal replacement for mayonnaise and processed sauces; mash half an avocado with your breakfast eggs or spread it on a slice of whole-wheat bread.",
+          "Sprinkle it with a few drops of lemon juice, a pinch of sea salt and cumin as soon as you cut it, to stop it oxidising in the air and keep its green colour and flavour."
         ],
         "nl": [
-          "Avocado is rijk aan enkelvoudig onverzadigde vetten, vezels en kalium; een halve vrucht is een geschikte portie.",
-          "Voeg hem toe aan salades of volkorenbrood in plaats van boter, en besprenkel hem met citroen zodat hij niet bruin wordt."
+          "Een ideale vervanger voor mayonaise en bewerkte sauzen; prak een halve avocado bij je ontbijtei of smeer hem op een snee volkorenbrood.",
+          "Besprenkel hem direct na het snijden met een paar druppels citroensap, een snufje zeezout en komijn, zodat hij niet oxideert en zijn groene kleur en smaak behoudt."
         ]
+      },
+      "lead": {
+        "ar": "الفاكهة الاستثنائية التي تخالف كل قواعد الفواكه؛ تحتوي على 9 غرامات كربوهيدرات لكن 7 غرامات منها ألياف ذائبة صافية! غنية بالبوتاسيوم والدهون الصحية التي تمنح شبعاً عميقاً لساعات طويلة.",
+        "en": "The exceptional fruit that breaks all the fruit rules: it contains 9 grams of carbohydrate, but 7 of those grams are pure fibre! Rich in potassium and healthy fats that give deep fullness for many hours.",
+        "nl": "De uitzonderlijke vrucht die alle fruitregels breekt: hij bevat 9 gram koolhydraten, maar 7 gram daarvan zijn pure vezels! Rijk aan kalium en gezonde vetten die urenlang een diep verzadigd gevoel geven."
       }
     },
     "62": {
       "tips": {
         "ar": [
-          "تمرتان إلى ثلاث تمرات حصة معتدلة، وتناولها مع الحليب أو اللبن أو حفنة مكسرات كما في الإفطار التقليدي يوازن الوجبة.",
-          "جرّب التمر مع ملعقة صغيرة من الطحينة أو حبة جوز، فالدهون والبروتين يبطئان امتصاص السكر."
+          "الحصة اليومية المناسبة لمريض السكر والدايت هي حبة إلى ثلاث حبات؛ وتناولها مع رشفات من القهوة العربية السادة دون سكر.",
+          "ادمج حبة الرطب مع نصف ملعقة طحينة سمسم خام أو حبة جوز (عين جمل)؛ الدهون الصحية تبطئ امتصاص سكر التمر وتمنع القفزة السريعة للإنسولين."
         ],
         "en": [
-          "Two to three dates make a moderate portion; eating them with milk, yoghurt or a handful of nuts, as in the traditional iftar, balances the snack.",
-          "Try dates with a teaspoon of tahini or a walnut, because fat and protein slow the absorption of sugar."
+          "A suitable daily portion for people with diabetes or on a diet is one to three dates; enjoy them with sips of plain Arabic coffee without sugar.",
+          "Pair a fresh date with half a teaspoon of raw sesame tahini or a walnut; the healthy fats slow the absorption of the date's sugar and help prevent a rapid insulin spike."
         ],
         "nl": [
-          "Twee tot drie dadels zijn een gematigde portie; met melk, yoghurt of een handje noten, zoals bij de traditionele iftar, wordt het evenwichtiger.",
-          "Eet dadels met een theelepel tahin of een walnoot, want vet en eiwit vertragen de opname van suiker."
+          "Een passende dagelijkse portie voor mensen met diabetes of op dieet is één tot drie dadels; geniet ervan met slokjes ongezoete Arabische koffie.",
+          "Combineer een verse dadel met een halve theelepel pure sesamtahin of een walnoot; de gezonde vetten vertragen de opname van de dadelsuiker en helpen een snelle insulinepiek te voorkomen."
         ]
+      },
+      "lead": {
+        "ar": "فاكهة الضيافة وموائد رمضان المباركة، غني بالمعادن والبوتاسيوم ومضادات الأكسدة. مؤشره الجلايسيمي منخفض (47) على عكس ما يعتقد الكثيرون، لكن كثافته السكرية وسعراته تفرض قاعدة ذهبية واحدة: الاعتدال بالحصة.",
+        "en": "The fruit of hospitality and of the blessed Ramadan table, rich in minerals, potassium and antioxidants. Contrary to what many believe, its glycemic index is low (47), but its sugar density and calories impose one golden rule: moderation in the portion.",
+        "nl": "De vrucht van gastvrijheid en van de gezegende ramadantafel, rijk aan mineralen, kalium en antioxidanten. In tegenstelling tot wat velen denken is de glykemische index laag (47), maar de suikerdichtheid en calorieën leggen één gouden regel op: matig met de portie."
       }
     },
     "63": {
       "tips": {
         "ar": [
-          "التمر المجفف مركّز السكريات والسعرات؛ احسب كل ثلاث تمرات صغيرة كحصة فاكهة كاملة.",
-          "استخدم معجون التمر بديلاً طبيعياً للسكر في الحلويات المنزلية مع تقليل الكمية الكلية."
+          "تناول حبة إلى حبتين قبل ممارسة الرياضة بنصف ساعة لمنح عضلاتك طاقة نقية مستدامة، أو كبديل طبيعي لحلويات بعد العصر.",
+          "احشُ حبة التمر المجفف بلوزة نيئة غير مملحة؛ الجمع بين قرمشة اللوز وحلاوة التمر يمنحك متعة التحلية وشبعاً أطول."
         ],
         "en": [
-          "Dried dates are concentrated in sugar and calories; count every three small dates as a full portion of fruit.",
-          "Use date paste as a natural sugar substitute in home baking, while reducing the total amount."
+          "Eat one or two dates half an hour before exercise to give your muscles clean, sustained energy, or as a natural alternative to afternoon sweets.",
+          "Stuff a dried date with a raw, unsalted almond; the crunch of the almond and the sweetness of the date give you the pleasure of a treat and longer fullness."
         ],
         "nl": [
-          "Gedroogde dadels zijn geconcentreerd in suiker en calorieën; tel elke drie kleine dadels als een volledige portie fruit.",
-          "Gebruik dadelpasta als natuurlijke suikervervanger bij zelfgebakken lekkers, en verminder de totale hoeveelheid."
+          "Eet een of twee dadels een half uur voor het sporten om je spieren zuivere, langdurige energie te geven, of als natuurlijk alternatief voor zoetigheid in de middag.",
+          "Vul een gedroogde dadel met een ongebrande, ongezouten amandel; de knapperige amandel en de zoete dadel geven je het plezier van een traktatie en langer een verzadigd gevoel."
         ]
+      },
+      "lead": {
+        "ar": "حبة طاقة طبيعية مركزة؛ تجفيف الماء يرفع تركيز السكريات والمعادن في الحبة الواحدة، ورغم ذلك يحافظ على مؤشر جلايسيمي منخفض (52). ممتاز للرياضيين والنشاط اليومي بشرط حساب الكمية.",
+        "en": "A concentrated natural energy bite: drying removes water and raises the concentration of sugars and minerals in each date, yet it keeps a low glycemic index (52). Excellent for athletes and daily activity, provided you count the amount.",
+        "nl": "Een geconcentreerd natuurlijk energiehapje: door het drogen verdwijnt water en stijgt de concentratie suikers en mineralen per dadel, toch blijft de glykemische index laag (52). Uitstekend voor sporters en dagelijkse activiteit, zolang je de hoeveelheid bijhoudt."
       }
     },
     "66": {
       "tips": {
         "ar": [
-          "الكمثرى غنية بالألياف، خاصة في قشرها، ومؤشرها الجلايسيمي منخفض.",
-          "تناولها بقشرها بعد غسلها، أو اشوِها في الفرن مع القرفة كتحلية دون سكر مضاف."
+          "خيار فاكهة يومي ممتاز بين الوجبات يقطع نوبات الجوع المفاجئة، ويساعد بفضل ألياف البكتين على تحسين الهضم وصحة الأمعاء.",
+          "كُل حبة الكمثرى كاملة بقشرتها الخارجية الغنية بمضادات الأكسدة بعد غسلها جيداً، وتجنب الكمثرى المعلبة في المحاليل السكرية."
         ],
         "en": [
-          "Pears are rich in fibre, especially in the skin, and have a low glycemic index.",
-          "Eat them with the skin after washing, or bake them with cinnamon as a dessert without added sugar."
+          "An excellent everyday fruit between meals that cuts off sudden hunger pangs, and its pectin fibre supports good digestion and gut health.",
+          "Eat the whole pear with its antioxidant-rich skin after washing it well, and avoid canned pears in sugary syrup."
         ],
         "nl": [
-          "Peren zijn rijk aan vezels, vooral in de schil, en hebben een lage glykemische index.",
-          "Eet ze met schil na het wassen, of bak ze met kaneel als toetje zonder toegevoegde suiker."
+          "Een uitstekende dagelijkse fruitkeuze tussen de maaltijden die plotselinge hongeraanvallen afkapt; de pectinevezels ondersteunen een goede spijsvertering en gezonde darmen.",
+          "Eet de hele peer met de antioxidantrijke schil nadat je hem goed hebt gewassen, en vermijd peren uit blik op suikersiroop."
         ]
+      },
+      "lead": {
+        "ar": "تعتبر الكمثرى الصديق الوفي لمرضى السكري ومقاومة الإنسولين؛ مؤشرها الجلايسيمي منخفض جداً (36)، ومذاقها حلو غني بالماء والألياف الذائبة التي تمنح شبعاً طويلاً واستقراراً مثالياً لسكر الدم.",
+        "en": "The pear is a loyal friend for people with diabetes and insulin resistance: its glycemic index is very low (36), and its sweet taste comes with plenty of water and soluble fibre that give long-lasting fullness and steady blood sugar.",
+        "nl": "De peer is een trouwe vriend voor mensen met diabetes en insulineresistentie: de glykemische index is zeer laag (36), en de zoete smaak gaat samen met veel water en oplosbare vezels die langdurige verzadiging en een stabiele bloedsuiker geven."
       }
     },
     "68": {
       "tips": {
         "ar": [
-          "حفنة صغيرة من الزبيب (نحو ملعقتين كبيرتين) تكفي لإضافة حلاوة طبيعية إلى السلطة أو الشوفان.",
-          "أضفه إلى الطبخ أو العجين بدلاً من جزء من السكر، وانقعه قليلاً في الماء ليصبح أطرى."
+          "الحصة الذكية هي ملعقة طعام واحدة ملأى؛ أضفها فوق طبق الشوفان أو صحن السلطة الخضراء للحصول على لمسة حلاوة دون رفع السكر.",
+          "انقع ملعقة الزبيب في قليل من الماء الدافئ قبل إضافتها للزبادي أو أطباق الفطور لتسهيل هضمه وزيادة طراوته."
         ],
         "en": [
-          "A small handful of raisins (about two tablespoons) is enough to add natural sweetness to a salad or oatmeal.",
-          "Add them to cooking or dough instead of some of the sugar, soaking them briefly in water to soften them."
+          "The smart portion is one heaped tablespoon; sprinkle it over your oatmeal or a green salad for a touch of sweetness without raising your blood sugar.",
+          "Soak a spoonful of raisins in a little warm water before adding them to yoghurt or breakfast dishes, to make them easier to digest and softer."
         ],
         "nl": [
-          "Een klein handje rozijnen (ongeveer twee eetlepels) is genoeg om een salade of havermout natuurlijk zoet te maken.",
-          "Voeg ze toe aan gerechten of deeg in plaats van een deel van de suiker, en laat ze even weken in water om ze zachter te maken."
+          "De slimme portie is één volle eetlepel; strooi die over je havermout of een groene salade voor een vleugje zoetheid zonder je bloedsuiker te laten stijgen.",
+          "Week een lepel rozijnen in een beetje warm water voordat je ze aan yoghurt of ontbijtgerechten toevoegt, zodat ze beter verteerbaar en zachter worden."
         ]
+      },
+      "lead": {
+        "ar": "حلوى الطبيعة الغنية بالحديد ومضادات الأكسدة. حجم الحبات الصغير يجعلنا نأكل منه كميات كبيرة بسرعة دون وعي، رغم أن مؤشره الجلايسيمي منخفض إلى معتدل (55) ويمنح طاقة سريعة ومركزة.",
+        "en": "Nature's candy, rich in iron and antioxidants. Their small size makes it easy to eat large amounts quickly without noticing, although their glycemic index is low to moderate (55) and they provide quick, concentrated energy.",
+        "nl": "Het snoep van de natuur, rijk aan ijzer en antioxidanten. Door het kleine formaat eet je er snel en ongemerkt grote hoeveelheden van, hoewel de glykemische index laag tot gematigd is (55) en ze snelle, geconcentreerde energie geven."
       }
     },
     "69": {
       "tips": {
         "ar": [
-          "الحليب يوفر البروتين والكالسيوم وسكر اللاكتوز، ومؤشره الجلايسيمي منخفض.",
-          "اشربه دون إضافة سكر أو منكهات، ويمكن استخدامه مع الشوفان أو القهوة."
+          "خيار ممتاز مع الفطور أو قبل النوم، ويساعد بروتين الكازين الطبيعي فيه على منح الجسم تدفقاً بطيئاً ومستقراً للأحماض الأمينية.",
+          "اشربه دافئاً أو بارداً بدون سكر مضاف، وتجنب خلطه ببودرة الشوكولاتة المحلاة أو النكهات المصنعة التي ترفع مؤشره الجلايسيمي."
         ],
         "en": [
-          "Milk provides protein, calcium and the milk sugar lactose, and its glycemic index is low.",
-          "Drink it without added sugar or flavourings; it also works well with oatmeal or coffee."
+          "An excellent choice with breakfast or before bed; its natural casein protein gives the body a slow, steady supply of amino acids.",
+          "Drink it warm or cold without added sugar, and avoid mixing it with sweetened chocolate powder or artificial flavourings, which raise its glycemic index."
         ],
         "nl": [
-          "Melk levert eiwit, calcium en melksuiker (lactose), en de glykemische index is laag.",
-          "Drink haar zonder toegevoegde suiker of smaakstoffen; ze past ook goed bij havermout of koffie."
+          "Een uitstekende keuze bij het ontbijt of voor het slapengaan; het natuurlijke caseïne-eiwit geeft het lichaam een langzame, gelijkmatige aanvoer van aminozuren.",
+          "Drink het warm of koud zonder toegevoegde suiker, en meng het niet met gezoete chocoladepoeder of kunstmatige smaakstoffen, die de glykemische index verhogen."
         ]
+      },
+      "lead": {
+        "ar": "مشروب غذائي متكامل يوفر الكالسيوم عالي الامتصاص والبروتين الطبيعي. دهونه الكاملة تعمل كفرامل طبيعية تبطئ هضم سكر الحليب (اللاكتوز)، مما يمنحه مؤشراً جلايسيمياً منخفضاً جداً (32).",
+        "en": "A complete nutritious drink that provides well-absorbed calcium and natural protein. Its full fat acts as a natural brake that slows the digestion of milk sugar (lactose), giving it a very low glycemic index (32).",
+        "nl": "Een complete, voedzame drank die goed opneembaar calcium en natuurlijk eiwit levert. Het volle vet werkt als een natuurlijke rem die de vertering van melksuiker (lactose) vertraagt, wat zorgt voor een zeer lage glykemische index (32)."
       }
     },
     "70": {
       "tips": {
         "ar": [
-          "الحليب خالي الدسم يحتفظ بالبروتين والكالسيوم مع سعرات أقل من الحليب كامل الدسم.",
-          "مناسب للقهوة والمخفوقات المنزلية؛ تأكد أن النوع الذي تختاره غير محلّى."
+          "ممتاز بعد التمارين الرياضية أو لإعداد القهوة الصباحية؛ يمنحك نفس فوائد الكالسيوم والبروتين بنصف سعرات الحليب العادي تقريباً.",
+          "استخدمه في تحضير عصيدة الشوفان أو مخفوق البروتين الطبيعي مع رشة قرفة للحصول على قوام غني دون دهون إضافية."
         ],
         "en": [
-          "Skimmed milk keeps the protein and calcium with fewer calories than whole milk.",
-          "It suits coffee and homemade smoothies; make sure the variety you choose is unsweetened."
+          "Excellent after exercise or in your morning coffee; it gives you the same calcium and protein benefits with roughly half the calories of whole milk.",
+          "Use it to make oatmeal or a natural protein shake with a pinch of cinnamon for a rich texture without extra fat."
         ],
         "nl": [
-          "Magere melk behoudt het eiwit en calcium met minder calorieën dan volle melk.",
-          "Geschikt voor koffie en zelfgemaakte smoothies; let erop dat de variant ongezoet is."
+          "Uitstekend na het sporten of in je ochtendkoffie; het geeft je dezelfde voordelen van calcium en eiwit met ongeveer de helft van de calorieën van volle melk.",
+          "Gebruik het voor havermout of een natuurlijke eiwitshake met een snufje kaneel voor een rijke structuur zonder extra vet."
         ]
+      },
+      "lead": {
+        "ar": "الخيار المفضل لمن يحسب سعراته بدقة ويبحث عن بروتين وكالسيوم صافيين بأقل دهون ممكنة. مؤشره الجلايسيمي منخفض (38)، ويناسب خطط إنقاص الوزن وحميات تقليل الدهون.",
+        "en": "The favourite choice for anyone who counts calories carefully and wants pure protein and calcium with as little fat as possible. Its glycemic index is low (38), and it suits weight-loss plans and lower-fat diets.",
+        "nl": "De favoriete keuze voor wie zijn calorieën nauwkeurig telt en puur eiwit en calcium zoekt met zo weinig mogelijk vet. De glykemische index is laag (38), en het past bij afvalplannen en vetarme voeding."
       }
     },
     "71": {
       "tips": {
         "ar": [
-          "اللبن اليوناني المصفّى أغنى بالبروتين من اللبن العادي ويعزز الشبع، لكن نسخة 10% دسم أعلى سعرات.",
-          "أضف إليه الفاكهة الطازجة والمكسرات بدلاً من العسل والسكر، واختر النسخة الأقل دسماً إن أردت سعرات أقل."
+          "وجبة خفيفة ممتازة بعد العصر تقطع الرغبة في تناول الحلويات؛ تناوله مع بضع حبات توت أو رشة قرفة مطحونة.",
+          "اختر الزبادي اليوناني الطبيعي السادة، وتجنب الزبادي المنكه بالفواكه الجاهزة الذي يكون في الحقيقة مليئاً بشراب السكر المصنع."
         ],
         "en": [
-          "Strained Greek yoghurt has more protein than regular yoghurt and helps fullness, although the 10% fat version is higher in calories.",
-          "Top it with fresh fruit and nuts instead of honey or sugar, and choose a lower-fat version if you want fewer calories."
+          "An excellent afternoon snack that curbs cravings for sweets; enjoy it with a few berries or a pinch of ground cinnamon.",
+          "Choose plain, natural Greek yoghurt, and avoid ready-made fruit yoghurts, which are in fact full of processed sugar syrup."
         ],
         "nl": [
-          "Uitgelekte Griekse yoghurt bevat meer eiwit dan gewone yoghurt en geeft verzadiging, al is de variant met 10% vet calorierijker.",
-          "Voeg vers fruit en noten toe in plaats van honing of suiker, en kies een magerdere variant als je minder calorieën wilt."
+          "Een uitstekend tussendoortje in de middag dat de trek in zoetigheid remt; eet het met een paar bessen of een snufje gemalen kaneel.",
+          "Kies naturel Griekse yoghurt en vermijd kant-en-klare vruchtenyoghurt, die in werkelijkheid vol bewerkte suikersiroop zit."
         ]
+      },
+      "lead": {
+        "ar": "كثيف القوام وغني بالبروتين الطبيعي، يتم تصفيته من مصل اللبن المائي مما يقلل نسبة سكر اللاكتوز للنصف ويضاعف البروتين، ليكون غذاءً ساحراً للشبع واستقرار الأيض.",
+        "en": "Thick and rich in natural protein, it is strained of its watery whey, which halves the lactose and doubles the protein, making it a wonderful food for fullness and a steady metabolism.",
+        "nl": "Dik en rijk aan natuurlijk eiwit; het wordt van de waterige wei gezeefd, waardoor de lactose halveert en het eiwit verdubbelt, wat het een heerlijk voedingsmiddel maakt voor verzadiging en een stabiel metabolisme."
       }
     },
     "72": {
       "tips": {
         "ar": [
-          "اللبنة لبن مصفّى غني بالبروتين ومتوسط الدسم؛ ملعقتان كبيرتان حصة معتدلة للفطور.",
-          "قدّمها مع قليل من زيت الزيتون والخيار والنعناع وخبز الحبوب الكاملة، واختر الأنواع الأقل ملحاً."
+          "غموس صحي رائع مع شرائح الخيار والجزر وورق النعناع بدلاً من الخبز، أو مع شريحة توست قمح كامل لوجبة متوازنة.",
+          "قدمها مع رشة زعتر بلدي وملعقة صغيرة من زيت الزيتون البكر الممتاز وبضع حبات زيتون أسود لوجبة متوسطية أصيلة ومشبعة."
         ],
         "en": [
-          "Labneh is a strained yoghurt that is rich in protein and moderate in fat; two tablespoons are a moderate breakfast portion.",
-          "Serve it with a little olive oil, cucumber, mint and wholegrain bread, and choose lower-salt brands."
+          "A great healthy dip with cucumber and carrot slices and mint leaves instead of bread, or with a slice of whole-wheat toast for a balanced meal.",
+          "Serve it with a sprinkle of za'atar, a teaspoon of extra virgin olive oil and a few black olives for an authentic, filling Mediterranean meal."
         ],
         "nl": [
-          "Labneh is uitgelekte yoghurt, rijk aan eiwit en matig vet; twee eetlepels zijn een gematigde ontbijtportie.",
-          "Serveer haar met een beetje olijfolie, komkommer, munt en volkorenbrood, en kies zoutarmere merken."
+          "Een heerlijke gezonde dip met plakjes komkommer en wortel en muntblaadjes in plaats van brood, of met een sneetje volkorentoast voor een evenwichtige maaltijd.",
+          "Serveer met een snufje za'atar, een theelepel extra vierge olijfolie en een paar zwarte olijven voor een authentieke, verzadigende mediterrane maaltijd."
         ]
+      },
+      "lead": {
+        "ar": "سيدة موائد الإفطار الشامية؛ لبن رائب مصفى تقليدياً، يجمع بين بكتيريا التخمير النافعة والدهون الطبيعية والبروتين، ولا يحمل أي نشويات سريعة تؤثر على سكر الدم.",
+        "en": "The queen of the Levantine breakfast table: traditionally strained yoghurt that combines beneficial fermentation bacteria, natural fats and protein, with no fast-acting starches to affect blood sugar.",
+        "nl": "De koningin van de Levantijnse ontbijttafel: traditioneel uitgelekte yoghurt die nuttige fermentatiebacteriën, natuurlijke vetten en eiwit combineert, zonder snelle zetmelen die de bloedsuiker beïnvloeden."
       }
     },
     "74": {
       "tips": {
         "ar": [
-          "جبنة الشيدر غنية بالكالسيوم والبروتين لكنها مرتفعة الدهون المشبعة والملح؛ شريحة واحدة (نحو 30 غ) تكفي.",
-          "استخدمها مبشورة بكمية صغيرة لإضافة النكهة، فطعمها القوي يغني عن الكميات الكبيرة."
+          "وجبة خفيفة سريعة تمنح شبعاً قوياً؛ لكن كثافتها العالية في السعرات والدهون تستلزم الاكتفاء بشريحة إلى شريحتين معتدلتين.",
+          "بشر كمية قليلة منها فوق صحن البيض المسلوق أو الخضار المطهية بالبخار يضفي نكهة دسمة وغنية تغنيك عن الصلصات المصنعة."
         ],
         "en": [
-          "Cheddar is rich in calcium and protein but high in saturated fat and salt; one slice (about 30 g) is enough.",
-          "Use a small amount grated to add flavour; its strong taste means you need less."
+          "A quick snack that gives strong fullness, but its high calorie and fat density means one or two moderate slices are enough.",
+          "Grating a little over boiled eggs or steamed vegetables adds a rich, savoury flavour that replaces processed sauces."
         ],
         "nl": [
-          "Cheddar is rijk aan calcium en eiwit maar bevat veel verzadigd vet en zout; één plak (ongeveer 30 g) is genoeg.",
-          "Gebruik een kleine hoeveelheid geraspt voor de smaak; door de sterke smaak heb je er minder van nodig."
+          "Een snel tussendoortje dat stevig verzadigt, maar door de hoge dichtheid aan calorieën en vet zijn een of twee gematigde plakken genoeg.",
+          "Een beetje geraspt over gekookte eieren of gestoomde groenten geeft een rijke, hartige smaak die bewerkte sauzen overbodig maakt."
         ]
+      },
+      "lead": {
+        "ar": "تركيز هائل من الكالسيوم والبروتين والدهون الطبيعية في شريحة واحدة. عملية التعتيق الطويلة تستهلك سكر اللاكتوز تماماً، لتصبح جبنة خالية من الكربوهيدرات وآمنة كلياً لسكر الدم.",
+        "en": "A huge concentration of calcium, protein and natural fat in a single slice. The long ageing process uses up the lactose, leaving a cheese that is practically carbohydrate-free and has virtually no effect on blood sugar.",
+        "nl": "Een enorme concentratie calcium, eiwit en natuurlijk vet in één plak. Door het lange rijpingsproces wordt de lactose verbruikt, waardoor een kaas overblijft die vrijwel koolhydraatvrij is en nauwelijks effect heeft op de bloedsuiker."
       }
     },
     "77": {
       "tips": {
         "ar": [
-          "الحلوم جبن مالح نسبياً وغني بالبروتين؛ حصة صغيرة تكفي مع السلطة أو الفطور.",
-          "اشوه أو حمّره في مقلاة دون زيت لأنه لا يذوب بسهولة، ويمكن نقعه في الماء لتقليل ملوحته."
+          "رائعة مع أطباق السلطة أو كوجبة فطور بروتينية؛ انتبه فقط لمحتواها من الملح واشرب معها كمية كافية من الماء.",
+          "اشوها على مقلاة غير لاصقة جافة دون أي زيت إضافي حتى تكتسب لوناً ذهبياً جميلاً، أو انقعها في ماء فاتر لعشر دقائق قبل الطهي لتخفيف ملوحتها."
         ],
         "en": [
-          "Halloumi is a fairly salty, protein-rich cheese; a small portion is enough with a salad or breakfast.",
-          "Grill it or fry it in a dry pan, since it does not melt easily, and soak it in water to reduce the saltiness."
+          "Great with salads or as a protein-rich breakfast; just watch its salt content and drink enough water with it.",
+          "Grill it in a dry non-stick pan without any added oil until beautifully golden, or soak it in lukewarm water for ten minutes before cooking to reduce its saltiness."
         ],
         "nl": [
-          "Halloumi is een vrij zoute, eiwitrijke kaas; een kleine portie is genoeg bij een salade of ontbijt.",
-          "Gril hem of bak hem in een droge pan, want hij smelt niet snel, en week hem in water om hem minder zout te maken."
+          "Heerlijk bij salades of als eiwitrijk ontbijt; let alleen op het zoutgehalte en drink er voldoende water bij.",
+          "Gril hem in een droge antiaanbakpan zonder extra olie tot hij mooi goudbruin is, of week hem tien minuten in lauw water voor het bakken om hem minder zout te maken."
         ]
+      },
+      "lead": {
+        "ar": "الجبنة المحبوبة ذات القوام المتماسك الشهي الذي لا يذوب عند الحرارة. صفر نشويات وغنية بالبروتين المشبع، وتعد إضافة فاخرة لترقية أي طبق صحي.",
+        "en": "The much-loved cheese with a firm, delicious texture that does not melt when heated. Zero starch and rich in filling protein, it is a premium addition that upgrades any healthy dish.",
+        "nl": "De geliefde kaas met een stevige, smakelijke structuur die niet smelt bij verhitting. Nul zetmeel en rijk aan verzadigend eiwit, een luxe toevoeging die elk gezond gerecht naar een hoger niveau tilt."
       }
     },
     "79": {
       "tips": {
         "ar": [
-          "الكفير حليب مخمّر يحتوي على بكتيريا وخمائر نافعة، وقوامه أخف من اللبن الزبادي.",
-          "اشربه بارداً أو أضفه إلى المخفوقات، واختر الكفير الطبيعي غير المحلّى."
+          "من أفضل ما تقدمه لجهازك الهضمي يومياً؛ يساعد على تحسين الميكروبيوم المعوي وضبط مناعة الجسم وحساسية الإنسولين.",
+          "اشرب كوباً بارداً منه صباحاً أو بين الوجبات، وتجنب منتجات الكفير التجارية المنكهة بالفواكه المصنعة لأنها تكون محشوة بالسكر التجاري."
         ],
         "en": [
-          "Kefir is a fermented milk that contains beneficial bacteria and yeasts and is thinner than yoghurt.",
-          "Drink it chilled or add it to smoothies, and choose plain, unsweetened kefir."
+          "One of the best things you can offer your digestive system every day; it supports a healthy gut microbiome, a healthy immune system and insulin sensitivity.",
+          "Drink a cold glass in the morning or between meals, and avoid commercial fruit-flavoured kefir, which is usually loaded with added sugar."
         ],
         "nl": [
-          "Kefir is gefermenteerde melk met nuttige bacteriën en gisten, en is dunner dan yoghurt.",
-          "Drink hem gekoeld of voeg hem toe aan smoothies, en kies naturel, ongezoete kefir."
+          "Een van de beste dingen die je dagelijks aan je spijsvertering kunt geven; het ondersteunt een gezond darmmicrobioom, een gezond immuunsysteem en de insulinegevoeligheid.",
+          "Drink 's ochtends of tussen de maaltijden een koud glas, en vermijd kefir uit de winkel met fruitsmaak, want die zit meestal vol toegevoegde suiker."
         ]
+      },
+      "lead": {
+        "ar": "صيدلية البروبيوتيك الحية؛ مشروب لبن مخمر تخترقه مليارات البكتيريا النافعة التي تلتهم جزءاً كبيراً من سكر اللاكتوز أثناء التخمير، مما يجعله خفيفاً على الأمعاء بمؤشر جلايسيمي منخفض (36).",
+        "en": "A living source of probiotics: a fermented milk drink teeming with billions of beneficial bacteria that consume a large part of the lactose during fermentation, making it gentle on the gut, with a low glycemic index (36).",
+        "nl": "Een levende bron van probiotica: een gefermenteerde melkdrank vol miljarden nuttige bacteriën die tijdens de fermentatie een groot deel van de lactose opeten, waardoor hij licht is voor de darmen, met een lage glykemische index (36)."
       }
     },
     "91": {
       "tips": {
         "ar": [
-          "صدر الدجاج من أغنى المصادر بالبروتين وأقلها دهوناً، خاصة بدون الجلد.",
-          "تتبيله بالزبادي والليمون والبهارات قبل الشوي يحافظ على طراوته، واطبخه حتى تصل حرارة داخله إلى 74 درجة مئوية."
+          "الرفيق الأساسي لوجبة الغداء أو العشاء؛ تناوله أولاً قبل أي نشويات في طبقك للمساعدة على فرملة امتصاص الوجبة بالكامل.",
+          "تبّله بزيت الزيتون والليمون والأعشاب الطبيعية (كالزعتر وإكليل الجبل) واشوه بالفرن أو المقلاة الجافة، وتجنب القلي بالبقسماط والزيوت المهدرجة."
         ],
         "en": [
-          "Chicken breast is one of the richest and leanest protein sources, especially without the skin.",
-          "Marinating it in yoghurt, lemon and spices before grilling keeps it tender; cook it to an internal temperature of 74 °C."
+          "The essential companion for lunch or dinner; eat it first, before any starch on your plate, to help put the brakes on the absorption of the whole meal.",
+          "Season it with olive oil, lemon and natural herbs (such as thyme and rosemary) and grill it in the oven or a dry pan; avoid breaded frying and hydrogenated oils."
         ],
         "nl": [
-          "Kipfilet is een van de rijkste en magerste eiwitbronnen, vooral zonder vel.",
-          "Marineren in yoghurt, citroen en kruiden voor het grillen houdt hem mals; gaar hem tot een kerntemperatuur van 74 °C."
+          "De vaste metgezel van lunch of diner; eet het als eerste, vóór het zetmeel op je bord, om de opname van de hele maaltijd te helpen afremmen.",
+          "Kruid het met olijfolie, citroen en natuurlijke kruiden (zoals tijm en rozemarijn) en gril het in de oven of een droge pan; vermijd paneren en frituren in geharde oliën."
         ]
+      },
+      "lead": {
+        "ar": "المصدر الأنقى للبروتين الصافي الخالي من الكربوهيدرات. يدعم بناء الكتلة العضلية ويزيد من معدل الحرق اليومي، دون أن يحدث أي ارتداد أو ارتفاع في مستويات الجلوكوز.",
+        "en": "The purest source of lean, carbohydrate-free protein. It supports building muscle mass and increases daily energy expenditure, without causing any rebound or rise in glucose levels.",
+        "nl": "De zuiverste bron van mager, koolhydraatvrij eiwit. Het ondersteunt de opbouw van spiermassa en verhoogt het dagelijkse energieverbruik, zonder enige terugslag of stijging van de glucosewaarden."
       }
     },
     "92": {
       "tips": {
         "ar": [
-          "اللحم البقري غني بالبروتين والحديد وفيتامين B12؛ اختر القطع قليلة الدهن واعتدل في حصص اللحوم الحمراء خلال الأسبوع.",
-          "الشوي على حرارة معتدلة أفضل من التفحيم، وأزل الدهون الظاهرة قبل الطهي."
+          "ممتاز لبناء الدم ودعم الطاقة لمن يعاني من الإرهاق أو نقص الحديد؛ احرص على اختيار قطع اللحم قليلة الدهن الظاهر لتوازن السعرات.",
+          "اشوه بدرجة استواء متوسطة للحفاظ على طراوته وقيمته الغذائية، وتناوله مع طبق سلطة ورقية غنية بالليمون لمضاعفة امتصاص الحديد."
         ],
         "en": [
-          "Beef is rich in protein, iron and vitamin B12; choose lean cuts and keep red meat portions moderate across the week.",
-          "Grilling over moderate heat is better than charring, and trim visible fat before cooking."
+          "A good source of iron and energy, especially for people who often feel tired or have low iron intake; choose cuts with little visible fat to keep the calories balanced.",
+          "Grill it to medium to keep it tender and nutritious, and eat it with a leafy salad dressed with plenty of lemon to boost iron absorption."
         ],
         "nl": [
-          "Rundvlees is rijk aan eiwit, ijzer en vitamine B12; kies magere stukken en houd rood vlees gematigd over de week.",
-          "Grillen op matige hitte is beter dan aanbranden, en snijd zichtbaar vet weg voor het bereiden."
+          "Een goede bron van ijzer en energie, vooral voor wie zich vaak moe voelt of weinig ijzer binnenkrijgt; kies stukken met weinig zichtbaar vet om de calorieën in balans te houden.",
+          "Gril het medium om het mals en voedzaam te houden, en eet het met een bladsalade met veel citroen om de ijzeropname te verhogen."
         ]
+      },
+      "lead": {
+        "ar": "قنبلة الحديد عالي الامتصاص، والزنك، وفيتامين B12. بروتين نقي يخلو تماماً من النشويات ولا يرفع سكر الدم، ويمنح الجسم طاقة تدوم طويلاً وشعوراً عميقاً بالامتلاء والشبع.",
+        "en": "A powerhouse of well-absorbed iron, zinc and vitamin B12. Pure protein that is completely free of starch and does not raise blood sugar, giving the body long-lasting energy and a deep feeling of fullness.",
+        "nl": "Een krachtpatser van goed opneembaar ijzer, zink en vitamine B12. Puur eiwit dat volledig zetmeelvrij is en de bloedsuiker niet laat stijgen, met langdurige energie en een diep gevoel van verzadiging."
       }
     },
     "93": {
       "tips": {
         "ar": [
-          "لحم الغنم غني بالبروتين لكنه أعلى دهوناً من الدجاج؛ اختر القطع الأقل دهناً كالفخذ المنزوع الدهن.",
-          "اطبخه بالشوي أو الطهي البطيء مع إزالة الدهن الطافي، وقدّمه مع الخضار بدلاً من كميات كبيرة من الأرز."
+          "يناسب الحميات منخفضة النشويات (اللوكارب والكيتو) كوجبة دسمة مشبعة؛ تناوله مع صحن سلطة خضراء غنية بالألياف لمعادلة امتصاص الدهون.",
+          "اشوه في الفرن أو على الفحم وتخلص من الدهون السائلة الزائدة أثناء الطهي، وتجنب طهيه مع كميات كبيرة من الزيوت المضافة."
         ],
         "en": [
-          "Lamb is rich in protein but higher in fat than chicken; choose leaner cuts such as trimmed leg.",
-          "Grill or slow-cook it and skim off the fat, and serve it with vegetables rather than large amounts of rice."
+          "Suits low-carbohydrate diets (low-carb and keto) as a hearty, filling meal; eat it with a fibre-rich green salad to balance the fat.",
+          "Roast it in the oven or over charcoal and drain off the excess melted fat while cooking; avoid cooking it with large amounts of added oil."
         ],
         "nl": [
-          "Lamsvlees is rijk aan eiwit maar vetter dan kip; kies magere stukken zoals bijgesneden bout.",
-          "Gril het of stoof het langzaam en schep het vet eraf, en serveer het met groenten in plaats van veel rijst."
+          "Past bij koolhydraatarme voeding (low-carb en keto) als stevige, verzadigende maaltijd; eet het met een vezelrijke groene salade om het vet in balans te brengen.",
+          "Rooster het in de oven of boven houtskool en giet het overtollige gesmolten vet tijdens het koken af; kook het niet met grote hoeveelheden extra olie."
         ]
+      },
+      "lead": {
+        "ar": "لحم تقليدي فاخر يتميز بنكهته الغنية والدهون الطبيعية غير المصنعة. صفر نشويات وصفر تأثير جلايسيمي، لكن كثافته في السعرات والدهون تقتضي الاعتدال في حجم الحصة.",
+        "en": "A traditional, premium meat with a rich flavour and natural, unprocessed fat. Zero starch and zero glycemic effect, but its calorie and fat density call for moderation in portion size.",
+        "nl": "Traditioneel, hoogwaardig vlees met een rijke smaak en natuurlijk, onbewerkt vet. Nul zetmeel en nul glykemisch effect, maar de dichtheid aan calorieën en vet vraagt om een gematigde portie."
       }
     },
     "94": {
       "tips": {
         "ar": [
-          "السلمون غني بأحماض أوميغا 3 الدهنية والبروتين، وتوصي إرشادات غذائية كثيرة بتناول السمك مرة إلى مرتين أسبوعياً.",
-          "اشوه في الفرن أو على الصاج مع الليمون والأعشاب، ولا تُفرط في طهيه حتى يبقى طرياً."
+          "يُنصح بتناوله مرتين أسبوعياً لكل من يعاني من مقاومة الإنسولين، الكبد الدهني، أو ارتفاع الدهون الثلاثية.",
+          "اشوه بلمسة زيت زيتون وعصير ليمون وثوم طازج؛ لا تفرط في طهيه حتى يجف، فالشواء اللطيف يحافظ على دهون أوميغا 3 الثمينة."
         ],
         "en": [
-          "Salmon is rich in omega-3 fatty acids and protein, and many dietary guidelines recommend eating fish once or twice a week.",
-          "Bake or pan-grill it with lemon and herbs, and do not overcook it so it stays moist."
+          "Fatty fish such as salmon is recommended twice a week, and it is a particularly good choice if you have insulin resistance, a fatty liver or high triglycerides.",
+          "Grill it with a touch of olive oil, lemon juice and fresh garlic; do not overcook it until dry, as gentle grilling preserves the precious omega-3 fats."
         ],
         "nl": [
-          "Zalm is rijk aan omega-3-vetzuren en eiwit, en veel voedingsrichtlijnen adviseren één tot twee keer per week vis.",
-          "Bak hem in de oven of in de grillpan met citroen en kruiden, en gaar hem niet te lang zodat hij sappig blijft."
+          "Vette vis zoals zalm wordt twee keer per week aanbevolen, en is een bijzonder goede keuze bij insulineresistentie, een vervette lever of verhoogde triglyceriden.",
+          "Gril hem met een beetje olijfolie, citroensap en verse knoflook; bak hem niet te lang zodat hij droog wordt, want zacht grillen behoudt de waardevolle omega-3-vetten."
         ]
+      },
+      "lead": {
+        "ar": "ملك الأسماك وأفضل غذاء لمحاربة الالتهابات؛ يزخر بأحماض أوميغا 3 الدهنية التي تحمي القلب والشرايين وتعزز حساسية الإنسولين، دون وجود أي جرام كربوهيدرات في لحمه النقي.",
+        "en": "The king of fish and one of the best foods for a balanced, anti-inflammatory diet; it is rich in omega-3 fatty acids, which support the heart and blood vessels and insulin sensitivity, without a single gram of carbohydrate in its flesh.",
+        "nl": "De koning van de vis en een van de beste voedingsmiddelen voor een evenwichtig, ontstekingsremmend eetpatroon; rijk aan omega-3-vetzuren die hart, bloedvaten en de insulinegevoeligheid ondersteunen, zonder één gram koolhydraten in het visvlees."
       }
     },
     "98": {
       "tips": {
         "ar": [
-          "التونة المعلبة بالماء مصدر عملي للبروتين بسعرات منخفضة، وتناسب السلطات والسندويشات.",
-          "صفّها جيداً واخلطها مع قليل من زيت الزيتون والليمون بدلاً من المايونيز."
+          "وجبة سريعة ومريحة لمنتصف اليوم؛ أضفها لطبق سلطة كبير من الخس والخيار لتبني وجبة مشبعة بأقل من 200 سعرة حرارية.",
+          "اختر التونة المحفوظة في الماء والملح وصَفِّها جيداً، وتجنب التونة المحفوظة في الزيوت النباتية المكررة الرخيصة."
         ],
         "en": [
-          "Tuna canned in water is a practical, low-calorie protein source that suits salads and sandwiches.",
-          "Drain it well and mix it with a little olive oil and lemon instead of mayonnaise."
+          "A quick and convenient midday meal; add it to a large salad of lettuce and cucumber to build a filling meal of under 200 calories.",
+          "Choose tuna canned in water and salt and drain it well, and avoid tuna packed in cheap refined vegetable oils."
         ],
         "nl": [
-          "Tonijn op water is een praktische, caloriearme eiwitbron die past in salades en broodjes.",
-          "Laat hem goed uitlekken en meng hem met wat olijfolie en citroen in plaats van mayonaise."
+          "Een snelle en handige middagmaaltijd; voeg het toe aan een grote salade van sla en komkommer voor een verzadigende maaltijd van minder dan 200 calorieën.",
+          "Kies tonijn in water met zout en laat hem goed uitlekken, en vermijd tonijn in goedkope geraffineerde plantaardige olie."
         ]
+      },
+      "lead": {
+        "ar": "الحل العملي السريع للبروتين الصافي؛ بروتين مرتفع جداً وسعرات منخفضة تكاد تخلو من الدهون والكربوهيدرات، مما يجعلها الخيار الأسهل للدايت السريع ولجم الشهية.",
+        "en": "The quick, practical answer for lean protein: very high in protein and low in calories, almost free of fat and carbohydrate, which makes it the easiest choice for a diet and for curbing appetite.",
+        "nl": "Het snelle, praktische antwoord voor mager eiwit: zeer eiwitrijk en caloriearm, vrijwel zonder vet en koolhydraten, waardoor het de makkelijkste keuze is bij een dieet en om de eetlust te temmen."
       }
     },
     "101": {
       "tips": {
         "ar": [
-          "البيضة الكبيرة توفر نحو 6 غ من البروتين عالي الجودة، وهي خيار عملي للفطور أو الوجبة الخفيفة.",
-          "السلق من أفضل طرق التحضير دون دهون مضافة؛ اتركها 9 إلى 12 دقيقة لبيضة مسلوقة جيداً."
+          "الغذاء المثالي لكسر الصيام وبدء وجبة الفطور؛ يحافظ على خط سكر دم مستقيم تماماً طوال الصباح ويقضي على الرغبة في تناول النشويات.",
+          "اسلق البيض بحيث يظل الصفار طرياً قليلاً (نصف استواء) للحفاظ على دهون الكولين ومضادات الأكسدة الحساسة للحرارة العالية."
         ],
         "en": [
-          "A large egg provides about 6 g of high-quality protein and is a practical choice for breakfast or a snack.",
-          "Boiling is one of the best methods without added fat; cook for 9 to 12 minutes for a hard-boiled egg."
+          "The ideal food to break a fast and start your breakfast; it keeps the blood sugar line completely flat all morning and curbs cravings for starchy foods.",
+          "Boil eggs so the yolk stays slightly soft (medium-boiled) to preserve the choline-rich fats and the antioxidants that are sensitive to high heat."
         ],
         "nl": [
-          "Een groot ei levert ongeveer 6 g hoogwaardig eiwit en is een praktische keuze voor ontbijt of tussendoor.",
-          "Koken is een van de beste bereidingen zonder toegevoegd vet; kook 9 tot 12 minuten voor een hardgekookt ei."
+          "Het ideale voedingsmiddel om een vasten te breken en je ontbijt te beginnen; het houdt de bloedsuikerlijn de hele ochtend volledig vlak en remt de trek in zetmeel.",
+          "Kook eieren zo dat de dooier nog licht zacht is (halfzacht) om de cholinerijke vetten en de antioxidanten die gevoelig zijn voor hoge hitte te behouden."
         ]
+      },
+      "lead": {
+        "ar": "معيار الذهب للبروتين الكامل وأحد أكثر الأطعمة فائدة واستقراراً لسكر الدم في العالم. لا يحتوي على نشويات تذكر (صفر مؤشر جلايسيمي)، ويمنحك شبعاً هائلاً وفيتامينات ذائبة في الدهون تدعم صحة الدماغ.",
+        "en": "The gold standard of complete protein and one of the most beneficial and blood-sugar-friendly foods in the world. It contains hardly any starch (no glycemic index), and gives you great fullness plus fat-soluble vitamins that support brain health.",
+        "nl": "De gouden standaard van compleet eiwit en een van de meest waardevolle en bloedsuikervriendelijke voedingsmiddelen ter wereld. Het bevat nauwelijks zetmeel (geen glykemische index) en geeft je veel verzadiging plus vetoplosbare vitamines die een gezond brein ondersteunen."
       }
     },
     "128": {
       "tips": {
         "ar": [
-          "زيت الزيتون البكر غني بالدهون الأحادية غير المشبعة والبوليفينولات، لكن ملعقة كبيرة واحدة تحتوي على نحو 120 سعرة.",
-          "استخدمه نيئاً على السلطات والحمص أو للطهي على حرارة متوسطة، وقِس الكمية بالملعقة بدلاً من السكب المباشر."
+          "أضف ملعقة إلى ملعقتين يومياً فوق أطباق السلطة، الفول، أو الحمص؛ وجود زيت الزيتون مع النشويات يبطئ امتصاصها بشكل فعال جداً.",
+          "استهلكه بارداً أو مع طهي خفيف على درجات حرارة منخفضة، وتجنب تسخينه لدرجات احتراق عالية للحفاظ على مركبات البوليفينول الحساسة."
         ],
         "en": [
-          "Extra virgin olive oil is rich in monounsaturated fats and polyphenols, but one tablespoon contains about 120 kcal.",
-          "Use it raw on salads and hummus or for cooking over medium heat, and measure it with a spoon rather than pouring freely."
+          "Add one to two tablespoons a day over salads, fava beans or hummus; olive oil eaten with starchy foods slows their absorption very effectively.",
+          "Use it cold or for gentle cooking at low temperatures, and avoid heating it to its smoke point to preserve its delicate polyphenols."
         ],
         "nl": [
-          "Extra vierge olijfolie is rijk aan enkelvoudig onverzadigde vetten en polyfenolen, maar één eetlepel bevat ongeveer 120 kcal.",
-          "Gebruik haar rauw over salades en hummus of om op middelhoog vuur te bakken, en meet af met een lepel in plaats van vrij te schenken."
+          "Voeg dagelijks een tot twee eetlepels toe aan salades, tuinbonen of hummus; olijfolie bij zetmeelrijke producten vertraagt de opname daarvan zeer effectief.",
+          "Gebruik het koud of voor zacht koken op lage temperatuur, en verhit het niet tot het rookpunt om de gevoelige polyfenolen te behouden."
         ]
+      },
+      "lead": {
+        "ar": "إكسير حمية البحر الأبيض المتوسط وصحة القلب؛ دهون أحادية غير مشبعة ومضادات أكسدة قوية تحمي بطانة الشرايين وتدعم حساسية الخلايا للإنسولين دون أي تأثير رافع للسكر.",
+        "en": "The elixir of the Mediterranean diet and heart health: monounsaturated fats and powerful antioxidants that support healthy artery walls and insulin sensitivity, without any effect that raises blood sugar.",
+        "nl": "Het elixer van het mediterrane eetpatroon en een gezond hart: enkelvoudig onverzadigde vetten en krachtige antioxidanten die gezonde vaatwanden en de insulinegevoeligheid ondersteunen, zonder enig effect dat de bloedsuiker verhoogt."
       }
     },
     "132": {
       "tips": {
         "ar": [
-          "القهوة السوداء دون إضافات لا تكاد تحتوي على سعرات.",
-          "إن أردت الحليب فاختر كمية صغيرة غير محلاة، وتجنب الشراب المنكّه والكريمة."
+          "ممتازة لتعزيز التركيز الصباحي وكبح الشهية أثناء الصيام المتقطع؛ واحرص على شربها سادة دون إضافة سكر أو مبيضات صناعية محلاة تفسد فوائدها الأيضية.",
+          "حضّرها بالتقطير، أو الإسبريسو، أو القهوة العربية والتركية الخفيفة؛ واشرب مع كل فنجان قهوة كوباً من الماء لتعويض الترطيب ومنع الجفاف."
         ],
         "en": [
-          "Black coffee without additions contains almost no calories.",
-          "If you want milk, use a small unsweetened amount, and avoid flavoured syrups and cream."
+          "Great for morning focus and for curbing appetite during intermittent fasting; drink it black, without sugar or sweetened artificial creamers that undo its metabolic benefits.",
+          "Make it as filter coffee, espresso, or light Arabic or Turkish coffee, and drink a glass of water with every cup to stay well hydrated."
         ],
         "nl": [
-          "Zwarte koffie zonder toevoegingen bevat vrijwel geen calorieën.",
-          "Wil je melk, neem dan een klein ongezoet scheutje, en vermijd smaaksiropen en room."
+          "Ideaal voor focus in de ochtend en om de eetlust te remmen tijdens intermittent fasting; drink hem zwart, zonder suiker of gezoete kunstmatige koffiecreamer die de metabole voordelen tenietdoen.",
+          "Zet hem als filterkoffie, espresso of lichte Arabische of Turkse koffie, en drink bij elk kopje een glas water om goed gehydrateerd te blijven."
         ]
+      },
+      "lead": {
+        "ar": "المشروب الصباحي المفضل عالمياً؛ غنية بحمض الكلوروجينيك ومضادات الأكسدة التي تدعم اليقظة والتمثيل الغذائي. خالية تماماً من الكربوهيدرات، وصفر سعرات، وصفر تأثير على سكر الدم.",
+        "en": "The world's favourite morning drink, rich in chlorogenic acid and antioxidants that support alertness and metabolism. Free of carbohydrate, with practically zero calories and no effect on blood sugar.",
+        "nl": "De favoriete ochtenddrank ter wereld, rijk aan chlorogeenzuur en antioxidanten die alertheid en de stofwisseling ondersteunen. Vrij van koolhydraten, met vrijwel nul calorieën en geen effect op de bloedsuiker."
       }
     },
     "133": {
       "tips": {
         "ar": [
-          "الشاي الأخضر يحتوي على مضادات أكسدة (الكاتيكينات) وعادةً على كافيين أقل من القهوة.",
-          "انقعه بماء دون درجة الغليان (نحو 80 درجة مئوية) لمدة دقيقتين إلى ثلاث لتجنب المرارة، ودون سكر."
+          "رائع بين الوجبات أو بعد الغداء بنصف ساعة؛ يدعم الأيض بلطف ويساعد على تهدئة الالتهابات دون إحداث أي حركة في سكر الدم أو الإنسولين.",
+          "انقع أوراق الشاي الأخضر في ماء ساخن (غير مغلي بشدة، نحو 80 درجة مئوية) لمدة دقيقتين إلى ثلاث وتجنب غليه المباشر حتى لا تفرز مادة التانين طعماً مراً لاذعاً."
         ],
         "en": [
-          "Green tea contains antioxidants (catechins) and usually less caffeine than coffee.",
-          "Steep it in water just below boiling (about 80 °C) for two to three minutes to avoid bitterness, and skip the sugar."
+          "Lovely between meals or half an hour after lunch; it gently supports metabolism and fits an anti-inflammatory lifestyle, without moving blood sugar or insulin.",
+          "Steep green tea leaves in hot (not fully boiling, about 80 °C) water for two to three minutes, and avoid boiling them directly, so the tannins do not release a harsh, bitter taste."
         ],
         "nl": [
-          "Groene thee bevat antioxidanten (catechinen) en meestal minder cafeïne dan koffie.",
-          "Laat hem twee tot drie minuten trekken in water net onder het kookpunt (ongeveer 80 °C) om bitterheid te voorkomen, en zonder suiker."
+          "Heerlijk tussen de maaltijden of een half uur na de lunch; het ondersteunt zachtjes de stofwisseling en past bij een ontstekingsremmende leefstijl, zonder de bloedsuiker of insuline te beïnvloeden.",
+          "Laat groene theeblaadjes twee tot drie minuten trekken in heet water (niet kokend, ongeveer 80 °C), en kook ze niet direct, zodat de tannines geen scherpe, bittere smaak afgeven."
         ]
+      },
+      "lead": {
+        "ar": "إكسير مضادات الأكسدة النقي بمركب (EGCG) الشهير لدعم صحة الشرايين وتنشيط الحرق. مشروب خالٍ كلياً من السعرات والنشويات، ويساعد على صفاء الذهن وتوازن الطاقة.",
+        "en": "A pure elixir of antioxidants, with the well-known compound EGCG, which supports healthy arteries and metabolism. A drink practically free of calories and starch that helps with a clear mind and balanced energy.",
+        "nl": "Een puur elixer van antioxidanten, met het bekende EGCG, dat gezonde bloedvaten en de stofwisseling ondersteunt. Een drank die vrijwel vrij is van calorieën en zetmeel en helpt bij een helder hoofd en evenwichtige energie."
       }
     },
     "196": {

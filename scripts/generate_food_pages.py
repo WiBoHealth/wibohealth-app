@@ -512,7 +512,7 @@ PAGE_CSS = """
             font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
         }
         .lead { font-size: 1.04rem; margin: 6px 0 22px; }
-        .reviewed { font-size: 0.85rem; color: var(--text-muted); margin-top: -12px; margin-bottom: 22px; }
+        .reviewed { font-size: 0.85rem; color: var(--text-muted); margin: 12px 0 0; }
         .reviewed a { color: var(--primary); text-decoration: none; font-weight: 700; }
         .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 26px; }
         .stat-box {
@@ -829,7 +829,6 @@ def build(food, lang, ctx):
             </div>
 
             <p class="lead">{esc(lead)}</p>
-            <p class="reviewed">{u["reviewed"].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])}</p>
 
             <section class="stat-grid" aria-label="{u["gi"]}">
                 <div class="stat-box"><h2>{u["gi"]}</h2>{gi_card}</div>
@@ -865,6 +864,7 @@ def build(food, lang, ctx):
             </aside>
 
             {src}
+            <p class="reviewed">{u["reviewed"].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])}</p>
             <p class="disclaimer-box">{u["disclaimer"]}</p>
         </article>
     </main>
