@@ -1,0 +1,305 @@
+/* ==========================================================================
+   WiBo Health - unified compact sticky header (modelled on foods.html)
+   Loaded after each page's own <style>, so it overrides the per-page header
+   rules and every page gets the same 60px glass header and capsule buttons.
+   Dark theme is detected from both systems used on the site:
+   body.dark-mode (main pages) and html[data-theme="dark"] (doctor family + food pages).
+   ========================================================================== */
+
+body > header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    min-height: 60px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.82) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+    backdrop-filter: blur(14px) saturate(160%) !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06) !important;
+    border-radius: 0 !important;
+    transform: none !important; /* always visible: cancels the old hide-on-scroll (.hide-nav) */
+}
+body.dark-mode > header,
+html[data-theme="dark"] body > header {
+    background: rgba(11, 15, 25, 0.82) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* inner row */
+body > header > .header-content,
+body > header > .header-container,
+body > header > .nav-content,
+body > header > .container {
+    width: 100%;
+    max-width: 1250px !important;
+    min-height: 60px;
+    margin: 0 auto !important;
+    padding: 0 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* logo */
+body > header .logo,
+body > header .brand-link,
+body > header .brand-logo { gap: 8px !important; flex-shrink: 0; text-decoration: none; }
+body > header .logo-icon,
+body > header .logo-icon svg,
+body > header .brand-logo-svg { width: 34px !important; height: 34px !important; }
+body > header .logo-text h1,
+body > header .brand-title,
+body > header .brand-logo h1,
+body > header .brand-logo span {
+    font-size: 19px !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+/* nav capsules */
+body > header .nav-menu,
+body > header .nav-links-bar { gap: 6px !important; align-items: center; }
+body > header .nav-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    height: 34px !important;
+    line-height: 1 !important;
+    padding: 0 14px !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+    text-decoration: none;
+    background: #f3f4f6 !important;
+    color: #1f2937 !important;
+    border: 1px solid transparent !important;
+}
+body > header .nav-link:hover,
+body > header .nav-link.active {
+    background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+    color: #fff !important;
+}
+body > header .nav-link.boodi-link {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    color: #fff !important;
+}
+body.dark-mode > header .nav-link:not(:hover):not(.active):not(.boodi-link),
+html[data-theme="dark"] body > header .nav-link:not(:hover):not(.active):not(.boodi-link) {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #f1f5f9 !important;
+}
+
+/* action capsules: language, theme, favourites, back */
+body > header .header-actions,
+body > header .header-controls,
+body > header .nav-buttons { display: flex; align-items: center; gap: 6px !important; flex-shrink: 0; }
+body > header .lang-btn,
+body > header .theme-toggle,
+body > header .theme-toggle-btn,
+body > header .favorites-btn,
+body > header .toggle-btn,
+body > header .nav-back-btn,
+body > header .lang-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-sizing: border-box;
+    min-width: 32px !important;
+    width: auto !important;
+    height: 32px !important;
+    padding: 0 9px !important;
+    border-radius: 999px !important;
+    font-size: 13px !important;
+    font-weight: 700;
+    line-height: 1 !important;
+    cursor: pointer;
+    flex-shrink: 0;
+    text-decoration: none;
+    background: #f3f4f6 !important;
+    color: #1f2937 !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+body.dark-mode > header .lang-btn, body.dark-mode > header .theme-toggle, body.dark-mode > header .theme-toggle-btn,
+body.dark-mode > header .favorites-btn, body.dark-mode > header .toggle-btn, body.dark-mode > header .nav-back-btn,
+html[data-theme="dark"] body > header .lang-btn, html[data-theme="dark"] body > header .theme-toggle,
+html[data-theme="dark"] body > header .theme-toggle-btn, html[data-theme="dark"] body > header .favorites-btn,
+html[data-theme="dark"] body > header .toggle-btn, html[data-theme="dark"] body > header .nav-back-btn,
+body.dark-mode > header .lang-toggle, html[data-theme="dark"] body > header .lang-toggle {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #f1f5f9 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+body > header .lang-btn:hover,
+body > header .theme-toggle:hover,
+body > header .theme-toggle-btn:hover,
+body > header .favorites-btn:hover,
+body > header .toggle-btn:hover,
+body > header .nav-back-btn:hover,
+body > header .lang-toggle:hover { border-color: #2ecc71 !important; }
+body > header .lang-btn.active,
+html[data-theme="dark"] body > header .lang-btn.active,
+body.dark-mode > header .lang-btn.active {
+    background: #2ecc71 !important;
+    color: #fff !important;
+    border-color: #2ecc71 !important;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4) !important;
+}
+
+/* segmented language switcher (doctor family + food pages): one capsule holding the buttons */
+body > header .lang-switcher-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px !important;
+    padding: 2px !important;
+    border-radius: 999px !important;
+    background: #f3f4f6 !important;
+    border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+body.dark-mode > header .lang-switcher-container,
+html[data-theme="dark"] body > header .lang-switcher-container {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+body > header .lang-switcher-container .lang-btn:not(.active) {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+body > header .lang-switcher-container .lang-btn { height: 28px !important; }
+
+@media (max-width: 480px) {
+    body > header > .header-content,
+    body > header > .header-container,
+    body > header > .nav-content,
+    body > header > .container { padding: 0 10px !important; gap: 6px; }
+    body > header .logo-text h1,
+    body > header .brand-title,
+    body > header .brand-logo h1,
+    body > header .brand-logo span { font-size: 17px !important; }
+    body > header .header-actions,
+    body > header .header-controls,
+    body > header .nav-buttons { gap: 4px !important; }
+    body > header .lang-btn,
+    body > header .theme-toggle,
+    body > header .theme-toggle-btn,
+    body > header .favorites-btn,
+    body > header .toggle-btn,
+    body > header .nav-back-btn,
+    body > header .lang-toggle { min-width: 30px !important; height: 30px !important; padding: 0 7px !important; }
+}
+
+/* one row everywhere: logo | nav | actions (pages whose own CSS stacked or wrapped the header) */
+body > header .header-content,
+body > header .header-container,
+body > header .nav-content {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+body > header > .container { display: block; }
+body > header > .container > .header-content { width: 100%; min-height: 60px; }
+
+/* plain text logos (no gradient) stay readable on the glass background */
+body > header a.logo { color: #10b981 !important; font-size: 19px; font-weight: 900; }
+body > header a.logo h1 { margin: 0 !important; font-size: 19px !important; }
+
+/* pages whose plain <nav> sits in the header row: on small screens it folds behind the hamburger */
+@media (max-width: 992px) {
+    body > header .header-content > nav:not([class]) { display: none !important; }
+    body > header.nav-open .header-content > nav:not([class]) {
+        display: flex !important;
+        flex-direction: column;
+        gap: 6px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 10px 14px 14px;
+        background: rgba(255, 255, 255, 0.96);
+        -webkit-backdrop-filter: blur(14px);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    }
+    body.dark-mode > header.nav-open .header-content > nav:not([class]),
+    html[data-theme="dark"] body > header.nav-open .header-content > nav:not([class]) { background: rgba(11, 15, 25, 0.96); }
+    body > header.nav-open .header-content > nav:not([class]) a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #f3f4f6;
+        color: #1f2937;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+/* recipes-style markup: the nav sits next to .header-content instead of inside it -> lay all of it out as one row */
+body > header > .container:has(> .nav-menu) {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    min-height: 60px;
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+    padding: 0 14px !important;
+}
+body > header > .container:has(> .nav-menu) > .header-content { display: contents !important; }
+body > header > .container:has(> .nav-menu) .logo { order: 0; margin-inline-end: auto; }
+body > header > .container:has(> .nav-menu) > .nav-menu { order: 1; margin: 0 !important; padding: 0 !important; }
+body > header > .container:has(> .nav-menu) .header-actions { order: 2; }
+
+/* the inner row is never a card of its own (diet-plan drew a rounded box inside the header) */
+body > header > .header-content,
+body > header > .header-container,
+body > header > .nav-content {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+/* calorie-tracker stretched its buttons to a full-width second row on phones */
+body > header .nav-buttons { width: auto !important; }
+/* doctor-family nav bar folds away on tablets/phones, like on doctor.html (calculators kept showing it) */
+@media (max-width: 860px) {
+    body > header .nav-links-bar { display: none !important; }
+}
+
+/* plain <nav> in the header row (articles): same capsules as .nav-link on desktop */
+@media (min-width: 993px) {
+    body > header .header-content > nav:not([class]) { display: flex; align-items: center; gap: 6px; }
+    body > header .header-content > nav:not([class]) a {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        height: 34px;
+        padding: 0 14px !important;
+        border-radius: 999px !important;
+        background: #f3f4f6 !important;
+        color: #1f2937 !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    body > header .header-content > nav:not([class]) a:hover {
+        background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+        color: #fff !important;
+    }
+}

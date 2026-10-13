@@ -12,6 +12,10 @@ function toggleMobileMenu() {
         mobileNav.classList.toggle('active');
         overlay.classList.toggle('active');
         body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    } else {
+        // pages without a separate mobile drawer: fold the header's own <nav> open below the sticky header
+        const header = document.querySelector('body > header');
+        if (header) header.classList.toggle('nav-open');
     }
 }
 

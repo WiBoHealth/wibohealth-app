@@ -581,9 +581,9 @@
             width: max-content;
             height: 100%;
             will-change: transform;
-            animation: pulse-to-right 70s linear infinite;
+            animation: pulse-to-left 70s linear infinite;
         }
-        :root[dir="rtl"] .pulse-track { animation-name: pulse-to-left; }
+        :root[dir="rtl"] .pulse-track { animation-name: pulse-to-right; }
         .pulse-ticker:hover .pulse-track,
         .pulse-ticker:focus-within .pulse-track,
         .pulse-ticker:active .pulse-track { animation-play-state: paused; }
@@ -1367,6 +1367,7 @@
             .article-stat-box { width: 100%; }
         }
     </style>
+    <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
     <!-- Floating Barcode Scanner Pill Button -->

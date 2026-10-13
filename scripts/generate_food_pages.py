@@ -1158,12 +1158,12 @@ def build(food, lang, ctx):
     <script>
         try {{ document.documentElement.setAttribute('data-theme', localStorage.getItem('wibo_theme') || 'dark'); }} catch (e) {{}}
     </script>
-    <!-- Theme-switch guard: while light/dark flips, pause every transition except the page background and text colour (0.2s),
-         so cards, blur and shadows are not animated (removes the toggle lag) -->
-    <style>html.theme-switching *,html.theme-switching *::before,html.theme-switching *::after{{transition:none!important}}html.theme-switching body{{transition:background-color .2s ease,color .2s ease!important}}</style>
-    <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-switching');clearTimeout(window.__tsw);window.__tsw=setTimeout(function(){{h.classList.remove('theme-switching')}},260)}},true);</script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{{transition:none!important;animation-duration:0s!important}}</style>
+    <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){{window.__tsw=requestAnimationFrame(function(){{h.classList.remove('theme-transitioning')}})}})}},true);</script>
     <style>
 {BASE_CSS}{PAGE_CSS}    </style>
+    <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>
     <header>
