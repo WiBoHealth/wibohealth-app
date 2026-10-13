@@ -1659,5 +1659,19 @@
             initLocalization();
         });
     </script>
+    <script>
+        // deep links from the home page ticker: calculators.html#bmi | #calories (#tdee) | #water | #whtr
+        function openCalculatorFromHash() {
+            var id = (location.hash || '').slice(1).toLowerCase();
+            if (id === 'tdee') id = 'calories';
+            var btn = document.querySelector('.tab-btn[onclick*="\'' + id + '\'"]');
+            if (id && btn && typeof switchCalculator === 'function') {
+                switchCalculator(id, btn);
+                btn.scrollIntoView({ block: 'center' });
+            }
+        }
+        window.addEventListener('load', openCalculatorFromHash);
+        window.addEventListener('hashchange', openCalculatorFromHash);
+    </script>
 </body>
 </html>
