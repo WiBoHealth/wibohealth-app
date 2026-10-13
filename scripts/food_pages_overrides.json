@@ -1,292 +1,382 @@
 {
-  "_note": "Per-food overrides for scripts/generate_food_pages.py. Key = food id from js/data.js. tips: {lang: [consumption, preparation]} (the third tip is the approved group note). Optional: slug.",
+  "_note": "Per-food overrides for scripts/generate_food_pages.py. Key = food id from js/data.js. lead: {lang: text} replaces the computed introduction (doctor-approved). tips: {lang: [consumption, preparation]} (the third tip is the approved group note). Optional: slug.",
   "foods": {
     "1": {
       "tips": {
         "ar": [
-          "اجعل الأرز ربع الطبق فقط، ونصفه خضار وربعه بروتين؛ هذا التوزيع يخفف الحمل الجلايسيمي للوجبة.",
-          "تبريد الأرز المطبوخ في الثلاجة 12 إلى 24 ساعة ثم إعادة تسخينه يزيد النشا المقاوم، وقد يخفّض استجابة السكر قليلاً."
+          "تناول صحن السلطة الخضراء أو مصدر البروتين قبل الأرز بعشر دقائق؛ الألياف تشكل شبكة هلامية تبطئ امتصاص نشويات الأرز بشكل مذهل.",
+          "سر النشا المقاوم: تبريد الأرز المطبوخ في الثلاجة 12–24 ساعة قبل إعادة تسخينه يعيد تشكيل جزيئات النشا ويزيد من \"النشا المقاوم\" المفيد لصحة الأمعاء واستقرار السكر."
         ],
         "en": [
-          "Keep rice to a quarter of the plate, with half vegetables and a quarter protein; this split lowers the glycemic load of the meal.",
-          "Chilling cooked rice in the fridge for 12 to 24 hours and then reheating it increases resistant starch and may slightly lower the glucose response."
+          "Eat a green salad or your protein source ten minutes before the rice; the fibre forms a gel-like network that markedly slows the absorption of the rice starch.",
+          "The resistant-starch secret: chilling cooked rice in the fridge for 12–24 hours before reheating it reshapes the starch molecules and increases \"resistant starch\", which benefits gut health and steadier blood sugar."
         ],
         "nl": [
-          "Houd rijst bij een kwart van het bord, met de helft groenten en een kwart eiwit; deze verdeling verlaagt de glykemische lading van de maaltijd.",
-          "Gekookte rijst 12 tot 24 uur in de koelkast laten afkoelen en daarna opwarmen verhoogt het resistente zetmeel en kan de glucoserespons iets verlagen."
+          "Eet een groene salade of je eiwitbron tien minuten vóór de rijst; de vezels vormen een gelachtig netwerk dat de opname van het rijstzetmeel duidelijk vertraagt.",
+          "Het geheim van resistent zetmeel: gekookte rijst 12–24 uur in de koelkast laten afkoelen voordat je hem opwarmt, verandert de zetmeelmoleculen en verhoogt het \"resistente zetmeel\", dat goed is voor de darmen en een stabielere bloedsuiker."
         ]
+      },
+      "lead": {
+        "ar": "يُعد الأرز الأبيض ركيزة المائدة اليومية في معظم البيوت العربية، لكنه يمثل تحدياً لمرضى السكري ومقاومة الإنسولين بسبب سرعة هضمه. بمؤشر جلايسيمي متوسط (65) وحمل جلايسيمي مرتفع نسبياً للحصة الكاملة، لا يعني ذلك حرمان نفسك منه، بل السر كله يكمن في طريقة طهيه ومشاركته مع الألياف والبروتين.",
+        "en": "White rice is a staple of the daily table in most Arab homes, but it is a challenge for people with diabetes and insulin resistance because it is digested quickly. With a medium glycemic index (65) and a relatively high glycemic load for a full portion, this does not mean you have to give it up: the whole secret lies in how you cook it and in pairing it with fibre and protein.",
+        "nl": "Witte rijst is in de meeste Arabische huishoudens een vaste basis van de dagelijkse maaltijd, maar voor mensen met diabetes en insulineresistentie is het een uitdaging omdat het snel wordt verteerd. Met een gemiddelde glykemische index (65) en een relatief hoge glykemische lading voor een volle portie hoef je het niet te laten staan: het hele geheim zit in hoe je het kookt en in de combinatie met vezels en eiwit."
       }
     },
     "2": {
       "tips": {
         "ar": [
-          "يحتوي الأرز البني على ألياف ومغنيسيوم أكثر من الأرز الأبيض، لكن مؤشره الجلايسيمي قريب منه، فالحصة المعتدلة تبقى مهمة.",
-          "انقعه بضع ساعات قبل الطهي لتقصير وقت الطهي وتحسين القوام، ثم اطبخه بماء أكثر قليلاً من الأرز الأبيض."
+          "خيار ممتاز لبناء وجبة متوازنة لمقاومة الإنسولين؛ فأليافه الوفيرة تحسن حساسية الخلايا للإنسولين والشبع على المدى الطويل.",
+          "نقع الأرز البني لعدة ساعات قبل الطهي يجعله أسهل في الهضم، ويقلل من حمض الفيتيك، ويقصر مدة طهيه بالماء للحفاظ على أليافه."
         ],
         "en": [
-          "Brown rice has more fibre and magnesium than white rice, but its glycemic index is similar, so a moderate portion still matters.",
-          "Soak it for a few hours before cooking to shorten the cooking time and improve the texture, then cook it with slightly more water than white rice."
+          "An excellent choice for building a balanced meal when you have insulin resistance; its abundant fibre supports insulin sensitivity and long-lasting fullness.",
+          "Soaking brown rice for several hours before cooking makes it easier to digest, reduces phytic acid and shortens its cooking time in water, which helps preserve its fibre."
         ],
         "nl": [
-          "Zilvervliesrijst bevat meer vezels en magnesium dan witte rijst, maar de glykemische index ligt dicht bij elkaar, dus een gematigde portie blijft belangrijk.",
-          "Week hem een paar uur voor het koken om de kooktijd te verkorten en de structuur te verbeteren, en kook hem met iets meer water dan witte rijst."
+          "Een uitstekende keuze voor een evenwichtige maaltijd bij insulineresistentie; de vele vezels ondersteunen de insulinegevoeligheid en zorgen voor langdurige verzadiging.",
+          "Zilvervliesrijst een paar uur weken voor het koken maakt hem beter verteerbaar, vermindert fytinezuur en verkort de kooktijd in water, zodat de vezels beter behouden blijven."
         ]
+      },
+      "lead": {
+        "ar": "يحتفظ الأرز البني بطبقة النخالة والجنين الكاملة، مما يجعله كنزاً حقيقياً للألياف والمغنيسيوم. ورغم أن مؤشره الجلايسيمي المقاس (68) يبدو قريباً من الأبيض بسبب طول فترة طهيه بالماء، إلا أن أليافه ومغذياته الدقيقة تبطئ الامتصاص الفعلي داخل الجسم وتمنحه تفوقاً أيضياً كبيراً.",
+        "en": "Brown rice keeps its full bran layer and germ, making it a true treasure of fibre and magnesium. Although its measured glycemic index (68) looks close to that of white rice because of its long cooking time in water, its fibre and micronutrients slow the actual absorption in the body and give it a clear metabolic advantage.",
+        "nl": "Zilvervliesrijst behoudt de volledige zemelenlaag en kiem, waardoor hij een echte schatkamer van vezels en magnesium is. Hoewel de gemeten glykemische index (68) dicht bij die van witte rijst ligt door de lange kooktijd in water, vertragen de vezels en micronutriënten de werkelijke opname in het lichaam en geven ze hem een duidelijk metabool voordeel."
       }
     },
     "3": {
       "tips": {
         "ar": [
-          "الخبز الأبيض سريع الهضم؛ تناوله مع بيض أو جبن قليل الدسم أو حمّص بدلاً من تناوله وحده أو مع المربى.",
-          "اختر خبز العجينة المخمّرة (الساوردو) أو خبز الحبوب الكاملة كبديل متى أمكن، ولا تُكثر من الشرائح في الوجبة الواحدة."
+          "تجنب تناوله منفرداً إطلاقاً؛ احرص على حشوه أو دهنه بمصدر دهون صحية أو بروتين (كالبيض المسلوق، الأفوكادو، أو زيت الزيتون) لفرملة سرعة امتصاصه.",
+          "تحميص شريحة الخبز الأبيض (Toasting) في المحمصة أو تجميدها ثم تحميصها يحدث تغيراً دقيقاً في جزيئات النشا يخفض استجابتها الجلايسيمية بشكل طفيف."
         ],
         "en": [
-          "White bread is digested quickly; eat it with eggs, low-fat cheese or hummus rather than on its own or with jam.",
-          "Choose sourdough or wholegrain bread as an alternative when you can, and limit the number of slices per meal."
+          "Avoid eating it on its own; always fill or spread it with a source of healthy fat or protein (such as a boiled egg, avocado or olive oil) to put the brakes on its absorption.",
+          "Toasting a slice of white bread in the toaster, or freezing it and then toasting it, subtly changes the starch molecules and slightly lowers its glycemic response."
         ],
         "nl": [
-          "Wit brood wordt snel verteerd; eet het met ei, magere kaas of hummus in plaats van alleen of met jam.",
-          "Kies waar mogelijk zuurdesembrood of volkorenbrood als alternatief, en beperk het aantal sneetjes per maaltijd."
+          "Eet het nooit los; beleg of besmeer het altijd met een bron van gezond vet of eiwit (zoals een gekookt ei, avocado of olijfolie) om de opname af te remmen.",
+          "Een snee witbrood roosteren in de broodrooster, of eerst invriezen en dan roosteren, verandert de zetmeelmoleculen subtiel en verlaagt de glykemische respons licht."
         ]
+      },
+      "lead": {
+        "ar": "الخبز الأكثر انتشاراً وسرعة في التناول، لكنه سريع الامتصاص كونه مصنوعاً من دقيق منخول مجرد من النخالة والألياف، مما يؤدي إلى قفزة سريعة في مستويات السكر والإنسولين بمؤشر جلايسيمي مرتفع (70).",
+        "en": "The most widespread and quickest bread to eat, but it is absorbed fast because it is made from refined flour stripped of its bran and fibre, which leads to a rapid rise in blood sugar and insulin, with a high glycemic index (70).",
+        "nl": "Het meest gegeten en snelst te eten brood, maar het wordt snel opgenomen omdat het gemaakt is van geraffineerd meel zonder zemelen en vezels, wat leidt tot een snelle stijging van bloedsuiker en insuline, met een hoge glykemische index (70)."
       }
     },
     "4": {
       "tips": {
         "ar": [
-          "يوفر خبز القمح الكامل أليافاً أكثر من الخبز الأبيض، والأنواع التي تحتوي حبوباً ظاهرة تُهضم أبطأ من الطحين الناعم.",
-          "اقرأ الملصق: يجب أن يكون طحين القمح الكامل أول المكونات، لا الطحين الأبيض المضاف إليه قليل من النخالة."
+          "رائع لوجبة إفطار مشبعة؛ واحرص على التأكد من بطاقة المكونات أن الدقيق المستخدم هو \"قمح كامل 100%\" وليس دقيقاً أبيض مضافاً إليه ملونات كراميل.",
+          "ابحث دائماً عن الخبز المصنوع بالتخمير الطبيعي البطيء (الخميرة البلدية / الساوردو)؛ فالتخمير الطبيعي يفكك جزءاً من النشويات ويخفض المؤشر أكثر."
         ],
         "en": [
-          "Wholemeal bread provides more fibre than white bread, and loaves with visible grains are digested more slowly than finely milled flour.",
-          "Read the label: wholemeal flour should be the first ingredient, not white flour with a little added bran."
+          "Great for a filling breakfast; check the ingredient list to make sure the flour is \"100% whole wheat\" and not white flour with added caramel colouring.",
+          "Always look for bread made with slow natural fermentation (traditional starter / sourdough); natural fermentation breaks down part of the starch and lowers the index further."
         ],
         "nl": [
-          "Volkorenbrood levert meer vezels dan wit brood, en brood met zichtbare korrels wordt langzamer verteerd dan fijngemalen meel.",
-          "Lees het etiket: volkorenmeel hoort het eerste ingrediënt te zijn, niet bloem met een beetje toegevoegde zemelen."
+          "Ideaal voor een verzadigend ontbijt; controleer op de ingrediëntenlijst dat het meel \"100% volkoren tarwe\" is en geen witmeel met toegevoegde karamelkleurstof.",
+          "Kies altijd brood dat met langzame natuurlijke fermentatie is gemaakt (traditioneel desem / zuurdesem); natuurlijke fermentatie breekt een deel van het zetmeel af en verlaagt de index verder."
         ]
+      },
+      "lead": {
+        "ar": "البديل اليومي الرابح لكل من يبحث عن استقرار الطاقة، يجمع بين دقيق الحبة الكاملة وأليافها الطبيعية، مما يمنحه مؤشراً جلايسيمياً منخفضاً (54) وشبعاً مستداماً يحمي من هبوط السكر المفاجئ.",
+        "en": "The winning everyday alternative for anyone looking for steady energy: it combines wholegrain flour with its natural fibre, giving it a low glycemic index (54) and lasting fullness that guards against sudden drops in blood sugar.",
+        "nl": "Het winnende dagelijkse alternatief voor iedereen die stabiele energie zoekt: het combineert volkorenmeel met zijn natuurlijke vezels, wat zorgt voor een lage glykemische index (54) en langdurige verzadiging die beschermt tegen plotselinge dalingen van de bloedsuiker."
       }
     },
     "5": {
       "tips": {
         "ar": [
-          "المعكرونة المصنوعة من القمح القاسي (السميد) متماسكة البنية، لذلك مؤشرها الجلايسيمي أقل من الخبز الأبيض؛ قدّمها مع خضار وبروتين.",
-          "اطبخها متماسكة (ال دنتي) ولا تُفرط في سلقها، فالطهي الزائد يرفع المؤشر الجلايسيمي."
+          "قدمها مع صلصة طماطم طبيعية وزيت زيتون وبروتين نظيف، وتجنب الصلصات الجاهزة المليئة بالسكر الخفي أو الكريمة المهدرجة.",
+          "قاعدة Al Dente: اطه المعكرونة حتى تنضج مع بقاء قوامها متماسكاً قليلاً وتجنب المبالغة في السلق حتى التعجن؛ فالمعكرونة المتماسكة تُهضم أبطأ بكثير."
         ],
         "en": [
-          "Pasta made from durum wheat semolina has a compact structure, so its glycemic index is lower than white bread; serve it with vegetables and protein.",
-          "Cook it al dente and avoid overcooking, because overcooking raises the glycemic index."
+          "Serve it with a natural tomato sauce, olive oil and lean protein, and avoid ready-made sauces full of hidden sugar or hydrogenated cream.",
+          "The al dente rule: cook pasta until done but still slightly firm, and avoid boiling it until it turns mushy; firm pasta is digested much more slowly."
         ],
         "nl": [
-          "Pasta van harde tarwe (griesmeel) heeft een compacte structuur, waardoor de glykemische index lager is dan van wit brood; serveer haar met groenten en eiwit.",
-          "Kook haar al dente en niet te lang, want te lang koken verhoogt de glykemische index."
+          "Serveer ze met een natuurlijke tomatensaus, olijfolie en mager eiwit, en vermijd kant-en-klare sauzen vol verborgen suiker of geharde room.",
+          "De al-denteregel: kook pasta gaar maar nog licht stevig, en kook ze niet zo lang dat ze papperig wordt; stevige pasta wordt veel langzamer verteerd."
         ]
+      },
+      "lead": {
+        "ar": "على عكس الشائع بأنها ترفع السكر بشدة، تمتلك المعكرونة المسلوقة مؤشراً جلايسيمياً منخفضاً إلى معتدل (49)؛ والسر يكمن في طريقة تصنيع عجينتها المضغوطة التي تجعل جزيئات النشا متماسكة وصعبة على الإنزيمات الهاضمة.",
+        "en": "Contrary to the common belief that it sends blood sugar soaring, boiled pasta has a low-to-moderate glycemic index (49); the secret lies in how its dough is pressed during manufacturing, which keeps the starch molecules compact and hard for digestive enzymes to break down.",
+        "nl": "In tegenstelling tot het idee dat pasta de bloedsuiker sterk laat stijgen, heeft gekookte pasta een lage tot gematigde glykemische index (49); het geheim zit in het samengeperste deeg, waardoor de zetmeelmoleculen compact blijven en moeilijk bereikbaar zijn voor spijsverteringsenzymen."
       }
     },
     "7": {
       "tips": {
         "ar": [
-          "الشوفان غني بألياف بيتا-جلوكان القابلة للذوبان، التي تزيد الشبع وتبطئ الهضم.",
-          "اختر رقائق الشوفان الكاملة أو المقطّعة بدلاً من الشوفان الفوري، وأضف المكسرات أو الحليب بدلاً من السكر."
+          "عزز وجبتك بإضافة بذور الشيا أو حفنة مكسرات نيئة وقرفة لزيادة الشبع، وتجنب أكياس الشوفان الفوري المعبأة بالسكر والنكهات الصناعية.",
+          "اعتمد حبوب الشوفان الكاملة (Rolled Oats) واطهها بالماء أو الحليب غير المحلى على نار هادئة للحفاظ على بنية أليافها الطبيعية."
         ],
         "en": [
-          "Oats are rich in soluble beta-glucan fibre, which increases fullness and slows digestion.",
-          "Choose whole rolled or steel-cut oats instead of instant oats, and add nuts or milk instead of sugar."
+          "Boost your bowl with chia seeds or a handful of raw nuts and some cinnamon for more fullness, and avoid instant oat sachets packed with sugar and artificial flavours.",
+          "Choose whole rolled oats and cook them in water or unsweetened milk over low heat to preserve their natural fibre structure."
         ],
         "nl": [
-          "Havermout is rijk aan oplosbare bètaglucaanvezels, die de verzadiging verhogen en de vertering vertragen.",
-          "Kies hele of gesneden havervlokken in plaats van instanthavermout, en voeg noten of melk toe in plaats van suiker."
+          "Verrijk je kom met chiazaad of een handje ongebrande noten en wat kaneel voor meer verzadiging, en vermijd zakjes instanthavermout vol suiker en kunstmatige smaakstoffen.",
+          "Kies hele havervlokken (rolled oats) en kook ze in water of ongezoete melk op laag vuur om de natuurlijke vezelstructuur te behouden."
         ]
+      },
+      "lead": {
+        "ar": "أيقونة الفطور الصحي لصحة القلب والأوعية ومقاومة الإنسولين، يزخر بألياف البيتا جلوكان الذائبة التي تشكل قواماً هلامياً في الأمعاء يمنح استقراراً طويلاً لسكر الدم بمؤشر جلايسيمي معتدل (55).",
+        "en": "The icon of a healthy breakfast for heart and blood-vessel health and for insulin resistance, rich in soluble beta-glucan fibre that forms a gel-like texture in the gut and keeps blood sugar steady for longer, with a moderate glycemic index (55).",
+        "nl": "Het icoon van een gezond ontbijt voor hart en bloedvaten en bij insulineresistentie, rijk aan oplosbare bètaglucaanvezels die in de darm een gelachtige structuur vormen en de bloedsuiker langer stabiel houden, met een gematigde glykemische index (55)."
       }
     },
     "8": {
       "tips": {
         "ar": [
-          "الكينوا تحتوي على جميع الأحماض الأمينية الأساسية، فهي بديل جيد للأرز في الأطباق النباتية.",
-          "اشطفها جيداً قبل الطهي لإزالة طبقة الصابونين المُرّة، واطبخها بنحو كوبين من الماء لكل كوب."
+          "البديل الأفضل للأرز الأبيض لمن يسعى لبناء العضلات وخفض السكر التراكمي دون التنازل عن طاقة النشويات المشبعة.",
+          "اغسل الكينوا بمصفاة ناعمة تحت الماء الجاري قبل الطهي لإزالة مادة السابونين الطبيعية المرة، واطهها في مرق خضار طبيعي مع رشة كمون."
         ],
         "en": [
-          "Quinoa contains all the essential amino acids, which makes it a good alternative to rice in plant-based dishes.",
-          "Rinse it well before cooking to remove the bitter saponin coating, and cook it in about two cups of water per cup."
+          "The best alternative to white rice for anyone building muscle and keeping an eye on their HbA1c, without giving up the filling energy of starches.",
+          "Rinse quinoa in a fine sieve under running water before cooking to remove the natural bitter saponins, and cook it in natural vegetable stock with a pinch of cumin."
         ],
         "nl": [
-          "Quinoa bevat alle essentiële aminozuren en is daarom een goed alternatief voor rijst in plantaardige gerechten.",
-          "Spoel haar goed voor het koken om het bittere saponinelaagje te verwijderen, en kook haar met ongeveer twee kopjes water per kopje."
+          "Het beste alternatief voor witte rijst voor wie spiermassa opbouwt en zijn HbA1c in de gaten houdt, zonder de verzadigende energie van zetmeel op te geven.",
+          "Spoel quinoa voor het koken in een fijne zeef onder stromend water om de natuurlijke bittere saponinen te verwijderen, en kook ze in natuurlijke groentebouillon met een snufje komijn."
         ]
+      },
+      "lead": {
+        "ar": "حبة ذهبية قادمة من جبال الأنديز، تتميز عن كافة النشويات بأنها مصدر بروتين كامل يضم الأحماض الأمينية التسعة الأساسية، مما يمنحها مؤشراً جلايسيمياً منخفضاً (52) وقيمة غذائية فريدة.",
+        "en": "A golden seed from the Andes that stands out from all other starches as a complete protein source containing all nine essential amino acids, giving it a low glycemic index (52) and a unique nutritional value.",
+        "nl": "Een gouden korrel uit de Andes die zich van alle andere zetmeelproducten onderscheidt als complete eiwitbron met alle negen essentiële aminozuren, met een lage glykemische index (52) en een unieke voedingswaarde."
       }
     },
     "9": {
       "tips": {
         "ar": [
-          "البرغل قمح مسلوق ومجفف ومجروش يحتفظ بالكثير من أليافه، لذلك مؤشره الجلايسيمي أقل من الأرز الأبيض.",
-          "استخدم البرغل الخشن للطبخ والناعم للتبولة والكبة، وانقع الناعم بدلاً من طهيه طويلاً للحفاظ على قوامه."
+          "الخيار الأول والبديل الأذكى لمرضى السكري في الأطباق اليومية؛ يمنحك امتصاصاً شديد البطء وشبعاً يدوم لساعات طويلة.",
+          "اطه البرغل الخشن مع زيت الزيتون والبصل والعدس (طبق المجدرة العريق) أو مع الطماطم؛ فالجمع بين زيت الزيتون والبرغل يخلق توازناً غذائياً مثالياً."
         ],
         "en": [
-          "Bulgur is wheat that has been boiled, dried and cracked; it keeps much of its fibre, so its glycemic index is lower than white rice.",
-          "Use coarse bulgur for cooked dishes and fine bulgur for tabbouleh and kibbeh, soaking the fine type rather than cooking it for long."
+          "The first choice and smartest alternative for people with diabetes in everyday dishes; it is absorbed very slowly and keeps you full for many hours.",
+          "Cook coarse bulgur with olive oil, onion and lentils (the classic mujaddara) or with tomatoes; combining olive oil and bulgur creates an ideal nutritional balance."
         ],
         "nl": [
-          "Bulgur is gekookte, gedroogde en gebroken tarwe die veel van zijn vezels behoudt, waardoor de glykemische index lager is dan van witte rijst.",
-          "Gebruik grove bulgur voor gekookte gerechten en fijne bulgur voor tabouleh en kibbeh, en laat de fijne soort weken in plaats van lang te koken."
+          "De eerste keuze en het slimste alternatief voor mensen met diabetes in dagelijkse gerechten; hij wordt zeer langzaam opgenomen en houdt je urenlang verzadigd.",
+          "Kook grove bulgur met olijfolie, ui en linzen (het klassieke mujaddara) of met tomaten; de combinatie van olijfolie en bulgur zorgt voor een ideale voedingsbalans."
         ]
+      },
+      "lead": {
+        "ar": "بطل المطبخ الشامي التقليدي وأحد أكثر الحبوب أماناً واعتدالاً، بمؤشر جلايسيمي منخفض جداً (47) وغنى استثنائي بالألياف والحديد والزنك يجعله يتفوق على معظم أنواع الأرز.",
+        "en": "The hero of traditional Levantine cooking and one of the safest, most balanced grains, with a very low glycemic index (47) and an exceptional richness in fibre, iron and zinc that puts it ahead of most types of rice.",
+        "nl": "De held van de traditionele Levantijnse keuken en een van de veiligste en meest evenwichtige granen, met een zeer lage glykemische index (47) en een uitzonderlijke rijkdom aan vezels, ijzer en zink waarmee hij de meeste rijstsoorten overtreft."
       }
     },
     "10": {
       "tips": {
         "ar": [
-          "الكسكس مصنوع من السميد المطحون، ومؤشره متوسط؛ تقديمه مع الخضار والحمص كما في الطبق المغربي يوازن الوجبة.",
-          "حضّره بالبخار أو بنقعه في الماء المغلي دون إفراط في الزبدة، واختر الكسكس الكامل متى توفر."
+          "تجنب تناوله منفرداً؛ قدّمه بالطريقة المغاربية الأصيلة الغنية بالخضار المتنوعة كالكوسا والجزر والقرع مع قطع الدجاج أو الحمص لخفض حمله الجلايسيمي.",
+          "اطه الكسكسي على البخار (في الكسكاس) فوق مرق الخضار والبهارات بدلاً من غليه بالماء، للحفاظ على تماسك حباته وقيمته."
         ],
         "en": [
-          "Couscous is made from ground semolina and has a medium glycemic index; serving it with vegetables and chickpeas, as in the Moroccan dish, balances the meal.",
-          "Steam it or soak it in boiling water without too much butter, and choose wholewheat couscous when available."
+          "Avoid eating it on its own; serve it the authentic Maghrebi way, rich in mixed vegetables such as courgette, carrot and pumpkin, with pieces of chicken or chickpeas to lower its glycemic load.",
+          "Steam couscous (in a couscoussier) over vegetable broth and spices instead of boiling it in water, to keep its grains separate and its value intact."
         ],
         "nl": [
-          "Couscous wordt gemaakt van gemalen griesmeel en heeft een gemiddelde glykemische index; met groenten en kikkererwten, zoals in het Marokkaanse gerecht, wordt de maaltijd evenwichtiger.",
-          "Stoom hem of laat hem wellen in kokend water zonder veel boter, en kies volkoren couscous als die er is."
+          "Eet het niet los; serveer het op de authentieke Maghrebijnse manier, rijk aan verschillende groenten zoals courgette, wortel en pompoen, met stukjes kip of kikkererwten om de glykemische lading te verlagen.",
+          "Stoom couscous (in een couscoussière) boven groentebouillon en specerijen in plaats van hem in water te koken, zodat de korrels los en de voedingswaarde behouden blijven."
         ]
+      },
+      "lead": {
+        "ar": "جوهرة مطبخ المغرب العربي، يُحضر من سميد القمح ويوفر قواماً خفيفاً وسريع الطهي، بمؤشر جلايسيمي معتدل (62) يجعله خياراً لذيذاً للتنويع عند تحضيره بالطريقة التقليدية.",
+        "en": "The jewel of North African cuisine, made from wheat semolina, with a light texture that cooks quickly and a moderate glycemic index (62), making it a tasty choice for variety when prepared the traditional way.",
+        "nl": "Het juweel van de Noord-Afrikaanse keuken, gemaakt van tarwegries, met een lichte structuur die snel gaar is en een gematigde glykemische index (62), waardoor het een smakelijke keuze voor afwisseling is als je het op de traditionele manier bereidt."
       }
     },
     "11": {
       "tips": {
         "ar": [
-          "الذرة من النشويات وليست من الخضار الورقية؛ كوز واحد يكفي كحصة نشويات في الوجبة.",
-          "اسلقها أو اشوها دون إكثار من الزبدة، وتجنب الذرة المعلبة المضاف إليها السكر."
+          "اعتبرها بديلاً للنشويات في وجبتك وليست خضاراً عادياً؛ فعرنوس الذرة يمثل وجبة كربوهيدراتية كاملة قائمة بذاتها.",
+          "اسلق الذرة بالماء دون إضافة سكر أو زبدة مهدرجة، وتناول الحبات كاملة مع قشرتها الغنية بالألياف وتجنب الذرة المعلبة المضاف إليها سكر."
         ],
         "en": [
-          "Corn counts as a starch rather than a leafy vegetable; one cob is enough as the starch portion of a meal.",
-          "Boil or grill it without too much butter, and avoid canned corn with added sugar."
+          "Count it as the starch of your meal, not as an ordinary vegetable; a corn cob is a complete carbohydrate serving in its own right.",
+          "Boil corn in water without adding sugar or margarine, eat the whole kernels with their fibre-rich skins, and avoid canned corn with added sugar."
         ],
         "nl": [
-          "Maïs telt als zetmeelbron en niet als bladgroente; één kolf is genoeg als zetmeelportie van een maaltijd.",
-          "Kook of gril hem zonder veel boter, en vermijd maïs uit blik met toegevoegde suiker."
+          "Tel maïs als de zetmeelbron van je maaltijd, niet als gewone groente; een maïskolf is op zichzelf al een complete koolhydraatportie.",
+          "Kook maïs in water zonder suiker of margarine toe te voegen, eet de hele korrels met hun vezelrijke vliesje en vermijd maïs uit blik met toegevoegde suiker."
         ]
+      },
+      "lead": {
+        "ar": "حبات ذهبية تجمع بين الحلاوة الطبيعية والنشويات المعقدة بمؤشر جلايسيمي معتدل (56)، وتعد مصدراً ممتازاً لمضادات الأكسدة ومفيدة لصحة العيون والألياف.",
+        "en": "Golden kernels that combine natural sweetness with complex carbohydrates, with a moderate glycemic index (56); corn is an excellent source of antioxidants and fibre, and good for eye health.",
+        "nl": "Gouden korrels die natuurlijke zoetheid combineren met complexe koolhydraten, met een gematigde glykemische index (56); maïs is een uitstekende bron van antioxidanten en vezels, en goed voor de ogen."
       }
     },
     "14": {
       "tips": {
         "ar": [
-          "البسمتي طويل الحبة أقل التصاقاً من الأرز قصير الحبة، ويميل إلى مؤشر جلايسيمي أقل منه؛ اختره بدلاً منه عند الإمكان.",
-          "اغسله قبل الطهي لإزالة النشا السطحي وتقليل التكتل، واطبخه بماء معتدل حتى ينضج دون أن يتعجن."
+          "خيار مثالي كبديل يومي للأرز قصير الحبة؛ وتناوله مع الخضار المطهية أو البقوليات يمنحك شبعاً مستداماً دون قفزات حادة في سكر الدم.",
+          "نقع الأرز البسمتي لمدة 30 دقيقة وغسله جيداً قبل الطهي، ثم طهيه على نار هادئة يساعد في الحفاظ على بنيته النشوية المتماسكة وبطء هضمه."
         ],
         "en": [
-          "Long-grain basmati is less sticky than short-grain rice and tends to have a lower glycemic index; choose it instead when you can.",
-          "Rinse it before cooking to remove surface starch and reduce clumping, and cook it in a moderate amount of water until just tender."
+          "An ideal everyday replacement for short-grain rice; eating it with cooked vegetables or legumes gives you lasting fullness without sharp spikes in blood sugar.",
+          "Soaking basmati rice for 30 minutes and rinsing it well before cooking, then cooking it over low heat, helps keep its starch structure firm and its digestion slow."
         ],
         "nl": [
-          "Langkorrelige basmati plakt minder dan rondkorrelige rijst en heeft meestal een lagere glykemische index; kies hem waar mogelijk.",
-          "Spoel hem voor het koken om oppervlaktezetmeel te verwijderen en klonteren te beperken, en kook hem in een gematigde hoeveelheid water tot hij net gaar is."
+          "Een ideale dagelijkse vervanger voor rondkorrelrijst; samen met gestoofde groenten of peulvruchten geeft hij langdurige verzadiging zonder scherpe pieken in de bloedsuiker.",
+          "Basmatirijst 30 minuten weken en goed spoelen voor het koken, en hem daarna op laag vuur garen, helpt de zetmeelstructuur stevig en de vertering langzaam te houden."
         ]
+      },
+      "lead": {
+        "ar": "يتميز الأرز البسمتي بحبته الطويلة ونكهته العطرية، وهو الخيار الأذكى والأكثر أماناً بين أنواع الأرز الأبيض؛ حيث يحتوي طبيعياً على نسبة أعلى من نشا الأميلوز بطيء الهضم، مما يمنحه مؤشراً جلايسيمياً أكثر اعتدالاً (61) وهضماً متوازناً.",
+        "en": "Basmati rice stands out for its long grain and fragrant aroma, and it is the smartest and safest choice among white rice varieties: it naturally contains more amylose, a slowly digested starch, which gives it a more moderate glycemic index (61) and balanced digestion.",
+        "nl": "Basmatirijst onderscheidt zich door de lange korrel en het geurige aroma, en is de slimste en veiligste keuze onder de witte rijstsoorten: van nature bevat hij meer amylose, een langzaam verteerbaar zetmeel, wat hem een gematigdere glykemische index (61) en een evenwichtige vertering geeft."
       }
     },
     "17": {
       "tips": {
         "ar": [
-          "نخالة الشوفان أغنى بألياف بيتا-جلوكان من رقائق الشوفان العادية؛ ملعقتان كبيرتان تضيفان أليافاً واضحة إلى الفطور.",
-          "أضفها إلى اللبن أو العصيدة أو العجين، وزد شرب الماء مع زيادة الألياف تدريجياً."
+          "أضف ملعقتين كبيرتين إلى الزبادي أو الشوربة أو المخبوزات؛ ستزيد من كثافة الوجبة وشبعك سريعاً دون إضافة سعرات حرارية عالية.",
+          "احرص دائماً على شرب كوبين من الماء عند تناول نخالة الشوفان، لتساعد ألياف البيتا جلوكان على التمدد والقيام بدورها في الأمعاء."
         ],
         "en": [
-          "Oat bran is richer in beta-glucan fibre than regular rolled oats; two tablespoons add a clear amount of fibre to breakfast.",
-          "Stir it into yoghurt, porridge or dough, and drink more water as you gradually increase your fibre intake."
+          "Add two tablespoons to yoghurt, soup or baked goods; it quickly makes the meal denser and more filling without adding many calories.",
+          "Always drink two glasses of water when you eat oat bran, so the beta-glucan fibre can swell and do its job in the gut."
         ],
         "nl": [
-          "Haverzemelen bevatten meer bètaglucaan dan gewone havervlokken; twee eetlepels voegen duidelijk vezels toe aan het ontbijt.",
-          "Roer ze door yoghurt, pap of deeg en drink meer water terwijl je de vezelinname geleidelijk verhoogt."
+          "Voeg twee eetlepels toe aan yoghurt, soep of baksels; het maakt de maaltijd snel voller en verzadigender zonder veel calorieën toe te voegen.",
+          "Drink altijd twee glazen water als je haverzemelen eet, zodat de bètaglucaanvezels kunnen opzwellen en hun werk in de darm kunnen doen."
         ]
+      },
+      "lead": {
+        "ar": "القشرة الخارجية فائقة التركيز لحبة الشوفان، وتعتبر السلاح الأقوى للألياف الذائبة، مما يجعلها أداة استثنائية لخفض الكوليسترول الضار ولجم الشهية بمؤشر جلايسيمي معتدل (56).",
+        "en": "The highly concentrated outer layer of the oat grain and the strongest source of soluble fibre, making it an exceptional ally for healthy LDL cholesterol levels and for curbing appetite, with a moderate glycemic index (56).",
+        "nl": "De sterk geconcentreerde buitenlaag van de haverkorrel en de krachtigste bron van oplosbare vezels, waardoor het een uitzonderlijke bondgenoot is voor een gezond LDL-cholesterolgehalte en het temmen van de eetlust, met een gematigde glykemische index (56)."
       }
     },
     "18": {
       "tips": {
         "ar": [
-          "العدس من أقل الأطعمة النشوية مؤشراً، وغني بالبروتين والألياف؛ شوربة العدس والمجدرة طريقتان تقليديتان لإدخاله.",
-          "العدس لا يحتاج إلى نقع طويل؛ اغسله واطبخه حتى ينضج، واستخدم البصل المحمّر باعتدال في المجدرة."
+          "طعام يومي مثالي لتحسين حساسية الإنسولين وخفض الكوليسترول؛ تناوله كشوربة دافئة مع بداية الوجبة أو مع السلطات للشبع طوال اليوم.",
+          "اعصر نصف ليمونة طازجة فوق طبق العدس؛ فيتامين C يضاعف امتصاص الحديد النباتي ثلاث مرات ويضفي نكهة رائعة تدعم الهضم."
         ],
         "en": [
-          "Lentils are among the starchy foods with the lowest glycemic index and are rich in protein and fibre; lentil soup and mujaddara are traditional ways to eat them.",
-          "Lentils need no long soaking; rinse and cook them until tender, and use fried onions sparingly in mujaddara."
+          "An ideal everyday food that supports insulin sensitivity and healthy cholesterol levels; eat it as a warm soup at the start of a meal or with salads to stay full all day.",
+          "Squeeze half a fresh lemon over your lentils; vitamin C can increase the absorption of plant iron up to threefold and adds a lovely flavour that supports digestion."
         ],
         "nl": [
-          "Linzen behoren tot de zetmeelrijke producten met de laagste glykemische index en zijn rijk aan eiwit en vezels; linzensoep en mujaddara zijn traditionele bereidingen.",
-          "Linzen hoeven niet lang te weken; spoel ze af en kook ze gaar, en gebruik gebakken ui met mate in mujaddara."
+          "Een ideaal dagelijks voedingsmiddel dat de insulinegevoeligheid en een gezond cholesterolgehalte ondersteunt; eet het als warme soep aan het begin van de maaltijd of bij salades om de hele dag verzadigd te blijven.",
+          "Knijp een halve verse citroen uit boven je linzen; vitamine C kan de opname van plantaardig ijzer tot drie keer verhogen en geeft een heerlijke smaak die de spijsvertering ondersteunt."
         ]
+      },
+      "lead": {
+        "ar": "درة التاج وأفضل غذاء على الإطلاق لمرضى السكري وصحة القلب؛ يمتلك واحداً من أقل المؤشرات الجلايسيمية في العالم (25)، ويزخر بجرعة هائلة من البروتين النباتي والحديد والألياف الذائبة.",
+        "en": "The crown jewel and one of the very best foods for people with diabetes and for heart health; lentils have one of the lowest glycemic indexes in the world (25) and are packed with plant protein, iron and soluble fibre.",
+        "nl": "Het kroonjuweel en een van de allerbeste voedingsmiddelen voor mensen met diabetes en voor de gezondheid van het hart; linzen hebben een van de laagste glykemische indexen ter wereld (25) en zitten boordevol plantaardig eiwit, ijzer en oplosbare vezels."
       }
     },
     "19": {
       "tips": {
         "ar": [
-          "الحمص غني بالبروتين النباتي والألياف؛ الحمص بالطحينة مع الخضار وجبة خفيفة مُشبعة.",
-          "انقعه ليلة كاملة ثم اطبخه حتى يلين، أو اغسل الحمص المعلب جيداً لتقليل الملح."
+          "تناول الحمص كحبوب كاملة في السلطات أو كوجبة خفيفة مقرمشة محمصة بالفرن مع البهارات؛ يمنحك امتلاءً معوياً يقطع نوبات الجوع المفاجئة.",
+          "انقع الحمص الجاف لمدة 12 إلى 24 ساعة مع تغيير الماء قبل السلق؛ هذا يساعد في تفكيك السكريات المسببة للانتفاخ ويسهل امتصاص بروتيناته."
         ],
         "en": [
-          "Chickpeas are rich in plant protein and fibre; hummus with raw vegetables makes a filling snack.",
-          "Soak them overnight and cook until soft, or rinse canned chickpeas well to reduce the salt."
+          "Eat chickpeas whole in salads or as a crunchy oven-roasted snack with spices; they give a feeling of fullness that cuts off sudden hunger pangs.",
+          "Soak dried chickpeas for 12 to 24 hours, changing the water, before boiling; this helps break down the sugars that cause bloating and makes their protein easier to absorb."
         ],
         "nl": [
-          "Kikkererwten zijn rijk aan plantaardig eiwit en vezels; hummus met rauwe groenten is een verzadigende snack.",
-          "Week ze een nacht en kook ze zacht, of spoel kikkererwten uit blik goed af om zout te verminderen."
+          "Eet kikkererwten heel in salades of als knapperige, in de oven geroosterde snack met specerijen; ze geven een vol gevoel dat plotselinge hongeraanvallen afkapt.",
+          "Week gedroogde kikkererwten 12 tot 24 uur voor het koken en ververs het water; dit helpt de suikers af te breken die een opgeblazen gevoel geven en maakt hun eiwit beter opneembaar."
         ]
+      },
+      "lead": {
+        "ar": "حبة ذهبية عريقة في تراثنا الغذائي، تجمع بين النشويات بطيئة التحلل والبروتين النباتي الغني، بمؤشر جلايسيمي منخفض (37) يجعلها الصديق الوفي لمرضى السكري والقلب.",
+        "en": "A time-honoured golden legume in our food heritage that combines slowly broken-down starch with rich plant protein, with a low glycemic index (37) that makes it a loyal friend for people with diabetes and for heart health.",
+        "nl": "Een eeuwenoude gouden peulvrucht uit ons voedselerfgoed die langzaam afbreekbaar zetmeel combineert met rijk plantaardig eiwit, met een lage glykemische index (37) die haar een trouwe vriend maakt voor mensen met diabetes en voor het hart."
       }
     },
     "22": {
       "tips": {
         "ar": [
-          "الفاصولياء الحمراء غنية بالألياف والبروتين، وتصلح لليخنات والسلطات بدلاً من جزء من الأرز.",
-          "انقعها ثم اغلها بقوة 10 دقائق على الأقل قبل الطهي البطيء، لأن الفاصولياء الحمراء غير المطبوخة جيداً تحتوي على مادة مهيّجة للمعدة."
+          "ممتازة في السلطات والشوربات واليخنات؛ تساهم في ضبط قراءات السكر بعد الوجبات بفضل شبكة أليافها اللزجة الحامية.",
+          "قاعدة أمان هامة: إذا استخدمت الفاصولياء الجافة، يجب نقعها جيداً ثم غليها في الماء بقوة لمدة 10 دقائق على الأقل لتدمير بروتين الليكتين السام تماماً قبل متابعة الطهي."
         ],
         "en": [
-          "Red kidney beans are rich in fibre and protein and work well in stews and salads in place of some of the rice.",
-          "Soak them, then boil them hard for at least 10 minutes before slow cooking, because undercooked kidney beans contain a substance that irritates the stomach."
+          "Excellent in salads, soups and stews; their protective network of viscous fibre helps keep post-meal blood sugar readings in check.",
+          "An important safety rule: if you use dried beans, soak them well and then boil them vigorously in water for at least 10 minutes to fully destroy the toxic lectin protein before you continue cooking."
         ],
         "nl": [
-          "Rode kidneybonen zijn rijk aan vezels en eiwit en passen goed in stoofgerechten en salades in plaats van een deel van de rijst.",
-          "Week ze en kook ze daarna minstens 10 minuten flink door voordat je ze langzaam gaart, want onvoldoende gekookte kidneybonen bevatten een stof die de maag irriteert."
+          "Uitstekend in salades, soepen en stoofschotels; hun beschermende netwerk van stroperige vezels helpt de bloedsuikerwaarden na de maaltijd onder controle te houden.",
+          "Een belangrijke veiligheidsregel: gebruik je gedroogde bonen, week ze dan goed en kook ze daarna minstens 10 minuten flink door in water om het giftige lectine-eiwit volledig te vernietigen voordat je verder kookt."
         ]
+      },
+      "lead": {
+        "ar": "غنية بمضادات الأكسدة القوية والألياف الذائبة، وتتميز بمؤشر جلايسيمي منخفض (37) يدعم صحة البكتيريا النافعة في الأمعاء ويمنح خط سكر دم مستقيماً ومستقراً.",
+        "en": "Rich in powerful antioxidants and soluble fibre, with a low glycemic index (37) that supports healthy gut bacteria and keeps the blood sugar line flat and stable.",
+        "nl": "Rijk aan krachtige antioxidanten en oplosbare vezels, met een lage glykemische index (37) die gezonde darmbacteriën ondersteunt en de bloedsuikerlijn vlak en stabiel houdt."
       }
     },
     "26": {
       "tips": {
         "ar": [
-          "البطاطا المسلوقة مُشبعة جداً ومنخفضة الدهون، لكن مؤشرها مرتفع، فاجمعها مع بروتين وخضار.",
-          "اسلقها بقشرها ثم برّدها قبل تقديمها في السلطة، فالتبريد يزيد النشا المقاوم، وتجنب القلي."
+          "تناولها مع قشرتها دائماً لتعزيز الألياف، واجمعها مع مصدر بروتين نظيف أو سلطة خضراء لفرملة تدفق الجلوكوز إلى الدم.",
+          "سر التبريد: اسلق البطاطا كاملة بقشرتها، واتركها لتبرد تماماً قبل تناولها (في سلطة باردة مع زيت زيتون وأعشاب)؛ التبريد يولد نشأ مقاوماً يخفض مؤشرها الجلايسيمي بشكل ملموس!"
         ],
         "en": [
-          "Boiled potatoes are very filling and low in fat, but their glycemic index is high, so combine them with protein and vegetables.",
-          "Boil them in their skins and let them cool before using them in a salad, because cooling increases resistant starch; avoid frying."
+          "Always eat them with the skin to boost fibre, and combine them with lean protein or a green salad to put the brakes on the flow of glucose into the blood.",
+          "The cooling secret: boil potatoes whole in their skins and let them cool completely before eating (in a cold salad with olive oil and herbs); cooling creates resistant starch, which noticeably lowers their glycemic index!"
         ],
         "nl": [
-          "Gekookte aardappelen verzadigen goed en bevatten weinig vet, maar hun glykemische index is hoog; combineer ze met eiwit en groenten.",
-          "Kook ze in de schil en laat ze afkoelen voor een salade, want afkoelen verhoogt het resistente zetmeel; vermijd frituren."
+          "Eet ze altijd met schil voor meer vezels, en combineer ze met mager eiwit of een groene salade om de instroom van glucose in het bloed af te remmen.",
+          "Het afkoelgeheim: kook aardappelen heel in de schil en laat ze volledig afkoelen voordat je ze eet (in een koude salade met olijfolie en kruiden); afkoelen vormt resistent zetmeel, dat hun glykemische index merkbaar verlaagt!"
         ]
+      },
+      "lead": {
+        "ar": "طعام مغذٍ ومظلوم في ثقافة الحميات؛ فهي من أكثر الأطعمة تحقيقاً للشبع في العالم بفضل محتواها العالي من الماء والبوتاسيوم، وسر تأثيرها الجلايسيمي (69) يعتمد تماماً على طريقة طهيك لها.",
+        "en": "A nourishing food that gets an unfair reputation in diet culture: potatoes are among the most filling foods in the world thanks to their high water and potassium content, and their glycemic effect (69) depends entirely on how you cook them.",
+        "nl": "Een voedzaam product dat in de dieetcultuur onterecht slecht bekendstaat: aardappelen behoren tot de meest verzadigende voedingsmiddelen ter wereld dankzij hun hoge gehalte aan water en kalium, en hun glykemisch effect (69) hangt volledig af van hoe je ze kookt."
       }
     },
     "27": {
       "tips": {
         "ar": [
-          "البطاطا الحلوة غنية بالبيتا كاروتين والألياف، لكنها تبقى من النشويات وتحتاج إلى حصة معتدلة.",
-          "السلق أو الطهي بالبخار يعطي مؤشراً أقل من الشوي الطويل في الفرن، فاختر السلق كطريقة أساسية."
+          "وجبة ممتازة كبديل لنشويات الغداء أو كوجبة طاقة قبل التمارين الرياضية، تمنح شبعاً حقيقياً يحمي من نوبات اشتهاء الحلويات.",
+          "يفضل طهيها بالسلق أو الشواء الخفيف بالفرن مع قشرتها، وتجنب الشواء المفرط حتى درجات الكرملة الشديدة التي قد ترفع سرعة تحلل سكرياتها."
         ],
         "en": [
-          "Sweet potatoes are rich in beta-carotene and fibre, but they are still a starch and need a moderate portion.",
-          "Boiling or steaming gives a lower glycemic index than long roasting in the oven, so make boiling your main method."
+          "An excellent replacement for the starch at lunch or as an energy meal before exercise, giving real fullness that helps keep sweet cravings at bay.",
+          "Preferably boil it or bake it lightly in the oven with its skin on, and avoid over-roasting it to deep caramelisation, which can speed up the breakdown of its sugars."
         ],
         "nl": [
-          "Zoete aardappelen zijn rijk aan bètacaroteen en vezels, maar blijven een zetmeelbron en vragen om een gematigde portie.",
-          "Koken of stomen geeft een lagere glykemische index dan lang roosteren in de oven; kies dus vooral voor koken."
+          "Een uitstekende vervanger voor het zetmeel bij de lunch of als energiemaaltijd voor het sporten, met echte verzadiging die trek in zoetigheid helpt voorkomen.",
+          "Kook haar bij voorkeur of bak haar licht in de oven met schil, en rooster haar niet te lang tot sterke karamelisatie, omdat dat de afbraak van haar suikers kan versnellen."
         ]
+      },
+      "lead": {
+        "ar": "منجم طبيعي لفيتامين A والبيتا كاروتين، ورغم حلاوتها الطبيعية إلا أن مؤشرها الجلايسيمي (67) وأليافها الكثيفة يجعلها خياراً ممتازاً للطاقة المستدامة وصحة المناعة.",
+        "en": "A natural treasure trove of vitamin A and beta-carotene; despite its natural sweetness, its glycemic index (67) and dense fibre make it an excellent choice for sustained energy and a healthy immune system.",
+        "nl": "Een natuurlijke schatkamer van vitamine A en bètacaroteen; ondanks haar natuurlijke zoetheid maken haar glykemische index (67) en dichte vezels haar een uitstekende keuze voor langdurige energie en een gezond immuunsysteem."
       }
     },
     "29": {
       "tips": {
         "ar": [
-          "الهرس يفكك النشا فيصبح أسرع هضماً من البطاطا الكاملة، لذلك يُفضّل التحكم بالحصة.",
-          "استخدم الحليب بدلاً من كثير من الزبدة، واترك بعض القطع أو القشر لزيادة الألياف."
+          "إذا كنت تعاني من مقاومة الإنسولين، تناول منها حصة صغيرة فقط، أو جرب خلط نصف كميتها بالقرنبيط المهروس لخداع حاسة التذوق وخفض النشويات للنصف!",
+          "اهرسها بزيت الزيتون البكر الممتاز وقليل من مرق الثوم والأعشاب، بدلاً من الزبدة المهدرجة والحليب؛ فالدهون الطبيعية تساعد على لجم الهضم السريع."
         ],
         "en": [
-          "Mashing breaks down the starch so it is digested faster than whole potatoes, so it is best to control the portion.",
-          "Use milk instead of a lot of butter, and leave some chunks or skin in for extra fibre."
+          "If you have insulin resistance, eat only a small portion, or try replacing half of it with mashed cauliflower to trick your taste buds and halve the starch!",
+          "Mash it with extra virgin olive oil and a little garlic broth and herbs instead of margarine and milk; natural fats help rein in rapid digestion."
         ],
         "nl": [
-          "Pureren breekt het zetmeel af, waardoor het sneller verteerd wordt dan hele aardappelen; let daarom op de portie.",
-          "Gebruik melk in plaats van veel boter, en laat wat stukjes of schil erin voor extra vezels."
+          "Heb je insulineresistentie, eet dan maar een kleine portie, of vervang de helft door gepureerde bloemkool om je smaakpapillen te foppen en het zetmeel te halveren!",
+          "Pureer met extra vierge olijfolie en een beetje knoflookbouillon en kruiden in plaats van margarine en melk; natuurlijke vetten helpen de snelle vertering af te remmen."
         ]
+      },
+      "lead": {
+        "ar": "الطبق المفضل للكبار والصغار، لكن هرس البطاطا يكسر بنيتها الخلوية بالكامل مما يجعل إنزيمات الهضم تحولها إلى سكر سريع بمؤشر جلايسيمي مرتفع (79) يتطلب حكمة في التناول.",
+        "en": "A favourite of adults and children alike, but mashing breaks down the potato's cell structure completely, so digestive enzymes turn it into fast sugar, with a high glycemic index (79) that calls for eating it wisely.",
+        "nl": "Een favoriet van groot en klein, maar pureren breekt de celstructuur van de aardappel volledig af, waardoor spijsverteringsenzymen hem snel in suiker omzetten, met een hoge glykemische index (79) die vraagt om er verstandig mee om te gaan."
       }
     },
     "30": {
@@ -436,97 +526,127 @@
     "48": {
       "tips": {
         "ar": [
-          "تناول التفاحة كاملة بقشرها، فالقشر يحتوي على جزء كبير من أليافها ومضادات الأكسدة.",
-          "اجمع شرائح التفاح مع ملعقة زبدة فول سوداني أو حفنة لوز كوجبة خفيفة متوازنة، وتجنب عصير التفاح."
+          "كُل التفاحة كاملة مع قشرتها دائماً، وتجنب عصير التفاح نهائياً؛ فالعصير يرفع السكر بسرعة الصاروخ لغياب ألياف البكتين الحامية.",
+          "تناول شرائح التفاح مع رشة قرفة مطحونة أو قليل من زبدة الفول السوداني الطبيعية لتعزيز الشبع وحساسية الإنسولين."
         ],
         "en": [
-          "Eat the whole apple with its skin, because the skin holds much of its fibre and antioxidants.",
-          "Pair apple slices with a spoonful of peanut butter or a handful of almonds for a balanced snack, and skip apple juice."
+          "Always eat the whole apple with its skin and avoid apple juice altogether; juice raises blood sugar at rocket speed because it lacks the protective pectin fibre.",
+          "Eat apple slices with a pinch of ground cinnamon or a little natural peanut butter to boost fullness and support insulin sensitivity."
         ],
         "nl": [
-          "Eet de hele appel met schil, want in de schil zit een groot deel van de vezels en antioxidanten.",
-          "Combineer appelpartjes met een lepel pindakaas of een handje amandelen voor een evenwichtige snack, en sla appelsap over."
+          "Eet de appel altijd heel met schil en laat appelsap helemaal staan; sap laat de bloedsuiker razendsnel stijgen omdat de beschermende pectinevezels ontbreken.",
+          "Eet appelpartjes met een snufje gemalen kaneel of een beetje natuurlijke pindakaas voor meer verzadiging en ondersteuning van de insulinegevoeligheid."
         ]
+      },
+      "lead": {
+        "ar": "الفاكهة اليومية الأكثر أماناً وشهرة، غنية بألياف البكتين الذائبة التي تنظم حركة الأمعاء، وتتميز بمؤشر جلايسيمي منخفض جداً (38) يجعلها خيار الفاكهة المثالي لمريض السكر والدايت.",
+        "en": "The safest and best-known everyday fruit, rich in soluble pectin fibre that supports regular bowel movements, with a very low glycemic index (38) that makes it the ideal fruit choice for people with diabetes and anyone on a diet.",
+        "nl": "De veiligste en bekendste dagelijkse vrucht, rijk aan oplosbare pectinevezels die een regelmatige stoelgang ondersteunen, met een zeer lage glykemische index (38) die hem de ideale fruitkeuze maakt voor mensen met diabetes en iedereen die op dieet is."
       }
     },
     "49": {
       "tips": {
         "ar": [
-          "كلما نضج الموز ازداد سكره؛ الموز الأقل نضجاً (أطرافه مخضرّة) أبطأ تأثيراً على سكر الدم.",
-          "موزة متوسطة حصة مناسبة قبل الرياضة أو مع اللبن، وتجنب إضافة العسل أو الشوكولاتة إليها."
+          "لمريض السكري، اختر الموز الأصفر مع بقاء أطراف خضراء وتجنب الموز المرقط بالبقع البنية الكثيفة؛ فكلما نضج الموز زادت سرعة تدفق سكره.",
+          "ادمج نصف موزة مع حفنة لوز نيء أو زبادي يوناني؛ فالبروتين والدهون يحميانك من قفزة السكر السريعة."
         ],
         "en": [
-          "The riper a banana, the more sugar it contains; less ripe bananas (with green tips) raise blood sugar more slowly.",
-          "One medium banana is a good portion before exercise or with yoghurt; avoid adding honey or chocolate."
+          "If you have diabetes, choose yellow bananas that still have green tips and avoid heavily brown-spotted ones; the riper the banana, the faster its sugar enters the blood.",
+          "Pair half a banana with a handful of raw almonds or Greek yoghurt; protein and fat help protect you from a rapid sugar spike."
         ],
         "nl": [
-          "Hoe rijper de banaan, hoe meer suiker; minder rijpe bananen (met groene puntjes) laten de bloedsuiker langzamer stijgen.",
-          "Eén middelgrote banaan is een goede portie voor het sporten of bij yoghurt; voeg geen honing of chocolade toe."
+          "Heb je diabetes, kies dan gele bananen met nog groene puntjes en vermijd bananen met veel bruine vlekken; hoe rijper de banaan, hoe sneller de suiker in het bloed komt.",
+          "Combineer een halve banaan met een handje ongebrande amandelen of Griekse yoghurt; eiwit en vet helpen je te beschermen tegen een snelle suikerpiek."
         ]
+      },
+      "lead": {
+        "ar": "وجبة الطاقة الطبيعية المحمولة الغنية بالبوتاسيوم وفيتامين B6. يتغير مؤشرها الجلايسيمي مع النضج؛ فالموز الأخضر مليء بالنشا المقاوم، بينما الموز الأصفر تزداد سكرياته بمؤشر معتدل (52).",
+        "en": "A natural, portable energy snack rich in potassium and vitamin B6. Its glycemic index changes as it ripens: green bananas are full of resistant starch, while yellow bananas contain more sugars, with a moderate index (52).",
+        "nl": "Een natuurlijke, draagbare energiesnack, rijk aan kalium en vitamine B6. De glykemische index verandert met de rijpheid: groene bananen zitten vol resistent zetmeel, terwijl gele bananen meer suikers bevatten, met een gematigde index (52)."
       }
     },
     "50": {
       "tips": {
         "ar": [
-          "البرتقال الكامل يوفر الألياف وفيتامين C، وهو أفضل من العصير الذي يفقد معظم أليافه.",
-          "قشّره وتناول الفصوص مع الغشاء الأبيض الرقيق، فهو غني بالألياف."
+          "تناول البرتقالة كاملة بفصوصها وأليافها البيضاء الرقيقة، وتجنب عصرها؛ فكوب العصير الواحد يركز سكر 3 برتقالات دون ألياف!",
+          "قطعه وتناوله طازجاً، أو أضف فصوصه المنعشة إلى طبق سلطة خضراء مع الجوز وأوراق الجرجير."
         ],
         "en": [
-          "A whole orange provides fibre and vitamin C and is better than juice, which loses most of its fibre.",
-          "Peel it and eat the segments with the thin white pith, which is rich in fibre."
+          "Eat the whole orange with its segments and thin white pith, and avoid juicing it; a single glass of juice concentrates the sugar of 3 oranges without the fibre!",
+          "Cut it up and eat it fresh, or add its refreshing segments to a green salad with walnuts and rocket."
         ],
         "nl": [
-          "Een hele sinaasappel levert vezels en vitamine C en is beter dan sap, dat de meeste vezels kwijtraakt.",
-          "Schil hem en eet de partjes met het dunne witte vlies, dat rijk is aan vezels."
+          "Eet de sinaasappel heel, met de partjes en het dunne witte vlies, en pers hem niet uit; één glas sap bevat de suiker van 3 sinaasappels zonder de vezels!",
+          "Snijd hem in stukjes en eet hem vers, of voeg de frisse partjes toe aan een groene salade met walnoten en rucola."
         ]
+      },
+      "lead": {
+        "ar": "قنبلة فيتامين C الطبيعية، غني بالفلافونويدات الحمضية الواقية للشرايين والألياف المهدئة لامتصاص السكر، بمؤشر جلايسيمي منخفض ومريح (42).",
+        "en": "A natural vitamin C bomb, rich in citrus flavonoids that support healthy arteries and in fibre that slows sugar absorption, with a comfortably low glycemic index (42).",
+        "nl": "Een natuurlijke vitamine C-bom, rijk aan citrusflavonoïden die gezonde slagaders ondersteunen en aan vezels die de suikeropname vertragen, met een prettig lage glykemische index (42)."
       }
     },
     "51": {
       "tips": {
         "ar": [
-          "البطيخ غني بالماء ومنخفض السعرات، وكمية الكربوهيدرات في حصته صغيرة نسبياً، لكن الحصص الكبيرة جداً ترفع الحمل الجلايسيمي.",
-          "قدّمه مبرداً كتحلية بعد الوجبة، أو مع جبنة بيضاء قليلة الملح كما في الطبق الشامي التقليدي."
+          "حمل البطيخ الجلايسيمي آمن جداً بحصة معتدلة (شريحة واحدة 250غ)؛ فقط راقب الكمية وتجنب تناول نصف بطيخة دفعة واحدة.",
+          "تناوله بارداً مع قطعة صغيرة من جبن الحلوم أو القريش؛ الجمع بين حلاوة البطيخ وبروتين الجبن يمنحك متعة صيفية وثباتاً تاماً للسكر."
         ],
         "en": [
-          "Watermelon is rich in water and low in calories, and a portion holds relatively little carbohydrate, but very large portions raise the glycemic load.",
-          "Serve it chilled as a dessert after a meal, or with a low-salt white cheese as in the traditional Levantine pairing."
+          "Watermelon's glycemic load is very safe in a moderate portion (one 250 g slice); just watch the amount and avoid eating half a watermelon in one go.",
+          "Eat it chilled with a small piece of halloumi or cottage cheese; combining the sweetness of watermelon with the protein of the cheese gives you a summer treat and fully stable blood sugar."
         ],
         "nl": [
-          "Watermeloen is rijk aan water en caloriearm, en een portie bevat relatief weinig koolhydraten, maar heel grote porties verhogen de glykemische lading.",
-          "Serveer hem gekoeld als toetje na de maaltijd, of met een zoutarme witte kaas zoals in de traditionele Levantijnse combinatie."
+          "De glykemische lading van watermeloen is zeer veilig bij een gematigde portie (één plak van 250 g); let alleen op de hoeveelheid en eet geen halve watermeloen in één keer.",
+          "Eet hem gekoeld met een klein stukje halloumi of hüttenkäse; de combinatie van de zoetheid van watermeloen met het eiwit van de kaas geeft je een zomerse traktatie en een volledig stabiele bloedsuiker."
         ]
+      },
+      "lead": {
+        "ar": "الفاكهة الصيفية الأكثر إنعاشاً وترطيباً، يتكون من 92% ماء ومضادات أكسدة قوية كالليكوبين. ورغم أن مؤشره معتدل (50)، إلا أن سرّه يكمن في أن حمله الجلايسيمي منخفض إلى متوسط (نحو 9.5 لشريحة 250 غ).",
+        "en": "The most refreshing and hydrating summer fruit, made up of 92% water and powerful antioxidants such as lycopene. Although its index is moderate (50), its secret is that its glycemic load is low to medium (about 9.5 for a 250 g slice).",
+        "nl": "De meest verfrissende en hydraterende zomervrucht, bestaande uit 92% water en krachtige antioxidanten zoals lycopeen. Hoewel de index gematigd is (50), zit het geheim in de lage tot gemiddelde glykemische lading (ongeveer 9,5 voor een plak van 250 g)."
       }
     },
     "53": {
       "tips": {
         "ar": [
-          "العنب صغير الحبة ويسهل الإفراط فيه؛ ضع حصة محددة (نحو كوب صغير) في صحن بدلاً من الأكل من العنقود.",
-          "اغسله جيداً قبل الأكل، ويمكن تجميده كوجبة خفيفة منعشة بدلاً من الحلويات."
+          "الحصة المعتدلة هي عنقود صغير بحجم قبضة اليد (حوالي 15 حبة). تناوله ببطء وتلذذ بكل حبة بدلاً من التهام العنقود أمام الشاشات.",
+          "جرب تجميد حبات العنب في الفريزر؛ تصبح مثل حلوى مثلجة صحية تأخذ وقتاً أطول في الفم وتشعرك بالاكتفاء بعد حبات قليلة."
         ],
         "en": [
-          "Grapes are small and easy to overeat; put a set portion (about a small cup) in a bowl instead of eating from the bunch.",
-          "Wash them well before eating; frozen grapes make a refreshing snack instead of sweets."
+          "A moderate portion is a small bunch the size of your fist (about 15 grapes). Eat them slowly and savour each one instead of devouring the bunch in front of a screen.",
+          "Try freezing grapes; they become like a healthy frozen treat that lasts longer in your mouth and leaves you satisfied after just a few."
         ],
         "nl": [
-          "Druiven zijn klein en je eet er snel te veel van; doe een vaste portie (ongeveer een klein kopje) in een schaaltje in plaats van van de tros te eten.",
-          "Was ze goed voor het eten; bevroren druiven zijn een verfrissende snack in plaats van snoep."
+          "Een gematigde portie is een kleine tros ter grootte van je vuist (ongeveer 15 druiven). Eet ze langzaam en geniet van elke druif in plaats van de tros voor een scherm naar binnen te werken.",
+          "Probeer druiven in te vriezen; ze worden een soort gezond ijssnoepje dat langer in je mond blijft en je na een paar druiven al voldaan laat voelen."
         ]
+      },
+      "lead": {
+        "ar": "غني بمركب الريسفيراترول المفيد لصحة القلب والأوعية الدموية، بمؤشر جلايسيمي معتدل (50)، لكن سهولة تناوله بحبات صغيرة وسريعة تتطلب انتباهاً واعياً لحجم الحصة.",
+        "en": "Rich in resveratrol, which benefits heart and blood-vessel health, with a moderate glycemic index (50); but because the small grapes are so quick and easy to eat, they call for mindful attention to portion size.",
+        "nl": "Rijk aan resveratrol, dat goed is voor hart en bloedvaten, met een gematigde glykemische index (50); maar omdat de kleine druiven zo snel en makkelijk te eten zijn, vragen ze bewuste aandacht voor de portiegrootte."
       }
     },
     "54": {
       "tips": {
         "ar": [
-          "الأناناس الطازج يحتوي على فيتامين C وإنزيم البروميلين، لكن تأثيره على السكر يختلف كثيراً حسب النضج والصنف.",
-          "فضّل الأناناس الطازج على المعلّب بالشراب السكري، وإن اخترت المعلّب فاختر المحفوظ بعصيره."
+          "ممتازة بعد وجبة غنية بالبروتين للمساعدة على الهضم، ولكن احرص على تناول شريحة واحدة طازجة، وتجنب تماماً الأناناس المعلب الغارق في القطر الصناعي.",
+          "اشوِ شريحة الأناناس على مقلاة جافة لدقيقة واحدة مع رشة قرفة؛ حرارة الشواء تبرز حلاوتها الطبيعية وتكفيك عن أي سكر إضافي."
         ],
         "en": [
-          "Fresh pineapple contains vitamin C and the enzyme bromelain, but its effect on blood sugar varies a lot with ripeness and variety.",
-          "Prefer fresh pineapple to pineapple canned in syrup; if you buy canned, choose pineapple packed in its own juice."
+          "Excellent after a protein-rich meal to help digestion, but stick to one fresh slice and completely avoid canned pineapple soaked in syrup.",
+          "Grill a slice of pineapple in a dry pan for one minute with a pinch of cinnamon; the heat brings out its natural sweetness so you need no added sugar."
         ],
         "nl": [
-          "Verse ananas bevat vitamine C en het enzym bromelaïne, maar het effect op de bloedsuiker verschilt sterk per rijpheid en ras.",
-          "Kies verse ananas boven ananas op siroop; neem je toch blik, kies dan ananas op eigen sap."
+          "Uitstekend na een eiwitrijke maaltijd om de spijsvertering te helpen, maar houd het bij één verse plak en vermijd ananas uit blik op siroop volledig.",
+          "Grill een plak ananas één minuut in een droge pan met een snufje kaneel; de hitte haalt de natuurlijke zoetheid naar boven, zodat je geen extra suiker nodig hebt."
         ]
+      },
+      "lead": {
+        "ar": "فاكهة استوائية متميزة بإنزيم البروميلين الهاضم والمضاد للالتهابات، وتأتي بمؤشر جلايسيمي معتدل إلى مرتفع قليلاً (61) يوجب الاعتدال في تناولها والاستمتاع بفوائدها بحكمة.",
+        "en": "A distinctive tropical fruit containing bromelain, a digestive enzyme with anti-inflammatory properties, and a moderate to slightly high glycemic index (61) that calls for moderation and enjoying its benefits wisely.",
+        "nl": "Een bijzondere tropische vrucht met bromelaïne, een spijsverteringsenzym met ontstekingsremmende eigenschappen, en een gematigde tot licht hoge glykemische index (61) die vraagt om mate te houden en verstandig van de voordelen te genieten."
       }
     },
     "55": {
@@ -884,17 +1004,22 @@
     "196": {
       "tips": {
         "ar": [
-          "رغيف صغير (نحو 60 غ) حصة معتدلة؛ املأه بالخضار والدجاج المشوي أو الحمص بدلاً من الصلصات الدهنية.",
-          "اختر الخبز العربي الأسمر المصنوع من الطحين الكامل، وسخّنه سريعاً بدلاً من قليه أو تحميصه بالزيت."
+          "الرغيف الواحد يعادل تقريباً شريحتين إلى ثلاث من التوست؛ املأ الرغيف بنسبة 70% من الخضار والبروتين النظيف (كالبيض، الفول، أو الدجاج) لتقليل حصة الخبز.",
+          "اختر خبز البيتا المحضر من طحين الحبة الكاملة أو النخالة، وحمصه في الفرن مع قليل من زيت الزيتون والزعتر بدلاً من قليه."
         ],
         "en": [
-          "One small pita (about 60 g) is a moderate portion; fill it with vegetables and grilled chicken or hummus rather than fatty sauces.",
-          "Choose wholemeal pita and warm it briefly instead of frying it or toasting it in oil."
+          "One loaf is roughly equal to two or three slices of toast bread; fill it 70% with vegetables and lean protein (such as eggs, fava beans or chicken) to reduce the share of bread.",
+          "Choose pita made from wholegrain or bran flour, and toast it in the oven with a little olive oil and za'atar instead of frying it."
         ],
         "nl": [
-          "Eén klein pitabroodje (ongeveer 60 g) is een gematigde portie; vul het met groenten en gegrilde kip of hummus in plaats van vette sauzen.",
-          "Kies volkoren pitabrood en warm het kort op in plaats van het te bakken of in olie te roosteren."
+          "Eén pitabrood staat ongeveer gelijk aan twee tot drie sneetjes toastbrood; vul het voor 70% met groenten en mager eiwit (zoals ei, tuinbonen of kip) om het aandeel brood te verkleinen.",
+          "Kies pitabrood van volkoren- of zemelenmeel en rooster het in de oven met een beetje olijfolie en za'atar in plaats van het te frituren."
         ]
+      },
+      "lead": {
+        "ar": "سيد المائدة الشرقية وسندويشات الفطور، لكن رقته وسهولة تناوله تجعلنا نتناول منه كميات كبيرة دون انتباه. كثافته النشوية العالية تمنحه مؤشراً جلايسيمياً مرتفعاً (70) يتطلب وعياً بحجم الحصة وطريقة الحشو.",
+        "en": "The king of the Middle Eastern table and of breakfast sandwiches, but because it is so thin and easy to eat, we often eat large amounts without noticing. Its high starch density gives it a high glycemic index (70), which calls for awareness of portion size and of how you fill it.",
+        "nl": "De koning van de oosterse tafel en van broodjes bij het ontbijt, maar omdat het zo dun en makkelijk te eten is, eten we er vaak veel van zonder het te merken. De hoge zetmeeldichtheid geeft het een hoge glykemische index (70), wat bewust omgaan met de portiegrootte en de vulling vraagt."
       }
     }
   }

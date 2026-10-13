@@ -10,7 +10,7 @@ Output (re-running rebuilds everything, nothing is appended twice):
     sitemap.xml                  block between <!-- FOOD-PAGES:START --> and <!-- FOOD-PAGES:END -->
 
 Sources: js/data.js (values, GI provenance), doctor.html (design system: CSS, logo, nav labels).
-Per-food text can be overridden in scripts/food_pages_overrides.json (tips, portion, slug).
+Per-food text can be overridden in scripts/food_pages_overrides.json (lead, tips, slug).
 """
 import html
 import json
@@ -633,6 +633,8 @@ def build(food, lang, ctx):
     else:
         lead = u['lead_na'].format(name=sname, kcal=kcal, protein=protein, **g)
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
+    # a doctor-approved introduction replaces the computed lead (the numbers stay in the cards and table)
+    lead = ctx['overrides'].get(str(food['id']), {}).get('lead', {}).get(lang) or lead
     title = u['title'].format(name=name)
 
     # -------- FAQ (answers computed from the numbers)
