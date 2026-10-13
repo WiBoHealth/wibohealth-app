@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -90,7 +92,7 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     
     <!-- PWA Icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
@@ -568,7 +570,7 @@
         }
 
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             --header-bg: white;
             --card-bg: white;
             --text-dark: #2c3e50;
@@ -754,12 +756,12 @@
         .logo-icon svg {
             width: 42px;
             height: 42px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.4));
+            filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
         .logo-text h1 {
             font-size: 22px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -801,7 +803,7 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
             transform: scale(1.05);
         }
@@ -856,7 +858,7 @@
         }
 
         .nav-link:hover {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             transform: translateY(-2px);
         }
@@ -884,16 +886,16 @@
 
         /* كرت مقال اللبتين الملكي VIP */
         .leptin-feature-card {
-            background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 40%, #be185d 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #134e4a 55%, #0e7490 100%);
             padding: 25px 30px;
             border-radius: 20px;
-            border: 3px solid #f472b6;
+            border: 3px solid #10b981;
             margin: 20px auto 25px;
             max-width: 800px;
             display: flex;
             align-items: center;
             gap: 20px;
-            box-shadow: 0 12px 45px rgba(190, 24, 93, 0.4);
+            box-shadow: 0 12px 45px rgba(16, 185, 129, 0.25);
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -906,14 +908,14 @@
             left: 0;
             width: 6px;
             height: 100%;
-            background: linear-gradient(180deg, #f472b6, #fb7185);
-            box-shadow: 0 0 12px rgba(244, 114, 182, 0.8);
+            background: linear-gradient(180deg, #10b981, #0ea5e9);
+            box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
         }
 
         .leptin-feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 18px 55px rgba(219, 39, 119, 0.55);
-            border-color: #fb7185;
+            box-shadow: 0 18px 55px rgba(16, 185, 129, 0.35);
+            border-color: #34d399;
         }
 
         .leptin-feature-content {
@@ -966,7 +968,7 @@
         }
 
         .compare-feature-card {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #10b981 100%);
             backdrop-filter: blur(10px);
             padding: 25px 30px;
             border-radius: 20px;
@@ -1273,7 +1275,7 @@
         }
 
         .pwa-install-btn {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             border: none;
             padding: 18px 40px;
@@ -1282,7 +1284,7 @@
             border-radius: 50px;
             cursor: pointer;
             margin-top: 30px;
-            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             font-family: 'Cairo', sans-serif;
             display: inline-flex;
@@ -1309,7 +1311,7 @@
         .feature-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1319,7 +1321,7 @@
             color: white;
         }
 
-        .feature-card h3 { color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px; }
+        .feature-card h3 { color: #10b981; font-size: 1.8rem; margin-bottom: 15px; }
         .feature-card p { color: var(--text-light); line-height: 1.8; font-size: 1.1rem; }
 
         .info-section {
@@ -1331,10 +1333,10 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .info-section h2 { color: #2ecc71; font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
+        .info-section h2 { color: #10b981; font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
         .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 40px; }
-        .info-box { padding: 30px; background: #f8f9fa; border-radius: 15px; border-right: 5px solid #2ecc71; }
-        [dir="ltr"] .info-box { border-right: none; border-left: 5px solid #2ecc71; }
+        .info-box { padding: 30px; background: #f8f9fa; border-radius: 15px; border-right: 5px solid #10b981; }
+        [dir="ltr"] .info-box { border-right: none; border-left: 5px solid #10b981; }
         .info-box h3 { color: var(--text-dark); font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
         .info-box ul { list-style: none; padding: 0; }
         .info-box li { padding: 10px 0; border-bottom: 1px solid #e0e0e0; color: var(--text-light); }
@@ -1343,31 +1345,31 @@
         .info-box li:last-child { border-bottom: none; }
         .level-indicator { display: inline-block; width: 15px; height: 15px; border-radius: 50%; margin-left: 10px; }
         [dir="ltr"] .level-indicator { margin-left: 0; margin-right: 10px; }
-        .level-low { background: #2ecc71; }
+        .level-low { background: #10b981; }
         .level-medium { background: #f39c12; }
         .level-high { background: #e74c3c; }
 
         /* ===== Health articles (#articles) ===== */
         .home-articles { background: var(--card-bg); color: var(--text-dark); padding: 50px 40px; border-radius: 20px; margin: 50px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); scroll-margin-top: 76px; }
-        .home-articles h2 { color: #2ecc71; font-size: 2.3rem; text-align: center; margin-bottom: 8px; }
+        .home-articles h2 { color: #10b981; font-size: 2.3rem; text-align: center; margin-bottom: 8px; }
         .home-articles-sub { text-align: center; color: var(--text-light); margin-bottom: 30px; }
         .home-articles-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
-        .home-article-link { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 14px; background: #f8f9fa; color: var(--text-dark); text-decoration: none; font-weight: 700; border: 1px solid rgba(46,204,113,0.18); transition: border-color 0.2s ease, transform 0.2s ease; }
-        .home-article-link:hover { border-color: #2ecc71; transform: translateY(-2px); }
+        .home-article-link { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 14px; background: #f8f9fa; color: var(--text-dark); text-decoration: none; font-weight: 700; border: 1px solid rgba(16, 185, 129,0.18); transition: border-color 0.2s ease, transform 0.2s ease; }
+        .home-article-link:hover { border-color: #10b981; transform: translateY(-2px); }
         .home-article-icon { font-size: 1.5rem; line-height: 1; }
         .home-articles-h3 { color: var(--text-dark); font-size: 1.5rem; margin: 40px 0 16px; }
         .home-articles-long { display: grid; gap: 16px; }
-        .home-article { border-radius: 16px; background: #f8f9fa; border: 1px solid rgba(46,204,113,0.18); overflow: hidden; }
+        .home-article { border-radius: 16px; background: #f8f9fa; border: 1px solid rgba(16, 185, 129,0.18); overflow: hidden; }
         .home-article > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 180px 1fr; grid-template-rows: auto auto 1fr auto; column-gap: 18px; align-items: start; padding: 16px; }
         .home-article > summary::-webkit-details-marker { display: none; }
-        .home-article-img { grid-row: 1 / span 4; width: 180px; height: 120px; object-fit: cover; border-radius: 12px; background: rgba(46,204,113,0.12); }
+        .home-article-img { grid-row: 1 / span 4; width: 180px; height: 120px; object-fit: cover; border-radius: 12px; background: rgba(16, 185, 129,0.12); }
         .home-article-cat { justify-self: start; padding: 3px 12px; border-radius: 999px; background: linear-gradient(135deg, #14b8a6, #10b981); color: #fff; font-size: 0.8rem; font-weight: 700; }
         .home-article h3 { font-size: 1.3rem; margin: 6px 0 4px; color: var(--text-dark); }
         .home-article p { color: var(--text-light); line-height: 1.7; }
         .home-article-more { color: #10b981; font-weight: 700; font-size: 0.9rem; margin-top: 6px; }
         .home-article[open] .home-article-more { opacity: 0.6; }
         .home-article-body { padding: 4px 24px 24px; line-height: 1.9; color: var(--text-dark); }
-        .home-article-body h2 { color: #2ecc71; font-size: 1.5rem; margin: 18px 0 10px; text-align: start; }
+        .home-article-body h2 { color: #10b981; font-size: 1.5rem; margin: 18px 0 10px; text-align: start; }
         .home-article-body h3 { font-size: 1.2rem; margin: 18px 0 8px; }
         .home-article-body h4 { margin: 12px 0 4px; }
         .home-article-body ul { padding-inline-start: 22px; margin: 8px 0; }
@@ -1396,7 +1398,7 @@
         .cta-btn {
             padding: 18px 40px;
             background: white;
-            color: #2ecc71;
+            color: #10b981;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
@@ -1478,6 +1480,8 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
     <!-- Floating Barcode Scanner Pill Button -->
     <a href="boodi.html" class="floating-scanner-btn">
         <span class="floating-scanner-badge" data-i18n="new_badge">تطبيقنا 💚</span>
@@ -1555,7 +1559,7 @@
         <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">دليل المكملات الغذائية</span></a>
         <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
         <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
-        <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">احصل على دايت مجاني 🎁</span></a>
+        <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">احصل على دايت مجاني 🎁</span></a>
         <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">اتصل بنا</span></a>
     </nav>
 
@@ -1588,7 +1592,7 @@
         <section class="hero">
             <!-- 1. كرت مقال اللبتين الملكي VIP بصورة البنت بأعلى الصفحة فوراً -->
             <div class="leptin-feature-card">
-                <div style="width: 140px; height: 100px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 2px solid #f472b6; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                <div style="width: 140px; height: 100px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 2px solid #34d399; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
                     <img src="images/leptin-hero.jpeg" alt="ليش عم آكل وما عم أشبع" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div class="leptin-feature-content">
@@ -1960,7 +1964,7 @@
             <p style="font-size: 1.2rem; margin-top: 15px;" data-i18n="cta_subtitle">اكتشف المؤشرات الصحية لأطعمتك المفضلة</p>
             
             <div class="cta-buttons">
-                <a href="diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; font-size: 1.1em; padding: 15px 30px; box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);" data-i18n="cta_btn1"><i class="fas fa-gift"></i> احصل على دايت مجاني لأسبوع! 🎁</a>
+                <a href="diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.1em; padding: 15px 30px; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);" data-i18n="cta_btn1"><i class="fas fa-gift"></i> احصل على دايت مجاني لأسبوع! 🎁</a>
                 <a href="foods.html" class="cta-btn" data-i18n="cta_btn2"><i class="fas fa-utensils"></i> تصفح الأطعمة</a>
                 <a href="calculators.html" class="cta-btn" data-i18n="cta_btn3"><i class="fas fa-calculator"></i> احسب احتياجك اليومي</a>
                 <a href="recipes.html" class="cta-btn" data-i18n="cta_btn4"><i class="fas fa-book-open"></i> وصفات صحية</a>
@@ -1988,10 +1992,10 @@
             <a href="doctor.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">الطبيب المشرف</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة.</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</p>
         
         <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #34495e;">
-            <h4 style="color: #2ecc71; margin-bottom: 15px; font-size: 1.1em;">📚 المصادر العلمية</h4>
+            <h4 style="color: #10b981; margin-bottom: 15px; font-size: 1.1em;">📚 المصادر العلمية</h4>
             <p style="color: #95a5a6; font-size: 0.85em; line-height: 1.8; max-width: 800px; margin: 0 auto;">
                 جميع المعلومات الغذائية والصحية في هذا الموقع مستمدة من مصادر علمية موثوقة بما في ذلك:
                 <br>

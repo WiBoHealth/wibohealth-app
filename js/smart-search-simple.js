@@ -224,7 +224,7 @@
             .suggestion-item:hover,
             .suggestion-item.active {
                 background: linear-gradient(135deg, #f8f9ff, #f0f2ff);
-                border-right: 3px solid #667eea;
+                border-right: 3px solid #10b981;
             }
             
             .sug-icon {
@@ -258,7 +258,7 @@
             }
             
             .sug-arrow {
-                color: #667eea;
+                color: #10b981;
                 font-size: 14px;
                 opacity: 0;
                 transition: opacity 0.2s;
@@ -283,7 +283,7 @@
             }
             
             .smart-suggestions::-webkit-scrollbar-thumb {
-                background: #667eea;
+                background: #10b981;
                 border-radius: 3px;
             }
             

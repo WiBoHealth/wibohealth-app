@@ -6,14 +6,68 @@
    body.dark-mode (main pages) and html[data-theme="dark"] (doctor family + food pages).
    ========================================================================== */
 
-/* Anti white-flash: whenever the GPU drops a layer or repaints, the browser shows the root canvas colour.
-   Keep that canvas navy (and the UA in dark scheme) so a repaint can never flash white. */
-html, :root {
-    background-color: #0b132b !important;
-    color-scheme: dark !important;
+/* ==========================================================================
+   WiBo Health - one colour system for every page
+   Two page families exist: the "classic" pages (theme = body.dark-mode, vars --card-bg/--text-dark...)
+   and the doctor family + food pages (theme = html[data-theme], vars --bg-main/--text-main...).
+   The theme boot script in each page's <head> always sets html[data-theme] before the first paint
+   (and keeps it in sync with body.dark-mode), so html[data-theme="dark"] is the single dark switch here.
+   ========================================================================== */
+:root {
+    --wb-bg: #f8fafc;
+    --wb-card: #ffffff;
+    --wb-soft: #f1f5f9;
+    --wb-text: #0f172a;
+    --wb-muted: #64748b;
+    --wb-border: rgba(15, 23, 42, 0.09);
+    --wb-header: rgba(255, 255, 255, 0.85);
+    --wb-primary: #10b981;
+    --wb-primary-hover: #059669;
+    --wb-accent: #0ea5e9;
+    --wb-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+    color-scheme: light;
 }
-/* ...but form fields on a page shown in its light theme keep light native controls */
-html:not([data-theme="dark"]) body:not(.dark-mode) :is(input, select, textarea) { color-scheme: light; }
+html[data-theme="dark"] {
+    --wb-bg: #0f172a;
+    --wb-card: #1e293b;
+    --wb-soft: #273449;
+    --wb-text: #e2e8f0;
+    --wb-muted: #94a3b8;
+    --wb-border: rgba(148, 163, 184, 0.18);
+    --wb-header: rgba(15, 23, 42, 0.85);
+    color-scheme: dark;
+}
+html { background-color: var(--wb-bg); }
+
+/* every family's own variables point at the palette (declared on body so they beat :root,
+   html[data-theme="light"] and body.dark-mode definitions in the pages) */
+html body,
+html body.dark-mode {
+    /* doctor family + food pages */
+    --bg-main: var(--wb-bg);
+    --bg-card: var(--wb-card);
+    --bg-input: var(--wb-soft);
+    --text-main: var(--wb-text);
+    --text-muted: var(--wb-muted);
+    --border-color: var(--wb-border);
+    --header-bg: var(--wb-header);
+    --primary: var(--wb-primary);
+    --primary-hover: var(--wb-primary-hover);
+    --secondary: var(--wb-accent);
+    /* classic pages */
+    --card-bg: var(--wb-card);
+    --text-dark: var(--wb-text);
+    --text-light: var(--wb-muted);
+    --primary-color: var(--wb-primary);
+    --secondary-color: var(--wb-accent);
+    --primary-gradient: var(--wb-gradient);
+    --box-bg: var(--wb-soft);
+    --item-bg: var(--wb-soft);
+    --light-gray: var(--wb-soft);
+
+    background: var(--wb-bg) !important;
+    color: var(--wb-text);
+}
 
 body > header {
     position: sticky !important;
@@ -27,7 +81,7 @@ body > header {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.82) !important;
+    background: var(--wb-header) !important;
     -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
     backdrop-filter: blur(14px) saturate(160%) !important;
     border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
@@ -37,7 +91,7 @@ body > header {
 }
 body.dark-mode > header,
 html[data-theme="dark"] body > header {
-    background: rgba(11, 15, 25, 0.82) !important;
+    background: var(--wb-header) !important;
     border-bottom-color: rgba(255, 255, 255, 0.08) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
 }
@@ -98,7 +152,7 @@ body > header .nav-link {
 }
 body > header .nav-link:hover,
 body > header .nav-link.active {
-    background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+    background: linear-gradient(135deg, var(--wb-primary), var(--wb-primary-hover)) !important;
     color: #fff !important;
 }
 body > header .nav-link.boodi-link {
@@ -160,14 +214,14 @@ body > header .theme-toggle-btn:hover,
 body > header .favorites-btn:hover,
 body > header .toggle-btn:hover,
 body > header .nav-back-btn:hover,
-body > header .lang-toggle:hover { border-color: #2ecc71 !important; }
+body > header .lang-toggle:hover { border-color: var(--wb-primary) !important; }
 body > header .lang-btn.active,
 html[data-theme="dark"] body > header .lang-btn.active,
 body.dark-mode > header .lang-btn.active {
-    background: #2ecc71 !important;
+    background: var(--wb-primary) !important;
     color: #fff !important;
-    border-color: #2ecc71 !important;
-    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4) !important;
+    border-color: var(--wb-primary) !important;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35) !important;
 }
 
 /* segmented language switcher (doctor family + food pages): one capsule holding the buttons */
@@ -308,7 +362,7 @@ body > header .nav-buttons { width: auto !important; }
         white-space: nowrap;
     }
     body > header .header-content > nav:not([class]) a:hover {
-        background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
+        background: linear-gradient(135deg, var(--wb-primary), var(--wb-primary-hover)) !important;
         color: #fff !important;
     }
 }

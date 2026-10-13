@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -148,7 +150,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- PWA Icons -->
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     
@@ -180,10 +182,10 @@
         }
 
         :root {
-            --bg-gradient-1: #667eea;
-            --bg-gradient-2: #764ba2;
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
+            --bg-gradient-1: #10b981;
+            --bg-gradient-2: #0ea5e9;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --white: #ffffff;
@@ -275,7 +277,7 @@
         .logo-icon svg {
             width: 34px;
             height: 34px;
-            filter: drop-shadow(0 2px 6px rgba(46, 204, 113, 0.4));
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
         }
 
         .logo-text h1 {
@@ -318,7 +320,7 @@
         }
 
         .nav-link:hover, .nav-link.active {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             transform: translateY(-2px);
         }
@@ -362,9 +364,9 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
-            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
         }
 
         .favorites-btn { position: relative; }
@@ -485,7 +487,7 @@
            3. المحتوى العام وبطاقات الأطعمة
            ========================================================================== */
         .daily-tip {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
             color: white;
             padding: 16px 20px;
             border-radius: 16px;
@@ -502,7 +504,7 @@
         .tip-content p { font-size: 0.92rem; opacity: 0.95; line-height: 1.5; margin: 0; }
 
         .stats-bar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             color: white;
             padding: 24px 16px;
             border-radius: 20px;
@@ -546,7 +548,7 @@
         .tab-btn.active {
             background: var(--primary-color);
             color: white;
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
         }
 
         .tab-count {
@@ -586,7 +588,7 @@
         .search-input:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.15);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
         }
 
         .search-helper {
@@ -680,7 +682,7 @@
 
         .food-category {
             display: inline-block;
-            background: rgba(46, 204, 113, 0.12);
+            background: rgba(16, 185, 129, 0.12);
             padding: 3px 12px;
             border-radius: 12px;
             font-size: 12px;
@@ -761,10 +763,10 @@
         /* المراجع السريرية للمؤشر الجلايسيمي (نفس شريط food-details.html) */
         .gi-sources-box {
             background: var(--card-bg);
-            border: 1px solid rgba(46, 204, 113, 0.35);
+            border: 1px solid rgba(16, 185, 129, 0.35);
             border-inline-start: 4px solid var(--primary-color);
             border-radius: 14px;
-            box-shadow: 0 0 14px rgba(46, 204, 113, 0.15), 0 5px 20px var(--shadow);
+            box-shadow: 0 0 14px rgba(16, 185, 129, 0.15), 0 5px 20px var(--shadow);
             padding: 12px 16px;
             margin-top: 25px;
             color: var(--text-light);
@@ -775,9 +777,9 @@
             overflow-wrap: anywhere;
         }
         body.dark-mode .gi-sources-box {
-            border-color: rgba(46, 204, 113, 0.45);
+            border-color: rgba(16, 185, 129, 0.45);
             border-inline-start-color: var(--primary-color);
-            box-shadow: 0 0 18px rgba(46, 204, 113, 0.25), 0 5px 20px var(--shadow);
+            box-shadow: 0 0 18px rgba(16, 185, 129, 0.25), 0 5px 20px var(--shadow);
             color: #cbd5e1;
         }
 
@@ -1027,7 +1029,7 @@
             color: #ffffff;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 6px 18px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
         }
 
         .fm-full-link:hover { filter: brightness(1.05); }
@@ -1042,6 +1044,8 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
 
     <!-- Unified Slim Header 2.0 (Zero-Overflow Protected) -->
     <header>
@@ -1155,7 +1159,7 @@
         <div class="search-box">
             <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 ابحث عن أي طعام أو تصنيف..." oninput="onSearchInput()">
             <p class="search-helper">
-                <i class="fas fa-info-circle" style="color: #667eea;"></i>
+                <i class="fas fa-info-circle" style="color: #10b981;"></i>
                 <span data-i18n="search_helper">يمكنك البحث في اسم الطعام أو التصنيف (عربي / English / Nederlands)</span>
             </p>
         </div>
@@ -1202,7 +1206,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #2ecc71;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #10b981;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
     </footer>
 
     <!-- Food Details Modal -->
@@ -1700,7 +1704,7 @@
                             <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                        ${food.image ? `
-    <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid rgba(46, 204, 113, 0.25);">
+    <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid rgba(16, 185, 129, 0.25);">
         <img src="${food.image}" alt="${foodTitle}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
     </div>
     <div class="food-icon" style="display: none;">${food.icon || '🍽️'}</div>

@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -51,7 +53,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2ecc71">
+    <meta name="theme-color" content="#10b981">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
     <!-- Google Analytics -->
@@ -71,9 +73,9 @@
         }
 
         :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --accent-color: #667eea;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
+            --accent-color: #10b981;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --white: #ffffff;
@@ -83,7 +85,7 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.8;
@@ -132,7 +134,7 @@
         }
 
         .theme-toggle, .lang-toggle {
-            background: rgba(46, 204, 113, 0.2);
+            background: rgba(16, 185, 129, 0.2);
             border: none;
             padding: 10px 15px;
             border-radius: 20px;
@@ -232,7 +234,7 @@
             margin-bottom: 30px;
             font-size: 1.3em;
             font-weight: 600;
-            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
         }
 
         .pricing-plans {
@@ -367,7 +369,7 @@
             outline: none;
             border-color: var(--primary-color);
             background: white;
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
 
         body.dark-mode .form-group input:focus,
@@ -456,7 +458,7 @@
             text-align: center;
             margin: 30px 0;
             padding: 20px;
-            background: linear-gradient(135deg, var(--accent-color), #764ba2);
+            background: linear-gradient(135deg, var(--accent-color), #0ea5e9);
             color: white;
             border-radius: 12px;
             font-size: 1.2em;
@@ -477,12 +479,12 @@
             transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
             font-family: 'Cairo', sans-serif;
             margin-top: 30px;
-            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
         }
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
         }
 
         .submit-btn:active {
@@ -551,10 +553,14 @@
     </style>
     <!-- Unified Language System -->
     <link rel="stylesheet" href="css/unified-header.css">
+    <!-- text that sat on the old purple page background now follows the shared palette -->
+    <style>.back-home a{color:var(--wb-primary)!important}.hero{color:var(--wb-text)}.hero h1{text-shadow:none}.hero .subtitle{color:var(--wb-muted)}.hero .intro-text{background:var(--wb-card);border-color:var(--wb-border);box-shadow:0 10px 30px rgba(15,23,42,.06)}</style>
     <!-- body has 20px padding on this page: pull the sticky header out to the window edges -->
     <style>html body > header{margin:-20px -20px 20px!important;width:auto!important}html body > header .header-content > a:first-child{font-size:19px!important}</style>
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
     <!-- Header -->
     <header>
         <div class="header-content">
@@ -1159,7 +1165,7 @@
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
+            localStorage.setItem('wibo_theme', isDarkMode ? 'dark' : 'light');
             updateThemeIcon();
         }
 
@@ -1171,7 +1177,7 @@
 
         // Initialize theme
         function initializeTheme() {
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            const isDarkMode = localStorage.getItem('wibo_theme') === 'dark';
             if (isDarkMode) {
                 document.body.classList.add('dark-mode');
             }
@@ -1357,7 +1363,7 @@ ${formData.otherConditions !== 'لا يوجد' ? '• أمراض أخرى: ' + f
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
             progressIndicator.innerHTML = t('diet_success');
-            progressIndicator.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
+            progressIndicator.style.background = 'linear-gradient(135deg, #10b981, #059669)';
             progressIndicator.style.display = 'block';
 
             setTimeout(() => {

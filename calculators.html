@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -345,7 +347,7 @@
             font-weight: 700;
             border-radius: var(--radius-md);
             cursor: pointer;
-            transition: background-color 0.25s cubic-bezier(0.4, color 0.25s cubic-bezier(0.4, border-color 0.25s cubic-bezier(0.4, opacity 0.25s cubic-bezier(0.4, transform 0.25s cubic-bezier(0.4, top 0.25s cubic-bezier(0.4, right 0.25s cubic-bezier(0.4, bottom 0.25s cubic-bezier(0.4, left 0.25s cubic-bezier(0.4, width 0.25s cubic-bezier(0.4, height 0.25s cubic-bezier(0.4, max-height 0.25s cubic-bezier(0.4, visibility 0.25s cubic-bezier(0.4;
+            transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: inherit;
         }
 

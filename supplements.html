@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -51,7 +53,7 @@
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ4Y2C4YNE"></script>
@@ -70,14 +72,14 @@
         }
 
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             --header-bg: #ffffff;
             --card-bg: #ffffff;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --hero-text: #ffffff;
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
             --light-gray: #f3f4f6;
             --shadow: rgba(0,0,0,0.08);
             --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
@@ -150,12 +152,12 @@
         .logo-icon svg {
             width: 42px;
             height: 42px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.4));
+            filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
         .logo-text h1 {
             font-size: 22px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -192,7 +194,7 @@
         }
 
         .nav-link:hover, .nav-link.active {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             transform: translateY(-2px);
         }
@@ -228,7 +230,7 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
             transform: scale(1.05);
         }
@@ -432,7 +434,7 @@
         .search-box input:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.25);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
         }
 
         .search-box i {
@@ -446,7 +448,7 @@
         [dir="ltr"] .search-box i { left: 18px; right: auto; }
 
         .compare-hint-box {
-            background: rgba(46, 204, 113, 0.15);
+            background: rgba(16, 185, 129, 0.15);
             padding: 14px 20px;
             border-radius: 14px;
             display: flex;
@@ -506,7 +508,7 @@
 
         .supplement-category {
             display: inline-block;
-            background: rgba(46, 204, 113, 0.15);
+            background: rgba(16, 185, 129, 0.15);
             color: var(--secondary-color);
             padding: 4px 12px;
             border-radius: 14px;
@@ -606,7 +608,7 @@
             color: white;
             padding: 14px 28px;
             border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.5);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5);
             cursor: pointer;
             z-index: 1000;
             display: flex;
@@ -818,8 +820,12 @@
         }
     </style>
     <link rel="stylesheet" href="css/unified-header.css">
+    <!-- text that sat on the old purple page background now follows the shared palette -->
+    <style>.compare-hint-box{color:var(--wb-text)}</style>
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
 
     <!-- Unified Slim Header 2.0 -->
     <header>

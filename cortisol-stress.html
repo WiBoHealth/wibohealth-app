@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -181,7 +183,7 @@
 
         .brand-logo h1 {
             font-size: 20px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -214,10 +216,10 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             transform: scale(1.08);
-            border-color: #27ae60;
-            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+            border-color: #059669;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
         }
 
         .theme-toggle {
@@ -242,12 +244,12 @@
 
         .theme-toggle:hover {
             transform: scale(1.08) rotate(15deg);
-            background: #2ecc71;
+            background: #10b981;
             color: white;
         }
 
         .nav-back-btn {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             padding: 6px 16px;
             border-radius: 20px;
@@ -258,12 +260,12 @@
             align-items: center;
             gap: 6px;
             transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
-            box-shadow: 0 3px 10px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
         }
 
         .nav-back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
         }
 
         /* Article Wrapper */
@@ -316,7 +318,7 @@
         .author-icon {
             width: 44px;
             height: 44px;
-            background: rgba(46, 204, 113, 0.15);
+            background: rgba(16, 185, 129, 0.15);
             color: #10b981;
             border-radius: 50%;
             display: flex;
@@ -586,12 +588,14 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
 
     <!-- Header Navigation (Slim Header 2.0) -->
     <header class="site-header">
         <div class="header-container">
             <a href="/" class="brand-logo">
-                <i class="fa-solid fa-heart-pulse" style="font-size: 24px; color: #2ecc71;"></i>
+                <i class="fa-solid fa-heart-pulse" style="font-size: 24px; color: #10b981;"></i>
                 <h1>WiBo Health</h1>
             </a>
             <div class="header-controls">
@@ -794,7 +798,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق WiBo Health الطبي</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</p>
     </footer>
 
     <!-- Translations & Theme Engine (Safe Double-Quote JSON Structure) -->

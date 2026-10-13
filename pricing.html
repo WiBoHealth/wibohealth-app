@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -51,7 +53,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
     <!-- Mobile Menu CSS -->
@@ -65,9 +67,9 @@
         }
 
         :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
-            --accent-color: #667eea;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
+            --accent-color: #10b981;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --white: #ffffff;
@@ -77,7 +79,7 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             min-height: 100vh;
             color: var(--text-dark);
             transition: background-color 0.2s ease, color 0.2s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
@@ -142,7 +144,7 @@
         .logo-icon svg {
             width: 70px;
             height: 70px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
+            filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
         }
 
         .logo-text h1 {
@@ -160,7 +162,7 @@
         }
 
         .theme-toggle, .lang-toggle {
-            background: rgba(46, 204, 113, 0.2);
+            background: rgba(16, 185, 129, 0.2);
             border: none;
             padding: 10px 15px;
             border-radius: 20px;
@@ -200,7 +202,7 @@
 
         .nav-link {
             padding: 10px 20px;
-            background: rgba(46, 204, 113, 0.2);
+            background: rgba(16, 185, 129, 0.2);
             color: var(--text-dark);
             text-decoration: none;
             border-radius: 20px;
@@ -369,7 +371,7 @@
 
         .plan-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
         }
 
         .plan-btn.secondary {
@@ -552,8 +554,12 @@
     </style>
     <!-- Unified Language System -->
     <link rel="stylesheet" href="css/unified-header.css">
+    <!-- text that sat on the old purple page background now follows the shared palette -->
+    <style>.pricing-hero{color:var(--wb-text)}.pricing-hero h2{text-shadow:none}.pricing-hero p{color:var(--wb-muted)}</style>
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
     <!-- Header -->
     <header>
         <div class="container">
@@ -1220,7 +1226,7 @@
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode);
+            localStorage.setItem('wibo_theme', isDarkMode ? 'dark' : 'light');
             updateThemeIcon();
         }
 
@@ -1232,7 +1238,7 @@
 
         // Initialize theme
         function initializeTheme() {
-            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            const isDarkMode = localStorage.getItem('wibo_theme') === 'dark';
             if (isDarkMode) {
                 document.body.classList.add('dark-mode');
             }

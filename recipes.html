@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -62,7 +64,7 @@
     
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
     <!-- Google Analytics -->
@@ -87,10 +89,10 @@
         }
 
         :root {
-            --bg-gradient-1: #667eea;
-            --bg-gradient-2: #764ba2;
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
+            --bg-gradient-1: #10b981;
+            --bg-gradient-2: #0ea5e9;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
             --white: #ffffff;
@@ -169,7 +171,7 @@
         .logo-icon svg {
             width: 70px;
             height: 70px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.3));
+            filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
         }
 
         .logo-text h1 {
@@ -243,7 +245,7 @@
 
         /* Daily Tip */
         .daily-tip {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
             color: white;
             padding: 20px 30px;
             border-radius: 15px;
@@ -282,7 +284,7 @@
 
         /* Stats Bar */
         .stats-bar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             color: white;
             padding: 30px;
             border-radius: 20px;
@@ -330,7 +332,7 @@
         .search-input:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
 
         /* Recipe Grid */
@@ -356,7 +358,7 @@
         .recipe-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -415,7 +417,7 @@
 
         .recipe-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
         }
 
         /* Modal Styles */
@@ -531,7 +533,7 @@
         }
 
         .nutrition-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             color: white;
             padding: 20px;
             border-radius: 15px;
@@ -571,7 +573,7 @@
         .ingredients-list li {
             padding: 12px;
             margin-bottom: 10px;
-            background: rgba(46, 204, 113, 0.1);
+            background: rgba(16, 185, 129, 0.1);
             border-radius: 8px;
             color: var(--text-dark);
             display: flex;
@@ -611,7 +613,7 @@
         }
 
         .tips-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
             color: white;
             padding: 20px;
             border-radius: 15px;
@@ -671,12 +673,12 @@
         }
 
         .recipe-search-box:focus-within {
-            box-shadow: 0 8px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 40px rgba(16, 185, 129, 0.3);
             transform: translateY(-3px);
         }
 
         .recipe-search-box i.fa-search {
-            color: #667eea;
+            color: #10b981;
             font-size: 1.3em;
             margin-left: 15px;
         }
@@ -718,14 +720,14 @@
         }
 
         .recipe-search-stats {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             padding: 12px 25px;
             border-radius: 50px;
             margin-top: 15px;
             text-align: center;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
             animation: slideInRecipe 0.3s ease;
         }
 
@@ -759,7 +761,7 @@
             }
             50% {
                 transform: scale(1.03);
-                box-shadow: 0 8px 30px rgba(46, 204, 113, 0.4);
+                box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
             }
             100% {
                 transform: scale(1);
@@ -790,6 +792,8 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
     <!-- Header -->
     <header>
         <div class="container">
@@ -973,22 +977,22 @@
     <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="about.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#10b981'" onmouseout="this.style.color='#ecf0f1'">
                 <span data-lang="ar">من نحن</span>
                 <span data-lang="en" style="display: none;">About Us</span>
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="contact.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#10b981'" onmouseout="this.style.color='#ecf0f1'">
                 <span data-lang="ar">اتصل بنا</span>
                 <span data-lang="en" style="display: none;">Contact Us</span>
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#10b981'" onmouseout="this.style.color='#ecf0f1'">
                 <span data-lang="ar">سياسة الخصوصية</span>
                 <span data-lang="en" style="display: none;">Privacy Policy</span>
             </a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#2ecc71'" onmouseout="this.style.color='#ecf0f1'">
+            <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#10b981'" onmouseout="this.style.color='#ecf0f1'">
                 <span data-lang="ar">شروط الاستخدام</span>
                 <span data-lang="en" style="display: none;">Terms of Use</span>
             </a>
@@ -998,8 +1002,8 @@
             <span data-lang="en" style="display: none;">© 2024 WiBo Health. All rights reserved.</span>
         </p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">
-            <span data-lang="ar">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</span>
-            <span data-lang="en" style="display: none;">💚 Developed with <span style="color: #2ecc71;">♥</span> for Bodi</span>
+            <span data-lang="ar">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</span>
+            <span data-lang="en" style="display: none;">💚 Developed with <span style="color: #10b981;">♥</span> for Bodi</span>
         </p>
     </footer>
 

@@ -361,7 +361,7 @@ function filterFoods() {
                 <i class="fas fa-search" style="font-size: 4rem; color: #cbd5e1; margin-bottom: 1rem;"></i>
                 <p style="font-size: 1.25rem; color: #475569;">${noResultsText}</p>
                 <p style="color: #64748b;">${tryAgainText}</p>
-                <button onclick="document.getElementById('foodSearch').value=''; filterFoods();" style="margin-top: 1rem; padding: 0.75rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; font-weight: 600;">
+                <button onclick="document.getElementById('foodSearch').value=''; filterFoods();" style="margin-top: 1rem; padding: 0.75rem 2rem; background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%); color: white; border: none; border-radius: 50px; cursor: pointer; font-size: 1rem; font-weight: 600;">
                     ${clearButtonText}
                 </button>
             </div>

@@ -108,7 +108,7 @@ body.dark-mode .mobile-nav-link {
 }
 
 .mobile-nav-link:hover {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    background: linear-gradient(135deg, #10b981, #059669);
     color: white;
     transform: translateX(-5px);
 }

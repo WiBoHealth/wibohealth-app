@@ -114,9 +114,8 @@
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <script>
-        try { document.documentElement.setAttribute('data-theme', localStorage.getItem('wibo_theme') || 'dark'); } catch (e) {}
-    </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -694,14 +693,14 @@
         }
         .stat-box h2 { font-size: 0.82rem; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
         .stat-num { font-size: 2rem; font-weight: 900; line-height: 1.2; }
-        .stat-num.low { color: #2ecc71; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
+        .stat-num.low { color: #10b981; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
         .stat-num.muted { color: var(--text-muted); } .stat-num.kcal { color: #3498db; } .stat-num.protein { color: #9b59b6; }
         .stat-sub { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
         .badge {
             display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem;
             font-weight: 700; border: 1px solid transparent;
         }
-        .badge.low { background: rgba(46, 204, 113, 0.12); border-color: rgba(46, 204, 113, 0.45); color: #2ecc71; }
+        .badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #10b981; }
         .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #f39c12; }
         .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #e74c3c; }
         .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-muted); }

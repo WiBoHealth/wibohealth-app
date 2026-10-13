@@ -192,7 +192,7 @@ function addSearchSuggestionsCSS() {
         .suggestion-item:hover,
         .suggestion-item.active {
             background: linear-gradient(135deg, #f8f9ff, #f0f2ff);
-            border-right: 3px solid #667eea;
+            border-right: 3px solid #10b981;
         }
         
         .suggestion-icon {
@@ -230,7 +230,7 @@ function addSearchSuggestionsCSS() {
         }
         
         .suggestion-arrow {
-            color: #667eea;
+            color: #10b981;
             font-size: 16px;
             opacity: 0;
             transition: opacity 0.2s;

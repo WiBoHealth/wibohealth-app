@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -91,7 +93,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- PWA Icons -->
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
@@ -114,8 +116,8 @@
         }
 
         :root {
-            --primary-color: #2ecc71;
-            --secondary-color: #27ae60;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
             --accent-color: #3498db;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
@@ -127,7 +129,7 @@
 
         body {
             font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.8;
@@ -204,7 +206,7 @@
         .logo-icon svg {
             width: 32px;
             height: 32px;
-            filter: drop-shadow(0 2px 6px rgba(46, 204, 113, 0.4));
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
         }
 
         .logo-text h1 {
@@ -240,14 +242,14 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
             white-space: nowrap;
             flex-shrink: 0;
         }
 
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.45);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.45);
         }
 
         .lang-btn, .theme-toggle {
@@ -274,13 +276,13 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
-            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
         }
 
         .theme-toggle:hover {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
         }
 
@@ -331,7 +333,7 @@
 
         .food-category-badge {
             display: inline-block;
-            background: rgba(46, 204, 113, 0.12);
+            background: rgba(16, 185, 129, 0.12);
             color: var(--primary-color);
             padding: 5px 18px;
             border-radius: 20px;
@@ -385,10 +387,10 @@
         /* المراجع السريرية للمؤشر الجلايسيمي (GI Sources) */
         .gi-sources-box {
             background: var(--card-bg);
-            border: 1px solid rgba(46, 204, 113, 0.35);
+            border: 1px solid rgba(16, 185, 129, 0.35);
             border-inline-start: 4px solid var(--primary-color);
             border-radius: 14px;
-            box-shadow: 0 0 14px rgba(46, 204, 113, 0.15), 0 5px 20px var(--shadow);
+            box-shadow: 0 0 14px rgba(16, 185, 129, 0.15), 0 5px 20px var(--shadow);
             padding: 12px 16px;
             margin: -8px 0 22px 0;
             color: var(--text-light);
@@ -399,9 +401,9 @@
             overflow-wrap: anywhere;
         }
         body.dark-mode .gi-sources-box {
-            border-color: rgba(46, 204, 113, 0.45);
+            border-color: rgba(16, 185, 129, 0.45);
             border-inline-start-color: var(--primary-color);
-            box-shadow: 0 0 18px rgba(46, 204, 113, 0.25), 0 5px 20px var(--shadow);
+            box-shadow: 0 0 18px rgba(16, 185, 129, 0.25), 0 5px 20px var(--shadow);
             color: #cbd5e1;
         }
         .ii-sources-box { margin-top: -10px; }
@@ -418,8 +420,8 @@
             margin-top: 8px;
             padding: 3px 9px;
             border-radius: 999px;
-            background: rgba(46, 204, 113, 0.12);
-            border: 1px solid rgba(46, 204, 113, 0.45);
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.45);
             color: #1e9e57;
             font-size: 0.68rem;
             font-weight: 700;
@@ -453,7 +455,7 @@
             border: 1px solid transparent;
         }
         .gi-status-badge:empty { display: none; }
-        .gi-status-badge.low { background: rgba(46, 204, 113, 0.12); border-color: rgba(46, 204, 113, 0.45); color: #1e9e57; }
+        .gi-status-badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #1e9e57; }
         .gi-status-badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #b9770e; }
         .gi-status-badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #c0392b; }
         .gi-status-badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.5); color: #64748b; }
@@ -554,7 +556,7 @@
         [dir="ltr"] .nutrition-table th, [dir="ltr"] .nutrition-table td { text-align: left; }
 
         .nutrition-table th {
-            background: rgba(46, 204, 113, 0.1);
+            background: rgba(16, 185, 129, 0.1);
             color: var(--primary-color);
             font-weight: 800;
             border-radius: 6px;
@@ -585,7 +587,7 @@
         }
 
         .tip-item {
-            background: rgba(46, 204, 113, 0.05);
+            background: rgba(16, 185, 129, 0.05);
             padding: 16px 18px;
             border-radius: 14px;
             margin-bottom: 12px;
@@ -656,6 +658,8 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
 
     <!-- Unified Slim Header 2.0 (Zero-Overflow Shield) -->
     <header>
@@ -708,7 +712,7 @@
     <main class="container">
         <!-- Food Hero -->
         <div class="food-hero">
-          <div id="foodMediaContainer" style="width: 140px; height: 140px; margin: 0 auto 15px auto; border-radius: 22px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.18); border: 2px solid rgba(46, 204, 113, 0.3); display: none;">
+          <div id="foodMediaContainer" style="width: 140px; height: 140px; margin: 0 auto 15px auto; border-radius: 22px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.18); border: 2px solid rgba(16, 185, 129, 0.3); display: none;">
     <img id="foodRealImage" src="" alt="" style="width: 100%; height: 100%; object-fit: cover;">
 </div>
 <div class="food-icon-large" id="foodIcon">🍽️</div>
@@ -853,7 +857,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_copyright">© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #2ecc71;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #10b981;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
     </footer>
 
     <!-- Food Database -->
@@ -1339,7 +1343,7 @@ if (food.image) {
         function getIIColor(value) {
             if (value >= 70) return '#e74c3c';
             if (value >= 40) return '#f39c12';
-            return '#2ecc71';
+            return '#10b981';
         }
 
         // Schema.org Structured Data لتصدر محركات البحث Googlebot
@@ -1420,7 +1424,7 @@ if (food.image) {
             if (hasMeasuredGI(food) || hasReviewedGI(food)) {
                 indexLabels.push(t(hasReviewedGI(food) ? 'chart_label_gi_reviewed' : 'chart_label_gi'));
                 indexData.push(food.gi);
-                indexColors.push(food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#2ecc71'));
+                indexColors.push(food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#10b981'));
             }
             if (hasTestedII(food)) {
                 indexLabels.push(t('chart_label_ii'));
@@ -1476,7 +1480,7 @@ if (food.image) {
                                 fatVal,
                                 food.nutrition?.fiber || 0
                             ],
-                            backgroundColor: ['#9b59b6', '#3498db', '#e74c3c', '#2ecc71'],
+                            backgroundColor: ['#9b59b6', '#3498db', '#e74c3c', '#10b981'],
                             borderWidth: 2,
                             borderColor: '#fff'
                         }]

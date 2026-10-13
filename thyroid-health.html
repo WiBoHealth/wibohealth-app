@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -49,7 +51,7 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             --header-bg: #ffffff;
             --card-bg: #ffffff;
             --text-dark: #2c3e50;
@@ -98,7 +100,7 @@
         }
         .brand-logo h1 {
             font-size: 24px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -123,7 +125,7 @@
         }
         body.dark-mode .lang-btn { background: rgba(255, 255, 255, 0.1); }
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
             transform: scale(1.05);
         }
@@ -146,7 +148,7 @@
             color: #ffffff;
         }
         .nav-back-btn {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             padding: 9px 20px;
             border-radius: 25px;
@@ -156,7 +158,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
         .article-wrapper {
@@ -201,7 +203,7 @@
         .author-icon {
             width: 44px;
             height: 44px;
-            background: rgba(46, 204, 113, 0.15);
+            background: rgba(16, 185, 129, 0.15);
             color: #10b981;
             border-radius: 50%;
             display: flex;
@@ -333,7 +335,7 @@
             text-align: center;
         }
         footer a { color: #ecf0f1; text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: #2ecc71; }
+        footer a:hover { color: #10b981; }
         @media (max-width: 768px) {
             .article-title { font-size: 22px; }
             .article-content { padding: 25px 20px; font-size: 16px; }
@@ -344,12 +346,14 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
 
     <!-- Header Navigation -->
     <header class="site-header">
         <div class="header-container">
             <a href="/" class="brand-logo">
-                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #2ecc71;"></i>
+                <i class="fa-solid fa-heart-pulse" style="font-size: 26px; color: #10b981;"></i>
                 <h1>WiBo Health</h1>
             </a>
             <div class="header-controls">
@@ -497,7 +501,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_made_with">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_made_with">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</p>
     </footer>
 
     <!-- Translations & Theme Engine -->
@@ -548,7 +552,7 @@
                 'footer_privacy': 'سياسة الخصوصية',
                 'footer_terms': 'شروط الاستخدام',
                 'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي',
-                'footer_made_with': '💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي'
+                'footer_made_with': '💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي'
             },
             en: {
                 'meta_title': 'Eating Like a Bird and Not Losing Weight?! The Hidden Thyroid Sluggishness | WiBo Health',
@@ -595,7 +599,7 @@
                 'footer_privacy': 'Privacy Policy',
                 'footer_terms': 'Terms of Use',
                 'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by WiBo Health Medical Team',
-                'footer_made_with': '💚 Developed with <span style="color: #2ecc71;">♥</span> for your body'
+                'footer_made_with': '💚 Developed with <span style="color: #10b981;">♥</span> for your body'
             },
             nl: {
                 'meta_title': 'Eet je als een vogeltje en val je toch niet af?! De verborgen trage schildklier | WiBo Health',
@@ -642,7 +646,7 @@
                 'footer_privacy': 'Privacybeleid',
                 'footer_terms': 'Gebruiksvoorwaarden',
                 'footer_rights': '© 2026 WiBo Health. Alle rechten voorbehouden | Onder toezicht van het medisch team van WiBo Health',
-                'footer_made_with': '💚 Ontwikkeld met <span style="color: #2ecc71;">♥</span> voor je lichaam'
+                'footer_made_with': '💚 Ontwikkeld met <span style="color: #10b981;">♥</span> voor je lichaam'
             }
         };
 

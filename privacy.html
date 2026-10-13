@@ -28,6 +28,8 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -90,7 +92,7 @@
     
     <!-- PWA Manifest & Favicons -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
+    <meta name="theme-color" content="#10b981">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     
@@ -102,14 +104,14 @@
         }
 
         :root {
-            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --primary-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
             --header-bg: #ffffff;
             --card-bg: #ffffff;
             --text-dark: #2c3e50;
             --text-light: #7f8c8d;
-            --accent-green: #2ecc71;
-            --secondary-green: #27ae60;
-            --accent-blue: #667eea;
+            --accent-green: #10b981;
+            --secondary-green: #059669;
+            --accent-blue: #10b981;
             --boodi-green: #059669;
             --warning-bg: #fffbeb;
             --warning-border: #f59e0b;
@@ -190,12 +192,12 @@
         .logo-icon svg {
             width: 42px;
             height: 42px;
-            filter: drop-shadow(0 2px 8px rgba(46, 204, 113, 0.4));
+            filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
         .logo-text h1 {
             font-size: 22px;
-            background: linear-gradient(135deg, #2ecc71, #3498db);
+            background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -227,10 +229,10 @@
         }
 
         .lang-btn.active {
-            background: #2ecc71;
+            background: #10b981;
             color: white;
             transform: scale(1.05);
-            box-shadow: 0 2px 8px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
         }
 
         .theme-toggle {
@@ -277,7 +279,7 @@
         }
 
         .nav-link:hover {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             transform: translateY(-2px);
         }
@@ -423,7 +425,7 @@
             font-weight: 800;
             margin-top: 35px;
             margin-bottom: 15px;
-            border-bottom: 3px solid rgba(46, 204, 113, 0.2);
+            border-bottom: 3px solid rgba(16, 185, 129, 0.2);
             padding-bottom: 10px;
         }
 
@@ -502,7 +504,7 @@
         }
 
         .rectification-card {
-            background: rgba(102, 126, 234, 0.08);
+            background: rgba(16, 185, 129, 0.08);
             border: 2px solid var(--accent-blue);
             border-radius: 14px;
             padding: 22px 24px;
@@ -528,7 +530,7 @@
             text-align: center;
             margin-top: 40px;
             padding-top: 30px;
-            border-top: 2px solid rgba(46, 204, 113, 0.2);
+            border-top: 2px solid rgba(16, 185, 129, 0.2);
         }
 
         .privacy-footer-box p {
@@ -549,19 +551,19 @@
             align-items: center;
             gap: 10px;
             padding: 14px 28px;
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 800;
             font-size: 1rem;
-            box-shadow: 0 6px 20px rgba(46, 204, 113, 0.35);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
             transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
         }
 
         .btn-action-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(46, 204, 113, 0.5);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
         }
 
         .btn-action-boodi {
@@ -609,7 +611,7 @@
         }
 
         .footer-links a:hover {
-            color: #2ecc71;
+            color: #10b981;
         }
 
         .footer-divider {
@@ -652,6 +654,8 @@
     <link rel="stylesheet" href="css/unified-header.css">
 </head>
 <body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
     <!-- Header Slim 2.0 -->
     <header>
         <div class="container">
@@ -720,7 +724,7 @@
         <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">دليل المكملات</span></a>
         <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
         <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
-        <a href="privacy.html" class="mobile-nav-link" style="background: rgba(46, 204, 113, 0.15); font-weight: 800;"><i class="fas fa-shield-alt"></i> <span data-i18n="nav_privacy">سياسة الخصوصية</span></a>
+        <a href="privacy.html" class="mobile-nav-link" style="background: rgba(16, 185, 129, 0.15); font-weight: 800;"><i class="fas fa-shield-alt"></i> <span data-i18n="nav_privacy">سياسة الخصوصية</span></a>
         <a href="terms.html" class="mobile-nav-link"><i class="fas fa-file-contract"></i> <span data-i18n="nav_terms">الشروط والأحكام</span></a>
         <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">اتصل بنا</span></a>
     </nav>
