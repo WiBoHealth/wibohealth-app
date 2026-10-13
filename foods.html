@@ -2011,6 +2011,11 @@
                 if (allFoodsCount) allFoodsCount.textContent = allFoods.length;
             }
 
+            // ?search=VALUE (e.g. from the home page "What did you cook today?" bar) pre-filters the list
+            const searchParam = (new URLSearchParams(window.location.search).get('search') || '').trim().slice(0, 80);
+            const searchBox = document.getElementById('searchInput');
+            if (searchParam && searchBox) searchBox.value = searchParam;
+
             changeLanguage(currentLang);
             updateFavCount();
             setupInfiniteScroll();

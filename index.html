@@ -224,6 +224,8 @@
                 'pulse_a7': 'الصيام المتقطع وخرافات السوشيال ميديا',
                 'pulse_a8': 'خمول الغدة وبطء الحرق المستمر',
                 'meals_badge': '🍳 شو طبخت اليوم؟',
+                'meals_search_ph': 'ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)',
+                'meals_search_btn': 'ابحث 🔍',
                 'home_articles_title': '📚 المقالات الصحية',
                 'home_articles_sub': 'مقالات وأدلة سريرية يراجعها فريق ويبو هيلث الطبي',
                 'home_articles_guides': 'أدلة غذائية أساسية',
@@ -365,6 +367,8 @@
                 'pulse_a7': 'Intermittent fasting vs. social-media myths',
                 'pulse_a8': 'Sluggish thyroid and a persistently slow metabolism',
                 'meals_badge': '🍳 What\'s cooking today?',
+                'meals_search_ph': 'Search your daily meal or dish... (e.g. Shawarma, Big Mac, Burrito)',
+                'meals_search_btn': 'Search 🔍',
                 'home_articles_title': '📚 Health Articles',
                 'home_articles_sub': 'Articles and clinical guides reviewed by the WiBo Health medical team',
                 'home_articles_guides': 'Essential nutrition guides',
@@ -506,6 +510,8 @@
                 'pulse_a7': 'Intermittent vasten vs. mythes op social media',
                 'pulse_a8': 'Trage schildklier en een aanhoudend trage stofwisseling',
                 'meals_badge': '🍳 Wat eten we vandaag?',
+                'meals_search_ph': 'Zoek je maaltijd of gerecht... (bijv. Snert, Stamppot, Kibbeling)',
+                'meals_search_btn': 'Zoeken 🔍',
                 'home_articles_title': '📚 Gezondheidsartikelen',
                 'home_articles_sub': 'Artikelen en klinische gidsen, beoordeeld door het medisch team van WiBo Health',
                 'home_articles_guides': 'Basisgidsen voeding',
@@ -577,6 +583,13 @@
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang] && translations[currentLang][key]) {
                     el.innerHTML = translations[currentLang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.placeholder = translations[currentLang][key];
+                    el.setAttribute('aria-label', translations[currentLang][key]);
                 }
             });
         }
@@ -729,6 +742,63 @@
             .pulse-track { animation-duration: 55s; }
         }
         /* people who ask for less motion get a still strip they can swipe instead */
+        /* ===== What did you cook today? - search pill under the meals ticker ===== */
+        .meals-search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: calc(100% - 32px);
+            max-width: 760px;
+            margin: 14px auto 0;
+            padding: 6px 6px 6px 18px;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+            border-radius: 999px;
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+        }
+        :root[dir="rtl"] .meals-search { padding: 6px 18px 6px 6px; }
+        html[data-theme="dark"] .meals-search { background: rgba(15, 23, 42, 0.85); border-color: rgba(16, 185, 129, 0.35); box-shadow: 0 8px 30px rgba(2, 6, 23, 0.3); }
+        .meals-search:focus-within { border-color: #10b981; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+        .meals-search-ico { font-size: 1.05rem; line-height: 1; flex: 0 0 auto; }
+        .meals-search-input {
+            flex: 1 1 auto;
+            min-width: 0;
+            height: 42px;
+            border: 0;
+            outline: none;
+            background: transparent;
+            color: #0f172a;
+            font: inherit;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .meals-search-input::placeholder { color: #64748b; font-weight: 500; opacity: 1; }
+        .meals-search-input::-webkit-search-cancel-button { cursor: pointer; }
+        html[data-theme="dark"] .meals-search-input { color: #ffffff; }
+        html[data-theme="dark"] .meals-search-input::placeholder { color: #94a3b8; }
+        .meals-search-btn {
+            flex: 0 0 auto;
+            height: 42px;
+            padding: 0 22px;
+            border: 0;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: #ffffff;
+            font: inherit;
+            font-size: 0.95rem;
+            font-weight: 800;
+            cursor: pointer;
+            white-space: nowrap;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .meals-search-btn:hover, .meals-search-btn:focus-visible { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45); outline: none; }
+        @media (max-width: 768px) {
+            .meals-search { width: calc(100% - 24px); margin-top: 10px; gap: 6px; padding: 5px 5px 5px 14px; }
+            :root[dir="rtl"] .meals-search { padding: 5px 14px 5px 5px; }
+            .meals-search-input { height: 38px; font-size: 0.85rem; }
+            .meals-search-btn { height: 38px; padding: 0 14px; font-size: 0.85rem; }
+        }
         /* ===== What's cooking today? (meals ticker) - same frame as the pulse ticker, theme-aware surface ===== */
         .meals-ticker {
             --pulse-h: 52px;
@@ -1778,6 +1848,14 @@
         </div>
     </div>
 
+
+    <!-- What did you cook today? - search; submits to /foods.html?search=VALUE -->
+    <form class="meals-search" action="/foods.html" method="get" role="search">
+        <span class="meals-search-ico" aria-hidden="true">🔍</span>
+        <input type="search" name="search" class="meals-search-input" required maxlength="80" autocomplete="off" enterkeyhint="search"
+               data-i18n-placeholder="meals_search_ph" placeholder="ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)" aria-label="ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)">
+        <button type="submit" class="meals-search-btn" data-i18n="meals_search_btn">ابحث 🔍</button>
+    </form>
     <!-- Main Content -->
     <div class="container">
         <!-- Hero Section -->
