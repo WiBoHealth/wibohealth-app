@@ -1,13 +1,14 @@
-/* Crisp callout: a small glass pill above the Crisp launcher (bottom-right).
-   - Appears only once Crisp has actually loaded, so it is never a dead button.
+﻿/* Crisp callout: a small glass pill above the Crisp launcher (bottom-right).
+   - Fades in together with the Crisp launcher (session:loaded, or the launcher showing up in the DOM if
+     Crisp loaded before this script), so it is never a dead button and never pops in on its own.
    - Click opens the chat; hides while the chat is open and returns when it closes.
    - The x dismisses it for the rest of the browsing session.
    - Text follows <html lang> (ar / nl / en), including live language switches on index.html. */
 (function () {
     var TEXT = {
-        ar: '💬 هل لديك سؤال؟ دردش معنا',
-        nl: '💬 Vragen? Chat met ons',
-        en: '💬 Have a question? Chat with us'
+        ar: '💬 دردش معنا',
+        nl: '💬 Chat met ons',
+        en: '💬 Chat with us'
     };
     var CLOSE = { ar: 'إغلاق', nl: 'Sluiten', en: 'Close' };
     var KEY = 'wibo_crisp_callout_dismissed';
@@ -18,10 +19,10 @@
         '-webkit-backdrop-filter:blur(12px) saturate(160%);backdrop-filter:blur(12px) saturate(160%);' +
         'border:1px solid rgba(16,185,129,.35);box-shadow:0 8px 24px rgba(15,23,42,.14);' +
         'font:600 14px/1.3 "Plus Jakarta Sans","Cairo",system-ui,sans-serif;color:#0f172a;' +
-        'opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .25s ease,transform .25s ease}' +
+        'opacity:0;pointer-events:none;transition:opacity .3s ease-in-out}' +
         '.wibo-cc[dir=rtl]{padding:6px 14px 6px 6px;font-family:"Cairo","Plus Jakarta Sans",system-ui,sans-serif}' +
-        '.wibo-cc.is-on{opacity:1;transform:none;pointer-events:auto}' +
-        '.wibo-cc::after{content:"";position:absolute;bottom:-6px;right:26px;width:12px;height:12px;' +
+        '.wibo-cc.is-on{opacity:1;pointer-events:auto}' +
+        '.wibo-cc::after{content:"";position:absolute;bottom:-6px;right:24px;width:12px;height:12px;' +
         'background:inherit;border-right:inherit;border-bottom:inherit;transform:rotate(45deg);' +
         '-webkit-backdrop-filter:none;backdrop-filter:none}' +
         '.wibo-cc-open{all:unset;cursor:pointer;white-space:nowrap;color:inherit}' +
@@ -55,6 +56,17 @@
         el.classList.toggle('is-on', ready && !chatOpen && !dismissed());
     }
 
+    // Visible = the Crisp chatbox exists, is not hidden by Crisp, and its launcher button is rendered.
+    function check() {
+        var box = document.getElementById('crisp-chatbox');
+        var shown = !!(box && box.getAttribute('data-hidden') !== 'true' && box.querySelector('[role=button]'));
+        if (shown && !ready) {
+            try { chatOpen = window.$crisp.is('chat:opened'); } catch (e) {}
+        }
+        ready = shown;
+        sync();
+    }
+
     function build() {
         var style = document.createElement('style');
         style.textContent = CSS;
@@ -84,11 +96,11 @@
         new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
         window.$crisp = window.$crisp || [];
-        window.$crisp.push(['on', 'session:loaded', function () {
-            ready = true;
-            try { chatOpen = window.$crisp.is('chat:opened'); } catch (e) {}
-            sync();
-        }]);
+        window.$crisp.push(['on', 'session:loaded', check]);
+        // Crisp may already be up (cached l.js runs before this deferred script and session:loaded is gone),
+        // and it can hide its own launcher (away / mobile settings): follow the launcher itself too.
+        new MutationObserver(check).observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-hidden'] });
+        check();
         window.$crisp.push(['on', 'chat:opened', function () { chatOpen = true; sync(); }]);
         window.$crisp.push(['on', 'chat:closed', function () { chatOpen = false; sync(); }]);
     }
