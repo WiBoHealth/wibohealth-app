@@ -121,6 +121,13 @@ PILOT = {
     344: ('grain', 40), 345: ('grain', 40), 346: ('grain', 60), 347: ('grain', 35), 348: ('grain', 35),
     349: ('grain', 50), 350: ('grain', 150), 351: ('grain', 30), 352: ('grain', 150), 353: ('grain', 30),
     354: ('grain', 30), 355: ('grain', 120), 356: ('grain', 30),
+    # batch 11: muesli & granola, European and leafy vegetables, peppers, squash and berries
+    # (portions approved by Dr. Wassim on 13 October 2026)
+    357: ('grain', 45), 358: ('grain', 30), 359: ('veg', 100), 360: ('veg', 150), 361: ('veg', 100),
+    362: ('veg', 150), 363: ('veg', 80), 364: ('veg', 80), 365: ('veg', 80), 366: ('veg', 80), 367: ('veg', 100),
+    368: ('veg', 100), 369: ('veg', 15), 370: ('veg', 10), 371: ('veg', 150), 372: ('veg', 50), 373: ('veg', 80),
+    374: ('veg', 100), 375: ('veg', 150), 376: ('veg', 100), 377: ('veg', 15), 378: ('veg', 5), 379: ('veg', 120),
+    380: ('veg', 100), 381: ('fruit', 140),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -129,7 +136,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 357))
+TEAM_REVIEW |= set(range(207, 382))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}

@@ -122,9 +122,9 @@
         ]
       },
       "lead": {
-        "ar": "أيقونة الفطور الصحي لصحة القلب والأوعية ومقاومة الإنسولين، يزخر بألياف البيتا جلوكان الذائبة التي تشكل قواماً هلامياً في الأمعاء يمنح استقراراً طويلاً لسكر الدم بمؤشر جلايسيمي معتدل (55).",
-        "en": "The icon of a healthy breakfast for heart and blood-vessel health and for insulin resistance, rich in soluble beta-glucan fibre that forms a gel-like texture in the gut and keeps blood sugar steady for longer, with a moderate glycemic index (55).",
-        "nl": "Het icoon van een gezond ontbijt voor hart en bloedvaten en bij insulineresistentie, rijk aan oplosbare bètaglucaanvezels die in de darm een gelachtige structuur vormen en de bloedsuiker langer stabiel houden, met een gematigde glykemische index (55)."
+        "ar": "أيقونة الفطور الصحي لصحة القلب والأوعية ومقاومة الإنسولين، يزخر بألياف البيتا جلوكان الذائبة التي تشكل قواماً هلامياً في الأمعاء يمنح استقراراً طويلاً لسكر الدم بمؤشر جلايسيمي منخفض (55).",
+        "en": "The icon of a healthy breakfast for heart and blood-vessel health and for insulin resistance, rich in soluble beta-glucan fibre that forms a gel-like texture in the gut and keeps blood sugar steady for longer, with a low glycemic index (55).",
+        "nl": "Het icoon van een gezond ontbijt voor hart en bloedvaten en bij insulineresistentie, rijk aan oplosbare bètaglucaanvezels die in de darm een gelachtige structuur vormen en de bloedsuiker langer stabiel houden, met een lage glykemische index (55)."
       }
     },
     "8": {
@@ -668,9 +668,9 @@
         ]
       },
       "lead": {
-        "ar": "غني بمركب الريسفيراترول المفيد لصحة القلب والأوعية الدموية، بمؤشر جلايسيمي معتدل (50)، لكن سهولة تناوله بحبات صغيرة وسريعة تتطلب انتباهاً واعياً لحجم الحصة.",
-        "en": "Rich in resveratrol, which benefits heart and blood-vessel health, with a moderate glycemic index (50); but because the small grapes are so quick and easy to eat, they call for mindful attention to portion size.",
-        "nl": "Rijk aan resveratrol, dat goed is voor hart en bloedvaten, met een gematigde glykemische index (50); maar omdat de kleine druiven zo snel en makkelijk te eten zijn, vragen ze bewuste aandacht voor de portiegrootte."
+        "ar": "غني بمركب الريسفيراترول المفيد لصحة القلب والأوعية الدموية، بمؤشر جلايسيمي منخفض (50)، لكن سهولة تناوله بحبات صغيرة وسريعة تتطلب انتباهاً واعياً لحجم الحصة.",
+        "en": "Rich in resveratrol, which benefits heart and blood-vessel health, with a low glycemic index (50); but because the small grapes are so quick and easy to eat, they call for mindful attention to portion size.",
+        "nl": "Rijk aan resveratrol, dat goed is voor hart en bloedvaten, met een lage glykemische index (50); maar omdat de kleine druiven zo snel en makkelijk te eten zijn, vragen ze bewuste aandacht voor de portiegrootte."
       }
     },
     "54": {
@@ -2886,9 +2886,9 @@
     },
     "137": {
       "lead": {
-        "ar": "مشروب الرياضيين الإلكتروليتي الطبيعي؛ ماء نقي مستخرج من ثمرة جوز الهند الخضراء، يزخر بالبوتاسيوم والمغنيسيوم بمؤشر جلايسيمي معتدل (54) وسعرات خفيفة.",
-        "en": "The athletes' natural electrolyte drink: clear water from young green coconuts, rich in potassium and magnesium, with a moderate glycemic index (54) and few calories.",
-        "nl": "De natuurlijke elektrolytendrank van sporters: helder water uit jonge groene kokosnoten, rijk aan kalium en magnesium, met een gematigde glykemische index (54) en weinig calorieën."
+        "ar": "مشروب الرياضيين الإلكتروليتي الطبيعي؛ ماء نقي مستخرج من ثمرة جوز الهند الخضراء، يزخر بالبوتاسيوم والمغنيسيوم بمؤشر جلايسيمي منخفض (54) وسعرات خفيفة.",
+        "en": "The athletes' natural electrolyte drink: clear water from young green coconuts, rich in potassium and magnesium, with a low glycemic index (54) and few calories.",
+        "nl": "De natuurlijke elektrolytendrank van sporters: helder water uit jonge groene kokosnoten, rijk aan kalium en magnesium, met een lage glykemische index (54) en weinig calorieën."
       },
       "tips": {
         "ar": [
@@ -2928,9 +2928,9 @@
     },
     "139": {
       "lead": {
-        "ar": "مستخلص مضادات الأكسدة الفائقة لصحة القلب وضغط الدم؛ لكن تصفية الحبوب من بذورها البيضاء الغنية بالألياف يرفع تركيز السكريات ويمنحه مؤشراً جلايسيمياً معتدلاً (53).",
-        "en": "An extract of powerful antioxidants that support heart health and healthy blood pressure; but straining the arils from their fibre-rich white seeds concentrates the sugars, giving it a moderate glycemic index (53).",
-        "nl": "Een extract van krachtige antioxidanten die een gezond hart en een gezonde bloeddruk ondersteunen; maar door de pitjes te scheiden van de vezelrijke witte zaadjes raken de suikers geconcentreerd, met een gematigde glykemische index (53)."
+        "ar": "مستخلص مضادات الأكسدة الفائقة لصحة القلب وضغط الدم؛ لكن تصفية الحبوب من بذورها البيضاء الغنية بالألياف يرفع تركيز السكريات ويمنحه مؤشراً جلايسيمياً منخفضاً (53).",
+        "en": "An extract of powerful antioxidants that support heart health and healthy blood pressure; but straining the arils from their fibre-rich white seeds concentrates the sugars, giving it a low glycemic index (53).",
+        "nl": "Een extract van krachtige antioxidanten die een gezond hart en een gezonde bloeddruk ondersteunen; maar door de pitjes te scheiden van de vezelrijke witte zaadjes raken de suikers geconcentreerd, met een lage glykemische index (53)."
       },
       "tips": {
         "ar": [
@@ -2949,9 +2949,9 @@
     },
     "140": {
       "lead": {
-        "ar": "المشروب الغازي الأشهر عالمياً؛ محلول سكري مكرر وسريع الامتصاص خالٍ تماماً من أي بروتين أو ألياف أو قيمة غذائية، بمؤشر جلايسيمي مرتفع (63) يضغط بقوة على البنكرياس.",
-        "en": "The world's best-known soft drink: a refined, quickly absorbed sugar solution with no protein, fibre or nutritional value, and a high glycemic index (63) that puts heavy demand on insulin.",
-        "nl": "De bekendste frisdrank ter wereld: een geraffineerde, snel opneembare suikeroplossing zonder eiwit, vezels of voedingswaarde, met een hoge glykemische index (63) die veel vraagt van de insuline."
+        "ar": "المشروب الغازي الأشهر عالمياً؛ محلول سكري مكرر وسريع الامتصاص خالٍ تماماً من أي بروتين أو ألياف أو قيمة غذائية، بمؤشر جلايسيمي متوسط (63) يضغط بقوة على البنكرياس.",
+        "en": "The world's best-known soft drink: a refined, quickly absorbed sugar solution with no protein, fibre or nutritional value, and a medium glycemic index (63) that puts heavy demand on insulin.",
+        "nl": "De bekendste frisdrank ter wereld: een geraffineerde, snel opneembare suikeroplossing zonder eiwit, vezels of voedingswaarde, met een gemiddelde glykemische index (63) die veel vraagt van de insuline."
       },
       "tips": {
         "ar": [
@@ -3525,9 +3525,9 @@
     },
     "166": {
       "lead": {
-        "ar": "ملكة المطبخ الإيطالي والطبق العائلي الأكثر دفئاً في عطلات نهاية الأسبوع. السؤال الأبرز لدى عشاقها: هل لازانيا اللحم والبشاميل ترفع سكر الدم بسرعة؟ الحقيقة أن وجود اللحم المفروم وجبن الموزاريلا وصلصة الطماطم يبطئ امتصاص طبقات الباستا ويمنحها مؤشراً جلايسيمياً متوسطاً (≈52)، لكن دسامة البشاميل وكثافة النشويات تجعلان التحكم في حجم القطعة هو الفيصل الحقيقي.",
-        "en": "The queen of Italian cooking and the cosiest weekend family dish. The big question from its fans: does meat and béchamel lasagne raise blood sugar quickly? In fact, the minced meat, mozzarella and tomato sauce slow the absorption of the pasta layers, giving it a medium glycemic index (≈52), but the richness of the béchamel and the starch density make portion size the real deciding factor.",
-        "nl": "De koningin van de Italiaanse keuken en het gezelligste familiegerecht in het weekend. De grote vraag van liefhebbers: laat lasagne met vlees en bechamel de bloedsuiker snel stijgen? Het gehakt, de mozzarella en de tomatensaus vertragen juist de opname van de pastalagen, wat zorgt voor een gemiddelde glykemische index (≈52), maar de rijke bechamel en de zetmeeldichtheid maken de portiegrootte tot de echte doorslag."
+        "ar": "ملكة المطبخ الإيطالي والطبق العائلي الأكثر دفئاً في عطلات نهاية الأسبوع. السؤال الأبرز لدى عشاقها: هل لازانيا اللحم والبشاميل ترفع سكر الدم بسرعة؟ الحقيقة أن وجود اللحم المفروم وجبن الموزاريلا وصلصة الطماطم يبطئ امتصاص طبقات الباستا ويمنحها مؤشراً جلايسيمياً منخفضاً (≈52)، لكن دسامة البشاميل وكثافة النشويات تجعلان التحكم في حجم القطعة هو الفيصل الحقيقي.",
+        "en": "The queen of Italian cooking and the cosiest weekend family dish. The big question from its fans: does meat and béchamel lasagne raise blood sugar quickly? In fact, the minced meat, mozzarella and tomato sauce slow the absorption of the pasta layers, giving it a low glycemic index (≈52), but the richness of the béchamel and the starch density make portion size the real deciding factor.",
+        "nl": "De koningin van de Italiaanse keuken en het gezelligste familiegerecht in het weekend. De grote vraag van liefhebbers: laat lasagne met vlees en bechamel de bloedsuiker snel stijgen? Het gehakt, de mozzarella en de tomatensaus vertragen juist de opname van de pastalagen, wat zorgt voor een lage glykemische index (≈52), maar de rijke bechamel en de zetmeeldichtheid maken de portiegrootte tot de echte doorslag."
       },
       "tips": {
         "ar": [
@@ -3549,9 +3549,9 @@
     },
     "167": {
       "lead": {
-        "ar": "الباستا الرومانية الأصيلة التي يعشقها الملايين لصلصتها المخملية المكونة من صفار البيض وجبن البارميزان أو البيكورينو. كثيرون يتفاجأون بأن السباغيتي الكلاسيكية لا ترفع السكر بالحدة المتوقعة؛ فطهيها نصف استواء (Al Dente) مع بروتين البيض ودهون الجبن يمنحها مؤشراً جلايسيمياً معتدلاً (≈50) وهضماً تدريجياً مريحاً.",
-        "en": "The authentic Roman pasta loved by millions for its velvety sauce of egg yolk and Parmesan or pecorino. Many are surprised that classic spaghetti doesn't raise blood sugar as sharply as expected; cooking it al dente, together with the egg protein and cheese fat, gives it a moderate glycemic index (≈50) and gradual, comfortable digestion.",
-        "nl": "De authentieke Romeinse pasta waar miljoenen van houden om de fluweelzachte saus van eidooier en Parmezaan of pecorino. Velen zijn verrast dat klassieke spaghetti de bloedsuiker minder scherp laat stijgen dan verwacht; al dente gekookt, samen met het eiwit uit het ei en het vet uit de kaas, heeft ze een gematigde glykemische index (≈50) en een geleidelijke, prettige vertering."
+        "ar": "الباستا الرومانية الأصيلة التي يعشقها الملايين لصلصتها المخملية المكونة من صفار البيض وجبن البارميزان أو البيكورينو. كثيرون يتفاجأون بأن السباغيتي الكلاسيكية لا ترفع السكر بالحدة المتوقعة؛ فطهيها نصف استواء (Al Dente) مع بروتين البيض ودهون الجبن يمنحها مؤشراً جلايسيمياً منخفضاً (≈50) وهضماً تدريجياً مريحاً.",
+        "en": "The authentic Roman pasta loved by millions for its velvety sauce of egg yolk and Parmesan or pecorino. Many are surprised that classic spaghetti doesn't raise blood sugar as sharply as expected; cooking it al dente, together with the egg protein and cheese fat, gives it a low glycemic index (≈50) and gradual, comfortable digestion.",
+        "nl": "De authentieke Romeinse pasta waar miljoenen van houden om de fluweelzachte saus van eidooier en Parmezaan of pecorino. Velen zijn verrast dat klassieke spaghetti de bloedsuiker minder scherp laat stijgen dan verwacht; al dente gekookt, samen met het eiwit uit het ei en het vet uit de kaas, heeft ze een lage glykemische index (≈50) en een geleidelijke, prettige vertering."
       },
       "tips": {
         "ar": [
@@ -3573,9 +3573,9 @@
     },
     "168": {
       "lead": {
-        "ar": "الطبق المنزلي الأكثر شهرة وانتشاراً حول العالم؛ معكرونة سباغيتي مكللة بصلصة \"الراغو\" الغنية باللحم المفروم والطماطم المطهوة ببطء. التوازن الممتاز بين بروتين اللحم وألياف الطماطم ومضادات الأكسدة يمنح هذا الطبق ثباتاً أيضياً رائعاً بمؤشر جلايسيمي معتدل (≈50)، مما يجعله خياراً آمناً ومشبعاً عند ضبط الكمية.",
-        "en": "The most famous home-cooked dish in the world: spaghetti crowned with a ragù of minced meat and slow-cooked tomatoes. The great balance of meat protein, tomato fibre and antioxidants gives it good metabolic stability with a moderate glycemic index (≈50), making it a safe, filling choice when the portion is controlled.",
-        "nl": "Het beroemdste huisgerecht ter wereld: spaghetti met een ragù van gehakt en langzaam gestoofde tomaten. De goede balans tussen vleeseiwit, tomatenvezels en antioxidanten zorgt voor een mooie metabole stabiliteit met een gematigde glykemische index (≈50), waardoor het een veilige, verzadigende keuze is als de portie klopt."
+        "ar": "الطبق المنزلي الأكثر شهرة وانتشاراً حول العالم؛ معكرونة سباغيتي مكللة بصلصة \"الراغو\" الغنية باللحم المفروم والطماطم المطهوة ببطء. التوازن الممتاز بين بروتين اللحم وألياف الطماطم ومضادات الأكسدة يمنح هذا الطبق ثباتاً أيضياً رائعاً بمؤشر جلايسيمي منخفض (≈50)، مما يجعله خياراً آمناً ومشبعاً عند ضبط الكمية.",
+        "en": "The most famous home-cooked dish in the world: spaghetti crowned with a ragù of minced meat and slow-cooked tomatoes. The great balance of meat protein, tomato fibre and antioxidants gives it good metabolic stability with a low glycemic index (≈50), making it a safe, filling choice when the portion is controlled.",
+        "nl": "Het beroemdste huisgerecht ter wereld: spaghetti met een ragù van gehakt en langzaam gestoofde tomaten. De goede balans tussen vleeseiwit, tomatenvezels en antioxidanten zorgt voor een mooie metabole stabiliteit met een lage glykemische index (≈50), waardoor het een veilige, verzadigende keuze is als de portie klopt."
       },
       "tips": {
         "ar": [
@@ -3621,9 +3621,9 @@
     },
     "170": {
       "lead": {
-        "ar": "تحفة الأرز الإيطالي الشهيرة بقوامها المخملي الذي يذوب في الفم. لكن السؤال الأيضي المهم: هل الريزوتو أخف على السكر من الأرز العادي؟ في الواقع، يُصنع الريزوتو من أرز \"الأربوريو\" قصير الحبة والغني بنشا \"الأميلوبكتين\" سريع التحلل، مما يمنحه مؤشراً جلايسيمياً مرتفعاً نسبياً (≈68)، ولذا يحتاج لمرافقة ذكية تضبط وتيرة هضمه.",
-        "en": "The famous Italian rice masterpiece with a velvety texture that melts in the mouth. But the key metabolic question: is risotto gentler on blood sugar than ordinary rice? In fact, risotto is made from short-grain arborio rice, rich in quickly broken-down amylopectin starch, which gives it a relatively high glycemic index (≈68), so it needs smart companions to slow its digestion.",
-        "nl": "Het beroemde Italiaanse rijstmeesterwerk met een fluweelzachte structuur die in de mond smelt. Maar de belangrijke metabole vraag: is risotto milder voor de bloedsuiker dan gewone rijst? In werkelijkheid wordt risotto gemaakt van rondkorrelige arboriorijst, rijk aan snel afbreekbaar amylopectine-zetmeel, wat zorgt voor een relatief hoge glykemische index (≈68), dus hij heeft slimme begeleiders nodig om de vertering te vertragen."
+        "ar": "تحفة الأرز الإيطالي الشهيرة بقوامها المخملي الذي يذوب في الفم. لكن السؤال الأيضي المهم: هل الريزوتو أخف على السكر من الأرز العادي؟ في الواقع، يُصنع الريزوتو من أرز \"الأربوريو\" قصير الحبة والغني بنشا \"الأميلوبكتين\" سريع التحلل، مما يمنحه مؤشراً جلايسيمياً متوسطاً (≈68)، ولذا يحتاج لمرافقة ذكية تضبط وتيرة هضمه.",
+        "en": "The famous Italian rice masterpiece with a velvety texture that melts in the mouth. But the key metabolic question: is risotto gentler on blood sugar than ordinary rice? In fact, risotto is made from short-grain arborio rice, rich in quickly broken-down amylopectin starch, which gives it a medium glycemic index (≈68), so it needs smart companions to slow its digestion.",
+        "nl": "Het beroemde Italiaanse rijstmeesterwerk met een fluweelzachte structuur die in de mond smelt. Maar de belangrijke metabole vraag: is risotto milder voor de bloedsuiker dan gewone rijst? In werkelijkheid wordt risotto gemaakt van rondkorrelige arboriorijst, rijk aan snel afbreekbaar amylopectine-zetmeel, wat zorgt voor een gemiddelde glykemische index (≈68), dus hij heeft slimme begeleiders nodig om de vertering te vertragen."
       },
       "tips": {
         "ar": [
@@ -3645,9 +3645,9 @@
     },
     "171": {
       "lead": {
-        "ar": "حبات النيوكي الصغيرة والطرية تبدو مثل وسائد شهية من الراحة، لكن مكوناتها الأساسية تجمع بين هريس البطاطا المسلوقة ودقيق القمح. ولأن نشا البطاطا المهروسة سريع التحلل جداً في الجهاز الهضمي، فإن النيوكي يسجل مؤشراً جلايسيمياً مرتفعاً نسبياً (≈68)، مما قد يسبب ارتفاعاً سريعاً في سكر الدم إذا لم يُحط بالألياف والدهون الصحية.",
-        "en": "Small, soft gnocchi look like delicious little pillows of comfort, but they are made mainly from mashed boiled potato and wheat flour. Because mashed potato starch is broken down very quickly, gnocchi have a relatively high glycemic index (≈68), which can raise blood sugar quickly if they aren't surrounded by fibre and healthy fats.",
-        "nl": "Kleine, zachte gnocchi lijken heerlijke kussentjes van troost, maar ze worden vooral gemaakt van gepureerde gekookte aardappel en tarwebloem. Omdat het zetmeel van aardappelpuree zeer snel wordt afgebroken, hebben gnocchi een relatief hoge glykemische index (≈68), wat de bloedsuiker snel kan laten stijgen als ze niet omringd worden door vezels en gezonde vetten."
+        "ar": "حبات النيوكي الصغيرة والطرية تبدو مثل وسائد شهية من الراحة، لكن مكوناتها الأساسية تجمع بين هريس البطاطا المسلوقة ودقيق القمح. ولأن نشا البطاطا المهروسة سريع التحلل جداً في الجهاز الهضمي، فإن النيوكي يسجل مؤشراً جلايسيمياً متوسطاً (≈68)، مما قد يسبب ارتفاعاً سريعاً في سكر الدم إذا لم يُحط بالألياف والدهون الصحية.",
+        "en": "Small, soft gnocchi look like delicious little pillows of comfort, but they are made mainly from mashed boiled potato and wheat flour. Because mashed potato starch is broken down very quickly, gnocchi have a medium glycemic index (≈68), which can raise blood sugar quickly if they aren't surrounded by fibre and healthy fats.",
+        "nl": "Kleine, zachte gnocchi lijken heerlijke kussentjes van troost, maar ze worden vooral gemaakt van gepureerde gekookte aardappel en tarwebloem. Omdat het zetmeel van aardappelpuree zeer snel wordt afgebroken, hebben gnocchi een gemiddelde glykemische index (≈68), wat de bloedsuiker snel kan laten stijgen als ze niet omringd worden door vezels en gezonde vetten."
       },
       "tips": {
         "ar": [
@@ -3693,9 +3693,9 @@
     },
     "173": {
       "lead": {
-        "ar": "رمز البساطة والأناقة في المقبلات التوسكانية؛ شرائح خبز مقرمشة ومحمصة يعلوها مزيج متألق من الطماطم الناضجة، الثوم، أوراق الريحان العطرية، وزيت الزيتون البكر الممتاز. خيار خفيف ومبهج يجمع بين النشويات المعتدلة والقوة المضادة للأكسدة بمؤشر جلايسيمي معتدل (≈55).",
-        "en": "The symbol of simplicity and elegance among Tuscan starters: crisp toasted bread topped with a bright mix of ripe tomatoes, garlic, fragrant basil and extra virgin olive oil. A light, cheerful choice that combines moderate starch with antioxidant power, with a moderate glycemic index (≈55).",
-        "nl": "Het symbool van eenvoud en elegantie onder de Toscaanse voorgerechten: knapperig geroosterd brood met een stralende mix van rijpe tomaten, knoflook, geurige basilicum en extra vierge olijfolie. Een lichte, vrolijke keuze die gematigd zetmeel combineert met antioxidantkracht, met een gematigde glykemische index (≈55)."
+        "ar": "رمز البساطة والأناقة في المقبلات التوسكانية؛ شرائح خبز مقرمشة ومحمصة يعلوها مزيج متألق من الطماطم الناضجة، الثوم، أوراق الريحان العطرية، وزيت الزيتون البكر الممتاز. خيار خفيف ومبهج يجمع بين النشويات المعتدلة والقوة المضادة للأكسدة بمؤشر جلايسيمي منخفض (≈55).",
+        "en": "The symbol of simplicity and elegance among Tuscan starters: crisp toasted bread topped with a bright mix of ripe tomatoes, garlic, fragrant basil and extra virgin olive oil. A light, cheerful choice that combines moderate starch with antioxidant power, with a low glycemic index (≈55).",
+        "nl": "Het symbool van eenvoud en elegantie onder de Toscaanse voorgerechten: knapperig geroosterd brood met een stralende mix van rijpe tomaten, knoflook, geurige basilicum en extra vierge olijfolie. Een lichte, vrolijke keuze die gematigd zetmeel combineert met antioxidantkracht, met een lage glykemische index (≈55)."
       },
       "tips": {
         "ar": [
@@ -3789,9 +3789,9 @@
     },
     "177": {
       "lead": {
-        "ar": "الرول الأكثر طلباً وشعبية حول العالم؛ يجمع بين مكعبات الأفوكادو الطرية، الخيار المقرمش، وأصابع الكراب داخل لفافة متناسقة من الأرز والسمسم المحمص. وجبة منعشة وخفيفة بمؤشر جلايسيمي معتدل (≈55)، مع ضرورة الانتباه إلى أن أصابع الكراب المصنعة تحتوي على نشويات خفية.",
-        "en": "The most ordered roll in the world: soft avocado, crunchy cucumber and crab sticks in a neat roll of rice and toasted sesame. A fresh, light meal with a moderate glycemic index (≈55), but note that processed crab sticks contain hidden starch.",
-        "nl": "De meest bestelde roll ter wereld: zachte avocado, knapperige komkommer en surimisticks in een nette rol van rijst en geroosterd sesamzaad. Een frisse, lichte maaltijd met een gematigde glykemische index (≈55), maar let op: bewerkte surimisticks bevatten verborgen zetmeel."
+        "ar": "الرول الأكثر طلباً وشعبية حول العالم؛ يجمع بين مكعبات الأفوكادو الطرية، الخيار المقرمش، وأصابع الكراب داخل لفافة متناسقة من الأرز والسمسم المحمص. وجبة منعشة وخفيفة بمؤشر جلايسيمي منخفض (≈55)، مع ضرورة الانتباه إلى أن أصابع الكراب المصنعة تحتوي على نشويات خفية.",
+        "en": "The most ordered roll in the world: soft avocado, crunchy cucumber and crab sticks in a neat roll of rice and toasted sesame. A fresh, light meal with a low glycemic index (≈55), but note that processed crab sticks contain hidden starch.",
+        "nl": "De meest bestelde roll ter wereld: zachte avocado, knapperige komkommer en surimisticks in een nette rol van rijst en geroosterd sesamzaad. Een frisse, lichte maaltijd met een lage glykemische index (≈55), maar let op: bewerkte surimisticks bevatten verborgen zetmeel."
       },
       "tips": {
         "ar": [
@@ -3837,9 +3837,9 @@
     },
     "179": {
       "lead": {
-        "ar": "وعاء الدفء والراحة الأشهر في اليابان؛ مرق دجاج غني بالنكهات يحمل نودلز القمح الطازجة، بيضة مسلوقة، وشرائح دجاج طرية. السؤال الأهم: هل الرامن صحي للدايت وسكر الدم؟ البروتين والمرق يشبعان بعمق، لكن نودلز القمح تمثل مصدراً كربوهيدراتياً غنياً بمؤشر جلايسيمي متوسط (≈55)، والمرق المركز يحمل نسبة صوديوم عالية.",
-        "en": "Japan's best-known bowl of warmth and comfort: a flavourful chicken broth with fresh wheat noodles, a boiled egg and tender chicken slices. The key question: is ramen healthy for a diet and blood sugar? The protein and broth are deeply filling, but wheat noodles are a rich source of carbohydrate with a medium glycemic index (≈55), and the concentrated broth is high in sodium.",
-        "nl": "De bekendste kom warmte en troost uit Japan: een smaakvolle kippenbouillon met verse tarwenoedels, een gekookt ei en malse plakjes kip. De belangrijkste vraag: is ramen gezond bij lijnen en voor de bloedsuiker? Het eiwit en de bouillon verzadigen diep, maar tarwenoedels zijn een rijke koolhydraatbron met een gemiddelde glykemische index (≈55), en de geconcentreerde bouillon bevat veel natrium."
+        "ar": "وعاء الدفء والراحة الأشهر في اليابان؛ مرق دجاج غني بالنكهات يحمل نودلز القمح الطازجة، بيضة مسلوقة، وشرائح دجاج طرية. السؤال الأهم: هل الرامن صحي للدايت وسكر الدم؟ البروتين والمرق يشبعان بعمق، لكن نودلز القمح تمثل مصدراً كربوهيدراتياً غنياً بمؤشر جلايسيمي منخفض (≈55)، والمرق المركز يحمل نسبة صوديوم عالية.",
+        "en": "Japan's best-known bowl of warmth and comfort: a flavourful chicken broth with fresh wheat noodles, a boiled egg and tender chicken slices. The key question: is ramen healthy for a diet and blood sugar? The protein and broth are deeply filling, but wheat noodles are a rich source of carbohydrate with a low glycemic index (≈55), and the concentrated broth is high in sodium.",
+        "nl": "De bekendste kom warmte en troost uit Japan: een smaakvolle kippenbouillon met verse tarwenoedels, een gekookt ei en malse plakjes kip. De belangrijkste vraag: is ramen gezond bij lijnen en voor de bloedsuiker? Het eiwit en de bouillon verzadigen diep, maar tarwenoedels zijn een rijke koolhydraatbron met een lage glykemische index (≈55), en de geconcentreerde bouillon bevat veel natrium."
       },
       "tips": {
         "ar": [
@@ -3933,9 +3933,9 @@
     },
     "183": {
       "lead": {
-        "ar": "وسائد العجين الآسيوية الرقيقة المحشوة باللحم المفروم أو الخضار والمطهوة داخل سلال الخيزران على البخار. ميزة الطهي بالبخار أنها تحافظ على خفة العجين وخلوه التام من زيوت القلي، مما يمنحه مؤشراً جلايسيمياً معتدلاً (≈48) مع طاقة نظيفة وخفيفة على الجهاز الهضمي.",
-        "en": "Delicate Asian dough parcels filled with minced meat or vegetables and steamed in bamboo baskets. Steaming keeps the dough light and completely free of frying oil, giving dumplings a moderate glycemic index (≈48) and clean, light energy that is easy on digestion.",
-        "nl": "Fijne Aziatische deegpakketjes gevuld met gehakt of groenten en gestoomd in bamboemandjes. Stomen houdt het deeg licht en volledig vrij van frituurolie, wat dumplings een gematigde glykemische index (≈48) geeft en zuivere, lichte energie die makkelijk te verteren is."
+        "ar": "وسائد العجين الآسيوية الرقيقة المحشوة باللحم المفروم أو الخضار والمطهوة داخل سلال الخيزران على البخار. ميزة الطهي بالبخار أنها تحافظ على خفة العجين وخلوه التام من زيوت القلي، مما يمنحه مؤشراً جلايسيمياً منخفضاً (≈48) مع طاقة نظيفة وخفيفة على الجهاز الهضمي.",
+        "en": "Delicate Asian dough parcels filled with minced meat or vegetables and steamed in bamboo baskets. Steaming keeps the dough light and completely free of frying oil, giving dumplings a low glycemic index (≈48) and clean, light energy that is easy on digestion.",
+        "nl": "Fijne Aziatische deegpakketjes gevuld met gehakt of groenten en gestoomd in bamboemandjes. Stomen houdt het deeg licht en volledig vrij van frituurolie, wat dumplings een lage glykemische index (≈48) geeft en zuivere, lichte energie die makkelijk te verteren is."
       },
       "tips": {
         "ar": [
@@ -3957,9 +3957,9 @@
     },
     "184": {
       "lead": {
-        "ar": "لفائف الخضار الآسيوية المقرمشة من أشهر المقبلات حول العالم؛ رقائق عجين هشة تحبس بداخلها الملفوف والجزر والفطر. ورغم غنى الحشوة بالخضار، إلا أن القلي بالزيت الغزير ورقة العجين النشوي يجعلانها مصدراً سريعاً للسعرات بمؤشر جلايسيمي متوسط (≈50).",
-        "en": "Crispy Asian vegetable rolls are among the best-known starters in the world: thin, flaky pastry wrapped around cabbage, carrot and mushrooms. Although the filling is full of vegetables, deep-frying and the starchy pastry make them a quick source of calories, with a medium glycemic index (≈50).",
-        "nl": "Knapperige Aziatische groenteloempia's behoren tot de bekendste voorgerechten ter wereld: dun, bladerig deeg rond kool, wortel en paddenstoelen. Hoewel de vulling vol groenten zit, maken het frituren en het zetmeelrijke deeg ze tot een snelle bron van calorieën, met een gemiddelde glykemische index (≈50)."
+        "ar": "لفائف الخضار الآسيوية المقرمشة من أشهر المقبلات حول العالم؛ رقائق عجين هشة تحبس بداخلها الملفوف والجزر والفطر. ورغم غنى الحشوة بالخضار، إلا أن القلي بالزيت الغزير ورقة العجين النشوي يجعلانها مصدراً سريعاً للسعرات بمؤشر جلايسيمي منخفض (≈50).",
+        "en": "Crispy Asian vegetable rolls are among the best-known starters in the world: thin, flaky pastry wrapped around cabbage, carrot and mushrooms. Although the filling is full of vegetables, deep-frying and the starchy pastry make them a quick source of calories, with a low glycemic index (≈50).",
+        "nl": "Knapperige Aziatische groenteloempia's behoren tot de bekendste voorgerechten ter wereld: dun, bladerig deeg rond kool, wortel en paddenstoelen. Hoewel de vulling vol groenten zit, maken het frituren en het zetmeelrijke deeg ze tot een snelle bron van calorieën, met een lage glykemische index (≈50)."
       },
       "tips": {
         "ar": [
@@ -4077,9 +4077,9 @@
     },
     "189": {
       "lead": {
-        "ar": "السفير الأشهر للمطبخ الهندي حول العالم؛ قطع دجاج تندوري طرية تسبح في صلصة طماطم كريمية غنية بالتوابل العطرية كالزنجبيل والغارام ماسالا. الدجاج يمنح بروتيناً صافياً ودهون الصلصة تبطئ الهضم، مما يعطي الوجبة مؤشراً جلايسيمياً معتدلاً (≈45) وتدفقاً هادئاً للطاقة وشبعاً ممتداً.",
-        "en": "The best-known ambassador of Indian cooking worldwide: tender tandoori chicken in a creamy tomato sauce rich in aromatic spices such as ginger and garam masala. The chicken provides lean protein and the fat in the sauce slows digestion, giving the meal a moderate glycemic index (≈45), calm energy and lasting fullness.",
-        "nl": "De bekendste ambassadeur van de Indiase keuken wereldwijd: malse tandoorikip in een romige tomatensaus vol aromatische specerijen zoals gember en garam masala. De kip levert mager eiwit en het vet in de saus vertraagt de vertering, wat de maaltijd een gematigde glykemische index (≈45), rustige energie en langdurige verzadiging geeft."
+        "ar": "السفير الأشهر للمطبخ الهندي حول العالم؛ قطع دجاج تندوري طرية تسبح في صلصة طماطم كريمية غنية بالتوابل العطرية كالزنجبيل والغارام ماسالا. الدجاج يمنح بروتيناً صافياً ودهون الصلصة تبطئ الهضم، مما يعطي الوجبة مؤشراً جلايسيمياً منخفضاً (≈45) وتدفقاً هادئاً للطاقة وشبعاً ممتداً.",
+        "en": "The best-known ambassador of Indian cooking worldwide: tender tandoori chicken in a creamy tomato sauce rich in aromatic spices such as ginger and garam masala. The chicken provides lean protein and the fat in the sauce slows digestion, giving the meal a low glycemic index (≈45), calm energy and lasting fullness.",
+        "nl": "De bekendste ambassadeur van de Indiase keuken wereldwijd: malse tandoorikip in een romige tomatensaus vol aromatische specerijen zoals gember en garam masala. De kip levert mager eiwit en het vet in de saus vertraagt de vertering, wat de maaltijd een lage glykemische index (≈45), rustige energie en langdurige verzadiging geeft."
       },
       "tips": {
         "ar": [
@@ -4221,9 +4221,9 @@
     },
     "195": {
       "lead": {
-        "ar": "الرغيف المسطح والمرن الذي يشكل أساس أشهر الأطباق اللاتينية كالتاكو والفاهيتا. تورتيلا الذرة التقليدية تتميز بمؤشر جلايسيمي معتدل (≈52) بفضل معالجة الذرة الكلسية التي تحافظ على أليافها، بينما تورتيلا القمح الأبيض تكون أسرع امتصاصاً وأعلى بالسعرات.",
-        "en": "The flat, flexible bread at the heart of the best-known Latin dishes such as tacos and fajitas. Traditional corn tortillas have a moderate glycemic index (≈52) thanks to the lime treatment of the corn (nixtamalisation), which preserves its fibre, while white wheat tortillas are absorbed faster and are higher in calories.",
-        "nl": "Het platte, soepele brood dat de basis vormt van de bekendste Latijns-Amerikaanse gerechten zoals taco's en fajitas. Traditionele maïstortilla's hebben een gematigde glykemische index (≈52) dankzij de kalkbehandeling van de maïs (nixtamalisatie), die de vezels behoudt, terwijl witte tarwetortilla's sneller worden opgenomen en meer calorieën bevatten."
+        "ar": "الرغيف المسطح والمرن الذي يشكل أساس أشهر الأطباق اللاتينية كالتاكو والفاهيتا. تورتيلا الذرة التقليدية تتميز بمؤشر جلايسيمي منخفض (≈52) بفضل معالجة الذرة الكلسية التي تحافظ على أليافها، بينما تورتيلا القمح الأبيض تكون أسرع امتصاصاً وأعلى بالسعرات.",
+        "en": "The flat, flexible bread at the heart of the best-known Latin dishes such as tacos and fajitas. Traditional corn tortillas have a low glycemic index (≈52) thanks to the lime treatment of the corn (nixtamalisation), which preserves its fibre, while white wheat tortillas are absorbed faster and are higher in calories.",
+        "nl": "Het platte, soepele brood dat de basis vormt van de bekendste Latijns-Amerikaanse gerechten zoals taco's en fajitas. Traditionele maïstortilla's hebben een lage glykemische index (≈52) dankzij de kalkbehandeling van de maïs (nixtamalisatie), die de vezels behoudt, terwijl witte tarwetortilla's sneller worden opgenomen en meer calorieën bevatten."
       },
       "tips": {
         "ar": [
@@ -4269,9 +4269,9 @@
     },
     "198": {
       "lead": {
-        "ar": "الدفء الصباحي المحبب في كل حارة؛ عجينة ذهبية مخبوزة محشوة بالجبن البلدي الأبيض مع رشة حبة البركة. بروتين الجبن ودهونه يبطئان هضم نشويات العجين ويمنحان الفطيرة مؤشراً جلايسيمياً متوسطاً (≈50)، مع إحساس عميق بالامتلاء يدوم طويلاً.",
-        "en": "The much-loved morning warmth of every neighbourhood: golden baked dough filled with white local cheese and a sprinkle of nigella seeds. The protein and fat of the cheese slow the digestion of the dough's starch, giving the pie a medium glycemic index (≈50) and a deep, long-lasting feeling of fullness.",
-        "nl": "De geliefde ochtendwarmte van elke buurt: goudbruin gebakken deeg gevuld met witte lokale kaas en een snufje nigellazaad. Het eiwit en vet van de kaas vertragen de vertering van het zetmeel in het deeg, wat het pasteitje een gemiddelde glykemische index (≈50) geeft en een diep, langdurig verzadigd gevoel."
+        "ar": "الدفء الصباحي المحبب في كل حارة؛ عجينة ذهبية مخبوزة محشوة بالجبن البلدي الأبيض مع رشة حبة البركة. بروتين الجبن ودهونه يبطئان هضم نشويات العجين ويمنحان الفطيرة مؤشراً جلايسيمياً منخفضاً (≈50)، مع إحساس عميق بالامتلاء يدوم طويلاً.",
+        "en": "The much-loved morning warmth of every neighbourhood: golden baked dough filled with white local cheese and a sprinkle of nigella seeds. The protein and fat of the cheese slow the digestion of the dough's starch, giving the pie a low glycemic index (≈50) and a deep, long-lasting feeling of fullness.",
+        "nl": "De geliefde ochtendwarmte van elke buurt: goudbruin gebakken deeg gevuld met witte lokale kaas en een snufje nigellazaad. Het eiwit en vet van de kaas vertragen de vertering van het zetmeel in het deeg, wat het pasteitje een lage glykemische index (≈50) geeft en een diep, langdurig verzadigd gevoel."
       },
       "tips": {
         "ar": [
@@ -4317,9 +4317,9 @@
     },
     "200": {
       "lead": {
-        "ar": "عطر الصباح في بلاد الشام؛ رغيف مخبوز مغطى بالزعتر البري المطحون والسمسم وزيت الزيتون البكر الممتاز. دهون زيت الزيتون الأحادية غير المشبعة تشكل حاجزاً حيوياً يبطئ هضم عجين القمح، مما يمنح منقوشة الزعتر مؤشراً جلايسيمياً معتدلاً (≈55) وطاقة متوازنة.",
-        "en": "The scent of morning in the Levant: flatbread topped with ground wild thyme, sesame and extra virgin olive oil. The monounsaturated fats in olive oil help slow the digestion of the wheat dough, giving za'atar manakish a moderate glycemic index (≈55) and balanced energy.",
-        "nl": "De geur van de ochtend in de Levant: platbrood met gemalen wilde tijm, sesam en extra vierge olijfolie. De enkelvoudig onverzadigde vetten in olijfolie helpen de vertering van het tarwedeeg te vertragen, wat za'atar-manakish een gematigde glykemische index (≈55) en evenwichtige energie geeft."
+        "ar": "عطر الصباح في بلاد الشام؛ رغيف مخبوز مغطى بالزعتر البري المطحون والسمسم وزيت الزيتون البكر الممتاز. دهون زيت الزيتون الأحادية غير المشبعة تشكل حاجزاً حيوياً يبطئ هضم عجين القمح، مما يمنح منقوشة الزعتر مؤشراً جلايسيمياً منخفضاً (≈55) وطاقة متوازنة.",
+        "en": "The scent of morning in the Levant: flatbread topped with ground wild thyme, sesame and extra virgin olive oil. The monounsaturated fats in olive oil help slow the digestion of the wheat dough, giving za'atar manakish a low glycemic index (≈55) and balanced energy.",
+        "nl": "De geur van de ochtend in de Levant: platbrood met gemalen wilde tijm, sesam en extra vierge olijfolie. De enkelvoudig onverzadigde vetten in olijfolie helpen de vertering van het tarwedeeg te vertragen, wat za'atar-manakish een lage glykemische index (≈55) en evenwichtige energie geeft."
       },
       "tips": {
         "ar": [
@@ -4341,9 +4341,9 @@
     },
     "201": {
       "lead": {
-        "ar": "متعة الجبن الممتد والذائب على رغيف الفرن الساخن؛ وجبة الفطور المحبوبة للصغار والكبار. دهون وبروتين جبن العكاوي يفرملان سرعة امتصاص نشويات العجين بمؤشر جلايسيمي معتدل (≈55)، مما يوفر شبعاً يدوم لساعات طويلة، لكنها تتطلب الانتباه لملوحة الجبن.",
-        "en": "The joy of stretchy, melted cheese on hot oven-baked bread: a breakfast loved by young and old. The fat and protein of the akkawi cheese slow the absorption of the dough's starch, with a moderate glycemic index (≈55) and fullness that lasts for hours, but the saltiness of the cheese needs attention.",
-        "nl": "Het plezier van draderige, gesmolten kaas op warm ovenbrood: een ontbijt waar jong en oud van houden. Het vet en eiwit van de akkawi-kaas vertragen de opname van het zetmeel in het deeg, met een gematigde glykemische index (≈55) en een verzadiging die urenlang aanhoudt, maar de zoutheid van de kaas vraagt aandacht."
+        "ar": "متعة الجبن الممتد والذائب على رغيف الفرن الساخن؛ وجبة الفطور المحبوبة للصغار والكبار. دهون وبروتين جبن العكاوي يفرملان سرعة امتصاص نشويات العجين بمؤشر جلايسيمي منخفض (≈55)، مما يوفر شبعاً يدوم لساعات طويلة، لكنها تتطلب الانتباه لملوحة الجبن.",
+        "en": "The joy of stretchy, melted cheese on hot oven-baked bread: a breakfast loved by young and old. The fat and protein of the akkawi cheese slow the absorption of the dough's starch, with a low glycemic index (≈55) and fullness that lasts for hours, but the saltiness of the cheese needs attention.",
+        "nl": "Het plezier van draderige, gesmolten kaas op warm ovenbrood: een ontbijt waar jong en oud van houden. Het vet en eiwit van de akkawi-kaas vertragen de opname van het zetmeel in het deeg, met een lage glykemische index (≈55) en een verzadiging die urenlang aanhoudt, maar de zoutheid van de kaas vraagt aandacht."
       },
       "tips": {
         "ar": [
@@ -4413,9 +4413,9 @@
     },
     "204": {
       "lead": {
-        "ar": "الغداء السريع والأكثر شعبية لمن يبحث عن بروتين بحري سهل ومشبع. لحم التونة النقي خالٍ تماماً من النشويات وغني بأوميغا 3 والبروتين الكامل، وعند دمجه مع التوست، تنخفض سرعة تفكك الكربوهيدرات بمؤشر جلايسيمي معتدل (≈52) وطاقة مستقرة.",
-        "en": "The most popular quick lunch for anyone looking for easy, filling marine protein. Tuna itself has no starch and is rich in omega-3 and complete protein, and combined with toast it slows the breakdown of carbohydrate, with a moderate glycemic index (≈52) and steady energy.",
-        "nl": "De populairste snelle lunch voor wie makkelijk, verzadigend eiwit uit zee zoekt. Tonijn zelf bevat geen zetmeel en is rijk aan omega-3 en compleet eiwit, en samen met brood vertraagt het de afbraak van koolhydraten, met een gematigde glykemische index (≈52) en stabiele energie."
+        "ar": "الغداء السريع والأكثر شعبية لمن يبحث عن بروتين بحري سهل ومشبع. لحم التونة النقي خالٍ تماماً من النشويات وغني بأوميغا 3 والبروتين الكامل، وعند دمجه مع التوست، تنخفض سرعة تفكك الكربوهيدرات بمؤشر جلايسيمي منخفض (≈52) وطاقة مستقرة.",
+        "en": "The most popular quick lunch for anyone looking for easy, filling marine protein. Tuna itself has no starch and is rich in omega-3 and complete protein, and combined with toast it slows the breakdown of carbohydrate, with a low glycemic index (≈52) and steady energy.",
+        "nl": "De populairste snelle lunch voor wie makkelijk, verzadigend eiwit uit zee zoekt. Tonijn zelf bevat geen zetmeel en is rijk aan omega-3 en compleet eiwit, en samen met brood vertraagt het de afbraak van koolhydraten, met een lage glykemische index (≈52) en stabiele energie."
       },
       "tips": {
         "ar": [
@@ -4509,9 +4509,9 @@
     },
     "208": {
       "lead": {
-        "ar": "حساء التعافي الكلاسيكي الذي يرتبط دائماً بالدفء واستعادة الحيوية؛ مرق دجاج غني بقطع الدجاج المسحب وخيوط الشعيرية الذهبية. يتساءل الكثيرون: هل الشعيرية في الشوربة ترفع السكر؟ وجود بروتين الدجاج مع دهون المرق يفرمل تحلل نشا الشعيرية، مما يمنح الشوربة مؤشراً جلايسيمياً معتدلاً (≈35) وطاقة متدرجة.",
-        "en": "The classic soup for getting back on your feet, always linked with warmth and renewed energy: a rich chicken broth with shredded chicken and golden vermicelli. Many ask: does the vermicelli in soup raise blood sugar? The chicken protein and the fat in the broth slow the breakdown of the vermicelli starch, giving the soup a moderate glycemic index (≈35) and gradual energy.",
-        "nl": "De klassieke soep om weer op krachten te komen, altijd verbonden met warmte en nieuwe energie: een rijke kippenbouillon met getrokken kip en goudgele vermicelli. Velen vragen: laat de vermicelli in soep de bloedsuiker stijgen? Het kippeneiwit en het vet in de bouillon vertragen de afbraak van het vermicellizetmeel, wat de soep een gematigde glykemische index (≈35) en geleidelijke energie geeft."
+        "ar": "حساء التعافي الكلاسيكي الذي يرتبط دائماً بالدفء واستعادة الحيوية؛ مرق دجاج غني بقطع الدجاج المسحب وخيوط الشعيرية الذهبية. يتساءل الكثيرون: هل الشعيرية في الشوربة ترفع السكر؟ وجود بروتين الدجاج مع دهون المرق يفرمل تحلل نشا الشعيرية، مما يمنح الشوربة مؤشراً جلايسيمياً منخفضاً (≈35) وطاقة متدرجة.",
+        "en": "The classic soup for getting back on your feet, always linked with warmth and renewed energy: a rich chicken broth with shredded chicken and golden vermicelli. Many ask: does the vermicelli in soup raise blood sugar? The chicken protein and the fat in the broth slow the breakdown of the vermicelli starch, giving the soup a low glycemic index (≈35) and gradual energy.",
+        "nl": "De klassieke soep om weer op krachten te komen, altijd verbonden met warmte en nieuwe energie: een rijke kippenbouillon met getrokken kip en goudgele vermicelli. Velen vragen: laat de vermicelli in soep de bloedsuiker stijgen? Het kippeneiwit en het vet in de bouillon vertragen de afbraak van het vermicellizetmeel, wat de soep een lage glykemische index (≈35) en geleidelijke energie geeft."
       },
       "tips": {
         "ar": [
@@ -4629,9 +4629,9 @@
     },
     "213": {
       "lead": {
-        "ar": "سيدة الشوربات التراثية في المطبخ الشامي؛ حبوب القمح الأخضر المحمصة والمجروشة والمطهوة ببطء مع مرق اللحم وقطعه الطرية. الفريكة تتفوق على الأرز والبرغل بغناها بالألياف الذائبة والبروتين، مما يمنح الشوربة مؤشراً جلايسيمياً معتدلاً (≈42) وشبعاً عميقاً يستمر لساعات.",
-        "en": "The queen of heritage soups in Levantine cooking: roasted, cracked green wheat slow-cooked with meat broth and tender pieces of meat. Freekeh beats rice and bulgur for fibre and protein, giving the soup a moderate glycemic index (≈42) and deep fullness that lasts for hours.",
-        "nl": "De koningin van de erfgoedsoepen uit de Levantijnse keuken: geroosterde, gebroken groene tarwe langzaam gekookt met vleesbouillon en malse stukjes vlees. Freekeh verslaat rijst en bulgur in vezels en eiwit, wat de soep een gematigde glykemische index (≈42) en een diepe, urenlange verzadiging geeft."
+        "ar": "سيدة الشوربات التراثية في المطبخ الشامي؛ حبوب القمح الأخضر المحمصة والمجروشة والمطهوة ببطء مع مرق اللحم وقطعه الطرية. الفريكة تتفوق على الأرز والبرغل بغناها بالألياف الذائبة والبروتين، مما يمنح الشوربة مؤشراً جلايسيمياً منخفضاً (≈42) وشبعاً عميقاً يستمر لساعات.",
+        "en": "The queen of heritage soups in Levantine cooking: roasted, cracked green wheat slow-cooked with meat broth and tender pieces of meat. Freekeh beats rice and bulgur for fibre and protein, giving the soup a low glycemic index (≈42) and deep fullness that lasts for hours.",
+        "nl": "De koningin van de erfgoedsoepen uit de Levantijnse keuken: geroosterde, gebroken groene tarwe langzaam gekookt met vleesbouillon en malse stukjes vlees. Freekeh verslaat rijst en bulgur in vezels en eiwit, wat de soep een lage glykemische index (≈42) en een diepe, urenlange verzadiging geeft."
       },
       "tips": {
         "ar": [
@@ -4725,9 +4725,9 @@
     },
     "217": {
       "lead": {
-        "ar": "إفطار وعشاء الحارات الشامية المحبوب؛ مكعبات البطاطا المقلية أو المسلوقة والممزوجة بالبيض البلدي المخفوق والتوابل كالفلفل الأسود والكمون. السؤال الدائم: هل البطاطا مع البيض ترفع السكر؟ بروتين ودهون البيض تشكل فرملة حيوية لامتصاص نشا البطاطا، مما يعطي الطبق مؤشراً جلايسيمياً متوسطاً (≈55).",
-        "en": "The beloved breakfast and supper of Levantine neighbourhoods: fried or boiled potato cubes mixed with beaten eggs and spices such as black pepper and cumin. The ever-present question: do potatoes with eggs raise blood sugar? The protein and fat in the eggs help slow the absorption of the potato starch, giving the dish a medium glycemic index (≈55).",
-        "nl": "Het geliefde ontbijt en avondeten in Levantijnse buurten: gebakken of gekookte aardappelblokjes gemengd met losgeklopte eieren en specerijen zoals zwarte peper en komijn. De vaste vraag: laten aardappelen met ei de bloedsuiker stijgen? Het eiwit en vet in de eieren helpen de opname van het aardappelzetmeel te vertragen, wat het gerecht een gemiddelde glykemische index (≈55) geeft."
+        "ar": "إفطار وعشاء الحارات الشامية المحبوب؛ مكعبات البطاطا المقلية أو المسلوقة والممزوجة بالبيض البلدي المخفوق والتوابل كالفلفل الأسود والكمون. السؤال الدائم: هل البطاطا مع البيض ترفع السكر؟ بروتين ودهون البيض تشكل فرملة حيوية لامتصاص نشا البطاطا، مما يعطي الطبق مؤشراً جلايسيمياً منخفضاً (≈55).",
+        "en": "The beloved breakfast and supper of Levantine neighbourhoods: fried or boiled potato cubes mixed with beaten eggs and spices such as black pepper and cumin. The ever-present question: do potatoes with eggs raise blood sugar? The protein and fat in the eggs help slow the absorption of the potato starch, giving the dish a low glycemic index (≈55).",
+        "nl": "Het geliefde ontbijt en avondeten in Levantijnse buurten: gebakken of gekookte aardappelblokjes gemengd met losgeklopte eieren en specerijen zoals zwarte peper en komijn. De vaste vraag: laten aardappelen met ei de bloedsuiker stijgen? Het eiwit en vet in de eieren helpen de opname van het aardappelzetmeel te vertragen, wat het gerecht een lage glykemische index (≈55) geeft."
       },
       "tips": {
         "ar": [
@@ -4797,9 +4797,9 @@
     },
     "220": {
       "lead": {
-        "ar": "الطبق العثماني التراثي العريق؛ كرات اللحم المفروم المتبلة بالبهارات والبصل، والمطهوة داخل صلصة طماطم كثيفة مع الصنوبر المحمص. كرات اللحم توفر بروتيناً صافياً والصلصة تمدك بمضادات الأكسدة، مما يمنح الطبق مؤشراً جلايسيمياً معتدلاً (≈42) وشعوراً عميقاً بالرضا والامتلاء.",
-        "en": "The time-honoured Ottoman heritage dish: spiced meatballs with onion, cooked in a thick tomato sauce with toasted pine nuts. The meatballs provide lean protein and the sauce adds antioxidants, giving the dish a moderate glycemic index (≈42) and a deep feeling of satisfaction and fullness.",
-        "nl": "Het eeuwenoude Ottomaanse erfgoedgerecht: gekruide gehaktballetjes met ui, gestoofd in een dikke tomatensaus met geroosterde pijnboompitten. De gehaktballetjes leveren mager eiwit en de saus antioxidanten, wat het gerecht een gematigde glykemische index (≈42) en een diep gevoel van voldoening en verzadiging geeft."
+        "ar": "الطبق العثماني التراثي العريق؛ كرات اللحم المفروم المتبلة بالبهارات والبصل، والمطهوة داخل صلصة طماطم كثيفة مع الصنوبر المحمص. كرات اللحم توفر بروتيناً صافياً والصلصة تمدك بمضادات الأكسدة، مما يمنح الطبق مؤشراً جلايسيمياً منخفضاً (≈42) وشعوراً عميقاً بالرضا والامتلاء.",
+        "en": "The time-honoured Ottoman heritage dish: spiced meatballs with onion, cooked in a thick tomato sauce with toasted pine nuts. The meatballs provide lean protein and the sauce adds antioxidants, giving the dish a low glycemic index (≈42) and a deep feeling of satisfaction and fullness.",
+        "nl": "Het eeuwenoude Ottomaanse erfgoedgerecht: gekruide gehaktballetjes met ui, gestoofd in een dikke tomatensaus met geroosterde pijnboompitten. De gehaktballetjes leveren mager eiwit en de saus antioxidanten, wat het gerecht een lage glykemische index (≈42) en een diep gevoel van voldoening en verzadiging geeft."
       },
       "tips": {
         "ar": [
@@ -4869,9 +4869,9 @@
     },
     "223": {
       "lead": {
-        "ar": "سلطة الطاقة والتغذية الذكية المعاصرة؛ حبوب كينوا مطبوخة وممزوجة بمكعبات الأفوكادو، الطماطم الكرزية، الخيار، والكزبرة مع تتبيلة الليمون وزيت الزيتون. الكينوا من الحبوب الكاملة الغنية بالبروتين النباتي الكامل والألياف، مما يمنح السلطة مؤشراً جلايسيمياً معتدلاً (≈53) وطاقة مستدامة.",
-        "en": "The modern salad of energy and smart nutrition: cooked quinoa mixed with avocado cubes, cherry tomatoes, cucumber and coriander in a lemon and olive oil dressing. Quinoa is a wholegrain rich in complete plant protein and fibre, giving the salad a moderate glycemic index (≈53) and sustained energy.",
-        "nl": "De moderne salade van energie en slimme voeding: gekookte quinoa gemengd met blokjes avocado, cherrytomaatjes, komkommer en koriander in een dressing van citroen en olijfolie. Quinoa is een volkorengraan rijk aan compleet plantaardig eiwit en vezels, wat de salade een gematigde glykemische index (≈53) en langdurige energie geeft."
+        "ar": "سلطة الطاقة والتغذية الذكية المعاصرة؛ حبوب كينوا مطبوخة وممزوجة بمكعبات الأفوكادو، الطماطم الكرزية، الخيار، والكزبرة مع تتبيلة الليمون وزيت الزيتون. الكينوا من الحبوب الكاملة الغنية بالبروتين النباتي الكامل والألياف، مما يمنح السلطة مؤشراً جلايسيمياً منخفضاً (≈53) وطاقة مستدامة.",
+        "en": "The modern salad of energy and smart nutrition: cooked quinoa mixed with avocado cubes, cherry tomatoes, cucumber and coriander in a lemon and olive oil dressing. Quinoa is a wholegrain rich in complete plant protein and fibre, giving the salad a low glycemic index (≈53) and sustained energy.",
+        "nl": "De moderne salade van energie en slimme voeding: gekookte quinoa gemengd met blokjes avocado, cherrytomaatjes, komkommer en koriander in een dressing van citroen en olijfolie. Quinoa is een volkorengraan rijk aan compleet plantaardig eiwit en vezels, wat de salade een lage glykemische index (≈53) en langdurige energie geeft."
       },
       "tips": {
         "ar": [
@@ -5037,9 +5037,9 @@
     },
     "230": {
       "lead": {
-        "ar": "اللؤلؤة الاستوائية الآسيوية بقشرتها الوردية الخشنة ولبها الأبيض الشفاف المفعم بالعصارة والنكهة الزهرية الفريدة. يسأل محبو الفواكه: هل الليتشي عالي السكر؟ يتميز الليتشي بحلاوة طبيعية واضحة وماء وفير، ويسجل مؤشراً جلايسيمياً متوسطاً (≈50)، مما يستدعي الاستمتاع به بوعي واعتدال في عدد الحبات.",
-        "en": "The Asian tropical pearl with a rough pink skin and translucent white, juicy flesh with a unique floral flavour. Fruit lovers ask: is lychee high in sugar? Lychee has a clear natural sweetness and plenty of water, with a medium glycemic index (≈50), which calls for enjoying it mindfully and in moderate numbers.",
-        "nl": "De Aziatische tropische parel met een ruwe roze schil en doorschijnend wit, sappig vruchtvlees met een unieke bloemige smaak. Fruitliefhebbers vragen: bevat lychee veel suiker? Lychee heeft een duidelijke natuurlijke zoetheid en veel water, met een gemiddelde glykemische index (≈50), wat vraagt om er bewust en met mate van te genieten."
+        "ar": "اللؤلؤة الاستوائية الآسيوية بقشرتها الوردية الخشنة ولبها الأبيض الشفاف المفعم بالعصارة والنكهة الزهرية الفريدة. يسأل محبو الفواكه: هل الليتشي عالي السكر؟ يتميز الليتشي بحلاوة طبيعية واضحة وماء وفير، ويسجل مؤشراً جلايسيمياً منخفضاً (≈50)، مما يستدعي الاستمتاع به بوعي واعتدال في عدد الحبات.",
+        "en": "The Asian tropical pearl with a rough pink skin and translucent white, juicy flesh with a unique floral flavour. Fruit lovers ask: is lychee high in sugar? Lychee has a clear natural sweetness and plenty of water, with a low glycemic index (≈50), which calls for enjoying it mindfully and in moderate numbers.",
+        "nl": "De Aziatische tropische parel met een ruwe roze schil en doorschijnend wit, sappig vruchtvlees met een unieke bloemige smaak. Fruitliefhebbers vragen: bevat lychee veel suiker? Lychee heeft een duidelijke natuurlijke zoetheid en veel water, met een lage glykemische index (≈50), wat vraagt om er bewust en met mate van te genieten."
       },
       "tips": {
         "ar": [
@@ -5397,9 +5397,9 @@
     },
     "245": {
       "lead": {
-        "ar": "دقيق الألياف الفائقة؛ لب جوز الهند المجفف والمطحون بعد استخلاص الزيت منه. يتميز برائحة استوائية ناعمة وغنى استثنائي بالألياف الذائبة وغير الذائبة بمؤشر جلايسيمي معتدل (≈45) وكربوهيدرات صافية منخفضة.",
-        "en": "The super-fibre flour: dried coconut flesh ground after the oil has been extracted. It has a soft tropical aroma and an exceptional amount of soluble and insoluble fibre, with a moderate glycemic index (≈45) and low net carbohydrate.",
-        "nl": "Het supervezelmeel: gedroogd kokosvruchtvlees, gemalen nadat de olie eruit is gehaald. Het heeft een zacht tropisch aroma en uitzonderlijk veel oplosbare en onoplosbare vezels, met een gematigde glykemische index (≈45) en weinig netto koolhydraten."
+        "ar": "دقيق الألياف الفائقة؛ لب جوز الهند المجفف والمطحون بعد استخلاص الزيت منه. يتميز برائحة استوائية ناعمة وغنى استثنائي بالألياف الذائبة وغير الذائبة بمؤشر جلايسيمي منخفض (≈45) وكربوهيدرات صافية منخفضة.",
+        "en": "The super-fibre flour: dried coconut flesh ground after the oil has been extracted. It has a soft tropical aroma and an exceptional amount of soluble and insoluble fibre, with a low glycemic index (≈45) and low net carbohydrate.",
+        "nl": "Het supervezelmeel: gedroogd kokosvruchtvlees, gemalen nadat de olie eruit is gehaald. Het heeft een zacht tropisch aroma en uitzonderlijk veel oplosbare en onoplosbare vezels, met een lage glykemische index (≈45) en weinig netto koolhydraten."
       },
       "tips": {
         "ar": [
@@ -5517,9 +5517,9 @@
     },
     "250": {
       "lead": {
-        "ar": "شاي المزاج والشارع الخليجي الدافئ؛ شاي أسود قوي يغلي طويلاً مع الحليب المبخر وحبات الهيل والقرنفل والزعفران والزنجبيل. الحليب والتوابل يمنحان الشاي مؤشراً جلايسيمياً متوسطاً (≈50)، وسر تأثيره على الصحة يعتمد كلياً على كمية السكر المضافة.",
-        "en": "The warming, mood-lifting tea of the Gulf street: strong black tea boiled long with evaporated milk, cardamom, cloves, saffron and ginger. The milk and spices give the tea a medium glycemic index (≈50), and its effect on health depends entirely on how much sugar is added.",
-        "nl": "De verwarmende, opbeurende thee van de straten in de Golf: sterke zwarte thee lang gekookt met verdampte melk, kardemom, kruidnagel, saffraan en gember. De melk en specerijen geven de thee een gemiddelde glykemische index (≈50), en het effect op de gezondheid hangt volledig af van hoeveel suiker er wordt toegevoegd."
+        "ar": "شاي المزاج والشارع الخليجي الدافئ؛ شاي أسود قوي يغلي طويلاً مع الحليب المبخر وحبات الهيل والقرنفل والزعفران والزنجبيل. الحليب والتوابل يمنحان الشاي مؤشراً جلايسيمياً منخفضاً (≈50)، وسر تأثيره على الصحة يعتمد كلياً على كمية السكر المضافة.",
+        "en": "The warming, mood-lifting tea of the Gulf street: strong black tea boiled long with evaporated milk, cardamom, cloves, saffron and ginger. The milk and spices give the tea a low glycemic index (≈50), and its effect on health depends entirely on how much sugar is added.",
+        "nl": "De verwarmende, opbeurende thee van de straten in de Golf: sterke zwarte thee lang gekookt met verdampte melk, kardemom, kruidnagel, saffraan en gember. De melk en specerijen geven de thee een lage glykemische index (≈50), en het effect op de gezondheid hangt volledig af van hoeveel suiker er wordt toegevoegd."
       },
       "tips": {
         "ar": [
@@ -5541,9 +5541,9 @@
     },
     "251": {
       "lead": {
-        "ar": "الفاكهة الآسيوية ذات المظهر الخارجي المدهش بشعيراتها الحمراء اللطيفة ولبها الأبيض الشفاف المشابه لليتشي. يتميز الرامبوتان بطعم حلو معتدل وعصارة وفيرة بمؤشر جلايسيمي متوسط (≈50)، مما يستوجب تناوله باعتدال لضبط السكريات البسيطة.",
-        "en": "The Asian fruit with a striking hairy red skin and translucent white flesh similar to lychee. Rambutan has a moderately sweet taste and plenty of juice, with a medium glycemic index (≈50), so it should be eaten in moderation to keep simple sugars in check.",
-        "nl": "De Aziatische vrucht met een opvallende harige rode schil en doorschijnend wit vruchtvlees dat lijkt op lychee. Ramboetan heeft een gematigd zoete smaak en veel sap, met een gemiddelde glykemische index (≈50), dus eet hem met mate om de enkelvoudige suikers in toom te houden."
+        "ar": "الفاكهة الآسيوية ذات المظهر الخارجي المدهش بشعيراتها الحمراء اللطيفة ولبها الأبيض الشفاف المشابه لليتشي. يتميز الرامبوتان بطعم حلو معتدل وعصارة وفيرة بمؤشر جلايسيمي منخفض (≈50)، مما يستوجب تناوله باعتدال لضبط السكريات البسيطة.",
+        "en": "The Asian fruit with a striking hairy red skin and translucent white flesh similar to lychee. Rambutan has a moderately sweet taste and plenty of juice, with a low glycemic index (≈50), so it should be eaten in moderation to keep simple sugars in check.",
+        "nl": "De Aziatische vrucht met een opvallende harige rode schil en doorschijnend wit vruchtvlees dat lijkt op lychee. Ramboetan heeft een gematigd zoete smaak en veel sap, met een lage glykemische index (≈50), dus eet hem met mate om de enkelvoudige suikers in toom te houden."
       },
       "tips": {
         "ar": [
@@ -5589,9 +5589,9 @@
     },
     "253": {
       "lead": {
-        "ar": "\"ملك الفواكه\" في جنوب شرق آسيا؛ الفاكهة الشوكية الشهيرة برائحتها النفاذة المثيرة للجدل وقوامها الكريمي الذي يشبه الكاسترد. يتفرد الدوريان بأنه فاكهة غنية بالدهون المفيدة والبروتين، ويسجل مؤشراً جلايسيمياً معتدلاً (≈49)، لكنه فاكهة فائقة الكثافة بالسعرات.",
-        "en": "The 'king of fruits' in Southeast Asia: the famous spiky fruit with a pungent, controversial smell and a creamy, custard-like texture. Durian is unusual in being rich in healthy fats and protein, with a moderate glycemic index (≈49), but it is very energy-dense.",
-        "nl": "De 'koning der vruchten' in Zuidoost-Azië: de beroemde stekelige vrucht met een doordringende, omstreden geur en een romige, custardachtige structuur. Doerian is bijzonder omdat hij rijk is aan gezonde vetten en eiwit, met een gematigde glykemische index (≈49), maar hij is zeer energierijk."
+        "ar": "\"ملك الفواكه\" في جنوب شرق آسيا؛ الفاكهة الشوكية الشهيرة برائحتها النفاذة المثيرة للجدل وقوامها الكريمي الذي يشبه الكاسترد. يتفرد الدوريان بأنه فاكهة غنية بالدهون المفيدة والبروتين، ويسجل مؤشراً جلايسيمياً منخفضاً (≈49)، لكنه فاكهة فائقة الكثافة بالسعرات.",
+        "en": "The 'king of fruits' in Southeast Asia: the famous spiky fruit with a pungent, controversial smell and a creamy, custard-like texture. Durian is unusual in being rich in healthy fats and protein, with a low glycemic index (≈49), but it is very energy-dense.",
+        "nl": "De 'koning der vruchten' in Zuidoost-Azië: de beroemde stekelige vrucht met een doordringende, omstreden geur en een romige, custardachtige structuur. Doerian is bijzonder omdat hij rijk is aan gezonde vetten en eiwit, met een lage glykemische index (≈49), maar hij is zeer energierijk."
       },
       "tips": {
         "ar": [
@@ -5661,9 +5661,9 @@
     },
     "256": {
       "lead": {
-        "ar": "\"ملكة الفواكه الاستوائية\"؛ قشرة بنفسجية سميكة تخفي بداخلها فصوصاً بيضاء كفصوص الثوم بمذاق يجمع بين الخوخ والفراولة بنعومة حريرية. يسجل المانجوستين مؤشراً جلايسيمياً معتدلاً (≈46)، ويشتهر بغناه الاستثنائي بمركبات \"الزانثونات\" المضادة للأكسدة.",
-        "en": "The 'queen of tropical fruits': a thick purple rind hiding white segments like garlic cloves, with a silky taste that combines peach and strawberry. Mangosteen has a moderate glycemic index (≈46) and is known for its exceptional content of antioxidant xanthones.",
-        "nl": "De 'koningin van de tropische vruchten': een dikke paarse schil met witte partjes als knoflookteentjes, met een zijdezachte smaak die perzik en aardbei combineert. Mangistan heeft een gematigde glykemische index (≈46) en staat bekend om het uitzonderlijke gehalte aan antioxiderende xanthonen."
+        "ar": "\"ملكة الفواكه الاستوائية\"؛ قشرة بنفسجية سميكة تخفي بداخلها فصوصاً بيضاء كفصوص الثوم بمذاق يجمع بين الخوخ والفراولة بنعومة حريرية. يسجل المانجوستين مؤشراً جلايسيمياً منخفضاً (≈46)، ويشتهر بغناه الاستثنائي بمركبات \"الزانثونات\" المضادة للأكسدة.",
+        "en": "The 'queen of tropical fruits': a thick purple rind hiding white segments like garlic cloves, with a silky taste that combines peach and strawberry. Mangosteen has a low glycemic index (≈46) and is known for its exceptional content of antioxidant xanthones.",
+        "nl": "De 'koningin van de tropische vruchten': een dikke paarse schil met witte partjes als knoflookteentjes, met een zijdezachte smaak die perzik en aardbei combineert. Mangistan heeft een lage glykemische index (≈46) en staat bekend om het uitzonderlijke gehalte aan antioxiderende xanthonen."
       },
       "tips": {
         "ar": [
@@ -5685,9 +5685,9 @@
     },
     "257": {
       "lead": {
-        "ar": "فاكهة الخريف البرتقالية المتألقة ببريقها العسلي وقوامها الجيلاتيني الناعم؛ كنز موسمي لفيتامين A ومضادات الأكسدة. السؤال الدائم: هل الكاكا ترفع السكر سريعاً؟ تتميز بحلاوة واضحة ومؤشر جلايسيمي متوسط (≈50)، لكن غناها بألياف البكتين الذائبة يجعل امتصاص سكرياتها متزناً عند النضج الطبيعي المعتدل.",
-        "en": "The shining orange fruit of autumn with a honey-like gloss and a soft, jelly-like texture: a seasonal treasure of vitamin A and antioxidants. The ever-present question: does persimmon raise blood sugar quickly? It is clearly sweet with a medium glycemic index (≈50), but its soluble pectin fibre keeps the absorption of its sugars balanced when it is moderately ripe.",
-        "nl": "De stralende oranje herfstvrucht met een honingachtige glans en een zachte, geleiachtige structuur: een seizoensschat van vitamine A en antioxidanten. De vaste vraag: laat kaki de bloedsuiker snel stijgen? Hij is duidelijk zoet met een gemiddelde glykemische index (≈50), maar de oplosbare pectinevezels houden de opname van de suikers evenwichtig als hij matig rijp is."
+        "ar": "فاكهة الخريف البرتقالية المتألقة ببريقها العسلي وقوامها الجيلاتيني الناعم؛ كنز موسمي لفيتامين A ومضادات الأكسدة. السؤال الدائم: هل الكاكا ترفع السكر سريعاً؟ تتميز بحلاوة واضحة ومؤشر جلايسيمي منخفض (≈50)، لكن غناها بألياف البكتين الذائبة يجعل امتصاص سكرياتها متزناً عند النضج الطبيعي المعتدل.",
+        "en": "The shining orange fruit of autumn with a honey-like gloss and a soft, jelly-like texture: a seasonal treasure of vitamin A and antioxidants. The ever-present question: does persimmon raise blood sugar quickly? It is clearly sweet with a low glycemic index (≈50), but its soluble pectin fibre keeps the absorption of its sugars balanced when it is moderately ripe.",
+        "nl": "De stralende oranje herfstvrucht met een honingachtige glans en een zachte, geleiachtige structuur: een seizoensschat van vitamine A en antioxidanten. De vaste vraag: laat kaki de bloedsuiker snel stijgen? Hij is duidelijk zoet met een lage glykemische index (≈50), maar de oplosbare pectinevezels houden de opname van de suikers evenwichtig als hij matig rijp is."
       },
       "tips": {
         "ar": [
@@ -5709,9 +5709,9 @@
     },
     "258": {
       "lead": {
-        "ar": "بشائر الربيع الذهبية التي تمتلئ بها أسواق بلاد الشام وحوض المتوسط؛ ثمار صفراء صغيرة ذات نكهة تجمع بين المشمش والبرقوق بحموضة مبهجة. تسجل الإسكدنيا مؤشراً جلايسيمياً متوسطاً (≈55)، وتتميز بمحتواها العالي من الماء والألياف الحيوية.",
-        "en": "The golden first sign of spring that fills the markets of the Levant and the Mediterranean: small yellow fruits with a flavour between apricot and plum and a cheerful tang. Loquats have a medium glycemic index (≈55) and are rich in water and fibre.",
-        "nl": "De gouden eerste voorbode van de lente op de markten van de Levant en de Middellandse Zee: kleine gele vruchten met een smaak tussen abrikoos en pruim en een vrolijk zuurtje. Mispel (loquat) heeft een gemiddelde glykemische index (≈55) en is rijk aan water en vezels."
+        "ar": "بشائر الربيع الذهبية التي تمتلئ بها أسواق بلاد الشام وحوض المتوسط؛ ثمار صفراء صغيرة ذات نكهة تجمع بين المشمش والبرقوق بحموضة مبهجة. تسجل الإسكدنيا مؤشراً جلايسيمياً منخفضاً (≈55)، وتتميز بمحتواها العالي من الماء والألياف الحيوية.",
+        "en": "The golden first sign of spring that fills the markets of the Levant and the Mediterranean: small yellow fruits with a flavour between apricot and plum and a cheerful tang. Loquats have a low glycemic index (≈55) and are rich in water and fibre.",
+        "nl": "De gouden eerste voorbode van de lente op de markten van de Levant en de Middellandse Zee: kleine gele vruchten met een smaak tussen abrikoos en pruim en een vrolijk zuurtje. Mispel (loquat) heeft een lage glykemische index (≈55) en is rijk aan water en vezels."
       },
       "tips": {
         "ar": [
@@ -6237,9 +6237,9 @@
     },
     "280": {
       "lead": {
-        "ar": "سيدة الفتات الشامية والطبق الدمشقي العريق؛ حبات الباذنجان الصغير المحشوة باللحم المفروم والصنوبر، تتهادى فوق طبقة من الخبز المحمص وصلصة اللبن الزبادي بالطحينة والثوم. التوليفة الدسمة الغنية بالبروتين والدهون تفرمل امتصاص الخبز بمؤشر جلايسيمي متوسط (≈55).",
-        "en": "The queen of Levantine fatteh and a time-honoured Damascene dish: small aubergines stuffed with minced meat and pine nuts, resting on toasted bread with a yoghurt, tahini and garlic sauce. The rich combination of protein and fat slows the absorption of the bread, with a medium glycemic index (≈55).",
-        "nl": "De koningin onder de Levantijnse fattehs en een eeuwenoud Damasceens gerecht: kleine aubergines gevuld met gehakt en pijnboompitten, op een laag geroosterd brood met een saus van yoghurt, tahin en knoflook. De rijke combinatie van eiwit en vet remt de opname van het brood af, met een gemiddelde glykemische index (≈55)."
+        "ar": "سيدة الفتات الشامية والطبق الدمشقي العريق؛ حبات الباذنجان الصغير المحشوة باللحم المفروم والصنوبر، تتهادى فوق طبقة من الخبز المحمص وصلصة اللبن الزبادي بالطحينة والثوم. التوليفة الدسمة الغنية بالبروتين والدهون تفرمل امتصاص الخبز بمؤشر جلايسيمي منخفض (≈55).",
+        "en": "The queen of Levantine fatteh and a time-honoured Damascene dish: small aubergines stuffed with minced meat and pine nuts, resting on toasted bread with a yoghurt, tahini and garlic sauce. The rich combination of protein and fat slows the absorption of the bread, with a low glycemic index (≈55).",
+        "nl": "De koningin onder de Levantijnse fattehs en een eeuwenoud Damasceens gerecht: kleine aubergines gevuld met gehakt en pijnboompitten, op een laag geroosterd brood met een saus van yoghurt, tahin en knoflook. De rijke combinatie van eiwit en vet remt de opname van het brood af, met een lage glykemische index (≈55)."
       },
       "tips": {
         "ar": [
@@ -6261,9 +6261,9 @@
     },
     "281": {
       "lead": {
-        "ar": "أيقونة المائدة الشامية في الأعياد والمناسبات؛ قطع لحم الغنم الطرية المطهوة ببطء داخل صلصة اللبن الزبادي المطبوخ بالنشا والمعطر بالبصل والبهارات العطرية. بروتين اللحم واللبن يمنحان الطبق شبعاً عميقاً وثباتاً ممتازاً بمؤشر جلايسيمي معتدل (≈50).",
-        "en": "An icon of the Levantine table at Eid and celebrations: tender lamb slow-cooked in a warm yoghurt sauce thickened with a little starch and scented with onion and aromatic spices. The protein of the meat and yoghurt gives deep fullness and excellent stability, with a moderate glycemic index (≈50).",
-        "nl": "Een icoon van de Levantijnse tafel bij feesten: mals lamsvlees langzaam gestoofd in een warme yoghurtsaus, gebonden met een beetje zetmeel en op smaak gebracht met ui en aromatische specerijen. Het eiwit uit vlees en yoghurt geeft diepe verzadiging en een uitstekende stabiliteit, met een gematigde glykemische index (≈50)."
+        "ar": "أيقونة المائدة الشامية في الأعياد والمناسبات؛ قطع لحم الغنم الطرية المطهوة ببطء داخل صلصة اللبن الزبادي المطبوخ بالنشا والمعطر بالبصل والبهارات العطرية. بروتين اللحم واللبن يمنحان الطبق شبعاً عميقاً وثباتاً ممتازاً بمؤشر جلايسيمي منخفض (≈50).",
+        "en": "An icon of the Levantine table at Eid and celebrations: tender lamb slow-cooked in a warm yoghurt sauce thickened with a little starch and scented with onion and aromatic spices. The protein of the meat and yoghurt gives deep fullness and excellent stability, with a low glycemic index (≈50).",
+        "nl": "Een icoon van de Levantijnse tafel bij feesten: mals lamsvlees langzaam gestoofd in een warme yoghurtsaus, gebonden met een beetje zetmeel en op smaak gebracht met ui en aromatische specerijen. Het eiwit uit vlees en yoghurt geeft diepe verzadiging en een uitstekende stabiliteit, met een lage glykemische index (≈50)."
       },
       "tips": {
         "ar": [
@@ -6285,9 +6285,9 @@
     },
     "282": {
       "lead": {
-        "ar": "سيد المائدة النجدية والطبق التراثي الأول في المناسبات؛ قمح مجروش ومطهو ببطء لساعات مع اللبن واللحم ومزين بـ \"المسمنة\" (كشنة البصل واللومي والسمن). القمح الصلب الكامل يوفر أليافاً ممتازة تفرمل هضمه، مما يمنحه مؤشراً جلايسيمياً معتدلاً (≈50) وطاقة دافئة مستدامة.",
-        "en": "The king of the Najdi table and the first heritage dish at celebrations: cracked wheat slow-cooked for hours with yoghurt and meat and topped with musammana (a fry of onion, dried lime and ghee). The whole durum wheat provides excellent fibre that slows its digestion, giving a moderate glycemic index (≈50) and warm, sustained energy.",
-        "nl": "De koning van de Najdi-tafel en het belangrijkste erfgoedgerecht op feesten: gebroken tarwe urenlang langzaam gekookt met yoghurt en vlees en afgewerkt met musammana (gebakken ui, gedroogde limoen en ghee). De volkoren harde tarwe levert uitstekende vezels die de vertering vertragen, wat zorgt voor een gematigde glykemische index (≈50) en warme, langdurige energie."
+        "ar": "سيد المائدة النجدية والطبق التراثي الأول في المناسبات؛ قمح مجروش ومطهو ببطء لساعات مع اللبن واللحم ومزين بـ \"المسمنة\" (كشنة البصل واللومي والسمن). القمح الصلب الكامل يوفر أليافاً ممتازة تفرمل هضمه، مما يمنحه مؤشراً جلايسيمياً منخفضاً (≈50) وطاقة دافئة مستدامة.",
+        "en": "The king of the Najdi table and the first heritage dish at celebrations: cracked wheat slow-cooked for hours with yoghurt and meat and topped with musammana (a fry of onion, dried lime and ghee). The whole durum wheat provides excellent fibre that slows its digestion, giving a low glycemic index (≈50) and warm, sustained energy.",
+        "nl": "De koning van de Najdi-tafel en het belangrijkste erfgoedgerecht op feesten: gebroken tarwe urenlang langzaam gekookt met yoghurt en vlees en afgewerkt met musammana (gebakken ui, gedroogde limoen en ghee). De volkoren harde tarwe levert uitstekende vezels die de vertering vertragen, wat zorgt voor een lage glykemische index (≈50) en warme, langdurige energie."
       },
       "tips": {
         "ar": [
@@ -6309,9 +6309,9 @@
     },
     "283": {
       "lead": {
-        "ar": "تحفة الضيافة في جنوب الجزيرة العربية؛ قرص بر محمص يُعرك مع عجينة التمر الفاخر، ويُغرق بالسمن البلدي والعسل والقشطة. قنبلة طاقية مبهجة ومكثفة جداً؛ تسجل مؤشراً جلايسيمياً مرتفعاً نسبياً (≈68) وحملاً جلايسيمياً وسعرات فائقة الكثافة.",
-        "en": "A masterpiece of hospitality in the south of the Arabian Peninsula: toasted wholewheat bread kneaded with fine date paste and drenched in ghee, honey and cream. A cheerful, very concentrated energy dish with a relatively high glycemic index (≈68) and a very dense glycemic load and calorie content.",
-        "nl": "Een meesterwerk van gastvrijheid in het zuiden van het Arabisch Schiereiland: geroosterd volkorenbrood gekneed met fijne dadelpasta en overgoten met ghee, honing en room. Een vrolijk, zeer geconcentreerd energiegerecht met een relatief hoge glykemische index (≈68) en een zeer hoge glykemische lading en calorie-inhoud."
+        "ar": "تحفة الضيافة في جنوب الجزيرة العربية؛ قرص بر محمص يُعرك مع عجينة التمر الفاخر، ويُغرق بالسمن البلدي والعسل والقشطة. قنبلة طاقية مبهجة ومكثفة جداً؛ تسجل مؤشراً جلايسيمياً متوسطاً (≈68) وحملاً جلايسيمياً وسعرات فائقة الكثافة.",
+        "en": "A masterpiece of hospitality in the south of the Arabian Peninsula: toasted wholewheat bread kneaded with fine date paste and drenched in ghee, honey and cream. A cheerful, very concentrated energy dish with a medium glycemic index (≈68) and a very dense glycemic load and calorie content.",
+        "nl": "Een meesterwerk van gastvrijheid in het zuiden van het Arabisch Schiereiland: geroosterd volkorenbrood gekneed met fijne dadelpasta en overgoten met ghee, honing en room. Een vrolijk, zeer geconcentreerd energiegerecht met een gemiddelde glykemische index (≈68) en een zeer hoge glykemische lading en calorie-inhoud."
       },
       "tips": {
         "ar": [
@@ -7111,9 +7111,9 @@
     "316": {
       "slug": "kruidnoten",
       "lead": {
-        "ar": "حبات البسكويت الكروية الصغيرة المقرمشة التي يعشقها أطفال وكبار هولندا في موسم أعياد \"سينتركلاس\"؛ كرات متبلة بالقرفة والزنجبيل والسكر البني. يسجل مؤشراً جلايسيمياً مرتفعاً نسبياً (≈67)، وصغر حجم الحبات قد يغري بتناول كميات كبيرة دون انتباه.",
-        "en": "The small, crunchy round biscuits that Dutch children and adults love during the Sinterklaas season: little balls spiced with cinnamon, ginger and brown sugar. They have a fairly high glycemic index (≈67), and their small size can tempt you to eat large amounts without noticing.",
-        "nl": "De kleine, knapperige ronde koekjes waar Nederlandse kinderen en volwassenen dol op zijn in de sinterklaastijd: balletjes gekruid met kaneel, gember en bruine suiker. Ze hebben een vrij hoge glykemische index (≈67), en door het kleine formaat eet je er makkelijk ongemerkt veel van."
+        "ar": "حبات البسكويت الكروية الصغيرة المقرمشة التي يعشقها أطفال وكبار هولندا في موسم أعياد \"سينتركلاس\"؛ كرات متبلة بالقرفة والزنجبيل والسكر البني. يسجل مؤشراً جلايسيمياً متوسطاً (≈67)، وصغر حجم الحبات قد يغري بتناول كميات كبيرة دون انتباه.",
+        "en": "The small, crunchy round biscuits that Dutch children and adults love during the Sinterklaas season: little balls spiced with cinnamon, ginger and brown sugar. They have a medium glycemic index (≈67), and their small size can tempt you to eat large amounts without noticing.",
+        "nl": "De kleine, knapperige ronde koekjes waar Nederlandse kinderen en volwassenen dol op zijn in de sinterklaastijd: balletjes gekruid met kaneel, gember en bruine suiker. Ze hebben een gemiddelde glykemische index (≈67), en door het kleine formaat eet je er makkelijk ongemerkt veel van."
       },
       "tips": {
         "ar": [
@@ -7136,9 +7136,9 @@
     "317": {
       "slug": "bitterballen",
       "lead": {
-        "ar": "نجمة مقبلات المقاهي والتجمعات في هولندا بلا منازع؛ كرات مقرمشة من فتات الخبز تحبس في داخلها حشوة ساخنة ولذيذة من يخنة اللحم البقري الكثيفة بالتوابل. بروتين ودهون اللحم يفرملان امتصاص غلاف البقسماط النشوي بمؤشر جلايسيمي متوسط (≈55).",
-        "en": "The undisputed star of snacks in Dutch cafés and get-togethers: crunchy breadcrumb balls holding a hot, tasty filling of thick, spiced beef ragout. The protein and fat in the meat slow the absorption of the starchy breadcrumb coating, giving a medium glycemic index (≈55).",
-        "nl": "De onbetwiste ster onder de borrelhapjes in Nederlandse cafés en op feestjes: knapperige paneerballetjes met een hete, smakelijke vulling van dikke, gekruide rundvleesragout. Het eiwit en vet in het vlees remmen de opname van het zetmeelrijke paneerlaagje, met een gemiddelde glykemische index (≈55)."
+        "ar": "نجمة مقبلات المقاهي والتجمعات في هولندا بلا منازع؛ كرات مقرمشة من فتات الخبز تحبس في داخلها حشوة ساخنة ولذيذة من يخنة اللحم البقري الكثيفة بالتوابل. بروتين ودهون اللحم يفرملان امتصاص غلاف البقسماط النشوي بمؤشر جلايسيمي منخفض (≈55).",
+        "en": "The undisputed star of snacks in Dutch cafés and get-togethers: crunchy breadcrumb balls holding a hot, tasty filling of thick, spiced beef ragout. The protein and fat in the meat slow the absorption of the starchy breadcrumb coating, giving a low glycemic index (≈55).",
+        "nl": "De onbetwiste ster onder de borrelhapjes in Nederlandse cafés en op feestjes: knapperige paneerballetjes met een hete, smakelijke vulling van dikke, gekruide rundvleesragout. Het eiwit en vet in het vlees remmen de opname van het zetmeelrijke paneerlaagje, met een lage glykemische index (≈55)."
       },
       "tips": {
         "ar": [
@@ -7161,9 +7161,9 @@
     "318": {
       "slug": "rundvleeskroket",
       "lead": {
-        "ar": "الشقيقة الكبرى للبيتربالن والوجبة السريعة الأكثر مبيعاً في آلات البيع الذاتي (Febo) وفي المقاهي الهولندية؛ أسطوانة مقرمشة محشوة بصلصة الرو واللحم البقري الطري المتبل. تسجل مؤشراً جلايسيمياً معتدلاً (≈55)، وتوفر شبعاً حسياً غنياً.",
-        "en": "The big sister of the bitterbal and the best-selling fast food from Dutch wall vending machines (FEBO) and cafés: a crunchy cylinder filled with roux sauce and tender, seasoned beef. It has a moderate glycemic index (≈55) and gives a rich, satisfying sense of fullness.",
-        "nl": "Het grote zusje van de bitterbal en de bestverkochte snack uit de muur (FEBO) en in Nederlandse cafés: een knapperige rol gevuld met ragout van roux en mals, gekruid rundvlees. Hij heeft een matige glykemische index (≈55) en geeft een rijk, voldaan gevoel."
+        "ar": "الشقيقة الكبرى للبيتربالن والوجبة السريعة الأكثر مبيعاً في آلات البيع الذاتي (Febo) وفي المقاهي الهولندية؛ أسطوانة مقرمشة محشوة بصلصة الرو واللحم البقري الطري المتبل. تسجل مؤشراً جلايسيمياً منخفضاً (≈55)، وتوفر شبعاً حسياً غنياً.",
+        "en": "The big sister of the bitterbal and the best-selling fast food from Dutch wall vending machines (FEBO) and cafés: a crunchy cylinder filled with roux sauce and tender, seasoned beef. It has a low glycemic index (≈55) and gives a rich, satisfying sense of fullness.",
+        "nl": "Het grote zusje van de bitterbal en de bestverkochte snack uit de muur (FEBO) en in Nederlandse cafés: een knapperige rol gevuld met ragout van roux en mals, gekruid rundvlees. Hij heeft een lage glykemische index (≈55) en geeft een rijk, voldaan gevoel."
       },
       "tips": {
         "ar": [
@@ -7811,9 +7811,9 @@
     "344": {
       "slug": "sourdough-bread",
       "lead": {
-        "ar": "رغيف الخبز الحرفي الأصيل بقشرته المقرمشة ولبه المطاطي المليء بالجيوب الهوائية؛ يُخمر طبيعياً لـ 24 إلى 48 ساعة بواسطة الخمائر البرية وبكتيريا حمض اللاكتيك دون خميرة تجارية. التخمير الطويل يفكك جزءاً من النشا، مما يمنحه مؤشراً جلايسيمياً متوسطاً (≈53) وهضماً أهدأ بكثير من الخبز الأبيض العادي.",
-        "en": "The authentic artisan loaf with a crisp crust and a chewy, open crumb full of air pockets: naturally fermented for 24 to 48 hours by wild yeasts and lactic acid bacteria without commercial yeast. The long fermentation breaks down part of the starch, giving it a medium glycemic index (≈53) and much calmer digestion than ordinary white bread.",
-        "nl": "Het echte ambachtelijke brood met een knapperige korst en een taaie, open kruim vol luchtgaatjes: 24 tot 48 uur natuurlijk gerezen met wilde gisten en melkzuurbacteriën, zonder commerciële gist. De lange fermentatie breekt een deel van het zetmeel af, wat het een gemiddelde glykemische index geeft (≈53) en een veel rustigere vertering dan gewoon wit brood."
+        "ar": "رغيف الخبز الحرفي الأصيل بقشرته المقرمشة ولبه المطاطي المليء بالجيوب الهوائية؛ يُخمر طبيعياً لـ 24 إلى 48 ساعة بواسطة الخمائر البرية وبكتيريا حمض اللاكتيك دون خميرة تجارية. التخمير الطويل يفكك جزءاً من النشا، مما يمنحه مؤشراً جلايسيمياً منخفضاً (≈53) وهضماً أهدأ بكثير من الخبز الأبيض العادي.",
+        "en": "The authentic artisan loaf with a crisp crust and a chewy, open crumb full of air pockets: naturally fermented for 24 to 48 hours by wild yeasts and lactic acid bacteria without commercial yeast. The long fermentation breaks down part of the starch, giving it a low glycemic index (≈53) and much calmer digestion than ordinary white bread.",
+        "nl": "Het echte ambachtelijke brood met een knapperige korst en een taaie, open kruim vol luchtgaatjes: 24 tot 48 uur natuurlijk gerezen met wilde gisten en melkzuurbacteriën, zonder commerciële gist. De lange fermentatie breekt een deel van het zetmeel af, wat het een lage glykemische index geeft (≈53) en een veel rustigere vertering dan gewoon wit brood."
       },
       "tips": {
         "ar": [
@@ -7886,9 +7886,9 @@
     "347": {
       "slug": "tiger-bread",
       "lead": {
-        "ar": "الخبز اليومي الأكثر شعبية في المخابز الهولندية؛ رغيف يتميز بقشرة علوية مقرمشة ومتشققة تشبه جلد النمر، ناتجة عن دهن سطحه بعجينة من دقيق الأرز وزيت السمسم قبل الخبز. يصنع لبه من الدقيق الأبيض الخفيف، ويسجل مؤشراً جلايسيمياً مرتفعاً (≈68).",
-        "en": "The most popular everyday bread in Dutch bakeries: a loaf with a crisp, crackled top crust that looks like a tiger's skin, made by brushing the surface with a paste of rice flour and sesame oil before baking. The crumb is made from light white flour, and it has a high glycemic index (≈68).",
-        "nl": "Het populairste dagelijkse brood bij Nederlandse bakkers: een brood met een knapperige, gebarsten bovenkorst die op een tijgervel lijkt, ontstaan door de bovenkant voor het bakken in te smeren met een pasta van rijstmeel en sesamolie. De kruim is van licht witmeel, en het heeft een hoge glykemische index (≈68)."
+        "ar": "الخبز اليومي الأكثر شعبية في المخابز الهولندية؛ رغيف يتميز بقشرة علوية مقرمشة ومتشققة تشبه جلد النمر، ناتجة عن دهن سطحه بعجينة من دقيق الأرز وزيت السمسم قبل الخبز. يصنع لبه من الدقيق الأبيض الخفيف، ويسجل مؤشراً جلايسيمياً متوسطاً (≈68).",
+        "en": "The most popular everyday bread in Dutch bakeries: a loaf with a crisp, crackled top crust that looks like a tiger's skin, made by brushing the surface with a paste of rice flour and sesame oil before baking. The crumb is made from light white flour, and it has a medium glycemic index (≈68).",
+        "nl": "Het populairste dagelijkse brood bij Nederlandse bakkers: een brood met een knapperige, gebarsten bovenkorst die op een tijgervel lijkt, ontstaan door de bovenkant voor het bakken in te smeren met een pasta van rijstmeel en sesamolie. De kruim is van licht witmeel, en het heeft een gemiddelde glykemische index (≈68)."
       },
       "tips": {
         "ar": [
@@ -7961,9 +7961,9 @@
     "350": {
       "slug": "cooked-buckwheat",
       "lead": {
-        "ar": "الحبوب الروسية والأوروبية العريقة (Kasha / Buckwheat)؛ حبوب مثلثة الشكل خالية طبيعياً من الغلوتين، ذات نكهة جوزية ترابية مميزة. حبوب الحنطة السوداء المطبوخة تسجل مؤشراً جلايسيمياً معتدلاً (≈49) وتفيض بالبروتين النباتي الكامل والزنك والمغنيسيوم.",
-        "en": "The time-honoured grain of Russia and Europe (kasha / buckwheat): triangular, naturally gluten-free seeds with a distinctive nutty, earthy flavour. Cooked buckwheat has a moderate glycemic index (≈49) and is packed with complete plant protein, zinc and magnesium.",
-        "nl": "De eeuwenoude graansoort van Rusland en Europa (kasja / boekweit): driehoekige, van nature glutenvrije korrels met een kenmerkende nootachtige, aardse smaak. Gekookte boekweit heeft een matige glykemische index (≈49) en zit vol volwaardig plantaardig eiwit, zink en magnesium."
+        "ar": "الحبوب الروسية والأوروبية العريقة (Kasha / Buckwheat)؛ حبوب مثلثة الشكل خالية طبيعياً من الغلوتين، ذات نكهة جوزية ترابية مميزة. حبوب الحنطة السوداء المطبوخة تسجل مؤشراً جلايسيمياً منخفضاً (≈49) وتفيض بالبروتين النباتي الكامل والزنك والمغنيسيوم.",
+        "en": "The time-honoured grain of Russia and Europe (kasha / buckwheat): triangular, naturally gluten-free seeds with a distinctive nutty, earthy flavour. Cooked buckwheat has a low glycemic index (≈49) and is packed with complete plant protein, zinc and magnesium.",
+        "nl": "De eeuwenoude graansoort van Rusland en Europa (kasja / boekweit): driehoekige, van nature glutenvrije korrels met een kenmerkende nootachtige, aardse smaak. Gekookte boekweit heeft een lage glykemische index (≈49) en zit vol volwaardig plantaardig eiwit, zink en magnesium."
       },
       "tips": {
         "ar": [
@@ -8036,9 +8036,9 @@
     "353": {
       "slug": "whole-spelt-flour",
       "lead": {
-        "ar": "الطحين الكامل لحبوب السبيلت القديمة بقشرتها ونخالتها؛ البديل الأرقى لدقيق القمح الأبيض في المخابز الأوروبية الحرفية. عند خبزه يسجل مؤشراً جلايسيمياً معتدلاً (≈55)، ويمنح الخبز لوناً بنياً جميلاً ورائحة دافئة ونكهة غنية.",
-        "en": "Wholemeal flour from ancient spelt grains, husk and bran included: the finer alternative to white wheat flour in artisan European bakeries. Once baked it has a moderate glycemic index (≈55) and gives bread a lovely brown colour, a warm aroma and a rich flavour.",
-        "nl": "Volkorenmeel van oude speltkorrels, inclusief vlies en zemelen: het verfijndere alternatief voor witte tarwebloem in ambachtelijke Europese bakkerijen. Gebakken heeft het een matige glykemische index (≈55) en het geeft brood een mooie bruine kleur, een warme geur en een volle smaak."
+        "ar": "الطحين الكامل لحبوب السبيلت القديمة بقشرتها ونخالتها؛ البديل الأرقى لدقيق القمح الأبيض في المخابز الأوروبية الحرفية. عند خبزه يسجل مؤشراً جلايسيمياً منخفضاً (≈55)، ويمنح الخبز لوناً بنياً جميلاً ورائحة دافئة ونكهة غنية.",
+        "en": "Wholemeal flour from ancient spelt grains, husk and bran included: the finer alternative to white wheat flour in artisan European bakeries. Once baked it has a low glycemic index (≈55) and gives bread a lovely brown colour, a warm aroma and a rich flavour.",
+        "nl": "Volkorenmeel van oude speltkorrels, inclusief vlies en zemelen: het verfijndere alternatief voor witte tarwebloem in ambachtelijke Europese bakkerijen. Gebakken heeft het een lage glykemische index (≈55) en het geeft brood een mooie bruine kleur, een warme geur en een volle smaak."
       },
       "tips": {
         "ar": [
@@ -8130,6 +8130,631 @@
           "Eet geen grote kom met alleen melk op een lege maag; meng een klein handje door een kom Griekse yoghurt met chiazaad en noten om de scherpe glucosepiek af te zwakken.",
           "Kies altijd naturel varianten zonder glucose-fructosestroop of toegevoegde suiker, en eet ze langzaam met wat eiwit erbij om de vertering te vertragen.",
           "Zelfs cornflakes \"zonder suiker\" laten de bloedsuiker ongeveer even snel stijgen als wit brood door hun snelle zetmeelstructuur, dus volle havermout of skyr zijn veel betere keuzes bij diabetes of als je op je gewicht let."
+        ]
+      }
+    },
+    "357": {
+      "slug": "swiss-muesli-no-sugar",
+      "lead": {
+        "ar": "إفطار جبال الألب الصحي الأصيل الذي ابتكره الطبيب السويسري بيرشر-بينر؛ مزيج نقي من رقائق الشوفان الكاملة، حبوب الجاودار، المكسرات النيئة، وبذور الكتان دون أي ذرة سكر مكرر أو عسل مصنع. يسجل مؤشراً جلايسيمياً منخفضاً إلى معتدل (≈45)، ويعد من أهدأ خيارات الحبوب الصباحية على سكر الدم.",
+        "en": "The authentic healthy breakfast of the Alps, created by the Swiss physician Bircher-Benner: a pure mix of wholegrain oat flakes, rye flakes, raw nuts and flaxseed without a trace of refined sugar or processed honey. It has a low-to-moderate glycemic index (≈45) and is one of the gentlest breakfast cereals for blood sugar.",
+        "nl": "Het echte gezonde ontbijt uit de Alpen, bedacht door de Zwitserse arts Bircher-Benner: een pure mix van volkoren havervlokken, roggevlokken, rauwe noten en lijnzaad zonder een spoor van geraffineerde suiker of bewerkte honing. Het heeft een lage tot matige glykemische index (≈45) en is een van de rustigste ontbijtgranen voor de bloedsuiker."
+      },
+      "tips": {
+        "ar": [
+          "انقع نصف كوب في الحليب أو الزبادي الطبيعي طوال الليل مع رشة قرفة وبضع حبات من التوت؛ فتحصل على إفطار كريمي مشبع يمنحك تدفقاً هادئاً ومستداماً للطاقة طوال ساعات الصباح.",
+          "انتبه للملصق التجاري؛ اختر دائماً العبوات المكتوب عليها صراحة \"بدون سكر مضاف\" (No Added Sugar)، وتجنب خلطات الميوسلي التي تضيف الفواكه المجففة المغلفة بالسكر أو رقائق الشوكولاتة.",
+          "غني بألياف \"البيتا جلوكان\" الذائبة التي تفرمل امتصاص الكربوهيدرات وتدعم صحة الأوعية ومستويات الكوليسترول المتوازنة؛ وهو بديل مثالي لرقائق الإفطار المصنعة."
+        ],
+        "en": [
+          "Soak half a cup overnight in milk or plain yoghurt with a pinch of cinnamon and a few berries for a creamy, filling breakfast that gives a calm, steady flow of energy all morning.",
+          "Read the label carefully: always choose packs that clearly say no added sugar, and avoid muesli mixes with sugar-coated dried fruit or chocolate flakes.",
+          "Rich in soluble beta-glucan fibre, which slows carbohydrate absorption and supports healthy blood vessels and balanced cholesterol; an ideal replacement for processed breakfast cereals."
+        ],
+        "nl": [
+          "Week een half kopje een nacht in melk of naturel yoghurt met een snufje kaneel en een paar bessen voor een romig, verzadigend ontbijt dat de hele ochtend rustig en gelijkmatig energie geeft.",
+          "Let goed op het etiket: kies altijd verpakkingen met duidelijk 'zonder toegevoegde suiker', en laat muslimixen met gesuikerd gedroogd fruit of chocoladevlokken liggen.",
+          "Rijk aan oplosbare bètaglucaanvezels, die de opname van koolhydraten afremmen en gezonde bloedvaten en een evenwichtig cholesterol ondersteunen; een ideale vervanger van bewerkte ontbijtgranen."
+        ]
+      }
+    },
+    "358": {
+      "slug": "granola-honey-nut",
+      "lead": {
+        "ar": "كتل الشوفان المقرمشة المحمصة في الفرن مع اللوز والجوز وجوز الهند وبذور اليقطين مع لمسة من العسل الطبيعي. رغم فائدة مكوناتها، فإن تحميص الشوفان بالدهون والعسل يرفع كثافتها الطاقية ويمنحها مؤشراً جلايسيمياً منخفضاً (≈52) وحملاً كربوهيدراتياً مركزاً يتطلب وعياً بحجم الحصة.",
+        "en": "Crunchy oat clusters baked in the oven with almonds, walnuts, coconut and pumpkin seeds and a touch of natural honey. Although the ingredients are wholesome, baking the oats with fat and honey raises their energy density, giving a low glycemic index (≈52) and a concentrated carbohydrate load that calls for attention to portion size.",
+        "nl": "Knapperige haverclusters, in de oven geroosterd met amandelen, walnoten, kokos en pompoenpitten en een vleugje natuurlijke honing. Hoewel de ingrediënten gezond zijn, verhoogt het roosteren met vet en honing de energiedichtheid, wat een lage glykemische index (≈52) en een geconcentreerde koolhydraatlast geeft die aandacht voor de portie vraagt."
+      },
+      "tips": {
+        "ar": [
+          "تعامل مع الغرانولا كـ \"إضافة مقرمشة\" وليس كوعاء طعام كامل؛ رش ملعقتين كبيرتين فقط (نحو 30 غرام) فوق كوب من الزبادي اليوناني السادة لرفع البروتين والحد من سرعة امتصاص السكريات.",
+          "حضرها منزلياً للتحكم الكامل بالمكونات: اخلط الشوفان الكامل مع زيت جوز الهند والمكسرات النيئة واكتفِ بملعقة عسل واحدة ورشة قرفة وفانيليا، واخبزها حتى تصبح ذهبية مقرمشة.",
+          "الغرانولا التجارية الجاهزة في السوبرماركت غالباً ما تكون محشوة بزيوت مكررة وشراب الذرة المركز؛ لذا فإن فحص جدول المكونات والالتزام بالحصة المحددة يحميك من قفزات الجلوكوز غير المرئية."
+        ],
+        "en": [
+          "Treat granola as a crunchy topping, not a full bowl: sprinkle just two tablespoons (about 30 grams) over a cup of plain Greek yoghurt to add protein and slow the absorption of the sugars.",
+          "Make it at home for full control over the ingredients: mix whole oats with coconut oil and raw nuts, use just one spoonful of honey with a pinch of cinnamon and vanilla, and bake until golden and crisp.",
+          "Ready-made supermarket granola is often loaded with refined oils and concentrated corn syrup, so checking the ingredient list and sticking to the set portion protects you from hidden glucose spikes."
+        ],
+        "nl": [
+          "Zie granola als knapperig topping en niet als volle kom: strooi slechts twee eetlepels (ongeveer 30 gram) over een kom Griekse yoghurt naturel voor extra eiwit en een tragere suikeropname.",
+          "Maak hem zelf voor volledige controle over de ingrediënten: meng volkoren havervlokken met kokosolie en rauwe noten, gebruik maar één lepel honing met een snufje kaneel en vanille, en bak tot hij goudbruin en knapperig is.",
+          "Kant-en-klare granola uit de supermarkt zit vaak vol geraffineerde oliën en geconcentreerde glucosestroop, dus de ingrediëntenlijst controleren en je aan de portie houden beschermt je tegen verborgen glucosepieken."
+        ]
+      }
+    },
+    "359": {
+      "slug": "celery-sticks",
+      "lead": {
+        "ar": "أعواد الانتعاش والماء الأخضر المقرمش؛ سيقان كرفس مائية غنية بالألياف والمعادن ومضادات الأكسدة كالأبيجينين. كربوهيدراتها الصافية تكاد تقترب من الصفر ومؤشرها الجلايسيمي غير منطبق، وتعد من أشهر الخضار الداعمة للترطيب العميق والرشاقة.",
+        "en": "Fresh, crunchy green sticks full of water: juicy celery stalks rich in fibre, minerals and antioxidants such as apigenin. Their net carbohydrate is close to zero, so a glycemic index does not apply, and celery is one of the best-known vegetables for deep hydration and staying slim.",
+        "nl": "Frisse, knapperige groene stengels vol water: sappige bleekselderij, rijk aan vezels, mineralen en antioxidanten zoals apigenine. Het netto koolhydraatgehalte is bijna nul, dus een glykemische index is niet van toepassing, en selderij is een van de bekendste groenten voor een goede vochthuishouding en een slanke lijn."
+      },
+      "tips": {
+        "ar": [
+          "سناك مقرمش مثالي لكسر الرغبة العصبية في المضغ؛ تناول عودين إلى ثلاثة مغموسة في زبدة الفول السوداني الطبيعية الخالية من السكر أو صلصة الحمص لرفع الشبع دون أي كربوهيدرات تُذكر.",
+          "اغسل السيقان وتناولها طازجة بقرمشتها الحية، ويمكنك تقطيعها ناعماً داخل أطباق سلطة التونة والدجاج لإضفاء صوت قرمشة منعش وترطيب هائل.",
+          "الكرفس غني بالنترات الطبيعية ومركبات الفثاليد التي تدعم مرونة الأوعية الدموية وراحة الدورة الدموية؛ وهو خيار مفتوح وآمن تماماً لمرضى السكري وحميات ضبط الوزن."
+        ],
+        "en": [
+          "An ideal crunchy snack for stress-chewing: have two or three sticks dipped in natural sugar-free peanut butter or hummus to boost fullness with hardly any carbohydrate.",
+          "Wash the stalks and eat them fresh with their lively crunch, or chop them finely into tuna or chicken salads for a refreshing crunch and lots of hydration.",
+          "Celery is rich in natural nitrates and phthalides that support flexible blood vessels and healthy circulation; it is an unrestricted, completely safe choice for people with diabetes and weight-management diets."
+        ],
+        "nl": [
+          "Een ideale knapperige snack als je uit stress wilt kauwen: neem twee of drie stengels gedipt in natuurlijke pindakaas zonder suiker of hummus voor meer verzadiging met nauwelijks koolhydraten.",
+          "Was de stengels en eet ze vers met hun levendige knapperigheid, of snijd ze fijn door een tonijn- of kipsalade voor een frisse crunch en veel vocht.",
+          "Selderij is rijk aan natuurlijke nitraten en ftaliden die soepele bloedvaten en een gezonde doorbloeding ondersteunen; een onbeperkte, volkomen veilige keuze bij diabetes en diëten voor gewichtsbeheersing."
+        ]
+      }
+    },
+    "360": {
+      "slug": "celeriac-cooked",
+      "lead": {
+        "ar": "الدرنة الخريفية العريقة في المطبخ الأوروبي والهولندي (Knolselderij)؛ جذر نبات الكرفس الكروي ذو القشرة الخشنة واللب العاجي بنكهة كرفسية دافئة وناعمة. كربوهيدراته أقل بكثير من البطاطس، ويسجل مؤشراً جلايسيمياً منخفضاً إلى معتدل (≈35) وهضماً سلساً.",
+        "en": "The traditional autumn root of European and Dutch cooking (knolselderij): the round root of the celery plant with a rough skin and ivory flesh and a warm, gentle celery flavour. It has far less carbohydrate than potato and a low-to-moderate glycemic index (≈35) with smooth digestion.",
+        "nl": "De traditionele herfstknol uit de Europese en Nederlandse keuken (knolselderij): de ronde wortelknol van de selderijplant met een ruwe schil, ivoorkleurig vruchtvlees en een warme, zachte selderijsmaak. Hij bevat veel minder koolhydraten dan aardappel en heeft een lage tot matige glykemische index (≈35) met een soepele vertering."
+      },
+      "tips": {
+        "ar": [
+          "بديل عبقري ومنخفض النشويات لهريس البطاطس (Mashed potatoes)؛ اسلقه واهرسه مع قليل من زيت الزيتون والثوم بجانب الأسماك المشوية أو اللحوم لتنعم بنصف السعرات والنشويات.",
+          "قشر القشرة الخارجية السميكة جيداً، واقطعه مكعبات واشوِه في الفرن مع الروزماري وزيت الزيتون حتى يتحمر، أو أضفه لشوربات الخضار الشتوية لمنحها قواماً كريمياً غنياً.",
+          "جذر الكرفس غني بالألياف وفيتامينات K وC والفوسفور؛ وهو خيار راقٍ وممتاز لمرضى السكري ومقاومة الإنسولين كبديل دافئ للدرنات النشوية."
+        ],
+        "en": [
+          "A brilliant low-starch alternative to mashed potato: boil and mash it with a little olive oil and garlic alongside grilled fish or meat to enjoy half the calories and starch.",
+          "Peel off the thick outer skin thoroughly, cut it into cubes and roast it in the oven with rosemary and olive oil until golden, or add it to winter vegetable soups for a rich, creamy texture.",
+          "Celeriac is rich in fibre, vitamins K and C and phosphorus; a refined, excellent choice for people with diabetes and insulin resistance as a warming alternative to starchy roots."
+        ],
+        "nl": [
+          "Een briljant zetmeelarm alternatief voor aardappelpuree: kook en stamp hem met een beetje olijfolie en knoflook en eet hem bij gegrilde vis of vlees, voor de helft van de calorieën en het zetmeel.",
+          "Schil de dikke buitenkant goed weg, snijd hem in blokjes en rooster hem in de oven met rozemarijn en olijfolie tot hij goudbruin is, of voeg hem toe aan wintergroentesoep voor een rijke, romige structuur.",
+          "Knolselderij is rijk aan vezels, vitamine K en C en fosfor; een verfijnde, uitstekende keuze bij diabetes en insulineresistentie als warm alternatief voor zetmeelrijke knollen."
+        ]
+      }
+    },
+    "361": {
+      "slug": "fresh-fennel-bulb",
+      "lead": {
+        "ar": "البصلة البيضاء العطرية ذات النكهة اليانسونية المنعشة والقوام المقرمش كالتفاح (Venkel)؛ هدية البحر المتوسط لراحة الجهاز الهضمي. كربوهيدراته الصافية ضئيلة ومؤشره الجلايسيمي غير منطبق، ومفعم بزيوت الأنيثول العطرية ومضادات الأكسدة.",
+        "en": "The aromatic white bulb with a refreshing aniseed flavour and an apple-like crunch (venkel): the Mediterranean's gift for a comfortable digestive system. Its net carbohydrate is low, so a glycemic index does not apply, and it is full of aromatic anethole oils and antioxidants.",
+        "nl": "De aromatische witte knol met een frisse anijssmaak en een knapperigheid als van een appel (venkel): het geschenk van het Middellandse Zeegebied voor een rustige spijsvertering. Het netto koolhydraatgehalte is laag, dus een glykemische index is niet van toepassing, en hij zit vol aromatische anetholoïe en antioxidanten."
+      },
+      "tips": {
+        "ar": [
+          "قطّعه إلى شرائح رقيقة كجزء أساسي من سلطات المأكولات البحرية والأسماك مع عصرة ليمون وزيت زيتون؛ فمركباته العطرية تحفز إفراز الإنزيمات الهاضمة وتهدئ المعدة.",
+          "تناوله نيئاً ومقرمشاً للاستمتاع بنكهته اليانسونية الباردة، أو اشوِ أرباع البصلة في الفرن مع زيت الزيتون حتى تذبل وتتكرمل وتتحول نكهتها إلى حلاوة ناعمة جداً.",
+          "الشمر صديق كلاسيكي للحد من الغازات والانتفاخات الهضمية ودعم راحة القولون؛ وهو خيار غذائي متميز لتعزيز الشبع دون أي تأثير على سكر الدم."
+        ],
+        "en": [
+          "Slice it thinly as a key part of seafood and fish salads with a squeeze of lemon and olive oil; its aromatic compounds stimulate digestive enzymes and calm the stomach.",
+          "Eat it raw and crunchy to enjoy its cool aniseed flavour, or roast the bulb in quarters with olive oil until soft and caramelised so its flavour turns very gently sweet.",
+          "Fennel is a classic ally against gas and bloating and supports a comfortable colon; an excellent choice for boosting fullness with no effect on blood sugar."
+        ],
+        "nl": [
+          "Snijd hem in dunne plakjes als belangrijk onderdeel van salades met zeevruchten en vis, met een kneepje citroen en olijfolie; de aromatische stoffen stimuleren de spijsverteringsenzymen en kalmeren de maag.",
+          "Eet hem rauw en knapperig om van de koele anijssmaak te genieten, of rooster de knol in kwarten met olijfolie tot hij zacht en gekaramelliseerd is en de smaak heel zacht zoet wordt.",
+          "Venkel is een klassieke bondgenoot tegen winderigheid en een opgeblazen gevoel en ondersteunt een rustige darm; een uitstekende keuze voor meer verzadiging zonder effect op de bloedsuiker."
+        ]
+      }
+    },
+    "362": {
+      "slug": "cooked-white-asparagus",
+      "lead": {
+        "ar": "\"الذهب الأبيض\" وأمير الخضار الربيعية في هولندا وألمانيا (Witte asperges)؛ سيقان هليون تنمو تحت التراب في الظلام لتحتفظ بلونها العاجي وقوامها الحريري الطري ونكهتها الزبدية الرقيقة. كربوهيدراته شبه معدومة ومؤشره الجلايسيمي غير منطبق، ويعد من أرقى الأغذية وأخفها على الجسم.",
+        "en": "\"White gold\" and the prince of spring vegetables in the Netherlands and Germany (witte asperges): asparagus spears grown underground in the dark so they keep their ivory colour, silky tender texture and delicate buttery flavour. They contain almost no carbohydrate, so a glycemic index does not apply, and they are among the finest and lightest foods there are.",
+        "nl": "Het \"witte goud\" en de prins van de voorjaarsgroenten in Nederland en Duitsland (witte asperges): stengels die onder de grond in het donker groeien en zo hun ivoorkleur, zijdezachte structuur en fijne boterige smaak behouden. Ze bevatten bijna geen koolhydraten, dus een glykemische index is niet van toepassing, en ze behoren tot de verfijndste en lichtste voedingsmiddelen."
+      },
+      "tips": {
+        "ar": [
+          "طبق العشاء الربيعي التقليدي: يُقدم مسلوقاً مع البيض المسلوق المفروم، شرائح لحم الحبش، ورشة بقدونس وقليل من الزبدة الطبيعية؛ لتنعم بوجبة بروتينية فاخرة خالية تماماً من النشويات.",
+          "قشر السيقان بعناية من أسفل الرأس وحتى القاعدة واقطع الطرف الخشبي القاسي، واسلقه على نار هادئة في ماء مضاف إليه رشة ملح وشريحة ليمون لمدة 10 إلى 15 دقيقة حتى يطرى.",
+          "الهليون غني جداً بمركب الأسباراجين وحمض الفوليك والماء، ويدعم التخلص الطبيعي من احتباس السوائل؛ وصديق مطلق لمريض السكري وصحة الكلى."
+        ],
+        "en": [
+          "The traditional spring supper: serve them boiled with chopped boiled egg, slices of ham, a sprinkle of parsley and a little real butter for a luxurious, completely starch-free protein meal.",
+          "Peel the spears carefully from just below the tip down to the base and cut off the woody end, then simmer them gently in water with a pinch of salt and a slice of lemon for 10 to 15 minutes until tender.",
+          "Asparagus is very rich in asparagine, folic acid and water and supports the natural release of retained fluid; a true friend for people with diabetes and for kidney health."
+        ],
+        "nl": [
+          "Het traditionele voorjaarsdiner: geserveerd met gehakt gekookt ei, plakjes ham, wat peterselie en een beetje echte boter voor een luxe, volledig zetmeelvrije eiwitmaaltijd.",
+          "Schil de stengels zorgvuldig van net onder de kop tot de voet en snijd het houtige uiteinde eraf; kook ze dan zachtjes 10 tot 15 minuten in water met een snufje zout en een schijfje citroen tot ze gaar zijn.",
+          "Asperges zijn zeer rijk aan asparagine, foliumzuur en water en helpen vastgehouden vocht op natuurlijke wijze kwijt te raken; een echte vriend bij diabetes en voor gezonde nieren."
+        ]
+      }
+    },
+    "363": {
+      "slug": "belgian-endive-witlof",
+      "lead": {
+        "ar": "الخضار المخروطي العاجي الأشهر في بلجيكا وهولندا (Witlof / Chicory)؛ أوراق متراصة مقرمشة ذات مرارة خفيفة راقية ونكهة مائية منعشة. كربوهيدراته الصافية ضئيلة جداً ومؤشره الجلايسيمي غير منطبق، ويشتهر بغناه بألياف الإينولين البريبايوتك الداعمة للأمعاء.",
+        "en": "The famous ivory, cone-shaped vegetable of Belgium and the Netherlands (witlof / chicory): tightly packed, crunchy leaves with a refined, mild bitterness and a fresh, watery flavour. Its net carbohydrate is very low, so a glycemic index does not apply, and it is known for its prebiotic inulin fibre that supports the gut.",
+        "nl": "De bekende ivoorkleurige, kegelvormige groente van België en Nederland (witlof): dicht opeengepakte, knapperige blaadjes met een verfijnde, milde bitterheid en een frisse, waterige smaak. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en witlof staat bekend om de prebiotische inulinevezels die de darm ondersteunen."
+      },
+      "tips": {
+        "ar": [
+          "استخدم أوراقه البيضاء المقوسة كـ \"قوارب طبيعية\" مقرمشة لوضع سلطة التونة أو الجبن والبيض بدلاً من رقائق البسكويت والتوست؛ لتحصل على مقبلات منعشة بصفر كربوهيدرات حرة.",
+          "لإزالة مرارته، انزع اللب المخروطي الصغير في القاعدة؛ وتناوله مقطعاً في سلطة مع التفاح والجوز، أو اطهه مشوياً في الفرن مع مسحة خفيفة من جبن الغودا.",
+          "المرارة الخفيفة في الإنديف تحفز وظائف الكبد والمرارة وتدعم الهضم السلس؛ وهو من أعظم الخضار لمرضى السكري والمهتمين بالصحة الأيضية."
+        ],
+        "en": [
+          "Use the curved white leaves as crunchy natural boats for tuna salad or cheese and egg instead of crackers and toast, for a refreshing starter with zero free carbohydrate.",
+          "To reduce the bitterness, remove the small cone-shaped core at the base; eat it sliced in a salad with apple and walnuts, or roast it in the oven with a light layer of Gouda.",
+          "The gentle bitterness of endive stimulates the liver and gallbladder and supports smooth digestion; it is one of the best vegetables for people with diabetes and anyone focused on metabolic health."
+        ],
+        "nl": [
+          "Gebruik de gebogen witte blaadjes als knapperige natuurlijke bootjes voor tonijnsalade of kaas en ei in plaats van crackers en toast, voor een fris hapje zonder vrije koolhydraten.",
+          "Verwijder voor minder bitterheid het kleine kegelvormige hart onderaan; eet hem gesneden in een salade met appel en walnoten, of bak hem in de oven met een dun laagje Goudse kaas.",
+          "De milde bitterheid van witlof stimuleert lever en galblaas en ondersteunt een soepele vertering; een van de beste groenten bij diabetes en voor wie op zijn stofwisseling let."
+        ]
+      }
+    },
+    "364": {
+      "slug": "curly-endive-andijvie",
+      "lead": {
+        "ar": "الأوراق الخضراء المموجة ذات الأطراف المشرشرة والنكهة الترابية المنعشة (Andijvie)؛ ركيزة طبق الستامبوت الصيفي والشتوي في هولندا. كربوهيدراته منعدمة التأثير الأيضي ومؤشره الجلايسيمي غير منطبق، ومفعم بفيتامينات A وK ومضادات الأكسدة.",
+        "en": "Wavy green leaves with jagged edges and a fresh, earthy flavour (andijvie): a mainstay of Dutch stamppot in summer and winter. Its carbohydrate has no real metabolic impact, so a glycemic index does not apply, and it is full of vitamins A and K and antioxidants.",
+        "nl": "Golvende groene bladeren met gekartelde randen en een frisse, aardse smaak (andijvie): een vaste waarde in de Hollandse stamppot, zomer en winter. De koolhydraten hebben geen echte invloed op de stofwisseling, dus een glykemische index is niet van toepassing, en andijvie zit vol vitamine A en K en antioxidanten."
+      },
+      "tips": {
+        "ar": [
+          "فرمه طازجاً وخلطه مع الأطباق الدافئة أو تناوله كسلطة ورقية مقرمشة مع الخل وزيت الزيتون؛ فأليافه الكثيفة تفرمل امتصاص أي وجبة طعام وتمنح شبعاً حقيقياً.",
+          "اخلط أوراق الإنديفيا المفرومة طازجة ونيئة مع قليل من هريس الخضار الدافئ (Rauwe andijviestamppot) لتحتفظ بقرمشتها الحية ولونها وفيتاميناتها دون أن تفقد قيمتها بالطهي الزائد.",
+          "الإنديفيا رافد ممتاز لحمض الفوليك واللوتين الداعم لصحة العين؛ وخضار صديق بنسبة 100% لاستقرار سكر الدم وإدارة الوزن."
+        ],
+        "en": [
+          "Chop it fresh and mix it into warm dishes, or eat it as a crunchy leaf salad with vinegar and olive oil; its dense fibre slows the absorption of any meal and gives real fullness.",
+          "Mix the chopped endive raw and fresh through a little warm vegetable mash (rauwe andijviestamppot) so it keeps its lively crunch, colour and vitamins instead of losing them to overcooking.",
+          "Curly endive is an excellent source of folic acid and lutein, which supports eye health; a 100% friendly vegetable for stable blood sugar and weight management."
+        ],
+        "nl": [
+          "Snijd hem vers en meng hem door warme gerechten, of eet hem als knapperige bladsalade met azijn en olijfolie; de dichte vezels remmen de opname van elke maaltijd en geven echte verzadiging.",
+          "Meng de gesneden andijvie rauw en vers door een beetje warme groentepuree (rauwe andijviestamppot), zodat hij zijn levendige knapperigheid, kleur en vitamines behoudt in plaats van ze door te lang koken te verliezen.",
+          "Andijvie is een uitstekende bron van foliumzuur en luteïne, dat de ogen ondersteunt; een 100% vriendelijke groente voor een stabiele bloedsuiker en gewichtsbeheersing."
+        ]
+      }
+    },
+    "365": {
+      "slug": "iceberg-lettuce",
+      "lead": {
+        "ar": "رأس الخس الكروي المقرمش الأكثر مبيعاً في العالم؛ طبقات متراصة من الأوراق الفاتحة المفعمة بالماء البارد والقرمشة المنعشة. كربوهيدراته شبه معدومة (أقل من 2غ صافية) ومؤشره الجلايسيمي غير منطبق، ويعد ملك الترطيب والانتعاش الفوري.",
+        "en": "The world's best-selling crisp, round lettuce: tightly layered pale leaves full of cool water and refreshing crunch. It contains almost no carbohydrate (under 2 g net), so a glycemic index does not apply, and it is the king of instant hydration and freshness.",
+        "nl": "De best verkochte knapperige, ronde slasoort ter wereld: dicht opeengepakte lichte bladeren vol koel water en frisse knapperigheid. Hij bevat bijna geen koolhydraten (minder dan 2 g netto), dus een glykemische index is niet van toepassing, en hij is de koning van directe hydratatie en frisheid."
+      },
+      "tips": {
+        "ar": [
+          "استخدم أوراقه العريضة المتماسكة كبديل لخبز التورتيلا أو البرغر (Lettuce wraps)؛ لحشو الدجاج المشوي والفاهيتا والبرغر، مما يوفر عليك مئات السعرات والنشويات المكررة.",
+          "قطّعه شرائح سميدة لسلطات البرغر والتاكو، واحفظه مغسولاً ومجففاً في الثلاجة ليبقى مقرمشاً ومحتفظاً ببرودته المائية.",
+          "رغم خفته وانخفاض سعراته، إلا أنه يرطب الجسم ويسهل حركة الأمعاء؛ وهو خيار مجاني دون أي قيود على الكمية لمرضى السكري وحميات اللوكارب."
+        ],
+        "en": [
+          "Use its broad, firm leaves instead of tortillas or burger buns (lettuce wraps) to hold grilled chicken, fajitas or burgers, saving you hundreds of calories and refined starch.",
+          "Shred it for burger and taco salads, and keep it washed and dried in the fridge so it stays crisp and refreshingly cool.",
+          "Although it is light and low in calories, it hydrates the body and keeps the bowels moving; a free choice with no limit on quantity for people with diabetes and low-carb diets."
+        ],
+        "nl": [
+          "Gebruik de brede, stevige bladeren in plaats van tortilla's of hamburgerbroodjes (slawraps) voor gegrilde kip, fajita's of burgers; dat scheelt honderden calorieën en geraffineerd zetmeel.",
+          "Snijd hem in reepjes voor burger- en tacosalades, en bewaar hem gewassen en drooggedept in de koelkast zodat hij knapperig en fris koel blijft.",
+          "Hoewel hij licht en caloriearm is, levert hij vocht en houdt hij de darmen in beweging; een vrije keuze zonder beperking van de hoeveelheid bij diabetes en koolhydraatarme diëten."
+        ]
+      }
+    },
+    "366": {
+      "slug": "romaine-lettuce",
+      "lead": {
+        "ar": "الخس الطولي الأخضر الداكن؛ العمود الفقري لسلطة السيزر والسلطات المتوسطية. يتفوق على خس الآيسبيرغ بكثافته الغذائية العالية وفيتامينات A وC وحمض الفوليك، وكربوهيدراته الصافية مهملة ومؤشره الجلايسيمي غير منطبق.",
+        "en": "The long, dark-green lettuce that forms the backbone of Caesar and Mediterranean salads. It beats iceberg with its higher nutrient density, vitamins A and C and folic acid; its net carbohydrate is negligible, so a glycemic index does not apply.",
+        "nl": "De lange, donkergroene sla die de basis vormt van caesarsalade en mediterrane salades. Hij verslaat ijsbergsla met een hogere voedingsdichtheid, vitamine A en C en foliumzuur; het netto koolhydraatgehalte is verwaarloosbaar, dus een glykemische index is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "ابدأ كل وجبة رئيسية بصحن سلطة يعتمد على الخس الروماني وزيت الزيتون؛ فالألياف الورقية والماء يشكلان بطانة مبكرة في المعدة تقلل سرعة امتصاص سكريات الوجبة التالية.",
+          "اقطع الأوراق طولياً وتبلها بزيت الزيتون والليمون والثوم، ويمكن شواء أنصاف رؤوس الخس الروماني على الجريل لدقيقتين لإضفاء نكهة مدخنة رائعة.",
+          "الخس الروماني غني بالكلوروفيل والمعادن الحيوية؛ وتناوله بوفرة يومية يدعم استقرار سكر الدم والشبع الهادئ دون أي أثر كربوهيدراتي."
+        ],
+        "en": [
+          "Start every main meal with a salad based on romaine and olive oil; the leafy fibre and water form an early lining in the stomach that slows the absorption of the sugars in the rest of the meal.",
+          "Cut the leaves lengthwise and dress them with olive oil, lemon and garlic, or grill romaine halves for two minutes for a wonderful smoky flavour.",
+          "Romaine is rich in chlorophyll and essential minerals; eating plenty every day supports stable blood sugar and calm fullness without any carbohydrate effect."
+        ],
+        "nl": [
+          "Begin elke hoofdmaaltijd met een salade van Romeinse sla en olijfolie; de bladvezels en het water vormen vroeg een laagje in de maag dat de opname van de suikers uit de rest van de maaltijd vertraagt.",
+          "Snijd de bladeren in de lengte en maak ze aan met olijfolie, citroen en knoflook, of gril halve kroppen Romeinse sla twee minuten voor een heerlijke rooksmaak.",
+          "Romeinse sla is rijk aan bladgroen en belangrijke mineralen; er dagelijks veel van eten ondersteunt een stabiele bloedsuiker en rustige verzadiging zonder koolhydraateffect."
+        ]
+      }
+    },
+    "367": {
+      "slug": "swiss-chard",
+      "lead": {
+        "ar": "الخضار الورقي الملكي بسيقانه الملونة وأوراقه الخضراء العريضة؛ كنز الحمية المتوسطية والشامية المحبوب في حشوات الفطائر واليخنات. كربوهيدراته الصافية ضئيلة جداً ومؤشره الجلايسيمي غير منطبق، ويعد من أغنى الخضار بالبوتاسيوم والمغنيسيوم.",
+        "en": "The royal leafy green with colourful stalks and broad green leaves: a treasure of the Mediterranean and Levantine diet, loved in pie fillings and stews. Its net carbohydrate is very low, so a glycemic index does not apply, and it is one of the richest vegetables in potassium and magnesium.",
+        "nl": "De koninklijke bladgroente met kleurrijke stelen en brede groene bladeren: een schat uit de mediterrane en Levantijnse keuken, geliefd in hartige taartvullingen en stoofpotten. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en snijbiet is een van de rijkste groenten aan kalium en magnesium."
+      },
+      "tips": {
+        "ar": [
+          "اطهِ أوراق السلق مع الحمص المسلوق وعصير الليمون وزيت الزيتون كطبق شامي دافئ ومشبع يمنح طاقة هادئة ومغذية للأمعاء.",
+          "اطبخ السيقان الصلبة أولاً لدقائق ثم أضف الأوراق الخضراء الرقيقة في نهاية الطهي حتى تذبل بلطف مع فصوص الثوم وزيت الزيتون للحفاظ على عناصرها الحيوية.",
+          "السلق يحتوي على مركب حمض السيرينجيك الداعم للياقة الأيضية وتوازن السكر؛ مع مراعاة احتوائه على الأكسالات، لذا يُفضل سلقه خفيفاً لمن لديهم قابلية لحصوات الكلى."
+        ],
+        "en": [
+          "Cook the chard leaves with boiled chickpeas, lemon juice and olive oil as a warm, filling Levantine dish that gives calm energy and nourishes the gut.",
+          "Cook the firm stalks first for a few minutes, then add the tender green leaves at the end so they wilt gently with garlic and olive oil and keep their nutrients.",
+          "Chard contains syringic acid, which supports metabolic fitness and blood-sugar balance; it also contains oxalates, so people prone to kidney stones are better off blanching it lightly."
+        ],
+        "nl": [
+          "Kook de snijbietbladeren met gekookte kikkererwten, citroensap en olijfolie als warm, verzadigend Levantijns gerecht dat rustige energie geeft en de darm voedt.",
+          "Kook eerst een paar minuten de stevige stelen en voeg aan het eind de zachte groene bladeren toe, zodat ze voorzichtig slinken met knoflook en olijfolie en hun voedingsstoffen behouden.",
+          "Snijbiet bevat syringinezuur, dat een gezonde stofwisseling en suikerbalans ondersteunt; het bevat ook oxalaat, dus wie aanleg heeft voor nierstenen kan hem beter kort blancheren."
+        ]
+      }
+    },
+    "368": {
+      "slug": "bok-choy-cabbage",
+      "lead": {
+        "ar": "الكرنب الصيني الصغير بسيقانه البيضاء المقرمشة وأوراقه الخضراء الداكنة الحريرية (Paksoi)؛ يجمع بين قرمشة الكرفس ونعومة السبانخ. كربوهيدراته الصافية لا تتجاوز 1.5غ لكل 100غ ومؤشره الجلايسيمي غير منطبق، ومفعم بالكالسيوم وفيتامين C.",
+        "en": "The small Chinese cabbage with crisp white stalks and silky dark-green leaves (paksoi), combining the crunch of celery with the softness of spinach. Its net carbohydrate does not exceed 1.5 g per 100 g, so a glycemic index does not apply, and it is full of calcium and vitamin C.",
+        "nl": "De kleine Chinese kool met knapperige witte stelen en zijdezachte donkergroene bladeren (paksoi), die de knapperigheid van selderij combineert met de zachtheid van spinazie. Het netto koolhydraatgehalte is niet meer dan 1,5 g per 100 g, dus een glykemische index is niet van toepassing, en paksoi zit vol calcium en vitamine C."
+      },
+      "tips": {
+        "ar": [
+          "أضفه مقطعاً إلى أطباق النودلز، الشوربات الآسيوية، أو شوّحه مع صدور الدجاج والروبيان في مقلاة الـ Wok لمنح وجبتك حجماً مشبعاً دون سعرات مضافة.",
+          "شوّحه لثلاث دقائق فقط مع قطرات من زيت السمسم والثوم والزنجبيل؛ حتى تحتفظ سيقانه بقرمشتها الطبيعية المائية دون أن تفقد عصارتها.",
+          "البوك تشوي يحتوي على الكالسيوم عالي الامتصاص الحركي ومضادات الأكسدة الكبريتية؛ وهو من أفضل الخضار عالمياً لدعم الشبع واستقرار الجلوكوز."
+        ],
+        "en": [
+          "Add it chopped to noodle dishes and Asian soups, or stir-fry it with chicken breast and prawns in a wok to give your meal filling volume without extra calories.",
+          "Stir-fry it for just three minutes with a few drops of sesame oil, garlic and ginger so the stalks keep their natural, juicy crunch.",
+          "Bok choy contains highly absorbable calcium and sulphur-containing antioxidants; it is one of the best vegetables in the world for supporting fullness and stable glucose."
+        ],
+        "nl": [
+          "Voeg hem gesneden toe aan noedelgerechten en Aziatische soepen, of roerbak hem met kipfilet en garnalen in de wok om je maaltijd verzadigend volume te geven zonder extra calorieën.",
+          "Roerbak hem maar drie minuten met een paar druppels sesamolie, knoflook en gember, zodat de stelen hun natuurlijke, sappige knapperigheid behouden.",
+          "Paksoi bevat goed opneembaar calcium en zwavelhoudende antioxidanten; een van de beste groenten ter wereld voor verzadiging en een stabiele glucose."
+        ]
+      }
+    },
+    "369": {
+      "slug": "spring-onions",
+      "lead": {
+        "ar": "الأعواد الخضراء المنعشة بنكهتها البصلية الحلوة واللاذعة خفيفاً؛ رفيق المائدة اليومية والمشاوي والأطباق الآسيوية. كربوهيدراته الصافية ضئيلة في الحصة ومؤشره الجلايسيمي غير منطبق، ويحتوي على مركبات الكبريت العضوية ومضاد الأكسدة \"الكيرسيتين\".",
+        "en": "Fresh green stems with a sweet, mildly sharp onion flavour: a companion to everyday meals, grills and Asian dishes. Its net carbohydrate per serving is tiny, so a glycemic index does not apply, and it contains organic sulphur compounds and the antioxidant quercetin.",
+        "nl": "Frisse groene stengels met een zoete, licht scherpe uiensmaak: een vaste begeleider van dagelijkse maaltijden, de grill en Aziatische gerechten. Het netto koolhydraatgehalte per portie is minimaal, dus een glykemische index is niet van toepassing, en bosui bevat organische zwavelverbindingen en de antioxidant quercetine."
+      },
+      "tips": {
+        "ar": [
+          "تناوله نيئاً مع وجبات الغداء، أو قطعه ناعماً فوق الشوربات والبيض المقلي والأسماك؛ فهو ينشط براعم التذوق ويساعد على كبح الشهية المفرطة.",
+          "استخدم الجزء الأبيض والأخضر معاً؛ فالجزء الأبيض غني بنكهة البصل العطرية، بينما الجزء الأخضر يفيض بالكلوروفيل وفيتامين K الحساس للطهي.",
+          "الكيرسيتين ومركبات الأليسين في البصل الأخضر تدعم مرونة الأوعية الدموية وراحة التمثيل الغذائي؛ وهو مطعم صحي رائع خالٍ من أي عبء كربوهيدراتي."
+        ],
+        "en": [
+          "Eat it raw with lunch, or slice it finely over soups, fried eggs and fish; it wakes up your taste buds and helps curb an excessive appetite.",
+          "Use the white and green parts together: the white part carries the aromatic onion flavour, while the green part is full of chlorophyll and heat-sensitive vitamin K.",
+          "The quercetin and allicin compounds in spring onions support flexible blood vessels and a comfortable metabolism; a wonderful healthy flavouring with no carbohydrate burden."
+        ],
+        "nl": [
+          "Eet hem rauw bij de lunch, of snijd hem fijn over soep, gebakken eieren en vis; hij prikkelt je smaakpapillen en helpt een overmatige eetlust te temperen.",
+          "Gebruik het witte en groene deel samen: het witte deel draagt de aromatische uiensmaak, terwijl het groene deel vol bladgroen en hittegevoelige vitamine K zit.",
+          "De quercetine en allicine in bosui ondersteunen soepele bloedvaten en een rustige stofwisseling; een heerlijke, gezonde smaakmaker zonder koolhydraatlast."
+        ]
+      }
+    },
+    "370": {
+      "slug": "shallots",
+      "lead": {
+        "ar": "بصل الطهاة الراقي ذو الفصوص الصغيرة والقشرة النحاسية الوردية؛ نكهته أكثر نعومة وحلاوة من البصل العادي وخالية من اللسعة الحارقة. يُستهلك بحصص غرامية صغيرة في التتبيل والصلصات، ومؤشره الجلايسيمي غير مؤثر عملياً وغير منطبق.",
+        "en": "The chef's refined onion with small cloves and a coppery-pink skin; its flavour is softer and sweeter than ordinary onion, without the sharp sting. It is used in small, gram-sized amounts in dressings and sauces, so its glycemic index has practically no effect and does not apply.",
+        "nl": "De verfijnde ui van de chef-kok, met kleine teentjes en een koperroze schil; de smaak is zachter en zoeter dan die van gewone ui, zonder scherpe beet. Hij wordt in kleine hoeveelheden van enkele grammen gebruikt in dressings en sauzen, dus de glykemische index heeft in de praktijk geen effect en is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "افرمه ناعماً داخل تتبيلات السلطات (Vinaigrette) أو اطبخه مع صلصات اللحوم والأسماك؛ ليمنح طعامك عمقاً نكهياً راقياً يغنيك عن الملح الزائد.",
+          "كرمل شرائح الشالوت برفق على نار هادئة بزيت الزيتون حتى تذبل وتكتسب لوناً ذهبياً، وتجنب حرقها للحفاظ على حلاوتها الطبيعية.",
+          "الشالوت غني بمركبات الفلافونويد ومضادات الأكسدة التي تدعم التوازن الأيضي؛ واستخدامه في الطهي يثري النكهة والشبع دون أي تأثير سلبي على سكر الدم."
+        ],
+        "en": [
+          "Chop it finely into salad dressings (vinaigrette) or cook it into meat and fish sauces to give your food a refined depth of flavour that means you need less salt.",
+          "Caramelise sliced shallots gently over low heat in olive oil until soft and golden, without letting them burn, to keep their natural sweetness.",
+          "Shallots are rich in flavonoids and antioxidants that support metabolic balance; cooking with them enriches flavour and fullness with no negative effect on blood sugar."
+        ],
+        "nl": [
+          "Snipper hem fijn in saladedressings (vinaigrette) of kook hem mee in vlees- en vissauzen, voor een verfijnde smaakdiepte waardoor je minder zout nodig hebt.",
+          "Karamelliseer plakjes sjalot voorzichtig op laag vuur in olijfolie tot ze zacht en goudbruin zijn, zonder ze te laten verbranden, om de natuurlijke zoetheid te behouden.",
+          "Sjalotten zijn rijk aan flavonoïden en antioxidanten die de stofwisselingsbalans ondersteunen; koken met sjalot verrijkt smaak en verzadiging zonder negatief effect op de bloedsuiker."
+        ]
+      }
+    },
+    "371": {
+      "slug": "white-turnip",
+      "lead": {
+        "ar": "الدرنة الجذرية البيضاء الناصعة ذات الطرف البنفسجي الرقيق (Meiraap)؛ خضار كلاسيكي هولندي عريق يتميز بقوام طري ونكهة حلوة ناعمة تشبه الملفوف الخفيف. كربوهيدراته الصافية منخفضة جداً (نحو 4غ) ومؤشره الجلايسيمي غير مؤثر عملياً وغير منطبق.",
+        "en": "The bright white root with a delicate purple top (meiraap): a classic old Dutch vegetable with a tender texture and a soft, sweet flavour reminiscent of mild cabbage. Its net carbohydrate is very low (about 4 g), so its glycemic index has practically no effect and does not apply.",
+        "nl": "De helderwitte knol met een fijn paars kopje (meiraap): een klassieke oud-Hollandse groente met een zachte structuur en een zachte, zoete smaak die aan milde kool doet denken. Het netto koolhydraatgehalte is zeer laag (ongeveer 4 g), dus de glykemische index heeft in de praktijk geen effect en is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "خيار ممتاز لاستبدال جزء من البطاطس في اليخنات والشوربات؛ يمتص نكهة المرق والتوابل ويمنحك شبعاً دافئاً بنصف السعرات والنشويات.",
+          "اسلقه أو اطهه بالبخار واهرسه مع قليل من زيت الزيتون وجوزة الطيب، أو اقطعه مكعبات واشوِه في الفرن مع الأعشاب واللحوم.",
+          "اللفت غني بفيتامين C والألياف الحيوية ومضادات الأكسدة الصليبية؛ وهو من أأمن الخضار الجذرية لمرضى السكري ومقاومة الإنسولين لضبط الجلوكوز."
+        ],
+        "en": [
+          "An excellent choice to replace part of the potatoes in stews and soups; it soaks up the flavour of the stock and spices and gives warm fullness with half the calories and starch.",
+          "Boil or steam it and mash it with a little olive oil and nutmeg, or cut it into cubes and roast it in the oven with herbs and meat.",
+          "Turnip is rich in vitamin C, fibre and cruciferous antioxidants; it is one of the safest root vegetables for people with diabetes and insulin resistance to keep glucose in check."
+        ],
+        "nl": [
+          "Een uitstekende keuze om een deel van de aardappelen in stoofpotten en soepen te vervangen; hij neemt de smaak van bouillon en kruiden op en geeft warme verzadiging met de helft van de calorieën en het zetmeel.",
+          "Kook of stoom hem en stamp hem met een beetje olijfolie en nootmuskaat, of snijd hem in blokjes en rooster hem in de oven met kruiden en vlees.",
+          "Meiraap is rijk aan vitamine C, vezels en antioxidanten uit de koolfamilie; een van de veiligste wortelgroenten bij diabetes en insulineresistentie om je glucose onder controle te houden."
+        ]
+      }
+    },
+    "372": {
+      "slug": "daikon-radish",
+      "lead": {
+        "ar": "الفجل العملاق الأبيض الأشهر في المطبخ الياباني والكوري؛ ساق بيضاء ناصعة تفيض بالماء المقرمش والإنزيمات الهاضمة الطبيعية. كربوهيدراته الصافية شبه معدومة ومؤشره الجلايسيمي غير منطبق، ويعد أسطورة لراحة الجهاز الهضمي والرشاقة.",
+        "en": "The giant white radish famous in Japanese and Korean cooking: a bright white root brimming with crisp water and natural digestive enzymes. It contains almost no net carbohydrate, so a glycemic index does not apply, and it is a legend for digestive comfort and staying slim.",
+        "nl": "De reusachtige witte rammenas die beroemd is in de Japanse en Koreaanse keuken: een helderwitte wortel vol knapperig vocht en natuurlijke spijsverteringsenzymen. Hij bevat bijna geen netto koolhydraten, dus een glykemische index is niet van toepassing, en hij is legendarisch voor een rustige spijsvertering en een slanke lijn."
+      },
+      "tips": {
+        "ar": [
+          "ابشر كمية صغيرة ناعمة وتناولها بجانب الأسماك والوجبات البحرية واللحوم المشوية؛ فالإنزيمات في الدايكون تساعد في تفتيت الدهون وتسهيل الهضم.",
+          "تناوله نيئاً ومقرمشاً في السلطات، أو قطّعه مكعبات واطبخه في حساء الميسو والشوربات الآسيوية ليتحول إلى قوام طري شفاف يمتص كامل النكهة.",
+          "الدايكون يفيض بإنزيمات \"الدياستاز\" والأميليز الطبيعية الداعمة للهضم الصحي؛ وهو خضار استثنائي لملء المعدة بالألياف دون إضافة أي سكر أو سعرات."
+        ],
+        "en": [
+          "Finely grate a small amount and eat it with fish, seafood and grilled meat; the enzymes in daikon help break down fat and ease digestion.",
+          "Eat it raw and crunchy in salads, or cut it into cubes and cook it in miso and other Asian soups, where it turns soft and translucent and absorbs all the flavour.",
+          "Daikon is rich in the natural enzymes diastase and amylase that support healthy digestion; an exceptional vegetable for filling the stomach with fibre without adding sugar or calories."
+        ],
+        "nl": [
+          "Rasp een klein beetje fijn en eet het bij vis, zeevruchten en gegrild vlees; de enzymen in daikon helpen vet af te breken en de vertering te vergemakkelijken.",
+          "Eet hem rauw en knapperig in salades, of snijd hem in blokjes en kook hem in misosoep en andere Aziatische soepen, waar hij zacht en doorschijnend wordt en alle smaak opneemt.",
+          "Daikon is rijk aan de natuurlijke enzymen diastase en amylase die een gezonde vertering ondersteunen; een uitzonderlijke groente om je maag met vezels te vullen zonder suiker of calorieën toe te voegen."
+        ]
+      }
+    },
+    "373": {
+      "slug": "sweet-green-peas",
+      "lead": {
+        "ar": "حبات اللؤلؤ الخضراء التي يعشقها الجميع بحلاوتها الطبيعية؛ غنية بالنشا النباتي والألياف والبروتين في آن واحد. ونظراً لمحتواها من الكربوهيدرات المعقدة، تسجل البازلاء مؤشراً جلايسيمياً منخفضاً (≈48)، وتمنح طاقة تدريجية مشبعة.",
+        "en": "The green pearls everyone loves for their natural sweetness, rich in plant starch, fibre and protein all at once. Because of their complex carbohydrate content, peas have a low glycemic index (≈48) and give gradual, filling energy.",
+        "nl": "De groene parels waar iedereen dol op is om hun natuurlijke zoetheid, tegelijk rijk aan plantaardig zetmeel, vezels en eiwit. Door hun complexe koolhydraten hebben doperwten een lage glykemische index (≈48) en geven ze geleidelijke, verzadigende energie."
+      },
+      "tips": {
+        "ar": [
+          "تناول نصف كوب كجزء مدمج مع طبق الأرز أو اليخنات الغنية باللحم والخضار، وتجنب تناول صحن ضخم منها بمفردها لاحتساب النشويات بدقة.",
+          "اطهها بالبخار لدقائق معدودة فقط حتى تصبح طرية مع بقاء لونها الأخضر الزاهي وقشرتها متماسكة، وتجنب غليها المفرط الذي يحول نشاها إلى قوام رخو سريع الامتصاص.",
+          "البازلاء رافد رائع للبروتين النباتي والزنك والألياف القابلة للذوبان؛ والاعتدال بحصة محددة يمنحك فوائدها الغذائية الكبيرة مع الحفاظ على استقرار سكر الدم."
+        ],
+        "en": [
+          "Have half a cup as part of a rice dish or a stew rich in meat and vegetables, and avoid eating a huge plate of peas on their own so you can count the starch accurately.",
+          "Steam them for just a few minutes until tender while they keep their bright green colour and firm skins, and avoid overboiling, which turns their starch soft and quickly absorbed.",
+          "Peas are a wonderful source of plant protein, zinc and soluble fibre; sticking to a set portion gives you their considerable nutritional benefits while keeping your blood sugar stable."
+        ],
+        "nl": [
+          "Eet een half kopje als onderdeel van een rijstgerecht of een stoofpot met veel vlees en groenten, en eet geen enorm bord doperwten alleen, zodat je het zetmeel nauwkeurig kunt meetellen.",
+          "Stoom ze maar een paar minuten tot ze zacht zijn en hun heldergroene kleur en stevige velletje behouden; kook ze niet te lang, want dan wordt het zetmeel papperig en snel opneembaar.",
+          "Doperwten zijn een prachtige bron van plantaardig eiwit, zink en oplosbare vezels; met een vaste portie krijg je hun grote voedingsvoordelen binnen terwijl je bloedsuiker stabiel blijft."
+        ]
+      }
+    },
+    "374": {
+      "slug": "french-green-beans",
+      "lead": {
+        "ar": "قرون الفاصولياء الخضراء الرفيعة والناعمة (Haricots verts)؛ رمز الأناقة في المطبخ الفرنسي والهولندي بقرمشتها الرقيقة ولونها الأخضر الزمردي. كربوهيدراتها الصافية ضئيلة جداً (نحو 4غ) ومؤشره الجلايسيمي غير منطبق، وتعد من أفضل الخضار اليومية للياقة الأيضية.",
+        "en": "Fine, tender green bean pods (haricots verts): a symbol of elegance in French and Dutch cooking with their delicate crunch and emerald colour. Their net carbohydrate is very low (about 4 g), so a glycemic index does not apply, and they are one of the best everyday vegetables for metabolic fitness.",
+        "nl": "Fijne, malse groene boontjes (haricots verts): een symbool van elegantie in de Franse en Nederlandse keuken, met hun fijne knapperigheid en smaragdgroene kleur. Het netto koolhydraatgehalte is zeer laag (ongeveer 4 g), dus een glykemische index is niet van toepassing, en ze behoren tot de beste dagelijkse groenten voor een gezonde stofwisseling."
+      },
+      "tips": {
+        "ar": [
+          "طبق جانبي مثالي يرافق شرائح اللحم أو الدجاج والأسماك المشوية؛ تملأ صحنك بحجم مشبع وألياف راقية تفرمل هضم أي وجبة دون أي نشويات مؤثرة.",
+          "اسلقها لثلاث إلى أربع دقائق في ماء مغلي ثم انقلها فوراً لماء مثلج (Blanching) لتثبيت قرمشتها ولونها، وشوّحها سريعاً مع فص ثوم وزيت زيتون ورشة ملح خشن.",
+          "غنية بالسيليكون وحمض الفوليك والألياف الحيوية؛ وخيار حر وآمن بنسبة 100% لمرضى السكري والراغبين في خفض الوزن دون أي قلق من رفع الجلوكوز."
+        ],
+        "en": [
+          "An ideal side dish for steak, chicken or grilled fish; they fill your plate with satisfying volume and fine fibre that slows the digestion of any meal, with no significant starch.",
+          "Boil them for three to four minutes, then plunge them straight into iced water (blanching) to lock in their crunch and colour, and toss them quickly in a pan with a clove of garlic, olive oil and a pinch of coarse salt.",
+          "Rich in silicon, folic acid and fibre; a free, 100% safe choice for people with diabetes and anyone wanting to lose weight, with no worry about raising glucose."
+        ],
+        "nl": [
+          "Een ideale bijgerecht bij biefstuk, kip of gegrilde vis; ze vullen je bord met verzadigend volume en fijne vezels die de vertering van elke maaltijd vertragen, zonder noemenswaardig zetmeel.",
+          "Kook ze drie tot vier minuten en dompel ze dan direct in ijswater (blancheren) om de knapperigheid en kleur vast te houden; bak ze daarna kort om met een teentje knoflook, olijfolie en een snufje grof zout.",
+          "Rijk aan silicium, foliumzuur en vezels; een vrije, 100% veilige keuze bij diabetes en voor wie wil afvallen, zonder zorgen over een stijgende glucose."
+        ]
+      }
+    },
+    "375": {
+      "slug": "red-bell-pepper",
+      "lead": {
+        "ar": "ثمرة الفلفل الحلوة الناضجة تماماً على شجرتها؛ تفيض بالعصارة المقرمشة واللون القرمزي الجذاب. كربوهيدراتها الصافية منخفضة جداً ومؤشرها الجلايسيمي غير منطبق، وتعتبر القمة عالمياً في تركيز فيتامين C ومضادات الأكسدة كالكابسنتين.",
+        "en": "The sweet pepper left to ripen fully on the plant, bursting with crisp juice and an eye-catching crimson colour. Its net carbohydrate is very low, so a glycemic index does not apply, and it is one of the world's top sources of vitamin C and antioxidants such as capsanthin.",
+        "nl": "De zoete paprika die volledig aan de plant is gerijpt, vol knapperig sap en met een opvallende karmozijnrode kleur. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en hij behoort wereldwijd tot de beste bronnen van vitamine C en antioxidanten zoals capsanthine."
+      },
+      "tips": {
+        "ar": [
+          "حبة كاملة مقطعة أصابع مع وجبة الإفطار أو الغداء تمدك بأكثر من 200% من احتياجك اليومي من فيتامين C، وتمنح قرمشة وحلاوة مبهجة بديلة للمقرمشات.",
+          "تناوله نيئاً ومقرمشاً للحفاظ على كامل فيتامين C الحساس للحرارة، أو اشوِه في الفرن مع زيت الزيتون وانزع قشرته الرقيقة لصنع صلصة المحمرة الصحية.",
+          "الفلفل الرومي الأحمر الناضج يحتوي على ثلاثة أضعاف فيتامين C الموجود في البرتقال؛ وهو صديق مطلق لمرضى السكري وصحة الأوعية والشرايين."
+        ],
+        "en": [
+          "One whole pepper cut into strips with breakfast or lunch provides more than 200% of your daily vitamin C needs and gives a cheerful sweet crunch instead of crackers.",
+          "Eat it raw and crunchy to keep all of its heat-sensitive vitamin C, or roast it in the oven with olive oil and peel off the thin skin to make a healthy muhammara dip.",
+          "Ripe red bell pepper contains three times as much vitamin C as an orange; it is a true friend for people with diabetes and for healthy blood vessels and arteries."
+        ],
+        "nl": [
+          "Eén hele paprika in reepjes bij het ontbijt of de lunch levert meer dan 200% van je dagelijkse behoefte aan vitamine C en geeft een vrolijke zoete knapperigheid in plaats van crackers.",
+          "Eet hem rauw en knapperig om alle hittegevoelige vitamine C te behouden, of rooster hem in de oven met olijfolie en verwijder het dunne velletje voor een gezonde muhammara-dip.",
+          "Rijpe rode paprika bevat drie keer zoveel vitamine C als een sinaasappel; een echte vriend bij diabetes en voor gezonde bloedvaten."
+        ]
+      }
+    },
+    "376": {
+      "slug": "yellow-bell-pepper",
+      "lead": {
+        "ar": "شمس الخضار المبهجة على مائدة السلطات؛ فلفل رومي أصفر ذهبي يتميز بنكهة فاكهية ناعمة وقرمشة غنية بالعصارة. كربوهيدراته الصافية ضئيلة جداً ومؤشره الجلايسيمي غير منطبق، ويفيض بالكاروتينات واللوتين الداعم للنظر.",
+        "en": "The cheerful sunshine of the salad table: a golden-yellow bell pepper with a soft, fruity flavour and a juicy crunch. Its net carbohydrate is very low, so a glycemic index does not apply, and it is full of carotenoids and lutein, which supports eyesight.",
+        "nl": "Het vrolijke zonnetje op de saladetafel: een goudgele paprika met een zachte, fruitige smaak en een sappige knapperigheid. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en hij zit vol carotenoïden en luteïne, die het zicht ondersteunen."
+      },
+      "tips": {
+        "ar": [
+          "قطعه شرائح ملونة ضمن سلطتك الخضراء أو تناوله كغموس مع الحمص والغواكامولي؛ ليمنحك وجبة خفيفة منعشة تكسر رتابة الدايت دون أي نشويات سريعة.",
+          "قطعه طازجاً في اللحظات الأخيرة قبل التقديم للحفاظ على قرمشته وعصارته، واحرص على تناوله مع مصدر دهون صحية كزيت الزيتون لتعزيز امتصاص فيتامين A والكاروتين.",
+          "خضار مائي مفعم بمضادات الأكسدة التي تحمي الخلايا من الإجهاد التأكسدي؛ وهو خيار غذائي استثنائي للشبع المنعش واستقرار الجلوكوز."
+        ],
+        "en": [
+          "Slice it into colourful strips for your green salad or eat it as crudités with hummus and guacamole for a refreshing snack that breaks the monotony of a diet without any fast starch.",
+          "Cut it fresh at the last moment before serving to keep its crunch and juice, and eat it with a source of healthy fat such as olive oil to boost absorption of vitamin A and carotene.",
+          "A watery vegetable packed with antioxidants that protect cells from oxidative stress; an exceptional choice for refreshing fullness and stable glucose."
+        ],
+        "nl": [
+          "Snijd hem in kleurrijke reepjes door je groene salade of eet hem als rauwkost met hummus en guacamole, voor een frisse snack die de eentonigheid van een dieet doorbreekt zonder snel zetmeel.",
+          "Snijd hem vers vlak voor het serveren om de knapperigheid en het sap te behouden, en eet hem met een bron van gezond vet zoals olijfolie voor een betere opname van vitamine A en caroteen.",
+          "Een waterrijke groente vol antioxidanten die cellen beschermen tegen oxidatieve stress; een uitzonderlijke keuze voor frisse verzadiging en een stabiele glucose."
+        ]
+      }
+    },
+    "377": {
+      "slug": "jalapeno-pepper",
+      "lead": {
+        "ar": "قرون الفلفل الأخضر الحار المكسيكي الشهير بنكهته العشبية اللاذعة وحرارته المتوسطة المحببة. يُستهلك بحصص غرامية صغيرة، كربوهيدراته مهملة ومؤشره الجلايسيمي غير منطبق، ويشتهر بمركب \"الكابسيسين\" المنشط لعمليات الأيض.",
+        "en": "The famous Mexican hot green pepper with a sharp, herby flavour and a pleasant medium heat. It is eaten in small, gram-sized amounts, its carbohydrate is negligible, so a glycemic index does not apply, and it is known for capsaicin, which stimulates metabolism.",
+        "nl": "De beroemde Mexicaanse hete groene peper met een scherpe, kruidige smaak en een aangename middelmatige pittigheid. Hij wordt in kleine hoeveelheden van enkele grammen gegeten, de koolhydraten zijn verwaarloosbaar, dus een glykemische index is niet van toepassing, en hij staat bekend om capsaïcine, dat de stofwisseling stimuleert."
+      },
+      "tips": {
+        "ar": [
+          "أضف شرائح الهالبينو الطازجة إلى التاكو، السلطات، وأطباق البيض؛ فحرارته تنبه الحواس وتزيد إفراز هرمونات الشبع وتقلل الرغبة في التهام النشويات.",
+          "انزع البذور والعروق البيضاء الداخلية إذا رغبت في تقليل حدة الحرارة والاستمتاع بالنكهة العشبية، وتجنب الهالبينو المعلب التجاري المغمور بالسكريات والمواد الحافظة.",
+          "الكابسيسين في الهالبينو يدعم الدورة الدموية ومعدل حرق الطاقة الطبيعي؛ ولمن يعاني من حساسية المعدة أو ارتجاع المريء، فالاعتدال التام يضمن الراحة وتفادي التهيج."
+        ],
+        "en": [
+          "Add fresh jalapeño slices to tacos, salads and egg dishes; the heat wakes up your senses, increases satiety hormones and reduces the urge to load up on starch.",
+          "Remove the seeds and white inner ribs if you want less heat and more of the herby flavour, and avoid commercial canned jalapeños steeped in sugar and preservatives.",
+          "The capsaicin in jalapeño supports circulation and your natural energy burn; if you have a sensitive stomach or reflux, strict moderation keeps you comfortable and avoids irritation."
+        ],
+        "nl": [
+          "Voeg verse plakjes jalapeño toe aan taco's, salades en eiergerechten; de pittigheid prikkelt je zintuigen, verhoogt de verzadigingshormonen en vermindert de neiging om veel zetmeel te eten.",
+          "Verwijder de zaadjes en witte zaadlijsten als je minder pit en meer kruidige smaak wilt, en laat commerciële jalapeño uit blik met suiker en conserveermiddelen liggen.",
+          "De capsaïcine in jalapeño ondersteunt de doorbloeding en je natuurlijke energieverbranding; heb je een gevoelige maag of reflux, dan houdt strikte matigheid het comfortabel en voorkom je irritatie."
+        ]
+      }
+    },
+    "378": {
+      "slug": "red-chili-pepper",
+      "lead": {
+        "ar": "قرون الشطة الحمراء الصغيرة المفعمة بالنار والنكهة؛ ركيزة المطبخ الآسيوي واللاتيني وتوابل العالم الحارة. كربوهيدراته في الحصة غرامية ضئيلة ومؤشره الجلايسيمي غير منطبق، ويحتوي على أعلى تركيزات الكابسيسين ومضادات الأكسدة.",
+        "en": "Small red chilli pods full of fire and flavour: a cornerstone of Asian and Latin cooking and of the world's hot spices. Its carbohydrate per serving is a tiny number of grams, so a glycemic index does not apply, and it contains some of the highest concentrations of capsaicin and antioxidants.",
+        "nl": "Kleine rode pepers vol vuur en smaak: een pijler van de Aziatische en Latijns-Amerikaanse keuken en van de hete specerijen van de wereld. De koolhydraten per portie zijn maar een paar gram, dus een glykemische index is niet van toepassing, en ze bevatten een van de hoogste concentraties capsaïcine en antioxidanten."
+      },
+      "tips": {
+        "ar": [
+          "افرم نصف قرن ناعماً في صلصات الطماطم والشوربات واليخنات؛ فحرارته القوية تكسر رتابة الطعام وتساعدك على تناول الوجبة ببطء واستمتاع.",
+          "اطهه مبكراً مع زيت الزيتون والثوم لاستخلاص زيوته الحارة وتوزيعها بتجانس في الطبق، واغسل يديك جيداً بالماء والصابون بعد تقطيعه لتجنب ملامسة العينين.",
+          "الفلفل الحار داعم ممتاز لتنشيط الدورة الدموية؛ وهو بهار صحي خالٍ من السعرات والنشويات، مع ضرورة الاعتدال التام لمن يعاني من القولون الحساس أو قرحة المعدة النشطة."
+        ],
+        "en": [
+          "Finely chop half a pod into tomato sauces, soups and stews; its strong heat breaks the monotony of food and helps you eat your meal slowly and with enjoyment.",
+          "Cook it early with olive oil and garlic to release its hot oils and spread them evenly through the dish, and wash your hands well with soap and water after cutting it to avoid touching your eyes.",
+          "Chilli is an excellent aid to circulation; it is a healthy spice with no meaningful calories or starch, but people with an irritable bowel or an active stomach ulcer must keep it strictly moderate."
+        ],
+        "nl": [
+          "Hak een halve peper fijn door tomatensaus, soep en stoofpot; de sterke pit doorbreekt de eentonigheid van het eten en helpt je langzaam en met plezier te eten.",
+          "Bak hem vroeg mee met olijfolie en knoflook zodat de hete oliën vrijkomen en zich gelijkmatig door het gerecht verspreiden, en was na het snijden je handen goed met water en zeep om je ogen niet te raken.",
+          "Rode peper is een uitstekende ondersteuning voor de doorbloeding; een gezonde specerij zonder noemenswaardige calorieën of zetmeel, maar bij een prikkelbare darm of een actieve maagzweer is strikte matigheid nodig."
+        ]
+      }
+    },
+    "379": {
+      "slug": "butternut-squash",
+      "lead": {
+        "ar": "القرع الشتوي الذهبي ذو الشكل الكمثري واللب البرتقالي الممتلئ بالنكهة الحلوة الزبدية الشبيهة بالجوز؛ من أروع الخضار الجذرية الغنية بالألياف والمعادن. كربوهيدراته معتدلة ويسجل مؤشراً جلايسيمياً منخفضاً (≈51)، مع حمل جلايسيمي هادئ بفضل وفرة الألياف والماء.",
+        "en": "The golden, pear-shaped winter squash with orange flesh full of a sweet, buttery, nut-like flavour; one of the finest vegetables, rich in fibre and minerals. Its carbohydrate is moderate and it has a low glycemic index (≈51), with a gentle glycemic load thanks to plenty of fibre and water.",
+        "nl": "De goudkleurige, peervormige winterpompoen met oranje vruchtvlees vol zoete, boterige, nootachtige smaak; een van de beste groenten, rijk aan vezels en mineralen. Het koolhydraatgehalte is matig en de glykemische index laag (≈51), met een rustige glykemische last dankzij veel vezels en water."
+      },
+      "tips": {
+        "ar": [
+          "تناول شريحة مشوية بحجم قبضة اليد كبديل نشوي ذكي للأرز والبطاطس بجانب اللحوم المشوية، واستمتع بنكهته الحلوة دون الحاجة لإضافة أي سكر أو عسل.",
+          "قشر القشرة الصلبة واقطعه مكعبات واشوِه في الفرن مع زيت الزيتون، القرفة، ورشة فلفل أسود حتى يتكرمل لبه ويصبح طرياً ومخملياً، أو اخفقه في شوربة شتوية دافئة.",
+          "قرع الباترنت يفيض بالبيتا كاروتين وفيتامين A والألياف الذائبة الداعمة للمناعة والأمعاء؛ والاعتدال بحصة محددة يمنحك الشبع والمتعة دون قلق من رفع الجلوكوز."
+        ],
+        "en": [
+          "Have a fist-sized roasted slice as a smart starchy alternative to rice and potatoes alongside grilled meat, and enjoy its sweetness without adding any sugar or honey.",
+          "Peel off the hard skin, cut it into cubes and roast it in the oven with olive oil, cinnamon and a pinch of black pepper until the flesh caramelises and turns soft and velvety, or blend it into a warming winter soup.",
+          "Butternut squash is rich in beta-carotene, vitamin A and soluble fibre that support immunity and the gut; a set, moderate portion gives you fullness and enjoyment without worrying about raising glucose."
+        ],
+        "nl": [
+          "Eet een gerooste plak zo groot als je vuist als slim zetmeelalternatief voor rijst en aardappelen bij gegrild vlees, en geniet van de zoetheid zonder suiker of honing toe te voegen.",
+          "Schil de harde schil eraf, snijd hem in blokjes en rooster hem in de oven met olijfolie, kaneel en een snufje zwarte peper tot het vruchtvlees karamelliseert en zacht en fluweelzacht wordt, of pureer hem tot een warme wintersoep.",
+          "Flespompoen is rijk aan bètacaroteen, vitamine A en oplosbare vezels die de weerstand en de darm ondersteunen; een vaste, bescheiden portie geeft verzadiging en plezier zonder zorgen over een stijgende glucose."
+        ]
+      }
+    },
+    "380": {
+      "slug": "fresh-rhubarb",
+      "lead": {
+        "ar": "السيقان الوردية والملونة ذات الحموضة الشديدة والمنعشة (Rabarber)؛ يُعامل في المطبخ كفاكهة ولكنه خضار ساقي نقي. كربوهيدراته الصافية ضئيلة جداً (أقل من 2غ) ومؤشره الجلايسيمي غير منطبق، ويشتهر بغناه بالألياف وحمض الماليك والأكسالات.",
+        "en": "Pink, colourful stalks with an intense, refreshing sourness (rabarber); in the kitchen it is treated like a fruit, but it is purely a stalk vegetable. Its net carbohydrate is very low (under 2 g), so a glycemic index does not apply, and it is known for its fibre, malic acid and oxalates.",
+        "nl": "Roze, kleurrijke stelen met een intense, frisse zuurheid (rabarber); in de keuken behandeld als fruit, maar het is puur een stengelgroente. Het netto koolhydraatgehalte is zeer laag (minder dan 2 g), dus een glykemische index is niet van toepassing, en rabarber staat bekend om de vezels, het appelzuur en oxalaat."
+      },
+      "tips": {
+        "ar": [
+          "اطهِ السيقان المقطعة مع القليل من الماء ومحلي ستيفيا الآمن ورشة قرفة؛ لتحصل على صلصة كمبوت حامضة وشهية تضعها فوق الزبادي اليوناني بصفر سكر مضاف.",
+          "⚠️ تنبيه مطبخي هام: تناول السيقان الوردية فقط وتخلص تماماً من الأوراق الخضراء؛ فالأوراق تحتوي على تركيزات سامة وعالية جداً من حمض الأكساليك ولا تؤكل مطلقاً.",
+          "الراوند داعم ممتاز لحركة الأمعاء وصحة الهضم بفضل أليافه الحيوية؛ ويُنصح من لديهم تاريخ مع حصوات الكلى بالاعتدال في استهلاكه نظراً لمحتواه من الأكسالات."
+        ],
+        "en": [
+          "Cook the chopped stalks with a little water, a safe stevia sweetener and a pinch of cinnamon for a tangy, delicious compote to spoon over Greek yoghurt with zero added sugar.",
+          "⚠️ Important kitchen warning: eat only the pink stalks and discard the green leaves completely; the leaves contain toxic, very high concentrations of oxalic acid and must never be eaten.",
+          "Rhubarb is an excellent aid to bowel movement and digestive health thanks to its fibre; people with a history of kidney stones are advised to eat it in moderation because of its oxalate content."
+        ],
+        "nl": [
+          "Kook de gesneden stelen met een beetje water, een veilige steviazoetstof en een snufje kaneel tot een friszure, smakelijke compote om over Griekse yoghurt te lepelen, zonder toegevoegde suiker.",
+          "⚠️ Belangrijke keukenwaarschuwing: eet alleen de roze stelen en gooi de groene bladeren volledig weg; de bladeren bevatten giftige, zeer hoge concentraties oxaalzuur en mogen nooit gegeten worden.",
+          "Rabarber is een uitstekende hulp voor de darmwerking en een gezonde spijsvertering dankzij de vezels; wie ooit nierstenen heeft gehad, kan hem beter met mate eten vanwege het oxalaatgehalte."
+        ]
+      }
+    },
+    "381": {
+      "slug": "fresh-blackberries",
+      "lead": {
+        "ar": "لآلئ الغابة السوداء اللامعة المفعمة بالعصارة والحلاوة اللطيفة الممزوجة بحموضة ناعمة؛ من أعظم الفواكه لصحة الأيض في العالم. يفيض بألياف البكتين ومضادات الأكسدة (الأنثوسيانين)، ويسجل مؤشراً جلايسيمياً منخفضاً جداً (≈25) مع حمل جلايسيمي ضئيل للغاية.",
+        "en": "The shiny black pearls of the forest, full of juice and gentle sweetness balanced by a soft tartness; one of the world's best fruits for metabolic health. Blackberries are rich in pectin fibre and antioxidants (anthocyanins) and have a very low glycemic index (≈25) with a very small glycemic load.",
+        "nl": "De glanzende zwarte parels van het bos, vol sap en zachte zoetheid met een milde frisheid; een van de beste vruchten ter wereld voor een gezonde stofwisseling. Bramen zijn rijk aan pectinevezels en antioxidanten (anthocyanen) en hebben een zeer lage glykemische index (≈25) met een zeer kleine glykemische last."
+      },
+      "tips": {
+        "ar": [
+          "كوب كامل من حبات البلاك بيري كوجبة خفيفة أو مع الزبادي الصباحي؛ يمنح شبعاً ممتازاً ويشبع رغبة الحلى تماماً دون أن يرفع سكر الدم أو يرهق البنكرياس.",
+          "تناوله طازجاً ومغسولاً كما هو للاستفادة الكاملة من قرمشة بذوره الدقيقة الغنية بألياف البريبايوتك، وتجنب تماماً طهيه في مربيات سكرية أو تصفيته في عصائر.",
+          "البلاك بيري كنز لألياف الفاكهة ومضادات الأكسدة التي تدعم حساسية الخلايا ومرونة الشرايين؛ وهو من أأمن وأفضل الفواكه المعتمدة عالمياً لمرضى السكري وحميات اللوكارب والكيتو."
+        ],
+        "en": [
+          "A whole cup of blackberries as a snack or with your morning yoghurt gives excellent fullness and fully satisfies a sweet craving without raising blood sugar or straining the pancreas.",
+          "Eat them fresh and washed as they are, to get the full benefit of their tiny crunchy seeds rich in prebiotic fibre, and avoid cooking them into sugary jams or straining them into juice.",
+          "Blackberries are a treasure of fruit fibre and antioxidants that support insulin sensitivity and flexible arteries; one of the safest and best fruits recognised worldwide for people with diabetes and for low-carb and keto diets."
+        ],
+        "nl": [
+          "Een heel kopje bramen als tussendoortje of bij je ochtendyoghurt geeft uitstekende verzadiging en stilt de zoetbehoefte volledig zonder je bloedsuiker te laten stijgen of je alvleesklier te belasten.",
+          "Eet ze vers en gewassen zoals ze zijn, om volop te profiteren van de knapperige pitjes vol prebiotische vezels, en kook ze niet tot suikerrijke jam en zeef ze niet tot sap.",
+          "Bramen zijn een schat aan fruitvezels en antioxidanten die de insulinegevoeligheid en soepele bloedvaten ondersteunen; een van de veiligste en beste vruchten wereldwijd bij diabetes en koolhydraatarme en ketodiëten."
         ]
       }
     }
