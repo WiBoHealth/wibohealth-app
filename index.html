@@ -1648,10 +1648,27 @@
             .article-stat-box { width: 100%; }
         }
     </style>
+    <!-- Chat button: native HTML/CSS, painted with the page; the label follows html[lang] in pure CSS -->
+    <style>
+        .wibo-chat-btn{position:fixed;bottom:25px;right:25px;z-index:9999;display:flex;align-items:center;gap:8px;
+            padding:12px 20px;border:0;border-radius:50px;cursor:pointer;background:linear-gradient(135deg,#10b981,#059669);
+            color:#fff;font:800 15px/1.2 'Cairo','Plus Jakarta Sans',sans-serif;white-space:nowrap;
+            box-shadow:0 10px 30px rgba(16,185,129,.45);transition:opacity .3s ease-in-out,transform .2s ease}
+        .wibo-chat-btn:hover{transform:translateY(-2px)}
+        .wibo-chat-btn:focus-visible{outline:3px solid #a7f3d0;outline-offset:3px}
+        html[data-theme="dark"] .wibo-chat-btn{box-shadow:0 10px 30px rgba(0,0,0,.5)}
+        .wibo-chat-btn [data-l]{display:none}
+        html[lang="ar"] .wibo-chat-btn [data-l="ar"],html[lang="en"] .wibo-chat-btn [data-l="en"],html[lang="nl"] .wibo-chat-btn [data-l="nl"]{display:inline}
+        .wibo-chat-btn.has-unread::after{content:"";position:absolute;top:2px;right:6px;width:11px;height:11px;border-radius:50%;background:#ef4444;border:2px solid #fff}
+        html.wibo-chat-open .wibo-chat-btn{opacity:0;pointer-events:none}
+        /* Crisp's own launcher never renders: its UI is only shown while the chat window is open */
+        html:not(.wibo-chat-open) .crisp-client{display:none!important}
+        @media (max-width:768px){.wibo-chat-btn{bottom:20px;right:15px;padding:10px 16px;font-size:13px}}
+        /* phones: the scanner pill fills the bottom-left, so sit just above its row */
+        @media (max-width:480px){.wibo-chat-btn{bottom:76px}}
+        @media (prefers-reduced-motion:reduce){.wibo-chat-btn{transition:none}}
+    </style>
     <link rel="stylesheet" href="css/unified-header.css">
-    <!-- Crisp live chat: l.js is injected with async so it never blocks rendering -->
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9a3a1db5-419e-4437-81b5-d509419f99f1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-    <script src="/js/crisp-callout.js" defer></script>
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
@@ -1662,6 +1679,36 @@
         <i class="fas fa-mobile-screen-button" style="font-size: 20px;"></i>
         <span data-i18n="floating_scanner_text">تطبيق بودي (فحص الحلال)</span>
     </a>
+
+    <!-- Floating chat button (Crisp is only fetched after the page has loaded and gone idle, or on first click) -->
+    <button type="button" class="wibo-chat-btn" id="wiboChatBtn">💬 <span data-l="ar">دردش معنا</span><span data-l="en">Chat with us</span><span data-l="nl">Chat met ons</span></button>
+    <script>
+    (function () {
+        var h = document.documentElement, btn = document.getElementById('wiboChatBtn'), loaded = false;
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "9a3a1db5-419e-4437-81b5-d509419f99f1";
+        $crisp.push(['do', 'chat:hide']);
+        $crisp.push(['on', 'chat:opened', function () { h.classList.add('wibo-chat-open'); btn.classList.remove('has-unread'); }]);
+        $crisp.push(['on', 'chat:closed', function () { $crisp.push(['do', 'chat:hide']); h.classList.remove('wibo-chat-open'); }]);
+        $crisp.push(['on', 'message:received', function () { if (!h.classList.contains('wibo-chat-open')) btn.classList.add('has-unread'); }]);
+        function load() {
+            if (loaded) return;
+            loaded = true;
+            var s = document.createElement('script');
+            s.src = 'https://client.crisp.chat/l.js';
+            s.async = true;
+            document.head.appendChild(s);
+        }
+        btn.addEventListener('click', function () {
+            load();
+            $crisp.push(['do', 'chat:show']);
+            $crisp.push(['do', 'chat:open']);
+        });
+        window.addEventListener('load', function () {
+            (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(load, { timeout: 4000 });
+        });
+    })();
+    </script>
 
     <!-- Header -->
    <!-- Header Slim 2.0 -->
