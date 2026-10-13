@@ -7507,6 +7507,631 @@
           "De cacaoboter in pure chocolade vertraagt de suikeropname en levert antioxidanten; met een bescheiden hoeveelheid begin je de dag met een gezonde, beheerste Hollandse traktatie."
         ]
       }
+    },
+    "332": {
+      "slug": "parmigiano-reggiano",
+      "lead": {
+        "ar": "\"ملك الأجبان\" الإيطالي بلا منازع (Parmigiano Reggiano PDO)؛ جبن صلب معتق بصبر لعامين كاملين حتى تبلورت فيه أحماض الجلوتاميك الطبيعية وحبيبات الكالسيوم المقرمشة. كربوهيدراته الصافية صفر ومؤشره الجلايسيمي غير منطبق، ويعد منجم بروتين مركز يمنح طاقة ونكهة جبارة دون أي تأثير على سكر الدم.",
+        "en": "The undisputed Italian \"king of cheeses\" (Parmigiano Reggiano PDO): a hard cheese patiently aged for two full years until natural glutamic acid and crunchy calcium crystals form. Its net carbohydrate is zero, so a glycemic index does not apply, and it is a concentrated source of protein that delivers energy and bold flavour with no effect on blood sugar.",
+        "nl": "De onbetwiste Italiaanse \"koning der kazen\" (Parmigiano Reggiano BOB): een harde kaas die geduldig twee volle jaren rijpt tot er natuurlijk glutaminezuur en knapperige calciumkristallen ontstaan. Het netto koolhydraatgehalte is nul, dus een glykemische index is niet van toepassing, en het is een geconcentreerde eiwitbron die energie en een krachtige smaak geeft zonder effect op de bloedsuiker."
+      },
+      "tips": {
+        "ar": [
+          "ابشر ملعقة طعام فوق أطباق الباستا والشوربات وسلطات الخضار الورقية؛ فدهونه وبروتينه يبطئان امتصاص نشويات الوجبة ويمنحان إحساساً فورياً بالشبع والرضا.",
+          "تناوله في درجة حرارة الغرفة مقطعاً إلى رقائق رقيقة مع قليل من خل البلسمك التقليدي، واحتفظ بقشرة البارميزان الصلبة لغليها داخل الشوربات لإكسابها نكهة أومامي عميقة.",
+          "التعتق الطويل لمدة 24 شهراً يفكك سكر الحليب بالكامل، مما يجعله خالياً تماماً من اللاكتوز ومصدر كلسيوم هائل وسهل الهضم لجميع الأفراد."
+        ],
+        "en": [
+          "Grate a tablespoon over pasta, soups and leafy salads; its fat and protein slow the absorption of the meal's starch and give an immediate sense of fullness and satisfaction.",
+          "Eat it at room temperature, shaved into thin flakes with a little traditional balsamic vinegar, and keep the hard Parmesan rind to simmer in soups for a deep umami flavour.",
+          "Ageing for 24 months breaks down the milk sugar completely, so it is entirely lactose-free and a rich, easily digested source of calcium for everyone."
+        ],
+        "nl": [
+          "Rasp een eetlepel over pasta, soepen en bladsalades; het vet en eiwit vertragen de opname van het zetmeel uit de maaltijd en geven direct een verzadigd, voldaan gevoel.",
+          "Eet hem op kamertemperatuur in dunne schaafsel met een beetje traditionele balsamicoazijn, en bewaar de harde korst om mee te trekken in soep voor een diepe umamismaak.",
+          "Door 24 maanden rijping wordt de melksuiker volledig afgebroken, waardoor hij helemaal lactosevrij is en voor iedereen een rijke, goed verteerbare calciumbron."
+        ]
+      }
+    },
+    "333": {
+      "slug": "pecorino-romano",
+      "lead": {
+        "ar": "جبن روما القديم والتاريخي؛ يُصنع حصرياً من حليب الأغنام الكامل ويُملح ويُعتق حتى يكتسب قواماً صلباً ونكهة حادة وحارة ومالحة. كربوهيدراته شبه معدومة ومؤشره الجلايسيمي غير منطبق، ويشكل حجر الأساس لوصفات الباستا الرومانية الكلاسيكية كالكاربونارا والكاشيو إي بيبي.",
+        "en": "The ancient, historic cheese of Rome: made only from whole sheep's milk, salted and aged until it is hard, with a sharp, peppery, salty flavour. It contains almost no carbohydrate, so a glycemic index does not apply, and it is the cornerstone of classic Roman pasta dishes such as carbonara and cacio e pepe.",
+        "nl": "De oude, historische kaas van Rome: alleen gemaakt van volle schapenmelk, gezouten en gerijpt tot hij hard is, met een scherpe, peperige en zoute smaak. Hij bevat bijna geen koolhydraten, dus een glykemische index is niet van toepassing, en hij vormt de basis van klassieke Romeinse pastagerechten zoals carbonara en cacio e pepe."
+      },
+      "tips": {
+        "ar": [
+          "رشة صغيرة مبروشة كافية تماماً لمنح الطبق نكهة حادة؛ استخدمه كبديل ذكي يقلل حاجتك لإضافة الملح العادي مع توفير دهون صحية وكالسيوم طبيعي.",
+          "امزجه مبروشاً مع الفلفل الأسود المطحون طازجاً، ورشه فوق الخضار المشوية أو أطباق البيض لرفع النكهة ومستوى الشبع بامتياز.",
+          "حليب الغنم غني بحمض اللينوليك المقترن (CLA) المفيد للأوعية الدموية؛ ولكن نظراً لملوحته المرتفعة طبيعياً، يُنصح بالاعتدال في الكمية لمرضى ارتفاع ضغط الدم."
+        ],
+        "en": [
+          "A small sprinkle of grated pecorino is enough to give a dish a sharp flavour; use it as a smart way to need less ordinary salt while adding healthy fats and natural calcium.",
+          "Mix it grated with freshly ground black pepper and sprinkle it over roasted vegetables or egg dishes to lift both the flavour and the fullness.",
+          "Sheep's milk is rich in conjugated linoleic acid (CLA), which benefits the blood vessels; because it is naturally very salty, people with high blood pressure should keep the amount moderate."
+        ],
+        "nl": [
+          "Een klein beetje geraspte pecorino is genoeg om een gerecht een scherpe smaak te geven; gebruik hem slim om minder gewoon zout nodig te hebben, terwijl je gezonde vetten en natuurlijk calcium toevoegt.",
+          "Meng hem geraspt met versgemalen zwarte peper en strooi dat over geroosterde groenten of eiergerechten voor meer smaak en verzadiging.",
+          "Schapenmelk is rijk aan geconjugeerd linolzuur (CLA), goed voor de bloedvaten; omdat hij van nature erg zout is, is matigheid aan te raden bij een hoge bloeddruk."
+        ]
+      }
+    },
+    "334": {
+      "slug": "greek-feta",
+      "lead": {
+        "ar": "كنز الجزر اليونانية الأصيل (Feta PDO)؛ جبن أبيض طري ومحبب يُصنع من حليب الأغنام الممزوج بقليل من حليب الماعز، ويُحفظ في المحلول الملحي. كربوهيدراته الصافية ضئيلة جداً ومؤشره الجلايسيمي غير منطبق، ويعد ركيزة أساسية للحمية المتوسطية وصحة الأمعاء.",
+        "en": "The authentic treasure of the Greek islands (Feta PDO): a soft, crumbly white cheese made from sheep's milk with a little goat's milk and kept in brine. Its net carbohydrate is very low, so a glycemic index does not apply, and it is a cornerstone of the Mediterranean diet and gut health.",
+        "nl": "De echte schat van de Griekse eilanden (Feta BOB): een zachte, kruimelige witte kaas van schapenmelk met een beetje geitenmelk, bewaard in pekel. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en hij is een pijler van het mediterrane dieet en een gezonde darm."
+      },
+      "tips": {
+        "ar": [
+          "فتت شريحة متوسطة فوق صحن السلطة الخضراء اليومية مع زيت الزيتون وحبات الزيتون؛ فبروتينه ودهونه يشكلان حاجزاً يبطئ هضم أي وجبة تتناولها.",
+          "اخبز شريحة من الفيتا في الفرن مع الطماطم الكرزية وزيت الزيتون ورشة أوريغانو لدقائق حتى تصبح طرية؛ لتحصل على غموس دافئ ومغذٍ ومريح للمعدة.",
+          "الفيتا اليونانية الأصلية المصنوعة من حليب الأغنام أسهل هضماً بكثير من الأجبان البيضاء المصنعة من حليب الأبقار التجاري، ويمكن نقعها في ماء فاتر لتخفيف ملوحتها لمن يراقب الضغط."
+        ],
+        "en": [
+          "Crumble a medium slice over your daily green salad with olive oil and olives; its protein and fat form a buffer that slows the digestion of whatever you eat with it.",
+          "Bake a slice of feta in the oven with cherry tomatoes, olive oil and a pinch of oregano for a few minutes until soft, for a warm, nourishing dip that is gentle on the stomach.",
+          "Authentic Greek feta made from sheep's milk is much easier to digest than processed white cheeses made from commercial cow's milk, and you can soak it in lukewarm water to reduce its saltiness if you watch your blood pressure."
+        ],
+        "nl": [
+          "Verkruimel een middelgrote plak over je dagelijkse groene salade met olijfolie en olijven; het eiwit en vet vormen een buffer die de vertering van alles wat je erbij eet vertraagt.",
+          "Bak een plak feta een paar minuten in de oven met cherrytomaatjes, olijfolie en een snufje oregano tot hij zacht is, voor een warme, voedzame dip die licht op de maag ligt.",
+          "Echte Griekse feta van schapenmelk is veel beter verteerbaar dan bewerkte witte kaas van commerciële koemelk, en je kunt hem in lauw water laten weken om het zout te verminderen als je op je bloeddruk let."
+        ]
+      }
+    },
+    "335": {
+      "slug": "brie-cheese",
+      "lead": {
+        "ar": "\"ملكة الأجبان\" الفرنسية الناعمة؛ قشرة بيضاء صالحة للأكل من فطر البنسيليوم تحبس قلباً عاجياً يذوب كالقشطة بنكهة زبدية ترابية راقية. صفر كربوهيدرات ومؤشره الجلايسيمي غير منطبق، وتفيض بالدهون الصحية وفيتامين K2 وفيتامين B12.",
+        "en": "France's soft \"queen of cheeses\": an edible white Penicillium rind holding an ivory heart that melts like cream, with a refined buttery, earthy flavour. It has zero carbohydrate, so a glycemic index does not apply, and it is rich in healthy fats, vitamin K2 and vitamin B12.",
+        "nl": "De zachte Franse \"koningin der kazen\": een eetbare witte Penicillium-korst rond een ivoorkleurig hart dat smelt als room, met een verfijnde boterige, aardse smaak. Er zitten nul koolhydraten in, dus een glykemische index is niet van toepassing, en hij is rijk aan gezonde vetten, vitamine K2 en vitamine B12."
+      },
+      "tips": {
+        "ar": [
+          "شريحة رقيقة مع وجبة الإفطار أو كسناك مع بضع حبات من الجوز أو الفراولة؛ تمنح شبعاً عميقاً ورضا حسياً هائلاً دون أي قفزات في سكر الدم.",
+          "أخرج الجبن من الثلاجة قبل نصف ساعة من تناوله؛ فقوامه الكريمي ونكهته الحقيقية لا تظهر إلا في درجة حرارة الغرفة، وتناول القشرة البيضاء البيولوجية فهي صالحة للأكل وغنية بالبروبيوتيك.",
+          "⚠️ تنبيه سلامة للحوامل: جبن البري الطري المصنوع من حليب غير مبستر (Au lait cru) يُمنع للحوامل لتفادي مخاطر بكتيريا الليستيريا، بينما الأنواع المصنوعة من حليب مبستر آمنة وممتازة."
+        ],
+        "en": [
+          "A thin slice with breakfast or as a snack with a few walnuts or strawberries gives deep fullness and great sensory satisfaction without any blood-sugar spikes.",
+          "Take the cheese out of the fridge half an hour before eating; its creamy texture and true flavour only come through at room temperature, and the white rind is edible and rich in probiotics.",
+          "⚠️ Safety note for pregnancy: soft Brie made from unpasteurised milk (au lait cru) is not allowed during pregnancy because of the risk of Listeria, while versions made from pasteurised milk are safe and excellent."
+        ],
+        "nl": [
+          "Een dun plakje bij het ontbijt, of als tussendoortje met een paar walnoten of aardbeien, geeft diepe verzadiging en veel genot zonder bloedsuikerpieken.",
+          "Haal de kaas een halfuur voor het eten uit de koelkast; de romige structuur en echte smaak komen pas op kamertemperatuur tot hun recht, en de witte korst is eetbaar en rijk aan probiotica.",
+          "⚠️ Veiligheidswaarschuwing voor zwangeren: zachte brie van rauwe melk (au lait cru) is tijdens de zwangerschap niet toegestaan vanwege het risico op listeria; varianten van gepasteuriseerde melk zijn veilig en uitstekend."
+        ]
+      }
+    },
+    "336": {
+      "slug": "camembert-cheese",
+      "lead": {
+        "ar": "فخر إقليم النورماندي الفرنسي في علبته الخشبية الشهيرة؛ جبن طري مكثف النكهة برائحة فطرية ترابية مميزة وقوام مخملي غني. كربوهيدراته الصافية تقارب الصفر ومؤشره الجلايسيمي غير منطبق، ويوفر أحماضاً أمينية ودهوناً مغذية تدعم استقرار الجلوكوز.",
+        "en": "The pride of Normandy in its famous wooden box: a soft, intensely flavoured cheese with a distinctive earthy, mushroomy aroma and a rich, velvety texture. Its net carbohydrate is close to zero, so a glycemic index does not apply, and it provides amino acids and nourishing fats that support stable glucose.",
+        "nl": "De trots van Normandië in het beroemde houten doosje: een zachte kaas met een intense smaak, een kenmerkend aards, paddenstoelachtig aroma en een rijke, fluweelzachte structuur. Het netto koolhydraatgehalte is bijna nul, dus een glykemische index is niet van toepassing, en hij levert aminozuren en voedzame vetten die een stabiele glucose ondersteunen."
+      },
+      "tips": {
+        "ar": [
+          "قطعة صغيرة كافية تماماً؛ تناولها مع شرائح الخيار أو فوق توست الحبوب الكاملة لتبدأ يومك ببروتين نقي يمنع الجوع السريع.",
+          "اخبز علبة الكامامبير في الفرن لـ 10 دقائق بعد غرز فص ثوم وعود إكليل الجبل فيها، واغمس فيها أعواد الجزر والكرفس كوجبة عشاء شتوية فاخرة وخالية من النشويات.",
+          "⚠️ تنبيه للحوامل: ينطبق عليه نفس تحذير جبن البري؛ يُشترط التأكد من أنه مصنوع من حليب مبستر، أو تناوله مطهواً ومخبوزاً في الفرن بحرارة عالية ليصبح آمناً تماماً للحوامل."
+        ],
+        "en": [
+          "A small piece is quite enough; eat it with cucumber slices or on wholegrain toast to start your day with pure protein that prevents early hunger.",
+          "Bake the boxed camembert in the oven for 10 minutes with a garlic clove and a sprig of rosemary pushed into it, and dip carrot and celery sticks in it for a luxurious, starch-free winter supper.",
+          "⚠️ Note for pregnancy: the same warning as for Brie applies; make sure it is made from pasteurised milk, or eat it cooked and baked at a high oven temperature so it is completely safe during pregnancy."
+        ],
+        "nl": [
+          "Een klein stukje is ruim genoeg; eet het met plakjes komkommer of op volkorentoast om je dag te beginnen met puur eiwit dat snelle honger voorkomt.",
+          "Bak de camembert in zijn doosje 10 minuten in de oven met een teentje knoflook en een takje rozemarijn erin gestoken, en dip er wortel- en selderijstengels in voor een luxe, zetmeelvrij winters avondmaal.",
+          "⚠️ Waarschuwing voor zwangeren: dezelfde waarschuwing als bij brie geldt; controleer dat hij van gepasteuriseerde melk is gemaakt, of eet hem gebakken op hoge oventemperatuur zodat hij tijdens de zwangerschap volledig veilig is."
+        ]
+      }
+    },
+    "337": {
+      "slug": "ricotta-cheese",
+      "lead": {
+        "ar": "الجبن الإيطالي الأبيض الطري الخفيف؛ يُصنع تقليدياً من مصل اللبن (Whey) المتبقي من صناعة الأجبان الأخرى، ويتميز بقوام كريمي ناعم ونكهة حليبية حلوة خفيفة. كربوهيدراته الصافية ضئيلة جداً (نحو 5غ) ومؤشره الجلايسيمي منخفض جداً وغير مؤثر عملياً، ويعد بطلاً للبروتين سريع الامتصاص.",
+        "en": "The light, soft white Italian cheese: traditionally made from the whey left over from making other cheeses, with a smooth, creamy texture and a mild, sweet milky flavour. Its net carbohydrate is very low (about 5 g) and its glycemic index is very low and has practically no effect, and it is a champion of quickly absorbed protein.",
+        "nl": "De lichte, zachte witte Italiaanse kaas: traditioneel gemaakt van de wei die overblijft bij het maken van andere kazen, met een gladde, romige structuur en een milde, zoete melksmaak. Het netto koolhydraatgehalte is zeer laag (ongeveer 5 g) en de glykemische index is zeer laag en heeft in de praktijk geen effect; ricotta blinkt uit in snel opneembaar eiwit."
+      },
+      "tips": {
+        "ar": [
+          "ملعقتان كبيرتان في الصباح مع رشة قرفة وبضع حبات من التوت البري؛ وجبة إفطار ممتازة للرياضيين ولمن يسعى للشبع وبناء الكتلة العضلية بنشويات شبه معدومة.",
+          "استخدم الريكوتا كبديل صحي وخفيف للكريمة والمايونيز في حشوات المعكرونة والصلصات وتتبيلات السلطات، أو ادهنها فوق التوست الأسمر مع شرائح الطماطم والريحان.",
+          "الريكوتا غنية جداً ببروتين مصل اللبن (الواي) سهل الهضم؛ وتحتوي على نسبة طبيعية من سكر الحليب (اللاكتوز)، لذا يجب على من يعاني من حساسية لاكتوز شديدة الانتباه للكمية."
+        ],
+        "en": [
+          "Two tablespoons in the morning with a pinch of cinnamon and a few berries make an excellent breakfast for athletes and anyone aiming for fullness and muscle building with almost no starch.",
+          "Use ricotta as a light, healthy substitute for cream and mayonnaise in pasta fillings, sauces and salad dressings, or spread it on brown toast with tomato slices and basil.",
+          "Ricotta is very rich in easily digested whey protein; it does contain some natural milk sugar (lactose), so people with severe lactose intolerance should watch the amount."
+        ],
+        "nl": [
+          "Twee eetlepels in de ochtend met een snufje kaneel en een paar bessen vormen een uitstekend ontbijt voor sporters en voor wie verzadiging en spieropbouw zoekt met bijna geen zetmeel.",
+          "Gebruik ricotta als lichte, gezonde vervanger van room en mayonaise in pastavullingen, sauzen en saladedressings, of smeer hem op bruine toast met plakjes tomaat en basilicum.",
+          "Ricotta is zeer rijk aan goed verteerbaar wei-eiwit; hij bevat wel wat natuurlijke melksuiker (lactose), dus bij een ernstige lactose-intolerantie moet je op de hoeveelheid letten."
+        ]
+      }
+    },
+    "338": {
+      "slug": "mascarpone",
+      "lead": {
+        "ar": "سيدة الحلوى الإيطالية الأشهر (التيراميسو)؛ جبن كريمي فائق النعومة والدسامة يُصنع من خثر القشطة بحمض الستريك. الماسكاربوني تكاد تكون دهوناً وقشطة نقية مع كربوهيدرات مهملة، ومؤشرها الجلايسيمي غير منطبق، وتمنح قواماً مخملياً لا يُضاهى.",
+        "en": "The star of Italy's most famous dessert (tiramisu): an ultra-smooth, rich cream cheese made by curdling cream with citric acid. Mascarpone is almost pure fat and cream with negligible carbohydrate, so a glycemic index does not apply, and it gives an unmatched velvety texture.",
+        "nl": "De ster van Italiës bekendste dessert (tiramisu): een uiterst gladde, rijke roomkaas, gemaakt door room met citroenzuur te laten stremmen. Mascarpone is bijna puur vet en room met verwaarloosbare koolhydraten, dus een glykemische index is niet van toepassing, en hij geeft een ongeëvenaard fluweelzachte structuur."
+      },
+      "tips": {
+        "ar": [
+          "ملعقة طعام واحدة كتحلية كيتونية فاخرة ممزوجة ببودرة الكاكاو الخام وقليل من الفانيليا؛ تمنح إحساساً بالشبع الفوري وتغنيك عن الحلويات السكرية.",
+          "اخفقها باردة مع قليل من القهوة الإسبريسو ومحلي ستيفيا الآمن لتحصل على موس تيراميسو صحي وسريع وخالٍ تماماً من السكر المكرر والدقيق.",
+          "الماسكاربوني جبن فائق الكثافة بالسعرات والدهون المشبعة (نحو 430 سعرة لكل 100غ)؛ لذا فالاعتدال الصارم بالحصة ملعقة واحدة يضمن الاستمتاع بقوامها المترف دون فائض طاقي."
+        ],
+        "en": [
+          "One tablespoon as a luxurious keto dessert, mixed with raw cocoa powder and a little vanilla, gives instant fullness and replaces sugary sweets.",
+          "Whip it cold with a little espresso and a safe stevia sweetener for a quick, healthy tiramisu mousse that is completely free of refined sugar and flour.",
+          "Mascarpone is extremely dense in calories and saturated fat (about 430 kcal per 100 g), so strictly keeping to one tablespoon lets you enjoy its luxurious texture without surplus energy."
+        ],
+        "nl": [
+          "Eén eetlepel als luxe ketodessert, gemengd met rauw cacaopoeder en een beetje vanille, geeft direct verzadiging en vervangt suikerrijke zoetigheid.",
+          "Klop hem koud op met een beetje espresso en een veilige steviazoetstof voor een snelle, gezonde tiramisumousse zonder geraffineerde suiker en meel.",
+          "Mascarpone is zeer rijk aan calorieën en verzadigd vet (ongeveer 430 kcal per 100 g), dus strikt één eetlepel per keer laat je genieten van de luxe structuur zonder energieoverschot."
+        ]
+      }
+    },
+    "339": {
+      "slug": "gruyere-cheese",
+      "lead": {
+        "ar": "درة جبال الألب السويسرية والجبن الأساسي لطبق الفوندو وحساء البصل الفرنسي؛ جبن صلب معتق بنكهة جوزية زبدية معقدة تتراوح بين الحلاوة الخفيفة والملوحة العميقة. كربوهيدراته الصافية صفر ومؤشره الجلايسيمي غير منطبق، ويعد من أجود الأجبان الغنية بالكالسيوم والزنك.",
+        "en": "The jewel of the Swiss Alps and the essential cheese for fondue and French onion soup: an aged hard cheese with a complex nutty, buttery flavour that ranges from gentle sweetness to deep saltiness. Its net carbohydrate is zero, so a glycemic index does not apply, and it is one of the finest cheeses rich in calcium and zinc.",
+        "nl": "Het juweel van de Zwitserse Alpen en de onmisbare kaas voor fondue en Franse uiensoep: een gerijpte harde kaas met een complexe nootachtige, boterige smaak die varieert van licht zoet tot diep zout. Het netto koolhydraatgehalte is nul, dus een glykemische index is niet van toepassing, en hij is een van de beste kazen, rijk aan calcium en zink."
+      },
+      "tips": {
+        "ar": [
+          "شريحة صغيرة تذوب فوق الخضار المشوية أو الشوربات؛ دهونها وبروتينها يوفران شبعاً ثابتاً يفرمل امتصاص أي وجبة طعام.",
+          "ابشرها ناعماً واستمتع بقدرتها الفائقة على الذوبان السلس دون أن تنفصل دهونها؛ مما يجعلها خياراً راقياً لطهي صواني الخضار والبيض بالفرن.",
+          "خالية طبيعياً من اللاكتوز بفضل عمليات التعتق البطيئة، ومصدر ممتاز للأحماض الأمينية الكاملة؛ ومناسبة جداً لمرضى السكري وحميات اللوكارب."
+        ],
+        "en": [
+          "A small slice melted over roasted vegetables or soups; its fat and protein give steady fullness that slows the absorption of any meal.",
+          "Grate it finely and enjoy how smoothly it melts without its fat separating, which makes it a refined choice for oven-baked vegetable and egg dishes.",
+          "Naturally lactose-free thanks to slow ageing and an excellent source of complete amino acids; very suitable for people with diabetes and for low-carb diets."
+        ],
+        "nl": [
+          "Een klein plakje gesmolten over geroosterde groenten of soep; het vet en eiwit geven een stabiele verzadiging die de opname van elke maaltijd afremt.",
+          "Rasp hem fijn en geniet ervan hoe soepel hij smelt zonder dat het vet zich afscheidt, wat hem een verfijnde keuze maakt voor ovenschotels met groenten en ei.",
+          "Van nature lactosevrij dankzij het langzame rijpen en een uitstekende bron van volwaardige aminozuren; zeer geschikt bij diabetes en koolhydraatarme diëten."
+        ]
+      }
+    },
+    "340": {
+      "slug": "emmental-cheese",
+      "lead": {
+        "ar": "الجبنة الكلاسيكية الشهيرة بفجواتها الدائرية الكبيرة ونكهتها الجوزية الخفيفة الناعمة؛ تصنع من حليب أبقار جبال الألب السويسرية وتُعتق حتى تتشكل ثقوبها بفعل غاز التخمير الطبيعي. صفر كربوهيدرات ومؤشرها الجلايسيمي غير منطبق، وتعد من أخف الأجبان الصلبة وأقلها صوديوم.",
+        "en": "The classic cheese famous for its large round holes and mild, gentle nutty flavour: made from the milk of Swiss Alpine cows and aged until natural fermentation gas forms its holes. It has zero carbohydrate, so a glycemic index does not apply, and it is one of the mildest hard cheeses and among the lowest in sodium.",
+        "nl": "De klassieke kaas die bekendstaat om zijn grote ronde gaten en milde, zachte nootachtige smaak: gemaakt van melk van Zwitserse alpenkoeien en gerijpt tot natuurlijk gistingsgas de gaten vormt. Er zitten nul koolhydraten in, dus een glykemische index is niet van toepassing, en hij is een van de mildste harde kazen met het minste natrium."
+      },
+      "tips": {
+        "ar": [
+          "شريحة رقيقة في ساندويش القمح الكامل مع شرائح الخس والطماطم؛ تمنح قرمشة ونكهة لذيذة وشبعاً يدوم طوال الصباح.",
+          "تناولها مقطعة مكعبات مع حبات الزيتون كوجبة خفيفة، أو استخدمها في تحضير الساندويشات المحمصة لسرعة ذوبانها وقوامها المطاطي المحبب.",
+          "تتميز الإيمنتال بأنها أقل صوديوم وملوحة مقارنة بأغلب الأجبان الصلبة المعتقة الأخرى، مما يجعلها خياراً ممتازاً لمن يراقب ضغط الدم ويبحث عن الكالسيوم."
+        ],
+        "en": [
+          "A thin slice in a whole-wheat sandwich with lettuce and tomato gives bite, great flavour and fullness that lasts all morning.",
+          "Eat it in cubes with olives as a snack, or use it in toasted sandwiches because it melts quickly into a pleasantly stretchy texture.",
+          "Emmental is lower in sodium and salt than most other aged hard cheeses, which makes it an excellent choice for anyone watching their blood pressure and looking for calcium."
+        ],
+        "nl": [
+          "Een dun plakje op een volkorenboterham met sla en tomaat geeft bite, een heerlijke smaak en een verzadiging die de hele ochtend aanhoudt.",
+          "Eet hem in blokjes met olijven als tussendoortje, of gebruik hem in tosti's omdat hij snel smelt tot een prettig smeuïge structuur.",
+          "Emmentaler bevat minder natrium en zout dan de meeste andere gerijpte harde kazen, wat hem een uitstekende keuze maakt als je op je bloeddruk let en calcium zoekt."
+        ]
+      }
+    },
+    "341": {
+      "slug": "roquefort-cheese",
+      "lead": {
+        "ar": "\"ملك الأجبان الزرقاء\" والجبن الفرنسي الأكثر حدة وعراقة؛ يُصنع من حليب الأغنام الخام ويُعتق داخل كهوف كومبالو الطبيعية مع فطر البنسيليوم روكفورتي الأزرق. كربوهيدراته شبه معدومة ومؤشره الجلايسيمي غير منطبق، ويتميز بنكهة ملحية حادة ومخملية في آن واحد.",
+        "en": "The \"king of blue cheeses\" and France's sharpest, most venerable cheese: made from raw sheep's milk and aged in the natural Combalou caves with the blue mould Penicillium roqueforti. It contains almost no carbohydrate, so a glycemic index does not apply, and it is at once sharply salty and velvety.",
+        "nl": "De \"koning der blauwe kazen\" en de scherpste, eerbiedwaardigste kaas van Frankrijk: gemaakt van rauwe schapenmelk en gerijpt in de natuurlijke grotten van Combalou met de blauwe schimmel Penicillium roqueforti. Hij bevat bijna geen koolhydraten, dus een glykemische index is niet van toepassing, en hij is tegelijk scherp zout en fluweelzacht."
+      },
+      "tips": {
+        "ar": [
+          "قطعة صغيرة جداً بحجم عقلة الإصبع كافية لتفجير النكهة في فمك؛ فتتها فوق سلطة الجوز والكمثرى أو الخس لرفع الشبع والاستمتاع بالنكهة المعتقة.",
+          "اخلط قطعة صغيرة مع زيت الزيتون وعصير الليمون لصنع تتبيلة سلطة فرنسية أصيلة وشهية تغنيك عن إضافة الملح والصلصات المصنعة.",
+          "⚠️ تنبيه للحوامل: الروكفور جبن أزرق طري معتق بحليب غير مبستر وفطريات؛ يُمنع للحوامل لتفادي بكتيريا الليستيريا، بينما هو آمن وممتاز لصحة الأمعاء لدى الأصحاء بفضل بكتيريا التخمير."
+        ],
+        "en": [
+          "A very small piece, the size of a fingertip, is enough to fill your mouth with flavour; crumble it over a walnut-and-pear or lettuce salad to boost fullness and enjoy its aged taste.",
+          "Blend a small piece with olive oil and lemon juice for an authentic, delicious French salad dressing that replaces added salt and processed sauces.",
+          "⚠️ Note for pregnancy: Roquefort is a soft blue cheese aged from unpasteurised milk with moulds; it is not allowed during pregnancy because of Listeria, while for healthy people it is safe and good for gut health thanks to its fermentation bacteria."
+        ],
+        "nl": [
+          "Een heel klein stukje, zo groot als een vingertop, is genoeg voor een explosie van smaak; verkruimel het over een salade met walnoten en peer of sla voor meer verzadiging en de gerijpte smaak.",
+          "Meng een klein stukje met olijfolie en citroensap voor een echte, smakelijke Franse saladedressing, zodat je geen extra zout of kant-en-klare sauzen nodig hebt.",
+          "⚠️ Waarschuwing voor zwangeren: roquefort is een zachte blauwe kaas van rauwe melk met schimmels; tijdens de zwangerschap niet toegestaan vanwege listeria, terwijl hij voor gezonde mensen veilig en goed voor de darmen is dankzij de gistingsbacteriën."
+        ]
+      }
+    },
+    "342": {
+      "slug": "manchego-cheese",
+      "lead": {
+        "ar": "فخر منطقة لا مانشا الإسبانية ومرافقة أطباق التاباس؛ جبن صلب مصنوع حصرياً من حليب أغنام المانشيغا بعلامات القش التقليدية المحفورة على قشرته الخارجية. صفر كربوهيدرات ومؤشره الجلايسيمي غير منطبق، ويمتاز بنكهة عشبية زبدية تتدرج في الحدة حسب مدة التعتق.",
+        "en": "The pride of Spain's La Mancha and the companion of tapas: a hard cheese made only from Manchega sheep's milk, with the traditional woven-grass pattern pressed into its rind. It has zero carbohydrate, so a glycemic index does not apply, and its herby, buttery flavour grows sharper with ageing.",
+        "nl": "De trots van het Spaanse La Mancha en de vaste metgezel van tapas: een harde kaas die alleen van melk van Manchega-schapen wordt gemaakt, met het traditionele gevlochten-grasmotief in de korst. Er zitten nul koolhydraten in, dus een glykemische index is niet van toepassing, en de kruidige, boterige smaak wordt pittiger naarmate hij langer rijpt."
+      },
+      "tips": {
+        "ar": [
+          "شرائح مثلثة رقيقة تُقدم مع حبات اللوز النيء والزيتون كوجبة خفيفة راقية تدعم استقرار سكر الدم والشبع الهادئ.",
+          "قشر الغلاف الشمعي الخارجي وتناول الجبن في حرارة الغرفة، وتجنب تناوله مع المربيات السكرية الكثيفة للحفاظ على استقرار الجلوكوز.",
+          "غني بفيتامينات A وD وE والأحماض الدهنية المفيدة؛ وخالٍ تماماً من اللاكتوز في نسخه المعتقة، مما يجعله صديقاً رائعاً للجهاز الهضمي والرشاقة."
+        ],
+        "en": [
+          "Thin triangular slices served with raw almonds and olives make a refined snack that supports stable blood sugar and calm fullness.",
+          "Peel off the outer wax coating and eat the cheese at room temperature, and avoid pairing it with thick sugary jams so your glucose stays stable.",
+          "Rich in vitamins A, D and E and beneficial fatty acids, and completely lactose-free in its aged versions, which makes it a great friend to your digestion and your figure."
+        ],
+        "nl": [
+          "Dunne driehoekige plakjes met rauwe amandelen en olijven vormen een verfijnd tussendoortje dat een stabiele bloedsuiker en rustige verzadiging ondersteunt.",
+          "Verwijder de buitenste waslaag en eet de kaas op kamertemperatuur, en combineer hem niet met dikke, suikerrijke jam zodat je glucose stabiel blijft.",
+          "Rijk aan vitamine A, D en E en gezonde vetzuren, en in de gerijpte varianten helemaal lactosevrij, wat hem een prima vriend maakt voor je spijsvertering en je lijn."
+        ]
+      }
+    },
+    "343": {
+      "slug": "skyr-naturel",
+      "lead": {
+        "ar": "غذاء الفايكنغ العريق الذي غزا العالم الصحي؛ منتج ألبان تقليدي من آيسلندا يُصنع كجبن طري مصفى ولكنه يُؤكل كالزبادي السميك. يفيض بالبروتين النقي (نحو 11غ لكل 100غ) مع صفر دهون وكربوهيدرات ضئيلة جداً (نحو 4غ)، ومؤشره الجلايسيمي غير مؤثر عملياً وغير منطبق.",
+        "en": "The age-old food of the Vikings that has conquered the health world: a traditional Icelandic dairy product made like a strained soft cheese but eaten like thick yoghurt. It is packed with pure protein (about 11 g per 100 g) with zero fat and very little carbohydrate (about 4 g); its glycemic index has practically no effect and does not apply.",
+        "nl": "Het eeuwenoude voedsel van de Vikingen dat de gezondheidswereld heeft veroverd: een traditioneel IJslands zuivelproduct, gemaakt als een uitgelekte zachte kaas maar gegeten als dikke yoghurt. Het zit vol puur eiwit (ongeveer 11 g per 100 g) met nul vet en heel weinig koolhydraten (ongeveer 4 g); de glykemische index heeft in de praktijk geen effect en is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "وعاء الإفطار الذهبي؛ كوب صغير مع رشة قرفة وبضع حبات من التوت الأزرق يمنحك شبعاً فولاذياً وطاقة صافية تدوم لساعات دون أي قلق من رفع السكر.",
+          "اختر دائماً السكير الطبيعي السادة (Naturel) واخلطه بنفسك مع الفواكه الطازجة، وتجنب الأنواع المنكهة بالفواكه الجاهزة المحشوة بالسكر المضاف وشراب الجلوكوز.",
+          "السكير رافد استثنائي لبناء الكتلة العضلية وحرق الدهون وراحة الأمعاء بفضل البروبيوتيك؛ وهو من أفضل الأغذية المعتمدة عالمياً لمرضى السكري والرياضيين."
+        ],
+        "en": [
+          "The golden breakfast bowl: a small cup with a pinch of cinnamon and a few blueberries gives rock-solid fullness and clean energy for hours with no worry about raising blood sugar.",
+          "Always choose plain natural skyr (naturel) and mix in fresh fruit yourself, and avoid ready-made fruit-flavoured versions loaded with added sugar and glucose syrup.",
+          "Skyr is an exceptional aid for building muscle, burning fat and gut comfort thanks to its probiotics, and it is one of the best foods recognised worldwide for people with diabetes and athletes."
+        ],
+        "nl": [
+          "De gouden ontbijtkom: een klein bakje met een snufje kaneel en een paar blauwe bessen geeft urenlang een ijzersterke verzadiging en schone energie, zonder zorgen over een stijgende bloedsuiker.",
+          "Kies altijd skyr naturel zonder smaakje en meng er zelf vers fruit door; laat kant-en-klare fruitvarianten vol toegevoegde suiker en glucosestroop liggen.",
+          "Skyr is een uitzonderlijke hulp bij spieropbouw, vetverbranding en een rustige darm dankzij de probiotica, en hij behoort wereldwijd tot de beste voedingsmiddelen voor mensen met diabetes en sporters."
+        ]
+      }
+    },
+    "344": {
+      "slug": "sourdough-bread",
+      "lead": {
+        "ar": "رغيف الخبز الحرفي الأصيل بقشرته المقرمشة ولبه المطاطي المليء بالجيوب الهوائية؛ يُخمر طبيعياً لـ 24 إلى 48 ساعة بواسطة الخمائر البرية وبكتيريا حمض اللاكتيك دون خميرة تجارية. التخمير الطويل يفكك جزءاً من النشا، مما يمنحه مؤشراً جلايسيمياً متوسطاً (≈53) وهضماً أهدأ بكثير من الخبز الأبيض العادي.",
+        "en": "The authentic artisan loaf with a crisp crust and a chewy, open crumb full of air pockets: naturally fermented for 24 to 48 hours by wild yeasts and lactic acid bacteria without commercial yeast. The long fermentation breaks down part of the starch, giving it a medium glycemic index (≈53) and much calmer digestion than ordinary white bread.",
+        "nl": "Het echte ambachtelijke brood met een knapperige korst en een taaie, open kruim vol luchtgaatjes: 24 tot 48 uur natuurlijk gerezen met wilde gisten en melkzuurbacteriën, zonder commerciële gist. De lange fermentatie breekt een deel van het zetmeel af, wat het een gemiddelde glykemische index geeft (≈53) en een veel rustigere vertering dan gewoon wit brood."
+      },
+      "tips": {
+        "ar": [
+          "شريحة واحدة محمصة مع البيض المسلوق والأفوكادو أو زيت الزيتون؛ توليفة مثالية تفرمل امتصاص الكربوهيدرات وتمنح شبعاً مستداماً حتى الظهيرة.",
+          "حمص شريحة الساورداو في التوستر؛ فتحميص الخبز يغير جزئياً من سرعة تكسر نشوياته، واستمتع بنكهته الحامضة اللذيذة التي تمنح إحساساً رائعاً بالامتلاء.",
+          "بكتيريا اللاكتيك في الساورداو تفكك جزءاً كبيراً من الغلوتين وحمض الفيتيك، مما يجعله أسهل في الهضم وأعلى في إتاحة المعادن (كالزنك والمغنيسيوم)؛ ومع ذلك فهو يحتوي على الغلوتين ولا يناسب مرضى حساسية القمح الصريحة."
+        ],
+        "en": [
+          "One toasted slice with boiled egg and avocado or olive oil is an ideal combination that slows carbohydrate absorption and keeps you full until midday.",
+          "Toast your sourdough slice; toasting partly changes how fast its starch breaks down, and enjoy its delicious tangy flavour that gives a wonderful feeling of fullness.",
+          "The lactic acid bacteria in sourdough break down a large part of the gluten and phytic acid, making it easier to digest and its minerals (such as zinc and magnesium) more available; it still contains gluten, however, and is not suitable for people with a true wheat allergy."
+        ],
+        "nl": [
+          "Eén geroosterde snee met gekookt ei en avocado of olijfolie is een ideale combinatie die de opname van koolhydraten afremt en je tot de middag verzadigd houdt.",
+          "Rooster je snee zuurdesem; roosteren verandert deels hoe snel het zetmeel wordt afgebroken, en geniet van de heerlijk friszure smaak die een fijn vol gevoel geeft.",
+          "De melkzuurbacteriën in zuurdesem breken een groot deel van het gluten en fytinezuur af, waardoor het beter verteerbaar is en de mineralen (zoals zink en magnesium) beter beschikbaar zijn; het bevat wel nog gluten en is niet geschikt bij een echte tarweallergie."
+        ]
+      }
+    },
+    "345": {
+      "slug": "pumpernickel-bread",
+      "lead": {
+        "ar": "فخر المخابز الألمانية التراثية؛ خبز داكن كثيف وثقيل يُصنع من حبوب الجاودار (Rye) الكاملة المكسورة ويُخبز بالبخار ببطء شديد لمدة تصل إلى 16-24 ساعة. مؤشره الجلايسيمي منخفض (≈46)، ويعد من أبطأ أنواع الخبز امتصاصاً في العالم وأغناها بالألياف.",
+        "en": "The pride of traditional German bakeries: a dark, dense, heavy bread made from cracked whole rye grains and steam-baked very slowly for up to 16 to 24 hours. It has a low glycemic index (≈46) and is one of the slowest-absorbed and most fibre-rich breads in the world.",
+        "nl": "De trots van traditionele Duitse bakkerijen: een donker, compact, zwaar brood van gebroken volkoren roggekorrels, tot wel 16 tot 24 uur heel langzaam in stoom gebakken. Het heeft een lage glykemische index (≈46) en behoort tot de langzaamst opgenomen en vezelrijkste broden ter wereld."
+      },
+      "tips": {
+        "ar": [
+          "شريحة واحدة رقيقة كافية تماماً للشبع؛ ضع فوقها شريحة جبن معتق أو بيضة مسلوقة مع الخيار لتنعم بأعلى درجات الثبات لسكر الدم.",
+          "تناوله طازجاً كما هو دون تحميص نظراً لرطوبته الطبيعية العالية، واشرب معه كوب ماء أو شاي دافئ لمساعدة ألياف الجاودار على التمدد والشبع في المعدة.",
+          "البومبرنيكل كنز لألياف البيتا جلوكان المقاومة للهضم التي تغذي ميكروبيوم الأمعاء وتفرمل استجابة الجلوكوز؛ وهو خيار نموذجي لمرضى السكري والراغبين في ضبط الوزن."
+        ],
+        "en": [
+          "One thin slice is quite enough to fill you up; top it with a slice of aged cheese or a boiled egg with cucumber for the steadiest possible blood sugar.",
+          "Eat it fresh as it is, without toasting, because it is naturally very moist, and drink a glass of water or warm tea with it to help the rye fibre swell and fill your stomach.",
+          "Pumpernickel is a treasure of digestion-resistant beta-glucan fibre that feeds the gut microbiome and slows the glucose response, making it a model choice for people with diabetes and anyone managing their weight."
+        ],
+        "nl": [
+          "Eén dunne snee is ruim genoeg om verzadigd te raken; beleg hem met een plak oude kaas of een gekookt ei met komkommer voor een zo stabiel mogelijke bloedsuiker.",
+          "Eet het vers zoals het is, zonder roosteren, omdat het van nature erg vochtig is, en drink er een glas water of warme thee bij zodat de roggevezels kunnen opzwellen en je maag vullen.",
+          "Pumpernickel is een schatkamer van moeilijk verteerbare bètaglucaanvezels die het darmmicrobioom voeden en de glucoserespons afremmen; een voorbeeldkeuze bij diabetes en voor wie op het gewicht let."
+        ]
+      }
+    },
+    "346": {
+      "slug": "focaccia-bread",
+      "lead": {
+        "ar": "الخبز الإيطالي الإسفنجي المحبوب برائحته الفواحة؛ عجينة قمح طرية غنية بالفقاعات ومغمورة بزيت الزيتون البكر الممتاز والروزماري والملح الخشن. ونظراً لاعتماده على الدقيق الأبيض، فإن مؤشره الجلايسيمي مرتفع نسبياً (≈71)، على الرغم من أن زيت الزيتون يلطف وتيرة هضمه قليلاً.",
+        "en": "The much-loved spongy Italian bread with a wonderful aroma: a soft, bubbly wheat dough drenched in extra-virgin olive oil, rosemary and coarse salt. Because it is made with white flour its glycemic index is fairly high (≈71), although the olive oil slows its digestion a little.",
+        "nl": "Het geliefde sponzige Italiaanse brood met een heerlijke geur: een zacht, luchtig tarwedeeg, overgoten met extra vierge olijfolie, rozemarijn en grof zout. Omdat het met witmeel wordt gemaakt, is de glykemische index vrij hoog (≈71), al vertraagt de olijfolie de vertering een beetje."
+      },
+      "tips": {
+        "ar": [
+          "تناول قطعة صغيرة بحجم كف اليد كمقبلات استثنائية مع صحن سلطة خضراء، وتجنب استهلاك قطع كبيرة منفردة لتفادي ارتفاع الجلوكوز السريع.",
+          "سخن قطعة الفوكاشيا في الفرن لدقائق لتستعيد قرمشة أطرافها وزيتها، وتناولها مغموسة في قليل من زيت الزيتون البكر والخل لتأخير هضم النشويات.",
+          "خبز لذيذ وغني بالطاقة والسعرات؛ ولمن يراقب وزنه وسكر دمه، فالاعتدال الصارم في حجم القطعة والتركيز على الخضار والبروتين المرافق هو القرار الصائب."
+        ],
+        "en": [
+          "Have a small, palm-sized piece as an occasional starter with a plate of green salad, and avoid eating large pieces on their own to prevent a rapid rise in glucose.",
+          "Warm the focaccia in the oven for a few minutes so the edges and oil crisp up again, and dip it in a little extra-virgin olive oil and vinegar to slow the digestion of its starch.",
+          "A delicious bread that is rich in energy and calories; if you are watching your weight and blood sugar, strictly limiting the piece size and focusing on the vegetables and protein alongside it is the right call."
+        ],
+        "nl": [
+          "Neem een klein stuk zo groot als je handpalm als incidenteel voorgerecht bij een bord groene salade, en eet geen grote stukken los om een snelle glucosestijging te voorkomen.",
+          "Warm de focaccia een paar minuten op in de oven zodat de randjes en olie weer knapperig worden, en dip hem in een beetje extra vierge olijfolie en azijn om de vertering van het zetmeel te vertragen.",
+          "Een heerlijk brood dat rijk is aan energie en calorieën; let je op je gewicht en bloedsuiker, dan is een strikt kleine portie met de nadruk op de groenten en het eiwit erbij de juiste keuze."
+        ]
+      }
+    },
+    "347": {
+      "slug": "tiger-bread",
+      "lead": {
+        "ar": "الخبز اليومي الأكثر شعبية في المخابز الهولندية؛ رغيف يتميز بقشرة علوية مقرمشة ومتشققة تشبه جلد النمر، ناتجة عن دهن سطحه بعجينة من دقيق الأرز وزيت السمسم قبل الخبز. يصنع لبه من الدقيق الأبيض الخفيف، ويسجل مؤشراً جلايسيمياً مرتفعاً (≈68).",
+        "en": "The most popular everyday bread in Dutch bakeries: a loaf with a crisp, crackled top crust that looks like a tiger's skin, made by brushing the surface with a paste of rice flour and sesame oil before baking. The crumb is made from light white flour, and it has a high glycemic index (≈68).",
+        "nl": "Het populairste dagelijkse brood bij Nederlandse bakkers: een brood met een knapperige, gebarsten bovenkorst die op een tijgervel lijkt, ontstaan door de bovenkant voor het bakken in te smeren met een pasta van rijstmeel en sesamolie. De kruim is van licht witmeel, en het heeft een hoge glykemische index (≈68)."
+      },
+      "tips": {
+        "ar": [
+          "شريحة واحدة كافية؛ ادهنها دائماً ببروتين مشبع كجبن الغودا المعتق أو زبدة الفول السوداني الطبيعية أو البيض المسلوق لتفادي الجوع السريع الناتج عن نشا الخبز الأبيض.",
+          "اختر النسخة المصنوعة من القمح الكامل (Volkoren tijgerbrood)؛ فهي تمنحك نفس القشرة المقرمشة الشبيهة بجلد النمر ولكن مع لب غني بالنخالة وألياف أبطأ امتصاصاً.",
+          "اللب الأبيض الهش يتحلل إلى سكر بسرعة في الجهاز الهضمي؛ لذا فدعمه بالدهون والبروتينات الصحية يفرمل قفزة الجلوكوز ويطيل فترة الشبع."
+        ],
+        "en": [
+          "One slice is enough; always top it with filling protein such as aged Gouda, natural peanut butter or boiled egg to avoid the quick hunger that white-bread starch brings.",
+          "Choose the whole-wheat version (volkoren tijgerbrood); it gives you the same crunchy tiger crust but with a bran-rich crumb and fibre that is absorbed more slowly.",
+          "The soft white crumb breaks down into sugar quickly in the digestive tract, so pairing it with healthy fats and protein slows the glucose spike and keeps you full for longer."
+        ],
+        "nl": [
+          "Eén snee is genoeg; beleg hem altijd met verzadigend eiwit zoals oude Goudse kaas, natuurlijke pindakaas of gekookt ei om de snelle honger door het zetmeel van wit brood te voorkomen.",
+          "Kies de volkorenvariant (volkoren tijgerbrood); die geeft dezelfde knapperige tijgerkorst maar met een zemelrijke kruim en vezels die langzamer worden opgenomen.",
+          "De zachte witte kruim wordt in het spijsverteringskanaal snel tot suiker afgebroken, dus een combinatie met gezonde vetten en eiwit remt de glucosepiek en houdt je langer verzadigd."
+        ]
+      }
+    },
+    "348": {
+      "slug": "brioche-bread",
+      "lead": {
+        "ar": "الخبز المخملي الذهبي الذي يتربع على عرش المخبوزات الفرنسية؛ هجين فاخر بين الخبز والكيك، غني بالبيض الطازج والزبدة الطبيعية المكرملة. دهون الزبدة تجعل هضمه بطيئاً نسبياً، لكن كثافة الدقيق الأبيض والسكر المضاف تمنحه مؤشراً جلايسيمياً مرتفعاً (≈70) وسعرات عالية.",
+        "en": "The golden, velvety bread that reigns over French baking: a luxurious cross between bread and cake, rich in fresh eggs and caramelised real butter. The butterfat makes it digest relatively slowly, but the density of white flour and added sugar gives it a high glycemic index (≈70) and a lot of calories.",
+        "nl": "Het goudkleurige, fluweelzachte brood dat de Franse bakkunst aanvoert: een luxe kruising tussen brood en cake, rijk aan verse eieren en gekaramelliseerde echte boter. Door het botervet wordt het relatief langzaam verteerd, maar het vele witmeel en de toegevoegde suiker geven het een hoge glykemische index (≈70) en veel calorieën."
+      },
+      "tips": {
+        "ar": [
+          "شريحة صغيرة كوجبة استثنائية في عطلة نهاية الأسبوع؛ وتناول معها بيضة مسلوقة وكوب قهوة سادة دون سكر لتفادي تراكم السكريات البسيطة.",
+          "حمص شريحة البريوش قليلاً لتستمتع بنكهة الزبدة الطبيعية دون الحاجة لدهن المزيد من المربى أو الشوكولاتة فوقها.",
+          "البريوش وجبة طاقية كثيفة تجمع بين النشويات المكررة والدهون والسكريات؛ لذا يجب على مرضى السكري ومن يتبع حمية صارمة التعامل معه كحلوى نادرة وليس كخبز يومي."
+        ],
+        "en": [
+          "A small slice as an occasional weekend treat; have it with a boiled egg and a cup of black coffee without sugar to avoid piling up simple sugars.",
+          "Toast your brioche slice lightly to enjoy the natural butter flavour without needing to spread jam or chocolate on top.",
+          "Brioche is an energy-dense food that combines refined starch, fat and sugar, so people with diabetes and those on a strict diet should treat it as a rare sweet rather than everyday bread."
+        ],
+        "nl": [
+          "Een klein sneetje als incidentele traktatie in het weekend; eet er een gekookt ei bij en een kop zwarte koffie zonder suiker om niet te veel enkelvoudige suikers binnen te krijgen.",
+          "Rooster je plak brioche licht om van de natuurlijke botersmaak te genieten zonder er nog jam of chocolade op te hoeven smeren.",
+          "Brioche is een energierijk product dat geraffineerd zetmeel, vet en suiker combineert, dus mensen met diabetes en wie een streng dieet volgt, moeten het behandelen als een zeldzaam zoetje en niet als dagelijks brood."
+        ]
+      }
+    },
+    "349": {
+      "slug": "sesame-bagel",
+      "lead": {
+        "ar": "حلقة الخبز الدائرية الشهيرة في نيويورك بملمسها المطاطي الكثيف وقشرتها اللامعة المرشوشة بالسمسم؛ تُسلق في الماء المغلي قبل خبزها لتكتسب كثافتها الفريدة. كثافة عجين الدقيق الأبيض تجعل مؤشرها الجلايسيمي مرتفعاً (≈72) وحملها الكربوهيدراتي كبيراً.",
+        "en": "New York's famous ring of bread with a dense, chewy texture and a glossy crust scattered with sesame seeds: it is boiled in water before baking to get its unique density. The dense white-flour dough gives it a high glycemic index (≈72) and a large carbohydrate load.",
+        "nl": "De beroemde broodring uit New York met een dichte, taaie structuur en een glanzende korst vol sesamzaad: hij wordt voor het bakken in kokend water gekookt om zijn unieke dichtheid te krijgen. Het compacte deeg van witmeel geeft een hoge glykemische index (≈72) en een grote koolhydraatlast."
+      },
+      "tips": {
+        "ar": [
+          "نصف حبة بيغل كافية جداً للوجبة؛ احشُها بسخاء بجبن الريكوتا أو شرائح السلمون المدخن والخيار؛ فالبروتين والدهون الصحية يفرملان امتصاص العجين الكثيف.",
+          "اختر بيغل القمح الكامل وتفريغ جزء من العجين الداخلي الرخو قبل الحشو؛ فهذه الحيلة المطبخية تخفض كربوهيدرات الساندويش بنسبة الثلث.",
+          "حبة بيغل واحدة كاملة قد تعادل 4 إلى 5 شرائح من خبز التوست العادي في كمية النشويات؛ لذا فاقتسامها أو تناول نصفها هو الخيار الأذكى لمرضى السكري والرشاقة."
+        ],
+        "en": [
+          "Half a bagel is plenty for a meal; fill it generously with ricotta or smoked salmon and cucumber, because the protein and healthy fats slow the absorption of the dense dough.",
+          "Choose a whole-wheat bagel and scoop out some of the soft inner dough before filling it; this kitchen trick cuts the sandwich's carbohydrate by about a third.",
+          "One whole bagel can equal 4 to 5 slices of ordinary sandwich bread in starch, so sharing it or eating half is the smarter choice for people with diabetes or watching their weight."
+        ],
+        "nl": [
+          "Een halve bagel is ruim genoeg voor een maaltijd; beleg hem royaal met ricotta of gerookte zalm en komkommer, want het eiwit en de gezonde vetten remmen de opname van het compacte deeg.",
+          "Kies een volkorenbagel en hol een deel van het zachte binnendeeg uit voordat je hem belegt; deze keukentruc verlaagt de koolhydraten van de broodmaaltijd met ongeveer een derde.",
+          "Eén hele bagel kan qua zetmeel gelijkstaan aan 4 tot 5 sneetjes gewoon casinobrood, dus delen of de helft eten is de slimste keuze bij diabetes of als je op je gewicht let."
+        ]
+      }
+    },
+    "350": {
+      "slug": "cooked-buckwheat",
+      "lead": {
+        "ar": "الحبوب الروسية والأوروبية العريقة (Kasha / Buckwheat)؛ حبوب مثلثة الشكل خالية طبيعياً من الغلوتين، ذات نكهة جوزية ترابية مميزة. حبوب الحنطة السوداء المطبوخة تسجل مؤشراً جلايسيمياً معتدلاً (≈49) وتفيض بالبروتين النباتي الكامل والزنك والمغنيسيوم.",
+        "en": "The time-honoured grain of Russia and Europe (kasha / buckwheat): triangular, naturally gluten-free seeds with a distinctive nutty, earthy flavour. Cooked buckwheat has a moderate glycemic index (≈49) and is packed with complete plant protein, zinc and magnesium.",
+        "nl": "De eeuwenoude graansoort van Rusland en Europa (kasja / boekweit): driehoekige, van nature glutenvrije korrels met een kenmerkende nootachtige, aardse smaak. Gekookte boekweit heeft een matige glykemische index (≈49) en zit vol volwaardig plantaardig eiwit, zink en magnesium."
+      },
+      "tips": {
+        "ar": [
+          "بديل ذهبي ورائع للأرز الأبيض والمعكرونة في وجبات الغداء؛ تمنح شبعاً عميقاً وطاقة هادئة ومريحة وتدعم استقرار سكر الدم بامتياز.",
+          "انقع الحبوب قليلاً ثم اطبخها بنسبة 1 كوب حنطة إلى 2 كوب ماء مع رشة ملح وزيت زيتون لمدة 15 دقيقة حتى تمتص الماء وتصبح طرية مع بقاء حباتها متماسكة.",
+          "الحنطة السوداء غنية بمضاد الأكسدة الفريد \"الروتين\" (Rutin) الذي يدعم مرونة وقوة الأوعية الدموية؛ وهي خيار استثنائي لمرضى السكري والداء الزلاقي."
+        ],
+        "en": [
+          "A wonderful golden alternative to white rice and pasta at lunch; it gives deep fullness and calm, comfortable energy and supports stable blood sugar remarkably well.",
+          "Soak the groats briefly, then cook 1 cup of buckwheat in 2 cups of water with a pinch of salt and some olive oil for 15 minutes, until the water is absorbed and the grains are tender but still hold their shape.",
+          "Buckwheat is rich in the unique antioxidant rutin, which supports flexible, strong blood vessels, and it is an exceptional choice for people with diabetes and coeliac disease."
+        ],
+        "nl": [
+          "Een prachtig alternatief voor witte rijst en pasta bij de lunch; het geeft diepe verzadiging en rustige, prettige energie en ondersteunt een stabiele bloedsuiker uitstekend.",
+          "Week de korrels kort en kook dan 1 kopje boekweit in 2 kopjes water met een snufje zout en wat olijfolie, 15 minuten, tot het water is opgenomen en de korrels zacht zijn maar heel blijven.",
+          "Boekweit is rijk aan de unieke antioxidant rutine, die soepele, sterke bloedvaten ondersteunt, en het is een uitzonderlijke keuze bij diabetes en coeliakie."
+        ]
+      }
+    },
+    "351": {
+      "slug": "buckwheat-flour",
+      "lead": {
+        "ar": "الدقيق الرمادي المميز الذي تصنع منه فطائر \"الغاليت\" الفرنسية ونودلز \"السوبا\" اليابانية؛ مطحون حبوب الحنطة السوداء الكاملة الغني بالألياف والبروتين. مؤشره الجلايسيمي عند الخبز معتدل (≈50)، ويعد من أفضل بدائل الدقيق الأبيض لمرضى حساسية القمح.",
+        "en": "The distinctive grey flour used for French galettes and Japanese soba noodles: ground whole buckwheat, rich in fibre and protein. Once baked it has a moderate glycemic index (≈50), and it is one of the best alternatives to white flour for people with a wheat allergy.",
+        "nl": "Het kenmerkende grijze meel waarvan Franse galettes en Japanse sobanoedels worden gemaakt: gemalen volkoren boekweit, rijk aan vezels en eiwit. Gebakken heeft het een matige glykemische index (≈50), en het is een van de beste alternatieven voor witmeel bij een tarweallergie."
+      },
+      "tips": {
+        "ar": [
+          "استخدمه لإعداد الكريب والبانكيك الصحي والمخبوزات؛ فهو يوفر شبعاً أطول وهضماً متزناً مقارنة بدقيق الأرز أو نشا الذرة الخالي من الغلوتين.",
+          "نظراً لافتقاره للغلوتين، امزجه بقليل من بذور الكتان المطحونة أو البيض لربط العجين ومنحه مرونة رائعة أثناء الخبز على الصاج.",
+          "طحين الحنطة السوداء يتميز ببطء تحلله مقارنة بأغلب أنواع الدقيق الخالي من الغلوتين التجاري؛ مما يجعله صديقاً رائعاً للياقة الأيضية وتوازن الجلوكوز."
+        ],
+        "en": [
+          "Use it for healthy crêpes, pancakes and baking; it gives longer-lasting fullness and more balanced digestion than gluten-free rice flour or cornflour.",
+          "Because it has no gluten, mix it with a little ground flaxseed or egg to bind the batter and give it great elasticity on the griddle.",
+          "Buckwheat flour breaks down more slowly than most commercial gluten-free flours, which makes it a great friend for metabolic fitness and glucose balance."
+        ],
+        "nl": [
+          "Gebruik het voor gezonde crêpes, pannenkoeken en bakwerk; het geeft een langere verzadiging en een evenwichtigere vertering dan glutenvrij rijstmeel of maïszetmeel.",
+          "Omdat het geen gluten bevat, meng je het met een beetje gemalen lijnzaad of ei om het beslag te binden en het een mooie elasticiteit te geven in de pan.",
+          "Boekweitmeel wordt langzamer afgebroken dan de meeste commerciële glutenvrije meelsoorten, wat het een prima vriend maakt voor een gezonde stofwisseling en glucosebalans."
+        ]
+      }
+    },
+    "352": {
+      "slug": "cooked-spelt",
+      "lead": {
+        "ar": "سلالة القمح العتيقة والأصيلة التي لم تخضع للتعديل الوراثي الحديث؛ حبوب كاملة بنية ذات نكهة جوزية لذيذة وقوام مقرمش ومحبب للمضغ. حبات السبيلت المطبوخة تسجل مؤشراً جلايسيمياً منخفضاً إلى معتدل (≈45) وتفيض بالألياف والبروتين والمعادن.",
+        "en": "The ancient, original wheat variety that has not been through modern breeding: brown whole grains with a delicious nutty flavour and a pleasantly firm, chewy bite. Cooked spelt grains have a low-to-moderate glycemic index (≈45) and are full of fibre, protein and minerals.",
+        "nl": "De oude, oorspronkelijke tarwesoort die niet door moderne veredeling is gegaan: bruine volle korrels met een heerlijke nootachtige smaak en een prettig stevige, kauwbare bite. Gekookte speltkorrels hebben een lage tot matige glykemische index (≈45) en zitten vol vezels, eiwit en mineralen."
+      },
+      "tips": {
+        "ar": [
+          "بديل ممتاز للأرز في أطباق الريزوتو (Farrotto) أو كإضافة مشبعة للسلطات والشوربات؛ تمنح الجسم تدفقاً ثابتاً من الطاقة دون أي خمول بعد الأكل.",
+          "انقع الحبوب لعدة ساعات قبل الطهي ثم اسلقها في مرق خفيف لمدة 30 إلى 40 دقيقة حتى تنضج مع بقاء قرمشة خفيفة ممتعة، وتناولها متبلة بزيت الزيتون والأعشاب.",
+          "بنية الغلوتين في قمح السبيلت قابلة للذوبان في الماء وهضمها أسهل على المعدة مقارنة بالقمح الحديث؛ ومع ذلك فهي تحتوي على الغلوتين ولا تناسب مرضى السيلياك."
+        ],
+        "en": [
+          "An excellent alternative to rice in risotto-style dishes (farrotto) or a filling addition to salads and soups; it gives your body a steady flow of energy without any after-meal sluggishness.",
+          "Soak the grains for several hours before cooking, then simmer them in a light stock for 30 to 40 minutes until done but still pleasantly firm, and eat them dressed with olive oil and herbs.",
+          "The gluten structure in spelt is more water-soluble and easier on the stomach than that of modern wheat; it does still contain gluten, however, and is not suitable for people with coeliac disease."
+        ],
+        "nl": [
+          "Een uitstekend alternatief voor rijst in risottogerechten (farrotto) of een verzadigende toevoeging aan salades en soepen; het geeft je lichaam een gelijkmatige stroom energie zonder sloomheid na het eten.",
+          "Week de korrels een paar uur voor het koken en laat ze dan 30 tot 40 minuten zachtjes koken in een lichte bouillon tot ze gaar zijn maar nog licht stevig, en eet ze aangemaakt met olijfolie en kruiden.",
+          "De glutenstructuur van spelt is beter in water oplosbaar en lichter voor de maag dan die van moderne tarwe; spelt bevat wel gluten en is niet geschikt bij coeliakie."
+        ]
+      }
+    },
+    "353": {
+      "slug": "whole-spelt-flour",
+      "lead": {
+        "ar": "الطحين الكامل لحبوب السبيلت القديمة بقشرتها ونخالتها؛ البديل الأرقى لدقيق القمح الأبيض في المخابز الأوروبية الحرفية. عند خبزه يسجل مؤشراً جلايسيمياً معتدلاً (≈55)، ويمنح الخبز لوناً بنياً جميلاً ورائحة دافئة ونكهة غنية.",
+        "en": "Wholemeal flour from ancient spelt grains, husk and bran included: the finer alternative to white wheat flour in artisan European bakeries. Once baked it has a moderate glycemic index (≈55) and gives bread a lovely brown colour, a warm aroma and a rich flavour.",
+        "nl": "Volkorenmeel van oude speltkorrels, inclusief vlies en zemelen: het verfijndere alternatief voor witte tarwebloem in ambachtelijke Europese bakkerijen. Gebakken heeft het een matige glykemische index (≈55) en het geeft brood een mooie bruine kleur, een warme geur en een volle smaak."
+      },
+      "tips": {
+        "ar": [
+          "استخدمه لصنع الخبز المنزلي والفطائر؛ فهو يوفر هضماً أهدأ وشبعاً أطول ويغذي بكتيريا الأمعاء النافعة بفضل أليافه الذائبة.",
+          "يحتاج عجين السبيلت لعجن رقيق ووقت تخمير أقصر قليلاً من القمح العادي لأن شبكة الغلوتين فيه أكثر حساسية؛ لذا لا تفرط في عجنه للحصول على قوام طري.",
+          "دقيق غني بالمغنيسيوم والحديد والفوسفور، وامتصاصه في الدم أبطأ بكثير من الدقيق الأبيض المكرر؛ وهو خيار فاخر وصحي لكل من يبحث عن خبز منزلي متوازن."
+        ],
+        "en": [
+          "Use it for home-made bread and pastries; it gives calmer digestion and longer fullness and feeds beneficial gut bacteria thanks to its soluble fibre.",
+          "Spelt dough needs gentle kneading and a slightly shorter rise than ordinary wheat because its gluten network is more delicate, so don't over-knead it if you want a soft texture.",
+          "A flour rich in magnesium, iron and phosphorus that enters the bloodstream much more slowly than refined white flour; a fine, healthy choice for anyone looking for balanced home-made bread."
+        ],
+        "nl": [
+          "Gebruik het voor zelfgebakken brood en gebak; het zorgt voor een rustigere vertering en langere verzadiging en voedt goede darmbacteriën dankzij de oplosbare vezels.",
+          "Speltdeeg heeft zacht kneden en een iets kortere rijstijd nodig dan gewone tarwe, omdat het glutennetwerk kwetsbaarder is; kneed het dus niet te lang voor een zachte structuur.",
+          "Een meelsoort rijk aan magnesium, ijzer en fosfor die veel langzamer in het bloed wordt opgenomen dan geraffineerde witte bloem; een verfijnde, gezonde keuze voor wie evenwichtig zelfgebakken brood zoekt."
+        ]
+      }
+    },
+    "354": {
+      "slug": "chickpea-flour",
+      "lead": {
+        "ar": "طحين المعجزات الهندي والمتوسطي (Besan / Gram flour)؛ حبوب حمص جافة مطحونة ناعماً، خالية طبيعياً من الغلوتين وتفيض بالبروتين النباتي والألياف المعقدة. يسجل مؤشراً جلايسيمياً منخفضاً جداً (≈35)، ويعد من أروع بدائل الدقيق لمرضى السكري ومقاومة الإنسولين.",
+        "en": "The miracle flour of India and the Mediterranean (besan / gram flour): finely ground dried chickpeas, naturally gluten-free and packed with plant protein and complex fibre. It has a very low glycemic index (≈35) and is one of the best flour alternatives for people with diabetes and insulin resistance.",
+        "nl": "Het wondermeel van India en het Middellandse Zeegebied (besan / kikkererwtenmeel): fijngemalen gedroogde kikkererwten, van nature glutenvrij en vol plantaardig eiwit en complexe vezels. Het heeft een zeer lage glykemische index (≈35) en is een van de beste meelalternatieven bij diabetes en insulineresistentie."
+      },
+      "tips": {
+        "ar": [
+          "استخدمه لصنع خبز الصاج السريع (Socca / Cheela) أو كبديل للفتات والبيض في تكثيف الشوربات وعمل الفطائر؛ فهو يمنح شبعاً عميقاً واستقراراً تاماً للجلوكوز.",
+          "اخلطه بالماء وزيت الزيتون والكمون ورشة ملح ودع الخليط يرتاح لنصف ساعة، ثم اطهه على مقلاة ساخنة كفطائر ذهبية رقيقة ومقرمشة وغنية بالبروتين.",
+          "طحين الحمص غني بحمض الفوليك والحديد والألياف المقاومة؛ وهو من أكثر أنواع الطحين أماناً وثباتاً لسكر الدم ومناسب جداً للرياضيين والنباتيين."
+        ],
+        "en": [
+          "Use it for quick flatbreads (socca / cheela) or instead of breadcrumbs and egg to thicken soups and make pancakes; it gives deep fullness and complete glucose stability.",
+          "Mix it with water, olive oil, cumin and a pinch of salt and let the batter rest for half an hour, then cook it in a hot pan as thin, golden, crisp, protein-rich pancakes.",
+          "Chickpea flour is rich in folic acid, iron and resistant fibre; it is one of the safest, most blood-sugar-stable flours and very suitable for athletes and vegetarians."
+        ],
+        "nl": [
+          "Gebruik het voor snelle platte broodjes (socca / cheela) of in plaats van paneermeel en ei om soepen te binden en pannenkoeken te maken; het geeft diepe verzadiging en een volledig stabiele glucose.",
+          "Meng het met water, olijfolie, komijn en een snufje zout en laat het beslag een halfuur rusten; bak het daarna in een hete pan tot dunne, goudbruine, knapperige en eiwitrijke pannenkoekjes.",
+          "Kikkererwtenmeel is rijk aan foliumzuur, ijzer en resistente vezels; het is een van de veiligste meelsoorten voor een stabiele bloedsuiker en zeer geschikt voor sporters en vegetariërs."
+        ]
+      }
+    },
+    "355": {
+      "slug": "cooked-polenta",
+      "lead": {
+        "ar": "طبق الدفء الريفي الإيطالي الشهير؛ عصيدة ذهبية كريمية تُطهى ببطء من جريش الذرة الصفراء مع المرق أو الحليب والبارميزان. ونظراً لاعتمادها على نشا الذرة، تسجل البولينتا المطبوخة مؤشراً جلايسيمياً متوسطاً إلى مرتفع (≈68)، مما يتطلب موازنة ذكية بالبروتين.",
+        "en": "Italy's famous warming country dish: a creamy golden porridge slow-cooked from yellow cornmeal with stock or milk and Parmesan. Because it is based on corn starch, cooked polenta has a medium-to-high glycemic index (≈68), so it needs to be balanced smartly with protein.",
+        "nl": "Het beroemde verwarmende plattelandsgerecht uit Italië: een romige gouden pap, langzaam gekookt van geel maïsgriesmeel met bouillon of melk en Parmezaanse kaas. Omdat hij op maïszetmeel is gebaseerd, heeft gekookte polenta een gemiddelde tot hoge glykemische index (≈68), dus slim combineren met eiwit is nodig."
+      },
+      "tips": {
+        "ar": [
+          "اجعل حصتك معتدلة بحجم نصف كوب مطبوخ، وقدمها كقاعدة ساخنة أسفل قطع اللحم المطهو ببطء أو الفطر المشوي وصلصة الطماطم لفرملة امتصاص نشا الذرة.",
+          "اطبخها بالمرق وقليل من زيت الزيتون بدلاً من الزبدة الكثيفة، ويمكن تركها لتبرد وتقطيعها إلى شرائح وشوائها على الجريل لتحصل على قوام مقرمش وسعرات معتدلة.",
+          "البولينتا خالية طبيعياً من الغلوتين ومصدر ممتاز للكاروتينات وفيتامين A؛ ولمرضى السكري، فالاعتدال في حجم الحصة وتناولها مع البروتين يضمن الاستمتاع بها بأمان."
+        ],
+        "en": [
+          "Keep your portion moderate, about half a cup cooked, and serve it as a hot base under slow-cooked meat or grilled mushrooms with tomato sauce to slow the absorption of the corn starch.",
+          "Cook it with stock and a little olive oil instead of lots of butter; you can also let it cool, cut it into slices and grill them for a crisp texture and moderate calories.",
+          "Polenta is naturally gluten-free and an excellent source of carotenoids and vitamin A; for people with diabetes, a moderate portion eaten with protein lets you enjoy it safely."
+        ],
+        "nl": [
+          "Houd je portie bescheiden, ongeveer een half kopje gekookt, en serveer hem als warme basis onder langzaam gegaard vlees of gegrilde paddenstoelen met tomatensaus om de opname van het maïszetmeel af te remmen.",
+          "Kook hem met bouillon en een beetje olijfolie in plaats van veel boter; je kunt hem ook laten afkoelen, in plakken snijden en grillen voor een knapperige structuur en gematigde calorieën.",
+          "Polenta is van nature glutenvrij en een uitstekende bron van carotenoïden en vitamine A; bij diabetes kun je er veilig van genieten met een bescheiden portie en eiwit erbij."
+        ]
+      }
+    },
+    "356": {
+      "slug": "unsweetened-corn-flakes",
+      "lead": {
+        "ar": "حبوب الإفطار الأكثر انتشاراً في العالم؛ رقائق حبوب الذرة المحمصة الخالية من السكر المضاف. على الرغم من خلوها من السكر، إلا أن المعالجة الحرارية وسحق رقائق الذرة يجعلان نشاها فائق السرعة في التحلل والامتصاص، بمؤشر جلايسيمي مرتفع (79) بحسب المراجعة السريرية.",
+        "en": "The world's most widespread breakfast cereal: toasted corn flakes with no added sugar. Even without sugar, the heat processing and rolling of the corn make its starch break down and absorb extremely fast, with a high glycemic index (79) according to clinical review.",
+        "nl": "De meest gegeten ontbijtgranen ter wereld: geroosterde maïsvlokken zonder toegevoegde suiker. Ook zonder suiker zorgen de verhitting en het pletten van de maïs ervoor dat het zetmeel extreem snel wordt afgebroken en opgenomen, met een hoge glykemische index (79) volgens de klinische beoordeling."
+      },
+      "tips": {
+        "ar": [
+          "تجنب تناول وعاء كبير منها مع الحليب فقط على الريق؛ ادمج حفنة صغيرة منها مع وعاء من الزبادي اليوناني وبذور الشيا والمكسرات لفرملة قفزة الجلوكوز الحادة.",
+          "اختر دائماً الأنواع السادة الصافية الخالية تماماً من شراب الذرة عالي الفركتوز أو السكر المضاف، وتناولها ببطء مع مرافقة بروتينية لتقليل وتيرة الهضم.",
+          "الكورن فليكس حتى وإن كان \"بدون سكر\" يرفع سكر الدم بسرعة تضاهي الخبز الأبيض نظراً لبنيته النشوية السريعة؛ لذا فالشوفان الكامل أو السكير بدائل أرقى بكثير لمرضى السكري والرشاقة."
+        ],
+        "en": [
+          "Avoid eating a big bowl with just milk on an empty stomach; mix a small handful into a bowl of Greek yoghurt with chia seeds and nuts to blunt the sharp glucose spike.",
+          "Always choose plain versions completely free of high-fructose corn syrup or added sugar, and eat them slowly with some protein to slow digestion.",
+          "Even \"sugar-free\" corn flakes raise blood sugar about as fast as white bread because of their fast starch structure, so whole oats or skyr are far better choices for people with diabetes or watching their weight."
+        ],
+        "nl": [
+          "Eet geen grote kom met alleen melk op een lege maag; meng een klein handje door een kom Griekse yoghurt met chiazaad en noten om de scherpe glucosepiek af te zwakken.",
+          "Kies altijd naturel varianten zonder glucose-fructosestroop of toegevoegde suiker, en eet ze langzaam met wat eiwit erbij om de vertering te vertragen.",
+          "Zelfs cornflakes \"zonder suiker\" laten de bloedsuiker ongeveer even snel stijgen als wit brood door hun snelle zetmeelstructuur, dus volle havermout of skyr zijn veel betere keuzes bij diabetes of als je op je gewicht let."
+        ]
+      }
     }
   }
 }
