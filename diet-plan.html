@@ -557,6 +557,8 @@
     <style>.back-home a{color:var(--wb-primary)!important}.hero{color:var(--wb-text)}.hero h1{text-shadow:none}.hero .subtitle{color:var(--wb-muted)}.hero .intro-text{background:var(--wb-card);border-color:var(--wb-border);box-shadow:0 10px 30px rgba(15,23,42,.06)}</style>
     <!-- body has 20px padding on this page: pull the sticky header out to the window edges -->
     <style>html body > header{margin:-20px -20px 20px!important;width:auto!important}html body > header .header-content > a:first-child{font-size:19px!important}</style>
+    <!-- Crisp live chat: l.js is injected with async so it never blocks rendering -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9a3a1db5-419e-4437-81b5-d509419f99f1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
