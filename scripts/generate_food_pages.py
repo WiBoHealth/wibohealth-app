@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = 'https://wibohealth.com'
 REVIEWED = '2026-10-12'
 REVIEWED_TXT = {'ar': '12 أكتوبر 2026', 'en': '12 October 2026', 'nl': '12 oktober 2026'}
+TEAM_REVIEWED = '2026-10-13'             # batch 2: reviewed by the WiBo Health medical team
+TEAM_REVIEWED_TXT = {'ar': '13 أكتوبر 2026', 'en': '13 October 2026', 'nl': '13 oktober 2026'}
 LANGS = ('ar', 'en', 'nl')
 
 # --------------------------------------------------------------------------------------------
@@ -42,7 +44,78 @@ PILOT = {
     74: ('dairy_solid', 30), 77: ('dairy_solid', 30), 30: ('veg', 120), 31: ('veg', 100), 32: ('veg', 120),
     35: ('veg', 90), 36: ('veg', 100), 37: ('veg', 80), 38: ('veg', 100), 39: ('veg', 100), 40: ('veg', 70),
     132: ('drink', 240), 133: ('drink', 240),
+    # batch 2: GI is a clinically reviewed estimate (gi_status 'reviewed', not Atkinson-measured) or not applicable
+    6: ('grain', 150), 12: ('grain', 50), 13: ('grain', 50), 15: ('grain', 150), 16: ('grain', 150),
+    20: ('legume', 150), 21: ('legume', 150), 23: ('legume', 150), 24: ('legume', 100), 25: ('legume', 50),
+    28: ('tuber', 100), 33: ('veg', 100), 34: ('veg', 80), 41: ('veg', 120), 42: ('veg', 90), 43: ('veg', 80),
+    44: ('veg', 30), 45: ('veg', 50), 46: ('veg', 5), 47: ('veg', 100),
+    52: ('fruit', 150), 56: ('fruit', 100), 57: ('fruit', 100), 58: ('fruit', 120), 60: ('fruit', 100),
+    61: ('fruit', 100), 64: ('fruit', 75), 65: ('fruit', 150), 67: ('fruit', 150),
+    73: ('dairy_solid', 30), 75: ('dairy_solid', 30), 76: ('dairy_solid', 100), 78: ('fat', 10),
+    80: ('nuts', 30), 81: ('nuts', 30), 82: ('nuts', 30), 83: ('nuts', 30), 84: ('nuts', 30), 85: ('nuts', 15),
+    86: ('nuts', 10), 87: ('nuts', 30), 88: ('nuts', 30), 89: ('nuts', 30), 90: ('nuts', 16),
+    95: ('protein', 50), 96: ('protein', 120), 97: ('protein', 100), 99: ('protein', 90), 100: ('protein', 100),
+    102: ('protein', 120),
+    # batch 3: Arabic dishes, drinks, fast food and sweets (reviewed estimate or not applicable)
+    103: ('protein', 100), 104: ('arabic', 60), 105: ('arabic', 50), 106: ('arabic', 150), 107: ('arabic', 60),
+    108: ('arabic', 150), 109: ('arabic', 150), 110: ('arabic', 250), 111: ('arabic', 200), 112: ('arabic', 200),
+    113: ('arabic', 150), 114: ('arabic', 120), 115: ('arabic', 80), 116: ('arabic', 100), 117: ('arabic', 100),
+    118: ('arabic', 200), 119: ('arabic', 300), 120: ('arabic', 250), 121: ('arabic', 200), 122: ('arabic', 200),
+    123: ('arabic', 250), 124: ('arabic', 200), 125: ('arabic', 200), 126: ('arabic', 250), 127: ('arabic', 300),
+    129: ('fat', 10), 130: ('fat', 10), 131: ('fat', 15),
+    134: ('drink', 240), 135: ('drink', 250), 136: ('dairy_drink', 250), 137: ('drink', 250), 138: ('drink', 200),
+    139: ('drink', 200), 140: ('drink', 330),
+    141: ('fastfood', 215), 142: ('fastfood', 100), 143: ('fastfood', 120), 144: ('fastfood', 100),
+    145: ('fastfood', 100), 146: ('fastfood', 230), 147: ('fastfood', 100),
+    148: ('sweets', 40), 149: ('sweets', 100), 150: ('sweets', 60), 151: ('sweets', 40), 152: ('sweets', 30),
+    153: ('sweets', 150), 154: ('sweets', 150), 155: ('sweets', 20),
+    # batch 4: world dishes, bakery and sandwiches (reviewed estimate or not applicable)
+    156: ('sweets', 60), 157: ('sweets', 100), 158: ('mexican', 100), 159: ('mexican', 250), 160: ('mexican', 150),
+    161: ('mexican', 250), 162: ('mexican', 100), 163: ('mexican', 50), 164: ('mexican', 50), 165: ('mexican', 250),
+    166: ('italian', 250), 167: ('italian', 250), 168: ('italian', 300), 169: ('italian', 250),
+    170: ('italian', 200), 171: ('italian', 200), 172: ('italian', 200), 173: ('italian', 60),
+    174: ('italian', 150), 175: ('italian', 300), 176: ('asian', 180), 177: ('asian', 180), 178: ('asian', 100),
+    179: ('asian', 500), 180: ('asian', 300), 181: ('asian', 200), 182: ('asian', 150), 183: ('asian', 150),
+    184: ('asian', 60), 185: ('asian', 250), 186: ('asian', 150), 187: ('asian', 100), 188: ('asian', 50),
+    189: ('asian', 250), 190: ('asian', 250), 191: ('asian', 300), 192: ('asian', 100), 193: ('asian', 250),
+    194: ('bakery', 50), 195: ('bakery', 60), 197: ('bakery', 100), 198: ('bakery', 100), 199: ('bakery', 120),
+    200: ('bakery', 100), 201: ('bakery', 100), 202: ('bakery', 60), 203: ('sandwich', 250), 204: ('sandwich', 200),
+    205: ('sandwich', 150), 206: ('sandwich', 150),
+    # batch 5: home-cooked dishes, salads and tropical fruit
+    207: ('home', 250), 208: ('home', 250), 209: ('home', 250), 210: ('home', 250), 211: ('home', 250),
+    212: ('home', 250), 213: ('home', 250), 214: ('home', 250), 215: ('home', 300), 216: ('home', 300),
+    217: ('home', 200), 218: ('home', 150), 219: ('home', 250), 220: ('home', 250), 221: ('salad', 250),
+    222: ('salad', 200), 223: ('salad', 200), 224: ('salad', 100), 225: ('salad', 150), 226: ('salad', 80),
+    227: ('salad', 200), 228: ('fruit', 150), 229: ('fruit', 40), 230: ('fruit', 60), 231: ('fruit', 150),
+    # batch 6: dried fruit, spices, special ingredients, traditional drinks and tropical fruit
+    232: ('dried', 30), 233: ('dried', 40), 234: ('dried', 30), 235: ('dried', 20), 236: ('spice', 5), 237: ('spice', 5),
+    238: ('spice', 2), 239: ('spice', 2), 240: ('spice', 1), 241: ('spice', 2), 242: ('pantry', 5), 243: ('pantry', 30),
+    244: ('pantry', 30), 245: ('pantry', 20), 246: ('drink', 250), 247: ('drink', 250), 248: ('drink', 250),
+    249: ('drink', 100), 250: ('drink', 200), 251: ('fruit', 100), 252: ('fruit', 80), 253: ('fruit', 100),
+    254: ('fruit', 120), 255: ('fruit', 100), 256: ('fruit', 80),
+    # batch 7: seasonal fruit, vegetables, spices, seafood and Levantine dishes
+    257: ('fruit', 150), 258: ('fruit', 100), 259: ('fruit', 100), 260: ('fruit', 100), 261: ('veg', 100), 262: ('veg', 80),
+    263: ('veg', 80), 264: ('veg', 50), 265: ('veg', 150), 266: ('veg', 100), 267: ('spice', 1), 268: ('spice', 1),
+    269: ('spice', 1), 270: ('spice', 1), 271: ('spice', 3), 272: ('spice', 3), 273: ('protein', 150), 274: ('protein', 150),
+    275: ('protein', 150), 276: ('protein', 100), 277: ('protein', 15), 278: ('protein', 15), 279: ('arabic', 150),
+    280: ('arabic', 250), 281: ('arabic', 250),
+    # batch 8: regional dishes, pantry items, condiments, drinks (incl. alcohol, with warnings) and Dutch staples
+    282: ('arabic', 250), 283: ('sweets', 60), 284: ('pantry', 10), 285: ('pantry', 15), 286: ('pantry', 60),
+    287: ('bakery', 40), 288: ('grain', 150), 289: ('condiment', 10), 290: ('condiment', 15), 291: ('condiment', 5),
+    292: ('condiment', 50), 293: ('condiment', 20), 294: ('alcohol', 330), 295: ('alcohol', 150), 296: ('drink', 250),
+    297: ('drink', 300), 298: ('drink', 250), 299: ('drink', 70), 300: ('drink', 200), 301: ('veg', 80), 302: ('veg', 100),
+    303: ('dairy_drink', 250), 304: ('dairy_solid', 150), 305: ('dairy_solid', 100), 306: ('grain', 40),
 }
+# foods whose page is signed by the medical team instead of a named reviewer
+TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
+               64, 65, 67, 73, 75, 76, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 96, 97, 99, 100, 102,
+               103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126,
+               127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
+               156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
+               181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
+TEAM_REVIEW |= set(range(207, 307))
+# drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
+CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}
 
 GROUPS = {
@@ -55,6 +128,21 @@ GROUPS = {
     'dairy_solid': ('الألبان والأجبان', 'Dairy & cheese', 'Zuivel & kaas'),
     'protein': ('اللحوم والأسماك والبيض', 'Meat, fish & eggs', 'Vlees, vis & eieren'),
     'fat': ('الدهون الصحية', 'Healthy fats', 'Gezonde vetten'),
+    'nuts': ('المكسرات والبذور', 'Nuts & seeds', 'Noten & zaden'),
+    'arabic': ('الأطباق العربية', 'Arabic dishes', 'Arabische gerechten'),
+    'fastfood': ('وجبات المطاعم السريعة', 'Fast food', 'Fastfood'),
+    'sweets': ('الحلويات', 'Sweets & desserts', 'Zoetigheid & desserts'),
+    'mexican': ('الأطباق المكسيكية', 'Mexican dishes', 'Mexicaanse gerechten'),
+    'italian': ('الأطباق الإيطالية', 'Italian dishes', 'Italiaanse gerechten'),
+    'asian': ('الأطباق الآسيوية', 'Asian dishes', 'Aziatische gerechten'),
+    'bakery': ('المخبوزات والفطائر', 'Breads & pastries', 'Brood & hartige baksels'),
+    'sandwich': ('السندويشات', 'Sandwiches', 'Broodjes'),
+    'home': ('الشوربات والطبخات المنزلية', 'Soups & home-cooked dishes', 'Soepen & huisgemaakte gerechten'),
+    'salad': ('السلطات', 'Salads', 'Salades'),
+    'spice': ('التوابل والأعشاب', 'Spices & herbs', 'Specerijen & kruiden'),
+    'pantry': ('المكونات الخاصة والمكملات', 'Special ingredients & supplements', 'Speciale ingrediënten & supplementen'),
+    'condiment': ('الصلصات والمخللات والزيتون', 'Sauces, pickles & olives', 'Sauzen, zuur & olijven'),
+    'alcohol': ('المشروبات الكحولية', 'Alcoholic drinks', 'Alcoholische dranken'),
     'veg': ('الخضار', 'Vegetables', 'Groenten'),
     'drink': ('المشروبات', 'Drinks', 'Dranken'),
 }
@@ -133,6 +221,26 @@ TIPS = {
          'Adding a moderate amount to a starchy meal can slow sugar absorption; use it raw in salads when possible.', NA_NOTE[1]),
         ('Rijk aan gezonde onverzadigde vetten maar calorierijk, dus een kleine hoeveelheid is genoeg.',
          'Een gematigde hoeveelheid bij een zetmeelrijke maaltijd kan de suikeropname vertragen; gebruik het waar mogelijk rauw in salades.', NA_NOTE[2])),
+    'nuts': (
+        ('غنية بالدهون الصحية والبروتين والألياف لكنها مرتفعة السعرات، فالتزم بحفنة صغيرة.',
+         'اخترها نيئة أو محمصة دون ملح أو سكر أو زيوت مضافة.', CARB_NOTE[0]),
+        ('Rich in healthy fats, protein and fibre but high in calories, so keep to a small handful.',
+         'Choose them raw or dry-roasted, without added salt, sugar or oil.', CARB_NOTE[1]),
+        ('Rijk aan gezonde vetten, eiwit en vezels maar calorierijk, dus houd het bij een klein handje.',
+         'Kies ze rauw of droog geroosterd, zonder toegevoegd zout, suiker of olie.', CARB_NOTE[2])),
+    'arabic': (
+        ('تناوله بحصة معتدلة ضمن وجبة فيها خضار وبروتين.', 'فضّل الشوي أو الخبز في الفرن على القلي، واستخدم زيت الزيتون باعتدال.', CARB_NOTE[0]),
+        ('Eat it in a moderate portion as part of a meal with vegetables and protein.', 'Prefer grilling or baking over frying, and use olive oil in moderation.', CARB_NOTE[1]),
+        ('Eet het in een gematigde portie als onderdeel van een maaltijd met groenten en eiwit.', 'Kies grillen of bakken in de oven in plaats van frituren, en gebruik olijfolie met mate.', CARB_NOTE[2])),
+    'fastfood': (
+        ('اجعلها وجبة متباعدة بحصة صغيرة، ومعها سلطة وماء بدلاً من البطاطا والمشروبات الغازية.', 'اختر الخيارات المشوية والخبز الأسمر وقلل الصلصات المحلاة.', CARB_NOTE[0]),
+        ('Keep it occasional and small, with a salad and water instead of fries and soft drinks.', 'Choose grilled options and wholegrain bread, and limit sweet sauces.', CARB_NOTE[1]),
+        ('Houd het bij af en toe en een kleine portie, met salade en water in plaats van friet en frisdrank.', 'Kies gegrilde opties en volkorenbrood, en beperk zoete sauzen.', CARB_NOTE[2])),
+    'sweets': (
+        ('تناولها بحصة صغيرة بعد وجبة فيها بروتين وألياف، لا على معدة فارغة.', 'اختر الأصناف الأقل قطراً وسكراً، وحضّرها منزلياً بكمية سكر أقل.', CARB_NOTE[0]),
+        ('Have a small portion after a meal with protein and fibre, not on an empty stomach.', 'Choose versions with less syrup and sugar, and make them at home with less sugar.', CARB_NOTE[1]),
+        ('Neem een kleine portie na een maaltijd met eiwit en vezels, niet op een lege maag.', 'Kies varianten met minder siroop en suiker, en maak ze thuis met minder suiker.', CARB_NOTE[2])),
+    'mexican': None, 'italian': None, 'asian': None, 'bakery': None, 'sandwich': None,   # filled from 'arabic' below
     'veg': (
         ('خضار منخفضة السعرات وغنية بالماء والألياف، ويمكن أن تملأ نصف الطبق.',
          'تناولها نيئة أو مطهوة قليلاً على البخار للحفاظ على الفيتامينات، وقلّل الزيت عند الطهي.', NA_NOTE[0]),
@@ -152,10 +260,14 @@ TIPS = {
          'Bevat cafeïne: drink met mate, vooral \u2019s avonds, en overleg met je arts als je zwanger bent of medicijnen gebruikt die door cafeïne beïnvloed worden.')),
 }
 
+for _g in ('mexican', 'italian', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
+    TIPS[_g] = TIPS['arabic']                # generic fallback; every food in these groups has its own approved tips
+
 UI = {
     'ar': dict(
         dir='rtl', title='{name}: السعرات والمؤشر الجلايسيمي والقيم الغذائية | WiBo Health',
         desc_measured='{name}: {kcal} سعرة لكل 100 غ، المؤشر الجلايسيمي {gi} ({level}) وفق Atkinson 2021، والحمل الجلايسيمي {gl} لحصة {p} غ. قيم غذائية كاملة ونصائح وبدائل.',
+        desc_reviewed='{name}: {kcal} سعرة لكل 100 غ، المؤشر الجلايسيمي {gi} ({level}، تقدير مراجع سريرياً)، والحمل الجلايسيمي {gl} لحصة {p} غ. قيم غذائية كاملة ونصائح وبدائل.',
         desc_na='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. المؤشر الجلايسيمي لا ينطبق (أقل من 5 غ كربوهيدرات متاحة). قيم غذائية كاملة ونصائح وبدائل.',
         home='الرئيسية', guide='دليل الأطعمة', gi='المؤشر الجلايسيمي', gl='الحمل الجلايسيمي', kcal='السعرات الحرارية',
         protein='البروتين', per100='لكل 100 غ', per_portion='لحصة {p} غ', na='لا ينطبق',
@@ -171,6 +283,11 @@ UI = {
         rank_protein='{ya}وفر {v} غ بروتين لكل 100 سعرة، في المرتبة {rank} من {m} في فئة {group} (الأعلى أولاً).',
         rank_kcal='{ya}حتوي على {v} سعرة لكل 100 غ، في المرتبة {rank} من {m} في فئة {group} (الأقل أولاً).',
         lead_measured='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو متوسط {studies} في الجداول الدولية (Atkinson 2021). وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
+        lead_reviewed='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير مراجع سريرياً وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
+        gi_reviewed='تقدير مراجع سريرياً',
+        rank_reviewed='{ya}أتي في المرتبة {rank} بين أصناف فئة {group} التي لها مؤشر جلايسيمي (وعددها {m})، من الأقل إلى الأعلى.',
+        src_reviewed='📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021).',
+        reviewed_team='تمت مراجعته من قبل فريق ويبو هيلث الطبي · آخر مراجعة {date}',
         lead_na='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{protein} غ بروتين. ولأن{h} {ya}حتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، فلا ينطبق علي{h} المؤشر الجلايسيمي، ويكون أثر{h} المباشر على سكر الدم ضئيلاً.',
         boodi_title='امسح الباركود في السوبرماركت مع تطبيق بودي 💚',
         boodi_text='يحلل بودي المنتجات المعلّبة فوراً، ويفحص الحلال، ويقترح بدائل أقل سكراً من نفس الرف.',
@@ -188,6 +305,7 @@ UI = {
     'en': dict(
         dir='ltr', title='{name}: Calories, Glycemic Index & Nutrition Facts | WiBo Health',
         desc_measured='{name}: {kcal} kcal per 100 g, glycemic index {gi} ({level}) from Atkinson 2021, glycemic load {gl} per {p} g portion. Full nutrition facts, tips and alternatives.',
+        desc_reviewed='{name}: {kcal} kcal per 100 g, glycemic index {gi} ({level}, clinically reviewed estimate), glycemic load {gl} per {p} g portion. Full nutrition facts, tips and alternatives.',
         desc_na='{name}: {kcal} kcal and {protein} g protein per 100 g. Glycemic index not applicable (under 5 g available carbohydrate). Full nutrition facts, tips and alternatives.',
         home='Home', guide='Food guide', gi='Glycemic index', gl='Glycemic load', kcal='Calories', protein='Protein',
         per100='per 100 g', per_portion='per {p} g portion', na='Not applicable', levels=('Low', 'Medium', 'High'),
@@ -203,6 +321,11 @@ UI = {
         rank_protein='It provides {v} g of protein per 100 kcal, ranking {rank} of {m} in {group} (highest first).',
         rank_kcal='It has {v} kcal per 100 g, ranking {rank} of {m} in {group} (lowest first).',
         lead_measured='Every 100 g of {name} contains {kcal} kcal and {avail} g of available carbohydrate. Its glycemic index is {gi} ({level}), the average of {studies} in the International GI Tables (Atkinson 2021). A typical {p} g portion has a glycemic load of {gl} ({gl_level}).',
+        lead_reviewed='Every 100 g of {name} contains {kcal} kcal and {avail} g of available carbohydrate. Its glycemic index is {gi} ({level}), a clinically reviewed estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}).',
+        gi_reviewed='Clinically reviewed estimate',
+        rank_reviewed='Among the foods in {group} with a glycemic index ({m}), it ranks {rank} (lowest first).',
+        src_reviewed='📚 The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the International GI Tables (Atkinson 2021).',
+        reviewed_team='Reviewed by the WiBo Health medical team · Last reviewed {date}',
         lead_na='Every 100 g of {name} contains {kcal} kcal and {protein} g of protein. Because it has less than 5 g of available carbohydrate per 100 g, the glycemic index does not apply and its direct effect on blood sugar is minimal.',
         boodi_title='Scan supermarket barcodes with the boodi app 💚',
         boodi_text='boodi analyses packaged products instantly, checks halal status and suggests lower-sugar alternatives from the same shelf.',
@@ -220,6 +343,7 @@ UI = {
     'nl': dict(
         dir='ltr', title='{name}: calorieën, glykemische index & voedingswaarde | WiBo Health',
         desc_measured='{name}: {kcal} kcal per 100 g, glykemische index {gi} ({level}) volgens Atkinson 2021, glykemische lading {gl} per portie van {p} g. Volledige voedingswaarden, tips en alternatieven.',
+        desc_reviewed='{name}: {kcal} kcal per 100 g, glykemische index {gi} ({level}, klinisch beoordeelde schatting), glykemische lading {gl} per portie van {p} g. Volledige voedingswaarden, tips en alternatieven.',
         desc_na='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Glykemische index niet van toepassing (minder dan 5 g beschikbare koolhydraten). Volledige voedingswaarden, tips en alternatieven.',
         home='Home', guide='Voedingswijzer', gi='Glykemische index', gl='Glykemische lading', kcal='Calorieën', protein='Eiwit',
         per100='per 100 g', per_portion='per portie van {p} g', na='Niet van toepassing', levels=('Laag', 'Gemiddeld', 'Hoog'),
@@ -234,6 +358,11 @@ UI = {
         rank_protein='Het levert {v} g eiwit per 100 kcal en staat op plaats {rank} van {m} in {group} (hoogste eerst).',
         rank_kcal='Het bevat {v} kcal per 100 g en staat op plaats {rank} van {m} in {group} (laagste eerst).',
         lead_measured='Elke 100 g {name} bevat {kcal} kcal en {avail} g beschikbare koolhydraten. De glykemische index is {gi} ({level}), het gemiddelde van {studies} in de internationale GI-tabellen (Atkinson 2021). Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}).',
+        lead_reviewed='Elke 100 g {name} bevat {kcal} kcal en {avail} g beschikbare koolhydraten. De glykemische index is {gi} ({level}), een klinisch beoordeelde schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}).',
+        gi_reviewed='Klinisch beoordeelde schatting',
+        rank_reviewed='Van de producten in {group} met een glykemische index ({m}) staat het op plaats {rank} (laagste eerst).',
+        src_reviewed='📚 De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale GI-tabellen (Atkinson 2021).',
+        reviewed_team='Gecontroleerd door het medisch team van WiBo Health · Laatst gecontroleerd {date}',
         lead_na='Elke 100 g {name} bevat {kcal} kcal en {protein} g eiwit. Omdat het minder dan 5 g beschikbare koolhydraten per 100 g bevat, is de glykemische index niet van toepassing en is het directe effect op de bloedsuiker minimaal.',
         boodi_title='Scan barcodes in de supermarkt met de boodi-app 💚',
         boodi_text='boodi analyseert verpakte producten direct, controleert de halalstatus en stelt suikerarmere alternatieven uit hetzelfde schap voor.',
@@ -261,6 +390,7 @@ FAQ = {
         w_fiber='يمكن إدخال{h} باعتدال، ف{huwa} {ya}حتوي على {fiber} غ ألياف لكل 100 غ تساعد على الشبع، وحصة {p} غ تعطي {kcal_p} سعرة.',
         w_general='يمكن إدخال{h} ضمن نظام متوازن مع التحكم بالحصة: حصة {p} غ تعطي {kcal_p} سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.',
         s_measured='مؤشر{h} الجلايسيمي {gi} ({level}) وفق Atkinson 2021. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
+        s_reviewed='مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير مراجع سريرياً وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
         s_advice=('، لذلك يكون تأثير هذه الحصة على سكر الدم محدوداً.', '، لذلك يُفضّل تناول{h} مع بروتين أو خضار غنية بالألياف.',
                   '، لذلك يُفضّل تقليل الحصة أو تقسيمها وتناول{h} مع البروتين والألياف.'),
         s_na_zero='لا يحتوي {name} تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق علي{h} المؤشر الجلايسيمي، وأثر{h} المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة ل{h} كالخبز والأرز والصلصات المحلاة.',
@@ -275,6 +405,7 @@ FAQ = {
         w_fiber='It can be included in moderation: it contains {fiber} g of fibre per 100 g, which supports fullness, and a {p} g portion gives {kcal_p} kcal.',
         w_general='It can fit a balanced plan with portion control: a {p} g portion gives {kcal_p} kcal, and what matters most is your total daily intake and the rest of the meal.',
         s_measured='Its glycemic index is {gi} ({level}) according to Atkinson 2021. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
+        s_reviewed='Its glycemic index is {gi} ({level}), a clinically reviewed estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
         s_advice=(', so the effect of this portion on blood sugar is limited.', ', so it is best combined with protein or fibre-rich vegetables.',
                   ', so it is best to reduce or split the portion and combine it with protein and fibre.'),
         s_na='{name} {contains} only {avail} g of available carbohydrate per 100 g, so the glycemic index does not apply and its direct effect on blood sugar is minimal. The meal’s effect depends on what you eat with it, such as bread, rice or sweetened sauces.',
@@ -289,6 +420,7 @@ FAQ = {
         w_fiber='Het past met mate: het bevat {fiber} g vezels per 100 g, wat de verzadiging ondersteunt, en een portie van {p} g geeft {kcal_p} kcal.',
         w_general='Het past in een evenwichtig eetpatroon met aandacht voor de portie: een portie van {p} g geeft {kcal_p} kcal, en het gaat vooral om je totale dagelijkse inname en de rest van de maaltijd.',
         s_measured='De glykemische index is {gi} ({level}) volgens Atkinson 2021. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
+        s_reviewed='De glykemische index is {gi} ({level}), een klinisch beoordeelde schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
         s_advice=(', dus het effect van deze portie op de bloedsuiker is beperkt.', ', dus combineer het bij voorkeur met eiwit of vezelrijke groenten.',
                   ', dus verklein of verdeel de portie bij voorkeur en combineer haar met eiwit en vezels.'),
         s_na='{name} {bevat} slechts {avail} g beschikbare koolhydraten per 100 g, dus de glykemische index is niet van toepassing en het directe effect op de bloedsuiker is minimaal. Het effect van de maaltijd hangt af van wat je erbij eet, zoals brood, rijst of gezoete sauzen.',
@@ -297,14 +429,16 @@ FAQ = {
 }
 
 
-PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68}, 'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68}}
+PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68, 20, 21, 23, 25, 28, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 117, 142, 161, 162, 183, 184, 220, 232, 233, 234, 262, 267, 278, 292, 293, 302},
+          'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68, 20, 21, 23, 24, 25, 28, 42, 45, 52, 56, 57, 58, 60, 80, 81, 82,
+                 83, 84, 85, 87, 88, 89, 99, 100, 113, 117, 142, 151, 161, 162, 183, 220, 232, 233, 234, 235, 260, 276, 284, 292, 293, 302}}
 VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provides'),
                 dict(is_='are', does='do', contains='contain', provides='provide')),
          'nl': (dict(is_='is', bevat='bevat', levert='levert'), dict(is_='zijn', bevat='bevatten', levert='leveren')),
          'ar': (dict(), dict())}
 
 
-def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None, g=None):
+def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None, g=None, reviewed=False):
     """Three questions whose answers are computed from the food's own numbers."""
     f, u = FAQ[lang], UI[lang]
     v = dict(VERBS[lang][1 if food['id'] in PLURAL.get(lang, set()) else 0])
@@ -327,7 +461,7 @@ def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, g
         w = f['w_general']
     a1 = w.format(name=name, kcal=round(kcal), p=portion, kcal_p=kcal_p, ppk=fmt(ppk), fiber=fmt(food['fiber']), **v)
     if measured:
-        a2 = f['s_measured'].format(gi=gi, level=u['levels'][lvl], p=portion, gl=fmt(gl), gl_level=u['levels'][glv],
+        a2 = f['s_reviewed' if reviewed else 's_measured'].format(gi=gi, level=u['levels'][lvl], p=portion, gl=fmt(gl), gl_level=u['levels'][glv],
                                     advice=f['s_advice'][glv].format(**v), **v)
     else:
         tmpl = f['s_na_zero'] if food['avail'] < 0.5 else f['s_na']
@@ -346,11 +480,164 @@ AR_DEFINITE_OVERRIDES = {          # names whose natural definite form does not 
     'بيض مسلوق كامل': 'البيض المسلوق',
     'حليب كامل الدسم 3.5%': 'الحليب كامل الدسم',
     'لبن زبادي يوناني 10%': 'الزبادي اليوناني',
+    'رمان حب': 'حب الرمان',
+    'جوز عين الجمل': 'الجوز',
+    'بذور دوار الشمس (بزر سوري)': 'بذور دوار الشمس',
+    'زبدة فول سوداني 100% طبيعية': 'زبدة الفول السوداني الطبيعية',
+    'أومليت بيض بالزبدة': 'أومليت البيض بالزبدة',
+    'كبدة عجل مشوية': 'كبدة العجل المشوية',
+    'حمص بطحينة أصلي': 'الحمص بالطحينة',
+    'متبل باذنجان (بابا غنوج)': 'متبل الباذنجان',
+    'فتوش بالدبس وزيت الزيتون': 'الفتوش',
+    'ملوخية ورق بالدجاج': 'الملوخية بالدجاج',
+    'شاورما دجاج سوري': 'شاورما الدجاج',
+    'شاورما لحم عجل': 'شاورما لحم العجل',
+    'شيش طاووق مشوي': 'الشيش طاووق المشوي',
+    'ورق عنب يالنجي بالزيت': 'ورق العنب بالزيت',
+    'كوسا محشي باللحم والأرز': 'الكوسا المحشية باللحم والأرز',
+    'مقلوبة دجاج بالباذنجان': 'مقلوبة الدجاج بالباذنجان',
+    'مجدرة برغل بزيت الزيتون': 'مجدرة البرغل',
+    'فتة حمص باللبن والمكسرات': 'فتة الحمص باللبن',
+    'صيادية سمك بالبصل المحمر': 'صيادية السمك',
+    'مسخن دجاج فلسطيني': 'مسخن الدجاج الفلسطيني',
+    'شكشوكة بيض بالبندورة': 'شكشوكة البيض بالبندورة',
+    'شوربة عدس سورية صفراء': 'شوربة العدس الصفراء',
+    'زيت جوز هند بكر': 'زيت جوز الهند البكر',
+    'طحينة سمسم سائلة': 'طحينة السمسم',
+    'حليب اللوز غير محلى': 'حليب اللوز غير المحلى',
+    'ماء جوز الهند الطبيعي': 'ماء جوز الهند الطبيعي',
+    'عصير برتقال طازج': 'عصير البرتقال الطازج',
+    'عصير رمان طبيعي': 'عصير الرمان الطبيعي',
+    'بيج ماك': 'البيج ماك',
+    'تشيكن ناغتس (6 قطع)': 'التشيكن ناغتس',
+    'دجاج مقلي بروستد (KFC)': 'الدجاج المقلي (البروستد)',
+    'بيتزا مارغريتا (شريحة)': 'بيتزا المارغريتا',
+    'بيتزا بيبروني (شريحة)': 'بيتزا البيبروني',
+    'ساندويش صب واي دجاج تيرياكي': 'ساندويش صب واي بالدجاج تيرياكي',
+    'سلطة كول سلو': 'سلطة الكول سلو',
+    'كرواسون زبدة فرنسي': 'الكرواسون بالزبدة',
+    'تشيز كيك نيويورك': 'تشيز كيك نيويورك',
+    'تاكو لحم بقري': 'تاكو اللحم البقري',
+    'بوريتو دجاج وفاصوليا': 'بوريتو الدجاج والفاصوليا',
+    'فاهيتا دجاج مع فلفل وبصل': 'فاهيتا الدجاج',
+    'ناتشوز مقرمش بالجبن': 'الناتشوز بالجبن',
+    'صلصة سالسا طماطم حارة': 'صلصة السالسا الحارة',
+    'تشيلي كون كارني (لحم وفاصوليا)': 'التشيلي كون كارني',
+    'سباغيتي كاربونارا': 'سباغيتي الكاربونارا',
+    'سباغيتي بولونيز': 'سباغيتي البولونيز',
+    'فيتوتشيني ألفريدو بالكريمة': 'فيتوتشيني ألفريدو بالكريمة',
+    'سلطة كابريزي (موزاريلا وطماطم)': 'سلطة الكابريزي',
+    'شوربة مينيستروني الإيطالية': 'شوربة المينيستروني الإيطالية',
+    'سوشي سلمون رول': 'سوشي السلمون',
+    'سوشي كاليفورنيا رول': 'سوشي كاليفورنيا رول',
+    'ساشيمي سلمون نيء': 'ساشيمي السلمون النيء',
+    'شوربة رامن يابانية بالدجاج': 'شوربة الرامن بالدجاج',
+    'نودلز باد تاي تايلاندي': 'نودلز الباد تاي',
+    'سبرنج رول خضار مقلي': 'السبرنج رول بالخضار',
+    'شوربة ميسو اليابانية': 'شوربة الميسو اليابانية',
+    'توفو صويا طبيعي': 'التوفو',
+    'كيمتشي كوري حار ومخمر': 'الكيمتشي الكوري',
+    'دجاج تكا ماسالا هندي': 'دجاج التكا ماسالا',
+    'بالاك بانير (سبانخ وجبن هندي)': 'البالاك بانير',
+    'برياني دجاج هندي متبل': 'برياني الدجاج',
+    'شوربة دال عدس هندي': 'شوربة الدال',
+    'فطيرة سبانخ شامية': 'فطيرة السبانخ',
+    'فطيرة جبنة بلدية': 'فطيرة الجبنة',
+    'لحم بعجين صفيحة شامية': 'اللحم بعجين',
+    'مناقيش زعتر بلدي بزيت الزيتون': 'مناقيش الزعتر',
+    'مناقيش جبنة عكاوي': 'مناقيش جبنة العكاوي',
+    'ساندويش كلوب حبش وجبن': 'ساندويش الكلوب',
+    'ساندويش تونة بالمايونيز والخس': 'ساندويش التونة',
+    'بانيني حلومي مشوي وطماطم': 'بانيني الحلوم المشوي',
+    'توست أفوكادو مع بيض مسلوق': 'توست الأفوكادو بالبيض',
+    'شوربة خضار مشكلة طازجة': 'شوربة الخضار المشكلة',
+    'شوربة دجاج بالشعيرية': 'شوربة الدجاج بالشعيرية',
+    'شوربة قرع عسلي بالكريمة': 'شوربة القرع العسلي',
+    'شوربة بروكلي كريمية': 'شوربة البروكلي الكريمية',
+    'شوربة طماطم إيطالية محمصة': 'شوربة الطماطم المحمصة',
+    'شوربة فريكة باللحم': 'شوربة الفريكة باللحم',
+    'مسقعة باذنجان باللحمة المفرومة': 'مسقعة الباذنجان باللحمة المفرومة',
+    'يخنة بامية باللحم والأرز': 'يخنة البامية باللحم',
+    'يخنة فاصوليا خضراء باللحم': 'يخنة الفاصوليا الخضراء باللحم',
+    'مفركة بطاطا بالبيض (شامية)': 'مفركة البطاطا بالبيض',
+    'أرز بالشعيرية ومطبوخ بالسمن': 'الأرز بالشعيرية',
+    'كفتة داوود باشا بصلصة البندورة': 'كفتة داوود باشا',
+    'سلطة سيزر بالدجاج المشوي': 'سلطة السيزر بالدجاج المشوي',
+    'سلطة كينوا بالأفوكادو والخضار': 'سلطة الكينوا بالأفوكادو',
+    'سلطة جرجير بالرمان والجوز': 'سلطة الجرجير بالرمان والجوز',
+    'سلطة بطاطا مسلوقة بالبقدونس': 'سلطة البطاطا المسلوقة بالبقدونس',
+    'سلطة شمندر مسلوق بالليمون': 'سلطة الشمندر المسلوق',
+    'سلطة تونة بالذرة والمايونيز الخفيف': 'سلطة التونة بالذرة',
+    'دراغون فروت (فاكهة التنين)': 'فاكهة التنين',
+    'باشن فروت (ماراكوجا)': 'الباشن فروت',
+    'مشمش مجفف طبيعي': 'المشمش المجفف',
+    'تين مجفف بلدي': 'التين المجفف',
+    'توت غوجي بيري مجفف': 'توت الغوجي المجفف',
+    'كركم طازج مبشور': 'الكركم الطازج',
+    'هيل أخضر حب': 'الهيل الأخضر',
+    'زعفران نقي': 'الزعفران',
+    'سبيرولينا عضوية بودرة': 'بودرة السبيرولينا',
+    'بروتين مصل اللبن (واي آيسوليت)': 'بروتين مصل اللبن',
+    'طحين جوز الهند العضوي': 'طحين جوز الهند',
+    'عصير خروب بلدي طبيعي': 'عصير الخروب',
+    'سحلب ساخن بالقرفة والمكسرات': 'السحلب الساخن',
+    'شاي كرك بالحليب والتوابل': 'شاي الكرك',
+    'جاك فروت (خبزية)': 'الجاك فروت',
+    'خبيزة برية مطبوخة بزيت الزيتون': 'الخبيزة البرية',
+    'قرنبيط مقلي مقرمش بالكمون': 'القرنبيط المقلي بالكمون',
+    'قرنفل مسامير حب': 'مسامير القرنفل',
+    'ريحان مجفف بلدي': 'الريحان المجفف',
+    'سماق بلدي حامض': 'السماق البلدي',
+    'سمك البلطي الطازج المشوي': 'سمك البلطي المشوي',
+    'سمك الهامور الفاخر': 'سمك الهامور',
+    'أخطبوط مشوي بالزيت والليمون': 'الأخطبوط المشوي',
+    'كافيار سمك أصلي فخم': 'الكافيار',
+    'سمك أنشوفة مملح (Ansjovis)': 'سمك الأنشوفة المملح',
+    'كبدة إسكندراني حارة بالفلفل': 'الكبدة الإسكندراني',
+    'شاكرية لحم غنم باللبن والنشا': 'الشاكرية',
+    'جريش سعودي بالسمن والبصل': 'الجريش',
+    'عريكة ملكية بالتمر والعسل والسمن': 'العريكة',
+    'خميرة غذائية مدعمة (Nutritional Yeast)': 'الخميرة الغذائية',
+    'خل تفاح عضوي غير مفلتر مع الأم': 'خل التفاح',
+    'بروتين بار بنكهة الشوكولاتة والكراميل': 'لوح البروتين',
+    'خبز كيتو خالي من الجلوتين': 'خبز الكيتو',
+    'معكرونة خالية من الجلوتين (أرز وذرة)': 'المعكرونة الخالية من الغلوتين',
+    'دبس رمان طبيعي مركز بدون سكر': 'دبس الرمان',
+    'صلصة صويا مخمرة طبيعياً (Kikkoman)': 'صلصة الصويا',
+    'صلصة سريراتشا حارة': 'صلصة السريراتشا',
+    'مخلل خيار بلدي مقرمش': 'مخلل الخيار',
+    'زيتون كلاماتا يوناني أسود': 'زيتون كالاماتا',
+    'بيرة عادية (Pilsener)': 'البيرة',
+    'نبيذ أحمر جاف': 'النبيذ الأحمر',
+    'مشروب عرق سوس بلدي طبيعي': 'عرق السوس',
+    'شاي كركديه بارد أحمر': 'شاي الكركديه',
+    'منقوع بابونج مهدئ للأعصاب': 'منقوع البابونج',
+    'قهوة تركية بالهيل': 'القهوة التركية بالهيل',
+    'شاي أخضر بالنعناع المغربي': 'الشاي الأخضر بالنعناع',
+    'كرنب أجعد هولندي (بورنكول)': 'الكرنب الأجعد',
+    'كرنب بروكسل (سبروتس)': 'كرنب بروكسل',
+    'حليب خض مع خاثر (كارنملك)': 'حليب الخض',
+    'كوارك خالي الدسم (ماخر كفارك)': 'الكوارك خالي الدسم',
+    'كوارك كامل الدسم (فول كفارك)': 'الكوارك كامل الدسم',
+    'خبز الجاودار الهولندي الخشن (روخه برود)': 'خبز الجاودار الهولندي',
 }
+AR_GENDER_OVERRIDES = {'حمص بطحينة أصلي': False, 'فاهيتا دجاج مع فلفل وبصل': True, 'لازانيا باللحم والبشاميل': True,
+                       'بروسكيتا بالطماطم والريحان': True, 'مناقيش زعتر بلدي بزيت الزيتون': True,
+                       'سمبوسك باللحمة المفرومة': False, 'ساندويش تونة بالمايونيز والخس': False,
+                       'أرز بالشعيرية ومطبوخ بالسمن': False, 'دراغون فروت (فاكهة التنين)': True,
+                       'سبيرولينا عضوية بودرة': True, 'قهوة عربية شقراء بالهيل': True,
+                       'خرما (كاكا طازجة)': True, 'قرنفل مسامير حب': True, 'سمك أنشوفة مملح (Ansjovis)': False,
+                       'عريكة ملكية بالتمر والعسل والسمن': True, 'خميرة غذائية مدعمة (Nutritional Yeast)': True,
+                       'بروتين بار بنكهة الشوكولاتة والكراميل': False, 'معكرونة خالية من الجلوتين (أرز وذرة)': True,
+                       'دبس رمان طبيعي مركز بدون سكر': False, 'صلصة صويا مخمرة طبيعياً (Kikkoman)': True,
+                       'صلصة سريراتشا حارة': True, 'مخلل خيار بلدي مقرمش': False, 'زيتون كلاماتا يوناني أسود': False,
+                       'بيرة عادية (Pilsener)': True, 'نبيذ أحمر جاف': False, 'مشروب عرق سوس بلدي طبيعي': False,
+                       'منقوع بابونج مهدئ للأعصاب': False, 'قهوة تركية بالهيل': True,
+                       'شاي أخضر بالنعناع المغربي': False}     # True = feminine; for names the head-noun rule gets wrong
 AR_IDAFA = {('صدر', 'دجاج'), ('زيت', 'زيتون'), ('سمك', 'سلمون'), ('لحم', 'غنم'), ('خبز', 'قمح'),
-            ('جبنة', 'شيدر'), ('جبنة', 'حلوم')}        # construct state: only the second noun takes ال
+            ('جبنة', 'شيدر'), ('جبنة', 'حلوم'), ('جبنة', 'موزاريلا'), ('جبنة', 'جودا'), ('جبنة', 'قريش')}        # construct state: only the second noun takes ال
 AR_STOP = {'على', 'في', 'من', 'مع', 'عن', 'إلى', 'أبو', 'بدون'}   # prepositions / proper names: rest stays as is
-AR_FEMININE_NOUNS = {'كمثرى', 'بطاطا', 'كوسا', 'مانجو', 'كينوا', 'سبانخ', 'فاصوليا'}
+AR_FEMININE_NOUNS = {'كمثرى', 'بطاطا', 'كوسا', 'مانجو', 'كينوا', 'سبانخ', 'فاصوليا', 'لوبيا', 'بذور', 'شاورما', 'بيتزا'}
 AR_FEMININE_ADJ = {'بيضاء', 'سوداء', 'حمراء', 'خضراء', 'صفراء'}
 
 
@@ -380,6 +667,8 @@ def ar_definite(name):
 
 
 def ar_is_feminine(name):
+    if name in AR_GENDER_OVERRIDES:
+        return AR_GENDER_OVERRIDES[name]
     words = _core_words(name)
     head = words[0] if words else ''
     if head.endswith('ة') or head in AR_FEMININE_NOUNS:
@@ -412,6 +701,64 @@ ALTERNATIVES = {
     30: [31, 37, 32], 31: [30, 32, 35], 32: [39, 36, 30], 35: [36, 37, 32], 36: [35, 32, 40], 37: [38, 35, 30],
     38: [37, 39, 32], 39: [32, 38, 30], 40: [32, 35, 36],
     132: [133], 133: [132],
+    # batch 2
+    6: [15, 9, 8], 12: [13, 4, 196], 13: [12, 4, 7], 15: [9, 6, 8], 16: [8, 15, 9],
+    20: [18, 19, 21], 21: [23, 22, 18], 23: [21, 18, 22], 24: [25, 19, 18], 25: [24, 89, 19],
+    28: [27, 26, 36], 33: [32, 47, 36], 34: [30, 31, 47], 41: [42, 35, 37], 42: [35, 41, 37], 43: [34, 30, 33],
+    44: [37, 31, 30], 45: [46, 30, 47], 46: [45, 30, 37], 47: [30, 31, 32],
+    52: [57, 56, 48], 56: [57, 52, 58], 57: [52, 56, 58], 58: [57, 66, 52], 60: [58, 66, 65], 61: [52, 57, 48],
+    64: [50, 52, 48], 65: [66, 48, 58], 67: [51, 65, 52],
+    73: [76, 72, 77], 75: [74, 73, 77], 76: [71, 72, 73], 78: [128, 59],
+    80: [81, 84, 83], 81: [80, 84, 83], 82: [80, 83, 89], 83: [80, 81, 87], 84: [80, 81, 83], 85: [86, 87, 88],
+    86: [85, 87, 88], 87: [88, 85, 80], 88: [87, 85, 80], 89: [80, 25, 87], 90: [80, 89, 84],
+    95: [94, 97, 99], 96: [100, 98, 94], 97: [94, 99, 95], 99: [97, 98, 94], 100: [96, 98, 91], 102: [101, 76, 95],
+    # batch 3
+    103: [91, 101, 92], 104: [107, 19, 106], 105: [104, 106, 19], 106: [20, 104, 18], 107: [104, 33, 108],
+    108: [109, 9, 44], 109: [108, 107, 44], 110: [38, 113, 126], 111: [113, 112, 91], 112: [114, 111, 92],
+    113: [91, 111, 114], 114: [113, 92, 112], 115: [116, 114, 121], 116: [115, 114, 121], 117: [118, 121, 108],
+    118: [117, 32, 121], 119: [120, 123, 121], 120: [121, 123, 119], 121: [9, 18, 126], 122: [104, 106, 121],
+    123: [94, 120, 121], 124: [113, 120, 111], 125: [101, 102, 106], 126: [18, 121, 106], 127: [121, 126, 18],
+    129: [128, 78, 130], 130: [128, 129, 78], 131: [104, 128, 80], 134: [133, 132], 135: [70, 69, 79],
+    136: [79, 70, 71], 137: [136, 135, 133], 138: [50, 64, 139], 139: [61, 138, 50], 140: [133, 136, 137],
+    141: [146, 114, 113], 142: [143, 113, 91], 143: [142, 113, 91], 144: [145, 146, 104], 145: [144, 146, 141],
+    146: [111, 144, 141], 147: [108, 109, 44], 148: [151, 152, 155], 149: [150, 148, 153], 150: [149, 151, 153],
+    151: [62, 152, 148], 152: [131, 155, 151], 153: [154, 71, 155], 154: [153, 71, 155], 155: [152, 80, 151],
+    # batch 4
+    156: [4, 151, 157], 157: [71, 153, 155], 158: [161, 159, 163], 159: [161, 158, 165], 160: [161, 158, 163],
+    161: [158, 165, 163], 162: [158, 163, 164], 163: [164, 59, 104], 164: [163, 30, 108], 165: [22, 161, 159],
+    166: [168, 167, 175], 167: [168, 166, 5], 168: [6, 167, 166], 169: [167, 168, 6], 170: [5, 167, 14],
+    171: [26, 6, 170], 172: [144, 166, 173], 173: [174, 200, 4], 174: [173, 73, 108], 175: [126, 193, 21],
+    176: [178, 177, 94], 177: [176, 178, 59], 178: [94, 176, 95], 179: [183, 180, 185], 180: [179, 183, 181],
+    181: [182, 113, 91], 182: [181, 113, 143], 183: [184, 179, 186], 184: [183, 176, 186], 185: [186, 126, 193],
+    186: [187, 24, 189], 187: [186, 24, 25], 188: [109, 108, 185], 189: [190, 181, 113], 190: [189, 186, 37],
+    191: [189, 14, 121], 192: [195, 194, 196], 193: [126, 18, 185], 194: [4, 192, 195], 195: [194, 196, 4],
+    197: [198, 200, 37], 198: [197, 201, 200], 199: [197, 200, 202], 200: [201, 197, 199], 201: [200, 198, 197],
+    202: [199, 197, 115], 203: [204, 206, 205], 204: [203, 206, 98], 205: [206, 204, 77], 206: [205, 204, 59],
+    # batch 5
+    207: [210, 216, 175], 208: [207, 126, 179], 209: [207, 210, 212], 210: [207, 211, 35], 211: [210, 207, 40],
+    212: [207, 175, 209], 213: [126, 15, 208], 214: [33, 216, 220], 215: [216, 39, 110], 216: [215, 207, 214],
+    217: [125, 26, 102], 218: [14, 9, 15], 219: [166, 168, 214], 220: [114, 214, 168],
+    221: [222, 113, 224], 222: [221, 174, 224], 223: [8, 108, 222], 224: [44, 222, 109], 225: [26, 108, 223],
+    226: [43, 224, 108], 227: [204, 221, 98],
+    228: [64, 229, 230], 229: [228, 57, 64], 230: [228, 58, 53], 231: [228, 66, 65],
+    # batch 6
+    232: [234, 233, 235], 233: [232, 234, 63], 234: [232, 235, 233], 235: [232, 234, 57], 236: [237, 238, 241],
+    237: [236, 238, 239], 238: [239, 237, 236], 239: [238, 249, 237], 240: [239, 238, 236], 241: [238, 236, 237],
+    242: [243, 85, 86], 243: [242, 71, 76], 244: [245, 80, 85], 245: [244, 86, 85], 246: [247, 133, 136],
+    247: [246, 133, 136], 248: [250, 153, 69], 249: [132, 133, 250], 250: [249, 133, 248], 251: [230, 256, 228],
+    252: [50, 64, 254], 253: [255, 256, 55], 254: [252, 228, 64], 255: [253, 256, 55], 256: [251, 230, 228],
+    # batch 7
+    257: [258, 65, 48], 258: [257, 65, 232], 259: [228, 31, 229], 260: [56, 57, 85], 261: [264, 36, 31],
+    262: [45, 207, 263], 263: [264, 44, 147], 264: [263, 261, 31], 265: [38, 37, 44], 266: [36, 33, 105],
+    267: [239, 238, 268], 268: [238, 267, 239], 269: [241, 270, 272], 270: [269, 241, 236], 271: [272, 241, 85],
+    272: [241, 271, 269], 273: [274, 96, 94], 274: [273, 96, 97], 275: [100, 276, 96], 276: [275, 100, 143],
+    277: [95, 278, 94], 278: [99, 277, 97], 279: [103, 113, 114], 280: [122, 214, 104], 281: [119, 220, 113],
+    # batch 8
+    282: [121, 213, 15], 283: [151, 62, 152], 284: [243, 242, 85], 285: [289, 290, 292], 286: [243, 80, 155],
+    287: [306, 4, 244], 288: [6, 5, 8], 289: [285, 139, 61], 290: [285, 289, 291], 291: [164, 290, 289],
+    292: [293, 285, 31], 293: [128, 292, 59], 294: [297, 300, 133], 295: [53, 297, 139], 296: [297, 247, 246],
+    297: [300, 298, 133], 298: [300, 297, 133], 299: [249, 132, 300], 300: [133, 298, 297], 301: [37, 35, 302],
+    302: [35, 36, 301], 303: [79, 136, 70], 304: [305, 76, 71], 305: [304, 71, 76], 306: [4, 12, 287],
 }
 
 
@@ -613,15 +960,26 @@ def build(food, lang, ctx):
     if subtitle == name:
         subtitle = ''
     group_name = GROUPS[group][li]
-    measured = food['gi_status'] == 'measured' and food['gi'] is not None
+    measured = food['gi_status'] == 'measured' and food['gi'] is not None      # Atkinson 2021
+    reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # clinically reviewed estimate
+    has_gi = measured or reviewed
+    team = food['id'] in TEAM_REVIEW
     p_factor = portion / 100.0
     tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
     if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
-        tips.append(TIPS[group][li][2])
+        tips.append(TIPS['drink'][li][2] if food['id'] in CAFFEINE else (CARB_NOTE if has_gi else NA_NOTE)[li])
 
     # -------- numbers
     kcal, protein, avail = round(food['kcal']), fmt(food['protein']), fmt(food['avail'])
-    if measured:
+    if reviewed:
+        gi = int(food['gi'])
+        lvl = gi_level(gi)
+        gl = round(gi * food['avail'] * p_factor / 100, 1)
+        glv = gl_level(gl)
+        lead = u['lead_reviewed'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=u['levels'][lvl], p=portion,
+                                         gl=fmt(gl), gl_level=u['levels'][glv], **g)
+        desc = u['desc_reviewed'].format(name=name, kcal=kcal, gi=gi, level=u['levels'][lvl], gl=fmt(gl), p=portion)
+    elif measured:
         gi = int(food['gi'])
         lvl = gi_level(gi)
         gl = round(gi * food['avail'] * p_factor / 100, 1)
@@ -638,8 +996,8 @@ def build(food, lang, ctx):
     title = u['title'].format(name=name)
 
     # -------- FAQ (answers computed from the numbers)
-    if measured:
-        faq = build_faq(food, lang, sname, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv, g=g)
+    if has_gi:
+        faq = build_faq(food, lang, sname, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv, g=g, reviewed=reviewed)
     else:
         faq = build_faq(food, lang, sname, portion, False, g=g)
     faq_html = ''.join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
@@ -654,18 +1012,24 @@ def build(food, lang, ctx):
         return (f'<li><a href="{page_url(ctx["slug"][f["id"]], lang, absolute=False)}">{esc(f[lang] or f["en"])}'
                 f'<span>{right}</span></a></li>')
     family = [ctx['foods'][i] for i in ALTERNATIVES.get(food['id'], []) if i in PILOT]
-    if measured:
-        ranked = sorted([f for f in peers if f['gi_status'] == 'measured'], key=lambda f: f['gi'])
-        rank = [f['id'] for f in ranked].index(food['id']) + 1
-        compare_txt = u['rank_measured'].format(rank=rank, m=len(ranked), m_items=ar_measured_items(len(ranked)),
-                                                group=group_name, **g)
+    def gi_of(f):
+        return f['gi'] if f['gi_status'] in ('measured', 'reviewed') and f['gi'] is not None else None
+    if has_gi:
+        if measured:                        # measured foods are ranked among measured foods only
+            ranked = sorted([f for f in peers if f['gi_status'] == 'measured'], key=lambda f: f['gi'])
+            rank = [f['id'] for f in ranked].index(food['id']) + 1
+            compare_txt = u['rank_measured'].format(rank=rank, m=len(ranked), m_items=ar_measured_items(len(ranked)),
+                                                    group=group_name, **g)
+        else:
+            ranked = sorted([f for f in peers if gi_of(f) is not None], key=gi_of)
+            rank = [f['id'] for f in ranked].index(food['id']) + 1
+            compare_txt = u['rank_reviewed'].format(rank=rank, m=len(ranked), group=group_name, **g)
         if rank == 1:
             compare_txt += ' ' + u['lowest_note']
-        has_gi = [f for f in family if f['gi_status'] == 'measured']
-        lower = sorted([f for f in has_gi if f['gi'] < food['gi']], key=lambda f: f['gi'])
+        lower = sorted([f for f in family if gi_of(f) is not None and gi_of(f) < food['gi']], key=gi_of)
         alts = (lower + [f for f in family if f not in lower])[:3]
         alt_title = u['alt_lower'] if alts and len(lower) == len(alts) else u['alt_family']
-        alt_html = ''.join(link_item(f, f"{u['gi']} {int(f['gi'])}" if f['gi_status'] == 'measured'
+        alt_html = ''.join(link_item(f, f"{u['gi']} {int(gi_of(f))}" if gi_of(f) is not None
                                      else f"{round(f['kcal'])} {u['kcal_unit']}") for f in alts)
     else:
         if group in ('protein', 'dairy_solid'):
@@ -683,9 +1047,11 @@ def build(food, lang, ctx):
         alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}") for f in family[:3])
 
     # -------- cards
-    if measured:
+    if has_gi:
         gi_card = (f'<div class="stat-num {["low", "medium", "high"][lvl]}">{gi}</div>'
                    f'<span class="badge {["low", "medium", "high"][lvl]}">{u["levels"][lvl]}</span>')
+        if reviewed:
+            gi_card += f'<div class="stat-sub">{u["gi_reviewed"]}</div>'
         gl_card = (f'<div class="stat-num {["low", "medium", "high"][glv]}">{fmt(gl)}</div>'
                    f'<div class="stat-sub">{u["per_portion"].format(p=portion)}</div>')
     else:
@@ -711,6 +1077,8 @@ def build(food, lang, ctx):
                u['src_value'].format(studies=studies_word(int(food['gi_n'] or 1), lang), lo=int(rng[0]), hi=int(rng[-1]),
                                      grade=food['gi_grade'] or '-') +
                f' <a href="{method_href}">{u["src_link"]}</a></div>')
+    elif reviewed:
+        src = f'<div class="source-strip">{u["src_reviewed"]} <a href="{method_href}">{u["src_link"]}</a></div>'
     if food['ii'] is not None:
         src += f'<div class="source-strip">{u["src_ii"]}</div>'
 
@@ -729,9 +1097,10 @@ def build(food, lang, ctx):
         "primaryImageOfPage": {"@type": "ImageObject", "url": image_abs},
         "about": {"@type": "Thing", "name": food['en'], "alternateName": [food['ar'], food['nl']]},
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
-        "reviewedBy": {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
-                       "url": f"{SITE}/doctor.html"},
-        "lastReviewed": REVIEWED,
+        "reviewedBy": ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
+                       {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
+                        "url": f"{SITE}/doctor.html"}),
+        "lastReviewed": TEAM_REVIEWED if team else REVIEWED,
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
             {"@type": "ListItem", "position": 2, "name": u['guide'], "item": SITE + site_link('/foods.html', lang)},
@@ -864,7 +1233,7 @@ def build(food, lang, ctx):
             </aside>
 
             {src}
-            <p class="reviewed">{u["reviewed"].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])}</p>
+            <p class="reviewed">{u["reviewed_team"].format(date=TEAM_REVIEWED_TXT[lang]) if team else u["reviewed"].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])}</p>
             <p class="disclaimer-box">{u["disclaimer"]}</p>
         </article>
     </main>
@@ -930,7 +1299,7 @@ def main():
     block = ['  <!-- FOOD-PAGES:START -->']
     for fid in PILOT:
         for lang in LANGS:
-            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{REVIEWED}</lastmod>',
+            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{TEAM_REVIEWED if fid in TEAM_REVIEW else REVIEWED}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in LANGS]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "ar")}"/>', '  </url>']
@@ -940,6 +1309,7 @@ def main():
 
     print(f'pages written: {written} ({len(PILOT)} foods x {len(LANGS)} languages)')
     print('measured:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'measured'),
+          '| reviewed:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'reviewed'),
           '| not applicable:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'not_applicable'))
 
 

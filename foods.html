@@ -969,6 +969,18 @@
 
         .fm-badge { display: block; margin-top: 6px; font-size: 0.72rem; font-weight: 700; color: #059669; }
         body.dark-mode .fm-badge { color: #34d399; }
+        .fm-badge.reviewed { color: #64748b; }
+        body.dark-mode .fm-badge.reviewed { color: #94a3b8; }
+        .card-gi { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 6px 0 2px; font-size: 0.78rem; font-weight: 800; }
+        .card-gi .gi-num { padding: 2px 10px; border-radius: 999px; }
+        .card-gi .gi-num.low { background: rgba(16, 185, 129, 0.14); color: #059669; }
+        .card-gi .gi-num.medium { background: rgba(245, 158, 11, 0.16); color: #b45309; }
+        .card-gi .gi-num.high { background: rgba(239, 68, 68, 0.14); color: #dc2626; }
+        body.dark-mode .card-gi .gi-num.low { color: #34d399; }
+        body.dark-mode .card-gi .gi-num.medium { color: #fbbf24; }
+        body.dark-mode .card-gi .gi-num.high { color: #f87171; }
+        .card-gi .gi-est { font-size: 0.68rem; font-weight: 700; color: #64748b; }
+        body.dark-mode .card-gi .gi-est { color: #94a3b8; }
 
         .fm-note { margin: 14px 0 0; font-size: 0.8rem; color: var(--text-light); text-align: center; }
 
@@ -1125,7 +1137,7 @@
         </div>
 
         <!-- GI Clinical Sources -->
-        <div class="gi-sources-box" data-i18n="gi_sources">📚 جميع قيم المؤشر الجلايسيمي (GI) مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد.</div>
+        <div class="gi-sources-box" data-i18n="gi_sources">📚 قيم المؤشر الجلايسيمي (GI) المقاسة مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد، أما القيم الموسومة «تقدير مراجع سريرياً» فهي تقديرات راجعها فريق ويبو هيلث الطبي.</div>
 
         <!-- Clinical Disclaimer Note (EU MDR 2017/745 Compliance) -->
         <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
@@ -1284,9 +1296,10 @@
                 "modal_full_details": "عرض التفاصيل الكاملة والرسوم البيانية",
                 "gi_not_applicable": "لا ينطبق",
                 "gi_not_available": "غير متوفر",
+                "gi_reviewed_badge": "تقدير مراجع سريرياً",
                 "methodology_line": "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
                 "methodology_link": "المنهجية والمراجع العلمية",
-                "gi_sources": "📚 جميع قيم المؤشر الجلايسيمي (GI) مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد.",
+                "gi_sources": "📚 قيم المؤشر الجلايسيمي (GI) المقاسة مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد، أما القيم الموسومة «تقدير مراجع سريرياً» فهي تقديرات راجعها فريق ويبو هيلث الطبي.",
                 "clinical_disclaimer": "إخلاء مسؤولية: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.",
                 "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
                 "boodi_banner_desc": "قراءة الأرقام ممتازة، ولكن فحص الباركود في المتجر أسرع! تطبيق بودي يحلل لك المؤشر الجلايسيمي، يفحص الحلال، ويقترح بدائل صحية أقل سكراً فوراً من نفس الرف.",
@@ -1340,9 +1353,10 @@
                 "modal_full_details": "View full details & charts",
                 "gi_not_applicable": "Not applicable",
                 "gi_not_available": "Not available",
+                "gi_reviewed_badge": "Clinically reviewed estimate",
                 "methodology_line": "Values are measured or calculated using a documented methodology",
                 "methodology_link": "Methodology & scientific references",
-                "gi_sources": "📚 All Glycemic Index (GI) values are referenced from the International Tables (Atkinson et al., Am J Clin Nutr 2021) and Harvard Health Publishing.",
+                "gi_sources": "📚 Measured Glycemic Index (GI) values are referenced from the International Tables (Atkinson et al., Am J Clin Nutr 2021) and Harvard Health Publishing; values labelled “clinically reviewed estimate” are estimates reviewed by the WiBo Health medical team.",
                 "clinical_disclaimer": "Disclaimer: The WiBo Health food database and boodi app are informational lifestyle guidance tools and do not constitute diagnostic medical devices under EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
                 "boodi_banner_desc": "Checking charts is great, but scanning in the supermarket aisle is faster! boodi deconstructs Glycemic Index, screens Halal status, and discovers healthier alternatives on the spot.",
@@ -1396,9 +1410,10 @@
                 "modal_full_details": "Bekijk alle details & grafieken",
                 "gi_not_applicable": "Niet van toepassing",
                 "gi_not_available": "Niet beschikbaar",
+                "gi_reviewed_badge": "Klinisch beoordeelde schatting",
                 "methodology_line": "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
                 "methodology_link": "Methodologie & wetenschappelijke bronnen",
-                "gi_sources": "📚 Alle GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing.",
+                "gi_sources": "📚 Gemeten GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing; waarden gemarkeerd als “klinisch beoordeelde schatting” zijn schattingen beoordeeld door het medisch team van WiBo Health.",
                 "clinical_disclaimer": "Algemene disclaimer: Deze voedingswijzer en de boodi-app zijn leefstijl- en educatieve hulpmiddelen en vormen geen medisch hulpmiddel volgens EU MDR 2017/745.",
                 "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
                 "boodi_banner_desc": "Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert halal-status en tipt gezondere alternatieven direct uit hetzelfde schap.",
@@ -1639,6 +1654,9 @@
                 const protVal = (food.nutrition?.protein || 0).toFixed(1);
                 const carbVal = (food.nutrition?.carbs || 0).toFixed(1);
                 const fatVal = ((food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0)).toFixed(1);
+                const cardGI = getKnownGI(food);
+                const cardGIHtml = cardGI === null ? '' : `
+                        <div class="card-gi"><span class="gi-num ${getGILevel(cardGI)}">GI ${cardGI}</span>${food.gi_status === 'reviewed' ? `<span class="gi-est">${t('gi_reviewed_badge')}</span>` : ''}</div>`;
 
                 return `
                     <a href="${foodPageHref(food.id)}" class="food-card" onclick="return openFoodModalFromCard(event, '${food.id}')">
@@ -1658,7 +1676,7 @@
     <div class="food-icon">${food.icon || '🍽️'}</div>
 `}
                         <h3 class="food-name">${foodTitle}</h3>
-                        <div style="text-align: center;"><span class="food-category">${catTitle}</span></div>
+                        <div style="text-align: center;"><span class="food-category">${catTitle}</span></div>${cardGIHtml}
                         <div class="food-stats">
                             <div class="stat-item">
                                 <div class="stat-label">${t('calories')}</div>
@@ -1699,6 +1717,13 @@
 
         function escapeHtml(value) {
             return String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+        }
+
+        // GI is shown when measured (Atkinson 2021) or a clinically reviewed estimate (labelled as such)
+        function getKnownGI(food) {
+            const gi = Number(food.gi);
+            if ((food.gi_status === 'measured' || food.gi_status === 'reviewed') && food.gi !== null && food.gi !== undefined && !isNaN(gi)) return gi;
+            return null;
         }
 
         function hasTestedII(food) {
@@ -1776,8 +1801,9 @@
 
             const n = food.nutrition || {};
             const unitGram = lang === 'ar' ? 'جم' : 'g';
-            const gi = Number(food.gi);
-            const giKnown = food.gi_status === 'measured' && food.gi !== null && food.gi !== undefined && !isNaN(gi);
+            const gi = getKnownGI(food);
+            const giKnown = gi !== null;
+            const giReviewed = giKnown && food.gi_status === 'reviewed';
             const giLevel = giKnown ? getGILevel(gi) : '';
             const iiTested = hasTestedII(food);
             const ii = Number(food.ii);
@@ -1788,7 +1814,7 @@
                     <div class="fm-card fm-index ${giLevel}">
                         <div class="fm-label">${t('modal_gi')}</div>
                         <div class="fm-value ${giKnown ? '' : 'untested'}">${giKnown ? gi : '—'}</div>
-                        ${giKnown ? `<span class="fm-level">${t('gi_' + giLevel)}</span>` : `<span class="fm-level">${t(food.gi_status === 'not_applicable' ? 'gi_not_applicable' : 'gi_not_available')}</span>`}
+                        ${giKnown ? `<span class="fm-level">${t('gi_' + giLevel)}</span>${giReviewed ? `<span class="fm-badge reviewed">${t('gi_reviewed_badge')}</span>` : ''}` : `<span class="fm-level">${t(food.gi_status === 'not_applicable' ? 'gi_not_applicable' : 'gi_not_available')}</span>`}
                     </div>
                     <div class="fm-card fm-index ${iiLevel}">
                         <div class="fm-label">${t('modal_ii')}</div>

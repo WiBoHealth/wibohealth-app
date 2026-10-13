@@ -21,3 +21,10 @@ screenshots/
 !/.well-known/security.txt
 # Page generator and its editable data (source only, not part of the site)
 scripts/
+# Secrets and signing keys must never be deployed
+*.jks
+*.keystore
+*.pem
+*.p12
+.env
+.env.*

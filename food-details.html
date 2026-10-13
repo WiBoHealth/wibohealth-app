@@ -395,6 +395,20 @@
             line-height: 1.5;
         }
         body.dark-mode .ii-tested-badge { color: #6ee7a8; }
+        .gi-reviewed-badge {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 3px 9px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.14);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            color: #64748b;
+            font-size: 0.68rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        body.dark-mode .gi-reviewed-badge { color: #cbd5e1; }
+        .reviewed-team-line { text-align: center; font-size: 0.85rem; font-weight: 700; color: var(--text-light); margin: 10px 0 0; }
         .stat-value.untested { color: var(--text-light); }
         /* GI status badge (measured level / not applicable / not available) */
         .gi-status-badge {
@@ -677,6 +691,7 @@
                 <h4 data-i18n="stat_gi">المؤشر الجلايسيمي</h4>
                 <div class="stat-value" id="giValue">-</div>
                 <span class="gi-status-badge neutral" id="giLabel"></span>
+                <span class="gi-reviewed-badge" id="giReviewedBadge" style="display: none;"></span>
             </div>
 
             <div class="stat-card">
@@ -782,7 +797,7 @@
 
         <!-- Scientific sources (documentation before the disclaimer) -->
         <div class="sources-stack">
-            <div class="gi-sources-box"><span data-i18n="gi_sources">📚 المراجع العلمية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).</span> <a class="sources-link" href="methodology.html" data-i18n="sources_more">المنهجية والتفاصيل ←</a></div>
+            <div class="gi-sources-box"><span id="giSourcesText" data-i18n="gi_sources">📚 المراجع العلمية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).</span> <a class="sources-link" href="methodology.html" data-i18n="sources_more">المنهجية والتفاصيل ←</a></div>
             <div class="gi-sources-box ii-sources-box" data-i18n="ii_sources">📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.</div>
         </div>
 
@@ -790,6 +805,7 @@
         <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">
             إخلاء مسؤولية: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.
         </div>
+        <p class="reviewed-team-line" data-i18n="reviewed_team">تمت مراجعته من قبل فريق ويبو هيلث الطبي</p>
         <p class="methodology-line"><span data-i18n="methodology_line">القيم مقاسة أو محسوبة وفق منهجية موثّقة</span> · <a href="methodology.html" data-i18n="methodology_link">المنهجية والمراجع العلمية</a></p>
     </main>
 
@@ -886,6 +902,10 @@
                 kcal_per_100g: "سعرة لكل 100 غ",
                 methodology_line: "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
                 methodology_link: "المنهجية والمراجع العلمية",
+                gi_reviewed_badge: "تقدير مراجع سريرياً",
+                chart_label_gi_reviewed: "المؤشر الجلايسيمي (تقدير)",
+                gi_sources_reviewed: "📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية.",
+                reviewed_team: "تمت مراجعته من قبل فريق ويبو هيلث الطبي",
                 sources_more: "المنهجية والتفاصيل ←",
                 ii_not_tested: "غير مختبر سريرياً",
                 ii_sources: "📚 مراجع مؤشر الإنسولين: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
@@ -945,6 +965,10 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Values are measured or calculated using a documented methodology",
                 methodology_link: "Methodology & scientific references",
+                gi_reviewed_badge: "Clinically reviewed estimate",
+                chart_label_gi_reviewed: "Glycemic Index (estimate)",
+                gi_sources_reviewed: "📚 The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the international tables.",
+                reviewed_team: "Reviewed by the WiBo Health medical team",
                 sources_more: "Methodology & details →",
                 ii_not_tested: "Not clinically tested",
                 ii_sources: "📚 Insulin Index sources: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
@@ -1004,6 +1028,10 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
                 methodology_link: "Methodologie & wetenschappelijke bronnen",
+                gi_reviewed_badge: "Klinisch beoordeelde schatting",
+                chart_label_gi_reviewed: "Glykemische Index (schatting)",
+                gi_sources_reviewed: "📚 De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale tabellen.",
+                reviewed_team: "Gecontroleerd door het medisch team van WiBo Health",
                 sources_more: "Methodologie & details →",
                 ii_not_tested: "Niet klinisch getest",
                 ii_sources: "📚 Bronnen insuline-index: Holt SH et al., Am J Clin Nutr 1997;66(5):1264–76 • Bao J et al., Am J Clin Nutr 2009;90(4):986–92.",
@@ -1159,15 +1187,19 @@ if (food.image) {
 
             // تحديث العنوان وميتا تاج لمحركات البحث
             const giMeasured = hasMeasuredGI(food);
+            const giReviewed = hasReviewedGI(food);
+            const giShown = giMeasured || giReviewed;
             const kcal = Math.round(food.nutrition?.calories || 0);
-            const pageTitle = giMeasured
+            const pageTitle = giShown
                 ? `${mainTitle} - ${t('stat_gi')}: ${food.gi} | WiBo Health`
                 : (food.gi_status === 'not_applicable'
                     ? `${mainTitle} - ${t('gi_title_na')} | WiBo Health`
                     : `${mainTitle} - ${kcal} ${t('kcal_per_100g')} | WiBo Health`);
             document.title = pageTitle;
             const iiMeta = hasTestedII(food) ? `, II ${food.ii}` : '';
-            const giMeta = giMeasured ? `GI ${food.gi} (Atkinson 2021), ` : (food.gi_status === 'not_applicable' ? `${t('gi_meta_na')}, ` : '');
+            const giMeta = giMeasured ? `GI ${food.gi} (Atkinson 2021), `
+                : (giReviewed ? `GI ${food.gi} (${t('gi_reviewed_badge')}), `
+                : (food.gi_status === 'not_applicable' ? `${t('gi_meta_na')}, ` : ''));
             const metaDescText = `${mainTitle} (${catName}): ${giMeta}${kcal} kcal, ${food.nutrition?.protein || 0}g protein, ${food.nutrition?.carbs || 0}g carbs${iiMeta}. WiBo Health Medical Team.`;
             
             const metaDesc = document.getElementById('metaDescription');
@@ -1182,7 +1214,13 @@ if (food.image) {
             // تحديث المؤشرات
             const giValueEl = document.getElementById('giValue');
             const giLabelEl = document.getElementById('giLabel');
-            if (giMeasured) {
+            const giReviewedBadgeEl = document.getElementById('giReviewedBadge');
+            giReviewedBadgeEl.textContent = t('gi_reviewed_badge');
+            giReviewedBadgeEl.style.display = giReviewed ? 'inline-block' : 'none';
+            const giSourcesEl = document.getElementById('giSourcesText');
+            giSourcesEl.setAttribute('data-i18n', giReviewed ? 'gi_sources_reviewed' : 'gi_sources');
+            giSourcesEl.textContent = t(giReviewed ? 'gi_sources_reviewed' : 'gi_sources');
+            if (giShown) {
                 giValueEl.textContent = food.gi;
                 giValueEl.className = 'stat-value ' + getGIClass(food.gi);
                 giLabelEl.textContent = getGIText(food.gi);
@@ -1232,6 +1270,11 @@ if (food.image) {
             return food.gi_status === 'measured' && typeof food.gi === 'number';
         }
 
+        // Clinically reviewed estimate: shown with its own badge, never attributed to Atkinson
+        function hasReviewedGI(food) {
+            return food.gi_status === 'reviewed' && typeof food.gi === 'number';
+        }
+
         function getGIClass(value) {
             if (value >= 70) return 'high';
             if (value > 55) return 'medium';
@@ -1278,7 +1321,7 @@ if (food.image) {
                 "name": title,
                 "category": category,
                 "url": `https://wibohealth.com/food-details.html?id=${food.id}`,
-                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : '')}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
+                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (clinically reviewed estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
                 "brand": {
                     "@type": "Organization",
                     "name": "WiBo Health Medical Team"
@@ -1342,8 +1385,8 @@ if (food.image) {
             const indexLabels = [];
             const indexData = [];
             const indexColors = [];
-            if (hasMeasuredGI(food)) {
-                indexLabels.push(t('chart_label_gi'));
+            if (hasMeasuredGI(food) || hasReviewedGI(food)) {
+                indexLabels.push(t(hasReviewedGI(food) ? 'chart_label_gi_reviewed' : 'chart_label_gi'));
                 indexData.push(food.gi);
                 indexColors.push(food.gi >= 70 ? '#e74c3c' : (food.gi > 55 ? '#f39c12' : '#2ecc71'));
             }
