@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,7 +116,7 @@
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.8;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         /* Slim Header 2.0 (Height: 60px) */
@@ -126,7 +129,7 @@
             z-index: 1000;
             display: flex;
             align-items: center;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .header-container {
@@ -173,7 +176,7 @@
             align-items: center;
             justify-content: center;
             font-size: 18px;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
         }
 
         body.dark-mode .lang-btn {
@@ -198,7 +201,7 @@
             align-items: center;
             justify-content: center;
             font-size: 16px;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
             color: var(--text-dark);
         }
 
@@ -224,7 +227,7 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
             box-shadow: 0 3px 10px rgba(46, 204, 113, 0.3);
         }
 
@@ -333,7 +336,7 @@
             gap: 12px;
             box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
             border: 2px solid #6ee7b7;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .btn-google-play:hover {
@@ -354,7 +357,7 @@
             align-items: center;
             gap: 10px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .btn-direct-apk:hover {
@@ -398,7 +401,7 @@
             padding: 30px 24px;
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             position: relative;
             overflow: hidden;
         }

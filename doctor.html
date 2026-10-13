@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,7 +143,7 @@
             color: var(--text-main);
             min-height: 100vh;
             line-height: 1.8;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         html[lang="en"] body, html[lang="nl"] body {
@@ -212,7 +215,7 @@
             border: 1px solid var(--border-color);
             color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
             font-size: 0.95rem;
         }
 
@@ -244,7 +247,7 @@
             font-weight: 600;
             border-radius: 9999px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
         }
 
         .lang-btn:hover { color: var(--text-main); }
@@ -268,7 +271,7 @@
             text-decoration: none;
             font-size: 0.88rem;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
         }
 
         .nav-link:hover, .nav-link.active {
@@ -406,7 +409,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px var(--primary-glow);
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
         }
 
         .boodi-cta-btn:hover {
@@ -480,7 +483,7 @@
             border-radius: var(--radius-sm);
             background: rgba(16, 185, 129, 0.1);
             border: 1px solid rgba(16, 185, 129, 0.25);
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
         }
 
         .support-email-link:hover {
@@ -505,7 +508,7 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
         }
 
         .back-home-btn:hover {
@@ -622,7 +625,7 @@
             color: var(--text-main);
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
         }
 
         .doctor-article-link i { color: var(--primary); }

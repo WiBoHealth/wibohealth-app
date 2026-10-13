@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +72,7 @@
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.85;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
         .site-header {
             background: var(--header-bg);
@@ -116,7 +119,7 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
         }
         body.dark-mode .lang-btn { background: rgba(255, 255, 255, 0.1); }
         .lang-btn.active {
@@ -136,7 +139,7 @@
             justify-content: center;
             font-size: 20px;
             color: var(--text-dark);
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
         }
         body.dark-mode .theme-toggle {
             background: rgba(255, 255, 255, 0.1);
@@ -154,7 +157,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
         .article-wrapper {
             max-width: 880px;
@@ -303,7 +306,7 @@
             gap: 10px;
             margin-top: 15px;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
         .support-cta-btn:hover {
             transform: translateY(-2px);

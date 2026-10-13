@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -204,7 +207,13 @@
                 'trust_btn': 'تعرّف على الطبيب المشرف',
                 'footer_doctor': 'الطبيب المشرف',
                 'footer_delete_account': 'حذف الحساب والبيانات',
-                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة.'
+                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة.',
+                'pulse_badge': '⚡ نبض ويبو هيلث',
+                'pulse_foods': 'دليل المؤشر الجلايسيمي: أكثر من 300 صنف غذائي مراجَع من الفريق الطبي',
+                'pulse_boodi': 'تطبيق بودي: امسح الباركود وافحص الحلال والبدائل الصحية',
+                'pulse_tracker': 'متتبع السعرات الحرارية والماكروز التفاعلي',
+                'pulse_thyroid': 'دليل صحة الغدة الدرقية: سر الأيض البطيء الخفي',
+                'pulse_diet': 'خطة الحمية الغذائية المخصصة'
             },
             en: {
                 'nav_home': 'Home',
@@ -307,7 +316,13 @@
                 'trust_btn': 'Meet our medical lead',
                 'footer_doctor': 'Medical Lead',
                 'footer_delete_account': 'Delete Account',
-                'footer_rights': '© 2026 WiBo Health. All rights reserved.'
+                'footer_rights': '© 2026 WiBo Health. All rights reserved.',
+                'pulse_badge': '⚡ Highlights',
+                'pulse_foods': 'Glycemic Index guide: 300+ foods reviewed by our medical team',
+                'pulse_boodi': 'boodi app: scan barcodes, check halal status and find healthier swaps',
+                'pulse_tracker': 'Interactive calorie & macro tracker',
+                'pulse_thyroid': 'Thyroid health guide: the hidden slow metabolism',
+                'pulse_diet': 'Personalised diet plan'
             },
             nl: {
                 'nav_home': 'Home',
@@ -410,7 +425,13 @@
                 'trust_btn': 'Maak kennis met onze arts',
                 'footer_doctor': 'Medisch verantwoordelijke',
                 'footer_delete_account': 'Account Verwijderen',
-                'footer_rights': '© 2026 WiBo Health. Alle rechten voorbehouden.'
+                'footer_rights': '© 2026 WiBo Health. Alle rechten voorbehouden.',
+                'pulse_badge': '⚡ Uitgelicht',
+                'pulse_foods': 'Glykemische-indexgids: 300+ voedingsmiddelen beoordeeld door ons medisch team',
+                'pulse_boodi': 'boodi-app: scan barcodes, check of iets halal is en vind gezondere alternatieven',
+                'pulse_tracker': 'Interactieve calorie- en macroteller',
+                'pulse_thyroid': 'Gids schildkliergezondheid: de verborgen trage stofwisseling',
+                'pulse_diet': 'Persoonlijk dieetplan'
             }
         };
 
@@ -497,13 +518,121 @@
             background: var(--primary-gradient);
             min-height: 100vh;
             color: var(--hero-text);
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .container {
             max-width: 1250px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        /* ===== Modern Pulse Ticker ===== */
+        .pulse-ticker {
+            --pulse-h: 52px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: var(--pulse-h);
+            width: calc(100% - 32px);
+            max-width: 1210px;
+            margin: 14px auto 0;
+            padding: 0 8px;
+            background: rgba(15, 23, 42, 0.55);
+            -webkit-backdrop-filter: blur(14px) saturate(140%);
+            backdrop-filter: blur(14px) saturate(140%);
+            border: 1px solid rgba(94, 234, 212, 0.28);
+            border-radius: 999px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+            overflow: hidden;
+            contain: layout paint;
+        }
+        .pulse-badge {
+            flex: 0 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #14b8a6, #10b981);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.88rem;
+            white-space: nowrap;
+            box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.55);
+            animation: pulse-glow 2.4s ease-out infinite;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.55); }
+            70%, 100% { box-shadow: 0 0 0 10px rgba(45, 212, 191, 0); }
+        }
+        /* the moving strip is always laid out left-to-right; only its direction of travel changes per language */
+        .pulse-viewport {
+            flex: 1 1 auto;
+            min-width: 0;
+            height: 100%;
+            overflow: hidden;
+            direction: ltr;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+        }
+        .pulse-track {
+            display: flex;
+            width: max-content;
+            height: 100%;
+            will-change: transform;
+            animation: pulse-to-right 70s linear infinite;
+        }
+        :root[dir="rtl"] .pulse-track { animation-name: pulse-to-left; }
+        .pulse-ticker:hover .pulse-track,
+        .pulse-ticker:focus-within .pulse-track,
+        .pulse-ticker:active .pulse-track { animation-play-state: paused; }
+        @keyframes pulse-to-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes pulse-to-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+        .pulse-set {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-inline-end: 12px;
+        }
+        .pulse-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(94, 234, 212, 0.22);
+            color: #e2fdf8;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
+            text-decoration: none;
+            direction: inherit;
+            transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+        }
+        :root[dir="rtl"] .pulse-pill { direction: rtl; }
+        .pulse-pill:hover,
+        .pulse-pill:focus-visible {
+            background: rgba(45, 212, 191, 0.2);
+            border-color: rgba(94, 234, 212, 0.65);
+            color: #fff;
+            transform: translateY(-1px);
+            outline: none;
+        }
+        .pulse-ico { font-size: 1.05rem; line-height: 1; }
+        body.dark-mode .pulse-ticker { background: rgba(2, 6, 23, 0.55); }
+        @media (max-width: 768px) {
+            .pulse-ticker { --pulse-h: 46px; width: calc(100% - 24px); margin-top: 10px; gap: 8px; padding: 0 6px; }
+            .pulse-badge { padding: 6px 11px; font-size: 0.78rem; }
+            .pulse-pill { padding: 6px 13px; font-size: 0.82rem; }
+            .pulse-track { animation-duration: 55s; }
+        }
+        /* people who ask for less motion get a still strip they can swipe instead */
+        @media (prefers-reduced-motion: reduce) {
+            .pulse-track { animation: none; }
+            .pulse-viewport { overflow-x: auto; scrollbar-width: none; }
+            .pulse-set[aria-hidden="true"] { display: none; }
         }
 
        /* Modern Slim Header 2.0 */
@@ -514,7 +643,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         header.hide-nav {
@@ -563,6 +692,12 @@
             line-height: 1.2;
         }
 
+        /* desktop: keep the name on one line (wrapping made the header jump when the Cairo font loaded) */
+        @media (min-width: 993px) {
+            .logo { flex-shrink: 0; }
+            .logo-text h1 { white-space: nowrap; }
+        }
+
         .logo-text p {
             display: none;
         }
@@ -584,7 +719,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
         }
 
         body.dark-mode .lang-btn {
@@ -609,7 +744,7 @@
             align-items: center;
             justify-content: center;
             color: var(--text-dark);
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
         }
 
         body.dark-mode .theme-toggle {
@@ -624,14 +759,20 @@
         }
 
         .nav-link {
-            padding: 8px 16px;
+            /* fixed height: the header must not grow when the Cairo web font swaps in (layout shift) */
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            height: 36px;
+            line-height: 1;
+            padding: 0 16px;
             font-size: 13px;
             font-weight: 700;
             border-radius: 20px;
             background: #f3f4f6;
             color: var(--text-dark);
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
             white-space: nowrap;
         }
 
@@ -644,6 +785,22 @@
             background: linear-gradient(135deg, #2ecc71, #27ae60);
             color: white;
             transform: translateY(-2px);
+        }
+
+        /* mid-size screens: keep the full desktop menu on one row without horizontal scrolling */
+        @media (max-width: 1320px) {
+            .nav-menu { gap: 6px; }
+            .nav-link { padding: 0 11px; }
+        }
+        @media (max-width: 1200px) {
+            .nav-link i { display: none; }
+            .nav-link { padding: 0 10px; font-size: 12.5px; }
+            .header-controls { gap: 6px; }
+        }
+        @media (max-width: 1100px) {
+            .nav-menu { gap: 4px; }
+            .nav-link { padding: 0 8px; font-size: 12px; }
+            .logo-text h1 { font-size: 19px; }
         }
 
         @media (max-width: 992px) {
@@ -663,7 +820,7 @@
             align-items: center;
             gap: 20px;
             box-shadow: 0 12px 45px rgba(190, 24, 93, 0.4);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -722,7 +879,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 20px rgba(225, 29, 72, 0.5);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             white-space: nowrap;
             border: 2px solid rgba(255, 255, 255, 0.6);
             font-family: 'Cairo', sans-serif;
@@ -746,7 +903,7 @@
             align-items: center;
             gap: 20px;
             box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -811,7 +968,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             white-space: nowrap;
             border: 2px solid rgba(255, 255, 255, 0.3);
             font-family: 'Cairo', sans-serif;
@@ -828,7 +985,7 @@
             align-items: center;
             gap: 20px;
             box-shadow: 0 10px 40px rgba(16, 185, 129, 0.4);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -885,7 +1042,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             white-space: nowrap;
             font-family: 'Cairo', sans-serif;
         }
@@ -907,7 +1064,7 @@
             z-index: 99999;
             text-decoration: none;
             border: 2px solid white;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             font-family: 'Cairo', sans-serif;
         }
 
@@ -969,7 +1126,7 @@
             text-align: right;
             position: relative;
             cursor: pointer;
-            transition: all 0.3s ease !important;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease !important;
             background: rgba(28, 37, 65, 0.85) !important;
             border: 2px solid rgba(0, 196, 159, 0.5) !important;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -1052,7 +1209,7 @@
             cursor: pointer;
             margin-top: 30px;
             box-shadow: 0 8px 25px rgba(46, 204, 113, 0.4);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             font-family: 'Cairo', sans-serif;
             display: inline-flex;
             align-items: center;
@@ -1072,7 +1229,7 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .feature-icon {
@@ -1136,7 +1293,7 @@
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.2rem;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             display: inline-flex;
             align-items: center;
@@ -1246,12 +1403,12 @@
                 <!-- Navigation Desktop -->
                 <nav class="nav-menu">
                     <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
-                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">الأطعمة</span></a>
+                    <a href="foods.html" class="nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
                     <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
                     <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
                     <a href="articles.html" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
-                    <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات</span></a>
-                    <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
+                    <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
+                    <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
                 </nav>
 
                 <!-- Controls & Mobile Toggle -->
@@ -1292,6 +1449,29 @@
         <a href="diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #2ecc71, #27ae60); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">احصل على دايت مجاني 🎁</span></a>
         <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">اتصل بنا</span></a>
     </nav>
+
+    <!-- Modern Pulse Ticker: pure-CSS marquee under the header (fixed height = no layout shift) -->
+    <div class="pulse-ticker" role="region" aria-label="WiBo Health highlights">
+        <span class="pulse-badge" data-i18n="pulse_badge">⚡ نبض ويبو هيلث</span>
+        <div class="pulse-viewport">
+            <div class="pulse-track">
+                <div class="pulse-set">
+                    <a href="foods.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🥗</span><span data-i18n="pulse_foods">دليل المؤشر الجلايسيمي: أكثر من 300 صنف غذائي مراجَع من الفريق الطبي</span></a>
+                    <a href="boodi.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📱</span><span data-i18n="pulse_boodi">تطبيق بودي: امسح الباركود وافحص الحلال والبدائل الصحية</span></a>
+                    <a href="calorie-tracker.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🧮</span><span data-i18n="pulse_tracker">متتبع السعرات الحرارية والماكروز التفاعلي</span></a>
+                    <a href="thyroid-health.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🦋</span><span data-i18n="pulse_thyroid">دليل صحة الغدة الدرقية: سر الأيض البطيء الخفي</span></a>
+                    <a href="diet-plan.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📋</span><span data-i18n="pulse_diet">خطة الحمية الغذائية المخصصة</span></a>
+                </div>
+                <div class="pulse-set" aria-hidden="true">
+                    <a href="foods.html" class="pulse-pill" tabindex="-1"><span class="pulse-ico" aria-hidden="true">🥗</span><span data-i18n="pulse_foods">دليل المؤشر الجلايسيمي: أكثر من 300 صنف غذائي مراجَع من الفريق الطبي</span></a>
+                    <a href="boodi.html" class="pulse-pill" tabindex="-1"><span class="pulse-ico" aria-hidden="true">📱</span><span data-i18n="pulse_boodi">تطبيق بودي: امسح الباركود وافحص الحلال والبدائل الصحية</span></a>
+                    <a href="calorie-tracker.html" class="pulse-pill" tabindex="-1"><span class="pulse-ico" aria-hidden="true">🧮</span><span data-i18n="pulse_tracker">متتبع السعرات الحرارية والماكروز التفاعلي</span></a>
+                    <a href="thyroid-health.html" class="pulse-pill" tabindex="-1"><span class="pulse-ico" aria-hidden="true">🦋</span><span data-i18n="pulse_thyroid">دليل صحة الغدة الدرقية: سر الأيض البطيء الخفي</span></a>
+                    <a href="diet-plan.html" class="pulse-pill" tabindex="-1"><span class="pulse-ico" aria-hidden="true">📋</span><span data-i18n="pulse_diet">خطة الحمية الغذائية المخصصة</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div class="container">

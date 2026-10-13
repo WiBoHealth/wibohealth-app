@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -135,7 +138,7 @@
             min-height: 100vh;
             line-height: 1.6;
             overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         html[lang="en"] body, html[lang="nl"] body {
@@ -207,7 +210,7 @@
             border: 1px solid var(--border-color);
             color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
             font-size: 0.95rem;
         }
 
@@ -239,7 +242,7 @@
             font-weight: 600;
             border-radius: 9999px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
         }
 
         .lang-btn:hover {
@@ -265,7 +268,7 @@
             text-decoration: none;
             font-size: 0.88rem;
             font-weight: 600;
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
         }
 
         .nav-link:hover, .nav-link.active {
@@ -342,7 +345,7 @@
             font-weight: 700;
             border-radius: var(--radius-md);
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: background-color 0.25s cubic-bezier(0.4, color 0.25s cubic-bezier(0.4, border-color 0.25s cubic-bezier(0.4, opacity 0.25s cubic-bezier(0.4, transform 0.25s cubic-bezier(0.4, top 0.25s cubic-bezier(0.4, right 0.25s cubic-bezier(0.4, bottom 0.25s cubic-bezier(0.4, left 0.25s cubic-bezier(0.4, width 0.25s cubic-bezier(0.4, height 0.25s cubic-bezier(0.4, max-height 0.25s cubic-bezier(0.4, visibility 0.25s cubic-bezier(0.4;
             font-family: inherit;
         }
 
@@ -447,7 +450,7 @@
             color: var(--text-main);
             font-size: 1rem;
             font-family: inherit;
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
             outline: none;
         }
 
@@ -466,7 +469,7 @@
             font-size: 1.05rem;
             font-weight: 800;
             cursor: pointer;
-            transition: all 0.25s;
+            transition: background-color 0.25s, color 0.25s, border-color 0.25s, opacity 0.25s, transform 0.25s, top 0.25s, right 0.25s, bottom 0.25s, left 0.25s, width 0.25s, height 0.25s, max-height 0.25s, visibility 0.25s;
             font-family: inherit;
             display: flex;
             align-items: center;
@@ -636,7 +639,7 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: var(--radius-md);
-            transition: all 0.2s;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
             box-shadow: 0 4px 14px var(--primary-glow);
         }
 

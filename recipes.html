@@ -28,6 +28,9 @@
             } catch (e) { h.classList.remove('lang-loading'); }
         })(document);
     </script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,7 +103,7 @@
             font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
             min-height: 100vh;
-            transition: all 0.3s ease;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         /* Dark Mode */
@@ -129,7 +132,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
         
         /* Auto-hide for navigation */
@@ -194,7 +197,7 @@
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
             color: var(--text-dark);
             font-weight: 600;
         }
@@ -224,7 +227,7 @@
             text-decoration: none;
             border-radius: 20px;
             font-weight: 600;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
             font-size: 14px;
         }
 
@@ -315,7 +318,7 @@
             border-radius: 10px;
             font-size: 16px;
             font-family: 'Cairo', sans-serif;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
             background: var(--card-bg);
             color: var(--text-dark);
         }
@@ -342,7 +345,7 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px var(--shadow);
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
         }
 
         .recipe-card:hover {
@@ -406,7 +409,7 @@
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
             font-family: 'Cairo', sans-serif;
         }
 
@@ -479,7 +482,7 @@
             color: white;
             font-size: 24px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s, transform 0.3s, top 0.3s, right 0.3s, bottom 0.3s, left 0.3s, width 0.3s, height 0.3s, max-height 0.3s, visibility 0.3s;
         }
 
         .modal-close:hover {
@@ -664,7 +667,7 @@
             display: flex;
             align-items: center;
             padding: 0 30px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
         }
 
         .recipe-search-box:focus-within {
@@ -704,7 +707,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
             padding: 0;
             box-shadow: 0 2px 10px rgba(231, 76, 60, 0.3);
         }

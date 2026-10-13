@@ -1158,6 +1158,10 @@ def build(food, lang, ctx):
     <script>
         try {{ document.documentElement.setAttribute('data-theme', localStorage.getItem('wibo_theme') || 'dark'); }} catch (e) {{}}
     </script>
+    <!-- Theme-switch guard: while light/dark flips, pause every transition except the page background and text colour (0.2s),
+         so cards, blur and shadows are not animated (removes the toggle lag) -->
+    <style>html.theme-switching *,html.theme-switching *::before,html.theme-switching *::after{{transition:none!important}}html.theme-switching body{{transition:background-color .2s ease,color .2s ease!important}}</style>
+    <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-switching');clearTimeout(window.__tsw);window.__tsw=setTimeout(function(){{h.classList.remove('theme-switching')}},260)}},true);</script>
     <style>
 {BASE_CSS}{PAGE_CSS}    </style>
 </head>
