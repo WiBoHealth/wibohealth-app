@@ -600,7 +600,7 @@
                     </button>
 
                     <!-- Language Toggle -->
-                    <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                    <button class="lang-toggle" id="langToggle" onclick="changeLanguage(nextLang())" title="تبديل اللغة">
                         <span id="langText">EN</span>
                     </button>
                 </div>
@@ -891,7 +891,22 @@
 
     <script>
         // ===== Language System =====
-        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+        const LANGS = ['ar', 'en', 'nl'];
+        function savedLang() {
+            const q = new URLSearchParams(window.location.search).get('lang');
+            return [q, localStorage.getItem('preferred_language'), localStorage.getItem('wibo_language')]
+                .find(l => LANGS.includes(l)) || 'ar';
+        }
+        let currentLang = savedLang();
+
+        // pick the text for the current language
+        function L(ar, en, nl) {
+            return currentLang === 'ar' ? ar : (currentLang === 'nl' ? nl : en);
+        }
+        // language toggle cycles ar -> en -> nl -> ar
+        function nextLang() {
+            return L('en', 'nl', 'ar');
+        }
 
         // Complete translations for both languages
         const translations = {
@@ -1066,6 +1081,92 @@
                 footer_copyright: "© 2024 WiBo Health. All rights reserved.",
                 footer_made_with: "Developed with",
                 footer_for_body: "for your body"
+            },
+            nl: {
+                page_title_pricing: "Abonnementen - WiBo Health",
+                nav_home: "Home",
+                nav_foods: "Voedingswijzer",
+                nav_calculators: "Rekenhulpen",
+                nav_recipes: "Recepten",
+                nav_articles: "Artikelen",
+                nav_doctor: "Consulten",
+                nav_pricing: "Prijzen",
+                nav_about: "Over ons",
+                nav_contact: "Contact",
+                pricing_hero_title: "Kies je abonnement",
+                pricing_hero_subtitle: "Begin je gezondheidsreis met WiBo Health",
+                pricing_notice_label: "Let op:",
+                pricing_notice_text: "Betaalde abonnementen omvatten persoonlijke medische consulten en individuele plannen op maat. Neem voor details over de dienstverlening en de specialisten rechtstreeks contact met ons op.",
+                pricing_per_month: "/maand",
+                pricing_free_name: "Gratis abonnement",
+                pricing_free_desc: "Ideaal voor beginners die het platform willen verkennen",
+                pricing_free_feature_1: "Database met 50 voedingsmiddelen",
+                pricing_free_feature_2: "Basiszoekfunctie",
+                pricing_free_feature_3: "BMI-calculator",
+                pricing_free_feature_4: "10 gezonde recepten",
+                pricing_free_feature_5: "Interactieve grafieken",
+                pricing_free_feature_6: "Maaltijdplannen op maat",
+                pricing_free_feature_7: "Persoonlijke medische consulten",
+                pricing_free_btn: "Gratis beginnen",
+                pricing_premium_name: "Premium-abonnement",
+                pricing_premium_desc: "Voor wie serieus werk wil maken van een gezondere leefstijl",
+                pricing_premium_feature_1: "Database met 505 voedingsmiddelen",
+                pricing_premium_feature_2: "Geavanceerd zoeken en slimme filters",
+                pricing_premium_feature_3: "Alle gezondheidscalculators",
+                pricing_premium_feature_4: "+50 gezonde recepten",
+                pricing_premium_feature_5: "Interactieve grafieken",
+                pricing_premium_feature_6: "Maaltijdplannen op maat",
+                pricing_premium_feature_7: "Dagelijkse tips",
+                pricing_premium_feature_8: "24/7 technische ondersteuning",
+                pricing_premium_feature_9: "20% korting op medische consulten",
+                pricing_pro_name: "Professioneel abonnement",
+                pricing_pro_desc: "Voor een complete ervaring met medische begeleiding",
+                pricing_pro_feature_1: "Alle Premium-functies",
+                pricing_pro_feature_2: "Maandelijks medisch consult",
+                pricing_pro_feature_3: "Gedetailleerd maaltijdplan",
+                pricing_pro_feature_4: "Wekelijkse opvolging",
+                pricing_pro_feature_5: "Maandelijkse voortgangsrapporten",
+                pricing_pro_feature_6: "Directe ondersteuning via WhatsApp",
+                pricing_pro_feature_7: "Voorrang bij het maken van afspraken",
+                pricing_subscribe_btn: "Nu abonneren",
+                pricing_comparison_title: "Abonnementen vergelijken",
+                pricing_table_feature: "Functie",
+                pricing_table_food_db: "Voedingsdatabase",
+                pricing_table_free_foods: "50 voedingsmiddelen",
+                pricing_table_premium_foods: "505 voedingsmiddelen",
+                pricing_table_pro_foods: "505 voedingsmiddelen",
+                pricing_table_recipes: "Gezonde recepten",
+                pricing_table_free_recipes: "10 recepten",
+                pricing_table_premium_recipes: "50+ recepten",
+                pricing_table_pro_recipes: "50+ recepten",
+                pricing_table_calculators: "Gezondheidscalculators",
+                pricing_table_charts: "Grafieken",
+                pricing_table_meal_plans: "Maaltijdplannen",
+                pricing_table_consultation: "Persoonlijk medisch consult",
+                pricing_table_discount_20: "20% korting",
+                pricing_table_monthly: "Maandelijks",
+                pricing_table_support: "Technische ondersteuning",
+                pricing_table_email: "E-mail",
+                pricing_table_24_7: "24/7",
+                pricing_table_whatsapp: "Direct via WhatsApp",
+                pricing_faq_title: "Veelgestelde vragen",
+                pricing_faq_q1: "Kan ik later van abonnement wisselen?",
+                pricing_faq_a1: "Ja, je kunt je abonnement op elk moment upgraden of downgraden. Wijzigingen gaan direct in.",
+                pricing_faq_q2: "Zit ik ergens lang aan vast?",
+                pricing_faq_a2: "Nee, al onze abonnementen zijn maandelijks en je kunt op elk moment opzeggen zonder extra kosten.",
+                pricing_faq_q3: "Hoe krijg ik het maandelijkse consult in het professionele abonnement?",
+                pricing_faq_a3: "Na het afsluiten ontvang je een link om je maandelijkse medische consult te boeken.",
+                pricing_faq_q4: "Zijn mijn gegevens veilig?",
+                pricing_faq_a4: "Ja, we gebruiken de hoogste beveiligingsstandaarden om je persoonlijke en gezondheidsgegevens te beschermen.",
+                pricing_faq_q5: "Kan ik een betaald abonnement eerst uitproberen?",
+                pricing_faq_a5: "Ja, we bieden een gratis proefperiode van 7 dagen voor zowel het Premium- als het Professionele abonnement.",
+                footer_about: "Over ons",
+                footer_contact: "Contact",
+                footer_privacy: "Privacybeleid",
+                footer_terms: "Gebruiksvoorwaarden",
+                footer_copyright: "© 2024 WiBo Health. Alle rechten voorbehouden.",
+                footer_made_with: "Ontwikkeld met",
+                footer_for_body: "voor je lichaam"
             }
         };
 
@@ -1078,6 +1179,7 @@
         function changeLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('wibo_language', lang);
+            localStorage.setItem('preferred_language', lang);
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             updatePageLanguage();
@@ -1089,7 +1191,7 @@
             document.title = t('page_title_pricing');
 
             // Update language button
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+            document.getElementById('langText').textContent = L('EN', 'NL', 'AR');
 
             // Update all elements with data-i18n
             document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -1105,7 +1207,7 @@
             // Update featured card label
             const featuredCard = document.querySelector('.pricing-card.featured');
             if (featuredCard) {
-                const label = currentLang === 'ar' ? 'الأكثر شعبية' : 'Most Popular';
+                const label = L('الأكثر شعبية', 'Most Popular', 'Meest gekozen');
                 featuredCard.setAttribute('data-label', label);
             }
         }
@@ -1135,7 +1237,7 @@
 
         // Initialize language
         function initializeLanguage() {
-            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            currentLang = savedLang();
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             
@@ -1146,14 +1248,15 @@
         // Subscribe function
         function subscribe(plan) {
             const plans = {
-                free: currentLang === 'ar' ? 'الخطة المجانية' : 'Free Plan',
-                premium: currentLang === 'ar' ? 'الخطة البريميوم - $4.99/شهر' : 'Premium Plan - $4.99/month',
-                pro: currentLang === 'ar' ? 'الخطة الاحترافية - $12.99/شهر' : 'Professional Plan - $12.99/month'
+                free: L('الخطة المجانية', 'Free Plan', 'Gratis abonnement'),
+                premium: L('الخطة البريميوم - $4.99/شهر', 'Premium Plan - $4.99/month', 'Premium-abonnement - $4.99/maand'),
+                pro: L('الخطة الاحترافية - $12.99/شهر', 'Professional Plan - $12.99/month', 'Professioneel abonnement - $12.99/maand')
             };
 
-            const message = currentLang === 'ar' 
-                ? `شكراً لاختيارك ${plans[plan]}!\n\nسيتم تحويلك إلى صفحة الدفع...`
-                : `Thank you for choosing ${plans[plan]}!\n\nYou will be redirected to the payment page...`;
+            const message = L(
+                `شكراً لاختيارك ${plans[plan]}!\n\nسيتم تحويلك إلى صفحة الدفع...`,
+                `Thank you for choosing ${plans[plan]}!\n\nYou will be redirected to the payment page...`,
+                `Bedankt voor je keuze voor ${plans[plan]}!\n\nJe wordt doorgestuurd naar de betaalpagina...`);
             
             alert(message);
         }

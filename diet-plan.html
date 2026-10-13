@@ -563,7 +563,7 @@
                 </button>
 
                 <!-- Language Toggle -->
-                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(currentLang === 'ar' ? 'en' : 'ar')" title="تبديل اللغة">
+                <button class="lang-toggle" id="langToggle" onclick="changeLanguage(nextLang())" title="تبديل اللغة">
                     <span id="langText">EN</span>
                 </button>
             </div>
@@ -855,7 +855,22 @@
 
     <script>
         // ===== Language System =====
-        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+        const LANGS = ['ar', 'en', 'nl'];
+        function savedLang() {
+            const q = new URLSearchParams(window.location.search).get('lang');
+            return [q, localStorage.getItem('preferred_language'), localStorage.getItem('wibo_language')]
+                .find(l => LANGS.includes(l)) || 'ar';
+        }
+        let currentLang = savedLang();
+
+        // pick the text for the current language
+        function L(ar, en, nl) {
+            return currentLang === 'ar' ? ar : (currentLang === 'nl' ? nl : en);
+        }
+        // language toggle cycles ar -> en -> nl -> ar
+        function nextLang() {
+            return L('en', 'nl', 'ar');
+        }
 
         // Complete translations for both languages
         const translations = {
@@ -1016,6 +1031,85 @@
                 diet_progress_2: "Excellent! Halfway there 🎯",
                 diet_progress_3: "Almost done! 🌟",
                 diet_success: "✅ Done! We'll contact you soon 💚"
+            },
+            nl: {
+                page_title_diet_plan: "Begin je gezondheidsreis - WiBo Health",
+                diet_hero_title: "🌟 Begin je reis naar een betere gezondheid",
+                diet_hero_subtitle: "Met dr. Wassim Habib - specialist klinische voeding",
+                diet_hero_greeting: "Welkom! 💚",
+                diet_hero_intro_1: "We helpen je je gezondheidsdoelen veilig en effectief te bereiken.",
+                diet_hero_intro_2: "Laten we je beter leren kennen, zodat we een voedingsplan kunnen maken dat 100% op jouw behoeften is afgestemd!",
+                diet_hero_special: "✨ Eerste consult en eerste dieetweek helemaal gratis!",
+                diet_pricing_title: "💰 Dieetplannen",
+                diet_free_week: "🎁 Gratis dieetweek - voor iedereen!",
+                diet_per_month: "/maand",
+                diet_plan_1_title: "📌 Afvaldieet",
+                diet_plan_1_feature_1: "• Weekelijks maaltijdplan",
+                diet_plan_1_feature_2: "• Gedetailleerde boodschappenlijst",
+                diet_plan_1_feature_3: "• Wekelijkse opvolging",
+                diet_plan_1_feature_4: "• Aanpassingen op basis van je voortgang",
+                diet_plan_2_title: "🏥 Medisch dieet",
+                diet_plan_2_feature_1: "• Voor mensen met een chronische aandoening",
+                diet_plan_2_feature_2: "• Persoonlijk afgestemd voedingsplan",
+                diet_plan_2_feature_3: "• Dagelijkse/wekelijkse opvolging",
+                diet_plan_2_feature_4: "• Consulten via WhatsApp",
+                diet_discount_title: "🔥 Speciale aanbieding: 20% korting bij een abonnement van 3 maanden!",
+                diet_discount_text: "• Regulier dieet 3 maanden: <strong>$120</strong> in plaats van $150 (bespaar $30)<br>• Medisch dieet 3 maanden: <strong>$240</strong> in plaats van $300 (bespaar $60)",
+                diet_form_title: "📋 Vertel ons over jezelf",
+                diet_personal_info: "Persoonlijke gegevens",
+                diet_label_name: "Hoe heet je? 😊",
+                diet_label_age: "Hoe oud ben je?",
+                diet_label_gender: "Geslacht",
+                diet_gender_male: "Man 👨",
+                diet_gender_female: "Vrouw 👩",
+                diet_label_whatsapp: "WhatsApp-nummer 📱",
+                diet_helper_whatsapp: "We nemen contact met je op via WhatsApp",
+                diet_label_email: "E-mail (optioneel) 📧",
+                diet_health_info: "Gezondheidsinformatie",
+                diet_label_weight: "Wat is je huidige gewicht? (kg) ⚖️",
+                diet_label_height: "Hoe lang ben je? (cm) 📏",
+                diet_label_target_weight: "Wat is je streefgewicht? (kg) 🎯",
+                diet_activity_title: "Hoe actief ben je dagelijks?",
+                diet_activity_sedentary: "Zittend<br>(kantoorbaan) 🪑",
+                diet_activity_light: "Licht actief<br>(1-3 dagen) 🚶",
+                diet_activity_moderate: "Matig actief<br>(3-5 dagen) 🏃",
+                diet_activity_high: "Zeer actief<br>(6-7 dagen) 💪",
+                diet_goal_title: "Wat is je doel?",
+                diet_goal_lose: "Afvallen 📉",
+                diet_goal_gain: "Aankomen 📈",
+                diet_goal_maintain: "Gewicht behouden ➡️",
+                diet_goal_muscle: "Spieren opbouwen 💪",
+                diet_conditions_title: "Heb je een chronische aandoening?",
+                diet_conditions_none: "Geen ✅",
+                diet_conditions_diabetes: "Diabetes 🩸",
+                diet_conditions_pressure: "Bloeddruk 💓",
+                diet_conditions_cholesterol: "Cholesterol 🧪",
+                diet_conditions_ibs: "Prikkelbare darm 🤕",
+                diet_conditions_thyroid: "Schildklier 🦋",
+                diet_label_other_conditions: "Andere aandoeningen (indien van toepassing)",
+                diet_allergies_title: "Allergieën en medicatie",
+                diet_label_allergies: "Heb je voedselallergieën? 🚫",
+                diet_helper_allergies: "Geen allergieën? Schrijf dan 'Geen'",
+                diet_label_medications: "Gebruik je medicijnen? 💊",
+                diet_helper_medications: "Geen medicijnen? Schrijf dan 'Geen'",
+                diet_preferences_title: "Je voedingsvoorkeuren",
+                diet_label_diet_type: "Heb je een voorkeur voor een bepaald dieet? 🥗",
+                diet_type_balanced: "Evenwichtig ⚖️",
+                diet_type_vegetarian: "Vegetarisch 🥬",
+                diet_type_lowcarb: "Koolhydraatarm 🥩",
+                diet_type_keto: "Keto 🥑",
+                diet_label_favorites: "Wat eet je graag ❤️",
+                diet_label_dislikes: "Wat lust je niet ❌",
+                diet_submit_btn: "Start mijn gezondheidsreis! 🚀",
+                diet_back_home: "Terug naar home",
+                bmi_underweight: "Ondergewicht",
+                bmi_normal: "Gezond gewicht",
+                bmi_overweight: "Overgewicht",
+                bmi_obese: "Obesitas",
+                diet_progress_1: "Goed bezig! Ga zo door 💪",
+                diet_progress_2: "Uitstekend! Je bent halverwege 🎯",
+                diet_progress_3: "Bijna klaar! 🌟",
+                diet_success: "✅ Klaar! We nemen snel contact met je op 💚"
             }
         };
 
@@ -1028,6 +1122,7 @@
         function changeLanguage(lang) {
             currentLang = lang;
             localStorage.setItem('wibo_language', lang);
+            localStorage.setItem('preferred_language', lang);
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
             updatePageLanguage();
@@ -1036,7 +1131,7 @@
         // Update page language
         function updatePageLanguage() {
             document.title = t('page_title_diet_plan');
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'AR';
+            document.getElementById('langText').textContent = L('EN', 'NL', 'AR');
 
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -1079,7 +1174,7 @@
 
         // Initialize language
         function initializeLanguage() {
-            currentLang = localStorage.getItem('wibo_language') || 'ar';
+            currentLang = savedLang();
             document.documentElement.lang = currentLang;
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             
@@ -1126,7 +1221,7 @@
                     emoji = '😔';
                 }
 
-                bmiResult.innerHTML = `${emoji} ${currentLang === 'ar' ? 'مؤشر كتلة الجسم (BMI)' : 'BMI'}: <strong>${bmi}</strong> - ${category}`;
+                bmiResult.innerHTML = `${emoji} ${L('مؤشر كتلة الجسم (BMI)', 'BMI', 'BMI')}: <strong>${bmi}</strong> - ${category}`;
                 bmiResult.style.display = 'block';
             }
         }

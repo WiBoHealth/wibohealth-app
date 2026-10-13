@@ -350,6 +350,7 @@
             </a>
             <div class="header-controls">
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
@@ -492,7 +493,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي</p>
-        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;" data-i18n="footer_made_with">💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي</p>
     </footer>
 
     <!-- Translations & Theme Engine -->
@@ -542,7 +543,8 @@
                 'footer_contact': 'اتصل بنا',
                 'footer_privacy': 'سياسة الخصوصية',
                 'footer_terms': 'شروط الاستخدام',
-                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي'
+                'footer_rights': '© 2026 WiBo Health. جميع الحقوق محفوظة | إشراف فريق ويبو هيلث الطبي',
+                'footer_made_with': '💚 مُطور بـ <span style="color: #2ecc71;">♥</span> من أجل بودي'
             },
             en: {
                 'meta_title': 'Eating Like a Bird and Not Losing Weight?! The Hidden Thyroid Sluggishness | WiBo Health',
@@ -588,15 +590,65 @@
                 'footer_contact': 'Contact Us',
                 'footer_privacy': 'Privacy Policy',
                 'footer_terms': 'Terms of Use',
-                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by WiBo Health Medical Team'
+                'footer_rights': '© 2026 WiBo Health. All rights reserved | Supervised by WiBo Health Medical Team',
+                'footer_made_with': '💚 Developed with <span style="color: #2ecc71;">♥</span> for your body'
+            },
+            nl: {
+                'meta_title': 'Eet je als een vogeltje en val je toch niet af?! De verborgen trage schildklier | WiBo Health',
+                'nav_back_home': 'Terug naar home',
+                'badge_specialized': '<i class="fa-solid fa-notes-medical"></i> Klinisch specialistisch artikel 🦋',
+                'article_main_title': 'Eet je als een vogeltje en kom je toch aan?! Het raadsel van een trage schildklier en een verborgen trage stofwisseling! 🦋🩺',
+                'author_name': 'Door: het medisch team van WiBo Health',
+                'author_subtitle': 'Uitgebreide, onderbouwde gids | Klinische review',
+                'intro_p1': '"Je eet nauwelijks één maaltijd per dag en je raakt geen gram kwijt? Je vriendinnen eten wat ze willen en blijven slank, terwijl jij al aankomt van de geur van eten?! Daarbovenop: veel haaruitval, koude handen en voeten zelfs in de zomer, en een aanhoudende vermoeidheid?! Je gaat naar de dokter, laat je TSH bepalen, en hij glimlacht: Gefeliciteerd, je TSH is helemaal normaal, eet gewoon wat minder en beweeg wat meer!"',
+                'intro_p2': 'Wacht even.. We geven je een vijfde klinische schok: <strong>je labuitslag ziet er prima uit, maar je schildklier ligt op celniveau volledig te slapen!</strong> 😁',
+                'intro_p3': 'Als iemand je koude, bevroren stofwisseling afdoet omdat je TSH normaal lijkt, neem dat advies dan niet zomaar aan! Er is een enorm biologisch verschil tussen wat de klier afgeeft en wat het hormoon daadwerkelijk in je cellen doet.',
+                'img_caption_hero': 'De activiteit van de schildklier is de echte motor van je basale stofwisseling, de warmte in je cellen en gezond haar en een gezonde huid.',
+                'h2_butterfly': '1. Wat is de schildklier (de magische vlinder)?',
+                'desc_butterfly_1': 'Onder in je hals ligt een kleine, vlindervormige klier die <strong>de stofwisselingsturbines en mitochondriën van elke cel</strong> aanstuurt! Als hij actief is, zet je lichaam calorieën om in levenswarmte, groeit je haar goed en straalt je huid.',
+                'desc_butterfly_2': 'Als hij traag is, schakelt je lichaam over op een soort "overlevingsstand", slaat het elke calorie op als buikvet en voelt het alsof je rijdt met de handrem erop!',
+                'h2_tsh_myth': '2. De oppervlakkige misvatting van de TSH-test:',
+                'desc_tsh_1': 'TSH wordt aangemaakt door de hypofyse in de hersenen, niet door de schildklier zelf. Het is slechts een alarmsignaal; vaak blijft de hersenen rustig terwijl de weefsels juist een tekort aan actief hormoon hebben.',
+                'desc_tsh_2': 'De klier maakt vooral <strong>T4 (thyroxine)</strong> aan, een inactief opslaghormoon dat geen vet verbrandt! Om biologisch actief te worden, moet T4 naar de <strong>lever en darmen</strong> reizen om daar door enzymen te worden omgezet in <strong>T3 (trijodothyronine)</strong>.',
+                'img_caption_hormones': 'Omzetting van inactief T4 naar actief T3 in de lever, met hulp van selenium en zink',
+                'h2_blockers': '3. Wat bevriest je stofwisseling en blokkeert de omzetting?',
+                'card_blockers_title': 'De biologische obstakels die de omzetting van T4 naar T3 stilleggen:',
+                'card_blockers_desc': '1. <strong>Vervette lever:</strong> een groot deel van de T3-omzetting gebeurt in de levercellen! Een vervette lever, overbelast door geraffineerde oliën en veel fructose, remt die omzetting sterk af.<br>2. <strong>Verhoogd cortisol en hongerdiëten:</strong> langdurige caloriebeperking en stress sturen T4 richting <strong>reverse T3 (rT3)</strong>, een metabool slot dat de vetverbranding in de cellen blokkeert.<br>3. <strong>Tekort aan belangrijke mineralen:</strong> de dejodase-enzymen hebben echt nodig: <strong>selenium, zink en jodium</strong>.',
+                'h2_signs': '4. Stille kenmerken van een trage schildklier op celniveau:',
+                'sign_1': 'Diffuse haaruitval, vooral het dunner worden van het buitenste derde deel van de wenkbrauwen.',
+                'sign_2': 'Aanhoudend koude handen en voeten en chronische verstopping.',
+                'sign_3': 'Een opgezwollen gezicht en wallen rond de ogen bij het wakker worden.',
+                'sign_4': 'Hardnekkig niet afvallen, ondanks een strikt calorietekort.',
+                'sign_5': 'Hersenmist, een slecht werkgeheugen en plotselinge prikkelbaarheid.',
+                'h2_protocol': '5. Klinisch protocol: de vlinder wekken en de stofwisseling opnieuw aanzetten',
+                'proto_1': '<strong>Twee paranoten per dag:</strong> paranoten bevatten van nature zeer veel selenium; twee per dag leveren je lever de brandstof voor de enzymen die actief T3 aanmaken! (Meer is niet beter: blijf bij twee.)',
+                'proto_2': '<strong>Zorg voor genoeg zink en goed opneembaar ijzer:</strong> uit rundvlees, eieren en rauwe pompoenpitten.',
+                'proto_3': '<strong>Ontlast je lever:</strong> beperk geraffineerde zaadoliën en fructoserijke siropen, zodat het belangrijkste omzettingsorgaan kan herstellen.',
+                'proto_4': '<strong>Stop met langdurige hongerdiëten:</strong> rustig periodiek vasten van 14 tot 16 uur is uitstekend, maar 24 uur lang niet eten dwingt de schildklier via reverse T3 in een overlevingsstand.',
+                'proto_5': '<strong>Ongeraffineerd zeezout (met jodium):</strong> voor natuurlijk jodium en andere sporenelementen; gebruik zout wel met mate.',
+                'support_box_title': '🌸 Herstartprogramma voor hormonen en schildklier (klinische begeleiding)',
+                'support_box_desc': 'Wil je een persoonlijk klinisch voedingsprotocol volgen dat je hormoonhuishouding op een natuurlijke manier ondersteunt, de omzetting van schildklierhormoon helpt en je stofwisseling opnieuw aanzet? Neem contact op met ons medisch supportteam voor de beschikbare plannen:',
+                'support_box_btn': '<i class="fa-solid fa-envelope"></i> support@wibohealth.com',
+                'card_final_title': 'De heldere klinische formule:',
+                'card_final_desc': 'Voed je schildklier met selenium en zink, ontlast je lever, en stop met extreme hongerdiëten.. Zie hoe je stofwisselingsturbines weer gaan draaien en hardnekkig vet op een natuurlijke manier verdwijnt.. <strong>Makkelijk of moeilijk? Jij beslist! 👍🏻</strong>',
+                'disclaimer_title': 'Klinische mededeling & medische disclaimer:',
+                'disclaimer_text': 'De informatie in deze gids is uitsluitend bedoeld voor educatieve doeleinden en voedingsadvies. Het is geen direct medisch advies, geen klinische diagnose en geen vervanging van de behandeling of medicatie die je eigen arts heeft voorgeschreven.',
+                'footer_about': 'Over ons',
+                'footer_contact': 'Contact',
+                'footer_privacy': 'Privacybeleid',
+                'footer_terms': 'Gebruiksvoorwaarden',
+                'footer_rights': '© 2026 WiBo Health. Alle rechten voorbehouden | Onder toezicht van het medisch team van WiBo Health',
+                'footer_made_with': '💚 Ontwikkeld met <span style="color: #2ecc71;">♥</span> voor je lichaam'
             }
         };
 
         function detectInitialLang() {
+            const queryLang = new URLSearchParams(window.location.search).get('lang')?.toLowerCase();
+            if (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en') return queryLang;
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && (saved === 'ar' || saved === 'en')) return saved;
+            if (saved === 'ar' || saved === 'nl' || saved === 'en') return saved;
             const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-            return phoneLang.startsWith('ar') ? 'ar' : 'en';
+            return phoneLang.startsWith('ar') ? 'ar' : (phoneLang.startsWith('nl') ? 'nl' : 'en');
         }
 
         let currentLang = detectInitialLang();

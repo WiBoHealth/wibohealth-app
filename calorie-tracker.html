@@ -617,11 +617,55 @@
                 protein_macro: 'Protein',
                 carbs_macro: 'Carbs',
                 fat_macro: 'Fat'
+            },
+            nl: {
+                calorie_tracker_title: 'Calorieteller',
+                tracker_intro_1: 'Met de calorieteller van WiBo Health houd je je dagelijkse maaltijden bij en vergelijk je je calorieën, eiwitten, koolhydraten en vetten met je persoonlijke doelen. Consequent bijhouden wat je eet is een van de meest effectieve hulpmiddelen voor gewichtsbeheersing en bloedsuikercontrole, omdat het verborgen caloriebronnen zichtbaar maakt en de verdeling van je macronutriënten over de dag laat zien.',
+                tracker_intro_2: 'Om een nauwkeurig dagdoel in te stellen, bereken je eerst je behoefte met de calorieberekenaar (Mifflin-St Jeor-formule) en kies je daarna producten met een lage glykemische index uit de voedingswijzer. Je gegevens worden alleen op je eigen apparaat opgeslagen. Deze tool is educatief en vervangt geen advies van een arts of diëtist, vooral niet bij diabetes of tijdens de zwangerschap.',
+                tracker_link_calc: 'Bereken je dagelijkse behoefte',
+                tracker_link_foods: 'Bekijk de voedingswijzer',
+                change_language: 'Nederlands',
+                dark_mode: 'Donkere modus',
+                daily_calorie_goal: 'Dagelijks caloriedoel:',
+                protein_goal: 'Eiwitdoel (gram):',
+                carbs_goal: 'Koolhydratendoel (gram):',
+                fat_goal: 'Vetdoel (gram):',
+                add_food_item: 'Voedingsmiddel toevoegen:',
+                add_btn: 'Toevoegen',
+                today_intake: 'Inname vandaag',
+                total_calories: 'Totaal calorieën',
+                total_protein: 'Totaal eiwit',
+                total_carbs: 'Totaal koolhydraten',
+                total_fat: 'Totaal vet',
+                progress_title: 'Voortgang',
+                calories: 'Calorieën',
+                protein: 'Eiwit',
+                carbs: 'Koolhydraten',
+                fat: 'Vet',
+                food_log: 'Voedingslogboek',
+                food_name: 'Naam voedingsmiddel',
+                action: 'Actie',
+                no_items: 'Geen items',
+                macro_breakdown: 'Verdeling macronutriënten',
+                reset_btn: 'Resetten',
+                export_btn: 'Gegevens exporteren',
+                delete: 'Verwijderen',
+                protein_macro: 'Eiwit',
+                carbs_macro: 'Koolhydraten',
+                fat_macro: 'Vet'
             }
         };
 
         // Language Management
-        let currentLanguage = localStorage.getItem('wibo_language') || 'ar';
+        const LANGS = ['ar', 'en', 'nl'];
+        const _queryLang = new URLSearchParams(window.location.search).get('lang');
+        let currentLanguage = [_queryLang, localStorage.getItem('preferred_language'), localStorage.getItem('wibo_language')]
+            .find(l => LANGS.includes(l)) || 'ar';
+
+        // pick the text for the current language
+        function L(ar, en, nl) {
+            return currentLanguage === 'ar' ? ar : (currentLanguage === 'nl' ? nl : en);
+        }
 
         function t(key) {
             return translations[currentLanguage]?.[key] || translations['ar']?.[key] || key;
@@ -630,6 +674,7 @@
         function changeLanguage(lang) {
             currentLanguage = lang;
             localStorage.setItem('wibo_language', lang);
+            localStorage.setItem('preferred_language', lang);
             updatePageLanguage();
         }
 
@@ -653,7 +698,8 @@
             });
 
             // Update lang button
-            document.getElementById('langToggle').textContent = isArabic ? 'English' : 'عربي';
+            // the button shows the next language in the cycle ar -> en -> nl -> ar
+            document.getElementById('langToggle').textContent = L('English', 'Nederlands', 'عربي');
             updateChart();
         }
 
@@ -662,7 +708,7 @@
             const isDarkMode = localStorage.getItem('darkMode') === 'true';
             if (isDarkMode) {
                 document.body.classList.add('dark-mode');
-                document.getElementById('darkModeToggle').textContent = currentLanguage === 'ar' ? '☀️ الوضع الفاتح' : '☀️ Light Mode';
+                document.getElementById('darkModeToggle').textContent = L('☀️ الوضع الفاتح', '☀️ Light Mode', '☀️ Lichte modus');
             }
         }
 
@@ -671,14 +717,14 @@
             const isDarkMode = document.body.classList.contains('dark-mode');
             localStorage.setItem('darkMode', isDarkMode);
             document.getElementById('darkModeToggle').textContent = isDarkMode 
-                ? (currentLanguage === 'ar' ? '☀️ الوضع الفاتح' : '☀️ Light Mode')
-                : (currentLanguage === 'ar' ? '🌙 الوضع الليلي' : '🌙 Dark Mode');
+                ? L('☀️ الوضع الفاتح', '☀️ Light Mode', '☀️ Lichte modus')
+                : L('🌙 الوضع الليلي', '🌙 Dark Mode', '🌙 Donkere modus');
             updateChart();
         });
 
         // Language Toggle
         document.getElementById('langToggle').addEventListener('click', () => {
-            const newLang = currentLanguage === 'ar' ? 'en' : 'ar';
+            const newLang = L('en', 'nl', 'ar');
             changeLanguage(newLang);
         });
 
@@ -736,7 +782,7 @@
 
                 updateDisplay();
             } else {
-                alert(currentLanguage === 'ar' ? 'يرجى إدخال اسم الطعام وقيمة واحدة على الأقل' : 'Please enter food name and at least one value');
+                alert(L('يرجى إدخال اسم الطعام وقيمة واحدة على الأقل', 'Please enter food name and at least one value', 'Vul de naam van het voedingsmiddel en minstens één waarde in'));
             }
         });
 
@@ -847,7 +893,7 @@
 
         // Reset
         document.getElementById('resetBtn').addEventListener('click', () => {
-            if (confirm(currentLanguage === 'ar' ? 'هل أنت متأكد من حذف جميع البيانات؟' : 'Are you sure you want to delete all data?')) {
+            if (confirm(L('هل أنت متأكد من حذف جميع البيانات؟', 'Are you sure you want to delete all data?', 'Weet je zeker dat je alle gegevens wilt verwijderen?'))) {
                 trackerData.foods = [];
                 localStorage.setItem('trackerData', JSON.stringify(trackerData));
                 updateDisplay();
