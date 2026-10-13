@@ -697,17 +697,14 @@
             display: flex;
             width: max-content;
             height: 100%;
-            will-change: transform;
-            backface-visibility: hidden;
-            transform: translate3d(0, 0, 0);
             animation: pulse-to-left 70s linear infinite;
         }
         :root[dir="rtl"] .pulse-track { animation-name: pulse-to-right; }
         .pulse-ticker:hover .pulse-track,
         .pulse-ticker:focus-within .pulse-track,
         .pulse-ticker:active .pulse-track { animation-play-state: paused; }
-        @keyframes pulse-to-left { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
-        @keyframes pulse-to-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0, 0, 0); } }
+        @keyframes pulse-to-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes pulse-to-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
         .pulse-set {
             display: flex;
             align-items: center;
@@ -841,9 +838,6 @@
             display: none;
             width: max-content;
             height: 100%;
-            will-change: transform;
-            backface-visibility: hidden;
-            transform: translate3d(0, 0, 0);
             animation: pulse-to-left 75s linear infinite;
         }
         :root[dir="rtl"] .meals-track { animation-name: pulse-to-right; }
