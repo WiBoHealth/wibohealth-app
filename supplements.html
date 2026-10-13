@@ -1,6 +1,34 @@
 ﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
+    <style>html.lang-loading body{visibility:hidden}</style>
+    <script>
+        (function (d) {
+            var h = d.documentElement;
+            try {
+                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
+                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
+                var n = (navigator.language || '').toLowerCase();
+                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
+                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
+                if (l === 'ar') return;
+                h.classList.add('lang-loading');
+                var shown = false;
+                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
+                window.wiboLangReady = show;
+                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
+                // reveal right after them, before the next paint
+                d.addEventListener('DOMContentLoaded', function () {
+                    requestAnimationFrame(show);
+                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
+                });
+                setTimeout(show, 2500);             // absolute safety net
+            } catch (e) { h.classList.remove('lang-loading'); }
+        })(document);
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="دليلك الكامل للمكملات الغذائية: واي بروتين، كرياتين، أوميغا 3، فيتامينات ومعادن - مع الفوائد، الجرعات، التوقيت والتحذيرات. موقعك الذي يوفر أيضاً المؤشر الجلايسيمي لكل طعام">
