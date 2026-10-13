@@ -6,6 +6,15 @@
    body.dark-mode (main pages) and html[data-theme="dark"] (doctor family + food pages).
    ========================================================================== */
 
+/* Anti white-flash: whenever the GPU drops a layer or repaints, the browser shows the root canvas colour.
+   Keep that canvas navy (and the UA in dark scheme) so a repaint can never flash white. */
+html, :root {
+    background-color: #0b132b !important;
+    color-scheme: dark !important;
+}
+/* ...but form fields on a page shown in its light theme keep light native controls */
+html:not([data-theme="dark"]) body:not(.dark-mode) :is(input, select, textarea) { color-scheme: light; }
+
 body > header {
     position: sticky !important;
     top: 0 !important;

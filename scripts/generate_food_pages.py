@@ -942,7 +942,10 @@ def page_url(slug, lang, absolute=True):
 
 def site_link(path, lang):
     """Link to a regular site page in the reader's language."""
-    return path if lang == 'ar' else f"{path}{'&' if '?' in path else '?'}lang={lang}"
+    if lang == 'ar':
+        return path
+    path, hash_, frag = path.partition('#')  # the query must sit before an #anchor
+    return f"{path}{'&' if '?' in path else '?'}lang={lang}{hash_}{frag}"
 
 
 # --------------------------------------------------------------------------------------------
@@ -1107,7 +1110,7 @@ def build(food, lang, ctx):
             {"@type": "ListItem", "position": 3, "name": name, "item": urls[lang]}]},
     }
 
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/articles.html', '/boodi.html']
+    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html']
     nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link">{label}</a>'
                     for p, label in zip(nav_paths, u['nav']))
     lang_links = '\n'.join(

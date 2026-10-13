@@ -15045,9 +15045,7 @@
                     const newWorker = registration.installing;
                     newWorker.addEventListener('statechange', () => {
                         if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
-                            // تحديث جديد متاح - أعد تحميل الصفحة
-                            console.log('🔄 New Service Worker activated! Reloading...');
-                            window.location.reload();
+                            // the new worker serves the next navigation; never reload the page under the reader
                         }
                     });
                 });
