@@ -6882,6 +6882,631 @@
           "Grof roggebrood is wereldwijd een voorbeeld van gezond brood bij diabetes; de dichte vezels vertragen de glucoserespons urenlang en voeden nuttige darmbacteriën zeer efficiënt."
         ]
       }
+    },
+    "307": {
+      "slug": "haring",
+      "lead": {
+        "ar": "رمز الشارع الهولندي التقليدي وعشق الصيف (Hollandse Nieuwe)؛ سمك رنجة نيء ومملح خفيفاً، يُمسك من الذيل ويؤكل دفعة واحدة مع البصل الأبيض المفروم ومخلل الخيار. صفر كربوهيدرات صافية ومؤشره الجلايسيمي غير منطبق، ويعد من أغنى الأسماك الدهنية بأحماض أوميغا 3 البحرية المفيدة للشرايين.",
+        "en": "The traditional icon of Dutch street food and a summer favourite (Hollandse Nieuwe): raw, lightly salted herring, held by the tail and eaten in one go with chopped white onion and pickles. It has zero net carbohydrate, so a glycemic index does not apply, and it is one of the richest oily fish in marine omega-3 fatty acids that benefit the arteries.",
+        "nl": "Hét icoon van de Nederlandse straatkeuken en een zomerfavoriet (Hollandse Nieuwe): rauwe, licht gezouten haring, bij de staart vastgehouden en in één keer gegeten met gesnipperde witte ui en zuur. Er zitten nul netto koolhydraten in, dus een glykemische index is niet van toepassing, en het is een van de rijkste vette vissoorten aan mariene omega-3-vetzuren die goed zijn voor de bloedvaten."
+      },
+      "tips": {
+        "ar": [
+          "وجبة سريعة ومثالية لتعزيز الشبع الصافي والنشاط الأيضي؛ تناوله كما هو مع البصل المفروم، وتجنب تناوله داخل الخبز الأبيض الصغير (Broodje haring) لتفادي النشويات المكررة.",
+          "اختر الرنجة الطازجة المجهزة في موسمها (يونيو ويوليو) والمبردة تماماً؛ فالبصل المفروم يكسر دسامة دهن السمك ويمنح انتعاشاً يدعم الهضم.",
+          "⚠️ تنبيه سلامة سريري: الرنجة سمك نيء محفوظ بالتمليح الخفيف فقط؛ يُمنع استهلاكه نيئاً للحوامل والأطفال وضعاف المناعة تجنباً لمخاطر بكتيريا الليستيريا والطفيليات، كما يجب الانتباه لملوحته لمرضى ضغط الدم."
+        ],
+        "en": [
+          "A quick, ideal meal for clean satiety and metabolic energy; eat it as it is with chopped onion, and avoid having it in a small white roll (broodje haring) to skip the refined starch.",
+          "Choose fresh, in-season herring (June and July) that is fully chilled; the chopped onion cuts through the richness of the fish oil and adds a freshness that supports digestion.",
+          "⚠️ Clinical safety note: herring is raw fish preserved only by light salting; it must not be eaten raw by pregnant women, children or people with weakened immunity because of the risk of Listeria and parasites, and people with high blood pressure should mind its saltiness."
+        ],
+        "nl": [
+          "Een snelle, ideale maaltijd voor pure verzadiging en energie; eet hem zoals hij is met gesnipperde ui, en sla het witte broodje (broodje haring) over om geraffineerd zetmeel te vermijden.",
+          "Kies verse haring in het seizoen (juni en juli) die goed gekoeld is; de gesnipperde ui breekt de vettigheid van de vis en geeft een frisheid die de spijsvertering ondersteunt.",
+          "⚠️ Klinische veiligheidswaarschuwing: haring is rauwe vis die alleen licht gezouten is; zwangeren, kinderen en mensen met een verzwakte afweer mogen hem niet rauw eten vanwege het risico op listeria en parasieten, en mensen met een hoge bloeddruk moeten letten op het zoutgehalte."
+        ]
+      }
+    },
+    "308": {
+      "slug": "snert",
+      "lead": {
+        "ar": "حساء الشتاء الهولندي العريق الذي يذيب الصقيع؛ حساء كثيف جداً من البازلاء الخضراء المجففة، الكرفس، الكراث، مع قطع اللحم ونقانق الركفورست. البازلاء توفر كربوهيدرات معقدة فائقة الغنى بالألياف والبروتين النباتي، مما يمنح الشوربة مؤشراً جلايسيمياً منخفضاً إلى معتدل (≈40) ودفقاً طاقياً هادئاً.",
+        "en": "The time-honoured Dutch winter soup that melts the frost: a very thick soup of dried green split peas, celeriac and leek with pieces of meat and rookworst sausage. The peas provide complex carbohydrates that are very rich in fibre and plant protein, giving the soup a low-to-moderate glycemic index (≈40) and a calm, steady release of energy.",
+        "nl": "De eeuwenoude Hollandse wintersoep die de kou verdrijft: een zeer dikke soep van gedroogde groene spliterwten, knolselderij en prei met stukjes vlees en rookworst. De erwten leveren complexe koolhydraten die zeer rijk zijn aan vezels en plantaardig eiwit, waardoor de soep een lage tot matige glykemische index heeft (≈40) en rustig, gelijkmatig energie afgeeft."
+      },
+      "tips": {
+        "ar": [
+          "وجبة غداء شتوية متكاملة بحد ذاتها؛ وعاء واحد يشعرك بالشبع العميق لعدة ساعات دون أي هبوط في السكر، وتناولها بالملعقة يغنيك تماماً عن مرافقتها بالخبز.",
+          "اطهِ البازلاء ببطء حتى تتفتح وتمنح الشوربة قوامها الثقيل التقليدي (الذي تقف فيه الملعقة عمودياً)، واعتمد على لحم العجل قليل الدهن مع تقليل شرائح النقانق المصنعة لتخفيف الدهون المشبعة والصوديوم.",
+          "غنية جداً بالألياف الذائبة والزنك؛ وينصح بشرب كميات وافرة من الماء لمساعدة الجهاز الهضمي على معالجة ألياف البقوليات الكثيفة بارتياح."
+        ],
+        "en": [
+          "A complete winter lunch on its own; one bowl keeps you deeply full for several hours without any drop in blood sugar, and eating it by the spoonful means you don't need bread with it at all.",
+          "Cook the peas slowly until they break down and give the soup its traditional heavy texture (thick enough for a spoon to stand upright), and use lean veal while cutting back on the processed sausage slices to reduce saturated fat and sodium.",
+          "Very rich in soluble fibre and zinc; drink plenty of water to help your digestive system process the dense legume fibre comfortably."
+        ],
+        "nl": [
+          "Een complete winterlunch op zich; één kom houdt je urenlang goed verzadigd zonder dip in je bloedsuiker, en doordat je hem lepelt heb je er helemaal geen brood bij nodig.",
+          "Kook de erwten langzaam tot ze uiteenvallen en de soep haar traditionele dikke structuur krijgt (zo dik dat de lepel rechtop blijft staan); gebruik mager kalfsvlees en minder plakjes bewerkte worst om verzadigd vet en natrium te beperken.",
+          "Zeer rijk aan oplosbare vezels en zink; drink ruim water zodat je spijsvertering de dichte peulvruchtvezels prettig kan verwerken."
+        ]
+      }
+    },
+    "309": {
+      "slug": "boerenkool-stamppot",
+      "lead": {
+        "ar": "الطبق الوطني الشعبي الأول في هولندا؛ بطاطس مهروسة مع أوراق الكرنب الأجعد (الكيل) المغذية، وتُقدم تقليدياً مع قطعة نقانق الروكفورست. خضار الكيل يضفي أليافاً ومضادات أكسدة هائلة تفرمل سرعة امتصاص نشا البطاطس المهروسة، مما يمنح الطبق مؤشراً جلايسيمياً متوسطاً (≈58).",
+        "en": "The Netherlands' number-one national comfort dish: mashed potato with nutritious curly kale leaves, traditionally served with a piece of rookworst sausage. The kale adds a great deal of fibre and antioxidants that slow down how fast the mashed-potato starch is absorbed, giving the dish a medium glycemic index (≈58).",
+        "nl": "Hét nationale troostgerecht van Nederland: aardappelpuree met voedzame boerenkool, traditioneel geserveerd met een stuk rookworst. De boerenkool voegt veel vezels en antioxidanten toe die de opname van het zetmeel uit de puree afremmen, waardoor het gerecht een gemiddelde glykemische index heeft (≈58)."
+      },
+      "tips": {
+        "ar": [
+          "اقلب ميزان الطبق الكلاسيكي: اجعل نسبة خضار الكيل الأخضر طاغية (نحو ثلثي الصحن) مقابل كمية معتدلة من هريس البطاطس، وتناول نصف حبة نقانق فقط للحد من الدهون المشبعة.",
+          "اطبخ الكيل بالبخار واهرسه برفق مع البطاطس المسلوقة باستخدام قليل من زيت الزيتون أو حليب الكارنيميلك بدلاً من سكب كميات هائلة من الزبدة المذابة.",
+          "الكيل غني بفيتامينات K وC والكالسيوم النباتي؛ والاعتدال في حصة البطاطس المهروسة هو السر لمرضى السكري والمهتمين بالوزن للاستمتاع بهذا الطبق الشتوي بأمان."
+        ],
+        "en": [
+          "Turn the classic plate around: let the green kale dominate (about two thirds of the plate) against a moderate amount of mashed potato, and have only half a sausage to limit saturated fat.",
+          "Steam the kale and mash it gently with the boiled potatoes using a little olive oil or karnemelk (buttermilk) instead of pouring on large amounts of melted butter.",
+          "Kale is rich in vitamins K and C and plant calcium; keeping the mashed-potato portion moderate is the key for people with diabetes or watching their weight to enjoy this winter dish safely."
+        ],
+        "nl": [
+          "Draai het klassieke bord om: laat de groene boerenkool overheersen (ongeveer twee derde van het bord) tegenover een matige hoeveelheid puree, en neem maar een halve rookworst om verzadigd vet te beperken.",
+          "Stoom de boerenkool en stamp hem voorzichtig door de gekookte aardappelen met een beetje olijfolie of karnemelk in plaats van grote hoeveelheden gesmolten boter.",
+          "Boerenkool is rijk aan vitamine K en C en plantaardig calcium; een bescheiden portie puree is het geheim voor mensen met diabetes of die op hun gewicht letten om veilig van dit wintergerecht te genieten."
+        ]
+      }
+    },
+    "310": {
+      "slug": "hutspot",
+      "lead": {
+        "ar": "طبق الراحة والتاريخ الهولندي العريق؛ مزيج متوازن من الجزر الشتوي الحلو، البصل المكرمل، والبطاطس المهروسة معاً، ويُقدم مع اللحم البقري المطهو ببطء (Klapstuk). حلاوة الجزر الطبيعية مع نشا البطاطس المهروس يمنحان الطبق مؤشراً جلايسيمياً معتدلاً إلى مرتفع (≈60)، ويستدعي خطة ذكية للحصة.",
+        "en": "A comfort dish steeped in Dutch history: a balanced mix of sweet winter carrots, caramelised onion and potato mashed together, served with slow-cooked beef (klapstuk). The natural sweetness of the carrots together with the mashed-potato starch gives the dish a moderate-to-high glycemic index (≈60), so it calls for a smart portion plan.",
+        "nl": "Een troostgerecht vol Hollandse geschiedenis: een evenwichtige mix van zoete winterpeen, gekaramelliseerde ui en aardappel, samen gestampt en geserveerd met langzaam gegaard rundvlees (klapstuk). De natuurlijke zoetheid van de peen en het zetmeel van de gestampte aardappel geven het gerecht een matige tot hoge glykemische index (≈60), dus een slim portieplan is nodig."
+      },
+      "tips": {
+        "ar": [
+          "رافق الهوتسبوت بقطعة سخية من اللحم البقري المسلوق أو صدر الدجاج المشوي؛ فبروتين اللحم يفرمل امتصاص نشويات وسكريات الجزر والبطاطس بكفاءة.",
+          "لا تفرط في هرس الخضار حتى تصبح كالمعجون؛ بل اترك قطع الجزر والبطاطس متماسكة وخشنة نسبياً (Stamppot rustiek)، فالقوام المتماسك يبطئ الهضم ويزيد الشبع.",
+          "الجزر يوفر جرعة هائلة من البيتا كاروتين المفيد للبشرة والأوعية؛ ولمن يراقب سكر دمه، فاكتفِ بحصة بحجم قبضة اليد لضمان استقرار الجلوكوز."
+        ],
+        "en": [
+          "Serve hutspot with a generous piece of braised beef or grilled chicken breast; the protein in the meat effectively slows the absorption of the starch and sugars from the carrots and potatoes.",
+          "Don't over-mash the vegetables into a paste; leave the carrot and potato pieces firm and fairly coarse (stamppot rustiek), because a chunky texture slows digestion and increases fullness.",
+          "Carrots provide a large dose of beta-carotene, good for the skin and blood vessels; if you are watching your blood sugar, keep to a fist-sized portion so your glucose stays stable."
+        ],
+        "nl": [
+          "Eet hutspot met een royaal stuk gestoofd rundvlees of gegrilde kipfilet; het eiwit in het vlees remt de opname van zetmeel en suikers uit peen en aardappel doeltreffend af.",
+          "Stamp de groenten niet tot moes; laat de stukjes peen en aardappel stevig en vrij grof (stamppot rustiek), want een grove structuur vertraagt de vertering en verzadigt beter.",
+          "Peen levert een flinke dosis bètacaroteen, goed voor huid en bloedvaten; let je op je bloedsuiker, houd het dan bij een portie zo groot als je vuist zodat je glucose stabiel blijft."
+        ]
+      }
+    },
+    "311": {
+      "slug": "gerookte-paling",
+      "lead": {
+        "ar": "التحفة البحرية الأكثر فخامة وشهرة في القرى الساحلية الهولندية مثل فولندام؛ سمك إنقليس مدخن على أخشاب البلوط حتى يكتسب لحماً زبدياً ناعماً ونكهة مدخنة ساحرة. صفر كربوهيدرات ومؤشره الجلايسيمي غير منطبق، ويعد من أغنى الأسماك بالبروتين وفيتامينات A وD ودهون أوميغا 3.",
+        "en": "The most luxurious and famous seafood delicacy of Dutch coastal villages such as Volendam: eel smoked over oak wood until the flesh turns soft and buttery with an enchanting smoky flavour. It has zero carbohydrate, so a glycemic index does not apply, and it is one of the richest fish in protein, vitamins A and D and omega-3 fats.",
+        "nl": "De meest luxueuze en bekende vislekkernij van Nederlandse kustplaatsen zoals Volendam: paling die boven eikenhout wordt gerookt tot het vlees zacht en boterachtig is met een betoverende rooksmaak. Er zitten nul koolhydraten in, dus een glykemische index is niet van toepassing, en het is een van de rijkste vissoorten aan eiwit, vitamine A en D en omega-3-vetten."
+      },
+      "tips": {
+        "ar": [
+          "قطعة صغيرة من فيليه الإنقليس كافية تماماً كوجبة بروتينية دهنية ممتازة؛ تناولها مع شرائح الخيار المقرمشة أو فوق شريحة خبز كيتو أو قمح كامل.",
+          "انزع الجلد الرقيق وتناوله مبرداً مع عصرة ليمون خفيفة لتعديل دسامته الطبيعية الفائقة، وتجنب قليه أو إضافة صلصات دسمة.",
+          "الإنقليس سمك فائق الدسامة والدهون بطبيعته؛ والاعتدال بحصة صغيرة (نحو 50 إلى 70 غرام) يمنحك كل المغذيات والفيتامينات الذائبة في الدهون دون إثقال المعدة."
+        ],
+        "en": [
+          "A small piece of eel fillet is quite enough as an excellent protein-and-fat meal; eat it with crisp cucumber slices or on a slice of keto or whole-wheat bread.",
+          "Remove the thin skin and eat it chilled with a light squeeze of lemon to balance its naturally rich fat, and avoid frying it or adding creamy sauces.",
+          "Eel is a naturally very fatty fish; keeping to a small portion (about 50 to 70 grams) gives you all the nutrients and fat-soluble vitamins without weighing down your stomach."
+        ],
+        "nl": [
+          "Een klein stukje palingfilet is ruim genoeg als uitstekende eiwit- en vetrijke maaltijd; eet het met knapperige plakjes komkommer of op een snee keto- of volkorenbrood.",
+          "Verwijder het dunne vel en eet de paling gekoeld met een klein beetje citroensap om de natuurlijke vettigheid in balans te brengen; bak hem niet en voeg geen romige sauzen toe.",
+          "Paling is van nature een zeer vette vis; met een kleine portie (ongeveer 50 tot 70 gram) krijg je alle voedingsstoffen en vetoplosbare vitamines binnen zonder dat het zwaar op de maag ligt."
+        ]
+      }
+    },
+    "312": {
+      "slug": "kibbeling",
+      "lead": {
+        "ar": "الوجبة الخفيفة الأكثر شعبية في أسواق السمك الهولندية؛ قطع طرية من سمك القد الأبيض (Kabeljauw) مغلفة بخليط عجين ومقلية حتى القرمشة الذهبية مع توابل السمك والصلصة البيضاء (Ravigottesaus). لحم القد بروتين بحري نقي، لكن غلاف العجين يرفع مؤشره الجلايسيمي إلى نحو (≈35).",
+        "en": "The most popular snack at Dutch fish markets: tender pieces of white cod (kabeljauw) coated in batter and fried golden and crisp, seasoned with fish spices and served with a white sauce (ravigottesaus). Cod itself is pure marine protein, but the batter coating raises its glycemic index to about (≈35).",
+        "nl": "De populairste snack op Nederlandse vismarkten: malse stukjes witte kabeljauw in beslag, goudbruin en knapperig gebakken, gekruid met viskruiden en geserveerd met witte saus (ravigottesaus). Kabeljauw zelf is puur visseiwit, maar het beslag verhoogt de glykemische index tot ongeveer (≈35)."
+      },
+      "tips": {
+        "ar": [
+          "استمتع بحصة صغيرة بالشوكة مباشرة كوجبة غداء بحرية ممتعة، واحرص على غمس الشوكة خفيفاً في صلصة الثوم أو التارتار وتجنب إغراق القطع بالصلصة المصنعة.",
+          "البديل الصحي الأرقى: اطلب تحضير سمك القد المشوي على الجريل (Gebakken vis) بدون غلاف عجين، أو اطلب الكيبلينغ المخبوز في المقلاة الهوائية لتفادي دهون القلي الغزيرة.",
+          "لحم القد غني بالبروتين الكامل واليود وقليل الدهون بذاته؛ ولمن يراقب وزنه وسكر دمه، فالاعتدال في كمية القطع المقلية وتناول سلطة خضراء بجانبها يحافظ على توازن الوجبة."
+        ],
+        "en": [
+          "Enjoy a small portion straight from the fork as a fun seafood lunch; dip the fork only lightly in garlic or tartare sauce and avoid drowning the pieces in processed sauce.",
+          "The finer, healthier alternative: ask for grilled cod (gebakken vis) without batter, or for kibbeling baked in an air fryer to avoid the heavy frying fat.",
+          "Cod is rich in complete protein and iodine and is low in fat on its own; if you are watching your weight and blood sugar, keeping the amount of fried pieces moderate and adding a green salad keeps the meal balanced."
+        ],
+        "nl": [
+          "Geniet van een kleine portie rechtstreeks van het vorkje als leuke vislunch; doop het vorkje maar licht in knoflook- of tartaarsaus en laat de stukjes niet verdrinken in kant-en-klare saus.",
+          "Het betere, gezondere alternatief: vraag om gegrilde kabeljauw (gebakken vis) zonder beslag, of om kibbeling uit de airfryer om het vele frituurvet te vermijden.",
+          "Kabeljauw is rijk aan volwaardig eiwit en jodium en van zichzelf vetarm; let je op je gewicht en bloedsuiker, houd de hoeveelheid gefrituurde stukjes dan bescheiden en eet er een groene salade bij voor een evenwichtige maaltijd."
+        ]
+      }
+    },
+    "313": {
+      "slug": "stroopwafel",
+      "lead": {
+        "ar": "أشهر حلوى في تاريخ هولندا وسفيرتها حول العالم؛ طبقتان رقيقتان من بسكويت الوافل المقرمش تحبسان بينهما حشوة دافئة من كراميل السكر البني والقرفة والزبدة. يسجل الستروب وافل مؤشراً جلايسيمياً مرتفعاً (≈72)، ويعد حلوى سكرية مركزة تتطلب وعياً شديداً بحجم القطعة.",
+        "en": "The most famous sweet in Dutch history and the country's ambassador around the world: two thin, crisp waffle layers holding a warm filling of brown-sugar caramel, cinnamon and butter. The stroopwafel has a high glycemic index (≈72) and is a concentrated sugary treat that calls for close attention to portion size.",
+        "nl": "Het bekendste zoetje uit de Nederlandse geschiedenis en de ambassadeur van het land wereldwijd: twee dunne, knapperige wafellaagjes met een warme vulling van bruine-suikerkaramel, kaneel en boter. De stroopwafel heeft een hoge glykemische index (≈72) en is een geconcentreerde suikerrijke traktatie waarbij je goed op de portiegrootte moet letten."
+      },
+      "tips": {
+        "ar": [
+          "استمتع بحبة واحدة صغيرة كاستثناء أسبوعي مدروس؛ الطريقة الهولندية الكلاسيكية هي وضع الحبة فوق فنجان القهوة السادة الساخنة لدقيقة لتذوب حشوة الكراميل ببخار القهوة والاستمتاع بها ببطء شديد.",
+          "تجنب أكل الستروب وافل الحجم الكبير (Mega stroopwafel) المغطى بالشوكولاتة والمكسرات؛ واكتفِ بالحجم الصغير التقليدي (Mini) بعد وجبة متكاملة غنية بالألياف.",
+          "تحتوي القطعة الواحدة على نسبة عالية من السكريات البسيطة سريعة الامتصاص؛ لذا فهي غير مناسبة للاستهلاك اليومي لمرضى السكري أو من يسعى لخفض الوزن."
+        ],
+        "en": [
+          "Enjoy one small stroopwafel as a planned weekly exception; the classic Dutch way is to rest it on top of a cup of hot black coffee for a minute so the steam melts the caramel, then savour it very slowly.",
+          "Avoid the large mega stroopwafels coated in chocolate and nuts; stick to the small traditional mini size, eaten after a complete, fibre-rich meal.",
+          "A single stroopwafel contains a high share of fast-absorbed simple sugars, so it is not suitable for daily eating for people with diabetes or anyone trying to lose weight."
+        ],
+        "nl": [
+          "Geniet van één kleine stroopwafel als bewuste wekelijkse uitzondering; de klassieke Hollandse manier is hem een minuut op een kop hete zwarte koffie te leggen zodat de stoom de stroop laat smelten, en hem dan heel langzaam op te eten.",
+          "Laat de grote megastroopwafels met chocolade en noten liggen; houd het bij het kleine traditionele mini-formaat, na een complete, vezelrijke maaltijd.",
+          "Eén stroopwafel bevat veel snel opneembare enkelvoudige suikers, dus hij is niet geschikt om dagelijks te eten voor mensen met diabetes of wie wil afvallen."
+        ]
+      }
+    },
+    "314": {
+      "slug": "poffertjes",
+      "lead": {
+        "ar": "الفطائر الإسفنجية الصغيرة اللطيفة التي تشتهر بها الأكشاك الهولندية الشتوية؛ تُخبز من دقيق الحنطة السوداء والقمح والخميرة في قوالب نحاسية خاصة وتُقدم غارقة في الزبدة وسكر البودرة. مؤشرها الجلايسيمي مرتفع (≈68)، وتمنح طاقة كربوهيدراتية سريعة.",
+        "en": "The charming little sponge pancakes that Dutch winter stalls are famous for: made from buckwheat and wheat flour with yeast, baked in special copper moulds and served swimming in butter and icing sugar. They have a high glycemic index (≈68) and deliver fast carbohydrate energy.",
+        "nl": "De schattige sponzige pannenkoekjes waar Nederlandse winterkraampjes om bekendstaan: gemaakt van boekweit- en tarwemeel met gist, gebakken in speciale koperen pannen en geserveerd met veel boter en poedersuiker. Ze hebben een hoge glykemische index (≈68) en geven snelle koolhydraatenergie."
+      },
+      "tips": {
+        "ar": [
+          "طبق للتحلية والمشاركة العائلية في النزهات؛ اكتفِ بـ 4 إلى 5 حبات صغيرة، وتجنب تناول الطبق الكامل بمفردك لتفادي قفزات السكر الحادة والخمول.",
+          "اطلب تحضيرها بمسحة خفيفة من الزبدة الطبيعية وقلل من سكر البودرة المرشوش على الوجه إلى الحد الأدنى، ويمكن تزيينها بقليل من التوت البري الطازج لإضافة ألياف حيوية.",
+          "الحنطة السوداء المستخدمة في العجين تضيف بعض المعادن ومضادات الأكسدة؛ ولكن سكر البودرة والزبدة المفرطة يجعلانها وجبة عالية السعرات تتطلب الاعتدال الصارم."
+        ],
+        "en": [
+          "A dish for dessert and for sharing with family on outings; stop at 4 to 5 small poffertjes and avoid eating the whole plate on your own to prevent sharp sugar spikes and sluggishness.",
+          "Ask for them with just a light brush of real butter and keep the icing sugar on top to a minimum; you can garnish them with a few fresh berries to add useful fibre.",
+          "The buckwheat in the batter adds some minerals and antioxidants, but the icing sugar and excess butter make this a high-calorie dish that calls for strict moderation."
+        ],
+        "nl": [
+          "Een gerecht voor het dessert en om met het gezin te delen tijdens een uitje; houd het bij 4 tot 5 kleine poffertjes en eet niet het hele bord alleen op, om scherpe suikerpieken en sloomheid te voorkomen.",
+          "Vraag om een dun laagje echte boter en houd de poedersuiker erop zo beperkt mogelijk; garneer ze eventueel met wat vers fruit zoals bessen voor extra vezels.",
+          "Het boekweitmeel in het beslag voegt wat mineralen en antioxidanten toe, maar de poedersuiker en overvloedige boter maken het een calorierijk gerecht dat strikte matigheid vraagt."
+        ]
+      }
+    },
+    "315": {
+      "slug": "speculaas",
+      "lead": {
+        "ar": "بسكويت الأعياد العريق بنقوشه الخشبية الجميلة وقرمشته الهشة؛ متبل بخلطة بهارات سحرية تضم القرفة، جوزة الطيب، القرنفل، والزنجبيل والسكر البني. يسجل مؤشراً جلايسيمياً متوسطاً إلى مرتفع (≈65)، وتعتبر القرفة والتوابل فيه سر رائحته ونكهته الشتوية.",
+        "en": "The time-honoured holiday biscuit with beautiful carved-wood patterns and a delicate crunch, spiced with a magical blend of cinnamon, nutmeg, cloves, ginger and brown sugar. It has a medium-to-high glycemic index (≈65), and the cinnamon and spices are the secret of its wintry aroma and flavour.",
+        "nl": "Het eeuwenoude feestkoekje met prachtige houtsnijpatronen en een fijne knapperigheid, gekruid met een magische mix van kaneel, nootmuskaat, kruidnagel, gember en bruine suiker. Het heeft een gemiddelde tot hoge glykemische index (≈65), en de kaneel en kruiden zijn het geheim van de winterse geur en smaak."
+      },
+      "tips": {
+        "ar": [
+          "قطعة واحدة مقرمشة بجانب كوب شاي أسود أو قهوة سادة بدون سكر كافية تماماً لإرضاء رغبة الحلى الصباحية دون إرهاق البنكرياس.",
+          "اختر الأنواع المصنوعة من طحين الحبوب الكاملة والزبدة الطبيعية بدلاً من الزيوت النباتية المهدرجة، وتجنب النوع المحشو بعجينة اللوز السكرية الكثيفة (Gevulde speculaas) إلا في المناسبات النادرة.",
+          "التوابل الطبيعية كالقرفة والقرنفل تدعم راحة الهضم، لكن كثافة السكر والدقيق الأبيض في البسكويت تستوجب التعامل معه كحلوى محسوبة ضمن مجموع سعراتك اليومية."
+        ],
+        "en": [
+          "One crunchy biscuit with a cup of black tea or unsweetened coffee is quite enough to satisfy a morning sweet craving without straining the pancreas.",
+          "Choose versions made with wholegrain flour and real butter rather than hydrogenated vegetable oils, and keep the version filled with dense, sugary almond paste (gevulde speculaas) for rare occasions only.",
+          "Natural spices such as cinnamon and cloves support comfortable digestion, but the density of sugar and white flour in the biscuit means it should be treated as a counted sweet within your daily calories."
+        ],
+        "nl": [
+          "Eén knapperig koekje bij een kop zwarte thee of koffie zonder suiker is ruim genoeg om de zoetbehoefte in de ochtend te stillen zonder je alvleesklier te belasten.",
+          "Kies varianten met volkorenmeel en echte boter in plaats van geharde plantaardige olie, en bewaar de versie gevuld met dichte, zoete amandelspijs (gevulde speculaas) voor zeldzame gelegenheden.",
+          "Natuurlijke specerijen zoals kaneel en kruidnagel ondersteunen een prettige vertering, maar door de dichte suiker en het witte meel moet je het koekje behandelen als een meegeteld zoetje binnen je dagelijkse calorieën."
+        ]
+      }
+    },
+    "316": {
+      "slug": "kruidnoten",
+      "lead": {
+        "ar": "حبات البسكويت الكروية الصغيرة المقرمشة التي يعشقها أطفال وكبار هولندا في موسم أعياد \"سينتركلاس\"؛ كرات متبلة بالقرفة والزنجبيل والسكر البني. يسجل مؤشراً جلايسيمياً مرتفعاً نسبياً (≈67)، وصغر حجم الحبات قد يغري بتناول كميات كبيرة دون انتباه.",
+        "en": "The small, crunchy round biscuits that Dutch children and adults love during the Sinterklaas season: little balls spiced with cinnamon, ginger and brown sugar. They have a fairly high glycemic index (≈67), and their small size can tempt you to eat large amounts without noticing.",
+        "nl": "De kleine, knapperige ronde koekjes waar Nederlandse kinderen en volwassenen dol op zijn in de sinterklaastijd: balletjes gekruid met kaneel, gember en bruine suiker. Ze hebben een vrij hoge glykemische index (≈67), en door het kleine formaat eet je er makkelijk ongemerkt veel van."
+      },
+      "tips": {
+        "ar": [
+          "حدد حصتك مسبقاً بوضع حفنة صغيرة (نحو 10 إلى 15 حبة) في صحن صغير وأبعد الكيس الكبير عن متناول يدك؛ لتستمتع بالنكهة وقرمشة العيد بوعي تام.",
+          "تجنب الكرويت نوتن المغطس بطبقات الشوكولاتة البيضاء أو الكراميل المملح؛ فالنوع التقليدي السادة يحتوي على سكريات وسعرات أقل بكثير.",
+          "حبات سكرية نشوية مركزة وسريعة الهضم؛ ولمن يراقب وزنه وسكر دمه، فالانتباه للحصة هو الفيصل لمنع تراكم السعرات الخفية أثناء الجلوس والحديث."
+        ],
+        "en": [
+          "Set your portion in advance by putting a small handful (about 10 to 15 pieces) in a little bowl and moving the big bag out of reach, so you enjoy the festive flavour and crunch fully aware.",
+          "Avoid kruidnoten dipped in white chocolate or salted caramel; the plain traditional kind contains far less sugar and fewer calories.",
+          "These are concentrated, quickly digested sugary-starchy bites; if you are watching your weight and blood sugar, paying attention to the portion is what prevents hidden calories piling up while you sit and chat."
+        ],
+        "nl": [
+          "Bepaal je portie vooraf door een klein handje (ongeveer 10 tot 15 stuks) in een schaaltje te doen en de grote zak buiten bereik te leggen, zodat je bewust van de feestelijke smaak en knapperigheid geniet.",
+          "Laat kruidnoten met een laagje witte chocolade of zoute karamel liggen; de traditionele naturel variant bevat veel minder suiker en calorieën.",
+          "Dit zijn geconcentreerde, snel verteerbare suiker- en zetmeelhapjes; let je op je gewicht en bloedsuiker, dan is opletten op de portie de sleutel om verborgen calorieën tijdens het gezellig zitten en kletsen te voorkomen."
+        ]
+      }
+    },
+    "317": {
+      "slug": "bitterballen",
+      "lead": {
+        "ar": "نجمة مقبلات المقاهي والتجمعات في هولندا بلا منازع؛ كرات مقرمشة من فتات الخبز تحبس في داخلها حشوة ساخنة ولذيذة من يخنة اللحم البقري الكثيفة بالتوابل. بروتين ودهون اللحم يفرملان امتصاص غلاف البقسماط النشوي بمؤشر جلايسيمي متوسط (≈55).",
+        "en": "The undisputed star of snacks in Dutch cafés and get-togethers: crunchy breadcrumb balls holding a hot, tasty filling of thick, spiced beef ragout. The protein and fat in the meat slow the absorption of the starchy breadcrumb coating, giving a medium glycemic index (≈55).",
+        "nl": "De onbetwiste ster onder de borrelhapjes in Nederlandse cafés en op feestjes: knapperige paneerballetjes met een hete, smakelijke vulling van dikke, gekruide rundvleesragout. Het eiwit en vet in het vlees remmen de opname van het zetmeelrijke paneerlaagje, met een gemiddelde glykemische index (≈55)."
+      },
+      "tips": {
+        "ar": [
+          "تناول حبتين إلى 3 حبات ساخنة كمقبلات خفيفة مع غمسها في الخردل الأصفر الحار (Mosterd)؛ فالخردل خالٍ من السكر ويمنح نكهة لاذعة تساعد على الهضم والشبع.",
+          "احذر دائماً عند قضم الحبة الأولى لأن الحشوة الداخلية تكون شديدة السخونة، ويمكن تحضيرها في المقلاة الهوائية (Airfryer bitterballen) للحصول على نفس القرمشة بنصف كمية الزيوت الممتصة.",
+          "مقبلات مقلية غنية بالدهون والصوديوم؛ لذا يجب جعلها استثناءً ممتعاً في اللقاءات الاجتماعية وموازنتها بباقي وجبات اليوم الصحية."
+        ],
+        "en": [
+          "Have 2 to 3 hot bitterballen as a light snack, dipped in sharp yellow mustard (mosterd); mustard is sugar-free and adds a tangy flavour that helps digestion and fullness.",
+          "Always be careful with the first bite because the filling is extremely hot; you can make them in an air fryer (airfryer bitterballen) for the same crunch with half the absorbed oil.",
+          "A fried snack that is high in fat and sodium, so keep it an enjoyable exception at social gatherings and balance it with the rest of the day's healthy meals."
+        ],
+        "nl": [
+          "Neem 2 tot 3 hete bitterballen als lichte snack en dip ze in pittige gele mosterd; mosterd is suikervrij en geeft een scherpe smaak die de vertering en verzadiging helpt.",
+          "Pas altijd op met de eerste hap, want de vulling is gloeiend heet; je kunt ze ook in de airfryer maken (airfryer bitterballen) voor dezelfde knapperigheid met de helft van het opgenomen vet.",
+          "Een gefrituurde snack met veel vet en natrium, dus houd het een leuke uitzondering op de borrel en compenseer met gezonde maaltijden voor de rest van de dag."
+        ]
+      }
+    },
+    "318": {
+      "slug": "rundvleeskroket",
+      "lead": {
+        "ar": "الشقيقة الكبرى للبيتربالن والوجبة السريعة الأكثر مبيعاً في آلات البيع الذاتي (Febo) وفي المقاهي الهولندية؛ أسطوانة مقرمشة محشوة بصلصة الرو واللحم البقري الطري المتبل. تسجل مؤشراً جلايسيمياً معتدلاً (≈55)، وتوفر شبعاً حسياً غنياً.",
+        "en": "The big sister of the bitterbal and the best-selling fast food from Dutch wall vending machines (FEBO) and cafés: a crunchy cylinder filled with roux sauce and tender, seasoned beef. It has a moderate glycemic index (≈55) and gives a rich, satisfying sense of fullness.",
+        "nl": "Het grote zusje van de bitterbal en de bestverkochte snack uit de muur (FEBO) en in Nederlandse cafés: een knapperige rol gevuld met ragout van roux en mals, gekruid rundvlees. Hij heeft een matige glykemische index (≈55) en geeft een rijk, voldaan gevoel."
+      },
+      "tips": {
+        "ar": [
+          "تناول حبة كروكيت واحدة بالشوكة مع سلطة خضراء ومسحة خردل طبيعي، وتجنب وضعها داخل الخبز الأبيض الطري بالزبدة (Broodje kroket) لتفادي مضاعفة النشويات المكررة.",
+          "اختر الكروكيت المصنوع من لحم البقر الصافي (Rundvlees) واخبزه في القلاية الهوائية لتقليل امتصاص دهون القلي التجارية، وتناوله ببطء واستمتاع.",
+          "وجبة مقلية عالية الكثافة بالسعرات والصوديوم؛ والاعتدال بحبة واحدة كافٍ تماماً للشبع وتذوق النكهة الهولندية الأصيلة دون إرهاق الجهاز الدوري."
+        ],
+        "en": [
+          "Eat one kroket with a fork alongside a green salad and a little natural mustard, and avoid putting it in a soft white buttered roll (broodje kroket) so you don't double up on refined starch.",
+          "Choose a kroket made with pure beef (rundvlees) and bake it in an air fryer to reduce the absorbed commercial frying fat, then eat it slowly and enjoy it.",
+          "A fried snack that is dense in calories and sodium; one kroket is plenty to feel full and taste the authentic Dutch flavour without straining your circulatory system."
+        ],
+        "nl": [
+          "Eet één kroket met een vork bij een groene salade en een beetje natuurlijke mosterd, en stop hem niet in een zacht wit broodje met boter (broodje kroket) om geen dubbele portie geraffineerd zetmeel te nemen.",
+          "Kies een kroket van puur rundvlees en bak hem in de airfryer zodat er minder frituurvet wordt opgenomen; eet hem langzaam en met aandacht.",
+          "Een gefrituurde snack die rijk is aan calorieën en natrium; één kroket is genoeg om verzadigd te raken en de echte Hollandse smaak te proeven zonder je hart en bloedvaten te belasten."
+        ]
+      }
+    },
+    "319": {
+      "slug": "frikandel",
+      "lead": {
+        "ar": "السناك الشعبي الأكثر استهلاكاً في هولندا؛ أصابع لحم مفروم ومتبل بدون غلاف جلدي خارجي، تُقلى أو تُشوى حتى تصبح متماسكة وداكنة. كربوهيدراتها منخفضة جداً (نحو 6غ لكل 100غ من النشا الرابط) ومؤشرها الجلايسيمي منخفض (≈25) مقارنة بالوجبات السريعة الأخرى.",
+        "en": "The most-eaten popular snack in the Netherlands: skinless sticks of seasoned minced meat, fried or grilled until firm and dark. They are very low in carbohydrate (about 6 g per 100 g, from the binding starch) and have a low glycemic index (≈25) compared with other fast food.",
+        "nl": "De meest gegeten snack van Nederland: vellozen staven van gekruid gehakt, gefrituurd of gegrild tot ze stevig en donker zijn. Ze bevatten heel weinig koolhydraten (ongeveer 6 g per 100 g, uit het bindende zetmeel) en hebben een lage glykemische index (≈25) vergeleken met andere fastfood."
+      },
+      "tips": {
+        "ar": [
+          "اختر الفريكانديل المشوي وتناوله سادة أو مع القليل من الخردل، وتجنب خلطة \"الفريكانديل سبيسيال\" (Frikandel speciaal) المحشوة بالمايونيز الكثيف وصلصة الكاري المحلاة بالسكر والبصل.",
+          "اشوِ أصابع الفريكانديل على الشواية أو في المقلاة الهوائية دون إضافة زيت إضافي؛ فاللحم يفرز دهونه الطبيعية ويكتسب قرمشة ناعمة وخفيفة.",
+          "الفريكانديل لحم مصنع يحتوي على نسب صوديوم ودهون مشبعة وتوابل؛ لذا لا يُنصح به كطعام يومي للأطفال أو مرضى القلب، ولكنه خيار سريع منخفض النشويات عند الضرورة."
+        ],
+        "en": [
+          "Choose a grilled frikandel and eat it plain or with a little mustard, and avoid the frikandel speciaal loaded with thick mayonnaise, sugar-sweetened curry sauce and onion.",
+          "Grill the frikandellen on a barbecue or in an air fryer without adding extra oil; the meat releases its own fat and turns gently and lightly crisp.",
+          "Frikandel is processed meat containing sodium, saturated fat and spices, so it is not recommended as an everyday food for children or people with heart disease, but it is a quick, low-starch option when needed."
+        ],
+        "nl": [
+          "Kies een gegrilde frikandel en eet hem naturel of met een beetje mosterd, en laat de frikandel speciaal met dikke mayonaise, met suiker gezoete curry en ui liggen.",
+          "Grill de frikandellen op de barbecue of in de airfryer zonder extra olie; het vlees laat zijn eigen vet los en wordt licht en zacht knapperig.",
+          "Een frikandel is bewerkt vlees met natrium, verzadigd vet en specerijen, dus niet aan te raden als dagelijkse kost voor kinderen of mensen met een hartaandoening, maar wel een snelle, zetmeelarme optie als het nodig is."
+        ]
+      }
+    },
+    "320": {
+      "slug": "ossenworst",
+      "lead": {
+        "ar": "نقانق أمستردام التراثية ذات الأصل العريق؛ لحم بقري مفروم نيء ومتبل بجوزة الطيب والقرنفل والفلفل الأبيض ومدخن تدخيناً بارداً خفيفاً. صفر كربوهيدرات صافية ومؤشرها الجلايسيمي غير منطبق، وتعد من أصفى مصادر البروتين والحديد وفيتامينات B في الأطباق الباردة.",
+        "en": "Amsterdam's heritage sausage with a long history: raw minced beef seasoned with nutmeg, cloves and white pepper and lightly cold-smoked. It has zero net carbohydrate, so a glycemic index does not apply, and it is one of the purest sources of protein, iron and B vitamins among cold dishes.",
+        "nl": "De Amsterdamse erfgoedworst met een lange geschiedenis: rauw rundergehakt, gekruid met nootmuskaat, kruidnagel en witte peper en licht koud gerookt. Er zitten nul netto koolhydraten in, dus een glykemische index is niet van toepassing, en het is een van de zuiverste bronnen van eiwit, ijzer en B-vitamines onder de koude gerechten."
+      },
+      "tips": {
+        "ar": [
+          "تناول بضع شرائح رقيقة كجزء من طبق المقبلات الباردة مع قطع الخيار المخلل والخردل الهولندي الحار؛ فهي تمنح شبعاً بروتينياً فورياً يدعم استقرار الجلوكوز.",
+          "احرص على شرائها طازجة جداً من جزار موثوق (Keurslager) وحفظها مبردة في الثلاجة واستهلاكها خلال يومين كحد أقصى، وتجنب تركها في درجات حرارة الغرفة.",
+          "⚠️ تحذير سريري هام: نقانق الأكسنفورست لحم بقري نيء بالكامل (Raw beef)؛ يُمنع منعاً باتاً تناولها للحوامل والأطفال الصغار وأصحاب المناعة الضعيفة تجنباً لمخاطر بكتيريا الإيكولاي والمقوسات (Toxoplasmosis)."
+        ],
+        "en": [
+          "Eat a few thin slices as part of a cold starter platter with gherkins and sharp Dutch mustard; it gives immediate protein satiety that supports stable glucose.",
+          "Buy it very fresh from a trusted butcher (keurslager), keep it refrigerated and eat it within two days at most; don't leave it at room temperature.",
+          "⚠️ Important clinical warning: ossenworst is entirely raw beef; it must never be eaten by pregnant women, young children or people with weakened immunity because of the risk of E. coli bacteria and toxoplasmosis."
+        ],
+        "nl": [
+          "Eet een paar dunne plakjes als onderdeel van een koude borrelplank met augurk en pittige Hollandse mosterd; het geeft direct eiwitverzadiging die een stabiele glucose ondersteunt.",
+          "Koop hem heel vers bij een betrouwbare slager (keurslager), bewaar hem in de koelkast en eet hem binnen hooguit twee dagen op; laat hem niet op kamertemperatuur liggen.",
+          "⚠️ Belangrijke klinische waarschuwing: ossenworst is volledig rauw rundvlees; zwangeren, jonge kinderen en mensen met een verzwakte afweer mogen hem absoluut niet eten vanwege het risico op E. coli-bacteriën en toxoplasmose."
+        ]
+      }
+    },
+    "321": {
+      "slug": "filet-americain",
+      "lead": {
+        "ar": "الدهان الأكثر طلباً على موائد الإفطار والغداء في هولندا؛ لحم بقري مفروم ناعماً جداً ونيء، ممزوج بتتبيلة المايونيز والماسترد والبابريكا. كربوهيدراته شبه معدومة (نحو 2غ) ومؤشره الجلايسيمي غير منطبق، ويوفر بروتيناً صافياً سريع الامتصاص.",
+        "en": "The most popular spread on Dutch breakfast and lunch tables: very finely minced raw beef mixed with a dressing of mayonnaise, mustard and paprika. It contains almost no carbohydrate (about 2 g), so a glycemic index does not apply, and it provides pure, quickly absorbed protein.",
+        "nl": "Het populairste broodbeleg op de Nederlandse ontbijt- en lunchtafel: heel fijn gemalen rauw rundvlees gemengd met een dressing van mayonaise, mosterd en paprika. Het bevat bijna geen koolhydraten (ongeveer 2 g), dus een glykemische index is niet van toepassing, en het levert puur, snel opneembaar eiwit."
+      },
+      "tips": {
+        "ar": [
+          "ادهن ملعقة كبيرة فوق شريحة من خبز الحبوب الكاملة أو توست الكيتو وزينها بشرائح البصل المفروم والبيض المسلوق؛ لتمنحك وجبة غداء مشبعة ومستقرة طاقياً.",
+          "تأكد من حفظ العبوة في الثلاجة عند درجة حرارة 4 درجات مئوية واستهلاكها فوراً بعد الفتح، واشترِ الأنواع النقية الخالية من السكريات المضافة ومحسنات النكهة الكيميائية.",
+          "⚠️ تحذير سريري صارم: الفيليه أمريكان هو لحم بقري نيء 100%؛ يُحظر تماماً على الحوامل والمرضعات والأشخاص الذين يتلقون علاجات مثبطة للمناعة لدرء مخاطر العدوى البكتيرية والطفيلية الخطيرة."
+        ],
+        "en": [
+          "Spread one tablespoon on a slice of wholegrain bread or keto toast and top it with chopped onion and boiled egg for a filling lunch with steady energy.",
+          "Make sure the tub is kept in the fridge at 4 °C and eaten straight after opening, and buy pure versions without added sugars or chemical flavour enhancers.",
+          "⚠️ Strict clinical warning: filet americain is 100% raw beef; it is completely off-limits for pregnant and breastfeeding women and people on immunosuppressive treatment, to prevent serious bacterial and parasitic infections."
+        ],
+        "nl": [
+          "Smeer één eetlepel op een snee volkorenbrood of ketotoast en beleg met gesnipperde ui en gekookt ei voor een verzadigende lunch met stabiele energie.",
+          "Bewaar het bakje in de koelkast op 4 °C en eet het direct na openen op; koop pure varianten zonder toegevoegde suikers of chemische smaakversterkers.",
+          "⚠️ Strenge klinische waarschuwing: filet americain is 100% rauw rundvlees; het is volstrekt verboden voor zwangere vrouwen, vrouwen die borstvoeding geven en mensen die afweeronderdrukkende medicatie gebruiken, om ernstige bacteriële en parasitaire infecties te voorkomen."
+        ]
+      }
+    },
+    "322": {
+      "slug": "edam-cheese",
+      "lead": {
+        "ar": "الجبنة الكروية الشهيرة بغلاف الشمع الأحمر اللامع؛ نشأت في بلدة إيدام وتتميز بنكهة خفيفة وقوام ناعم شبه صلب. كربوهيدراتها الصافية تقارب الصفر ومؤشرها الجلايسيمي غير منطبق، وتعد من أروع الأجبان المتوسطة الدسم والغنية بالكالسيوم والبروتين الكامل.",
+        "en": "The famous round cheese in its shiny red wax coat: it originated in the town of Edam and has a mild flavour and a smooth, semi-hard texture. Its net carbohydrate is close to zero, so a glycemic index does not apply, and it is one of the finest medium-fat cheeses, rich in calcium and complete protein.",
+        "nl": "De beroemde ronde kaas met zijn glanzende rode waslaag: hij komt uit het stadje Edam en heeft een milde smaak en een zachte, halfharde structuur. Het netto koolhydraatgehalte is bijna nul, dus een glykemische index is niet van toepassing, en het is een van de beste halfvette kazen, rijk aan calcium en volwaardig eiwit."
+      },
+      "tips": {
+        "ar": [
+          "شريحة أو شريحتان مع وجبة الإفطار أو كسناك مع بضع حبات من العنب أو الجوز؛ تمنح شبعاً هادئاً وتساعد على توازن سكر الدم بفضل خلوها من النشويات.",
+          "انزع طبقة الشمع الحمراء الخارجية غير القابلة للأكل، واستمتع بالجبن في درجة حرارة الغرفة لتتفتح نكهته الزبدية الطبيعية اللطيفة.",
+          "جبن الإيدام أقل دسامة ودهوناً من جبن الغودا، ومصدر ممتاز للفوسفور والزنك؛ وخيار رائع لمتبعي حميات ضبط الوزن والسكري لدعم الشبع دون أي كربوهيدرات."
+        ],
+        "en": [
+          "One or two slices with breakfast, or as a snack with a few grapes or walnuts; it gives calm fullness and helps balance blood sugar because it contains no starch.",
+          "Remove the inedible red wax coating and enjoy the cheese at room temperature so its gentle, natural buttery flavour comes through.",
+          "Edam is lower in fat than Gouda and an excellent source of phosphorus and zinc; a great choice for weight-management and diabetes diets to support fullness without any carbohydrate."
+        ],
+        "nl": [
+          "Een of twee plakjes bij het ontbijt, of als tussendoortje met een paar druiven of walnoten; het geeft rustige verzadiging en helpt je bloedsuiker in balans te houden omdat er geen zetmeel in zit.",
+          "Verwijder de oneetbare rode waslaag en eet de kaas op kamertemperatuur zodat de zachte, natuurlijke boterige smaak tot zijn recht komt.",
+          "Edammer is minder vet dan Goudse kaas en een uitstekende bron van fosfor en zink; een prima keuze bij een dieet voor gewichtsbeheersing en diabetes om verzadiging te steunen zonder koolhydraten."
+        ]
+      }
+    },
+    "323": {
+      "slug": "oude-gouda-cheese",
+      "lead": {
+        "ar": "تاج الأجبان الهولندية وفخر الصناعة التراثية (Oude Kaas)؛ جبن غودا أصلي عُتّق بصبر لأكثر من 10 إلى 12 شهراً حتى تبلورت فيه حبيبات الكالسيوم المقرمشة واكتسب نكهة كراميلية عميقة وحادة. صفر كربوهيدرات وصفر سكر لاكتوز ومؤشره الجلايسيمي غير منطبق.",
+        "en": "The crown of Dutch cheeses and the pride of its heritage craft (oude kaas): genuine Gouda patiently aged for more than 10 to 12 months until crunchy calcium crystals form and it develops a deep, sharp, caramel-like flavour. It has zero carbohydrate and zero lactose, so a glycemic index does not apply.",
+        "nl": "De kroon op de Nederlandse kazen en de trots van het ambacht (oude kaas): echte Goudse kaas die geduldig meer dan 10 tot 12 maanden is gerijpt, tot er knapperige kristallen ontstaan en hij een diepe, pittige, karamelachtige smaak krijgt. Er zitten nul koolhydraten en nul lactose in, dus een glykemische index is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "مكعبات صغيرة الحجم كتحلية بروتينية فاخرة أو مقبلات مع مسحة خردل خفيفة؛ تمنح إحساساً بالشبع والرضا الفوري بمجرد تذوقها بفضل كثافة نكهتها.",
+          "قطّعها إلى مكعبات صغيرة بسكين مخصص للأجبان الصلبة، وقدمها مع حبات الزيتون وجوز عين الجمل بدلاً من تقديمها مع البسكويت الأبيض المالح.",
+          "التعتق الطويل يكسر سكر اللاكتوز تماماً، مما يجعل الغودا المعتقة مناسبة جداً حتى للأشخاص الذين يعانون من عدم تحمل اللاكتوز، وهي منجم لفيتامين K2 الحيوي لصحة الشرايين والعظام."
+        ],
+        "en": [
+          "Small cubes as a luxurious protein dessert or as a snack with a little mustard; its intense flavour gives a sense of fullness and satisfaction as soon as you taste it.",
+          "Cut it into small cubes with a hard-cheese knife and serve it with olives and walnuts instead of salty white crackers.",
+          "Long ageing breaks down the lactose completely, which makes aged Gouda very suitable even for people with lactose intolerance, and it is a rich source of vitamin K2, vital for healthy arteries and bones."
+        ],
+        "nl": [
+          "Kleine blokjes als luxe eiwitrijk dessert of als borrelhapje met een beetje mosterd; door de intense smaak voel je je meteen voldaan en verzadigd.",
+          "Snijd hem in kleine blokjes met een kaasmes voor harde kaas en serveer hem met olijven en walnoten in plaats van zoute witte crackers.",
+          "Door het lange rijpen wordt de lactose volledig afgebroken, waardoor oude Goudse kaas zelfs geschikt is voor mensen met lactose-intolerantie, en hij is een rijke bron van vitamine K2, belangrijk voor gezonde bloedvaten en botten."
+        ]
+      }
+    },
+    "324": {
+      "slug": "leidse-kaas-cumin",
+      "lead": {
+        "ar": "الجبن التراثي لمدينة لايدن الهولندية؛ جبن نصف صلب ممزوج ببذور الكمون العطري الكاملة التي تمنحه نكهة ترابية ودافئة مميزة. كربوهيدراته ضئيلة جداً ومؤشره الجلايسيمي غير منطبق، ويجمع بين بروتين الحليب وفوائد الكمون الهضمية.",
+        "en": "The heritage cheese of the Dutch city of Leiden: a semi-hard cheese with whole aromatic cumin seeds that give it a distinctive warm, earthy flavour. It contains very little carbohydrate, so a glycemic index does not apply, and it combines milk protein with the digestive benefits of cumin.",
+        "nl": "De erfgoedkaas van de stad Leiden: een halfharde kaas met hele, aromatische komijnzaadjes die hem een kenmerkende warme, aardse smaak geven. Hij bevat heel weinig koolhydraten, dus een glykemische index is niet van toepassing, en hij combineert melkeiwit met de spijsverteringsvoordelen van komijn."
+      },
+      "tips": {
+        "ar": [
+          "شريحة غنية بالنكهة في ساندويش الصباح أو سناك؛ فبذور الكمون تضفي نكهة عطرية تساعد على تقليل حاجتك لإضافة الملح وتنعش حاسة التذوق.",
+          "امضغ قطع الجبن جيداً لتستخلص الزيوت العطرية من حبات الكمون المخبوزة في قلب الجبن، واستمتع به مع كوب من الشاي الأخضر أو القهوة السادة.",
+          "جبن لايدن يُصنع تقليدياً من حليب منزوع الدسم جزئياً؛ لذا فهو أقل دهوناً وسعرات من الغودا التقليدية، ومناسب جداً لمن يراقب دهون الدم ووزنه."
+        ],
+        "en": [
+          "A flavourful slice in your morning sandwich or as a snack; the cumin seeds add an aromatic taste that helps you need less added salt and refreshes your sense of taste.",
+          "Chew the cheese well to release the aromatic oils from the cumin seeds inside it, and enjoy it with a cup of green tea or black coffee.",
+          "Leidse kaas is traditionally made from partly skimmed milk, so it is lower in fat and calories than regular Gouda and very suitable for anyone watching their blood lipids and weight."
+        ],
+        "nl": [
+          "Een smaakvol plakje op je ochtendboterham of als tussendoortje; de komijnzaadjes geven een aromatische smaak waardoor je minder zout nodig hebt en je smaakpapillen worden opgefrist.",
+          "Kauw de kaas goed zodat de aromatische oliën uit de komijnzaadjes vrijkomen, en geniet ervan bij een kop groene thee of zwarte koffie.",
+          "Leidse kaas wordt traditioneel gemaakt van gedeeltelijk afgeroomde melk, dus hij bevat minder vet en calorieën dan gewone Goudse kaas en is zeer geschikt als je op je bloedvetten en gewicht let."
+        ]
+      }
+    },
+    "325": {
+      "slug": "geitenkaas",
+      "lead": {
+        "ar": "الجبن الأبيض الناعم النقي المصنوع من حليب الماعز الهولندي الطازج؛ يتميز بنكهة حليبية كريمية وقوام يذوب في الفم مع حموضة ناعمة. كربوهيدراته الصافية منخفضة جداً ومؤشره الجلايسيمي غير منطبق، وتعد بروتيناته وأحماضه الدهنية أسهل وأسرع هضماً من حليب البقر.",
+        "en": "A pure, soft white cheese made from fresh Dutch goat's milk, with a creamy milky flavour, a melt-in-the-mouth texture and a gentle tang. Its net carbohydrate is very low, so a glycemic index does not apply, and its proteins and fatty acids are easier and quicker to digest than those of cow's milk.",
+        "nl": "Een pure, zachte witte kaas van verse Hollandse geitenmelk, met een romige melksmaak, een structuur die smelt in de mond en een zachte frisheid. Het netto koolhydraatgehalte is zeer laag, dus een glykemische index is niet van toepassing, en de eiwitten en vetzuren zijn makkelijker en sneller verteerbaar dan die van koemelk."
+      },
+      "tips": {
+        "ar": [
+          "فتت ملعقة كبيرة فوق صحن سلطة الجرجير والشمندر مع حبات الجوز؛ فالدهون المفيدة وبروتين الماعز يفرملان امتصاص نشويات السلطة ويمنحان الوجبة فخامة غذائية وشبعاً.",
+          "اخبز قرصاً صغيراً من جبن الماعز في الفرن لدقائق حتى يسيل قلبه وزينه بلمسة زعتر بري خفيفة وتجنب سكب العسل الكثيف فوقه للحفاظ على انخفاض السكريات.",
+          "دهون حليب الماعز تحتوي على نسبة أعلى من الأحماض الدهنية متوسطة السلسلة (MCTs) وجزيئات دهنية أصغر؛ مما يجعله بديلاً مريحاً جداً لمن يعاني من حساسية هضمية تجاه أجبان الأبقار."
+        ],
+        "en": [
+          "Crumble a tablespoon over a rocket and beetroot salad with walnuts; the healthy fats and goat's-milk protein slow the absorption of the salad's carbohydrates and make the meal rich and filling.",
+          "Bake a small round of goat's cheese in the oven for a few minutes until the centre melts and top it with a light touch of wild thyme; skip the thick drizzle of honey to keep sugars low.",
+          "Goat's-milk fat contains a higher share of medium-chain fatty acids (MCTs) and smaller fat globules, which makes it a very comfortable alternative for people with digestive sensitivity to cow's-milk cheeses."
+        ],
+        "nl": [
+          "Verkruimel een eetlepel over een salade van rucola en rode biet met walnoten; de gezonde vetten en het geitenmelkeiwit remmen de opname van de koolhydraten uit de salade en maken de maaltijd rijk en verzadigend.",
+          "Bak een klein rondje geitenkaas een paar minuten in de oven tot het hart smelt en bestrooi het met een vleugje wilde tijm; laat de dikke laag honing weg om de suikers laag te houden.",
+          "Geitenmelkvet bevat meer middellange-ketenvetzuren (MCT's) en kleinere vetbolletjes, waardoor geitenkaas een zeer prettig alternatief is voor wie gevoelig reageert op kazen van koemelk."
+        ]
+      }
+    },
+    "326": {
+      "slug": "vanillevla",
+      "lead": {
+        "ar": "التحلية اليومية الأكثر انتشاراً في ثلاجات كل منزل هولندي؛ كاسترد حليب سميك وناعم بنكهة الفانيليا يُسكب بارداً بعد العشاء. يحتوي على الحليب والنشا والسكر، ويسجل مؤشراً جلايسيمياً متوسطاً إلى مرتفع (≈62)، مما يستوجب ضبط الحصة بالملعقة.",
+        "en": "The most common everyday dessert in every Dutch household fridge: a thick, smooth vanilla milk custard poured cold after dinner. It contains milk, starch and sugar and has a medium-to-high glycemic index (≈62), so the portion needs to be measured by the spoonful.",
+        "nl": "Het meest gegeten dagelijkse toetje uit de koelkast van elk Nederlands huishouden: dikke, gladde vanillevla die koud na het avondeten wordt geschonken. Het bevat melk, zetmeel en suiker en heeft een gemiddelde tot hoge glykemische index (≈62), dus de portie moet je per lepel afmeten."
+      },
+      "tips": {
+        "ar": [
+          "تناول نصف كوب صغير كتحلية استثنائية بعد وجبة رئيسية متكاملة، وزينه ببضع حبات من التوت الطازج ورشة قرفة لرفع الألياف وتعديل وتيرة الهضم.",
+          "اختر الأنواع المدونة بـ \"نصف دسم وبدون سكر مضاف\" (Vla 0% suiker toevoeging) أو حضره منزلياً بحليب طبيعي وقليل من النشا ومحلي طبيعي آمن وخلاصة فانيليا نقية.",
+          "الفلا التقليدي غني بالسكريات السائلة سريعة الامتصاص؛ لذا يجب على مرضى السكري ومن يتبع حمية صارمة التعامل معه بوعي واختيار البدائل غير المحلاة."
+        ],
+        "en": [
+          "Have half a small cup as an occasional dessert after a complete main meal, topped with a few fresh berries and a pinch of cinnamon to add fibre and slow digestion.",
+          "Choose versions labelled semi-skimmed with no added sugar (vla 0% suikertoevoeging), or make it at home with plain milk, a little starch, a safe natural sweetener and pure vanilla extract.",
+          "Traditional vla is rich in fast-absorbed liquid sugars, so people with diabetes and those on a strict diet should treat it with care and choose unsweetened alternatives."
+        ],
+        "nl": [
+          "Neem een half klein kommetje als incidenteel toetje na een complete hoofdmaaltijd, met een paar verse bessen en een snufje kaneel voor extra vezels en een tragere vertering.",
+          "Kies varianten met het label halfvol en zonder toegevoegde suiker (vla 0% suikertoevoeging), of maak hem zelf met gewone melk, een beetje zetmeel, een veilige natuurlijke zoetstof en pure vanille-extract.",
+          "Gewone vla is rijk aan snel opneembare vloeibare suikers, dus mensen met diabetes en wie een streng dieet volgt, moeten er bewust mee omgaan en voor ongezoete alternatieven kiezen."
+        ]
+      }
+    },
+    "327": {
+      "slug": "chocomel",
+      "lead": {
+        "ar": "المشروب الوطني الأصفر الشهير (De enige echte Chocomel)؛ حليب بالشوكولاتة الكثيفة والكاكاو يُشرب مثلجاً في الصيف أو ساخناً بالكريمة في الشتاء. مؤشره الجلايسيمي متوسط (≈50) بفضل بروتين ودهون الحليب، لكنه غني بالسكريات المضافة السريعة.",
+        "en": "The famous yellow national drink (De enige echte Chocomel): thick chocolate-and-cocoa milk drunk ice-cold in summer or hot with cream in winter. It has a medium glycemic index (≈50) thanks to the protein and fat in the milk, but it is rich in fast added sugars.",
+        "nl": "De beroemde gele nationale drank (De enige echte Chocomel): dikke chocolademelk met cacao, ijskoud gedronken in de zomer of warm met slagroom in de winter. Hij heeft een gemiddelde glykemische index (≈50) dankzij het eiwit en vet in de melk, maar is rijk aan snelle toegevoegde suikers."
+      },
+      "tips": {
+        "ar": [
+          "للأفراد النشطين والرياضيين: كوب صغير بعد تمرين بدني شاق يوفر تعويضاً سريعاً للجليكوجين وبروتيناً للاستشفاء، بينما لا يناسب كشراب يومي للأشخاص الخاملين.",
+          "اختر النسخة الخفيفة المكتوب عليها (Chocomel 0% suiker / Halfvol)؛ فهي تمنح نفس المذاق الشوكولاتي الكثيف الغني بنصف كمية السكريات والسعرات.",
+          "الكاكاو يوفر مضادات أكسدة كالفلافونويد؛ ولكن السكريات المضافة في الحليب التقليدي تجعله مشروباً عالي الطاقة يتطلب الاعتدال الصارم لمرضى السكري ومقاومة الإنسولين."
+        ],
+        "en": [
+          "For active people and athletes: a small glass after hard exercise quickly replenishes glycogen and provides protein for recovery, but it is not suitable as an everyday drink for inactive people.",
+          "Choose the lighter version labelled Chocomel 0% suiker or halfvol; it gives the same rich, thick chocolate taste with half the sugar and calories.",
+          "Cocoa provides antioxidants such as flavonoids, but the added sugars in the regular drink make it a high-energy drink that calls for strict moderation for people with diabetes and insulin resistance."
+        ],
+        "nl": [
+          "Voor actieve mensen en sporters: een klein glas na een zware training vult snel glycogeen aan en levert eiwit voor herstel, maar als dagelijkse drank voor mensen die weinig bewegen is hij niet geschikt.",
+          "Kies de lichtere variant met Chocomel 0% suiker of halfvol op het etiket; die geeft dezelfde rijke, dikke chocoladesmaak met de helft van de suiker en calorieën.",
+          "Cacao levert antioxidanten zoals flavonoïden, maar de toegevoegde suikers in de gewone variant maken het een energierijke drank die strikte matigheid vraagt bij diabetes en insulineresistentie."
+        ]
+      }
+    },
+    "328": {
+      "slug": "appelstroop",
+      "lead": {
+        "ar": "الدهان التراثي الداكن والأكثر فائدة في هولندا؛ معجون سميك ناتج عن طبخ عصير التفاح وبنجر السكر لساعات طويلة، مشهور بغناه الاستثنائي بالحديد النباتي الطبيعي. يسجل مؤشراً جلايسيمياً متوسطاً (≈58)، ويعد بديلاً راقياً للمربيات والشوكولاتة القابلة للدهن.",
+        "en": "The dark heritage spread and one of the most nutritious in the Netherlands: a thick syrup made by cooking apple juice and sugar beet for many hours, famous for its exceptionally high natural plant iron. It has a medium glycemic index (≈58) and is a refined alternative to jams and chocolate spreads.",
+        "nl": "Het donkere erfgoedbeleg en een van de voedzaamste van Nederland: een dikke stroop die ontstaat door appelsap en suikerbieten urenlang in te koken, bekend om het uitzonderlijk hoge gehalte aan natuurlijk plantaardig ijzer. Hij heeft een gemiddelde glykemische index (≈58) en is een verfijnd alternatief voor jam en chocoladepasta."
+      },
+      "tips": {
+        "ar": [
+          "ادهن مسحة رقيقة (ملعقة صغيرة) فوق شريحة خبز أسمر مع شريحة جبن غودا هولندي؛ فهذه التوليفة الهولندية الشهيرة تجمع بين الحديد والكالسيوم والبروتين المشبع.",
+          "اختر الأنواع التقليدية المسماة \"Rinschen appelstroop\" ذات الحموضة اللطيفة والنقية بدون شراب سكر الذرة المضاف، واكتفِ بمسحة ناعمة تكفي لتغطية الخبز.",
+          "ملعقة واحدة من الأبل ستروب تمد الجسم بنحو 2 إلى 3 ملغ من الحديد؛ وهو خيار غذائي متميز لدعم مخازن الحديد والهيموغلوبين، مع مراعاة احتساب سكرياته الطبيعية لمن يراقب سكر الدم."
+        ],
+        "en": [
+          "Spread a thin layer (one teaspoon) on a slice of brown bread with a slice of Dutch Gouda; this famous Dutch combination brings together iron, calcium and filling protein.",
+          "Choose traditional Rinse appelstroop with its pleasant, pure tang and no added corn syrup, and use just a thin layer, enough to cover the bread.",
+          "One spoonful of appelstroop supplies about 2 to 3 mg of iron, making it an excellent choice to support iron stores and haemoglobin; if you watch your blood sugar, remember to count its natural sugars."
+        ],
+        "nl": [
+          "Smeer een dun laagje (één theelepel) op een snee bruin brood met een plak Goudse kaas; deze bekende Hollandse combinatie brengt ijzer, calcium en verzadigend eiwit samen.",
+          "Kies traditionele Rinse appelstroop met een aangenaam, puur zurig smaakje en zonder toegevoegde glucosestroop, en smeer maar een dun laagje, net genoeg om het brood te bedekken.",
+          "Eén lepel appelstroop levert ongeveer 2 tot 3 mg ijzer, een uitstekende keuze om je ijzervoorraad en hemoglobine te ondersteunen; let je op je bloedsuiker, tel dan de natuurlijke suikers mee."
+        ]
+      }
+    },
+    "329": {
+      "slug": "volkoren-beschuit",
+      "lead": {
+        "ar": "أقراص الخبز المحمص الهشة والدائرية التي لا يخلو منها إفطار هولندي (Beschuit)؛ تُخبز مرتين حتى تصبح فائقة القرمشة والخفة. شابورة القمح الكامل غنية بالنخالة، ولكن هشاشة قوامها تجعل مؤشرها الجلايسيمي معتدلاً إلى مرتفع (≈68).",
+        "en": "The light, round rusks that no Dutch breakfast is without (beschuit): baked twice until extra crisp and airy. Whole-wheat rusk is rich in bran, but its brittle texture gives it a moderate-to-high glycemic index (≈68).",
+        "nl": "De lichte, ronde beschuitjes die bij geen Hollands ontbijt ontbreken: twee keer gebakken tot ze extra knapperig en luchtig zijn. Volkoren beschuit is rijk aan zemelen, maar door de brosse structuur heeft hij een matige tot hoge glykemische index (≈68)."
+      },
+      "tips": {
+        "ar": [
+          "تناول قرصاً واحداً أو اثنين مع دهنه بالجبن الأبيض أو زبدة الفول السوداني الطبيعية الخالية من السكر؛ فالبروتين والدهون الصحية يفرملان امتصاص نشا الشابورة المكرمل.",
+          "اختر دائماً النوع المصنوع من طحين القمح الكامل 100% (Volkoren) وتجنب الشابورة البيضاء الهشة العادية التي تتحلل إلى سكر في الفم سريعاً.",
+          "قرص البسخويت خفيف جداً بالسعرات (نحو 40 سعرة للقرص)؛ وهو بديل عملي ومقرمش في الصباح شريطة دعمه ببروتين طبيعي لمنع الجوع السريع."
+        ],
+        "en": [
+          "Have one or two rusks topped with soft white cheese or natural, sugar-free peanut butter; the protein and healthy fats slow the absorption of the toasted rusk starch.",
+          "Always choose rusks made from 100% whole-wheat flour (volkoren) and avoid ordinary brittle white rusks, which break down into sugar in the mouth very quickly.",
+          "A beschuit is very low in calories (about 40 kcal per rusk); it is a practical, crunchy morning option as long as it is paired with natural protein to prevent early hunger."
+        ],
+        "nl": [
+          "Eet een of twee beschuitjes met zuivelspread of natuurlijke pindakaas zonder suiker; het eiwit en de gezonde vetten remmen de opname van het geroosterde zetmeel.",
+          "Kies altijd beschuit van 100% volkorenmeel en laat gewone, brosse witte beschuit liggen, die in de mond heel snel tot suiker wordt afgebroken.",
+          "Een beschuitje bevat heel weinig calorieën (ongeveer 40 kcal per stuk); een praktische, knapperige keuze voor de ochtend, mits je het combineert met natuurlijk eiwit om snelle honger te voorkomen."
+        ]
+      }
+    },
+    "330": {
+      "slug": "ontbijtkoek",
+      "lead": {
+        "ar": "كعكة الصباح التراثية البنية بنكهتها المتبلة بالقرفة والقرنفل والزنجبيل؛ تُصنع تقليدياً من دقيق الجاودار (Rye) وتكاد تخلو من الدهون. يسجل مؤشرها الجلايسيمي متوسطاً إلى مرتفع (≈65)؛ فرغم قلة الدهون وغنى الجاودار بالألياف، إلا أنها تُحلى بشراب الجلوكوز أو العسل.",
+        "en": "The traditional brown breakfast cake, spiced with cinnamon, cloves and ginger: classically made with rye flour and almost fat-free. Its glycemic index is medium to high (≈65); despite its low fat and fibre-rich rye, it is sweetened with glucose syrup or honey.",
+        "nl": "De traditionele bruine ontbijtkoek, gekruid met kaneel, kruidnagel en gember: klassiek gemaakt met roggemeel en vrijwel vetvrij. De glykemische index is gemiddeld tot hoog (≈65); ondanks het lage vetgehalte en de vezelrijke rogge wordt hij gezoet met glucosestroop of honing."
+      },
+      "tips": {
+        "ar": [
+          "شريحة واحدة رقيقة مدهونة بمسحة خفيفة من الزبدة الطبيعية بجانب القهوة الصباحية؛ فدهن الزبدة يساهم في إبطاء وتيرة امتصاص سكريات الكعكة.",
+          "اختر الأنواع المكتوب عليها (Minder suiker / Volkoren ontbijtkoek) المحتوية على نسبة أعلى من ألياف الجاودار وبدون سكريات مضافة مفرطة.",
+          "ألياف الجاودار ممتازة للأمعاء وتمنح شبعاً جيداً، ولكن انتبه إلى أن الكعكة التقليدية غنية بالسكريات البسيطة؛ لذا فهي تتطلب وعياً بحجم الشريحة لمرضى السكري."
+        ],
+        "en": [
+          "One thin slice with a light scrape of real butter alongside your morning coffee; the butterfat helps slow the absorption of the cake's sugars.",
+          "Choose versions labelled minder suiker or volkoren ontbijtkoek, which contain more rye fibre and less added sugar.",
+          "Rye fibre is excellent for the gut and gives good fullness, but remember that traditional ontbijtkoek is rich in simple sugars, so people with diabetes need to watch the slice size."
+        ],
+        "nl": [
+          "Eén dunne plak met een dun laagje echte boter bij je ochtendkoffie; het botervet helpt de opname van de suikers uit de koek te vertragen.",
+          "Kies varianten met minder suiker of volkoren ontbijtkoek op het etiket, die meer roggevezels en minder toegevoegde suiker bevatten.",
+          "Roggevezels zijn uitstekend voor de darmen en verzadigen goed, maar gewone ontbijtkoek is rijk aan enkelvoudige suikers, dus mensen met diabetes moeten op de dikte van de plak letten."
+        ]
+      }
+    },
+    "331": {
+      "slug": "pure-hagelslag",
+      "lead": {
+        "ar": "الطقس الصباحي الهولندي الأشهر والأغرب في العالم؛ رش حبيبات الشوكولاتة الأسطوانية الصغيرة فوق شريحة الخبز المدهونة بالزبدة. النوع الداكن (Puur) يحتوي على نسبة كاكاو حقيقي تفوق 32% ودهون كاكاو، مما يمنحه مؤشراً جلايسيمياً منخفضاً إلى معتدل (≈45).",
+        "en": "The most famous, and most unusual, Dutch breakfast ritual in the world: tiny cylindrical chocolate sprinkles scattered over a slice of buttered bread. The dark (puur) kind contains more than 32% real cocoa and cocoa butter, giving it a low-to-moderate glycemic index (≈45).",
+        "nl": "Het bekendste, en voor buitenlanders vreemdste, Nederlandse ontbijtritueel ter wereld: kleine cilindervormige chocoladekorrels gestrooid over een beboterde boterham. De pure variant bevat meer dan 32% echte cacao en cacaoboter, wat een lage tot matige glykemische index geeft (≈45)."
+      },
+      "tips": {
+        "ar": [
+          "ملعقة طعام واحدة مرشوشة فوق توست القمح الكامل مع زبدة طبيعية كافية لإرضاء رغبة الشوكولاتة الصباحية بوعي واستمتاع دون إفراط.",
+          "اختر دائماً الشوكولاتة الداكنة النقية (Pure Hagelslag) التي تحتوي على نسبة سكر أقل ونسبة كاكاو أعلى، وتجنب شوكولاتة الحليب أو حبيبات السكر الملونة (Vruchtenhagel).",
+          "زبدة الكاكاو في الشوكولاتة الداكنة تبطئ امتصاص السكر وتوفر مضادات أكسدة؛ والاعتدال في الكمية المرشوشة يضمن بدء اليوم بمتعة هولندية صحية ومضبوطة."
+        ],
+        "en": [
+          "One tablespoon sprinkled over whole-wheat toast with real butter is enough to satisfy a morning chocolate craving mindfully and enjoyably without overdoing it.",
+          "Always choose pure dark chocolate sprinkles (pure hagelslag), which have less sugar and more cocoa, and avoid milk-chocolate sprinkles or coloured sugar sprinkles (vruchtenhagel).",
+          "The cocoa butter in dark chocolate slows sugar absorption and provides antioxidants; keeping the amount you sprinkle moderate means starting the day with a healthy, controlled Dutch treat."
+        ],
+        "nl": [
+          "Eén eetlepel over volkorentoast met echte boter is genoeg om je chocoladetrek in de ochtend bewust en met plezier te stillen zonder te overdrijven.",
+          "Kies altijd pure hagelslag, met minder suiker en meer cacao, en laat melkchocoladehagel en gekleurde suikerkorrels (vruchtenhagel) liggen.",
+          "De cacaoboter in pure chocolade vertraagt de suikeropname en levert antioxidanten; met een bescheiden hoeveelheid begin je de dag met een gezonde, beheerste Hollandse traktatie."
+        ]
+      }
     }
   }
 }
