@@ -712,6 +712,48 @@
             .pulse-badge { padding: 6px 11px; font-size: 0.78rem; }
             .pulse-pill { padding: 6px 13px; font-size: 0.82rem; }
         }
+        /* ===== Chip strips on desktop: arrow buttons, wheel and drag (no animation; mouse/trackpad only) ===== */
+        .chips-wrap { position: relative; flex: 1 1 auto; min-width: 0; height: 100%; display: flex; }
+        .chips-wrap > .pulse-viewport { flex: 1 1 auto; }
+        .chips-wrap.is-dragging .pulse-viewport { cursor: grabbing; scroll-behavior: auto; user-select: none; }
+        .chip-arrow { display: none; }
+        @media (hover: hover) and (pointer: fine) {
+            .pulse-viewport { cursor: grab; }
+            .chip-arrow {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                z-index: 1;
+                width: 30px;
+                height: 30px;
+                margin-top: -15px;
+                padding: 0;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 1px solid rgba(94, 234, 212, 0.4);
+                background: #0f172a;
+                color: #e2fdf8;
+                font: inherit;
+                font-size: 1.15rem;
+                font-weight: 700;
+                line-height: 1;
+                cursor: pointer;
+                box-shadow: 0 2px 10px rgba(2, 6, 23, 0.35);
+                transition: background-color 0.2s ease, border-color 0.2s ease;
+            }
+            .chip-arrow:hover, .chip-arrow:focus-visible { background: #134e4a; border-color: rgba(94, 234, 212, 0.8); outline: none; }
+            .chip-prev { inset-inline-start: 2px; }
+            .chip-next { inset-inline-end: 2px; }
+            .chips-wrap.at-start .chip-prev,
+            .chips-wrap.at-end .chip-next { display: none; }
+            :root[dir="rtl"] .chip-arrow span { display: inline-block; transform: scaleX(-1); }
+            .meals-ticker .chip-arrow { background: #ffffff; color: #0f172a; border-color: rgba(245, 158, 11, 0.5); box-shadow: 0 2px 10px rgba(15, 23, 42, 0.15); }
+            .meals-ticker .chip-arrow:hover, .meals-ticker .chip-arrow:focus-visible { background: #fef3c7; border-color: #f59e0b; }
+            html[data-theme="dark"] .meals-ticker .chip-arrow { background: #0f172a; color: #ffffff; box-shadow: 0 2px 10px rgba(2, 6, 23, 0.35); }
+            html[data-theme="dark"] .meals-ticker .chip-arrow:hover,
+            html[data-theme="dark"] .meals-ticker .chip-arrow:focus-visible { background: #1e293b; }
+        }
         /* ===== What did you cook today? - search pill under the meals ticker ===== */
         .meals-search {
             display: flex;
@@ -1734,70 +1776,138 @@
     <!-- Pulse strip: static chips under the header that scroll sideways (fixed height = no layout shift) -->
     <div class="pulse-ticker" role="region" aria-label="WiBo Health highlights">
         <span class="pulse-badge" data-i18n="pulse_badge">⚡ نبض ويبو هيلث</span>
-        <div class="pulse-viewport">
-            <div class="pulse-track">
-                <div class="pulse-set">
-                    <a href="calculators.html#bmi" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🧮</span><span data-i18n="pulse_c1">حاسبة مؤشر كتلة الجسم (BMI)</span></a>
-                    <a href="calculators.html#calories" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🔥</span><span data-i18n="pulse_c2">حاسبة السعرات والاحتياج اليومي (TDEE)</span></a>
-                    <a href="calculators.html#whtr" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📊</span><span data-i18n="pulse_c3">حاسبة نسبة الخصر إلى الطول (WHtR)</span></a>
-                    <a href="calculators.html#water" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">💧</span><span data-i18n="pulse_c4">حاسبة احتياج الماء اليومي (EFSA)</span></a>
-                    <a href="leptin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a1">لغز اللبتين: ليش عم آكل وما عم أشبع؟!</span></a>
-                    <a href="insulin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a2">السكر التراكمي ومقاومة الإنسولين</span></a>
-                    <a href="fatty-liver.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">الكبد الدهني الخفي والفركتوز</span></a>
-                    <a href="cortisol-stress.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a4">الكورتيزول والكرش العصبي</span></a>
-                    <a href="magnesium-types.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a5">أنواع المغنيسيوم واختيار الأنسب</span></a>
-                    <a href="bone-health-minerals.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a6">خفايا الكالسيوم وهشاشة العظام</span></a>
-                    <a href="intermittent-fasting.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a7">الصيام المتقطع وخرافات السوشيال ميديا</span></a>
-                    <a href="thyroid-health.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a8">خمول الغدة وبطء الحرق المستمر</span></a>
+        <div class="chips-wrap at-start">
+            <div class="pulse-viewport">
+                <div class="pulse-track">
+                    <div class="pulse-set">
+                        <a href="calculators.html#bmi" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🧮</span><span data-i18n="pulse_c1">حاسبة مؤشر كتلة الجسم (BMI)</span></a>
+                        <a href="calculators.html#calories" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">🔥</span><span data-i18n="pulse_c2">حاسبة السعرات والاحتياج اليومي (TDEE)</span></a>
+                        <a href="calculators.html#whtr" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📊</span><span data-i18n="pulse_c3">حاسبة نسبة الخصر إلى الطول (WHtR)</span></a>
+                        <a href="calculators.html#water" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">💧</span><span data-i18n="pulse_c4">حاسبة احتياج الماء اليومي (EFSA)</span></a>
+                        <a href="leptin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a1">لغز اللبتين: ليش عم آكل وما عم أشبع؟!</span></a>
+                        <a href="insulin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a2">السكر التراكمي ومقاومة الإنسولين</span></a>
+                        <a href="fatty-liver.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">الكبد الدهني الخفي والفركتوز</span></a>
+                        <a href="cortisol-stress.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a4">الكورتيزول والكرش العصبي</span></a>
+                        <a href="magnesium-types.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a5">أنواع المغنيسيوم واختيار الأنسب</span></a>
+                        <a href="bone-health-minerals.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a6">خفايا الكالسيوم وهشاشة العظام</span></a>
+                        <a href="intermittent-fasting.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a7">الصيام المتقطع وخرافات السوشيال ميديا</span></a>
+                        <a href="thyroid-health.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a8">خمول الغدة وبطء الحرق المستمر</span></a>
+                    </div>
                 </div>
             </div>
+            <button type="button" class="chip-arrow chip-prev" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></button>
+            <button type="button" class="chip-arrow chip-next" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></button>
         </div>
     </div>
 
     <!-- What's cooking today? - localized meal chips; only the row of the current page language is shown -->
     <div class="meals-ticker" role="region" aria-label="What's cooking today">
         <span class="meals-badge" data-i18n="meals_badge">🍳 شو طبخت اليوم؟</span>
-        <div class="pulse-viewport">
-            <div class="meals-track" data-lang="ar" lang="ar">
-                <div class="pulse-set">
-                    <a href="/foods/molokhia-with-chicken.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>ملوخية بالدجاج</span><span class="meals-gi">المؤشر لا ينطبق</span></a>
-                    <a href="/foods/chicken-shawarma.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌯</span><span>شاورما دجاج</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈45</span></span></a>
-                    <a href="/foods/jordanian-mansaf.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍛</span><span>منسف أردني باللحم</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈52</span></span></a>
-                    <a href="/foods/lahmacun-meat-sfiha.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥘</span><span>صفيحة لحم بعجين</span><span class="meals-gi">المؤشر متوسط <span dir="ltr">≈60</span></span></a>
-                    <a href="/foods/lentil-soup.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥣</span><span>شوربة عدس دافئة</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈30</span></span></a>
-                    <a href="/foods/dawood-basha-meatballs.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🧆</span><span>كفتة داوود باشا</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈42</span></span></a>
-                    <a href="/foods/eggplant-moussaka.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍆</span><span>مسقعة باذنجان باللحمة</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈42</span></span></a>
-                    <a href="/foods/maqluba.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>مقلوبة دجاج</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈55</span></span></a>
-                    <a href="/foods/mujadara.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥣</span><span>مجدرة برغل وعدس</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈38</span></span></a>
-                    <a href="/foods/saudi-jareesh.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>جريش سعودي بالسمن</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈50</span></span></a>
+        <div class="chips-wrap at-start">
+            <div class="pulse-viewport">
+                <div class="meals-track" data-lang="ar" lang="ar">
+                    <div class="pulse-set">
+                        <a href="/foods/molokhia-with-chicken.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>ملوخية بالدجاج</span><span class="meals-gi">المؤشر لا ينطبق</span></a>
+                        <a href="/foods/chicken-shawarma.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌯</span><span>شاورما دجاج</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈45</span></span></a>
+                        <a href="/foods/jordanian-mansaf.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍛</span><span>منسف أردني باللحم</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈52</span></span></a>
+                        <a href="/foods/lahmacun-meat-sfiha.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥘</span><span>صفيحة لحم بعجين</span><span class="meals-gi">المؤشر متوسط <span dir="ltr">≈60</span></span></a>
+                        <a href="/foods/lentil-soup.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥣</span><span>شوربة عدس دافئة</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈30</span></span></a>
+                        <a href="/foods/dawood-basha-meatballs.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🧆</span><span>كفتة داوود باشا</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈42</span></span></a>
+                        <a href="/foods/eggplant-moussaka.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍆</span><span>مسقعة باذنجان باللحمة</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈42</span></span></a>
+                        <a href="/foods/maqluba.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>مقلوبة دجاج</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈55</span></span></a>
+                        <a href="/foods/mujadara.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥣</span><span>مجدرة برغل وعدس</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈38</span></span></a>
+                        <a href="/foods/saudi-jareesh.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>جريش سعودي بالسمن</span><span class="meals-gi">المؤشر منخفض <span dir="ltr">≈50</span></span></a>
+                    </div>
+                </div>
+                <div class="meals-track" data-lang="en" lang="en">
+                    <div class="pulse-set">
+                        <a href="/en/foods/big-mac.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍔</span><span>Big Mac Burger</span><span class="meals-gi">GI low <span dir="ltr">≈55</span></span></a>
+                        <a href="/en/foods/subway-chicken-teriyaki.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥪</span><span>Subway Chicken Teriyaki</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
+                        <a href="/en/foods/chicken-burrito.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌯</span><span>Chicken &amp; Bean Burrito</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
+                        <a href="/en/foods/spaghetti-bolognese.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍝</span><span>Spaghetti Bolognese</span><span class="meals-gi">GI low <span dir="ltr">≈50</span></span></a>
+                        <a href="/en/foods/salmon-sushi-roll.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍣</span><span>Salmon Sushi Roll</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
+                        <a href="/en/foods/chicken-ramen.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍜</span><span>Chicken Ramen Bowl</span><span class="meals-gi">GI low <span dir="ltr">≈55</span></span></a>
+                        <a href="/en/foods/chicken-biryani.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍛</span><span>Chicken Biryani</span><span class="meals-gi">GI medium <span dir="ltr">≈58</span></span></a>
+                        <a href="/en/foods/beef-taco.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌮</span><span>Beef Tacos</span><span class="meals-gi">GI low <span dir="ltr">≈50</span></span></a>
+                    </div>
+                </div>
+                <div class="meals-track" data-lang="nl" lang="nl">
+                    <div class="pulse-set">
+                        <a href="/nl/foods/snert.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>Snert erwtensoep</span><span class="meals-gi">GI laag <span dir="ltr">≈40</span></span></a>
+                        <a href="/nl/foods/boerenkool-stamppot.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥬</span><span>Boerenkoolstamppot</span><span class="meals-gi">GI gemiddeld <span dir="ltr">≈58</span></span></a>
+                        <a href="/nl/foods/kibbeling.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🐟</span><span>Kibbeling met saus</span><span class="meals-gi">GI laag <span dir="ltr">≈35</span></span></a>
+                        <a href="/nl/foods/haring.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🐟</span><span>Hollandse Nieuwe haring</span><span class="meals-gi">GI n.v.t.</span></a>
+                        <a href="/nl/foods/hutspot.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥕</span><span>Hutspot met klapstuk</span><span class="meals-gi">GI gemiddeld <span dir="ltr">≈60</span></span></a>
+                        <a href="/nl/foods/bitterballen.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🧆</span><span>Bitterballen</span><span class="meals-gi">GI laag <span dir="ltr">≈55</span></span></a>
+                        <a href="/nl/foods/rundvleeskroket.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥩</span><span>Rundvleeskroket</span><span class="meals-gi">GI laag <span dir="ltr">≈55</span></span></a>
+                        <a href="/nl/foods/frikandel.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌭</span><span>Frikandel</span><span class="meals-gi">GI laag <span dir="ltr">≈25</span></span></a>
+                    </div>
                 </div>
             </div>
-            <div class="meals-track" data-lang="en" lang="en">
-                <div class="pulse-set">
-                    <a href="/en/foods/big-mac.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍔</span><span>Big Mac Burger</span><span class="meals-gi">GI low <span dir="ltr">≈55</span></span></a>
-                    <a href="/en/foods/subway-chicken-teriyaki.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥪</span><span>Subway Chicken Teriyaki</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
-                    <a href="/en/foods/chicken-burrito.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌯</span><span>Chicken &amp; Bean Burrito</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
-                    <a href="/en/foods/spaghetti-bolognese.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍝</span><span>Spaghetti Bolognese</span><span class="meals-gi">GI low <span dir="ltr">≈50</span></span></a>
-                    <a href="/en/foods/salmon-sushi-roll.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍣</span><span>Salmon Sushi Roll</span><span class="meals-gi">GI low <span dir="ltr">≈52</span></span></a>
-                    <a href="/en/foods/chicken-ramen.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍜</span><span>Chicken Ramen Bowl</span><span class="meals-gi">GI low <span dir="ltr">≈55</span></span></a>
-                    <a href="/en/foods/chicken-biryani.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍛</span><span>Chicken Biryani</span><span class="meals-gi">GI medium <span dir="ltr">≈58</span></span></a>
-                    <a href="/en/foods/beef-taco.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌮</span><span>Beef Tacos</span><span class="meals-gi">GI low <span dir="ltr">≈50</span></span></a>
-                </div>
-            </div>
-            <div class="meals-track" data-lang="nl" lang="nl">
-                <div class="pulse-set">
-                    <a href="/nl/foods/snert.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🍲</span><span>Snert erwtensoep</span><span class="meals-gi">GI laag <span dir="ltr">≈40</span></span></a>
-                    <a href="/nl/foods/boerenkool-stamppot.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥬</span><span>Boerenkoolstamppot</span><span class="meals-gi">GI gemiddeld <span dir="ltr">≈58</span></span></a>
-                    <a href="/nl/foods/kibbeling.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🐟</span><span>Kibbeling met saus</span><span class="meals-gi">GI laag <span dir="ltr">≈35</span></span></a>
-                    <a href="/nl/foods/haring.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🐟</span><span>Hollandse Nieuwe haring</span><span class="meals-gi">GI n.v.t.</span></a>
-                    <a href="/nl/foods/hutspot.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥕</span><span>Hutspot met klapstuk</span><span class="meals-gi">GI gemiddeld <span dir="ltr">≈60</span></span></a>
-                    <a href="/nl/foods/bitterballen.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🧆</span><span>Bitterballen</span><span class="meals-gi">GI laag <span dir="ltr">≈55</span></span></a>
-                    <a href="/nl/foods/rundvleeskroket.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🥩</span><span>Rundvleeskroket</span><span class="meals-gi">GI laag <span dir="ltr">≈55</span></span></a>
-                    <a href="/nl/foods/frikandel.html" class="meals-pill"><span class="pulse-ico" aria-hidden="true">🌭</span><span>Frikandel</span><span class="meals-gi">GI laag <span dir="ltr">≈25</span></span></a>
-                </div>
-            </div>
+            <button type="button" class="chip-arrow chip-prev" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></button>
+            <button type="button" class="chip-arrow chip-next" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></button>
         </div>
     </div>
+    <script>
+        // chip strips (mouse/trackpad): vertical wheel scrolls the row sideways, drag-to-scroll, and the arrow buttons;
+        // touch devices keep native swiping. Arrows hide at the start / end of the row.
+        (function () {
+            var rtl = document.documentElement.dir === 'rtl';
+            var lang = document.documentElement.lang;
+            var labels = { ar: ['السابق', 'التالي'], nl: ['Vorige', 'Volgende'], en: ['Previous', 'Next'] }[lang] || ['Previous', 'Next'];
+            function toward(d) { return rtl ? -d : d; }        // d > 0 = toward the end of the row
+            Array.prototype.forEach.call(document.querySelectorAll('.chips-wrap'), function (wrap) {
+                var row = wrap.querySelector('.pulse-viewport');
+                var prev = wrap.querySelector('.chip-prev'), next = wrap.querySelector('.chip-next');
+                prev.setAttribute('aria-label', labels[0]);
+                next.setAttribute('aria-label', labels[1]);
+                function pos() { return Math.abs(row.scrollLeft); }
+                function max() { return row.scrollWidth - row.clientWidth; }
+                function update() {
+                    wrap.classList.toggle('at-start', pos() <= 1);
+                    wrap.classList.toggle('at-end', pos() >= max() - 1);
+                }
+                prev.addEventListener('click', function () { row.scrollBy({ left: toward(-200), behavior: 'smooth' }); });
+                next.addEventListener('click', function () { row.scrollBy({ left: toward(200), behavior: 'smooth' }); });
+                row.addEventListener('scroll', update, { passive: true });
+                window.addEventListener('resize', update);
+                update();
+
+                wrap.addEventListener('wheel', function (e) {          // the whole strip, arrows included
+                    if (e.ctrlKey || Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return;   // sideways trackpad swipes and zoom stay native
+                    var d = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+                    if ((d < 0 && pos() <= 0) || (d > 0 && pos() >= max() - 1)) return;  // at the edge the page scrolls as usual
+                    e.preventDefault();
+                    row.scrollBy({ left: toward(d), behavior: 'instant' });
+                }, { passive: false });
+
+                var down = false, moved = false, startX = 0, startLeft = 0;
+                row.addEventListener('pointerdown', function (e) {
+                    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+                    down = true; moved = false; startX = e.clientX; startLeft = row.scrollLeft;
+                });
+                row.addEventListener('pointermove', function (e) {
+                    if (!down) return;
+                    var dx = e.clientX - startX;
+                    if (!moved) {
+                        if (Math.abs(dx) < 5) return;                 // a plain click still opens the chip
+                        moved = true;
+                        wrap.classList.add('is-dragging');
+                        row.setPointerCapture(e.pointerId);
+                    }
+                    row.scrollLeft = startLeft - dx;
+                });
+                function stop() { down = false; wrap.classList.remove('is-dragging'); }
+                row.addEventListener('pointerup', stop);
+                row.addEventListener('pointercancel', stop);
+                row.addEventListener('lostpointercapture', stop);
+                row.addEventListener('click', function (e) {          // a drag must not open the chip it ended on
+                    if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+                }, true);
+                row.addEventListener('dragstart', function (e) { e.preventDefault(); });
+            });
+        })();
+    </script>
 
 
     <!-- What did you cook today? - search; submits to /foods.html?search=VALUE -->
