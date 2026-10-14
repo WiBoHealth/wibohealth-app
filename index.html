@@ -848,6 +848,9 @@
         .meals-ticker:hover .meals-track,
         .meals-ticker:focus-within .meals-track,
         .meals-ticker:active .meals-track { animation-play-state: paused; }
+        /* set by the ticker script while a strip is off-screen or the tab is hidden */
+        .ticker-paused .pulse-track,
+        .ticker-paused .meals-track { animation-play-state: paused; }
         .meals-pill {
             display: inline-flex;
             align-items: center;
@@ -1897,6 +1900,30 @@
             </div>
         </div>
     </div>
+    <script>
+        // pause both tickers while off-screen or while the tab is hidden; they start running (no class),
+        // so the first paint is never altered - the class is only added once a strip is actually out of view
+        (function () {
+            var tickers = document.querySelectorAll('.pulse-ticker, .meals-ticker');
+            if (!tickers.length) return;
+            var offscreen = new WeakMap();
+            function apply(el) {
+                el.classList.toggle('ticker-paused', document.hidden || offscreen.get(el) === true);
+            }
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    for (var i = 0; i < entries.length; i++) {
+                        offscreen.set(entries[i].target, !entries[i].isIntersecting);
+                        apply(entries[i].target);
+                    }
+                });
+                for (var i = 0; i < tickers.length; i++) io.observe(tickers[i]);
+            }
+            document.addEventListener('visibilitychange', function () {
+                for (var i = 0; i < tickers.length; i++) apply(tickers[i]);
+            });
+        })();
+    </script>
 
 
     <!-- What did you cook today? - search; submits to /foods.html?search=VALUE -->
