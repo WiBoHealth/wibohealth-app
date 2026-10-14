@@ -134,6 +134,17 @@ PILOT = {
     387: ('fruit', 140), 388: ('fruit', 100), 389: ('fruit', 100), 390: ('fruit', 150), 391: ('fruit', 100),
     392: ('fruit', 150), 393: ('fruit', 15), 394: ('fruit', 15), 395: ('fruit', 100), 396: ('fruit', 145),
     397: ('nuts', 30), 398: ('nuts', 15), 399: ('nuts', 10), 400: ('nuts', 20),
+    # batch 13: white fish, shellfish, lean & cured meats, offal, pulses, canned vegetables and Spanish tapas
+    401: ('protein', 150), 402: ('protein', 150), 403: ('protein', 150), 404: ('protein', 150), 405: ('protein', 150),
+    406: ('protein', 150), 407: ('protein', 150), 408: ('protein', 150), 409: ('protein', 100), 410: ('protein', 100),
+    411: ('protein', 100), 412: ('protein', 150), 413: ('protein', 100), 414: ('protein', 50), 415: ('protein', 120),
+    416: ('protein', 120), 417: ('protein', 120), 418: ('protein', 40), 419: ('protein', 30), 420: ('protein', 50),
+    421: ('protein', 75), 422: ('protein', 120), 423: ('protein', 100), 424: ('protein', 100), 425: ('legume', 150),
+    426: ('legume', 150), 427: ('legume', 150), 428: ('legume', 150), 429: ('legume', 150), 430: ('legume', 150),
+    431: ('legume', 150), 432: ('legume', 150), 433: ('veg', 80), 434: ('veg', 100), 435: ('veg', 100),
+    436: ('veg', 100), 437: ('veg', 100), 438: ('veg', 80), 439: ('veg', 100), 440: ('condiment', 100),
+    441: ('veg', 100), 442: ('veg', 100), 443: ('condiment', 10), 444: ('spanish', 250), 445: ('spanish', 150),
+    446: ('spanish', 200), 447: ('spanish', 150), 448: ('spanish', 100), 449: ('spanish', 150), 450: ('spanish', 150),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -142,7 +153,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 401))
+TEAM_REVIEW |= set(range(207, 451))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}
@@ -163,6 +174,7 @@ GROUPS = {
     'sweets': ('الحلويات', 'Sweets & desserts', 'Zoetigheid & desserts'),
     'mexican': ('الأطباق المكسيكية', 'Mexican dishes', 'Mexicaanse gerechten'),
     'italian': ('الأطباق الإيطالية', 'Italian dishes', 'Italiaanse gerechten'),
+    'spanish': ('الأطباق الإسبانية', 'Spanish dishes', 'Spaanse gerechten'),
     'asian': ('الأطباق الآسيوية', 'Asian dishes', 'Aziatische gerechten'),
     'bakery': ('المخبوزات والفطائر', 'Breads & pastries', 'Brood & hartige baksels'),
     'sandwich': ('السندويشات', 'Sandwiches', 'Broodjes'),
@@ -269,7 +281,7 @@ TIPS = {
         ('تناولها بحصة صغيرة بعد وجبة فيها بروتين وألياف، لا على معدة فارغة.', 'اختر الأصناف الأقل قطراً وسكراً، وحضّرها منزلياً بكمية سكر أقل.', CARB_NOTE[0]),
         ('Have a small portion after a meal with protein and fibre, not on an empty stomach.', 'Choose versions with less syrup and sugar, and make them at home with less sugar.', CARB_NOTE[1]),
         ('Neem een kleine portie na een maaltijd met eiwit en vezels, niet op een lege maag.', 'Kies varianten met minder siroop en suiker, en maak ze thuis met minder suiker.', CARB_NOTE[2])),
-    'mexican': None, 'italian': None, 'asian': None, 'bakery': None, 'sandwich': None,   # filled from 'arabic' below
+    'mexican': None, 'italian': None, 'spanish': None, 'asian': None, 'bakery': None, 'sandwich': None,   # filled from 'arabic' below
     'veg': (
         ('خضار منخفضة السعرات وغنية بالماء والألياف، ويمكن أن تملأ نصف الطبق.',
          'تناولها نيئة أو مطهوة قليلاً على البخار للحفاظ على الفيتامينات، وقلّل الزيت عند الطهي.', NA_NOTE[0]),
@@ -289,7 +301,7 @@ TIPS = {
          'Bevat cafeïne: drink met mate, vooral \u2019s avonds, en overleg met je arts als je zwanger bent of medicijnen gebruikt die door cafeïne beïnvloed worden.')),
 }
 
-for _g in ('mexican', 'italian', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
+for _g in ('mexican', 'italian', 'spanish', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
     TIPS[_g] = TIPS['arabic']                # generic fallback; every food in these groups has its own approved tips
 
 UI = {
@@ -458,9 +470,13 @@ FAQ = {
 }
 
 
-PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68, 20, 21, 23, 25, 28, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 117, 142, 161, 162, 183, 184, 220, 232, 233, 234, 262, 267, 278, 292, 293, 302},
+PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68, 20, 21, 23, 25, 28, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 117, 142, 161, 162, 183, 184, 220, 232, 233, 234, 262, 267, 278, 292, 293, 302,
+                 411, 412, 413, 414, 420, 424, 425,
+                 426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 443, 448, 449},
           'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68, 20, 21, 23, 24, 25, 28, 42, 45, 52, 56, 57, 58, 60, 80, 81, 82,
-                 83, 84, 85, 87, 88, 89, 99, 100, 113, 117, 142, 151, 161, 162, 183, 220, 232, 233, 234, 235, 260, 276, 284, 292, 293, 302}}
+                 83, 84, 85, 87, 88, 89, 99, 100, 113, 117, 142, 151, 161, 162, 183, 220, 232, 233, 234, 235, 260, 276, 284, 292, 293, 302,
+                 411, 412, 413, 423, 424, 425,
+                 426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 440, 443, 448, 449}}
 VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provides'),
                 dict(is_='are', does='do', contains='contain', provides='provide')),
          'nl': (dict(is_='is', bevat='bevat', levert='levert'), dict(is_='zijn', bevat='bevatten', levert='leveren')),
@@ -1027,8 +1043,11 @@ def build(food, lang, ctx):
     lead = ctx['overrides'].get(str(food['id']), {}).get('lead', {}).get(lang) or lead
     title = u['title'].format(name=name)
 
-    # -------- FAQ (answers computed from the numbers)
-    if has_gi:
+    # -------- FAQ (answers computed from the numbers, unless doctor-approved questions are given)
+    faq_override = ctx['overrides'].get(str(food['id']), {}).get('faq', {}).get(lang)
+    if faq_override:
+        faq = [(item['q'], item['a']) for item in faq_override]
+    elif has_gi:
         faq = build_faq(food, lang, sname, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv, g=g, reviewed=reviewed)
     else:
         faq = build_faq(food, lang, sname, portion, False, g=g)
