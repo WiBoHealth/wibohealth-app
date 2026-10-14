@@ -156,6 +156,18 @@ PILOT = {
     486: ('arabic', 150), 487: ('arabic', 300), 488: ('arabic', 200), 489: ('arabic', 300), 490: ('arabic', 250),
     491: ('arabic', 250), 492: ('arabic', 150), 493: ('arabic', 150), 494: ('bakery', 100), 495: ('arabic', 150),
     496: ('arabic', 60), 497: ('salad', 200), 498: ('salad', 150), 499: ('pantry', 15), 500: ('pantry', 15),
+    # batch 15: Turkish, Moroccan and Indian kitchens, South-East Asian dishes, breads, sweets and drinks
+    501: ('turkish', 150), 502: ('turkish', 300), 503: ('turkish', 150), 504: ('turkish', 250), 505: ('turkish', 200),
+    506: ('turkish', 120), 507: ('turkish', 200), 508: ('turkish', 150), 509: ('turkish', 300), 510: ('turkish', 100),
+    511: ('sweets', 30), 512: ('drink', 250), 513: ('moroccan', 300), 514: ('moroccan', 300), 515: ('moroccan', 300),
+    516: ('moroccan', 150), 517: ('moroccan', 150), 518: ('moroccan', 300), 519: ('moroccan', 350),
+    520: ('moroccan', 100), 521: ('moroccan', 100), 522: ('bakery', 70), 523: ('sweets', 80), 524: ('bakery', 80),
+    525: ('sweets', 30), 526: ('sweets', 30), 527: ('condiment', 10), 528: ('condiment', 15), 529: ('indian', 250),
+    530: ('indian', 250), 531: ('indian', 250), 532: ('indian', 250), 533: ('indian', 200), 534: ('indian', 200),
+    535: ('indian', 200), 536: ('indian', 150), 537: ('indian', 250), 538: ('indian', 100), 539: ('bakery', 40),
+    540: ('bakery', 80), 541: ('dairy_drink', 250), 542: ('drink', 250), 543: ('sweets', 50), 544: ('sweets', 150),
+    545: ('asian', 500), 546: ('asian', 150), 547: ('asian', 300), 548: ('asian', 250), 549: ('asian', 250),
+    550: ('salad', 200),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -164,7 +176,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 501))
+TEAM_REVIEW |= set(range(207, 551))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}
@@ -188,6 +200,9 @@ GROUPS = {
     'spanish': ('الأطباق الإسبانية', 'Spanish dishes', 'Spaanse gerechten'),
     'french': ('الأطباق الفرنسية', 'French dishes', 'Franse gerechten'),
     'greek': ('الأطباق اليونانية', 'Greek dishes', 'Griekse gerechten'),
+    'turkish': ('الأطباق التركية', 'Turkish dishes', 'Turkse gerechten'),
+    'moroccan': ('الأطباق المغربية', 'Moroccan dishes', 'Marokkaanse gerechten'),
+    'indian': ('الأطباق الهندية', 'Indian dishes', 'Indiase gerechten'),
     'asian': ('الأطباق الآسيوية', 'Asian dishes', 'Aziatische gerechten'),
     'bakery': ('المخبوزات والفطائر', 'Breads & pastries', 'Brood & hartige baksels'),
     'sandwich': ('السندويشات', 'Sandwiches', 'Broodjes'),
@@ -294,7 +309,7 @@ TIPS = {
         ('تناولها بحصة صغيرة بعد وجبة فيها بروتين وألياف، لا على معدة فارغة.', 'اختر الأصناف الأقل قطراً وسكراً، وحضّرها منزلياً بكمية سكر أقل.', CARB_NOTE[0]),
         ('Have a small portion after a meal with protein and fibre, not on an empty stomach.', 'Choose versions with less syrup and sugar, and make them at home with less sugar.', CARB_NOTE[1]),
         ('Neem een kleine portie na een maaltijd met eiwit en vezels, niet op een lege maag.', 'Kies varianten met minder siroop en suiker, en maak ze thuis met minder suiker.', CARB_NOTE[2])),
-    'mexican': None, 'italian': None, 'spanish': None, 'french': None, 'greek': None, 'asian': None, 'bakery': None, 'sandwich': None,   # filled from 'arabic' below
+    'mexican': None, 'italian': None, 'spanish': None, 'french': None, 'greek': None, 'turkish': None, 'moroccan': None, 'indian': None, 'asian': None, 'bakery': None, 'sandwich': None,   # filled from 'arabic' below
     'veg': (
         ('خضار منخفضة السعرات وغنية بالماء والألياف، ويمكن أن تملأ نصف الطبق.',
          'تناولها نيئة أو مطهوة قليلاً على البخار للحفاظ على الفيتامينات، وقلّل الزيت عند الطهي.', NA_NOTE[0]),
@@ -314,7 +329,7 @@ TIPS = {
          'Bevat cafeïne: drink met mate, vooral \u2019s avonds, en overleg met je arts als je zwanger bent of medicijnen gebruikt die door cafeïne beïnvloed worden.')),
 }
 
-for _g in ('mexican', 'italian', 'spanish', 'french', 'greek', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
+for _g in ('mexican', 'italian', 'spanish', 'french', 'greek', 'turkish', 'moroccan', 'indian', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
     TIPS[_g] = TIPS['arabic']                # generic fallback; every food in these groups has its own approved tips
 
 UI = {
@@ -486,12 +501,14 @@ FAQ = {
 PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68, 20, 21, 23, 25, 28, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 117, 142, 161, 162, 183, 184, 220, 232, 233, 234, 262, 267, 278, 292, 293, 302,
                  411, 412, 413, 414, 420, 424, 425,
                  426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 443, 448, 449,
-                 451, 465, 472, 476, 478, 479, 495},
+                 451, 465, 472, 476, 478, 479, 495,
+                 504, 508, 510, 527, 543, 546},
           'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68, 20, 21, 23, 24, 25, 28, 42, 45, 52, 56, 57, 58, 60, 80, 81, 82,
                  83, 84, 85, 87, 88, 89, 99, 100, 113, 117, 142, 151, 161, 162, 183, 220, 232, 233, 234, 235, 260, 276, 284, 292, 293, 302,
                  411, 412, 413, 423, 424, 425,
                  426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 440, 443, 448, 449,
-                 451, 465, 472, 476, 478, 479, 495}}
+                 451, 465, 472, 476, 478, 479, 495,
+                 504, 508, 527, 543, 546}}
 VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provides'),
                 dict(is_='are', does='do', contains='contain', provides='provide')),
          'nl': (dict(is_='is', bevat='bevat', levert='levert'), dict(is_='zijn', bevat='bevatten', levert='leveren')),
