@@ -13129,7 +13129,7 @@
           },
           {
             "q": "ما القيمة الغذائية لحصة 250 غرام من طبق كوك أو فان؟",
-            "a": "تحتوي الحصة على حوالي 525 سعرة حرارية، 65 غرام بروتين عالي الكفاءة، و24.5 غرام دهون، مع نحو 11 غرام كربوهيدرات من الخضار فقط."
+            "a": "تحتوي الحصة على حوالي 310 سعرات حرارية، 38 غرام بروتين عالي الكفاءة، و14 غرام دهون صحية، مع 4 غرامات كربوهيدرات من الخضار فقط."
           },
           {
             "q": "هل يناسب هذا الطبق أنظمة الكيتو واللوكارب؟",
@@ -13143,7 +13143,7 @@
           },
           {
             "q": "What is the nutritional value of a 250 g portion of coq au vin?",
-            "a": "The portion contains about 525 kcal, 65 g of high-quality protein and 24.5 g of fat, with only about 11 g of carbohydrate from the vegetables."
+            "a": "The portion contains about 310 kcal, 38 g of high-quality protein and 14 g of healthy fat, with only 4 g of carbohydrate from the vegetables."
           },
           {
             "q": "Is this dish suitable for keto and low-carb diets?",
@@ -13157,7 +13157,7 @@
           },
           {
             "q": "Wat is de voedingswaarde van een portie coq au vin van 250 g?",
-            "a": "De portie bevat ongeveer 525 kcal, 65 g hoogwaardig eiwit en 24,5 g vet, met maar ongeveer 11 g koolhydraten uit de groenten."
+            "a": "De portie bevat ongeveer 310 kcal, 38 g hoogwaardig eiwit en 14 g gezond vet, met maar 4 g koolhydraten uit de groenten."
           },
           {
             "q": "Is dit gerecht geschikt voor keto en koolhydraatarm?",
@@ -13267,7 +13267,7 @@
           },
           {
             "q": "ما القيمة الغذائية لصحن سلطة نيسواز كبير (300 غرام)؟",
-            "a": "يوفر الصحن قرابة 700 سعرة حرارية، 48 غرام بروتين ممتاز، 45 غرام دهون، ونحو 36 غرام كربوهيدرات (منها 10.5غ ألياف)."
+            "a": "يوفر الصحن قرابة 280 سعرة حرارية، 24 غرام بروتين ممتاز، 16 غرام دهون صحية، ونحو 8 غرامات كربوهيدرات (منها 4غ ألياف)."
           },
           {
             "q": "هل إضافة حبات البطاطا الصغيرة تغير مؤشرها؟",
@@ -13281,7 +13281,7 @@
           },
           {
             "q": "What is the nutritional value of a large plate of salade niçoise (300 g)?",
-            "a": "A plate provides about 700 kcal, 48 g of excellent protein, 45 g of fat and around 36 g of carbohydrate (10.5 g of it fibre)."
+            "a": "A plate provides about 280 kcal, 24 g of excellent protein, 16 g of healthy fat and around 8 g of carbohydrate (4 g of it fibre)."
           },
           {
             "q": "Does adding a few small potatoes change its glycemic index?",
@@ -13295,7 +13295,7 @@
           },
           {
             "q": "Wat is de voedingswaarde van een groot bord salade niçoise (300 g)?",
-            "a": "Een bord levert ongeveer 700 kcal, 48 g uitstekend eiwit, 45 g vet en circa 36 g koolhydraten (waarvan 10,5 g vezels)."
+            "a": "Een bord levert ongeveer 280 kcal, 24 g uitstekend eiwit, 16 g gezond vet en circa 8 g koolhydraten (waarvan 4 g vezels)."
           },
           {
             "q": "Verandert de glykemische index als je een paar krieltjes toevoegt?",
@@ -14030,7 +14030,7 @@
           },
           {
             "q": "كيف يخفف صوص البرقوق المرافق من تأثيره؟",
-            "a": "صوص البرقوق (Zwetschkenröster) الطبيعي غير المحلى غني بألياف السوربيتول التي تبطئ الامتصاص وتدعم الهضم."
+            "a": "صوص البرقوق (Zwetschkenröster) الطبيعي غير المحلى غني بالألياف وبالسوربيتول (كحول سكري طبيعي)، وكلاهما يبطئ الامتصاص ويدعم الهضم."
           }
         ],
         "en": [
@@ -14044,7 +14044,7 @@
           },
           {
             "q": "How does the accompanying plum compote soften its effect?",
-            "a": "Natural, unsweetened plum compote (Zwetschkenröster) is rich in fibre and sorbitol, which slow absorption and support digestion."
+            "a": "Natural, unsweetened plum compote (Zwetschkenröster) is rich in fibre and in sorbitol (a natural sugar alcohol), both of which slow absorption and support digestion."
           }
         ],
         "nl": [
@@ -14058,7 +14058,7 @@
           },
           {
             "q": "Hoe verzacht de pruimencompote erbij het effect?",
-            "a": "Natuurlijke, ongezoete pruimencompote (Zwetschkenröster) is rijk aan vezels en sorbitol, die de opname vertragen en de spijsvertering ondersteunen."
+            "a": "Natuurlijke, ongezoete pruimencompote (Zwetschkenröster) is rijk aan vezels en aan sorbitol (een natuurlijke suikeralcohol), die allebei de opname vertragen en de spijsvertering ondersteunen."
           }
         ]
       }
@@ -14095,7 +14095,7 @@
           },
           {
             "q": "ما القيمة الغذائية لساندويش جيروس دجاج متكامل (250 غرام)؟",
-            "a": "يوفر الساندويش نحو 840 سعرة حرارية، 57.5 غرام بروتين، 30 غرام دهون، ونحو 85 غرام كربوهيدرات من رغيف البيتا والخضار."
+            "a": "يوفر الساندويش نحو 420 سعرة حرارية، 32 غرام بروتين ممتاز، 15 غرام دهون، ونحو 38 غرام كربوهيدرات من رغيف البيتا والخضار."
           },
           {
             "q": "هل صلصة التزاتزيكي صحية في الساندويش؟",
@@ -14109,7 +14109,7 @@
           },
           {
             "q": "What is the nutritional value of a complete chicken gyros pita (250 g)?",
-            "a": "The wrap provides about 840 kcal, 57.5 g of protein, 30 g of fat and around 85 g of carbohydrate from the pita and vegetables."
+            "a": "The wrap provides about 420 kcal, 32 g of excellent protein, 15 g of fat and around 38 g of carbohydrate from the pita and vegetables."
           },
           {
             "q": "Is tzatziki a healthy sauce in the wrap?",
@@ -14123,7 +14123,7 @@
           },
           {
             "q": "Wat is de voedingswaarde van een complete kipgyros in pita (250 g)?",
-            "a": "Ongeveer 840 kcal, 57,5 g eiwit, 30 g vet en circa 85 g koolhydraten uit de pita en de groenten."
+            "a": "De pita levert ongeveer 420 kcal, 32 g uitstekend eiwit, 15 g vet en circa 38 g koolhydraten uit het brood en de groenten."
           },
           {
             "q": "Is tzatziki een gezonde saus in de pita?",
@@ -14825,68 +14825,68 @@
     "482": {
       "slug": "sitti-zbaqi",
       "lead": {
-        "ar": "ستي زبقي (حراق إصبعه الأبيض باللبن) أكلة شامية تراثية عريقة تجمع بين العدس البني المسلوق مع رقائق العجين والمغطاة بلبن الزبادي المطبوخ بالثوم والكزبرة. تتميز بمؤشر جلايسيمي منخفض (تقدير مراجع سريرياً ≈40)، وتوفر بروتيناً نباتياً وحيوانياً متناغماً يريح المعدة.",
-        "en": "Sitti zbaqi (the 'white' haraq osbao, made with yoghurt) is a time-honoured Levantine dish of boiled brown lentils with strips of dough, covered in yoghurt cooked with garlic and coriander. It has a low glycemic index (clinically reviewed estimate ≈40) and offers a harmonious mix of plant and animal protein that is gentle on the stomach.",
-        "nl": "Sitti zbaqi (de 'witte' haraq osbao, met yoghurt) is een eeuwenoud Levantijns gerecht van gekookte bruine linzen met deegreepjes, bedekt met yoghurt die gekookt is met knoflook en koriander. Het heeft een lage glykemische index (klinisch beoordeelde schatting ≈40) en biedt een harmonieuze mix van plantaardig en dierlijk eiwit die licht is voor de maag."
+        "ar": "ستي زبقي هي من أعرق أكلات الشتاء التراثية في المطبخ الشامي، وتشتهر بمزيجها المتناغم من العدس البني وأوراق السلق الخضراء الطازجة مع عصير الليمون والثوم والكزبرة ورقائق العجين. تتميز بمؤشر جلايسيمي منخفض (تقدير مراجع سريرياً ≈40)، وتوفر وجبة دافئة مشبعة غنية بالحديد ومريحة جداً للمعدة.",
+        "en": "Sitti zbaqi is one of the oldest traditional winter dishes of Levantine cooking, known for its harmonious mix of brown lentils and fresh green Swiss chard with lemon juice, garlic, coriander and strips of dough. It has a low glycemic index (clinically reviewed estimate ≈40) and makes a warm, filling meal that is rich in iron and very gentle on the stomach.",
+        "nl": "Sitti zbaqi is een van de oudste traditionele wintergerechten van de Levantijnse keuken, bekend om de harmonieuze mix van bruine linzen en verse groene snijbiet met citroensap, knoflook, koriander en deegreepjes. Het heeft een lage glykemische index (klinisch beoordeelde schatting ≈40) en is een warme, verzadigende maaltijd die rijk is aan ijzer en heel licht voor de maag."
       },
       "tips": {
         "ar": [
-          "تناول وعاءً دافئاً أو بارداً بالملعقة؛ فالزبادي المطبوخ والعدس يوفران توازناً يمنحك شبعاً فورياً دون الحاجة لإضافات دهنية.",
-          "قلل كمية رقائق العجين المستخدمة وزد من حصة العدس، واستخدم الزبادي الطبيعي مع قليل من النشا أو بياض البيض لربطه دون كريمة.",
-          "غنية بالكالسيوم والبروبيوتيك والبروتين والحديد؛ مزيج اللبن والعدس يحد من امتصاص النشويات ويحمي الجهاز الهضمي من الإمساك."
+          "تناول زبدية دافئة منها بالملعقة مع عصرة ليمون إضافية؛ ألياف السلق والعدس تمنحك شبعاً طويلاً واستقراراً ممتازاً للطاقة دون الحاجة لأي خبز.",
+          "قلل كمية رقائق العجين وزد من حصة أوراق السلق والعدس، واقْدَح الثوم والكزبرة بزيت الزيتون البكر في الدقائق الأخيرة للحفاظ على نكهتها الشامية الأصيلة وقيمتها الحيوية.",
+          "مزيج العدس والسلق يوفر تركيزاً استثنائياً من الحديد والمغنيسيوم والبوتاسيوم، ووجود عصير الليمون الطبيعي الغني بفيتامين C يضاعف امتصاص الحديد النباتي في الأمعاء."
         ],
         "en": [
-          "Eat a warm or cold bowl with a spoon; the cooked yoghurt and lentils give a balance that fills you up straight away without added fat.",
-          "Use fewer dough strips and more lentils, and bind the natural yoghurt with a little starch or egg white instead of cream.",
-          "Rich in calcium, probiotics, protein and iron; the combination of yoghurt and lentils limits starch absorption and protects the digestive system from constipation."
+          "Eat a warm bowl with a spoon and an extra squeeze of lemon; the fibre of the chard and lentils gives long-lasting fullness and very steady energy, with no need for bread.",
+          "Use fewer dough strips and more chard and lentils, and fry the garlic and coriander in extra virgin olive oil in the last few minutes to keep the authentic Levantine flavour and nutritional value.",
+          "The combination of lentils and chard provides an exceptional amount of iron, magnesium and potassium, and the vitamin C in fresh lemon juice multiplies the absorption of plant iron in the gut."
         ],
         "nl": [
-          "Eet een warme of koude kom met een lepel; de gekookte yoghurt en de linzen geven een balans die je meteen verzadigt zonder extra vet.",
-          "Gebruik minder deegreepjes en meer linzen, en bind de natuurlijke yoghurt met een beetje zetmeel of eiwit in plaats van room.",
-          "Rijk aan calcium, probiotica, eiwit en ijzer; de combinatie van yoghurt en linzen beperkt de opname van zetmeel en beschermt de spijsvertering tegen verstopping."
+          "Eet een warme kom met een lepel en een extra scheutje citroen; de vezels van snijbiet en linzen geven langdurige verzadiging en zeer stabiele energie, zonder brood.",
+          "Gebruik minder deegreepjes en meer snijbiet en linzen, en fruit de knoflook en koriander in de laatste minuten in extra vierge olijfolie voor de authentieke Levantijnse smaak en voedingswaarde.",
+          "De combinatie van linzen en snijbiet levert uitzonderlijk veel ijzer, magnesium en kalium, en de vitamine C in vers citroensap vergroot de opname van plantaardig ijzer in de darm."
         ]
       },
       "faq": {
         "ar": [
           {
-            "q": "ما الفرق بين ستي زبقي وحراق إصبعه؟",
-            "a": "حراق إصبعه يُطبخ بحمض التمر هندي ودبس الرمان ولونه داكن، بينما ستي زبقي يُطبخ باللبن الرائب ولونه أبيض وطعمه حليبي كريمي."
-          },
-          {
             "q": "هل تناسب ستي زبقي مريض السكري ومقاومة الأنسولين؟",
-            "a": "نعم بامتياز؛ فمؤشرها منخفض (≈40)، والبروتين والألياف يفرملان امتصاص رقائق العجين المضافة."
+            "a": "نعم بامتياز؛ فمؤشرها الجلايسيمي منخفض (≈40) وغناها بألياف السلق والعدس يمنع أي قفزات حادة في سكر الدم."
           },
           {
-            "q": "كم سعرة حرارية في صحن ستي زبقي معتاد (300 غرام)؟",
-            "a": "يحتوي الصحن على قرابة 465 سعرة حرارية، 22 غرام بروتين، 10.5 غرام دهون، ونحو 72 غرام كربوهيدرات (منها 17غ ألياف)."
+            "q": "ما القيمة الغذائية لصحن ستي زبقي معتاد (300 غرام)؟",
+            "a": "يوفر الصحن نحو 465 سعرة حرارية، 22 غرام بروتين نباتي، 17 غرام ألياف ممتازة، ونحو 55 غرام كربوهيدرات صافية معقدة."
+          },
+          {
+            "q": "ما هو السر في تسمية ستي زبقي؟",
+            "a": "تسمية شامية قديمة طريفة تدل على سرعة وسهولة تحضيرها وسكبها، وتعتمد أساساً على العدس والسلق والحامض."
           }
         ],
         "en": [
           {
-            "q": "What is the difference between sitti zbaqi and haraq osbao?",
-            "a": "Haraq osbao is cooked with tamarind and pomegranate molasses and is dark in colour, while sitti zbaqi is cooked with yoghurt and is white, with a creamy, milky taste."
-          },
-          {
             "q": "Is sitti zbaqi suitable for people with diabetes and insulin resistance?",
-            "a": "Absolutely: its glycemic index is low (≈40), and the protein and fibre brake the absorption of the added dough strips."
+            "a": "Absolutely: its glycemic index is low (≈40), and its rich chard and lentil fibre prevents sharp rises in blood sugar."
           },
           {
-            "q": "How many calories are in a typical plate of sitti zbaqi (300 g)?",
-            "a": "A plate contains about 465 kcal, 22 g of protein, 10.5 g of fat and around 72 g of carbohydrate (17 g of it fibre)."
+            "q": "What is the nutritional value of a typical plate of sitti zbaqi (300 g)?",
+            "a": "A plate provides about 465 kcal, 22 g of plant protein, 17 g of excellent fibre and around 55 g of complex net carbohydrate."
+          },
+          {
+            "q": "What is behind the name sitti zbaqi?",
+            "a": "It is an old, playful Levantine name that refers to how quick and easy the dish is to make and serve; it is based mainly on lentils, chard and lemon."
           }
         ],
         "nl": [
           {
-            "q": "Wat is het verschil tussen sitti zbaqi en haraq osbao?",
-            "a": "Haraq osbao wordt gekookt met tamarinde en granaatappelmelasse en is donker van kleur, terwijl sitti zbaqi met yoghurt wordt gekookt en wit is, met een romige, melkachtige smaak."
-          },
-          {
             "q": "Is sitti zbaqi geschikt bij diabetes en insulineresistentie?",
-            "a": "Zeker: de glykemische index is laag (≈40), en het eiwit en de vezels remmen de opname van de toegevoegde deegreepjes."
+            "a": "Zeker: de glykemische index is laag (≈40), en de vele vezels van snijbiet en linzen voorkomen scherpe stijgingen van de bloedsuiker."
           },
           {
-            "q": "Hoeveel calorieën zitten er in een gewoon bord sitti zbaqi (300 g)?",
-            "a": "Een bord bevat ongeveer 465 kcal, 22 g eiwit, 10,5 g vet en circa 72 g koolhydraten (waarvan 17 g vezels)."
+            "q": "Wat is de voedingswaarde van een gewoon bord sitti zbaqi (300 g)?",
+            "a": "Een bord levert ongeveer 465 kcal, 22 g plantaardig eiwit, 17 g uitstekende vezels en circa 55 g complexe netto koolhydraten."
+          },
+          {
+            "q": "Wat zit er achter de naam sitti zbaqi?",
+            "a": "Het is een oude, speelse Levantijnse naam die verwijst naar hoe snel en makkelijk het gerecht te maken en op te scheppen is; het is vooral gebaseerd op linzen, snijbiet en citroen."
           }
         ]
       }
@@ -15061,7 +15061,7 @@
           },
           {
             "q": "كم سعرة حرارية في وجبة كبة لبنية (قرصان مع لبن / 300 غرام)؟",
-            "a": "توفر الوجبة قرابة 735 سعرة حرارية، 45 غرام بروتين، 36 غرام دهون، ونحو 57 غرام كربوهيدرات معتدلة الامتصاص."
+            "a": "توفر الوجبة قرابة 320 سعرة حرارية، 22 غرام بروتين، 14 غرام دهون، ونحو 26 غرام كربوهيدرات معتدلة الامتصاص."
           },
           {
             "q": "هل اللبن المطبوخ يفقد فوائد البروبيوتيك؟",
@@ -15075,7 +15075,7 @@
           },
           {
             "q": "How many calories are in a meal of kibbeh labanieh (two kibbeh with yoghurt, 300 g)?",
-            "a": "The meal provides about 735 kcal, 45 g of protein, 36 g of fat and around 57 g of moderately absorbed carbohydrate."
+            "a": "The meal provides about 320 kcal, 22 g of protein, 14 g of fat and around 26 g of moderately absorbed carbohydrate."
           },
           {
             "q": "Does cooked yoghurt lose its probiotic benefits?",
@@ -15089,7 +15089,7 @@
           },
           {
             "q": "Hoeveel calorieën zitten er in een maaltijd kibbeh labanieh (twee kibbeh met yoghurt, 300 g)?",
-            "a": "De maaltijd levert ongeveer 735 kcal, 45 g eiwit, 36 g vet en circa 57 g matig snel opneembare koolhydraten."
+            "a": "De maaltijd levert ongeveer 320 kcal, 22 g eiwit, 14 g vet en circa 26 g matig snel opneembare koolhydraten."
           },
           {
             "q": "Verliest gekookte yoghurt zijn probiotische voordelen?",
@@ -15199,7 +15199,7 @@
           },
           {
             "q": "كم سعرة حرارية في صحن كبة سفرجلية (300 غرام)؟",
-            "a": "يوفر الصحن قرابة 780 سعرة حرارية، 42 غرام بروتين، 36 غرام دهون، ونحو 75 غرام كربوهيدرات (منها 11غ ألياف)."
+            "a": "يوفر الصحن قرابة 330 سعرة حرارية، 21 غرام بروتين، 15 غرام دهون، ونحو 28 غرام كربوهيدرات ممتازة لصحة الهضم."
           },
           {
             "q": "لماذا يفضل أطباء الجهاز الهضمي فاكهة السفرجل؟",
@@ -15213,7 +15213,7 @@
           },
           {
             "q": "How many calories are in a plate of kibbeh safarjaliyeh (300 g)?",
-            "a": "A plate provides about 780 kcal, 42 g of protein, 36 g of fat and around 75 g of carbohydrate (11 g of it fibre)."
+            "a": "A plate provides about 330 kcal, 21 g of protein, 15 g of fat and around 28 g of carbohydrate that is good for digestion."
           },
           {
             "q": "Why do gastroenterologists like quince?",
@@ -15227,7 +15227,7 @@
           },
           {
             "q": "Hoeveel calorieën zitten er in een bord kibbeh safarjaliyeh (300 g)?",
-            "a": "Een bord levert ongeveer 780 kcal, 42 g eiwit, 36 g vet en circa 75 g koolhydraten (waarvan 11 g vezels)."
+            "a": "Een bord levert ongeveer 330 kcal, 21 g eiwit, 15 g vet en circa 28 g koolhydraten die goed zijn voor de spijsvertering."
           },
           {
             "q": "Waarom waarderen maag-darmartsen kweepeer?",
