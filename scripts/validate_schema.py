@@ -1,10 +1,12 @@
 """Validate the JSON-LD of the live site pages.
 
-Checks every <script type="application/ld+json"> block in foods.html, food-details.html and the
-static food pages (foods/, en/foods/, nl/foods/):
+Checks every <script type="application/ld+json"> block in foods.html, food-details.html, the
+static food pages (foods/, en/foods/, nl/foods/) and the supplement pages (supplements/, en/..., nl/...):
   - the block parses as JSON (an empty block is an error too)
   - no "Product" type anywhere, and no offers / aggregateRating / review / price fields
-  - every static food page carries a MedicalWebPage with author and publisher
+  - every static food page carries a MedicalWebPage with author (Dr. Wassim Habib) and publisher
+  - every supplement page carries a MedicalWebPage authored by the WiBo Health organisation, cites its
+    sources, and never names a personal reviewer (legal requirement for supplement content)
 It also scans the .js / .html sources for a schema "@type": "Product" built at runtime.
 
 Usage: python scripts/validate_schema.py
@@ -33,11 +35,15 @@ def walk(node, path='$'):
 def main():
     pages = [ROOT / 'foods.html', ROOT / 'food-details.html']
     static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html'))]
+    supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements') for p in sorted((ROOT / d).glob('*.html'))]
     errors, blocks = [], 0
-    for page in pages + static:
+    for page in pages + static + supp:
         rel = page.relative_to(ROOT).as_posix()
         found_types = set()
-        for raw in LD_RE.findall(page.read_text(encoding='utf-8')):
+        text = page.read_text(encoding='utf-8')
+        if page in supp and re.search(r'Wassim|وسيم', text):
+            errors.append(f'{rel}: supplement page names a personal reviewer')
+        for raw in LD_RE.findall(text):
             blocks += 1
             try:
                 data = json.loads(raw)
@@ -55,7 +61,13 @@ def main():
                     errors.append(f'{rel}: author missing')
                 if (data.get('publisher') or {}).get('name') != 'WiBo Health':
                     errors.append(f'{rel}: publisher missing')
-        if page in static and 'MedicalWebPage' not in found_types:
+            if data.get('@type') == 'MedicalWebPage' and page in supp:
+                author = data.get('author') or {}
+                if author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
+                    errors.append(f'{rel}: author must be the WiBo Health organisation')
+                if not data.get('citation'):
+                    errors.append(f'{rel}: no citation')
+        if page in static + supp and 'MedicalWebPage' not in found_types:
             errors.append(f'{rel}: no MedicalWebPage block')
 
     sources = [p for p in ROOT.glob('*.html')] + [p for p in (ROOT / 'js').glob('*.js')] + \
@@ -66,7 +78,7 @@ def main():
             line = text.count('\n', 0, m.start()) + 1
             errors.append(f'{src.relative_to(ROOT).as_posix()}:{line}: runtime "@type": "Product"')
 
-    print(f'{len(pages) + len(static)} pages, {blocks} JSON-LD blocks, {len(sources)} source files scanned')
+    print(f'{len(pages) + len(static) + len(supp)} pages, {blocks} JSON-LD blocks, {len(sources)} source files scanned')
     for e in errors:
         print('ERROR', e)
     print('OK: no Product schema, all JSON-LD valid' if not errors else f'{len(errors)} problem(s)')

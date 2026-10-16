@@ -523,6 +523,10 @@
             line-height: 1.6;
             margin-bottom: 15px;
             min-height: 44px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .supplement-tags {
@@ -736,6 +740,14 @@
             line-height: 1.75;
         }
         .medical-disclaimer strong { color: var(--text-dark); }
+        .ref-list { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+        .ref-list li { color: var(--text-light); font-size: 0.86rem; overflow-wrap: anywhere; }
+        .page-link {
+            display: flex; align-items: center; justify-content: center; gap: 8px; margin: 6px 0 4px;
+            padding: 11px 18px; border-radius: 30px; text-decoration: none; font-weight: 800; color: #ffffff;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        .page-link:hover { filter: brightness(1.06); }
 
         .modal-icon { font-size: 50px; margin-bottom: 8px; }
         .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
@@ -960,7 +972,7 @@
             <div class="hero-stats">
                 <div class="stat-card">
                     <i class="fas fa-capsules"></i>
-                    <h3 id="supplementsTotalCount">284</h3>
+                    <h3 id="supplementsTotalCount">281</h3>
                     <p data-i18n="stat_supplements">مكمل غذائي</p>
                 </div>
                 <div class="stat-card">
@@ -1094,6 +1106,7 @@
 
     <!-- Clean External Data -->
     <script src="js/supplements-data.js"></script>
+    <script src="js/supplement-pages.js"></script>
 
     <!-- Logic & Ultra-Fast Progressive Engine -->
     <script>
@@ -1129,6 +1142,8 @@
                 modal_interactions: "التفاعلات الدوائية",
                 modal_sources: "المصادر الطبيعية",
                 modal_close: "إغلاق",
+                modal_refs_title: "المراجع العلمية",
+                modal_open_page: "فتح الصفحة الكاملة للمكمل",
                 modal_copy_link: "نسخ رابط المكمل المباشر",
                 modal_link_copied: "تم نسخ الرابط",
                 modal_refs: "📚 المراجع العلمية: الهيئة الأوروبية لسلامة الأغذية (EFSA) • المعاهد الوطنية للصحة (NIH - ODS) • قواعد بيانات PubMed / Cochrane",
@@ -1185,6 +1200,8 @@
                 modal_interactions: "Drug Interactions",
                 modal_sources: "Natural Sources",
                 modal_close: "Close",
+                modal_refs_title: "Scientific references",
+                modal_open_page: "Open the full supplement page",
                 modal_copy_link: "Copy direct link to this supplement",
                 modal_link_copied: "Link copied",
                 modal_refs: "📚 Scientific references: European Food Safety Authority (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane databases",
@@ -1241,6 +1258,8 @@
                 modal_interactions: "Interacties met medicijnen",
                 modal_sources: "Natuurlijke bronnen",
                 modal_close: "Sluiten",
+                modal_refs_title: "Wetenschappelijke bronnen",
+                modal_open_page: "Open de volledige pagina van dit supplement",
                 modal_copy_link: "Directe link naar dit supplement kopiëren",
                 modal_link_copied: "Link gekopieerd",
                 modal_refs: "📚 Wetenschappelijke bronnen: Europese Autoriteit voor Voedselveiligheid (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane-databanken",
@@ -1673,8 +1692,15 @@
             return slug ? (supplementsData.find(s => s.slug === slug) || null) : null;
         }
 
+        function supplementPagePath(supp) {
+            if (!(window.SUPP_PAGES || {})[supp.slug]) return null;
+            return currentLang === 'ar' ? `/supplements/${supp.slug}.html` : `/${currentLang}/supplements/${supp.slug}.html`;
+        }
+
+        // Direct link to share: the supplement's own indexable page, else the guide with #slug
         function supplementUrl(supp) {
-            return 'https://wibohealth.com/supplements.html#' + encodeURIComponent(supp.slug);
+            const page = supplementPagePath(supp);
+            return page ? 'https://wibohealth.com' + page : 'https://wibohealth.com/supplements.html#' + encodeURIComponent(supp.slug);
         }
 
         function openModal(id, opts = {}) {
@@ -1802,6 +1828,12 @@
                     <p style="color: var(--text-dark);">${sourcesVal}</p>
                 </div>
 
+                ${(supp.references || []).length ? `
+                <div class="info-section">
+                    <h4><i class="fas fa-book-medical"></i> ${t('modal_refs_title')}</h4>
+                    <ol class="ref-list">${supp.references.map(r => `<li>${r}</li>`).join('')}</ol>
+                </div>` : ''}
+                ${supplementPagePath(supp) ? `<a class="page-link" href="${supplementPagePath(supp)}"><i class="fas fa-up-right-from-square"></i> ${t('modal_open_page')}</a>` : ''}
                 <div class="refs-strip">${t('modal_refs')}</div>
                 <div class="medical-disclaimer">${t('modal_disclaimer')}</div>
             `;
