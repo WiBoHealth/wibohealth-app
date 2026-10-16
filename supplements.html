@@ -679,6 +679,63 @@
         }
         [dir="rtl"] .close-modal { left: 18px; right: auto; }
         [dir="ltr"] .close-modal { right: 18px; left: auto; }
+        .close-modal:hover { background: rgba(255, 255, 255, 0.4); }
+        .close-modal:focus-visible, .share-modal:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
+
+        /* Copy direct link: the corner opposite the close button */
+        .share-modal {
+            position: absolute;
+            top: 18px;
+            height: 34px;
+            min-width: 34px;
+            padding: 0 10px;
+            border: none;
+            border-radius: 17px;
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .share-modal:hover { background: rgba(255, 255, 255, 0.4); }
+        .share-modal.copied { background: #ffffff; color: var(--secondary-color); }
+        .share-modal .share-text { display: none; }
+        .share-modal.copied .share-text { display: inline; }
+        [dir="rtl"] .share-modal { right: 18px; left: auto; }
+        [dir="ltr"] .share-modal { left: 18px; right: auto; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+        /* Lock the page behind the modal without losing the scroll position (works on iOS too) */
+        body.supp-modal-open { position: fixed; left: 0; right: 0; width: 100%; overflow: hidden; }
+
+        .refs-strip {
+            margin-top: 8px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.07);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-inline-start: 4px solid var(--primary-color);
+            color: var(--text-light);
+            font-size: 0.84rem;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+        .medical-disclaimer {
+            margin-top: 12px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            background: rgba(100, 116, 139, 0.08);
+            border: 1px solid rgba(100, 116, 139, 0.25);
+            color: var(--text-light);
+            font-size: 0.82rem;
+            line-height: 1.75;
+        }
+        .medical-disclaimer strong { color: var(--text-dark); }
 
         .modal-icon { font-size: 50px; margin-bottom: 8px; }
         .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
@@ -903,7 +960,7 @@
             <div class="hero-stats">
                 <div class="stat-card">
                     <i class="fas fa-capsules"></i>
-                    <h3 id="supplementsTotalCount">453</h3>
+                    <h3 id="supplementsTotalCount">284</h3>
                     <p data-i18n="stat_supplements">مكمل غذائي</p>
                 </div>
                 <div class="stat-card">
@@ -969,10 +1026,14 @@
     </div>
 
     <!-- Details Modal -->
-    <div class="modal" id="supplementModal">
+    <div class="modal" id="supplementModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
         <div class="modal-content">
             <div class="modal-header">
-                <button class="close-modal" onclick="closeModal()">
+                <button type="button" class="share-modal" id="supplementShare" onclick="copySupplementLink()">
+                    <i class="fas fa-link"></i><span class="share-text" id="supplementShareText"></span>
+                </button>
+                <span class="sr-only" id="supplementModalStatus" role="status" aria-live="polite"></span>
+                <button class="close-modal" id="supplementClose" onclick="closeModal()">
                     <i class="fas fa-times"></i>
                 </button>
                 <div class="modal-icon" id="modalIcon"></div>
@@ -1067,6 +1128,11 @@
                 modal_warnings: "تحذيرات مهمة",
                 modal_interactions: "التفاعلات الدوائية",
                 modal_sources: "المصادر الطبيعية",
+                modal_close: "إغلاق",
+                modal_copy_link: "نسخ رابط المكمل المباشر",
+                modal_link_copied: "تم نسخ الرابط",
+                modal_refs: "📚 المراجع العلمية: الهيئة الأوروبية لسلامة الأغذية (EFSA) • المعاهد الوطنية للصحة (NIH - ODS) • قواعد بيانات PubMed / Cochrane",
+                modal_disclaimer: "<strong>⚖️ إخلاء مسؤولية طبي:</strong> المعلومات والبيانات الواردة هنا هي لأغراض التثقيف الصحي والإرشاد الغذائي فقط، ولا تُعتبر تشخيصاً طبياً ولا تُغني بأي حال عن الاستشارة الطبية المباشرة من طبيبك المعالج أو الصيدلي. استشر طبيبك دائماً قبل البدء بأي مكمل، خصوصاً في حالات الحمل والرضاعة أو عند استخدام أدوية مزمنة.",
                 compare_title: "مقارنة المكملات",
                 compare_subtitle: "مقارنة شاملة للمكملات المختارة",
                 cat_muscle: "بناء العضلات",
@@ -1118,6 +1184,11 @@
                 modal_warnings: "Important Warnings",
                 modal_interactions: "Drug Interactions",
                 modal_sources: "Natural Sources",
+                modal_close: "Close",
+                modal_copy_link: "Copy direct link to this supplement",
+                modal_link_copied: "Link copied",
+                modal_refs: "📚 Scientific references: European Food Safety Authority (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane databases",
+                modal_disclaimer: "<strong>⚖️ Medical disclaimer:</strong> The information and data provided here are for health education and nutritional guidance only. They are not a medical diagnosis and never replace a direct consultation with your doctor or pharmacist. Always consult your doctor before starting any supplement, especially during pregnancy or breastfeeding or when taking long-term medication.",
                 compare_title: "Supplements Comparison",
                 compare_subtitle: "Comprehensive side-by-side comparison",
                 cat_muscle: "Muscle Building",
@@ -1169,6 +1240,11 @@
                 modal_warnings: "Belangrijke waarschuwingen",
                 modal_interactions: "Interacties met medicijnen",
                 modal_sources: "Natuurlijke bronnen",
+                modal_close: "Sluiten",
+                modal_copy_link: "Directe link naar dit supplement kopiëren",
+                modal_link_copied: "Link gekopieerd",
+                modal_refs: "📚 Wetenschappelijke bronnen: Europese Autoriteit voor Voedselveiligheid (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane-databanken",
+                modal_disclaimer: "<strong>⚖️ Medische disclaimer:</strong> De informatie en gegevens hier zijn uitsluitend bedoeld voor gezondheidsvoorlichting en voedingsadvies. Ze vormen geen medische diagnose en vervangen nooit een direct consult bij je behandelend arts of apotheker. Overleg altijd met je arts voordat je met een supplement begint, vooral tijdens zwangerschap of borstvoeding of bij langdurig medicijngebruik.",
                 compare_title: "Supplementen Vergelijken",
                 compare_subtitle: "Volledige vergelijking van geselecteerde supplementen",
                 cat_muscle: "Spieropbouw",
@@ -1294,6 +1370,11 @@
 
             // إعادة عرض فورية خفيفة بدون لاغ
             displaySupplements(true);
+
+            if (modalSuppId !== null) {
+                const openSupp = supplementsData.find(s => s.id === modalSuppId);
+                if (openSupp) renderSupplementModal(openSupp);
+            }
         }
 
         function initializeTheme() {
@@ -1577,13 +1658,55 @@
         }
 
         // Details Modal Logic
-        function openModal(id) {
+        // ==========================================================================
+        // Supplement modal: opens in place, keeps the exact scroll position, and puts
+        // #<slug> in the URL so the back button closes it and the link can be shared.
+        // ==========================================================================
+        let modalSuppId = null;
+        let modalScrollY = 0;
+        let modalReturnFocus = null;
+        let copyResetTimer = null;
+
+        function supplementBySlug(hash) {
+            let slug = '';
+            try { slug = decodeURIComponent(String(hash || '').replace(/^#/, '')); } catch (e) { return null; }
+            return slug ? (supplementsData.find(s => s.slug === slug) || null) : null;
+        }
+
+        function supplementUrl(supp) {
+            return 'https://wibohealth.com/supplements.html#' + encodeURIComponent(supp.slug);
+        }
+
+        function openModal(id, opts = {}) {
             const supp = supplementsData.find(s => s.id === id);
             if (!supp) return;
-            
             const modal = document.getElementById('supplementModal');
+            const wasOpen = modal.classList.contains('active');
+            if (!wasOpen && !opts.fromHistory) modalReturnFocus = document.activeElement;
+            modalSuppId = supp.id;
+            renderSupplementModal(supp);
+
+            const hash = '#' + encodeURIComponent(supp.slug);
+            if (!wasOpen) {
+                modalScrollY = window.scrollY;
+                // Push before locking the body so the list entry keeps the real scroll position
+                if (!opts.fromHistory && !(history.state && history.state.suppModal)) {
+                    history.pushState({ suppModal: true }, '', hash);
+                }
+                document.body.style.top = `-${modalScrollY}px`;
+                document.body.classList.add('supp-modal-open');
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+            } else if (!opts.fromHistory && location.hash !== hash) {
+                history.replaceState({ suppModal: true }, '', hash);
+            }
+            modal.scrollTop = 0;
+            document.getElementById('supplementClose').focus({ preventScroll: true });
+        }
+
+        function renderSupplementModal(supp) {
             document.getElementById('modalIcon').textContent = supp.icon || '💊';
-            
+
             if (currentLang === 'ar') {
                 document.getElementById('modalTitle').textContent = supp.name;
                 document.getElementById('modalSubtitle').textContent = supp.englishName || '';
@@ -1595,7 +1718,11 @@
                 document.getElementById('modalTitle').textContent = supp.englishName || supp.name;
                 document.getElementById('modalSubtitle').textContent = '';
             }
-            
+            const closeBtn = document.getElementById('supplementClose');
+            closeBtn.setAttribute('aria-label', t('modal_close'));
+            closeBtn.title = t('modal_close');
+            resetCopyButton();
+
             const benefitsList = (currentLang === 'nl' && supp.benefitsNl) ? supp.benefitsNl :
                                  (currentLang === 'en' && supp.benefitsEn) ? supp.benefitsEn :
                                  (supp.benefits || []);
@@ -1624,6 +1751,12 @@
                                (currentLang === 'en' && supp.naturalSourcesEn) ? supp.naturalSourcesEn :
                                smartClinicalTranslate(supp.naturalSources || '-', currentLang);
 
+            // merged records list several interactions separated by " • ": show them as a list
+            const interParts = String(interVal).split(' • ').filter(Boolean);
+            const interHtml = interParts.length > 1
+                ? `<ul>${interParts.map(x => `<li>${x}</li>`).join('')}</ul>`
+                : `<p style="color: var(--text-dark);">${interVal}</p>`;
+
             document.getElementById('modalBody').innerHTML = `
                 <div class="info-section">
                     <h4><i class="fas fa-star"></i> ${t('modal_benefits')}</h4>
@@ -1631,7 +1764,7 @@
                         ${benefitsList.map(b => `<li>${b}</li>`).join('')}
                     </ul>
                 </div>
-                
+
                 <div class="info-section">
                     <h4><i class="fas fa-prescription-bottle"></i> ${t('modal_dosage')}</h4>
                     <div class="dosage-box">
@@ -1649,7 +1782,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="info-section">
                     <div class="warning-box">
                         <h5><i class="fas fa-triangle-exclamation"></i> ${t('modal_warnings')}</h5>
@@ -1658,26 +1791,107 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="info-section">
                     <h4><i class="fas fa-pills"></i> ${t('modal_interactions')}</h4>
-                    <p style="color: var(--text-dark);">${interVal}</p>
+                    ${interHtml}
                 </div>
-                
+
                 <div class="info-section">
                     <h4><i class="fas fa-leaf"></i> ${t('modal_sources')}</h4>
                     <p style="color: var(--text-dark);">${sourcesVal}</p>
                 </div>
+
+                <div class="refs-strip">${t('modal_refs')}</div>
+                <div class="medical-disclaimer">${t('modal_disclaimer')}</div>
             `;
-            
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+        }
+
+        function hideModal() {
+            const modal = document.getElementById('supplementModal');
+            if (!modal || !modal.classList.contains('active')) return;
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('supp-modal-open');
+            document.body.style.top = '';
+            window.scrollTo({ top: modalScrollY, left: 0, behavior: 'instant' });
+            modalSuppId = null;
+            document.getElementById('supplementModalStatus').textContent = '';
+            if (modalReturnFocus && document.body.contains(modalReturnFocus)) modalReturnFocus.focus({ preventScroll: true });
+            modalReturnFocus = null;
         }
 
         function closeModal() {
             const modal = document.getElementById('supplementModal');
-            if (modal) modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            if (!modal || !modal.classList.contains('active')) return;
+            // Drop the history entry added on open; popstate then hides the modal
+            if (history.state && history.state.suppModal) {
+                history.back();
+            } else {
+                hideModal();
+                if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+            }
+        }
+
+        // Opened from a shared link (supplements.html#ashwagandha): put the plain list entry
+        // under the modal entry, so closing or pressing back shows the list instead of leaving the site.
+        function openModalFromLink(supp) {
+            history.replaceState(null, '', location.pathname + location.search);
+            openModal(supp.id);
+        }
+
+        window.addEventListener('popstate', function() {
+            const supp = supplementBySlug(location.hash);
+            if (!supp) { hideModal(); return; }
+            if (history.state && history.state.suppModal) openModal(supp.id, { fromHistory: true });
+            else openModalFromLink(supp);   // hash typed or pasted into the address bar
+        });
+
+        // A reload keeps the history state; clear it so closing never leaves the page
+        if (history.state && history.state.suppModal) history.replaceState(null, '');
+
+        function resetCopyButton() {
+            clearTimeout(copyResetTimer);
+            const btn = document.getElementById('supplementShare');
+            btn.classList.remove('copied');
+            btn.setAttribute('aria-label', t('modal_copy_link'));
+            btn.title = t('modal_copy_link');
+            document.getElementById('supplementShareText').textContent = '';
+            btn.querySelector('i').className = 'fas fa-link';
+        }
+
+        function legacyCopy(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            let ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+            ta.remove();
+            return ok;
+        }
+
+        function copySupplementLink() {
+            const supp = supplementsData.find(s => s.id === modalSuppId);
+            if (!supp) return;
+            const url = supplementUrl(supp);
+            const done = () => {
+                const btn = document.getElementById('supplementShare');
+                btn.classList.add('copied');
+                btn.querySelector('i').className = 'fas fa-check';
+                document.getElementById('supplementShareText').textContent = t('modal_link_copied');
+                document.getElementById('supplementModalStatus').textContent = t('modal_link_copied');
+                clearTimeout(copyResetTimer);
+                copyResetTimer = setTimeout(resetCopyButton, 2200);
+            };
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url).then(done, () => { if (legacyCopy(url)) done(); });
+            } else if (legacyCopy(url)) {
+                done();
+            }
         }
 
         document.getElementById('supplementModal').addEventListener('click', function(e) {
@@ -1819,8 +2033,8 @@
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                closeModal();
-                closeCompareModal();
+                if (modalSuppId !== null) closeModal();
+                else closeCompareModal();
             }
         });
 
@@ -1838,6 +2052,9 @@
             initializeTheme();
             initScrollObserver();
             changeLanguage(currentLang);
+
+            const linkedSupp = supplementBySlug(location.hash);
+            if (linkedSupp) openModalFromLink(linkedSupp);
         });
     </script>
 </body>
