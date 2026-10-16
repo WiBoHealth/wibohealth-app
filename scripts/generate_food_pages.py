@@ -168,6 +168,18 @@ PILOT = {
     540: ('bakery', 80), 541: ('dairy_drink', 250), 542: ('drink', 250), 543: ('sweets', 50), 544: ('sweets', 150),
     545: ('asian', 500), 546: ('asian', 150), 547: ('asian', 300), 548: ('asian', 250), 549: ('asian', 250),
     550: ('salad', 200),
+    # batch 16: East Asian dishes and noodles, seaweed, mushrooms, superfoods, seeds, oils and wild fruit
+    # (portions approved by Dr. Wassim on 16 October 2026)
+    551: ('asian', 150), 552: ('asian', 200), 553: ('asian', 150), 554: ('asian', 250), 555: ('asian', 250),
+    556: ('protein', 50), 557: ('grain', 150), 558: ('grain', 150), 559: ('grain', 200), 560: ('asian', 300),
+    561: ('asian', 150), 562: ('asian', 150), 563: ('veg', 30), 564: ('veg', 3), 565: ('veg', 80), 566: ('veg', 80),
+    567: ('pantry', 10), 568: ('pantry', 20), 569: ('pantry', 5), 570: ('pantry', 10), 571: ('pantry', 10),
+    572: ('pantry', 10), 573: ('fat', 10), 574: ('nuts', 15), 575: ('nuts', 10), 576: ('nuts', 16), 577: ('nuts', 16),
+    578: ('fat', 10), 579: ('fat', 5), 580: ('fat', 5), 581: ('fruit', 100), 582: ('fruit', 50), 583: ('fruit', 50),
+    584: ('fruit', 150), 585: ('dried', 40), 586: ('fruit', 100), 587: ('dried', 30), 588: ('nuts', 80),
+    589: ('nuts', 15), 590: ('nuts', 10), 591: ('drink', 250), 592: ('drink', 250), 593: ('drink', 250),
+    594: ('drink', 250), 595: ('drink', 250), 596: ('drink', 250), 597: ('drink', 250), 598: ('drink', 250),
+    599: ('drink', 250), 600: ('pantry', 15),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -176,7 +188,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 551))
+TEAM_REVIEW |= set(range(207, 601))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}
