@@ -1169,9 +1169,11 @@ def build(food, lang, ctx):
     urls = {l: page_url(slug, l) for l in LANGS}
     image_abs = f'{SITE}/{food["image"]}' if food['image'] else f'{SITE}/images/logo.png'
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
+    # Educational page, never a Product: Google requires offers/review/aggregateRating on Product,
+    # which an information site cannot give (Search Console error, pages left unindexed).
     schema = {
         "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "MedicalWebPage",
         "@id": urls[lang] + '#webpage',
         "url": urls[lang],
         "name": title,
@@ -1180,6 +1182,10 @@ def build(food, lang, ctx):
         "primaryImageOfPage": {"@type": "ImageObject", "url": image_abs},
         "about": {"@type": "Thing", "name": food['en'], "alternateName": [food['ar'], food['nl']]},
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+        "author": {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib",
+                   "jobTitle": "Medical Doctor", "url": f"{SITE}/doctor.html"},
+        "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
+                      "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "reviewedBy": ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
                        {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
                         "url": f"{SITE}/doctor.html"}),

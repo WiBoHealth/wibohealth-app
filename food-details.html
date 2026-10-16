@@ -78,8 +78,7 @@
     <meta property="og:description" id="ogDesc" content="تحليل غذائي معتمد للمؤشر الجلايسيمي ومؤشر الأنسولين والقيم الغذائية من فريق ويبو هيلث الطبي.">
     <meta property="og:image" content="https://wibohealth.com/images/logo.png">
     
-    <!-- Google Structured Data (Schema.org MedicalWebPage & NutritionInformation) -->
-    <script type="application/ld+json" id="foodNutritionSchema"></script>
+    <!-- Google Structured Data (Schema.org MedicalWebPage): the JSON-LD tag is added by updateStructuredData() -->
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1297,8 +1296,8 @@ if (food.image) {
             document.getElementById('nutFat').textContent = fatVal + ' ' + gUnit;
             document.getElementById('nutFiber').textContent = (food.nutrition?.fiber || 0).toFixed(1) + ' ' + gUnit;
 
-            updateStructuredData(food, mainTitle, catName, fatVal);
             updateCanonicalAndHreflang(food.id);
+            updateStructuredData(food, mainTitle, catName, fatVal);
         }
 
         // GI is shown only when it was measured (Atkinson 2021); otherwise gi is null
@@ -1348,29 +1347,28 @@ if (food.image) {
 
         // Schema.org Structured Data لتصدر محركات البحث Googlebot
         function updateStructuredData(food, title, category, fatVal) {
-            const schemaEl = document.getElementById('foodNutritionSchema');
-            if (!schemaEl) return;
+            // Created here, not in the markup: an empty JSON-LD tag is invalid for crawlers that skip JS
+            let schemaEl = document.getElementById('foodNutritionSchema');
+            if (!schemaEl) {
+                schemaEl = document.createElement('script');
+                schemaEl.type = 'application/ld+json';
+                schemaEl.id = 'foodNutritionSchema';
+                document.head.appendChild(schemaEl);
+            }
 
+            // Educational page, never a Product: Google requires offers/review/aggregateRating on Product.
+            const canonical = document.getElementById('canonicalTag');
+            const pageUrl = (canonical && canonical.href) || `https://wibohealth.com/food-details.html?id=${food.id}`;
             const schema = {
                 "@context": "https://schema.org",
-                "@type": "Product",
+                "@type": "MedicalWebPage",
+                "url": pageUrl,
                 "name": title,
-                "category": category,
-                "url": `https://wibohealth.com/food-details.html?id=${food.id}`,
-                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (clinically reviewed estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal.`,
-                "brand": {
-                    "@type": "Organization",
-                    "name": "WiBo Health Medical Team"
-                },
-                "nutrition": {
-                    "@type": "NutritionInformation",
-                    "servingSize": "100g",
-                    "calories": `${Math.round(food.nutrition?.calories || 0)} calories`,
-                    "proteinContent": `${(food.nutrition?.protein || 0).toFixed(1)}g`,
-                    "carbohydrateContent": `${(food.nutrition?.carbs || 0).toFixed(1)}g`,
-                    "fatContent": `${fatVal}g`,
-                    "fiberContent": `${(food.nutrition?.fiber || 0).toFixed(1)}g`
-                }
+                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (clinically reviewed estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal, Protein: ${(food.nutrition?.protein || 0).toFixed(1)} g, Carbohydrates: ${(food.nutrition?.carbs || 0).toFixed(1)} g, Fat: ${fatVal} g per 100 g.`,
+                "about": { "@type": "Thing", "name": food.nameEn || title, "description": category },
+                "author": { "@type": "Person", "@id": "https://wibohealth.com/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": "Medical Doctor", "url": "https://wibohealth.com/doctor.html" },
+                "publisher": { "@type": "Organization", "name": "WiBo Health", "url": "https://wibohealth.com", "logo": { "@type": "ImageObject", "url": "https://wibohealth.com/images/icon-512.png" } },
+                "isPartOf": { "@type": "WebSite", "name": "WiBo Health", "url": "https://wibohealth.com/" }
             };
             schemaEl.textContent = JSON.stringify(schema);
         }

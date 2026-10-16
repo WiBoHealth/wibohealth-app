@@ -99,17 +99,19 @@
       "description": "Nutritional database analyzing Glycemic Index (GI), Insulin Index (II), and macronutrients for diabetes management and metabolic health.",
       "aspect": "Overview",
       "author": {
-        "@type": "Organization",
-        "name": "WiBo Health Medical Team",
-        "url": "https://wibohealth.com"
+        "@type": "Person",
+        "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+        "name": "Dr. Wassim Habib",
+        "jobTitle": "Medical Doctor",
+        "url": "https://wibohealth.com/doctor.html"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "WiBo Health Group",
+        "name": "WiBo Health",
         "url": "https://wibohealth.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://wibohealth.com/images/icon-192.png"
+          "url": "https://wibohealth.com/images/icon-512.png"
         }
       },
       "inLanguage": ["ar", "nl", "en"],
@@ -125,7 +127,7 @@
           "@type": "ListItem",
           "position": 1,
           "name": "WiBo Health",
-          "item": "https://wibohealth.com/index.html"
+          "item": "https://wibohealth.com/"
         },
         {
           "@type": "ListItem",
@@ -136,7 +138,6 @@
       ]
     }
     </script>
-    <script type="application/ld+json" id="foodsItemListSchema"></script>
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
@@ -885,7 +886,7 @@
             background: var(--card-bg);
             color: var(--text-dark);
             border-radius: 20px;
-            max-width: 560px;
+            max-width: 760px;
             width: 100%;
             margin: 30px auto;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
@@ -922,6 +923,37 @@
         .food-modal-close:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
         [dir="rtl"] .food-modal-close { left: 16px; right: auto; }
         [dir="ltr"] .food-modal-close { right: 16px; left: auto; }
+
+        /* Copy direct link: the corner opposite the close button */
+        .food-modal-share {
+            position: absolute;
+            top: 16px;
+            height: 36px;
+            min-width: 36px;
+            padding: 0 11px;
+            border: none;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font: inherit;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: background 0.2s ease;
+        }
+        .food-modal-share i { font-size: 15px; }
+        .food-modal-share:hover { background: rgba(255, 255, 255, 0.4); }
+        .food-modal-share:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
+        .food-modal-share.copied { background: #ffffff; color: var(--secondary-color); }
+        .food-modal-share .fm-share-text { display: none; }
+        .food-modal-share.copied .fm-share-text { display: inline; }
+        [dir="rtl"] .food-modal-share { right: 16px; left: auto; }
+        [dir="ltr"] .food-modal-share { left: 16px; right: auto; }
+        .fm-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
         .food-modal-media {
             width: min(240px, 62vw);
@@ -1034,7 +1066,87 @@
 
         .fm-full-link:hover { filter: brightness(1.05); }
 
+        /* Full details, loaded from the food's own static page (foods/<slug>.html) */
+        .fm-full {
+            --fp-input: rgba(0, 0, 0, 0.03);
+            --fp-primary: #10b981;
+            line-height: 1.75;
+            text-align: start;
+        }
+        body.dark-mode .fm-full { --fp-input: rgba(255, 255, 255, 0.05); }
+        #foodModalFull { margin-top: 22px; }
+        .fm-full h2, .fm-full h3, .fm-full td, .fm-full strong { color: var(--text-dark); }
+        .fm-full p { color: var(--text-dark); margin: 0 0 12px; }
+        .fm-full .lead { font-size: 1.02rem; margin: 0 0 20px; }
+        .fm-full .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
+        .fm-full .stat-box { background: var(--fp-input); border: 1px solid var(--border-color); border-radius: 14px; padding: 14px 10px; text-align: center; min-width: 0; }
+        .fm-full .stat-box h2 { font-size: 0.78rem; color: var(--text-light); font-weight: 700; margin: 0 0 6px; line-height: 1.4; }
+        .fm-full .stat-num { font-size: 1.7rem; font-weight: 900; line-height: 1.2; color: var(--text-dark); }
+        .fm-full .stat-num.low { color: #10b981; } .fm-full .stat-num.medium { color: #f39c12; } .fm-full .stat-num.high { color: #e74c3c; }
+        .fm-full .stat-num.muted { color: var(--text-light); } .fm-full .stat-num.kcal { color: #3498db; } .fm-full .stat-num.protein { color: #9b59b6; }
+        .fm-full .stat-sub { font-size: 0.75rem; color: var(--text-light); font-weight: 600; }
+        .fm-full .badge { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; border: 1px solid transparent; }
+        .fm-full .badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #059669; }
+        .fm-full .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #b45309; }
+        .fm-full .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #dc2626; }
+        .fm-full .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-light); }
+        body.dark-mode .fm-full .badge.low { color: #34d399; }
+        body.dark-mode .fm-full .badge.medium { color: #fbbf24; }
+        body.dark-mode .fm-full .badge.high { color: #f87171; }
+        .fm-full .section-title { font-size: 1.2rem; font-weight: 800; color: var(--fp-primary); margin: 26px 0 12px; display: flex; align-items: center; gap: 10px; }
+        .fm-full .tip-list { display: grid; gap: 10px; margin: 8px 0 22px; }
+        .fm-full .tip { background: var(--fp-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--fp-primary); border-radius: 8px; padding: 12px 16px; }
+        .fm-full .tip h3 { font-size: 0.98rem; font-weight: 800; margin: 0 0 4px; display: flex; gap: 8px; align-items: center; }
+        .fm-full .tip h3 i { color: var(--fp-primary); }
+        .fm-full .tip.warn { border-inline-start-color: #f39c12; }
+        .fm-full .tip.warn h3 i { color: #f39c12; }
+        .fm-full .tip p { color: var(--text-light); margin: 0; }
+        .fm-full .table-wrap { overflow-x: auto; }
+        .fm-full .nutrition-table { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 0.92rem; }
+        .fm-full .nutrition-table th, .fm-full .nutrition-table td { padding: 10px; border-bottom: 1px solid var(--border-color); text-align: start; }
+        .fm-full .nutrition-table th { color: var(--fp-primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
+        .fm-full .nutrition-table td:not(:first-child) { font-weight: 700; }
+        .fm-full .table-note { font-size: 0.78rem; color: var(--text-light); margin-bottom: 22px; }
+        .fm-full .alt-list { list-style: none; display: grid; gap: 8px; margin: 8px 0 22px; padding: 0; }
+        .fm-full .alt-list a { display: flex; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 8px; background: var(--fp-input); border: 1px solid var(--border-color); color: var(--text-dark); text-decoration: none; font-weight: 700; }
+        .fm-full .alt-list a:hover { border-color: var(--fp-primary); color: var(--fp-primary); }
+        .fm-full .alt-list span { color: var(--text-light); font-weight: 600; white-space: nowrap; }
+        .fm-full .faq-list { display: grid; gap: 10px; margin: 8px 0 22px; }
+        .fm-full .faq-item { background: var(--fp-input); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; }
+        .fm-full .faq-item h3 { font-size: 0.98rem; font-weight: 800; margin: 0 0 6px; }
+        .fm-full .faq-item p { color: var(--text-light); margin: 0; }
+        .fm-full .source-strip { background: var(--fp-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--fp-primary); border-radius: 12px; padding: 10px 14px; margin-bottom: 10px; color: var(--text-light); font-size: 0.82rem; font-weight: 600; overflow-wrap: anywhere; }
+        .fm-full .source-strip a, .fm-full .reviewed a { color: var(--fp-primary); font-weight: 800; text-decoration: none; }
+        .fm-full .reviewed { font-size: 0.82rem; color: var(--text-light); margin: 10px 0 0; }
+        .fm-full .disclaimer-box { margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(0, 0, 0, 0.04); border: 1px solid var(--border-color); color: var(--text-light); font-size: 0.8rem; text-align: center; }
+        body.dark-mode .fm-full .disclaimer-box { background: rgba(15, 23, 42, 0.62); }
+
+        .fm-loading { display: grid; gap: 10px; margin-top: 22px; }
+        .fm-loading span { display: block; height: 14px; border-radius: 7px; background: linear-gradient(90deg, rgba(148, 163, 184, 0.15), rgba(148, 163, 184, 0.32), rgba(148, 163, 184, 0.15)); background-size: 200% 100%; animation: fmShimmer 1.2s linear infinite; }
+        .fm-loading span:nth-child(2) { width: 85%; } .fm-loading span:nth-child(3) { width: 65%; }
+        @keyframes fmShimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+        .fm-card.fm-gl { grid-column: 1 / -1; text-align: center; line-height: 1.4; }
+        .fm-card.fm-gl .stat-num { font-size: 1.6rem; }
+        .fm-load-error { margin-top: 18px; text-align: center; color: var(--text-light); font-size: 0.9rem; }
+
+        .fm-page-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            padding: 11px 18px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+        .fm-page-link:hover { border-color: var(--primary-color); }
+
         @media (max-width: 600px) {
+            .fm-full .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .food-modal { padding: 10px; }
             .food-modal-content { margin: 10px auto; }
             .food-modal-title { font-size: 1.3rem; }
@@ -1216,6 +1328,10 @@
                 <button type="button" class="food-modal-close" id="foodModalClose" onclick="closeFoodModal()">
                     <i class="fas fa-times"></i>
                 </button>
+                <button type="button" class="food-modal-share" id="foodModalShare" onclick="copyFoodLink()">
+                    <i class="fas fa-link"></i><span class="fm-share-text" id="foodModalShareText"></span>
+                </button>
+                <span class="fm-sr-only" id="foodModalStatus" role="status" aria-live="polite"></span>
                 <div class="food-modal-media" id="foodModalMedia"></div>
                 <h2 class="food-modal-title" id="foodModalTitle"></h2>
                 <p class="food-modal-subtitle" id="foodModalSubtitle"></p>
@@ -1329,7 +1445,11 @@
                 "ii_tested_badge": "مختبر سريرياً (Holt / Bao) ✅",
                 "ii_not_tested": "غير مختبر سريرياً",
                 "modal_per_100g": "القيم الغذائية لكل 100 جرام",
-                "modal_full_details": "عرض التفاصيل الكاملة والرسوم البيانية",
+                "modal_full_details": "فتح الصفحة المستقلة للصنف",
+                "modal_copy_link": "نسخ رابط الصنف المباشر",
+                "modal_link_copied": "تم نسخ الرابط",
+                "modal_loading": "جاري تحميل التفاصيل الكاملة",
+                "modal_load_error": "تعذّر تحميل التفاصيل الكاملة الآن. يمكنك فتح صفحة الصنف من الزر أدناه.",
                 "gi_not_applicable": "لا ينطبق",
                 "gi_not_available": "غير متوفر",
                 "gi_reviewed_badge": "تقدير مراجع سريرياً",
@@ -1386,7 +1506,11 @@
                 "ii_tested_badge": "Clinically tested (Holt / Bao) ✅",
                 "ii_not_tested": "Not clinically tested",
                 "modal_per_100g": "Nutritional values per 100 g",
-                "modal_full_details": "View full details & charts",
+                "modal_full_details": "Open the standalone food page",
+                "modal_copy_link": "Copy direct link to this food",
+                "modal_link_copied": "Link copied",
+                "modal_loading": "Loading full details",
+                "modal_load_error": "The full details could not be loaded right now. You can open the food page with the button below.",
                 "gi_not_applicable": "Not applicable",
                 "gi_not_available": "Not available",
                 "gi_reviewed_badge": "Clinically reviewed estimate",
@@ -1443,7 +1567,11 @@
                 "ii_tested_badge": "Klinisch getest (Holt / Bao) ✅",
                 "ii_not_tested": "Niet klinisch getest",
                 "modal_per_100g": "Voedingswaarden per 100 g",
-                "modal_full_details": "Bekijk alle details & grafieken",
+                "modal_full_details": "Open de losse pagina van dit voedingsmiddel",
+                "modal_copy_link": "Directe link naar dit voedingsmiddel kopiëren",
+                "modal_link_copied": "Link gekopieerd",
+                "modal_loading": "Volledige details laden",
+                "modal_load_error": "De volledige details konden nu niet worden geladen. Open de pagina via de knop hieronder.",
                 "gi_not_applicable": "Niet van toepassing",
                 "gi_not_available": "Niet beschikbaar",
                 "gi_reviewed_badge": "Klinisch beoordeelde schatting",
@@ -1695,7 +1823,7 @@
                         <div class="card-gi"><span class="gi-num ${getGILevel(cardGI)}">GI ${cardGI}</span>${food.gi_status === 'reviewed' ? `<span class="gi-est">${t('gi_reviewed_badge')}</span>` : ''}</div>`;
 
                 return `
-                    <a href="${foodPageHref(food.id)}" class="food-card" onclick="return openFoodModalFromCard(event, '${food.id}')">
+                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}" onclick="return openFoodModalFromCard(event, '${food.id}')">
                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
                                 data-food-id="${food.id}" 
                                 onclick="toggleFavorite(event, '${food.id}')"
@@ -1745,11 +1873,17 @@
         }
 
         // ==========================================================================
-        // Food details modal: opens in place, keeps scroll position, search and tab
+        // Food details modal: opens in place with the full details, keeps scroll
+        // position, search and tab. The URL gets #<slug>, so the food is linkable
+        // and the back button closes the modal instead of leaving the page.
         // ==========================================================================
         let modalFoodId = null;
         let modalScrollY = 0;
         let modalReturnFocus = null;
+        let modalLoadToken = 0;
+        let copyResetTimer = null;
+        let slugToFoodId = null;
+        const fullDetailsCache = new Map();   // page path -> Promise of { gl, body } (HTML)
 
         function escapeHtml(value) {
             return String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
@@ -1789,28 +1923,68 @@
             return false;
         }
 
-        function openFoodModal(foodId) {
+        function foodSlug(foodId) {
+            return (window.FOOD_PAGES || {})[String(foodId)] || null;
+        }
+
+        function foodHash(food) {
+            return '#' + (foodSlug(food.id) || `food-${food.id}`);
+        }
+
+        // '#brown-rice' or '#food-612' -> food
+        function foodFromHash(hash) {
+            let key = '';
+            try { key = decodeURIComponent(String(hash || '').replace(/^#/, '')); } catch (e) { return null; }
+            if (!key) return null;
+            const byId = /^food-(\d+)$/.exec(key);
+            let id = byId ? byId[1] : null;
+            if (!id) {
+                if (!slugToFoodId) {
+                    slugToFoodId = {};
+                    Object.entries(window.FOOD_PAGES || {}).forEach(([fid, slug]) => { slugToFoodId[slug] = fid; });
+                }
+                id = slugToFoodId[key];
+            }
+            return id ? (allFoods.find(f => String(f.id) === String(id)) || null) : null;
+        }
+
+        // '/foods/x.html', '/en/foods/x.html', '/nl/foods/x.html' -> food
+        function foodFromPagePath(pathname) {
+            const m = /^\/(?:(?:en|nl)\/)?foods\/([^\/]+)\.html$/.exec(pathname);
+            return m ? foodFromHash('#' + m[1]) : null;
+        }
+
+        // Direct link to share: the food's own indexable page in the current language
+        function absoluteFoodUrl(food) {
+            return new URL(foodPageHref(food.id), 'https://wibohealth.com/').href;
+        }
+
+        function openFoodModal(foodId, opts = {}) {
             const food = allFoods.find(f => String(f.id) === String(foodId));
             if (!food) return;
             modalFoodId = String(food.id);
             renderFoodModal(food);
 
             const modal = document.getElementById('foodModal');
+            const hash = foodHash(food);
             if (!modal.classList.contains('active')) {
                 modalScrollY = window.scrollY;
                 // Let the phone/browser back button close the modal instead of leaving the page.
                 // Push before locking the body, so the browser saves the real scroll position
                 // for this entry and restores it (not 0) when the modal is closed.
-                if (!(history.state && history.state.foodModal)) {
-                    history.pushState({ foodModal: true }, '');
+                if (!opts.fromHistory && !(history.state && history.state.foodModal)) {
+                    history.pushState({ foodModal: true }, '', hash);
                 }
                 // Lock the page behind the modal without losing the scroll position
                 document.body.style.top = `-${modalScrollY}px`;
                 document.body.classList.add('food-modal-open');
                 modal.classList.add('active');
                 modal.setAttribute('aria-hidden', 'false');
-                modal.scrollTop = 0;
+            } else if (!opts.fromHistory && location.hash !== hash) {
+                // Another food opened from inside the modal: same history entry, new hash
+                history.replaceState({ foodModal: true }, '', hash);
             }
+            modal.scrollTop = 0;
             document.getElementById('foodModalClose').focus({ preventScroll: true });
         }
 
@@ -1828,6 +2002,7 @@
             document.getElementById('foodModalCategory').textContent = getSafeCategoryName(food, lang);
             document.getElementById('foodModalClose').setAttribute('aria-label', t('modal_close'));
             document.getElementById('foodModalClose').title = t('modal_close');
+            resetCopyButton();
 
             const media = document.getElementById('foodModalMedia');
             const icon = escapeHtml(food.icon || '🍽️');
@@ -1844,9 +2019,10 @@
             const iiTested = hasTestedII(food);
             const ii = Number(food.ii);
             const iiLevel = iiTested ? getIILevel(ii) : '';
+            const hasPage = !!foodSlug(food.id);
 
             document.getElementById('foodModalBody').innerHTML = `
-                <div class="fm-grid">
+                <div class="fm-grid" id="foodModalGrid">
                     <div class="fm-card fm-index ${giLevel}">
                         <div class="fm-label">${t('modal_gi')}</div>
                         <div class="fm-value ${giKnown ? '' : 'untested'}">${giKnown ? gi : '—'}</div>
@@ -1877,21 +2053,173 @@
                     </div>
                 </div>
                 <p class="fm-note">${t('modal_per_100g')}</p>
+                ${hasPage ? `
+                <div class="fm-full" id="foodModalFull" aria-busy="true">
+                    <div class="fm-loading" role="img" aria-label="${escapeHtml(t('modal_loading'))}"><span></span><span></span><span></span></div>
+                </div>
+                <a class="fm-page-link" href="${foodPageHref(food.id)}">
+                    <i class="fas fa-up-right-from-square"></i> <span>${t('modal_full_details')}</span>
+                </a>` : `
                 <a class="fm-full-link" href="${foodPageHref(food.id)}">
                     <i class="fas fa-chart-column"></i> <span>${t('modal_full_details')}</span>
-                </a>
+                </a>`}
             `;
+            if (hasPage) loadFullDetails(food);
+        }
+
+        // Full details come from the food's static page, so the modal and the indexed page
+        // always show the same doctor-reviewed text. Cached per page; prefetched on hover/touch.
+        function fetchFullDetails(path) {
+            if (!fullDetailsCache.has(path)) {
+                const request = fetch(path, { credentials: 'same-origin' })
+                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
+                    .then(extractFullDetails)
+                    .catch(err => { fullDetailsCache.delete(path); throw err; });
+                fullDetailsCache.set(path, request);
+            }
+            return fullDetailsCache.get(path);
+        }
+
+        function extractFullDetails(html) {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const article = doc.querySelector('main.food-page article');
+            if (!article) throw new Error('food page without article');
+            // The modal header already shows name, image and group; the app promo stays on the page
+            article.querySelectorAll('.breadcrumb, .food-hero, .boodi-card, script, style').forEach(el => el.remove());
+            // GI, calories and protein are in the summary grid; only the glycemic load moves over
+            let gl = '';
+            const stats = article.querySelector('.stat-grid');
+            if (stats) {
+                const glBox = stats.querySelector('.stat-box:nth-child(2)');
+                if (glBox) {
+                    const label = glBox.querySelector('h2');
+                    const labelText = label ? label.textContent : '';
+                    if (label) label.remove();
+                    gl = `<div class="fm-label">${escapeHtml(labelText)}</div>${glBox.innerHTML}`;
+                }
+                stats.remove();
+            }
+            article.querySelectorAll('table').forEach(table => {
+                const wrap = doc.createElement('div');
+                wrap.className = 'table-wrap';
+                table.replaceWith(wrap);
+                wrap.appendChild(table);
+            });
+            return { gl, body: article.innerHTML };
+        }
+
+        function loadFullDetails(food) {
+            const token = ++modalLoadToken;
+            fetchFullDetails(foodPageHref(food.id)).then(({ gl, body }) => {
+                if (token !== modalLoadToken) return;
+                const box = document.getElementById('foodModalFull');
+                const grid = document.getElementById('foodModalGrid');
+                if (!box) return;
+                if (gl && grid) grid.children[1].insertAdjacentHTML('afterend', `<div class="fm-card fm-gl fm-full">${gl}</div>`);
+                box.innerHTML = body;
+                box.removeAttribute('aria-busy');
+            }).catch(() => {
+                if (token !== modalLoadToken) return;
+                const box = document.getElementById('foodModalFull');
+                if (!box) return;
+                box.innerHTML = `<p class="fm-load-error">${t('modal_load_error')}</p>`;
+                box.removeAttribute('aria-busy');
+            });
+        }
+
+        function prefetchFullDetails(foodId) {
+            if (foodSlug(foodId)) fetchFullDetails(foodPageHref(foodId)).catch(() => {});
+        }
+
+        // Prefetch after a short hover (not while the pointer only passes over the grid), at once on touch
+        (function setupPrefetch() {
+            const grid = document.getElementById('foodGrid');
+            if (!grid) return;
+            let hoverTimer = null;
+            grid.addEventListener('pointerover', function(e) {
+                const card = e.target.closest('.food-card');
+                if (!card) return;
+                clearTimeout(hoverTimer);
+                hoverTimer = setTimeout(() => prefetchFullDetails(card.dataset.cardId), 150);
+            });
+            grid.addEventListener('pointerout', function() { clearTimeout(hoverTimer); });
+            grid.addEventListener('touchstart', function(e) {
+                const card = e.target.closest('.food-card');
+                if (card) prefetchFullDetails(card.dataset.cardId);
+            }, { passive: true });
+            grid.addEventListener('focusin', function(e) {
+                const card = e.target.closest('.food-card');
+                if (card) prefetchFullDetails(card.dataset.cardId);
+            });
+        })();
+
+        // An alternative food linked inside the modal opens in the modal too
+        document.getElementById('foodModalBody').addEventListener('click', function(e) {
+            const link = e.target.closest('a[href]');
+            if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button > 0) return;
+            const url = new URL(link.href, location.href);
+            if (url.origin !== location.origin) return;
+            const food = foodFromPagePath(url.pathname);
+            if (!food || String(food.id) === modalFoodId) return;
+            e.preventDefault();
+            openFoodModal(food.id);
+        });
+
+        function resetCopyButton() {
+            clearTimeout(copyResetTimer);
+            const btn = document.getElementById('foodModalShare');
+            btn.classList.remove('copied');
+            btn.setAttribute('aria-label', t('modal_copy_link'));
+            btn.title = t('modal_copy_link');
+            document.getElementById('foodModalShareText').textContent = '';
+            btn.querySelector('i').className = 'fas fa-link';
+        }
+
+        function legacyCopy(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            let ok = false;
+            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+            ta.remove();
+            return ok;
+        }
+
+        function copyFoodLink() {
+            const food = allFoods.find(f => String(f.id) === modalFoodId);
+            if (!food) return;
+            const url = absoluteFoodUrl(food);
+            const done = () => {
+                const btn = document.getElementById('foodModalShare');
+                btn.classList.add('copied');
+                btn.querySelector('i').className = 'fas fa-check';
+                document.getElementById('foodModalShareText').textContent = t('modal_link_copied');
+                document.getElementById('foodModalStatus').textContent = t('modal_link_copied');
+                clearTimeout(copyResetTimer);
+                copyResetTimer = setTimeout(resetCopyButton, 2200);
+            };
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url).then(done, () => { if (legacyCopy(url)) done(); });
+            } else if (legacyCopy(url)) {
+                done();
+            }
         }
 
         function hideFoodModal() {
             const modal = document.getElementById('foodModal');
             if (!modal.classList.contains('active')) return;
+            modalLoadToken++;
             modal.classList.remove('active');
             modal.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('food-modal-open');
             document.body.style.top = '';
             window.scrollTo({ top: modalScrollY, left: 0, behavior: 'instant' });
             modalFoodId = null;
+            document.getElementById('foodModalStatus').textContent = '';
             if (modalReturnFocus && document.body.contains(modalReturnFocus)) {
                 modalReturnFocus.focus({ preventScroll: true });
             }
@@ -1904,10 +2232,23 @@
                 history.back();
             } else {
                 hideFoodModal();
+                if (location.hash) history.replaceState(null, '', location.pathname + location.search);
             }
         }
 
-        window.addEventListener('popstate', hideFoodModal);
+        // Opened from a shared link (foods.html#brown-rice): put the plain list entry under the
+        // modal entry, so closing or pressing back shows the list instead of leaving the site.
+        function openFoodModalFromLink(food) {
+            history.replaceState(null, '', location.pathname + location.search);
+            openFoodModal(food.id);
+        }
+
+        window.addEventListener('popstate', function() {
+            const food = foodFromHash(location.hash);
+            if (!food) { hideFoodModal(); return; }
+            if (history.state && history.state.foodModal) openFoodModal(food.id, { fromHistory: true });
+            else openFoodModalFromLink(food);   // hash typed or pasted into the address bar
+        });
 
         // A reload keeps the history state; clear it so closing never leaves the page
         if (history.state && history.state.foodModal) {
@@ -1945,34 +2286,33 @@
         }
 
         function updateStructuredDataForSEO() {
-            const schemaEl = document.getElementById('foodsItemListSchema');
-            if (!schemaEl || !allFoods || allFoods.length === 0) return;
+            if (!allFoods || allFoods.length === 0) return;
+            // Created here, not in the markup: an empty JSON-LD tag is invalid for crawlers that skip JS
+            let schemaEl = document.getElementById('foodsItemListSchema');
+            if (!schemaEl) {
+                schemaEl = document.createElement('script');
+                schemaEl.type = 'application/ld+json';
+                schemaEl.id = 'foodsItemListSchema';
+                document.head.appendChild(schemaEl);
+            }
 
-            const itemsToSchema = allFoods.slice(0, 100).map((f, index) => {
+            // Summary list of the indexable food pages. Never Product: Google requires
+            // offers/review/aggregateRating on it, which an information site cannot give.
+            const itemsToSchema = allFoods.filter(f => (window.FOOD_PAGES || {})[String(f.id)]).slice(0, 100).map((f, index) => {
                 const name = (currentLang === 'en') ? (f.nameEn || f.name) :
                              (currentLang === 'nl') ? (f.nameNl || f.nameEn || f.name) : f.name;
                 return {
                     "@type": "ListItem",
                     "position": index + 1,
-                    "item": {
-                        "@type": "Product",
-                        "name": name,
-                        "url": `https://wibohealth.com/food-details.html?id=${f.id}`,
-                        "category": getSafeCategoryName(f, currentLang),
-                        "nutrition": {
-                            "@type": "NutritionInformation",
-                            "calories": `${Math.round(f.nutrition?.calories || 0)} calories`,
-                            "proteinContent": `${(f.nutrition?.protein || 0).toFixed(1)} g`,
-                            "carbohydrateContent": `${(f.nutrition?.carbs || 0).toFixed(1)} g`,
-                            "fatContent": `${((f.nutrition?.fat !== undefined) ? f.nutrition.fat : (f.nutrition?.fats || 0)).toFixed(1)} g`
-                        }
-                    }
+                    "name": name,
+                    "url": 'https://wibohealth.com' + foodPageHref(f.id)
                 };
             });
 
             schemaEl.textContent = JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "ItemList",
+                "numberOfItems": itemsToSchema.length,
                 "itemListElement": itemsToSchema
             });
         }
@@ -2019,6 +2359,9 @@
             changeLanguage(currentLang);
             updateFavCount();
             setupInfiniteScroll();
+
+            const linkedFood = foodFromHash(location.hash);
+            if (linkedFood) openFoodModalFromLink(linkedFood);
         });
 
         function toggleTheme() {
