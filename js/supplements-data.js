@@ -5536,14 +5536,14 @@ const supplementsData = [
     {
         id: 77,
         slug: "d-aspartic-acid",
-        name: "حمض الأسبارتيك",
+        name: "حمض د-أسبارتيك لدعم الحيوية الذكورية",
         englishName: "D-Aspartic Acid (DAA)",
         nameNl: "D-Asparaginezuur (DAA)",
         category: "بناء-عضلات",
         icon: "🔬",
-        summary: "حمض أميني قد يزيد التستوستيرون لفترة قصيرة - للرياضيين",
-        summaryNl: "D-aminozuur dat LH en tijdelijke testosteronproductie stimuleert ter ondersteuning van kracht en mannelijke fertiliteit.",
-        summaryEn: "Endogenous D-amino acid stimulating luteinizing hormone (LH) and temporary free testosterone output.",
+        summary: "متصاوغ لحمض الأسبارتيك يتركز في الغدة النخامية والخصيتين؛ تشير دراسات إلى أنه ينشط إفراز الهرمون الملوتن (LH)، وقد يدعم تخليق التستوستيرون لدى الرجال ذوي المستويات المنخفضة، بينما يكون أثره مؤقتاً أو غائباً لدى الرياضيين ذوي المستويات الطبيعية.",
+        summaryNl: "Een isomeer van asparaginezuur dat zich ophoopt in de hypofyse en de testikels; studies wijzen erop dat het de afgifte van luteïniserend hormoon (LH) stimuleert en de testosteronaanmaak kan ondersteunen bij mannen met lage waarden, terwijl het effect bij sporters met normale waarden tijdelijk is of ontbreekt.",
+        summaryEn: "An isomer of aspartic acid concentrated in the pituitary gland and testes; studies suggest it stimulates luteinizing hormone (LH) release and may support testosterone synthesis in men with low levels, while its effect is temporary or absent in athletes with normal levels.",
         tags: [
             "تستوستيرون",
             "خصوبة",
@@ -5552,72 +5552,71 @@ const supplementsData = [
             "قوة"
         ],
         benefits: [
-            "قد يزيد التستوستيرون بنسبة 30-40% (لفترة قصيرة)",
-            "يحسن خصوبة الرجال",
-            "قد يزيد القوة والكتلة العضلية",
-            "يدعم إنتاج الهرمونات"
+            "متصاوغ لحمض الأسبارتيك يتركز في الغدة النخامية والخصيتين؛ تشير دراسات إلى أنه ينشط إفراز الهرمون الملوتن (LH)، وقد يدعم تخليق التستوستيرون لدى الرجال ذوي المستويات المنخفضة، بينما يكون أثره مؤقتاً أو غائباً لدى الرياضيين ذوي المستويات الطبيعية."
         ],
         benefitsNl: [
-            "Stimuleert de hypofyse tot afgifte van luteïniserend hormoon (LH) en groeihormoon (GH)",
-            "Kan bij mannen met een laag testosteron zorgen voor een tijdelijke stijging van 30-42%",
-            "Verhoogt spermatelling, spermakwaliteit en beweeglijkheid bij fertiliteitsproblemen",
-            "Ondersteunt acute trainingskracht en libido tijdens een korte kuur"
+            "Een isomeer van asparaginezuur dat zich ophoopt in de hypofyse en de testikels; studies wijzen erop dat het de afgifte van luteïniserend hormoon (LH) stimuleert en de testosteronaanmaak kan ondersteunen bij mannen met lage waarden, terwijl het effect bij sporters met normale waarden tijdelijk is of ontbreekt."
         ],
         benefitsEn: [
-            "Upregulates pituitary release of luteinizing hormone (LH) and testicular steroidogenesis",
-            "Clinically shown to elevate testosterone by 30-42% over 6-12 days in sub-optimal baselines",
-            "Improves seminal volume, sperm density, and motility parameters in subfertile men",
-            "Provides short-term boost to muscular strength and libido"
+            "An isomer of aspartic acid concentrated in the pituitary gland and testes; studies suggest it stimulates luteinizing hormone (LH) release and may support testosterone synthesis in men with low levels, while its effect is temporary or absent in athletes with normal levels."
         ],
         dosage: {
-            recommended: "3000 ملغ (3 غ يومياً)",
-            timing: "في الصباح على معدة فارغة",
-            frequency: "دورة 12-14 يوماً استخدام ثم 2-3 أسابيع توقف"
+            recommended: "3 غ يومياً",
+            timing: "صباحاً على معدة فارغة مع كأس ماء",
+            frequency: "في دورات: 12–14 يوماً متواصلة ثم توقف كامل 2–3 أسابيع"
         },
         dosageNl: {
-            recommended: "3000 mg (3 gram per dag)",
-            timing: "'s Ochtends direct bij het opstaan op een nuchtere maag met water",
-            frequency: "Kuur van maximaal 12 tot 14 dagen, gevolgd door minimaal 2-3 weken rust"
+            recommended: "3 g per dag",
+            timing: "'s Ochtends op een lege maag met een glas water",
+            frequency: "In cycli: 12–14 dagen gebruiken, daarna 2–3 weken volledig stoppen"
         },
         dosageEn: {
-            recommended: "3000 mg (3 g daily)",
-            timing: "Morning upon waking on an empty stomach with water",
-            frequency: "Cycle 12-14 days on, followed by 2-3 weeks off"
+            recommended: "3 g daily",
+            timing: "In the morning on an empty stomach with a glass of water",
+            frequency: "In cycles: 12–14 days on, then a full 2–3-week break"
         },
+        forms: "مسحوق حمض د-أسبارتيك النقي، أو تركيبات تجمعه مع الزنك وفيتامينات B6 وB12 وD3.",
+        formsNl: "Zuiver D-asparaginezuurpoeder, of formules die het combineren met zink en de vitamines B6, B12 en D3.",
+        formsEn: "Pure D-aspartic acid powder, or formulas that combine it with zinc and vitamins B6, B12 and D3.",
         warnings: [
-            "التأثير مؤقت (2-3 أسابيع)",
-            "خذ فترات استراحة (2-3 أسابيع أون، 1-2 أسبوع أوف)",
-            "الأبحاث متضاربة",
-            "قد لا يعمل لمن لديهم تستوستيرون طبيعي"
+            "الالتزام بالدورات المتقطعة ضروري؛ الاستخدام المتواصل لأكثر من شهر قد يخفض الهرمونات عكسياً",
+            "يُمنع لمن هم دون 18 عاماً وللنساء والحوامل"
         ],
         warningsNl: [
-            "ALTIJD CYCLEN: Na ca. 12-14 dagen treedt gewenning op en kan de testosteronspiegel weer dalen",
-            "Heeft het sterkste effect bij mannen met een suboptimaal testosteron; bij jonge, getrainde atleten is het effect beperkt",
-            "Niet geschikt voor langdurig continu gebruik"
+            "Je houden aan de cycli is essentieel; langer dan een maand onafgebroken gebruik kan de hormoonspiegel juist verlagen",
+            "Niet voor mensen onder de 18, vrouwen of zwangeren"
         ],
         warningsEn: [
-            "MANDATORY CYCLING: Benefits plateau after ~12 days as negative feedback downregulates receptor sensitivity",
-            "Most dramatically effective in older or subfertile males rather than high-baseline young lifters",
-            "Do not consume continuously beyond 2 weeks"
+            "Sticking to on/off cycles is essential; continuous use for more than a month may lower hormone levels instead",
+            "Not for people under 18, women or pregnant women"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen interacties bekend; niet combineren met hormonale geneesmiddelen.",
-        interactionsEn: "No direct drug interactions; avoid combining with prescription hormone therapies.",
-        naturalSources: "البروتين الحيواني والنباتي (بكميات قليلة)",
-        naturalSourcesNl: "Geproduceerd in neuro-endocrien weefsel; minimale sporen in dierlijk eiwit en suikerbieten.",
-        naturalSourcesEn: "Endogenously synthesized in pituitary and testes; trace amounts in animal foods."
+        interactions: "آمن مع معظم الأدوية؛ لا يُستخدم مع هرمون التستوستيرون التعويضي (TRT) أو مثبطات الإستروجين.",
+        interactionsNl: "Veilig met de meeste medicijnen; niet combineren met testosteronvervangende therapie (TRT) of oestrogeenremmers.",
+        interactionsEn: "Safe with most medicines; do not combine it with testosterone replacement therapy (TRT) or oestrogen blockers.",
+        naturalSources: "كميات صغيرة جداً في اللحوم والبيض ومنتجات الألبان",
+        naturalSourcesNl: "Zeer kleine hoeveelheden in vlees, eieren en zuivel",
+        naturalSourcesEn: "Very small amounts in meat, eggs and dairy",
+        groupLabel: {
+            ar: "الحيوية والأداء الرياضي",
+            en: "Vitality & sports performance",
+            nl: "Vitaliteit & sportprestaties"
+        },
+        references: [
+            "Topo E et al. Reprod Biol Endocrinol 2009 — PMID: 19860889"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 78,
         slug: "apigenin",
-        name: "أبيجينين",
-        englishName: "Apigenin",
-        nameNl: "Apigenine (Kamille Flavonoïde)",
+        name: "مركب الأبيجينين الطبيعي لدعم النوم الهادئ",
+        englishName: "Apigenin (Chamomile Extract)",
+        nameNl: "Apigenine Extract",
         category: "نوم-نفسية",
         icon: "🌼",
-        summary: "فلافونويد من البابونج - يحسن النوم ويقلل القلق وقد يزيد التستوستيرون",
-        summaryNl: "Krachtige bioflavonoïde die GABA-receptoren activeert voor diepe herstellende slaap, angstverlichting en NAD+-behoud.",
-        summaryEn: "Potent botanical flavonoid binding central GABA-A receptors for deep restorative sleep, anxiolysis, and CD38 NAD+ preservation.",
+        summary: "فلافونويد نباتي يوجد بكثرة في البابونج والبقدونس؛ يرتبط بمستقبلات GABA-A في الجهاز العصبي، مما يساهم في تهدئة النشاط العصبي المفرط ودعم الاسترخاء والدخول في نوم هادئ.",
+        summaryNl: "Een plantaardig flavonoïde dat veel voorkomt in kamille en peterselie; het bindt aan GABA-A-receptoren in het zenuwstelsel en helpt zo overmatige zenuwactiviteit te kalmeren en ontspanning en een rustige slaap te ondersteunen.",
+        summaryEn: "A plant flavonoid abundant in chamomile and parsley; it binds to GABA-A receptors in the nervous system, helping calm excessive nerve activity and supporting relaxation and restful sleep.",
         tags: [
             "نوم",
             "قلق",
@@ -5627,75 +5626,74 @@ const supplementsData = [
             "صحة"
         ],
         benefits: [
-            "يحسن جودة النوم ويقلل الأرق",
-            "يقلل القلق والتوتر",
-            "قد يزيد التستوستيرون بتثبيط الأروماتاز",
-            "مضاد أكسدة ومضاد التهاب",
-            "قد يحمي من السرطان",
-            "يدعم صحة الدماغ"
+            "فلافونويد نباتي يوجد بكثرة في البابونج والبقدونس؛ يرتبط بمستقبلات GABA-A في الجهاز العصبي، مما يساهم في تهدئة النشاط العصبي المفرط ودعم الاسترخاء والدخول في نوم هادئ."
         ],
         benefitsNl: [
-            "Bindt aan benzodiazepine-receptoren op het GABA-complex voor kalmerende ontspanning zonder sufheid",
-            "Verbetert de kwaliteit en continuïteit van de diepe slaapfase",
-            "Remt het enzym CD38, waardoor cellulaire NAD+-niveaus behouden blijven (anti-aging)",
-            "Remt het aromatase-enzym en ondersteunt een gezonde testosteron-oestrogeenbalans bij mannen",
-            "Krachtige ontstekingsremmer en neuroprotectieve antioxidant"
+            "Een plantaardig flavonoïde dat veel voorkomt in kamille en peterselie; het bindt aan GABA-A-receptoren in het zenuwstelsel en helpt zo overmatige zenuwactiviteit te kalmeren en ontspanning en een rustige slaap te ondersteunen."
         ],
         benefitsEn: [
-            "Positive allosteric modulator of central GABA-A receptors calming neuro-excitation",
-            "Deepens slow-wave restorative sleep continuity and shortens sleep latency",
-            "Inhibits CD38 enzyme, directly protecting cellular NAD+ pools against age-related decline",
-            "Acts as a mild aromatase inhibitor supporting male endocrine balance",
-            "Neuroprotective and systemic anti-inflammatory flavonoid"
+            "A plant flavonoid abundant in chamomile and parsley; it binds to GABA-A receptors in the nervous system, helping calm excessive nerve activity and supporting relaxation and restful sleep."
         ],
         dosage: {
-            recommended: "50-100 ملغ",
-            timing: "قبل النوم بـ 30-60 دقيقة",
+            recommended: "50–100 ملغ يومياً",
+            timing: "قبل النوم بـ 30–60 دقيقة",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "50-100 mg puur apigenine-extract",
-            timing: "30-60 minuten voor het slapengaan met water (of 's avonds bij kamillethee)",
-            frequency: "1x per dag 's avonds"
+            recommended: "50–100 mg per dag",
+            timing: "30–60 minuten voor het slapengaan",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "50-100 mg pure apigenin extract",
-            timing: "30-60 minutes before bedtime with water",
-            frequency: "Once daily at night"
+            recommended: "50–100 mg daily",
+            timing: "30–60 minutes before bed",
+            frequency: "Once daily"
         },
+        forms: "كبسولات الأبيجينين المعيارية (نقاء 98%) المستخلصة من أزهار البابونج، أو المستخلصات الدهنية لتعزيز امتصاصه.",
+        formsNl: "Gestandaardiseerde apigeninecapsules (98% zuiver) uit kamillebloemen, of vetextracten voor een betere opname.",
+        formsEn: "Standardized apigenin capsules (98% purity) extracted from chamomile flowers, or lipid extracts for better absorption.",
         warnings: [
-            "آمن جداً",
-            "قد يسبب نعاس - لا تقود بعده",
-            "آمن للاستخدام طويل المدى"
+            "يسبب نعاساً؛ لا تقد السيارة ولا تشغّل الآلات بعد تناوله",
+            "يُنصح بتجنب الجرعات المركزة أثناء الحمل والرضاعة",
+            "يُتجنب لمن لديهم حساسية من البابونج ونباتات الفصيلة النجمية"
         ],
         warningsNl: [
-            "Niet innemen voor het besturen van voertuigen of machines wegens spierontspannende rust",
-            "1 capsule van 50 mg levert evenveel apigenine als ongeveer 10-15 koppen geconcentreerde kamillethee",
-            "Zeer veilig bij langdurig gebruik"
+            "Maakt slaperig; rijd geen auto en bedien geen machines na inname",
+            "Vermijd geconcentreerde doses tijdens zwangerschap en borstvoeding",
+            "Vermijden bij een allergie voor kamille of composieten"
         ],
         warningsEn: [
-            "Do not consume prior to driving or operating machinery due to muscle relaxation",
-            "One 50 mg capsule delivers equivalent bioactive apigenin of ~12-15 cups of chamomile tea",
-            "Outstanding safety index for prolonged sleep optimization"
+            "Causes drowsiness; do not drive or operate machinery after taking it",
+            "Avoid concentrated doses during pregnancy and breastfeeding",
+            "Avoid it if you are allergic to chamomile or the daisy family"
         ],
-        interactions: "قد يتفاعل مع المهدئات - استشر طبيبك",
-        interactionsNl: "Kan de werking van slaapmedicatie en kalmeringsmiddelen (benzodiazepinen) versterken.",
-        interactionsEn: "May additively amplify the sedative effects of prescription sleep aids.",
-        naturalSources: "البابونج، البقدونس، الكرفس، الكزبرة",
-        naturalSourcesNl: "Gedroogde kamillebloemen, peterselie, selderij en artisjok.",
-        naturalSourcesEn: "Chamomile blossoms, dried parsley, celery stalks."
+        interactions: "يعزز مفعول المهدئات والمنومات ومضادات القلق. قد يثبط إنزيم CYP2C9 طفيفاً، فيُراعى مع الوارفارين ومضادات التشنج.",
+        interactionsNl: "Het versterkt kalmerende middelen, slaappillen en angstremmers. Het kan CYP2C9 licht remmen, dus let op bij warfarine en anti-epileptica.",
+        interactionsEn: "It strengthens sedatives, sleeping pills and anti-anxiety drugs. It may slightly inhibit CYP2C9, so take care with warfarin and anticonvulsants.",
+        naturalSources: "البابونج، البقدونس، الكرفس، الزعتر، البرتقال",
+        naturalSourcesNl: "Kamille, peterselie, selderij, tijm, sinaasappels",
+        naturalSourcesEn: "Chamomile, parsley, celery, thyme, oranges",
+        groupLabel: {
+            ar: "النوم والاسترخاء",
+            en: "Sleep & relaxation",
+            nl: "Slaap & ontspanning"
+        },
+        references: [
+            "Salehi B et al. Int J Mol Sci 2019 (review) — PMID: 30875872"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 79,
         slug: "carnosine",
-        name: "كارنوزين",
-        englishName: "Carnosine",
+        name: "الكارنوزين النقي لحماية الخلايا",
+        englishName: "L-Carnosine",
         nameNl: "L-Carnosine",
         category: "بناء-عضلات",
         icon: "💪",
-        summary: "ثنائي ببتيد من بيتا-ألانين والهستدين - مضاد أكسدة قوي ويحسن الأداء الرياضي",
-        summaryNl: "Intracellulair dipeptide dat spierverzuring buffert en geavanceerde glycatie (AGE's) en veroudering krachtig tegengaat.",
-        summaryEn: "Intramuscular dipeptide neutralizing lactic acid and providing premier anti-glycation defense against AGEs and cellular decay.",
+        summary: "ثنائي ببتيد طبيعي من بيتا-ألانين وإل-هيستيدين يتركز في الدماغ والعضلات؛ تشير الدراسات إلى دوره في الحد من تفاعل السكر مع البروتينات (Glycation) وتكوّن نواتج الجلايكيشن المتقدمة (AGEs)، كما يعمل كمنظم لحموضة الأنسجة ومضاد للإجهاد التأكسدي.",
+        summaryNl: "Een natuurlijk dipeptide van bèta-alanine en L-histidine dat zich ophoopt in hersenen en spieren; studies wijzen erop dat het de reactie van suikers met eiwitten (glycatie) en de vorming van geavanceerde glycatie-eindproducten (AGE's) beperkt, en het werkt als zuurbuffer en antioxidant in de weefsels.",
+        summaryEn: "A natural dipeptide of beta-alanine and L-histidine concentrated in the brain and muscles; studies suggest it limits the reaction of sugars with proteins (glycation) and the formation of advanced glycation end products (AGEs), and it acts as a tissue pH buffer and antioxidant.",
         tags: [
             "قوة",
             "تحمل",
@@ -5705,150 +5703,145 @@ const supplementsData = [
             "سكر"
         ],
         benefits: [
-            "مضاد أكسدة قوي يحمي الخلايا",
-            "يحسن التحمل العضلي",
-            "يقلل تراكم حمض اللاكتيك",
-            "خصائص مضادة للشيخوخة",
-            "يحمي البروتينات من التلف (anti-glycation)",
-            "يدعم صحة الدماغ والقلب"
+            "ثنائي ببتيد طبيعي من بيتا-ألانين وإل-هيستيدين يتركز في الدماغ والعضلات؛ تشير الدراسات إلى دوره في الحد من تفاعل السكر مع البروتينات (Glycation) وتكوّن نواتج الجلايكيشن المتقدمة (AGEs)، كما يعمل كمنظم لحموضة الأنسجة ومضاد للإجهاد التأكسدي."
         ],
         benefitsNl: [
-            "Krachtige beschermer tegen 'glycatie' (het schadelijk versuikeren van eiwitten en weefsels)",
-            "Buffert waterstofionen in spiervezels en stelt spierverzuring tijdens anaerobe arbeid uit",
-            "Beschermt hersenneuronen tegen oxidatieve stress en zware metalen (cheleert koper en zink)",
-            "Ondersteunt gezonde cardiovasculaire elasticiteit en vaatwandfunctie",
-            "Verlengt de functionele levensduur van cellen (Hayflick-limiet ondersteuning)"
+            "Een natuurlijk dipeptide van bèta-alanine en L-histidine dat zich ophoopt in hersenen en spieren; studies wijzen erop dat het de reactie van suikers met eiwitten (glycatie) en de vorming van geavanceerde glycatie-eindproducten (AGE's) beperkt, en het werkt als zuurbuffer en antioxidant in de weefsels."
         ],
         benefitsEn: [
-            "Premier systemic inhibitor of Advanced Glycation End-products (AGEs) protecting proteins",
-            "Intramuscular proton buffer blunting acidosis during high-intensity glycolytic output",
-            "Neuroprotective antioxidant chelating excess transition metals in brain tissue",
-            "Supports vascular contractility and endothelial elasticity",
-            "Promotes cellular longevity and attenuates cross-linking of structural collagen"
+            "A natural dipeptide of beta-alanine and L-histidine concentrated in the brain and muscles; studies suggest it limits the reaction of sugars with proteins (glycation) and the formation of advanced glycation end products (AGEs), and it acts as a tissue pH buffer and antioxidant."
         ],
         dosage: {
-            recommended: "500-1000 ملغ",
-            timing: "قبل التمرين بـ30 دقيقة",
-            frequency: "1-2 مرة يومياً"
+            recommended: "500–1000 ملغ يومياً",
+            timing: "قبل الوجبات الرئيسية بنصف ساعة",
+            frequency: "مقسمة على جرعتين"
         },
         dosageNl: {
-            recommended: "500-1000 mg",
-            timing: "'s Ochtends op een nuchtere maag of 30-45 minuten voor de training met water",
-            frequency: "1-2x per dag"
+            recommended: "500–1000 mg per dag",
+            timing: "Een half uur voor de hoofdmaaltijden",
+            frequency: "Verdeeld over twee doses"
         },
         dosageEn: {
-            recommended: "500-1000 mg",
-            timing: "Morning on an empty stomach or 30-45 minutes pre-workout",
-            frequency: "1-2 times daily"
+            recommended: "500–1000 mg daily",
+            timing: "Half an hour before main meals",
+            frequency: "Split into two doses"
         },
+        forms: "مسحوق أو كبسولات إل-كارنوزين النقية، أو مركب زنك-كارنوزين لدعم بطانة المعدة.",
+        formsNl: "Zuiver L-carnosinepoeder of -capsules, of zink-carnosine ter ondersteuning van het maagslijmvlies.",
+        formsEn: "Pure L-carnosine powder or capsules, or zinc-carnosine to support the stomach lining.",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "بيتا-ألانين + هستدين أرخص وأفضل",
-            "يحتاج 4-6 أسابيع لتحقيق النتائج"
+            "يتحلل جزء من الكارنوزين الفموي في الدم بواسطة إنزيم الكارنوزيناز",
+            "الجرعات المعتدلة آمنة ولا تسبب الوخز الجلدي المعروف مع البيتا-ألانين"
         ],
         warningsNl: [
-            "Orale carnosine wordt in het bloed deels afgebroken door het enzym carnosinase; voor pure spieropbouw is beta-alanine vaak kosteneffectiever, maar voor anti-aging is carnosine superieur",
-            "Zeer veilig bij dagelijks gebruik",
-            "Niet-toxisch"
+            "Een deel van de orale carnosine wordt in het bloed afgebroken door het enzym carnosinase",
+            "Gematigde doses zijn veilig en geven niet de tinteling die bekend is van bèta-alanine"
         ],
         warningsEn: [
-            "Rapidly degraded in serum by carnosinase enzyme; beta-alanine is more cost-effective for pure muscle, but carnosine excels for systemic anti-glycation",
-            "Completely non-toxic at clinical doses",
-            "Crucial supplement for strict vegans lacking dietary carnosine"
+            "Part of oral carnosine is broken down in the blood by the enzyme carnosinase",
+            "Moderate doses are safe and do not cause the skin tingling known from beta-alanine"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen klinisch nadelige interacties. • Geen interacties bekend; veilig met alle diabetesmedicatie.",
-        interactionsEn: "No significant adverse pharmaceutical interactions.",
-        naturalSources: "اللحوم الحمراء، الدواجن، الأسماك",
-        naturalSourcesNl: "Rood vlees, gevogelte en vette vis (volledig afwezig in plantaardige voeding).",
-        naturalSourcesEn: "Beef, poultry, pork, fish (absent in plant foods)."
+        interactions: "لا توجد تداخلات دوائية كبرى مسجلة بالجرعات المعتمدة.",
+        interactionsNl: "Er zijn geen belangrijke interacties gemeld bij de gebruikelijke doses.",
+        interactionsEn: "No major drug interactions have been reported at the usual doses.",
+        naturalSources: "اللحوم الحمراء والدواجن والأسماك (لا يوجد في الأطعمة النباتية)",
+        naturalSourcesNl: "Rood vlees, gevogelte en vis (niet in plantaardige voeding)",
+        naturalSourcesEn: "Red meat, poultry and fish (not found in plant foods)",
+        groupLabel: {
+            ar: "حماية الخلايا والشيخوخة الصحية",
+            en: "Cell protection & healthy ageing",
+            nl: "Celbescherming & gezond ouder worden"
+        },
+        references: [
+            "Boldyrev AA et al. Physiol Rev 2013 (review) — PMID: 24137022"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 80,
-        slug: "ornithine",
-        name: "أورنيثين",
-        englishName: "Ornithine",
-        nameNl: "L-Ornithine (HCL)",
+        slug: "l-ornithine",
+        name: "إل-أورنيثين لدعم التخلص من الأمونيا والنوم",
+        englishName: "L-Ornithine Hydrochloride",
+        nameNl: "L-Ornithine",
         category: "بناء-عضلات",
         icon: "🏋️",
-        summary: "حمض أميني يساعد في التخلص من الأمونيا ويحسن النوم والتعافي",
-        summaryNl: "Ureumcyclus-aminozuur dat ammoniak ontgift, vermoeidheid na inspanning vermindert en diepe herstelslaap ondersteunt.",
-        summaryEn: "Urea cycle amino acid clearing toxic ammonia, relieving exercise fatigue, and enhancing restorative growth hormone sleep.",
+        summary: "حمض أميني غير بروتيني يمثل ركيزة دورة اليوريا في الكبد؛ يساهم في تحويل الأمونيا الناتجة عن استقلاب البروتين والمجهود العضلي إلى يوريا تُطرح في البول، وتشير دراسة سريرية إلى دوره في تخفيف الإرهاق ودعم جودة النوم.",
+        summaryNl: "Een niet-eiwitaminozuur dat centraal staat in de ureumcyclus in de lever; het helpt ammoniak uit de eiwitstofwisseling en spierinspanning om te zetten in ureum dat via de urine wordt uitgescheiden, en een klinische studie wijst op minder vermoeidheid en een betere slaapkwaliteit.",
+        summaryEn: "A non-protein amino acid at the heart of the urea cycle in the liver; it helps convert ammonia from protein metabolism and muscle effort into urea that leaves the body in urine, and a clinical study suggests it eases fatigue and supports sleep quality.",
         tags: [
             "نوم",
             "تعافي",
             "هرمون النمو"
         ],
         benefits: [
-            "يحسن جودة النوم ويقلل الإجهاد",
-            "يساعد في التخلص من الأمونيا",
-            "قد يزيد إفراز هرمون النمو",
-            "يحسن التعافي بعد التمرين",
-            "يقلل الإرهاق الجسدي والذهني",
-            "يدعم وظائف الكبد"
+            "حمض أميني غير بروتيني يمثل ركيزة دورة اليوريا في الكبد؛ يساهم في تحويل الأمونيا الناتجة عن استقلاب البروتين والمجهود العضلي إلى يوريا تُطرح في البول، وتشير دراسة سريرية إلى دوره في تخفيف الإرهاق ودعم جودة النوم."
         ],
         benefitsNl: [
-            "Versnelt de omzetting en uitscheiding van giftig ammoniak in de leverureumcyclus",
-            "Vermindert fysieke uitputting en verbetert hersteltijd na zware spierinspanning",
-            "Verbetert de kwaliteit van de diepe slaap en verlaagt ochtendcortisol",
-            "Kan in combinatie met arginine de nachtelijke afgifte van groeihormoon (GH) stimuleren",
-            "Ondersteunt gezonde leverfunctie en wondgenezing"
+            "Een niet-eiwitaminozuur dat centraal staat in de ureumcyclus in de lever; het helpt ammoniak uit de eiwitstofwisseling en spierinspanning om te zetten in ureum dat via de urine wordt uitgescheiden, en een klinische studie wijst op minder vermoeidheid en een betere slaapkwaliteit."
         ],
         benefitsEn: [
-            "Drives hepatic clearance of fatigue-inducing ammonia via the urea cycle",
-            "Attenuates post-exercise muscular and central fatigue accumulation",
-            "Improves subjective sleep quality score and lowers morning cortisol levels",
-            "Synergizes with L-arginine to promote nocturnal growth hormone release",
-            "Supports hepatic regenerative pathways and tissue healing"
+            "A non-protein amino acid at the heart of the urea cycle in the liver; it helps convert ammonia from protein metabolism and muscle effort into urea that leaves the body in urine, and a clinical study suggests it eases fatigue and supports sleep quality."
         ],
         dosage: {
-            recommended: "2000-4000 ملغ (2-4 غ)",
-            timing: "قبل النوم بساعة (على معدة فارغة)",
+            recommended: "2–3 غ يومياً (حتى 4 غ)",
+            timing: "قبل النوم بساعة على معدة فارغة، أو بعد التمارين الشاقة",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "2000-4000 mg (2-4 g)",
-            timing: "30-60 minuten voor het slapengaan op een nuchtere maag met water",
-            frequency: "1x per dag"
+            recommended: "2–3 g per dag (tot 4 g)",
+            timing: "Een uur voor het slapengaan op een lege maag, of na zware training",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "2000-4000 mg (2-4 g)",
-            timing: "30-60 minutes before bedtime on an empty stomach with water",
+            recommended: "2–3 g daily (up to 4 g)",
+            timing: "An hour before bed on an empty stomach, or after hard training",
             frequency: "Once daily"
         },
+        forms: "إل-أورنيثين هيدروكلوريد النقي، ويُجمع أحياناً مع إل-أرجينين.",
+        formsNl: "Zuiver L-ornithinehydrochloride, soms gecombineerd met L-arginine.",
+        formsEn: "Pure L-ornithine hydrochloride, sometimes combined with L-arginine.",
         warnings: [
-            "آمن بشكل عام",
-            "قد يسبب اضطراب معدة بجرعات عالية",
-            "تجنبه إذا كنت حاملاً أو مرضعاً"
+            "الجرعات الكبيرة دفعة واحدة (أكثر من 7 غ) قد تسبب تقلصات بطنية وإسهالاً",
+            "يُمنع لمن لديهم نقص إنزيم أورنيثين أمينوترانسفيراز الوراثي النادر",
+            "يُتجنب أثناء الحمل والرضاعة"
         ],
         warningsNl: [
-            "Neem op een lege maag; aminozuren uit voeding concurreren om dezelfde opnametransporters",
-            "Hoge doses (>6-8 g) kunnen milde maagkrampen of diarree geven; bouw rustig op",
-            "Zeer veilig bij aanbevolen doseringen"
+            "Hoge doses in één keer (meer dan 7 g) kunnen buikkrampen en diarree geven",
+            "Niet gebruiken bij het zeldzame erfelijke tekort aan ornithine-aminotransferase",
+            "Vermijden tijdens zwangerschap en borstvoeding"
         ],
         warningsEn: [
-            "Consume on an empty stomach to avoid competition with dietary protein transporters",
-            "Megadoses (>6-8 g) may cause transient gastrointestinal osmotic distress",
-            "Well tolerated across athletic recovery trials"
+            "Large single doses (more than 7 g) can cause abdominal cramps and diarrhoea",
+            "Not for people with the rare inherited ornithine aminotransferase deficiency",
+            "Avoid during pregnancy and breastfeeding"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen interacties bekend.",
-        interactionsEn: "No significant adverse pharmaceutical interactions.",
-        naturalSources: "اللحوم، الأسماك، البيض، منتجات الألبان",
-        naturalSourcesNl: "Vlees, vis, eieren en zuivelproducten.",
-        naturalSourcesEn: "Meat, fish, dairy, eggs."
+        interactions: "آمن مع معظم الأدوية؛ يُفصل بساعتين عن أدوية الصرع.",
+        interactionsNl: "Veilig met de meeste medicijnen; neem het twee uur gescheiden van anti-epileptica.",
+        interactionsEn: "Safe with most medicines; take it two hours apart from epilepsy medication.",
+        naturalSources: "ينتجه الجسم من الأرجينين؛ ويوجد بكميات صغيرة في اللحوم والأسماك والبيض ومنتجات الألبان",
+        naturalSourcesNl: "Het lichaam maakt het aan uit arginine; kleine hoeveelheden zitten in vlees, vis, eieren en zuivel",
+        naturalSourcesEn: "The body makes it from arginine; small amounts occur in meat, fish, eggs and dairy",
+        groupLabel: {
+            ar: "التعافي والاسترخاء",
+            en: "Recovery & relaxation",
+            nl: "Herstel & ontspanning"
+        },
+        references: [
+            "Miyake M et al. Nutr J 2014 — PMID: 24889392"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 81,
         slug: "glycine",
-        name: "جلايسين",
-        englishName: "Glycine",
-        nameNl: "Glycine",
+        name: "حمض الجلايسين النقي لدعم النوم العميق",
+        englishName: "Pure Glycine Powder",
+        nameNl: "Glycine Aminozuur",
         category: "نوم-نفسية",
         icon: "😴",
-        summary: "حمض أميني يحسن النوم ويدعم الكولاجين والصحة العقلية",
-        summaryNl: "Veelzijdig aminozuur dat de lichaamstemperatuur verlaagt voor diepe slaap, glutathion aanmaakt en bindweefsel opbouwt.",
-        summaryEn: "Essential inhibitory neurotransmitter and structural amino acid cooling core body temperature for deep sleep and fueling glutathione.",
+        summary: "أبسط حمض أميني في الطبيعة؛ يعمل كناقل عصبي مثبط ويساعد على خفض حرارة الجسم المركزية عبر توسيع الأوعية الطرفية، وهي إشارة فسيولوجية للدخول في النوم العميق، كما يشكل نحو ثلث تركيب الكولاجين في المفاصل والأوتار.",
+        summaryNl: "Het eenvoudigste aminozuur in de natuur; het werkt als remmende neurotransmitter en helpt de kerntemperatuur te verlagen door de perifere bloedvaten te verwijden, een fysiologisch signaal voor diepe slaap, en het vormt ongeveer een derde van het collageen in gewrichten en pezen.",
+        summaryEn: "The simplest amino acid in nature; it acts as an inhibitory neurotransmitter and helps lower core body temperature by widening peripheral blood vessels, a physiological signal for deep sleep, and it makes up about a third of the collagen in joints and tendons.",
         tags: [
             "نوم",
             "كولاجين",
@@ -5856,75 +5849,71 @@ const supplementsData = [
             "تعافي"
         ],
         benefits: [
-            "يحسن جودة النوم بشكل ملحوظ",
-            "يقلل الوقت اللازم للنوم",
-            "يحسن التركيز في اليوم التالي",
-            "يدعم إنتاج الكولاجين",
-            "يحسن صحة الجلد والمفاصل",
-            "له خصائص مضادة للالتهاب"
+            "أبسط حمض أميني في الطبيعة؛ يعمل كناقل عصبي مثبط ويساعد على خفض حرارة الجسم المركزية عبر توسيع الأوعية الطرفية، وهي إشارة فسيولوجية للدخول في النوم العميق، كما يشكل نحو ثلث تركيب الكولاجين في المفاصل والأوتار."
         ],
         benefitsNl: [
-            "Verlaagt de kerntemperatuur van het lichaam: het biologische signaal voor diepe herstelslaap",
-            "Verbetert subjectieve slaapkwaliteit en vermindert vermoeidheid overdag zonder sufheid",
-            "Essentiële bouwsteen van collageen (vormt 33% van alle aminozuren in collageenweefsel)",
-            "Onmisbaar voor de synthese van glutathion (de belangrijkste cellulaire antioxidant)",
-            "Werkt als kalmerende neurotransmitter in het ruggenmerg en de hersenstam"
+            "Het eenvoudigste aminozuur in de natuur; het werkt als remmende neurotransmitter en helpt de kerntemperatuur te verlagen door de perifere bloedvaten te verwijden, een fysiologisch signaal voor diepe slaap, en het vormt ongeveer een derde van het collageen in gewrichten en pezen."
         ],
         benefitsEn: [
-            "Promotes cutaneous vasodilation, cooling core body temperature to induce deep slow-wave sleep",
-            "Significantly elevates sleep satisfaction and daytime cognitive clarity without sedation",
-            "Primary building block of triple-helix collagen (comprises 1 in every 3 amino acids)",
-            "Rate-limiting substrate alongside NAC for endogenous glutathione biosynthesis",
-            "Inhibitory neurotransmitter in brainstem and spinal cord promoting physical calm"
+            "The simplest amino acid in nature; it acts as an inhibitory neurotransmitter and helps lower core body temperature by widening peripheral blood vessels, a physiological signal for deep sleep, and it makes up about a third of the collagen in joints and tendons."
         ],
         dosage: {
-            recommended: "3-5 غرام",
+            recommended: "3–5 غ مذابة في كأس ماء",
             timing: "قبل النوم بساعة",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "3-5 g zuiver poeder (heeft een aangename, van nature zoete smaak)",
-            timing: "30-60 minuten voor het slapengaan opgelost in water of kamillethee",
-            frequency: "1x per dag"
+            recommended: "3–5 g opgelost in een glas water",
+            timing: "Een uur voor het slapengaan",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "3-5 g pure powder (naturally sweet tasting)",
-            timing: "30-60 minutes before bedtime dissolved in water or herbal tea",
+            recommended: "3–5 g dissolved in a glass of water",
+            timing: "An hour before bed",
             frequency: "Once daily"
         },
+        forms: "مسحوق الجلايسين النقي الحر بدرجة نقاوة غذائية؛ سهل الذوبان وطعمه حلو طبيعياً.",
+        formsNl: "Zuiver glycinepoeder in vrije vorm van voedingskwaliteit; het lost makkelijk op en smaakt van nature zoet.",
+        formsEn: "Pure free-form glycine powder of food-grade purity; it dissolves easily and tastes naturally sweet.",
         warnings: [
-            "آمن جداً حتى بجرعات عالية",
-            "طعمه حلو ويمكن مزجه مع الماء",
-            "مناسب للاستخدام طويل المدى"
+            "آمن جداً بالجرعات المعتادة",
+            "قد يسبب استرخاءً شديداً؛ لا يُؤخذ نهاراً أو قبل القيادة"
         ],
         warningsNl: [
-            "Uiterst veilig, zelfs bij doseringen tot 10-15 g per dag",
-            "Kan door de van nature zoete smaak perfect als caloriearme suikervervanger in avondthee worden gebruikt",
-            "Combineert fenomenaal met magnesiumbisglycinaat voor slaap"
+            "Zeer veilig bij de gebruikelijke doses",
+            "Kan sterk ontspannen; neem het niet overdag of voor het autorijden"
         ],
         warningsEn: [
-            "Extremely safe with clinical tolerance demonstrated up to 15 g daily",
-            "Pleasantly sweet taste allows use as a functional sugar alternative in bedtime tea",
-            "Phenomenal sleep-enhancing synergy when stacked with magnesium bisglycinate"
+            "Very safe at the usual doses",
+            "May cause strong relaxation; do not take it during the day or before driving"
         ],
-        interactions: "آمن مع جميع الأدوية تقريباً",
-        interactionsNl: "Kan de werking van clozapine beïnvloeden; overleg bij antipsychotica.",
-        interactionsEn: "May interact with clozapine efficacy; otherwise broadly safe.",
-        naturalSources: "الجيلاتين، مرق العظام، جلد الدجاج، اللحوم",
-        naturalSourcesNl: "Gelatine, langgetrokken bottenbouillon, varkenszwoerd, kippenvel en peulvruchten.",
-        naturalSourcesEn: "Bone broth, gelatin, pork rinds, poultry skin, connective tissue cuts."
+        interactions: "قد يعزز مفعول المهدئات ومضادات القلق، وقد يقلل فاعلية الكلوزابين.",
+        interactionsNl: "Het kan kalmerende middelen en angstremmers versterken en de werking van clozapine verminderen.",
+        interactionsEn: "It may strengthen sedatives and anti-anxiety drugs and may reduce the effect of clozapine.",
+        naturalSources: "الجيلاتين ومرق العظام، جلد الدواجن، اللحوم، الأسماك، البقوليات",
+        naturalSourcesNl: "Gelatine en bottenbouillon, kippenvel, vlees, vis, peulvruchten",
+        naturalSourcesEn: "Gelatin and bone broth, poultry skin, meat, fish, legumes",
+        groupLabel: {
+            ar: "النوم والاسترخاء",
+            en: "Sleep & relaxation",
+            nl: "Slaap & ontspanning"
+        },
+        references: [
+            "Bannai M, Kawai N. J Pharmacol Sci 2012 — PMID: 22293292"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 82,
-        slug: "tryptophan",
-        name: "تريبتوفان",
-        englishName: "Tryptophan",
+        slug: "l-tryptophan",
+        name: "إل-تريبتوفان النقي لدعم السيروتونين الطبيعي",
+        englishName: "L-Tryptophan (Pharmaceutical Grade)",
         nameNl: "L-Tryptofaan",
         category: "نوم-نفسية",
         icon: "🌙",
-        summary: "حمض أميني أساسي يتحول إلى سيروتونين وميلاتونين - يحسن المزاج والنوم",
-        summaryNl: "Essentieel aminozuur voor de natuurlijke aanmaak van serotonine en melatonine: voor innerlijke rust en een gezond slaapritme.",
-        summaryEn: "Essential amino acid driving endogenous brain synthesis of serotonin and melatonin for mood and circadian balance.",
+        summary: "حمض أميني أساسي يُعد السلف المباشر للسيروتونين وهرمون الميلاتونين المنظم للنوم؛ يساهم في دعم الاستقرار المزاجي والحد من الاستيقاظ الليلي المتكرر.",
+        summaryNl: "Een essentieel aminozuur en de directe voorloper van serotonine en het slaaphormoon melatonine; het ondersteunt een stabiele stemming en helpt vaak 's nachts wakker worden te verminderen.",
+        summaryEn: "An essential amino acid and the direct precursor of serotonin and the sleep hormone melatonin; it helps support a stable mood and reduce frequent night-time waking.",
         tags: [
             "نوم",
             "مزاج",
@@ -5932,75 +5921,74 @@ const supplementsData = [
             "ميلاتونين"
         ],
         benefits: [
-            "يتحول إلى سيروتونين (هرمون السعادة)",
-            "يتحول إلى ميلاتونين (هرمون النوم)",
-            "يحسن المزاج ويقلل الاكتئاب",
-            "يحسن جودة النوم",
-            "يقلل القلق والتوتر",
-            "يساعد في التحكم بالشهية"
+            "حمض أميني أساسي يُعد السلف المباشر للسيروتونين وهرمون الميلاتونين المنظم للنوم؛ يساهم في دعم الاستقرار المزاجي والحد من الاستيقاظ الليلي المتكرر."
         ],
         benefitsNl: [
-            "Onmisbare biologische voorloper van serotonine (stemming) en melatonine (slaap)",
-            "Verkort de tijd om in slaap te vallen en bevordert een natuurlijke slaaparchitectuur",
-            "Ondersteunt emotionele stabiliteit, vermindert prikkelbaarheid en angstgevoelens",
-            "Onderdrukt nerveuze avondtrek en drang naar suikers",
-            "Voorziet in de lichaamseigen synthese van vitamine B3 (niacine)"
+            "Een essentieel aminozuur en de directe voorloper van serotonine en het slaaphormoon melatonine; het ondersteunt een stabiele stemming en helpt vaak 's nachts wakker worden te verminderen."
         ],
         benefitsEn: [
-            "Obligate dietary precursor for serotonin neurotransmission and nocturnal melatonin release",
-            "Reduces sleep onset latency and fosters natural physiological sleep architecture",
-            "Elevates emotional resiliency, mitigates irritability, and relieves situational anxiety",
-            "Helps curb evening carbohydrate cravings and binge eating",
-            "Can be endogenously converted into Vitamin B3 (niacin) when needed"
+            "An essential amino acid and the direct precursor of serotonin and the sleep hormone melatonin; it helps support a stable mood and reduce frequent night-time waking."
         ],
         dosage: {
-            recommended: "500-1000 ملغ",
-            timing: "قبل النوم بـ30-60 دقيقة (على معدة فارغة)",
+            recommended: "500–1000 ملغ يومياً",
+            timing: "قبل النوم بـ 30–60 دقيقة على معدة فارغة مع رشفة عصير",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "500-1000 mg",
-            timing: "30-60 minuten voor het slapengaan op een nuchtere maag met een slokje vruchtensap (koolhydraten bevorderen hersenopname)",
-            frequency: "1x per dag"
+            recommended: "500–1000 mg per dag",
+            timing: "30–60 minuten voor het slapengaan op een lege maag met een slokje sap",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "500-1000 mg",
-            timing: "30-60 minutes before bed on an empty stomach with a light carb sip (insulin aids brain uptake)",
+            recommended: "500–1000 mg daily",
+            timing: "30–60 minutes before bed on an empty stomach with a sip of juice",
             frequency: "Once daily"
         },
+        forms: "كبسولات إل-تريبتوفان الحرة بدرجة نقاوة دوائية (Ph. Eur.) المنتجة بالتخمير والمفحوصة للخلو من الشوائب.",
+        formsNl: "Capsules met vrij L-tryptofaan van farmaceutische zuiverheid (Ph. Eur.), gemaakt door fermentatie en getest op verontreinigingen.",
+        formsEn: "Free-form L-tryptophan capsules of pharmaceutical purity (Ph. Eur.), made by fermentation and tested free of impurities.",
         warnings: [
-            "لا تستخدمه مع مضادات الاكتئاب (خطر متلازمة السيروتونين)",
-            "قد يسبب نعاس - لا تقود بعده",
-            "استشر طبيبك إذا كنت تتناول أدوية نفسية"
+            "يُمنع أثناء الحمل والرضاعة ولمن لديهم أمراض كبدية أو كلوية شديدة",
+            "يجب استشارة الطبيب قبل استخدامه لمن يتناولون أي أدوية نفسية أو عصبية",
+            "قد يسبب نعاساً؛ لا تقد السيارة بعد تناوله"
         ],
         warningsNl: [
-            "STRIKT CONTRA-INDICATIE: Nooit combineren met antidepressiva (SSRI's, SNRI's, MAO-remmers) wegens risico op serotoninesyndroom",
-            "Niet besturen van voertuigen na inname wegens natuurlijke slaperigheid",
-            "Neem niet in met een zware eiwitmaaltijd (andere grote neutrale aminozuren concurreren om de bloed-hersenbarrière)"
+            "Niet gebruiken tijdens zwangerschap, borstvoeding of bij ernstige lever- of nierziekte",
+            "Overleg met je arts voor gebruik als je psychiatrische of neurologische medicatie gebruikt",
+            "Kan slaperig maken; rijd geen auto na inname"
         ],
         warningsEn: [
-            "STRICT CONTRAINDICATION: Never combine with prescription antidepressants (SSRIs/SNRIs/MAOIs) due to Serotonin Syndrome risk",
-            "Do not drive or operate machinery following consumption",
-            "Avoid taking with heavy dietary protein (large neutral amino acids compete for brain entry)"
+            "Not for use during pregnancy, breastfeeding or with severe liver or kidney disease",
+            "Consult your doctor before use if you take any psychiatric or neurological medication",
+            "May cause drowsiness; do not drive after taking it"
         ],
-        interactions: "خطير مع SSRIs ومضادات الاكتئاب - استشر طبيبك",
-        interactionsNl: "Ernstige interactie met alle serotonerge medicijnen, triptanen en sint-janskruid.",
-        interactionsEn: "Dangerous interaction with serotonergic pharmaceuticals, triptans, and St. John's wort.",
-        naturalSources: "الديك الرومي، الدجاج، البيض، الجبن، المكسرات، البذور",
-        naturalSourcesNl: "Kalkoen, eieren, bananen, havermout, pompoenpitten en oude kaas.",
-        naturalSourcesEn: "Turkey, eggs, spirulina, pumpkin seeds, aged cheeses, oats."
+        interactions: "تحذير حرج (متلازمة السيروتونين): يُمنع مع مضادات الاكتئاب (SSRIs وSNRIs ومثبطات MAO) ونبتة سانت جون والترامادول والتريبتانات، لتفادي تراكم السيروتونين المهدد للحياة.",
+        interactionsNl: "Kritieke waarschuwing (serotoninesyndroom): nooit combineren met antidepressiva (SSRI's, SNRI's, MAO-remmers), sint-janskruid, tramadol of triptanen, om een levensbedreigende ophoping van serotonine te voorkomen.",
+        interactionsEn: "Critical warning (serotonin syndrome): never combine it with antidepressants (SSRIs, SNRIs, MAO inhibitors), St John's wort, tramadol or triptans, to avoid a life-threatening build-up of serotonin.",
+        naturalSources: "الديك الرومي والدجاج، البيض، الجبن، الشوفان، بذور اليقطين، فول الصويا",
+        naturalSourcesNl: "Kalkoen en kip, eieren, kaas, haver, pompoenpitten, sojabonen",
+        naturalSourcesEn: "Turkey and chicken, eggs, cheese, oats, pumpkin seeds, soybeans",
+        groupLabel: {
+            ar: "النوم والمزاج",
+            en: "Sleep & mood",
+            nl: "Slaap & stemming"
+        },
+        references: [
+            "Silber BY, Schmitt JA. Neurosci Biobehav Rev 2010 (review) — PMID: 19715722"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 83,
         slug: "citrulline-malate",
-        name: "سيترولين مالات",
-        englishName: "Citrulline Malate",
-        nameNl: "Citrulline Malaat (2:1)",
+        name: "سيترولين مالات 2:1 لدعم ضخ الدم والتحمل",
+        englishName: "Citrulline Malate 2:1",
+        nameNl: "Citrulline Malaat 2:1",
         category: "طاقة",
         icon: "⚡",
-        summary: "سيترولين + حمض الماليك - يزيد أكسيد النيتريك ويحسن الطاقة والتحمل",
-        summaryNl: "De ultieme trainingsbooster: L-citrulline gebonden aan appelzuur voor maximale spierpomp en versnelde ATP-resynthese.",
-        summaryEn: "The premier ergogenic pump catalyst: L-citrulline bound to malic acid accelerating Krebs cycle ATP resynthesis and vascular pump.",
+        summary: "تركيبة تجمع إل-سيترولين وحمض الماليك بنسبة 2:1؛ يرفع السيترولين مستويات الأرجينين وأكسيد النيتريك لدعم تدفق الدم، بينما يدخل حمض الماليك في دورة كريبس لدعم إنتاج الطاقة، مما يساعد على أداء تكرارات إضافية في التمارين الشديدة.",
+        summaryNl: "Een combinatie van L-citrulline en appelzuur in de verhouding 2:1; citrulline verhoogt arginine en stikstofmonoxide om de doorbloeding te ondersteunen, terwijl appelzuur in de citroenzuurcyclus de energieproductie ondersteunt, wat helpt extra herhalingen te doen bij zware training.",
+        summaryEn: "A 2:1 combination of L-citrulline and malic acid; citrulline raises arginine and nitric oxide to support blood flow, while malic acid enters the Krebs cycle to support energy production, helping you complete extra repetitions in hard training.",
         tags: [
             "طاقة",
             "تحمل",
@@ -6010,375 +5998,360 @@ const supplementsData = [
             "ضخ"
         ],
         benefits: [
-            "يزيد إنتاج أكسيد النيتريك أكثر من الأرجنين",
-            "يحسن تدفق الدم والبامب العضلي",
-            "يزيد الطاقة ويقلل التعب",
-            "يحسن التحمل العضلي",
-            "يقلل وجع العضلات بعد التمرين",
-            "حمض الماليك يدعم إنتاج الطاقة (ATP)"
+            "تركيبة تجمع إل-سيترولين وحمض الماليك بنسبة 2:1؛ يرفع السيترولين مستويات الأرجينين وأكسيد النيتريك لدعم تدفق الدم، بينما يدخل حمض الماليك في دورة كريبس لدعم إنتاج الطاقة، مما يساعد على أداء تكرارات إضافية في التمارين الشديدة."
         ],
         benefitsNl: [
-            "Appelzuur (malaat) voedt direct de citroenzuurcyclus (Krebscyclus) voor verhoogde aerobe ATP-energie",
-            "Citrulline maximaliseert stikstofoxide (NO) voor intense spierdoorbloeding en vaatverwijding",
-            "Verhoogt trainingsvolume en stelt vermoeidheid uit tijdens herhaalde zware sets",
-            "Verlaagt spierpijn (DOMS) 24 tot 48 uur na de training met wel 40%",
-            "Versnelt de afvoer van melkzuur en ammoniak tijdens zware inspanning"
+            "Een combinatie van L-citrulline en appelzuur in de verhouding 2:1; citrulline verhoogt arginine en stikstofmonoxide om de doorbloeding te ondersteunen, terwijl appelzuur in de citroenzuurcyclus de energieproductie ondersteunt, wat helpt extra herhalingen te doen bij zware training."
         ],
         benefitsEn: [
-            "Malic acid directly replenishes the Krebs tricarboxylic cycle driving oxidative ATP regeneration",
-            "Elevates systemic nitric oxide (NO) inducing maximal vascular hyperaemia and muscle fullness",
-            "Increases total training volume threshold across repeated heavy resistance sets",
-            "Decreases post-workout delayed onset muscle soreness (DOMS) by up to 40%",
-            "Accelerates clearance of exercise-accumulated ammonia and blood lactate"
+            "A 2:1 combination of L-citrulline and malic acid; citrulline raises arginine and nitric oxide to support blood flow, while malic acid enters the Krebs cycle to support energy production, helping you complete extra repetitions in hard training."
         ],
         dosage: {
-            recommended: "6-8 غ (بالنسبة المثبتة 2:1 من السيترولين إلى المالات)",
-            timing: "قبل التمرين بـ30-45 دقيقة",
+            recommended: "6–8 غ مذابة في الماء",
+            timing: "قبل التمرين بـ 30–45 دقيقة",
             frequency: "مرة واحدة قبل التمرين"
         },
         dosageNl: {
-            recommended: "6-8 g (in de bewezen 2:1 verhouding van citrulline tot malaat)",
-            timing: "30-45 minuten voor de training opgelost in 300 ml water",
-            frequency: "Uitsluitend op trainingsdagen"
+            recommended: "6–8 g opgelost in water",
+            timing: "30–45 minuten voor de training",
+            frequency: "1 keer voor de training"
         },
         dosageEn: {
-            recommended: "6-8 g (in the proven 2:1 ratio of citrulline to malate)",
-            timing: "30-45 minutes pre-workout dissolved in water",
-            frequency: "Workout days only"
+            recommended: "6–8 g dissolved in water",
+            timing: "30–45 minutes before training",
+            frequency: "Once before training"
         },
+        forms: "تحقق من نسبة المزج الموثقة (2:1 سيترولين إلى مالات)، وتجنب المنتجات بنسبة 1:1.",
+        formsNl: "Controleer of de verhouding citrulline:malaat aantoonbaar 2:1 is en vermijd producten met 1:1.",
+        formsEn: "Check for a documented 2:1 citrulline-to-malate ratio and avoid 1:1 products.",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "أفضل من L-السيترولين العادي",
-            "يحتاج 1-2 أسبوع لتحقيق أفضل نتائج"
+            "حموضته قد تسبب حرقة لمن لديهم التهاب معدة أو قرحة نشطة؛ يُشرب مع ماء وفير"
         ],
         warningsNl: [
-            "Heeft van nature een friszure smaak door het appelzuur (smaakt naar groene appel/citroen)",
-            "Veel beter verdragen door de maag dan arginine; leidt zelden tot maagdarmklachten",
-            "Kies altijd voor de 2:1 verhouding in plaats van de minder geconcentreerde 1:1 verhouding"
+            "De zuurgraad kan brandend maagzuur geven bij maagontsteking of een actieve zweer; drink het met veel water"
         ],
         warningsEn: [
-            "Possesses a naturally tart sour-apple citrus flavor due to the malic acid bond",
-            "Remarkably gentle on the stomach compared to free-base arginine",
-            "Insist on the verified 2:1 ratio rather than cheaper 1:1 mixtures"
+            "Its acidity may cause heartburn in people with gastritis or an active ulcer; drink it with plenty of water"
         ],
-        interactions: "قد يتفاعل مع أدوية ضغط الدم - استشر طبيبك • آمن مع معظم الأدوية - قد يخفض الضغط قليلاً",
-        interactionsNl: "Kan de bloeddruk licht verlagen; voorzichtigheid bij combinatie met vaatverwijders.",
-        interactionsEn: "May additively lower systemic blood pressure alongside antihypertensives.",
-        naturalSources: "البطيخ (كميات قليلة)",
-        naturalSourcesNl: "Citrulline uit watermeloenschil gecombineerd met appelzuur uit zure appels.",
-        naturalSourcesEn: "Citrulline from watermelon rind paired with malic acid found in tart apples."
+        interactions: "يتفاعل مع أدوية النترات القلبية ومثبطات PDE-5 (السيلدينافيل والتادالافيل) وخافضات الضغط، وقد يسبب هبوطاً في ضغط الدم.",
+        interactionsNl: "Het interageert met nitraten voor het hart, PDE-5-remmers (sildenafil, tadalafil) en bloeddrukverlagers en kan een bloeddrukdaling veroorzaken.",
+        interactionsEn: "It interacts with heart nitrates, PDE-5 inhibitors (sildenafil, tadalafil) and blood pressure medication and may cause a drop in blood pressure.",
+        naturalSources: "البطيخ (خاصة القشرة البيضاء)، الخيار، القرع",
+        naturalSourcesNl: "Watermeloen (vooral de witte schil), komkommer, pompoen",
+        naturalSourcesEn: "Watermelon (especially the white rind), cucumber, squash",
+        groupLabel: {
+            ar: "الأداء وصحة القلب",
+            en: "Performance & heart health",
+            nl: "Prestaties & hartgezondheid"
+        },
+        references: [
+            "Pérez-Guisado J, Jakeman PM. J Strength Cond Res 2010 — PMID: 20386132"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 84,
         slug: "choline-bitartrate",
-        name: "كولين بيتارترات",
+        name: "كولين بيتارترات لدعم الكبد والأسيتيل كولين",
         englishName: "Choline Bitartrate",
         nameNl: "Choline Bitartraat",
         category: "صحة-عامة",
         icon: "🧠",
-        summary: "مصدر اقتصادي للكولين - يدعم الذاكرة والتركيز وصحة الكبد",
-        summaryNl: "Essentiële voedingsstof voor gezonde leverfunctie, vetstofwisseling en synthese van de neurotransmitter acetylcholine.",
-        summaryEn: "Essential nutrient supporting hepatic lipid clearance, liver integrity, and acetylcholine synthesis.",
+        summary: "يساهم الكولين في الاستقلاب الطبيعي للدهون، والحفاظ على وظائف الكبد الطبيعية، والاستقلاب الطبيعي للهوموسيستين (ادعاءات معتمدة من EFSA)؛ ويُعد ركيزة تصنيع الناقل العصبي الأسيتيل كولين والليسيثين اللازم لنقل الدهون من الكبد.",
+        summaryNl: "Choline draagt bij tot een normaal vetmetabolisme, het behoud van een normale leverfunctie en een normaal homocysteïnemetabolisme (door EFSA toegestane claims); het is de bouwsteen van de neurotransmitter acetylcholine en van lecithine, dat vet uit de lever afvoert.",
+        summaryEn: "Choline contributes to normal lipid metabolism, the maintenance of normal liver function and normal homocysteine metabolism (EFSA-authorised claims); it is the building block of the neurotransmitter acetylcholine and of lecithin, which carries fat out of the liver.",
         tags: [
             "ذاكرة",
             "تركيز",
             "كبد"
         ],
         benefits: [
-            "يدعم إنتاج الأسيتيل كولين (ناقل عصبي)",
-            "يحسن الذاكرة والتركيز",
-            "يدعم صحة الكبد ويمنع تراكم الدهون",
-            "مهم لصحة الدماغ طويل المدى",
-            "يدعم أغشية الخلايا",
-            "مهم للنساء الحوامل (نمو دماغ الجنين)"
+            "يساهم الكولين في الاستقلاب الطبيعي للدهون، والحفاظ على وظائف الكبد الطبيعية، والاستقلاب الطبيعي للهوموسيستين (ادعاءات معتمدة من EFSA)؛ ويُعد ركيزة تصنيع الناقل العصبي الأسيتيل كولين والليسيثين اللازم لنقل الدهون من الكبد."
         ],
         benefitsNl: [
-            "Ondersteunt de normale vetstofwisseling en voorkomt vetstapeling in de lever",
-            "Bouwsteen voor acetylcholine, essentieel voor geheugen, leervermogen en spieraansturing",
-            "Draagt bij aan een gezond homocysteïnemetabolisme in combinatie met B-vitaminen",
-            "Belangrijk onderdeel van fosfolipiden in alle lichaamscelmembranen",
-            "Cruciaal voor de neurologische ontwikkeling van de foetus tijdens zwangerschap"
+            "Choline draagt bij tot een normaal vetmetabolisme, het behoud van een normale leverfunctie en een normaal homocysteïnemetabolisme (door EFSA toegestane claims); het is de bouwsteen van de neurotransmitter acetylcholine en van lecithine, dat vet uit de lever afvoert."
         ],
         benefitsEn: [
-            "Promotes hepatic lipid clearance and protects against non-alcoholic fatty liver",
-            "Substrate for acetylcholine synthesis, enhancing memory and neuromuscular signaling",
-            "Aids in homocysteine remethylation alongside folate and Vitamin B12",
-            "Structural backbone for phosphatidylcholine in biological cell membranes",
-            "Essential for fetal neural tube and hippocampal development during gestation"
+            "Choline contributes to normal lipid metabolism, the maintenance of normal liver function and normal homocysteine metabolism (EFSA-authorised claims); it is the building block of the neurotransmitter acetylcholine and of lecithin, which carries fat out of the liver."
         ],
         dosage: {
-            recommended: "500-1000 ملغ",
-            timing: "مع وجبة الإفطار",
-            frequency: "1-2 مرة يومياً"
+            recommended: "500–1000 ملغ يومياً",
+            timing: "مع الإفطار أو الغداء",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "500-1000 mg",
-            timing: "'s Ochtends tijdens het ontbijt met water",
-            frequency: "1-2x per dag"
+            recommended: "500–1000 mg per dag",
+            timing: "Bij het ontbijt of de lunch",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "500-1000 mg",
-            timing: "Morning with breakfast",
-            frequency: "1-2 times daily"
+            recommended: "500–1000 mg daily",
+            timing: "With breakfast or lunch",
+            frequency: "1–2 times daily"
         },
+        forms: "خيار اقتصادي لدعم الكبد؛ أما الأشكال الفوسفوليبيدية (مثل Alpha-GPC والسيتيكولين) فهي أكفأ في عبور الحاجز الدموي الدماغي.",
+        formsNl: "Een voordelige keuze voor de lever; fosfolipidevormen (zoals Alpha-GPC en citicoline) passeren de bloed-hersenbarrière efficiënter.",
+        formsEn: "An affordable choice for liver support; phospholipid forms (such as Alpha-GPC and citicoline) cross the blood-brain barrier more efficiently.",
         warnings: [
-            "آمن بشكل عام",
-            "قد يسبب رائحة سمك خفيفة (نادر)",
-            "Alpha-GPC وCDP-الكولين أقوى لكن أغلى"
+            "لم تحدد EFSA حداً أعلى للكولين؛ والحد الأعلى الأمريكي (NIH) هو 3500 ملغ يومياً من جميع المصادر",
+            "الجرعات المفرطة تسبب رائحة سمكية للجسم وإسهالاً وانخفاضاً في الضغط"
         ],
         warningsNl: [
-            "Zeer veilig bij aanbevolen dosering",
-            "Hoge doseringen (>3500 mg) kunnen een milde visachtige lichaamsgeur veroorzaken (TMAO-vorming)",
-            "Voor specifieke nootropische hersenfocus zijn CDP-Choline en Alpha-GPC potenter"
+            "EFSA heeft geen bovengrens voor choline vastgesteld; de Amerikaanse bovengrens (NIH) is 3500 mg per dag uit alle bronnen",
+            "Te hoge doses geven een vislucht, diarree en een lage bloeddruk"
         ],
         warningsEn: [
-            "Very safe at standard nutritional dosages",
-            "Excess megadoses (>3.5 g) may produce a transient fishy body odor via TMAO",
-            "Alpha-GPC and CDP-Choline cross the blood-brain barrier more readily for pure cognition"
+            "EFSA has not set an upper limit for choline; the US upper limit (NIH) is 3500 mg a day from all sources",
+            "Excessive doses cause a fishy body odour, diarrhoea and low blood pressure"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen klinisch significante interacties bekend.",
-        interactionsEn: "No known significant pharmaceutical interactions.",
-        naturalSources: "البيض، الكبد، الدجاج، السمك، البروكلي",
-        naturalSourcesNl: "Eidooiers (rijkste bron), runderlever, sojabonen, kip en broccoli.",
-        naturalSourcesEn: "Pastured egg yolks, beef liver, chicken breast, broccoli."
+        interactions: "آمن مع معظم الأدوية؛ قد يتداخل طفيفاً مع الأدوية المضادة للكولين.",
+        interactionsNl: "Veilig met de meeste medicijnen; het kan licht interfereren met anticholinerge middelen.",
+        interactionsEn: "Safe with most medicines; it may slightly interfere with anticholinergic drugs.",
+        naturalSources: "البيض (خاصة الصفار)، الكبدة، اللحوم، الأسماك، فول الصويا، البروكلي",
+        naturalSourcesNl: "Eieren (vooral de dooier), lever, vlees, vis, sojabonen, broccoli",
+        naturalSourcesEn: "Eggs (especially the yolk), liver, meat, fish, soybeans, broccoli",
+        groupLabel: {
+            ar: "صحة الكبد والكولين",
+            en: "Liver health & choline",
+            nl: "Levergezondheid & choline"
+        },
+        references: [
+            "EFSA Journal 2011;9(4):2056 (choline health claims)",
+            "NIH Office of Dietary Supplements (ODS): Choline Fact Sheet",
+            "Hollenbeck CB. Cent Nerv Syst Agents Med Chem 2012 — PMID: 22483274"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 85,
         slug: "phosphatidylcholine",
-        name: "فوسفاتيديل كولين",
-        englishName: "Phosphatidylcholine",
-        nameNl: "Fosfatidylcholine (Lecithine)",
+        name: "فوسفاتيديل كولين النقي لدعم الكبد وأغشية الخلايا",
+        englishName: "Pure Phosphatidylcholine (from Sunflower Lecithin)",
+        nameNl: "Fosfatidylcholine",
         category: "صحة-عامة",
         icon: "🧠",
-        summary: "فوسفوليبيد يدعم صحة الكبد والدماغ وأغشية الخلايا",
-        summaryNl: "Belangrijkste fosfolipide in biologische celmembranen; herstelt de lever en ondersteunt celintegriteit.",
-        summaryEn: "Predominant cell membrane phospholipid supporting hepatocyte regeneration and biliary health.",
+        summary: "الفوسفوليبيد الرئيسي في أغشية الخلايا والميتوكوندريا؛ يوفر الكولين بشكل عالي التوافر الحيوي، ويساهم في استحلاب الدهون الغذائية ودعم تدفق العصارة الصفراوية، ودعم سلامة أغشية خلايا الكبد والأعصاب.",
+        summaryNl: "Het belangrijkste fosfolipide in cel- en mitochondriale membranen; het levert choline in een goed opneembare vorm en helpt voedingsvetten te emulgeren, de galstroom te ondersteunen en de membranen van lever- en zenuwcellen gezond te houden.",
+        summaryEn: "The main phospholipid in cell and mitochondrial membranes; it provides choline in a highly bioavailable form and helps emulsify dietary fats, support bile flow and support the integrity of liver and nerve cell membranes.",
         tags: [
             "كبد",
             "دماغ",
             "خلايا"
         ],
         benefits: [
-            "يدعم صحة الكبد بشكل ممتاز",
-            "يساعد في علاج الكبد الدهني",
-            "يحسن وظائف الدماغ والذاكرة",
-            "مكون أساسي لأغشية الخلايا",
-            "يخفض الكوليسترول الضار",
-            "يدعم صحة القلب والأوعية"
+            "الفوسفوليبيد الرئيسي في أغشية الخلايا والميتوكوندريا؛ يوفر الكولين بشكل عالي التوافر الحيوي، ويساهم في استحلاب الدهون الغذائية ودعم تدفق العصارة الصفراوية، ودعم سلامة أغشية خلايا الكبد والأعصاب."
         ],
         benefitsNl: [
-            "Herstelt beschadigde levercelmembranen bij leververvetting en toxische belasting",
-            "Essentieel bestanddeel van galvloeistof; voorkomt het neerslaan van galstenen",
-            "Ondersteunt gezonde hersenfuncties en neuronale membraanvloeibaarheid",
-            "Helpt gezonde cholesterolspiegels te handhaven",
-            "Verbetert de intestinale slijmvliesbarrière in de darmen"
+            "Het belangrijkste fosfolipide in cel- en mitochondriale membranen; het levert choline in een goed opneembare vorm en helpt voedingsvetten te emulgeren, de galstroom te ondersteunen en de membranen van lever- en zenuwcellen gezond te houden."
         ],
         benefitsEn: [
-            "Restores hepatocyte membrane fluidity and aids in non-alcoholic fatty liver recovery",
-            "Core component of bile acids preventing cholesterol gallstone crystallization",
-            "Maintains neuronal synaptic integrity and cognitive fluidity",
-            "Supports healthy systemic lipoprotein balance",
-            "Fortifies mucosal protective barrier within the gastrointestinal tract"
+            "The main phospholipid in cell and mitochondrial membranes; it provides choline in a highly bioavailable form and helps emulsify dietary fats, support bile flow and support the integrity of liver and nerve cell membranes."
         ],
         dosage: {
-            recommended: "1200-2400 ملغ (من ليسيثين دوار الشمس)",
-            timing: "مع الوجبات",
-            frequency: "1-2 مرة يومياً"
+            recommended: "1200–2400 ملغ يومياً (كبسولات رخوة)",
+            timing: "مع الوجبات الرئيسية",
+            frequency: "مقسمة على 1–2 جرعة"
         },
         dosageNl: {
-            recommended: "1200-2400 mg (uit zonnebloemlecithine)",
-            timing: "Tijdens de maaltijd met water",
-            frequency: "1-2x per dag"
+            recommended: "1200–2400 mg per dag (softgels)",
+            timing: "Bij de hoofdmaaltijden",
+            frequency: "Verdeeld over 1–2 doses"
         },
         dosageEn: {
-            recommended: "1200-2400 mg (from sunflower lecithin)",
-            timing: "With meals",
-            frequency: "1-2 times daily"
+            recommended: "1200–2400 mg daily (softgels)",
+            timing: "With main meals",
+            frequency: "Split into 1–2 doses"
         },
+        forms: "فوسفاتيديل كولين من ليسيثين دوار الشمس، الخالي من التعديل الوراثي ومن الصويا.",
+        formsNl: "Fosfatidylcholine uit zonnebloemlecithine, ggo-vrij en sojavrij.",
+        formsEn: "Phosphatidylcholine from sunflower lecithin, GMO-free and soy-free.",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "قد يسبب اضطراب معدة خفيف",
-            "ممتاز لمن يتناولون الكحول أو لديهم مشاكل كبد"
+            "قد يسبب ليونة في البراز أو انزعاجاً هضمياً بالجرعات المرتفعة؛ يُؤخذ وسط وجبة"
         ],
         warningsNl: [
-            "Kies bij voorkeur voor zonnebloemlecithine (vrij van soja en gentech)",
-            "Zeer goed verdragen door de maag",
-            "Veilig voor langdurig continu gebruik"
+            "Hoge doses kunnen dunne ontlasting of spijsverteringsklachten geven; neem het midden in een maaltijd"
         ],
         warningsEn: [
-            "Sunflower-derived phosphatidylcholine is preferred over GMO soy variants",
-            "Extremely well tolerated gastrointestinally",
-            "Safe for sustained long-term therapeutic protocols"
+            "High doses may cause loose stools or digestive discomfort; take it in the middle of a meal"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen negatieve geneesmiddelinteracties.",
-        interactionsEn: "No adverse pharmaceutical interactions documented.",
-        naturalSources: "صفار البيض، الصويا، اللحوم، الأسماك",
-        naturalSourcesNl: "Eidooiers, zonnebloempitten, sojalecithine en vis.",
-        naturalSourcesEn: "Egg yolks, sunflower seeds, liver, soybeans."
+        interactions: "آمن عموماً؛ يُراعى الحذر مع مميعات الدم ومثبطات إنزيم الكولين إستراز.",
+        interactionsNl: "Over het algemeen veilig; wees voorzichtig met bloedverdunners en cholinesteraseremmers.",
+        interactionsEn: "Generally safe; take care with blood thinners and cholinesterase inhibitors.",
+        naturalSources: "صفار البيض، الكبدة، فول الصويا، بذور دوار الشمس، اللحوم",
+        naturalSourcesNl: "Eidooier, lever, sojabonen, zonnebloempitten, vlees",
+        naturalSourcesEn: "Egg yolk, liver, soybeans, sunflower seeds, meat",
+        groupLabel: {
+            ar: "صحة الكبد والكولين",
+            en: "Liver health & choline",
+            nl: "Levergezondheid & choline"
+        },
+        references: [
+            "Hollenbeck CB. Cent Nerv Syst Agents Med Chem 2012 — PMID: 22483274",
+            "NIH Office of Dietary Supplements (ODS): Choline Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 86,
-        slug: "vinpocetine",
-        name: "فينبوسيتين",
-        englishName: "Vinpocetine",
-        nameNl: "Vinpocetine",
-        category: "نوم-نفسية",
-        icon: "🌿",
-        summary: "مستخلص من نبات Vinca - يحسن تدفق الدم للدماغ والذاكرة",
-        summaryNl: "Cerebrale vaatverwijder die hersendoorbloeding, glucosebenutting en zuurstofopname in neuronen verbetert.",
-        summaryEn: "Cerebrovascular enhancer promoting microcirculation, neural oxygenation, and ATP utilization in the brain.",
+        slug: "panax-ginseng",
+        name: "خلاصة جذور الجنسنج الكوري الأحمر المعيارية",
+        englishName: "Korean Red Panax Ginseng Extract",
+        nameNl: "Koreaanse Rode Ginseng Extract",
+        category: "طاقة",
+        icon: "🔴",
+        summary: "عشبة تكيفية تقليدية في الطب الشرقي غنية بالجينسينوسيدات؛ تساهم في دعم مقاومة الإجهاد والتعب البدني، والأداء الإدراكي واليقظة الذهنية، ودعم الدورة الدموية الدقيقة.",
+        summaryNl: "Een traditioneel adaptogeen uit de oosterse geneeskunde, rijk aan ginsenosiden; het ondersteunt de weerstand tegen stress en lichamelijke vermoeidheid, de cognitieve prestaties en alertheid, en de microcirculatie.",
+        summaryEn: "A traditional adaptogen in Eastern medicine rich in ginsenosides; it helps support resistance to stress and physical fatigue, cognitive performance and alertness, and the microcirculation.",
         tags: [
-            "ذاكرة",
+            "طاقة",
+            "قوة",
             "تركيز",
-            "دماغ"
+            "مناعة"
         ],
         benefits: [
-            "يحسن تدفق الدم إلى الدماغ",
-            "يحسن الذاكرة والتركيز",
-            "يحمي خلايا الدماغ",
-            "قد يساعد في علاج طنين الأذن",
-            "يحسن الرؤية والسمع",
-            "مضاد التهاب ومضاد أكسدة"
+            "عشبة تكيفية تقليدية في الطب الشرقي غنية بالجينسينوسيدات؛ تساهم في دعم مقاومة الإجهاد والتعب البدني، والأداء الإدراكي واليقظة الذهنية، ودعم الدورة الدموية الدقيقة."
         ],
         benefitsNl: [
-            "Verbetert selectief de cerebrale bloedstroom zonder de systemische bloeddruk te ontregelen",
-            "Verhoogt de opname van zuurstof en glucose door hersencellen voor meer mentale energie",
-            "Scherpt focus, concentratie en auditieve verwerkingssnelheid aan",
-            "Kan verlichting bieden bij microcirculatoire tinnitus (oorsuizen) en duizeligheid",
-            "Biedt krachtige neuroprotectie tegen ischemische schade"
+            "Een traditioneel adaptogeen uit de oosterse geneeskunde, rijk aan ginsenosiden; het ondersteunt de weerstand tegen stress en lichamelijke vermoeidheid, de cognitieve prestaties en alertheid, en de microcirculatie."
         ],
         benefitsEn: [
-            "Selectively dilates cerebral microvasculature without altering systemic blood pressure",
-            "Enhances neuronal glucose and oxygen uptake, boosting ATP output in brain tissue",
-            "Sharpens executive focus, working memory, and mental processing speed",
-            "Clinical utility in microcirculatory tinnitus, inner ear strain, and vertigo",
-            "Shields neurons from hypoxic and ischemic cellular damage"
+            "A traditional adaptogen in Eastern medicine rich in ginsenosides; it helps support resistance to stress and physical fatigue, cognitive performance and alertness, and the microcirculation."
         ],
         dosage: {
-            recommended: "10-20 ملغ للجرعة (بحد أقصى 30-45 ملغ يومياً)",
-            timing: "مع الوجبات (3 مرات يومياً)",
-            frequency: "2-3 مرات يومياً"
+            recommended: "200–400 ملغ من المستخلص المعياري (4–7% جينسينوسيدات)",
+            timing: "صباحاً مع الإفطار (تجنبه بعد الظهر لتفادي الأرق)",
+            frequency: "مرة واحدة يومياً، لمدة لا تتجاوز 3 أشهر متواصلة"
         },
         dosageNl: {
-            recommended: "10-20 mg per inname (max 30-45 mg per dag)",
-            timing: "ALTIJD met voedsel (opname op een nuchtere maag is extreem laag)",
-            frequency: "2-3x per dag"
+            recommended: "200–400 mg gestandaardiseerd extract (4–7% ginsenosiden)",
+            timing: "'s Ochtends bij het ontbijt (niet na de middag, om slapeloosheid te voorkomen)",
+            frequency: "1 keer per dag, niet langer dan 3 maanden achter elkaar"
         },
         dosageEn: {
-            recommended: "10-20 mg per serving (max 30-45 mg daily)",
-            timing: "ALWAYS with meals (bioavailability is poor on an empty stomach)",
-            frequency: "2-3 times daily"
+            recommended: "200–400 mg standardized extract (4–7% ginsenosides)",
+            timing: "In the morning with breakfast (avoid it after midday to prevent insomnia)",
+            frequency: "Once daily, for no more than 3 months in a row"
         },
+        forms: "مستخلص الجنسنج الكوري الأحمر المعياري (4–7% جينسينوسيدات)، أو المخمر الذي يحول الجينسينوسيدات إلى Compound K الأسهل امتصاصاً.",
+        formsNl: "Gestandaardiseerd Koreaans rode-ginsengextract (4–7% ginsenosiden), of gefermenteerde rode ginseng, waarin ginsenosiden worden omgezet in het beter opneembare Compound K.",
+        formsEn: "Standardized Korean red ginseng extract (4–7% ginsenosides), or fermented red ginseng, in which ginsenosides are converted into the better-absorbed Compound K.",
         warnings: [
-            "يجب أخذه مع الطعام (امتصاص أفضل)",
-            "قد يخفض ضغط الدم قليلاً",
-            "تجنبه إذا كنت حاملاً أو مرضعاً"
+            "يُمنع لمن لديهم ارتفاع ضغط غير منضبط أو خفقان قلب شديد",
+            "يُمنع أثناء الحمل والرضاعة",
+            "لا يُستخدم لأكثر من 3 أشهر متواصلة دون استراحة"
         ],
         warningsNl: [
-            "STRIKT CONTRA-INDICATIE: Niet gebruiken tijdens zwangerschap of borstvoeding",
-            "Inname met vetrijke voeding verhoogt de biologische beschikbaarheid met 60-100%",
-            "Niet combineren met zware bloedverdunners zonder arts"
+            "Niet gebruiken bij ongecontroleerde hoge bloeddruk of hevige hartkloppingen",
+            "Niet gebruiken tijdens zwangerschap of borstvoeding",
+            "Niet langer dan 3 maanden zonder pauze gebruiken"
         ],
         warningsEn: [
-            "STRICT CONTRAINDICATION: Do not take during pregnancy or breastfeeding",
-            "Food co-ingestion enhances oral bioavailability by up to 100%",
-            "Use caution with pharmaceutical blood-thinning agents"
+            "Not for people with uncontrolled high blood pressure or severe palpitations",
+            "Not for use during pregnancy or breastfeeding",
+            "Do not use it for more than 3 months without a break"
         ],
-        interactions: "قد يتفاعل مع مميعات الدم - استشر طبيبك",
-        interactionsNl: "Kan de bloedstolling vertragen; interactie met aspirine, warfarine en clopidogrel.",
-        interactionsEn: "May additively inhibit platelet aggregation alongside blood thinners.",
-        naturalSources: "نبات Vinca minor (يُستخدم كمكمل فقط)",
-        naturalSourcesNl: "Half-synthetisch derivaat van vincamine uit de kleine maagdenpalm (Vinca minor).",
-        naturalSourcesEn: "Derived from vincamine alkaloid of the lesser periwinkle (Vinca minor)."
+        interactions: "قد يقلل فاعلية الوارفارين؛ يخفض سكر الدم فيُراعى مع أدوية السكري والإنسولين؛ ويتفاعل مع المنبهات وأدوية الضغط ومثبطات MAO.",
+        interactionsNl: "Het kan de werking van warfarine verminderen; het verlaagt de bloedsuiker, dus let op bij diabetesmedicatie en insuline; het interageert met stimulerende middelen, bloeddrukverlagers en MAO-remmers.",
+        interactionsEn: "It may reduce the effect of warfarin; it lowers blood sugar, so take care with diabetes medication and insulin; it interacts with stimulants, blood pressure drugs and MAO inhibitors.",
+        naturalSources: "جذور الجنسنج الآسيوي (Panax ginseng)؛ تُستخدم كمستخلص أو شاي",
+        naturalSourcesNl: "Aziatische ginsengwortel (Panax ginseng), gebruikt als extract of thee",
+        naturalSourcesEn: "Asian ginseng root (Panax ginseng), used as an extract or tea",
+        groupLabel: {
+            ar: "الطاقة والتكيف",
+            en: "Energy & adaptation",
+            nl: "Energie & aanpassing"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Panax ginseng C.A. Meyer, radix",
+            "Geng J et al. Cochrane Database Syst Rev 2010 — PMID: 21154383"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 87,
-        slug: "cdp-choline",
-        name: "سيتيكولين (CDP-Choline)",
-        englishName: "CDP-Choline (Citicoline)",
-        nameNl: "Citicoline (Cognizin® / CDP-Choline)",
+        slug: "citicoline",
+        name: "سيتيكولين لدعم خلايا الدماغ والذاكرة",
+        englishName: "Citicoline (CDP-Choline)",
+        nameNl: "Citicoline (CDP-Choline)",
         category: "نوم-نفسية",
         icon: "🧠",
-        summary: "أفضل أشكال الكولين - يحسن الذاكرة والتركيز والطاقة الذهنية بقوة",
-        summaryNl: "Premium hersenvoedingsstof die membraanfosfolipiden herstelt en dopamine- en acetylcholinespiegels optimaliseert.",
-        summaryEn: "Premium brain nutrient recharging neural membrane phospholipids, cellular ATP, and dopamine pathways.",
+        summary: "مركب يتفكك بعد الامتصاص إلى الكولين (لتصنيع الأسيتيل كولين) والسيتيدين (الذي يتحول في الدماغ إلى يوريدين لبناء فوسفوليبيدات أغشية الخلايا العصبية)، مما يدعم التركيز وكفاءة معالجة المعلومات.",
+        summaryNl: "Een stof die na opname uiteenvalt in choline (voor de aanmaak van acetylcholine) en cytidine (dat in de hersenen uridine wordt om de fosfolipiden van zenuwcelmembranen op te bouwen), wat focus en efficiënte informatieverwerking ondersteunt.",
+        summaryEn: "A compound that splits after absorption into choline (for making acetylcholine) and cytidine (which becomes uridine in the brain to build the phospholipids of nerve cell membranes), supporting focus and efficient information processing.",
         tags: [
             "ذاكرة",
             "تركيز",
             "طاقة ذهنية"
         ],
         benefits: [
-            "أفضل شكل من الكولين للدماغ",
-            "يحسن الذاكرة والتعلم بشكل ممتاز",
-            "يزيد الطاقة الذهنية والتركيز",
-            "يحمي الدماغ من التدهور",
-            "يساعد في التعافي من السكتات الدماغية",
-            "يحسن المزاج والدافع"
+            "مركب يتفكك بعد الامتصاص إلى الكولين (لتصنيع الأسيتيل كولين) والسيتيدين (الذي يتحول في الدماغ إلى يوريدين لبناء فوسفوليبيدات أغشية الخلايا العصبية)، مما يدعم التركيز وكفاءة معالجة المعلومات."
         ],
         benefitsNl: [
-            "Verhoogt zowel acetylcholine (focus en geheugen) als dopamine (motivatie en drive)",
-            "Ondersteunt synthese van fosfatidylcholine in neuronale celmembranen",
-            "Verhoogt ATP-energie in de frontale hersenschors met ca. 14%",
-            "Klinisch bewezen verbetering van volgehouden concentratie en werkgeheugen",
-            "Ondersteunt gezonde oogzenuwfunctie en netvliesgezondheid"
+            "Een stof die na opname uiteenvalt in choline (voor de aanmaak van acetylcholine) en cytidine (dat in de hersenen uridine wordt om de fosfolipiden van zenuwcelmembranen op te bouwen), wat focus en efficiënte informatieverwerking ondersteunt."
         ],
         benefitsEn: [
-            "Elevates brain levels of both acetylcholine (cognition) and dopamine (motivation)",
-            "Synthesizes structural phosphatidylcholine directly in neuronal membranes",
-            "Increases frontal cortex bioenergetic ATP reserves by approximately 14%",
-            "Clinically demonstrated to heighten sustained focus, attention, and memory recall",
-            "Supports optic nerve health and retinal ganglion cell longevity"
+            "A compound that splits after absorption into choline (for making acetylcholine) and cytidine (which becomes uridine in the brain to build the phospholipids of nerve cell membranes), supporting focus and efficient information processing."
         ],
         dosage: {
-            recommended: "250-500 ملغ",
-            timing: "مع وجبة الإفطار أو الغداء",
-            frequency: "1-2 مرة يومياً"
+            recommended: "250–500 ملغ يومياً (الحد المرخص في الاتحاد الأوروبي للمكملات 500 ملغ)",
+            timing: "صباحاً مع الإفطار أو الغداء",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "250-500 mg (gepatenteerd Cognizin®)",
-            timing: "'s Ochtends met het ontbijt of voor mentale topprestaties",
-            frequency: "1-2x per dag"
+            recommended: "250–500 mg per dag (in de EU toegestaan maximum voor supplementen 500 mg)",
+            timing: "'s Ochtends bij het ontbijt of de lunch",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "250-500 mg (Cognizin® verified)",
-            timing: "Morning with breakfast or prior to cognitive workloads",
-            frequency: "1-2 times daily"
+            recommended: "250–500 mg daily (EU authorised maximum for supplements 500 mg)",
+            timing: "In the morning with breakfast or lunch",
+            frequency: "1–2 times daily"
         },
+        forms: "سيتيكولين نقي مخمر حيوياً (مثل Cognizin®)، مرخص كغذاء مستحدث في الاتحاد الأوروبي.",
+        formsNl: "Zuiver gefermenteerd citicoline (zoals Cognizin®), in de EU toegelaten als nieuw voedingsmiddel.",
+        formsEn: "Pure fermented citicoline (such as Cognizin®), authorised as a novel food in the EU.",
         warnings: [
-            "آمن جداً وفعال",
-            "أغلى من بيتارترات الكولين لكن أقوى",
-            "النتائج تظهر بعد 1-2 أسبوع"
+            "التزم بالحد المرخص في الاتحاد الأوروبي: 500 ملغ يومياً",
+            "نادراً ما يسبب صداعاً عابراً أو أرقاً خفيفاً إذا أُخذ متأخراً",
+            "غير مخصص للأطفال والحوامل والمرضعات"
         ],
         warningsNl: [
-            "Uitmuntend veiligheidsprofiel in klinische studies",
-            "Niet laat in de avond innemen wegens merkbare toename in mentale alertheid",
-            "Prijziger dan cholinebitartraat, maar kwalitatief onvergelijkbaar superieur voor het brein"
+            "Houd je aan de in de EU toegestane grens van 500 mg per dag",
+            "Geeft zelden voorbijgaande hoofdpijn of lichte slapeloosheid als het laat wordt ingenomen",
+            "Niet bedoeld voor kinderen, zwangeren of vrouwen die borstvoeding geven"
         ],
         warningsEn: [
-            "Outstanding safety profile supported by decades of neurology trials",
-            "Avoid late evening dosing due to heightened energetic focus",
-            "Substantially more bioavailable for brain structures than standard bitartrate"
+            "Stick to the EU authorised limit of 500 mg a day",
+            "Rarely causes a passing headache or mild insomnia if taken late",
+            "Not intended for children, pregnant or breastfeeding women"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Kan levodopa-effectiviteit bij Parkinson licht versterken.",
-        interactionsEn: "May potentiate levodopa in neurological conditions; otherwise broadly safe.",
-        naturalSources: "يُنتج صناعياً (غير موجود طبيعياً بكميات كافية)",
-        naturalSourcesNl: "Endogeen tussenproduct in de cytidinedifosfaatcholine-route; niet direct in voeding.",
-        naturalSourcesEn: "Endogenous intermediate molecule in cellular phospholipid synthesis."
+        interactions: "قد يعزز فاعلية ليفودوبا لمرضى باركنسون، مما قد يتطلب تعديل الجرعات بإشراف طبي.",
+        interactionsNl: "Het kan levodopa bij de ziekte van Parkinson versterken, wat een dosisaanpassing onder medisch toezicht kan vereisen.",
+        interactionsEn: "It may strengthen levodopa in Parkinson's disease, which may require a dose adjustment under medical supervision.",
+        naturalSources: "لا يوجد السيتيكولين في الأطعمة؛ أما الكولين فمصادره البيض والكبدة والأسماك",
+        naturalSourcesNl: "Citicoline zit niet in voeding; choline komt uit eieren, lever en vis",
+        naturalSourcesEn: "Citicoline is not found in foods; choline comes from eggs, liver and fish",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "Nakazaki E et al. J Nutr 2021 — PMID: 33978188"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 88,
         slug: "black-seed-oil",
-        name: "زيت الحبة السوداء",
-        englishName: "Black Seed Oil (Nigella Sativa)",
-        nameNl: "Zwarte Zaadolie (Nigella Sativa)",
+        name: "كبسولات زيت الحبة السوداء المعصورة على البارد",
+        englishName: "Cold-Pressed Black Cumin Seed Oil",
+        nameNl: "Zwarte Komijnzaadolie",
         category: "صحة-عامة",
         icon: "🖤",
-        summary: "زيت عشبي معجزة - مضاد التهاب قوي ويدعم المناعة والصحة العامة",
-        summaryNl: "Koudgeperste nigellazaadolie rijk aan thymoquinone voor immuunregulatie, gezonde luchtwegen en huid.",
-        summaryEn: "Cold-pressed black cumin seed oil rich in thymoquinone promoting immune balance and respiratory health.",
+        summary: "غني بمركب الثيموكينون والأحماض الدهنية الأساسية (أوميغا 6 و9)؛ يساهم في تعديل الاستجابة الالتهابية الخلوية وحماية الخلايا من الإجهاد التأكسدي، ودعم راحة الممرات التنفسية والجهاز المناعي.",
+        summaryNl: "Rijk aan thymoquinon en essentiële vetzuren (omega-6 en omega-9); het helpt cellulaire ontstekingsreacties te dempen, cellen te beschermen tegen oxidatieve stress en comfortabele luchtwegen en het immuunsysteem te ondersteunen.",
+        summaryEn: "Rich in thymoquinone and essential fatty acids (omega-6 and omega-9); it helps moderate cellular inflammatory responses, protect cells from oxidative stress and support comfortable airways and the immune system.",
         tags: [
             "مناعة",
             "التهاب",
@@ -6387,227 +6360,214 @@ const supplementsData = [
             "ضغط"
         ],
         benefits: [
-            "مضاد التهاب قوي جداً",
-            "يقوي جهاز المناعة",
-            "مضاد أكسدة ممتاز",
-            "يخفض سكر الدم والكوليسترول",
-            "يدعم صحة الكبد والكلى",
-            "قد يساعد في علاج الربو والحساسية",
-            "يحسن صحة الجلد والشعر"
+            "غني بمركب الثيموكينون والأحماض الدهنية الأساسية (أوميغا 6 و9)؛ يساهم في تعديل الاستجابة الالتهابية الخلوية وحماية الخلايا من الإجهاد التأكسدي، ودعم راحة الممرات التنفسية والجهاز المناعي."
         ],
         benefitsNl: [
-            "Bevat krachtig thymoquinone: remt ontstekingsmediatoren en cytokinen",
-            "Verlicht symptomen van allergische rhinitis, hooikoorts en astmatische benauwdheid",
-            "Ondersteunt een evenwichtig immuunsysteem en antivirale weerstand",
-            "Draagt bij aan gezonde nuchtere bloedsuiker- en cholesterolwaarden",
-            "Verzacht een onrustige huid (eczeem, psoriasis en acne)"
+            "Rijk aan thymoquinon en essentiële vetzuren (omega-6 en omega-9); het helpt cellulaire ontstekingsreacties te dempen, cellen te beschermen tegen oxidatieve stress en comfortabele luchtwegen en het immuunsysteem te ondersteunen."
         ],
         benefitsEn: [
-            "Rich in bioactive thymoquinone suppressing inflammatory leukotrienes and cytokines",
-            "Alleviates symptoms of allergic rhinitis, seasonal allergies, and bronchial asthma",
-            "Enhances balanced immune surveillance and cellular defense",
-            "Supports normal fasting glucose levels and lipid metabolism",
-            "Soothes inflammatory skin dermatoses (eczema, psoriasis, acne)"
+            "Rich in thymoquinone and essential fatty acids (omega-6 and omega-9); it helps moderate cellular inflammatory responses, protect cells from oxidative stress and support comfortable airways and the immune system."
         ],
         dosage: {
-            recommended: "ملعقة صغيرة (5 مل) زيت معصور على البارد أو 1000-2000 ملغ كبسولات هلامية",
-            timing: "مع وجبة الإفطار",
-            frequency: "1-2 مرة يومياً"
+            recommended: "1000–2000 ملغ زيت (أو 5 مل من الزيت السائل)",
+            timing: "مع الإفطار",
+            frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "1 theelepel (5 ml) pure koudgeperste olie of 1000-2000 mg in softgels",
-            timing: "'s Ochtends tijdens het ontbijt (evt. met een theelepeltje rauwe honing)",
-            frequency: "1-2x per dag"
+            recommended: "1000–2000 mg olie (of 5 ml vloeibare olie)",
+            timing: "Bij het ontbijt",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "1 teaspoon (5 ml) cold-pressed oil or 1000-2000 mg softgels",
-            timing: "Morning with meals (or mixed with raw honey)",
-            frequency: "1-2 times daily"
+            recommended: "1000–2000 mg oil (or 5 ml of liquid oil)",
+            timing: "With breakfast",
+            frequency: "Once daily"
         },
+        forms: "كبسولات رخوة من زيت الحبة السوداء البكر المعصور على البارد بنسبة ثيموكينون موحدة (2–3% على الأقل).",
+        formsNl: "Softgels met koudgeperste zwarte komijnzaadolie met gestandaardiseerd thymoquinon (minstens 2–3%).",
+        formsEn: "Softgels of cold-pressed virgin black seed oil with standardized thymoquinone (at least 2–3%).",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "قد يخفض سكر الدم - مراقبة لمرضى السكري",
-            "تجنب الجرعات العالية إذا كنت حاملاً",
-            "قد يخفض السكر والضغط - راقب مع الأدوية"
+            "الجرعات المفرطة قد ترهق الكبد والكلى؛ التزم بالجرعات المذكورة",
+            "تُمنع الكبسولات المركزة أثناء الحمل لاحتمال تنشيطها لعضلات الرحم"
         ],
         warningsNl: [
-            "Heeft een kruidige, peperachtige smaak; softgels zijn een geur- en smaakloos alternatief",
-            "Grote doses vermijden tijdens zwangerschap (kan baarmoederstimulerend werken)",
-            "Kies altijd voor 100% koudgeperste, ongeraffineerde olie van eerste persing"
+            "Te hoge doses kunnen lever en nieren belasten; houd je aan de vermelde doses",
+            "Geconcentreerde capsules niet gebruiken tijdens de zwangerschap, omdat ze de baarmoeder kunnen stimuleren"
         ],
         warningsEn: [
-            "Possesses a strong spicy, pungent flavor; softgels offer a neutral alternative",
-            "Avoid high medicinal doses during pregnancy (mild uterine stimulant)",
-            "Insist on 100% cold-pressed, unrefined virgin Nigella sativa oil"
+            "Excessive doses may strain the liver and kidneys; stick to the stated doses",
+            "Concentrated capsules are not for use during pregnancy, as they may stimulate the uterus"
         ],
-        interactions: "قد يتفاعل مع أدوية السكري وضغط الدم - استشر طبيبك • قد يتفاعل مع أدوية السكر والضغط ومميعات الدم - استشر الطبيب",
-        interactionsNl: "Kan bloeddruk en bloedsuikerspiegel verlagen; overleg bij bloeddruk- of diabetesmedicatie.",
-        interactionsEn: "May additively lower blood pressure and glucose levels. • May additively potentiate antihypertensive and anti-diabetic pharmaceuticals.",
-        naturalSources: "بذور الحبة السوداء (يُفضل الزيت)",
-        naturalSourcesNl: "Koudgeperste zaden van Nigella sativa.",
-        naturalSourcesEn: "Nigella sativa whole seeds and cold-pressed virgin oil."
+        interactions: "يخفض الجلوكوز وضغط الدم ويثبط التخثر طفيفاً؛ تُراقب القراءات مع أدوية السكري والضغط، وتُتجنب الجرعات العالية مع مميعات الدم.",
+        interactionsNl: "Het verlaagt glucose en bloeddruk en remt de stolling licht; controleer je waarden bij diabetes- en bloeddrukmedicatie en vermijd hoge doses met bloedverdunners.",
+        interactionsEn: "It lowers glucose and blood pressure and slightly inhibits clotting; monitor readings with diabetes and blood pressure medication and avoid high doses with blood thinners.",
+        naturalSources: "بذور الحبة السوداء (حبة البركة) وزيتها، تُستخدم في الخبز والطبخ",
+        naturalSourcesNl: "Zwarte komijnzaad (Nigella sativa) en de olie ervan, gebruikt in brood en gerechten",
+        naturalSourcesEn: "Black seed (Nigella sativa) and its oil, used in bread and cooking",
+        groupLabel: {
+            ar: "المناعة والتنفس",
+            en: "Immunity & respiratory",
+            nl: "Weerstand & luchtwegen"
+        },
+        references: [
+            "Hannan MA et al. Nutrients 2021 (review) — PMID: 34073784"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 89,
-        slug: "garlic-extract",
-        name: "مستخلص الثوم",
-        englishName: "Garlic Extract",
-        nameNl: "Knoflookextract (Kyolic / Allicine)",
+        slug: "aged-garlic-extract",
+        name: "خلاصة الثوم المعتق لدعم القلب والشرايين",
+        englishName: "Aged Garlic Extract (Odourless)",
+        nameNl: "Gerijpt Knoflookextract (Geurloos)",
         category: "صحة-عامة",
         icon: "🧄",
-        summary: "مكمل عشبي قوي - يدعم صحة القلب والمناعة ويخفض الكوليسترول",
-        summaryNl: "Geurloos gerijpt knoflookextract (AGE) ter ondersteuning van een gezonde bloeddruk, vaatwanden en cholesterol.",
-        summaryEn: "Odorless aged garlic extract (AGE) supporting arterial elasticity, blood pressure balance, and immune defense.",
+        summary: "يُصنع بتعتيق شرائح الثوم في محلول مائي لعدة أشهر، فيتحول الأليسين غير المستقر إلى مركبات كبريتية مستقرة أبرزها إس-أليل سيستئين (SAC)؛ يساهم في دعم مرونة الشرايين ووظيفة بطانة الأوعية ومستويات ضغط الدم الطبيعية، وحماية كوليسترول LDL من الأكسدة.",
+        summaryNl: "Gemaakt door gesneden knoflook maandenlang in een wateroplossing te laten rijpen, waardoor instabiele allicine verandert in stabiele zwavelverbindingen, vooral S-allylcysteïne (SAC); het ondersteunt soepele slagaders, de werking van de vaatwand en een normale bloeddruk en beschermt LDL-cholesterol tegen oxidatie.",
+        summaryEn: "Made by ageing sliced garlic in a water solution for several months, which turns unstable allicin into stable sulphur compounds, mainly S-allyl cysteine (SAC); it helps support flexible arteries, blood vessel lining function and normal blood pressure, and protects LDL cholesterol from oxidation.",
         tags: [
             "قلب",
             "مناعة",
             "كوليسترول"
         ],
         benefits: [
-            "يخفض الكوليسترول الضار وضغط الدم",
-            "يقوي جهاز المناعة",
-            "مضاد أكسدة ومضاد التهاب",
-            "يدعم صحة القلب والأوعية",
-            "قد يحمي من السرطان",
-            "خصائص مضادة للبكتيريا والفيروسات"
+            "يُصنع بتعتيق شرائح الثوم في محلول مائي لعدة أشهر، فيتحول الأليسين غير المستقر إلى مركبات كبريتية مستقرة أبرزها إس-أليل سيستئين (SAC)؛ يساهم في دعم مرونة الشرايين ووظيفة بطانة الأوعية ومستويات ضغط الدم الطبيعية، وحماية كوليسترول LDL من الأكسدة."
         ],
         benefitsNl: [
-            "Verlaagt de systolische en diastolische bloeddruk op milde, natuurlijke wijze",
-            "Remt verkalking van de kransslagaderen en vertraagt plaque-opbouw",
-            "Verbetert het lipidenprofiel door vermindering van geoxideerd LDL-cholesterol",
-            "Ondersteunt het afweersysteem en vermindert de ernst en duur van verkoudheden",
-            "Heeft natuurlijke breedspectrum antimicrobiële eigenschappen"
+            "Gemaakt door gesneden knoflook maandenlang in een wateroplossing te laten rijpen, waardoor instabiele allicine verandert in stabiele zwavelverbindingen, vooral S-allylcysteïne (SAC); het ondersteunt soepele slagaders, de werking van de vaatwand en een normale bloeddruk en beschermt LDL-cholesterol tegen oxidatie."
         ],
         benefitsEn: [
-            "Clinically lowers both systolic and diastolic blood pressure safely",
-            "Slows progression of coronary artery calcification and soft plaque accumulation",
-            "Improves circulating lipid ratios by limiting oxidized LDL formation",
-            "Enhances NK-cell activity and reduces cold frequency and severity",
-            "Provides natural broad-spectrum antimicrobial and antioxidant properties"
+            "Made by ageing sliced garlic in a water solution for several months, which turns unstable allicin into stable sulphur compounds, mainly S-allyl cysteine (SAC); it helps support flexible arteries, blood vessel lining function and normal blood pressure, and protects LDL cholesterol from oxidation."
         ],
         dosage: {
-            recommended: "600-1200 ملغ (مستخلص مُعمّر)",
-            timing: "مع وجبة الإفطار",
-            frequency: "1-2 مرة يومياً"
+            recommended: "600–1200 ملغ يومياً",
+            timing: "مع وجبات الطعام",
+            frequency: "مقسمة على 1–2 جرعة"
         },
         dosageNl: {
-            recommended: "600-1200 mg Gerijpt Knoflookextract (Aged Garlic Extract)",
-            timing: "Tijdens een maaltijd met water",
-            frequency: "1-2x per dag"
+            recommended: "600–1200 mg per dag",
+            timing: "Bij de maaltijd",
+            frequency: "Verdeeld over 1–2 doses"
         },
         dosageEn: {
-            recommended: "600-1200 mg Aged Garlic Extract (AGE)",
-            timing: "With food and water",
-            frequency: "1-2 times daily"
+            recommended: "600–1200 mg daily",
+            timing: "With meals",
+            frequency: "Split into 1–2 doses"
         },
+        forms: "خلاصة الثوم المعتق المعيارية لمركب SAC (مثل Kyolic®)؛ عديمة الرائحة ولا تسبب تجشؤاً أو حرقة.",
+        formsNl: "Gerijpt knoflookextract gestandaardiseerd op SAC (zoals Kyolic®); geurloos en geeft geen oprispingen of brandend maagzuur.",
+        formsEn: "Aged garlic extract standardized for SAC (such as Kyolic®); odourless and does not cause burping or heartburn.",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "اختر المستخلص المُعمّر (odorless) لتجنب الرائحة",
-            "قد يسبب اضطراب معدة بجرعات عالية"
+            "يُوقف قبل أي جراحة مبرمجة بـ 10–14 يوماً",
+            "ألطف على المعدة من الثوم النيء ومكملات زيت الثوم"
         ],
         warningsNl: [
-            "Gerijpt knoflookextract (AGE) is volledig geurloos en veroorzaakt geen knoflookadem of maagbranden",
-            "Kan de bloedstolling vertragen; staak 1-2 weken voor een geplande chirurgische ingreep",
-            "Veilig voor dagelijks langdurig cardiovasculair onderhoud"
+            "Stop er 10–14 dagen voor een geplande operatie mee",
+            "Milder voor de maag dan rauwe knoflook en knoflookoliesupplementen"
         ],
         warningsEn: [
-            "Aged Garlic Extract (AGE) is 100% odorless with zero breath smell or gastric reflux",
-            "Mild antiplatelet effect; discontinue 1-2 weeks prior to scheduled surgery",
-            "Excellent safety profile for long-term daily cardiovascular maintenance"
+            "Stop it 10–14 days before planned surgery",
+            "Gentler on the stomach than raw garlic and garlic oil supplements"
         ],
-        interactions: "قد يتفاعل مع مميعات الدم - استشر طبيبك",
-        interactionsNl: "Versterkt de werking van antistollingsmedicatie en plaatjesremmers.",
-        interactionsEn: "May potentiate anticoagulant and antiplatelet pharmaceutical agents.",
-        naturalSources: "الثوم الطازج (4 فصوص = 1 كبسولة)",
-        naturalSourcesNl: "Verse biologische knoflook (Allium sativum), gefermenteerde zwarte knoflook.",
-        naturalSourcesEn: "Raw aged garlic cloves, fermented black garlic."
+        interactions: "تحذير سيولة: يثبط تجمع الصفائح؛ يُراعى الحذر مع مميعات الدم ومضادات التخثر (الوارفارين والأسبرين). قد يخفض مستوى بعض أدوية فيروس نقص المناعة (مثل الساكوينافير).",
+        interactionsNl: "Waarschuwing bloedingen: het remt het samenklonteren van bloedplaatjes; wees voorzichtig met bloedverdunners en antistollingsmiddelen (warfarine, aspirine). Het kan de spiegel van sommige hiv-remmers (zoals saquinavir) verlagen.",
+        interactionsEn: "Bleeding warning: it inhibits platelet clumping; take care with blood thinners and anticoagulants (warfarin, aspirin). It may lower levels of some HIV drugs (such as saquinavir).",
+        naturalSources: "الثوم الطازج، الثوم الأسود المعتق",
+        naturalSourcesNl: "Verse knoflook, gerijpte zwarte knoflook",
+        naturalSourcesEn: "Fresh garlic, aged black garlic",
+        groupLabel: {
+            ar: "صحة القلب والدورة الدموية",
+            en: "Heart health & circulation",
+            nl: "Hartgezondheid & doorbloeding"
+        },
+        references: [
+            "Varshney R, Budoff MJ. J Nutr 2016 — PMID: 26764327"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 90,
-        slug: "cinnamon",
-        name: "القرفة",
-        englishName: "Cinnamon",
-        nameNl: "Ceylon Kaneel (Echte Kaneel)",
+        slug: "ceylon-cinnamon",
+        name: "القرفة السيلانية الحقيقية (منخفضة الكومارين)",
+        englishName: "True Ceylon Cinnamon (Cinnamomum verum)",
+        nameNl: "Echte Ceylon Kaneel",
         category: "صحة-عامة",
         icon: "🌰",
-        summary: "توابل طبية - تخفض سكر الدم وتحسن حساسية الإنسولين",
-        summaryNl: "Veilige Ceylon kaneel voor stabiele bloedsuikerwaarden, verbeterde insulinesignalering en antioxidantbescherming.",
-        summaryEn: "True Ceylon cinnamon providing insulin-sensitizing polyphenol polymers without coumarin hepatotoxicity.",
+        summary: "غنية بالبروانثوسيانيدينات الذائبة في الماء والسينامالدهيد؛ تشير الدراسات إلى دورها في إبطاء إفراغ المعدة وتثبيط إنزيمات هضم النشويات، مما يدعم استقرار السكر بعد الوجبات.",
+        summaryNl: "Rijk aan wateroplosbare procyanidinen en kaneelaldehyde; studies wijzen erop dat het de maaglediging vertraagt en zetmeelverterende enzymen remt, wat een stabiele bloedsuiker na de maaltijd ondersteunt.",
+        summaryEn: "Rich in water-soluble procyanidins and cinnamaldehyde; studies suggest it slows stomach emptying and inhibits starch-digesting enzymes, supporting stable blood sugar after meals.",
         tags: [
             "سكر دم",
             "إنسولين",
             "مضاد أكسدة"
         ],
         benefits: [
-            "تخفض سكر الدم بشكل ملحوظ",
-            "تحسن حساسية الإنسولين",
-            "مضاد أكسدة قوي",
-            "مضاد التهاب ومضاد بكتيريا",
-            "تخفض الكوليسترول والدهون الثلاثية",
-            "قد تحمي من أمراض القلب"
+            "غنية بالبروانثوسيانيدينات الذائبة في الماء والسينامالدهيد؛ تشير الدراسات إلى دورها في إبطاء إفراغ المعدة وتثبيط إنزيمات هضم النشويات، مما يدعم استقرار السكر بعد الوجبات."
         ],
         benefitsNl: [
-            "Nagebootste insulinewerking: verbetert cellulair glucosetransport en verlaagt suikerpieken",
-            "Verlaagt nuchtere bloedglucosewaarden en ondersteunt HbA1c-regulatie",
-            "Rijk aan krachtige polyfenolen die lipidenperoxidatie remmen",
-            "Ondersteunt gezonde triglyceriden- en cholesterolwaarden",
-            "Bevordert een comfortabele spijsvertering en vermindert een vol gevoel na de maaltijd"
+            "Rijk aan wateroplosbare procyanidinen en kaneelaldehyde; studies wijzen erop dat het de maaglediging vertraagt en zetmeelverterende enzymen remt, wat een stabiele bloedsuiker na de maaltijd ondersteunt."
         ],
         benefitsEn: [
-            "Polyphenolic polymers act as insulin mimetics, activating glucose uptake pathways",
-            "Blunts postprandial glycemic excursions and improves fasting plasma glucose",
-            "Packed with protective proanthocyanidin antioxidants",
-            "Fosters favorable improvements in blood triglyceride and lipid parameters",
-            "Carminative herb soothing postprandial fullness and gas"
+            "Rich in water-soluble procyanidins and cinnamaldehyde; studies suggest it slows stomach emptying and inhibits starch-digesting enzymes, supporting stable blood sugar after meals."
         ],
         dosage: {
-            recommended: "1000-2000 ملغ قرفة سيلانية (أو 250-500 ملغ مستخلص مائي)",
-            timing: "مع الوجبات أو في القهوة/الشاي",
-            frequency: "1-2 مرة يومياً"
+            recommended: "1–2 غ مسحوق قرفة سيلانية (أو 500 ملغ مستخلص مائي)",
+            timing: "مع الوجبات الغنية بالنشويات",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "1000-2000 mg Ceylon kaneel (of 250-500 mg Cinnulin PF® waterextract)",
-            timing: "Vlak voor of tijdens de meest koolhydraatrijke maaltijd van de dag",
-            frequency: "1-2x per dag"
+            recommended: "1–2 g ceylonkaneelpoeder (of 500 mg waterextract)",
+            timing: "Bij zetmeelrijke maaltijden",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "1000-2000 mg Ceylon cinnamon (or 250-500 mg water-soluble extract)",
-            timing: "Immediately before or with high-carbohydrate meals",
-            frequency: "1-2 times daily"
+            recommended: "1–2 g Ceylon cinnamon powder (or 500 mg water extract)",
+            timing: "With starchy meals",
+            frequency: "1–2 times daily"
         },
+        forms: "القرفة السيلانية حصراً (Cinnamomum verum)، وتجنب قرفة الكاسيا الصينية الغنية بالكومارين الضار بالكبد.",
+        formsNl: "Uitsluitend ceylonkaneel (Cinnamomum verum); vermijd Chinese cassia, die veel leverschadelijke coumarine bevat.",
+        formsEn: "Ceylon cinnamon only (Cinnamomum verum); avoid Chinese cassia, which is high in liver-damaging coumarin.",
         warnings: [
-            "استخدم قرفة سيلان (Ceylon) - أكثر أماناً",
-            "قرفة كاسيا (Cassia) تحتوي كومارين (قد يضر الكبد)",
-            "آمنة بكميات معتدلة"
+            "الحد اليومي المقبول للكومارين وفق EFSA هو 0.1 ملغ لكل كغ من وزن الجسم؛ لذا فالقرفة السيلانية هي الخيار الآمن للاستخدام اليومي",
+            "تُمنع الجرعات العالية أثناء الحمل"
         ],
         warningsNl: [
-            "KIES ALTIJD CEYLON KANEEL (Cinnamomum verum); gewone supermarktkaneel (Cassia) bevat coumarine dat de lever kan belasten",
-            "Waterextracten (zoals Cinnulin PF) filteren schadelijke vetoplosbare stoffen er volledig uit",
-            "Diabetici dienen hun glucosewaarden te controleren"
+            "De EFSA-aanvaardbare dagelijkse inname van coumarine is 0,1 mg per kg lichaamsgewicht, waardoor ceylonkaneel de veilige keuze is voor dagelijks gebruik",
+            "Hoge doses niet gebruiken tijdens de zwangerschap"
         ],
         warningsEn: [
-            "ALWAYS INSIST ON CEYLON CINNAMON; commercial Cassia contains toxic coumarins harmful to the liver",
-            "Water-soluble aqueous extracts eliminate coumarin content while concentrating active polymers",
-            "Monitor blood glucose if taking anti-diabetic medications"
+            "The EFSA tolerable daily intake for coumarin is 0.1 mg per kg of body weight, which makes Ceylon cinnamon the safe choice for daily use",
+            "High doses are not for use during pregnancy"
         ],
-        interactions: "قد تتفاعل مع أدوية السكري - راقب مستوى السكر",
-        interactionsNl: "Versterkt de werking van metformine en insuline.",
-        interactionsEn: "Additively interacts with prescription blood glucose lowering agents.",
-        naturalSources: "قرفة سيلان (Ceylon Cinnamon) - الأفضل",
-        naturalSourcesNl: "Gedroogde binnenbast van Cinnamomum verum (Ceylon).",
-        naturalSourcesEn: "Dried inner bark of true Cinnamomum verum."
+        interactions: "تعزز فاعلية أدوية خفض السكر والإنسولين؛ تُراقب القراءات لتفادي الهبوط. قرفة الكاسيا تضيف عبئاً على الكبد مع الأدوية المجهدة له.",
+        interactionsNl: "Het versterkt glucoseverlagers en insuline; controleer je waarden om een hypo te voorkomen. Cassiakaneel belast de lever extra naast leverbelastende medicijnen.",
+        interactionsEn: "It strengthens glucose-lowering drugs and insulin; monitor readings to avoid hypoglycaemia. Cassia cinnamon adds strain on the liver alongside liver-taxing drugs.",
+        naturalSources: "لحاء القرفة السيلانية (عيدان أو مسحوق)",
+        naturalSourcesNl: "Ceylonkaneelschors (stokjes of poeder)",
+        naturalSourcesEn: "Ceylon cinnamon bark (sticks or powder)",
+        groupLabel: {
+            ar: "الأيض وسكر الدم",
+            en: "Metabolism & blood sugar",
+            nl: "Stofwisseling & bloedsuiker"
+        },
+        references: [
+            "Allen RW et al. Ann Fam Med 2013 (meta-analysis) — PMID: 24019277",
+            "EFSA Scientific Opinion on coumarin in flavourings and other food ingredients (2008)"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 91,
         slug: "bitter-melon",
-        name: "الحنظل المر",
-        englishName: "Bitter Melon",
-        nameNl: "Bittermeloen (Karela / Momordica)",
+        name: "مستخلص الحنظل المر المركز (الكارلا)",
+        englishName: "Bitter Melon Extract (Momordica charantia)",
+        nameNl: "Bittermeloen Extract (Karela)",
         category: "صحة-عامة",
         icon: "🥒",
-        summary: "خضار طبي - يخفض سكر الدم بقوة ويحسن التمثيل الغذائي",
-        summaryNl: "Klassiek fytotherapeutisch extract met 'plantaardig insuline' (polypeptide-p) voor bloedsuikerbeheersing.",
-        summaryEn: "Botanical extract supplying plant insulin (polypeptide-p) and charantin for robust glycemic reduction.",
+        summary: "ثمرة تقليدية في آسيا تحتوي على الشارانتين والفايسين وببتيد-P الشبيه بالإنسولين؛ تشير الدراسات المخبرية إلى دورها في تحفيز استهلاك الجلوكوز في العضلات، لكن الأدلة البشرية ما زالت محدودة وفق مراجعة Cochrane.",
+        summaryNl: "Een traditionele Aziatische vrucht met charantine, vicine en het insulineachtige polypeptide-P; laboratoriumonderzoek wijst op een verhoogde glucoseopname in de spieren, maar het bewijs bij mensen is volgens een Cochrane-review nog beperkt.",
+        summaryEn: "A traditional Asian fruit containing charantin, vicine and insulin-like polypeptide-P; laboratory studies suggest it stimulates glucose uptake in muscle, but human evidence is still limited according to a Cochrane review.",
         tags: [
             "سكر دم",
             "وزن",
@@ -6617,75 +6577,71 @@ const supplementsData = [
             "أنسولين"
         ],
         benefits: [
-            "يخفض سكر الدم بشكل قوي",
-            "يحسن حساسية الإنسولين",
-            "يساعد في إدارة مرض السكري النوع 2",
-            "قد يساعد في فقدان الوزن",
-            "يخفض الكوليسترول",
-            "مضاد أكسدة ومضاد التهاب"
+            "ثمرة تقليدية في آسيا تحتوي على الشارانتين والفايسين وببتيد-P الشبيه بالإنسولين؛ تشير الدراسات المخبرية إلى دورها في تحفيز استهلاك الجلوكوز في العضلات، لكن الأدلة البشرية ما زالت محدودة وفق مراجعة Cochrane."
         ],
         benefitsNl: [
-            "Bevat polypeptide-p, een plantaardige stof met een bewezen insuline-nabootsende werking",
-            "Verhoogt de perifere opname van glucose in spier- en leverweefsel",
-            "Ondersteunt regeneratie en bescherming van bètacellen in de alvleesklier",
-            "Onderdrukt suikerpieken na koolhydraatrijke maaltijden",
-            "Draagt bij aan gewichtsbeheersing en afname van buikvet"
+            "Een traditionele Aziatische vrucht met charantine, vicine en het insulineachtige polypeptide-P; laboratoriumonderzoek wijst op een verhoogde glucoseopname in de spieren, maar het bewijs bij mensen is volgens een Cochrane-review nog beperkt."
         ],
         benefitsEn: [
-            "Contains polypeptide-p, structurally mimicking endogenous human insulin signaling",
-            "Facilitates cellular glucose uptake and glycogen storage in muscle tissue",
-            "Protective and regenerative support for pancreatic beta-cell function",
-            "Significantly attenuates postprandial glucose surges",
-            "Assists in healthy metabolic weight regulation"
+            "A traditional Asian fruit containing charantin, vicine and insulin-like polypeptide-P; laboratory studies suggest it stimulates glucose uptake in muscle, but human evidence is still limited according to a Cochrane review."
         ],
         dosage: {
-            recommended: "500-1000 ملغ (مستخلص)",
-            timing: "قبل الوجبات بـ30 دقيقة",
+            recommended: "500–1000 ملغ من المستخلص المعياري",
+            timing: "قبل الوجبات الرئيسية بـ 30 دقيقة",
             frequency: "مرتين يومياً"
         },
         dosageNl: {
-            recommended: "500-1000 mg gestandaardiseerd extract (of 50-100 ml puur sap)",
-            timing: "15-30 minuten voor de maaltijd met water",
-            frequency: "2x per dag"
+            recommended: "500–1000 mg gestandaardiseerd extract",
+            timing: "30 minuten voor de hoofdmaaltijden",
+            frequency: "2 keer per dag"
         },
         dosageEn: {
-            recommended: "500-1000 mg standardized fruit extract",
-            timing: "15-30 minutes prior to meals with water",
-            frequency: "2 times daily"
+            recommended: "500–1000 mg standardized extract",
+            timing: "30 minutes before main meals",
+            frequency: "Twice daily"
         },
+        forms: "كبسولات المستخلص المعياري (2.5–5% شارانتين) لتفادي الطعم شديد المرارة للثمرة.",
+        formsNl: "Capsules met gestandaardiseerd extract (2,5–5% charantine), zonder de zeer bittere smaak van de vrucht.",
+        formsEn: "Standardized extract capsules (2.5–5% charantin), avoiding the very bitter taste of the fruit.",
         warnings: [
-            "قد يخفض سكر الدم كثيراً - مراقبة لازمة",
-            "لا تستخدمه إذا كنت حاملاً",
-            "قد يسبب إسهال أو اضطراب معدة"
+            "يُمنع أثناء الحمل والرضاعة لأنه قد يحفز انقباضات الرحم والنزيف",
+            "يُمنع لمن لديهم نقص إنزيم G6PD (أنيميا الفول) لأن بذوره تحتوي على الفايسين الذي قد يسبب انحلال الدم"
         ],
         warningsNl: [
-            "STRIKT CONTRA-INDICATIE: Niet gebruiken tijdens zwangerschap (kan baarmoedersamentrekkingen opwekken)",
-            "Kan de bloedsuiker aanzienlijk verlagen; alertheid op hypoglykemie bij diabetici",
-            "Niet gebruiken bij personen met een zeldzaam G6PD-enzymtekort (favisme)"
+            "Niet gebruiken tijdens zwangerschap of borstvoeding, omdat het baarmoedercontracties en bloedingen kan uitlokken",
+            "Niet gebruiken bij G6PD-deficiëntie (favisme), omdat de zaden vicine bevatten, dat hemolyse kan veroorzaken"
         ],
         warningsEn: [
-            "STRICT CONTRAINDICATION: Strictly avoid during pregnancy (traditional abortifacient properties)",
-            "May induce hypoglycemia when combined with diabetic pharmaceuticals",
-            "Contraindicated in G6PD enzyme deficiency"
+            "Not for use during pregnancy or breastfeeding, as it may trigger uterine contractions and bleeding",
+            "Not for people with G6PD deficiency (favism), as the seeds contain vicine, which may cause haemolysis"
         ],
-        interactions: "يتفاعل مع أدوية السكري - استشر طبيبك ضرورياً",
-        interactionsNl: "Krachtige wisselwerking met insuline en orale bloedglucoseverlagers.",
-        interactionsEn: "Potent additive interaction with exogenous insulin and oral hypoglycemics.",
-        naturalSources: "ثمار الحنظل المر (يمكن طبخها)",
-        naturalSourcesNl: "Vruchten van Momordica charantia (Aziatische bittermeloen).",
-        naturalSourcesEn: "Fruit of Momordica charantia (Karela)."
+        interactions: "تداخل حرج: يخفض الجلوكوز؛ لا يُستخدم مع الإنسولين أو السلفونيل يوريا دون إشراف طبي لتجنب نوبات الهبوط الحادة.",
+        interactionsNl: "Kritieke interactie: het verlaagt de glucose; niet gebruiken met insuline of sulfonylureumderivaten zonder medisch toezicht, om ernstige hypo's te voorkomen.",
+        interactionsEn: "Critical interaction: it lowers glucose; do not use it with insulin or sulfonylureas without medical supervision, to avoid severe hypoglycaemia.",
+        naturalSources: "ثمرة الحنظل المر (الكارلا) المطبوخة في المطبخ الآسيوي",
+        naturalSourcesNl: "Bittermeloen (karela), gekookt in de Aziatische keuken",
+        naturalSourcesEn: "Bitter melon (karela), cooked in Asian cuisine",
+        groupLabel: {
+            ar: "الأيض وسكر الدم",
+            en: "Metabolism & blood sugar",
+            nl: "Stofwisseling & bloedsuiker"
+        },
+        references: [
+            "Ooi CP et al. Cochrane Database Syst Rev 2012 — PMID: 22895968"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 92,
         slug: "gymnema-sylvestre",
-        name: "جيمنيما سيلفستر",
-        englishName: "Gymnema Sylvestre",
-        nameNl: "Gymnema Sylvestre (Suikervernietiger)",
+        name: "خلاصة عشبة الجيمنيما سيلفستر",
+        englishName: "Gymnema Sylvestre Leaf Extract",
+        nameNl: "Gymnema Sylvestre Extract",
         category: "تخسيس",
         icon: "🍃",
-        summary: "عشبة هندية - تقلل امتصاص السكر والرغبة في الحلويات",
-        summaryNl: "Het beroemde 'suikervernietiger' kruid dat zoetsmaakreceptoren tijdelijk uitschakelt en suikerabsorptie remt.",
-        summaryEn: "The famous 'sugar destroyer' herb blocking sweet taste receptors and reducing intestinal glucose absorption.",
+        summary: "تُعرف بالهندية باسم «غورمار» أي «حاطمة السكر»؛ ترتبط أحماض الجيمنيميك بمستقبلات المذاق الحلو على اللسان فتقلل الإحساس بالحلاوة لساعات وتحد من الرغبة في الحلويات، كما تنافس الجلوكوز على مواقع الامتصاص في الأمعاء.",
+        summaryNl: "In het Hindi bekend als gurmar, 'suikervernietiger'; de gymnemazuren binden aan zoetreceptoren op de tong, waardoor zoet urenlang minder wordt geproefd en de trek in zoet afneemt, en ze concurreren met glucose om opnameplaatsen in de darm.",
+        summaryEn: "Known in Hindi as gurmar, 'sugar destroyer'; its gymnemic acids bind to sweet taste receptors on the tongue, dulling sweetness for hours and curbing sugar cravings, and compete with glucose for absorption sites in the gut.",
         tags: [
             "سكر",
             "شهية",
@@ -6695,302 +6651,297 @@ const supplementsData = [
             "حلويات"
         ],
         benefits: [
-            "تقلل امتصاص السكر في الأمعاء",
-            "تقلل الرغبة في تناول الحلويات بشكل ممتاز",
-            "تخفض سكر الدم",
-            "تحسن حساسية الإنسولين",
-            "قد تساعد في فقدان الوزن",
-            "تدعم صحة البنكرياس"
+            "تُعرف بالهندية باسم «غورمار» أي «حاطمة السكر»؛ ترتبط أحماض الجيمنيميك بمستقبلات المذاق الحلو على اللسان فتقلل الإحساس بالحلاوة لساعات وتحد من الرغبة في الحلويات، كما تنافس الجلوكوز على مواقع الامتصاص في الأمعاء."
         ],
         benefitsNl: [
-            "Schakelt de zoete smaaksensatie op de tong tijdelijk uit: zoetigheid smaakt letterlijk neutraal",
-            "Onderdrukt acute snoepdrang en suikerverslaving op fysiologisch niveau",
-            "Blokkeert glucosereceptoren in de darmwand waardoor suiker minder snel wordt opgenomen",
-            "Ondersteunt regeneratie en werking van de bètacellen in de alvleesklier",
-            "Helpt HbA1c-waarden en nuchtere bloedsuikerspiegel gezond te houden"
+            "In het Hindi bekend als gurmar, 'suikervernietiger'; de gymnemazuren binden aan zoetreceptoren op de tong, waardoor zoet urenlang minder wordt geproefd en de trek in zoet afneemt, en ze concurreren met glucose om opnameplaatsen in de darm."
         ],
         benefitsEn: [
-            "Temporarily paralyzes sweet taste buds on the tongue, rendering sugary snacks tasteless",
-            "Dramatically curtails sugar cravings, binge impulses, and carbohydrate addiction",
-            "Competitively blocks intestinal glucose transporters, reducing dietary sugar absorption",
-            "Supports endogenous insulin secretion and pancreatic beta-cell health",
-            "Promotes reductions in fasting blood glucose and long-term HbA1c"
+            "Known in Hindi as gurmar, 'sugar destroyer'; its gymnemic acids bind to sweet taste receptors on the tongue, dulling sweetness for hours and curbing sugar cravings, and compete with glucose for absorption sites in the gut."
         ],
         dosage: {
-            recommended: "400-600 ملغ مستخلص معياري (25-75% أحماض جيمنيمية)",
-            timing: "قبل الوجبات بـ10-15 دقيقة",
-            frequency: "مرتين يومياً"
+            recommended: "400–600 ملغ من المستخلص المعياري (25–75% أحماض جيمنيميك)",
+            timing: "قبل الوجبات بـ 15 دقيقة مع ماء",
+            frequency: "مقسمة على جرعتين"
         },
         dosageNl: {
-            recommended: "400-600 mg gestandaardiseerd extract (25-75% gymnemische zuren)",
-            timing: "10-15 minuten voor de maaltijd (of vloeibaar extract op de tong druppelen bij acute snoepdrang)",
-            frequency: "2x per dag"
+            recommended: "400–600 mg gestandaardiseerd extract (25–75% gymnemazuren)",
+            timing: "15 minuten voor de maaltijd met water",
+            frequency: "Verdeeld over twee doses"
         },
         dosageEn: {
-            recommended: "400-600 mg standardized extract (25-75% gymnemic acids)",
-            timing: "10-15 minutes pre-meal with water (or liquid drops on tongue for cravings)",
-            frequency: "2 times daily"
+            recommended: "400–600 mg standardized extract (25–75% gymnemic acids)",
+            timing: "15 minutes before meals with water",
+            frequency: "Split into two doses"
         },
+        forms: "مستخلص الأوراق المعياري (25% أحماض جيمنيميك على الأقل)، مع توفر قطرات توضع على اللسان قبل الأكل.",
+        formsNl: "Gestandaardiseerd bladextract (minstens 25% gymnemazuren), ook verkrijgbaar als druppels voor op de tong voor het eten.",
+        formsEn: "Standardized leaf extract (at least 25% gymnemic acids), also available as drops placed on the tongue before eating.",
         warnings: [
-            "قد تخفض سكر الدم - مراقبة لازمة",
-            "تجنبها إذا كنت حاملاً أو مرضعاً",
-            "النتائج تظهر بعد 3-4 أسابيع"
+            "قد يسبب غثياناً خفيفاً على معدة فارغة تماماً",
+            "يُمنع أثناء الحمل والرضاعة لعدم كفاية بيانات الأمان",
+            "يُوقف قبل العمليات الجراحية بأسبوعين"
         ],
         warningsNl: [
-            "Zeer effectief bij suikerverslaving; kan het genot van zoete voeding voor 1-2 uur neutraliseren",
-            "Niet gebruiken tijdens zwangerschap of lactatie",
-            "Controleer glucosewaarden bij gelijktijdig gebruik van insuline of metformine",
-            "Kan de bloedsuikerspiegel krachtig verlagen; controleer glucose nauwlettend bij gebruik van insuline of metformine"
+            "Kan op een volledig lege maag lichte misselijkheid geven",
+            "Niet gebruiken tijdens zwangerschap of borstvoeding wegens onvoldoende veiligheidsgegevens",
+            "Stop er twee weken voor een operatie mee"
         ],
         warningsEn: [
-            "Remarkably effective for sugar cravings; neutralizes the hedonistic reward of sweets for 1-2 hours",
-            "Contraindicated during pregnancy and lactation",
-            "Monitor blood glucose if taking prescription anti-diabetic drugs"
+            "May cause mild nausea on a completely empty stomach",
+            "Not for use during pregnancy or breastfeeding because safety data are insufficient",
+            "Stop taking it two weeks before surgery"
         ],
-        interactions: "تتفاعل مع أدوية السكري - استشر طبيبك",
-        interactionsNl: "Versterkt het effect van alle reguliere diabetesmedicatie.",
-        interactionsEn: "Synergistic additive interaction with anti-diabetic pharmaceuticals.",
-        naturalSources: "أوراق نبات Gymnema Sylvestre (يُستخدم كمكمل)",
-        naturalSourcesNl: "Bladeren van de Gymnema sylvestre klimplant (Gurmar).",
-        naturalSourcesEn: "Leaves of the Indian climbing plant Gymnema sylvestre (Gurmar)."
+        interactions: "يعزز فاعلية أدوية خفض السكر والإنسولين؛ تُراقب القراءات وتُعدّل الجرعات بإشراف الطبيب.",
+        interactionsNl: "Het versterkt glucoseverlagers en insuline; controleer je waarden en laat doses onder toezicht van je arts aanpassen.",
+        interactionsEn: "It strengthens glucose-lowering drugs and insulin; monitor readings and adjust doses under your doctor's supervision.",
+        naturalSources: "أوراق عشبة الجيمنيما (تُستخدم كمستخلص أو شاي)؛ لا توجد في الأطعمة اليومية",
+        naturalSourcesNl: "Gymnemabladeren (gebruikt als extract of thee); niet aanwezig in gewone voeding",
+        naturalSourcesEn: "Gymnema leaves (used as an extract or tea); not found in everyday foods",
+        groupLabel: {
+            ar: "الأيض وسكر الدم",
+            en: "Metabolism & blood sugar",
+            nl: "Stofwisseling & bloedsuiker"
+        },
+        references: [
+            "Tiwari P et al. Biomed Res Int 2014 (review) — PMID: 24511547"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 93,
-        slug: "raspberry-ketones",
-        name: "كيتون التوت",
-        englishName: "Raspberry Ketones",
-        nameNl: "Frambozen Ketonen",
-        category: "تخسيس",
-        icon: "🍇",
-        summary: "مركب من التوت - قد يساعد في حرق الدهون لكن الأدلة ضعيفة",
-        summaryNl: "Aromatisch frambozenextract dat adiponectine stimuleert ter ondersteuning van een gezonde vetverbranding.",
-        summaryEn: "Aromatic phenolic compound from red raspberries supporting adiponectin signaling and lipid oxidation.",
+        slug: "myo-inositol",
+        name: "الميو-إينوزيتول مع دي-كايرو إينوزيتول (40:1)",
+        englishName: "Myo-Inositol & D-Chiro-Inositol (40:1)",
+        nameNl: "Myo-Inositol & D-Chiro-Inositol (40:1)",
+        category: "صحة-عامة",
+        icon: "🧘",
+        summary: "مركب شبيه بالفيتامينات يعمل رسولاً ثانياً لإشارات الإنسولين والهرمون المنبه للجريبات (FSH) داخل الخلايا؛ يساهم في دعم حساسية الخلايا للإنسولين، وتشير تحليلات تجميعية لدى النساء المصابات بتكيس المبايض إلى دوره في دعم انتظام التبويض وتوازن الهرمونات.",
+        summaryNl: "Een vitamineachtige stof die als tweede boodschapper werkt voor signalen van insuline en follikelstimulerend hormoon (FSH) in de cel; het ondersteunt de insulinegevoeligheid, en meta-analyses bij vrouwen met PCOS wijzen op ondersteuning van een regelmatige eisprong en hormonale balans.",
+        summaryEn: "A vitamin-like compound that acts as a second messenger for insulin and follicle-stimulating hormone (FSH) signals inside cells; it helps support insulin sensitivity, and meta-analyses in women with polycystic ovary syndrome suggest it supports regular ovulation and hormonal balance.",
         tags: [
-            "حرق دهون",
-            "وزن",
-            "أيض",
-            "أديبونكتين",
-            "توت"
+            "نوم",
+            "قلق",
+            "مزاج",
+            "إينوزيتول",
+            "تكيس",
+            "خصوبة"
         ],
         benefits: [
-            "قد يزيد تكسير الدهون (نظرياً)",
-            "قد يزيد إفراز أديبونكتين (ينظم الأيض)",
-            "قد يحسن مستوى السكر في الدم",
-            "مضاد أكسدة",
-            "رائحته جميلة"
+            "مركب شبيه بالفيتامينات يعمل رسولاً ثانياً لإشارات الإنسولين والهرمون المنبه للجريبات (FSH) داخل الخلايا؛ يساهم في دعم حساسية الخلايا للإنسولين، وتشير تحليلات تجميعية لدى النساء المصابات بتكيس المبايض إلى دوره في دعم انتظام التبويض وتوازن الهرمونات."
         ],
         benefitsNl: [
-            "Stimuleert de afgifte van adiponectine, een hormoon dat de vetstofwisseling reguleert",
-            "Verhoogt enzymatische vetafbraak in adipocyten in combinatie met caloriebeperking",
-            "Biedt milde antioxidantbescherming tegen celveroudering",
-            "Aangename, veilige natuurlijke ondersteuning van het dieet"
+            "Een vitamineachtige stof die als tweede boodschapper werkt voor signalen van insuline en follikelstimulerend hormoon (FSH) in de cel; het ondersteunt de insulinegevoeligheid, en meta-analyses bij vrouwen met PCOS wijzen op ondersteuning van een regelmatige eisprong en hormonale balans."
         ],
         benefitsEn: [
-            "Modulates adiponectin secretion, a peptide hormone governing metabolic homeostasis",
-            "Supports hormone-sensitive lipase activity in adipose tissue alongside diet",
-            "Provides mild phenolic radical-scavenging antioxidant benefits",
-            "Gentle, non-stimulant adjunct to caloric reduction"
+            "A vitamin-like compound that acts as a second messenger for insulin and follicle-stimulating hormone (FSH) signals inside cells; it helps support insulin sensitivity, and meta-analyses in women with polycystic ovary syndrome suggest it supports regular ovulation and hormonal balance."
         ],
         dosage: {
-            recommended: "100-200 ملغ",
-            timing: "قبل الإفطار",
-            frequency: "1-2 مرة يومياً"
+            recommended: "2–4 غ يومياً (مسحوق مذاب في الماء)",
+            timing: "صباحاً ومساءً، مع الوجبات أو بينها",
+            frequency: "مقسمة على جرعتين"
         },
         dosageNl: {
-            recommended: "100-200 mg",
-            timing: "'s Ochtends voor het ontbijt met water",
-            frequency: "1-2x per dag"
+            recommended: "2–4 g per dag (poeder opgelost in water)",
+            timing: "'s Ochtends en 's avonds, bij of tussen de maaltijden",
+            frequency: "Verdeeld over twee doses"
         },
         dosageEn: {
-            recommended: "100-200 mg",
-            timing: "Morning before breakfast with water",
-            frequency: "1-2 times daily"
+            recommended: "2–4 g daily (powder dissolved in water)",
+            timing: "Morning and evening, with or between meals",
+            frequency: "Split into two doses"
         },
+        forms: "التركيبة المطابقة لنسبة البلازما الطبيعية (40:1 ميو-إينوزيتول إلى دي-كايرو إينوزيتول)، غالباً مع حمض الفوليك (400 ميكروغرام).",
+        formsNl: "De formule die overeenkomt met de natuurlijke plasmaverhouding (40:1 myo-inositol tot D-chiro-inositol), vaak met foliumzuur (400 µg).",
+        formsEn: "The formula matching the natural plasma ratio (40:1 myo-inositol to D-chiro-inositol), often with folic acid (400 µg).",
         warnings: [
-            "الأدلة العلمية ضعيفة على البشر",
-            "غالباً مبالغ في تسويقه",
-            "آمن لكن غير فعال للكثيرين",
-            "لا تتوقع نتائج سحرية"
+            "الجرعات الكبيرة في البداية (فوق 6 غ) قد تسبب تلبكاً معوياً أو إسهالاً خفيفاً",
+            "يُستخدم أثناء الحمل فقط تحت إشراف طبي"
         ],
         warningsNl: [
-            "Geen wondermiddel; de wetenschappelijke bewijskracht bij mensen is bescheiden",
-            "Veilig bij normale doseringen, maar vereist altijd een calorietekort",
-            "Niet gebruiken tijdens zwangerschap"
+            "Hoge begindoses (boven 6 g) kunnen darmklachten of lichte diarree geven",
+            "Tijdens de zwangerschap alleen onder medisch toezicht gebruiken"
         ],
         warningsEn: [
-            "Modest human clinical trial backing; avoid unrealistic expectations",
-            "Safe at normal nutritional doses, but requires a foundational caloric deficit",
-            "Avoid during pregnancy"
+            "Large starting doses (above 6 g) may cause digestive upset or mild diarrhoea",
+            "Use during pregnancy only under medical supervision"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen klinisch relevante interacties.",
-        interactionsEn: "No significant clinical drug interactions.",
-        naturalSources: "التوت الأحمر (كميات ضئيلة جداً)",
-        naturalSourcesNl: "Rode frambozen (Rubus idaeus), bramen en veenbessen.",
-        naturalSourcesEn: "Red raspberries (Rubus idaeus), cranberries, blackberries."
+        interactions: "آمن مع معظم الأدوية؛ قد يعزز مفعول الميتفورمين وأدوية خفض السكر.",
+        interactionsNl: "Veilig met de meeste medicijnen; het kan metformine en andere glucoseverlagers versterken.",
+        interactionsEn: "Safe with most medicines; it may strengthen metformin and other glucose-lowering drugs.",
+        naturalSources: "الحمضيات (خاصة البرتقال والجريب فروت)، البقوليات، الحبوب الكاملة، المكسرات",
+        naturalSourcesNl: "Citrusvruchten (vooral sinaasappels en grapefruit), peulvruchten, volkoren granen, noten",
+        naturalSourcesEn: "Citrus fruit (especially oranges and grapefruit), legumes, whole grains, nuts",
+        groupLabel: {
+            ar: "صحة المرأة والأيض",
+            en: "Women's health & metabolism",
+            nl: "Vrouwengezondheid & stofwisseling"
+        },
+        references: [
+            "Unfer V et al. Endocr Connect 2017 (meta-analysis) — PMID: 29042448"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 94,
-        slug: "white-kidney-bean-extract",
-        name: "مستخلص الفاصوليا البيضاء",
-        englishName: "White Kidney Bean Extract",
-        nameNl: "Witte Bonen Extract (Phase 2®)",
+        slug: "white-kidney-bean",
+        name: "خلاصة الفاصوليا البيضاء (الفازولامين)",
+        englishName: "White Kidney Bean Extract (Phaseolamin)",
+        nameNl: "Witte Kidneyboon Extract (Faseolamine)",
         category: "تخسيس",
         icon: "⚪",
-        summary: "مثبط كربوهيدرات - يقلل امتصاص النشويات",
-        summaryNl: "Natuurlijke koolhydraatblokker die het enzym alfa-amylase remt en zetmeelopname tot 60% blokkeert.",
-        summaryEn: "Natural carbohydrate blocker inhibiting alpha-amylase to reduce glycemic impact of starchy meals.",
+        summary: "مستخلص يحتوي على البروتين المثبط الفازولامين، الذي يعطل مؤقتاً إنزيم ألفا أميليز المسؤول عن هضم النشويات، فيقلل جزئياً تحويل النشويات المعقدة إلى سكريات بسيطة ويمرر جزءاً منها إلى القولون كألياف.",
+        summaryNl: "Een extract met het remmende eiwit faseolamine, dat het zetmeelverterende enzym alfa-amylase tijdelijk blokkeert; zo wordt complex zetmeel deels minder omgezet in enkelvoudige suikers en gaat een deel als vezel naar de dikke darm.",
+        summaryEn: "An extract containing the inhibitor protein phaseolamin, which temporarily blocks the starch-digesting enzyme alpha-amylase, partly reducing the conversion of complex starches into simple sugars and passing some of them to the colon as fibre.",
         tags: [
             "كربوهيدرات",
             "وزن",
             "نشا"
         ],
         benefits: [
-            "يمنع إنزيم الأميليز (يهضم النشا)",
-            "يقلل امتصاص الكربوهيدرات",
-            "قد يساعد في فقدان الوزن",
-            "يخفض سكر الدم بعد الوجبات",
-            "مفيد لمن يتناولون نشويات كثيرة"
+            "مستخلص يحتوي على البروتين المثبط الفازولامين، الذي يعطل مؤقتاً إنزيم ألفا أميليز المسؤول عن هضم النشويات، فيقلل جزئياً تحويل النشويات المعقدة إلى سكريات بسيطة ويمرر جزءاً منها إلى القولون كألياف."
         ],
         benefitsNl: [
-            "Remt tijdelijk het spijsverteringsenzym alfa-amylase dat zetmeel afbreekt in glucose",
-            "Blokkeert tot 60% van de calorie-opname uit complexe koolhydraten (pasta, brood, rijst, aardappelen)",
-            "Dempt acute bloedsuikerpieken en insuline-uitscheiding na zetmeelrijke maaltijden",
-            "Draagt bij aan gewichtsverlies zonder dat u complexe koolhydraten volledig hoeft te schrappen",
-            "Voedt gezonde darmbacteriën doordat onverteerd zetmeel als prebioticum fungeert"
+            "Een extract met het remmende eiwit faseolamine, dat het zetmeelverterende enzym alfa-amylase tijdelijk blokkeert; zo wordt complex zetmeel deels minder omgezet in enkelvoudige suikers en gaat een deel als vezel naar de dikke darm."
         ],
         benefitsEn: [
-            "Temporarily inhibits salivary and pancreatic alpha-amylase starch degradation",
-            "Blocks up to 60% of caloric absorption derived from complex dietary starches (pasta, rice, bread)",
-            "Blunts postprandial glucose surges and reactive insulin spikes following starchy meals",
-            "Promotes fat loss without requiring complete dietary starch elimination",
-            "Unabsorbed starch passes to the colon, acting as a beneficial prebiotic substrate"
+            "An extract containing the inhibitor protein phaseolamin, which temporarily blocks the starch-digesting enzyme alpha-amylase, partly reducing the conversion of complex starches into simple sugars and passing some of them to the colon as fibre."
         ],
         dosage: {
-            recommended: "1000-1500 ملغ (ويُفضَّل مستخلص Phase 2® المعياري)",
-            timing: "قبل الوجبة الغنية بالنشويات بـ5-10 دقائق",
-            frequency: "1-2 مرة يومياً مع الوجبات النشوية"
+            recommended: "1000–1500 ملغ",
+            timing: "قبل الوجبات الغنية بالنشويات بـ 10–15 دقيقة مع كأس ماء",
+            frequency: "1–2 مرة يومياً مع الوجبات النشوية"
         },
         dosageNl: {
-            recommended: "1000-1500 mg (kies voor gepatenteerd Phase 2® extract)",
-            timing: "5-10 minuten direct voor een zetmeelrijke maaltijd met een groot glas water",
-            frequency: "1-2x per dag bij koolhydraatrijke maaltijden"
+            recommended: "1000–1500 mg",
+            timing: "10–15 minuten voor zetmeelrijke maaltijden met een glas water",
+            frequency: "1–2 keer per dag bij zetmeelrijke maaltijden"
         },
         dosageEn: {
-            recommended: "1000-1500 mg (Phase 2® standardized extract preferred)",
-            timing: "5-10 minutes prior to a starch-heavy meal with water",
-            frequency: "1-2 times daily with starchy meals"
+            recommended: "1000–1500 mg",
+            timing: "10–15 minutes before starchy meals with a glass of water",
+            frequency: "1–2 times daily with starchy meals"
         },
+        forms: "المستخلص المعياري لدرجة تثبيط الأميليز والمدروس سريرياً (مثل Phase 2®)، وتجنب المساحيق الخام غير المعايرة.",
+        formsNl: "Extract gestandaardiseerd op amylaseremmende activiteit en klinisch onderzocht (zoals Phase 2®); vermijd niet-gestandaardiseerde ruwe poeders.",
+        formsEn: "Extract standardized for amylase-inhibiting activity and clinically studied (such as Phase 2®); avoid unstandardized raw powders.",
         warnings: [
-            "قد يسبب غازات وانتفاخ",
-            "فعال فقط مع النشويات (ليس السكريات)",
-            "لا يُعفيك من اتباع دايت",
-            "اختر منتج المرحلة 2 للجودة"
+            "يعمل على النشويات المعقدة فقط، وليس على السكريات البسيطة",
+            "قد يسبب غازات وانتفاخاً وليونة في البراز",
+            "لا يغني عن نظام غذائي متوازن"
         ],
         warningsNl: [
-            "WERKT UITSLUITEND BIJ ZETMEEL: Heeft GEEN effect op eenvoudige suikers (zoals snoep, frisdrank of tafelsuiker)",
-            "Kan in het begin milde winderigheid of een opgeblazen gevoel geven door fermentatie van zetmeel in de dikke darm",
-            "Geen vrijbrief om onbeperkt te overeten"
+            "Het werkt alleen op complex zetmeel, niet op enkelvoudige suikers",
+            "Kan winderigheid, een opgeblazen gevoel en dunne ontlasting geven",
+            "Het vervangt geen evenwichtig voedingspatroon"
         ],
         warningsEn: [
-            "EFFECTIVE ON STARCH ONLY: Does NOT block simple mono- or disaccharide sugars (soda, candy, sucrose)",
-            "May cause transient flatulence or gas as unabsorbed starch ferments in the colon",
-            "Not a license for caloric gluttony"
+            "It only works on complex starches, not on simple sugars",
+            "May cause gas, bloating and loose stools",
+            "It does not replace a balanced diet"
         ],
-        interactions: "قد يتفاعل مع أدوية السكري - استشر طبيبك",
-        interactionsNl: "Kan de bloedsuiker verlagen; let op bij gelijktijdig gebruik van diabetesmedicatie.",
-        interactionsEn: "May lower post-meal glucose; monitor if taking anti-diabetic medications.",
-        naturalSources: "الفاصوليا البيضاء النيئة (غير مستحب)",
-        naturalSourcesNl: "Witte bonen (Phaseolus vulgaris).",
-        naturalSourcesEn: "White kidney beans (Phaseolus vulgaris)."
+        interactions: "قد يخفض السكر بعد الوجبات النشوية؛ تُراقب القراءات مع أدوية السكري والإنسولين.",
+        interactionsNl: "Het kan de bloedsuiker na zetmeelrijke maaltijden verlagen; controleer je waarden bij diabetesmedicatie en insuline.",
+        interactionsEn: "It may lower blood sugar after starchy meals; monitor readings with diabetes medication and insulin.",
+        naturalSources: "الفاصوليا البيضاء (Phaseolus vulgaris) المطبوخة جيداً",
+        naturalSourcesNl: "Goed gekookte witte bonen (Phaseolus vulgaris)",
+        naturalSourcesEn: "Well-cooked white kidney beans (Phaseolus vulgaris)",
+        groupLabel: {
+            ar: "الأيض وإدارة الوزن",
+            en: "Metabolism & weight management",
+            nl: "Stofwisseling & gewichtsbeheersing"
+        },
+        references: [
+            "Barrett ML, Udani JK. Nutr J 2011 (review of clinical studies) — PMID: 21414227"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 95,
         slug: "glucomannan",
-        name: "جلوكومانان",
-        englishName: "Glucomannan",
-        nameNl: "Glucomannan (Konjac Vezel)",
+        name: "ألياف الغلوكومانان النقية للشبع وإدارة الوزن",
+        englishName: "Pure Glucomannan (Konjac Root Fibre)",
+        nameNl: "Glucomannaan Vezels (Konjac)",
         category: "تخسيس",
         icon: "🌾",
-        summary: "ألياف قابلة للذوبان - يزيد الشبع ويقلل امتصاص الدهون والسكر",
-        summaryNl: "Door de EFSA goedgekeurde wateroplosbare supervezel die uitzet in de maag voor langdurige verzadiging en gewichtsverlies.",
-        summaryEn: "EFSA-approved viscous water-soluble dietary fiber expanding in the stomach for profound satiety and weight loss.",
+        summary: "ألياف عالية الذوبان من جذور نبات الكونجاك، تمتص الماء وتتمدد لتشكل هلاماً يملأ المعدة ويبطئ إفراغها؛ يساهم الغلوكومانان في إنقاص الوزن في سياق نظام غذائي منخفض السعرات (ادعاء معتمد من EFSA عند 3 غ يومياً).",
+        summaryNl: "Een goed oplosbare vezel uit de konjacwortel die water opneemt en opzwelt tot een gel die de maag vult en de lediging vertraagt; glucomannaan draagt bij tot gewichtsverlies in het kader van een energiearm dieet (door EFSA toegestane claim bij 3 g per dag).",
+        summaryEn: "A highly soluble fibre from konjac root that absorbs water and swells into a gel that fills the stomach and slows emptying; glucomannan contributes to weight loss in the context of an energy-restricted diet (EFSA-authorised claim at 3 g a day).",
         tags: [
             "ألياف",
             "شبع",
             "وزن"
         ],
         benefits: [
-            "يمتص الماء ويتمدد بالمعدة (شبع)",
-            "يقلل امتصاص الدهون والسكريات",
-            "يخفض الكوليسترول",
-            "يحسن صحة الأمعاء",
-            "يساعد في إنقاص الوزن",
-            "يخفض سكر الدم"
+            "ألياف عالية الذوبان من جذور نبات الكونجاك، تمتص الماء وتتمدد لتشكل هلاماً يملأ المعدة ويبطئ إفراغها؛ يساهم الغلوكومانان في إنقاص الوزن في سياق نظام غذائي منخفض السعرات (ادعاء معتمد من EFSA عند 3 غ يومياً)."
         ],
         benefitsNl: [
-            "Kan tot wel 50x zijn eigen gewicht in water absorberen en vormt een dikke verzadigende gel in de maag",
-            "Wetenschappelijk bewezen door de EFSA: ondersteunt gewichtsverlies bij een caloriebeperkt dieet",
-            "Verlaagt LDL-cholesterol en totaal cholesterol via galzuurbinding",
-            "Vertraagt de maagontlediging waardoor glucose langzamer en stabieler in het bloed terechtkomt",
-            "Krachtig prebioticum dat de groei van gezonde darmbacteriën (Bifidobacteriën) stimuleert"
+            "Een goed oplosbare vezel uit de konjacwortel die water opneemt en opzwelt tot een gel die de maag vult en de lediging vertraagt; glucomannaan draagt bij tot gewichtsverlies in het kader van een energiearm dieet (door EFSA toegestane claim bij 3 g per dag)."
         ],
         benefitsEn: [
-            "Absorbs up to 50 times its dry weight in water, creating a voluminous viscous gel in the stomach",
-            "Officially recognized by the European Food Safety Authority (EFSA) for aiding weight loss",
-            "Significantly reduces LDL and total cholesterol by binding bile acids",
-            "Prolongs gastric emptying time, flattening postprandial glucose spikes",
-            "Exceptional prebiotic promoting bifidobacteria and butyrate production"
+            "A highly soluble fibre from konjac root that absorbs water and swells into a gel that fills the stomach and slows emptying; glucomannan contributes to weight loss in the context of an energy-restricted diet (EFSA-authorised claim at 3 g a day)."
         ],
         dosage: {
-            recommended: "1 غ (ثلاث مرات يومياً، 3 غ إجمالاً وفق إرشادات EFSA)",
-            timing: "قبل الوجبات بـ15 دقيقة مع كوبين ماء",
-            frequency: "3 مرات يومياً قبل الوجبات"
+            recommended: "1 غ ثلاث مرات يومياً (3 غ إجمالاً وفق EFSA)",
+            timing: "قبل الوجبات الرئيسية بـ 15–30 دقيقة مع كأسين كبيرين من الماء (500 مل)",
+            frequency: "3 مرات يومياً"
         },
         dosageNl: {
-            recommended: "1 g (driemaal daags, totaal 3 g per dag volgens EFSA-richtlijn)",
-            timing: "15-30 minuten voor de maaltijd met minimaal 1 tot 2 grote glazen water (250-400 ml)",
-            frequency: "3x per dag voor de hoofdmaaltijden"
+            recommended: "1 g drie keer per dag (3 g in totaal, volgens EFSA)",
+            timing: "15–30 minuten voor de hoofdmaaltijden met twee grote glazen water (500 ml)",
+            frequency: "3 keer per dag"
         },
         dosageEn: {
-            recommended: "1 g (three times daily, 3 g total per EFSA guidelines)",
-            timing: "15-30 minutes pre-meal with 1-2 large glasses of water (250-400 ml)",
-            frequency: "3 times daily before meals"
+            recommended: "1 g three times daily (3 g in total, per EFSA)",
+            timing: "15–30 minutes before main meals with two large glasses of water (500 ml)",
+            frequency: "3 times daily"
         },
+        forms: "كبسولات أو أكياس مسحوق الغلوكومانان النقي 100%، تُبلع أو تُذاب في الماء فوراً قبل أن تتحول إلى هلام.",
+        formsNl: "Capsules of sachets met 100% zuiver glucomannaan, direct doorslikken of in water oplossen voordat het geleert.",
+        formsEn: "Capsules or sachets of 100% pure glucomannan, swallowed or dissolved in water straight away before it gels.",
         warnings: [
-            "اشرب ماء كثير معه (خطر اختناق)",
-            "لا تأخذه قبل النوم",
-            "قد يسبب انتفاخ وغازات في البداية",
-            "قد يقلل امتصاص الأدوية - خذه قبل/بعد الدواء بساعة"
+            "تحذير الاختناق (EFSA): لا يُبلع دون كمية وفيرة من الماء لأنه قد ينتفخ في المريء ويسد الحلق، خصوصاً لمن لديهم صعوبة في البلع",
+            "لا يُؤخذ مباشرة قبل النوم",
+            "قد يسبب انتفاخاً وغازات في البداية"
         ],
         warningsNl: [
-            "STRIKTE VEILIGHEIDSWAARSCHUWING: ALTIJD innemen met minimaal 1-2 volle glazen water ter voorkoming van slokdarmverstopping",
-            "Nooit als droog poeder doorslikken of direct voor het slapengaan innemen",
-            "Neem medicijnen minimaal 1 uur vóór of 4 uur ná glucomannan in (vezels vertragen medicijnopname)"
+            "Waarschuwing verstikking (EFSA): nooit innemen zonder veel water, omdat het in de slokdarm kan opzwellen en de keel kan blokkeren, vooral bij slikproblemen",
+            "Niet vlak voor het slapengaan innemen",
+            "Kan in het begin een opgeblazen gevoel en winderigheid geven"
         ],
         warningsEn: [
-            "MANDATORY SAFETY: ALWAYS consume with 1-2 full glasses of water to avoid esophageal choking hazard",
-            "Never swallow dry powder; do not ingest immediately before lying down",
-            "Separate prescription medications by 1 hour before or 4 hours after (fiber hinders drug uptake)"
+            "Choking warning (EFSA): never swallow it without plenty of water, as it can swell in the oesophagus and block the throat, especially in people with swallowing difficulties",
+            "Do not take it right before bed",
+            "May cause bloating and gas at first"
         ],
-        interactions: "قد يقلل امتصاص الأدوية - خذه منفصلاً",
-        interactionsNl: "Vertraagt of blokkeert de absorptie van vrijwel alle orale geneesmiddelen.",
-        interactionsEn: "Impairs intestinal absorption of oral pharmaceuticals; separate dosing widely.",
-        naturalSources: "جذور نبات الكونجاك (konjac)",
-        naturalSourcesNl: "Wortelknollen van de Konjac-plant (Amorphophallus konjac).",
-        naturalSourcesEn: "Tubers of the Asian Konjac plant (Amorphophallus konjac)."
+        interactions: "الهلام يعيق امتصاص الأدوية الفموية؛ تُؤخذ الأدوية قبله بساعتين على الأقل أو بعده بـ 4 ساعات (خصوصاً أدوية السكري والضغط وحبوب منع الحمل).",
+        interactionsNl: "De gel belemmert de opname van orale medicijnen; neem medicijnen minstens twee uur ervoor of vier uur erna (vooral diabetes- en bloeddrukmiddelen en de pil).",
+        interactionsEn: "The gel hinders the absorption of oral medicines; take medicines at least two hours before it or four hours after it (especially diabetes and blood pressure drugs and birth control pills).",
+        naturalSources: "جذور الكونجاك (تُستخدم في معكرونة الشيراتاكي والهلام الآسيوي)",
+        naturalSourcesNl: "Konjacwortel (gebruikt in shiratakinoedels en Aziatische gelei)",
+        naturalSourcesEn: "Konjac root (used in shirataki noodles and Asian jellies)",
+        groupLabel: {
+            ar: "الأيض وإدارة الوزن",
+            en: "Metabolism & weight management",
+            nl: "Stofwisseling & gewichtsbeheersing"
+        },
+        references: [
+            "EFSA Journal 2010;8(10):1798 (glucomannan and reduction of body weight)",
+            "Sood N et al. Am J Clin Nutr 2008 (systematic review) — PMID: 18842808"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 96,
         slug: "valerian-root",
-        name: "جذور الفاليريان",
-        englishName: "Valerian Root",
-        nameNl: "Valeriaanwortel (Valeriana officinalis)",
+        name: "خلاصة جذور الناردين الطبيعية للنوم والاسترخاء",
+        englishName: "Valerian Root Standardized Extract",
+        nameNl: "Valeriaanwortel Extract",
         category: "نوم-نفسية",
         icon: "🌿",
-        summary: "عشبة مهدئة طبيعية - تحسن النوم وتقلل القلق دون إدمان",
-        summaryNl: "Klassiek Europees fytotherapeuticum dat GABA verhoogt voor snellere inslaaptijd en diepe ontspanning zonder afhankelijkheid.",
-        summaryEn: "Classic European botanical elevating central GABA tone to shorten sleep latency and dissolve nervous tension without addiction.",
+        summary: "من أقدم الأعشاب المستخدمة للنوم في أوروبا، غنية بأحماض الفاليرينيك؛ تساهم في الحد من تفكك الناقل العصبي المهدئ GABA، مما يدعم تقصير زمن الدخول في النوم وجودته دون ترنح صباحي.",
+        summaryNl: "Een van de oudste kruiden voor de slaap in Europa, rijk aan valeriaanzuren; het helpt de afbraak van de kalmerende neurotransmitter GABA te beperken, wat sneller inslapen en een betere slaap ondersteunt zonder sufheid in de ochtend.",
+        summaryEn: "One of the oldest herbs used for sleep in Europe, rich in valerenic acids; it helps limit the breakdown of the calming neurotransmitter GABA, supporting faster sleep onset and better sleep without morning grogginess.",
         tags: [
             "نوم",
             "قلق",
@@ -6998,76 +6949,75 @@ const supplementsData = [
             "أرق"
         ],
         benefits: [
-            "يحسن جودة النوم ويقلل الأرق",
-            "يقلل القلق والتوتر",
-            "يقلل الوقت اللازم للنوم",
-            "بديل طبيعي للمهدئات",
-            "لا يسبب إدمان",
-            "يحسن المزاج"
+            "من أقدم الأعشاب المستخدمة للنوم في أوروبا، غنية بأحماض الفاليرينيك؛ تساهم في الحد من تفكك الناقل العصبي المهدئ GABA، مما يدعم تقصير زمن الدخول في النوم وجودته دون ترنح صباحي."
         ],
         benefitsNl: [
-            "Verkort de tijd om in slaap te vallen en verbetert de algehele slaapkwaliteit",
-            "Remt de afbraak van GABA in de hersenen en verlicht nervositeit en examenspanning",
-            "Natuurlijk alternatief voor chemische slaapmedicatie zonder risico op fysieke afhankelijkheid",
-            "Ontspant fysieke spierspanning en maagkrampen veroorzaakt door stress",
-            "Laat de natuurlijke slaapfasen (REM- en diepe slaap) intact"
+            "Een van de oudste kruiden voor de slaap in Europa, rijk aan valeriaanzuren; het helpt de afbraak van de kalmerende neurotransmitter GABA te beperken, wat sneller inslapen en een betere slaap ondersteunt zonder sufheid in de ochtend."
         ],
         benefitsEn: [
-            "Shortens sleep onset latency and fosters restful nocturnal sleep continuity",
-            "Inhibits enzymatic GABA breakdown, quelling acute nervous agitation and restlessness",
-            "Non-addictive natural alternative to pharmaceutical hypnotics without tolerance",
-            "Relieves somatic muscular tension and stress-induced visceral cramping",
-            "Preserves normal physiological REM and slow-wave sleep architecture"
+            "One of the oldest herbs used for sleep in Europe, rich in valerenic acids; it helps limit the breakdown of the calming neurotransmitter GABA, supporting faster sleep onset and better sleep without morning grogginess."
         ],
         dosage: {
-            recommended: "300-600 ملغ مستخلص معياري (0.8% حمض الفاليرينيك)",
-            timing: "قبل النوم بـ30-120 دقيقة",
+            recommended: "300–600 ملغ من المستخلص المعياري (0.8% حمض الفاليرينيك)",
+            timing: "قبل النوم بـ 30–120 دقيقة",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "300-600 mg gestandaardiseerd extract (0.8% valereenzuur)",
-            timing: "30 tot 60 minuten voor het slapengaan met een glas water",
-            frequency: "1x per dag 's avonds"
+            recommended: "300–600 mg gestandaardiseerd extract (0,8% valeriaanzuur)",
+            timing: "30–120 minuten voor het slapengaan",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "300-600 mg standardized extract (0.8% valerenic acid)",
-            timing: "30-60 minutes before bedtime with water",
-            frequency: "Once daily at night"
+            recommended: "300–600 mg standardized extract (0.8% valerenic acid)",
+            timing: "30–120 minutes before bed",
+            frequency: "Once daily"
         },
+        forms: "كبسولات المستخلص الجاف المعياري لحمض الفاليرينيك، لثبات الجرعة وتجنب الرائحة القوية للجذور الخام.",
+        formsNl: "Capsules met droog extract gestandaardiseerd op valeriaanzuur, voor een constante dosis zonder de sterke geur van de ruwe wortel.",
+        formsEn: "Dry extract capsules standardized for valerenic acid, for a consistent dose without the strong smell of the raw root.",
         warnings: [
-            "آمن للاستخدام طويل المدى",
-            "رائحته قوية وغير محببة",
-            "قد يسبب صداع أو دوخة (نادر)",
-            "لا تقود بعد تناوله"
+            "لا تقد السيارة ولا تشغّل الآلات بعد تناوله",
+            "قد يسبب صداعاً خفيفاً أو أحلاماً واضحة لدى قلة",
+            "يُمنع للأطفال دون 12 عاماً وأثناء الحمل والرضاعة"
         ],
         warningsNl: [
-            "Heeft een penetrante, typische 'oude sokken' geur door valereenzuur; capsules genieten de voorkeur boven thee",
-            "Niet besturen van voertuigen of machines binnen enkele uren na inname",
-            "Bouwt geleidelijk op: de meest consistente slaapverbetering treedt op na 1-2 weken dagelijks gebruik"
+            "Rijd geen auto en bedien geen machines na inname",
+            "Kan bij enkelen lichte hoofdpijn of levendige dromen geven",
+            "Niet voor kinderen onder de 12, of tijdens zwangerschap en borstvoeding"
         ],
         warningsEn: [
-            "Distinct pungent earthy aroma due to volatile isovaleric acid; softgels/capsules are preferred",
-            "Do not drive or operate machinery following consumption",
-            "Clinical sleep improvements build cumulatively over 1-2 weeks of nightly use"
+            "Do not drive or operate machinery after taking it",
+            "May cause a mild headache or vivid dreams in a few people",
+            "Not for children under 12, or during pregnancy and breastfeeding"
         ],
-        interactions: "قد يتفاعل مع المهدئات والكحول - استشر طبيبك",
-        interactionsNl: "Versterkt de werking van alcohol, benzodiazepinen en sederende antihistaminica.",
-        interactionsEn: "Additively potentiates central sedatives, alcohol, and benzodiazepines.",
-        naturalSources: "جذور نبات الفاليريان",
-        naturalSourcesNl: "Wortelstokken van Valeriana officinalis.",
-        naturalSourcesEn: "Root and rhizomes of Valeriana officinalis."
+        interactions: "يعزز مفعول المنومات والمهدئات ومضادات القلق (البنزوديازيبينات) والكحول؛ وقد يتفاعل مع الأدوية التي تُستقلب عبر إنزيمات CYP الكبدية.",
+        interactionsNl: "Het versterkt slaappillen, kalmerende middelen, angstremmers (benzodiazepinen) en alcohol, en kan interageren met medicijnen die via CYP-leverenzymen worden afgebroken.",
+        interactionsEn: "It strengthens sleeping pills, sedatives, anti-anxiety drugs (benzodiazepines) and alcohol, and may interact with drugs metabolized by liver CYP enzymes.",
+        naturalSources: "جذور نبات الناردين (تُستخدم كمستخلص أو شاي)",
+        naturalSourcesNl: "Valeriaanwortel (gebruikt als extract of thee)",
+        naturalSourcesEn: "Valerian root (used as an extract or tea)",
+        groupLabel: {
+            ar: "النوم والاسترخاء",
+            en: "Sleep & relaxation",
+            nl: "Slaap & ontspanning"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Valeriana officinalis L., radix",
+            "Bent S et al. Am J Med 2006 (meta-analysis) — PMID: 17145239"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 97,
         slug: "passionflower",
-        name: "زهرة الآلام",
-        englishName: "Passionflower",
-        nameNl: "Passiebloem (Passiflora incarnata)",
+        name: "خلاصة زهرة الآلام (الباسيفلورا) لتهدئة التوتر",
+        englishName: "Passionflower Extract (Passiflora incarnata)",
+        nameNl: "Passiebloem Extract (Passiflora)",
         category: "نوم-نفسية",
         icon: "🌸",
-        summary: "زهرة مهدئة - تقلل القلق وتحسن النوم بلطف",
-        summaryNl: "Zachtaardig maar krachtig rustgevend kruid dat piekeren en angst dempt en zorgt voor een vredige nachtrust.",
-        summaryEn: "Gentle yet potent botanical anxiolytic quieting nocturnal mental chatter and restoring tranquil sleep.",
+        summary: "نبتة غنية بالفلافونويدات (مثل الكريسين والفيتكسين)؛ تساهم في تعديل نشاط مستقبلات GABA في الدماغ، مما يدعم تخفيف الشعور بالتوتر والتململ دون التأثير على اليقظة الذهنية.",
+        summaryNl: "Een plant die rijk is aan flavonoïden (zoals chrysine en vitexine); het moduleert de activiteit van GABA-receptoren in de hersenen, wat gevoelens van spanning en onrust helpt verlichten zonder de alertheid te beïnvloeden.",
+        summaryEn: "A plant rich in flavonoids (such as chrysin and vitexin); it helps modulate GABA receptor activity in the brain, supporting relief from feelings of tension and restlessness without affecting mental alertness.",
         tags: [
             "نوم",
             "قلق",
@@ -7076,77 +7026,72 @@ const supplementsData = [
             "عشبة"
         ],
         benefits: [
-            "تقلل القلق والتوتر بفعالية",
-            "تحسن جودة النوم",
-            "مهدئ لطيف للجهاز العصبي",
-            "تقلل أعراض انسحاب المواد",
-            "تخفف آلام الأعصاب",
-            "مضاد للتشنجات"
+            "نبتة غنية بالفلافونويدات (مثل الكريسين والفيتكسين)؛ تساهم في تعديل نشاط مستقبلات GABA في الدماغ، مما يدعم تخفيف الشعور بالتوتر والتململ دون التأثير على اليقظة الذهنية."
         ],
         benefitsNl: [
-            "Klinisch bewezen werkzaamheid tegen gegeneraliseerde angstgevoelens (vergelijkbaar met oxazepam)",
-            "Stopt malende gedachten en piekeren bij het inslapen",
-            "Verhoogt de GABA-activiteit in het brein voor rustige spierontspanning",
-            "Verlicht nerveuze maagkrampen en prikkelbaarheid",
-            "Uitstekend te combineren met valeriaan en citroenmelisse"
+            "Een plant die rijk is aan flavonoïden (zoals chrysine en vitexine); het moduleert de activiteit van GABA-receptoren in de hersenen, wat gevoelens van spanning en onrust helpt verlichten zonder de alertheid te beïnvloeden."
         ],
         benefitsEn: [
-            "Clinically comparable to mild benzodiazepines in reducing generalized anxiety scores",
-            "Calms circular ruminating thoughts and mental overactivity when trying to sleep",
-            "Modulates GABA-A receptor sites fostering somatic physical tranquility",
-            "Relieves stress-induced gastrointestinal spasms and irritability",
-            "Remarkable sleep synergy when stacked with valerian and lemon balm"
+            "A plant rich in flavonoids (such as chrysin and vitexin); it helps modulate GABA receptor activity in the brain, supporting relief from feelings of tension and restlessness without affecting mental alertness."
         ],
         dosage: {
-            recommended: "250-500 ملغ مستخلص (أو 2-3 أكواب من منقوع زهرة الآلام)",
-            timing: "قبل النوم بـ1 ساعة",
-            frequency: "1-2 مرة يومياً"
+            recommended: "250–500 ملغ من المستخلص المعياري (أو منقوع الشاي)",
+            timing: "مرتين يومياً أو قبل النوم بساعة",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "250-500 mg extract (of 2-3 koppen passiebloemthee)",
-            timing: "Overdag bij acute stress of 45 minuten voor het slapengaan",
-            frequency: "1-2x per dag"
+            recommended: "250–500 mg gestandaardiseerd extract (of een kruidenthee)",
+            timing: "2 keer per dag of een uur voor het slapengaan",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "250-500 mg extract (or 2-3 cups brewed passionflower infusion)",
-            timing: "Daytime for acute stress or 45 mins before bed",
-            frequency: "1-2 times daily"
+            recommended: "250–500 mg standardized extract (or an infusion)",
+            timing: "Twice daily or an hour before bed",
+            frequency: "1–2 times daily"
         },
+        forms: "الكبسولات المعيارية للفلافونويدات (فيتكسين وإيزوفيتكسين) أو المستخلصات السائلة المركزة، وتُجمع غالباً مع الناردين والمليسة.",
+        formsNl: "Capsules gestandaardiseerd op flavonoïden (vitexine en isovitexine) of geconcentreerde vloeibare extracten, vaak gecombineerd met valeriaan en citroenmelisse.",
+        formsEn: "Capsules standardized for flavonoids (vitexin and isovitexin) or concentrated liquid extracts, often combined with valerian and lemon balm.",
         warnings: [
-            "آمنة جداً",
-            "قد تسبب نعاس - لا تقود",
-            "تجنبها إذا كنت حاملاً",
-            "تعمل بشكل أفضل مع الناردين أو المليسة",
-            "تجنبه مع الكحول والمهدئات"
+            "قد تسبب نعاساً طفيفاً لدى البعض",
+            "تُمنع أثناء الحمل لاحتوائها على قلويدات قد تحفز انقباضات الرحم"
         ],
         warningsNl: [
-            "Zeer veilig; veroorzaakt geen sufheid of 'katergevoel' in de ochtend",
-            "STRIKT CONTRA-INDICATIE: Niet gebruiken tijdens de zwangerschap (kan baarmoedersamentrekkingen triggeren)",
-            "Niet combineren met alcohol of zware verdovende middelen"
+            "Kan bij sommigen lichte slaperigheid geven",
+            "Niet gebruiken tijdens de zwangerschap, omdat het alkaloïden bevat die baarmoedercontracties kunnen uitlokken"
         ],
         warningsEn: [
-            "Exceptionally gentle with zero morning sedation or cognitive hangover",
-            "CONTRAINDICATION: Strictly avoid during pregnancy (uterine stimulating alkaloids)",
-            "Do not consume with alcohol or central nervous system depressants"
+            "May cause slight drowsiness in some people",
+            "Not for use during pregnancy, as it contains alkaloids that may trigger uterine contractions"
         ],
-        interactions: "قد تتفاعل مع المهدئات - استشر طبيبك",
-        interactionsNl: "Versterkt sedativa, slaapmiddelen en bloeddrukverlagers. • Versterkt de werking van alcohol, benzodiazepinen en voorgeschreven slaapmiddelen.",
-        interactionsEn: "Additively potentiates prescription sedatives and anxiolytics. • Additively potentiates central sedatives, alcohol, and prescription sleep medications.",
-        naturalSources: "أوراق وأزهار نبات Passiflora incarnata",
-        naturalSourcesNl: "Bovengrondse bloeiende delen van Passiflora incarnata.",
-        naturalSourcesEn: "Aerial flowering parts of Passiflora incarnata."
+        interactions: "تعزز فاعلية المهدئات ومضادات القلق ومسكنات الألم؛ تُتجنب مع الكحول ومضادات الاكتئاب من فئة MAOIs.",
+        interactionsNl: "Het versterkt kalmerende middelen, angstremmers en pijnstillers; vermijd het met alcohol en MAO-remmers.",
+        interactionsEn: "It strengthens sedatives, anti-anxiety drugs and painkillers; avoid it with alcohol and MAOI antidepressants.",
+        naturalSources: "أوراق وأزهار نبات الباسيفلورا (تُستخدم كشاي أو مستخلص)",
+        naturalSourcesNl: "Bladeren en bloemen van de passiebloem (gebruikt als thee of extract)",
+        naturalSourcesEn: "Passionflower leaves and flowers (used as a tea or extract)",
+        groupLabel: {
+            ar: "التوتر والاسترخاء",
+            en: "Stress & relaxation",
+            nl: "Stress & ontspanning"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Passiflora incarnata L., herba",
+            "Miyasaka LS et al. Cochrane Database Syst Rev 2007 — PMID: 17253512"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 98,
         slug: "lemon-balm",
-        name: "المليسة (بلسم الليمون)",
-        englishName: "Lemon Balm",
-        nameNl: "Citroenmelisse (Melissa officinalis)",
+        name: "مستخلص أوراق المليسة المعياري لصفاء المزاج",
+        englishName: "Lemon Balm Leaf Extract (Melissa officinalis)",
+        nameNl: "Citroenmelisse Extract",
         category: "نوم-نفسية",
         icon: "🍋",
-        summary: "عشبة مهدئة برائحة الليمون - تقلل القلق والأرق وتحسن المزاج",
-        summaryNl: "Aromatisch kalmerend kruid dat GABA-afbraak remt, alertheid verbetert en stressgerelateerde maagklachten verzacht.",
-        summaryEn: "Aromatic calming herb inhibiting GABA transaminase, lifting cognitive mood, and soothing stress-induced indigestion.",
+        summary: "عشبة ليمونية الرائحة من الفصيلة الشفوية غنية بحمض الروزمارينيك؛ تشير الدراسات إلى أنها تثبط إنزيم GABA ترانس أميناز فترفع مستوى GABA المهدئ في الدماغ، وتهدئ التقلصات الهضمية المرتبطة بالتوتر.",
+        summaryNl: "Een naar citroen geurend kruid uit de lipbloemenfamilie, rijk aan rozemarijnzuur; studies wijzen erop dat het GABA-transaminase remt, waardoor het kalmerende GABA in de hersenen stijgt, en dat het stressgerelateerde darmkrampen verzacht.",
+        summaryEn: "A lemon-scented herb of the mint family rich in rosmarinic acid; studies suggest it inhibits GABA transaminase, raising calming GABA in the brain, and soothes stress-related digestive cramps.",
         tags: [
             "نوم",
             "قلق",
@@ -7155,77 +7100,75 @@ const supplementsData = [
             "عشبة"
         ],
         benefits: [
-            "تقلل القلق والتوتر",
-            "تحسن المزاج",
-            "تحسن جودة النوم",
-            "تحسن التركيز والذاكرة",
-            "مضادة للفيروسات (خاصة الهربس)",
-            "تخفف اضطرابات الجهاز الهضمي"
+            "عشبة ليمونية الرائحة من الفصيلة الشفوية غنية بحمض الروزمارينيك؛ تشير الدراسات إلى أنها تثبط إنزيم GABA ترانس أميناز فترفع مستوى GABA المهدئ في الدماغ، وتهدئ التقلصات الهضمية المرتبطة بالتوتر."
         ],
         benefitsNl: [
-            "Remt het enzym GABA-transaminase waardoor GABA langer actief blijft in de hersenen",
-            "Verlicht acute mentale stress en examenangst terwijl cognitieve helderheid behouden blijft",
-            "Kalmeert nerveuze hartkloppingen en stressgerelateerde darmkrampen",
-            "Verbetert alertheid en geheugenprestaties dankzij milde acetylcholinerge werking",
-            "Krachtig antiviraal tegen het herpes simplex virus (zowel oraal als lokaal)"
+            "Een naar citroen geurend kruid uit de lipbloemenfamilie, rijk aan rozemarijnzuur; studies wijzen erop dat het GABA-transaminase remt, waardoor het kalmerende GABA in de hersenen stijgt, en dat het stressgerelateerde darmkrampen verzacht."
         ],
         benefitsEn: [
-            "Inhibits GABA transaminase enzyme, preserving central GABAergic calming tone",
-            "Attenuates acute laboratory-induced psychological stress while improving cognitive speed",
-            "Soothes stress-induced palpitations and visceral gastrointestinal spasms",
-            "Enhances memory and problem-solving through mild cholinergic receptor binding",
-            "Potent antiviral efficacy against Herpes simplex outbreaks"
+            "A lemon-scented herb of the mint family rich in rosmarinic acid; studies suggest it inhibits GABA transaminase, raising calming GABA in the brain, and soothes stress-related digestive cramps."
         ],
         dosage: {
-            recommended: "300-600 ملغ (مستخلص)",
-            timing: "صباحاً للقلق، مساءً للنوم",
-            frequency: "1-2 مرة يومياً"
+            recommended: "300–600 ملغ يومياً",
+            timing: "مع الوجبات، أو قبل النوم بساعة لدعم الاسترخاء",
+            frequency: "مقسمة على 1–2 جرعة"
         },
         dosageNl: {
-            recommended: "300-600 mg gestandaardiseerd extract (met rozemarijnzuur)",
-            timing: "'s Ochtends bij stress of 's avonds na het eten voor een ontspannen nachtrust",
-            frequency: "1-2x per dag"
+            recommended: "300–600 mg per dag",
+            timing: "Bij de maaltijd, of een uur voor het slapengaan om ontspanning te ondersteunen",
+            frequency: "Verdeeld over 1–2 doses"
         },
         dosageEn: {
-            recommended: "300-600 mg standardized extract (rosmarinic acid)",
-            timing: "Morning for daytime calm or evening for sleep prep",
-            frequency: "1-2 times daily"
+            recommended: "300–600 mg daily",
+            timing: "With meals, or an hour before bed to support relaxation",
+            frequency: "Split into 1–2 doses"
         },
+        forms: "مستخلص الأوراق المعياري لحمض الروزمارينيك (2–5% على الأقل، مثل Cyracos®)، أو شاي الأوراق.",
+        formsNl: "Bladextract gestandaardiseerd op rozemarijnzuur (minstens 2–5%, zoals Cyracos®), of thee van de bladeren.",
+        formsEn: "Leaf extract standardized for rosmarinic acid (at least 2–5%, such as Cyracos®), or leaf tea.",
         warnings: [
-            "آمنة جداً",
-            "قد تسبب نعاس خفيف",
-            "قد تخفض هرمونات الغدة الدرقية (نادر)",
-            "طعمها ورائحتها لطيفة"
+            "يُراعى الحذر لمن لديهم قصور شديد في الغدة الدرقية",
+            "يُفضَّل تجنب المكملات المركزة أثناء الحمل والرضاعة",
+            "قد تسبب نعاساً خفيفاً"
         ],
         warningsNl: [
-            "Heerlijke frisse citroengeur en -smaak; ook uitstekend als verse kruidenthee",
-            "Voorzichtigheid geboden bij een klinisch trage schildklier (kan TSH-binding licht remmen)",
-            "Zeer veilig voor volwassenen en adolescenten"
+            "Wees voorzichtig bij een ernstig trage schildklier",
+            "Vermijd geconcentreerde supplementen liever tijdens zwangerschap en borstvoeding",
+            "Kan licht slaperig maken"
         ],
         warningsEn: [
-            "Delightful botanical citrus aroma and flavor; excellent as brewed loose-leaf tea",
-            "Caution in severe hypothyroidism (may mildly antagonize TSH binding)",
-            "Exceptionally safe across age groups",
-            "Pleasant natural citrus aroma; standardized extracts deliver superior potency over light teas"
+            "Take care if you have a severely underactive thyroid",
+            "Best to avoid concentrated supplements during pregnancy and breastfeeding",
+            "May cause mild drowsiness"
         ],
-        interactions: "قد تتفاعل مع أدوية الغدة الدرقية - استشر طبيبك • قد يتفاعل مع أدوية الغدة الدرقية والمهدئات - استشر الطبيب",
-        interactionsNl: "Kan schildkliermedicatie (levothyroxine) en sedativa beïnvloeden.",
-        interactionsEn: "May interact with thyroid hormone replacement therapy and sedatives.",
-        naturalSources: "أوراق نبات Melissa officinalis (شاي)",
-        naturalSourcesNl: "Bladeren van Melissa officinalis.",
-        naturalSourcesEn: "Leaves of Melissa officinalis (Lemon balm)."
+        interactions: "قد تتداخل مع أدوية الغدة الدرقية، إذ تشير دراسات إلى أنها قد تثبط ارتباط الهرمون المنبه للدرقية (TSH) بمستقبلاته. وتعزز مفعول المنومات والمهدئات.",
+        interactionsNl: "Het kan interfereren met schildkliermedicatie, omdat studies erop wijzen dat het de binding van schildklierstimulerend hormoon (TSH) aan zijn receptoren kan remmen. Het versterkt slaappillen en kalmerende middelen.",
+        interactionsEn: "It may interfere with thyroid medication, as studies suggest it can inhibit the binding of thyroid-stimulating hormone (TSH) to its receptors. It strengthens sleeping pills and sedatives.",
+        naturalSources: "أوراق المليسة الطازجة أو المجففة (تُستخدم كشاي أو في الطبخ)",
+        naturalSourcesNl: "Verse of gedroogde citroenmelisseblaadjes (gebruikt als thee of in de keuken)",
+        naturalSourcesEn: "Fresh or dried lemon balm leaves (used as a tea or in cooking)",
+        groupLabel: {
+            ar: "التوتر والاسترخاء",
+            en: "Stress & relaxation",
+            nl: "Stress & ontspanning"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Melissa officinalis L., folium",
+            "Scholey A et al. Nutrients 2014 — PMID: 25360512"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 99,
         slug: "vitamin-a",
-        name: "فيتامين A",
-        englishName: "Vitamin A (Retinol)",
-        nameNl: "Vitamine A (Retinylpalmitaat / Bètacaroteen)",
+        name: "فيتامين أ المتوازن (الريتينول مع البيتا كاروتين)",
+        englishName: "Vitamin A (Retinyl Palmitate & Beta-Carotene)",
+        nameNl: "Vitamine A Complex",
         category: "صحة-عامة",
         icon: "👁️",
-        summary: "فيتامين أساسي للنظر والمناعة والجلد",
-        summaryNl: "Essentiële vetoplosbare vitamine voor nachtzicht, epitheelherstel van huid en slijmvliezen, en immuunafweer.",
-        summaryEn: "Fundamental fat-soluble vitamin governing rhodopsin photoreceptor function, mucosal immunity, and epithelial differentiation.",
+        summary: "يساهم فيتامين A في الحفاظ على الرؤية الطبيعية، والوظيفة الطبيعية للجهاز المناعي، والأغشية المخاطية والجلد الطبيعي، وتمايز الخلايا (ادعاءات معتمدة من EFSA)؛ ويدخل في تركيب صبغة الرودوبسين المسؤولة عن الرؤية في الضوء الخافت.",
+        summaryNl: "Vitamine A draagt bij tot het behoud van een normaal gezichtsvermogen, een normale werking van het immuunsysteem, normale slijmvliezen en huid, en de celspecialisatie (door EFSA toegestane claims); het maakt deel uit van rodopsine, het pigment voor zien bij weinig licht.",
+        summaryEn: "Vitamin A contributes to the maintenance of normal vision, normal immune function, normal mucous membranes and skin, and cell specialisation (EFSA-authorised claims); it is part of rhodopsin, the pigment for vision in dim light.",
         tags: [
             "نظر",
             "مناعة",
@@ -7234,216 +7177,215 @@ const supplementsData = [
             "دم"
         ],
         benefits: [
-            "ضروري لصحة النظر (خاصة الرؤية الليلية)",
-            "يقوي جهاز المناعة",
-            "يحسن صحة الجلد ويقلل حب الشباب",
-            "يدعم صحة الأغشية المخاطية",
-            "مضاد أكسدة قوي",
-            "يدعم النمو والتطور"
+            "يساهم فيتامين A في الحفاظ على الرؤية الطبيعية، والوظيفة الطبيعية للجهاز المناعي، والأغشية المخاطية والجلد الطبيعي، وتمايز الخلايا (ادعاءات معتمدة من EFSA)؛ ويدخل في تركيب صبغة الرودوبسين المسؤولة عن الرؤية في الضوء الخافت."
         ],
         benefitsNl: [
-            "Essentiële component van rodopsine in het netvlies voor scherp zicht in het donker",
-            "Onderhoudt de barrièrefunctie van huid, darm- en luchtwegslijmvliezen tegen bacteriën",
-            "Ondersteunt celdifferentiatie en helpt acne en verhoorning van de huid te reguleren",
-            "Versterkt de aanmaak en activiteit van witte bloedcellen (T-lymfocyten)",
-            "Ondersteunt een gezonde ijzerstofwisseling en celspecialisatie"
+            "Vitamine A draagt bij tot het behoud van een normaal gezichtsvermogen, een normale werking van het immuunsysteem, normale slijmvliezen en huid, en de celspecialisatie (door EFSA toegestane claims); het maakt deel uit van rodopsine, het pigment voor zien bij weinig licht."
         ],
         benefitsEn: [
-            "Essential structural component of retinal rhodopsin required for low-light night vision",
-            "Maintains epithelial barrier integrity across mucosal linings (gut, lungs, eyes)",
-            "Regulates keratinization and sebum pathways, clinically mitigating acne vulgaris",
-            "Enhances T-cell proliferation and systemic mucosal antibody responses",
-            "Crucial cofactor in systemic iron mobilization and cellular differentiation"
+            "Vitamin A contributes to the maintenance of normal vision, normal immune function, normal mucous membranes and skin, and cell specialisation (EFSA-authorised claims); it is part of rhodopsin, the pigment for vision in dim light."
         ],
         dosage: {
-            recommended: "800-1500 ميكروغرام RAE (2500-5000 وحدة دولية؛ ويُفضَّل البيتا كاروتين للأمان)",
-            timing: "مع وجبة تحتوي دهون",
+            recommended: "800–1500 ميكروغرام RAE يومياً (نحو 2700–5000 وحدة دولية)",
+            timing: "مع وجبة تحتوي على دهون",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "800-1500 mcg RAE (2500-5000 IE; geef voorkeur aan bètacaroteen als veilige voorloper)",
-            timing: "Tijdens een maaltijd die vetten bevat",
-            frequency: "1x per dag"
+            recommended: "800–1500 µg RAE per dag (ongeveer 2700–5000 IE)",
+            timing: "Bij een maaltijd met vet",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "800-1500 mcg RAE (2500-5000 IU; beta-carotene preferred for safety)",
-            timing: "With a meal containing dietary lipids",
+            recommended: "800–1500 µg RAE daily (about 2700–5000 IU)",
+            timing: "With a meal that contains fat",
             frequency: "Once daily"
         },
+        forms: "توليفة تجمع الريتينول (ريتينيل بالميتات) مع الكاروتينات المختلطة الطبيعية، إذ يحول الجسم البيتا كاروتين إلى فيتامين A عند الحاجة فقط.",
+        formsNl: "Een combinatie van retinol (retinylpalmitaat) met natuurlijke gemengde carotenoïden, omdat het lichaam bètacaroteen alleen omzet in vitamine A als dat nodig is.",
+        formsEn: "A combination of retinol (retinyl palmitate) with natural mixed carotenoids, as the body converts beta-carotene into vitamin A only when needed.",
         warnings: [
-            "يُمنع تجاوز الجرعة اليومية، وتُحذَّر الحوامل تماماً من الجرعات العالية لاحتمال تشوه الأجنة",
-            "قد يسبب تساقط شعر وجفاف جلد",
-            "بيتا-كاروتين أكثر أماناً (يتحول لفيتامين A)"
+            "الحد الأعلى للريتينول وفق EFSA هو 3000 ميكروغرام يومياً؛ ويُمنع على الحوامل تجاوز الجرعات الآمنة لاحتمال تشوه الأجنة",
+            "مكملات البيتا كاروتين المعزولة بجرعات عالية ترفع خطر سرطان الرئة لدى المدخنين (دراستا ATBC وCARET)",
+            "الإفراط يسبب تساقط الشعر وجفاف الجلد وإجهاد الكبد"
         ],
         warningsNl: [
-            "Overschrijd nooit de dagelijkse dosis; zwangere vrouwen moeten hoge doses strikt vermijden vanwege het risico op aangeboren afwijkingen",
-            "STRIKT CONTRA-INDICATIE BIJ ZWANGERSCHAP: Voorgevormde vitamine A (retinol) kan in hoge doses teratogeen zijn (aangeboren afwijkingen); neem maximaal 800 mcg of kies bètacaroteen",
-            "Rokers dienen hoge doseringen geïsoleerd bètacaroteen te vermijden"
+            "De EFSA-bovengrens voor retinol is 3000 µg per dag; zwangeren mogen veilige doses niet overschrijden vanwege het risico op aangeboren afwijkingen",
+            "Hoge doses los bètacaroteen verhogen het risico op longkanker bij rokers (ATBC- en CARET-studies)",
+            "Te veel geeft haaruitval, een droge huid en leverbelasting"
         ],
         warningsEn: [
-            "Never exceed the daily dose; pregnant women must strictly avoid high doses because of the risk of birth defects",
-            "STRICT PREGNANCY WARNING: Preformed retinol in excess is teratogenic; pregnant women must not exceed 800 mcg/day or use beta-carotene",
-            "Smokers should avoid isolated high-dose beta-carotene supplements"
+            "The EFSA upper limit for retinol is 3000 µg a day; pregnant women must not exceed safe doses because of the risk of birth defects",
+            "High-dose isolated beta-carotene supplements raise the risk of lung cancer in smokers (ATBC and CARET trials)",
+            "Excess causes hair loss, dry skin and liver strain"
         ],
-        interactions: "يتعارض مع أدوية حب الشباب من الرتينوئيدات (الإيزوتريتينوين) - خطير، لا تجمعهما",
-        interactionsNl: "Levensgevaarlijke interactie met retinoïden (zoals Roaccutane / isotretinoïne) wegens vitamine A-vergiftiging.",
-        interactionsEn: "Dangerous additive toxicity when combined with prescription retinoids (isotretinoin / Accutane).",
-        naturalSources: "الكبد، الجزر، البطاطا الحلوة، السبانخ، البيض",
-        naturalSourcesNl: "Runderlever (zeer geconcentreerd), eidooiers, wortelen, zoete aardappel en spinazie.",
-        naturalSourcesEn: "Beef liver, pastured egg yolks, carrots, sweet potatoes, dark leafy greens."
+        interactions: "تداخل خطير: يُمنع مع أدوية حب الشباب والصدفية المشتقة من فيتامين A (الإيزوتريتينوين والأسيتريتين) لتفادي التسمم بفرط فيتامين A.",
+        interactionsNl: "Gevaarlijke interactie: nooit combineren met van vitamine A afgeleide middelen tegen acne en psoriasis (isotretinoïne, acitretine), om vitamine A-vergiftiging te voorkomen.",
+        interactionsEn: "Dangerous interaction: never combine it with vitamin A-derived acne and psoriasis drugs (isotretinoin, acitretin), to avoid vitamin A toxicity.",
+        naturalSources: "الكبدة، صفار البيض، الزبدة، الجزر، البطاطا الحلوة، السبانخ، المشمش",
+        naturalSourcesNl: "Lever, eidooier, boter, wortels, zoete aardappel, spinazie, abrikozen",
+        naturalSourcesEn: "Liver, egg yolk, butter, carrots, sweet potatoes, spinach, apricots",
+        groupLabel: {
+            ar: "البصر والمناعة والجلد",
+            en: "Vision, immunity & skin",
+            nl: "Zicht, weerstand & huid"
+        },
+        references: [
+            "EFSA Journal 2015;13(3):4028 (Dietary Reference Values for vitamin A)",
+            "NIH Office of Dietary Supplements (ODS): Vitamin A and Carotenoids Fact Sheet",
+            "Omenn GS et al. (CARET). N Engl J Med 1996 — PMID: 8602180"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 100,
         slug: "biotin",
-        name: "بيوتين (فيتامين B7)",
-        englishName: "Biotin (Vitamin B7)",
-        nameNl: "Biotine (Vitamine B8 / Vitamine H)",
+        name: "البيوتين النقي لصحة الشعر والأظافر",
+        englishName: "Pure Biotin (Vitamin B7)",
+        nameNl: "Biotine (Vitamine B7)",
         category: "صحة-عامة",
         icon: "💇",
-        summary: "فيتامين الشعر والأظافر - يحسن صحتهما ويدعم الأيض",
-        summaryNl: "Essentiële co-enzymvitamine voor de aanmaak van keratine: versterkt broze nagels en bevordert vol haar.",
-        summaryEn: "Essential carboxylase coenzyme catalyzing keratin infrastructure, reducing nail splitting and supporting hair shaft density.",
+        summary: "فيتامين مائي يعمل إنزيماً مساعداً لخمسة إنزيمات كربوكسيلاز؛ يساهم البيوتين في الاستقلاب الطبيعي للمغذيات الكبيرة وإنتاج الطاقة، والحفاظ على الشعر والجلد والأغشية المخاطية الطبيعية (ادعاءات معتمدة من EFSA).",
+        summaryNl: "Een wateroplosbare vitamine die co-enzym is voor vijf carboxylase-enzymen; biotine draagt bij tot een normaal macronutriënten- en energieleverend metabolisme en het behoud van normaal haar, een normale huid en normale slijmvliezen (door EFSA toegestane claims).",
+        summaryEn: "A water-soluble vitamin that is a coenzyme for five carboxylase enzymes; biotin contributes to normal macronutrient and energy-yielding metabolism and the maintenance of normal hair, skin and mucous membranes (EFSA-authorised claims).",
         tags: [
             "شعر",
             "أظافر",
             "جلد"
         ],
         benefits: [
-            "يحسن صحة الشعر ويقلل التساقط",
-            "يقوي الأظافر ويمنع التكسر",
-            "يحسن صحة الجلد",
-            "يدعم الأيض وإنتاج الطاقة",
-            "يحسن صحة الجهاز العصبي",
-            "يساعد في التحكم بسكر الدم"
+            "فيتامين مائي يعمل إنزيماً مساعداً لخمسة إنزيمات كربوكسيلاز؛ يساهم البيوتين في الاستقلاب الطبيعي للمغذيات الكبيرة وإنتاج الطاقة، والحفاظ على الشعر والجلد والأغشية المخاطية الطبيعية (ادعاءات معتمدة من EFSA)."
         ],
         benefitsNl: [
-            "Stimuleert de synthese van keratine: versterkt de haarwortels en vermindert haarbreuk",
-            "Klinisch bewezen verbetering van nageldikte en afname van gespleten, broze nagels",
-            "Essentieel co-enzym voor carboxylase-enzymen in de vet- en koolhydraatstofwisseling",
-            "Ondersteunt een gezonde, gehydrateerde huid en voorkomt schilfering",
-            "Ondersteunt normale werking van het zenuwstelsel"
+            "Een wateroplosbare vitamine die co-enzym is voor vijf carboxylase-enzymen; biotine draagt bij tot een normaal macronutriënten- en energieleverend metabolisme en het behoud van normaal haar, een normale huid en normale slijmvliezen (door EFSA toegestane claims)."
         ],
         benefitsEn: [
-            "Stimulates keratin protein architecture, reinforcing hair shaft tensile strength",
-            "Clinically demonstrated to increase nail plate thickness and prevent brittle splitting",
-            "Obligate coenzyme for carboxylases driving fatty acid and gluconeogenesis metabolism",
-            "Maintains sebum barrier and prevents seborrheic skin flaking",
-            "Supports normal neurological myelin stability"
+            "A water-soluble vitamin that is a coenzyme for five carboxylase enzymes; biotin contributes to normal macronutrient and energy-yielding metabolism and the maintenance of normal hair, skin and mucous membranes (EFSA-authorised claims)."
         ],
         dosage: {
-            recommended: "2500-5000 ميكروغرام (جرعة علاجية للشعر والأظافر) أو 100 ميكروغرام (جرعة وقائية)",
-            timing: "مع وجبة الإفطار",
+            recommended: "100–1000 ميكروغرام يومياً (الاحتياج الغذائي 40 ميكروغرام؛ وتُستخدم 2500–5000 ميكروغرام لمن يعانون من هشاشة الأظافر والشعر)",
+            timing: "مع الإفطار",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "2500-5000 mcg (hoge dosering voor haar/nagels) of 50-100 mcg (onderhoud)",
-            timing: "'s Ochtends tijdens het ontbijt met water",
-            frequency: "1x per dag"
+            recommended: "100–1000 µg per dag (voedingsbehoefte 40 µg; 2500–5000 µg wordt gebruikt bij broze nagels en haar)",
+            timing: "Bij het ontbijt",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "2500-5000 mcg (therapeutic hair/nail dose) or 100 mcg (maintenance)",
-            timing: "Morning with breakfast",
+            recommended: "100–1000 µg daily (dietary requirement 40 µg; 2500–5000 µg is used by people with brittle nails and hair)",
+            timing: "With breakfast",
             frequency: "Once daily"
         },
+        forms: "د-بيوتين الطبيعي (D-Biotin)، وهو الشكل الوحيد ذو الفاعلية البيولوجية الكاملة.",
+        formsNl: "Natuurlijke D-biotine, de enige vorm met volledige biologische activiteit.",
+        formsEn: "Natural D-biotin, the only form with full biological activity.",
         warnings: [
-            "آمن جداً حتى بجرعات عالية",
-            "النتائج تحتاج 3-6 أشهر",
-            "قد يتداخل مع تحاليل الغدة الدرقية (أخبر الطبيب)",
-            "فعال فقط إذا كان لديك نقص"
+            "تحذير التحاليل (FDA): الجرعات العالية (فوق 1000 ميكروغرام) تتداخل مع المقايسات المناعية وتسبب نتائج خاطئة لتحاليل الغدة الدرقية والتروبونين القلبي",
+            "توقف عن البيوتين قبل أي سحب دم بـ 48–72 ساعة وأبلغ الطبيب والمختبر",
+            "يفيد الشعر والأظافر أساساً عند وجود نقص"
         ],
         warningsNl: [
-            "BELANGRIJKE LABTEST WAARSCHUWING: Biotine interfereert met immuno-assays in het laboratorium (kan vals verstoorde schildklier- en troponine-uitslagen geven)",
-            "Staak biotine minimaal 48 tot 72 uur vóór een gepland bloedonderzoek",
-            "Uiterst veilig wateroplosbaar vitamine; een overschot wordt via de urine uitgescheiden",
-            "BELANGRIJKE LABTEST WAARSCHUWING: Biotine verstoort laboratoriummetingen (kan vals afwijkende schildklier- en hartwaarden geven)"
+            "Waarschuwing laboratoriumtests (FDA): hoge doses (boven 1000 µg) verstoren immunoassays en geven foute uitslagen bij schildklier- en troponinetests",
+            "Stop 48–72 uur voor een bloedafname met biotine en meld het aan je arts en het lab",
+            "Het helpt haar en nagels vooral bij een tekort"
         ],
         warningsEn: [
-            "CRUCIAL LAB INTERFERENCE: High-dose biotin skews laboratory streptavidin immunoassays (falsely alters TSH, free T4, and cardiac troponin)",
-            "Discontinue supplementation 48-72 hours prior to scheduled clinical blood draws",
-            "Extremely safe water-soluble B-vitamin; excess readily eliminated renal"
+            "Lab test warning (FDA): high doses (above 1000 µg) interfere with immunoassays and cause false results in thyroid and cardiac troponin tests",
+            "Stop biotin 48–72 hours before any blood test and tell your doctor and the lab",
+            "It mainly helps hair and nails when there is a deficiency"
         ],
-        interactions: "قد يتداخل مع بعض التحاليل الطبية",
-        interactionsNl: "Interfereert met laboratoriumtesten (schildklier TSH, hartenzymen).",
-        interactionsEn: "Directly interferes with clinical laboratory diagnostic assay binding.",
-        naturalSources: "البيض، المكسرات، البذور، السلمون، الأفوكادو",
-        naturalSourcesNl: "Eidooiers, amandelen, walnoten, wilde zalm, zonnebloempitten en avocado.",
-        naturalSourcesEn: "Cooked egg yolks, almonds, wild salmon, sunflower seeds, mushrooms."
+        interactions: "أدوية الصرع طويلة الأمد (الكاربامازيبين والفينيتوين) تخفض مستوى البيوتين؛ والمضادات الحيوية المطولة تقلل إنتاجه بواسطة بكتيريا الأمعاء.",
+        interactionsNl: "Langdurig gebruik van anti-epileptica (carbamazepine, fenytoïne) verlaagt de biotinespiegel, en langdurige antibiotica verminderen de aanmaak door darmbacteriën.",
+        interactionsEn: "Long-term epilepsy drugs (carbamazepine, phenytoin) lower biotin levels, and prolonged antibiotics reduce its production by gut bacteria.",
+        naturalSources: "صفار البيض المطبوخ، الكبدة، المكسرات والبذور، البطاطا الحلوة، السلمون",
+        naturalSourcesNl: "Gekookte eidooier, lever, noten en zaden, zoete aardappel, zalm",
+        naturalSourcesEn: "Cooked egg yolk, liver, nuts and seeds, sweet potatoes, salmon",
+        groupLabel: {
+            ar: "الشعر والبشرة والطاقة",
+            en: "Hair, skin & energy",
+            nl: "Haar, huid & energie"
+        },
+        references: [
+            "EFSA Journal 2009;7(10):1209 (biotin health claims)",
+            "US FDA Safety Communication: Biotin (Vitamin B7) interference with lab tests",
+            "NIH Office of Dietary Supplements (ODS): Biotin Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 101,
         slug: "molybdenum",
-        name: "موليبدينوم",
-        englishName: "Molybdenum",
-        nameNl: "Molybdeen (Natriummolybdaat / Glycinaat)",
+        name: "معدن الموليبدينوم المخلبي لاستقلاب الأحماض الكبريتية",
+        englishName: "Molybdenum Chelate (Glycinate)",
+        nameNl: "Molybdeen Chelaat",
         category: "صحة-عامة",
         icon: "⚛️",
-        summary: "معدن نادر - يدعم إزالة السموم ويساعد في استقلاب الأحماض الأمينية",
-        summaryNl: "Essentieel cofactor-sporenelement voor sulfietontgifting, urinezuurstofwisseling en aldehyde-afbraak.",
-        summaryEn: "Essential trace mineral cofactor for sulfite oxidase, purine metabolism, and alcohol/toxin aldehyde clearance.",
+        summary: "معدن أثري يساهم في الاستقلاب الطبيعي للأحماض الأمينية الكبريتية (ادعاء معتمد من EFSA)؛ يعمل عاملاً مساعداً لإنزيم سلفيت أوكسيديز الذي يحول السلفيت إلى كبريتات، وإنزيم زانثين أوكسيديز الذي يفكك البيورينات.",
+        summaryNl: "Een spoorelement dat bijdraagt tot een normaal metabolisme van zwavelhoudende aminozuren (door EFSA toegestane claim); het is een cofactor van sulfietoxidase, dat sulfiet omzet in sulfaat, en van xanthineoxidase, dat purines afbreekt.",
+        summaryEn: "A trace mineral that contributes to normal sulphur amino acid metabolism (EFSA-authorised claim); it is a cofactor of sulphite oxidase, which turns sulphite into sulphate, and xanthine oxidase, which breaks down purines.",
         tags: [
             "معدن",
             "سموم",
             "إنزيمات"
         ],
         benefits: [
-            "يساعد في إزالة السموم من الجسم",
-            "يدعم استقلاب الأحماض الأمينية الكبريتية",
-            "يساعد في تكسير البيورينات",
-            "يدعم وظائف الكبد",
-            "يمنع تراكم السلفيت في الجسم",
-            "يدعم صحة الجهاز العصبي"
+            "معدن أثري يساهم في الاستقلاب الطبيعي للأحماض الأمينية الكبريتية (ادعاء معتمد من EFSA)؛ يعمل عاملاً مساعداً لإنزيم سلفيت أوكسيديز الذي يحول السلفيت إلى كبريتات، وإنزيم زانثين أوكسيديز الذي يفكك البيورينات."
         ],
         benefitsNl: [
-            "Cruciale cofactor voor het enzym sulfietoxidase: zet toxische sulfieten om in onschadelijk sulfaat",
-            "Voorkomt hoofdpijn, benauwdheid en hersenmist na het drinken van wijn of eten van sulfietrijke voeding",
-            "Ondersteunt aldehyde-oxidase bij de afbraak van acetaldehyde (alcohol- en schimmelafbraakproducten)",
-            "Ondersteunt xanthine-oxidase bij een normale urinezuurstofwisseling",
-            "Onmisbaar sporenelement bij candida-ontgifting"
+            "Een spoorelement dat bijdraagt tot een normaal metabolisme van zwavelhoudende aminozuren (door EFSA toegestane claim); het is een cofactor van sulfietoxidase, dat sulfiet omzet in sulfaat, en van xanthineoxidase, dat purines afbreekt."
         ],
         benefitsEn: [
-            "Obligate cofactor for sulfite oxidase, transforming neurotoxic sulfites into harmless sulfates",
-            "Resolves sulfite-induced headaches and sensitivities following wine or dried fruit consumption",
-            "Empowers aldehyde oxidase clearing toxic acetaldehyde from yeast/candida and alcohol",
-            "Maintains purine breakdown balance via xanthine oxidase activity",
-            "Vital micronutrient support during candida die-off detox reactions"
+            "A trace mineral that contributes to normal sulphur amino acid metabolism (EFSA-authorised claim); it is a cofactor of sulphite oxidase, which turns sulphite into sulphate, and xanthine oxidase, which breaks down purines."
         ],
         dosage: {
-            recommended: "100-200 ميكروغرام (حتى 500 ميكروغرام في حالات الحساسية الحادة للكبريتيت)",
-            timing: "مع الوجبات",
+            recommended: "50–100 ميكروغرام يومياً (الاحتياج 65 ميكروغرام للبالغين وفق EFSA، ويوجد في معظم مكملات الملتي فيتامين)",
+            timing: "مع وجبة طعام",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "100-200 mcg (tot 500 mcg bij acute sulfietgevoeligheid)",
-            timing: "Tijdens de maaltijd met water",
-            frequency: "1x per dag"
+            recommended: "50–100 µg per dag (behoefte volwassenen 65 µg volgens EFSA; zit in de meeste multivitaminen)",
+            timing: "Bij een maaltijd",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "100-200 mcg (up to 500 mcg in acute sulfite sensitivity)",
-            timing: "With food",
+            recommended: "50–100 µg daily (adult requirement 65 µg according to EFSA; found in most multivitamins)",
+            timing: "With a meal",
             frequency: "Once daily"
         },
+        forms: "موليبدينوم غلايسينات المخلبي أو موليبدات الصوديوم.",
+        formsNl: "Molybdeenglycinaatchelaat of natriummolybdaat.",
+        formsEn: "Molybdenum glycinate chelate or sodium molybdate.",
         warnings: [
-            "نادراً ما يكون هناك نقص",
-            "آمن بجرعات معتدلة",
-            "الجرعات العالية جداً قد تسبب مشاكل مفاصل (نادر)",
-            "غالباً موجود في الملتي فيتامين"
+            "الحد الأعلى الآمن للبالغين وفق EFSA هو 600 ميكروغرام يومياً",
+            "الإفراط المزمن قد يرفع حمض اليوريك ويسبب آلاماً تشبه النقرس",
+            "النقص نادر لدى من يتبعون نظاماً غذائياً متنوعاً"
         ],
         warningsNl: [
-            "Overschrijd langdurig niet meer dan 600 mcg per dag (zeer hoge doses kunnen urinezuur verhogen)",
-            "Kies voor biologisch gebonden molybdeenglycinaat voor optimale tolerantie",
-            "Uiterst effectief bij personen die gevoelig reageren op sulfiet in rode wijn"
+            "De EFSA-bovengrens voor volwassenen is 600 µg per dag",
+            "Chronisch te veel kan het urinezuur verhogen en jichtachtige gewrichtspijn geven",
+            "Een tekort is zeldzaam bij gevarieerd eten"
         ],
         warningsEn: [
-            "Do not exceed the tolerable upper limit of 600 mcg daily long-term (may elevate uric acid)",
-            "Chelated molybdenum glycinate offers clean, predictable absorption",
-            "Clinically specific for individuals suffering wine/sulfite intolerance"
+            "The EFSA upper limit for adults is 600 µg a day",
+            "Chronic excess may raise uric acid and cause gout-like joint pain",
+            "Deficiency is rare with a varied diet"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Kan bij extreem hoge doseringen de koperstatus van het lichaam beïnvloeden.",
-        interactionsEn: "Very high doses may antagonize copper retention; balanced at standard doses.",
-        naturalSources: "البقوليات، الحبوب الكاملة، المكسرات، الخضار الورقية",
-        naturalSourcesNl: "Peulvruchten (linzen, kikkererwten), volkoren granen en bladgroenten.",
-        naturalSourcesEn: "Legumes (black beans, lentils), whole grains, liver, dark leafy vegetables."
+        interactions: "آمن بالجرعات المعتادة؛ الجرعات العالية جداً تزيد إفراز النحاس في البول وقد تخفض مستواه.",
+        interactionsNl: "Veilig bij de gebruikelijke doses; zeer hoge doses verhogen de uitscheiding van koper via de urine en kunnen de koperspiegel verlagen.",
+        interactionsEn: "Safe at the usual doses; very high doses increase copper excretion in urine and may lower copper levels.",
+        naturalSources: "البقوليات (العدس والفاصوليا والبازلاء)، الحبوب الكاملة، المكسرات، الكبدة",
+        naturalSourcesNl: "Peulvruchten (linzen, bonen, erwten), volkoren granen, noten, lever",
+        naturalSourcesEn: "Legumes (lentils, beans, peas), whole grains, nuts, liver",
+        groupLabel: {
+            ar: "المعادن الأساسية",
+            en: "Essential minerals",
+            nl: "Essentiële mineralen"
+        },
+        references: [
+            "EFSA Journal 2013;11(8):3333 (Dietary Reference Values for molybdenum)",
+            "NIH Office of Dietary Supplements (ODS): Molybdenum Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 102,
@@ -13736,84 +13678,6 @@ const supplementsData = [
         naturalSourcesEn: "Engineered multi-nutrient clinical hematinic formulation."
     },
     {
-        id: 187,
-        slug: "aged-garlic-extract",
-        name: "الثوم المعتق (Aged Garlic Extract)",
-        englishName: "Aged Garlic Extract (Kyolic)",
-        nameNl: "Gerijpt Knoflookextract (Kyolic® AGE)",
-        category: "صحة-عامة",
-        icon: "🧄",
-        summary: "يخفض الضغط والكوليسترول - بدون رائحة الثوم المزعجة",
-        summaryNl: "Geurloos gefermenteerd knoflookextract rijk aan S-allylcysteïne voor zachte bloeddruk- en vaatwandondersteuning.",
-        summaryEn: "Odorless fermented aged garlic extract rich in S-allylcysteine clinically proven to reduce arterial pressure and soft plaque.",
-        tags: [
-            "ضغط",
-            "كوليسترول",
-            "مناعة",
-            "ثوم",
-            "قلب"
-        ],
-        benefits: [
-            "يخفض ضغط الدم (5-10 mmHg)",
-            "يخفض الكوليسترول الكلي والضار LDL",
-            "يقلل تصلب الشرايين",
-            "يقوي جهاز المناعة",
-            "مضاد أكسدة ومضاد التهاب قوي",
-            "بدون رائحة الثوم (معالج خاص)"
-        ],
-        benefitsNl: [
-            "Klinisch bewezen verlaging van de systolische bloeddruk met gemiddeld 8-10 mmHg bij hypertensie",
-            "Vertraagt de progressie van zachte atherosclerotische plaque in de kransslagaderen",
-            "Verlaagt totaal cholesterol en remt oxidatie van LDL-cholesterol in de vaatwand",
-            "Verbetert microcirculatie en ondersteunt elastische, soepele slagaderen",
-            "Volledig geurloos: veroorzaakt geen knoflookadem of maagirritatie"
-        ],
-        benefitsEn: [
-            "Clinically proven to reduce systolic blood pressure by 8-10 mmHg in uncontrolled hypertension",
-            "Retards progression of low-attenuation coronary artery soft plaque burden",
-            "Lowers total cholesterol and inhibits oxidative modification of LDL particles",
-            "Enhances peripheral microvascular circulation and arterial compliance",
-            "100% odorless formulation causing zero breath odor or gastric reflux"
-        ],
-        dosage: {
-            recommended: "600-1200 ملغ",
-            timing: "مع وجبة",
-            frequency: "1-2 مرة يومياً"
-        },
-        dosageNl: {
-            recommended: "600-1200 mg gestandaardiseerd Kyolic® extract",
-            timing: "Tijdens de maaltijd met water",
-            frequency: "1-2x per dag"
-        },
-        dosageEn: {
-            recommended: "600-1200 mg standardized Kyolic® AGE extract",
-            timing: "With meals",
-            frequency: "1-2 times daily"
-        },
-        warnings: [
-            "قد يزيد خطر النزيف بجرعات عالية",
-            "توقف قبل العمليات الجراحية بأسبوعين",
-            "النتائج تحتاج 8-12 أسبوع",
-            "اختر مستخلص الثوم المعتق (أفضل من الثوم العادي)"
-        ],
-        warningsNl: [
-            "Kan de bloedplaatjesaggregatie remmen; staak 1-2 weken voor een geplande chirurgische ingreep",
-            "Kies specifiek voor 'Gerijpt' knoflookextract (Aged Garlic Extract); vers knoflookpoeder mist de stabiele werkzame stoffen",
-            "Zeer veilig bij langdurig dagelijks cardiovasculair onderhoud"
-        ],
-        warningsEn: [
-            "Mild antiplatelet activity; discontinue 1-2 weeks prior to scheduled surgery",
-            "Specifically select Aged Garlic Extract (AGE); crude garlic powders lack stable S-allylcysteine bioactives",
-            "Outstanding safety index for prolonged cardiovascular maintenance"
-        ],
-        interactions: "قد يتفاعل مع مميعات الدم - استشر طبيبك • قد يتفاعل مع أدوية تخثر الدم والضغط - استشر الطبيب",
-        interactionsNl: "Versterkt het effect van bloedverdunners (aspirine, warfarine, DOAC's); overleg bij medicatie.",
-        interactionsEn: "May additively enhance pharmaceutical blood thinners and antiplatelet drugs.",
-        naturalSources: "الثوم الطازج (لكن بكميات كبيرة ورائحة قوية)",
-        naturalSourcesNl: "Biologische knoflook (Allium sativum) natuurlijk gerijpt gedurende 20 maanden.",
-        naturalSourcesEn: "Organic Allium sativum naturally aged for up to 20 months in stainless steel tanks."
-    },
-    {
         id: 188,
         slug: "potassium-citrate",
         name: "البوتاسيوم (للضغط)",
@@ -14280,82 +14144,6 @@ const supplementsData = [
         naturalSources: "غير متوفر طبيعياً - مجموعة مصنعة متكاملة",
         naturalSourcesNl: "Synergetische samenstelling van natuurlijke vitamines, mineralen en botanische extracten.",
         naturalSourcesEn: "Engineered multi-nutrient clinical hair restoration formulation."
-    },
-    {
-        id: 194,
-        slug: "black-seed",
-        name: "الحبة السوداء (حبة البركة)",
-        englishName: "Black Seed (Nigella Sativa)",
-        nameNl: "Zwarte Komijn (Nigella Sativa)",
-        category: "صحة-عامة",
-        icon: "⚫",
-        summary: "\"دواء لكل داء إلا الموت\" - تقوي المناعة وتخفض السكر والضغط والكوليسترول",
-        summaryNl: "Natuurlijk panacee rijk aan thymoquinone voor krachtige immuunafweer, luchtwegen en bloeddrukbalans.",
-        summaryEn: "Profound traditional botanical rich in thymoquinone for broad-spectrum immunity, respiratory health, and metabolic tone.",
-        tags: [
-            "مناعة",
-            "سكر",
-            "ضغط"
-        ],
-        benefits: [
-            "تقوي جهاز المناعة بقوة",
-            "تخفض سكر الدم والضغط والكوليسترول",
-            "مضاد أكسدة ومضاد التهاب قوي جداً",
-            "تحسن الربو والحساسية",
-            "تساعد في إنقاص الوزن",
-            "\"حديث نبوي: دواء لكل داء إلا الموت\""
-        ],
-        benefitsNl: [
-            "Ondersteunt immuuncellen en antivirale weerstand dankzij hoog thymoquinone-gehalte",
-            "Verlaagt de bloeddruk, nuchtere bloedsuikerspiegel en totaal cholesterol",
-            "Verlicht symptomen van astma, bronchitis en chronische allergische rhinitis",
-            "Krachtige ontstekingsremmende en antibacteriële werking",
-            "Ondersteunt gezonde lever- en nierfuncties"
-        ],
-        benefitsEn: [
-            "Enhances macrophage and T-cell immune surveillance via thymoquinone bioactivity",
-            "Assists in lowering resting blood pressure, fasting glucose, and serum LDL",
-            "Relieves bronchial spasms, asthma symptoms, and seasonal allergic rhinitis",
-            "Potent broad-spectrum anti-inflammatory and gastroprotective agent",
-            "Promotes hepatoprotective and nephroprotective detoxification pathways"
-        ],
-        dosage: {
-            recommended: "ملعقة صغيرة (5 مل) زيت معصور على البارد أو 1000-2000 ملغ كبسولات هلامية",
-            timing: "صباحاً ومساءً مع عسل",
-            frequency: "1-2 مرة يومياً"
-        },
-        dosageNl: {
-            recommended: "1 theelepel (5 ml) koudgeperste olie of 1000-2000 mg in softgels",
-            timing: "'s Ochtends voor het ontbijt met wat honing of water",
-            frequency: "1-2x per dag"
-        },
-        dosageEn: {
-            recommended: "1 teaspoon (5 ml) cold-pressed oil or 1000-2000 mg softgels",
-            timing: "Morning before breakfast with honey or water",
-            frequency: "1-2 times daily"
-        },
-        warnings: [
-            "قد تخفض الضغط والسكر - راقبهما",
-            "قد تتفاعل مع أدوية السكري والضغط",
-            "آمنة بجرعات معتدلة",
-            "الزيت أقوى من البذور المطحونة"
-        ],
-        warningsNl: [
-            "Kies altijd voor 100% zuivere, koudgeperste olie van Nigella sativa",
-            "Grote medicinale doseringen vermijden tijdens zwangerschap",
-            "Kan de bloeddruk en bloedsuiker verlagen"
-        ],
-        warningsEn: [
-            "Insist on 100% pure cold-pressed unrefined Nigella sativa seed oil",
-            "Avoid high medicinal doses during pregnancy (mild uterine stimulant)",
-            "May lower blood pressure and glucose levels"
-        ],
-        interactions: "تتفاعل مع أدوية السكري والضغط - استشر طبيبك",
-        interactionsNl: "Interactie met bloeddrukverlagers en diabetesmedicatie.",
-        interactionsEn: "May additively interact with antihypertensive and hypoglycemic medications.",
-        naturalSources: "بذور حبة البركة، زيت حبة البركة (شائعة جداً في العالم العربي)",
-        naturalSourcesNl: "Zaden en koudgeperste olie van Nigella sativa.",
-        naturalSourcesEn: "Seeds and virgin oil of Nigella sativa."
     },
     {
         id: 195,
@@ -16187,85 +15975,6 @@ const supplementsData = [
         naturalSourcesEn: "Green tea leaves (theanine) and tart cherry extract (melatonin)."
     },
     {
-        id: 219,
-        slug: "inositol",
-        name: "إينوزيتول",
-        englishName: "Inositol",
-        nameNl: "Myo-Inositol (Serotonine & PCOS)",
-        category: "نوم-ومزاج",
-        icon: "🧘",
-        summary: "فيتامين B8 - يحسن النوم والمزاج ويقلل القلق",
-        summaryNl: "Essentiële tweede boodschapper voor serotonine- en insulinereceptoren; vermindert paniek, piekeren en PCOS.",
-        summaryEn: "Secondary cellular messenger sensitizing serotonin and insulin receptors, resolving panic, rumination, and PCOS.",
-        tags: [
-            "نوم",
-            "قلق",
-            "مزاج",
-            "إينوزيتول",
-            "تكيس",
-            "خصوبة"
-        ],
-        benefits: [
-            "يحسن جودة النوم",
-            "يقلل القلق والهلع",
-            "يحسن المزاج والاكتئاب",
-            "يحسن أعراض OCD",
-            "يدعم صحة المبايض (للنساء)",
-            "آمن جداً"
-        ],
-        benefitsNl: [
-            "Cruciaal voor de tweede-boodschapperroute van serotonine: vermindert paniekaanvallen en dwanggedachten (OCD)",
-            "Stopt malende gedachten en bevordert een diepe, vredige nachtrust",
-            "Herstelt insulinegevoeligheid en ondersteunt eisprong bij polycysteus ovariumsyndroom (PCOS)",
-            "Ondersteunt emotionele veerkracht en gemoedstoestand",
-            "Heeft een aangename zoete smaak"
-        ],
-        benefitsEn: [
-            "Key second messenger for central serotonin receptors, clinically resolving panic disorder and OCD intrusive thoughts",
-            "Quiets racing bedtime thoughts and restores continuous nocturnal sleep depth",
-            "Restores ovarian insulin sensitivity and regular ovulatory cycles in PCOS",
-            "Supports neurotransmitter balance and mood stability",
-            "Pleasantly sweet tasting powder"
-        ],
-        dosage: {
-            recommended: "2-4 غ (للنوم وتكيس المبايض) أو 6-12 غ (بروتوكولات نوبات الهلع والوسواس القهري)",
-            timing: "مساءً أو قبل النوم",
-            frequency: "1-2 مرات يومياً"
-        },
-        dosageNl: {
-            recommended: "2-4 g (voor slaap en PCOS) of 6-12 g (bij paniekstoornis/OCD)",
-            timing: "'s Avonds opgelost in water of thee voor het slapengaan",
-            frequency: "1-2x per dag"
-        },
-        dosageEn: {
-            recommended: "2-4 g (sleep and PCOS) or 6-12 g (panic/OCD protocols)",
-            timing: "Evening dissolved in water or herbal tea before bed",
-            frequency: "1-2 times daily"
-        },
-        warnings: [
-            "آمن جداً",
-            "قد يسبب غثيان بجرعات عالية",
-            "Myo-الإينوزيتول الأكثر دراسة",
-            "فعال جداً للقلق"
-        ],
-        warningsNl: [
-            "Zeer hoge startdoseringen (>10 g) kunnen milde winderigheid of losse ontlasting geven; bouw rustig op",
-            "Kies voor de zuivere 'Myo-Inositol' vorm",
-            "Volkomen veilig voor langdurig gebruik"
-        ],
-        warningsEn: [
-            "High initial doses (>10 g) may induce transient loose stools; titrate up gradually",
-            "Myo-inositol is the specific research-validated isomer",
-            "Safe for sustained long-term administration"
-        ],
-        interactions: "آمن مع معظم الأدوية • آمن - قد يخفض السكر (راقب مع أدوية السكري)",
-        interactionsNl: "Kan bloedsuikerspiegel licht verlagen; overleg bij diabetesmedicatie.",
-        interactionsEn: "May additively improve insulin sensitivity; monitor if on hypoglycemics.",
-        naturalSources: "الفواكه، الحبوب، المكسرات، البقول",
-        naturalSourcesNl: "Sinaasappels, cantaloupe meloen, bonen, volkoren granen en noten.",
-        naturalSourcesEn: "Citrus fruits, cantaloupe, legumes, whole grains, nuts."
-    },
-    {
         id: 220,
         slug: "deep-sleep-complex",
         name: "كومبلكس النوم العميق",
@@ -16340,83 +16049,6 @@ const supplementsData = [
         naturalSources: "غير متوفر طبيعياً - تركيبة مصنعة متكاملة",
         naturalSourcesNl: "Synergetische samenstelling van gecheleerde mineralen, aminozuren en botanische extracten.",
         naturalSourcesEn: "Engineered multi-nutrient clinical sleep matrix."
-    },
-    {
-        id: 221,
-        slug: "vitamin-a-beta-carotene",
-        name: "فيتامين أ + بيتا كاروتين",
-        englishName: "Vitamin A + Beta-Carotene",
-        nameNl: "Vitamine A & Bètacaroteen (Netvlies & Rodopsine)",
-        category: "صحة-عامة",
-        icon: "🥕",
-        summary: "فيتامين الرؤية - ضروري للرؤية الليلية وصحة القرنية",
-        summaryNl: "Klassiek oogvitamine dat rodopsine aanmaakt voor nachtzicht en het hoornvlies beschermt tegen droogte.",
-        summaryEn: "Foundational vision vitamin synthesizing rhodopsin for dark adaptation and maintaining corneal epithelial moisture.",
-        tags: [
-            "عيون",
-            "رؤية ليلية",
-            "فيتامينات"
-        ],
-        benefits: [
-            "ضروري للرؤية الليلية (نقصه = عمى ليلي)",
-            "يحمي القرنية والملتحمة (سطح العين)",
-            "يمنع جفاف العين الشديد",
-            "يدعم تجديد خلايا الشبكية",
-            "يحمي من العدوى العينية",
-            "البيتا كاروتين: يتحول لفيتامين A حسب الحاجة"
-        ],
-        benefitsNl: [
-            "Vormt rodopsine: het lichtgevoelige pigment in de staafjes van het netvlies voor nachtzicht",
-            "Voorkomt nachtblindheid en vertraagde licht-donkeradaptatie",
-            "Essentieel voor traanproductie en slijmvliesgezondheid (voorkomt ernstige xerofthalmie/oogdroogte)",
-            "Beschermt de integriteit van het hoornvlies en de bindvliezen",
-            "Bètacaroteen fungeert als veilige provitamine die het lichaam naar behoefte omzet"
-        ],
-        benefitsEn: [
-            "Structural backbone of visual purple (rhodopsin) in rod photoreceptors required for night vision",
-            "Directly cures and prevents nyctalopia (night blindness) and dark adaptation failure",
-            "Essential for lacrimal gland goblet cell secretion, preventing xerophthalmia and corneal drying",
-            "Preserves structural integrity of corneal and conjunctival epithelial linings",
-            "Beta-carotene provides a self-limiting, non-toxic metabolic precursor pool"
-        ],
-        dosage: {
-            recommended: "800-1200 ميكروغرام RAE (ويُفضَّل الكاروتينات الطبيعية المختلطة / البيتا كاروتين)",
-            timing: "مع وجبة تحتوي دهون",
-            frequency: "مرة واحدة يومياً"
-        },
-        dosageNl: {
-            recommended: "800-1200 mcg RE (bij voorkeur als natuurlijk bètacaroteen)",
-            timing: "Tijdens een maaltijd die vetten bevat",
-            frequency: "1x per dag"
-        },
-        dosageEn: {
-            recommended: "800-1200 mcg RAE (natural mixed carotenoids/beta-carotene preferred)",
-            timing: "With a meal containing dietary fats",
-            frequency: "Once daily"
-        },
-        warnings: [
-            "يُمنع تجاوز الجرعة اليومية، وتُحذَّر الحوامل تماماً من الجرعات العالية لاحتمال تشوه الأجنة",
-            "❌ النساء الحوامل: لا تتجاوزي 5000 وحدة (تشوهات جنينية)",
-            "البيتا كاروتين أكثر أماناً (لا يسبب سمية)",
-            "المدخنون: تجنب جرعات عالية من بيتا كاروتين"
-        ],
-        warningsNl: [
-            "Overschrijd nooit de dagelijkse dosis; zwangere vrouwen moeten hoge doses strikt vermijden vanwege het risico op aangeboren afwijkingen",
-            "STRIKT CONTRA-INDICATIE BIJ ZWANGERSCHAP: Vermijd hoge doses voorgevormde retinol (max 800 mcg/dag wegens teratogeen risico); bètacaroteen is veilig",
-            "Rokers dienen hoge geïsoleerde doseringen synthetisch bètacaroteen te vermijden",
-            "Stapelt op in de lever bij langdurig overmatig gebruik van pure retinol"
-        ],
-        warningsEn: [
-            "Never exceed the daily dose; pregnant women must strictly avoid high doses because of the risk of birth defects",
-            "STRICT PREGNANCY WARNING: Avoid high-dose preformed retinol (>800 mcg daily) due to teratogenicity; beta-carotene is safe",
-            "Cigarette smokers must avoid high-dose isolated synthetic beta-carotene supplements"
-        ],
-        interactions: "قد يتفاعل مع: الرتينوئيدات (Accutane) - لا تجمعهم",
-        interactionsNl: "Gevaarlijke interactie met retinoïden (zoals isotretinoïne tegen acne).",
-        interactionsEn: "Dangerous additive toxicity when combined with prescription oral retinoids (Accutane).",
-        naturalSources: "فيتامين A: كبد، زبدة، بيض | بيتا كاروتين: جزر، بطاطا حلوة، سبانخ",
-        naturalSourcesNl: "Runderlever, eidooiers, wortelen, zoete aardappel en spinazie.",
-        naturalSourcesEn: "Beef liver, pastured egg yolks, carrots, sweet potatoes, spinach."
     },
     {
         id: 222,
@@ -17871,83 +17503,6 @@ const supplementsData = [
         naturalSourcesEn: "Skins and scales of sustainably wild-caught deep-sea white fish."
     },
     {
-        id: 241,
-        slug: "retinol",
-        name: "ريتينول",
-        englishName: "Retinol (Vitamin A)",
-        nameNl: "Retinol (Vitamine A Huidvernieuwing)",
-        category: "صحة-عامة",
-        icon: "🌟",
-        summary: "مشتق فيتامين A - الأقوى لمكافحة الشيخوخة وحب الشباب",
-        summaryNl: "De gouden standaard dermatologische vitamine A die celvernieuwing versnelt, poriën verfijnt en diepe rimpels vervaagt.",
-        summaryEn: "The dermatological gold standard for cellular turnover, collagen upregulation, and acne resolution.",
-        tags: [
-            "ريتينول",
-            "فيتامين A",
-            "شيخوخة"
-        ],
-        benefits: [
-            "الأقوى علمياً لتقليل التجاعيد والخطوط",
-            "يعالج حب الشباب ويمنع انسداد المسام",
-            "يحفز تجدد الخلايا ويحسن نسيج البشرة",
-            "يقلل التصبغات والبقع الداكنة",
-            "يزيد إنتاج الكولاجين والإيلاستين",
-            "يحسن حجم المسام"
-        ],
-        benefitsNl: [
-            "Wetenschappelijk bewezen nummer 1 voor het stimuleren van nieuwe collageenaanmaak in de lederhuid",
-            "Versnelt de natuurlijke celvernieuwing en exfolieert dode huidcellen voor een gladde textuur",
-            "Reguleert talgklieractiviteit en voorkomt verstopte poriën, mee-eters en acne",
-            "Vervaagt diepe rimpels, fijne lijntjes en ouderdomsvlekken",
-            "Verfijnt grove poriënstructuur en egaliseert de teint"
-        ],
-        benefitsEn: [
-            "Unrivaled dermatological evidence for upregulating procollagen genes and dermal thickness",
-            "Accelerates basal keratinocyte mitosis, shedding dull stratum corneum cells",
-            "Normalizes follicular desquamation, clearing comedones, blackheads, and inflammatory acne",
-            "Clinically smooths deep photo-aged wrinkles and disperses clustered melanin deposits",
-            "Tightens enlarged pore appearance and refines surface skin texture"
-        ],
-        dosage: {
-            recommended: "موضعياً: كريم أو سيروم ريتينول 0.2%-1% | فموياً: 800 ميكروغرام يومياً كحد أقصى",
-            timing: "مساءً فقط",
-            frequency: "ابدأ بليلتين أسبوعياً ثم زد تدريجياً حتى كل ليلة حسب التحمل"
-        },
-        dosageNl: {
-            recommended: "Lokaal: 0.2% - 1% retinolcrème/serum | Oraal: maximaal 800 mcg vitamine A per dag",
-            timing: "UITSLUITEND 'S AVONDS aanbrengen op een gereinigde, droge huid",
-            frequency: "Begin met 2 avonden per week en bouw langzaam op naar tolerantie"
-        },
-        dosageEn: {
-            recommended: "Topical: 0.2% - 1% retinol cream/serum | Oral: max 800 mcg daily",
-            timing: "EXCLUSIVELY AT NIGHT on clean, dry skin",
-            frequency: "Start 2 nights weekly, gradually titrating to nightly as tolerated"
-        },
-        warnings: [
-            "يُمنع استخدامه أثناء الحمل والرضاعة، موضعياً وفموياً، لاحتمال تشوه الأجنة",
-            "⚠️ قد يسبب تهيج واحمرار وتقشر",
-            "تجنبه نهاراً (يزيد حساسية الشمس)",
-            "ممنوع للحوامل والمرضعات",
-            "استخدم SPF50+ نهاراً"
-        ],
-        warningsNl: [
-            "Niet gebruiken tijdens zwangerschap of borstvoeding, niet op de huid en niet via de mond, vanwege het risico op aangeboren afwijkingen",
-            "GEBRUIK OVERDAG ALTIJD EEN ZONNEBRANDCRÈME (SPF 30-50): retinol maakt de huid extreem gevoelig voor zonlicht",
-            "Kan in de eerste weken roodheid, schilfering en droogheid geven ('retinol-purging'); bouw rustig op"
-        ],
-        warningsEn: [
-            "Do not use during pregnancy or breastfeeding, topically or orally, because of the risk of birth defects",
-            "MANDATORY DAYTIME BROAD-SPECTRUM SPF 30-50: retinol renders epidermis photosensitive to UV rays",
-            "Initial peeling, redness, and flaking ('retinization') is common; moisturize generously"
-        ],
-        interactions: "لا تستخدمه مع AHA/BHA أو فيتامين C بنفس الوقت",
-        interactionsNl: "Lokaal niet gelijktijdig aanbrengen met zuren (glycolzuur/salicylzuur) of pure vitamine C.",
-        interactionsEn: "Do not layer concurrently with direct exfoliating acids (AHA/BHA) or acidic Vitamin C.",
-        naturalSources: "الكبد، البيض، الحليب، الخضروات البرتقالية",
-        naturalSourcesNl: "Runderlever, eidooiers, biologische boter en vette vis (als retinylpalmitaat).",
-        naturalSourcesEn: "Beef liver, pastured egg yolks, butter, wild oily fish."
-    },
-    {
         id: 242,
         slug: "niacinamide",
         name: "نياسيناميد",
@@ -18943,160 +18498,6 @@ const supplementsData = [
         naturalSources: "أوراق شجرة البانابا الفلبينية - يجب تناوله كمكمل",
         naturalSourcesNl: "Bladeren van Lagerstroemia speciosa (Banaba).",
         naturalSourcesEn: "Leaves of Lagerstroemia speciosa (Banaba)."
-    },
-    {
-        id: 256,
-        slug: "ceylon-cinnamon",
-        name: "قرفة سيلان",
-        englishName: "Ceylon Cinnamon",
-        nameNl: "Echte Ceylon Kaneel (Cinnamomum verum)",
-        category: "سكري-والأنسولين",
-        icon: "🥄",
-        summary: "القرفة الحقيقية - تحسن حساسية الأنسولين بأمان",
-        summaryNl: "Veilige Ceylon kaneel rijk aan MHCP-polyfenolen die insulinereceptoren activeren zonder coumarine-leverschade.",
-        summaryEn: "True Ceylon cinnamon supplying MHCP polyphenol polymers sensitizing insulin receptors without coumarin toxicity.",
-        tags: [
-            "قرفة",
-            "سكر",
-            "أنسولين",
-            "سيلان"
-        ],
-        benefits: [
-            "تحسن حساسية الأنسولين بنسبة 10-29%",
-            "تخفض سكر الدم الصيامي بنسبة 10-25%",
-            "تبطئ امتصاص الجلوكوز بعد الوجبات",
-            "تحسن الكوليسترول والدهون الثلاثية",
-            "مضاد أكسدة ومضاد التهاب قوي",
-            "قرفة سيلان آمنة (منخفضة الكومارين - لا تضر الكبد)"
-        ],
-        benefitsNl: [
-            "Bevat MHCP-polyfenolen die de autofosforylering van insulinereceptoren nabootsen en versterken",
-            "Klinisch bewezen daling van nuchtere bloedsuikerspiegel met 10 tot 25%",
-            "Vertraagt de maaglediging en dempt acute postprandiale glucosepieken",
-            "Ondersteunt verlaging van circulerende triglyceriden en totaal cholesterol",
-            "Ceylon kaneel bevat nagenoeg GEEN coumarine (in tegenstelling tot toxische Cassia kaneel)"
-        ],
-        benefitsEn: [
-            "Supplies MHCP polyphenol polymers that mimic insulin, driving receptor autophosphorylation",
-            "Clinically demonstrated to reduce fasting plasma glucose by 10-25% in metabolic trials",
-            "Slows gastric emptying rate, blunting rapid post-meal glucose and insulin spikes",
-            "Promotes favorable reductions in serum triglycerides and LDL-cholesterol",
-            "Ceylon variety contains virtually undetectable coumarin levels (completely liver-safe)"
-        ],
-        dosage: {
-            recommended: "1000-2000 ملغ مسحوق قرفة سيلانية (أو 250-500 ملغ مستخلص مائي)",
-            timing: "مع الوجبات أو في القهوة/الشاي",
-            frequency: "1-2 مرة يومياً"
-        },
-        dosageNl: {
-            recommended: "1000-2000 mg Ceylon kaneelpoeder (of 250-500 mg Cinnulin PF® waterextract)",
-            timing: "Tijdens of direct voor de meest koolhydraatrijke maaltijd van de dag",
-            frequency: "1-2x per dag"
-        },
-        dosageEn: {
-            recommended: "1000-2000 mg Ceylon cinnamon powder (or 250-500 mg aqueous extract)",
-            timing: "With or directly before carbohydrate-heavy meals",
-            frequency: "1-2 times daily"
-        },
-        warnings: [
-            "⚠️ استخدم قرفة سيلان (Ceylon) وليس كاسيا (Cassia)",
-            "كاسيا تحتوي كومارين عالي (يضر الكبد بالجرعات العالية)",
-            "قرفة سيلان آمنة جداً",
-            "⚠️ يخفض السكر - راقب مع أدوية السكري"
-        ],
-        warningsNl: [
-            "KIES STRIKT CEYLON KANEEL (Cinnamomum verum); gewone Cassia kaneel bevat veel coumarine dat leverschade kan veroorzaken",
-            "Waterextracten (zoals Cinnulin PF®) filteren coumarine er 100% uit en zijn maximaal geconcentreerd",
-            "Controleer bloedsuikerspiegel bij gebruik van diabetesmedicijnen"
-        ],
-        warningsEn: [
-            "STRICTLY CHOOSE CEYLON (Cinnamomum verum); supermarket Cassia contains high coumarin which is hepatotoxic",
-            "Water-soluble extracts (e.g. Cinnulin PF®) filter out coumarins entirely while isolating active bioactives",
-            "Monitor blood glucose if taking prescription anti-diabetic pharmaceuticals"
-        ],
-        interactions: "قد تتفاعل مع أدوية السكري - راقب مستوى السكر",
-        interactionsNl: "Versterkt het effect van metformine en insuline.",
-        interactionsEn: "Additively interacts with prescription blood glucose lowering agents.",
-        naturalSources: "لحاء شجرة القرفة السيلانية (سيريلانكا)",
-        naturalSourcesNl: "Binnenbast van Cinnamomum verum uit Sri Lanka.",
-        naturalSourcesEn: "Dried inner bark of Sri Lankan Cinnamomum verum."
-    },
-    {
-        id: 257,
-        slug: "cinnulin-pf",
-        name: "مستخلص لحاء القرفة الصينية",
-        englishName: "Cinnulin PF (Cinnamon Extract)",
-        nameNl: "Cinnulin PF® (Gepatenteerd Kaneelextract)",
-        category: "سكري-والأنسولين",
-        icon: "🌳",
-        summary: "مستخلص قرفة موحد - خالي من الكومارين وآمن للكبد",
-        summaryNl: "Gepatenteerd wateroplosbaar kaneelextract (type-A polymeren) dat 100% vrij is van toxisch coumarine voor maximale insulinegevoeligheid.",
-        summaryEn: "Patented aqueous cinnamon extract standardized to type-A polymers; 100% coumarin-free and clinically validated for insulin sensitivity.",
-        tags: [
-            "قرفة",
-            "سكر",
-            "Cinnulin",
-            "موحد"
-        ],
-        benefits: [
-            "مستخلص موحد ومبرأ من الكومارين (آمن 100%)",
-            "يحسن حساسية الأنسولين بنسبة 20-30%",
-            "يخفض سكر الدم الصيامي والتراكمي A1C",
-            "أقوى من مسحوق القرفة العادي (مركز)",
-            "لا يحتاج جرعات عالية (فعال بجرعات صغيرة)",
-            "آمن للاستخدام طويل المدى"
-        ],
-        benefitsNl: [
-            "Gepatenteerd waterextractieproces filtert alle toxische coumarines en vetoplosbare stoffen er 100% uit",
-            "Klinisch bewezen verhoging van insulinegevoeligheid met 20 tot 30%",
-            "Verlaagt nuchtere bloedsuikerspiegel, systolische bloeddruk en lichaamsvetpercentage",
-            "Gestandaardiseerd op dubbel-gebonden type-A proanthocyanidinepolymeren",
-            "Uiterst effectief in lage, geconcentreerde doseringen (slechts 250-500 mg per dag)"
-        ],
-        benefitsEn: [
-            "Patented aqueous extraction completely eliminates toxic fat-soluble coumarins while concentrating bioactives",
-            "Clinically demonstrated to enhance whole-body insulin sensitivity by 20-30%",
-            "Lowers fasting plasma glucose, systolic blood pressure, and promotes lean body mass preservation",
-            "Standardized strictly to doubly-linked type-A procyanidin polymers",
-            "Exceptionally potent at low daily micro-dosages (250-500 mg daily)"
-        ],
-        dosage: {
-            recommended: "250-500 ملغ يومياً (Cinnulin PF)",
-            timing: "مع الوجبات",
-            frequency: "1-2 مرات يومياً"
-        },
-        dosageNl: {
-            recommended: "250-500 mg Cinnulin PF®",
-            timing: "10-15 minuten voor de hoofdmaaltijden met water",
-            frequency: "1-2x per dag"
-        },
-        dosageEn: {
-            recommended: "250-500 mg Cinnulin PF®",
-            timing: "10-15 minutes pre-meal with water",
-            frequency: "1-2 times daily"
-        },
-        warnings: [
-            "آمن جداً (خالي من الكومارين)",
-            "⚠️ يخفض السكر - راقب مع أدوية السكري",
-            "اختر منتج موثوق (Cinnulin PF أو ما يعادله)",
-            "المستخلص أفضل من المسحوق"
-        ],
-        warningsNl: [
-            "100% leverveilig door volledige afwezigheid van coumarine",
-            "Kan de bloedsuikerspiegel verlagen; controleer glucose bij gebruik van diabetesmedicijnen",
-            "Superieur aan gewoon kaneelpoeder"
-        ],
-        warningsEn: [
-            "100% hepatosafe due to complete analytical absence of coumarins",
-            "May lower blood glucose; monitor parameters if on anti-diabetic pharmaceuticals",
-            "Vastly superior to raw culinary cinnamon powder"
-        ],
-        interactions: "قد يتفاعل مع أدوية السكري - راقب مستوى السكر",
-        interactionsNl: "Versterkt het effect van metformine en insuline.",
-        interactionsEn: "Additively interacts with prescription hypoglycemic agents.",
-        naturalSources: "مستخلص من لحاء القرفة - يجب تناوله كمكمل",
-        naturalSourcesNl: "Gepatenteerd waterig extract van Cinnamomum burmannii schors.",
-        naturalSourcesEn: "Patented aqueous extract of Cinnamomum burmannii bark."
     },
     {
         id: 258,
@@ -20720,84 +20121,6 @@ const supplementsData = [
         naturalSources: "براعم نبات القمح الصغيرة (عمر 7-10 أيام)",
         naturalSourcesNl: "Jonge jonge scheuten van Triticum aestivum (7-10 dagen oud).",
         naturalSourcesEn: "Young sprouted shoots of common wheat (Triticum aestivum)."
-    },
-    {
-        id: 279,
-        slug: "korean-red-ginseng",
-        name: "الجينسنج الكوري الأحمر",
-        englishName: "Korean Red Ginseng (Panax Ginseng)",
-        nameNl: "Koreaanse Rode Ginseng (Panax Ginseng)",
-        category: "أعشاب-وزيوت-علاجية",
-        icon: "🔴",
-        summary: "ملك الأعشاب - طاقة وقوة وتركيز ومناعة - الأقوى والأغلى",
-        summaryNl: "De koning der adaptogenen; traditioneel gestoomde rode Panax-wortel voor maximale fysieke kracht, libido en mentale focus.",
-        summaryEn: "The sovereign adaptogen; traditional steam-cured red Panax root maximizing physical vigor, sexual stamina, and mental sharpness.",
-        tags: [
-            "طاقة",
-            "قوة",
-            "تركيز",
-            "مناعة"
-        ],
-        benefits: [
-            "يزيد الطاقة والقدرة على التحمل بقوة",
-            "يحسن التركيز والذاكرة والوظائف الإدراكية",
-            "يقوي جهاز المناعة",
-            "يحسن الأداء الجنسي (رجال ونساء)",
-            "يقلل الإجهاد ويحسن المزاج",
-            "يخفض السكر والكوليسترول"
-        ],
-        benefitsNl: [
-            "Het krachtigste stimulerende adaptogeen ter wereld: verhoogt fysiek uithoudingsvermogen en spierkracht",
-            "Verbeterde stikstofoxideproductie (NO): klinisch bewezen effectief bij erectiestoornissen en libido bij mannen en vrouwen",
-            "Verhoogt mentale alertheid, reactiesnelheid, werkgeheugen en concentratie onder zware druk",
-            "Stimuleert de afweer en verhoogt natuurlijke weerstand tegen virale infecties",
-            "Ondersteunt gezonde bloedsuikerspiegel en insulinerespons"
-        ],
-        benefitsEn: [
-            "World's premier stimulating adaptogen driving muscular work capacity, stamina, and mitochondrial resilience",
-            "Augments endothelial nitric oxide release; clinically proven therapy for erectile dysfunction and libido in both sexes",
-            "Elevates cognitive alertness, reaction time, mental arithmetic speed, and executive focus under pressure",
-            "Activates cell-mediated immunity and natural killer cell activity against viral challenges",
-            "Supports normal fasting glucose metabolism and insulin sensitivity"
-        ],
-        dosage: {
-            recommended: "500-1000 ملغ مستخلص معياري (4-10% جينسينوسيدات) أو 1-2 غ من الجذر",
-            timing: "صباحاً مع الإفطار",
-            frequency: "مرة واحدة يومياً (دورة 4-6 أسابيع استخدام ثم 1-2 أسبوع توقف)"
-        },
-        dosageNl: {
-            recommended: "500-1000 mg gestandaardiseerd extract (minimaal 4-10% ginsenosiden) of 1-2 g pure wortel",
-            timing: "'s Ochtends tijdens het ontbijt met water (NOOIT laat in de middag of avond)",
-            frequency: "1x per dag (kuren van 4-6 weken, gevolgd door 1-2 weken rust)"
-        },
-        dosageEn: {
-            recommended: "500-1000 mg standardized extract (4-10% ginsenosides) or 1-2 g root",
-            timing: "Morning with breakfast and water (NEVER in the afternoon or evening)",
-            frequency: "Once daily (cycle 4-6 weeks on, 1-2 weeks off)"
-        },
-        warnings: [
-            "قد يسبب أرق - لا تأخذه مساءً",
-            "قد يرفع ضغط الدم قليلاً",
-            "تجنبه مع مميعات الدم",
-            "باهظ الثمن (النوع الأصلي)",
-            "⚠️ النوع الأحمر أقوى من الأبيض"
-        ],
-        warningsNl: [
-            "RODE GINSENG IS WARM EN STIMULEREND: Kan bij overdosering slapeloosheid, rusteloosheid of een lichte bloeddrukstijging geven",
-            "Niet gebruiken bij ongecontroleerde hoge bloeddruk of acute infecties met hoge koorts",
-            "ALTIJD CYCLEN: Periodiek pauzeren houdt de receptoren gevoelig"
-        ],
-        warningsEn: [
-            "RED GINSENG IS STIMULATING AND WARMING: Overdosing can provoke insomnia, agitation, or elevated blood pressure",
-            "Contraindicated in uncontrolled severe hypertension or acute febrile illnesses",
-            "MANDATORY CYCLING: Periodic off-weeks preserve receptor sensitivity and prevent habituation"
-        ],
-        interactions: "يتفاعل مع مميعات الدم وأدوية السكر والضغط - استشر الطبيب",
-        interactionsNl: "Kan bloedverdunners (warfarine), bloeddrukverlagers en diabetesmedicatie beïnvloeden; interactie met MAO-remmers.",
-        interactionsEn: "Interacts with warfarin anticoagulation, antihypertensives, hypoglycemics, and MAO inhibitors.",
-        naturalSources: "جذور نبات Panax ginseng الكوري (معالج بالبخار)",
-        naturalSourcesNl: "Wortels van 6 jaar oude Panax ginseng uit Korea (traditioneel gestoomd en gedroogd).",
-        naturalSourcesEn: "Six-year-old cultivated roots of Korean Panax ginseng (steam-cured)."
     },
     {
         id: 280,
