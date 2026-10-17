@@ -654,9 +654,9 @@
             background: var(--card-bg);
             color: var(--text-dark);
             border-radius: 20px;
-            max-width: 750px;
+            max-width: 800px;
             width: 100%;
-            margin: 30px auto;
+            margin: 32px auto;
             box-shadow: var(--shadow-lg);
             overflow: hidden;
         }
@@ -742,28 +742,37 @@
         .medical-disclaimer strong { color: var(--text-dark); }
         .ref-list { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
         .ref-list li { color: var(--text-light); font-size: 0.86rem; overflow-wrap: anywhere; }
-        .page-link {
-            display: flex; align-items: center; justify-content: center; gap: 8px; margin: 6px 0 4px;
-            padding: 11px 18px; border-radius: 30px; text-decoration: none; font-weight: 800; color: #ffffff;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+        .related-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        .related-item {
+            display: flex; align-items: center; gap: 12px; width: 100%;
+            padding: 14px 16px; border-radius: 14px; cursor: pointer;
+            background: var(--light-gray); border: 1px solid transparent;
+            color: var(--text-dark); font: inherit; text-align: start;
+            transition: border-color 0.15s, transform 0.15s;
         }
-        .page-link:hover { filter: brightness(1.06); }
+        .related-item:hover { border-color: var(--primary-color); transform: translateY(-1px); }
+        .related-item:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 2px; }
+        .related-icon { font-size: 26px; flex-shrink: 0; }
+        .related-text { display: flex; flex-direction: column; min-width: 0; }
+        .related-name { font-weight: 800; font-size: 15px; line-height: 1.45; }
+        .related-group { color: var(--text-light); font-size: 13px; margin-top: 2px; }
 
         .modal-icon { font-size: 50px; margin-bottom: 8px; }
         .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
         .modal-subtitle { font-size: 14px; opacity: 0.9; }
 
-        .modal-body { padding: 25px; }
+        .modal-body { padding: 32px 36px 36px; }
 
         [dir="rtl"] .modal-body { text-align: right; }
         [dir="ltr"] .modal-body { text-align: left; }
 
-        .info-section { margin-bottom: 22px; }
+        .info-section { margin-bottom: 30px; }
         .info-section h4 {
             color: var(--primary-color);
-            font-size: 17px;
+            font-size: 18.5px;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -772,9 +781,11 @@
         .info-section ul {
             padding-right: 20px;
             padding-left: 0;
-            line-height: 1.8;
-            font-size: 14.5px;
+            line-height: 1.9;
+            font-size: 16px;
         }
+        .info-section li + li { margin-top: 6px; }
+        .info-section p { font-size: 16px; line-height: 1.9; }
 
         [dir="ltr"] .info-section ul {
             padding-left: 20px;
@@ -783,17 +794,19 @@
 
         .dosage-box {
             background: var(--light-gray);
-            padding: 16px;
-            border-radius: 14px;
+            padding: 8px 22px;
+            border-radius: 16px;
         }
 
         .dosage-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 0;
+            gap: 16px;
+            padding: 14px 0;
             border-bottom: 1px solid rgba(0,0,0,0.06);
-            font-size: 14px;
+            font-size: 15.5px;
+            line-height: 1.7;
         }
 
         body.dark-mode .dosage-item {
@@ -801,13 +814,13 @@
         }
 
         .dosage-item:last-child { border-bottom: none; }
-        .dosage-label { color: var(--text-light); font-weight: 600; }
-        .dosage-value { color: var(--primary-color); font-weight: 800; }
+        .dosage-label { color: var(--text-light); font-weight: 600; flex-shrink: 0; }
+        .dosage-value { color: var(--primary-color); font-weight: 800; text-align: end; }
 
         .warning-box {
             background: #fef3c7;
-            padding: 14px;
-            border-radius: 12px;
+            padding: 20px 22px;
+            border-radius: 16px;
             border-right: 4px solid var(--warning);
         }
 
@@ -818,9 +831,9 @@
 
         .warning-box h5 {
             color: #92400e;
-            font-size: 15px;
+            font-size: 17px;
             font-weight: 800;
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
 
         .warning-box li { color: #92400e !important; }
@@ -880,6 +893,34 @@
             color: white;
         }
         .no-results.show { display: block; }
+
+        @media (max-width: 640px) {
+            #supplementModal { padding: 0; overflow: hidden; }
+            #supplementModal .modal-content {
+                max-width: none; margin: 0; border-radius: 0;
+                height: 100vh; height: 100dvh;
+                display: flex; flex-direction: column;
+            }
+            #supplementModal .modal-header { flex-shrink: 0; padding: 18px 64px 16px; }
+            #supplementModal .modal-icon { font-size: 34px; margin-bottom: 4px; }
+            #supplementModal .modal-title { font-size: 20px; line-height: 1.35; }
+            #supplementModal .close-modal, #supplementModal .share-modal { top: 14px; height: 42px; min-width: 42px; }
+            #supplementModal .close-modal { width: 42px; font-size: 20px; background: rgba(255, 255, 255, 0.32); }
+            [dir="rtl"] #supplementModal .close-modal { left: 14px; }
+            [dir="ltr"] #supplementModal .close-modal { right: 14px; }
+            [dir="rtl"] #supplementModal .share-modal { right: 14px; }
+            [dir="ltr"] #supplementModal .share-modal { left: 14px; }
+            #supplementModal .modal-body {
+                flex: 1; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+                padding: 24px 20px calc(32px + env(safe-area-inset-bottom));
+            }
+            .info-section { margin-bottom: 26px; }
+            .dosage-box { padding: 4px 16px; }
+            .dosage-item { flex-direction: column; align-items: flex-start; gap: 2px; }
+            .dosage-value { text-align: start; }
+            .warning-box { padding: 16px 18px; }
+            .related-list { grid-template-columns: 1fr; }
+        }
 
         @media (max-width: 992px) {
             .nav-menu { display: none; }
@@ -1143,7 +1184,7 @@
                 modal_sources: "المصادر الطبيعية",
                 modal_close: "إغلاق",
                 modal_refs_title: "المراجع العلمية",
-                modal_open_page: "فتح الصفحة الكاملة للمكمل",
+                modal_related: "مكملات ذات صلة",
                 modal_copy_link: "نسخ رابط المكمل المباشر",
                 modal_link_copied: "تم نسخ الرابط",
                 modal_refs: "📚 المراجع العلمية: الهيئة الأوروبية لسلامة الأغذية (EFSA) • المعاهد الوطنية للصحة (NIH - ODS) • قواعد بيانات PubMed / Cochrane",
@@ -1201,7 +1242,7 @@
                 modal_sources: "Natural Sources",
                 modal_close: "Close",
                 modal_refs_title: "Scientific references",
-                modal_open_page: "Open the full supplement page",
+                modal_related: "Related supplements",
                 modal_copy_link: "Copy direct link to this supplement",
                 modal_link_copied: "Link copied",
                 modal_refs: "📚 Scientific references: European Food Safety Authority (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane databases",
@@ -1259,7 +1300,7 @@
                 modal_sources: "Natuurlijke bronnen",
                 modal_close: "Sluiten",
                 modal_refs_title: "Wetenschappelijke bronnen",
-                modal_open_page: "Open de volledige pagina van dit supplement",
+                modal_related: "Verwante supplementen",
                 modal_copy_link: "Directe link naar dit supplement kopiëren",
                 modal_link_copied: "Link gekopieerd",
                 modal_refs: "📚 Wetenschappelijke bronnen: Europese Autoriteit voor Voedselveiligheid (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane-databanken",
@@ -1703,6 +1744,25 @@
             return page ? 'https://wibohealth.com' + page : 'https://wibohealth.com/supplements.html#' + encodeURIComponent(supp.slug);
         }
 
+        // Same pick as the generated pages: same group first, then same category; vetted records before the rest
+        function relatedSupplements(supp, limit = 4) {
+            const group = supp.groupLabel && supp.groupLabel.ar;
+            const vetted = r => (r.references || []).length > 0;
+            const others = supplementsData.filter(r => r.id !== supp.id);
+            const picked = [];
+            const add = list => list.forEach(r => { if (!picked.includes(r)) picked.push(r); });
+            if (group) add(others.filter(r => vetted(r) && r.groupLabel && r.groupLabel.ar === group));
+            add(others.filter(r => vetted(r) && r.category === supp.category));
+            add(others.filter(r => r.category === supp.category));
+            return picked.slice(0, limit);
+        }
+
+        function supplementDisplayName(supp) {
+            if (currentLang === 'nl') return supp.nameNl || supp.englishName || supp.name;
+            if (currentLang === 'en') return supp.englishName || supp.name;
+            return supp.name;
+        }
+
         function openModal(id, opts = {}) {
             const supp = supplementsData.find(s => s.id === id);
             if (!supp) return;
@@ -1727,6 +1787,7 @@
                 history.replaceState({ suppModal: true }, '', hash);
             }
             modal.scrollTop = 0;
+            document.querySelector('#supplementModal .modal-body').scrollTop = 0;
             document.getElementById('supplementClose').focus({ preventScroll: true });
         }
 
@@ -1783,6 +1844,8 @@
                 ? `<ul>${interParts.map(x => `<li>${x}</li>`).join('')}</ul>`
                 : `<p style="color: var(--text-dark);">${interVal}</p>`;
 
+            const related = relatedSupplements(supp);
+
             document.getElementById('modalBody').innerHTML = `
                 <div class="info-section">
                     <h4><i class="fas fa-star"></i> ${t('modal_benefits')}</h4>
@@ -1833,7 +1896,19 @@
                     <h4><i class="fas fa-book-medical"></i> ${t('modal_refs_title')}</h4>
                     <ol class="ref-list">${supp.references.map(r => `<li>${r}</li>`).join('')}</ol>
                 </div>` : ''}
-                ${supplementPagePath(supp) ? `<a class="page-link" href="${supplementPagePath(supp)}"><i class="fas fa-up-right-from-square"></i> ${t('modal_open_page')}</a>` : ''}
+                ${related.length ? `
+                <div class="info-section">
+                    <h4><i class="fas fa-layer-group"></i> ${t('modal_related')}</h4>
+                    <div class="related-list">${related.map(r => `
+                        <button type="button" class="related-item" onclick="openModal(${r.id})">
+                            <span class="related-icon" aria-hidden="true">${r.icon || '💊'}</span>
+                            <span class="related-text">
+                                <span class="related-name">${supplementDisplayName(r)}</span>
+                                <span class="related-group">${(r.groupLabel && r.groupLabel[currentLang]) || getCategoryName(r.category)}</span>
+                            </span>
+                        </button>`).join('')}
+                    </div>
+                </div>` : ''}
                 <div class="refs-strip">${t('modal_refs')}</div>
                 <div class="medical-disclaimer">${t('modal_disclaimer')}</div>
             `;
