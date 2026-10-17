@@ -28,3 +28,24 @@ scripts/
 *.p12
 .env
 .env.*
+# Local tooling, backups and dev-only pages (never linked from the site)
+.vscode/
+scratchpad/
+__pycache__/
+*.sh
+js/data_backup.js
+js/data_backup_gi.js
+js/*.before-ii-cleanup.js
+images/foods/temp_*
+index-old-backup.html
+screenshot-generator.html
+feature-graphic.html
+feature-graphic-original.png
+manifest-broken.json
+manifest-fixed.json
+twa-manifest-*.json
+twa-vercel-config.json
+# Netlify/Apache leftovers (Vercel uses vercel.json)
+.htaccess
+_headers
+_redirects
