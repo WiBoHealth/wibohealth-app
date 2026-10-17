@@ -31,6 +31,11 @@ T = {
 }
 
 EXTRA_CSS = """
+        /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
+        .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
+        .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
+        .article-page .about-card p, .article-page .check-list li, .article-page .steps li { font-size: 1.06rem; line-height: 1.95; }
+        .article-page .lead { font-size: 1.14rem; }
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
