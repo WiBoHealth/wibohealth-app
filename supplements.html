@@ -894,6 +894,21 @@
         }
         .no-results.show { display: block; }
 
+        /* Wide screens: a roomy two-column reading layout */
+        @media (min-width: 900px) {
+            #supplementModal .modal-content { max-width: 1080px; }
+            #supplementModal .modal-header { padding: 30px 80px 26px; }
+            #supplementModal .modal-body {
+                padding: 36px 48px 44px;
+                display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+                column-gap: 40px; align-items: start;
+            }
+            #supplementModal .info-section.span-2,
+            #supplementModal .refs-strip,
+            #supplementModal .medical-disclaimer { grid-column: 1 / -1; }
+            #supplementModal .related-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+
         @media (max-width: 640px) {
             #supplementModal { padding: 0; overflow: hidden; }
             #supplementModal .modal-content {
@@ -1185,6 +1200,7 @@
                 modal_close: "إغلاق",
                 modal_refs_title: "المراجع العلمية",
                 modal_related: "مكملات ذات صلة",
+                modal_forms: "أفضل الأشكال المتوفرة",
                 modal_copy_link: "نسخ رابط المكمل المباشر",
                 modal_link_copied: "تم نسخ الرابط",
                 modal_refs: "📚 المراجع العلمية: الهيئة الأوروبية لسلامة الأغذية (EFSA) • المعاهد الوطنية للصحة (NIH - ODS) • قواعد بيانات PubMed / Cochrane",
@@ -1243,6 +1259,7 @@
                 modal_close: "Close",
                 modal_refs_title: "Scientific references",
                 modal_related: "Related supplements",
+                modal_forms: "Best forms to choose",
                 modal_copy_link: "Copy direct link to this supplement",
                 modal_link_copied: "Link copied",
                 modal_refs: "📚 Scientific references: European Food Safety Authority (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane databases",
@@ -1301,6 +1318,7 @@
                 modal_close: "Sluiten",
                 modal_refs_title: "Wetenschappelijke bronnen",
                 modal_related: "Verwante supplementen",
+                modal_forms: "Beste vormen om te kiezen",
                 modal_copy_link: "Directe link naar dit supplement kopiëren",
                 modal_link_copied: "Link gekopieerd",
                 modal_refs: "📚 Wetenschappelijke bronnen: Europese Autoriteit voor Voedselveiligheid (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane-databanken",
@@ -1845,9 +1863,11 @@
                 : `<p style="color: var(--text-dark);">${interVal}</p>`;
 
             const related = relatedSupplements(supp);
+            const formsVal = (currentLang === 'nl' && supp.formsNl) ? supp.formsNl :
+                             (currentLang === 'en' && supp.formsEn) ? supp.formsEn : (supp.forms || '');
 
             document.getElementById('modalBody').innerHTML = `
-                <div class="info-section">
+                <div class="info-section span-2">
                     <h4><i class="fas fa-star"></i> ${t('modal_benefits')}</h4>
                     <ul>
                         ${benefitsList.map(b => `<li>${b}</li>`).join('')}
@@ -1872,6 +1892,12 @@
                     </div>
                 </div>
 
+                ${formsVal ? `
+                <div class="info-section">
+                    <h4><i class="fas fa-capsules"></i> ${t('modal_forms')}</h4>
+                    <p style="color: var(--text-dark);">${formsVal}</p>
+                </div>` : ''}
+
                 <div class="info-section">
                     <div class="warning-box">
                         <h5><i class="fas fa-triangle-exclamation"></i> ${t('modal_warnings')}</h5>
@@ -1886,18 +1912,13 @@
                     ${interHtml}
                 </div>
 
-                <div class="info-section">
+                <div class="info-section${formsVal ? ' span-2' : ''}">
                     <h4><i class="fas fa-leaf"></i> ${t('modal_sources')}</h4>
                     <p style="color: var(--text-dark);">${sourcesVal}</p>
                 </div>
 
-                ${(supp.references || []).length ? `
-                <div class="info-section">
-                    <h4><i class="fas fa-book-medical"></i> ${t('modal_refs_title')}</h4>
-                    <ol class="ref-list">${supp.references.map(r => `<li>${r}</li>`).join('')}</ol>
-                </div>` : ''}
                 ${related.length ? `
-                <div class="info-section">
+                <div class="info-section span-2">
                     <h4><i class="fas fa-layer-group"></i> ${t('modal_related')}</h4>
                     <div class="related-list">${related.map(r => `
                         <button type="button" class="related-item" onclick="openModal(${r.id})">
@@ -1908,6 +1929,11 @@
                             </span>
                         </button>`).join('')}
                     </div>
+                </div>` : ''}
+                ${(supp.references || []).length ? `
+                <div class="info-section span-2">
+                    <h4><i class="fas fa-book-medical"></i> ${t('modal_refs_title')}</h4>
+                    <ol class="ref-list">${supp.references.map(r => `<li>${r}</li>`).join('')}</ol>
                 </div>` : ''}
                 <div class="refs-strip">${t('modal_refs')}</div>
                 <div class="medical-disclaimer">${t('modal_disclaimer')}</div>

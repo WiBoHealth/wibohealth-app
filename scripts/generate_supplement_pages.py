@@ -26,7 +26,7 @@ T = {
         dir='rtl', title='{name}: الجرعة والفوائد والتداخلات الدوائية | WiBo Health',
         desc='{name}: {desc} الجرعة الموصى بها: {dose}. التحذيرات والتداخلات الدوائية وفق EFSA وNIH.',
         guide='دليل المكملات', role='الدور الوظيفي والفوائد', dose='الجرعة وطريقة الاستخدام',
-        rec='الجرعة الموصى بها', timing='أفضل وقت للاستخدام', freq='التكرار', warnings='تحذيرات مهمة',
+        rec='الجرعة الموصى بها', forms='أفضل الأشكال المتوفرة', timing='أفضل وقت للاستخدام', freq='التكرار', warnings='تحذيرات مهمة',
         inter='التداخلات الدوائية', refs='المراجع العلمية', related='مكملات ذات صلة', open_guide='عرض في دليل المكملات',
         sources='📚 المصادر والأبحاث المنشورة: الهيئة الأوروبية لسلامة الأغذية (EFSA) • المعاهد الوطنية للصحة (NIH - ODS) • قواعد بيانات PubMed / Cochrane',
         updated='آخر تحديث للمحتوى: {date} · المحتوى مستند إلى المصادر والأبحاث المنشورة (EFSA / NIH / PubMed)',
@@ -36,7 +36,7 @@ T = {
         dir='ltr', title='{name}: Dosage, Benefits & Drug Interactions | WiBo Health',
         desc='{name}: {desc} Recommended dose: {dose}. Warnings and drug interactions based on EFSA and NIH.',
         guide='Supplements Guide', role='Function & benefits', dose='Dosage & how to use',
-        rec='Recommended dose', timing='Best time to take', freq='Frequency', warnings='Important warnings',
+        rec='Recommended dose', forms='Best forms to choose', timing='Best time to take', freq='Frequency', warnings='Important warnings',
         inter='Drug interactions', refs='Scientific references', related='Related supplements', open_guide='View in the supplements guide',
         sources='📚 Published sources and research: European Food Safety Authority (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane databases',
         updated='Content last updated: {date} · Based on published sources and research (EFSA / NIH / PubMed)',
@@ -46,7 +46,7 @@ T = {
         dir='ltr', title='{name}: dosering, voordelen en interacties | WiBo Health',
         desc='{name}: {desc} Aanbevolen dosis: {dose}. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.',
         guide='Supplementengids', role='Functie & voordelen', dose='Dosering & gebruik',
-        rec='Aanbevolen dosis', timing='Beste moment van inname', freq='Frequentie', warnings='Belangrijke waarschuwingen',
+        rec='Aanbevolen dosis', forms='Beste vormen om te kiezen', timing='Beste moment van inname', freq='Frequentie', warnings='Belangrijke waarschuwingen',
         inter='Interacties met medicijnen', refs='Wetenschappelijke bronnen', related='Verwante supplementen', open_guide='Bekijk in de supplementengids',
         sources='📚 Gepubliceerde bronnen en onderzoek: Europese Autoriteit voor Voedselveiligheid (EFSA) • National Institutes of Health (NIH - ODS) • PubMed / Cochrane-databanken',
         updated='Inhoud laatst bijgewerkt: {date} · Gebaseerd op gepubliceerde bronnen en onderzoek (EFSA / NIH / PubMed)',
@@ -132,6 +132,9 @@ def build(s, lang, vetted):
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
     warnings_html = ''.join(f'<div class="tip warn"><p>{esc(w)}</p></div>' for w in s['warnings' + suf])
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in s['references'])
+    forms_txt = s.get('forms' + suf)
+    forms_html = (f'<h2 class="section-title"><i class="fas fa-capsules"></i> <span>{t["forms"]}</span></h2>'
+                  f'<div class="tip-list"><div class="tip"><p>{esc(forms_txt)}</p></div></div>') if forms_txt else ''
     footer_links = ' <span>•</span> '.join(
         f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/supplements.html', t['footer_supp']),
@@ -220,17 +223,18 @@ def build(s, lang, vetted):
                 </tbody>
             </table>
 
+            {forms_html}
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>{t["warnings"]}</span></h2>
             <div class="tip-list">{warnings_html}</div>
 
             <h2 class="section-title"><i class="fas fa-pills"></i> <span>{t["inter"]}</span></h2>
             <div class="tip-list"><div class="tip"><p>{esc(s["interactions" + suf])}</p></div></div>
 
-            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
-            <ol class="ref-list">{refs_html}</ol>
-
             <a class="guide-link" href="{guide_href}"><i class="fas fa-capsules"></i> {t["open_guide"]}</a>
             {f'<h2 class="section-title"><i class="fas fa-layer-group"></i> <span>{t["related"]}</span></h2><ul class="alt-list">{related_html}</ul>' if related_html else ''}
+
+            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
+            <ol class="ref-list">{refs_html}</ol>
 
             <div class="source-strip">{t["sources"]}</div>
             <p class="reviewed">{t["updated"].format(date=t["date"])}</p>

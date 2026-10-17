@@ -1145,6 +1145,20 @@
         }
         .fm-page-link:hover { border-color: var(--primary-color); }
 
+        /* Wide screens: a roomy layout, nutrient cards in one row, page sections in two columns */
+        @media (min-width: 900px) {
+            .food-modal-content { max-width: 1080px; }
+            .food-modal-header { padding: 30px 80px 26px; }
+            .food-modal-body { padding: 30px 44px 40px; }
+            .fm-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .fm-card.fm-gl { grid-column: span 2; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+            .fm-full { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; align-items: start; }
+            .fm-full > * { grid-column: 1 / -1; }
+            .fm-full > .fm-sec { grid-column: auto; min-width: 0; }
+            .fm-full > .fm-sec:last-of-type:nth-of-type(odd) { grid-column: 1 / -1; }
+            .fm-full .fm-sec .section-title:first-child { margin-top: 18px; }
+        }
+
         @media (max-width: 600px) {
             .fm-full .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .food-modal { padding: 10px; }
@@ -2104,6 +2118,18 @@
                 wrap.className = 'table-wrap';
                 table.replaceWith(wrap);
                 wrap.appendChild(table);
+            });
+            // Group each heading with its content so wide screens can lay the sections out in two columns
+            const tail = el => el.matches('.source-strip, .reviewed, .disclaimer-box');
+            [...article.children].forEach(el => {
+                if (!el.matches('h2.section-title')) return;
+                const sec = doc.createElement('section');
+                sec.className = 'fm-sec';
+                el.replaceWith(sec);
+                sec.appendChild(el);
+                while (sec.nextElementSibling && !sec.nextElementSibling.matches('h2.section-title') && !tail(sec.nextElementSibling)) {
+                    sec.appendChild(sec.nextElementSibling);
+                }
             });
             return { gl, body: article.innerHTML };
         }

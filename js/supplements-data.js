@@ -414,7 +414,7 @@ const supplementsData = [
         naturalSourcesNl: "Verse groenten, fruit, volkorengranen, eieren en peulvruchten.",
         naturalSourcesEn: "Fruits, vegetables, whole grains, eggs, legumes.",
         groupLabel: {
-            ar: "صحة عامة ومناعة",
+            ar: "صحة عامة والمناعة",
             en: "General health & immunity",
             nl: "Algemene gezondheid & weerstand"
         },
@@ -1782,239 +1782,235 @@ const supplementsData = [
     {
         id: 26,
         slug: "ginkgo-biloba",
-        name: "جنكة بيلوبا",
-        englishName: "Ginkgo Biloba",
-        nameNl: "Ginkgo Biloba (Tempelboom)",
+        name: "خلاصة أوراق الجنكة بيلوبا القياسية",
+        englishName: "Ginkgo Biloba Standardized Extract",
+        nameNl: "Ginkgo Biloba Bladextract",
         category: "نوم-نفسية",
         icon: "🍃",
-        summary: "عشبة صينية قديمة تحسن الذاكرة والتركيز وتدفق الدم للدماغ",
-        summaryNl: "Klassiek botanisch extract voor microcirculatie, geheugenscherpte en cognitieve vitaliteit.",
-        summaryEn: "Ancient botanical extract improving cerebral microcirculation, memory retention, and mental sharpness.",
+        summary: "يساهم في دعم الدورة الدموية الدقيقة وتدفق الدم إلى الأوعية الدقيقة في الدماغ والأطراف؛ وتعمل مركبات الفلافونويد كمضادات أكسدة تحمي الخلايا العصبية من الإجهاد التأكسدي، وتدعم الوضوح الذهني ووظائف الذاكرة قصيرة المدى.",
+        summaryNl: "Het ondersteunt de microcirculatie en de doorbloeding van de kleine bloedvaten in de hersenen en ledematen; de flavonoïden werken als antioxidanten die zenuwcellen beschermen tegen oxidatieve stress en helderheid van geest en het kortetermijngeheugen ondersteunen.",
+        summaryEn: "It helps support the microcirculation and blood flow to the small vessels of the brain and limbs; its flavonoids act as antioxidants that protect nerve cells from oxidative stress and support mental clarity and short-term memory.",
         tags: [
             "ذاكرة",
             "تركيز",
             "دماغ"
         ],
         benefits: [
-            "يحسن الذاكرة والتركيز والانتباه",
-            "يزيد تدفق الدم والأكسجين للدماغ",
-            "يدعم صحة الدماغ مع التقدم في العمر",
-            "له خصائص مضادة للأكسدة قوية",
-            "قد يقلل أعراض القلق",
-            "يحسن صحة العين والرؤية"
+            "يساهم في دعم الدورة الدموية الدقيقة وتدفق الدم إلى الأوعية الدقيقة في الدماغ والأطراف؛ وتعمل مركبات الفلافونويد كمضادات أكسدة تحمي الخلايا العصبية من الإجهاد التأكسدي، وتدعم الوضوح الذهني ووظائف الذاكرة قصيرة المدى."
         ],
         benefitsNl: [
-            "Verbetert de microcirculatie en zuurstoftoevoer naar hersenen en ledematen",
-            "Ondersteunt kortetermijngeheugen, concentratie en verwerkingssnelheid",
-            "Helpt bij koude handen en voeten door perifere vaatverwijding",
-            "Kan verlichting bieden bij bepaalde vormen van oorsuizen (tinnitus) en duizeligheid",
-            "Krachtige antioxidant die neuronen beschermt tegen vrije radicalen"
+            "Het ondersteunt de microcirculatie en de doorbloeding van de kleine bloedvaten in de hersenen en ledematen; de flavonoïden werken als antioxidanten die zenuwcellen beschermen tegen oxidatieve stress en helderheid van geest en het kortetermijngeheugen ondersteunen."
         ],
         benefitsEn: [
-            "Enhances cerebral blood flow and peripheral microvascular perfusion",
-            "Boosts working memory retrieval, mental processing speed, and recall",
-            "Helps alleviate cold extremities via vascular dilation",
-            "May provide relief in microcirculation-related tinnitus and vertigo",
-            "Neuroprotective antioxidant defending brain cells against oxidative stress"
+            "It helps support the microcirculation and blood flow to the small vessels of the brain and limbs; its flavonoids act as antioxidants that protect nerve cells from oxidative stress and support mental clarity and short-term memory."
         ],
         dosage: {
-            recommended: "120-240 ملغ مستخلص معياري (24% غليكوسيدات فلافون الجنكة)",
-            timing: "مع وجبة الإفطار أو الغداء",
-            frequency: "1-2 مرة يومياً"
+            recommended: "120–240 ملغ من المستخلص المعياري (EGb 761)",
+            timing: "مع وجبات الطعام (صباحاً وظهراً)",
+            frequency: "مقسمة على جرعتين يومياً"
         },
         dosageNl: {
-            recommended: "120-240 mg gestandaardiseerd extract (bijv. EGb 761 met 24% flavonolen)",
-            timing: "Tijdens de ochtend- of middagmaaltijd met water",
-            frequency: "1-2x per dag"
+            recommended: "120–240 mg gestandaardiseerd extract (EGb 761)",
+            timing: "Bij de maaltijd ('s ochtends en 's middags)",
+            frequency: "Verdeeld over twee doses per dag"
         },
         dosageEn: {
-            recommended: "120-240 mg standardized extract (24% ginkgo flavone glycosides)",
-            timing: "With breakfast or lunch",
-            frequency: "1-2 times daily"
+            recommended: "120–240 mg standardized extract (EGb 761)",
+            timing: "With meals (morning and midday)",
+            frequency: "Split into two doses daily"
         },
+        forms: "المستخلصات المعيارية 24/6 (24% فلافون جليكوسيدات و6% تيربين لاكتونات، مثل EGb 761) مع نسبة حمض الجينكوليك أقل من 5 أجزاء في المليون لتفادي التحسس والاضطرابات الهضمية.",
+        formsNl: "Gestandaardiseerde 24/6-extracten (24% flavonglycosiden en 6% terpeenlactonen, zoals EGb 761) met minder dan 5 ppm ginkgolzuren om allergische en spijsverteringsklachten te voorkomen.",
+        formsEn: "Standardized 24/6 extracts (24% flavone glycosides and 6% terpene lactones, such as EGb 761) with ginkgolic acids below 5 ppm to avoid allergic and digestive reactions.",
         warnings: [
-            "النتائج تحتاج 4-6 أسابيع للظهور",
-            "قد يزيد خطر النزيف بجرعات عالية",
-            "استشر طبيبك إذا كنت تتناول مميعات الدم"
+            "يُمنع لمن لديهم تاريخ من نوبات الصرع والتشنجات",
+            "يُمنع أثناء الحمل والرضاعة لعدم كفاية بيانات الأمان",
+            "يجب إيقافه قبل العمليات الجراحية بـ 14 يوماً"
         ],
         warningsNl: [
-            "Resultaten zijn cumulatief en vragen 4-8 weken consequent gebruik",
-            "Ginkgo remt de bloedplaatjesaggregatie; staak minimaal 2 weken voor een geplande operatie",
-            "Niet gebruiken in combinatie met sterke antistollingsmiddelen zonder medisch overleg"
+            "Niet gebruiken bij een voorgeschiedenis van epilepsie of toevallen",
+            "Niet gebruiken tijdens zwangerschap of borstvoeding wegens onvoldoende veiligheidsgegevens",
+            "Stop er 14 dagen voor een operatie mee"
         ],
         warningsEn: [
-            "Therapeutic benefits require 4-8 weeks of sustained administration",
-            "Inhibits platelet activating factor; discontinue 2 weeks prior to surgery",
-            "Exercise caution with pharmaceutical anticoagulants"
+            "Not for people with a history of epilepsy or seizures",
+            "Not for use during pregnancy or breastfeeding because safety data are insufficient",
+            "Stop taking it 14 days before surgery"
         ],
-        interactions: "يتفاعل مع مميعات الدم وأدوية السكري - استشر طبيبك",
-        interactionsNl: "Significante interactie met bloedverdunners (aspirine, warfarine, clopidogrel).",
-        interactionsEn: "Direct interaction with antiplatelet drugs and blood thinners.",
-        naturalSources: "شجرة الجنكة (يُستخدم كمكمل فقط)",
-        naturalSourcesNl: "Bladeren van de Ginkgo biloba boom.",
-        naturalSourcesEn: "Leaves of the ancient Ginkgo biloba tree."
+        interactions: "تحذير سيولة: يزيد خطر النزيف؛ لا يُستخدم دون إشراف طبي مع مميعات الدم ومضادات التخثر (الوارفارين، الأسبرين، الكلوبيدوجريل) ومضادات الالتهاب غير الستيرويدية. قد يتداخل مع أدوية السكري وخافضات الضغط.",
+        interactionsNl: "Waarschuwing bloedingen: het verhoogt het bloedingsrisico; combineer het niet zonder medisch toezicht met bloedverdunners en antistollingsmiddelen (warfarine, aspirine, clopidogrel) of NSAID's. Het kan interageren met diabetes- en bloeddrukmedicatie.",
+        interactionsEn: "Bleeding warning: it raises the risk of bleeding; do not combine it without medical supervision with blood thinners and anticoagulants (warfarin, aspirin, clopidogrel) or NSAIDs. It may interact with diabetes and blood pressure medication.",
+        naturalSources: "أوراق شجرة الجنكة (تُستخدم كمستخلص معياري فقط)",
+        naturalSourcesNl: "Bladeren van de ginkgoboom (alleen gebruikt als gestandaardiseerd extract)",
+        naturalSourcesEn: "Leaves of the ginkgo tree (used only as a standardized extract)",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Ginkgo biloba L., folium",
+            "Birks J, Grimley Evans J. Cochrane Database Syst Rev 2009 — PMID: 19160216"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 27,
-        slug: "lion-s-mane-mushroom",
-        name: "عرف الأسد",
-        englishName: "Lion's Mane Mushroom",
-        nameNl: "Lion's Mane (Pruikzwam / Hericium)",
+        slug: "lions-mane",
+        name: "فطر عرف الأسد المركز لدعم الأعصاب",
+        englishName: "Lion's Mane Mushroom (Hericium erinaceus)",
+        nameNl: "Lion's Mane Paddenstoel (Pruikzwam)",
         category: "نوم-نفسية",
         icon: "🍄",
-        summary: "فطر طبي ياباني يدعم صحة الدماغ والذاكرة وقد يساعد في تجديد الخلايا العصبية",
-        summaryNl: "Medische paddenstoel die de aanmaak van Nerve Growth Factor (NGF) stimuleert voor hersenregeneratie en focus.",
-        summaryEn: "Medicinal nootropic mushroom stimulating Nerve Growth Factor (NGF) for neural plasticity and recall.",
+        summary: "يحتوي على مركبات الهيريسينونات والإريناسينات التي تشير الدراسات المخبرية إلى قدرتها على تحفيز تخليق عامل نمو الأعصاب (NGF)، وتشير دراسات بشرية صغيرة إلى دوره في دعم التركيز والصفاء الذهني والمرونة الإدراكية.",
+        summaryNl: "Het bevat hericenonen en erinacinen, die in laboratoriumonderzoek de aanmaak van zenuwgroeifactor (NGF) stimuleren; kleine studies bij mensen wijzen op ondersteuning van focus, helderheid van geest en cognitieve flexibiliteit.",
+        summaryEn: "It contains hericenones and erinacines, which laboratory studies show can stimulate the synthesis of nerve growth factor (NGF); small human studies suggest it supports focus, mental clarity and cognitive flexibility.",
         tags: [
             "دماغ",
             "ذاكرة",
             "أعصاب"
         ],
         benefits: [
-            "يدعم صحة الدماغ والجهاز العصبي",
-            "قد يحفز نمو الخلايا العصبية (NGF)",
-            "يحسن الذاكرة والتركيز",
-            "يقلل القلق والاكتئاب الخفيف",
-            "يدعم صحة الجهاز الهضمي",
-            "له خصائص مضادة للالتهاب"
+            "يحتوي على مركبات الهيريسينونات والإريناسينات التي تشير الدراسات المخبرية إلى قدرتها على تحفيز تخليق عامل نمو الأعصاب (NGF)، وتشير دراسات بشرية صغيرة إلى دوره في دعم التركيز والصفاء الذهني والمرونة الإدراكية."
         ],
         benefitsNl: [
-            "Stimuleert de biosynthese van Nerve Growth Factor (NGF) en BDNF in de hersenen",
-            "Ondersteunt neurogenese, myelineschedelherstel en synaptische plasticiteit",
-            "Verbetert concentratie, langetermijngeheugen en mentale helderheid",
-            "Draagt bij aan vermindering van milde cognitieve achteruitgang bij veroudering",
-            "Ondersteunt een gezonde darmwand en het maagmicrobioom"
+            "Het bevat hericenonen en erinacinen, die in laboratoriumonderzoek de aanmaak van zenuwgroeifactor (NGF) stimuleren; kleine studies bij mensen wijzen op ondersteuning van focus, helderheid van geest en cognitieve flexibiliteit."
         ],
         benefitsEn: [
-            "Triggers endogenous synthesis of Nerve Growth Factor (NGF) and BDNF",
-            "Encourages neurogenesis, myelin sheath maintenance, and synaptic plasticity",
-            "Deepens cognitive clarity, long-term memory retrieval, and daily focus",
-            "Mitigates age-related brain fog and minor cognitive decline",
-            "Nourishes stomach mucosa and gut-brain neurological axis"
+            "It contains hericenones and erinacines, which laboratory studies show can stimulate the synthesis of nerve growth factor (NGF); small human studies suggest it supports focus, mental clarity and cognitive flexibility."
         ],
         dosage: {
-            recommended: "1000-2000 ملغ مستخلص مركز من الجسم الثمري",
-            timing: "في الصباح أو مع وجبة الإفطار",
-            frequency: "1-2 مرة يومياً"
+            recommended: "1000–2000 ملغ من مستخلص الجسم الثمري المعياري",
+            timing: "صباحاً مع الإفطار أو مع مشروب ساخن",
+            frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "1000-2000 mg extract (rijk aan hericenonen en erinacines)",
-            timing: "'s Ochtends met het ontbijt of in koffie/smoothie",
-            frequency: "1-2x per dag"
+            recommended: "1000–2000 mg gestandaardiseerd vruchtlichaamextract",
+            timing: "'s Ochtends bij het ontbijt of met een warme drank",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "1000-2000 mg concentrated fruiting body extract",
-            timing: "Morning with breakfast or coffee",
-            frequency: "1-2 times daily"
+            recommended: "1000–2000 mg standardized fruiting body extract",
+            timing: "In the morning with breakfast or a hot drink",
+            frequency: "Once daily"
         },
+        forms: "مستخلص الجسم الثمري النقي 100% (Fruiting Body) المستخلص بالماء الساخن والكحول، وتجنب منتجات الميسيليوم المزروع على الحبوب لأنها غنية بالنشا وقليلة المركبات النشطة.",
+        formsNl: "Extract van 100% vruchtlichaam (heetwater- en alcoholextractie); vermijd mycelium gekweekt op graan, dat veel zetmeel en weinig actieve stoffen bevat.",
+        formsEn: "100% fruiting body extract made by hot-water and alcohol extraction; avoid mycelium grown on grain, which is high in starch and low in active compounds.",
         warnings: [
-            "النتائج تحتاج 2-8 أسابيع للظهور",
-            "آمن للاستخدام طويل المدى",
-            "قد يسبب حكة جلدية خفيفة لدى البعض"
+            "قد يسبب حكة جلدية خفيفة أو طفحاً تحسسياً لمن لديهم حساسية الفطريات",
+            "يُنصح بتجنبه أثناء الحمل والرضاعة لقلة الدراسات"
         ],
         warningsNl: [
-            "Buitengewoon veilig voor langdurig dagelijks gebruik",
-            "Kies voor een heetwater/alchoholextract van het vruchtlichaam voor maximale biologische werking",
-            "In zeldzame gevallen kan een lichte huidkriebel optreden door verhoogde NGF"
+            "Kan lichte jeuk of allergische huiduitslag geven bij een allergie voor paddenstoelen",
+            "Liever vermijden tijdens zwangerschap en borstvoeding wegens beperkt onderzoek"
         ],
         warningsEn: [
-            "Superb safety index for long-term daily brain support",
-            "Verify dual-extracted fruiting body rather than simple grain mycelium",
-            "Rare mild transient skin tingling may occur secondary to NGF activity"
+            "May cause mild itching or an allergic rash in people allergic to mushrooms",
+            "Best avoided during pregnancy and breastfeeding because of limited studies"
         ],
-        interactions: "قد يتفاعل مع أدوية السكري - استشر طبيبك",
-        interactionsNl: "Kan bloedsuikerspiegel licht verlagen; overleg bij diabetesmedicatie.",
-        interactionsEn: "May mildly lower blood glucose; monitor if taking anti-diabetic drugs.",
-        naturalSources: "فطر عرف الأسد الطازج (نادر)",
-        naturalSourcesNl: "Hericium erinaceus paddenstoel.",
-        naturalSourcesEn: "Hericium erinaceus medicinal mushroom fruiting bodies."
+        interactions: "قد يخفض سكر الدم طفيفاً؛ تُراقب القراءات لمن يتناولون أدوية خفض الجلوكوز والإنسولين. قد يبطئ تجلط الدم طفيفاً، فيُراعى مع مميعات الدم.",
+        interactionsNl: "Het kan de bloedsuiker licht verlagen; controleer je waarden bij glucoseverlagende middelen of insuline. Het kan de bloedstolling licht vertragen, dus wees voorzichtig met bloedverdunners.",
+        interactionsEn: "It may lower blood sugar slightly; monitor readings if you take glucose-lowering medication or insulin. It may slightly slow blood clotting, so take care with blood thinners.",
+        naturalSources: "فطر عرف الأسد الطازج أو المجفف (يُطهى كغذاء في المطبخ الآسيوي)",
+        naturalSourcesNl: "Verse of gedroogde pruikzwam (als voedsel gebruikt in de Aziatische keuken)",
+        naturalSourcesEn: "Fresh or dried lion's mane mushroom (cooked as a food in Asian cuisine)",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "Mori K et al. Phytother Res 2009 — PMID: 18844328",
+            "Saitsu Y et al. Biomed Res (Tokyo) 2019 — PMID: 31413233"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 28,
-        slug: "beta-hydroxy-beta-methylbutyrate",
-        name: "HMB",
-        englishName: "Beta-Hydroxy Beta-Methylbutyrate",
-        nameNl: "HMB (Beta-Hydroxy Beta-Methylbutyraat)",
+        slug: "hmb",
+        name: "مركب إتش إم بي لحماية العضلات",
+        englishName: "HMB (β-Hydroxy β-Methylbutyrate)",
+        nameNl: "HMB Spierbescherming",
         category: "بناء-عضلات",
         icon: "🔬",
-        summary: "مستقلب من الليوسين يمنع هدم العضلات ويسرع التعافي والبناء العضلي",
-        summaryNl: "Krachtig anti-katabool metaboliet van leucine dat spierafbraak stopt tijdens calorietekort of zware training.",
-        summaryEn: "Potent anti-catabolic metabolite of leucine shielding muscle tissue against breakdown during cuts and intense training.",
+        summary: "مستقلب نشط مشتق من الحمض الأميني الليوسين؛ يساهم في الحد من تكسر البروتين العضلي عبر تثبيط مسار اليوبيكويتين وتحفيز مسار mTOR، ويفيد خصوصاً أثناء فترات تقليل السعرات وللحد من فقدان الكتلة العضلية مع التقدم في العمر.",
+        summaryNl: "Een actief afbraakproduct van het aminozuur leucine; het helpt de afbraak van spiereiwit te beperken door de ubiquitineroute te remmen en mTOR te stimuleren, vooral nuttig bij caloriebeperking en om spierverlies op oudere leeftijd te beperken.",
+        summaryEn: "An active metabolite of the amino acid leucine; it helps limit muscle protein breakdown by inhibiting the ubiquitin pathway and stimulating mTOR, and is most useful during calorie restriction and to limit age-related muscle loss.",
         tags: [
             "منع هدم",
             "تعافي",
             "عضلات"
         ],
         benefits: [
-            "يمنع هدم العضلات بقوة (Anti-Catabolic)",
-            "يسرع التعافي العضلي بعد التمارين",
-            "يزيد القوة والكتلة العضلية الصافية",
-            "مفيد جداً لكبار السن والمبتدئين",
-            "يقلل ألم العضلات بعد التمرين",
-            "يحسن التكيف مع التمارين الشاقة"
+            "مستقلب نشط مشتق من الحمض الأميني الليوسين؛ يساهم في الحد من تكسر البروتين العضلي عبر تثبيط مسار اليوبيكويتين وتحفيز مسار mTOR، ويفيد خصوصاً أثناء فترات تقليل السعرات وللحد من فقدان الكتلة العضلية مع التقدم في العمر."
         ],
         benefitsNl: [
-            "Biedt superieure bescherming tegen spierafbraak tijdens streng diëten of vasten",
-            "Versnelt herstel van spierweefsel en vermindert spierschade (creatinekinase-daling)",
-            "Ondersteunt toename van vetvrije spiermassa bij beginnende atleten en herstellers",
-            "Bijzonder effectief bij ouderen om leeftijdsgebonden spierverlies (sarcopenie) tegen te gaan",
-            "Verlicht spierstijfheid na zware excentrische spierbelasting"
+            "Een actief afbraakproduct van het aminozuur leucine; het helpt de afbraak van spiereiwit te beperken door de ubiquitineroute te remmen en mTOR te stimuleren, vooral nuttig bij caloriebeperking en om spierverlies op oudere leeftijd te beperken."
         ],
         benefitsEn: [
-            "Provides superior protection against muscle proteolysis during cutting or fasting",
-            "Blunts post-exercise muscle tissue trauma and lowers serum creatine kinase",
-            "Supports lean mass accrual in novice lifters and returning athletes",
-            "Highly clinical in preserving muscle mass in sarcopenic elderly populations",
-            "Minimizes eccentric exercise soreness"
+            "An active metabolite of the amino acid leucine; it helps limit muscle protein breakdown by inhibiting the ubiquitin pathway and stimulating mTOR, and is most useful during calorie restriction and to limit age-related muscle loss."
         ],
         dosage: {
-            recommended: "3 غ يومياً (مقسمة على جرعات من 1 غ أو 3 غ دفعة واحدة قبل التمرين)",
-            timing: "قبل أو بعد التمرين",
-            frequency: "مرة واحدة يومياً"
+            recommended: "3 غ يومياً",
+            timing: "جرعة كاملة قبل التمرين بـ 60 دقيقة أو 1 غ مع كل وجبة رئيسية",
+            frequency: "مرة واحدة يومياً أو مقسمة على 3 وجبات"
         },
         dosageNl: {
-            recommended: "3 g (verdeeld over 1 g driemaal daags of 3 g voor de training)",
-            timing: "30-60 minuten voor de training of verdeeld bij maaltijden",
-            frequency: "Dagelijks"
+            recommended: "3 g per dag",
+            timing: "In één dosis 60 minuten voor de training, of 1 g bij elke hoofdmaaltijd",
+            frequency: "1 keer per dag of verdeeld over 3 maaltijden"
         },
         dosageEn: {
-            recommended: "3 g daily (split into 1 g doses or single 3 g pre-workout)",
-            timing: "30-60 minutes pre-workout or spread with meals",
-            frequency: "Daily consistently"
+            recommended: "3 g daily",
+            timing: "As one dose 60 minutes before training, or 1 g with each main meal",
+            frequency: "Once daily or split over 3 meals"
         },
+        forms: "كربونات الكالسيوم (HMB-Ca) وهو الأكثر شيوعاً واقتصادية، والشكل الحر (HMB-FA) الذي يمتاز بامتصاص أسرع في الدم.",
+        formsNl: "Calcium-HMB (HMB-Ca), de meest gangbare en voordelige vorm, en HMB als vrij zuur (HMB-FA), dat sneller in het bloed komt.",
+        formsEn: "Calcium HMB (HMB-Ca), the most common and affordable form, and free-acid HMB (HMB-FA), which reaches the blood faster.",
         warnings: [
-            "النتائج تحتاج 2-4 أسابيع للظهور",
-            "مكلف نسبياً مقارنة بالكرياتين",
-            "آمن للاستخدام طويل المدى"
+            "آمن للاستخدام طويل الأمد حتى 3 غ يومياً",
+            "قليل الفائدة لمن يتناولون كميات وافرة من الواي بروتين والليوسين",
+            "يُستشار الطبيب لمرضى الفشل الكلوي لاحتواء شكل HMB-Ca على الكالسيوم"
         ],
         warningsNl: [
-            "Optimaal werkzaam bij calorietekort of intensieve trainingsperiodes; bij calorieoverschot is het effect subtieler",
-            "Vrij van noemenswaardige bijwerkingen bij aanbevolen dosering",
-            "Calcium-HMB of HMB-Free Acid zijn de twee meest effectieve vormen"
+            "Veilig voor langdurig gebruik tot 3 g per dag",
+            "Voegt weinig toe als je al veel wei-eiwit en leucine binnenkrijgt",
+            "Overleg bij nierfalen met je arts, want HMB-Ca bevat calcium"
         ],
         warningsEn: [
-            "Most dramatically effective in hypocaloric cutting phases or extreme overreaching",
-            "Virtually free from side effects at clinical 3 g dosage",
-            "Available as Calcium-HMB or rapid-acting HMB Free Acid"
+            "Safe for long-term use up to 3 g a day",
+            "Adds little for people already eating plenty of whey protein and leucine",
+            "People with kidney failure should consult a doctor, as HMB-Ca contains calcium"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen interacties bekend; uitstekend te combineren met creatine.",
-        interactionsEn: "No negative interactions; synergistic stack with creatine monohydrate.",
-        naturalSources: "يُنتج في الجسم من الليوسين (كميات قليلة)",
-        naturalSourcesNl: "Geproduceerd in het lichaam uit leucine (slechts 5% van leucine wordt omgezet in HMB).",
-        naturalSourcesEn: "Endogenously converted from L-leucine (approx 5% metabolic conversion rate)."
+        interactions: "لا توجد تداخلات دوائية سريرية خطيرة مسجلة.",
+        interactionsNl: "Er zijn geen ernstige klinische interacties met medicijnen gemeld.",
+        interactionsEn: "No serious clinical drug interactions have been reported.",
+        naturalSources: "كميات ضئيلة في الفصة (البرسيم الحجازي) والجريب فروت وسمك السلور؛ ويُنتج الجسم كمية صغيرة من الليوسين الغذائي",
+        naturalSourcesNl: "Sporen in alfalfa, grapefruit en meerval; het lichaam maakt een kleine hoeveelheid aan uit leucine uit de voeding",
+        naturalSourcesEn: "Trace amounts in alfalfa, grapefruit and catfish; the body makes a small amount from dietary leucine",
+        groupLabel: {
+            ar: "بناء العضلات واللياقة",
+            en: "Muscle building & fitness",
+            nl: "Spieropbouw & fitness"
+        },
+        references: [
+            "Wilson JM et al. ISSN Position Stand: HMB. J Int Soc Sports Nutr 2013 — PMID: 23374455"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 29,
         slug: "l-glutamine",
-        name: "جلوتامين",
+        name: "إل-غلوتامين لصحة الأمعاء والتعافي",
         englishName: "L-Glutamine",
-        nameNl: "L-Glutamine",
+        nameNl: "L-Glutamine Poeder",
         category: "بناء-عضلات",
         icon: "🧬",
-        summary: "أكثر الأحماض الأمينية وفرة في العضلات - يدعم التعافي والمناعة والأمعاء",
-        summaryNl: "Het meest voorkomende aminozuur in spierweefsel; cruciaal voor darmwandherstel en immuunsysteem.",
-        summaryEn: "Most abundant muscular free amino acid; paramount for intestinal tight junctions and immune defense.",
+        summary: "الحمض الأميني الأكثر وفرة في الدم والعضلات؛ يمثل الوقود الأساسي لخلايا بطانة الأمعاء الدقيقة والخلايا المناعية، ويساهم في دعم تماسك الوصلات الضيقة بين خلايا الأمعاء وسلامة الحاجز المعوي.",
+        summaryNl: "Het meest voorkomende aminozuur in bloed en spieren; het is de belangrijkste brandstof voor de cellen van de dunne darmwand en voor afweercellen, en ondersteunt de tight junctions tussen darmcellen en de darmbarrière.",
+        summaryEn: "The most abundant amino acid in blood and muscle; it is the main fuel for the cells lining the small intestine and for immune cells, and helps support the tight junctions between gut cells and the integrity of the gut barrier.",
         tags: [
             "تعافي",
             "مناعة",
@@ -2023,75 +2019,75 @@ const supplementsData = [
             "تسرب"
         ],
         benefits: [
-            "يسرع التعافي العضلي بعد التمارين",
-            "يدعم جهاز المناعة بقوة",
-            "يحسن صحة الأمعاء ويعالج التسريب المعوي",
-            "يمنع هدم العضلات أثناء الدايت",
-            "يقلل الرغبة الشديدة في السكر",
-            "يدعم صحة الجهاز الهضمي"
+            "الحمض الأميني الأكثر وفرة في الدم والعضلات؛ يمثل الوقود الأساسي لخلايا بطانة الأمعاء الدقيقة والخلايا المناعية، ويساهم في دعم تماسك الوصلات الضيقة بين خلايا الأمعاء وسلامة الحاجز المعوي."
         ],
         benefitsNl: [
-            "Herstelt de darmwandintegriteit en dicht een 'lekkende darm' (leaky gut)",
-            "Primaire brandstof voor immuuncellen (lymfocyten en macrofagen)",
-            "Ondersteunt glycogeenresynthese en herstel na uitputtende duursport",
-            "Vermindert trek in suiker en alcohol door regulatie van de bloedsuikerspiegel",
-            "Voorkomt spierafbraak tijdens zware fysieke stress en ziekte"
+            "Het meest voorkomende aminozuur in bloed en spieren; het is de belangrijkste brandstof voor de cellen van de dunne darmwand en voor afweercellen, en ondersteunt de tight junctions tussen darmcellen en de darmbarrière."
         ],
         benefitsEn: [
-            "Reconstructs intestinal mucosal barrier and seals intestinal permeability (leaky gut)",
-            "Primary cellular fuel source for rapidly dividing lymphocytes and macrophages",
-            "Assists in glycogen resynthesis following grueling endurance bouts",
-            "Dampens acute sugar and alcohol cravings",
-            "Prevents muscle wasting during critical physiological stress"
+            "The most abundant amino acid in blood and muscle; it is the main fuel for the cells lining the small intestine and for immune cells, and helps support the tight junctions between gut cells and the integrity of the gut barrier."
         ],
         dosage: {
-            recommended: "5-10 غ (حتى 15-20 غ في بروتوكولات إصلاح الأمعاء)",
-            timing: "بعد التمرين أو قبل النوم",
-            frequency: "1-2 مرات يومياً"
+            recommended: "5–10 غ يومياً (حتى 15–20 غ مقسمة لبروتوكولات دعم بطانة الأمعاء)",
+            timing: "بعد التمرين أو قبل النوم، مذاباً في ماء بارد على معدة فارغة",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "5-10 g (tot 15-20 g bij intensief darmherstel)",
-            timing: "Direct na de training of 's ochtends op een nuchtere maag",
-            frequency: "1-2x per dag"
+            recommended: "5–10 g per dag (tot 15–20 g verdeeld bij protocollen voor de darmwand)",
+            timing: "Na de training of voor het slapengaan, opgelost in koud water op een lege maag",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "5-10 g (up to 15-20 g for gut rehabilitation protocols)",
-            timing: "Post-workout or morning on an empty stomach",
-            frequency: "1-2 times daily"
+            recommended: "5–10 g daily (up to 15–20 g in split doses for gut-lining protocols)",
+            timing: "After training or before bed, dissolved in cold water on an empty stomach",
+            frequency: "1–2 times daily"
         },
+        forms: "مسحوق إل-غلوتامين الحر المخمر نباتياً (Fermented Free-Form L-Glutamine) لضمان أعلى نقاوة.",
+        formsNl: "Plantaardig gefermenteerd vrij L-glutaminepoeder voor de hoogste zuiverheid.",
+        formsEn: "Plant-fermented free-form L-glutamine powder for the highest purity.",
         warnings: [
-            "قد لا يكون ضرورياً إذا كنت تتناول بروتين كافي",
-            "مفيد أكثر للرياضيين المتقدمين",
-            "آمن بجرعات تصل إلى 20 جرام"
+            "يُذاب في ماء بارد أو فاتر لأن الحرارة تقلل ثباته",
+            "يُمنع لمرضى الاعتلال الدماغي الكبدي وتليف الكبد المتقدم",
+            "يُستخدم بحذر لمن لديهم اضطرابات عصبية"
         ],
         warningsNl: [
-            "Zeer veilig bij doseringen tot 20 g per dag",
-            "Meng niet met kokende vloeistoffen om denaturatie van het aminozuur te voorkomen",
-            "Voor pure spieropbouw minder noodzakelijk als totale eiwitinname hoog is, maar onmisbaar voor darmen"
+            "Los het op in koud of lauw water, want warmte vermindert de stabiliteit",
+            "Niet gebruiken bij hepatische encefalopathie of gevorderde levercirrose",
+            "Wees voorzichtig bij een neurologische aandoening"
         ],
         warningsEn: [
-            "Superbly safe up to 20 g daily",
-            "Do not mix into boiling liquids to avoid molecular breakdown",
-            "Primary value lies in gut and immune recovery rather than direct hypertrophy"
+            "Dissolve it in cold or lukewarm water, as heat reduces its stability",
+            "Not for people with hepatic encephalopathy or advanced liver cirrhosis",
+            "Use with caution if you have a neurological disorder"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Veilig met alle medicatie.",
-        interactionsEn: "Broadly safe with standard pharmaceutical medications.",
-        naturalSources: "اللحوم، الأسماك، البيض، منتجات الألبان، الملفوف",
-        naturalSourcesNl: "Rundvlees, eieren, kwark, wei-eiwit en gefermenteerde kool (zuurkool).",
-        naturalSourcesEn: "Beef, eggs, dairy, cabbage juice, bone broth."
+        interactions: "قد يقلل من فعالية أدوية الصرع والتشنجات لأن الغلوتامين يتحول في الدماغ إلى غلوتامات ذات أثر محفز؛ يُستشار الطبيب قبل الجمع بينهما.",
+        interactionsNl: "Het kan de werking van middelen tegen epilepsie en toevallen verminderen, omdat glutamine in de hersenen wordt omgezet in prikkelend glutamaat; overleg met je arts voor je ze combineert.",
+        interactionsEn: "It may reduce the effect of epilepsy and seizure medication because glutamine is converted in the brain to excitatory glutamate; consult a doctor before combining them.",
+        naturalSources: "اللحوم، البيض، الأسماك، منتجات الألبان، الفول والعدس",
+        naturalSourcesNl: "Vlees, eieren, vis, zuivel, bonen en linzen",
+        naturalSourcesEn: "Meat, eggs, fish, dairy, beans and lentils",
+        groupLabel: {
+            ar: "الهضم والتعافي",
+            en: "Digestion & recovery",
+            nl: "Spijsvertering & herstel"
+        },
+        references: [
+            "Kim MH, Kim H. Int J Mol Sci 2017 — PMID: 28498331",
+            "NIH National Library of Medicine (MedlinePlus): Glutamine"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 30,
         slug: "l-arginine",
-        name: "أرجينين",
-        englishName: "L-Arginine",
-        nameNl: "L-Arginine (HCL / AAKG)",
+        name: "إل-أرجينين لتعزيز ضخ الدم",
+        englishName: "L-Arginine (Free Form / AAKG)",
+        nameNl: "L-Arginine",
         category: "بناء-عضلات",
         icon: "💨",
-        summary: "حمض أميني يزيد أكسيد النيتريك ويحسن ضخ الدم والأداء الرياضي",
-        summaryNl: "Klassieke stikstofoxide (NO) voorloper voor vaatverwijding, bloedsomloop en ondersteuning van het immuunsysteem.",
-        summaryEn: "Classic nitric oxide precursor promoting peripheral vasodilation, vascular tone, and immune support.",
+        summary: "حمض أميني شبه أساسي يُعد الركيزة المباشرة لإنزيم NOS في تخليق أكسيد النيتريك، الذي يرخي العضلات الملساء في جدران الشرايين، مما يساهم في توسيع الأوعية الدموية ودعم تدفق الدم المحمل بالأكسجين.",
+        summaryNl: "Een semi-essentieel aminozuur dat de directe bouwstof is voor het enzym NOS om stikstofmonoxide te maken; dat ontspant de gladde spieren in de vaatwand en helpt zo de bloedvaten te verwijden en de zuurstofrijke doorbloeding te ondersteunen.",
+        summaryEn: "A semi-essential amino acid that is the direct substrate of the NOS enzyme for making nitric oxide, which relaxes the smooth muscle in artery walls and so helps widen blood vessels and support oxygen-rich blood flow.",
         tags: [
             "ضخ دم",
             "أداء",
@@ -2101,76 +2097,72 @@ const supplementsData = [
             "نشاط"
         ],
         benefits: [
-            "يزيد تدفق الدم والأكسجين للعضلات",
-            "يحسن الأداء الرياضي والتحمل",
-            "يدعم صحة القلب والأوعية الدموية",
-            "يسرع التئام الجروح",
-            "يدعم جهاز المناعة",
-            "قد يحسن مستويات هرمون النمو"
+            "حمض أميني شبه أساسي يُعد الركيزة المباشرة لإنزيم NOS في تخليق أكسيد النيتريك، الذي يرخي العضلات الملساء في جدران الشرايين، مما يساهم في توسيع الأوعية الدموية ودعم تدفق الدم المحمل بالأكسجين."
         ],
         benefitsNl: [
-            "Stimuleert stikstofoxideproductie (NO) voor ontspanning van de bloedvaten",
-            "Verbetert doorbloeding van spieren en ondersteunt een gezonde erectiele functie",
-            "Ondersteunt collageensynthese en versnelt weefselherstel bij wonden",
-            "Betrokken bij het ureumcyclus-metabolisme voor ammoniakontgifting",
-            "Kan bijdragen aan nachtelijke afgifte van groeihormoon"
+            "Een semi-essentieel aminozuur dat de directe bouwstof is voor het enzym NOS om stikstofmonoxide te maken; dat ontspant de gladde spieren in de vaatwand en helpt zo de bloedvaten te verwijden en de zuurstofrijke doorbloeding te ondersteunen."
         ],
         benefitsEn: [
-            "Direct substrate for nitric oxide synthase (NOS) inducing vasodilation",
-            "Enhances muscular hyperaemia and supports healthy erectile hemodynamics",
-            "Supports collagen deposition and accelerates dermal wound closure",
-            "Essential player in the hepatic urea cycle for ammonia clearance",
-            "Assists in nocturnal endogenous growth hormone release"
+            "A semi-essential amino acid that is the direct substrate of the NOS enzyme for making nitric oxide, which relaxes the smooth muscle in artery walls and so helps widen blood vessels and support oxygen-rich blood flow."
         ],
         dosage: {
-            recommended: "3-5 غ (ويُفضَّل L-أرجينين AAKG)",
-            timing: "قبل التمرين بـ 30-60 دقيقة",
-            frequency: "مرة واحدة يومياً"
+            recommended: "3–6 غ يومياً",
+            timing: "قبل التمرين بـ 30–60 دقيقة على معدة فارغة، أو مقسمة مع الوجبات",
+            frequency: "مرة واحدة يومياً أو مقسمة"
         },
         dosageNl: {
-            recommended: "3-5 g (bij voorkeur L-Arginine Alpha-Ketoglutaraat / AAKG)",
-            timing: "30-45 minuten voor de training of voor het slapengaan op nuchtere maag",
-            frequency: "1x per dag"
+            recommended: "3–6 g per dag",
+            timing: "30–60 minuten voor de training op een lege maag, of verdeeld bij de maaltijden",
+            frequency: "1 keer per dag of verdeeld"
         },
         dosageEn: {
-            recommended: "3-5 g (preferably L-Arginine AAKG)",
-            timing: "30-45 minutes pre-workout or before bedtime on empty stomach",
-            frequency: "Once daily"
+            recommended: "3–6 g daily",
+            timing: "30–60 minutes before training on an empty stomach, or split with meals",
+            frequency: "Once daily or in split doses"
         },
+        forms: "أرجينين ألفا كيتوغلوتارات (AAKG) لأداء التمارين؛ ويُعد مكمل السيترولين أكفأ في رفع أرجينين الدم لأنه يتجنب المرور الكبدي الأول.",
+        formsNl: "Arginine-alfa-ketoglutaraat (AAKG) voor training; citrulline verhoogt het arginine in het bloed efficiënter omdat het de first-pass in de lever omzeilt.",
+        formsEn: "Arginine alpha-ketoglutarate (AAKG) for training; citrulline supplements raise blood arginine more efficiently because they bypass first-pass metabolism in the liver.",
         warnings: [
-            "قد يسبب اضطراب معدة لدى البعض",
-            "السيترولين أفضل لزيادة الأرجينين في الدم",
-            "تجنبه إذا كان لديك هربس نشط",
-            "قد يخفض الضغط كثيراً (راقب الضغط)"
+            "فيروس الهربس البسيط يحتاج الأرجينين للتكاثر؛ قد يحفز المكمل نوبات القروح الفموية أو التناسلية لدى حاملي الفيروس",
+            "قد يسبب تقلصات معوية وإسهالاً بالجرعات الكبيرة"
         ],
         warningsNl: [
-            "Kan bij hogere orale doses maagkrampen of diarree geven (Citrulline is maagvriendelijker)",
-            "CONTRA-INDICATIE: Vermijd bij actieve uitbraak van het herpes simplex virus (kan virale replicatie voeden)",
-            "Overleg bij recent hartinfarct"
+            "Het herpes simplex-virus heeft arginine nodig om zich te vermenigvuldigen; het supplement kan koortslippen of genitale uitbraken uitlokken bij dragers",
+            "Hoge doses kunnen darmkrampen en diarree geven"
         ],
         warningsEn: [
-            "Oral bioavailability lower than citrulline; high doses may cause GI distress",
-            "CONTRAINDICATION: Avoid during active Herpes simplex outbreaks (can feed viral replication)",
-            "Caution following acute myocardial infarction"
+            "The herpes simplex virus needs arginine to multiply; the supplement may trigger cold sores or genital outbreaks in carriers",
+            "Large doses may cause intestinal cramps and diarrhoea"
         ],
-        interactions: "قد يتفاعل مع أدوية ضغط الدم - استشر طبيبك • قد يتفاعل مع أدوية الضغط والفياغرا - استشر طبيبك",
-        interactionsNl: "Kan bloeddrukverlagers en erectiemedicatie (sildenafil) versterken.",
-        interactionsEn: "May potentiate antihypertensive medications and PDE5 inhibitors.",
-        naturalSources: "اللحوم الحمراء، الدجاج، الأسماك، المكسرات، البذور",
-        naturalSourcesNl: "Kalkoen, pompoenpitten, pinda's, spirulina en zuivel.",
-        naturalSourcesEn: "Turkey breast, pumpkin seeds, peanuts, lentils."
+        interactions: "تحذير هبوط الضغط: يتفاعل بقوة مع خافضات الضغط وأدوية النترات القلبية ومثبطات PDE-5 (السيلدينافيل والتادالافيل)، وقد يؤدي لهبوط خطير في ضغط الدم.",
+        interactionsNl: "Waarschuwing lage bloeddruk: het interageert sterk met bloeddrukverlagers, nitraten voor het hart en PDE-5-remmers (sildenafil, tadalafil) en kan een gevaarlijke bloeddrukdaling veroorzaken.",
+        interactionsEn: "Low blood pressure warning: it interacts strongly with blood pressure medication, heart nitrates and PDE-5 inhibitors (sildenafil, tadalafil) and can cause a dangerous drop in blood pressure.",
+        naturalSources: "اللحوم الحمراء والدواجن، الأسماك، المكسرات وبذور اليقطين، البقوليات",
+        naturalSourcesNl: "Rood vlees en gevogelte, vis, noten en pompoenpitten, peulvruchten",
+        naturalSourcesEn: "Red meat and poultry, fish, nuts and pumpkin seeds, legumes",
+        groupLabel: {
+            ar: "الأداء وصحة القلب",
+            en: "Performance & heart health",
+            nl: "Prestaties & hartgezondheid"
+        },
+        references: [
+            "Dong JY et al. Am Heart J 2011 (meta-analysis, L-arginine and blood pressure) — PMID: 22137067",
+            "NIH National Library of Medicine (MedlinePlus): L-arginine"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 31,
         slug: "vitamin-c",
-        name: "فيتامين سي",
-        englishName: "Vitamin C (Ascorbic Acid)",
-        nameNl: "Vitamine C (Ascorbinezuur / Ester-C)",
+        name: "فيتامين سي عالي الامتصاص (حمض الأسكوربيك)",
+        englishName: "Vitamin C (Ascorbic Acid / Liposomal)",
+        nameNl: "Vitamine C (Ascorbinezuur)",
         category: "صحة-عامة",
         icon: "🍊",
-        summary: "فيتامين أساسي قوي لجهاز المناعة والبشرة ومضاد أكسدة طبيعي",
-        summaryNl: "Krachtige wateroplosbare antioxidant voor weerstand, collageenopbouw en bescherming tegen vrije radicalen.",
-        summaryEn: "Essential water-soluble antioxidant powering immune defenses, collagen synthesis, and iron absorption.",
+        summary: "يساهم فيتامين سي في حماية الخلايا من الإجهاد التأكسدي، وفي الوظيفة الطبيعية للجهاز المناعي أثناء التمارين البدنية الشديدة وبعدها، وفي تكوين الكولاجين الطبيعي للغضاريف والجلد (ادعاءات معتمدة من EFSA).",
+        summaryNl: "Vitamine C draagt bij tot de bescherming van cellen tegen oxidatieve stress, tot de normale werking van het immuunsysteem tijdens en na intensieve lichamelijke inspanning, en tot de normale collageenvorming voor kraakbeen en huid (door EFSA toegestane claims).",
+        summaryEn: "Vitamin C contributes to the protection of cells from oxidative stress, to the normal function of the immune system during and after intense physical exercise, and to normal collagen formation for cartilage and skin (EFSA-authorised claims).",
         tags: [
             "مناعة",
             "بشرة",
@@ -2179,76 +2171,73 @@ const supplementsData = [
             "تبييض"
         ],
         benefits: [
-            "يقوي جهاز المناعة ويقلل مدة نزلات البرد",
-            "مضاد أكسدة قوي يحمي الخلايا",
-            "يدعم إنتاج الكولاجين للبشرة والمفاصل",
-            "يحسن امتصاص الحديد",
-            "يدعم صحة القلب والأوعية الدموية",
-            "يسرع التئام الجروح"
+            "يساهم فيتامين سي في حماية الخلايا من الإجهاد التأكسدي، وفي الوظيفة الطبيعية للجهاز المناعي أثناء التمارين البدنية الشديدة وبعدها، وفي تكوين الكولاجين الطبيعي للغضاريف والجلد (ادعاءات معتمدة من EFSA)."
         ],
         benefitsNl: [
-            "Verhoogt de activiteit van witte bloedcellen en versterkt de algehele weerstand",
-            "Essentiële cofactor voor de lichaamseigen synthese van collageen (huid, botten, vaten)",
-            "Beschermt lichaamscellen tegen oxidatieve stress en vroegtijdige veroudering",
-            "Verhoogt de absorptie van non-heemijzer uit plantaardige voeding aanzienlijk",
-            "Draagt bij aan fitheid en vermindering van vermoeidheid"
+            "Vitamine C draagt bij tot de bescherming van cellen tegen oxidatieve stress, tot de normale werking van het immuunsysteem tijdens en na intensieve lichamelijke inspanning, en tot de normale collageenvorming voor kraakbeen en huid (door EFSA toegestane claims)."
         ],
         benefitsEn: [
-            "Boosts phagocyte and lymphocyte activity, accelerating infection recovery",
-            "Indispensable enzymatic cofactor for procollagen hydroxylation in skin and connective tissue",
-            "Potent radical scavenger defending against intracellular oxidative stress",
-            "Dramatically enhances intestinal absorption of dietary non-heme iron",
-            "Reduces systemic fatigue and protects capillary integrity"
+            "Vitamin C contributes to the protection of cells from oxidative stress, to the normal function of the immune system during and after intense physical exercise, and to normal collagen formation for cartilage and skin (EFSA-authorised claims)."
         ],
         dosage: {
-            recommended: "500-1000 ملغ",
-            timing: "مع وجبة الإفطار",
-            frequency: "1-2 مرات يومياً"
+            recommended: "500–1000 ملغ يومياً",
+            timing: "مع وجبات الطعام؛ ينخفض الامتصاص إلى أقل من 50% عندما تتجاوز الجرعة الواحدة 1000 ملغ",
+            frequency: "مقسمة على 1–2 جرعة"
         },
         dosageNl: {
-            recommended: "500-1000 mg (kies voor ontzuurde Ester-C of calciumascorbaat bij gevoelige maag)",
-            timing: "Bij het ontbijt of verdeeld over de dag met water",
-            frequency: "1-2x per dag"
+            recommended: "500–1000 mg per dag",
+            timing: "Bij de maaltijd; de opname daalt onder 50% als één dosis boven 1000 mg komt",
+            frequency: "Verdeeld over 1–2 doses"
         },
         dosageEn: {
-            recommended: "500-1000 mg (buffered Ester-C preferred for sensitive stomachs)",
-            timing: "With breakfast or divided through the day",
-            frequency: "1-2 times daily"
+            recommended: "500–1000 mg daily",
+            timing: "With meals; absorption falls below 50% when a single dose exceeds 1000 mg",
+            frequency: "Split into 1–2 doses"
         },
+        forms: "أسكوربات الكالسيوم أو المغنيسيوم (Buffered Vitamin C) لمن يعانون من حموضة المعدة، أو فيتامين سي الليبوزومي لامتصاص أعلى دون تهيج هضمي.",
+        formsNl: "Calcium- of magnesiumascorbaat (gebufferde vitamine C) bij maagzuur, of liposomale vitamine C voor een hogere opname zonder maagirritatie.",
+        formsEn: "Calcium or magnesium ascorbate (buffered vitamin C) if you have stomach acidity, or liposomal vitamin C for higher absorption without digestive irritation.",
         warnings: [
-            "الجرعات العالية جداً (+2000 ملغ) قد تسبب إسهال",
-            "آمن للاستخدام طويل المدى",
-            "اختر الشكل مُعادَل أو ليبوزومي (أفضل)"
+            "الجرعات التي تتجاوز 2000 ملغ يومياً قد تسبب إسهالاً تناضحياً",
+            "قد تزيد الجرعات العالية خطر حصوات أكسالات الكالسيوم في الكلى لدى المعرضين لذلك"
         ],
         warningsNl: [
-            "Zeer veilig; een overschot wordt via de urine uitgescheiden",
-            "Hoge doseringen ineens (>2000 mg ascorbinezuur) kunnen maagdarmkrampen of osmotische diarree geven",
-            "Bij gevoelige maag de voorkeur geven aan gebufferde vitamine C",
-            "Oraal: kies bij gevoelige maag voor ontzuurde Ester-C® (calciumascorbaat)"
+            "Doses boven 2000 mg per dag kunnen osmotische diarree geven",
+            "Hoge doses kunnen het risico op calciumoxalaat-nierstenen verhogen bij mensen die daar gevoelig voor zijn"
         ],
         warningsEn: [
-            "Extremely safe water-soluble nutrient; excess excreted via urine",
-            "Mega-doses (>2000 mg at once) may induce mild osmotic diarrhea",
-            "Use buffered calcium ascorbate if prone to acid reflux"
+            "Doses above 2000 mg a day can cause osmotic diarrhoea",
+            "High doses may raise the risk of calcium oxalate kidney stones in people prone to them"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Kan de absorptie van ijzerpreparaten aanzienlijk verhogen (gunstig effect).",
-        interactionsEn: "Significantly enhances therapeutic iron absorption (beneficial synergy).",
-        naturalSources: "البرتقال، الليمون، الفلفل الحلو، الفراولة، البروكلي، الكيوي",
-        naturalSourcesNl: "Rode paprika (bevat meer dan sinaasappels!), kiwi's, aardbeien, broccoli en citrusvruchten.",
-        naturalSourcesEn: "Bell peppers, kiwifruit, strawberries, broccoli, citrus fruits."
+        interactions: "يعزز امتصاص الحديد غير الهيمي بشكل ملحوظ (يُراعى لمرضى ترسب الحديد). قد تتداخل الجرعات العالية مع بعض أدوية السرطان الكيميائية ومع مزيج الستاتين والنياسين؛ يُستشار الطبيب.",
+        interactionsNl: "Het verhoogt de opname van non-heemijzer duidelijk (van belang bij ijzerstapeling). Hoge doses kunnen interfereren met sommige chemotherapiemiddelen en met de combinatie statine–niacine; overleg met je arts.",
+        interactionsEn: "It markedly increases the absorption of non-haem iron (relevant for people with iron overload). High doses may interfere with some chemotherapy drugs and with the statin–niacin combination; consult your doctor.",
+        naturalSources: "الفلفل الحلو، الجوافة، الكيوي، الحمضيات، الفراولة، البروكلي",
+        naturalSourcesNl: "Paprika, guave, kiwi, citrusvruchten, aardbeien, broccoli",
+        naturalSourcesEn: "Bell peppers, guava, kiwi, citrus fruit, strawberries, broccoli",
+        groupLabel: {
+            ar: "صحة عامة والمناعة",
+            en: "General health & immunity",
+            nl: "Algemene gezondheid & weerstand"
+        },
+        references: [
+            "EFSA Journal 2009;7(9):1226 (vitamin C health claims)",
+            "NIH Office of Dietary Supplements (ODS): Vitamin C Fact Sheet",
+            "Carr AC, Maggini S. Nutrients 2017 — PMID: 29099763"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 32,
         slug: "vitamin-b-complex",
-        name: "فيتامينات ب المركبة",
-        englishName: "Vitamin B Complex",
-        nameNl: "Vitamine B-Complex (Actief / Gemethyleerd)",
+        name: "مجموعة فيتامينات ب المركبة النشطة",
+        englishName: "Vitamin B-Complex (Active Methylated)",
+        nameNl: "Vitamine B-Complex Actief",
         category: "صحة-عامة",
         icon: "⚡",
-        summary: "مجموعة من 8 فيتامينات أساسية لإنتاج الطاقة والجهاز العصبي والمزاج",
-        summaryNl: "Synergetische groep van 8 essentiële B-vitaminen voor energiestofwisseling, zenuwstelsel en mentale veerkracht.",
-        summaryEn: "Synergistic constellation of all 8 essential B vitamins powering cellular bioenergetics and neurotransmission.",
+        summary: "تعمل فيتامينات B الثمانية كإنزيمات مساعدة في تحويل الكربوهيدرات والدهون والبروتينات إلى طاقة، وتساهم في استقلاب الطاقة الطبيعي، والأداء الطبيعي للجهاز العصبي، وتكوين خلايا الدم الحمراء الطبيعي، وتقليل التعب والإرهاق (EFSA).",
+        summaryNl: "De acht B-vitamines werken als co-enzymen die koolhydraten, vetten en eiwitten omzetten in energie; ze dragen bij tot een normaal energieleverend metabolisme, een normale werking van het zenuwstelsel, de normale aanmaak van rode bloedcellen en de vermindering van vermoeidheid (EFSA).",
+        summaryEn: "The eight B vitamins act as coenzymes that turn carbohydrates, fats and proteins into energy; they contribute to normal energy-yielding metabolism, normal functioning of the nervous system, normal red blood cell formation and the reduction of tiredness and fatigue (EFSA).",
         tags: [
             "طاقة",
             "أعصاب",
@@ -2258,75 +2247,73 @@ const supplementsData = [
             "شعر"
         ],
         benefits: [
-            "تدعم إنتاج الطاقة من الطعام",
-            "تحسن المزاج وتقلل التوتر",
-            "تدعم صحة الجهاز العصبي والدماغ",
-            "تحسن صحة البشرة والشعر والأظافر",
-            "تدعم تكوين خلايا الدم الحمراء",
-            "مهمة لصحة القلب والأوعية الدموية"
+            "تعمل فيتامينات B الثمانية كإنزيمات مساعدة في تحويل الكربوهيدرات والدهون والبروتينات إلى طاقة، وتساهم في استقلاب الطاقة الطبيعي، والأداء الطبيعي للجهاز العصبي، وتكوين خلايا الدم الحمراء الطبيعي، وتقليل التعب والإرهاق (EFSA)."
         ],
         benefitsNl: [
-            "Cruciaal voor de omzetting van koolhydraten, vetten en eiwitten in cellulaire ATP-energie",
-            "Ondersteunt een gezonde werking van het zenuwstelsel en neurotransmittersynthese",
-            "Verlaagt vermoeidheid en verhoogt stressbestendigheid",
-            "Ondersteunt homocysteïneregulatie en cardiovasculaire gezondheid (B6, B12, Folaat)",
-            "Draagt bij aan normale aanmaak van rode bloedcellen"
+            "De acht B-vitamines werken als co-enzymen die koolhydraten, vetten en eiwitten omzetten in energie; ze dragen bij tot een normaal energieleverend metabolisme, een normale werking van het zenuwstelsel, de normale aanmaak van rode bloedcellen en de vermindering van vermoeidheid (EFSA)."
         ],
         benefitsEn: [
-            "Drives metabolic conversion of dietary macronutrients into ATP cellular energy",
-            "Vital for myelin maintenance, neurological conduction, and mood balance",
-            "Combats chronic fatigue and enhances physiological stress tolerance",
-            "Maintains healthy homocysteine metabolism protecting vascular lining (B6, B12, Folate)",
-            "Required for erythropoiesis and healthy red blood cell production"
+            "The eight B vitamins act as coenzymes that turn carbohydrates, fats and proteins into energy; they contribute to normal energy-yielding metabolism, normal functioning of the nervous system, normal red blood cell formation and the reduction of tiredness and fatigue (EFSA)."
         ],
         dosage: {
-            recommended: "كبسولة واحدة (اختر الأشكال الممثيلة النشطة)",
-            timing: "مع وجبة الإفطار",
+            recommended: "كبسولة واحدة يومياً (B6 لا يتجاوز 12 ملغ)",
+            timing: "مع الإفطار؛ يُفضَّل تجنبها مساءً لأنها قد تزيد اليقظة",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "1 capsule (kies actieve vormen: methylcobalamine, 5-MTHF en P-5-P)",
-            timing: "'s Ochtends bij het ontbijt met water",
-            frequency: "1x per dag"
+            recommended: "1 capsule per dag (B6 niet meer dan 12 mg)",
+            timing: "Bij het ontbijt; liever niet 's avonds, omdat het alerter kan maken",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "1 capsule (choose active methylated forms)",
-            timing: "Morning with breakfast",
+            recommended: "1 capsule daily (B6 no more than 12 mg)",
+            timing: "With breakfast; best avoided in the evening as it can increase alertness",
             frequency: "Once daily"
         },
+        forms: "الأشكال النشطة حيوياً: ميثيل كوبالامين (B12)، ميثيل فولات (5-MTHF) بدلاً من حمض الفوليك الصناعي، وبيريدوكسال-5-فوسفات (P5P) لفيتامين B6.",
+        formsNl: "Bioactieve vormen: methylcobalamine (B12), methylfolaat (5-MTHF) in plaats van synthetisch foliumzuur, en pyridoxaal-5-fosfaat (P5P) voor vitamine B6.",
+        formsEn: "Bioactive forms: methylcobalamin (B12), methylfolate (5-MTHF) instead of synthetic folic acid, and pyridoxal-5-phosphate (P5P) for vitamin B6.",
         warnings: [
-            "قد يحول لون البول إلى أصفر فاقع (طبيعي)",
-            "تجنب الجرعات الضخمة من B6 (+100 ملغ يومياً)",
-            "آمن للاستخدام طويل المدى"
+            "تحول لون البول إلى أصفر زاهٍ أمر طبيعي وغير ضار ناتج عن إفراز فيتامين B2",
+            "حد EFSA الأعلى لعام 2023: يجب ألا تتجاوز جرعة B6 اليومية 12 ملغ لتفادي تلف الأعصاب الحسية الطرفية"
         ],
         warningsNl: [
-            "Felle neon-gele urine na inname is volkomen onschadelijk (overtollige vitamine B2 / riboflavine)",
-            "Neem niet 's avonds laat in wegens het activerende effect op de energiestofwisseling",
-            "Kies voor de veilige P-5-P vorm van vitamine B6"
+            "Felgele urine is normaal en onschuldig, veroorzaakt door uitgescheiden vitamine B2",
+            "Bovengrens EFSA 2023: neem niet meer dan 12 mg vitamine B6 per dag om schade aan de perifere gevoelszenuwen te voorkomen"
         ],
         warningsEn: [
-            "Bright neon-yellow urine is completely benign (excess riboflavin excretion)",
-            "Avoid late evening intake due to metabolic stimulating effects",
-            "Ensure Vitamin B6 is in the active P-5-P form to avoid neuropathy"
+            "Bright yellow urine is normal and harmless, caused by excreted vitamin B2",
+            "EFSA 2023 upper limit: daily vitamin B6 should not exceed 12 mg to avoid damage to the peripheral sensory nerves"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Kan de effectiviteit van levodopa verminderen indien niet-actieve B6 wordt gebruikt.",
-        interactionsEn: "High-dose non-active B6 can interfere with Parkinson's levodopa therapy.",
-        naturalSources: "اللحوم، الأسماك، البيض، الحبوب الكاملة، الخضروات الورقية، البقوليات",
-        naturalSourcesNl: "Eieren, biologisch vlees, vette vis, voedingsgist, peulvruchten en bladgroenten.",
-        naturalSourcesEn: "Eggs, meat, fatty fish, nutritional yeast, legumes, leafy greens."
+        interactions: "قد يقلل فيتامين B6 من فعالية ليفودوبا لمرضى باركنسون عند استخدامه دون كاربيدوبا. يخفض الميتفورمين وحبوب منع الحمل وبعض مدرات البول ومثبطات حمض المعدة مستويات B12 والفولات.",
+        interactionsNl: "Vitamine B6 kan de werking van levodopa bij de ziekte van Parkinson verminderen als het zonder carbidopa wordt gebruikt. Metformine, de pil, sommige plaspillen en maagzuurremmers verlagen de B12- en foliumzuurspiegel.",
+        interactionsEn: "Vitamin B6 can reduce the effect of levodopa in Parkinson's disease when it is taken without carbidopa. Metformin, birth control pills, some diuretics and acid-reducing drugs lower B12 and folate levels.",
+        naturalSources: "الحبوب الكاملة، البيض، اللحوم والكبدة، البقوليات، الخضروات الورقية، منتجات الألبان",
+        naturalSourcesNl: "Volkoren granen, eieren, vlees en lever, peulvruchten, bladgroenten, zuivel",
+        naturalSourcesEn: "Whole grains, eggs, meat and liver, legumes, leafy greens, dairy",
+        groupLabel: {
+            ar: "الطاقة والجهاز العصبي",
+            en: "Energy & nervous system",
+            nl: "Energie & zenuwstelsel"
+        },
+        references: [
+            "EFSA Scientific Opinion on the Tolerable Upper Intake Level for vitamin B6 (2023)",
+            "NIH Office of Dietary Supplements (ODS): B vitamins fact sheets",
+            "Kennedy DO. Nutrients 2016 — PMID: 26828517"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 33,
         slug: "iron",
-        name: "حديد",
-        englishName: "Iron",
-        nameNl: "IJzer (Bisglycinaat / Gentle Iron)",
+        name: "الحديد المخلبي اللطيف على المعدة",
+        englishName: "Iron Bisglycinate (Gentle Iron)",
+        nameNl: "IJzer Bisglycinaat",
         category: "صحة-عامة",
         icon: "🩸",
-        summary: "معدن أساسي لنقل الأكسجين في الدم والطاقة - شائع نقصه لدى النساء",
-        summaryNl: "Essentieel mineraal voor hemoglobinevorming, zuurstoftransport en bestrijding van chronische vermoeidheid.",
-        summaryEn: "Fundamental trace element for hemoglobin formation, systemic oxygen delivery, and fighting fatigue.",
+        summary: "يساهم الحديد في التكوين الطبيعي لخلايا الدم الحمراء والهيموغلوبين، والنقل الطبيعي للأكسجين في الجسم، والوظيفة الإدراكية الطبيعية، وتقليل التعب والإرهاق (ادعاءات معتمدة من EFSA).",
+        summaryNl: "IJzer draagt bij tot de normale vorming van rode bloedcellen en hemoglobine, het normale zuurstoftransport in het lichaam, een normale cognitieve functie en de vermindering van vermoeidheid (door EFSA toegestane claims).",
+        summaryEn: "Iron contributes to normal formation of red blood cells and haemoglobin, normal oxygen transport in the body, normal cognitive function and the reduction of tiredness and fatigue (EFSA-authorised claims).",
         tags: [
             "دم",
             "طاقة",
@@ -2335,233 +2322,221 @@ const supplementsData = [
             "شعر"
         ],
         benefits: [
-            "ضروري لإنتاج الهيموجلوبين ونقل الأكسجين",
-            "يمنع ويعالج فقر الدم (الأنيميا)",
-            "يزيد مستويات الطاقة ويقلل التعب",
-            "يدعم جهاز المناعة",
-            "يحسن التركيز والأداء الذهني",
-            "يدعم صحة الشعر والأظافر"
+            "يساهم الحديد في التكوين الطبيعي لخلايا الدم الحمراء والهيموغلوبين، والنقل الطبيعي للأكسجين في الجسم، والوظيفة الإدراكية الطبيعية، وتقليل التعب والإرهاق (ادعاءات معتمدة من EFSA)."
         ],
         benefitsNl: [
-            "Vormt de kern van hemoglobine voor efficiënt zuurstoftransport door het hele lichaam",
-            "Behandelt en voorkomt ijzertekortanemie en herstelt vitale energieniveaus",
-            "Ondersteunt cognitieve functies, alertheid en denkvermogen",
-            "Cruciaal voor spierkracht en herstel bij intensief sportende vrouwen",
-            "Vermindert haaruitval en broze nagels veroorzaakt door een laag ferritinegehalte"
+            "IJzer draagt bij tot de normale vorming van rode bloedcellen en hemoglobine, het normale zuurstoftransport in het lichaam, een normale cognitieve functie en de vermindering van vermoeidheid (door EFSA toegestane claims)."
         ],
         benefitsEn: [
-            "Central core of hemoglobin, driving efficient systemic oxygen perfusion",
-            "Prevents and resolves iron-deficiency anemia, restoring vitality",
-            "Maintains cognitive sharpness and task concentration",
-            "Crucial for female athletic endurance and work capacity",
-            "Reverses diffuse hair thinning linked to depleted ferritin stores"
+            "Iron contributes to normal formation of red blood cells and haemoglobin, normal oxygen transport in the body, normal cognitive function and the reduction of tiredness and fatigue (EFSA-authorised claims)."
         ],
         dosage: {
-            recommended: "14-25 ملغ حديد عنصري (على شكل بيسجليسينات الحديد اللطيفة)",
-            timing: "على معدة فارغة أو مع فيتامين سي",
+            recommended: "14–25 ملغ حديد عنصري يومياً (فقط عند ثبوت النقص)",
+            timing: "على معدة فارغة مع نصف كأس عصير برتقال، أو مع وجبة خفيفة لمن يعانون من الغثيان",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "14-25 mg elementair ijzer (als maagvriendelijk ijzerbisglycinaat)",
-            timing: "'s Ochtends op een nuchtere maag met een bron van vitamine C (bijv. sinaasappelsap)",
-            frequency: "1x per dag (of om de dag voor betere opname)"
+            recommended: "14–25 mg elementair ijzer per dag (alleen bij een vastgesteld tekort)",
+            timing: "Op een lege maag met een half glas sinaasappelsap, of met een lichte snack bij misselijkheid",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "14-25 mg elemental iron (as gentle iron bisglycinate)",
-            timing: "Morning on an empty stomach paired with Vitamin C",
-            frequency: "Once daily (or alternate-day for optimal hepcidin dynamics)"
+            recommended: "14–25 mg elemental iron daily (only when a deficiency is confirmed)",
+            timing: "On an empty stomach with half a glass of orange juice, or with a light snack if it causes nausea",
+            frequency: "Once daily"
         },
+        forms: "حديد بيسغلايسينات (Iron Bisglycinate): لطيف على المعدة والأمعاء ويسبب إمساكاً وغثياناً أقل من كبريتات الحديدوز التقليدية.",
+        formsNl: "IJzerbisglycinaat: mild voor maag en darmen, met minder verstopping en misselijkheid dan klassiek ijzersulfaat.",
+        formsEn: "Iron bisglycinate: gentle on the stomach and gut, with less constipation and nausea than traditional ferrous sulphate.",
         warnings: [
-            "لا تأخذه إلا إذا كان لديك نقص (افحص دمك)",
-            "قد يسبب إمساك أو غثيان",
-            "تجنب القهوة والشاي قبل/بعد الجرعة بساعتين",
-            "الجرعات الزائدة خطيرة جداً",
-            "⚠️ لا تأخذه مع أدوية الغدة الدرقية (فارق 4 ساعات!)",
-            "افحص مستوى الحديد قبل المكملات"
+            "لا تتناوله دون فحص مخبري سابق لمستوى الفيريتين؛ فالحديد يتراكم في الكبد والقلب والبنكرياس ولا يملك الجسم وسيلة فعالة لإفرازه",
+            "يُمنع لمرضى داء ترسب الأصبغة الدموية (Hemochromatosis)",
+            "يُحفظ بعيداً عن متناول الأطفال تماماً لتفادي التسمم الحاد"
         ],
         warningsNl: [
-            "ALLEEN innemen na een aangetoond tekort via bloedonderzoek (ferritine-meting)",
-            "Neem NIET in met koffie, thee, calcium of zuivel (polyfenolen en calcium blokkeren opname)",
-            "IJzerbisglycinaat veroorzaakt aanzienlijk minder obstipatie dan traditioneel ijzersulfaat",
-            "IJzer bindt zich in de maag aan schildklierhormoon en maakt de medicatie volledig onwerkzaam"
+            "Neem het niet zonder eerst je ferritine te laten meten; ijzer stapelt zich op in lever, hart en alvleesklier en het lichaam kan het niet goed uitscheiden",
+            "Niet gebruiken bij hemochromatose",
+            "Bewaar het buiten bereik van kinderen om acute vergiftiging te voorkomen"
         ],
         warningsEn: [
-            "Supplement ONLY following confirmed blood test (serum ferritin)",
-            "NEVER take with coffee, tea, or dairy (calcium and tannins block absorption)",
-            "Bisglycinate chelate causes significantly less constipation than sulfate",
-            "STRICT 4-HOUR RULE: NEVER take iron supplements within 4 hours of levothyroxine medication",
-            "Iron chelates directly to synthetic thyroid hormone in the stomach, completely blocking its absorption"
+            "Do not take it without a prior ferritin blood test; iron builds up in the liver, heart and pancreas and the body has no effective way to excrete it",
+            "Not for people with haemochromatosis",
+            "Keep it well out of reach of children to prevent acute poisoning"
         ],
-        interactions: "يتفاعل مع الكالسيوم والشاي والقهوة - خذها منفصلة • يتفاعل بقوة مع أدوية الغدة الدرقية - خذهم بفارق 4 ساعات على الأقل",
-        interactionsNl: "Blokkeert absorptie van schildkliermedicatie en antibiotica; minimaal 3-4 uur scheiden.",
-        interactionsEn: "Blocks absorption of levothyroxine and antibiotics; separate by at least 4 hours. • Major therapeutic binding with levothyroxine (must separate by 4 hours); avoid coffee and calcium.",
-        naturalSources: "اللحوم الحمراء، الكبد، السبانخ، العدس، الحمص، صفار البيض",
-        naturalSourcesNl: "Rood rundvlees, lever, linzen, spinazie, pompoenpitten en eigeel.",
-        naturalSourcesEn: "Red meat, liver, lentils, spinach, pumpkin seeds."
+        interactions: "يُفصل بساعتين عن القهوة والشاي ومكملات الكالسيوم والمغنيسيوم ومضادات الحموضة، وبـ 4 ساعات عن ليفوثيروكسين (هرمون الغدة الدرقية) والمضادات الحيوية (الكينولونات والتتراسيكلين).",
+        interactionsNl: "Neem het twee uur gescheiden van koffie, thee, calcium- en magnesiumsupplementen en maagzuurbinders, en vier uur gescheiden van levothyroxine (schildklierhormoon) en antibiotica (chinolonen en tetracyclines).",
+        interactionsEn: "Take it two hours apart from coffee, tea, calcium and magnesium supplements and antacids, and four hours apart from levothyroxine (thyroid hormone) and antibiotics (quinolones and tetracyclines).",
+        naturalSources: "اللحوم الحمراء والكبدة، العدس والفول، السبانخ، بذور اليقطين، الحبوب المدعمة",
+        naturalSourcesNl: "Rood vlees en lever, linzen en bonen, spinazie, pompoenpitten, verrijkte ontbijtgranen",
+        naturalSourcesEn: "Red meat and liver, lentils and beans, spinach, pumpkin seeds, fortified cereals",
+        groupLabel: {
+            ar: "صحة الدم والحيوية",
+            en: "Blood & vitality",
+            nl: "Bloed & vitaliteit"
+        },
+        references: [
+            "EFSA Journal 2009;7(9):1215 (iron health claims)",
+            "NIH Office of Dietary Supplements (ODS): Iron Fact Sheet",
+            "WHO Guideline: Daily iron supplementation in adult women and adolescent girls (2016)"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 34,
         slug: "calcium",
-        name: "كالسيوم",
-        englishName: "Calcium",
-        nameNl: "Calcium (Citraat / Hydroxyapatiet)",
+        name: "الكالسيوم (سيترات وكربونات) لصحة العظام",
+        englishName: "Calcium (Citrate / Carbonate)",
+        nameNl: "Calcium Citraat",
         category: "عظام-مفاصل",
         icon: "🦴",
-        summary: "المعدن الأساسي لصحة العظام والأسنان والعضلات والأعصاب",
-        summaryNl: "Fundamenteel bouwmineraal voor botdichtheid, sterke tanden, spiercontractie en zenuwgeleiding.",
-        summaryEn: "Foundational structural mineral governing bone mineral density, muscle contractions, and nerve impulses.",
+        summary: "يساهم الكالسيوم في الحفاظ على العظام والأسنان الطبيعية، وفي تخثر الدم الطبيعي، ونقل الإشارات العصبية، والوظيفة العضلية الطبيعية (ادعاءات معتمدة من EFSA).",
+        summaryNl: "Calcium is nodig voor het behoud van normale botten en tanden en draagt bij tot een normale bloedstolling, prikkeloverdracht in de zenuwen en een normale spierwerking (door EFSA toegestane claims).",
+        summaryEn: "Calcium is needed for the maintenance of normal bones and teeth and contributes to normal blood clotting, nerve signalling and normal muscle function (EFSA-authorised claims).",
         tags: [
             "عظام",
             "أسنان",
             "عضلات"
         ],
         benefits: [
-            "يبني ويحافظ على عظام وأسنان قوية",
-            "يمنع هشاشة العظام",
-            "يدعم تقلص وانبساط العضلات",
-            "ضروري لنقل الإشارات العصبية",
-            "يساعد في تخثر الدم",
-            "قد يساعد في تنظيم ضغط الدم"
+            "يساهم الكالسيوم في الحفاظ على العظام والأسنان الطبيعية، وفي تخثر الدم الطبيعي، ونقل الإشارات العصبية، والوظيفة العضلية الطبيعية (ادعاءات معتمدة من EFSA)."
         ],
         benefitsNl: [
-            "Primaire bouwsteen voor sterke botten en een gezond gebit",
-            "Essentieel ter preventie van osteoporose en botbreuken op latere leeftijd",
-            "Noodzakelijk voor gecontroleerde spiercontracties en ontspanning",
-            "Ondersteunt een accurate zenuwprikkeloverdracht door het lichaam",
-            "Draagt bij aan een normale bloedstolling"
+            "Calcium is nodig voor het behoud van normale botten en tanden en draagt bij tot een normale bloedstolling, prikkeloverdracht in de zenuwen en een normale spierwerking (door EFSA toegestane claims)."
         ],
         benefitsEn: [
-            "Primary mineral architect of skeletal tensile strength and teeth",
-            "Crucial defense against age-related osteoporotic bone loss",
-            "Regulates actin-myosin cross-bridge muscle contractions",
-            "Governs precise neurotransmitter release across synapses",
-            "Essential enzymatic catalyst in the coagulation cascade"
+            "Calcium is needed for the maintenance of normal bones and teeth and contributes to normal blood clotting, nerve signalling and normal muscle function (EFSA-authorised claims)."
         ],
         dosage: {
-            recommended: "500-800 ملغ كالسيوم عنصري (ويُفضَّل السترات)",
-            timing: "مع وجبة تحتوي على فيتامين د",
-            frequency: "مقسمة على 1-2 حصة (بحد أقصى 500 ملغ للحصة)"
+            recommended: "500–800 ملغ كالسيوم عنصري يومياً",
+            timing: "مع الوجبات (الكربونات حصراً مع وجبة)؛ لا يمتص الجسم أكثر من 500 ملغ في الجرعة الواحدة",
+            frequency: "مقسمة على جرعتين"
         },
         dosageNl: {
-            recommended: "500-800 mg elementair calcium (als citraat voor betere absorptie)",
-            timing: "Tijdens een maaltijd; combineer altijd met vitamine D3 en K2",
-            frequency: "Verdeeld over 1-2 doseringen (max 500 mg per inname)"
+            recommended: "500–800 mg elementair calcium per dag",
+            timing: "Bij de maaltijd (carbonaat alleen bij een maaltijd); het lichaam neemt niet meer dan 500 mg per dosis op",
+            frequency: "Verdeeld over twee doses"
         },
         dosageEn: {
-            recommended: "500-800 mg elemental calcium (citrate preferred)",
-            timing: "With meals; always co-supplement with Vitamin D3 and K2",
-            frequency: "Divided into 1-2 servings (max 500 mg per serving)"
+            recommended: "500–800 mg elemental calcium daily",
+            timing: "With meals (carbonate only with a meal); the body absorbs no more than 500 mg per dose",
+            frequency: "Split into two doses"
         },
+        forms: "سيترات الكالسيوم هي الخيار الأفضل لأنها تُمتص مع الطعام أو بدونه ولا تعتمد على حموضة المعدة؛ أما الكربونات فأرخص لكنها تُؤخذ مع وجبة ممتلئة وقد تسبب غازات وإمساكاً.",
+        formsNl: "Calciumcitraat is de beste keuze: het wordt met of zonder eten opgenomen en is niet afhankelijk van maagzuur; carbonaat is goedkoper, maar moet bij een volle maaltijd worden ingenomen en kan winderigheid en verstopping geven.",
+        formsEn: "Calcium citrate is the best choice: it is absorbed with or without food and does not depend on stomach acid; carbonate is cheaper but must be taken with a full meal and can cause gas and constipation.",
         warnings: [
-            "لا تتجاوز 2500 ملغ يومياً",
-            "خذه مع فيتامين د لامتصاص أفضل",
-            "قد يسبب إمساك أو انتفاخ",
-            "اختر سترات الكالسيوم (أفضل امتصاصاً)"
+            "الحد الأعلى الآمن للبالغين وفق EFSA هو 2500 ملغ يومياً من جميع المصادر",
+            "الإفراط المزمن دون توازن مع فيتامين D3 وK2 والمغنيسيوم قد يرفع خطر تكلس الأوعية الدموية وحصوات الكلى"
         ],
         warningsNl: [
-            "Neem calcium NOOIT als monotherapie zonder vitamine K2 (K2 voorkomt kalkafzetting in bloedvaten)",
-            "Calciumcarbonaat vereist veel maagzuur; calciumcitraat is maagvriendelijker en effectiever",
-            "Neem niet tegelijk in met ijzer- of zinksupplementen"
+            "De EFSA-bovengrens voor volwassenen is 2500 mg per dag uit alle bronnen",
+            "Chronisch te veel zonder balans met vitamine D3, K2 en magnesium kan het risico op vaatverkalking en nierstenen verhogen"
         ],
         warningsEn: [
-            "NEVER take high-dose calcium without Vitamin K2 (K2 directs calcium out of arteries into bone)",
-            "Calcium citrate does not require stomach acid unlike cheap carbonate",
-            "Separate intake from iron or zinc supplements"
+            "The EFSA upper limit for adults is 2500 mg a day from all sources",
+            "Chronic excess without balancing vitamin D3, K2 and magnesium may raise the risk of vascular calcification and kidney stones"
         ],
-        interactions: "يتفاعل مع الحديد والمضادات الحيوية - خذها في أوقات منفصلة",
-        interactionsNl: "Blokkeert opname van ijzer, schildklierhormoon en tetracyclines (minstens 2-4 uur tussenruimte).",
-        interactionsEn: "Competes with iron absorption and binds thyroid medication; separate by 4 hours.",
-        naturalSources: "الحليب، الجبن، الزبادي، السلمون المعلب، السردين، اللوز، البروكلي",
-        naturalSourcesNl: "Kaas, yoghurt, sardientjes met graat, amandelen, tofu en sesamzaad.",
-        naturalSourcesEn: "Dairy, canned bone-in sardines, almonds, tofu, sesame seeds."
+        interactions: "يتنافس مع الحديد والزنك والمغنيسيوم على الامتصاص؛ يُفصل عنها بساعتين. يقلل امتصاص ليفوثيروكسين والمضادات الحيوية (الفلوروكينولونات والتتراسيكلين) والبيسفوسفونات؛ يُفصل عنها بساعتين إلى 4 ساعات.",
+        interactionsNl: "Het concurreert met ijzer, zink en magnesium om de opname; neem het twee uur gescheiden. Het vermindert de opname van levothyroxine, antibiotica (fluorochinolonen en tetracyclines) en bisfosfonaten; neem het 2–4 uur gescheiden.",
+        interactionsEn: "It competes with iron, zinc and magnesium for absorption; take it two hours apart from them. It reduces the absorption of levothyroxine, antibiotics (fluoroquinolones and tetracyclines) and bisphosphonates; take it 2–4 hours apart.",
+        naturalSources: "الحليب والأجبان والزبادي، السردين بعظامه، الطحينة، اللوز، الخضروات الورقية الداكنة",
+        naturalSourcesNl: "Melk, kaas en yoghurt, sardines met graat, tahin, amandelen, donkere bladgroenten",
+        naturalSourcesEn: "Milk, cheese and yogurt, sardines with bones, tahini, almonds, dark leafy greens",
+        groupLabel: {
+            ar: "العظام والأسنان",
+            en: "Bones & teeth",
+            nl: "Botten & tanden"
+        },
+        references: [
+            "EFSA Journal 2012;10(7):2814 (Tolerable Upper Intake Level of calcium)",
+            "NIH Office of Dietary Supplements (ODS): Calcium Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 35,
         slug: "probiotics",
-        name: "بروبيوتيك",
-        englishName: "Probiotics",
-        nameNl: "Probiotica (Multi-Stam)",
+        name: "مكمل البروبيوتيك متعدد السلالات الحية",
+        englishName: "Multi-Strain Live Probiotics",
+        nameNl: "Probiotica Complex",
         category: "صحة-عامة",
         icon: "🦠",
-        summary: "بكتيريا نافعة تدعم صحة الأمعاء والهضم والمناعة والصحة العامة",
-        summaryNl: "Levende heilzame bacterieculturen voor een evenwichtig microbioom, optimale spijsvertering en sterke weerstand.",
-        summaryEn: "Live therapeutic bacterial cultures restoring microbiome biodiversity, gut barrier, and mucosal immunity.",
+        summary: "سلالات بكتيرية حية نافعة (مثل العصيات اللبنية Lactobacillus والشقية Bifidobacterium) تساهم في استعمار بطانة القناة الهضمية ومنافسة الكائنات الضارة، وإنتاج الأحماض الدهنية قصيرة السلسلة، مما يدعم الحاجز المخاطي المعوي وانتظام حركة الهضم.",
+        summaryNl: "Levende nuttige bacteriestammen (zoals Lactobacillus en Bifidobacterium) die de darmwand koloniseren, concurreren met schadelijke microben en kortketenige vetzuren maken, wat de slijmvliesbarrière van de darm en een regelmatige spijsvertering ondersteunt.",
+        summaryEn: "Live beneficial bacterial strains (such as Lactobacillus and Bifidobacterium) that colonise the gut lining, compete with harmful microbes and produce short-chain fatty acids, supporting the intestinal mucosal barrier and regular digestion.",
         tags: [
             "أمعاء",
             "هضم",
             "مناعة"
         ],
         benefits: [
-            "يحسن صحة الجهاز الهضمي والأمعاء",
-            "يعالج الإسهال والإمساك والانتفاخ",
-            "يدعم جهاز المناعة بقوة (70% من المناعة في الأمعاء)",
-            "يحسن المزاج والصحة النفسية",
-            "يساعد في علاج القولون العصبي",
-            "يقلل الالتهابات في الجسم"
+            "سلالات بكتيرية حية نافعة (مثل العصيات اللبنية Lactobacillus والشقية Bifidobacterium) تساهم في استعمار بطانة القناة الهضمية ومنافسة الكائنات الضارة، وإنتاج الأحماض الدهنية قصيرة السلسلة، مما يدعم الحاجز المخاطي المعوي وانتظام حركة الهضم."
         ],
         benefitsNl: [
-            "Herstelt de gezonde bacteriebalans na een antibioticakuur",
-            "Verlicht symptomen van het prikkelbare darmsyndroom (PDS), opgeblazen gevoel en obstipatie",
-            "Ondersteunt 70% van het immuunsysteem dat zich in de darmwand bevindt",
-            "Verbetert de stemming en vermindert angst via de darm-hersen-as (gut-brain axis)",
-            "Bevordert de aanmaak van korte-keten vetzuren (zoals boterzuur) voor darmwandherstel"
+            "Levende nuttige bacteriestammen (zoals Lactobacillus en Bifidobacterium) die de darmwand koloniseren, concurreren met schadelijke microben en kortketenige vetzuren maken, wat de slijmvliesbarrière van de darm en een regelmatige spijsvertering ondersteunt."
         ],
         benefitsEn: [
-            "Restores commensal microbiota diversity post-antibiotic therapy",
-            "Alleviates symptoms of irritable bowel syndrome (IBS), gas, and bloating",
-            "Fortifies mucosal immunity where ~70% of immune defenses reside",
-            "Modulates mood and neuroinflammation via the bidirectional gut-brain axis",
-            "Enhances microbial production of short-chain fatty acids (SCFAs like butyrate)"
+            "Live beneficial bacterial strains (such as Lactobacillus and Bifidobacterium) that colonise the gut lining, compete with harmful microbes and produce short-chain fatty acids, supporting the intestinal mucosal barrier and regular digestion."
         ],
         dosage: {
-            recommended: "10-50 مليار CFU",
-            timing: "مع وجبة أو قبل النوم",
+            recommended: "10–50 مليار وحدة (CFU) يومياً",
+            timing: "قبل الإفطار بـ 20 دقيقة أو قبل النوم مع كأس ماء بارد",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "10-50 miljard KVE (kolonievormende eenheden) met meerdere bacteriestammen",
-            timing: "'s Ochtends 15-30 minuten voor het ontbijt of voor het slapengaan met water",
-            frequency: "1x per dag"
+            recommended: "10–50 miljard KVE per dag",
+            timing: "20 minuten voor het ontbijt of voor het slapengaan met een glas koud water",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "10-50 Billion CFU multi-strain formula",
-            timing: "Morning 20 mins before breakfast or at bedtime with water",
+            recommended: "10–50 billion CFU daily",
+            timing: "20 minutes before breakfast or at bedtime with a glass of cold water",
             frequency: "Once daily"
         },
+        forms: "كبسولات مقاومة لحمض المعدة (Delayed-Release)، محددة السلالات برمزها الكامل (مثل LGG أو BB-12)، ومصنعة بتقنية تضمن بقاء البكتيريا حية حتى تاريخ انتهاء الصلاحية.",
+        formsNl: "Maagzuurbestendige capsules (delayed-release) die elke stam volledig vermelden (zoals LGG of BB-12) en zo gemaakt zijn dat de bacteriën tot de houdbaarheidsdatum leven.",
+        formsEn: "Acid-resistant (delayed-release) capsules that name each strain in full (such as LGG or BB-12) and are made to keep the bacteria alive until the expiry date.",
         warnings: [
-            "النتائج تحتاج 2-4 أسابيع للظهور",
-            "اختر أنواع متعددة من البكتيريا",
-            "احفظه في الثلاجة إن أمكن",
-            "قد يسبب غازات خفيفة في البداية"
+            "قد يسبب غازات وانتفاخاً مؤقتاً في الأيام الأولى",
+            "يُمنع لمرضى نقص المناعة الشديد ومرضى العناية المركزة ومن لديهم قساطر وريدية مركزية لتفادي خطر تجرثم الدم النادر"
         ],
         warningsNl: [
-            "Kies voor een maagsapresistente capsule om overleving van maagzuur te garanderen",
-            "Kan in de eerste dagen lichte winderigheid veroorzaken (teken van darmkolonisatie)",
-            "Kies voor formules met zowel Lactobacillus- als Bifidobacterium-stammen"
+            "Kan de eerste dagen tijdelijk winderigheid en een opgeblazen gevoel geven",
+            "Niet gebruiken bij ernstige afweerstoornissen, op de intensive care of met een centraal veneuze katheter, wegens een zeldzaam risico op bloedbaaninfectie"
         ],
         warningsEn: [
-            "Select enteric-coated delivery to ensure survival past gastric acid",
-            "Transient mild gas may occur during initial colonization phase",
-            "Opt for diverse multi-strain formulas containing both Lacto and Bifido genera"
+            "May cause temporary gas and bloating in the first days",
+            "Not for people with severe immune deficiency, intensive-care patients or people with a central venous catheter, because of a rare risk of bloodstream infection"
         ],
-        interactions: "تجنبه مع المضادات الحيوية (خذه بعد 2-3 ساعات)",
-        interactionsNl: "Neem minstens 2 tot 3 uur gescheiden van orale antibiotica.",
-        interactionsEn: "Separate by at least 2-3 hours from oral antibiotic medications.",
-        naturalSources: "الزبادي، الكفير، المخللات، الكيمتشي، الملفوف المخمر (ساوركراوت)",
-        naturalSourcesNl: "Kefir, rauwmelkse yoghurt, zuurkool, kimchi, miso en kombucha.",
-        naturalSourcesEn: "Kefir, unpasteurized sauerkraut, kimchi, miso, kombucha."
+        interactions: "المضادات الحيوية تقتل بكتيريا البروبيوتيك؛ يُؤخذ بعد جرعة المضاد الحيوي بساعتين إلى 3 ساعات على الأقل. يُستشار الطبيب مع الأدوية المثبطة للمناعة.",
+        interactionsNl: "Antibiotica doden probiotische bacteriën; neem het minstens 2–3 uur na een dosis antibiotica. Overleg met je arts bij afweeronderdrukkende medicijnen.",
+        interactionsEn: "Antibiotics kill probiotic bacteria; take it at least 2–3 hours after an antibiotic dose. Consult a doctor if you take immunosuppressants.",
+        naturalSources: "الزبادي والكفير، اللبن الرائب، المخللات المخمرة طبيعياً، مخلل الملفوف (ساوركراوت)، الكيمتشي",
+        naturalSourcesNl: "Yoghurt en kefir, karnemelk, natuurlijk gefermenteerde augurken, zuurkool, kimchi",
+        naturalSourcesEn: "Yogurt and kefir, buttermilk, naturally fermented pickles, sauerkraut, kimchi",
+        groupLabel: {
+            ar: "الهضم والميكروبيوم",
+            en: "Digestion & microbiome",
+            nl: "Spijsvertering & microbioom"
+        },
+        references: [
+            "Hill C et al. ISAPP consensus statement on probiotics. Nat Rev Gastroenterol Hepatol 2014 — PMID: 24912386",
+            "World Gastroenterology Organisation (WGO) Global Guidelines: Probiotics and prebiotics",
+            "NIH Office of Dietary Supplements (ODS): Probiotics Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 36,
         slug: "turmeric-curcumin",
-        name: "كركم (كركمين)",
-        englishName: "Turmeric / Curcumin",
-        nameNl: "Kurkuma (Curcumine C3)",
+        name: "الكركمين المركز عالي الامتصاص مع الفلفل الأسود",
+        englishName: "Curcumin 95% with Piperine",
+        nameNl: "Curcumine Extract met Piperine",
         category: "صحة-عامة",
         icon: "🟡",
-        summary: "توابل هندية قوية - مضاد التهاب ومضاد أكسدة طبيعي يدعم المفاصل والدماغ",
-        summaryNl: "Krachtig natuurlijk ontstekingsremmend extract ter ondersteuning van soepele gewrichten en celbescherming.",
-        summaryEn: "Gold-standard botanical anti-inflammatory supporting joint comfort, gut health, and cognitive function.",
+        summary: "المركب البوليفينولي الفعال في جذور الكركم؛ له خواص مضادة للأكسدة عبر تثبيط مسارات خلوية مرتبطة بالإجهاد التأكسدي (مثل NF-kB وإنزيمات COX-2)، مما يساهم في دعم راحة المفاصل ومرونتها.",
+        summaryNl: "De actieve polyfenol in kurkumawortel; het heeft antioxiderende eigenschappen door remming van celroutes die met oxidatieve stress samenhangen (zoals NF-kB en COX-2-enzymen), wat het comfort en de soepelheid van de gewrichten ondersteunt.",
+        summaryEn: "The active polyphenol in turmeric root; it has antioxidant properties through inhibition of cellular pathways linked to oxidative stress (such as NF-kB and COX-2 enzymes), helping support joint comfort and flexibility.",
         tags: [
             "مضاد التهاب",
             "مفاصل",
@@ -2571,75 +2546,76 @@ const supplementsData = [
             "هضم"
         ],
         benefits: [
-            "مضاد التهاب طبيعي قوي جداً",
-            "يقلل آلام المفاصل والتهاب المفاصل",
-            "مضاد أكسدة قوي يحارب الشيخوخة",
-            "يدعم صحة الدماغ والذاكرة",
-            "يحسن المزاج ويقلل الاكتئاب",
-            "يدعم صحة القلب والكبد"
+            "المركب البوليفينولي الفعال في جذور الكركم؛ له خواص مضادة للأكسدة عبر تثبيط مسارات خلوية مرتبطة بالإجهاد التأكسدي (مثل NF-kB وإنزيمات COX-2)، مما يساهم في دعم راحة المفاصل ومرونتها."
         ],
         benefitsNl: [
-            "Krachtige natuurlijke remming van ontstekingsenzymen (COX-2 en NF-kB)",
-            "Verlicht gewrichtspijn en stijfheid bij artrose en overbelasting",
-            "Beschermt hersenneuronen en ondersteunt BDNF-niveaus voor een beter humeur",
-            "Ondersteunt gezonde leverfunctie en galafgifte",
-            "Krachtige antioxidant die gezonde cellen beschermt tegen vrije radicalen"
+            "De actieve polyfenol in kurkumawortel; het heeft antioxiderende eigenschappen door remming van celroutes die met oxidatieve stress samenhangen (zoals NF-kB en COX-2-enzymen), wat het comfort en de soepelheid van de gewrichten ondersteunt."
         ],
         benefitsEn: [
-            "Systemic down-regulation of inflammatory cascades (COX-2 and NF-kB)",
-            "Clinically relieves osteoarthritic joint stiffness and discomfort",
-            "Elevates brain-derived neurotrophic factor (BDNF) supporting mood",
-            "Assists in liver detoxification and biliary flow",
-            "Broad-spectrum antioxidant neutralizing reactive oxygen species"
+            "The active polyphenol in turmeric root; it has antioxidant properties through inhibition of cellular pathways linked to oxidative stress (such as NF-kB and COX-2 enzymes), helping support joint comfort and flexibility."
         ],
         dosage: {
-            recommended: "500-1000 ملغ كركمين",
-            timing: "مع وجبة تحتوي على دهون",
-            frequency: "1-2 مرات يومياً"
+            recommended: "500–1000 ملغ من مستخلص الكركمين المعياري (95% كركومينويدات)",
+            timing: "مع وجبات تحتوي على دهون صحية كزيت الزيتون",
+            frequency: "مقسمة على 1–2 جرعة يومياً"
         },
         dosageNl: {
-            recommended: "500-1000 mg curcumine-extract (gecombineerd met piperine/zwarte peper)",
-            timing: "Tijdens een vetrijke maaltijd voor optimale opname",
-            frequency: "1-2x per dag"
+            recommended: "500–1000 mg gestandaardiseerd curcumine-extract (95% curcuminoïden)",
+            timing: "Bij maaltijden met gezonde vetten zoals olijfolie",
+            frequency: "Verdeeld over 1–2 doses per dag"
         },
         dosageEn: {
-            recommended: "500-1000 mg standardized curcumin (with piperine)",
-            timing: "With a fat-containing meal",
-            frequency: "1-2 times daily"
+            recommended: "500–1000 mg standardized curcumin extract (95% curcuminoids)",
+            timing: "With meals that contain healthy fats such as olive oil",
+            frequency: "Split into 1–2 doses daily"
         },
+        forms: "الكركمين الخام ضعيف الامتصاص؛ اختر مستخلصاً معيارياً (95% كركومينويدات) معززاً بالبيبيرين (مستخلص الفلفل الأسود الذي رفع امتصاصه حتى 20 ضعفاً في دراسة بشرية) أو تقنية الفيتوزوم المدمجة بالفوسفوليبيدات.",
+        formsNl: "Gewone curcumine wordt slecht opgenomen; kies een gestandaardiseerd extract (95% curcuminoïden) met piperine (zwarte-peperextract dat de opname in een studie bij mensen tot 20 keer verhoogde) of een fytosoomvorm gebonden aan fosfolipiden.",
+        formsEn: "Plain curcumin is poorly absorbed; choose a standardized extract (95% curcuminoids) with piperine (black pepper extract, which raised absorption up to 20-fold in a human study) or a phytosome form bound to phospholipids.",
         warnings: [
-            "النتائج تحتاج 4-8 أسابيع للظهور",
-            "يجب أن يحتوي على فلفل أسود (بيبيرين) لامتصاص أفضل",
-            "قد يسبب اضطراب معدة بجرعات عالية"
+            "يُمنع لمن يعانون من انسداد القنوات الصفراوية أو حصوات المرارة النشطة لأن الكركمين يحفز انقباض المرارة",
+            "رصدت الهيئة الفرنسية لسلامة الغذاء (ANSES) حالات إجهاد كبدي مع المستخلصات عالية الامتصاص؛ أوقفه وراجع الطبيب عند ظهور اصفرار أو بول داكن أو ألم في البطن",
+            "يُتجنب أثناء الحمل والرضاعة بالجرعات المكملة"
         ],
         warningsNl: [
-            "Curcumine wordt slecht opgenomen zonder toevoeging van zwarte peper (piperine) of fosfolipiden (fytosoom)",
-            "Niet gebruiken bij obstructie van de galwegen of acute galstenen",
-            "Kan in hoge doseringen de bloedstolling licht vertragen"
+            "Niet gebruiken bij afgesloten galwegen of actieve galstenen, omdat curcumine de galblaas laat samentrekken",
+            "Het Franse voedselveiligheidsagentschap (ANSES) registreerde gevallen van leverschade met extracten met hoge opname; stop en raadpleeg een arts bij geelverkleuring, donkere urine of buikpijn",
+            "Vermijd supplementdoses tijdens zwangerschap en borstvoeding"
         ],
         warningsEn: [
-            "Requires piperine (black pepper) or lipid phytosome for systemic bioavailability",
-            "Contraindicated in active biliary tract obstruction or gallstones",
-            "May possess mild antiplatelet properties"
+            "Not for people with blocked bile ducts or active gallstones, because curcumin makes the gallbladder contract",
+            "The French food safety agency (ANSES) has recorded cases of liver injury with high-absorption extracts; stop and see a doctor if you notice yellowing, dark urine or abdominal pain",
+            "Avoid supplement doses during pregnancy and breastfeeding"
         ],
-        interactions: "قد يتفاعل مع مميعات الدم - استشر طبيبك",
-        interactionsNl: "Voorzichtigheid geboden bij bloedverdunners (aspirine, warfarine).",
-        interactionsEn: "May interact with anticoagulant and antiplatelet therapeutics.",
-        naturalSources: "الكركم الطازج أو المسحوق (في الطبخ)",
-        naturalSourcesNl: "Verse kurkumawortel, kurkumapoeder.",
-        naturalSourcesEn: "Fresh turmeric rhizome, golden milk spices."
+        interactions: "يعزز مفعول مميعات الدم ومضادات التخثر؛ ويُراعى مع أدوية السكري لاحتمال خفض إضافي للجلوكوز. يثبط البيبيرين إنزيمات الكبد (مثل CYP3A4) فيغير مستويات أدوية كثيرة في الدم.",
+        interactionsNl: "Het versterkt de werking van bloedverdunners en antistollingsmiddelen en kan de glucose extra verlagen bij diabetesmedicatie. Piperine remt leverenzymen (zoals CYP3A4) en verandert zo de bloedspiegel van veel medicijnen.",
+        interactionsEn: "It strengthens the effect of blood thinners and anticoagulants and may lower glucose further with diabetes medication. Piperine inhibits liver enzymes (such as CYP3A4) and so changes blood levels of many drugs.",
+        naturalSources: "جذور الكركم الطازجة أو المطحونة (يحتوي الكركم المطبخي على 2–5% كركمين فقط)",
+        naturalSourcesNl: "Verse of gemalen kurkumawortel (keukenkurkuma bevat maar 2–5% curcumine)",
+        naturalSourcesEn: "Fresh or ground turmeric root (kitchen turmeric contains only 2–5% curcumin)",
+        groupLabel: {
+            ar: "المفاصل ومضادات الأكسدة",
+            en: "Joints & antioxidants",
+            nl: "Gewrichten & antioxidanten"
+        },
+        references: [
+            "Shoba G et al. Planta Med 1998 (piperine and curcumin bioavailability) — PMID: 9619120",
+            "ANSES Opinion on the risks associated with turmeric food supplements (2022)",
+            "EFSA ANS Panel: Scientific opinion on the re-evaluation of curcumin (E 100) as a food additive (2010)"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 37,
         slug: "ginger",
-        name: "زنجبيل",
-        englishName: "Ginger",
-        nameNl: "Gember (Ginseng / Gingerol)",
+        name: "خلاصة جذور الزنجبيل المركزة",
+        englishName: "Standardized Ginger Root Extract",
+        nameNl: "Gemberwortel Extract",
         category: "صحة-عامة",
         icon: "🫚",
-        summary: "جذر طبيعي قوي يحسن الهضم ويقلل الغثيان والالتهابات",
-        summaryNl: "Krachtige botanische wortel die de spijsvertering kalmeert, misselijkheid stopt en spierpijn verlicht.",
-        summaryEn: "Time-tested digestive tonic and systemic anti-inflammatory relieving nausea and muscle soreness.",
+        summary: "غني بالمركبات النشطة الجينجيرول والشوجاول، التي تساهم في تسريع إفراغ المعدة وتهدئة تقلصات الجهاز الهضمي والتأثير في مستقبلات السيروتونين 5-HT3، مما يدعم راحة الجهاز الهضمي ويخفف الشعور بالغثيان ودوار الحركة.",
+        summaryNl: "Rijk aan de actieve stoffen gingerolen en shogaolen, die de maaglediging versnellen, darmkrampen kalmeren en inwerken op 5-HT3-serotoninereceptoren; zo ondersteunt het het spijsverteringscomfort en verlicht het misselijkheid en reisziekte.",
+        summaryEn: "Rich in the active compounds gingerols and shogaols, which help speed up stomach emptying, calm digestive cramps and act on 5-HT3 serotonin receptors, supporting digestive comfort and easing feelings of nausea and motion sickness.",
         tags: [
             "هضم",
             "غثيان",
@@ -2647,75 +2623,72 @@ const supplementsData = [
             "التهاب"
         ],
         benefits: [
-            "يحسن الهضم ويقلل الانتفاخ والغازات",
-            "يعالج الغثيان والقيء (للحامل، العلاج الكيماوي)",
-            "مضاد التهاب طبيعي قوي",
-            "يقلل آلام العضلات بعد التمارين",
-            "يخفض سكر الدم والكوليسترول",
-            "يدعم جهاز المناعة"
+            "غني بالمركبات النشطة الجينجيرول والشوجاول، التي تساهم في تسريع إفراغ المعدة وتهدئة تقلصات الجهاز الهضمي والتأثير في مستقبلات السيروتونين 5-HT3، مما يدعم راحة الجهاز الهضمي ويخفف الشعور بالغثيان ودوار الحركة."
         ],
         benefitsNl: [
-            "Verlicht misselijkheid effectief (reisziekte, ochtendmisselijkheid)",
-            "Bevordert een soepele maagontlediging en vermindert winderigheid en een opgeblazen gevoel",
-            "Remt ontstekingen en vermindert verlate spierpijn na intensief sporten",
-            "Ondersteunt een gezonde bloedsuikerspiegel en insulinerespons",
-            "Verwarmt het lichaam en stimuleert de perifere bloedsomloop"
+            "Rijk aan de actieve stoffen gingerolen en shogaolen, die de maaglediging versnellen, darmkrampen kalmeren en inwerken op 5-HT3-serotoninereceptoren; zo ondersteunt het het spijsverteringscomfort en verlicht het misselijkheid en reisziekte."
         ],
         benefitsEn: [
-            "Relieves nausea effectively (motion sickness, morning sickness)",
-            "Accelerates gastric emptying and reduces dyspepsia and bloating",
-            "Mitigates delayed-onset muscle soreness and exercise-induced trauma",
-            "Aids in maintaining glycemic stability",
-            "Stimulates peripheral blood circulation"
+            "Rich in the active compounds gingerols and shogaols, which help speed up stomach emptying, calm digestive cramps and act on 5-HT3 serotonin receptors, supporting digestive comfort and easing feelings of nausea and motion sickness."
         ],
         dosage: {
-            recommended: "500-1500 ملغ مستخلص زنجبيل معياري (أو منقوع الزنجبيل الطازج)",
-            timing: "قبل أو بعد الوجبات",
-            frequency: "1-3 مرات يومياً"
+            recommended: "500–1500 ملغ من المستخلص المعياري يومياً",
+            timing: "مع الوجبات، أو قبل السفر بنصف ساعة",
+            frequency: "مقسمة على 1–3 جرعات"
         },
         dosageNl: {
-            recommended: "500-1500 mg gestandaardiseerd gemberextract (of verse gemberthee)",
-            timing: "Voor of na de maaltijd, of 30 min voor vertrek bij reisziekte",
-            frequency: "1-3x per dag"
+            recommended: "500–1500 mg gestandaardiseerd extract per dag",
+            timing: "Bij de maaltijd, of een half uur voor vertrek op reis",
+            frequency: "Verdeeld over 1–3 doses"
         },
         dosageEn: {
-            recommended: "500-1500 mg standardized ginger extract (or fresh ginger infusion)",
-            timing: "Before or after meals, or 30 min prior to travel",
-            frequency: "1-3 times daily"
+            recommended: "500–1500 mg standardized extract daily",
+            timing: "With meals, or half an hour before travelling",
+            frequency: "Split into 1–3 doses"
         },
+        forms: "كبسولات المستخلص الجاف المعياري (5% جينجيرول) لثبات المحتوى، أو شاي الزنجبيل المحضر من الجذور الطازجة.",
+        formsNl: "Capsules met gestandaardiseerd droog extract (5% gingerolen) voor een constant gehalte, of thee van verse gemberwortel.",
+        formsEn: "Standardized dry extract capsules (5% gingerols) for a consistent content, or tea made from fresh ginger root.",
         warnings: [
-            "آمن جداً بجرعات تصل إلى 5 جرام",
-            "قد يسبب حموضة لدى البعض",
-            "استشر طبيبك إذا كنت حاملاً أو تتناول مميعات الدم"
+            "الجرعات التي تتجاوز 4–5 غ يومياً قد تسبب حرقة وارتجاعاً مريئياً",
+            "الحوامل: لا تتجاوز الجرعة 1000 ملغ يومياً وبعد استشارة الطبيب"
         ],
         warningsNl: [
-            "Veilig tot 4 gram per dag; hoge doseringen kunnen brandend maagzuur uitlokken",
-            "Tijdens zwangerschap niet meer dan 1000 mg droog extract per dag innemen",
-            "Overleg bij galsteenaandoeningen"
+            "Doses boven 4–5 g per dag kunnen brandend maagzuur en reflux geven",
+            "Zwangeren: niet meer dan 1000 mg per dag en alleen na overleg met de arts"
         ],
         warningsEn: [
-            "Safe up to 4 g daily; excessive intake may cause mild heartburn",
-            "Limit to 1000 mg dry extract daily during pregnancy",
-            "Consult physician if diagnosed with gallstones"
+            "Doses above 4–5 g a day may cause heartburn and reflux",
+            "Pregnant women: no more than 1000 mg a day, and only after consulting a doctor"
         ],
-        interactions: "قد يتفاعل مع مميعات الدم - استشر طبيبك",
-        interactionsNl: "Kan de werking van bloedverdunners licht versterken.",
-        interactionsEn: "May additively interact with anticoagulant medications.",
-        naturalSources: "الزنجبيل الطازج، الزنجبيل المجفف، شاي الزنجبيل",
-        naturalSourcesNl: "Verse gemberwortel, gemberthee, gekonfijte gember.",
-        naturalSourcesEn: "Fresh raw ginger root, infused ginger tea."
+        interactions: "له تأثير خفيف مضاد لتجمع الصفائح الدموية؛ يُراعى مع الجرعات العالية من مميعات الدم (الوارفارين والأسبرين). قد يعزز مفعول خافضات الضغط وأدوية السكري.",
+        interactionsNl: "Het heeft een licht remmend effect op de bloedplaatjes; wees voorzichtig met hoge doses bloedverdunners (warfarine, aspirine). Het kan bloeddruk- en diabetesmedicatie versterken.",
+        interactionsEn: "It has a mild anti-platelet effect; take care with high doses of blood thinners (warfarin, aspirin). It may strengthen blood pressure and diabetes medication.",
+        naturalSources: "جذور الزنجبيل الطازجة والمجففة والمطحونة",
+        naturalSourcesNl: "Verse, gedroogde en gemalen gemberwortel",
+        naturalSourcesEn: "Fresh, dried and ground ginger root",
+        groupLabel: {
+            ar: "الهضم والراحة",
+            en: "Digestion & comfort",
+            nl: "Spijsvertering & comfort"
+        },
+        references: [
+            "European Medicines Agency (EMA): Community herbal monograph on Zingiber officinale Roscoe, rhizoma",
+            "Lete I, Allué J. Integr Med Insights 2016 — PMID: 27053918"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 38,
         slug: "spirulina",
-        name: "سبيرولينا",
-        englishName: "Spirulina",
-        nameNl: "Spirulina (Blauwalgen)",
+        name: "طحالب السبيرولينا الخضراء المزرقة العضوية",
+        englishName: "Organic Spirulina (Arthrospira platensis)",
+        nameNl: "Biologische Spirulina Poeder",
         category: "صحة-عامة",
         icon: "🌀",
-        summary: "طحلب أخضر مزرق غني بالبروتين والمغذيات - سوبرفود طبيعي كامل",
-        summaryNl: "Nutriëntenrijke micro-alg bomvol plantaardige eiwitten, chlorofyl, ijzer en fycocyanine.",
-        summaryEn: "Nutrient-dense superfood blue-green microalga rich in complete plant protein, phycocyanin, and bioavailable iron.",
+        summary: "طحلب دقيق غني بالبروتين النباتي (نحو 60–65%) والفيتامينات والمعادن، ويتميز بصبغة الفيكوسيانين الزرقاء ذات الخواص المضادة للأكسدة، مما يساهم في دعم الحيوية والنشاط اليومي.",
+        summaryNl: "Een micro-alg die rijk is aan plantaardig eiwit (ongeveer 60–65%), vitamines en mineralen, met het blauwe pigment fycocyanine dat antioxiderende eigenschappen heeft; het ondersteunt de dagelijkse vitaliteit en energie.",
+        summaryEn: "A microalga rich in plant protein (about 60–65%), vitamins and minerals, with the blue pigment phycocyanin, which has antioxidant properties, helping support everyday vitality and energy.",
         tags: [
             "بروتين",
             "مغذيات",
@@ -2725,224 +2698,226 @@ const supplementsData = [
             "نباتي"
         ],
         benefits: [
-            "غني جداً بالبروتين (60-70%) والأحماض الأمينية",
-            "مصدر ممتاز للحديد وفيتامينات ب",
-            "مضاد أكسدة قوي (فيكوسيانين)",
-            "يدعم جهاز المناعة",
-            "يخفض الكوليسترول وضغط الدم",
-            "له خصائص مضادة للالتهاب"
+            "طحلب دقيق غني بالبروتين النباتي (نحو 60–65%) والفيتامينات والمعادن، ويتميز بصبغة الفيكوسيانين الزرقاء ذات الخواص المضادة للأكسدة، مما يساهم في دعم الحيوية والنشاط اليومي."
         ],
         benefitsNl: [
-            "Rijk aan bioactieve eiwitten (60-70%), chlorofyl en B-vitaminen",
-            "Bevat fycocyanine: een unieke krachtige antioxidant die immuuncellen activeert",
-            "Uitstekende bron van natuurlijk ijzer voor extra energie",
-            "Ondersteunt ontgifting en bindt zware metalen",
-            "Ondersteunt gezonde bloeddruk en gunstige cholesterolwaarden"
+            "Een micro-alg die rijk is aan plantaardig eiwit (ongeveer 60–65%), vitamines en mineralen, met het blauwe pigment fycocyanine dat antioxiderende eigenschappen heeft; het ondersteunt de dagelijkse vitaliteit en energie."
         ],
         benefitsEn: [
-            "Concentrated plant protein (60-70%) with a balanced amino acid spectrum",
-            "Potent radical-scavenging phycocyanin activating immune defenses",
-            "Superior non-constipating natural iron source restoring energy",
-            "Assists in heavy metal clearance and cellular detox",
-            "Promotes healthy endothelial lipid profiles"
+            "A microalga rich in plant protein (about 60–65%), vitamins and minerals, with the blue pigment phycocyanin, which has antioxidant properties, helping support everyday vitality and energy."
         ],
         dosage: {
-            recommended: "3-5 جرام",
-            timing: "مع وجبة الإفطار",
+            recommended: "3–5 غ يومياً (مسحوق أو أقراص)",
+            timing: "مع الإفطار أو مضافة للسموثي والعصائر",
             frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "3-5 g poeder of tabletten",
-            timing: "'s Ochtends met water of gemengd door een smoothie",
-            frequency: "1x per dag"
+            recommended: "3–5 g per dag (poeder of tabletten)",
+            timing: "Bij het ontbijt of door smoothies en sappen",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "3-5 g powder or tablets",
-            timing: "Morning with water or blended into a smoothie",
+            recommended: "3–5 g daily (powder or tablets)",
+            timing: "With breakfast or added to smoothies and juices",
             frequency: "Once daily"
         },
+        forms: "السبيرولينا العضوية المعتمدة (Certified Organic) المزروعة في بيئات مراقبة، مع شهادة تحليل تثبت خلوها من سموم الميكروسيستين والمعادن الثقيلة كالرصاص والزرنيخ.",
+        formsNl: "Gecertificeerd biologische spirulina, gekweekt onder gecontroleerde omstandigheden, met een analysecertificaat dat aantoont dat ze vrij is van microcystines en zware metalen zoals lood en arseen.",
+        formsEn: "Certified organic spirulina grown in controlled conditions, with a certificate of analysis showing it is free of microcystin toxins and heavy metals such as lead and arsenic.",
         warnings: [
-            "قد يسبب غثيان خفيف في البداية",
-            "تجنبه إذا كان لديك أمراض مناعة ذاتية",
-            "اختر مصدر موثوق (خالي من السموم)",
-            "تجنبه إذا كان لديك أمراض المناعة الذاتية"
+            "يُمنع لمرضى أمراض المناعة الذاتية (التصلب اللويحي، الذئبة الحمراء، التهاب المفاصل الروماتويدي) لأنه قد ينشط الجهاز المناعي",
+            "يُمنع لمرضى بيلة الفينيل كيتون (PKU) لاحتوائه على الفينيل ألانين",
+            "قد يسبب غثياناً خفيفاً في البداية"
         ],
         warningsNl: [
-            "Koop altijd geteste spirulina van betrouwbare merken (voorkom besmetting met microcystines)",
-            "Niet geschikt bij de zeldzame stofwisselingsziekte fenylketonurie (PKU)",
-            "Voorzichtigheid bij auto-immuunziekten wegens sterke immuunstimulatie"
+            "Niet gebruiken bij auto-immuunziekten (MS, lupus, reumatoïde artritis), omdat het het immuunsysteem kan stimuleren",
+            "Niet gebruiken bij fenylketonurie (PKU), omdat het fenylalanine bevat",
+            "Kan in het begin lichte misselijkheid geven"
         ],
         warningsEn: [
-            "Always source tested organic spirulina free from cyanobacterial toxins (microcystins)",
-            "Contraindicated in phenylketonuria (PKU) due to high phenylalanine",
-            "Exercise caution in severe autoimmune disease due to immunostimulation"
+            "Not for people with autoimmune diseases (multiple sclerosis, lupus, rheumatoid arthritis), because it may stimulate the immune system",
+            "Not for people with phenylketonuria (PKU), as it contains phenylalanine",
+            "May cause mild nausea at first"
         ],
-        interactions: "قد يتفاعل مع أدوية المناعة - استشر طبيبك",
-        interactionsNl: "Kan interageren met immuunonderdrukkende medicijnen (immunosuppressiva).",
-        interactionsEn: "May counteract immunosuppressive prescription medications.",
-        naturalSources: "السبيرولينا (طحلب - يُستخدم كمكمل فقط)",
-        naturalSourcesNl: "Gekweekte zoetwatermicroalgen (Arthrospira platensis).",
-        naturalSourcesEn: "Arthrospira platensis fresh water microalgae."
+        interactions: "قد يتعارض مع الأدوية المثبطة للمناعة (مثل الكورتيزون والسيكلوسبورين) لخواصه المنشطة للمناعة. قد يزيد مفعول مميعات الدم طفيفاً.",
+        interactionsNl: "Het kan afweeronderdrukkende middelen (zoals corticosteroïden en ciclosporine) tegenwerken omdat het het immuunsysteem stimuleert. Het kan bloedverdunners licht versterken.",
+        interactionsEn: "It may counteract immunosuppressants (such as corticosteroids and ciclosporin) because it stimulates the immune system. It may slightly strengthen blood thinners.",
+        naturalSources: "طحلب السبيرولينا نفسه (مسحوق أو أقراص)؛ لا يوجد في الأطعمة اليومية",
+        naturalSourcesNl: "Spirulina zelf (poeder of tabletten); het zit niet in gewone voeding",
+        naturalSourcesEn: "Spirulina itself (powder or tablets); it is not found in everyday foods",
+        groupLabel: {
+            ar: "الأغذية الخارقة والحيوية",
+            en: "Superfoods & vitality",
+            nl: "Superfoods & vitaliteit"
+        },
+        references: [
+            "Karkos PD et al. Evid Based Complement Alternat Med 2011 — PMC3136577",
+            "NIH National Library of Medicine (MedlinePlus): Blue-green algae"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 39,
         slug: "garcinia-cambogia",
-        name: "غارسينيا كامبوجيا",
-        englishName: "Garcinia Cambogia",
-        nameNl: "Garcinia Cambogia (HCA)",
+        name: "خلاصة ثمار الغارسينيا كامبوجيا",
+        englishName: "Garcinia Cambogia (HCA Extract)",
+        nameNl: "Garcinia Cambogia Extract",
         category: "تخسيس",
         icon: "🟢",
-        summary: "فاكهة استوائية تحتوي على HCA - قد تقلل الشهية وتمنع تخزين الدهون",
-        summaryNl: "Tropisch fruitextract rijk aan hydroxycitroenzuur (HCA) ter ondersteuning van eetlustbeheersing.",
-        summaryEn: "Tropical fruit extract rich in hydroxycitric acid (HCA) aiding in appetite modulation.",
+        summary: "تحتوي قشرة الثمرة على حمض الهيدروكسي سيتريك (HCA) الذي يثبط في الدراسات المخبرية إنزيم سترات لياز المشارك في تحويل الكربوهيدرات الزائدة إلى دهون؛ وقد يساهم طفيفاً في دعم الشعور بالشبع، لكن أثره على الوزن في الدراسات البشرية متواضع.",
+        summaryNl: "De schil van de vrucht bevat hydroxycitroenzuur (HCA), dat in laboratoriumonderzoek het enzym citraatlyase remt dat overtollige koolhydraten helpt omzetten in vet; het kan het verzadigingsgevoel licht ondersteunen, maar het effect op het gewicht is in studies bij mensen bescheiden.",
+        summaryEn: "The fruit rind contains hydroxycitric acid (HCA), which in laboratory studies inhibits citrate lyase, an enzyme involved in turning excess carbohydrates into fat; it may slightly support satiety, but its effect on weight in human studies is modest.",
         tags: [
             "تخسيس",
             "شهية",
             "دهون"
         ],
         benefits: [
-            "قد يقلل الشهية والرغبة في الأكل",
-            "قد يمنع تحويل الكربوهيدرات إلى دهون",
-            "قد يزيد مستوى السيروتونين (تحسين المزاج)",
-            "قد يخفض الكوليسترول والدهون الثلاثية",
-            "قد يحسن الأداء الرياضي قليلاً"
+            "تحتوي قشرة الثمرة على حمض الهيدروكسي سيتريك (HCA) الذي يثبط في الدراسات المخبرية إنزيم سترات لياز المشارك في تحويل الكربوهيدرات الزائدة إلى دهون؛ وقد يساهم طفيفاً في دعم الشعور بالشبع، لكن أثره على الوزن في الدراسات البشرية متواضع."
         ],
         benefitsNl: [
-            "HCA remt tijdelijk het enzym citraatliase (betrokken bij vetsynthese)",
-            "Verhoogt de verzadiging door stimulatie van serotonine in de hersenen",
-            "Helpt emotioneel eten en snaaigedrag verminderen",
-            "Draagt bij aan stabilisatie van de bloedsuikerspiegel"
+            "De schil van de vrucht bevat hydroxycitroenzuur (HCA), dat in laboratoriumonderzoek het enzym citraatlyase remt dat overtollige koolhydraten helpt omzetten in vet; het kan het verzadigingsgevoel licht ondersteunen, maar het effect op het gewicht is in studies bij mensen bescheiden."
         ],
         benefitsEn: [
-            "HCA competitively inhibits ATP-citrate lyase enzyme in de novo lipogenesis",
-            "Supports satiety signaling through central serotonin modulation",
-            "Helps curb stress-induced emotional overeating",
-            "Assists in glycemic stabilization"
+            "The fruit rind contains hydroxycitric acid (HCA), which in laboratory studies inhibits citrate lyase, an enzyme involved in turning excess carbohydrates into fat; it may slightly support satiety, but its effect on weight in human studies is modest."
         ],
         dosage: {
-            recommended: "500-1000 ملغ (معياري بنسبة 50-60% HCA)",
-            timing: "قبل الوجبات بـ 30-60 دقيقة",
-            frequency: "2-3 مرات يومياً"
+            recommended: "500–1000 ملغ من المستخلص المعياري (50–60% HCA)",
+            timing: "قبل الوجبات بـ 30–60 دقيقة مع كأس ماء كبير",
+            frequency: "2–3 مرات يومياً"
         },
         dosageNl: {
-            recommended: "500-1000 mg (gestandaardiseerd op minimaal 50-60% HCA)",
-            timing: "30-60 minuten voor de hoofdmaaltijden met een vol glas water",
-            frequency: "2-3x per dag"
+            recommended: "500–1000 mg gestandaardiseerd extract (50–60% HCA)",
+            timing: "30–60 minuten voor de maaltijd met een groot glas water",
+            frequency: "2–3 keer per dag"
         },
         dosageEn: {
-            recommended: "500-1000 mg (standardized to 50-60% HCA)",
-            timing: "30-60 minutes pre-meal with water",
-            frequency: "2-3 times daily"
+            recommended: "500–1000 mg standardized extract (50–60% HCA)",
+            timing: "30–60 minutes before meals with a large glass of water",
+            frequency: "2–3 times daily"
         },
+        forms: "مستخلصات HCA المرتبطة بالكالسيوم أو البوتاسيوم لثبات المركب، مع التأكد من عدم خلطها بمنبهات غير معلنة.",
+        formsNl: "HCA-extracten gebonden aan calcium of kalium voor de stabiliteit, gecontroleerd op niet-vermelde stimulerende middelen.",
+        formsEn: "HCA extracts bound to calcium or potassium for stability, checked to be free of undeclared stimulants.",
         warnings: [
-            "الدراسات متضاربة حول فعاليته",
-            "لا يُعتبر حلاً سحرياً - يحتاج دايت وتمارين",
-            "قد يسبب اضطراب معدة أو صداع",
-            "تجنبه إذا كنت حاملاً أو مرضعاً"
+            "ليس حلاً سحرياً؛ فاعليته في إنقاص الوزن متواضعة ومتفاوتة في الدراسات البشرية",
+            "أُبلغ عن حالات نادرة لإصابة كبدية؛ يُمنع لمرضى القصور الكبدي والكلوي، ويُوقف فوراً عند ظهور اصفرار أو بول داكن",
+            "يُمنع أثناء الحمل والرضاعة"
         ],
         warningsNl: [
-            "Geen wondermiddel; werkt uitsluitend in combinatie met een caloriebeperkt dieet",
-            "Niet gebruiken tijdens zwangerschap of borstvoeding",
-            "Staak gebruik bij maagdarmongemakken"
+            "Geen wondermiddel: het effect op afvallen is bescheiden en wisselt tussen studies bij mensen",
+            "Er zijn zeldzame gevallen van leverschade gemeld; niet gebruiken bij lever- of nierfalen, en stop direct bij geelverkleuring of donkere urine",
+            "Niet gebruiken tijdens zwangerschap of borstvoeding"
         ],
         warningsEn: [
-            "Modest clinical weight loss outcomes; requires strict caloric deficit",
-            "Contraindicated during pregnancy or lactation",
-            "Discontinue if experiencing digestive intolerance"
+            "Not a magic solution: its effect on weight loss is modest and varies between human studies",
+            "Rare cases of liver injury have been reported; not for people with liver or kidney failure, and stop at once if you notice yellowing or dark urine",
+            "Not for use during pregnancy or breastfeeding"
         ],
-        interactions: "قد يتفاعل مع أدوية السكري - استشر طبيبك",
-        interactionsNl: "Kan interageren met diabetesmedicatie en antidepressiva.",
-        interactionsEn: "May interact with hypoglycemic medications and serotonergic drugs.",
-        naturalSources: "فاكهة غارسينيا كامبوجيا (نادرة)",
-        naturalSourcesNl: "Schil van de Garcinia gummi-gutta vrucht.",
-        naturalSourcesEn: "Rind of the Garcinia gummi-gutta fruit."
+        interactions: "قد يخفض الجلوكوز في الدم؛ تُراقب القراءات مع أدوية السكري والإنسولين. قد يتداخل مع أدوية الكوليسترول (الستاتينات) ومضادات الاكتئاب السيروتونية.",
+        interactionsNl: "Het kan de bloedglucose verlagen; controleer je waarden bij diabetesmedicatie en insuline. Het kan interageren met cholesterolverlagers (statines) en serotonerge antidepressiva.",
+        interactionsEn: "It may lower blood glucose; monitor readings with diabetes medication and insulin. It may interact with cholesterol drugs (statins) and serotonergic antidepressants.",
+        naturalSources: "قشرة ثمرة الغارسينيا (تُستخدم تقليدياً في مطبخ جنوب آسيا)",
+        naturalSourcesNl: "De schil van de garciniavrucht (traditioneel gebruikt in de Zuid-Aziatische keuken)",
+        naturalSourcesEn: "The rind of the garcinia fruit (used traditionally in South Asian cooking)",
+        groupLabel: {
+            ar: "الأيض وإدارة الوزن",
+            en: "Metabolism & weight management",
+            nl: "Stofwisseling & gewichtsbeheersing"
+        },
+        references: [
+            "Onakpoya I et al. J Obes 2011 (systematic review and meta-analysis) — PMID: 21197150",
+            "NIH LiverTox: Garcinia cambogia",
+            "NIH Office of Dietary Supplements (ODS): Dietary Supplements for Weight Loss"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 40,
         slug: "forskolin",
-        name: "فورسكولين",
-        englishName: "Forskolin",
-        nameNl: "Forskolin (Coleus Forskohlii)",
+        name: "خلاصة جذور الكوليوس المعيارية (فورسكولين)",
+        englishName: "Forskolin (Coleus forskohlii Extract)",
+        nameNl: "Forskolin Extract",
         category: "تخسيس",
         icon: "🌿",
-        summary: "مستخلص من نبات القوليوس الهندي - قد يساعد في حرق الدهون والحفاظ على العضلات",
-        summaryNl: "Plantenextract dat cyclisch AMP (cAMP) stimuleert voor actieve vetafbraak en spierbehoud.",
-        summaryEn: "Ayurvedic plant extract stimulating cyclic AMP (cAMP) to promote lipolysis and lean tissue preservation.",
+        summary: "مركب نباتي ينشط إنزيم أدينيلات سيكلاز داخل الخلايا مباشرة، مما يرفع مستوى الرسول الخلوي cAMP المشارك في استقلاب الدهون وإرخاء العضلات الملساء؛ والأبحاث البشرية حول أثره على الوزن محدودة.",
+        summaryNl: "Een plantaardige stof die het enzym adenylaatcyclase in de cel direct activeert en zo de boodschapperstof cAMP verhoogt, die betrokken is bij de vetstofwisseling en het ontspannen van gladde spieren; onderzoek bij mensen naar het effect op het gewicht is beperkt.",
+        summaryEn: "A plant compound that directly activates the enzyme adenylate cyclase inside cells, raising the cellular messenger cAMP, which is involved in fat metabolism and smooth muscle relaxation; human research on its effect on weight is limited.",
         tags: [
             "حرق دهون",
             "هرمونات",
             "عضلات"
         ],
         benefits: [
-            "قد يزيد مستويات cAMP (يحفز حرق الدهون)",
-            "قد يحافظ على الكتلة العضلية أثناء التخسيس",
-            "قد يزيد مستوى التستوستيرون لدى الرجال",
-            "قد يدعم صحة القلب والأوعية الدموية",
-            "له خصائص مضادة للالتهاب"
+            "مركب نباتي ينشط إنزيم أدينيلات سيكلاز داخل الخلايا مباشرة، مما يرفع مستوى الرسول الخلوي cAMP المشارك في استقلاب الدهون وإرخاء العضلات الملساء؛ والأبحاث البشرية حول أثره على الوزن محدودة."
         ],
         benefitsNl: [
-            "Activeert het enzym adenylaatcyclase en verhoogt cellulair cAMP",
-            "Stimuleert hormoongevoelig lipase (HSL) voor directe vetcelafbraak",
-            "Ondersteunt behoud van vetvrije spiermassa tijdens het afvallen",
-            "Kan bij mannen een gunstige invloed hebben op vrij testosteron",
-            "Bevordert ontspanning van de gladde spieren in bloedvaten"
+            "Een plantaardige stof die het enzym adenylaatcyclase in de cel direct activeert en zo de boodschapperstof cAMP verhoogt, die betrokken is bij de vetstofwisseling en het ontspannen van gladde spieren; onderzoek bij mensen naar het effect op het gewicht is beperkt."
         ],
         benefitsEn: [
-            "Directly stimulates adenylate cyclase, elevating intracellular cAMP",
-            "Activates hormone-sensitive lipase (HSL) accelerating adipocyte breakdown",
-            "Aids in preserving lean mass during caloric deficits",
-            "May positively influence free testosterone levels in men",
-            "Promotes vascular smooth muscle relaxation"
+            "A plant compound that directly activates the enzyme adenylate cyclase inside cells, raising the cellular messenger cAMP, which is involved in fat metabolism and smooth muscle relaxation; human research on its effect on weight is limited."
         ],
         dosage: {
-            recommended: "250 ملغ (معياري بنسبة 10-20% فورسكولين)",
-            timing: "مع وجبة الإفطار والعشاء",
+            recommended: "250 ملغ من المستخلص المعياري (10–20% فورسكولين)",
+            timing: "مع الإفطار والعشاء",
             frequency: "مرتين يومياً"
         },
         dosageNl: {
-            recommended: "250 mg (gestandaardiseerd op 10-20% pure forskolin)",
-            timing: "Bij het ontbijt en diner met water",
-            frequency: "2x per dag"
+            recommended: "250 mg gestandaardiseerd extract (10–20% forskoline)",
+            timing: "Bij het ontbijt en het avondeten",
+            frequency: "2 keer per dag"
         },
         dosageEn: {
-            recommended: "250 mg (standardized to 10-20% forskolin)",
+            recommended: "250 mg standardized extract (10–20% forskolin)",
             timing: "With breakfast and dinner",
             frequency: "Twice daily"
         },
+        forms: "المستخلص الجاف المعياري لجذور الكوليوس (10–20% فورسكولين) الموثق النقاء.",
+        formsNl: "Gestandaardiseerd droog extract van Coleus forskohlii-wortel (10–20% forskoline) met aantoonbare zuiverheid.",
+        formsEn: "Standardized dry Coleus forskohlii root extract (10–20% forskolin) with documented purity.",
         warnings: [
-            "الأبحاث محدودة حول فعاليته",
-            "النتائج تحتاج 8-12 أسبوع للظهور",
-            "قد يخفض ضغط الدم",
-            "استشر طبيبك إذا كنت تتناول أدوية ضغط الدم"
+            "قد يزيد حموضة المعدة ويسبب إسهالاً خفيفاً؛ يُمنع لمرضى قرحة المعدة النشطة",
+            "يُمنع أثناء الحمل والرضاعة",
+            "الأبحاث البشرية محدودة؛ النتائج تحتاج 8–12 أسبوعاً"
         ],
         warningsNl: [
-            "Verlaagt de bloeddruk; niet combineren met bloeddrukverlagers zonder controle",
-            "Niet gebruiken bij maagzweren (stimuleert maagzuurproductie)",
-            "Niet geschikt voor zwangeren"
+            "Het kan het maagzuur verhogen en lichte diarree geven; niet gebruiken bij een actieve maagzweer",
+            "Niet gebruiken tijdens zwangerschap of borstvoeding",
+            "Onderzoek bij mensen is beperkt; resultaten vragen 8–12 weken"
         ],
         warningsEn: [
-            "Lowers systemic vascular resistance; caution with antihypertensives",
-            "May stimulate gastric acid secretion; avoid in active peptic ulcers",
-            "Not recommended during pregnancy"
+            "It may increase stomach acid and cause mild diarrhoea; not for people with an active stomach ulcer",
+            "Not for use during pregnancy or breastfeeding",
+            "Human research is limited; results take 8–12 weeks"
         ],
-        interactions: "قد يتفاعل مع أدوية ضغط الدم ومميعات الدم - استشر طبيبك",
-        interactionsNl: "Interactie met bloeddrukverlagers, nitraten en antistollingsmiddelen.",
-        interactionsEn: "Interacts with antihypertensive agents and anticoagulants.",
-        naturalSources: "نبات القوليوس الهندي (يُستخدم كمكمل فقط)",
-        naturalSourcesNl: "Wortelextract van de Coleus forskohlii plant.",
-        naturalSourcesEn: "Root of the Coleus forskohlii Ayurvedic plant."
+        interactions: "تحذير ضغط وسيولة: يوسع الأوعية ويخفض الضغط ويثبط تجمع الصفائح؛ لا يُستخدم مع أدوية خفض الضغط أو مميعات الدم لتفادي هبوط الضغط والنزيف.",
+        interactionsNl: "Waarschuwing bloeddruk en bloedingen: het verwijdt de bloedvaten, verlaagt de bloeddruk en remt de bloedplaatjes; combineer het niet met bloeddrukverlagers of bloedverdunners om een bloeddrukdaling en bloedingen te voorkomen.",
+        interactionsEn: "Blood pressure and bleeding warning: it widens blood vessels, lowers blood pressure and inhibits platelets; do not combine it with blood pressure medication or blood thinners, to avoid low blood pressure and bleeding.",
+        naturalSources: "جذور نبات الكوليوس فورسكولي (من عائلة النعناع)؛ لا يوجد في الأطعمة اليومية",
+        naturalSourcesNl: "De wortel van Coleus forskohlii (lipbloemenfamilie); niet aanwezig in gewone voeding",
+        naturalSourcesEn: "The root of Coleus forskohlii (mint family); not found in everyday foods",
+        groupLabel: {
+            ar: "الأيض وإدارة الوزن",
+            en: "Metabolism & weight management",
+            nl: "Stofwisseling & gewichtsbeheersing"
+        },
+        references: [
+            "Godard MP et al. Obes Res 2005 — PMID: 16129715",
+            "NIH National Library of Medicine (MedlinePlus): Coleus forskohlii"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 41,
-        slug: "essential-amino-acids",
-        name: "أحماض أمينية أساسية EAA",
-        englishName: "Essential Amino Acids (EAA)",
-        nameNl: "EAA (Essentiële Aminozuren)",
+        slug: "eaa",
+        name: "الأحماض الأمينية الأساسية الكاملة التسعة (EAA)",
+        englishName: "Essential Amino Acids (EAA Complex)",
+        nameNl: "Essentiële Aminozuren (EAA)",
         category: "بناء-عضلات",
         icon: "🧬",
-        summary: "جميع الأحماض الأمينية الأساسية التسعة - أفضل من BCAA لبناء البروتين العضلي",
-        summaryNl: "Alle 9 essentiële aminozuren in optimale verhouding voor maximale spiereiwitsynthese en herstel.",
-        summaryEn: "Complete spectrum of all 9 essential amino acids driving maximal muscle protein synthesis.",
+        summary: "تضم الأحماض الأمينية التسعة التي لا يصنعها الجسم ويجب الحصول عليها من الغذاء؛ توفر الركائز الكاملة لتخليق البروتين العضلي، وتتفوق على مكملات BCAA المنفردة لأنها توفر كل الأحماض اللازمة لإتمام البناء.",
+        summaryNl: "De negen aminozuren die het lichaam niet zelf kan maken en uit voeding moet halen; ze leveren de volledige bouwstenen voor de aanmaak van spiereiwit en doen het beter dan alleen BCAA, omdat ze alle aminozuren leveren die daarvoor nodig zijn.",
+        summaryEn: "The nine amino acids the body cannot make and must get from food; they provide the complete building blocks for muscle protein synthesis and outperform BCAA alone because they supply every amino acid needed to complete it.",
         tags: [
             "أحماض أمينية",
             "بناء عضلات",
@@ -2950,75 +2925,72 @@ const supplementsData = [
             "بروتين"
         ],
         benefits: [
-            "يحتوي على جميع الأحماض الأمينية الأساسية (9 أحماض)",
-            "أفضل من BCAA لتخليق البروتين العضلي",
-            "يمنع هدم العضلات أثناء التمرين",
-            "يسرع التعافي بعد التمرين",
-            "يحسن الأداء الرياضي والتحمل",
-            "مفيد جداً للصيام المتقطع والنباتيين"
+            "تضم الأحماض الأمينية التسعة التي لا يصنعها الجسم ويجب الحصول عليها من الغذاء؛ توفر الركائز الكاملة لتخليق البروتين العضلي، وتتفوق على مكملات BCAA المنفردة لأنها توفر كل الأحماض اللازمة لإتمام البناء."
         ],
         benefitsNl: [
-            "Bevat alle 9 essentiële aminozuren die het lichaam zelf niet kan aanmaken",
-            "Superieur aan BCAA's alleen: zet direct aan tot volwaardige spieropbouw",
-            "Ideaal tijdens periodiek vasten of calorietekort om spierafbraak te stoppen",
-            "Snelle opname zonder spijsverteringsbelasting (caloriearm)",
-            "Onmisbare ondersteuning voor plantaardige en veganistische sporters"
+            "De negen aminozuren die het lichaam niet zelf kan maken en uit voeding moet halen; ze leveren de volledige bouwstenen voor de aanmaak van spiereiwit en doen het beter dan alleen BCAA, omdat ze alle aminozuren leveren die daarvoor nodig zijn."
         ],
         benefitsEn: [
-            "Supplies all 9 essential amino acids indispensable for tissue construction",
-            "Far superior to isolated BCAAs for initiating full de novo protein synthesis",
-            "Ideal during intermittent fasting or cutting to prevent muscle loss",
-            "Rapid absorption with negligible digestive stress or caloric load",
-            "Crucial ergogenic aid for vegan and plant-based athletes"
+            "The nine amino acids the body cannot make and must get from food; they provide the complete building blocks for muscle protein synthesis and outperform BCAA alone because they supply every amino acid needed to complete it."
         ],
         dosage: {
-            recommended: "10-15 جرام",
-            timing: "أثناء التمرين أو بين الوجبات",
-            frequency: "1-2 مرات يومياً"
+            recommended: "10–15 غ مذابة في الماء",
+            timing: "أثناء التمرين أو بعده، أو بين الوجبات",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "10-15 g poeder opgelost in water",
-            timing: "Tijdens de training (intra-workout) of tussen maaltijden",
-            frequency: "1-2x per dag"
+            recommended: "10–15 g opgelost in water",
+            timing: "Tijdens of na de training, of tussen de maaltijden",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "10-15 g dissolved in water",
-            timing: "Intra-workout or between protein-sparse meals",
-            frequency: "1-2 times daily"
+            recommended: "10–15 g dissolved in water",
+            timing: "During or after training, or between meals",
+            frequency: "1–2 times daily"
         },
+        forms: "مسحوق الأحماض الأمينية الحرة سريعة الامتصاص (Free-Form EAA) الخالي من السكر وبنسبة مرتفعة من الليوسين.",
+        formsNl: "Snel opneembaar EAA-poeder in vrije vorm, suikervrij en verrijkt met leucine.",
+        formsEn: "Fast-absorbing free-form EAA powder, sugar-free and leucine-enriched.",
         warnings: [
-            "أفضل من BCAA لأنه يحتوي على جميع الأحماض",
-            "قد يكون غير ضروري إذا كنت تتناول بروتين كافي",
-            "آمن للاستخدام طويل المدى"
+            "غير ضرورية لمن يتناولون كميات وافرة من البروتين الكامل كالدجاج والبيض والواي",
+            "تُضبط الجرعات لمرضى الفشل الكلوي والكبدي المتقدم وفق توجيهات الطبيب"
         ],
         warningsNl: [
-            "Uiterst veilig en biologisch zuiver",
-            "Vervangt geen volwaardige eiwitmaaltijden, maar vult ze perfect aan rondom trainingen",
-            "Kies voor een product gezoet met stevia en vrij van kunstmatige kleurstoffen"
+            "Niet nodig als je veel volwaardig eiwit eet, zoals kip, eieren en wei",
+            "Bij gevorderd nier- of leverfalen de dosis afstemmen met je arts"
         ],
         warningsEn: [
-            "Extremely safe with zero gastric burden",
-            "Complements rather than completely replaces whole dietary protein",
-            "Opt for naturally sweetened formulations"
+            "Not needed if you eat plenty of complete protein such as chicken, eggs and whey",
+            "People with advanced kidney or liver failure should adjust the dose with their doctor"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen klinische interacties met medicatie.",
-        interactionsEn: "No negative pharmaceutical interactions.",
-        naturalSources: "البروتين الحيواني (لحوم، دجاج، أسماك، بيض)",
-        naturalSourcesNl: "Eieren, zuivel, vlees, vis, hennepzaad en sojabonen.",
-        naturalSourcesEn: "Eggs, meat, poultry, dairy, edamame."
+        interactions: "آمنة مع معظم الأدوية؛ تُفصل بساعتين عن ليفودوبا لمرضى باركنسون لأن الأحماض الأمينية تتنافس معه على الامتصاص.",
+        interactionsNl: "Veilig met de meeste medicijnen; neem ze twee uur gescheiden van levodopa bij de ziekte van Parkinson, omdat aminozuren met de opname ervan concurreren.",
+        interactionsEn: "Safe with most medicines; take them two hours apart from levodopa in Parkinson's disease, because amino acids compete with it for absorption.",
+        naturalSources: "البيض، اللحوم والدواجن، الأسماك، منتجات الألبان، الصويا",
+        naturalSourcesNl: "Eieren, vlees en gevogelte, vis, zuivel, soja",
+        naturalSourcesEn: "Eggs, meat and poultry, fish, dairy, soy",
+        groupLabel: {
+            ar: "بناء العضلات واللياقة",
+            en: "Muscle building & fitness",
+            nl: "Spieropbouw & fitness"
+        },
+        references: [
+            "Jäger R et al. ISSN Position Stand: protein and exercise. J Int Soc Sports Nutr 2017 — PMID: 28642676",
+            "Kerksick CM et al. ISSN exercise & sports nutrition review update. J Int Soc Sports Nutr 2018 — PMID: 30068354"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 42,
         slug: "l-leucine",
-        name: "ليوسين",
-        englishName: "L-Leucine",
-        nameNl: "L-Leucine",
+        name: "إل-ليوسين المفعل للبناء العضلي",
+        englishName: "Pure L-Leucine",
+        nameNl: "L-Leucine Aminozuur",
         category: "بناء-عضلات",
         icon: "💪",
-        summary: "أهم حمض أميني لتخليق البروتين العضلي - يشكل 50% من تأثير BCAA",
-        summaryNl: "De anabole hoofdschakelaar; activeert direct het mTOR-signaalpad voor spiereiwitsynthese.",
-        summaryEn: "The primary molecular anabolic trigger directly stimulating mTOR signaling for muscle synthesis.",
+        summary: "الحمض الأميني الأهم ابتنائياً؛ يعمل كمفتاح تشغيل لمسار mTORC1 داخل الألياف العضلية لتحفيز تخليق البروتين، ويفيد كبار السن خصوصاً لمواجهة ضعف الاستجابة الابتنائية المرتبط بالتقدم في العمر.",
+        summaryNl: "Het meest anabole aminozuur; het werkt als schakelaar van de mTORC1-route in de spiervezels om de eiwitaanmaak te stimuleren, en is vooral nuttig voor ouderen om de leeftijdsgebonden afname van de anabole respons tegen te gaan.",
+        summaryEn: "The most anabolic amino acid; it acts as the switch for the mTORC1 pathway inside muscle fibres to stimulate protein synthesis, and is especially useful for older adults to counter the age-related decline in anabolic response.",
         tags: [
             "ليوسين",
             "بناء عضلات",
@@ -3028,375 +3000,366 @@ const supplementsData = [
             "تعافي"
         ],
         benefits: [
-            "الحمض الأميني الأقوى لتحفيز بناء العضلات (mTOR)",
-            "يسرع التعافي بعد التمارين",
-            "يمنع هدم العضلات",
-            "يحافظ على الكتلة العضلية أثناء الدايت",
-            "يحسن قوة العضلات",
-            "مهم جداً لكبار السن"
+            "الحمض الأميني الأهم ابتنائياً؛ يعمل كمفتاح تشغيل لمسار mTORC1 داخل الألياف العضلية لتحفيز تخليق البروتين، ويفيد كبار السن خصوصاً لمواجهة ضعف الاستجابة الابتنائية المرتبط بالتقدم في العمر."
         ],
         benefitsNl: [
-            "Activeert direct het mTORC1-complex: het startsignaal voor spieropbouw",
-            "Overwint anabole resistentie bij ouderen (helpt senioren spieren te behouden)",
-            "Verrijkt eiwitshakes met lagere biologische waarde (zoals plantaardige eiwitten)",
-            "Vermindert spierafbraak tijdens hypocalorische periodes",
-            "Cruciaal aminozuur voor herstel na intensieve krachttraining"
+            "Het meest anabole aminozuur; het werkt als schakelaar van de mTORC1-route in de spiervezels om de eiwitaanmaak te stimuleren, en is vooral nuttig voor ouderen om de leeftijdsgebonden afname van de anabole respons tegen te gaan."
         ],
         benefitsEn: [
-            "Direct primary agonist of the intracellular mTORC1 anabolic cascade",
-            "Overcomes anabolic resistance in elderly adults (sarcopenia counter)",
-            "Upgrades the biological value of lower-quality plant protein shakes",
-            "Attenuates skeletal muscle breakdown during caloric deficits",
-            "Accelerates post-exercise myofibrillar repair"
+            "The most anabolic amino acid; it acts as the switch for the mTORC1 pathway inside muscle fibres to stimulate protein synthesis, and is especially useful for older adults to counter the age-related decline in anabolic response."
         ],
         dosage: {
-            recommended: "2.5-4 غ للجرعة (عتبة اللوسين المثلى)",
-            timing: "بعد التمرين أو مع الوجبات",
-            frequency: "1-2 مرة يومياً"
+            recommended: "2.5–4 غ للجرعة",
+            timing: "مع وجبة منخفضة البروتين أو بعد التمرين مباشرة",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "2.5-4 g per innamemoment (de 'leucine-drempel')",
-            timing: "Direct na de training of toegevoegd aan een eiwitarmere maaltijd",
-            frequency: "1-2x per dag"
+            recommended: "2,5–4 g per dosis",
+            timing: "Bij een eiwitarme maaltijd of direct na de training",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "2.5-4 g per serving (the optimal 'leucine threshold')",
-            timing: "Post-workout or added to lower-protein meals",
-            frequency: "1-2 times daily"
+            recommended: "2.5–4 g per dose",
+            timing: "With a low-protein meal or straight after training",
+            frequency: "1–2 times daily"
         },
+        forms: "الليوسين الفوري سريع الذوبان (Instantized L-Leucine) المنتج بالتخمير النباتي، لتفادي طعمه المر وصعوبة ذوبانه.",
+        formsNl: "Geïnstantiseerde L-leucine gemaakt door plantaardige fermentatie, om de bittere smaak en slechte oplosbaarheid te vermijden.",
+        formsEn: "Instantized L-leucine made by plant fermentation, to avoid its bitter taste and poor solubility.",
         warnings: [
-            "لا تأخذه وحده - خذ مع BCAA أو EAA",
-            "الجرعات العالية وحده قد تسبب خلل في الأحماض الأمينية",
-            "آمن مع الطعام أو البروتين"
+            "تجنب الجرعات الكبيرة المنفردة لفترات طويلة دون باقي الأحماض الأمينية لمنع اختلال مستويات الإيزوليوسين والفالين في الدم",
+            "يُفضَّل تناوله ضمن مصدر بروتين كامل أو مع EAA"
         ],
         warningsNl: [
-            "Niet langdurig in megadoses als geïsoleerd aminozuur nemen zonder andere aminozuren",
-            "Heeft van nature een bittere smaak; meng bij voorkeur door een shake met smaak",
-            "Veilig binnen aanbevolen doseringen"
+            "Vermijd langdurig hoge doses zonder de andere aminozuren, om een onbalans van isoleucine en valine in het bloed te voorkomen",
+            "Bij voorkeur met een volwaardige eiwitbron of met EAA"
         ],
         warningsEn: [
-            "Avoid excessive megadoses in isolation without balanced baseline amino acids",
-            "Has an inherently bitter taste; best blended into flavored protein shakes",
-            "Safe when taken around meals"
+            "Avoid large stand-alone doses over long periods without the other amino acids, to prevent an imbalance in blood isoleucine and valine",
+            "Best taken with a complete protein source or with EAA"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen wisselwerkingen bekend.",
-        interactionsEn: "No known pharmaceutical interactions.",
-        naturalSources: "البروتين الحيواني، البيض، الحليب، الصويا",
-        naturalSourcesNl: "Parmezaanse kaas, rundvlees, sojabonen, tonijn en eieren.",
-        naturalSourcesEn: "Parmesan cheese, beef, tuna, soybeans, whey."
+        interactions: "آمن عموماً؛ قد يخفض سكر الدم طفيفاً بتحفيز إفراز الإنسولين، فيُراعى لمن يتناولون الإنسولين وأدوية السكري.",
+        interactionsNl: "Over het algemeen veilig; het kan de bloedsuiker licht verlagen door de insulineafgifte te stimuleren, dus let op bij insuline of diabetesmedicatie.",
+        interactionsEn: "Generally safe; it may lower blood sugar slightly by stimulating insulin release, so take care if you use insulin or diabetes medication.",
+        naturalSources: "مصل اللبن (الواي)، اللحوم والدواجن، البيض، الأسماك، الصويا، العدس",
+        naturalSourcesNl: "Wei, vlees en gevogelte, eieren, vis, soja, linzen",
+        naturalSourcesEn: "Whey, meat and poultry, eggs, fish, soy, lentils",
+        groupLabel: {
+            ar: "بناء العضلات واللياقة",
+            en: "Muscle building & fitness",
+            nl: "Spieropbouw & fitness"
+        },
+        references: [
+            "Katsanos CS et al. Am J Physiol Endocrinol Metab 2006 — PMID: 16507602",
+            "Jäger R et al. ISSN Position Stand: protein and exercise. J Int Soc Sports Nutr 2017 — PMID: 28642676"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 43,
-        slug: "l-carnitine-tartrate",
-        name: "كارنتين طرطرات",
-        englishName: "L-Carnitine Tartrate (LCLT)",
-        nameNl: "L-Carnitine L-Tartraat (LCLT)",
+        slug: "lclt",
+        name: "إل-كارنتين إل-تارترات لسرعة التعافي",
+        englishName: "L-Carnitine L-Tartrate (LCLT)",
+        nameNl: "L-Carnitine L-Tartraat",
         category: "بناء-عضلات",
         icon: "⚡",
-        summary: "شكل متقدم من الكارنتين - يحسن التعافي ويزيد هرمون التستوستيرون",
-        summaryNl: "Snel opneembare carnitinevorm die androgeenreceptoren verhoogt en spierschade drastisch verlaagt.",
-        summaryEn: "Fast-absorbing carnitine variant increasing androgen receptor density and slashing post-workout muscle damage.",
+        summary: "شكل سريع الامتصاص من الكارنتين مرتبط بحمض التارتاريك؛ تشير الدراسات السريرية إلى دوره في تقليل علامات التلف العضلي والإجهاد التأكسدي بعد التمارين الشديدة، ودعم كفاءة التعافي.",
+        summaryNl: "Een snel opneembare vorm van carnitine gebonden aan wijnsteenzuur; klinische studies wijzen op minder markers van spierschade en oxidatieve stress na zware training, wat een efficiënt herstel ondersteunt.",
+        summaryEn: "A fast-absorbing form of carnitine bound to tartaric acid; clinical studies point to a role in reducing markers of muscle damage and oxidative stress after hard training, supporting efficient recovery.",
         tags: [
             "تعافي",
             "هرمونات",
             "أداء"
         ],
         benefits: [
-            "يقلل ضرر العضلات بعد التمرين بنسبة 45%",
-            "يسرع التعافي العضلي بشكل ملحوظ",
-            "قد يزيد مستقبلات التستوستيرون",
-            "يحسن تدفق الدم للعضلات",
-            "يزيد الأداء الرياضي",
-            "أسرع امتصاصاً من L-الكارنيتين العادي"
+            "شكل سريع الامتصاص من الكارنتين مرتبط بحمض التارتاريك؛ تشير الدراسات السريرية إلى دوره في تقليل علامات التلف العضلي والإجهاد التأكسدي بعد التمارين الشديدة، ودعم كفاءة التعافي."
         ],
         benefitsNl: [
-            "Verhoogt de dichtheid van androgeenreceptoren in spiercellen voor betere spiergroei",
-            "Vermindert spierweefselschade na zware krachttraining met wel 40-45%",
-            "Versnelt spierherstel en maakt hogere trainingsfrequentie mogelijk",
-            "Superieure en snellere intestinale absorptie vergeleken met reguliere carnitine",
-            "Verbetert zuurstoftoevoer naar werkende spieren"
+            "Een snel opneembare vorm van carnitine gebonden aan wijnsteenzuur; klinische studies wijzen op minder markers van spierschade en oxidatieve stress na zware training, wat een efficiënt herstel ondersteunt."
         ],
         benefitsEn: [
-            "Upregulates intramuscular androgen receptor content for enhanced anabolic signaling",
-            "Reduces exercise-induced structural muscle breakdown markers by 40-45%",
-            "Accelerates recovery enabling higher weekly training frequency",
-            "Superior intestinal absorption kinetics compared to base L-carnitine",
-            "Optimizes oxygen delivery and capillary perfusion in active muscle"
+            "A fast-absorbing form of carnitine bound to tartaric acid; clinical studies point to a role in reducing markers of muscle damage and oxidative stress after hard training, supporting efficient recovery."
         ],
         dosage: {
-            recommended: "1000-2000 ملغ",
-            timing: "بعد التمرين",
-            frequency: "1-2 مرة يومياً"
+            recommended: "1000–2000 ملغ يومياً",
+            timing: "صباحاً وبعد التمرين مع وجبة تحتوي على كربوهيدرات",
+            frequency: "مقسمة على جرعتين"
         },
         dosageNl: {
-            recommended: "1000-2000 mg (LCLT levert ca. 68% pure carnitine)",
-            timing: "Direct na de training met koolhydraten en eiwitten",
-            frequency: "1-2x per dag"
+            recommended: "1000–2000 mg per dag",
+            timing: "'s Ochtends en na de training bij een maaltijd met koolhydraten",
+            frequency: "Verdeeld over twee doses"
         },
         dosageEn: {
-            recommended: "1000-2000 mg",
-            timing: "Post-workout along with carbohydrates and protein",
-            frequency: "1-2 times daily"
+            recommended: "1000–2000 mg daily",
+            timing: "In the morning and after training with a meal containing carbohydrates",
+            frequency: "Split into two doses"
         },
+        forms: "كبسولات أو مسحوق نقي من شكل L-Carnitine (مثل Carnipure®) لضمان خلوه من شوائب D-Carnitine.",
+        formsNl: "Zuivere capsules of poeder van de L-carnitinevorm (zoals Carnipure®), vrij van D-carnitine.",
+        formsEn: "Pure capsules or powder of the L-carnitine form (such as Carnipure®), free of D-carnitine impurities.",
         warnings: [
-            "أفضل شكل للرياضيين من الكارنتين",
-            "النتائج تحتاج 2-4 أسابيع",
-            "آمن للاستخدام طويل المدى"
+            "يُفضَّل عدم تناوله في ساعات الليل المتأخرة لتجنب الأرق",
+            "يُتجنب لمرضى القصور الكلوي الشديد",
+            "قد يرفع مستوى مركب TMAO في الدم عند الاستخدام الطويل"
         ],
         warningsNl: [
-            "De meest wetenschappelijk gevalideerde carnitine-vorm voor krachtatleten",
-            "Vereist insulinepiek (koolhydraten) voor optimale opname in spierweefsel",
-            "Veilig voor langdurig continu gebruik"
+            "Liever niet laat op de avond innemen, om slapeloosheid te voorkomen",
+            "Vermijden bij ernstig nierfalen",
+            "Langdurig gebruik kan het TMAO-gehalte in het bloed verhogen"
         ],
         warningsEn: [
-            "The premier research-supported carnitine form for resistance athletes",
-            "Muscle loading is significantly enhanced when paired with insulinogenic carbs",
-            "Safe for sustained long-term athletic use"
+            "Best not taken late at night, to avoid insomnia",
+            "Avoid it if you have severe kidney failure",
+            "Long-term use may raise blood levels of TMAO"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Veilig met alle medicatie.",
-        interactionsEn: "No known pharmaceutical conflicts.",
-        naturalSources: "اللحوم الحمراء (بكميات قليلة)",
-        naturalSourcesNl: "Rood lams- en rundvlees (in veel lagere hoeveelheden dan supplementen).",
-        naturalSourcesEn: "Lean red meats."
+        interactions: "قد يقلل من نشاط هرمون الغدة الدرقية في الأنسجة؛ يُراعى لمرضى قصور الدرقية. قد يزيد مفعول الوارفارين ومضادات التخثر.",
+        interactionsNl: "Het kan de werking van schildklierhormoon in de weefsels verminderen; let op bij een trage schildklier. Het kan warfarine en andere antistollingsmiddelen versterken.",
+        interactionsEn: "It may reduce thyroid hormone activity in the tissues; take care if you have an underactive thyroid. It may strengthen warfarin and other anticoagulants.",
+        naturalSources: "اللحوم الحمراء، الدواجن، الأسماك، منتجات الألبان",
+        naturalSourcesNl: "Rood vlees, gevogelte, vis, zuivel",
+        naturalSourcesEn: "Red meat, poultry, fish, dairy",
+        groupLabel: {
+            ar: "التعافي الرياضي",
+            en: "Sports recovery",
+            nl: "Sportherstel"
+        },
+        references: [
+            "Kraemer WJ et al. J Strength Cond Res 2003 — PMID: 12930169",
+            "NIH Office of Dietary Supplements (ODS): Carnitine Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 44,
-        slug: "betaine",
-        name: "بيتايين",
-        englishName: "Betaine (TMG)",
-        nameNl: "Betaïne Anhydrous (TMG)",
+        slug: "betaine-tmg",
+        name: "البيتين اللامائي (TMG) للقوة وصحة القلب",
+        englishName: "Betaine Anhydrous (Trimethylglycine)",
+        nameNl: "Betaïne Watervrij (TMG)",
         category: "بناء-عضلات",
         icon: "🔋",
-        summary: "مركب طبيعي من الشمندر - يزيد القوة وحجم العضلات ويدعم الكبد",
-        summaryNl: "Natuurlijke methyldonor uit rode biet die spierkracht, spiervolume en leverontgifting ondersteunt.",
-        summaryEn: "Natural osmolytic methyl donor from beets boosting power output, muscular work capacity, and hepatic health.",
+        summary: "مركب طبيعي يوجد في البنجر والحبوب؛ يساهم في الاستقلاب الطبيعي للهوموسيستين (ادعاء معتمد من EFSA عند 1.5 غ يومياً)، ويعمل كمنظم أسموزي يحمي خلايا العضلات من الجفاف ويدعم إنتاج القوة العضلية.",
+        summaryNl: "Een natuurlijke stof uit biet en granen; het draagt bij tot een normaal homocysteïnemetabolisme (door EFSA toegestane claim bij 1,5 g per dag) en werkt als osmolyt die spiercellen beschermt tegen uitdroging en de krachtproductie ondersteunt.",
+        summaryEn: "A natural compound found in beetroot and grains; it contributes to normal homocysteine metabolism (EFSA-authorised claim at 1.5 g a day) and acts as an osmolyte that protects muscle cells from dehydration and supports force production.",
         tags: [
             "قوة",
             "عضلات",
             "كبد"
         ],
         benefits: [
-            "يزيد القوة العضلية بنسبة 10-25%",
-            "يحسن قدرة التحمل العضلي",
-            "يزيد إنتاج الكرياتين في الجسم",
-            "يدعم صحة الكبد بقوة",
-            "يخفض الهوموسيستين (مفيد للقلب)",
-            "يحسن تكوين الجسم (عضلات ودهون)"
+            "مركب طبيعي يوجد في البنجر والحبوب؛ يساهم في الاستقلاب الطبيعي للهوموسيستين (ادعاء معتمد من EFSA عند 1.5 غ يومياً)، ويعمل كمنظم أسموزي يحمي خلايا العضلات من الجفاف ويدعم إنتاج القوة العضلية."
         ],
         benefitsNl: [
-            "Verhoogt spierkracht en maximaal explosief vermogen (bankdrukken, squats)",
-            "Werkt als celhydraterend osmolyet: trekt water in spiercellen voor meer volume",
-            "Ondersteunt lichaamseigen synthese van creatine en carnitine",
-            "Verlaagt schadelijk homocysteïne en beschermt de lever tegen vetophoping",
-            "Draagt bij aan een gunstigere lichaamssamenstelling bij krachttraining"
+            "Een natuurlijke stof uit biet en granen; het draagt bij tot een normaal homocysteïnemetabolisme (door EFSA toegestane claim bij 1,5 g per dag) en werkt als osmolyt die spiercellen beschermt tegen uitdroging en de krachtproductie ondersteunt."
         ],
         benefitsEn: [
-            "Clinically improves power output and repetition capacity in squats and bench press",
-            "Acts as an intracellular osmolyte promoting cell volumization and hydration",
-            "Acts as a methyl donor in endogenous creatine and methionine synthesis",
-            "Reduces arterial homocysteine and protects against hepatic steatosis",
-            "Supports favorable improvements in lean-to-fat body composition"
+            "A natural compound found in beetroot and grains; it contributes to normal homocysteine metabolism (EFSA-authorised claim at 1.5 g a day) and acts as an osmolyte that protects muscle cells from dehydration and supports force production."
         ],
         dosage: {
-            recommended: "2.5 غ يومياً (الجرعة المرجعية في الدراسات السريرية)",
-            timing: "قبل التمرين أو مع وجبة",
-            frequency: "مرة واحدة يومياً"
+            recommended: "1.5–2.5 غ يومياً",
+            timing: "قبل التمرين بـ 30 دقيقة أو مقسمة مع الوجبات؛ ابدأ بـ 1.25 غ",
+            frequency: "مرة واحدة يومياً أو مقسمة"
         },
         dosageNl: {
-            recommended: "2.5 g (de gouden klinische standaarddosering)",
-            timing: "30-45 minuten voor de training of verdeeld in 2 doses bij maaltijden",
-            frequency: "Dagelijks"
+            recommended: "1,5–2,5 g per dag",
+            timing: "30 minuten voor de training of verdeeld bij de maaltijden; begin met 1,25 g",
+            frequency: "1 keer per dag of verdeeld"
         },
         dosageEn: {
-            recommended: "2.5 g daily (clinical benchmark dose)",
-            timing: "30-45 minutes pre-workout or divided with meals",
-            frequency: "Daily consistently"
+            recommended: "1.5–2.5 g daily",
+            timing: "30 minutes before training or split with meals; start with 1.25 g",
+            frequency: "Once daily or in split doses"
         },
+        forms: "البيتين اللامائي النقي (Betaine Anhydrous)، ولا يُخلط مع بيتين هيدروكلوريد (Betaine HCl) المخصص لزيادة حموضة المعدة.",
+        formsNl: "Zuiver watervrij betaïne; niet verwarren met betaïne-HCl, dat bedoeld is om het maagzuur te verhogen.",
+        formsEn: "Pure betaine anhydrous; do not confuse it with betaine HCl, which is meant to increase stomach acid.",
         warnings: [
-            "قد يسبب اضطراب معدة خفيف",
-            "ابدأ بـ 1.25 جرام ثم زد تدريجياً",
-            "آمن للاستخدام طويل المدى"
+            "تحذير EFSA: أكثر من 4 غ يومياً قد يرفع كوليسترول الدم بشكل ملحوظ",
+            "قد يسبب انزعاجاً هضمياً خفيفاً في البداية"
         ],
         warningsNl: [
-            "Zeer veilig; kan bij gevoelige magen in het begin lichte misselijkheid geven",
-            "Niet verwarren met Betaïne HCL (dat maagzuur toevoegt); gebruik Betaïne Anhydrous (TMG)",
-            "Combineert uitstekend met creatine monohydraat"
+            "EFSA-waarschuwing: meer dan 4 g per dag kan het cholesterol in het bloed merkbaar verhogen",
+            "Kan in het begin lichte spijsverteringsklachten geven"
         ],
         warningsEn: [
-            "Do not confuse with Betaine HCl (which acidifies the stomach); use Betaine Anhydrous",
-            "Mild transient stomach sensitivity easily avoided by taking with food",
-            "Superb synergy when co-ingested with creatine monohydrate"
+            "EFSA warning: more than 4 g a day may noticeably raise blood cholesterol",
+            "May cause mild digestive discomfort at first"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Geen klinisch nadelige interacties.",
-        interactionsEn: "No adverse medication interactions reported.",
-        naturalSources: "الشمندر، السبانخ، الكينوا، القمح",
-        naturalSourcesNl: "Rode bieten, spinazie, quinoa, tarwezemelen.",
-        naturalSourcesEn: "Sugar beets, spinach, wheat bran, quinoa."
+        interactions: "آمن عموماً؛ يُراعى لمن يتناولون أدوية خفض الكوليسترول لأن الجرعات العالية قد ترفع الكوليسترول الكلي وLDL طفيفاً.",
+        interactionsNl: "Over het algemeen veilig; let op bij cholesterolverlagers, want hoge doses kunnen het totale en LDL-cholesterol licht verhogen.",
+        interactionsEn: "Generally safe; take care if you use cholesterol-lowering drugs, as high doses may slightly raise total and LDL cholesterol.",
+        naturalSources: "البنجر، السبانخ، الكينوا، نخالة القمح، القمح الكامل",
+        naturalSourcesNl: "Biet, spinazie, quinoa, tarwezemelen, volkorentarwe",
+        naturalSourcesEn: "Beetroot, spinach, quinoa, wheat bran, whole wheat",
+        groupLabel: {
+            ar: "القوة وصحة القلب",
+            en: "Strength & heart health",
+            nl: "Kracht & hartgezondheid"
+        },
+        references: [
+            "EFSA NDA Panel (2011): Scientific opinion on betaine and contribution to normal homocysteine metabolism",
+            "Cholewa JM et al. J Int Soc Sports Nutr 2013 — PMID: 23967897"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 45,
         slug: "epicatechin",
-        name: "إبيكاتشين",
-        englishName: "Epicatechin",
-        nameNl: "(-)-Epicatechine (Cacao Flavonol)",
+        name: "إيبيكاتيشين الكاكاو المركز لدعم العضلات",
+        englishName: "Epicatechin (Cocoa Extract)",
+        nameNl: "Epicatechine Cacao Extract",
         category: "بناء-عضلات",
         icon: "🍫",
-        summary: "فلافونويد من الكاكاو - يمنع الميوستاتين ويزيد نمو العضلات",
-        summaryNl: "Bioactieve cacao-flavonoïde die myostatine remt en follistatine verhoogt voor ongehinderde spiergroei.",
-        summaryEn: "Bioactive dark chocolate flavonol that inhibits myostatin and elevates follistatin, unlocking muscle growth potential.",
+        summary: "فلافانول نباتي يوجد في الكاكاو والشاي الأخضر؛ تشير دراسات أولية إلى دوره في دعم إنتاج أكسيد النيتريك وتدفق الدم، وفي تعديل التوازن بين الميوستاتين والفوليستاتين المرتبطين بنمو العضلات.",
+        summaryNl: "Een plantaardig flavanol uit cacao en groene thee; eerste studies wijzen op ondersteuning van de aanmaak van stikstofmonoxide en de doorbloeding, en op een verschuiving in de balans tussen myostatine en follistatine, twee eiwitten die met spiergroei samenhangen.",
+        summaryEn: "A plant flavanol found in cocoa and green tea; early studies suggest it supports nitric oxide production and blood flow, and shifts the balance between myostatin and follistatin, two proteins linked to muscle growth.",
         tags: [
             "ميوستاتين",
             "نمو عضلي",
             "قوة"
         ],
         benefits: [
-            "يثبط الميوستاتين (هرمون يمنع نمو العضلات)",
-            "يزيد نمو العضلات بدون هرمونات",
-            "يحسن تدفق الدم وأكسيد النيتريك",
-            "يدعم صحة القلب والأوعية الدموية",
-            "مضاد أكسدة قوي",
-            "قد يحسن حساسية الأنسولين"
+            "فلافانول نباتي يوجد في الكاكاو والشاي الأخضر؛ تشير دراسات أولية إلى دوره في دعم إنتاج أكسيد النيتريك وتدفق الدم، وفي تعديل التوازن بين الميوستاتين والفوليستاتين المرتبطين بنمو العضلات."
         ],
         benefitsNl: [
-            "Verlaagt myostatine (de genetische rem op spiergroei) en verhoogt follistatine",
-            "Ondersteunt spiermassa en kracht zonder hormonale bijwerkingen",
-            "Stimuleert stikstofoxide (NO) en verbetert microcirculatie en vaatverwijding",
-            "Krachtige antioxidant die mitochondriale biogenese in spieren ondersteunt",
-            "Verbetert insulinegevoeligheid en aerobe spieruithoudingsvermogen"
+            "Een plantaardig flavanol uit cacao en groene thee; eerste studies wijzen op ondersteuning van de aanmaak van stikstofmonoxide en de doorbloeding, en op een verschuiving in de balans tussen myostatine en follistatine, twee eiwitten die met spiergroei samenhangen."
         ],
         benefitsEn: [
-            "Inhibits myostatin (the genetic governor on muscle growth) while raising follistatin",
-            "Promotes natural muscular hypertrophy and grip strength without androgenic side effects",
-            "Stimulates endothelial nitric oxide synthase (eNOS) enhancing microcirculation",
-            "Mitochondrial biogenesis stimulator boosting oxidative endurance capacity",
-            "Enhances insulin sensitivity and cardiovascular compliance"
+            "A plant flavanol found in cocoa and green tea; early studies suggest it supports nitric oxide production and blood flow, and shifts the balance between myostatin and follistatin, two proteins linked to muscle growth."
         ],
         dosage: {
-            recommended: "150-250 ملغ (-)-إبيكاتيشين نقي (نحو 1.5-2 ملغ لكل كغ من وزن الجسم)",
-            timing: "قبل أو بعد التمرين",
-            frequency: "1-2 مرة يومياً (دورات من 8-12 أسبوعاً)"
+            recommended: "150–250 ملغ (نحو 1.5–2 ملغ لكل كغ من وزن الجسم)",
+            timing: "قبل التمرين بـ 45 دقيقة أو مع الإفطار",
+            frequency: "مرة واحدة يومياً، في دورات 8–12 أسبوعاً تليها 4 أسابيع راحة"
         },
         dosageNl: {
-            recommended: "150-250 mg zuivere (-)-epicatechine (ca. 1.5-2 mg per kg lichaamsgewicht)",
-            timing: "30-45 minuten voor de training of 's ochtends bij het ontbijt",
-            frequency: "1-2x per dag (kuren van 8-12 weken)"
+            recommended: "150–250 mg (ongeveer 1,5–2 mg per kg lichaamsgewicht)",
+            timing: "45 minuten voor de training of bij het ontbijt",
+            frequency: "1 keer per dag, in cycli van 8–12 weken gevolgd door 4 weken pauze"
         },
         dosageEn: {
-            recommended: "150-250 mg pure (-)-epicatechin (approx 1.5-2 mg/kg bodyweight)",
-            timing: "30-45 minutes pre-workout or with breakfast",
-            frequency: "1-2 times daily (cycles of 8-12 weeks)"
+            recommended: "150–250 mg (about 1.5–2 mg per kg of body weight)",
+            timing: "45 minutes before training or with breakfast",
+            frequency: "Once daily, in 8–12-week cycles followed by 4 weeks off"
         },
+        forms: "مستخلصات الكاكاو أو الشاي المعيارية بنقاء 90% إيبيكاتيشين، وليس الشوكولاتة العادية الغنية بالسكر والدهون.",
+        formsNl: "Gestandaardiseerde cacao- of thee-extracten met 90% zuiver epicatechine, geen gewone chocolade vol suiker en vet.",
+        formsEn: "Standardized cocoa or tea extracts with 90% epicatechin purity, not regular chocolate, which is high in sugar and fat.",
         warnings: [
-            "النتائج تحتاج 6-8 أسابيع",
-            "مكلف نسبياً",
-            "تأكد من نسبة نقاء 90%+"
+            "الأبحاث البشرية ما زالت محدودة ومتوسطة الحجم",
+            "قد يسبب أرقاً خفيفاً لدى الحساسين للكافيين إذا كان المستخلص من الكاكاو أو الشاي"
         ],
         warningsNl: [
-            "Kies voor een product gestandaardiseerd op 90%+ pure (-)-epicatechine",
-            "Chocolade eten levert te veel calorieën en suikers op voor een effectieve therapeutische dosis",
-            "Volledig niet-hormonaal; veilig voor zowel mannen als vrouwen"
+            "Onderzoek bij mensen is nog beperkt en middelgroot",
+            "Kan bij cafeïnegevoelige mensen licht slecht slapen geven als het extract uit cacao of thee komt"
         ],
         warningsEn: [
-            "Verify standardization to 90%+ pure (-)-epicatechin monomer",
-            "Eating commercial chocolate cannot replicate clinical doses due to fat/sugar load",
-            "Completely non-hormonal; equally safe and effective for men and women"
+            "Human research is still limited and medium-sized",
+            "May cause mild sleeplessness in caffeine-sensitive people if the extract comes from cocoa or tea"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Veilig en combineerbaar met alle supplementen.",
-        interactionsEn: "Broadly safe with no known negative drug interactions.",
-        naturalSources: "الشوكولاتة الداكنة (بكميات قليلة جداً)",
-        naturalSourcesNl: "Pure donkere chocolade (85%+ cacao), rauwe cacaobonen en groene thee.",
-        naturalSourcesEn: "Raw dark cacao nibs, 85%+ dark chocolate, green tea."
+        interactions: "آمن عموماً؛ قد يزيد طفيفاً من تأثير خافضات الضغط ومميعات الدم.",
+        interactionsNl: "Over het algemeen veilig; het kan bloeddrukverlagers en bloedverdunners licht versterken.",
+        interactionsEn: "Generally safe; it may slightly strengthen blood pressure medication and blood thinners.",
+        naturalSources: "الكاكاو الخام والشوكولاتة الداكنة (85% فأكثر)، الشاي الأخضر، التفاح، العنب الأسود",
+        naturalSourcesNl: "Rauwe cacao en pure chocolade (85% of meer), groene thee, appels, blauwe druiven",
+        naturalSourcesEn: "Raw cocoa and dark chocolate (85% or more), green tea, apples, black grapes",
+        groupLabel: {
+            ar: "الأداء والأوعية الدموية",
+            en: "Performance & circulation",
+            nl: "Prestaties & doorbloeding"
+        },
+        references: [
+            "Gutierrez-Salmean G et al. J Nutr Biochem 2014 — PMID: 24314870",
+            "EFSA NDA Panel (2012): Scientific opinion on cocoa flavanols and maintenance of normal endothelium-dependent vasodilation"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 46,
         slug: "phosphatidylserine",
-        name: "فوسفاتيديل سيرين",
+        name: "فوسفاتيديل سيرين لدعم الذاكرة",
         englishName: "Phosphatidylserine (PS)",
-        nameNl: "Fosfatidylserine (PS-100)",
+        nameNl: "Fosfatidylserine (PS)",
         category: "نوم-نفسية",
         icon: "🧠",
-        summary: "فوسفوليبيد للدماغ - يقلل الكورتيزول ويحسن الذاكرة والأداء الرياضي",
-        summaryNl: "Essentieel fosfolipide voor celmembranen; verlaagt overmatig stresshormoon (cortisol) en scherpt het geheugen.",
-        summaryEn: "Neuronal membrane phospholipid blunting post-exercise cortisol spikes and sharpening cognitive acuity.",
+        summary: "فوسفوليبيد طبيعي يشكل مكوناً بنيوياً أساسياً في أغشية الخلايا العصبية؛ يساهم في دعم نقل الإشارات العصبية وإفراز النواقل العصبية، وتشير دراسات إلى دوره في الحد من الارتفاع الحاد لهرمون الكورتيزول أثناء الإجهاد البدني والنفسي.",
+        summaryNl: "Een natuurlijk fosfolipide dat een belangrijke bouwsteen is van de membranen van zenuwcellen; het ondersteunt de prikkeloverdracht en de afgifte van neurotransmitters, en studies wijzen erop dat het scherpe stijgingen van het stresshormoon cortisol bij lichamelijke en mentale belasting beperkt.",
+        summaryEn: "A natural phospholipid that is a key building block of nerve cell membranes; it helps support nerve signalling and neurotransmitter release, and studies suggest it limits sharp rises in the stress hormone cortisol during physical and mental strain.",
         tags: [
             "كورتيزول",
             "ذاكرة",
             "توتر"
         ],
         benefits: [
-            "يخفض الكورتيزول (هرمون التوتر) بعد التمرين",
-            "يحسن الذاكرة والتركيز",
-            "يقلل التوتر والإرهاق الذهني",
-            "يحسن التعافي بعد التمارين الشاقة",
-            "يدعم صحة خلايا الدماغ",
-            "قد يحسن المزاج"
+            "فوسفوليبيد طبيعي يشكل مكوناً بنيوياً أساسياً في أغشية الخلايا العصبية؛ يساهم في دعم نقل الإشارات العصبية وإفراز النواقل العصبية، وتشير دراسات إلى دوره في الحد من الارتفاع الحاد لهرمون الكورتيزول أثناء الإجهاد البدني والنفسي."
         ],
         benefitsNl: [
-            "Dempt overmatige cortisolpieken na zware training of acute mentale stress met wel 30%",
-            "Cruciaal voor gezonde neuronale celmembranen en communicatie tussen hersencellen",
-            "Verbetert geheugencapaciteit, leersnelheid en concentratie",
-            "Vermindert gevoelens van mentale burn-out en cognitieve uitputting",
-            "Bevordert spierherstel en vermindert spierpijn bij topsporters"
+            "Een natuurlijk fosfolipide dat een belangrijke bouwsteen is van de membranen van zenuwcellen; het ondersteunt de prikkeloverdracht en de afgifte van neurotransmitters, en studies wijzen erop dat het scherpe stijgingen van het stresshormoon cortisol bij lichamelijke en mentale belasting beperkt."
         ],
         benefitsEn: [
-            "Attenuates excessive exercise-induced serum cortisol spikes by up to 30%",
-            "Essential building block for fluid neuronal membranes and neurotransmission",
-            "Clinically enhances memory retrieval, mental processing speed, and focus",
-            "Reduces perception of cognitive exhaustion and athletic overtraining syndrome",
-            "Promotes recovery by preserving an optimal testosterone-to-cortisol ratio"
+            "A natural phospholipid that is a key building block of nerve cell membranes; it helps support nerve signalling and neurotransmitter release, and studies suggest it limits sharp rises in the stress hormone cortisol during physical and mental strain."
         ],
         dosage: {
-            recommended: "300-400 ملغ",
-            timing: "بعد التمرين أو قبل النوم",
-            frequency: "مرة واحدة يومياً"
+            recommended: "300–400 ملغ يومياً",
+            timing: "مقسمة مع الوجبات، أو مساءً لدعم الاسترخاء",
+            frequency: "مرة واحدة يومياً أو مقسمة"
         },
         dosageNl: {
-            recommended: "300-400 mg (afkomstig uit zonnebloemlecithine)",
-            timing: "Direct na een zware training of 's avonds bij het diner ter verlaging van nachtelijk cortisol",
-            frequency: "1x per dag"
+            recommended: "300–400 mg per dag",
+            timing: "Verdeeld bij de maaltijden, of 's avonds om ontspanning te ondersteunen",
+            frequency: "1 keer per dag of verdeeld"
         },
         dosageEn: {
-            recommended: "300-400 mg (sunflower lecithin derived)",
-            timing: "Immediately post-workout or with dinner to normalize evening cortisol",
-            frequency: "Once daily"
+            recommended: "300–400 mg daily",
+            timing: "Split with meals, or in the evening to support relaxation",
+            frequency: "Once daily or in split doses"
         },
+        forms: "فوسفاتيديل سيرين مشتق من ليسيثين دوار الشمس أو الصويا، بدلاً من المصادر البقرية القديمة.",
+        formsNl: "Fosfatidylserine uit zonnebloem- of sojalecithine, in plaats van de oudere runderbronnen.",
+        formsEn: "Phosphatidylserine derived from sunflower or soy lecithin, rather than the older bovine sources.",
         warnings: [
-            "النتائج تحتاج 2-4 أسابيع للظهور",
-            "قد يسبب نعاس خفيف",
-            "آمن للاستخدام طويل المدى"
+            "مكمل عالي الأمان للاستخدام طويل الأمد",
+            "قد يسبب نعاساً خفيفاً أو اضطراباً في النوم بالجرعات العالية في وقت متأخر",
+            "يُتجنب لمن لديهم حساسية الصويا إذا كان المصدر صويا"
         ],
         warningsNl: [
-            "Kies voor fosfatidylserine gewonnen uit zonnebloemlecithine (vrij van soja-allergenen)",
-            "Zeer veilig bij langdurig gebruik",
-            "Ideaal voor krachtsporters in zware trainingsperioden en studenten tijdens examens"
+            "Een zeer veilig supplement voor langdurig gebruik",
+            "Hoge doses laat op de dag kunnen lichte slaperigheid of een verstoorde slaap geven",
+            "Vermijd producten uit soja bij een soja-allergie"
         ],
         warningsEn: [
-            "Sunflower-derived PS is non-GMO and allergen-free compared to older bovine or soy sources",
-            "Exceptionally clean safety profile across clinical trials",
-            "Prime candidate for overreached lifters and high-stress professionals"
+            "A very safe supplement for long-term use",
+            "High doses taken late may cause mild drowsiness or disturbed sleep",
+            "Avoid soy-derived products if you have a soy allergy"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Kan additief werken met anticholinergica of cholinergicum-medicatie.",
-        interactionsEn: "May interact with medications affecting acetylcholine levels.",
-        naturalSources: "فول الصويا، الكبد، الكلى (بكميات قليلة)",
-        naturalSourcesNl: "Zonnebloemlecithine, sojalecithine, makreel en orgaanvlees.",
-        naturalSourcesEn: "Sunflower lecithin, Atlantic mackerel, organ meats."
+        interactions: "قد يتفاعل مع الأدوية المضادة للكولين وأدوية الزهايمر (مثبطات الكولين إستراز). قد يزيد سيولة الدم طفيفاً، فيُراعى مع مضادات التخثر.",
+        interactionsNl: "Het kan interageren met anticholinerge middelen en alzheimermedicatie (cholinesteraseremmers). Het kan het bloed licht verdunnen, dus let op bij antistollingsmiddelen.",
+        interactionsEn: "It may interact with anticholinergic drugs and Alzheimer's medication (cholinesterase inhibitors). It may slightly thin the blood, so take care with anticoagulants.",
+        naturalSources: "فول الصويا، الأسماك البيضاء، الدجاج، الفاصوليا البيضاء، صفار البيض",
+        naturalSourcesNl: "Sojabonen, witte vis, kip, witte bonen, eidooier",
+        naturalSourcesEn: "Soybeans, white fish, chicken, white beans, egg yolk",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "Kato-Kataoka A et al. J Clin Biochem Nutr 2010 — PMID: 21103034",
+            "US FDA: Qualified health claim for phosphatidylserine and cognitive function (2003)"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 47,
         slug: "sodium-bicarbonate",
-        name: "بيكربونات الصوديوم",
-        englishName: "Sodium Bicarbonate (Baking Soda)",
+        name: "بيكربونات الصوديوم لمعادلة حموضة العضلات",
+        englishName: "Sodium Bicarbonate (Ergogenic Buffer)",
         nameNl: "Natriumbicarbonaat (Zuiveringszout)",
         category: "طاقة",
         icon: "🥤",
-        summary: "منظم حموضة طبيعي - يحسن الأداء في التمارين عالية الكثافة",
-        summaryNl: "Krachtige extracellulaire melkzuurbuffer voor explosieve anaerobe sportprestaties van 1 tot 7 minuten.",
-        summaryEn: "Potent extracellular systemic buffer elevating blood bicarbonate to combat lactic fatigue in high-intensity efforts.",
+        summary: "عامل معادلة للحموضة يرفع تركيز البيكربونات في السائل خارج الخلايا العضلية، فيسرع خروج أيونات الهيدروجين الناتجة عن المجهود اللاهوائي الشديد (الجري السريع، السباحة، التجديف)، مما يؤخر الوصول إلى الإنهاك العضلي.",
+        summaryNl: "Een zuurbuffer die het bicarbonaat in het vocht rond de spiercellen verhoogt; zo worden waterstofionen die bij zware anaerobe inspanning ontstaan (sprinten, zwemmen, roeien) sneller afgevoerd en wordt spieruitputting uitgesteld.",
+        summaryEn: "An acid buffer that raises bicarbonate in the fluid around muscle cells, speeding the removal of hydrogen ions produced during hard anaerobic effort (sprinting, swimming, rowing) and so delaying muscular exhaustion.",
         tags: [
             "أداء",
             "تحمل",
@@ -3405,153 +3368,143 @@ const supplementsData = [
             "قوة"
         ],
         benefits: [
-            "يعادل حموضة العضلات ويؤخر التعب",
-            "يحسن الأداء في التمارين عالية الكثافة (30 ثانية - 8 دقائق)",
-            "يزيد عدد التكرارات في تمارين القوة",
-            "مدعوم علمياً بقوة",
-            "رخيص جداً وفعّال"
+            "عامل معادلة للحموضة يرفع تركيز البيكربونات في السائل خارج الخلايا العضلية، فيسرع خروج أيونات الهيدروجين الناتجة عن المجهود اللاهوائي الشديد (الجري السريع، السباحة، التجديف)، مما يؤخر الوصول إلى الإنهاك العضلي."
         ],
         benefitsNl: [
-            "Verhoogt de bloedbuffercapaciteit en transporteert waterstofionen (H+) snel uit de spieren",
-            "Verbetert prestaties bij roeien, sprinten, zwemmen en vechtsport met 2-3% (goudstandaard)",
-            "Maakt extra herhalingen mogelijk in latere sets van zware krachttraining",
-            "Extreem goedkoop en een van de best bewezen prestatiebevorderende stoffen (IOC-goedgekeurd)",
-            "Versnelt herstel tussen herhaalde maximale sprintintervallen"
+            "Een zuurbuffer die het bicarbonaat in het vocht rond de spiercellen verhoogt; zo worden waterstofionen die bij zware anaerobe inspanning ontstaan (sprinten, zwemmen, roeien) sneller afgevoerd en wordt spieruitputting uitgesteld."
         ],
         benefitsEn: [
-            "Expands extracellular buffering capacity, pulling fatiguing H+ ions out of working muscle",
-            "Improves competitive times in sprinting, rowing, swimming, and combat sports by 2-3%",
-            "Increases repetition volume during multi-set heavy resistance training",
-            "Officially recognized by the International Olympic Committee (IOC) as a tier-1 ergogenic aid",
-            "Accelerates recovery during repeated sprint intervals"
+            "An acid buffer that raises bicarbonate in the fluid around muscle cells, speeding the removal of hydrogen ions produced during hard anaerobic effort (sprinting, swimming, rowing) and so delaying muscular exhaustion."
         ],
         dosage: {
-            recommended: "0.2-0.3 غ لكل كغ من وزن الجسم (نحو 15-20 غ لرياضي وزنه 75 كغ)",
-            timing: "60-90 دقيقة قبل التمرين",
-            frequency: "قبل التمارين المكثفة فقط"
+            recommended: "0.2–0.3 غ لكل كغ من وزن الجسم (نحو 15–20 غ لوزن 75 كغ)",
+            timing: "قبل التمرين المكثف بـ 60–90 دقيقة، مذابة في لتر ماء وتُشرب تدريجياً مع وجبة غنية بالكربوهيدرات",
+            frequency: "قبل التمارين المكثفة فقط، وليس للاستخدام اليومي"
         },
         dosageNl: {
-            recommended: "0.2 - 0.3 g per kg lichaamsgewicht (bijv. 15-20 g voor een atleet van 75 kg)",
-            timing: "60-90 minuten voor de wedstrijd/training met 500-750 ml water en een kleine koolhydraatrijke maaltijd",
-            frequency: "Alleen voor zware wedstrijden of intensieve trainingssessies"
+            recommended: "0,2–0,3 g per kg lichaamsgewicht (ongeveer 15–20 g bij 75 kg)",
+            timing: "60–90 minuten voor een intensieve training, opgelost in een liter water en geleidelijk gedronken bij een koolhydraatrijke maaltijd",
+            frequency: "Alleen voor intensieve trainingen, niet dagelijks"
         },
         dosageEn: {
-            recommended: "0.2 - 0.3 g per kg bodyweight (approx 15-20 g for a 75 kg athlete)",
-            timing: "60-90 minutes pre-event with 500-750 ml water and a light carbohydrate snack",
-            frequency: "Competition or peak workout days only"
+            recommended: "0.2–0.3 g per kg of body weight (about 15–20 g at 75 kg)",
+            timing: "60–90 minutes before intense training, dissolved in a litre of water and sipped gradually with a carbohydrate-rich meal",
+            frequency: "Only before intense sessions, not for daily use"
         },
+        forms: "كبسولات معوية مقاومة لحمض المعدة (Enteric-Coated) تطلق البيكربونات في الأمعاء، مما يقلل الاضطراب المعدي.",
+        formsNl: "Maagsapresistente capsules (enteric-coated) die het bicarbonaat in de darm vrijgeven, wat maagklachten vermindert.",
+        formsEn: "Enteric-coated capsules that release the bicarbonate in the intestine, reducing stomach upset.",
         warnings: [
-            "قد يسبب اضطراب معدة شديد وإسهال",
-            "ابدأ بجرعة منخفضة لاختبار التحمل",
-            "خذه مع كمية كبيرة من الماء والطعام",
-            "لا تستخدمه يومياً"
+            "الجرعات السريعة غير المقسمة تسبب إسهالاً مائياً ومغصاً وغثياناً؛ جرّب جرعة منخفضة في التدريب قبل المنافسة",
+            "يُمنع لمرضى ارتفاع ضغط الدم والقصور الكلوي وقصور القلب لارتفاع محتواه من الصوديوم"
         ],
         warningsNl: [
-            "WAARSCHUWING: Kan acute maagdarmklachten en osmotische diarree veroorzaken indien te snel ingenomen",
-            "Test dit NOOIT voor het eerst op een wedstrijddag; oefen eerst in training",
-            "Verdeel de inname over 30 minuten en neem in met koolhydraten om maagklachten te voorkomen",
-            "Bevat veel natrium; vermijd bij ernstige hypertensie",
-            "Niet geschikt bij een zoutarm dieet of ongecontroleerde hoge bloeddruk"
+            "Snel in één keer innemen geeft waterige diarree, krampen en misselijkheid; test een lage dosis in de training voor een wedstrijd",
+            "Niet gebruiken bij hoge bloeddruk, nierfalen of hartfalen vanwege het hoge natriumgehalte"
         ],
         warningsEn: [
-            "CAUTION: High risk of acute GI distress and osmotic diarrhea if consumed rapidly",
-            "NEVER experiment on competition day; trial in training protocols first",
-            "Split ingestion over 30 minutes with plenty of fluid to protect stomach comfort",
-            "High sodium load; contraindicated in unmanaged hypertension"
+            "Taking it quickly in one go causes watery diarrhoea, cramps and nausea; test a low dose in training before competition",
+            "Not for people with high blood pressure, kidney failure or heart failure, because of its high sodium content"
         ],
-        interactions: "قد يتفاعل مع بعض الأدوية - استشر طبيبك",
-        interactionsNl: "Verandert de maagzuur-pH en urinaire pH; kan absorptie en uitscheiding van medicatie beïnvloeden.",
-        interactionsEn: "Alters gastric and urinary pH; may alter absorption kinetics of acidic/basic medications.",
-        naturalSources: "بيكربونات الصوديوم (صودا الخبز)",
-        naturalSourcesNl: "Zuiveringszout / baksoda (natriumbicarbonaat E500).",
-        naturalSourcesEn: "Food-grade baking soda (sodium bicarbonate)."
+        interactions: "قلوية البول الناتجة عنه تغير إفراز بعض الأدوية (مثل الأسبرين والأمفيتامين) وتزيد إفراز الليثيوم فتخفض مستواه في الدم؛ قد يذيب الأقراص المغلفة معوياً مبكراً؛ ولا يُستخدم مع أدوية الضغط ومدرات البول لارتفاع محتواه من الصوديوم.",
+        interactionsNl: "De basische urine die het geeft verandert de uitscheiding van sommige medicijnen (zoals aspirine en amfetaminen) en verhoogt de uitscheiding van lithium, waardoor de bloedspiegel daalt; het kan maagsapresistente tabletten te vroeg laten oplossen; niet gebruiken met bloeddrukverlagers of plaspillen vanwege het hoge natriumgehalte.",
+        interactionsEn: "The alkaline urine it causes changes the excretion of some drugs (such as aspirin and amphetamines) and increases lithium excretion, lowering its blood level; it can dissolve enteric-coated tablets too early; do not use it with blood pressure medication or diuretics because of its high sodium content.",
+        naturalSources: "لا يوجد في الأطعمة كمكمل رياضي؛ يُستخدم صودا الخبز في الطهي بكميات صغيرة",
+        naturalSourcesNl: "Niet in voeding aanwezig in sportdoses; zuiveringszout wordt in kleine hoeveelheden in de keuken gebruikt",
+        naturalSourcesEn: "Not found in foods at sports doses; baking soda is used in cooking in small amounts",
+        groupLabel: {
+            ar: "الأداء عالي الشدة",
+            en: "High-intensity performance",
+            nl: "Prestaties bij hoge intensiteit"
+        },
+        references: [
+            "Grgic J et al. ISSN Position Stand: sodium bicarbonate and exercise performance. J Int Soc Sports Nutr 2021 — PMID: 34503527"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 48,
-        slug: "nitrates",
-        name: "نترات - عصير الشمندر",
-        englishName: "Nitrates (Beetroot Juice)",
-        nameNl: "Rode Bietensap (Voedingsnitraten)",
+        slug: "beetroot-nitrates",
+        name: "نترات الشوندر المركزة لتعزيز التحمل",
+        englishName: "Concentrated Beetroot Nitrates",
+        nameNl: "Rode Bietensap Concentraat (Nitraat)",
         category: "طاقة",
         icon: "🥤",
-        summary: "نترات طبيعية تتحول لأكسيد النيتريك - تحسن التحمل والأداء الرياضي",
-        summaryNl: "Geconcentreerde natuurlijke nitraten die zuurstofverbruik verlagen en duursportprestaties maximaliseren.",
-        summaryEn: "Concentrated dietary nitrates enhancing oxygen efficiency, time-to-exhaustion, and athletic stamina.",
+        summary: "مصدر نباتي غني بالنترات؛ تحولها بكتيريا اللسان إلى نتريت ثم يحولها الجسم في العضلات إلى أكسيد النيتريك، مما يحسن كفاءة استهلاك الأكسجين ويقلل الكلفة الطاقية للمجهود ويدعم تدفق الدم.",
+        summaryNl: "Een plantaardige bron die rijk is aan nitraat; bacteriën op de tong zetten het om in nitriet, dat het lichaam in de spieren omzet in stikstofmonoxide; dat verbetert de zuurstofefficiëntie, verlaagt de energiekosten van inspanning en ondersteunt de doorbloeding.",
+        summaryEn: "A plant source rich in nitrate; bacteria on the tongue turn it into nitrite, which the body converts in muscle into nitric oxide, improving oxygen efficiency, lowering the energy cost of effort and supporting blood flow.",
         tags: [
             "أكسيد نيتريك",
             "تحمل",
             "أداء"
         ],
         benefits: [
-            "يزيد أكسيد النيتريك بشكل طبيعي",
-            "يحسن التحمل الرياضي بنسبة 15-20%",
-            "يقلل استهلاك الأكسجين في التمارين",
-            "يخفض ضغط الدم بشكل طبيعي",
-            "يحسن تدفق الدم للعضلات",
-            "مدعوم بأبحاث علمية قوية"
+            "مصدر نباتي غني بالنترات؛ تحولها بكتيريا اللسان إلى نتريت ثم يحولها الجسم في العضلات إلى أكسيد النيتريك، مما يحسن كفاءة استهلاك الأكسجين ويقلل الكلفة الطاقية للمجهود ويدعم تدفق الدم."
         ],
         benefitsNl: [
-            "Wordt via speekselbacteriën omgezet in stikstofmonoxide (NO) voor maximale vaatverwijding",
-            "Verlaagt de zuurstofkosten van submaximale inspanning (spieren werken efficiënter)",
-            "Verlengt de tijd tot uitputting (time-to-exhaustion) bij hardlopen en wielrennen met 15-20%",
-            "Verlaagt de systolische bloeddruk op natuurlijke wijze",
-            "Bewezen effectief door het Internationaal Olympisch Comité (IOC)"
+            "Een plantaardige bron die rijk is aan nitraat; bacteriën op de tong zetten het om in nitriet, dat het lichaam in de spieren omzet in stikstofmonoxide; dat verbetert de zuurstofefficiëntie, verlaagt de energiekosten van inspanning en ondersteunt de doorbloeding."
         ],
         benefitsEn: [
-            "Converted via oral microflora into plasma nitrite and nitric oxide (NO)",
-            "Reduces oxygen cost of submaximal exercise, enhancing muscular bioenergetics",
-            "Significantly prolongs time to exhaustion in cycling, running, and rowing bouts",
-            "Naturally lowers resting systolic blood pressure",
-            "Validated tier-1 endurance supplement by the International Olympic Committee (IOC)"
+            "A plant source rich in nitrate; bacteria on the tongue turn it into nitrite, which the body converts in muscle into nitric oxide, improving oxygen efficiency, lowering the energy cost of effort and supporting blood flow."
         ],
         dosage: {
-            recommended: "400-500 ملغ نترات غذائية (نحو 70 مل من عصير الشمندر المركز)",
-            timing: "2-3 ساعات قبل التمرين",
-            frequency: "قبل المنافسة أو بروتوكول تحميل متواصل لمدة 3-5 أيام"
+            recommended: "400–500 ملغ نترات (نحو 70 مل من عصير البنجر المركز)",
+            timing: "قبل النشاط أو المنافسة بـ 2–3 ساعات",
+            frequency: "جرعة واحدة قبل المنافسة، أو جرعة يومية لمدة 3–6 أيام كتحميل"
         },
         dosageNl: {
-            recommended: "400-500 mg nitraat (ongeveer 70 ml geconcentreerd bietensap-shot of 500 ml vers sap)",
-            timing: "2 tot 2.5 uur voor de training of wedstrijd (wanneer nitriet in het bloed piekt)",
-            frequency: "Voor belangrijke duursessies of dagelijks gedurende 3-5 dagen voorafgaand aan een evenement"
+            recommended: "400–500 mg nitraat (ongeveer 70 ml geconcentreerd bietensap)",
+            timing: "2–3 uur voor de inspanning of wedstrijd",
+            frequency: "Eén dosis voor de wedstrijd, of dagelijks 3–6 dagen als laadfase"
         },
         dosageEn: {
-            recommended: "400-500 mg dietary nitrate (approx 70 ml concentrated beetroot shot)",
-            timing: "2 to 2.5 hours prior to event (matches plasma nitrite peak)",
-            frequency: "Pre-event or continuous 3-5 day loading protocol"
+            recommended: "400–500 mg nitrate (about 70 ml concentrated beetroot juice)",
+            timing: "2–3 hours before activity or competition",
+            frequency: "One dose before competition, or daily for 3–6 days as a loading phase"
         },
+        forms: "شوت عصير البنجر المركز المعياري للجرعة؛ وتجنب غسول الفم المطهر لأنه يقتل بكتيريا اللسان المسؤولة عن تحويل النترات ويعطل مفعول المكمل.",
+        formsNl: "Een gestandaardiseerde shot geconcentreerd bietensap; vermijd antiseptisch mondwater, dat de tongbacteriën doodt die nitraat omzetten en zo het effect tenietdoet.",
+        formsEn: "A standardized concentrated beetroot shot; avoid antiseptic mouthwash, which kills the tongue bacteria that convert nitrate and cancels the effect.",
         warnings: [
-            "قد يحول لون البول والبراز إلى أحمر (طبيعي)",
-            "تجنب غسول الفم (يقتل البكتيريا المفيدة للنترات)",
-            "آمن للاستخدام المنتظم"
+            "تحول لون البول والبراز إلى الوردي أو الأحمر (Beeturia) أمر طبيعي وغير ضار",
+            "يُراعى الحذر لمن لديهم تاريخ حصوات كلوية لاحتوائه على الأوكسالات"
         ],
         warningsNl: [
-            "GEBRUIK GEEN antibacterieel mondwater of kauwgom! Dit doodt de noodzakelijke tongbacteriën die nitraat omzetten",
-            "Rode urine (beeturie) en roodachtige ontlasting zijn volkomen onschadelijk",
-            "Kies voor geconcentreerde 'shots' om overmatige maagvulling vlak voor de start te vermijden"
+            "Roze of rode urine en ontlasting (beeturie) zijn normaal en onschuldig",
+            "Wees voorzichtig bij een voorgeschiedenis van nierstenen, want biet bevat oxalaten"
         ],
         warningsEn: [
-            "DO NOT use antibacterial mouthwash! It annihilates the oral bacteria required for nitrate reduction",
-            "Reddish urine (beeturia) and pink stools are completely harmless",
-            "Concentrated nitrate shots minimize GI volume before racing"
+            "Pink or red urine and stools (beeturia) are normal and harmless",
+            "Take care if you have a history of kidney stones, as beetroot contains oxalates"
         ],
-        interactions: "قد يتفاعل مع أدوية ضغط الدم - استشر طبيبك",
-        interactionsNl: "Kan bloeddrukverlagers en erectiepillen (PDE-5-remmers) versterken.",
-        interactionsEn: "May additively potentiate antihypertensive drugs and PDE5 inhibitors.",
-        naturalSources: "الشمندر، السبانخ، الجرجير، الكرفس",
-        naturalSourcesNl: "Geconcentreerd rode bietensap, rucola, spinazie en selderij.",
-        naturalSourcesEn: "Beetroot juice concentrate, wild arugula, spinach, celery."
+        interactions: "يتفاعل مع خافضات الضغط وموسعات الأوعية وأدوية النترات القلبية ومثبطات PDE-5 (السيلدينافيل)، وقد يسبب انخفاضاً إضافياً في ضغط الدم.",
+        interactionsNl: "Het interageert met bloeddrukverlagers, vaatverwijders, nitraten voor het hart en PDE-5-remmers (sildenafil) en kan de bloeddruk extra verlagen.",
+        interactionsEn: "It interacts with blood pressure medication, vasodilators, heart nitrates and PDE-5 inhibitors (sildenafil) and may lower blood pressure further.",
+        naturalSources: "البنجر (الشوندر)، الجرجير، السبانخ، الكرفس، الخس",
+        naturalSourcesNl: "Rode biet, rucola, spinazie, selderij, sla",
+        naturalSourcesEn: "Beetroot, rocket (arugula), spinach, celery, lettuce",
+        groupLabel: {
+            ar: "التحمل والأداء الرياضي",
+            en: "Endurance & sports performance",
+            nl: "Uithoudingsvermogen & sportprestaties"
+        },
+        references: [
+            "Jones AM. Sports Med 2014 (dietary nitrate and exercise performance) — PMID: 24791915",
+            "Kerksick CM et al. ISSN exercise & sports nutrition review update. J Int Soc Sports Nutr 2018 — PMID: 30068354"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 49,
         slug: "alpha-gpc",
-        name: "ألفا جي بي سي",
-        englishName: "Alpha-GPC (L-Alpha glycerylphosphorylcholine)",
-        nameNl: "Alpha-GPC (Choline Alfosceraat)",
+        name: "ألفا جي بي سي عالي النقاء لدعم الذاكرة والقوة",
+        englishName: "Alpha-GPC (L-Alpha Glycerylphosphorylcholine)",
+        nameNl: "Alpha-GPC Choline",
         category: "نوم-نفسية",
         icon: "🧠",
-        summary: "مصدر كولين متقدم - يحسن التركيز والذاكرة وقد يزيد هرمون النمو",
-        summaryNl: "Superieure biobeschikbare cholinebron die direct de bloed-hersenbarrière passeert voor intense focus en spierkracht.",
-        summaryEn: "Superior bioavailable choline donor rapidly crossing the blood-brain barrier for sharp focus and power output.",
+        summary: "مركب حامل للكولين يعبر الحاجز الدموي الدماغي بكفاءة أعلى من أشكال الكولين العادية؛ يرفع تركيز الأسيتيل كولين، الناقل العصبي الرئيسي للتعلم والذاكرة وسرعة رد الفعل، ويدعم تنشيط الوحدات الحركية العضلية أثناء التمارين.",
+        summaryNl: "Een cholinedrager die de bloed-hersenbarrière efficiënter passeert dan gewone cholinevormen; het verhoogt acetylcholine, de belangrijkste neurotransmitter voor leren, geheugen en reactiesnelheid, en ondersteunt de activering van motorische eenheden tijdens inspanning.",
+        summaryEn: "A choline carrier that crosses the blood-brain barrier more efficiently than ordinary choline forms; it raises acetylcholine, the main neurotransmitter for learning, memory and reaction speed, and supports muscle motor-unit activation during exercise.",
         tags: [
             "كولين",
             "تركيز",
@@ -3559,140 +3512,135 @@ const supplementsData = [
             "قوة"
         ],
         benefits: [
-            "يحسن التركيز والأداء الذهني بقوة",
-            "يزيد إنتاج الأسيتيل كولين (ناقل عصبي)",
-            "يدعم صحة الدماغ والذاكرة",
-            "قد يزيد هرمون النمو بنسبة 44%",
-            "يحسن الأداء الرياضي",
-            "يدعم صحة الدماغ مع التقدم في العمر"
+            "مركب حامل للكولين يعبر الحاجز الدموي الدماغي بكفاءة أعلى من أشكال الكولين العادية؛ يرفع تركيز الأسيتيل كولين، الناقل العصبي الرئيسي للتعلم والذاكرة وسرعة رد الفعل، ويدعم تنشيط الوحدات الحركية العضلية أثناء التمارين."
         ],
         benefitsNl: [
-            "Passeert direct de bloed-hersenbarrière en verhoogt acetylcholine (neurotransmitter voor geheugen en focus)",
-            "Verbetert 'mind-muscle connection' en maximale explosieve krachtoutput tijdens zware lifts",
-            "Kan acute afgifte van groeihormoon (GH) na de training tijdelijk verhogen",
-            "Ondersteunt cognitieve functies, reactietijd en mentale alertheid bij slaaptekort",
-            "Beschermt celmembranen en ondersteunt hersenherstel"
+            "Een cholinedrager die de bloed-hersenbarrière efficiënter passeert dan gewone cholinevormen; het verhoogt acetylcholine, de belangrijkste neurotransmitter voor leren, geheugen en reactiesnelheid, en ondersteunt de activering van motorische eenheden tijdens inspanning."
         ],
         benefitsEn: [
-            "Freely crosses blood-brain barrier to directly drive acetylcholine synthesis",
-            "Elevates mind-muscle neuromuscular signaling and peak rate of force development",
-            "Clinically shown to acutely augment post-workout growth hormone (GH) secretion",
-            "Sharpens cognitive reaction time, attention, and executive mental processing",
-            "Protects neuronal membrane phospholipids against degradation"
+            "A choline carrier that crosses the blood-brain barrier more efficiently than ordinary choline forms; it raises acetylcholine, the main neurotransmitter for learning, memory and reaction speed, and supports muscle motor-unit activation during exercise."
         ],
         dosage: {
-            recommended: "300-600 ملغ",
-            timing: "في الصباح أو قبل التمرين",
-            frequency: "1-2 مرات يومياً"
+            recommended: "300–600 ملغ يومياً",
+            timing: "صباحاً أو قبل المجهود الذهني أو البدني بـ 45 دقيقة مع مصدر خفيف للدهون",
+            frequency: "1–2 مرة يومياً"
         },
         dosageNl: {
-            recommended: "300-600 mg (gestandaardiseerd op 50% Alpha-GPC)",
-            timing: "45-60 minuten voor de training of 's ochtends voor intensief denkwerk",
-            frequency: "1-2x per dag"
+            recommended: "300–600 mg per dag",
+            timing: "'s Ochtends of 45 minuten voor mentale of lichamelijke inspanning, met een kleine hoeveelheid vet",
+            frequency: "1–2 keer per dag"
         },
         dosageEn: {
-            recommended: "300-600 mg",
-            timing: "45-60 minutes pre-workout or morning prior to cognitive tasks",
-            frequency: "1-2 times daily"
+            recommended: "300–600 mg daily",
+            timing: "In the morning or 45 minutes before mental or physical effort, with a light source of fat",
+            frequency: "1–2 times daily"
         },
+        forms: "كبسولات معيارية بنقاء 50% أو 99%؛ ولا تُترك العبوة مفتوحة لأن المادة شديدة امتصاص الرطوبة وتتكتل بسرعة.",
+        formsNl: "Gestandaardiseerde capsules van 50% of 99% zuiverheid; houd de verpakking gesloten, want de stof trekt sterk vocht aan en klontert snel.",
+        formsEn: "Standardized capsules of 50% or 99% purity; keep the container closed, as the substance absorbs moisture strongly and clumps quickly.",
         warnings: [
-            "قد يسبب صداع خفيف (علامة نقص كولين)",
-            "خذه مع مصدر دهون لامتصاص أفضل",
-            "آمن للاستخدام طويل المدى"
+            "قد يسبب صداعاً خفيفاً أو حرقة معدة نادرة بالجرعات العالية",
+            "تشير دراسات رصدية إلى أن الاستخدام المزمن بجرعات كبيرة قد يرفع مستوى TMAO في الدم؛ يُفضَّل استخدامه في دورات أو عند الحاجة"
         ],
         warningsNl: [
-            "Hygroscopisch poeder: trekt vocht aan uit de lucht; bewaar capsules in een goed afgesloten pot",
-            "Kan bij een overschot aan choline een lichte spanningshoofdpijn geven",
-            "Zeer veilig bij aanbevolen doseringen"
+            "Hoge doses kunnen lichte hoofdpijn of, zelden, brandend maagzuur geven",
+            "Observationele studies wijzen erop dat langdurig hoge doses het TMAO in het bloed kunnen verhogen; bij voorkeur in cycli of wanneer nodig gebruiken"
         ],
         warningsEn: [
-            "Highly hygroscopic (absorbs ambient moisture readily); store in airtight packaging",
-            "Excess choline levels may induce mild tension headache",
-            "Very safe at clinical dosages"
+            "High doses may cause a mild headache or, rarely, heartburn",
+            "Observational studies suggest chronic high-dose use may raise blood TMAO; best used in cycles or when needed"
         ],
-        interactions: "آمن مع معظم الأدوية",
-        interactionsNl: "Voorzichtigheid bij gelijktijdig gebruik van sterke anticholinergica.",
-        interactionsEn: "May counteract prescription anticholinergic medications.",
-        naturalSources: "الصويا، البيض، الحليب (بكميات قليلة جداً)",
-        naturalSourcesNl: "Geëxtraheerd uit sojalecithine (in voeding slechts in minuscule sporen aanwezig).",
-        naturalSourcesEn: "Synthesized from purified soy or sunflower lecithin."
+        interactions: "قد يتعارض مع الأدوية المضادة للكولين، وقد يزيد أثر أدوية الزهايمر (مثبطات الكولين إستراز).",
+        interactionsNl: "Het kan anticholinerge middelen tegenwerken en het effect van alzheimermedicatie (cholinesteraseremmers) versterken.",
+        interactionsEn: "It may counteract anticholinergic drugs and may add to the effect of Alzheimer's medication (cholinesterase inhibitors).",
+        naturalSources: "صفار البيض، الكبدة، اللحوم، الأسماك، فول الصويا (كمصادر للكولين)",
+        naturalSourcesNl: "Eidooier, lever, vlees, vis, sojabonen (als bronnen van choline)",
+        naturalSourcesEn: "Egg yolk, liver, meat, fish, soybeans (as sources of choline)",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "Bellar D et al. J Int Soc Sports Nutr 2015 — PMID: 26582972",
+            "NIH Office of Dietary Supplements (ODS): Choline Fact Sheet"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 50,
-        slug: "huperzine-a",
-        name: "هيوبرزين إيه",
-        englishName: "Huperzine A",
-        nameNl: "Huperzine A",
+        slug: "bacopa-monnieri",
+        name: "خلاصة عشبة الباكوبا مونيري لدعم الذاكرة",
+        englishName: "Bacopa Monnieri Standardized Extract (Brahmi)",
+        nameNl: "Bacopa Monnieri Extract",
         category: "نوم-نفسية",
         icon: "🌿",
-        summary: "مستخلص من نبات صيني - يحسن الذاكرة والتركيز بشكل قوي",
-        summaryNl: "Krachtige natuurlijke acetylcholinesteraseremmer die acetylcholine afbraak in de hersenen blokkeert.",
-        summaryEn: "Potent natural acetylcholinesterase inhibitor preventing acetylcholine breakdown for prolonged memory and focus.",
+        summary: "عشبة تقليدية من الطب الأيورفيدي تعمل مركباتها النشطة (الباكوسيدات) على دعم التوصيل العصبي وحماية خلايا الحصين من الإجهاد التأكسدي؛ وتشير التحليلات التجميعية إلى دورها في دعم سرعة معالجة المعلومات واسترجاع الذاكرة بعد 6–12 أسبوعاً من الاستخدام المنتظم.",
+        summaryNl: "Een traditioneel ayurvedisch kruid waarvan de actieve stoffen (bacosiden) de prikkeloverdracht ondersteunen en cellen in de hippocampus beschermen tegen oxidatieve stress; meta-analyses wijzen op ondersteuning van de verwerkingssnelheid en het ophalen van herinneringen na 6–12 weken regelmatig gebruik.",
+        summaryEn: "A traditional Ayurvedic herb whose active compounds (bacosides) support nerve signalling and protect hippocampal cells from oxidative stress; meta-analyses suggest it supports information-processing speed and memory recall after 6–12 weeks of regular use.",
         tags: [
             "ذاكرة",
-            "تركيز",
-            "نيوتروبيك",
-            "دماغ"
+            "تعلم",
+            "قلق"
         ],
         benefits: [
-            "يثبط إنزيم يكسر الأسيتيل كولين (يزيد الذاكرة)",
-            "يحسن الذاكرة والتعلم بشكل ملحوظ",
-            "يزيد التركيز واليقظة",
-            "يحمي خلايا الدماغ من التلف",
-            "مفيد لمرض الزهايمر",
-            "تأثير يدوم 6-8 ساعات"
+            "عشبة تقليدية من الطب الأيورفيدي تعمل مركباتها النشطة (الباكوسيدات) على دعم التوصيل العصبي وحماية خلايا الحصين من الإجهاد التأكسدي؛ وتشير التحليلات التجميعية إلى دورها في دعم سرعة معالجة المعلومات واسترجاع الذاكرة بعد 6–12 أسبوعاً من الاستخدام المنتظم."
         ],
         benefitsNl: [
-            "Remt het enzym acetylcholinesterase waardoor acetylcholine urenlang hoog blijft in de synaps",
-            "Scherpt werkgeheugen, concentratievermogen en leervermogen spectaculair aan",
-            "Beschermt hersencellen tegen glutamaat-toxiciteit en oxidatieve celdood",
-            "Langdurige werkingsduur van 6 tot 10 uur",
-            "Ideaal te combineren met een cholinebron (zoals Alpha-GPC)"
+            "Een traditioneel ayurvedisch kruid waarvan de actieve stoffen (bacosiden) de prikkeloverdracht ondersteunen en cellen in de hippocampus beschermen tegen oxidatieve stress; meta-analyses wijzen op ondersteuning van de verwerkingssnelheid en het ophalen van herinneringen na 6–12 weken regelmatig gebruik."
         ],
         benefitsEn: [
-            "Potently inhibits acetylcholinesterase, sustaining elevated synaptic acetylcholine for hours",
-            "Sharply elevates short-term working memory, recall, and studying capacity",
-            "Neuroprotective against glutamate excitotoxicity and neuronal apoptosis",
-            "Long biological half-life providing 6-10 hours of sustained nootropic support",
-            "Synergizes exceptionally with choline donors like Alpha-GPC"
+            "A traditional Ayurvedic herb whose active compounds (bacosides) support nerve signalling and protect hippocampal cells from oxidative stress; meta-analyses suggest it supports information-processing speed and memory recall after 6–12 weeks of regular use."
         ],
         dosage: {
-            recommended: "50-200 ميكروجرام",
-            timing: "في الصباح أو قبل المذاكرة",
-            frequency: "استخدام دوري (مثلاً 3-4 أيام استخدام ثم 3 أيام توقف لتجنب التعود)"
+            recommended: "300–450 ملغ من المستخلص المعياري (50–55% باكوسيدات)",
+            timing: "مع وجبة تحتوي على دهون (الإفطار أو الغداء)",
+            frequency: "مرة واحدة يومياً"
         },
         dosageNl: {
-            recommended: "50-200 mcg (let op: microgrammen, GEEN milligrammen!)",
-            timing: "'s Ochtends voor studie of mentale topprestaties",
-            frequency: "Periodiek gebruiken (bijv. 3-4 dagen per week, daarna rustdagen om gewenning te voorkomen)"
+            recommended: "300–450 mg gestandaardiseerd extract (50–55% bacosiden)",
+            timing: "Bij een maaltijd met vet (ontbijt of lunch)",
+            frequency: "1 keer per dag"
         },
         dosageEn: {
-            recommended: "50-200 mcg (Note: micrograms, NOT milligrams!)",
-            timing: "Morning prior to cognitive workload",
-            frequency: "Cycle use (e.g. 3-4 days on, 3 days off to prevent tolerance)"
+            recommended: "300–450 mg standardized extract (50–55% bacosides)",
+            timing: "With a meal that contains fat (breakfast or lunch)",
+            frequency: "Once daily"
         },
+        forms: "مستخلصات معيارية لنسبة الباكوسيدات (50–55%) مدروسة سريرياً، مثل Synapsa® أو Bacognize®.",
+        formsNl: "Klinisch onderzochte extracten gestandaardiseerd op bacosiden (50–55%), zoals Synapsa® of Bacognize®.",
+        formsEn: "Clinically studied extracts standardized for bacosides (50–55%), such as Synapsa® or Bacognize®.",
         warnings: [
-            "خذه بحذر - تأثير قوي",
-            "لا تستخدمه يومياً - خذ استراحة (2 أيام أون، 1 يوم أوف)",
-            "قد يسبب غثيان أو صداع",
-            "تجنبه إذا كنت تتناول أدوية للذاكرة"
+            "قد يسبب غثياناً وتقلصات معوية إذا أُخذ على معدة فارغة؛ يُؤخذ دائماً مع الطعام",
+            "قد يسبب خمولاً أو استرخاءً زائداً في الأسابيع الأولى",
+            "يُتجنب أثناء الحمل والرضاعة لقلة بيانات الأمان"
         ],
         warningsNl: [
-            "LET OP DE DOSERING: Uiterst potent in microscopische doses (microgrammen)",
-            "Niet continu dagelijks gebruiken wegens opbouw in het lichaam; las regelmatig pauzes in",
-            "Niet gebruiken bij trage hartslag (bradycardie) of astma"
+            "Kan op een lege maag misselijkheid en darmkrampen geven; neem het altijd bij het eten",
+            "Kan de eerste weken sloomheid of overmatige ontspanning geven",
+            "Vermijden tijdens zwangerschap en borstvoeding wegens beperkte veiligheidsgegevens"
         ],
         warningsEn: [
-            "EXTREME DOSAGE ACCURACY: Potent at microgram level; never overdose",
-            "Requires cycling due to long half-life to avoid cholinergic receptor saturation",
-            "Contraindicated in bradycardia and bronchial asthma"
+            "May cause nausea and intestinal cramps on an empty stomach; always take it with food",
+            "May cause sluggishness or excessive relaxation in the first weeks",
+            "Avoid during pregnancy and breastfeeding because safety data are limited"
         ],
-        interactions: "يتفاعل مع أدوية الزهايمر - استشر طبيبك",
-        interactionsNl: "Interactie met medicatie tegen Alzheimer (zoals donepezil) en bètablokkers.",
-        interactionsEn: "Direct interaction with Alzheimer's cholinesterase inhibitors and beta-blockers.",
-        naturalSources: "نبات Huperzia serrata الصيني",
-        naturalSourcesNl: "Huperzia serrata mos (Chinees clubmos).",
-        naturalSourcesEn: "Huperzia serrata (toothed clubmoss)."
+        interactions: "قد يزيد أثر الأدوية الكولينية وأدوية الزهايمر؛ وقد يخفض ضغط الدم ومعدل النبض طفيفاً، فيُراعى مع خافضات الضغط وحاصرات بيتا. قد يتداخل مع أدوية الغدة الدرقية.",
+        interactionsNl: "Het kan het effect van cholinerge middelen en alzheimermedicatie versterken; het kan de bloeddruk en hartslag licht verlagen, dus let op bij bloeddrukverlagers en bètablokkers. Het kan interageren met schildkliermedicatie.",
+        interactionsEn: "It may add to the effect of cholinergic drugs and Alzheimer's medication; it may slightly lower blood pressure and heart rate, so take care with blood pressure medication and beta blockers. It may interact with thyroid medication.",
+        naturalSources: "عشبة الباكوبا (البراهمي)؛ تُستخدم كمستخلص معياري ولا توجد في الأطعمة اليومية",
+        naturalSourcesNl: "Het kruid bacopa (brahmi); gebruikt als gestandaardiseerd extract en niet aanwezig in gewone voeding",
+        naturalSourcesEn: "The bacopa (brahmi) herb; used as a standardized extract and not found in everyday foods",
+        groupLabel: {
+            ar: "التركيز والذاكرة",
+            en: "Focus & memory",
+            nl: "Focus & geheugen"
+        },
+        references: [
+            "Pase MP et al. J Altern Complement Med 2012 (systematic review) — PMID: 22747190",
+            "Kongkeaw C et al. J Ethnopharmacol 2014 (meta-analysis) — PMID: 24252493"
+        ],
+        reviewed: "2026-10-17"
     },
     {
         id: 51,
@@ -5486,81 +5434,6 @@ const supplementsData = [
         naturalSources: "فطر الريشي الطازج (نادر)",
         naturalSourcesNl: "Vruchtlichaam van Ganoderma lucidum.",
         naturalSourcesEn: "Ganoderma lucidum wood-grown fruiting body."
-    },
-    {
-        id: 74,
-        slug: "bacopa-monnieri",
-        name: "باكوبا مونييري",
-        englishName: "Bacopa Monnieri",
-        nameNl: "Bacopa Monnieri (Brahmi)",
-        category: "نوم-نفسية",
-        icon: "🌿",
-        summary: "عشبة هندية قديمة للدماغ - تحسن الذاكرة والتعلم وتقلل القلق",
-        summaryNl: "Klassiek Ayurvedisch noötropicum dat synaptische communicatie verbetert, geheugen versterkt en stress vermindert.",
-        summaryEn: "Classic Ayurvedic nootropic proven to enhance synaptic signaling, memory acquisition, and stress resilience.",
-        tags: [
-            "ذاكرة",
-            "تعلم",
-            "قلق"
-        ],
-        benefits: [
-            "تحسن الذاكرة والاستدعاء بشكل ملحوظ",
-            "تسرع معالجة المعلومات",
-            "تقلل القلق والتوتر",
-            "تحمي الدماغ من التلف",
-            "تحسن المزاج",
-            "مدعومة بأبحاث علمية قوية"
-        ],
-        benefitsNl: [
-            "Klinisch bewezen verbetering van geheugenbehoud, woordherinnering en leercapaciteit",
-            "Verhoogt de snelheid van visuele informatieverwerking in de hersenen",
-            "Bevordert dendritische vertakking en synaptische transmissie via bacosiden",
-            "Dempt acute stress en angst door modulatie van serotonine en GABA",
-            "Biedt krachtige antioxidantbescherming tegen cognitieve achteruitgang"
-        ],
-        benefitsEn: [
-            "Clinically demonstrated to enhance memory consolidation, recall, and retention",
-            "Accelerates visual information processing speed and reaction accuracy",
-            "Encourages dendritic arborization and synaptic transmission via bacoside triterpenoids",
-            "Anxiolytic adaptogen modulating serotonin and GABAergic balance",
-            "Neuroprotective antioxidant defending against oxidative brain stress"
-        ],
-        dosage: {
-            recommended: "300-450 ملغ (معياري بنسبة 50-55% باكوسيدات، مثل Synapsa® أو Bacognize®)",
-            timing: "مع وجبة",
-            frequency: "مرة واحدة يومياً"
-        },
-        dosageNl: {
-            recommended: "300-450 mg (gestandaardiseerd op 50-55% bacosiden, bijv. Synapsa® of Bacognize®)",
-            timing: "Tijdens een maaltijd die vetten bevat (om maagirritatie te voorkomen en opname te borgen)",
-            frequency: "1x per dag"
-        },
-        dosageEn: {
-            recommended: "300-450 mg (standardized to 50-55% bacosides, e.g. Synapsa® or Bacognize®)",
-            timing: "With a fat-containing meal to optimize absorption and avoid nausea",
-            frequency: "Once daily"
-        },
-        warnings: [
-            "النتائج تحتاج 8-12 أسبوع",
-            "قد تسبب اضطراب معدة",
-            "آمنة للاستخدام طويل المدى"
-        ],
-        warningsNl: [
-            "NEEM TIJDENS DE MAALTIJD: Inname op nuchtere maag kan milde misselijkheid veroorzaken",
-            "Werking is cumulatief: de krachtigste geheugeneffecten treden op na 8 tot 12 weken consistent gebruik",
-            "Kan bij sommigen een lichte vermoeidheid geven; neem in dat geval bij het diner"
-        ],
-        warningsEn: [
-            "TAKE WITH FOOD: Fasted consumption frequently triggers transient stomach upset/nausea",
-            "Memory-enhancing effects are cumulative and peak after 8-12 weeks of sustained use",
-            "May cause subtle relaxation; shift to evening meal if daytime drowsiness occurs"
-        ],
-        interactions: "قد تتفاعل مع أدوية الغدة الدرقية - استشر طبيبك",
-        interactionsNl: "Kan schildklierhormoonspiegels licht stimuleren; voorzichtigheid bij hyperthyreoïdie.",
-        interactionsEn: "May mildly stimulate thyroid hormone output; monitor in hyperthyroidism.",
-        naturalSources: "نبات الباكوبا (يُستخدم كمكمل)",
-        naturalSourcesNl: "Bovengrondse delen van de Bacopa monnieri waterplant.",
-        naturalSourcesEn: "Whole herb of the Bacopa monnieri wetland plant."
     },
     {
         id: 75,
