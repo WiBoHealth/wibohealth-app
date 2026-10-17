@@ -1,12 +1,13 @@
 """Validate the JSON-LD of the live site pages.
 
 Checks every <script type="application/ld+json"> block in foods.html, food-details.html, the
-static food pages (foods/, en/foods/, nl/foods/) and the supplement pages (supplements/, en/..., nl/...):
+static food pages (foods/, en/foods/, nl/foods/), the supplement pages (supplements/, en/..., nl/...) and the
+article pages (articles/, en/..., nl/...):
   - the block parses as JSON (an empty block is an error too)
   - no "Product" type anywhere, and no offers / aggregateRating / review / price fields
   - every static food page carries a MedicalWebPage with author (Dr. Wassim Habib) and publisher
-  - every supplement page carries a MedicalWebPage authored by the WiBo Health organisation, cites its
-    sources, and never names a personal reviewer (legal requirement for supplement content)
+  - every supplement and article page carries a MedicalWebPage authored by the WiBo Health organisation, cites its
+    sources, and never names a personal reviewer (legal requirement for supplement and article content)
 It also scans the .js / .html sources for a schema "@type": "Product" built at runtime.
 
 Usage: python scripts/validate_schema.py
@@ -35,14 +36,16 @@ def walk(node, path='$'):
 def main():
     pages = [ROOT / 'foods.html', ROOT / 'food-details.html']
     static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html'))]
-    supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements') for p in sorted((ROOT / d).glob('*.html'))]
+    # supplement and article pages are authored by the WiBo Health organisation and must never name a person
+    supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles')
+            for p in sorted((ROOT / d).glob('*.html'))]
     errors, blocks = [], 0
     for page in pages + static + supp:
         rel = page.relative_to(ROOT).as_posix()
         found_types = set()
         text = page.read_text(encoding='utf-8')
         if page in supp and re.search(r'Wassim|وسيم', text):
-            errors.append(f'{rel}: supplement page names a personal reviewer')
+            errors.append(f'{rel}: supplement/article page names a personal reviewer')
         for raw in LD_RE.findall(text):
             blocks += 1
             try:

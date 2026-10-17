@@ -224,6 +224,12 @@
                 'home_articles_guides': 'أدلة غذائية أساسية',
                 'home_articles_read': 'اقرأ المقال',
                 'home_articles_ar_only': ' ',
+                'feat_cereal_href': '/articles/healthy-sugar-free-breakfast-cereals.html',
+                'feat_cereal_cat': 'مقال جديد ✨',
+                'feat_cereal_title': 'حبوب الإفطار الصحية الخالية من السكر: دليلك الكامل',
+                'feat_cereal_sum': 'كثير من حبوب الإفطار "الصحية" حلوى مقنعة. تعلّم قراءة الملصق، واكتشف أفضل الخيارات الخالية من السكر المضاف في السوبرماركت.',
+                'feat_cereal_btn': 'اقرأ الدليل الكامل',
+                'feat_cereal_alt': 'امرأة تتناول وعاء شوفان كامل مع التوت',
                 'ha_l1': 'دليلك الطبي للتسوق والمؤشر الجلايسيمي',
                 'ha_l2': 'الصيام المتقطع وخرافات السوشيال ميديا',
                 'ha_l3': 'السكر التراكمي ومقاومة الإنسولين',
@@ -367,6 +373,12 @@
                 'home_articles_guides': 'Essential nutrition guides',
                 'home_articles_read': 'Read article',
                 'home_articles_ar_only': '(article text in Arabic)',
+                'feat_cereal_href': '/en/articles/healthy-sugar-free-breakfast-cereals.html',
+                'feat_cereal_cat': 'New article ✨',
+                'feat_cereal_title': 'Healthy Sugar-Free Breakfast Cereals: the complete guide',
+                'feat_cereal_sum': 'Many "healthy" cereals are dessert in disguise. Learn to read the label and find the best cereals with no added sugar in the supermarket.',
+                'feat_cereal_btn': 'Read the full guide',
+                'feat_cereal_alt': 'Woman eating a bowl of whole oats with berries',
                 'ha_l1': 'Your medical shopping guide & the glycemic index',
                 'ha_l2': 'Intermittent fasting vs. social-media myths',
                 'ha_l3': 'HbA1c and insulin resistance',
@@ -510,6 +522,12 @@
                 'home_articles_guides': 'Basisgidsen voeding',
                 'home_articles_read': 'Lees artikel',
                 'home_articles_ar_only': '(artikeltekst in het Arabisch)',
+                'feat_cereal_href': '/nl/articles/gezonde-ontbijtgranen-zonder-suiker.html',
+                'feat_cereal_cat': 'Nieuw artikel ✨',
+                'feat_cereal_title': 'Gezonde ontbijtgranen zonder suiker: de complete gids',
+                'feat_cereal_sum': 'Veel "gezonde" ontbijtgranen zijn vermomde snoep. Leer het etiket lezen en vind de beste ontbijtgranen zonder toegevoegde suiker.',
+                'feat_cereal_btn': 'Lees de volledige gids',
+                'feat_cereal_alt': 'Vrouw die een kom volkoren havermout met bessen eet',
                 'ha_l1': 'Medische boodschappengids & de glykemische index',
                 'ha_l2': 'Intermittent vasten vs. mythes op social media',
                 'ha_l3': 'HbA1c en insulineresistentie',
@@ -577,6 +595,14 @@
                 if (translations[currentLang] && translations[currentLang][key]) {
                     el.innerHTML = translations[currentLang][key];
                 }
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const href = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-href')];
+                if (href) el.setAttribute('href', href);
+            });
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const alt = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-alt')];
+                if (alt) el.setAttribute('alt', alt);
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
@@ -1535,6 +1561,16 @@
         .home-article-body ul { padding-inline-start: 22px; margin: 8px 0; }
         .home-article-body li { margin: 6px 0; }
         body.dark-mode .home-article-link, body.dark-mode .home-article { background: rgba(255,255,255,0.05); }
+        /* Featured article card (top of #articles) */
+        .home-article-featured { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 22px; align-items: center; margin-bottom: 26px; padding: 16px; border-radius: 18px; background: #f8f9fa; border: 2px solid #10b981; color: var(--text-dark); text-decoration: none; box-shadow: 0 10px 28px rgba(16, 185, 129, 0.18); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .home-article-featured:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(16, 185, 129, 0.28); }
+        .home-article-featured img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; display: block; background: rgba(16, 185, 129,0.12); }
+        .home-article-featured h3 { font-size: 1.45rem; line-height: 1.4; margin: 10px 0 8px; color: var(--text-dark); }
+        .home-article-featured p { color: var(--text-light); line-height: 1.7; margin-bottom: 14px; }
+        .home-article-featured-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 800; }
+        body.dark-mode .home-article-featured { background: rgba(255,255,255,0.05); }
+        [dir="ltr"] .home-article-featured-btn i { transform: scaleX(-1); }
+        @media (max-width: 760px) { .home-article-featured { grid-template-columns: 1fr; gap: 12px; } .home-article-featured h3 { font-size: 1.25rem; } }
         @media (max-width: 640px) {
             .home-articles { padding: 32px 18px; }
             .home-articles h2 { font-size: 1.8rem; }
@@ -2124,6 +2160,15 @@
         <section class="home-articles" id="articles">
             <h2 data-i18n="home_articles_title">📚 المقالات الصحية</h2>
             <p class="home-articles-sub" data-i18n="home_articles_sub">مقالات وأدلة سريرية يراجعها فريق ويبو هيلث الطبي</p>
+            <a href="/articles/healthy-sugar-free-breakfast-cereals.html" class="home-article-featured" data-i18n-href="feat_cereal_href">
+                <img src="/images/healthy-sugar-free-breakfast-cereal-hero.webp" alt="امرأة تتناول وعاء شوفان كامل مع التوت" data-i18n-alt="feat_cereal_alt" width="1400" height="781" loading="lazy" decoding="async">
+                <div>
+                    <span class="home-article-cat" data-i18n="feat_cereal_cat">مقال جديد ✨</span>
+                    <h3 data-i18n="feat_cereal_title">حبوب الإفطار الصحية الخالية من السكر: دليلك الكامل</h3>
+                    <p data-i18n="feat_cereal_sum">كثير من حبوب الإفطار "الصحية" حلوى مقنعة. تعلّم قراءة الملصق، واكتشف أفضل الخيارات الخالية من السكر المضاف في السوبرماركت.</p>
+                    <span class="home-article-featured-btn"><span data-i18n="feat_cereal_btn">اقرأ الدليل الكامل</span> <i class="fas fa-arrow-left"></i></span>
+                </div>
+            </a>
             <div class="home-articles-links">
                 <a href="my-articles.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🛒</span><span data-i18n="ha_l1">دليلك الطبي للتسوق والمؤشر الجلايسيمي</span></a>
                 <a href="intermittent-fasting.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">⏱️</span><span data-i18n="ha_l2">الصيام المتقطع وخرافات السوشيال ميديا</span></a>

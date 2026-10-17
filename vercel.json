@@ -37,7 +37,7 @@
       "permanent": true
     },
     {
-      "source": "/en/:path((?!foods/|supplements/).*)",
+      "source": "/en/:path((?!foods/|supplements/|articles/).*)",
       "destination": "/",
       "permanent": true
     },
@@ -47,7 +47,7 @@
       "permanent": true
     },
     {
-      "source": "/nl/:path((?!foods/|supplements/).*)",
+      "source": "/nl/:path((?!foods/|supplements/|articles/).*)",
       "destination": "/",
       "permanent": true
     },
