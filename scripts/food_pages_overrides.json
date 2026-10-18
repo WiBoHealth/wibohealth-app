@@ -109,22 +109,76 @@
     "7": {
       "tips": {
         "ar": [
-          "عزز وجبتك بإضافة بذور الشيا أو حفنة مكسرات نيئة وقرفة لزيادة الشبع، وتجنب أكياس الشوفان الفوري المعبأة بالسكر والنكهات الصناعية.",
-          "اعتمد حبوب الشوفان الكاملة (Rolled Oats) واطهها بالماء أو الحليب غير المحلى على نار هادئة للحفاظ على بنية أليافها الطبيعية."
+          "احرص على استخدام رقائق الشوفان التقليدية (Rolled Oats) واطبخها بالماء أو الحليب قليل الدسم، وتجنب مغلفات الشوفان الفوري المضاف إليها السكر والنكهات المصنعة.",
+          "أضف بذور الشيا أو القليل من القرفة مع حفنة توت طازج لرفع محتوى الألياف ومضادات الأكسدة دون الحاجة لإضافة سكر مكرر."
         ],
         "en": [
-          "Boost your bowl with chia seeds or a handful of raw nuts and some cinnamon for more fullness, and avoid instant oat sachets packed with sugar and artificial flavours.",
-          "Choose whole rolled oats and cook them in water or unsweetened milk over low heat to preserve their natural fibre structure."
+          "Opt for traditional rolled or steel-cut oats cooked in water or low-fat milk, and avoid instant flavored oatmeal packets with added sugars.",
+          "Top your bowl with chia seeds, Ceylon cinnamon, or a handful of fresh berries to enhance fiber and antioxidants without refined sweeteners."
         ],
         "nl": [
-          "Verrijk je kom met chiazaad of een handje ongebrande noten en wat kaneel voor meer verzadiging, en vermijd zakjes instanthavermout vol suiker en kunstmatige smaakstoffen.",
-          "Kies hele havervlokken (rolled oats) en kook ze in water of ongezoete melk op laag vuur om de natuurlijke vezelstructuur te behouden."
+          "Kies voor traditionele havermoutvlokken bereid met water of magere melk, en vermijd instant portiezakjes met toegevoegde suikers en aroma’s.",
+          "Voeg chiazaad, een snufje kaneel of wat vers rood fruit toe voor extra vezels en antioxidanten zonder geraffineerde suikers."
         ]
       },
       "lead": {
-        "ar": "أيقونة الفطور الصحي لصحة القلب والأوعية ومقاومة الإنسولين، يزخر بألياف البيتا جلوكان الذائبة التي تشكل قواماً هلامياً في الأمعاء يمنح استقراراً طويلاً لسكر الدم بمؤشر جلايسيمي منخفض (55).",
-        "en": "The icon of a healthy breakfast for heart and blood-vessel health and for insulin resistance, rich in soluble beta-glucan fibre that forms a gel-like texture in the gut and keeps blood sugar steady for longer, with a low glycemic index (55).",
-        "nl": "Het icoon van een gezond ontbijt voor hart en bloedvaten en bij insulineresistentie, rijk aan oplosbare bètaglucaanvezels die in de darm een gelachtige structuur vormen en de bloedsuiker langer stabiel houden, met een lage glykemische index (55)."
+        "ar": "وجبة الفطور الصحية الكلاسيكية؛ توفر ألياف البيتا جلوكان الذائبة مع مؤشر جلايسيمي منخفض (55). تتشرب رقائق الشوفان الماء أو الحليب أثناء الطهي ليتضاعف حجمها، مما يمنح زبدية دافئة وممتلئة بسعرات معتدلة وشبع طويل الأمد.",
+        "en": "The classic nutrient-dense breakfast; providing soluble beta-glucan fiber with a low glycemic index (55). As oat flakes simmer in water or milk, they absorb liquid and expand, creating a warm, satisfying bowl with moderate calories and prolonged fullness.",
+        "nl": "Het klassieke gezonde ontbijt; rijk aan oplosbare bèta-glucaanvezels met een lage glykemische index (55). Tijdens het koken nemen de havervlokken vocht op, waardoor een vullende, warme kom ontstaat met een matig aantal calorieën en langdurige verzadiging."
+      },
+      "title": {
+        "ar": "كم سعرة في الشوفان المطبوخ؟ المؤشر الجلايسيمي والدايت | WiBo Health",
+        "en": "Cooked Oatmeal Calories & Glycemic Index: Porridge Facts | WiBo Health",
+        "nl": "Calorieën in bereide havermout & glykemische index | WiBo Health"
+      },
+      "desc": {
+        "ar": "زبدية الشوفان المطبوخ تحتوي على 170 سعرة (68 سعرة/100غ) بمؤشر جلايسيمي منخفض (55). تعرف على الفرق بين الشوفان الجاف والمطبوخ وتأثيره على الشبع وسكر الدم.",
+        "en": "Cooked oatmeal has 170 kcal per bowl (68 kcal/100g) and a low glycemic index of 55. Learn the difference between raw and cooked oats, fiber & blood sugar facts.",
+        "nl": "Een kom bereide havermout levert 170 kcal (68 kcal/100g) met een lage GI van 55. Ontdek het verschil tussen droge en bereide havermout, vezels en verzadiging."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما الفرق في السعرات بين الشوفان الجاف والمطبوخ؟",
+            "a": "الشوفان الجاف يحتوي على قرابة 380 سعرة لكل 100غ، ولكن عند طبخه بالماء يمتص كميات كبيرة من السائل، فتحتوي زبدية الشوفان المطبوخ (250غ) على حوالي 170 سعرة فقط (68 سعرة لكل 100غ مطبوخ). الطبخ بالحليب يرفع السعرات حسب كمية الحليب ونوعه."
+          },
+          {
+            "q": "كيف يساعد الشوفان في استقرار سكر الدم؟",
+            "a": "ألياف البيتا جلوكان تشكل قواماً هلامياً لطيفاً في الجهاز الهضمي يبطئ من وتيرة امتصاص الكربوهيدرات، مما يمنح منحنى طاقة هادئاً ومستقراً."
+          },
+          {
+            "q": "هل الشوفان المطبوخ خيار جيد لإنقاص الوزن؟",
+            "a": "نعم؛ أليافه تحتفظ بالماء في المعدة وقد تساعد على زيادة الإحساس بالشبع، مما يقلل الرغبة في تناول الوجبات الخفيفة لساعات بعد الفطور."
+          }
+        ],
+        "en": [
+          {
+            "q": "What is the calorie difference between raw and cooked oats?",
+            "a": "Raw rolled oats contain approximately 380 kcal per 100g. When cooked in water, they absorb the liquid so that a generous 250g cooked bowl provides only around 170 kcal (68 kcal per 100g cooked). Cooking with milk adds calories depending on the amount and type of milk."
+          },
+          {
+            "q": "How does oatmeal support healthy blood sugar levels?",
+            "a": "The soluble beta-glucan fiber forms a gentle gel in the digestive tract that slows carbohydrate digestion and glucose absorption, supporting steady energy."
+          },
+          {
+            "q": "Is cooked oatmeal effective for weight loss?",
+            "a": "Yes. Its high viscosity and fiber content promote prolonged satiety, reducing hunger and the temptation for mid-morning snacking."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat is het verschil in calorieën tussen droge en bereide havermout?",
+            "a": "Droge havermout bevat ongeveer 380 kcal per 100g. Door het koken met water zet het uit, waardoor een royale portie van 250g bereide pap circa 170 kcal bevat (68 kcal per 100g). Met melk bereid stijgt het aantal calorieën, afhankelijk van de hoeveelheid en soort melk."
+          },
+          {
+            "q": "Hoe ondersteunt havermout een stabiele bloedsuikerspiegel?",
+            "a": "De bèta-glucanen vormen een zachte gel in het spijsverteringskanaal die de opname van koolhydraten vertraagt, wat zorgt voor een evenwichtige energieafgifte."
+          },
+          {
+            "q": "Helpt bereide havermout bij gewichtsbeheersing?",
+            "a": "Zeker. Het hoge vezelgehalte zorgt voor een langdurig vol gevoel, waardoor de behoefte aan tussendoortjes in de loop van de ochtend afneemt."
+          }
+        ]
       }
     },
     "8": {
@@ -592,22 +646,76 @@
     "49": {
       "tips": {
         "ar": [
-          "لمريض السكري، اختر الموز الأصفر مع بقاء أطراف خضراء وتجنب الموز المرقط بالبقع البنية الكثيفة؛ فكلما نضج الموز زادت سرعة تدفق سكره.",
-          "ادمج نصف موزة مع حفنة لوز نيء أو زبادي يوناني؛ فالبروتين والدهون يحميانك من قفزة السكر السريعة."
+          "لمرضى السكري أو مقاومة الإنسولين، يُفضل اختيار الموز متماسك القوام بأطراف خضراء خفيفة؛ حيث يحتوي على نسبة أعلى من النشا المقاوم الذي يهضم ببطء.",
+          "لتحقيق شبع أطول، ادمج نصف موزة مع مصدر دهون صحية أو بروتين، مثل زبدة الفول السوداني الطبيعية أو الزبادي اليوناني."
         ],
         "en": [
-          "If you have diabetes, choose yellow bananas that still have green tips and avoid heavily brown-spotted ones; the riper the banana, the faster its sugar enters the blood.",
-          "Pair half a banana with a handful of raw almonds or Greek yoghurt; protein and fat help protect you from a rapid sugar spike."
+          "For better blood glucose stability, choose slightly green-tipped bananas, which are naturally richer in slow-digesting resistant starch.",
+          "Pair half a banana with a protein or healthy fat source, such as unsweetened Greek yogurt or a handful of raw nuts, to prolong satiety."
         ],
         "nl": [
-          "Heb je diabetes, kies dan gele bananen met nog groene puntjes en vermijd bananen met veel bruine vlekken; hoe rijper de banaan, hoe sneller de suiker in het bloed komt.",
-          "Combineer een halve banaan met een handje ongebrande amandelen of Griekse yoghurt; eiwit en vet helpen je te beschermen tegen een snelle suikerpiek."
+          "Kies bananen met een lichtgroene schil voor een rustigere bloedsuikerspiegel, omdat ze meer langzaam verteerbaar resistent zetmeel bevatten.",
+          "Combineer een halve banaan met eiwitten of gezonde vetten, zoals ongezoete Griekse yoghurt of wat noten, voor een langer verzadigd gevoel."
         ]
       },
       "lead": {
-        "ar": "وجبة الطاقة الطبيعية المحمولة الغنية بالبوتاسيوم وفيتامين B6. يتغير مؤشرها الجلايسيمي مع النضج؛ فالموز الأخضر مليء بالنشا المقاوم، بينما الموز الأصفر تزداد سكرياته بمؤشر معتدل (52).",
-        "en": "A natural, portable energy snack rich in potassium and vitamin B6. Its glycemic index changes as it ripens: green bananas are full of resistant starch, while yellow bananas contain more sugars, with a moderate index (52).",
-        "nl": "Een natuurlijke, draagbare energiesnack, rijk aan kalium en vitamine B6. De glykemische index verandert met de rijpheid: groene bananen zitten vol resistent zetmeel, terwijl gele bananen meer suikers bevatten, met een gematigde index (52)."
+        "ar": "وجبة الطاقة الطبيعية المحمولة؛ غنية بالبوتاسيوم وفيتامين B6، وتتميز بمؤشر جلايسيمي منخفض (52). يتغير تركيب نشوياتها مع مراحل النضج من النشا المقاوم إلى السكريات الطبيعية، مما يجعلها خياراً ممتازاً للرياضيين ودعم النشاط اليومي.",
+        "en": "Nature's portable energy snack; rich in potassium and vitamin B6, with a low glycemic index (52). Its carbohydrate profile shifts from resistant starch to natural sugars as it ripens, making it a reliable source of fuel for workouts and daily vitality.",
+        "nl": "De ideale natuurlijke energiesnack; rijk aan kalium en vitamine B6, met een lage glykemische index (52). Naarmate de banaan rijpt, verandert resistent zetmeel in natuurlijke suikers, wat zorgt voor een evenwichtige energiebron voor sport en dagelijkse bezigheden."
+      },
+      "title": {
+        "ar": "كم سعرة في الموزة الواحدة؟ جدول السعرات والمؤشر الجلايسيمي | WiBo Health",
+        "en": "Calories in a Banana: Exact Calories by Size & GI | WiBo Health",
+        "nl": "Calorieën in een banaan: per stuk, per maat & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "كم سعرة حرارية في الموزة؟ الموزة المتوسطة تحتوي على 105 سعرات (89 سعرة/100غ) بمؤشر جلايسيمي منخفض (52). اكتشف السعرات حسب الحجم وتأثيرها على الدايت وسكر الدم.",
+        "en": "How many calories in a banana? A medium banana has 105 kcal (89 kcal/100g) with a low GI of 52. Explore calories by size, ripeness impact and weight loss facts.",
+        "nl": "Hoeveel calorieën zitten er in een banaan? Een middelgrote banaan bevat ca. 105 kcal (89 kcal/100g) met een lage GI van 52. Bekijk voedingswaarden, maten en tips."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة حرارية في الموزة حسب حجمها؟",
+            "a": "الموزة الصغيرة (حوالي 100غ) تمنحك 89 سعرة، والمتوسطة (118-120غ) نحو 105-107 سعرات، بينما الحبة الكبيرة (140غ) تصل إلى نحو 125 سعرة حرارية."
+          },
+          {
+            "q": "هل الموز مسموح في الدايت وإنقاص الوزن؟",
+            "a": "نعم؛ فالموز يحتوي على ألياف تعزز الشبع مثل البكتين والنشا المقاوم، واحتساب موزة واحدة ضمن ميزانية سعراتك اليومية يمنحك الشبع دون أن يخل بخطتك."
+          },
+          {
+            "q": "أيهما أفضل لسكر الدم: الموز الأخضر أم الأصفر الناضج؟",
+            "a": "الموز غير المكتمل النضج (الأخضر) يمتلك مؤشراً جلايسيمياً أقل ونسبة أعلى من النشا المقاوم، بينما الموز الأصفر المنقط بالبني يتحول نشاؤه إلى سكريات بسيطة أسرع امتصاصاً."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a banana by size?",
+            "a": "A small banana (~100g) provides about 89 kcal, a medium banana (118–120g) delivers roughly 105–107 kcal, and a large banana (~140g) contains around 125 kcal."
+          },
+          {
+            "q": "Are bananas suitable for weight loss diets?",
+            "a": "Yes. Bananas are rich in dietary fiber and resistant starch, which promote satiety. Including one banana within your daily caloric target supports a balanced diet."
+          },
+          {
+            "q": "Which is better for blood sugar: green or ripe bananas?",
+            "a": "Greener bananas have a lower glycemic impact due to higher resistant starch content, whereas ripe, spotted bananas contain simpler sugars that absorb more quickly."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een banaan per grootte?",
+            "a": "Een kleine banaan (~100g) levert ongeveer 89 kcal, een middelgrote banaan (118–120g) circa 105–107 kcal, en een grote banaan (~140g) ongeveer 125 kcal."
+          },
+          {
+            "q": "Past een banaan in een dieet om af te vallen?",
+            "a": "Zeker. Bananen bevatten verzadigende vezels zoals pectine en resistent zetmeel. Een banaan binnen je dagelijkse caloriebehoefte past perfect in een gezond voedingspatroon."
+          },
+          {
+            "q": "Wat is beter voor de bloedsuikerspiegel: een groene of rijpe banaan?",
+            "a": "Een groenere banaan heeft een lagere glykemische impact dankzij het resistente zetmeel, terwijl een rijpe banaan met spikkels sneller opneembare suikers bevat."
+          }
+        ]
       }
     },
     "50": {
@@ -1914,22 +2022,76 @@
     },
     "82": {
       "lead": {
-        "ar": "مكسرات مميزة بقوامها الكريمي وطعمها اللذيذ، غنية بالزنك والحديد والنحاس، بمؤشر جلايسيمي منخفض (25) يمنح طاقة هادئة ومغذية للأعصاب والمناعة.",
-        "en": "A distinctive nut with a creamy texture and delicious taste, rich in zinc, iron and copper, with a low glycemic index (25) that gives calm energy and supports the nervous and immune systems.",
-        "nl": "Een bijzondere noot met een romige structuur en heerlijke smaak, rijk aan zink, ijzer en koper, met een lage glykemische index (25) die rustige energie geeft en zenuwstelsel en immuunsysteem ondersteunt."
+        "ar": "من أشهى المكسرات ذات القوام الكريمي والمذاق اللطيف؛ يتميز بمؤشر جلايسيمي منخفض جداً (25)، ومحتوى متميز من الدهون غير المشبعة الأحادية المفيدة للقلب، بالإضافة إلى معادن النحاس والمغنيسيوم والحديد التي تدعم الحيوية والنشاط.",
+        "en": "Among the creamiest and most versatile tree nuts; boasting a very low glycemic index (25) and a rich profile of heart-friendly monounsaturated fats. Cashews are also a notable source of essential minerals like copper, magnesium, and iron to support daily vitality.",
+        "nl": "Een van de zachtste en romigste noten; gekenmerkt door een zeer lage glykemische index (25) en een overvloed aan hartvriendelijke enkelvoudig onverzadigde vetzuren. Cashewnoten leveren bovendien waardevolle mineralen zoals koper, magnesium en ijzer voor dagelijkse vitaliteit."
       },
       "tips": {
         "ar": [
-          "يحتوي الكاجو على نسبة نشويات أعلى بقليل من اللوز والجوز؛ لذا التزم بحصة معتدلة (حفنة صغيرة) وتناوله ببطء للاستمتاع بنكهته الغنية.",
-          "اختر الكاجو النيء أو المحمص جافاً بالهواء، وتجنب الأنواع المقلية بالزيوت التجارية أو المغلفة بالعسل والمنكهات الصناعية."
+          "اضبط حصتك بقبضة يد صغيرة مغلقة (حوالي 30 غرام)، واختر الكاجو المحمص جافاً أو النيء دون إضافة زيوت مهدرجة أو أملاح زائدة.",
+          "تجنب الأصناف المغلفة بالسكر أو العسل أو الشوكولاتة؛ فنكهته الزبدية الطبيعية غنية ومشبعة بذاتها."
         ],
         "en": [
-          "Cashews contain a little more starch than almonds and walnuts, so keep to a moderate portion (a small handful) and eat them slowly to enjoy their rich flavour.",
-          "Choose raw or dry-roasted cashews, and avoid kinds fried in commercial oils or coated in honey and artificial flavourings."
+          "Measure your portion to a modest handful (about 30g / 18–20 nuts), and choose dry-roasted or raw cashews without added hydrogenated oils or heavy salt.",
+          "Steer clear of honey-roasted or sugar-glazed varieties; the natural buttery flavor of plain cashews is satisfying on its own."
         ],
         "nl": [
-          "Cashewnoten bevatten iets meer zetmeel dan amandelen en walnoten, dus houd het bij een gematigde portie (een klein handje) en eet ze langzaam om van de rijke smaak te genieten.",
-          "Kies rauwe of droog geroosterde cashewnoten, en vermijd soorten die in commerciële olie zijn gefrituurd of bedekt met honing en kunstmatige smaakstoffen."
+          "Beperk je portie tot een klein handjevol (circa 30 gram / 18–20 noten) en kies voor droog geroosterde of ongebrande noten zonder extra zout of bakvetten.",
+          "Vermijd met suiker of honing gebrande varianten; de natuurlijke romige nootsmaak is op zichzelf al rijk en verzadigend."
+        ]
+      },
+      "title": {
+        "ar": "كم سعرة في الكاجو؟ السعرات في القبضة والمؤشر الجلايسيمي | WiBo Health",
+        "en": "Cashews Calories & Nutrition Facts: Handful Portions & GI | WiBo Health",
+        "nl": "Calorieën cashewnoten: voedingswaarde & portie per handjevol | WiBo Health"
+      },
+      "desc": {
+        "ar": "قبضة اليد من الكاجو (30غ) تمنحك 166 سعرة حرارية (553 سعرة/100غ) بمؤشر جلايسيمي منخفض جداً (25). اكتشف محتواه من المعادن والدهون الصحية وحصته المثالية للدايت.",
+        "en": "A 30g handful of roasted cashews provides 166 kcal (553 kcal/100g) with a very low GI of 25. Discover protein, healthy fats, minerals and portion control tips.",
+        "nl": "Een handvol cashewnoten (30g) levert 166 kcal (553 kcal/100g) met een zeer lage GI van 25. Bekijk voedingswaarden, mineralen en gezonde vetten."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة حرارية في قبضة اليد من الكاجو؟",
+            "a": "قبضة اليد المعتدلة (نحو 30 غرام أو 18-20 حبة) تحتوي على قرابة 166 سعرة حرارية، و5.4 غرام بروتين، و13 غراماً من الدهون معظمها غير مشبع."
+          },
+          {
+            "q": "هل الكاجو يرفع سكر الدم لدى مرضى السكري؟",
+            "a": "لا، فمؤشره الجلايسيمي منخفض جداً (25) وحمله الجلايسيمي للحصة لا يتجاوز 2، مما يجعله وجبة خفيفة مناسبة لا تسبب قفزات حادة في الجلوكوز."
+          },
+          {
+            "q": "هل يناسب الكاجو خطط إنقاص الوزن؟",
+            "a": "نعم، عند الالتزام بالحصة المحددة؛ فالدهون المفيدة والبروتين والألياف تساعد على الشبع وتقليل الجوع بين الوجبات."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a handful of cashews?",
+            "a": "A standard handful (approximately 30g or 18–20 kernels) provides around 166 kcal, 5.4g of protein, and 13g of mostly unsaturated healthy fats."
+          },
+          {
+            "q": "Do cashews cause blood sugar spikes?",
+            "a": "No. With a very low glycemic index of 25 and a glycemic load of just 2 per portion, cashews digest slowly without sudden glucose fluctuations."
+          },
+          {
+            "q": "Can cashews be part of a weight loss meal plan?",
+            "a": "Yes, when enjoyed in portion-controlled servings. Their combination of protein, healthy fats, and fiber supports prolonged satiety and appetite management."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een handjevol cashewnoten?",
+            "a": "Een afgemeten handjevol (ca. 30g) bevat ongeveer 166 kcal, 5,4g eiwit en 13g vet, grotendeels onverzadigd."
+          },
+          {
+            "q": "Laten cashewnoten de bloedsuikerspiegel stijgen?",
+            "a": "Nee. Met een zeer lage glykemische index van 25 en een glykemische lading van slechts 2 per portie worden de koolhydraten heel langzaam opgenomen."
+          },
+          {
+            "q": "Passen cashewnoten in een dieet om af te vallen?",
+            "a": "Jazeker, mits met mate geconsumeerd. De combinatie van eiwitten, vezels en gezonde vetten helpt het hongergevoel tussen maaltijden te beperken."
+          }
         ]
       }
     },

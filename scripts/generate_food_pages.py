@@ -10,7 +10,7 @@ Output (re-running rebuilds everything, nothing is appended twice):
     sitemap.xml                  block between <!-- FOOD-PAGES:START --> and <!-- FOOD-PAGES:END -->
 
 Sources: js/data.js (values, GI provenance), doctor.html (design system: CSS, logo, nav labels).
-Per-food text can be overridden in scripts/food_pages_overrides.json (lead, tips, slug).
+Per-food text can be overridden in scripts/food_pages_overrides.json (lead, tips, faq, slug, title, desc).
 """
 import html
 import json
@@ -198,7 +198,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
 TEAM_REVIEW |= set(range(207, 626))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
-SLUG_OVERRIDES = {71: 'greek-yogurt'}
+SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
 
 GROUPS = {
     'grain': ('الحبوب والنشويات', 'Grains & starches', 'Granen & zetmeel'),
@@ -1093,6 +1093,9 @@ def build(food, lang, ctx):
     # a doctor-approved introduction replaces the computed lead (the numbers stay in the cards and table)
     lead = ctx['overrides'].get(str(food['id']), {}).get('lead', {}).get(lang) or lead
     title = u['title'].format(name=name)
+    # search-tuned <title> and meta description for high-traffic foods (also used for og: and JSON-LD)
+    title = ctx['overrides'].get(str(food['id']), {}).get('title', {}).get(lang) or title
+    desc = ctx['overrides'].get(str(food['id']), {}).get('desc', {}).get(lang) or desc
 
     # -------- FAQ (answers computed from the numbers, unless doctor-approved questions are given)
     faq_override = ctx['overrides'].get(str(food['id']), {}).get('faq', {}).get(lang)
