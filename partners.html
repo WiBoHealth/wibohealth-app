@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
+    <style>html.lang-loading body{visibility:hidden}</style>
+    <script>
+        (function (d) {
+            var h = d.documentElement;
+            try {
+                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
+                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
+                var n = (navigator.language || '').toLowerCase();
+                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
+                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
+                if (l === 'ar') return;
+                h.classList.add('lang-loading');
+                var shown = false;
+                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
+                window.wiboLangReady = show;
+                d.addEventListener('DOMContentLoaded', function () {
+                    requestAnimationFrame(show);
+                    setTimeout(show, 150);
+                });
+                setTimeout(show, 2500);
+            } catch (e) { h.classList.remove('lang-loading'); }
+        })(document);
+    </script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="meta_title">الشراكات والرعاية التجارية | Partner with WiBo Health</title>
+    <meta name="description" id="metaDescription" content="شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 650 صنفاً غذائياً و1,950 صفحة بثلاث لغات. أرسل مقترحك.">
+    <meta name="author" content="WiBo Health Group">
+    <link rel="canonical" href="https://wibohealth.com/partners.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wibohealth.com/partners.html">
+    <meta property="og:title" content="Partner with WiBo Health | Partnerships & Sponsorships">
+    <meta property="og:description" content="Partner with WiBo Health and the Boodi app: 650+ verified foods, 1,950 pages in Arabic, English and Dutch, GI, GL and insulin index data, and a dedicated supplements guide.">
+    <meta property="og:image" content="https://wibohealth.com/images/boodi-app-poster.jpeg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Partner with WiBo Health",
+      "url": "https://wibohealth.com/partners.html",
+      "inLanguage": ["ar", "en", "nl"],
+      "about": "Partnerships and sponsorships",
+      "publisher": {
+        "@type": "Organization",
+        "name": "WiBo Health Group",
+        "url": "https://wibohealth.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "partnerships",
+          "email": "support@wibohealth.com",
+          "availableLanguage": ["Arabic", "English", "Dutch"]
+        }
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy: #0f172a;
+            --navy-2: #162447;
+            --emerald: #10b981;
+            --emerald-dark: #059669;
+            --emerald-soft: rgba(16, 185, 129, 0.12);
+            --emerald-line: rgba(16, 185, 129, 0.35);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--wb-bg, #f8fafc);
+            color: var(--wb-text, #0f172a);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* Header (styled by css/unified-header.css) */
+        .site-header { height: 60px; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; }
+        .header-container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+        .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .brand-logo h1 { font-size: 20px; font-weight: 900; background: linear-gradient(135deg, #10b981, #3498db); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .header-controls { display: flex; align-items: center; gap: 8px; }
+        .lang-btn, .theme-toggle { width: 38px; height: 38px; border-radius: 50%; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 17px; }
+        .nav-back-btn { padding: 6px 14px; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; }
+
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+        /* Hero: dark navy in both themes, emerald accents */
+        .hero {
+            background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.25), transparent 45%), linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+            color: #fff;
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--emerald-soft); border: 1px solid var(--emerald-line); color: #6ee7b7; padding: 6px 16px; border-radius: 40px; font-weight: 800; font-size: 14px; margin-bottom: 18px; }
+        .hero h1 { font-size: 2.6rem; font-weight: 900; line-height: 1.3; margin-bottom: 18px; }
+        .hero h1 span { display: block; font-size: 0.62em; margin-top: 6px; background: linear-gradient(135deg, #10b981, #6ee7b7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { max-width: 760px; margin: 0 auto; color: #cbd5e1; font-size: 1.12rem; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
+
+        .btn-primary { background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%); color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 16px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.35); border: 2px solid #6ee7b7; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(16, 185, 129, 0.5); }
+        .btn-ghost { background: rgba(255, 255, 255, 0.08); color: #fff; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.2); transition: background-color 0.25s ease; }
+        .btn-ghost:hover { background: rgba(255, 255, 255, 0.16); }
+
+        /* Stats strip */
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: -32px; position: relative; }
+        .stat { background: var(--wb-card, #fff); border: 1px solid var(--wb-border); border-radius: 18px; padding: 20px 14px; text-align: center; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12); }
+        .stat-num { font-size: 2rem; font-weight: 900; color: var(--emerald); line-height: 1.2; }
+        .stat-label { color: var(--wb-muted); font-size: 0.92rem; font-weight: 600; }
+
+        section.block { padding: 60px 0 0; }
+        .section-header { text-align: center; margin-bottom: 34px; }
+        .section-eyebrow { color: var(--emerald); font-weight: 800; font-size: 0.9rem; letter-spacing: 0.3px; }
+        .section-header h2 { font-size: 2rem; font-weight: 900; color: var(--wb-text); line-height: 1.35; }
+        .section-header p { color: var(--wb-muted); font-size: 1.05rem; max-width: 720px; margin: 8px auto 0; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+        .card { background: var(--wb-card, #fff); border: 1px solid var(--wb-border); border-radius: 20px; padding: 26px 22px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); transition: transform 0.25s ease, border-color 0.25s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--emerald); }
+        .card-icon { width: 54px; height: 54px; border-radius: 15px; background: var(--emerald-soft); border: 1px solid var(--emerald-line); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 23px; margin-bottom: 16px; }
+        .card h3 { font-size: 1.2rem; font-weight: 800; color: var(--wb-text); margin-bottom: 4px; line-height: 1.5; }
+        .card-tag { display: block; color: var(--emerald); font-size: 0.82rem; font-weight: 700; margin-bottom: 10px; direction: ltr; unicode-bidi: isolate; }
+        [dir="rtl"] .card-tag { text-align: right; }
+        html[lang="en"] .card .card-tag { display: none; }   /* the English subtitle would repeat the English title */
+        .card p { color: var(--wb-muted); font-size: 0.97rem; line-height: 1.75; }
+
+        /* Our edge: two highlighted pillars */
+        .edge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .edge { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; border-radius: 24px; padding: 32px 28px; border: 2px solid var(--emerald-line); box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25); }
+        .edge .card-tag { color: #6ee7b7; }
+        .edge h3 { font-size: 1.45rem; font-weight: 900; margin-bottom: 6px; line-height: 1.45; }
+        .edge p { color: #cbd5e1; font-size: 1rem; line-height: 1.8; }
+        .pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+        .pill { background: var(--emerald-soft); border: 1px solid var(--emerald-line); color: #a7f3d0; border-radius: 12px; padding: 8px 14px; font-weight: 700; font-size: 0.9rem; }
+        .pill b { color: #fff; margin-inline-end: 6px; }
+        .edge-note { margin-top: 14px; font-size: 0.85rem !important; color: #94a3b8 !important; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 12px; }
+
+        /* Featured opportunity (supplements) spans the row */
+        .card.featured { grid-column: 1 / -1; border: 2px solid var(--emerald-line); background: linear-gradient(135deg, var(--emerald-soft), transparent 70%), var(--wb-card, #fff); }
+
+        .trust { margin-top: 26px; display: flex; gap: 16px; align-items: flex-start; background: var(--wb-soft); border: 1px solid var(--wb-border); border-radius: 18px; padding: 22px; }
+        .trust i { color: var(--emerald); font-size: 26px; margin-top: 4px; }
+        .trust h3 { font-size: 1.1rem; font-weight: 800; color: var(--wb-text); }
+        .trust p { color: var(--wb-muted); font-size: 0.95rem; }
+
+        /* CTA */
+        .cta { margin: 60px 0 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); border: 2px solid var(--emerald-line); border-radius: 26px; padding: 44px 28px; text-align: center; color: #fff; }
+        .cta h2 { font-size: 1.9rem; font-weight: 900; margin-bottom: 10px; }
+        .cta p { color: #cbd5e1; max-width: 640px; margin: 0 auto 24px; }
+        .cta .btn-primary { word-break: break-word; }
+        .cta-badges { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+        .cta-badge { display: inline-flex; align-items: center; gap: 8px; color: #a7f3d0; font-weight: 700; font-size: 0.92rem; }
+        .cta-note { font-size: 0.88rem; color: #94a3b8 !important; margin: 18px auto 0 !important; }
+
+        footer { background: #0f172a; color: #fff; padding: 35px 16px; margin-top: 70px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+        footer a { color: #94a3b8; text-decoration: none; margin: 0 10px; transition: color 0.2s ease; }
+        footer a:hover, footer a[aria-current="page"] { color: #10b981; }
+
+        @media (max-width: 900px) {
+            .edge-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 48px 0 56px; }
+            .hero h1 { font-size: 1.85rem; }
+            .section-header h2 { font-size: 1.55rem; }
+            .nav-back-btn span { display: none; }
+            .header-controls { gap: 5px; }
+            .lang-btn, .theme-toggle { width: 34px; height: 34px; font-size: 15px; }
+            .brand-logo h1 { font-size: 17px; }
+            .stat-num { font-size: 1.6rem; }
+            .cta { padding: 34px 18px; }
+            .cta h2 { font-size: 1.5rem; }
+            .btn-primary { font-size: 15px; padding: 13px 20px; }
+            .trust { flex-direction: column; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/unified-header.css">
+</head>
+<body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="/" class="brand-logo">
+                <i class="fa-solid fa-heart-pulse" style="font-size: 24px; color: #10b981;"></i>
+                <h1>WiBo Health</h1>
+            </a>
+            <div class="header-controls">
+                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
+                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
+                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="/" class="nav-back-btn">
+                    <i class="fa-solid fa-arrow-right" id="backIcon"></i>
+                    <span data-i18n="nav_back_home">العودة للرئيسية</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrap">
+                <span class="hero-badge"><i class="fa-solid fa-handshake"></i> <span data-i18n="hero_badge">الشراكات والرعاية</span></span>
+                <h1 data-i18n="hero_title">الشراكات والرعاية التجارية<span>Partner with WiBo Health</span></h1>
+                <p data-i18n="hero_desc">منصة متخصصة في التغذية الذكية وتتبع الحمل الجلايسيمي، تستند بياناتها إلى مراجع علمية موثقة: قاعدة USDA FoodData Central الأمريكية للأطعمة، وإرشادات الهيئة الأوروبية لسلامة الغذاء (EFSA) للمكملات الغذائية.</p>
+                <div class="hero-ctas">
+                    <a class="btn-primary" href="mailto:support@wibohealth.com?subject=Partnership%20Inquiry%20-%20WiBo%20Health">
+                        <i class="fa-solid fa-envelope"></i> <span data-i18n="btn_contact">تواصل معنا للشراكة</span>
+                    </a>
+                    <a class="btn-ghost" href="#edge">
+                        <i class="fa-solid fa-star"></i> <span data-i18n="btn_edge">اكتشف نقاط قوتنا</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrap">
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat"><div class="stat-num">650+</div><div class="stat-label" data-i18n="stat_foods">صنفاً غذائياً مدققاً</div></div>
+                <div class="stat"><div class="stat-num">1,950</div><div class="stat-label" data-i18n="stat_pages">صفحة غذائية متخصصة</div></div>
+                <div class="stat"><div class="stat-num">174</div><div class="stat-label" data-i18n="stat_supps">مكملاً غذائياً موثقاً</div></div>
+                <div class="stat"><div class="stat-num">3</div><div class="stat-label" data-i18n="stat_langs">لغات: العربية، الإنجليزية، الهولندية</div></div>
+            </div>
+
+            <!-- Audience & reach -->
+            <section class="block" id="audience">
+                <div class="section-header">
+                    <div class="section-eyebrow" data-i18n="reach_eyebrow">جمهورنا وانتشارنا</div>
+                    <h2 data-i18n="reach_heading">لماذا تشارك مع WiBo Health وتطبيق Boodi؟</h2>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3 data-i18n="reach_1_title">قاعدة بيانات شاملة ومدققة</h3>
+                        <p data-i18n="reach_1_desc">أكثر من 650 صنفاً غذائياً مدققاً و1,950 صفحة متخصصة بثلاث لغات (العربية، الإنجليزية، الهولندية)، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 data-i18n="reach_2_title">جمهور نوعي بنية شراء عالية</h3>
+                        <p data-i18n="reach_2_desc">زوار يبحثون عن حلول عملية: مرضى السكري ومقاومة الإنسولين، الساعون إلى إنقاص الوزن، والباحثون عن منتجات حلال موثوقة في أوروبا والشرق الأوسط.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-brands fa-google"></i></div>
+                        <h3 data-i18n="reach_3_title">نمو عضوي متسارع في Google</h3>
+                        <p data-i18n="reach_3_desc">تظهر صفحاتنا في نتائج بحث Google لعبارات غذائية عالية الطلب، بأكثر من 5,700 ظهور يومياً ونمو عضوي في نتائج البحث بنسبة <bdi dir="ltr">+44,000%</bdi>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our edge -->
+            <section class="block" id="edge">
+                <div class="section-header">
+                    <div class="section-eyebrow">Our Edge</div>
+                    <h2 data-i18n="edge_heading">نقاط قوتنا</h2>
+                    <p data-i18n="edge_sub">ما يميز WiBo Health عن قواعد البيانات الغذائية التقليدية</p>
+                </div>
+                <div class="edge-grid">
+                    <div class="edge">
+                        <span class="card-tag">The Triple Metabolic Metric</span>
+                        <h3 data-i18n="edge_1_title">ريادة المؤشرات الأيضية الشاملة</h3>
+                        <div class="pills">
+                            <span class="pill"><b>GI</b><span data-i18n="pill_gi">المؤشر الجلايسيمي</span></span>
+                            <span class="pill"><b>GL</b><span data-i18n="pill_gl">الحمل الجلايسيمي</span></span>
+                            <span class="pill"><b>II</b><span data-i18n="pill_ii">مؤشر الإنسولين الغذائي</span></span>
+                        </div>
+                        <p data-i18n="edge_1_desc">لا نكتفي بالمؤشر الجلايسيمي (GI) والحمل الجلايسيمي (GL)، بل نضيف مؤشر الإنسولين الغذائي (Food Insulin Index - II) لفهم الاستجابة الهرمونية الحقيقية للجسم بعد تناول البروتينات والألبان والأطعمة المتنوعة، التي قد تحفّز إفراز الإنسولين حتى عندما يكون مؤشرها الجلايسيمي منخفضاً. هذا يجعلنا الشريك الأمثل لشركات التغذية العلاجية وإدارة السكري والتمثيل الغذائي.</p>
+                        <p class="edge-note" data-i18n="edge_1_note">قيم مؤشر الإنسولين مأخوذة من دراسات سريرية منشورة (Holt 1997، Bao 2009)، وتُعرض للأطعمة التي تتوفر لها قياسات موثقة.</p>
+                    </div>
+                    <div class="edge">
+                        <span class="card-tag">Global Cuisines &amp; Supplements</span>
+                        <h3 data-i18n="edge_2_title">الشمولية العالمية وقسم المكملات الغذائية</h3>
+                        <div class="pills">
+                            <span class="pill" data-i18n="pill_eu">🇪🇺 أوروبي</span>
+                            <span class="pill" data-i18n="pill_us">🇺🇸 أمريكي</span>
+                            <span class="pill" data-i18n="pill_med">🫒 متوسطي</span>
+                            <span class="pill" data-i18n="pill_arab">🥙 عربي</span>
+                            <span class="pill" data-i18n="pill_asia">🍜 آسيوي</span>
+                            <span class="pill" data-i18n="pill_fast">🍔 وجبات سريعة</span>
+                        </div>
+                        <p data-i18n="edge_2_desc">تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بثلاث لغات.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sponsorship opportunities -->
+            <section class="block" id="opportunities">
+                <div class="section-header">
+                    <div class="section-eyebrow">Sponsorship Opportunities</div>
+                    <h2 data-i18n="opp_heading">مجالات وفرص الرعاية</h2>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                        <h3 data-i18n="opp_1_title">رعاية البدائل الذكية الموصى بها</h3>
+                        <span class="card-tag">Featured Smart Alternatives</span>
+                        <p data-i18n="opp_1_desc">إبراز منتج شركتك كبديل صحي في صفحات الأطعمة ذات الصلة، بعد مراجعة قيمه الغذائية من فريقنا الطبي.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h3 data-i18n="opp_2_title">حملات تطبيق Boodi</h3>
+                        <span class="card-tag">Boodi App Campaigns</span>
+                        <p data-i18n="opp_2_desc">رعاية نتائج المسح وإبراز علامتك التجارية لمستخدمي تطبيق Boodi في هولندا وأوروبا، مع فرصة الانضمام كشريك مؤسس مع إطلاق التطبيق.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h3 data-i18n="opp_3_title">المراجعات والتدقيق الغذائي المستقل</h3>
+                        <span class="card-tag">Verified Product Audits</span>
+                        <p data-i18n="opp_3_desc">إدراج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال (مشتقات الخنزير، الجيلاتين، الكحول، الإضافات E).</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                        <h3 data-i18n="opp_4_title">برامج الصحة المؤسسية والتعاون البحثي</h3>
+                        <span class="card-tag">Corporate &amp; Research Programs</span>
+                        <p data-i18n="opp_4_desc">برامج توعية غذائية للموظفين، وتعاون مع الجامعات ومراكز الأبحاث في مجالات التغذية والتمثيل الغذائي.</p>
+                    </div>
+                    <div class="card featured">
+                        <div class="card-icon"><i class="fa-solid fa-capsules"></i></div>
+                        <h3 data-i18n="opp_5_title">المكملات الغذائية والأغذية الوظيفية</h3>
+                        <span class="card-tag">Nutraceuticals &amp; Dietary Supplements</span>
+                        <p data-i18n="opp_5_desc">قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و522 صفحة بثلاث لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.</p>
+                    </div>
+                </div>
+
+                <div class="trust">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <div>
+                        <h3 data-i18n="trust_title">الشفافية والاستقلالية التحريرية</h3>
+                        <p data-i18n="trust_desc">يُوسَم كل محتوى أو منتج مموَّل بوضوح بعبارة «برعاية»، ولا يُدرج أي منتج إلا بعد مراجعة فريقنا الطبي. القيم الغذائية والتوصيات الطبية في الموقع ليست للبيع، ولا ننشر ادعاءات صحية غير مصرّح بها وفق اللائحة الأوروبية (EC) رقم 1924/2006.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to action -->
+            <section class="cta" id="contact">
+                <h2 data-i18n="cta_title">لنبنِ شراكة تُحدث فرقاً</h2>
+                <p data-i18n="cta_desc">أرسل مقترحك إلى فريق الشراكات، ونلتزم بمراجعته والرد عليك خلال 24 إلى 48 ساعة عمل.</p>
+                <a class="btn-primary" href="mailto:support@wibohealth.com?subject=Partnership%20Inquiry%20-%20WiBo%20Health">
+                    <i class="fa-solid fa-paper-plane"></i> <span data-i18n="cta_btn">أرسل مقترح الشراكة</span>
+                </a>
+                <div class="cta-badges">
+                    <span class="cta-badge"><i class="fa-solid fa-envelope"></i> support@wibohealth.com</span>
+                    <span class="cta-badge"><i class="fa-solid fa-clock"></i> <span data-i18n="cta_time">رد خلال 24-48 ساعة عمل</span></span>
+                </div>
+                <p class="cta-note" data-i18n="cta_note">يُفضَّل أن تتضمن رسالتك اسم الشركة، والمنتج أو الخدمة، والسوق المستهدف.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="about.html" data-i18n="footer_about">من نحن</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="contact.html" data-i18n="footer_contact">اتصل بنا</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="partners.html" aria-current="page" data-i18n="footer_partners">الشراكات</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
+        </div>
+        <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                'meta_title': 'الشراكات والرعاية التجارية | Partner with WiBo Health',
+                'meta_desc': 'شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 650 صنفاً غذائياً و1,950 صفحة بثلاث لغات. أرسل مقترحك.',
+                'nav_back_home': 'العودة للرئيسية',
+                'hero_badge': 'الشراكات والرعاية',
+                'hero_title': 'الشراكات والرعاية التجارية<span>Partner with WiBo Health</span>',
+                'hero_desc': 'منصة متخصصة في التغذية الذكية وتتبع الحمل الجلايسيمي، تستند بياناتها إلى مراجع علمية موثقة: قاعدة USDA FoodData Central الأمريكية للأطعمة، وإرشادات الهيئة الأوروبية لسلامة الغذاء (EFSA) للمكملات الغذائية.',
+                'btn_contact': 'تواصل معنا للشراكة',
+                'btn_edge': 'اكتشف نقاط قوتنا',
+                'stat_foods': 'صنفاً غذائياً مدققاً',
+                'stat_pages': 'صفحة غذائية متخصصة',
+                'stat_supps': 'مكملاً غذائياً موثقاً',
+                'stat_langs': 'لغات: العربية، الإنجليزية، الهولندية',
+                'reach_eyebrow': 'جمهورنا وانتشارنا',
+                'reach_heading': 'لماذا تشارك مع WiBo Health وتطبيق Boodi؟',
+                'reach_1_title': 'قاعدة بيانات شاملة ومدققة',
+                'reach_1_desc': 'أكثر من 650 صنفاً غذائياً مدققاً و1,950 صفحة متخصصة بثلاث لغات (العربية، الإنجليزية، الهولندية)، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.',
+                'reach_2_title': 'جمهور نوعي بنية شراء عالية',
+                'reach_2_desc': 'زوار يبحثون عن حلول عملية: مرضى السكري ومقاومة الإنسولين، الساعون إلى إنقاص الوزن، والباحثون عن منتجات حلال موثوقة في أوروبا والشرق الأوسط.',
+                'reach_3_title': 'نمو عضوي متسارع في Google',
+                'reach_3_desc': 'تظهر صفحاتنا في نتائج بحث Google لعبارات غذائية عالية الطلب، بأكثر من 5,700 ظهور يومياً ونمو عضوي في نتائج البحث بنسبة <bdi dir="ltr">+44,000%</bdi>.',
+                'edge_heading': 'نقاط قوتنا',
+                'edge_sub': 'ما يميز WiBo Health عن قواعد البيانات الغذائية التقليدية',
+                'edge_1_title': 'ريادة المؤشرات الأيضية الشاملة',
+                'pill_gi': 'المؤشر الجلايسيمي',
+                'pill_gl': 'الحمل الجلايسيمي',
+                'pill_ii': 'مؤشر الإنسولين الغذائي',
+                'edge_1_desc': 'لا نكتفي بالمؤشر الجلايسيمي (GI) والحمل الجلايسيمي (GL)، بل نضيف مؤشر الإنسولين الغذائي (Food Insulin Index - II) لفهم الاستجابة الهرمونية الحقيقية للجسم بعد تناول البروتينات والألبان والأطعمة المتنوعة، التي قد تحفّز إفراز الإنسولين حتى عندما يكون مؤشرها الجلايسيمي منخفضاً. هذا يجعلنا الشريك الأمثل لشركات التغذية العلاجية وإدارة السكري والتمثيل الغذائي.',
+                'edge_1_note': 'قيم مؤشر الإنسولين مأخوذة من دراسات سريرية منشورة (Holt 1997، Bao 2009)، وتُعرض للأطعمة التي تتوفر لها قياسات موثقة.',
+                'edge_2_title': 'الشمولية العالمية وقسم المكملات الغذائية',
+                'pill_eu': '🇪🇺 أوروبي',
+                'pill_us': '🇺🇸 أمريكي',
+                'pill_med': '🫒 متوسطي',
+                'pill_arab': '🥙 عربي',
+                'pill_asia': '🍜 آسيوي',
+                'pill_fast': '🍔 وجبات سريعة',
+                'edge_2_desc': 'تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بثلاث لغات.',
+                'opp_heading': 'مجالات وفرص الرعاية',
+                'opp_1_title': 'رعاية البدائل الذكية الموصى بها',
+                'opp_1_desc': 'إبراز منتج شركتك كبديل صحي في صفحات الأطعمة ذات الصلة، بعد مراجعة قيمه الغذائية من فريقنا الطبي.',
+                'opp_2_title': 'حملات تطبيق Boodi',
+                'opp_2_desc': 'رعاية نتائج المسح وإبراز علامتك التجارية لمستخدمي تطبيق Boodi في هولندا وأوروبا، مع فرصة الانضمام كشريك مؤسس مع إطلاق التطبيق.',
+                'opp_3_title': 'المراجعات والتدقيق الغذائي المستقل',
+                'opp_3_desc': 'إدراج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال (مشتقات الخنزير، الجيلاتين، الكحول، الإضافات E).',
+                'opp_4_title': 'برامج الصحة المؤسسية والتعاون البحثي',
+                'opp_4_desc': 'برامج توعية غذائية للموظفين، وتعاون مع الجامعات ومراكز الأبحاث في مجالات التغذية والتمثيل الغذائي.',
+                'opp_5_title': 'المكملات الغذائية والأغذية الوظيفية',
+                'opp_5_desc': 'قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و522 صفحة بثلاث لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.',
+                'trust_title': 'الشفافية والاستقلالية التحريرية',
+                'trust_desc': 'يُوسَم كل محتوى أو منتج مموَّل بوضوح بعبارة «برعاية»، ولا يُدرج أي منتج إلا بعد مراجعة فريقنا الطبي. القيم الغذائية والتوصيات الطبية في الموقع ليست للبيع، ولا ننشر ادعاءات صحية غير مصرّح بها وفق اللائحة الأوروبية (EC) رقم 1924/2006.',
+                'cta_title': 'لنبنِ شراكة تُحدث فرقاً',
+                'cta_desc': 'أرسل مقترحك إلى فريق الشراكات، ونلتزم بمراجعته والرد عليك خلال 24 إلى 48 ساعة عمل.',
+                'cta_btn': 'أرسل مقترح الشراكة',
+                'cta_time': 'رد خلال 24-48 ساعة عمل',
+                'cta_note': 'يُفضَّل أن تتضمن رسالتك اسم الشركة، والمنتج أو الخدمة، والسوق المستهدف.',
+                'footer_about': 'من نحن',
+                'footer_contact': 'اتصل بنا',
+                'footer_partners': 'الشراكات',
+                'footer_privacy': 'سياسة الخصوصية',
+                'footer_terms': 'شروط الاستخدام',
+                'footer_rights': '© 2026 WiBo Health Group. جميع الحقوق محفوظة.'
+            },
+            en: {
+                'meta_title': 'Partnerships & Sponsorships | Partner with WiBo Health',
+                'meta_desc': 'Partner with WiBo Health and the Boodi app: an audience focused on diabetes, weight loss and halal products, 650+ verified foods and 1,950 pages in three languages.',
+                'nav_back_home': 'Back to Home',
+                'hero_badge': 'Partnerships & Sponsorships',
+                'hero_title': 'Partnerships &amp; Sponsorships<span>Partner with WiBo Health</span>',
+                'hero_desc': 'A platform for smart nutrition and glycemic load tracking, built on documented scientific references: USDA FoodData Central for foods and European Food Safety Authority (EFSA) guidance for dietary supplements.',
+                'btn_contact': 'Contact us about a partnership',
+                'btn_edge': 'Discover our edge',
+                'stat_foods': 'verified foods',
+                'stat_pages': 'dedicated food pages',
+                'stat_supps': 'documented supplements',
+                'stat_langs': 'languages: Arabic, English, Dutch',
+                'reach_eyebrow': 'Our Audience & Reach',
+                'reach_heading': 'Why partner with WiBo Health and the Boodi app?',
+                'reach_1_title': 'A comprehensive, verified database',
+                'reach_1_desc': 'More than 650 verified foods and 1,950 dedicated pages in three languages (Arabic, English and Dutch), plus a separate guide covering 174 dietary supplements.',
+                'reach_2_title': 'A high-intent, niche audience',
+                'reach_2_desc': 'Visitors looking for practical answers: people with diabetes or insulin resistance, people working on weight loss, and shoppers seeking trustworthy halal products in Europe and the Middle East.',
+                'reach_3_title': 'Fast-growing organic reach on Google',
+                'reach_3_desc': 'Our pages appear in Google search results for high-demand nutrition queries, with over 5,700 daily impressions and more than +44,000% organic search growth (Google Organic Reach).',
+                'edge_heading': 'Our Edge',
+                'edge_sub': 'What sets WiBo Health apart from conventional nutrition databases',
+                'edge_1_title': 'Leading in comprehensive metabolic metrics',
+                'pill_gi': 'Glycemic index',
+                'pill_gl': 'Glycemic load',
+                'pill_ii': 'Food insulin index',
+                'edge_1_desc': 'We go beyond the glycemic index (GI) and glycemic load (GL) by adding the Food Insulin Index (II), which shows the body\'s real hormonal response to proteins, dairy and other foods that can trigger insulin release even when their glycemic index is low. That makes us the ideal partner for clinical nutrition, diabetes care and metabolic health companies.',
+                'edge_1_note': 'Insulin index values come from published clinical studies (Holt 1997, Bao 2009) and are shown for foods with documented measurements.',
+                'edge_2_title': 'Global coverage and a dedicated supplements section',
+                'pill_eu': '🇪🇺 European',
+                'pill_us': '🇺🇸 American',
+                'pill_med': '🫒 Mediterranean',
+                'pill_arab': '🥙 Arabic',
+                'pill_asia': '🍜 Asian',
+                'pill_fast': '🍔 Fast food',
+                'edge_2_desc': 'Our database covers cuisines from around the world, including European, American, Mediterranean, Arabic and Asian dishes, as well as fast food, with accurate comparisons per 100 grams and per serving. The site also has a main, stand-alone section for Nutraceuticals &amp; Dietary Supplements covering 174 supplements in three languages.',
+                'opp_heading': 'Sponsorship Opportunities',
+                'opp_1_title': 'Featured Smart Alternatives',
+                'opp_1_desc': 'Feature your product as a healthier alternative on relevant food pages, after our medical team has reviewed its nutritional values.',
+                'opp_2_title': 'Boodi App Campaigns',
+                'opp_2_desc': 'Sponsor scan results and showcase your brand to Boodi app users in the Netherlands and across Europe, with the chance to join as a founding partner at launch.',
+                'opp_3_title': 'Verified Product Audits',
+                'opp_3_desc': 'List your products in our scanning engine once they meet our clinical criteria (glycemic index, sugars, ingredients) and halal criteria (pork derivatives, gelatin, alcohol, E-number additives).',
+                'opp_4_title': 'Corporate & Research Programs',
+                'opp_4_desc': 'Nutrition awareness programmes for employees, and collaboration with universities and research centres in nutrition and metabolism.',
+                'opp_5_title': 'Nutraceuticals & Dietary Supplements',
+                'opp_5_desc': 'A main, stand-alone partnership track for supplement and vitamin companies: sponsor sections of our supplements guide (174 supplements, 522 pages in three languages) and list your trusted products as approved options for our audience, after their ingredients and doses are checked against EFSA references.',
+                'trust_title': 'Transparency and editorial independence',
+                'trust_desc': 'All sponsored content and products are clearly labelled "Sponsored", and no product is listed without review by our medical team. Nutritional values and medical guidance on this site are not for sale, and we do not publish health claims that are not authorised under EU Regulation (EC) No 1924/2006.',
+                'cta_title': 'Let\'s build a partnership that makes a difference',
+                'cta_desc': 'Send your proposal to our partnerships team. We review every proposal and reply within 24 to 48 business hours.',
+                'cta_btn': 'Send a partnership proposal',
+                'cta_time': 'Reply within 24-48 business hours',
+                'cta_note': 'Please include your company name, the product or service, and your target market.',
+                'footer_about': 'About Us',
+                'footer_contact': 'Contact Us',
+                'footer_partners': 'Partnerships',
+                'footer_privacy': 'Privacy Policy',
+                'footer_terms': 'Terms of Use',
+                'footer_rights': '© 2026 WiBo Health Group. All rights reserved.'
+            },
+            nl: {
+                'meta_title': 'Partnerships & sponsoring | Partner with WiBo Health',
+                'meta_desc': 'Word partner van WiBo Health en de Boodi-app: een publiek gericht op diabetes, afvallen en halal producten, 650+ gecontroleerde voedingsmiddelen en 1.950 pagina\'s in drie talen.',
+                'nav_back_home': 'Terug naar Home',
+                'hero_badge': 'Partnerships & sponsoring',
+                'hero_title': 'Partnerships &amp; sponsoring<span>Partner with WiBo Health</span>',
+                'hero_desc': 'Een platform voor slimme voeding en het volgen van de glykemische lading, gebouwd op gedocumenteerde wetenschappelijke bronnen: USDA FoodData Central voor voedingsmiddelen en richtlijnen van de Europese Autoriteit voor voedselveiligheid (EFSA) voor voedingssupplementen.',
+                'btn_contact': 'Neem contact op over een partnership',
+                'btn_edge': 'Ontdek onze sterke punten',
+                'stat_foods': 'gecontroleerde voedingsmiddelen',
+                'stat_pages': 'gespecialiseerde voedingspagina\'s',
+                'stat_supps': 'gedocumenteerde supplementen',
+                'stat_langs': 'talen: Arabisch, Engels, Nederlands',
+                'reach_eyebrow': 'Ons publiek & bereik',
+                'reach_heading': 'Waarom samenwerken met WiBo Health en de Boodi-app?',
+                'reach_1_title': 'Een uitgebreide, gecontroleerde database',
+                'reach_1_desc': 'Meer dan 650 gecontroleerde voedingsmiddelen en 1.950 gespecialiseerde pagina\'s in drie talen (Arabisch, Engels en Nederlands), plus een aparte gids met 174 voedingssupplementen.',
+                'reach_2_title': 'Een gericht publiek met hoge koopintentie',
+                'reach_2_desc': 'Bezoekers die praktische antwoorden zoeken: mensen met diabetes of insulineresistentie, mensen die willen afvallen, en consumenten die betrouwbare halal producten zoeken in Europa en het Midden-Oosten.',
+                'reach_3_title': 'Snel groeiend organisch bereik in Google',
+                'reach_3_desc': 'Onze pagina\'s verschijnen in de zoekresultaten van Google voor veelgezochte voedingsvragen, met meer dan 5.700 vertoningen per dag en een organische zoekgroei van ruim +44.000% (Google Organic Reach).',
+                'edge_heading': 'Onze sterke punten',
+                'edge_sub': 'Wat WiBo Health onderscheidt van gewone voedingsdatabases',
+                'edge_1_title': 'Voorloper in complete metabole indicatoren',
+                'pill_gi': 'Glykemische index',
+                'pill_gl': 'Glykemische lading',
+                'pill_ii': 'Voedingsinsuline-index',
+                'edge_1_desc': 'We stoppen niet bij de glykemische index (GI) en glykemische lading (GL), maar voegen ook de Food Insulin Index (II) toe. Die laat de werkelijke hormonale reactie van het lichaam zien op eiwitten, zuivel en andere voedingsmiddelen die insuline kunnen vrijmaken, ook als hun glykemische index laag is. Dat maakt ons de ideale partner voor bedrijven in klinische voeding, diabeteszorg en stofwisseling.',
+                'edge_1_note': 'Waarden voor de insuline-index komen uit gepubliceerde klinische studies (Holt 1997, Bao 2009) en worden getoond voor voedingsmiddelen met gedocumenteerde metingen.',
+                'edge_2_title': 'Wereldwijde dekking en een eigen supplementensectie',
+                'pill_eu': '🇪🇺 Europees',
+                'pill_us': '🇺🇸 Amerikaans',
+                'pill_med': '🫒 Mediterraan',
+                'pill_arab': '🥙 Arabisch',
+                'pill_asia': '🍜 Aziatisch',
+                'pill_fast': '🍔 Fastfood',
+                'edge_2_desc': 'Onze database omvat keukens van over de hele wereld, waaronder Europese, Amerikaanse, mediterrane, Arabische en Aziatische gerechten, plus fastfood, met nauwkeurige vergelijkingen per 100 gram en per portie. De site heeft daarnaast een hoofdsectie voor Nutraceuticals &amp; Dietary Supplements met 174 supplementen in drie talen.',
+                'opp_heading': 'Sponsormogelijkheden',
+                'opp_1_title': 'Uitgelichte slimme alternatieven',
+                'opp_1_desc': 'Laat uw product zien als gezonder alternatief op relevante voedingspagina\'s, nadat ons medisch team de voedingswaarden heeft beoordeeld.',
+                'opp_2_title': 'Campagnes in de Boodi-app',
+                'opp_2_desc': 'Sponsor scanresultaten en breng uw merk onder de aandacht van Boodi-gebruikers in Nederland en Europa, met de kans om bij de lancering founding partner te worden.',
+                'opp_3_title': 'Onafhankelijke productcontroles',
+                'opp_3_desc': 'Neem uw producten op in onze scanengine zodra ze voldoen aan onze klinische criteria (glykemische index, suikers, ingrediënten) en halalcriteria (varkensderivaten, gelatine, alcohol, E-nummers).',
+                'opp_4_title': 'Bedrijfsgezondheid & onderzoek',
+                'opp_4_desc': 'Voedingsvoorlichting voor medewerkers en samenwerking met universiteiten en onderzoekscentra op het gebied van voeding en stofwisseling.',
+                'opp_5_title': 'Nutraceuticals & voedingssupplementen',
+                'opp_5_desc': 'Een eigen hoofdspoor voor supplement- en vitaminebedrijven: sponsor onderdelen van onze supplementengids (174 supplementen, 522 pagina\'s in drie talen) en neem uw betrouwbare producten op als goedgekeurde opties voor ons publiek, nadat ingrediënten en doseringen zijn getoetst aan EFSA-referenties.',
+                'trust_title': 'Transparantie en redactionele onafhankelijkheid',
+                'trust_desc': 'Alle gesponsorde content en producten krijgen duidelijk het label "Gesponsord", en geen enkel product wordt opgenomen zonder beoordeling door ons medisch team. Voedingswaarden en medische adviezen op deze site zijn niet te koop, en we publiceren geen gezondheidsclaims die niet zijn toegestaan onder EU-verordening (EG) nr. 1924/2006.',
+                'cta_title': 'Laten we samen iets betekenen',
+                'cta_desc': 'Stuur uw voorstel naar ons partnershipsteam. We beoordelen elk voorstel en reageren binnen 24 tot 48 werkuren.',
+                'cta_btn': 'Stuur een partnershipvoorstel',
+                'cta_time': 'Reactie binnen 24-48 werkuren',
+                'cta_note': 'Vermeld bij voorkeur uw bedrijfsnaam, het product of de dienst, en uw doelmarkt.',
+                'footer_about': 'Over Ons',
+                'footer_contact': 'Contact',
+                'footer_partners': 'Partners',
+                'footer_privacy': 'Privacybeleid',
+                'footer_terms': 'Algemene Voorwaarden',
+                'footer_rights': '© 2026 WiBo Health Group. Alle rechten voorbehouden.'
+            }
+        };
+
+        function detectInitialLang() {
+            const q = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
+            if (q === 'ar' || q === 'nl' || q === 'en') return q;
+            let saved = null;
+            try {
+                saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') ||
+                        localStorage.getItem('selected_language') || localStorage.getItem('lang');
+            } catch (e) {}
+            if (saved === 'ar' || saved === 'nl' || saved === 'en') return saved;
+            const phoneLang = (navigator.language || '').toLowerCase();
+            if (phoneLang.startsWith('nl')) return 'nl';
+            if (phoneLang.startsWith('ar')) return 'ar';
+            return 'en';
+        }
+
+        let currentLang = detectInitialLang();
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            try {
+                ['preferred_language', 'wibo_language', 'selected_language', 'lang'].forEach(k => localStorage.setItem(k, lang));
+            } catch (e) {}
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            const backIcon = document.getElementById('backIcon');
+            if (backIcon) backIcon.className = lang === 'ar' ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left';
+
+            const t = translations[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.innerHTML = t[key];
+            });
+            document.title = t.meta_title;
+            document.getElementById('metaDescription').setAttribute('content', t.meta_desc);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-lang-toggle') === lang));
+        }
+
+        window.addEventListener('storage', function (e) {
+            if ((e.key === 'preferred_language' || e.key === 'wibo_language') && translations[e.newValue]) changeLanguage(e.newValue);
+            if (e.key === 'wibo_theme') document.body.classList.toggle('dark-mode', e.newValue === 'dark');
+        });
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const icon = document.querySelector('.theme-toggle i');
+            if (document.body.classList.contains('dark-mode') && icon) icon.className = 'fas fa-sun';
+            changeLanguage(currentLang);
+        });
+
+        function toggleTheme() {
+            const dark = document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (icon) icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+            try { localStorage.setItem('wibo_theme', dark ? 'dark' : 'light'); } catch (e) {}
+        }
+    </script>
+</body>
+</html>

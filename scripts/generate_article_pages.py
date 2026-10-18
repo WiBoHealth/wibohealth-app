@@ -135,9 +135,9 @@ def build(a, lang):
             {"@type": "ListItem", "position": 3, "name": c['h1'], "item": urls[lang]}]},
     }
 
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html']
-    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" active" if p == "/#articles" else ""}">{label}</a>'
-                    for p, label in zip(nav_paths, u['nav']))
+    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
+    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}{" active" if p == "/#articles" else ""}">{label}</a>'
+                    for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(a["slugs"], l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
@@ -147,7 +147,7 @@ def build(a, lang):
     footer_links = ' <span>•</span> '.join(
         f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
-         ('/methodology.html', u['methodology']), ('/privacy.html', u['privacy'])])
+         ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">

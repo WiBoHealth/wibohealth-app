@@ -122,9 +122,9 @@ def build(s, lang, vetted):
         f'<li><a href="{page_url(r["slug"], lang, absolute=False)}">{esc(r[NAME[lang]] or r["name"])}'
         f'<span>{esc(r["groupLabel"][lang])}</span></a></li>' for r in related[:4])
 
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html']
-    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" active" if p == "/supplements.html" else ""}">{label}</a>'
-                    for p, label in zip(nav_paths, u['nav']))
+    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
+    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}{" active" if p == "/supplements.html" else ""}">{label}</a>'
+                    for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(s["slug"], l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
@@ -138,7 +138,7 @@ def build(s, lang, vetted):
     footer_links = ' <span>•</span> '.join(
         f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/supplements.html', t['footer_supp']),
-         ('/methodology.html', u['methodology']), ('/privacy.html', u['privacy'])])
+         ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">

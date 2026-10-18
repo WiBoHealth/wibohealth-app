@@ -396,7 +396,7 @@ UI = {
         reviewed='راجعه طبياً: <a href="{doctor}">د. وسيم حبيب</a> · آخر مراجعة {date}',
         portion_note='الحصة المعتادة تقريبية لأغراض المقارنة.',
         theme='تبديل المظهر', footer_rights='© 2026 WiBo Health Group. جميع الحقوق محفوظة.',
-        nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية',
+        nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية', partners='الشراكات',
         methodology='المنهجية والمراجع العلمية'),
     'en': dict(
         dir='ltr', title='{name}: Calories, Glycemic Index & Nutrition Facts | WiBo Health',
@@ -434,7 +434,7 @@ UI = {
         reviewed='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
         portion_note='The typical portion is approximate, for comparison purposes.',
         theme='Toggle theme', footer_rights='© 2026 WiBo Health Group. All rights reserved.',
-        nav=('Home', 'Food Guide', 'Calculators', 'Supplements', 'Articles', 'boodi App 💚'), privacy='Privacy',
+        nav=('Home', 'Food Guide', 'Calculators', 'Supplements', 'Articles', 'boodi App 💚'), privacy='Privacy', partners='Partnerships',
         methodology='Methodology & scientific references'),
     'nl': dict(
         dir='ltr', title='{name}: calorieën, glykemische index & voedingswaarde | WiBo Health',
@@ -471,7 +471,7 @@ UI = {
         reviewed='Medisch gecontroleerd door <a href="{doctor}">dr. Wassim Habib</a> · Laatst gecontroleerd {date}',
         portion_note='De gangbare portie is een benadering, bedoeld om te vergelijken.',
         theme='Thema wisselen', footer_rights='© 2026 WiBo Health Group. Alle rechten voorbehouden.',
-        nav=('Home', 'Voedingswijzer', 'Calculators', 'Supplementen', 'Artikelen', 'boodi App 💚'), privacy='Privacy',
+        nav=('Home', 'Voedingswijzer', 'Calculators', 'Supplementen', 'Artikelen', 'boodi App 💚'), privacy='Privacy', partners='Partners',
         methodology='Methodologie & wetenschappelijke bronnen'),
 }
 
@@ -1226,9 +1226,9 @@ def build(food, lang, ctx):
             {"@type": "ListItem", "position": 3, "name": name, "item": urls[lang]}]},
     }
 
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html']
-    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link">{label}</a>'
-                    for p, label in zip(nav_paths, u['nav']))
+    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
+    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}">{label}</a>'
+                    for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(slug, l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
@@ -1242,7 +1242,7 @@ def build(food, lang, ctx):
     footer_links = ' <span>•</span> '.join(
         f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/methodology.html', u['methodology']),
-         ('/doctor.html', 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'), ('/privacy.html', u['privacy'])])
+         ('/doctor.html', 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">

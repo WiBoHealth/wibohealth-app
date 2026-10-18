@@ -159,10 +159,23 @@ body > header .nav-link.boodi-link {
     background: linear-gradient(135deg, #10b981, #059669) !important;
     color: #fff !important;
 }
+/* partnerships capsule: emerald outline so businesses spot it next to the filled boodi capsule */
+body > header .nav-link.nav-partners:not(:hover):not(.active) {
+    background: transparent !important;
+    color: #059669 !important;
+    border: 1.5px solid #10b981 !important;
+}
 body.dark-mode > header .nav-link:not(:hover):not(.active):not(.boodi-link),
 html[data-theme="dark"] body > header .nav-link:not(:hover):not(.active):not(.boodi-link) {
     background: rgba(255, 255, 255, 0.08) !important;
     color: #f1f5f9 !important;
+}
+
+body.dark-mode > header .nav-link.nav-partners:not(:hover):not(.active),
+html[data-theme="dark"] body > header .nav-link.nav-partners:not(:hover):not(.active) {
+    background: transparent !important;
+    color: #34d399 !important;
+    border: 1.5px solid #10b981 !important;
 }
 
 /* action capsules: language, theme, favourites, back */
@@ -365,4 +378,21 @@ body > header .nav-buttons { width: auto !important; }
         background: linear-gradient(135deg, var(--wb-primary), var(--wb-primary-hover)) !important;
         color: #fff !important;
     }
+}
+
+/* mid-width desktops: the logo already links home, so the Home capsule gives way to keep the menu
+   (incl. the Partnerships capsule) on one row until the hamburger takes over at 992px */
+@media (min-width: 993px) and (max-width: 1320px) {
+    body > header .nav-menu .nav-link > i { display: none !important; }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+    body > header .nav-menu > a.nav-link[href="/"],
+    body > header .nav-links-bar > a.nav-link[href="/"],
+    body > header .nav-links-bar > a.nav-link[href="/?lang=en"],
+    body > header .nav-links-bar > a.nav-link[href="/?lang=nl"] { display: none !important; }
+}
+@media (min-width: 993px) and (max-width: 1080px) {
+    body > header .nav-menu, body > header .nav-links-bar { gap: 3px !important; }
+    body > header .nav-link { padding: 0 8px !important; font-size: 12px !important; }
+    body > header .header-controls > .lang-btn { width: 30px !important; }
 }
