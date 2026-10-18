@@ -1706,6 +1706,48 @@
         @media (prefers-reduced-motion:reduce){.wibo-chat-btn{transition:none}}
     </style>
     <link rel="stylesheet" href="css/unified-header.css">
+    <!-- Olive dark theme: homepage-only surfaces (the palette and the corner gradient live in css/unified-header.css) -->
+    <style id="olive-dark">
+        /* glass surfaces: soft olive edge + faint top highlight */
+        html[data-theme="dark"] .article-stat-box,
+        html[data-theme="dark"] .home-articles,
+        html[data-theme="dark"] .cta-section {
+            background: var(--wb-card) !important;
+            border: 1px solid var(--wb-border) !important;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.35) !important;
+            backdrop-filter: blur(6px);
+        }
+        html[data-theme="dark"] .article-stat-box:hover { border-color: rgba(110, 231, 183, 0.45) !important; }
+        html[data-theme="dark"] .stat-thumb-container { background: #10140d; }
+        html[data-theme="dark"] .info-box,
+        html[data-theme="dark"] .home-article-link,
+        html[data-theme="dark"] .home-article { background: var(--wb-soft); border-color: var(--wb-border); }
+        html[data-theme="dark"] .pulse-ticker,
+        html[data-theme="dark"] .meals-ticker,
+        html[data-theme="dark"] .meals-search { background: rgba(14, 19, 11, 0.72); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35); }
+        html[data-theme="dark"] .meals-pill,
+        html[data-theme="dark"] .pulse-pill { background: var(--wb-soft); }
+        html[data-theme="dark"] .meals-ticker .chip-arrow { background: #1a2215; }
+        html[data-theme="dark"] .meals-ticker .chip-arrow:hover,
+        html[data-theme="dark"] .meals-ticker .chip-arrow:focus-visible { background: #26331d; }
+        html[data-theme="dark"] .compare-feature-card {
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.14), transparent 60%), var(--wb-card) !important;
+            border: 1px solid rgba(234, 179, 8, 0.35) !important;
+        }
+
+        /* buttons: light pill with forest text, and deeper emerald where white text sits on green (AA contrast) */
+        html[data-theme="dark"] .cta-btn { background: #eef1e8; color: #14532d; }
+        html[data-theme="dark"] .stat-article-badge { background: #047857; }
+        html[data-theme="dark"] .home-article-more { color: #34d399; }
+        html[data-theme="dark"] a[href="doctor.html"][style*="background: #10b981"] { background: #047857 !important; }
+
+        /* the two hero feature cards: olive into forest instead of navy into teal */
+        html[data-theme="dark"] .leptin-feature-card {
+            background: linear-gradient(135deg, #1a2215 0%, #24361f 55%, #0f3b2c 100%);
+            border: 2px solid rgba(110, 231, 183, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 40px rgba(0, 0, 0, 0.45);
+        }
+    </style>
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->

@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
     <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
+    <style>html.lang-loading body{visibility:hidden}    body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(225deg, rgba(74, 96, 40, 0.25) 0%, transparent 45%), radial-gradient(130% 110% at 100% 0%, #435a26 0%, #2f4220 18%, #18200f 38%, #0d100a 60%, #070806 85%); }
+  </style>
     <script>
         (function (d) {
             var h = d.documentElement;
@@ -41,19 +42,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0B0F17;
-      --card: #151D2A;
-      --border: #232F42;
+      --bg: #070806;
+      --card: rgba(22, 27, 18, 0.55);
+      --border: rgba(196, 214, 160, 0.14);
       --primary: #10B981;
-      --danger: #EF4444;
-      --text: #F3F4F6;
-      --muted: #9CA3AF;
+      --danger: #dc2626;
+      --text: #eef1e8;
+      --muted: #c2cab6;
     }
     body {
       margin: 0;
       padding: 20px;
       background-color: var(--bg);
       color: var(--text);
+      position: relative;
+      z-index: 0;
       font-family: 'Tajawal', sans-serif;
       display: flex;
       justify-content: center;
@@ -107,7 +110,7 @@
       opacity: 0.6;
     }
     .lang-btn.active {
-      background: var(--primary);
+      background: #047857;
       opacity: 1;
     }
     .content-section {

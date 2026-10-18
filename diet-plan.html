@@ -94,10 +94,10 @@
         }
 
         body.dark-mode {
-            --card-bg: #0f3460;
-            --text-dark: #ffffff;
-            --text-light: #b8b8b8;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --card-bg: var(--wb-card);
+            --text-dark: var(--wb-text);
+            --text-light: var(--wb-muted);
+            background: var(--wb-bg);
         }
 
         .container {
@@ -253,8 +253,8 @@
         }
 
         body.dark-mode .plan-card {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.1);
+            background: var(--wb-card);
+            border-color: var(--wb-border);
         }
 
         .plan-card:hover {
@@ -358,8 +358,8 @@
         body.dark-mode .form-group input,
         body.dark-mode .form-group select,
         body.dark-mode .form-group textarea {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.2);
+            background: var(--wb-soft);
+            border-color: var(--wb-border);
             color: white;
         }
 
@@ -424,8 +424,8 @@
 
         body.dark-mode .radio-option label,
         body.dark-mode .checkbox-option label {
-            background: rgba(255,255,255,0.05);
-            border-color: rgba(255,255,255,0.2);
+            background: var(--wb-soft);
+            border-color: var(--wb-border);
             color: white;
         }
 

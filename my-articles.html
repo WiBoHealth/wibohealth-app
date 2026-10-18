@@ -51,6 +51,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <style>
         * {
             margin: 0;
@@ -244,6 +245,30 @@
             .article-card { padding: 25px; }
             .article-title { font-size: 1.6em; }
         }
+
+        /* dark theme: same page, card and soft-surface tones as partners.html */
+        html[data-theme="dark"] { color-scheme: dark; background: #070806; }
+        html[data-theme="dark"] body { background: transparent; color: #eef1e8; }
+        html[data-theme="dark"] body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(225deg, rgba(74, 96, 40, 0.25) 0%, transparent 45%), radial-gradient(130% 110% at 100% 0%, #435a26 0%, #2f4220 18%, #18200f 38%, #0d100a 60%, #070806 85%); }
+        html[data-theme="dark"] .hero { background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.25), transparent 45%), linear-gradient(135deg, #18200f 0%, #2f4220 100%); }
+        html[data-theme="dark"] .back-btn { background: rgba(22, 27, 18, 0.55); color: #6ee7b7; border: 1px solid rgba(196, 214, 160, 0.14); }
+        html[data-theme="dark"] .back-btn:hover { color: #a7f3d0; }
+        html[data-theme="dark"] .article-card { background: rgba(22, 27, 18, 0.55); border-top-color: #10b981; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25); }
+        html[data-theme="dark"] .article-header { border-bottom-color: rgba(196, 214, 160, 0.14); }
+        html[data-theme="dark"] .article-badge { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; }
+        html[data-theme="dark"] .article-title,
+        html[data-theme="dark"] .article-content h2 { color: #f1f5f9; }
+        html[data-theme="dark"] .article-content { color: #eef1e8; }
+        html[data-theme="dark"] .article-meta { color: #c2cab6; }
+        html[data-theme="dark"] .highlight-box { background: rgba(196, 214, 160, 0.05); }
+        html[data-theme="dark"] .cta-banner { background: linear-gradient(135deg, #18200f, #2f4220); border: 1px solid rgba(16, 185, 129, 0.35); }
+        html[data-theme="dark"] .faq-box { background: rgba(196, 214, 160, 0.05); border-color: rgba(196, 214, 160, 0.14); }
+        html[data-theme="dark"] .footer { border-top-color: rgba(255, 255, 255, 0.08); color: #d0d7c4; }
+        html[data-theme="dark"] .cta-banner a { background: #047857; }
+        html[data-theme="dark"] [style^="color: #0f172a"] { color: #f1f5f9 !important; }
+        html[data-theme="dark"] [style^="color: #64748b"] { color: #c2cab6 !important; }
+        html[data-theme="dark"] [style^="color: #065f46"], html[data-theme="dark"] [style*="color: #166534"] { color: #6ee7b7 !important; }
+        html[data-theme="dark"] [style^="color: #2563eb"] { color: #93c5fd !important; }
     </style>
 </head>
 <body>
