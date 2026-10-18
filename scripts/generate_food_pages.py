@@ -195,6 +195,13 @@ PILOT = {
     638: ('fastfood', 280), 639: ('fastfood', 210), 640: ('fastfood', 180), 641: ('fastfood', 80), 642: ('fastfood', 85),
     643: ('fastfood', 85), 644: ('fastfood', 85), 645: ('fastfood', 200), 646: ('fastfood', 180),
     647: ('fastfood', 115), 648: ('fastfood', 130), 649: ('fastfood', 280), 650: ('fastfood', 85),
+    # batch 19: Latin American, Nordic and Eastern European dishes, starches (portions from the
+    # medical team's copy, 18 October 2026)
+    651: ('latin', 100), 652: ('latin', 150), 653: ('latin', 120), 654: ('latin', 100), 655: ('latin', 100), 656: ('latin', 150),
+    657: ('latin', 250), 658: ('latin', 100), 659: ('latin', 150), 660: ('latin', 250), 661: ('protein', 150), 662: ('pantry', 20),
+    663: ('grain', 25), 664: ('protein', 60), 665: ('sandwich', 150), 666: ('sweets', 90), 667: ('veg', 150), 668: ('home', 300),
+    669: ('grain', 150), 670: ('home', 250), 671: ('home', 250), 672: ('salad', 150), 673: ('grain', 100), 674: ('pantry', 20),
+    675: ('pantry', 20),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -203,7 +210,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 651))
+TEAM_REVIEW |= set(range(207, 676))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
@@ -223,6 +230,7 @@ GROUPS = {
     'fastfood': ('وجبات المطاعم السريعة', 'Fast food', 'Fastfood'),
     'sweets': ('الحلويات', 'Sweets & desserts', 'Zoetigheid & desserts'),
     'mexican': ('الأطباق المكسيكية', 'Mexican dishes', 'Mexicaanse gerechten'),
+    'latin': ('أطباق أمريكا اللاتينية', 'Latin American dishes', 'Latijns-Amerikaanse gerechten'),
     'italian': ('الأطباق الإيطالية', 'Italian dishes', 'Italiaanse gerechten'),
     'spanish': ('الأطباق الإسبانية', 'Spanish dishes', 'Spaanse gerechten'),
     'french': ('الأطباق الفرنسية', 'French dishes', 'Franse gerechten'),
@@ -356,7 +364,7 @@ TIPS = {
          'Bevat cafeïne: drink met mate, vooral \u2019s avonds, en overleg met je arts als je zwanger bent of medicijnen gebruikt die door cafeïne beïnvloed worden.')),
 }
 
-for _g in ('mexican', 'italian', 'spanish', 'french', 'greek', 'turkish', 'moroccan', 'indian', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
+for _g in ('mexican', 'latin', 'italian', 'spanish', 'french', 'greek', 'turkish', 'moroccan', 'indian', 'asian', 'bakery', 'sandwich', 'home', 'salad', 'spice', 'pantry', 'condiment', 'alcohol'):
     TIPS[_g] = TIPS['arabic']                # generic fallback; every food in these groups has its own approved tips
 
 UI = {
