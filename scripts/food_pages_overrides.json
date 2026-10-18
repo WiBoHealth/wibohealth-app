@@ -24845,6 +24845,833 @@
           }
         ]
       }
+    },
+    "626": {
+      "title": {
+        "ar": "كم سعرة في كبد الحوت الآيسلندي المعلب؟ الفوائد ومحاذير الاستهلاك | WiBo Health",
+        "en": "Smoked Cod Liver Calories & Omega-3 Facts: Safe Portions | WiBo Health",
+        "nl": "Kabeljauwlever in blik: calorieën, omega-3 & tips | WiBo Health"
+      },
+      "desc": {
+        "ar": "نصف علبة من كبد القد الآيسلندي (60غ) تمنحك 246 سعرة ودهون أوميغا-3 مع كربوهيدرات شبه معدومة. اكتشف فوائده لفيتامين D وأهم محاذيره للحوامل.",
+        "en": "A 60g portion of Icelandic cod liver provides 246 kcal, rich omega-3s and vitamin D with almost no carbs. Discover its benefits and pregnancy guidelines.",
+        "nl": "Een portie gerookte kabeljauwlever (60g) levert 246 kcal en veel omega-3, vrijwel zonder koolhydraten. Bekijk voedingswaarden, vitamine D en advies bij zwangerschap."
+      },
+      "lead": {
+        "ar": "\"ذهب المحيط الشمالي\" المدخن بنعومة؛ يتميز بقوامه الكريمي الذي يذوب في الفم كنكهة بحرية فاخرة. يُعد مصدراً طبيعياً غنياً جداً بأحماض أوميغا-3 وفيتاميني D وA، مع كربوهيدرات شبه معدومة لا ينطبق عليها المؤشر الجلايسيمي.",
+        "en": "The gently smoked “gold of the North Atlantic”, with a creamy texture that melts in the mouth and a luxurious taste of the sea. It is a very rich natural source of omega-3 fatty acids and vitamins D and A, with almost no carbohydrate, so the glycemic index does not apply.",
+        "nl": "Het zacht gerookte ‘goud van de Noord-Atlantische Oceaan’, met een romige textuur die op de tong smelt en een luxueuze zeesmaak. Het is een zeer rijke natuurlijke bron van omega-3-vetzuren en de vitamines D en A, met vrijwel geen koolhydraten, dus de glykemische index is niet van toepassing."
+      },
+      "tips": {
+        "ar": [
+          "يُفضل تناوله مهروساً مع شريحة من خبز الحبوب الكاملة المحمص وعصرة ليمون طازجة لتعديل دسامة دهونه الطبيعية.",
+          "يُنصح بالاكتفاء بحصة صغيرة أسبوعياً (نصف علبة) للحصول على أقصى فائدة دون إفراط في الفيتامينات الذائبة في الدهون.",
+          "تنبيه سريري للحوامل: نظراً لكثافته العالية جداً بفيتامين A الحيواني (الريتينول)، يُوصى بتجنبه أثناء الحمل لتفادي فرط فيتامين A."
+        ],
+        "en": [
+          "Enjoy it mashed on a slice of toasted wholegrain bread with a squeeze of fresh lemon to balance its natural richness.",
+          "Stick to a small portion once a week (half a can) to get the benefits without overdoing the fat-soluble vitamins.",
+          "Clinical note for pregnancy: because it is extremely rich in animal vitamin A (retinol), it is best avoided during pregnancy to prevent excess vitamin A."
+        ],
+        "nl": [
+          "Eet het geprakt op een geroosterde volkorenboterham met een scheutje verse citroen om de natuurlijke machtigheid in balans te brengen.",
+          "Houd het bij een kleine portie per week (een half blikje) om te profiteren zonder te veel vetoplosbare vitamines binnen te krijgen.",
+          "Klinische noot bij zwangerschap: omdat het extreem rijk is aan dierlijke vitamine A (retinol), kun je het tijdens de zwangerschap beter vermijden om een teveel aan vitamine A te voorkomen."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل كبد القد المعلب يساعد في ضبط سكر الدم؟",
+            "a": "كربوهيدراته شبه معدومة ودهونه صحية، لذا فتأثيره على الجلوكوز ضئيل جداً."
+          },
+          {
+            "q": "ما الفرق بين كبد القد وزيت كبد القد؟",
+            "a": "الكبد المعلب غذاء كامل يوفر بروتيناً ودهوناً طبيعية وفيتامينات، بينما الزيت مستخلص دهني صافٍ."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does canned cod liver help with blood sugar control?",
+            "a": "It has almost no carbohydrate and contains healthy fats, so its effect on glucose is minimal."
+          },
+          {
+            "q": "What is the difference between cod liver and cod liver oil?",
+            "a": "Canned cod liver is a whole food that provides protein, natural fats and vitamins, while the oil is a pure extracted fat."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Helpt kabeljauwlever uit blik bij de bloedsuikerregulatie?",
+            "a": "Het bevat vrijwel geen koolhydraten en wel gezonde vetten, dus het effect op de glucose is minimaal."
+          },
+          {
+            "q": "Wat is het verschil tussen kabeljauwlever en levertraan?",
+            "a": "Kabeljauwlever uit blik is een volwaardig voedingsmiddel met eiwit, natuurlijke vetten en vitamines, terwijl levertraan puur geëxtraheerd vet is."
+          }
+        ]
+      }
+    },
+    "630": {
+      "title": {
+        "ar": "كم سعرة في معكرونة بيني ريغاتي المطبوخة؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Cooked Penne Rigate Calories & Glycemic Index Guide | WiBo Health",
+        "nl": "Calorieën gekookte penne rigate: glykemische index & tips | WiBo Health"
+      },
+      "desc": {
+        "ar": "زبدية معكرونة بيني ريغاتي المطبوخة (150غ) تحتوي على 203 سعرات فقط بمؤشر جلايسيمي منخفض (45). اكتشف سر طهي الأل دينتي لضبط سكر الدم.",
+        "en": "A 150g bowl of cooked penne rigate provides just 203 kcal with a low GI of 45. Learn how cooking al dente keeps your blood sugar steadier and aids satiety.",
+        "nl": "Een portie gekookte penne (150g) levert slechts 203 kcal met een lage GI van 45. Ontdek hoe 'al dente' koken zorgt voor een stabielere bloedsuikerspiegel."
+      },
+      "lead": {
+        "ar": "معكرونة الأنابيب المخططة المحبوبة والمصنوعة من سميد القمح الصلب الطبيعي؛ تمتص الماء لتعطي حجماً مشبعاً بـ 203 سعرات فقط للحصة مع مؤشر جلايسيمي منخفض (45).",
+        "en": "The beloved ridged pasta tubes made from natural durum wheat semolina; they absorb water to give a filling volume of just 203 kcal per portion, with a low glycemic index (45).",
+        "nl": "De geliefde geribbelde pastabuisjes van natuurlijke durumtarwegries; ze nemen water op en geven een vullende portie van slechts 203 kcal, met een lage glykemische index (45)."
+      },
+      "tips": {
+        "ar": [
+          "طهيها بدرجة متماسكة (Al Dente، 9-10 دقائق) يبطئ تحلل النشا ويخفض المؤشر الجلايسيمي مقارنة بالطهي الزائد.",
+          "اخلطها مع كمية وفيرة من البروكلي أو الكوسا لزيادة حجم الطبق بأقل سعرات ممكنة."
+        ],
+        "en": [
+          "Cooking it al dente (9–10 minutes) slows starch breakdown and lowers the glycemic index compared with overcooking.",
+          "Mix it with plenty of broccoli or courgette to bulk up the plate with as few calories as possible."
+        ],
+        "nl": [
+          "Al dente koken (9–10 minuten) vertraagt de afbraak van zetmeel en verlaagt de glykemische index vergeleken met te lang koken.",
+          "Meng er veel broccoli of courgette door om je bord te vullen met zo min mogelijk calorieën."
+        ]
+      }
+    },
+    "631": {
+      "title": {
+        "ar": "كم سعرة في معكرونة الفوزيلي بالقمح الكامل؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Whole Grain Fusilli Calories & Low GI: High-Fiber Pasta | WiBo Health",
+        "nl": "Calorieën volkoren fusilli (gekookt) & glykemische index | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة فوزيلي الحبوب الكاملة المطبوخة (150غ) تحتوي على 192 سعرة و6غ ألياف مع مؤشر جلايسيمي منخفض (42). خيار ذكي لمرضى السكري ومتبعي الدايت.",
+        "en": "Cooked whole grain fusilli has 192 kcal and 6g fiber per 150g serving with a low GI of 42. A smart carb choice for steady blood sugar and weight management.",
+        "nl": "Een portie volkoren fusilli (150g) bevat 192 kcal en 6g vezels met een lage GI van 42. Een slimme keuze voor een stabiele bloedsuikerspiegel."
+      },
+      "lead": {
+        "ar": "اللوالب الذهبية الغنية بنخالة وجنين القمح الكامل؛ تتميز بمحتوى ألياف عالٍ (6غ للحصة) يمنح شبعاً طويلاً ومؤشراً جلايسيمياً منخفضاً (42) يدعم استقرار الطاقة وسكر الدم.",
+        "en": "Golden spirals rich in wholewheat bran and germ, with a high fibre content (6 g per portion) that keeps you full for longer and a low glycemic index (42) that supports steady energy and blood sugar.",
+        "nl": "Goudkleurige spiraaltjes vol volkorenzemelen en -kiem, met veel vezels (6 g per portie) die je langer verzadigd houden en een lage glykemische index (42) voor stabiele energie en bloedsuiker."
+      },
+      "tips": {
+        "ar": [
+          "خيار ممتاز لمرضى السكري ومقاومة الإنسولين كبديل للباستا البيضاء التقليدية.",
+          "شكلها اللولبي يحتفظ بصلصات الخضار وزيت الزيتون دون الحاجة لإضافة دهون ثقيلة."
+        ],
+        "en": [
+          "An excellent swap for traditional white pasta for people with diabetes or insulin resistance.",
+          "Its spiral shape holds vegetable sauces and olive oil well, so you don’t need heavy fats."
+        ],
+        "nl": [
+          "Een uitstekend alternatief voor gewone witte pasta bij diabetes of insulineresistentie.",
+          "Door de spiraalvorm blijven groentesauzen en olijfolie goed hangen, zodat je geen zware vetten nodig hebt."
+        ]
+      }
+    },
+    "632": {
+      "title": {
+        "ar": "كم سعرة في شرائح لازانيا القمح الكامل؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Whole Wheat Lasagna Sheets: Dry Calories, Fiber & GI | WiBo Health",
+        "nl": "Calorieën volkoren lasagnebladen (droog): voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "شريحتان من لازانيا الحبوب الكاملة (70غ جافة) تحتويان على 242 سعرة و5.6غ ألياف بمؤشر جلايسيمي منخفض (48). اكتشف سر إعداد لازانيا صحية ومشبعة.",
+        "en": "Two dry whole wheat lasagna sheets (70g) provide 242 kcal and 5.6g fiber with a low GI of 48. Learn how to layer a healthy, diabetes-friendly lasagna.",
+        "nl": "Twee droge volkoren lasagnebladen (70g) leveren 242 kcal en 5,6g vezels met een lage GI van 48. Tips voor het bereiden van een gezonde en vullende lasagne."
+      },
+      "lead": {
+        "ar": "شرائح عريضة من دقيق القمح الكامل غير المكرر؛ توفر أساساً متيناً وغنياً بالألياف لبناء صينية لازانيا صحية، مع مؤشر جلايسيمي منخفض (48). القيم في هذه الصفحة للشرائح الجافة قبل الطهي.",
+        "en": "Wide sheets of unrefined wholewheat flour that give a sturdy, fibre-rich base for a healthy lasagna, with a low glycemic index (48). The values on this page are for the dry sheets before cooking.",
+        "nl": "Brede bladen van ongeraffineerd volkorenmeel die een stevige, vezelrijke basis vormen voor een gezonde lasagne, met een lage glykemische index (48). De waarden op deze pagina gelden voor de droge bladen vóór het koken."
+      },
+      "tips": {
+        "ar": [
+          "ابنِ طبقات اللازانيا بشرائح الكوسا والباذنجان وصلصة اللحم المفروم قليل الدهن لتقليل كمية الشرائح وزيادة الألياف.",
+          "تذكر أن وزن الـ 70 غرام هو للشرائح الجافة قبل أن تتشرب صلصة الطهي في الفرن."
+        ],
+        "en": [
+          "Layer the lasagna with courgette and aubergine slices and a lean mince sauce to use fewer sheets and add fibre.",
+          "Remember that the 70 g is the weight of the dry sheets before they soak up the sauce in the oven."
+        ],
+        "nl": [
+          "Bouw de lasagne op met plakken courgette en aubergine en een saus van mager gehakt, zodat je minder bladen gebruikt en meer vezels binnenkrijgt.",
+          "Onthoud dat de 70 g het gewicht van de droge bladen is, voordat ze in de oven de saus opnemen."
+        ]
+      }
+    },
+    "633": {
+      "title": {
+        "ar": "كم سعرة في صلصة البيستو الخضراء؟ المؤشر الجلايسيمي وحصة الدايت | WiBo Health",
+        "en": "Traditional Basil Pesto Calories & Fat Facts: Serving Size | WiBo Health",
+        "nl": "Calorieën pesto alla genovese: voedingswaarde & portiegrootte | WiBo Health"
+      },
+      "desc": {
+        "ar": "ملعقتان من صلصة بيستو الريحان الإيطالية (30غ) تمنحانك 131 سعرة ودهوناً غير مشبعة صحية مع تأثير ضئيل على سكر الدم. اكتشف فوائدها وحصتها اليومية.",
+        "en": "A 30g serving of authentic pesto genovese delivers 131 kcal and heart-healthy fats with negligible glycemic impact. Learn smart portion tips for pasta and salads.",
+        "nl": "Twee eetlepels traditionele pesto (30g) leveren 131 kcal en gezonde onverzadigde vetten met nauwelijks effect op de bloedsuiker. Bekijk tips voor pasta en salades."
+      },
+      "lead": {
+        "ar": "جوهرة مدينة جنوة الإيطالية الخضراء؛ مزيج عطري طازج من أوراق الريحان وزيت الزيتون البكر الممتاز والصنوبر المحمص والبارميزان. توفر دهوناً أحادية غير مشبعة مع تأثير جلايسيمي ضئيل.",
+        "en": "The green jewel of Genoa: a fresh, fragrant blend of basil leaves, extra virgin olive oil, toasted pine nuts and Parmesan. It provides monounsaturated fats with negligible glycemic impact.",
+        "nl": "Het groene juweel van Genua: een frisse, geurige mix van basilicum, extra vierge olijfolie, geroosterde pijnboompitten en Parmezaanse kaas. Het levert enkelvoudig onverzadigde vetten met een verwaarloosbaar glykemisch effect."
+      },
+      "tips": {
+        "ar": [
+          "لا تقم بطهي البيستو على نار حامية، بل اخلطه بالباستا الدافئة عند التقديم للحفاظ على جودة زيت الزيتون وعطر الريحان.",
+          "ملعقة طعام واحدة إلى ملعقتين تكفي لمنح نكهة غنية وشبع طويل دون فائض حراري."
+        ],
+        "en": [
+          "Don’t cook pesto over high heat; stir it into warm pasta just before serving to preserve the olive oil and the aroma of the basil.",
+          "One to two tablespoons are enough for rich flavour and lasting fullness without excess calories."
+        ],
+        "nl": [
+          "Verhit pesto niet op hoog vuur; schep het pas bij het serveren door de warme pasta om de olijfolie en het aroma van de basilicum te behouden.",
+          "Eén tot twee eetlepels zijn genoeg voor een rijke smaak en een lang verzadigd gevoel zonder overbodige calorieën."
+        ]
+      }
+    },
+    "634": {
+      "title": {
+        "ar": "كم سعرة في البيستو الأحمر بالطماطم واللوز؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Red Pesto Rosso Calories & Nutrition: Sun-Dried Tomato Facts | WiBo Health",
+        "nl": "Calorieën rode pesto (pesto rosso): voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "ملعقتان من البيستو الأحمر (30غ) تحتويان على 114 سعرة ودهون صحية ومضادات أكسدة مع مؤشر جلايسيمي منخفض جداً (25). الخيار الإيطالي الأمثل للسلطات.",
+        "en": "Two tablespoons of red pesto rosso (30g) contain 114 kcal with a very low GI of 25. Discover lycopene benefits, healthy almond fats and serving ideas.",
+        "nl": "Een portie rode pesto met zongedroogde tomaten (30g) levert 114 kcal met een zeer lage GI van 25. Rijk aan gezonde vetten en antioxidanten."
+      },
+      "lead": {
+        "ar": "النسخة الحمراء الساحلية من البيستو الإيطالي؛ تمزج حلاوة الطماطم المجففة بالشمس مع اللوز المحمص وزيت الزيتون. تمنح مضاد الأكسدة الليكوبين بمؤشر جلايسيمي منخفض جداً (25).",
+        "en": "The red, coastal version of Italian pesto, blending the sweetness of sun-dried tomatoes with toasted almonds and olive oil. It provides the antioxidant lycopene with a very low glycemic index (25).",
+        "nl": "De rode kustvariant van Italiaanse pesto, die de zoetheid van zongedroogde tomaten combineert met geroosterde amandelen en olijfolie. Het levert de antioxidant lycopeen met een zeer lage glykemische index (25)."
+      },
+      "tips": {
+        "ar": [
+          "استخدمها كصلصة دهن خفيفة في السندوتشات الصحية كبديل رائع للمايونيز المصنع.",
+          "احفظ العلبة في الثلاجة مع تغطية السطح بملعقة زيت زيتون لمنع تأكسد المكونات الطبيعية."
+        ],
+        "en": [
+          "Use it as a light spread in healthy sandwiches, a great alternative to processed mayonnaise.",
+          "Keep the jar in the fridge and cover the surface with a spoonful of olive oil to stop the ingredients from oxidising."
+        ],
+        "nl": [
+          "Gebruik het als lichte smeersel op gezonde broodjes, een prima alternatief voor fabrieksmayonaise.",
+          "Bewaar de pot in de koelkast en bedek het oppervlak met een lepel olijfolie om oxidatie van de ingrediënten te voorkomen."
+        ]
+      }
+    },
+    "635": {
+      "title": {
+        "ar": "كم سعرة في الطماطم المجففة بزيت الزيتون؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Sun-Dried Tomatoes in Olive Oil: Calories, Fiber & Low GI | WiBo Health",
+        "nl": "Calorieën zongedroogde tomaten in olijfolie: voedingswaarde | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة 30غ من الطماطم المجففة بزيت الزيتون تمنحك 65 سعرة وغنية بالألياف والليكوبين بمؤشر جلايسيمي منخفض (35). اكتشف فوائدها لمرضى السكري والدايت.",
+        "en": "A 30g portion of sun-dried tomatoes in olive oil contains just 65 kcal and 2g fiber with a low GI of 35. Learn about concentrated lycopene and usage tips.",
+        "nl": "Een portie zongedroogde tomaten (30g) levert slechts 65 kcal en waardevolle vezels met een lage GI van 35. Rijk aan lycopeen en mediterrane smaak."
+      },
+      "lead": {
+        "ar": "حبات الطماطم المركزة المجففة تحت شمس المتوسط والمغمورة في زيت الزيتون البكر؛ مصدر غني بالألياف ومضاد الأكسدة الليكوبين بنكهة دافئة ومؤشر جلايسيمي منخفض (35).",
+        "en": "Concentrated tomatoes dried under the Mediterranean sun and preserved in virgin olive oil: a rich source of fibre and the antioxidant lycopene, with a warm flavour and a low glycemic index (35).",
+        "nl": "Geconcentreerde tomaten, gedroogd onder de mediterrane zon en ingelegd in vierge olijfolie: een rijke bron van vezels en de antioxidant lycopeen, met een warme smaak en een lage glykemische index (35)."
+      },
+      "tips": {
+        "ar": [
+          "تصفية القطع بمنديل ورقي بلطف يقلل السعرات بنسبة ملحوظة دون التأثير على نكهتها الغنية.",
+          "تقطيع حبتين فوق طبق السلطة الخضراء يغنيك عن إضافة الملح والصلصات المصنعة."
+        ],
+        "en": [
+          "Gently blotting the pieces with kitchen paper noticeably lowers the calories without affecting their rich flavour.",
+          "Chopping two pieces over a green salad means you don’t need extra salt or processed dressings."
+        ],
+        "nl": [
+          "Dep de stukjes voorzichtig met keukenpapier: dat scheelt merkbaar in calorieën zonder de rijke smaak aan te tasten.",
+          "Snijd twee stukjes over een groene salade en je hebt geen extra zout of kant-en-klare dressing nodig."
+        ]
+      }
+    },
+    "636": {
+      "title": {
+        "ar": "كم سعرة في مخلل البصل الفضي الصغير؟ المؤشر الجلايسيمي والدايت | WiBo Health",
+        "en": "Pickled Silverskin Onions Calories & GI: Low-Calorie Snack | WiBo Health",
+        "nl": "Calorieën zilveruitjes (zoetzuur): voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "5 حبات من مخلل البصل الفضي (30غ) تمنحك 11 سعرة حرارية فقط بمؤشر جلايسيمي منخفض (25). اكتشف قيمته الغذائية كإضافة منعشة للسلطات والوجبات.",
+        "en": "A 30g serving of silverskin pickled onions delivers only 11 kcal with a low GI of 25. A tangy, crunchy addition for weight management and salads.",
+        "nl": "Een portie zilveruitjes (30g) bevat slechts 11 kcal met een lage glykemische index van 25. Een frisse, knapperige toevoeging met minimale calorieën."
+      },
+      "lead": {
+        "ar": "كرات البصل الفضي اللؤلؤية الصغيرة المقرمشة والمخللة في مزيج الخل والتوابل؛ خيار خفيف جداً يضيف نكهة قوية وقرمشة منعشة بنحو 11 سعرة فقط للحصة.",
+        "en": "Small, crunchy pearl-like silverskin onions pickled in vinegar and spices: a very light choice that adds strong flavour and a fresh crunch for only about 11 kcal per portion.",
+        "nl": "Kleine, knapperige parelachtige zilveruitjes, ingelegd in azijn en kruiden: een heel lichte keuze die veel smaak en een frisse crunch toevoegt voor slechts ongeveer 11 kcal per portie."
+      },
+      "tips": {
+        "ar": [
+          "إضافة مثالية لأطباق اللحوم الباردة والمشاوي لكسر الدسامة دون إضافة أي دهون.",
+          "غسل البصلات بالماء قبل الأكل يقلل الصوديوم والسكر الطفيف في سائل التخليل لمن يراقبون الأملاح."
+        ],
+        "en": [
+          "A perfect addition to cold meats and grills to cut through the richness without adding any fat.",
+          "Rinsing the onions before eating reduces the sodium and the small amount of sugar from the pickling liquid, useful if you watch your salt."
+        ],
+        "nl": [
+          "Een perfecte aanvulling bij vleeswaren en gegrild vlees om de machtigheid te doorbreken zonder vet toe te voegen.",
+          "Spoel de uitjes af vóór het eten om het natrium en de kleine hoeveelheid suiker uit het zuur te verminderen, handig als je op je zout let."
+        ]
+      }
+    },
+    "637": {
+      "title": {
+        "ar": "كم سعرة في مخلل الخضار الإيطالي جياردينييرا؟ الفوائد والدايت | WiBo Health",
+        "en": "Italian Giardiniera Calories & Nutrition: Pickled Veggie Guide | WiBo Health",
+        "nl": "Calorieën giardiniera (ingelegde groenten): voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "نصف كوب من مخلل الجياردينييرا الإيطالي (50غ) يمنحك 11 سعرة فقط وأليافاً طبيعية مع تأثير ضئيل على سكر الدم. مقبلات منعشة ومثالية لإنقاص الوزن.",
+        "en": "A 50g serving of crisp pickled giardiniera provides just 11 kcal and valuable fiber with negligible glycemic impact. The ultimate low-calorie Mediterranean crunch.",
+        "nl": "Een portie Italiaanse giardiniera (50g) bevat slechts 11 kcal en gezonde vezels zonder bloedsuikerpiek. Heerlijke knapperige groenten ingelegd in azijn."
+      },
+      "lead": {
+        "ar": "تشكيلة الخضار الإيطالية الكلاسيكية المقرمشة (قرنبيط، جزر، كرفس، فلفل) المنقوعة بالخل والأعشاب العطرية؛ مقبلات متوسطية منعشة تكاد تخلو من السعرات وتدعم الشبع بالألياف.",
+        "en": "The classic Italian mix of crunchy vegetables (cauliflower, carrot, celery, peppers) pickled in vinegar and aromatic herbs: a refreshing Mediterranean starter that is almost calorie-free and supports fullness with its fibre.",
+        "nl": "De klassieke Italiaanse mix van knapperige groenten (bloemkool, wortel, selderij, paprika) ingelegd in azijn en kruiden: een frisse mediterrane starter die bijna geen calorieën bevat en met zijn vezels bijdraagt aan verzadiging."
+      },
+      "tips": {
+        "ar": [
+          "ممتازة كوجبة خفيفة مقرمشة بين الوجبات لتهدئة الرغبة في تناول المقرمشات المملحة الدسمة.",
+          "الخل الطبيعي قد يسهم في إبطاء وتيرة تفريغ المعدة عند تناوله في بداية الوجبات."
+        ],
+        "en": [
+          "An excellent crunchy snack between meals to calm cravings for salty, fatty crisps.",
+          "Natural vinegar may help slow stomach emptying when eaten at the start of a meal."
+        ],
+        "nl": [
+          "Een uitstekend knapperig tussendoortje om de trek in zoute, vette chips te temperen.",
+          "Natuurlijke azijn kan helpen de maaglediging te vertragen als je het aan het begin van een maaltijd eet."
+        ]
+      }
+    },
+    "638": {
+      "title": {
+        "ar": "كم سعرة في برجر ووبر برجر كينج؟ الحقائق الغذائية والدايت | WiBo Health",
+        "en": "Burger King Whopper Calories & Nutrition Facts: Complete Guide | WiBo Health",
+        "nl": "Calorieën Burger King Whopper: voedingswaarde & tips | WiBo Health"
+      },
+      "desc": {
+        "ar": "ساندوتش برجر كينج ووبر يحتوي على 657 سعرة و28غ بروتين و40غ دهون بحمل جلايسيمي 30.7. اكتشف طرقاً ذكية لتقليل سعراته ودهونه بشكل ملحوظ.",
+        "en": "A full Burger King Whopper packs 657 kcal, 28g protein and 40g fat with a high glycemic load of 30.7. Discover smart ordering hacks to cut calories.",
+        "nl": "Een complete Burger King Whopper levert 657 kcal, 28g eiwit en 40g vet met een hoge glykemische lading (30,7). Bekijk handige tips om calorieën te besparen."
+      },
+      "lead": {
+        "ar": "ساندوتش البرجر الأيقوني المشوي على اللهب من برجر كينج بلحم البقر والطماطم والخس والمايونيز؛ وجبة سريعة مشبعة وغنية بالبروتين ولكنها تتطلب وعياً بحجم سعراتها ودهونها العالية.",
+        "en": "Burger King’s iconic flame-grilled burger with beef, tomato, lettuce and mayonnaise: a filling, protein-rich fast-food meal that calls for awareness of its high calories and fat.",
+        "nl": "De iconische vlamgegrilde burger van Burger King met rundvlees, tomaat, sla en mayonaise: een vullende, eiwitrijke fastfoodmaaltijd waarbij je bewust moet zijn van de vele calorieën en vetten."
+      },
+      "tips": {
+        "ar": [
+          "طلب الساندوتش \"بدون مايونيز\" يخصم قرابة 150 سعرة حرارية و16 غراماً من الدهون.",
+          "الاستغناء عن نصف الخبز العلوي يخفض الكربوهيدرات السريعة بنسبة تقارب 40%.",
+          "القيم الغذائية للوجبات السريعة تقريبية وقد تختلف بحسب البلد والفرع وطريقة التحضير المحلية، وWiBo Health غير مرتبط بأي من هذه العلامات التجارية."
+        ],
+        "en": [
+          "Ordering it “without mayo” saves about 150 kcal and 16 g of fat.",
+          "Leaving out the top half of the bun cuts the fast carbohydrates by roughly 40%.",
+          "Fast-food nutrition values are approximate and can vary by country, outlet and local preparation; WiBo Health is not affiliated with any of these brands."
+        ],
+        "nl": [
+          "Bestel hem ‘zonder mayo’ en je bespaart ongeveer 150 kcal en 16 g vet.",
+          "Laat de bovenste helft van het broodje weg en je eet ongeveer 40% minder snelle koolhydraten.",
+          "Voedingswaarden van fastfood zijn bij benadering en kunnen per land, vestiging en lokale bereiding verschillen; WiBo Health is niet verbonden aan deze merken."
+        ]
+      }
+    },
+    "639": {
+      "title": {
+        "ar": "كم سعرة في ساندوتش تشيكن رويال برجر كينج؟ الحقائق والبدائل | WiBo Health",
+        "en": "BK Chicken Royale Calories & Nutrition: Full Sandwich Facts | WiBo Health",
+        "nl": "Calorieën Chicken Royale Burger King: voedingswaarde & tips | WiBo Health"
+      },
+      "desc": {
+        "ar": "ساندوتش تشيكن رويال المقرمش يحتوي على 590 سعرة و24غ بروتين و51غ كربوهيدرات متاحة. تعرف على تفاصيل دهونه وطريقة جعله أخف على الهضم وسكر الدم.",
+        "en": "A Burger King Chicken Royale sandwich contains 590 kcal, 24g protein and 31g fat with a high glycemic load of 31.9. Learn portion tips and lighter swaps.",
+        "nl": "Een Chicken Royale van Burger King bevat 590 kcal, 24g eiwit en 31g vet met een hoge glykemische lading. Ontdek hoe je deze maaltijd lichter maakt."
+      },
+      "lead": {
+        "ar": "ساندوتش فيليه الدجاج المقرمش المستطيل من برجر كينج والمغطى بالخس والمايونيز؛ يمنح قرمشة محبوبة مع بروتين دجاج جيد، لكن القلي وتغليفة البقسماط يرفعان النشويات والدهون معاً.",
+        "en": "Burger King’s long crispy chicken fillet sandwich topped with lettuce and mayonnaise: a much-loved crunch with good chicken protein, but frying and the breadcrumb coating raise both starch and fat.",
+        "nl": "Het langwerpige krokante kipfiletbroodje van Burger King met sla en mayonaise: een geliefde crunch met goed kipeiwit, maar het frituren en de paneerlaag verhogen zowel het zetmeel als het vet."
+      },
+      "tips": {
+        "ar": [
+          "استبدال المايونيز العادي بالخردل يمنح نكهة قوية دون إضافة سعرات دهنية.",
+          "تجنب الجمع بينه وبين البطاطس المقلية والمشروبات الغازية السكرية لمنع تجاوز ميزانية الطاقة اليومية.",
+          "القيم الغذائية للوجبات السريعة تقريبية وقد تختلف بحسب البلد والفرع وطريقة التحضير المحلية، وWiBo Health غير مرتبط بأي من هذه العلامات التجارية."
+        ],
+        "en": [
+          "Swapping the mayonnaise for mustard gives a strong flavour without the fat calories.",
+          "Avoid combining it with fries and sugary soft drinks so you don’t exceed your daily energy budget.",
+          "Fast-food nutrition values are approximate and can vary by country, outlet and local preparation; WiBo Health is not affiliated with any of these brands."
+        ],
+        "nl": [
+          "Vervang de mayonaise door mosterd voor een uitgesproken smaak zonder vetcalorieën.",
+          "Combineer hem niet met friet en suikerhoudende frisdrank, zodat je je dagelijkse energiebudget niet overschrijdt.",
+          "Voedingswaarden van fastfood zijn bij benadering en kunnen per land, vestiging en lokale bereiding verschillen; WiBo Health is niet verbonden aan deze merken."
+        ]
+      }
+    },
+    "640": {
+      "title": {
+        "ar": "كم سعرة في ماك فلوري أوريو ماكدونالدز؟ المؤشر وحقائق السكر | WiBo Health",
+        "en": "McDonald's Oreo McFlurry Calories & Sugar Facts | WiBo Health",
+        "nl": "Calorieën McFlurry Oreo McDonald's: voedingswaarde & suikers | WiBo Health"
+      },
+      "desc": {
+        "ar": "كوب ماك فلوري أوريو يحتوي على 340 سعرة و52غ كربوهيدرات بحمل جلايسيمي مرتفع (32.1). اكتشف تأثيره على سكر الدم والخيارات الأخف للتحلية.",
+        "en": "An Oreo McFlurry cup packs 340 kcal and 52g net carbs with a high glycemic load of 32.1. Understand its sugar impact and discover lighter dessert swaps.",
+        "nl": "Een McFlurry met Oreo levert 340 kcal en 52g koolhydraten met een hoge glykemische lading (32,1). Bekijk de voedingswaarden en tips voor matiging."
+      },
+      "lead": {
+        "ar": "حلوى الآيس كريم الأكثر شعبية من ماكدونالدز؛ تجمع بين قوام الحليب المثلج الناعم وفتات بسكويت الأوريو بالكاكاو. حلوى غنية بالسكريات البسيطة تتطلب التناول الحذر والمتباعد.",
+        "en": "McDonald’s most popular ice-cream dessert, combining smooth soft-serve with crushed cocoa Oreo cookies. A treat rich in simple sugars that is best eaten carefully and only occasionally.",
+        "nl": "Het populairste ijsdessert van McDonald’s, met zacht softijs en verkruimelde Oreo-koekjes. Een traktatie vol enkelvoudige suikers die je het best voorzichtig en maar af en toe eet."
+      },
+      "tips": {
+        "ar": [
+          "مشاركة الكوب مع شخص آخر هي الخطوة الأسرع لتقليص الكربوهيدرات (نحو 26 غراماً بدلاً من 52 غراماً).",
+          "تناوله كتحلية بعد وجبة رئيسية متوازنة بالبروتين، وليس منفرداً على معدة خاوية.",
+          "القيم الغذائية للوجبات السريعة تقريبية وقد تختلف بحسب البلد والفرع وطريقة التحضير المحلية، وWiBo Health غير مرتبط بأي من هذه العلامات التجارية."
+        ],
+        "en": [
+          "Sharing the cup with someone else is the quickest way to cut the carbohydrate (about 26 g instead of 52 g).",
+          "Have it as dessert after a balanced main meal with protein, not on its own on an empty stomach.",
+          "Fast-food nutrition values are approximate and can vary by country, outlet and local preparation; WiBo Health is not affiliated with any of these brands."
+        ],
+        "nl": [
+          "Het bekertje delen is de snelste manier om de koolhydraten te halveren (ongeveer 26 g in plaats van 52 g).",
+          "Eet het als dessert na een evenwichtige hoofdmaaltijd met eiwit, niet los op een lege maag.",
+          "Voedingswaarden van fastfood zijn bij benadering en kunnen per land, vestiging en lokale bereiding verschillen; WiBo Health is niet verbonden aan deze merken."
+        ]
+      },
+      "slug": "mcdonalds-mcflurry-with-oreo-cookies"
+    },
+    "641": {
+      "title": {
+        "ar": "كم سعرة في فطيرة تفاح ماكدونالدز؟ المؤشر الجلايسيمي والدايت | WiBo Health",
+        "en": "McDonald's Apple Pie Calories & Nutrition Facts: Warm Pie Guide | WiBo Health",
+        "nl": "Calorieën McDonald's appeltaartje: voedingswaarde & suikers | WiBo Health"
+      },
+      "desc": {
+        "ar": "فطيرة تفاح ماكدونالدز الساخنة تحتوي على 250 سعرة و32غ كربوهيدرات متاحة بحمل جلايسيمي 21. اكتشف قيمتها الغذائية ومقارنتها بالحلويات الأخرى.",
+        "en": "A classic McDonald's warm apple pie contains 250 kcal, 12g fat and 32g net carbs with a GI of 65. Discover glycemic impact and smart portion facts.",
+        "nl": "Een warm McDonald's appeltaartje levert 250 kcal en 32g koolhydraten met een glykemische index van 65. Handige voedingsfeiten en bewuste keuzetips."
+      },
+      "lead": {
+        "ar": "الفطيرة المقرمشة الكلاسيكية المحشوة بقطع التفاح الدافئ وصلصة القرفة العطرية؛ توفر نكهة مريحة ومحبوبة، مع ضرورة الانتباه لحجم السكريات ودهون العجينة المورقة.",
+        "en": "The classic crispy pie filled with warm apple pieces and fragrant cinnamon sauce: a comforting, much-loved flavour, but keep an eye on the sugars and the fat in the flaky pastry.",
+        "nl": "Het klassieke krokante taartje gevuld met warme stukjes appel en geurige kaneelsaus: een vertrouwde, geliefde smaak, maar let op de suikers en het vet in het bladerdeeg."
+      },
+      "tips": {
+        "ar": [
+          "تحتوي على دهون وسعرات أقل من الدونات والمثلجات الدسمة الكبيرة، لكنها تظل غنية بالسكريات البسيطة.",
+          "فنجان قهوة سوداء أو شاي بدون سكر يمثل رفيقاً متزناً للحد من رغبة طلب المزيد.",
+          "القيم الغذائية للوجبات السريعة تقريبية وقد تختلف بحسب البلد والفرع وطريقة التحضير المحلية، وWiBo Health غير مرتبط بأي من هذه العلامات التجارية."
+        ],
+        "en": [
+          "It has less fat and fewer calories than doughnuts and large rich ice-cream desserts, but it is still high in simple sugars.",
+          "A cup of black coffee or unsweetened tea is a balanced companion that helps curb the urge to order more.",
+          "Fast-food nutrition values are approximate and can vary by country, outlet and local preparation; WiBo Health is not affiliated with any of these brands."
+        ],
+        "nl": [
+          "Het bevat minder vet en calorieën dan donuts en grote romige ijsdesserts, maar blijft rijk aan enkelvoudige suikers.",
+          "Een kop zwarte koffie of thee zonder suiker is een evenwichtige metgezel die de neiging om meer te bestellen helpt te beperken.",
+          "Voedingswaarden van fastfood zijn bij benadering en kunnen per land, vestiging en lokale bereiding verschillen; WiBo Health is niet verbonden aan deze merken."
+        ]
+      },
+      "slug": "crispy-warm-mcdonalds-apple-pie"
+    },
+    "642": {
+      "title": {
+        "ar": "كم سعرة في أصابع الموتزاريلا المقلية؟ المؤشر الجلايسيمي وحقائق الدايت | WiBo Health",
+        "en": "Fried Mozzarella Sticks Calories & Low GI: Marinara Dip Facts | WiBo Health",
+        "nl": "Calorieën mozzarella sticks met marinara: voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "3 أصابع موتزاريلا مقلية مع المارينارا (85غ) تمنحك 238 سعرة و10غ بروتين بمؤشر جلايسيمي منخفض (52). اكتشف نصائح لتقليل الدهون والقلي.",
+        "en": "A 3-piece serving of mozzarella sticks (85g) contains 238 kcal and 10g protein with a low GI of 52. Learn about dairy protein and portion control.",
+        "nl": "Drie gefrituurde mozzarella sticks (85g) leveren 238 kcal en 10g eiwit met een lage GI van 52. Bekijk voedingswaarden en tips voor matiging."
+      },
+      "lead": {
+        "ar": "أصابع الجبن الذائبة المغطاة بغلاف البقسماط الذهبي المقرمش والمغموسة بصلصة الطماطم؛ بروتين الموتزاريلا العالي يبطئ وتيرة امتصاص الكربوهيدرات ليمنح مؤشراً جلايسيمياً منخفضاً (52).",
+        "en": "Melting cheese sticks in a crisp golden breadcrumb coating, dipped in tomato sauce; the high protein in the mozzarella slows carbohydrate absorption, giving a low glycemic index (52).",
+        "nl": "Smeltende kaasstengels in een krokant goudbruin paneerlaagje, gedipt in tomatensaus; het hoge eiwitgehalte van de mozzarella vertraagt de opname van koolhydraten, wat een lage glykemische index (52) geeft."
+      },
+      "tips": {
+        "ar": [
+          "طهيها في القلاية الهوائية يمنح قرمشة مشابهة ويخفض نحو ثلث الدهون مقارنة بالقلي الغزير.",
+          "الاكتفاء بـ 2 إلى 3 أصابع كافٍ لمنح الإشباع بفضل دهن وبروتين الجبن."
+        ],
+        "en": [
+          "Cooking them in an air fryer gives a similar crunch and cuts about a third of the fat compared with deep-frying.",
+          "Two to three sticks are enough to satisfy you, thanks to the fat and protein in the cheese."
+        ],
+        "nl": [
+          "In de airfryer krijg je een vergelijkbare crunch met ongeveer een derde minder vet dan bij frituren.",
+          "Twee tot drie sticks zijn genoeg om verzadigd te raken, dankzij het vet en eiwit in de kaas."
+        ]
+      }
+    },
+    "643": {
+      "title": {
+        "ar": "كم سعرة في حلقات البصل المقلية المقرمشة؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Crispy Onion Rings Calories & Glycemic Index: Fast Food Facts | WiBo Health",
+        "nl": "Calorieën gefrituurde uienringen: voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة حلقات البصل المقلية (85غ) تحتوي على 323 سعرة و35غ نشويات سريعة بحمل جلايسيمي مرتفع (24). تعرف على سبب دسامتها وبدائلها الصحية.",
+        "en": "An 85g portion of battered onion rings packs 323 kcal and 18g fat with a high glycemic load of 24. Discover why batter absorbs more oil and find lighter swaps.",
+        "nl": "Een portie uienringen (85g) levert 323 kcal en 18g vet met een hoge glykemische lading (24). Ontdek waarom uienringen calorierijk zijn en bekijk lichtere alternatieven."
+      },
+      "lead": {
+        "ar": "دوائر البصل المغلفة بخليط العجين المقلي حتى اللون الذهبي؛ ورغم فوائد البصل الطبيعية، إلا أن العجين الخارجي يمتص كميات كبيرة من زيت القلي مما يرفع السعرات والحمل الجلايسيمي.",
+        "en": "Onion rings coated in batter and fried until golden; despite the natural benefits of onion, the batter soaks up a lot of frying oil, which raises the calories and the glycemic load.",
+        "nl": "Uienringen in beslag, goudbruin gefrituurd; ondanks de natuurlijke voordelen van ui neemt het beslag veel frituurolie op, wat de calorieën en de glykemische lading verhoogt."
+      },
+      "tips": {
+        "ar": [
+          "خَبزُ حلقات البصل في الفرن برشة خفيفة من الزيت بدلاً من غمرها في الزيت الساخن يقلل السعرات بشكل كبير.",
+          "تجنب تغميسها في الصلصات السكرية مثل صوص الباربيكيو التجاري."
+        ],
+        "en": [
+          "Baking onion rings in the oven with a light spray of oil instead of deep-frying them cuts the calories considerably.",
+          "Avoid dipping them in sugary sauces such as shop-bought barbecue sauce."
+        ],
+        "nl": [
+          "Uienringen in de oven bakken met een klein beetje olie in plaats van frituren scheelt flink in calorieën.",
+          "Dip ze niet in suikerrijke sauzen zoals kant-en-klare barbecuesaus."
+        ]
+      }
+    },
+    "644": {
+      "title": {
+        "ar": "كم سعرة في أجنحة دجاج بافلو الحارة؟ البروتين والمؤشر الجلايسيمي | WiBo Health",
+        "en": "Spicy Buffalo Wings Calories & Protein: Low-Carb Guide | WiBo Health",
+        "nl": "Calorieën hete buffalo chicken wings: eiwitten & keto | WiBo Health"
+      },
+      "desc": {
+        "ar": "4 قطع من أجنحة البافلو الحارة (85غ لحم) تمنحك 221 سعرة و19غ بروتين مع كربوهيدرات شبه معدومة، لذا لا ينطبق المؤشر الجلايسيمي. خيار مناسب للكيتو والبروتين.",
+        "en": "A 4-piece serving of buffalo chicken wings (85g edible meat) delivers 221 kcal and 19g protein with virtually zero carbs. A high-protein, keto-friendly choice.",
+        "nl": "Een portie van 4 pittige buffalo wings (85g vlees) bevat 221 kcal en 19g eiwit, vrijwel zonder koolhydraten. Geschikt voor een koolhydraatarm of keto voedingspatroon."
+      },
+      "lead": {
+        "ar": "أجنحة الدجاج المقلية المتبلة بصلصة الشطة الحارة والزبدة المذابة؛ تمتاز بكثافة بروتينية عالية وكربوهيدرات شبه معدومة، مما يجعل تأثيرها على سكر الدم ضئيلاً جداً.",
+        "en": "Fried chicken wings tossed in hot chilli sauce and melted butter; they are high in protein with almost no carbohydrate, so their effect on blood sugar is minimal.",
+        "nl": "Gefrituurde kippenvleugels in pittige chilisaus en gesmolten boter; ze zijn eiwitrijk en bevatten vrijwel geen koolhydraten, dus het effect op de bloedsuiker is minimaal."
+      },
+      "tips": {
+        "ar": [
+          "خيار مناسب لمن يتبعون حميات قليلة النشويات أو الكيتو لعدم وجود دقيق أو بقسماط في الوصفة الأصيلة.",
+          "تناول أعواد الكرفس المرافقة يمنح أليافاً وترطيباً يوازن حدة الشطة الحارة."
+        ],
+        "en": [
+          "A good choice for low-carb or keto diets, as the original recipe uses no flour or breadcrumbs.",
+          "Eating the celery sticks served alongside adds fibre and hydration that balance the heat of the chilli."
+        ],
+        "nl": [
+          "Een goede keuze bij een koolhydraatarm of ketodieet, omdat het originele recept geen bloem of paneermeel gebruikt.",
+          "De selderijstengels die erbij horen leveren vezels en vocht die de scherpte van de chili in balans brengen."
+        ]
+      }
+    },
+    "645": {
+      "title": {
+        "ar": "كم سعرة في برجر فيليه الدجاج المقرمش بالمايونيز؟ حقائق الدايت | WiBo Health",
+        "en": "Crispy Chicken Fillet Burger Calories & Nutrition Guide | WiBo Health",
+        "nl": "Calorieën crispy chicken burger met mayonaise: voedingswaarde | WiBo Health"
+      },
+      "desc": {
+        "ar": "برجر دجاج فيليه مقرمش كامل (200غ) يحتوي على 480 سعرة و23غ بروتين و24غ دهون. تعرف على نصائح ذكية لتقليل السعرات واختيار البديل الصحي.",
+        "en": "A 200g crispy chicken fillet burger packs 480 kcal, 23g protein and 24g fat with a glycemic load of 24.2. Discover tips to reduce calories and fat.",
+        "nl": "Een knapperige kipburger (200g) levert 480 kcal, 23g eiwit en 24g vet. Bekijk handige tips om calorieën te verlagen en gezondere keuzes te maken."
+      },
+      "lead": {
+        "ar": "صدر الدجاج المتبل والمقرمش داخل خبز البرجر الطري مع المايونيز والخس؛ وجبة غداء سريعة توفر 23غ بروتين يعزز الشبع، مع ضرورة الانتباه لحجم النشويات والدهون في التغطية المقلية.",
+        "en": "Seasoned crispy chicken breast in a soft burger bun with mayonnaise and lettuce: a quick lunch with 23 g of filling protein, but watch the starch and fat in the fried coating.",
+        "nl": "Gekruide krokante kipfilet in een zacht burgerbroodje met mayonaise en sla: een snelle lunch met 23 g verzadigend eiwit, maar let op het zetmeel en vet in de gefrituurde korst."
+      },
+      "tips": {
+        "ar": [
+          "اختيار الدجاج المشوي (Grilled Chicken) بدلاً من المقرمش يوفر قرابة 140 سعرة ويخفض الدهون بنحو النصف.",
+          "اطلب كمية خس إضافية واستغنِ عن ملعقة المايونيز لخفض السعرات الزائدة."
+        ],
+        "en": [
+          "Choosing grilled chicken instead of crispy saves about 140 kcal and roughly halves the fat.",
+          "Ask for extra lettuce and skip the spoonful of mayonnaise to cut surplus calories."
+        ],
+        "nl": [
+          "Kies gegrilde kip in plaats van krokante: dat scheelt ongeveer 140 kcal en ongeveer de helft van het vet.",
+          "Vraag om extra sla en sla de schep mayonaise over om overbodige calorieën te schrappen."
+        ]
+      }
+    },
+    "646": {
+      "title": {
+        "ar": "كم سعرة في ساندوتش روست بيف ميلت بالشيدر؟ البروتين والمؤشر | WiBo Health",
+        "en": "Warm Roast Beef & Cheddar Melt Calories: High-Protein Sub | WiBo Health",
+        "nl": "Calorieën warme roast beef melt met cheddar: voedingswaarde | WiBo Health"
+      },
+      "desc": {
+        "ar": "ساندوتش الروست بيف المذاب بالشيدر (180غ) يمنحك 410 سعرات و28غ بروتين بمؤشر جلايسيمي منخفض (52). خيار رائع لعشاق البروتين والشبع.",
+        "en": "A warm roast beef melt sandwich (180g) delivers 410 kcal and 28g muscle-building protein with a low GI of 52. Learn smart nutrition facts and balance tips.",
+        "nl": "Een warme roast beef sandwich met cheddar (180g) bevat 410 kcal en 28g eiwit met een lage GI van 52. Een eiwitrijke en verzadigende maaltijdkeuze."
+      },
+      "lead": {
+        "ar": "شرائح لحم البقر المشوي الرقيقة الدافئة المغطاة بجبن الشيدر الذائب داخل خبز محمص؛ وجبة سريعة تتميز بارتفاع نسبة البروتين وانخفاض نسبي في النشويات مقارنة ببرجر الدجاج المقلي.",
+        "en": "Thin, warm slices of roast beef topped with melted cheddar in toasted bread: a fast-food meal that stands out for its high protein and relatively lower starch than a fried chicken burger.",
+        "nl": "Dunne, warme plakken rosbief met gesmolten cheddar op geroosterd brood: een fastfoodmaaltijd die opvalt door veel eiwit en relatief minder zetmeel dan een gefrituurde kipburger."
+      },
+      "tips": {
+        "ar": [
+          "نسبة البروتين العالية (28غ) تجعله من أفضل الخيارات في مطاعم الوجبات السريعة لدعم الكتلة العضلية والشبع.",
+          "اختر خبز الحبوب الكاملة إن توفر، وتجنب الصلصات السكرية المضافة."
+        ],
+        "en": [
+          "Its high protein (28 g) makes it one of the better fast-food choices for muscle mass and fullness.",
+          "Choose wholegrain bread if available and avoid added sugary sauces."
+        ],
+        "nl": [
+          "Door het hoge eiwitgehalte (28 g) is dit een van de betere fastfoodkeuzes voor spiermassa en verzadiging.",
+          "Kies volkorenbrood als dat er is en vermijd toegevoegde suikerrijke sauzen."
+        ]
+      }
+    },
+    "647": {
+      "title": {
+        "ar": "كم سعرة في بطاطس كيرلي المقلية المتبلة؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Seasoned Curly Fries Calories & Glycemic Index: Fast Food Facts | WiBo Health",
+        "nl": "Calorieën gekruide curly fries: voedingswaarde & glykemische index | WiBo Health"
+      },
+      "desc": {
+        "ar": "عبوة بطاطس كيرلي المتبلة (115غ) تحتوي على 368 سعرة ونشويات بمؤشر جلايسيمي مرتفع (72). اكتشف تأثير القلي والتوابل على سكر الدم.",
+        "en": "A medium portion of spiral curly fries (115g) delivers 368 kcal and 44g net carbs with a high GI of 72. Learn portion facts and healthier oven swaps.",
+        "nl": "Een portie curly fries (115g) bevat 368 kcal en 18g vet met een hoge glykemische index (72). Ontdek voedingswaarden en tips voor matiging."
+      },
+      "lead": {
+        "ar": "لولبيات البطاطس المقلية المقرمشة والمتبلة بالبابريكا ومسحوق الثوم؛ تحظى بشعبية طاغية بفضل نكهتها القوية، إلا أن مؤشرها الجلايسيمي المرتفع (72) يستدعي ضبط الحصة.",
+        "en": "Crispy fried potato spirals seasoned with paprika and garlic powder; hugely popular for their bold flavour, but their high glycemic index (72) calls for portion control.",
+        "nl": "Krokante gefrituurde aardappelspiralen met paprika en knoflookpoeder; razend populair door hun uitgesproken smaak, maar de hoge glykemische index (72) vraagt om een beperkte portie."
+      },
+      "tips": {
+        "ar": [
+          "حجم الحصة هو الأهم؛ شارك العبوة مع رفقائك وتجنب تناول الحجم الكبير منفرداً.",
+          "انتبه لمحتواها المرتفع من الملح، واختر الماء بدلاً من المشروبات الغازية بجانبها."
+        ],
+        "en": [
+          "Portion size matters most: share the pack and avoid eating a large one on your own.",
+          "Mind the high salt content, and choose water rather than soft drinks alongside."
+        ],
+        "nl": [
+          "De portiegrootte telt het zwaarst: deel het bakje en eet geen grote portie in je eentje.",
+          "Let op het hoge zoutgehalte en drink er water bij in plaats van frisdrank."
+        ]
+      }
+    },
+    "648": {
+      "title": {
+        "ar": "كم سعرة في بطاطس ودجز المشوية بالقشرة؟ المؤشر الجلايسيمي والدايت | WiBo Health",
+        "en": "Oven-Baked Potato Wedges Calories & GI: Healthier Fry Swap | WiBo Health",
+        "nl": "Calorieën aardappelpartjes uit de oven: voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة بطاطس ودجز المشوية بالفرن (130غ) تحتوي على 215 سعرة فقط و4.5غ ألياف مع دهون قليلة. البديل الصحي الأفضل للبطاطس المقلية.",
+        "en": "A 130g serving of skin-on baked potato wedges has only 215 kcal and 6.2g fat with 4.5g fiber. The smart, nutrient-dense alternative to deep-fried fries.",
+        "nl": "Een portie ovengebakken aardappelpartjes met schil (130g) levert slechts 215 kcal en 4,5g vezels. Het gezondere alternatief voor gefrituurde friet."
+      },
+      "lead": {
+        "ar": "أرباع البطاطس الطبيعية المخبوزة في الفرن بقشرتها الغنية بالألياف والمعطرة بإكليل الجبل وزيت الزيتون؛ بديل صحي متفوق على البطاطس المقلية يوفر دهوناً أقل بكثير وسعرات معتدلة.",
+        "en": "Natural potato wedges baked in the oven with their fibre-rich skin, flavoured with rosemary and olive oil: a healthier alternative to fries with far less fat and moderate calories.",
+        "nl": "Natuurlijke aardappelpartjes, in de oven gebakken met hun vezelrijke schil en op smaak gebracht met rozemarijn en olijfolie: een gezonder alternatief voor friet met veel minder vet en gematigde calorieën."
+      },
+      "tips": {
+        "ar": [
+          "الإبقاء على قشرة البطاطس يحافظ على الألياف والبوتاسيوم ويبطئ وتيرة امتصاص النشا.",
+          "تتبيلها بالروزماري والبابريكا يمنح نكهة رائعة دون الحاجة لصلصات دسمة."
+        ],
+        "en": [
+          "Keeping the skin on preserves fibre and potassium and slows the absorption of starch.",
+          "Seasoning with rosemary and paprika gives great flavour without rich sauces."
+        ],
+        "nl": [
+          "De schil laten zitten behoudt vezels en kalium en vertraagt de opname van zetmeel.",
+          "Kruiden met rozemarijn en paprika geeft een heerlijke smaak zonder machtige sauzen."
+        ]
+      }
+    },
+    "649": {
+      "title": {
+        "ar": "كم سعرة في ساندوتش فيلي تشيز ستيك؟ البروتين والمؤشر الجلايسيمي | WiBo Health",
+        "en": "Philly Cheesesteak Calories & Protein Facts: Sub Guide | WiBo Health",
+        "nl": "Calorieën Philly cheesesteak sandwich: eiwitten & voedingswaarde | WiBo Health"
+      },
+      "desc": {
+        "ar": "ساندوتش فيلي تشيز ستيك (280غ) يمنحك 520 سعرة و32غ بروتين بمؤشر جلايسيمي منخفض (55). اكتشف قيمته الغذائية وطرق ضبط دهونه.",
+        "en": "A classic Philly cheesesteak sub (280g) packs 520 kcal and 32g protein with a low GI of 55. Learn about its macro balance, ribeye beef and portion tips.",
+        "nl": "Een Philly cheesesteak sub (280g) levert 520 kcal en 32g hoogwaardig eiwit met een lage GI van 55. Een voedzame, eiwitrijke Amerikaanse klassieker."
+      },
+      "lead": {
+        "ar": "الساندوتش الأمريكي الأسطوري القادم من فيلادلفيا؛ شرائح لحم الريب آي البقري المطهوة على الصاج مع البصل المكرمل ومغطاة بالجبن الذائب؛ يوفر دفعة بروتينية كبيرة (32غ).",
+        "en": "The legendary American sandwich from Philadelphia: ribeye beef slices cooked on the griddle with caramelised onions and topped with melted cheese, delivering a big protein boost (32 g).",
+        "nl": "De legendarische Amerikaanse sandwich uit Philadelphia: plakjes ribeye, gebakken op de bakplaat met gekarameliseerde ui en bedekt met gesmolten kaas, goed voor een flinke portie eiwit (32 g)."
+      },
+      "tips": {
+        "ar": [
+          "طلب زيادة كمية البصل والفلفل الأخضر المشوي يضيف حجماً وأليافاً غذائية ممتازة للوجبة.",
+          "الحجم الفردي مشبع جداً وكافٍ كوجبة رئيسية متكاملة دون الحاجة لطلب مقبلات جانبية."
+        ],
+        "en": [
+          "Asking for extra onions and grilled green peppers adds volume and valuable fibre to the meal.",
+          "A single sandwich is very filling and enough as a complete main meal without side orders."
+        ],
+        "nl": [
+          "Vraag om extra ui en gegrilde groene paprika voor meer volume en waardevolle vezels.",
+          "Eén sandwich is erg vullend en volstaat als volledige hoofdmaaltijd zonder bijgerechten."
+        ]
+      }
+    },
+    "650": {
+      "title": {
+        "ar": "كم سعرة في أجنحة الدجاج بصلصة الباربيكيو والعسل؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Honey BBQ Glazed Chicken Wings Calories & GI Guide | WiBo Health",
+        "nl": "Calorieën honey BBQ chicken wings: voedingswaarde & GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "4 قطع من أجنحة باربيكيو العسل (85غ لحم) تمنحك 234 سعرة و18غ بروتين بمؤشر جلايسيمي منخفض (35). اكتشف تأثير تتبيلة العسل والباربيكيو على الدايت.",
+        "en": "A 4-piece portion of honey BBQ chicken wings provides 234 kcal and 18g protein with a low GI of 35. Discover sugar content facts and healthy eating tips.",
+        "nl": "Een portie van 4 honey BBQ wings (85g vlees) levert 234 kcal en 18g eiwit met een lage GI van 35. Bekijk voedingswaarden en tips voor sauzen."
+      },
+      "lead": {
+        "ar": "أجنحة الدجاج المشوية والمغلفة بصلصة الباربيكيو المدخنة الممزوجة بلمسة العسل الطبيعي؛ تمنح مزيجاً لا يُقاوم بين التدخين والحلاوة مع محتوى بروتيني عالٍ ومؤشر جلايسيمي منخفض (35).",
+        "en": "Grilled chicken wings coated in smoky barbecue sauce with a touch of natural honey: an irresistible mix of smoke and sweetness with high protein and a low glycemic index (35).",
+        "nl": "Gegrilde kippenvleugels in een rokerige barbecuesaus met een vleugje natuurlijke honing: een onweerstaanbare mix van rook en zoet, met veel eiwit en een lage glykemische index (35)."
+      },
+      "tips": {
+        "ar": [
+          "اختيار الأجنحة المشوية بالفرن بدلاً من المقلية يقلل السعرات والدهون الإجمالية بشكل ملموس.",
+          "صلصة الباربيكيو بالعسل تضيف سكريات؛ لذا راقب مجموع الكربوهيدرات المتاحة إذا كنت تتبع حمية منخفضة الكربوهيدرات."
+        ],
+        "en": [
+          "Choosing oven-baked wings instead of fried ones noticeably lowers the total calories and fat.",
+          "Honey barbecue sauce adds sugars, so keep track of your total available carbohydrate if you follow a low-carb diet."
+        ],
+        "nl": [
+          "Kies voor wings uit de oven in plaats van gefrituurde: dat verlaagt de calorieën en het vet merkbaar.",
+          "Honing-barbecuesaus voegt suikers toe; houd dus je totale beschikbare koolhydraten in de gaten als je koolhydraatarm eet."
+        ]
+      }
+    },
+    "627": {
+      "slug": "tortellini-with-ricotta-spinach-filling",
+      "title": {
+        "ar": "كم سعرة في التورتيليني المطبوخة بالريكوتا والسبانخ؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Cooked Spinach & Ricotta Tortellini Calories & GI | WiBo Health",
+        "nl": "Calorieën gekookte tortellini ricotta & spinazie: GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة التورتيليني المطبوخة (150غ) تحتوي على 255 سعرة و10غ بروتين بمؤشر جلايسيمي منخفض (50). اكتشف كيف تؤثر حشوة الجبن على الشبع وسكر الدم.",
+        "en": "A 150g serving of cooked spinach & ricotta tortellini contains 255 kcal and 10g protein with a low GI of 50. Learn portion control and healthy serving tips.",
+        "nl": "Een gekookte portie tortellini met ricotta en spinazie (150g) levert 255 kcal en 10g eiwit met een lage GI van 50. Bekijk voedingswaarden en tips."
+      },
+      "lead": {
+        "ar": "كرات الباستا الإيطالية التقليدية المحشوة بنعومة؛ يجتمع فيها عجين سميد القمح مع حشوة جبن الريكوتا وأوراق السبانخ الخضراء. يسهم بروتين الريكوتا في إبطاء هضم النشا ليمنحها مؤشراً جلايسيمياً منخفضاً (50). القيم في هذه الصفحة للتورتيليني بعد الطهي.",
+        "en": "Traditional, delicately filled Italian pasta parcels: semolina dough wrapped around ricotta and green spinach. The protein in the ricotta helps slow starch digestion, giving a low glycemic index (50). The values on this page are for cooked tortellini.",
+        "nl": "Traditionele, fijn gevulde Italiaanse pastapakketjes: deeg van tarwegries rond ricotta en groene spinazie. Het eiwit in de ricotta vertraagt de vertering van zetmeel, wat zorgt voor een lage glykemische index (50). De waarden op deze pagina gelden voor gekookte tortellini."
+      },
+      "tips": {
+        "ar": [
+          "قدّمها مع صلصة طماطم طازجة خفيفة (مارينارا) بدلاً من الصلصات الكريمية الثقيلة للتحكم في مجمل السعرات.",
+          "ابدأ وجبتك بطبق سلطة خضراء لزيادة الألياف وخفض الحمل الجلايسيمي الكلي للوجبة."
+        ],
+        "en": [
+          "Serve them with a light fresh tomato sauce (marinara) instead of heavy cream sauces to keep total calories in check.",
+          "Start your meal with a green salad to add fibre and lower the overall glycemic load of the meal."
+        ],
+        "nl": [
+          "Serveer ze met een lichte verse tomatensaus (marinara) in plaats van zware roomsauzen om de totale calorieën te beperken.",
+          "Begin je maaltijd met een groene salade voor extra vezels en een lagere glykemische lading van de hele maaltijd."
+        ]
+      }
+    },
+    "628": {
+      "slug": "ravioli-with-wild-mushroom-parmesan-filling",
+      "title": {
+        "ar": "كم سعرة في الرافيولي المطبوخة بالفطر والبارميزان؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Cooked Wild Mushroom Ravioli Calories & GI Guide | WiBo Health",
+        "nl": "Calorieën gekookte ravioli met bospaddenstoelen: GI | WiBo Health"
+      },
+      "desc": {
+        "ar": "الحصة المعتادة من الرافيولي المطبوخة (150غ) تحتوي على 248 سعرة و9.3غ بروتين بمؤشر جلايسيمي منخفض (50). تعرف على فوائد الفطر البري وقيمته للدايت.",
+        "en": "A 150g serving of cooked mushroom & parmesan ravioli contains 248 kcal and 9.3g protein with a low GI of 50. Discover satiety facts and cooking tips.",
+        "nl": "Een portie gekookte ravioli met paddenstoelen (150g) bevat 248 kcal en 9,3g eiwit met een lage GI van 50. Ontdek voedingswaarden en bereidingstips."
+      },
+      "lead": {
+        "ar": "مربعات الرافيولي الإيطالية المفعمة بنكهة الفطر البري وجبن البارميزان المعتق. يضفي الفطر أليافاً ونكهة غنية تعزز الشبع، مع مؤشر جلايسيمي منخفض (50). القيم في هذه الصفحة للرافيولي بعد الطهي.",
+        "en": "Italian ravioli squares full of the flavour of wild mushrooms and aged Parmesan. The mushrooms add fibre and a rich taste that supports fullness, with a low glycemic index (50). The values on this page are for cooked ravioli.",
+        "nl": "Italiaanse raviolikussentjes vol smaak van bospaddenstoelen en belegen Parmezaanse kaas. De paddenstoelen leveren vezels en een rijke smaak die bijdraagt aan verzadiging, met een lage glykemische index (50). De waarden op deze pagina gelden voor gekookte ravioli."
+      },
+      "tips": {
+        "ar": [
+          "طهي الباستا بدرجة \"أل دينتي\" (Al Dente) يحافظ على تماسك النشا ويبطئ تفككه في الأمعاء.",
+          "رشة خفيفة من زيت الزيتون البكر وأوراق الميرمية تكفي لإبراز طعم الفطر دون دهون مصنعة."
+        ],
+        "en": [
+          "Cooking the pasta al dente keeps the starch structure firm and slows its breakdown in the gut.",
+          "A light drizzle of virgin olive oil and a few sage leaves are enough to bring out the mushroom flavour without processed fats."
+        ],
+        "nl": [
+          "Pasta al dente koken houdt de zetmeelstructuur stevig en vertraagt de afbraak in de darm.",
+          "Een scheutje vierge olijfolie en een paar salieblaadjes zijn genoeg om de paddenstoelsmaak naar voren te halen zonder bewerkte vetten."
+        ]
+      }
+    },
+    "629": {
+      "slug": "fresh-egg-tagliatelle-ribbon-pasta",
+      "title": {
+        "ar": "كم سعرة في معكرونة التالياتيلي المطبوخة بالبيض؟ المؤشر الجلايسيمي | WiBo Health",
+        "en": "Cooked Egg Tagliatelle Calories & Glycemic Index Facts | WiBo Health",
+        "nl": "Calorieën gekookte eiertagliatelle: glykemische index | WiBo Health"
+      },
+      "desc": {
+        "ar": "حصة التالياتيلي المطبوخة بالبيض (140غ) تحتوي على 203 سعرات و7.8غ بروتين بمؤشر جلايسيمي منخفض (50). اكتشف الفرق بين الباستا بالبيض والعادية.",
+        "en": "Cooked fresh egg tagliatelle provides 203 kcal and 7.8g protein per 140g serving with a low GI of 50. Learn the nutritional benefits of egg pasta.",
+        "nl": "Een portie gekookte tagliatelle met ei (140g) levert 203 kcal en 7,8g eiwit met een lage GI van 50. Bekijk voedingswaarden en handige tips."
+      },
+      "lead": {
+        "ar": "شرائط الباستا الذهبية العريضة المعدة من دقيق القمح الصلب وصفار البيض الطازج؛ يمنحها البيض قواماً ناعماً ونسبة بروتين أعلى تعزز الشبع وتبطئ امتصاص النشويات. القيم في هذه الصفحة للتالياتيلي بعد الطهي.",
+        "en": "Wide golden pasta ribbons made from durum wheat flour and fresh egg yolk; the egg gives a silky texture and more protein, which supports fullness and slows starch absorption. The values on this page are for cooked tagliatelle.",
+        "nl": "Brede goudgele pastalinten van durumtarwebloem en vers eigeel; het ei zorgt voor een zijdezachte textuur en meer eiwit, wat de verzadiging ondersteunt en de opname van zetmeel vertraagt. De waarden op deze pagina gelden voor gekookte tagliatelle."
+      },
+      "tips": {
+        "ar": [
+          "إضافة البروتين مثل صدور الدجاج أو الروبيان المشوي يجعل الوجبة متكاملة ويقلل استجابة الجلوكوز.",
+          "حصة معتدلة (140غ مطبوخة) تكفي كطبق رئيسي، خاصة مع الخضار والبروتين."
+        ],
+        "en": [
+          "Adding protein such as grilled chicken breast or prawns makes it a complete meal and lowers the glucose response.",
+          "A moderate portion (140 g cooked) is enough for a main course, especially with vegetables and protein."
+        ],
+        "nl": [
+          "Voeg eiwit toe zoals gegrilde kipfilet of garnalen voor een complete maaltijd en een lagere glucosereactie.",
+          "Een gematigde portie (140 g gekookt) is genoeg als hoofdgerecht, zeker met groenten en eiwit."
+        ]
+      }
     }
   }
 }

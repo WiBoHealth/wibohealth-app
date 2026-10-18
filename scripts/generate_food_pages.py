@@ -187,6 +187,14 @@ PILOT = {
     611: ('sweets', 75), 612: ('sweets', 80), 613: ('sweets', 120), 614: ('sweets', 30), 615: ('sweets', 40),
     616: ('sweets', 90), 617: ('sweets', 95), 618: ('protein', 25), 619: ('protein', 100), 620: ('protein', 120),
     621: ('protein', 120), 622: ('protein', 110), 623: ('protein', 115), 624: ('protein', 115), 625: ('protein', 85),
+    # batch 18: Italian pasta and condiments, cured cod liver, fast food (fast-food values rebuilt per 100 g
+    # from the approved item weights; 627-629 rebuilt as cooked pasta)
+    626: ('protein', 60), 627: ('italian', 150), 628: ('italian', 150), 629: ('italian', 140),
+    630: ('italian', 150), 631: ('italian', 150), 632: ('italian', 70), 633: ('condiment', 30),
+    634: ('condiment', 30), 635: ('pantry', 30), 636: ('condiment', 30), 637: ('condiment', 50),
+    638: ('fastfood', 280), 639: ('fastfood', 210), 640: ('fastfood', 180), 641: ('fastfood', 80), 642: ('fastfood', 85),
+    643: ('fastfood', 85), 644: ('fastfood', 85), 645: ('fastfood', 200), 646: ('fastfood', 180),
+    647: ('fastfood', 115), 648: ('fastfood', 130), 649: ('fastfood', 280), 650: ('fastfood', 85),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -195,7 +203,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 626))
+TEAM_REVIEW |= set(range(207, 651))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
@@ -543,7 +551,7 @@ def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, g
     v.update(g or {})
     pf = portion / 100.0
     kcal = food['kcal']
-    kcal_p = round(kcal * pf)
+    kcal_p = int(kcal * pf + 0.5 + 1e-9)    # half up (130.5 -> 131), not Python's banker's rounding
     ppk = food['protein'] / kcal * 100 if kcal else 0
     if kcal >= 400:
         w = f['w_high']
