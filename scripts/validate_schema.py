@@ -6,8 +6,9 @@ article pages (articles/, en/..., nl/...):
   - the block parses as JSON (an empty block is an error too)
   - no "Product" type anywhere, and no offers / aggregateRating / review / price fields
   - every static food page carries a MedicalWebPage with author (Dr. Wassim Habib) and publisher
-  - every supplement and article page carries a MedicalWebPage authored by the WiBo Health organisation, cites its
-    sources, and never names a personal reviewer (legal requirement for supplement and article content)
+  - every supplement, article and calculator page carries a MedicalWebPage authored by the WiBo Health organisation,
+    cites its sources, and never names a personal reviewer (legal requirement for supplement and article content)
+  - JSON-LD may be a single node or an @graph of nodes
 It also scans the .js / .html sources for a schema "@type": "Product" built at runtime.
 
 Usage: python scripts/validate_schema.py
@@ -39,6 +40,8 @@ def main():
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
     supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles')
             for p in sorted((ROOT / d).glob('*.html'))]
+    # the standalone calculator pages follow the same organisation-only authorship rule
+    supp += [p for d in ('.', 'en', 'nl') for p in sorted((ROOT / d).glob('*-calculator.html'))]
     errors, blocks = [], 0
     for page in pages + static + supp:
         rel = page.relative_to(ROOT).as_posix()
@@ -53,23 +56,27 @@ def main():
             except json.JSONDecodeError as e:
                 errors.append(f'{rel}: invalid JSON-LD ({e})')
                 continue
-            found_types.add(data.get('@type'))
+            nodes = data.get('@graph', [data]) if isinstance(data, dict) else [data]
+            found_types.update(n.get('@type') for n in nodes if isinstance(n, dict))
             for path, k, v in walk(data):
                 if k == '@type' and (v == 'Product' or (isinstance(v, list) and 'Product' in v)):
                     errors.append(f'{rel}: Product at {path}')
                 if k in BANNED_KEYS:
                     errors.append(f'{rel}: commerce field {k!r} at {path}')
-            if data.get('@type') == 'MedicalWebPage' and page in static:
-                if (data.get('author') or {}).get('name') != 'Dr. Wassim Habib':
-                    errors.append(f'{rel}: author missing')
-                if (data.get('publisher') or {}).get('name') != 'WiBo Health':
-                    errors.append(f'{rel}: publisher missing')
-            if data.get('@type') == 'MedicalWebPage' and page in supp:
-                author = data.get('author') or {}
-                if author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
-                    errors.append(f'{rel}: author must be the WiBo Health organisation')
-                if not data.get('citation'):
-                    errors.append(f'{rel}: no citation')
+            for node in nodes:
+                if not isinstance(node, dict) or node.get('@type') != 'MedicalWebPage':
+                    continue
+                if page in static:
+                    if (node.get('author') or {}).get('name') != 'Dr. Wassim Habib':
+                        errors.append(f'{rel}: author missing')
+                    if (node.get('publisher') or {}).get('name') != 'WiBo Health':
+                        errors.append(f'{rel}: publisher missing')
+                if page in supp:
+                    author = node.get('author') or {}
+                    if author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
+                        errors.append(f'{rel}: author must be the WiBo Health organisation')
+                    if not node.get('citation'):
+                        errors.append(f'{rel}: no citation')
         if page in static + supp and 'MedicalWebPage' not in found_types:
             errors.append(f'{rel}: no MedicalWebPage block')
 

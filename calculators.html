@@ -668,6 +668,21 @@
         .footer-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
         .footer-links a:hover { color: var(--primary); }
 
+        /* Links to the standalone calculator pages */
+        .guide-section { margin: 0 0 30px; }
+        .guide-section-title { font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; color: var(--text-main); }
+        .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+        .guide-card { display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: var(--radius-md); text-decoration: none;
+            background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-main); transition: border-color 0.2s, transform 0.2s; }
+        .guide-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .guide-card i { color: var(--primary); font-size: 1.2rem; }
+        html[data-theme="dark"] .guide-card i, html[data-theme="dark"] .panel-guide-link { color: #6ee7b7; }
+        .guide-card strong { font-size: 1rem; }
+        .guide-card span { color: var(--text-muted); font-size: 0.86rem; }
+        .panel-guide-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-weight: 700; font-size: 0.92rem;
+            color: var(--primary); text-decoration: none; }
+        .panel-guide-link:hover { text-decoration: underline; }
+
         @media (max-width: 860px) {
             .calculator-tabs { grid-template-columns: repeat(2, 1fr); }
             .hero-title { font-size: 1.8rem; }
@@ -730,6 +745,33 @@
             <p class="hero-subtitle" data-i18n="hero_subtitle">أدوات تحليل استرشادية مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية لسلامة الأغذية (EFSA) وإرشادات المعهد الوطني للصحة والرعاية (NICE).</p>
         </section>
 
+        <!-- Standalone calculator pages: each has the full clinical guide, tables and FAQ -->
+        <section class="guide-section" aria-labelledby="guidesTitle">
+            <h2 class="guide-section-title" id="guidesTitle" data-i18n="guides_title">الدليل الكامل لكل حاسبة</h2>
+            <div class="guide-grid">
+            <a class="guide-card" href="/bmi-calculator.html" data-calc-page="bmi-calculator">
+                <i class="fas fa-weight-scale" aria-hidden="true"></i>
+                <strong data-i18n="guide_bmi_t">حاسبة مؤشر كتلة الجسم BMI</strong>
+                <span data-i18n="guide_bmi_d">جدول التصنيف، الوزن المثالي لطولك، وحدود أصحاب الأصول العربية.</span>
+            </a>
+            <a class="guide-card" href="/tdee-calculator.html" data-calc-page="tdee-calculator">
+                <i class="fas fa-fire-flame-curved" aria-hidden="true"></i>
+                <strong data-i18n="guide_tdee_t">حاسبة السعرات TDEE وBMR</strong>
+                <span data-i18n="guide_tdee_d">معادلة ميفلين-سانت جور، سعرات التنحيف الآمنة، وتوزيع الماكروز.</span>
+            </a>
+            <a class="guide-card" href="/water-calculator.html" data-calc-page="water-calculator">
+                <i class="fas fa-droplet" aria-hidden="true"></i>
+                <strong data-i18n="guide_water_t">حاسبة شرب الماء اليومي</strong>
+                <span data-i18n="guide_water_d">احتياجك حسب الوزن والنشاط مقارنة بقيم EFSA وعلامات الجفاف.</span>
+            </a>
+            <a class="guide-card" href="/whtr-calculator.html" data-calc-page="whtr-calculator">
+                <i class="fas fa-ruler-combined" aria-hidden="true"></i>
+                <strong data-i18n="guide_whtr_t">حاسبة نسبة الخصر إلى الطول</strong>
+                <span data-i18n="guide_whtr_d">خطر دهون البطن الحشوية، طريقة القياس الصحيحة، ونصائح عملية.</span>
+            </a>
+            </div>
+        </section>
+
         <!-- Tabs -->
         <div class="calculator-tabs" role="tablist">
             <button class="tab-btn active" onclick="switchCalculator('bmi', this)">
@@ -779,6 +821,8 @@
                     <span data-i18n="btn_calc_bmi">احسب مؤشر كتلة الجسم الآن</span>
                 </button>
             </form>
+
+            <a class="panel-guide-link" href="/bmi-calculator.html" data-calc-page="bmi-calculator"><i class="fas fa-book-medical" aria-hidden="true"></i> <span data-i18n="guide_link">اقرأ الدليل الكامل والجدول التوضيحي</span></a>
 
             <div class="result-view" id="bmiResultView">
                 <div class="result-main">
@@ -848,6 +892,8 @@
                 </button>
             </form>
 
+            <a class="panel-guide-link" href="/tdee-calculator.html" data-calc-page="tdee-calculator"><i class="fas fa-book-medical" aria-hidden="true"></i> <span data-i18n="guide_link">اقرأ الدليل الكامل والجدول التوضيحي</span></a>
+
             <div class="result-view" id="caloriesResultView">
                 <div class="result-main">
                     <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_tdee_heading">إجمالي استهلاك الطاقة اليومي (TDEE)</div>
@@ -910,7 +956,7 @@
                         <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="water_sub">توصيات الهيئة الأوروبية لسلامة الأغذية (EFSA)</div>
                     </div>
                 </div>
-                <span class="clinical-badge">EFSA Standard</span>
+                <span class="clinical-badge">35 ml/kg · EFSA 2010</span>
             </div>
 
             <form id="waterForm" onsubmit="handleWaterSubmit(event)">
@@ -935,6 +981,8 @@
                 </button>
             </form>
 
+            <a class="panel-guide-link" href="/water-calculator.html" data-calc-page="water-calculator"><i class="fas fa-book-medical" aria-hidden="true"></i> <span data-i18n="guide_link">اقرأ الدليل الكامل والجدول التوضيحي</span></a>
+
             <div class="result-view" id="waterResultView">
                 <div class="result-main">
                     <div style="font-size: 0.95rem; color: var(--text-muted);" data-i18n="res_water_heading">احتياجك اليومي الموصى به من السوائل الصافية</div>
@@ -958,7 +1006,7 @@
                         <div style="font-size:0.82rem; color:var(--text-muted);" data-i18n="whtr_sub">المعيار الذهبي للكشف عن الدهون الحشوية ومقاومة الإنسولين</div>
                     </div>
                 </div>
-                <span class="clinical-badge">NICE Guidelines 2023</span>
+                <span class="clinical-badge">NICE 2022</span>
             </div>
 
             <form id="whtrForm" onsubmit="handleWHtRSubmit(event)">
@@ -977,6 +1025,8 @@
                     <span data-i18n="btn_calc_whtr">تقييم مخاطر الدهون الحشوية</span>
                 </button>
             </form>
+
+            <a class="panel-guide-link" href="/whtr-calculator.html" data-calc-page="whtr-calculator"><i class="fas fa-book-medical" aria-hidden="true"></i> <span data-i18n="guide_link">اقرأ الدليل الكامل والجدول التوضيحي</span></a>
 
             <div class="result-view" id="whtrResultView">
                 <div class="result-main">
@@ -1056,6 +1106,16 @@
         // 2. Master Clinical Dictionary (Tri-Lingual: AR, NL, EN)
         const i18nDictionary = {
             ar: {
+                guides_title: "الدليل الكامل لكل حاسبة",
+                guide_link: "اقرأ الدليل الكامل والجدول التوضيحي",
+                guide_bmi_t: "حاسبة مؤشر كتلة الجسم BMI",
+                guide_bmi_d: "جدول التصنيف، الوزن المثالي لطولك، وحدود أصحاب الأصول العربية.",
+                guide_tdee_t: "حاسبة السعرات TDEE وBMR",
+                guide_tdee_d: "معادلة ميفلين-سانت جور، سعرات التنحيف الآمنة، وتوزيع الماكروز.",
+                guide_water_t: "حاسبة شرب الماء اليومي",
+                guide_water_d: "احتياجك حسب الوزن والنشاط مقارنة بقيم EFSA وعلامات الجفاف.",
+                guide_whtr_t: "حاسبة نسبة الخصر إلى الطول",
+                guide_whtr_d: "خطر دهون البطن الحشوية، طريقة القياس الصحيحة، ونصائح عملية.",
                 seo_title: "حاسبات صحية وسريرية معتمدة - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health",
                 seo_desc: "حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.",
                 nav_home: "الرئيسية",
@@ -1152,6 +1212,16 @@
                 ph_height_whtr: "مثال: 175"
             },
             nl: {
+                guides_title: "De volledige gids per calculator",
+                guide_link: "Lees de volledige gids en de tabel",
+                guide_bmi_t: "BMI berekenen",
+                guide_bmi_d: "BMI-tabel, gezond gewicht bij je lengte en lagere grenzen bij een Midden-Oosterse achtergrond.",
+                guide_tdee_t: "Calorieën berekenen (TDEE en BMR)",
+                guide_tdee_d: "Formule van Mifflin-St Jeor, veilige afvalcalorieën en een macroverdeling.",
+                guide_water_t: "Waterbehoefte berekenen",
+                guide_water_d: "Je behoefte op basis van gewicht en activiteit naast de EFSA-waarden, plus signalen van uitdroging.",
+                guide_whtr_t: "Taille-lengteratio berekenen",
+                guide_whtr_d: "Risico van buikvet, zo meet je je buikomvang en praktische tips.",
                 seo_title: "Klinische Gezondheidscalculators - BMI, Calorieën, Macro's, Water & WHtR | WiBo Health",
                 seo_desc: "Klinisch gevalideerde rekentools conform WHO-, EFSA- en Gezondheidsraad-richtlijnen: Body Mass Index (BMI), Energie- en Macroverdeling (BMR/TDEE), Taille-lengteverhouding en Vochtbehoefte.",
                 nav_home: "Home",
@@ -1248,6 +1318,16 @@
                 ph_height_whtr: "Bijv: 175"
             },
             en: {
+                guides_title: "The full guide for each calculator",
+                guide_link: "Read the full guide and reference chart",
+                guide_bmi_t: "BMI calculator",
+                guide_bmi_d: "BMI chart, healthy weight for your height and lower cut-offs for Middle Eastern backgrounds.",
+                guide_tdee_t: "TDEE and BMR calorie calculator",
+                guide_tdee_d: "Mifflin-St Jeor equation, safe fat-loss calories and a macro split.",
+                guide_water_t: "Daily water intake calculator",
+                guide_water_d: "Your needs by weight and activity versus EFSA values, plus signs of dehydration.",
+                guide_whtr_t: "Waist-to-height ratio calculator",
+                guide_whtr_d: "Visceral belly-fat risk, how to measure your waist and practical tips.",
                 seo_title: "Clinical Health Calculators - BMI, Calories, Macros, Water & WHtR | WiBo Health",
                 seo_desc: "Evidence-based clinical calculators compliant with WHO, EFSA, and NICE standards: Body Mass Index (BMI), Energy & Macro Split (BMR/TDEE), Waist-to-Height Ratio (WHtR), and Water Intake.",
                 nav_home: "Home",
@@ -1391,6 +1471,11 @@
                 if (i18nDictionary[lang] && i18nDictionary[lang][key]) {
                     el.placeholder = i18nDictionary[lang][key];
                 }
+            });
+
+            // Standalone calculator pages exist per language: /bmi-calculator.html, /en/..., /nl/...
+            document.querySelectorAll('[data-calc-page]').forEach(a => {
+                a.href = (lang === 'ar' ? '/' : '/' + lang + '/') + a.getAttribute('data-calc-page') + '.html';
             });
 
             // Re-render active results to match the new language dynamically

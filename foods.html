@@ -817,6 +817,14 @@
             line-height: 1.6;
         }
         .methodology-line a { color: #6ee7a8; font-weight: 700; text-decoration: none; }
+        .calc-strip { margin: 26px 0 8px; }
+        .calc-strip h2 { font-size: 1.1rem; font-weight: 800; margin: 0 0 12px; color: var(--text-dark); }
+        .calc-strip-links { display: flex; flex-wrap: wrap; gap: 10px; }
+        .calc-strip-links a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; font-weight: 700;
+            font-size: 0.9rem; text-decoration: none; color: var(--text-dark); background: var(--card-bg); border: 1px solid rgba(16, 185, 129, 0.35); }
+        .calc-strip-links a:hover { border-color: #10b981; }
+        .calc-strip-links i { color: #10b981; }
+        html[data-theme="dark"] .calc-strip-links i { color: #6ee7b7; }
         .methodology-line a:hover { text-decoration: underline; }
 
         body.dark-mode .clinical-disclaimer-box {
@@ -1294,6 +1302,17 @@
         </div>
         <p class="methodology-line"><span data-i18n="methodology_line">القيم مقاسة أو محسوبة وفق منهجية موثّقة</span> · <a href="methodology.html" data-i18n="methodology_link">المنهجية والمراجع العلمية</a></p>
 
+        <!-- Health calculators: pair the food data with your own numbers -->
+        <section class="calc-strip" aria-labelledby="calcStripTitle">
+            <h2 id="calcStripTitle" data-i18n="calc_strip_title">احسب احتياجك ثم اختر طعامك</h2>
+            <div class="calc-strip-links">
+                <a href="/bmi-calculator.html" data-calc-page="bmi-calculator"><i class="fas fa-weight-scale" aria-hidden="true"></i> <span data-i18n="calc_strip_bmi">حاسبة مؤشر كتلة الجسم BMI</span></a>
+                <a href="/tdee-calculator.html" data-calc-page="tdee-calculator"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> <span data-i18n="calc_strip_tdee">حاسبة السعرات TDEE</span></a>
+                <a href="/water-calculator.html" data-calc-page="water-calculator"><i class="fas fa-droplet" aria-hidden="true"></i> <span data-i18n="calc_strip_water">حاسبة الماء اليومي</span></a>
+                <a href="/whtr-calculator.html" data-calc-page="whtr-calculator"><i class="fas fa-ruler-combined" aria-hidden="true"></i> <span data-i18n="calc_strip_whtr">نسبة الخصر إلى الطول</span></a>
+            </div>
+        </section>
+
         <!-- Conversion Card -->
         <div class="boodi-food-banner">
             <div class="boodi-banner-text">
@@ -1411,6 +1430,11 @@
 
         const foodsTranslations = {
             ar: {
+                "calc_strip_title": "احسب احتياجك ثم اختر طعامك",
+                "calc_strip_bmi": "حاسبة مؤشر كتلة الجسم BMI",
+                "calc_strip_tdee": "حاسبة السعرات TDEE",
+                "calc_strip_water": "حاسبة الماء اليومي",
+                "calc_strip_whtr": "نسبة الخصر إلى الطول",
                 "meta_title": "دليل الأطعمة الشامل - المؤشر الجلايسيمي، الأنسولين، السعرات | WiBo Health",
                 "meta_desc": "دليلك الغذائي الشامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف - قاعدة بيانات غذائية استرشادية لمرضى السكري والدايت معتمدة من فريق ويبو هيلث الطبي.",
                 "nav_home": "الرئيسية",
@@ -1474,6 +1498,11 @@
                 "footer_rights": "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي"
             },
             en: {
+                "calc_strip_title": "Work out your needs, then choose your food",
+                "calc_strip_bmi": "BMI calculator",
+                "calc_strip_tdee": "TDEE calorie calculator",
+                "calc_strip_water": "Daily water calculator",
+                "calc_strip_whtr": "Waist-to-height ratio",
                 "meta_title": "Comprehensive Food Guide - Glycemic Index, Insulin & Calories | WiBo Health",
                 "meta_desc": "Nutritional food guide with Glycemic Index (GI), Insulin Index (II), calories, protein, carbs, fats, and fiber for metabolic health and diabetes. WiBo Health Medical Team.",
                 "nav_home": "Home",
@@ -1537,6 +1566,11 @@
                 "footer_rights": "© 2026 WiBo Health Group. All rights reserved | WiBo Health Medical Team"
             },
             nl: {
+                "calc_strip_title": "Bereken je behoefte en kies dan je eten",
+                "calc_strip_bmi": "BMI berekenen",
+                "calc_strip_tdee": "Calorieën berekenen (TDEE)",
+                "calc_strip_water": "Waterbehoefte berekenen",
+                "calc_strip_whtr": "Taille-lengteratio",
                 "meta_title": "Uitgebreide Voedingswijzer - Glykemische Index, Insuline & Calorieën | WiBo Health",
                 "meta_desc": "Wetenschappelijke voedingswijzer met Glykemische Index (GI), Insuline Index (II), calorieën, eiwitten, koolhydraten en vetten voor diabetes en metabole gezondheid. Medisch Team WiBo Health.",
                 "nav_home": "Home",
@@ -1654,6 +1688,11 @@
 
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('data-lang-toggle') === lang);
+            });
+
+            // calculator pages exist per language: /bmi-calculator.html, /en/..., /nl/...
+            document.querySelectorAll('[data-calc-page]').forEach(a => {
+                a.href = (lang === 'ar' ? '/' : '/' + lang + '/') + a.getAttribute('data-calc-page') + '.html';
             });
 
             if (foodsTranslations[lang] && foodsTranslations[lang]['meta_title']) {

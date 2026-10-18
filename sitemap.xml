@@ -27176,4 +27176,126 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods/dark-toasted-sesame-seed-oil.html"/>
   </url>
   <!-- FOOD-PAGES:END -->
+  <!-- CALCULATOR-PAGES:START -->
+  <url>
+    <loc>https://wibohealth.com/bmi-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bmi-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/bmi-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bmi-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/bmi-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/bmi-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bmi-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/tdee-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/tdee-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/tdee-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/tdee-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/tdee-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/tdee-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/tdee-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/water-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/water-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/water-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/water-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/water-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/water-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/water-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/whtr-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/whtr-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/whtr-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/whtr-calculator.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/whtr-calculator.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/whtr-calculator.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/whtr-calculator.html"/>
+  </url>
+  <!-- CALCULATOR-PAGES:END -->
 </urlset>

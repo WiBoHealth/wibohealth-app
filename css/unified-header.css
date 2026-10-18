@@ -27,23 +27,24 @@
     --wb-gradient: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
     color-scheme: light;
 }
-/* dark theme: one light source in the TOP-RIGHT corner of the screen - rich dark olive/forest that spreads
-   diagonally toward the centre and bottom and sinks into deep black (body::before below, fixed to the viewport).
-   Cards are smoked olive glass: a little darker than the olive corner, a little lighter than the black. */
+/* dark theme: a calm, matte backdrop for long reading. A muted deep slate-olive in the top-right corner of the screen
+   fades in a wide, soft diagonal into matte charcoal (body::before below, fixed to the viewport). No glow or sheen:
+   the corner is only a few shades lighter than the charcoal, and the steps between stops are small.
+   Cards are smoked slate glass: a touch darker than the corner, a touch lighter than the charcoal. */
 html[data-theme="dark"] {
-    --olive-1: #435a26;   /* rich dark olive / forest (corner) */
-    --olive-2: #2f4220;
-    --olive-3: #18200f;
-    --olive-4: #0d100a;   /* charcoal */
-    --olive-5: #070806;   /* deep black */
-    --wb-bg: #070806;
-    --wb-card: rgba(22, 27, 18, 0.7);
-    --wb-soft: rgba(196, 214, 160, 0.05);
-    --wb-solid: #121810;  /* opaque surface for menus, dialogs and dropdowns that float over content */
-    --wb-text: #eef1e8;
-    --wb-muted: #d0d7c4;
-    --wb-border: rgba(196, 214, 160, 0.14);
-    --wb-header: rgba(14, 19, 11, 0.6);
+    --olive-1: #262d22;   /* muted deep slate-olive (corner) */
+    --olive-2: #1f251c;
+    --olive-3: #181c16;
+    --olive-4: #131512;
+    --olive-5: #0f100f;   /* matte charcoal black */
+    --wb-bg: #0f100f;
+    --wb-card: rgba(30, 34, 28, 0.62);
+    --wb-soft: rgba(205, 214, 192, 0.045);
+    --wb-solid: #161915;  /* opaque surface for menus, dialogs and dropdowns that float over content */
+    --wb-text: #e6e9e1;   /* softened off-white: less glare than pure white on a dark page */
+    --wb-muted: #c3c9b9;
+    --wb-border: rgba(205, 214, 192, 0.12);
+    --wb-header: rgba(17, 19, 16, 0.82);
     color-scheme: dark;
 }
 html { background-color: var(--wb-bg); }
@@ -55,9 +56,7 @@ html[data-theme="dark"] body::before {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background:
-        linear-gradient(225deg, rgba(74, 96, 40, 0.25) 0%, transparent 45%),
-        radial-gradient(130% 110% at 100% 0%, var(--olive-1) 0%, var(--olive-2) 18%, var(--olive-3) 38%, var(--olive-4) 60%, var(--olive-5) 85%);
+    background: radial-gradient(150% 130% at 100% 0%, var(--olive-1) 0%, var(--olive-2) 22%, var(--olive-3) 45%, var(--olive-4) 70%, var(--olive-5) 92%);
 }
 
 /* every family's own variables point at the palette (declared on body so they beat :root,
@@ -511,3 +510,5 @@ html[data-theme="dark"] .group-chip,
 html[data-theme="dark"] .app-badge-text,
 html[data-theme="dark"] .hero-badge { color: #a7f3d0; }
 html[data-theme="dark"] .footer-divider { color: var(--wb-muted); }
+html[data-theme="dark"] .calc-submit-btn { background: #047857; }
+html[data-theme="dark"] .calc-submit-btn:hover { background: #065f46; }
