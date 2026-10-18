@@ -22982,6 +22982,1707 @@
           }
         ]
       }
+    },
+    "601": {
+      "slug": "chocolate-eclair-with-custard",
+      "lead": {
+        "ar": "أيقونة المخبوزات الفرنسية الفاخرة التي تأسر القلوب بخفتها؛ تتكون من عجينة الشو (Choux pastry) الهشة المخبوزة بعناية، والمحشوة بكريمة الكاسترد المخملية، والمغطاة بطبقة غنية من جناش الشوكولاتة الداكنة أو بالحليب. يقدم الإكلير تجربة متوازنة النكهات، حيث تسهم دهون الزبدة والبيض والبروتين الموجود في الكاسترد في إبطاء وتيرة امتصاص السكريات مقارنة بالحلويات السكرية البسيطة، مما يجعله خياراً يمكن الاستمتاع به بوعي واعتدال في المناسبات.",
+        "en": "An icon of fine French pâtisserie that wins hearts with its lightness: crisp, carefully baked choux pastry filled with velvety custard cream and topped with a rich layer of dark or milk chocolate ganache. The éclair offers a balanced mix of flavours: the fat from butter and eggs and the protein in the custard slow the absorption of its sugars compared with simple sugary sweets, making it a treat you can enjoy mindfully and in moderation on special occasions.",
+        "nl": "Een icoon van de verfijnde Franse patisserie dat harten verovert met zijn lichtheid: knapperig, zorgvuldig gebakken soezendeeg (pâte à choux), gevuld met fluweelzachte banketbakkersroom en bedekt met een rijke laag pure of melkchocoladeganache. De eclair biedt een uitgebalanceerde smaak: het vet uit boter en eieren en het eiwit in de room vertragen de opname van de suikers vergeleken met eenvoudige suikerrijke zoetigheid, waardoor je er bewust en met mate van kunt genieten bij bijzondere gelegenheden."
+      },
+      "tips": {
+        "ar": [
+          "استمتع بنصف قطعة أو قطعة مفردة كتحلية بعد وجبة رئيسية متكاملة وغنية بالألياف والخضار الورقية، وتجنب تناوله كوجبة إفطار خفيفة أو على معدة فارغة.",
+          "يمكن تحضيره منزلياً باستخدام حليب قليل الدسم ومحليات طبيعية منخفضة السعرات في الكاسترد، مع اختيار شوكولاتة داكنة (70% فما فوق) للتغطية لرفع مضادات الأكسدة وتقليل السكر المضاف.",
+          "لاحتوائه على مزيج من السكريات والدهون المشبعة، يُنصح بمراقبة سكر الدم بعد ساعتين من تناوله لدى من يعانون من مقاومة الإنسولين لاكتشاف مدى استجابة أجسامهم."
+        ],
+        "en": [
+          "Enjoy half or a single éclair as dessert after a complete main meal rich in fibre and leafy greens, and avoid eating it as a light breakfast or on an empty stomach.",
+          "You can make it at home with low-fat milk and low-calorie natural sweeteners in the custard, and choose dark chocolate (70% or more) for the topping to add antioxidants and cut added sugar.",
+          "Because it combines sugars with saturated fat, people with insulin resistance are advised to check their blood glucose two hours after eating it to see how their body responds."
+        ],
+        "nl": [
+          "Geniet van een halve of één eclair als dessert na een volwaardige hoofdmaaltijd met veel vezels en bladgroenten, en eet hem niet als licht ontbijt of op een lege maag.",
+          "Je kunt hem thuis maken met magere melk en natuurlijke caloriearme zoetstoffen in de room, en kies voor de glazuurlaag pure chocolade (70% of meer) voor meer antioxidanten en minder toegevoegde suiker.",
+          "Omdat hij suikers combineert met verzadigd vet, is het voor mensen met insulineresistentie raadzaam hun bloedsuiker twee uur na het eten te meten om te zien hoe hun lichaam reageert."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل يناسب إكلير الشوكولاتة أهداف إنقاص الوزن؟",
+            "a": "يمكن إدراجه ضمن خطتك الغذائية بحساب سعراته (حوالي 210 سعرة للحبة)، ولكن يُفضل جعله مكافأة متباعدة مع الالتزام بالعجز الحراري اليومي."
+          },
+          {
+            "q": "كيف يؤثر إكلير الشوكولاتة على مستويات سكر الدم؟",
+            "a": "بفضل دهون وبروتينات الكاسترد، يكون الارتفاع في سكر الدم تدريجياً مقارنة بالحلويات السائلة، إلا أن حمله الجلايسيمي المتوسط (12) يتطلب ضبط الحصة بدقة."
+          },
+          {
+            "q": "ما الفرق بين إكلير الشوكولاتة والحلويات الدسمة الأخرى؟",
+            "a": "عجينة الشو تعتمد في انتفاخها على بخار الماء والبيض وتتميز بكونها مجوفة وخفيفة مقارنة بالعجائن المقلية كالدونات، مما يجعل تركيز الكربوهيدرات فيها أقل نسبياً."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does a chocolate éclair fit a weight-loss plan?",
+            "a": "It can fit into your eating plan if you count its calories (about 210 kcal per éclair), but it is best kept as an occasional treat while staying within your daily calorie deficit."
+          },
+          {
+            "q": "How does a chocolate éclair affect blood sugar?",
+            "a": "Thanks to the fat and protein in the custard, blood sugar rises more gradually than with liquid sweets, but its medium glycemic load (12) still calls for careful portion control."
+          },
+          {
+            "q": "How is a chocolate éclair different from other rich pastries?",
+            "a": "Choux pastry rises from steam and eggs and is hollow and light compared with fried doughs such as doughnuts, so its carbohydrate density is relatively lower."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Past een chocolade-eclair bij afvallen?",
+            "a": "Hij past in je eetplan als je de calorieën meetelt (ongeveer 210 kcal per eclair), maar houd hem bij voorkeur als af en toe een traktatie binnen je dagelijkse calorietekort."
+          },
+          {
+            "q": "Wat doet een chocolade-eclair met je bloedsuiker?",
+            "a": "Dankzij het vet en eiwit in de room stijgt de bloedsuiker geleidelijker dan bij vloeibare zoetigheid, maar de gemiddelde glykemische lading (12) vraagt toch om een goed afgemeten portie."
+          },
+          {
+            "q": "Wat is het verschil tussen een eclair en ander machtig gebak?",
+            "a": "Soezendeeg rijst door stoom en eieren en is hol en licht vergeleken met gefrituurd deeg zoals donuts, waardoor de koolhydraatdichtheid relatief lager is."
+          }
+        ]
+      }
+    },
+    "602": {
+      "lead": {
+        "ar": "كرات الشو الفرنسية الكلاسيكية المبهجة التي تمنح إحساساً فاخراً بالدفء؛ تُحشى هذه الكرات الصغيرة بخفة إما بكريمة المعجنات (الكاسترد) أو الآيس كريم الخفيف، وتُتوج بصلصة شوكولاتة دافئة ولامعة تُسكب فوقها مباشرة قبل التقديم. حجم الحبات الفردي الصغير يجعلها مرنة وممتازة في التحكم بحجم الحصة مقارنة بقطع الكيك الكبيرة، كما أن دفء الشوكولاتة يمنح شعوراً عالياً بالرضا والاكتفاء بأقل كمية ممكنة.",
+        "en": "Cheerful classic French choux puffs that bring a luxurious feeling of warmth: these small puffs are lightly filled with pastry cream (custard) or light ice cream and crowned with a warm, glossy chocolate sauce poured over just before serving. Their small individual size makes portion control easy and flexible compared with large slices of cake, and the warm chocolate gives a strong sense of satisfaction with the smallest possible amount.",
+        "nl": "Vrolijke klassieke Franse soesjes die een luxueus, warm gevoel geven: de kleine soesjes worden licht gevuld met banketbakkersroom of luchtig ijs en vlak voor het serveren overgoten met een warme, glanzende chocoladesaus. Door hun kleine formaat is de portie veel makkelijker te beheersen dan bij grote stukken taart, en de warme chocolade geeft veel voldoening met zo weinig mogelijk."
+      },
+      "tips": {
+        "ar": [
+          "اكتفِ بكرتين صغيرتين واطلب وضع صلصة الشوكولاتة جانباً لتغمس فيها الحبات بنفسك، مما يقلل كمية السكر المضاف بشكل ملحوظ.",
+          "استبدال حشوة الآيس كريم التقليدية بالزبادي اليوناني المخفوق بنكهة الفانيليا وحبوب الكاكاو يرفع القيمة البروتينية ويخفض السعرات بشكل ملحوظ.",
+          "انتبه إلى أن صلصة الشوكولاتة الجاهزة في المطاعم قد تحتوي على شراب الجلوكوز أو شراب الذرة عالي الفركتوز، لذا يُفضل الاستفسار عن مكوناتها أو صنعها منزلياً بكاكاو نقي وقليل من الحليب."
+        ],
+        "en": [
+          "Stick to two small puffs and ask for the chocolate sauce on the side so you can dip them yourself; this noticeably reduces the added sugar.",
+          "Replacing the usual ice-cream filling with whipped vanilla Greek yogurt and cacao nibs raises the protein and lowers the calories noticeably.",
+          "Ready-made chocolate sauce in restaurants may contain glucose syrup or high-fructose corn syrup, so ask about the ingredients or make it at home with pure cocoa and a little milk."
+        ],
+        "nl": [
+          "Houd het bij twee kleine soesjes en vraag de chocoladesaus apart, zodat je ze zelf kunt dippen; zo krijg je merkbaar minder toegevoegde suiker binnen.",
+          "Vervang de gebruikelijke ijsvulling door opgeklopte Griekse yoghurt met vanille en cacaonibs: dat verhoogt het eiwit en verlaagt de calorieën merkbaar.",
+          "Kant-en-klare chocoladesaus in restaurants kan glucosestroop of glucose-fructosestroop bevatten; vraag dus naar de ingrediënten of maak hem thuis met pure cacao en een beetje melk."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل البروفترول خيار مناسب في الدايت؟",
+            "a": "ميزته الكبرى هي سهولة تقسيم الحصص؛ تناول حبة واحدة (حوالي 85 سعرة) يتيح لك الاستمتاع بالنكهة الفاخرة دون تخريب أهدافك اليومية."
+          },
+          {
+            "q": "ما تأثير صلصة الشوكولاتة على المؤشر الجلايسيمي؟",
+            "a": "تضيف الصلصة سكراً سريع الامتصاص، لكن محتوى الزبدة والبيض في كرات الشو يحد من سرعة القفزة المفاجئة في الجلوكوز، ليبقى المؤشر ضمن النطاق المتوسط (58)."
+          },
+          {
+            "q": "أيهما أفضل لمستويات الطاقة: تناول البروفترول منفرداً أم بعد وجبة؟",
+            "a": "تناوله دائماً بعد وجبة متوازنة تحتوي على البروتين والألياف لمنع حدوث خمول ما بعد السكريات (Sugar Crash)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are profiteroles a good choice on a diet?",
+            "a": "Their big advantage is easy portioning: one puff (about 85 kcal) lets you enjoy the luxurious flavour without derailing your daily goals."
+          },
+          {
+            "q": "How does the chocolate sauce affect the glycemic index?",
+            "a": "The sauce adds fast-absorbed sugar, but the butter and eggs in the choux puffs limit how sharply glucose spikes, so the index stays in the medium range (58)."
+          },
+          {
+            "q": "Which is better for energy levels: profiteroles on their own or after a meal?",
+            "a": "Always have them after a balanced meal with protein and fibre to avoid the slump that follows sweets (a sugar crash)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn profiteroles een goede keuze als je op dieet bent?",
+            "a": "Het grote voordeel is dat je makkelijk kunt doseren: één soesje (ongeveer 85 kcal) laat je genieten van de luxe smaak zonder je dagdoelen te ondermijnen."
+          },
+          {
+            "q": "Wat doet de chocoladesaus met de glykemische index?",
+            "a": "De saus voegt snel opneembare suiker toe, maar de boter en eieren in de soesjes remmen een plotselinge glucosepiek, zodat de index in het gemiddelde bereik blijft (58)."
+          },
+          {
+            "q": "Wat is beter voor je energie: profiteroles los of na een maaltijd?",
+            "a": "Eet ze altijd na een evenwichtige maaltijd met eiwit en vezels, om de dip na zoetigheid (een suikercrash) te voorkomen."
+          }
+        ]
+      }
+    },
+    "603": {
+      "lead": {
+        "ar": "حلوى \"الألف ورقة\" الفرنسية العريقة الشهيرة بقرمشتها الأسطورية وتعدد طبقاتها المورقة، والتي تُعرف في هولندا وبلجيكا باسم \"تومبوس\" (Tompouce) بطبقتها الوردية اللامعة. تُحضر من رقائق البف باستري الهشة بالزبدة ويتخللها طبقات وفيرة من الكاسترد الكثيف (Crème Pâtissière). بالرغم من مذاقها المحبوب عالمياً، إلا أنها تُعد من الحلويات كثيفة الطاقة والنشويات سريعة التحلل، مما يجعلها تتطلب عناية خاصة وحساباً دقيقاً في برامج إدارة الوزن والسكر.",
+        "en": "The time-honoured French “thousand-leaf” pastry, famous for its legendary crunch and many flaky layers, known in the Netherlands and Belgium as the tompouce with its glossy pink icing. It is made from crisp, buttery puff pastry layered with generous amounts of thick pastry cream (crème pâtissière). Loved around the world, it is nonetheless an energy-dense dessert with quickly digested starch, so it needs special care and careful counting in weight and blood sugar management plans.",
+        "nl": "Het eeuwenoude Franse ‘duizendbladgebak’, beroemd om zijn legendarische krokantheid en vele bladerlagen, in Nederland en België bekend als de tompouce met zijn glanzende roze glazuur. Het wordt gemaakt van knapperig roomboterbladerdeeg met royale lagen dikke banketbakkersroom (crème pâtissière). Hoe geliefd het ook is, het is een energierijk gebak met snel verteerbaar zetmeel, dus het vraagt extra aandacht en nauwkeurig tellen bij gewichts- en bloedsuikerbeheer."
+      },
+      "tips": {
+        "ar": [
+          "يُفضل مشاركة القطعة مع صديق أو تناول نصفها فقط، وتجنب شرب المشروبات المحلاة أو العصائر بجانبها؛ فكوب من الشاي الأخضر أو القهوة المرة هو الرفيق المثالي لموازنة المذاق.",
+          "يمكن استبدال طبقة الفوندان السكرية البيضاء أو الوردية برشة خفيفة جداً من مسحوق القرفة أو الكاكاو غير المحلى لتقليل السكريات البسيطة.",
+          "الحمل الجلايسيمي المرتفع (25.8) يفرض على مرضى السكري الحذر وتنسيق تناولها مع جرعات النشويات اليومية أو ممارسة نشاط حركي كالمشي السريع بعد تناولها."
+        ],
+        "en": [
+          "Share a slice with a friend or eat only half, and skip sweetened drinks or juice alongside it; a cup of green tea or unsweetened coffee is the ideal partner to balance the taste.",
+          "You can replace the white or pink sugar fondant with a very light dusting of cinnamon or unsweetened cocoa to cut simple sugars.",
+          "Its high glycemic load (25.8) means people with diabetes should be careful, fit it into their daily carbohydrate allowance, or take some activity such as a brisk walk after eating it."
+        ],
+        "nl": [
+          "Deel een tompouce met iemand of eet er maar de helft van, en drink er geen gezoete dranken of sap bij; een kop groene thee of zwarte koffie is de ideale begeleider.",
+          "Je kunt het witte of roze suikerglazuur vervangen door een heel licht laagje kaneel of ongezoete cacao om enkelvoudige suikers te beperken.",
+          "Door de hoge glykemische lading (25,8) moeten mensen met diabetes voorzichtig zijn: pas hem in je dagelijkse koolhydraatbudget in, of beweeg daarna, bijvoorbeeld met een stevige wandeling."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "لماذا يحمل الميل فوي حملاً جلايسيمياً مرتفعاً رغم وجود الكاسترد؟",
+            "a": "لأن طبقات العجين المورق تُصنع من دقيق مكرر بكميات كبيرة، إضافة إلى السكر المركز في طبقة التزيين العلوية، مما يرفع مجمل الكربوهيدرات سريعة الامتصاص في الحصة."
+          },
+          {
+            "q": "هل الميل فوي الهولندي (Tompouce) يختلف عن الميل فوي الفرنسي التقليدي؟",
+            "a": "الفارق الأساسي يكمن في سُمك طبقة التزيين الفوندان الوردية وقوام الكاسترد الأكثر تماسكاً، وكلاهما متقاربان جداً في السعرات والحمل السكري."
+          },
+          {
+            "q": "كيف أخفف من تأثيرها على استقرار طاقتي خلال اليوم؟",
+            "a": "احرص على ألا تكون وجبتك السابقة لها غنية بالنشويات، بل ركز على البروتينات والألياف الخضراء لإبطاء الهضم العام."
+          }
+        ],
+        "en": [
+          {
+            "q": "Why does mille-feuille have a high glycemic load despite the custard?",
+            "a": "The flaky pastry layers use a lot of refined flour, and the icing on top adds concentrated sugar, which raises the total fast-absorbed carbohydrate in a portion."
+          },
+          {
+            "q": "Is the Dutch tompouce different from the classic French mille-feuille?",
+            "a": "The main differences are the thickness of the pink fondant icing and the firmer custard; both are very similar in calories and glycemic load."
+          },
+          {
+            "q": "How can I soften its effect on my energy during the day?",
+            "a": "Make sure the meal before it is not starch-heavy; focus on protein and green, fibre-rich vegetables to slow overall digestion."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Waarom heeft een tompouce een hoge glykemische lading ondanks de room?",
+            "a": "De bladerdeeglagen bevatten veel geraffineerde bloem en het glazuur voegt geconcentreerde suiker toe, waardoor de totale hoeveelheid snel opneembare koolhydraten per portie stijgt."
+          },
+          {
+            "q": "Verschilt de Nederlandse tompouce van de klassieke Franse mille-feuille?",
+            "a": "Het belangrijkste verschil zit in de dikte van het roze glazuur en de stevigere room; qua calorieën en glykemische lading liggen ze heel dicht bij elkaar."
+          },
+          {
+            "q": "Hoe beperk ik het effect op mijn energie gedurende de dag?",
+            "a": "Zorg dat de maaltijd ervoor niet zetmeelrijk is en richt je op eiwitten en groene, vezelrijke groenten om de vertering te vertragen."
+          }
+        ]
+      }
+    },
+    "604": {
+      "lead": {
+        "ar": "التناغم الساحر بين حموضة الليمون المنعشة وحلاوة طبقة المرنغ الهوائية المقرمشة من الخارج والطرية من الداخل؛ ترتكز هذه الحلوى على قاعدة مقرمشة (Shortcrust)، يعلوها كاسترد الليمون المكثف وتتوج برغوة بياض البيض المخفوق بالسكر. تتميز بحموضة الليمون الطبيعية، وتشير بعض الدراسات إلى أن الأطعمة الحمضية قد تساعد على إبطاء تفريغ المعدة، وهو ما قد يفسر كون مؤشرها الجلايسيمي أكثر اعتدالاً من كثير من الحلويات المماثلة.",
+        "en": "A charming harmony between the refreshing tang of lemon and the sweetness of an airy meringue that is crisp outside and soft inside: the tart sits on a crumbly shortcrust base, topped with rich lemon curd and crowned with egg white whipped with sugar. It stands out for the natural acidity of lemon; some studies suggest acidic foods may help slow stomach emptying, which may explain why its glycemic index is lower than that of many similar desserts.",
+        "nl": "Een betoverende harmonie tussen de frisse zuurheid van citroen en de zoetheid van luchtige meringue, knapperig van buiten en zacht van binnen: de taart rust op een krokante zandtaartbodem, met daarop romige citroencurd en een kroon van met suiker opgeklopt eiwit. Kenmerkend is de natuurlijke zuurheid van citroen; sommige studies wijzen erop dat zure voedingsmiddelen de maaglediging kunnen vertragen, wat zou kunnen verklaren waarom de glykemische index lager is dan bij veel vergelijkbare desserts."
+      },
+      "tips": {
+        "ar": [
+          "المرنغ عبارة عن بياض بيض وسكر مركز؛ يمكنك الاستمتاع بكاسترد الليمون مع القاعدة وتناول جزء بسيط جداً من قمة المرنغ لتقليل السكر في الحصة بشكل ملحوظ.",
+          "استخدام طحين اللوز في إعداد قاعدة التارت يمنحها دهوناً صحية وبروتيناً نباتياً ممتازاً ويقلل الكربوهيدرات في القاعدة بشكل كبير.",
+          "رغم أن المؤشر الجلايسيمي (55) منخفض، إلا أن الحمل الجلايسيمي للحصة الكاملة مرتفع (24.7)؛ لذا فإن حجم الحصة هو الحاسم لمنع ارتفاع مستويات السكر."
+        ],
+        "en": [
+          "Meringue is egg white and concentrated sugar; enjoy the lemon curd with the base and take only a very small part of the meringue top to noticeably cut the sugar in your portion.",
+          "Using almond flour for the tart base adds healthy fats and good plant protein and greatly reduces the carbohydrate in the base.",
+          "Although the glycemic index (55) is low, the glycemic load of a full slice is high (24.7), so portion size is what decides whether blood sugar rises."
+        ],
+        "nl": [
+          "Meringue bestaat uit eiwit en geconcentreerde suiker; geniet van de citroencurd met de bodem en neem maar een heel klein deel van de meringue om merkbaar minder suiker binnen te krijgen.",
+          "Amandelmeel voor de taartbodem levert gezonde vetten en goed plantaardig eiwit, en verlaagt de koolhydraten in de bodem flink.",
+          "Hoewel de glykemische index (55) laag is, is de glykemische lading van een hele punt hoog (24,7); de portiegrootte bepaalt dus of je bloedsuiker stijgt."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل يساعد عصير الليمون حقاً في خفض المؤشر الجلايسيمي؟",
+            "a": "تشير بعض الدراسات إلى أن إضافة الأطعمة الحمضية (كعصير الليمون أو الخل) إلى وجبة نشوية قد تبطئ تفريغ المعدة وتخفف ارتفاع سكر الدم بعدها، لكن التأثير محدود ولا يلغي أثر السكر في المرنغ."
+          },
+          {
+            "q": "هل يناسب تارت الليمون من يتبع حمية قليلة السعرات؟",
+            "a": "محتوى الدهون فيه (11 غ لكل 100 غ) أقل من حلويات الشوكولاتة والكريمة الزبدية، لكنه يبقى غنياً بالسكريات البسيطة التي تتطلب الاعتدال."
+          },
+          {
+            "q": "كيف أحسب الكربوهيدرات المتاحة في تارت الليمون؟",
+            "a": "تُحسب بطرح الألياف (1.3 غ) من إجمالي الكربوهيدرات (46.2 غ) للحصة المعتادة، لتصبح الكربوهيدرات المتاحة المؤثرة نحو 44.9 غ."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does lemon juice really lower the glycemic index?",
+            "a": "Some studies suggest that adding acidic foods (such as lemon juice or vinegar) to a starchy meal may slow stomach emptying and soften the rise in blood sugar afterwards, but the effect is modest and does not cancel out the sugar in the meringue."
+          },
+          {
+            "q": "Does lemon meringue tart suit a low-calorie diet?",
+            "a": "Its fat content (11 g per 100 g) is lower than that of chocolate and buttercream desserts, but it is still rich in simple sugars that call for moderation."
+          },
+          {
+            "q": "How do I calculate the available carbohydrate in lemon meringue tart?",
+            "a": "Subtract the fibre (1.3 g) from the total carbohydrate (46.2 g) in a typical slice, giving about 44.9 g of available carbohydrate."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verlaagt citroensap echt de glykemische index?",
+            "a": "Sommige studies wijzen erop dat zure voedingsmiddelen (zoals citroensap of azijn) bij een zetmeelrijke maaltijd de maaglediging kunnen vertragen en de bloedsuikerstijging daarna kunnen afvlakken, maar het effect is beperkt en heft de suiker in de meringue niet op."
+          },
+          {
+            "q": "Past citroen-meringuetaart bij een caloriearm dieet?",
+            "a": "Het vetgehalte (11 g per 100 g) is lager dan bij chocolade- en botercrèmedesserts, maar de taart blijft rijk aan enkelvoudige suikers en vraagt dus om matiging."
+          },
+          {
+            "q": "Hoe bereken ik de beschikbare koolhydraten in citroen-meringuetaart?",
+            "a": "Trek de vezels (1,3 g) af van de totale koolhydraten (46,2 g) in een gewone punt; dat geeft ongeveer 44,9 g beschikbare koolhydraten."
+          }
+        ]
+      }
+    },
+    "605": {
+      "lead": {
+        "ar": "تحفة المعجنات الفرنسية الراقية والملونة، التي تتميز بقشرتها الخارجية المقرمشة ولمستها الداخلية الطرية الذائبة في الفم. يكمن سر تميز الماكارون الغذائي في اعتماده الأساسي على مسحوق اللوز النقي المطحون وبياض البيض بدلاً من دقيق القمح الأبيض، مما يمنحه نسبة محترمة من الدهون الأحادية غير المشبعة والبروتين النباتي والألياف. يجعلها ذلك من أرقى الحلويات التي يمكن التحكم بحصتها بسهولة دون الإفراط في الكمية بفضل وزن الحبة الصغير وطعمها المركز والغني.",
+        "en": "A refined, colourful masterpiece of French pâtisserie with a crisp outer shell and a soft centre that melts in the mouth. The secret of the macaron’s nutritional profile is that it is based on finely ground almonds and egg white instead of white wheat flour, giving it a respectable share of monounsaturated fat, plant protein and fibre. That makes it one of the most elegant sweets to keep in check, thanks to the small weight of each piece and its rich, concentrated flavour.",
+        "nl": "Een verfijnd, kleurrijk meesterwerk van de Franse patisserie met een knapperig schaaltje en een zachte binnenkant die op de tong smelt. Het geheim van het voedingsprofiel van de macaron is dat hij gemaakt wordt van fijngemalen amandelen en eiwit in plaats van witte tarwebloem, wat hem een behoorlijk aandeel enkelvoudig onverzadigd vet, plantaardig eiwit en vezels geeft. Daardoor is het een van de elegantste lekkernijen om binnen de perken te houden, dankzij het kleine gewicht per stuk en de rijke, geconcentreerde smaak."
+      },
+      "tips": {
+        "ar": [
+          "الماكارون مثالي لمن يحب \"لقمة الحلوى\" مع القهوة؛ فتناول حبة أو حبتين يمنحك متعة تذوق استثنائية مع 140 سعرة حرارية فقط للحبتين.",
+          "اختيار حشوات الغاناش الداكن المصنوع من الشوكولاتة المرة، أو معجون التوت البري غير المحلى بالسكر، يعزز القيمة التغذوية مقارنة بحشوات الكريمة الزبدية المصنعة.",
+          "الماكارون التقليدي خالٍ من دقيق القمح بطبيعته، لذا قد يناسب من يتجنبون الغلوتين؛ أما مرضى السيلياك فعليهم اختيار منتج يحمل علامة \"خالٍ من الغلوتين\" لتجنب التلوث العرضي في خط الإنتاج."
+        ],
+        "en": [
+          "Macarons are perfect for anyone who likes a “bite of something sweet” with coffee: one or two pieces give an exceptional taste experience for only 140 kcal for the pair.",
+          "Choosing dark ganache made with bitter chocolate, or an unsweetened berry paste, as the filling improves the nutritional value compared with factory-made buttercream fillings.",
+          "Traditional macarons contain no wheat flour, so they may suit people who avoid gluten; people with coeliac disease should choose products labelled gluten-free to avoid cross-contamination on the production line."
+        ],
+        "nl": [
+          "Macarons zijn perfect als je graag ‘een zoet hapje’ bij de koffie neemt: één of twee stuks geven een bijzondere smaakbeleving voor slechts 140 kcal voor het tweetal.",
+          "Kies voor een vulling van pure ganache met bittere chocolade of een ongezoete bessenpasta; dat verbetert de voedingswaarde vergeleken met fabrieksmatige botercrèmevullingen.",
+          "Traditionele macarons bevatten geen tarwebloem en kunnen dus geschikt zijn als je gluten vermijdt; mensen met coeliakie kiezen beter een product met het label glutenvrij om kruisbesmetting in de productie te vermijden."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الماكارون صحي أكثر من الكوكيز العادي؟",
+            "a": "اعتماده على طحين اللوز يمنحه دهوناً صحية ومحتوى ألياف أفضل من البسكويت المعتمد على الدقيق الأبيض والدهون المهدرجة، لكن السكر البودرة يبقى مكوناً رئيساً فيه."
+          },
+          {
+            "q": "ما هو الحمل الجلايسيمي لقطعة واحدة فقط من الماكارون؟",
+            "a": "حبة واحدة بوزن 17.5 غرام تحمل حملاً جلايسيمياً يبلغ حوالي 6.2 فقط، وهو حمل منخفض ومثالي للتحلية الهادئة."
+          },
+          {
+            "q": "هل النكهات المختلفة تغير من مؤشره الجلايسيمي؟",
+            "a": "نعم، نكهات الفستق واللوز والكاكاو الداكن تكون أكثر توازناً واستقراراً لمستويات السكر مقارنة بنكهات الكراميل المملح أو المربيات السكرية."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are macarons healthier than ordinary cookies?",
+            "a": "Being based on almond flour gives them healthy fats and more fibre than biscuits made with white flour and hydrogenated fat, but powdered sugar is still a main ingredient."
+          },
+          {
+            "q": "What is the glycemic load of a single macaron?",
+            "a": "One 17.5 g macaron has a glycemic load of only about 6.2, a low load that makes it a gentle sweet treat."
+          },
+          {
+            "q": "Do different flavours change the glycemic index?",
+            "a": "Yes: pistachio, almond and dark cocoa flavours are more balanced for blood sugar than salted caramel or sugary jam fillings."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn macarons gezonder dan gewone koekjes?",
+            "a": "Door het amandelmeel bevatten ze gezonde vetten en meer vezels dan koekjes van witte bloem en gehard vet, maar poedersuiker blijft een hoofdingrediënt."
+          },
+          {
+            "q": "Wat is de glykemische lading van één macaron?",
+            "a": "Eén macaron van 17,5 g heeft een glykemische lading van slechts ongeveer 6,2, een lage lading die hem tot een rustige zoete traktatie maakt."
+          },
+          {
+            "q": "Veranderen de smaken de glykemische index?",
+            "a": "Ja: pistache, amandel en pure cacao zijn evenwichtiger voor je bloedsuiker dan gezouten karamel of suikerrijke jamvullingen."
+          }
+        ]
+      }
+    },
+    "606": {
+      "lead": {
+        "ar": "معشوقة عشاق الشوكولاتة حول العالم؛ كعكة دافئة بقوام خارجي ناضج يختبئ في داخله قلب سائل وغني يتدفق بنعومة. ورغم مذاقها الغني، إلا أن اعتماد الوصفات الأصيلة على شوكولاتة داكنة غنية بزبدة الكاكاو والبيض يمنحها محتوى مفيداً من مضادات الأكسدة والدهون التي تبطئ وتيرة الهضم مقارنة بالحلويات السكرية البسيطة، مما يجعلها تجربة فاخرة يمكن الاستمتاع بها بوعي واعتدال.",
+        "en": "The darling of chocolate lovers around the world: a warm cake with a set outer crust hiding a rich, liquid centre that flows out gently. Despite its richness, authentic recipes rely on dark chocolate full of cocoa butter and on eggs, which give it a useful amount of antioxidants and fats that slow digestion compared with simple sugary sweets, making it a luxurious treat to enjoy mindfully and in moderation.",
+        "nl": "De lieveling van chocoladeliefhebbers wereldwijd: een warm cakeje met een stevige buitenkant en een rijke, vloeibare kern die zachtjes naar buiten stroomt. Ondanks de rijke smaak gebruiken authentieke recepten pure chocolade vol cacaoboter en eieren, wat zorgt voor een nuttige hoeveelheid antioxidanten en vetten die de vertering vertragen vergeleken met eenvoudige suikerrijke zoetigheid. Zo wordt het een luxe traktatie om bewust en met mate van te genieten."
+      },
+      "tips": {
+        "ar": [
+          "نظراً لغناها بالطاقة، يُفضل مشاركة القالب أو تناوله بعد وجبة رئيسية متوازنة غنية بالألياف والبروتين الصافي.",
+          "اعتماد شوكولاتة داكنة بنسبة كاكاو 70% فما فوق مع تقليل السكر المضاف واستخدام دقيق اللوز يقلل من الحمل السكري بشكل ملحوظ.",
+          "يُفضل تجنب إضافة كرات الآيس كريم التجارية الدسمة فوقها، واستبدالها بالقليل من التوت العليق الطازج لإضافة نكهة منعشة دون رفع الحمل الجلايسيمي."
+        ],
+        "en": [
+          "Because it is so energy-dense, share the cake or have it after a balanced main meal rich in fibre and lean protein.",
+          "Using dark chocolate with 70% cocoa or more, cutting the added sugar and using almond flour noticeably lowers the glycemic load.",
+          "Skip the rich shop-bought ice cream on top and use a few fresh raspberries instead for a fresh flavour without raising the glycemic load."
+        ],
+        "nl": [
+          "Omdat het zo energierijk is, deel je het cakeje of eet je het na een evenwichtige hoofdmaaltijd met veel vezels en mager eiwit.",
+          "Pure chocolade met 70% cacao of meer, minder toegevoegde suiker en amandelmeel verlagen de glykemische lading merkbaar.",
+          "Sla het romige kant-en-klare ijs erbovenop over en neem in plaats daarvan een paar verse frambozen: frisse smaak zonder hogere glykemische lading."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل محتوى الكاكاو العالي يرفع قيمتها الغذائية؟",
+            "a": "نعم، الكاكاو الداكن مصدر ممتاز لمركبات الفلافونويد المضادة للأكسدة والمغنيسيوم."
+          },
+          {
+            "q": "لماذا يُعتبر الحمل الجلايسيمي مرتفعاً رغم مؤشرها المتوسط؟",
+            "a": "لأن الحمل يأخذ بالحسبان إجمالي كمية الكربوهيدرات المتاحة في الحصة الواحدة (41 غ)."
+          },
+          {
+            "q": "متى يفضل تناولها؟",
+            "a": "بعد وجبة متكاملة وقبل فترة من النشاط الحركي ليستهلك الجسم الطاقة بكفاءة."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does the high cocoa content raise its nutritional value?",
+            "a": "Yes: dark cocoa is an excellent source of antioxidant flavonoids and magnesium."
+          },
+          {
+            "q": "Why is the glycemic load high despite its medium index?",
+            "a": "Because the load takes into account the total available carbohydrate in one portion (41 g)."
+          },
+          {
+            "q": "When is the best time to eat it?",
+            "a": "After a complete meal and before some physical activity, so the body uses the energy efficiently."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt het hoge cacaogehalte de voedingswaarde?",
+            "a": "Ja: pure cacao is een uitstekende bron van antioxiderende flavonoïden en magnesium."
+          },
+          {
+            "q": "Waarom is de glykemische lading hoog ondanks de gemiddelde index?",
+            "a": "Omdat de lading rekening houdt met de totale hoeveelheid beschikbare koolhydraten in één portie (41 g)."
+          },
+          {
+            "q": "Wanneer eet je het het best?",
+            "a": "Na een volwaardige maaltijd en vóór wat lichamelijke activiteit, zodat je lichaam de energie efficiënt gebruikt."
+          }
+        ]
+      }
+    },
+    "607": {
+      "lead": {
+        "ar": "درة المخبوزات الألمانية التقليدية (Schwarzwälder Kirschtorte)؛ تتميز بطبقات كعك الكاكاو الإسفنجي الهش، والممزوجة بحبات كرز الغابة الحامض وقشور الشوكولاتة الداكنة والكريمة المخفوقة. تمثل توازناً محبباً بين الحلاوة ونكهة الكرز، حيث توفر حبات الكرز الطبيعية أليافاً ومضادات أكسدة طبيعية (الأنثوسيانين)، مما يمنحها شخصية غذائية متفردة بين الحلويات التقليدية.",
+        "en": "The jewel of traditional German baking (Schwarzwälder Kirschtorte): light cocoa sponge layers combined with sour forest cherries, dark chocolate shavings and whipped cream. It strikes a much-loved balance between sweetness and cherry tang, and the whole cherries add fibre and natural antioxidants (anthocyanins), giving it a distinctive nutritional character among traditional desserts.",
+        "nl": "Het pronkstuk van de traditionele Duitse bakkunst (Schwarzwälder Kirschtorte): luchtige cacaobiscuitlagen met zure krieken, schaafsel van pure chocolade en slagroom. De taart vindt een geliefd evenwicht tussen zoet en de frisheid van kersen, en de hele kersen leveren vezels en natuurlijke antioxidanten (anthocyanen), wat hem een eigen voedingsprofiel geeft tussen de traditionele desserts."
+      },
+      "tips": {
+        "ar": [
+          "الشريحة المعتادة مشبعة وسخية؛ لذا فإن تقاسمها مع صديق يضمن الاستمتاع بالنكهة الأصيلة باعتدال حراري.",
+          "استخدام الكرز الطازج أو المجمد غير المغلى بالقطر السكري، وضبط سكر الكريمة المخفوقة يخفف من السكريات البسيطة بصورة ملحوظة.",
+          "يُراعى أن بعض الوصفات التجارية تستخدم شربات سكري مركز لتشريب الكيك، مما يستدعي الانتباه لمن يتابعون قراءات سكر الدم."
+        ],
+        "en": [
+          "A typical slice is generous and filling, so sharing it with a friend lets you enjoy the authentic flavour with moderate calories.",
+          "Using fresh or frozen cherries not cooked in syrup, and going easy on the sugar in the whipped cream, noticeably reduces simple sugars.",
+          "Some commercial recipes soak the sponge in concentrated sugar syrup, which people who track their blood glucose should keep in mind."
+        ],
+        "nl": [
+          "Een gewone punt is royaal en vullend; deel hem met iemand en je geniet van de echte smaak met minder calorieën.",
+          "Verse of diepgevroren kersen die niet in siroop zijn gekookt en minder suiker in de slagroom verminderen de enkelvoudige suikers merkbaar.",
+          "Sommige commerciële recepten drenken de biscuit in geconcentreerde suikersiroop; houd daar rekening mee als je je bloedsuiker bijhoudt."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل حبات الكرز تضيف قيمة حقيقية؟",
+            "a": "نعم، الكرز فاكهة ذات مؤشر جلايسيمي منخفض وغنية بمضادات الأكسدة التي تدعم الحماية من الإجهاد التأكسدي."
+          },
+          {
+            "q": "هل هي أخف من التشيز كيك؟",
+            "a": "بنيتها الإسفنجية تجعل محتوى الدهون فيها أقل عادة من كعكات الجبن كاملة الدسم."
+          },
+          {
+            "q": "كيف تؤثر الكريمة على امتصاص السكر؟",
+            "a": "دهون الكريمة تبطئ من سرعة إفراغ المعدة وتدفق الجلوكوز مقارنة بالحلويات الخالية تماماً من الدهون."
+          }
+        ],
+        "en": [
+          {
+            "q": "Do the cherries add real value?",
+            "a": "Yes: cherries are a low-GI fruit rich in antioxidants that help protect against oxidative stress."
+          },
+          {
+            "q": "Is it lighter than cheesecake?",
+            "a": "Its sponge structure usually means less fat than full-fat cheesecakes."
+          },
+          {
+            "q": "How does the cream affect sugar absorption?",
+            "a": "The fat in the cream slows stomach emptying and the flow of glucose compared with completely fat-free sweets."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Voegen de kersen echt iets toe?",
+            "a": "Ja: kersen zijn fruit met een lage glykemische index en rijk aan antioxidanten die helpen beschermen tegen oxidatieve stress."
+          },
+          {
+            "q": "Is hij lichter dan cheesecake?",
+            "a": "Door de luchtige biscuit bevat hij meestal minder vet dan volvette cheesecake."
+          },
+          {
+            "q": "Wat doet de slagroom met de suikeropname?",
+            "a": "Het vet in de room vertraagt de maaglediging en de instroom van glucose vergeleken met volledig vetvrije zoetigheid."
+          }
+        ]
+      }
+    },
+    "608": {
+      "lead": {
+        "ar": "أيقونة مقاهي فيينا التاريخية الشهيرة؛ كعكة شوكولاتة إسفنجية كثيفة تتوسطها طبقة رقيقة من مربى المشمش المصفى، وتُغلف بطبقة متماسكة ولامعة من جناش الشوكولاتة الداكنة. تتميز بطابعها النمساوي الأصيل الذي يوازن بين مرارة الشوكولاتة الراقية وحموضة المشمش الطبيعية، وتُقدم تقليدياً مع القهوة المرة بدون سكر مضاف.",
+        "en": "An icon of Vienna’s historic cafés: a dense chocolate sponge with a thin layer of smooth apricot jam, coated in a firm, glossy dark chocolate glaze. Its authentic Austrian character balances the bitterness of fine chocolate with the natural tartness of apricot, and it is traditionally served with black coffee without added sugar.",
+        "nl": "Een icoon van de historische Weense koffiehuizen: een compacte chocoladebiscuit met een dun laagje gezeefde abrikozenjam, omhuld door een stevige, glanzende laag pure chocoladeglazuur. Het echte Oostenrijkse karakter brengt de bitterheid van fijne chocolade in balans met de natuurlijke frisheid van abrikoos, en hij wordt traditioneel geserveerd met zwarte koffie zonder suiker."
+      },
+      "tips": {
+        "ar": [
+          "تُقطع تقليدياً بشرائح رقيقة لكثافتها وشبع نكهتها؛ شريحة صغيرة مع القهوة تمنح متعة المذاق بضبط تلقائي للحصة.",
+          "استخدام مربى مشمش مصنوع من الفاكهة بنسبة 100% وبدون سكر مكرر يقلل من الحمل السكري الإجمالي.",
+          "طبقة الجناش السطحية غنية بالسكريات سريعة التحلل، لذا يُفضل مراعاة ذلك ضمن المجموع اليومي للنشويات."
+        ],
+        "en": [
+          "It is traditionally cut into thin slices because it is so dense and filling; a small slice with coffee gives you the full pleasure with built-in portion control.",
+          "Using a 100%-fruit apricot spread without refined sugar lowers the overall glycemic load.",
+          "The glaze on top is rich in fast-digested sugars, so count it in your daily carbohydrate total."
+        ],
+        "nl": [
+          "Hij wordt traditioneel in dunne punten gesneden omdat hij zo compact en vullend is; een klein stuk bij de koffie geeft het volle genot met vanzelf een kleine portie.",
+          "Abrikozenbeleg van 100% fruit zonder geraffineerde suiker verlaagt de totale glykemische lading.",
+          "De glazuurlaag is rijk aan snel verteerbare suikers; tel die mee in je dagelijkse koolhydraattotaal."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما دور مربى المشمش؟",
+            "a": "يمنح رطوبة للكيكة الإسفنجية ويكسر دسامة الشوكولاتة بلمسة حمضية خفيفة."
+          },
+          {
+            "q": "هل تعتبر دسمة مقارنة بباقي أنواع الكيك؟",
+            "a": "دهونها معتدلة وأقل من كعكات الكريمة الزبدية لاعتمادها الأساسي على الكاكاو والبيض."
+          },
+          {
+            "q": "كيف نحد من سرعة امتصاص سكرياتها؟",
+            "a": "تناولها بعد وجبة تحتوي على خضار وبروتينات صافية، وتجنب المشروبات المحلاة بجانبها."
+          }
+        ],
+        "en": [
+          {
+            "q": "What does the apricot jam do?",
+            "a": "It keeps the sponge moist and cuts through the richness of the chocolate with a light tang."
+          },
+          {
+            "q": "Is it rich compared with other cakes?",
+            "a": "Its fat content is moderate and lower than buttercream cakes, as it relies mainly on cocoa and eggs."
+          },
+          {
+            "q": "How can I slow down the absorption of its sugars?",
+            "a": "Eat it after a meal with vegetables and lean protein, and avoid sweetened drinks alongside it."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat doet de abrikozenjam?",
+            "a": "Die houdt de biscuit smeuïg en doorbreekt de machtigheid van de chocolade met een lichte frisheid."
+          },
+          {
+            "q": "Is hij machtig vergeleken met andere taarten?",
+            "a": "Het vetgehalte is gematigd en lager dan bij botercrèmetaarten, omdat hij vooral op cacao en eieren drijft."
+          },
+          {
+            "q": "Hoe vertraag ik de opname van de suikers?",
+            "a": "Eet hem na een maaltijd met groenten en mager eiwit, en drink er geen gezoete dranken bij."
+          }
+        ]
+      }
+    },
+    "609": {
+      "lead": {
+        "ar": "من أكثر المخبوزات دفئاً وقبولاً؛ تجمع بين نكهات القرفة والزنجبيل الدافئة، ورطوبة الجزر المبشور الطازج، وقرمشة عين الجمل (الجوز)، مغطاة بطبقة من كريمة الجبن الناعمة. يسهم وجود الجزر الغني بالألياف والبيتا كاروتين، والجوز المليء بالدهون الصحية، في منحها مؤشراً جلايسيمياً أكثر اعتدالاً من الكعكات البيضاء التقليدية.",
+        "en": "One of the warmest and best-loved bakes: warm cinnamon and ginger, the moistness of freshly grated carrot and the crunch of walnuts, topped with smooth cream cheese frosting. Carrots rich in fibre and beta-carotene and walnuts full of healthy fats help give it a more moderate glycemic index than traditional white cakes.",
+        "nl": "Een van de warmste en meest geliefde baksels: warme kaneel en gember, de sappigheid van vers geraspte wortel en de knapperigheid van walnoten, afgedekt met een zachte roomkaasglazuur. Wortels vol vezels en bètacaroteen en walnoten met gezonde vetten zorgen samen voor een gematigdere glykemische index dan bij traditionele witte cakes."
+      },
+      "tips": {
+        "ar": [
+          "إزالة جزء من طبقة الكريمة السكرية العلوية بالشوكة يقلل من السكريات البسيطة والسعرات بصورة ملحوظة مع الحفاظ على نكهة الكعكة المتبلة.",
+          "إعدادها بدقيق الشوفان أو القمح الكامل، وزيادة نسبة الجوز والجزر، واستخدام جبن قليل الدسم ومحلي معتدل للكريمة.",
+          "القرفة من التوابل التي ترتبط في الدراسات التغذوية بدعم استقرار التمثيل الغذائي للسكريات، مما يجعلها إضافة إيجابية للوصفة."
+        ],
+        "en": [
+          "Scraping off part of the sweet frosting with your fork noticeably cuts simple sugars and calories while keeping the spiced flavour of the cake.",
+          "Make it with oat or wholewheat flour, add more walnuts and carrot, and use a reduced-fat cream cheese with a modest amount of sweetener for the frosting.",
+          "Cinnamon is a spice that nutrition studies link with steadier sugar metabolism, which makes it a positive addition to the recipe."
+        ],
+        "nl": [
+          "Schraap met je vork een deel van de zoete glazuur eraf: dat scheelt merkbaar in enkelvoudige suikers en calorieën, terwijl de kruidige smaak blijft.",
+          "Bak hem met haver- of volkorenmeel, gebruik meer walnoten en wortel, en neem voor de glazuur halfvolle roomkaas met een bescheiden hoeveelheid zoetmiddel.",
+          "Kaneel is een specerij die in voedingsonderzoek in verband wordt gebracht met een stabielere suikerstofwisseling, wat het een positieve toevoeging maakt."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل تُعتبر صحية لمجرد احتوائها على الجزر؟",
+            "a": "هي أغنى بالمغذيات كفيتامين A والألياف، لكنها تظل كعكة تحتوي على طاقة وسكريات تستوجب الاعتدال."
+          },
+          {
+            "q": "لماذا مؤشرها (58) أفضل من الكيك العادي؟",
+            "a": "بفضل ألياف الجزر والدهون النباتية الصحية في الجوز التي تبطئ تفكك النشا."
+          },
+          {
+            "q": "هل تناسب الأنظمة قليلة النشويات؟",
+            "a": "تحتوي الشريحة على قرابة 43 غ كربوهيدرات صافية، لذا تلائم الأنظمة المتوازنة مع حساب الحصص بدقة."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is it healthy just because it contains carrots?",
+            "a": "It is richer in nutrients such as vitamin A and fibre, but it is still a cake with energy and sugars that call for moderation."
+          },
+          {
+            "q": "Why is its index (58) better than ordinary cake?",
+            "a": "Thanks to the fibre in the carrots and the healthy plant fats in the walnuts, which slow the breakdown of starch."
+          },
+          {
+            "q": "Does it suit low-carb diets?",
+            "a": "A slice contains about 43 g of net carbohydrate, so it fits balanced diets with careful portion counting."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is hij gezond alleen omdat er wortel in zit?",
+            "a": "Hij bevat meer voedingsstoffen zoals vitamine A en vezels, maar blijft een taart met energie en suikers die om matiging vragen."
+          },
+          {
+            "q": "Waarom is de index (58) beter dan bij gewone cake?",
+            "a": "Dankzij de vezels in de wortels en de gezonde plantaardige vetten in de walnoten, die de afbraak van zetmeel vertragen."
+          },
+          {
+            "q": "Past hij bij een koolhydraatarm dieet?",
+            "a": "Een punt bevat ongeveer 43 g netto koolhydraten, dus hij past bij een evenwichtig eetpatroon als je de porties goed telt."
+          }
+        ]
+      }
+    },
+    "610": {
+      "lead": {
+        "ar": "الكعكة المخملية الحمراء ذات الشهرة الواسعة بلونها القرمزي وملمسها الناعم الشبيه بالساتان؛ تدمج بين طعم الكاكاو الخفيف وحموضة اللبن الرائب (Buttermilk) اللطيفة، مع طبقات وفيرة من كريمة الجبن الحلوة. هذا المزيج يمنحها هشاشتها المميزة، وتُعد نجمة في المناسبات الاحتفالية، مع أهمية مراعاة حجم الشريحة لكثافتها السكرية والحرارية.",
+        "en": "The famous red velvet cake, with its crimson colour and satin-smooth texture, combines a light cocoa taste with the gentle tang of buttermilk and generous layers of sweet cream cheese frosting. This combination gives it its signature tenderness and makes it a star at celebrations, but the slice size matters because it is dense in sugar and calories.",
+        "nl": "De beroemde red velvet cake, met zijn karmijnrode kleur en satijnzachte textuur, combineert een lichte cacaosmaak met de zachte frisheid van karnemelk en royale lagen zoete roomkaasglazuur. Die combinatie geeft de typische malsheid en maakt hem een ster op feestjes, maar let op de grootte van de punt vanwege de hoge suiker- en caloriedichtheid."
+      },
+      "tips": {
+        "ar": [
+          "نظراً لارتفاع حملها الجلايسيمي، يُنصح بتناول نصف شريحة كتحلية في المناسبات بعد وجبة رئيسية غنية بالخضار والبروتينات.",
+          "استخدام مسحوق الشمندر الطبيعي لإعطاء اللون الأحمر المميز بدلاً من الصبغات الاصطناعية، مع تقليل السكر في كريمة الجبن.",
+          "الحمل الجلايسيمي للشريحة (35.8) مرتفع، لذا يُوصى بممارسة نشاط بدني خفيف كالمشي بعد المناسبات التي تحتوي على هذا النوع من الحلويات."
+        ],
+        "en": [
+          "Because of its high glycemic load, have half a slice as dessert on special occasions after a main meal rich in vegetables and protein.",
+          "Use natural beetroot powder for the signature red colour instead of artificial dyes, and reduce the sugar in the cream cheese frosting.",
+          "The glycemic load of a slice (35.8) is high, so light activity such as a walk is recommended after occasions where you eat this kind of dessert."
+        ],
+        "nl": [
+          "Vanwege de hoge glykemische lading eet je bij voorkeur een halve punt als dessert bij speciale gelegenheden, na een hoofdmaaltijd met veel groenten en eiwit.",
+          "Gebruik natuurlijk bietenpoeder voor de typische rode kleur in plaats van kunstmatige kleurstoffen, en gebruik minder suiker in de roomkaasglazuur.",
+          "De glykemische lading van een punt (35,8) is hoog; lichte beweging zoals een wandeling is aan te raden na gelegenheden waarbij je dit soort desserts eet."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما سر قوامها المخملي؟",
+            "a": "تفاعل اللبن الرائب الخفيف مع كمية الكاكاو البسيطة يمنح العجينة طراوة فريدة وتماسكاً ناعماً."
+          },
+          {
+            "q": "هل تختلف عن كعكة الشوكولاتة؟",
+            "a": "نعم، كمية الكاكاو فيها قليلة جداً ونكهتها تعتمد أكثر على الفانيليا وتوازن الحموضة مع الكريمة."
+          },
+          {
+            "q": "كيف نتعامل مع ملونات الطعام؟",
+            "a": "يُفضل دائماً الاعتماد على الخلاصات النباتية الطبيعية كعصير أو مسحوق الشمندر للحفاظ على نقاء المكونات."
+          }
+        ],
+        "en": [
+          {
+            "q": "What is the secret of its velvety texture?",
+            "a": "The reaction between the buttermilk and the small amount of cocoa gives the batter a unique tenderness and a smooth crumb."
+          },
+          {
+            "q": "Is it different from chocolate cake?",
+            "a": "Yes: it contains very little cocoa, and its flavour relies more on vanilla and the balance of tang with the frosting."
+          },
+          {
+            "q": "What about food colourings?",
+            "a": "It is always better to rely on natural plant extracts such as beetroot juice or powder to keep the ingredients clean."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat is het geheim van de fluweelzachte textuur?",
+            "a": "De reactie tussen de karnemelk en de kleine hoeveelheid cacao geeft het beslag een unieke malsheid en een fijne kruim."
+          },
+          {
+            "q": "Verschilt hij van chocoladetaart?",
+            "a": "Ja: er zit heel weinig cacao in, en de smaak draait meer om vanille en het evenwicht tussen frisheid en de roomkaas."
+          },
+          {
+            "q": "Hoe zit het met kleurstoffen?",
+            "a": "Kies bij voorkeur natuurlijke plantenextracten zoals bietensap of -poeder voor een zuivere ingrediëntenlijst."
+          }
+        ]
+      }
+    },
+    "611": {
+      "lead": {
+        "ar": "أشهر ما أبدعه المطبخ الصقلي الإيطالي العريق؛ أنابيب مقرمشة وهشة من العجين المقلي والمتبل بالقرفة، تُحشى عند الطلب مباشرة بكريمة جبن الريكوتا الناعمة المصفاة والمحلاة بلمسات من الفانيليا وقطع الشوكولاتة الداكنة أو الفستق الحلبي. يتميز الكانولي بأن قلبه الكريمي يعتمد على جبن الريكوتا الغني ببروتين مصل اللبن (الواي) والكالسيوم، مما يمنحه كثافة بروتينية تجعل امتصاص السكر أهدأ وأبطأ مقارنة بالحلويات المحشوة بكريمة السكر المصنعة.",
+        "en": "The most famous creation of the time-honoured Sicilian kitchen: crisp, fragile tubes of fried, cinnamon-spiced dough, filled to order with smooth, strained ricotta sweetened with vanilla and studded with dark chocolate chips or pistachios. The creamy heart of the cannolo is ricotta, rich in whey protein and calcium, which makes sugar absorption calmer and slower than in sweets filled with processed sugar cream.",
+        "nl": "De beroemdste creatie van de eeuwenoude Siciliaanse keuken: knapperige, broze kokers van gefrituurd deeg met kaneel, pas bij bestelling gevuld met zachte, uitgelekte ricotta, gezoet met vanille en aangevuld met stukjes pure chocolade of pistache. Het romige hart van de cannolo is ricotta, rijk aan wei-eiwit en calcium, waardoor de suiker rustiger en langzamer wordt opgenomen dan bij zoetigheid met een fabrieksmatige suikercrème."
+      },
+      "tips": {
+        "ar": [
+          "حبة واحدة تمنحك إشباعاً ممتازاً؛ ويُفضل تناولها طازجة بعد وجبة رئيسية متوازنة للاستفادة من دهون وبروتين الريكوتا في تعديل وتيرة الهضم.",
+          "خبز قشور الكانولي في الفرن الهوائي بدلاً من القلي الغزير يقلل الدهون بشكل كبير، واستخدام ريكوتا طازجة ومحلي طبيعي يخفف السكر إلى أدنى حد.",
+          "تحتوي القشرة على دهون القلي، لذا يُنصح بالاكتفاء بحبة واحدة دون تكرار في نفس اليوم لمراقبي دهون الدم."
+        ],
+        "en": [
+          "One cannolo is very satisfying; eat it fresh after a balanced main meal so the fat and protein in the ricotta can moderate the pace of digestion.",
+          "Baking the shells in an air fryer instead of deep-frying them cuts the fat considerably, and fresh ricotta with a natural sweetener keeps the sugar to a minimum.",
+          "The shell contains frying fat, so people watching their blood lipids should stick to one cannolo and not repeat it on the same day."
+        ],
+        "nl": [
+          "Eén cannolo verzadigt uitstekend; eet hem vers na een evenwichtige hoofdmaaltijd, zodat het vet en eiwit in de ricotta de vertering afremmen.",
+          "De kokers in een airfryer bakken in plaats van frituren scheelt flink in vet, en verse ricotta met een natuurlijke zoetstof houdt de suiker zo laag mogelijk.",
+          "De koker bevat frituurvet; wie op zijn bloedvetten let, houdt het bij één cannolo en neemt er die dag geen tweede."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل جبن الريكوتا يجعل الكانولي صحياً؟",
+            "a": "يرفع محتوى البروتين والكالسيوم ويزيد الشبع، لكنه يبقى حلوى تحتوي على دهون ونشويات مقلية تستوجب الحصة المعتدلة."
+          },
+          {
+            "q": "كيف يؤثر الكانولي على جلوكوز الدم؟",
+            "a": "بفضل البروتين في الريكوتا، لا يحدث ارتفاع مفاجئ حاد، بل منحنى سكر معتدل نسبياً بحمل جلايسيمي متوسط (13.9)."
+          },
+          {
+            "q": "هل يمكن لمن يعانون من مقاومة الإنسولين تناوله؟",
+            "a": "نعم، كحلوى في المناسبات بمقدار نصف حبة أو حبة صغيرة مع المشي بعدها."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does ricotta make cannoli healthy?",
+            "a": "It raises the protein and calcium and increases fullness, but cannoli are still a sweet with fat and fried starch that call for a moderate portion."
+          },
+          {
+            "q": "How do cannoli affect blood glucose?",
+            "a": "Thanks to the protein in the ricotta there is no sharp spike but a relatively moderate glucose curve, with a medium glycemic load (13.9)."
+          },
+          {
+            "q": "Can people with insulin resistance eat it?",
+            "a": "Yes, as an occasional treat: half a cannolo or a small one, followed by a walk."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Maakt ricotta cannoli gezond?",
+            "a": "Het verhoogt het eiwit- en calciumgehalte en geeft meer verzadiging, maar het blijft zoetigheid met vet en gefrituurd zetmeel, dus houd de portie bescheiden."
+          },
+          {
+            "q": "Wat doen cannoli met je bloedglucose?",
+            "a": "Dankzij het eiwit in de ricotta is er geen scherpe piek maar een relatief gematigde suikercurve, met een gemiddelde glykemische lading (13,9)."
+          },
+          {
+            "q": "Mogen mensen met insulineresistentie het eten?",
+            "a": "Ja, als traktatie bij gelegenheid: een halve of een kleine cannolo, met daarna een wandeling."
+          }
+        ]
+      }
+    },
+    "612": {
+      "lead": {
+        "ar": "خبز الأعياد الإيطالي الفاخر القادم من ميلانو؛ يتميز بقوامه الإسفنجي فائق الخفة وقبته الشاهقة ورائحته الفواحة بقشور البرتقال المعسلة والزبيب المنقوع وحبوب الفانيليا. يتطلب تخميراً بطيئاً بالعجينة المخمرة الطبيعية لعدة أيام، مما يمنحه بنية هوائية فريدة تذوب في الفم، مع طعم يجمع بين غنى الزبدة الصافية وحلاوة الفواكه المجففة.",
+        "en": "The luxurious Italian festive bread from Milan, with its feather-light, airy crumb, tall dome and the fragrance of candied orange peel, soaked raisins and vanilla seeds. It needs a slow, days-long fermentation with natural sourdough, which gives it a unique airy structure that melts in the mouth, combining the richness of butter with the sweetness of dried fruit.",
+        "nl": "Het luxueuze Italiaanse feestbrood uit Milaan, met een vederlichte, luchtige kruim, een hoge koepel en de geur van gekonfijte sinaasappelschil, geweekte rozijnen en vanillezaadjes. Het vraagt een trage gisting van meerdere dagen met natuurlijk zuurdesem, wat zorgt voor een unieke luchtige structuur die op de tong smelt, met de rijkdom van boter en de zoetheid van gedroogd fruit."
+      },
+      "tips": {
+        "ar": [
+          "التخمير الطويل يعطيه سهولة في الهضم، لكن كثافة الفواكه المجففة ترفع الحمل السكري؛ لذا اكتفِ بشريحة رقيقة مع قهوة الإسبريسو الصباحية دون إضافات.",
+          "تجنب دهن الشريحة بصلصات الشوكولاتة أو الزبدة الإضافية كما يفعل البعض؛ نكهتها العطرية غنية وتكفي تماماً وحدها.",
+          "الزبيب وقشور الحمضيات المعسلة مصدر مركز للكربوهيدرات البسيطة، مما يستدعي الانتباه لمن يتابعون السكر التراكمي."
+        ],
+        "en": [
+          "The long fermentation makes it easy to digest, but the dried fruit raises the glycemic load, so stick to a thin slice with your morning espresso, without extras.",
+          "Avoid spreading the slice with chocolate sauce or extra butter as some people do; its aromatic flavour is rich enough on its own.",
+          "Raisins and candied citrus peel are a concentrated source of simple carbohydrates, so people monitoring their HbA1c should keep this in mind."
+        ],
+        "nl": [
+          "De lange rijs maakt het licht verteerbaar, maar het gedroogde fruit verhoogt de glykemische lading; houd het bij een dun plakje bij je ochtendespresso, zonder extra’s.",
+          "Besmeer het plakje niet met chocoladesaus of extra boter zoals sommigen doen; de aromatische smaak is op zichzelf rijk genoeg.",
+          "Rozijnen en gekonfijte citrusschil zijn een geconcentreerde bron van enkelvoudige koolhydraten; let daarop als je je HbA1c in de gaten houdt."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل التخمير الطبيعي للبانيتوني يقلل من مؤشره الجلايسيمي؟",
+            "a": "التخمير الطويل يحسن هضم الجلوتين وملمس الخبز، لكن وجود السكر والزبيب يبقي المؤشر في النطاق المتوسط (65)."
+          },
+          {
+            "q": "كم شريحة يمكن تناولها في المناسبات؟",
+            "a": "شريحة واحدة (80 غ) تمثل حصة نشويات رئيسية؛ لذا يُفضل خصمها من نشويات الوجبة السابقة."
+          },
+          {
+            "q": "ما الفرق بينه وبين الكيك الإسفنجي؟",
+            "a": "البانيتوني خبز مخمر بخمائر طبيعية وزبدة، ونسبة الدهون فيه أقل بكثير من كعكات الكريمة الدسمة."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does natural fermentation lower panettone’s glycemic index?",
+            "a": "Long fermentation improves gluten digestion and texture, but the sugar and raisins keep the index in the medium range (65)."
+          },
+          {
+            "q": "How many slices can I have on special occasions?",
+            "a": "One slice (80 g) is a full starch portion, so subtract it from the starch in the meal before."
+          },
+          {
+            "q": "How is it different from sponge cake?",
+            "a": "Panettone is a bread leavened with natural yeasts and butter, and it contains much less fat than rich cream cakes."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verlaagt natuurlijke gisting de glykemische index van panettone?",
+            "a": "Lange gisting verbetert de vertering van gluten en de textuur, maar suiker en rozijnen houden de index in het gemiddelde bereik (65)."
+          },
+          {
+            "q": "Hoeveel plakken kan ik nemen bij een feest?",
+            "a": "Eén plak (80 g) is een volledige zetmeelportie; trek die dus af van het zetmeel in de maaltijd ervoor."
+          },
+          {
+            "q": "Wat is het verschil met biscuitgebak?",
+            "a": "Panettone is een brood gerezen met natuurlijke gisten en boter, en bevat veel minder vet dan machtige roomtaarten."
+          }
+        ]
+      }
+    },
+    "613": {
+      "lead": {
+        "ar": "الحلوى البييمونتية الإيطالية الملكية التي تعني حرفياً \"الكريمة المطبوخة\"؛ تُحضر من طبخ الكريمة الطازجة والحليب مع أعواد الفانيليا الطبيعية ثم تبريدها لتكتسب قواماً مخملياً يهتز بخفة وأناقة عند لمسه، وتُزين بصلصة هريس توت العليق المنعشة بحموضتها الطبيعية. دهون الحليب الطبيعية مع ألياف التوت ومضادات الأكسدة تمنح هذه التحلية مؤشراً جلايسيمياً منخفضاً (55)، مما يجعلها من ألطف خيارات التحلية على مستويات الطاقة في الجسم.",
+        "en": "The regal dessert from Piedmont whose name literally means “cooked cream”: fresh cream and milk are cooked with natural vanilla pods and then chilled until velvety and gently wobbly, and finished with a refreshing raspberry coulis with its natural tartness. The natural milk fat, together with the fibre and antioxidants of the berries, gives this dessert a low glycemic index (55), making it one of the gentlest desserts for your energy levels.",
+        "nl": "Het vorstelijke dessert uit Piëmont waarvan de naam letterlijk ‘gekookte room’ betekent: verse room en melk worden met echte vanillestokjes verwarmd en daarna gekoeld tot een fluweelzachte, licht trillende pudding, afgewerkt met een frisse frambozencoulis. Het natuurlijke melkvet, samen met de vezels en antioxidanten van de bessen, geeft dit dessert een lage glykemische index (55), waardoor het een van de mildste desserts voor je energieniveau is."
+      },
+      "tips": {
+        "ar": [
+          "خيار رائع بعد وجبات الأسماك أو اللحوم الخفيفة، وحملها الجلايسيمي (11.6) يعتبر من الأفضل في فئة الحلويات الغربية الفاخرة.",
+          "تحضير صلصة التوت بهرس التوت الطازج دون غليه بالسكر المكرر يعزز فيتامين C ويخفض كربوهيدرات الصلصة بشكل ملحوظ.",
+          "لمن يراقبون الدهون الكلية، يمكن خلط نصف كمية الكريمة بحليب اللوز أو الحليب خالي الدسم مع الجيلاتين الطبيعي للاحتفاظ بنفس القوام الرائع بدهون أقل."
+        ],
+        "en": [
+          "A great choice after fish or light meat dishes; its glycemic load (11.6) is among the best in the category of fine Western desserts.",
+          "Making the coulis by mashing fresh berries without cooking them with refined sugar keeps more vitamin C and noticeably lowers the carbohydrate in the sauce.",
+          "If you watch your total fat, replace half the cream with almond milk or skimmed milk and keep the gelatine, for the same lovely texture with less fat."
+        ],
+        "nl": [
+          "Een prima keuze na vis of lichte vleesgerechten; de glykemische lading (11,6) is een van de laagste onder de verfijnde westerse desserts.",
+          "Maak de coulis door verse bessen te pureren zonder ze met geraffineerde suiker te koken: dat behoudt meer vitamine C en verlaagt de koolhydraten in de saus merkbaar.",
+          "Let je op je totale vetinname, vervang dan de helft van de room door amandelmelk of magere melk en houd de gelatine aan: dezelfde mooie textuur met minder vet."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الجيلاتين في البانا كوتا يقدم قيمة غذائية؟",
+            "a": "الجيلاتين بروتين مشتق من الكولاجين، لكن كميته في الحصة صغيرة جداً (بضعة غرامات)، لذا لا يُعد مصدراً غذائياً مهماً ودوره الأساسي هو تماسك القوام."
+          },
+          {
+            "q": "لماذا مؤشرها الجلايسيمي منخفض؟",
+            "a": "لأن نسبة السكر المضاف فيها متوازنة وتأتي في وسط دهني بطيء الامتصاص، مع التوت الغني بحمض الإيلاجيك."
+          },
+          {
+            "q": "هل تناسب حمية اللوكارب؟",
+            "a": "النسخة التقليدية تحتوي على نحو 21 غ كربوهيدرات متاحة في الكأس، لكن تحضيرها بمحلٍّ خالٍ من السعرات (كالإريثريتول) مع توت طازج غير محلى يجعلها مناسبة لأنظمة اللوكارب."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does the gelatine in panna cotta add nutritional value?",
+            "a": "Gelatine is a protein derived from collagen, but a portion contains only a few grams, so it is not a meaningful nutrient source; its main role is to set the texture."
+          },
+          {
+            "q": "Why is its glycemic index low?",
+            "a": "Because the added sugar is moderate and comes in a fatty, slowly absorbed base, together with berries rich in ellagic acid."
+          },
+          {
+            "q": "Does it suit a low-carb diet?",
+            "a": "The traditional version contains about 21 g of available carbohydrate per glass, but made with a zero-calorie sweetener (such as erythritol) and fresh unsweetened berries it fits low-carb diets."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Heeft de gelatine in panna cotta voedingswaarde?",
+            "a": "Gelatine is een eiwit dat uit collageen wordt gemaakt, maar een portie bevat maar een paar gram; het is dus geen belangrijke voedingsbron en dient vooral om de pudding te laten opstijven."
+          },
+          {
+            "q": "Waarom is de glykemische index laag?",
+            "a": "Omdat de toegevoegde suiker beperkt is en in een vetrijke, langzaam opgenomen basis zit, samen met bessen die rijk zijn aan ellaginezuur."
+          },
+          {
+            "q": "Past het bij een koolhydraatarm dieet?",
+            "a": "De traditionele versie bevat ongeveer 21 g beschikbare koolhydraten per glaasje, maar gemaakt met een calorievrije zoetstof (zoals erytritol) en verse ongezoete bessen past het bij een koolhydraatarm dieet."
+          }
+        ]
+      }
+    },
+    "614": {
+      "lead": {
+        "ar": "أصابع البسكويت الإسفنجية التاريخية التي تعود لأمراء سافوي الإيطاليين، والمكون الأساسي لحلوى التيراميسو والشارلوت الشهيرة. يتميز هذا البسكويت ببنية إسفنجية بالغة الخفة والمسامية قادرة على امتصاص القهوة والنكهات ببراعة فائقة. يُخبز من خفق بياض وصفار البيض مع الدقيق ورشة سكر على السطح تمنحه قرمشة ناعمة. ونظراً لقلة دهونه وكثافة نشوياته سريعة التحلل، فإنه يُصنف ضمن الأغذية ذات المؤشر الجلايسيمي المرتفع.",
+        "en": "The historic sponge fingers that date back to the Italian House of Savoy, and the key ingredient of tiramisu and the famous charlotte. Their extremely light, porous sponge structure soaks up coffee and flavours perfectly. They are baked from whipped egg whites and yolks with flour and a sprinkling of sugar on top that gives a delicate crunch. Because they are low in fat and dense in quickly digested starch, they are classed as a high glycemic index food.",
+        "nl": "De historische lange vingers die teruggaan tot het Italiaanse Huis Savoye, en het basisingrediënt van tiramisu en de beroemde charlotte. Hun uiterst lichte, poreuze biscuitstructuur neemt koffie en smaken perfect op. Ze worden gebakken van opgeklopt eiwit en eigeel met bloem en een laagje suiker erop dat zorgt voor een fijne krokantheid. Omdat ze weinig vet bevatten en veel snel verteerbaar zetmeel, horen ze bij de voedingsmiddelen met een hoge glykemische index."
+      },
+      "tips": {
+        "ar": [
+          "تجنب تناوله جافاً ومنفرداً كوجبة خفيفة، بل الأفضل استخدامه ضمن التيراميسو الكلاسيكي حيث يساعد دهن وبروتين جبن الماسكاربوني في كبح القفزة السكرية لامتصاص البسكويت.",
+          "غمسه في قهوة إسبريسو غنية بمضادات الأكسدة وبدون إضافة سكر إلى سائل التغميس.",
+          "مؤشره الجلايسيمي المرتفع (70) يجعله يتحلل في الدم بسرعة قريبة من الخبز الأبيض، لذا يجب الانتباه التام لكمية الحبات المستهلكة."
+        ],
+        "en": [
+          "Avoid eating them dry on their own as a snack; they are better used in classic tiramisu, where the fat and protein of the mascarpone help curb the sugar spike from the biscuits.",
+          "Dip them in antioxidant-rich espresso without adding sugar to the dipping coffee.",
+          "Its high glycemic index (70) means it is digested and absorbed almost as fast as white bread, so pay close attention to how many you eat."
+        ],
+        "nl": [
+          "Eet ze niet droog en los als tussendoortje; gebruik ze liever in klassieke tiramisu, waar het vet en eiwit van de mascarpone de suikerpiek van de koekjes helpen afremmen.",
+          "Doop ze in antioxidantrijke espresso zonder suiker toe te voegen aan de koffie.",
+          "Door de hoge glykemische index (70) wordt het bijna even snel opgenomen als witbrood; let dus goed op hoeveel je ervan eet."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل السافوياردي قليل السعرات؟",
+            "a": "الحبة الواحدة تحوي قرابة 38 سعرة ودهوناً قليلة جداً، لكن معظم طاقتها تأتي من كربوهيدرات مكررة سريعة الامتصاص."
+          },
+          {
+            "q": "لماذا مؤشره الجلايسيمي مرتفع (70)؟",
+            "a": "بسبب قلة الدهون والألياف التي تبطئ الهضم، وبنيته الإسفنجية المسامية التي تسهل وصول إنزيمات الهضم للنشا بسرعة."
+          },
+          {
+            "q": "ما البديل الصحي للبسكويت في التيراميسو؟",
+            "a": "يمكن استبداله بشرائح كعكة اللوز الإسفنجية منخفضة النشويات."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are ladyfingers low in calories?",
+            "a": "One biscuit has about 38 kcal and very little fat, but most of its energy comes from refined, quickly absorbed carbohydrate."
+          },
+          {
+            "q": "Why is its glycemic index high (70)?",
+            "a": "Because it has little of the fat and fibre that slow digestion, and its porous sponge structure lets digestive enzymes reach the starch quickly."
+          },
+          {
+            "q": "What is a healthier alternative to the biscuits in tiramisu?",
+            "a": "You can replace them with slices of low-starch almond sponge cake."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn lange vingers caloriearm?",
+            "a": "Eén koekje bevat ongeveer 38 kcal en heel weinig vet, maar de meeste energie komt uit geraffineerde, snel opneembare koolhydraten."
+          },
+          {
+            "q": "Waarom is de glykemische index hoog (70)?",
+            "a": "Omdat het weinig vet en vezels bevat die de vertering vertragen, en de poreuze structuur verteringsenzymen snel bij het zetmeel laat komen."
+          },
+          {
+            "q": "Wat is een gezonder alternatief voor de koekjes in tiramisu?",
+            "a": "Je kunt ze vervangen door plakjes zetmeelarme amandelbiscuit."
+          }
+        ]
+      }
+    },
+    "615": {
+      "lead": {
+        "ar": "تحفة مقاطعة توسكانا الإيطالية المشهورة بقرمشتها الجافة التي تتحدى الزمن؛ وهو بسكويت يُخبز مرتين متتاليتين (Biscotti) ليمنحه صلابته المحبوبة التي تلين بسحر رائع عند تغميسه في القهوة أو الشاي. يعج هذا البسكويت بحبات اللوز الكاملة المحمصة التي تشكل وزناً معتبراً من بنيته، مما يمنحه دفعة ممتازة من الدهون الأحادية غير المشبعة والمغنيسيوم والألياف والبروتين، وهو ما يبطئ ارتفاع السكر مقارنة بالبسكويت السادة.",
+        "en": "Tuscany’s treasure, famous for a dry crunch that lasts: a biscuit baked twice (biscotti) to give it the beloved firmness that softens beautifully when dipped in coffee or tea. It is packed with whole toasted almonds that make up a considerable share of its weight, giving it a good dose of monounsaturated fat, magnesium, fibre and protein, which slows the rise in blood sugar compared with plain biscuits.",
+        "nl": "Het pronkstuk van Toscane, beroemd om zijn droge, langdurige krokantheid: een koekje dat twee keer wordt gebakken (biscotti) voor de geliefde stevigheid die heerlijk zacht wordt als je het in koffie of thee doopt. Het zit vol hele geroosterde amandelen die een flink deel van het gewicht uitmaken, wat zorgt voor een goede dosis enkelvoudig onverzadigd vet, magnesium, vezels en eiwit; daardoor stijgt de bloedsuiker trager dan bij gewone koekjes."
+      },
+      "tips": {
+        "ar": [
+          "قطعة أو قطعتان مع فنجان قهوة سوداء تعتبر وجبة خفيفة وممتعة جداً؛ حيث تتطلب مضغاً جيداً يعزز إشارات الشبع الطبيعية في الدماغ.",
+          "يمكن زيادة نسبة اللوز غير المقشر إلى 35% من وزن الوصفة واستخدام طحين القمح الكامل لتحسين الحمل السكري ورفع الألياف.",
+          "اللوز يمنحه دهوناً ممتازة لصحة القلب والأوعية، لكنه يرفع الكثافة الحرارية؛ لذا يُنصح بالاكتفاء بحصة الـ 40 غرام."
+        ],
+        "en": [
+          "One or two pieces with a cup of black coffee make a very enjoyable snack; they need thorough chewing, which strengthens the brain’s natural fullness signals.",
+          "You can raise the unpeeled almonds to 35% of the recipe weight and use wholewheat flour to improve the glycemic load and boost fibre.",
+          "The almonds provide fats that are excellent for heart and blood vessel health, but they raise the calorie density, so stick to the 40 g portion."
+        ],
+        "nl": [
+          "Eén of twee stuks bij een kop zwarte koffie zijn een heerlijk tussendoortje; ze vragen goed kauwen, wat de natuurlijke verzadigingssignalen in de hersenen versterkt.",
+          "Je kunt het aandeel ongepelde amandelen verhogen tot 35% van het receptgewicht en volkorenmeel gebruiken om de glykemische lading te verbeteren en meer vezels binnen te krijgen.",
+          "De amandelen leveren vetten die uitstekend zijn voor hart en bloedvaten, maar verhogen de caloriedichtheid; houd het dus bij de portie van 40 g."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "لماذا مؤشر الكانتوتشيني أقل من البسكويت العادي؟",
+            "a": "لأن حبات اللوز الكاملة توفر شبكة من الدهون الصحية والألياف التي تبطئ التفكك المعوي للنشا."
+          },
+          {
+            "q": "هل يناسب مرضى السكري كتحلية خفيفة؟",
+            "a": "يمكن ذلك مع مراعاة الحصة (حبة أو اثنتين) واحتسابها ضمن كربوهيدرات اليوم (نحو 26 غ في القطعتين)، فهو أكثر ثباتاً لمستويات الطاقة من البسكويت الهش."
+          },
+          {
+            "q": "كيف يحافظ على طزاجته وصلابته؟",
+            "a": "بفضل عملية الخبز المزدوج التي تفرغه من الرطوبة، مما يجعله يحتفظ بقيمته وجودته لأسابيع طويلة طبيعياً."
+          }
+        ],
+        "en": [
+          {
+            "q": "Why is the index of cantuccini lower than ordinary biscuits?",
+            "a": "Because the whole almonds provide healthy fats and fibre that slow the breakdown of starch in the gut."
+          },
+          {
+            "q": "Is it suitable for people with diabetes as a light treat?",
+            "a": "It can be, if you watch the portion (one or two pieces) and count it in your daily carbohydrate (about 26 g for two pieces); it keeps energy steadier than crumbly biscuits."
+          },
+          {
+            "q": "How does it stay fresh and firm?",
+            "a": "Thanks to the double baking that removes moisture, so it naturally keeps its quality for many weeks."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Waarom is de index van cantuccini lager dan van gewone koekjes?",
+            "a": "Omdat de hele amandelen gezonde vetten en vezels leveren die de afbraak van zetmeel in de darm vertragen."
+          },
+          {
+            "q": "Is het geschikt voor mensen met diabetes als lichte traktatie?",
+            "a": "Dat kan, als je op de portie let (één of twee stuks) en het meetelt in je dagelijkse koolhydraten (ongeveer 26 g voor twee stuks); het houdt de energie stabieler dan bros koekjesgebak."
+          },
+          {
+            "q": "Hoe blijft het vers en stevig?",
+            "a": "Dankzij het dubbele bakken, dat het vocht verwijdert, zodat het van nature wekenlang goed blijft."
+          }
+        ]
+      }
+    },
+    "616": {
+      "lead": {
+        "ar": "درة موائد الشاي الإنجليزية الكلاسيكية التي سميت تيمناً بالملكة فيكتوريا؛ تتميز بطبقتين من الكيك الإسفنجي الذهبي الطري والغني بنكهة الزبدة النقية وخلاصة الفانيليا، تتوسطهما طبقة وفيرة من مربى الفراولة أو التوت الأحمر مع الكريمة المخفوقة الطازجة، وتُرش قمتها بلمسة سكر ناعم. كعكة احتفالية دافئة تجمع بين البساطة والرقي، تتطلب اهتماماً بالحصة لتفادي تركيز سكريات المربى والعجين الأبيض.",
+        "en": "The jewel of the classic English tea table, named after Queen Victoria: two layers of soft golden sponge rich with pure butter and vanilla, sandwiched with a generous layer of strawberry or raspberry jam and fresh whipped cream, and dusted with caster sugar. A warm celebration cake that is both simple and refined, it needs attention to portion size because of the concentrated sugars in the jam and white sponge.",
+        "nl": "Het pronkstuk van de klassieke Engelse theetafel, genoemd naar koningin Victoria: twee lagen zachte, goudgele biscuit vol roomboter en vanille, met daartussen een royale laag aardbeien- of frambozenjam en verse slagroom, bestrooid met fijne suiker. Een feestelijke taart die eenvoud en verfijning combineert, maar let op de portie vanwege de geconcentreerde suikers in de jam en de witte biscuit."
+      },
+      "tips": {
+        "ar": [
+          "مثالية لمشاركتها مع الأصدقاء في المناسبات؛ تناول نصف شريحة بجانب شاي أسود بدون سكر يمنحك التجربة البريطانية التقليدية باعتدال.",
+          "استخدام مربى فواكه مطبوخ بتركيز فاكهة 100% وبدون سكر مكرر، أو حشوها بحبات فراولة طازجة مهروسة بدلاً من المربى السكري.",
+          "الحمل الجلايسيمي (29.1) يصنف ضمن النطاق المرتفع؛ لذلك يُوصى بعدم تناولها على معدة فارغة لمنع هبوط الطاقة المفاجئ بعد الوجبة."
+        ],
+        "en": [
+          "Perfect for sharing with friends on special occasions: half a slice with unsweetened black tea gives you the traditional British experience in moderation.",
+          "Use a 100%-fruit spread without refined sugar, or fill it with fresh mashed strawberries instead of sugary jam.",
+          "Its glycemic load (29.1) is in the high range, so avoid eating it on an empty stomach to prevent a sudden energy dip afterwards."
+        ],
+        "nl": [
+          "Ideaal om met vrienden te delen: een halve punt bij zwarte thee zonder suiker geeft je de traditionele Britse ervaring met mate.",
+          "Gebruik fruitbeleg van 100% fruit zonder geraffineerde suiker, of vul hem met verse geprakte aardbeien in plaats van suikerrijke jam.",
+          "De glykemische lading (29,1) valt in het hoge bereik; eet hem dus niet op een lege maag, om een plotselinge energiedip daarna te voorkomen."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما الذي يميز كعكة فيكتوريا عن الكيك العادي؟",
+            "a": "استخدام نسب متساوية من الزبدة والسكر والدقيق والبيض، مما يمنحها قواماً زبدياً أكثر تماسكاً ورطوبة من الإسفنج العادي."
+          },
+          {
+            "q": "كيف أضبط تأثيرها على وزني؟",
+            "a": "احتساب الـ 324 سعرة كجزء من الميزانية اليومية، وتجنب الجمع بينها وبين المشروبات الغازية أو العصائر."
+          },
+          {
+            "q": "هل المربى هو العامل الأساسي في رفع المؤشر؟",
+            "a": "المربى أحد العوامل المهمة إلى جانب السكر والدقيق الأبيض في الكيك؛ فالمربى التجاري يحوي سكروز وشراب جلوكوز مركز، واستبداله بالفاكهة الطبيعية يخفف الحمل السكري بوضوح."
+          }
+        ],
+        "en": [
+          {
+            "q": "What makes Victoria sponge different from ordinary cake?",
+            "a": "It uses equal weights of butter, sugar, flour and eggs, which gives it a buttery texture that is firmer and moister than ordinary sponge."
+          },
+          {
+            "q": "How do I manage its effect on my weight?",
+            "a": "Count the 324 kcal as part of your daily budget and avoid combining it with soft drinks or juice."
+          },
+          {
+            "q": "Is the jam the main factor raising the index?",
+            "a": "The jam is one of the important factors, alongside the sugar and white flour in the sponge; commercial jam contains sucrose and concentrated glucose syrup, and replacing it with real fruit clearly lowers the glycemic load."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat maakt Victoria sponge anders dan gewone cake?",
+            "a": "Er worden gelijke gewichten boter, suiker, bloem en eieren gebruikt, wat een boterige textuur geeft die steviger en smeuïger is dan gewone biscuit."
+          },
+          {
+            "q": "Hoe beperk ik het effect op mijn gewicht?",
+            "a": "Tel de 324 kcal mee in je dagbudget en combineer de taart niet met frisdrank of sap."
+          },
+          {
+            "q": "Is de jam de belangrijkste factor die de index verhoogt?",
+            "a": "De jam is een van de belangrijke factoren, naast de suiker en witte bloem in de biscuit; commerciële jam bevat sucrose en geconcentreerde glucosestroop, en vervangen door echt fruit verlaagt de glykemische lading duidelijk."
+          }
+        ]
+      }
+    },
+    "617": {
+      "lead": {
+        "ar": "طقس الضيافة الأشهر في الريف الإنجليزي ومقاطعتي ديفون وكورنوال؛ مخبوزات بريطانية دافئة ومكتنزة تتميز بقوام يتأرجح بين الكعك الطري والبسكويت الهش. تُشطر الحبة الدافئة نصفين لتُدهن بالقشطة الإنجليزية الكثيفة المطهوة ببطء (Clotted Cream) وفوقها لمسة من مربى الفراولة اللامع. ورغم مذاقها الغني والمغري، إلا أن اجتماع دقيق القمح المركز مع دهون القشطة وسكر المربى يجعلها وجبة ذات حمل طاقة وسكر مرتفع تستدعي التناول الواعي.",
+        "en": "The best-known ritual of hospitality in the English countryside and the counties of Devon and Cornwall: warm, plump British bakes with a texture between soft cake and crumbly biscuit. The warm scone is split in half and spread with thick, slowly cooked clotted cream topped with glossy strawberry jam. Rich and tempting as it is, the combination of wheat flour, cream fat and jam sugar makes it a high-energy, high-sugar snack that calls for mindful eating.",
+        "nl": "Het bekendste gastvrijheidsritueel van het Engelse platteland en de graafschappen Devon en Cornwall: warme, stevige Britse baksels met een textuur tussen zachte cake en bros koekje. De warme scone wordt doormidden gesneden en besmeerd met dikke, langzaam verwarmde clotted cream met daarop glanzende aardbeienjam. Hoe rijk en verleidelijk ook, de combinatie van tarwebloem, roomvet en jamsuiker maakt er een snack van met veel energie en suiker, die om bewust eten vraagt."
+      },
+      "tips": {
+        "ar": [
+          "تناول نصف حبة سكونز فقط مع ملعقة صغيرة من القشطة، واستبدال المربى بشرائح فراولة طازجة، لتقليص نصف السعرات والنشويات.",
+          "عجن السكونز بدقيق الحبة الكاملة وإضافة بذور الشيا أو الكتان يرفع الألياف ويمنحها قيمة شبع أطول.",
+          "القشطة الإنجليزية تحتوي على نسبة دهون تفوق 55%، مما يعني أن الحبة المجهزة هي بمثابة وجبة كاملة وليست مجرد تحلية خفيفة."
+        ],
+        "en": [
+          "Eat only half a scone with a teaspoon of clotted cream and swap the jam for fresh strawberry slices to halve the calories and starch.",
+          "Making scones with wholemeal flour and adding chia or flaxseed raises the fibre and keeps you full for longer.",
+          "Clotted cream contains more than 55% fat, which means a fully dressed scone is really a full meal rather than a light treat."
+        ],
+        "nl": [
+          "Eet maar een halve scone met een theelepel clotted cream en vervang de jam door plakjes verse aardbei; zo halveer je de calorieën en het zetmeel.",
+          "Scones van volkorenmeel met chia- of lijnzaad bevatten meer vezels en houden je langer verzadigd.",
+          "Clotted cream bevat meer dan 55% vet; een volledig belegde scone is dus eigenlijk een hele maaltijd en geen licht tussendoortje."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل يؤكل السكونز ساخناً أم بارداً؟",
+            "a": "يُفضل تناوله دافئاً بمجرد خروجه من الفرن ليحتفظ بهشاشته المميزة ولتذوب القشطة الطبيعية فوقه بلطف."
+          },
+          {
+            "q": "لماذا يعتبر حمله الجلايسيمي مرتفعاً؟",
+            "a": "لاجتماع نحو 44 غ من الكربوهيدرات المتاحة السريعة في حبة واحدة بين العجين والمربى السكري."
+          },
+          {
+            "q": "كيف أوازن الوجبة بعد أكل السكونز؟",
+            "a": "اجعل وجبتك اللاحقة غنية جداً بالخضراوات الورقية والبروتينات الصافية وخالية من النشويات."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are scones eaten warm or cold?",
+            "a": "Best eaten warm, fresh from the oven, so they keep their typical crumbliness and the clotted cream melts gently on top."
+          },
+          {
+            "q": "Why is its glycemic load high?",
+            "a": "Because one scone with its sugary jam contains about 44 g of quickly available carbohydrate."
+          },
+          {
+            "q": "How do I balance my eating after a scone?",
+            "a": "Make your next meal rich in leafy vegetables and lean protein and free of starch."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Eet je scones warm of koud?",
+            "a": "Het lekkerst warm, vers uit de oven, zodat ze hun typische brosheid houden en de clotted cream er zachtjes op smelt."
+          },
+          {
+            "q": "Waarom is de glykemische lading hoog?",
+            "a": "Omdat één scone met de suikerrijke jam ongeveer 44 g snel beschikbare koolhydraten bevat."
+          },
+          {
+            "q": "Hoe breng ik mijn eten in balans na een scone?",
+            "a": "Maak je volgende maaltijd rijk aan bladgroenten en mager eiwit, en zonder zetmeel."
+          }
+        ]
+      }
+    },
+    "618": {
+      "lead": {
+        "ar": "\"ذهب البحر الأبيض المتوسط\"؛ بطارخ أسماك البوري الرمادي الطبيعية والمملحة والمجففة، والمحمية بغلاف من الشمع في إيطاليا واليونان. تتميز بنكهة بحرية عميقة مركزة وقوام كهرماني صلب يُبشر بسهولة فوق الأطباق. غذائياً، تُعد مصدراً مركزاً للبروتين الكامل، ولأحماض أوميغا-3 الدهنية (DHA وEPA)، والزنك وفيتامين E، وهي شبه خالية من الكربوهيدرات.",
+        "en": "“Mediterranean gold”: the natural roe of grey mullet, salted, dried and protected with a wax coating in Italy and Greece. It has a deep, concentrated taste of the sea and a firm amber texture that grates easily over dishes. Nutritionally it is a concentrated source of complete protein, omega-3 fatty acids (DHA and EPA), zinc and vitamin E, and it is almost free of carbohydrate.",
+        "nl": "‘Het goud van de Middellandse Zee’: de natuurlijke kuit van de harder, gezouten, gedroogd en beschermd met een waslaag in Italië en Griekenland. Het heeft een diepe, geconcentreerde zeesmaak en een stevige, amberkleurige textuur die makkelijk over gerechten te raspen is. Voedingskundig is het een geconcentreerde bron van volwaardig eiwit, omega-3-vetzuren (DHA en EPA), zink en vitamine E, en het bevat vrijwel geen koolhydraten."
+      },
+      "tips": {
+        "ar": [
+          "بشر 15 إلى 25 غرام فوق طبق المعكرونة المصنوعة من القمح الكامل أو طبق الكوسا الحلزونية يرفع نكهة الطبق وقيمته البروتينية دون إضافة صلصات ثقيلة.",
+          "لا تُطبخ على نار حامية؛ بل تُبشر أو تُقطع شرائح بالغة الرقة وتوضع على الطبق في لحظة التقديم للحفاظ على نكهتها وقوامها.",
+          "نظراً لطريقة تجفيفها بالملح البحري، فهي غنية بالصوديوم؛ لذا يُفضل عدم إضافة ملح طعام إضافي للوجبة التي تحتوي عليها، خاصة لمن يعانون من حساسية الصوديوم."
+        ],
+        "en": [
+          "Grating 15–25 g over wholewheat pasta or courgette spirals lifts the flavour and protein of the dish without heavy sauces.",
+          "Do not cook it over high heat; grate it or cut very thin slices and add it to the plate just before serving to keep its flavour and texture.",
+          "Because it is cured with sea salt it is high in sodium, so do not add extra salt to a dish that contains it, especially if you are salt-sensitive."
+        ],
+        "nl": [
+          "Rasp 15–25 g over volkorenpasta of courgettespaghetti: dat verhoogt de smaak en het eiwitgehalte zonder zware sauzen.",
+          "Verhit het niet op hoog vuur; rasp het of snijd flinterdunne plakjes en voeg het pas bij het serveren toe om smaak en textuur te behouden.",
+          "Omdat het met zeezout wordt gedroogd, bevat het veel natrium; voeg dus geen extra zout toe aan een gerecht waarin het zit, zeker als je zoutgevoelig bent."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "لماذا لا ينطبق عليها المؤشر الجلايسيمي؟",
+            "a": "لأنها بيوض سمك تتكون أساساً من البروتين والدهون، وكربوهيدراتها شبه معدومة (نحو 0.4 غ في الحصة)."
+          },
+          {
+            "q": "ما هي أهم الفوائد الغذائية للبوتارغا؟",
+            "a": "هي مصدر مركز للبروتين وأحماض أوميغا-3 (EPA وDHA) التي ترتبط بدعم صحة القلب والدماغ ضمن نظام غذائي متوازن."
+          },
+          {
+            "q": "هل تناسب حمية الكيتو والصيام المتقطع؟",
+            "a": "تناسب حمية الكيتو لأن كربوهيدراتها شبه معدومة؛ أما في الصيام المتقطع فتؤكل ضمن نافذة الأكل فقط، مع الانتباه لملوحتها العالية."
+          }
+        ],
+        "en": [
+          {
+            "q": "Why does the glycemic index not apply to bottarga?",
+            "a": "Because it is fish roe made up mainly of protein and fat, with almost no carbohydrate (about 0.4 g per portion)."
+          },
+          {
+            "q": "What are the main nutritional benefits of bottarga?",
+            "a": "It is a concentrated source of protein and omega-3s (EPA and DHA), which are linked to heart and brain health as part of a balanced diet."
+          },
+          {
+            "q": "Does it suit keto and intermittent fasting?",
+            "a": "It suits a keto diet because it has almost no carbohydrate; with intermittent fasting, eat it only within your eating window, and keep its high salt content in mind."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Waarom is de glykemische index niet van toepassing op bottarga?",
+            "a": "Omdat het viskuit is die vooral uit eiwit en vet bestaat, met vrijwel geen koolhydraten (ongeveer 0,4 g per portie)."
+          },
+          {
+            "q": "Wat zijn de belangrijkste voedingsvoordelen van bottarga?",
+            "a": "Het is een geconcentreerde bron van eiwit en omega-3 (EPA en DHA), die binnen een evenwichtig eetpatroon in verband worden gebracht met de gezondheid van hart en hersenen."
+          },
+          {
+            "q": "Past het bij keto en intermittent fasting?",
+            "a": "Het past bij een ketodieet omdat het vrijwel geen koolhydraten bevat; bij intermittent fasting eet je het alleen binnen je eetvenster, en let op het hoge zoutgehalte."
+          }
+        ]
+      }
+    },
+    "619": {
+      "lead": {
+        "ar": "الفطور البحري البريطاني العريق؛ أسماك الرنجة الأطلسية الكاملة المشطورة من الظهر، والمملحة والمدخنة ببطء على نشارة خشب البلوط الطبيعي لتكتسب لونها النحاسي الذهبي ورائحتها الدخانية الأيقونية. يُعد الكيبرز من أغنى الأسماك الزيتية بالقيمة الغذائية؛ فهو غني بأحماض أوميغا-3 المفيدة لصحة القلب، وفيتامين D الطبيعي، وفيتامين B12، مع نسبة بروتين صافية تجعله وقوداً مثالياً لطاقة بدنية وذهنية تدوم طويلاً وبدون أي تأثير سلبي على سكر الدم.",
+        "en": "The time-honoured British seafood breakfast: whole Atlantic herring split along the back, salted and slowly smoked over natural oak chips to give its coppery-gold colour and iconic smoky aroma. Kippers are among the most nutritious oily fish, rich in heart-friendly omega-3s, natural vitamin D and vitamin B12, with lean protein that makes them ideal fuel for long-lasting physical and mental energy without any negative effect on blood sugar.",
+        "nl": "Het eeuwenoude Britse visontbijt: hele Atlantische haring, langs de rug opengesneden, gezouten en langzaam gerookt boven eikenhoutsnippers voor de koperkleurige gloed en het iconische rookaroma. Kippers horen bij de voedzaamste vette vis: rijk aan omega-3 die goed is voor het hart, natuurlijke vitamine D en vitamine B12, met mager eiwit dat ze tot ideale brandstof maakt voor langdurige lichamelijke en mentale energie, zonder negatief effect op de bloedsuiker."
+      },
+      "tips": {
+        "ar": [
+          "يُقدم تقليدياً مع البيض المسلوق وشرائح الطماطم المشوية؛ وهو إفطار بروتيني يحافظ على استقرار مستويات الطاقة لساعات طويلة.",
+          "التسخين السريع على البخار أو في مقلاة غير لاصقة بقليل من زيت الزيتون مع عصرة ليمون وفيرة لتخفيف النكهة الدخانية وتوازن الأملاح.",
+          "تحتوي الرنجة المدخنة على كمية معتبرة من الملح بفعل عملية التمليح؛ وقد يساعد نقعها قليلاً في الماء البارد قبل الطهي على خفض محتوى الصوديوم."
+        ],
+        "en": [
+          "Traditionally served with boiled eggs and grilled tomato slices, it makes a protein-rich breakfast that keeps energy levels steady for hours.",
+          "Heat it quickly by steaming or in a non-stick pan with a little olive oil and a generous squeeze of lemon to soften the smokiness and balance the saltiness.",
+          "Smoked herring contains a fair amount of salt from curing; soaking it briefly in cold water before cooking may help reduce the sodium."
+        ],
+        "nl": [
+          "Traditioneel geserveerd met gekookte eieren en gegrilde tomaat: een eiwitrijk ontbijt dat je energie urenlang stabiel houdt.",
+          "Verwarm hem kort door te stomen of in een antiaanbakpan met een beetje olijfolie en een flinke scheut citroen, om de rooksmaak te verzachten en het zout in balans te brengen.",
+          "Gerookte haring bevat door het zouten flink wat zout; even weken in koud water vóór het bereiden kan helpen het natrium te verlagen."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الكيبرز مفيد لصحة العظام؟",
+            "a": "هو من المصادر الغذائية الغنية بفيتامين D الذي يساعد على امتصاص الكالسيوم، كما يوفر الفوسفور، وكلاهما مهم لصحة العظام."
+          },
+          {
+            "q": "كيف يؤثر على سكر الدم؟",
+            "a": "لا يرفع السكر لعدم احتوائه على كربوهيدرات، وبروتينه ودهونه تساعد على الشبع عند تناوله ضمن الوجبة."
+          },
+          {
+            "q": "هل يمكن تناوله أسبوعياً بأمان؟",
+            "a": "نعم، لكونه سمكاً صغيراً يتغذى على العوالق، فإن تراكم الزئبق فيه منخفض جداً مقارنة بالأسماك الكبيرة."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are kippers good for bone health?",
+            "a": "They are a rich food source of vitamin D, which helps the body absorb calcium, and they also provide phosphorus; both matter for healthy bones."
+          },
+          {
+            "q": "How does it affect blood sugar?",
+            "a": "It does not raise blood sugar because it contains no carbohydrate, and its protein and fat help you feel full when eaten as part of a meal."
+          },
+          {
+            "q": "Is it safe to eat every week?",
+            "a": "Yes: as a small fish that feeds on plankton, herring accumulates very little mercury compared with large predatory fish."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn kippers goed voor de botten?",
+            "a": "Ze zijn een rijke voedingsbron van vitamine D, dat helpt bij de opname van calcium, en leveren ook fosfor; beide zijn belangrijk voor gezonde botten."
+          },
+          {
+            "q": "Wat doet het met de bloedsuiker?",
+            "a": "Het verhoogt de bloedsuiker niet omdat het geen koolhydraten bevat, en het eiwit en vet helpen je verzadigd te voelen als onderdeel van een maaltijd."
+          },
+          {
+            "q": "Kun je het veilig elke week eten?",
+            "a": "Ja: haring is een kleine vis die van plankton leeft en stapelt heel weinig kwik op vergeleken met grote roofvissen."
+          }
+        ]
+      }
+    },
+    "620": {
+      "lead": {
+        "ar": "الخيار الذهبي للرياضيين ومتبعي الحميات الصحية؛ لحم سلمون ألاسكا الوردي البري المصطاد من المياه الباردة والمعبأ في الماء مع رشة ملح خفيفة. يوفر هذا الصنف بروتيناً عالي الجودة بدون دهون مضافة، كما تحتفظ عظام السلمون الصغيرة اللينة الصالحة للأكل بنسبة جيدة من الكالسيوم تفوق ما في الحليب لكل 100 غ، مع مضاد الأكسدة الطبيعي (الأستازانتين) الذي يمنح السلمون لونه الوردي.",
+        "en": "The go-to choice for athletes and healthy eaters: wild Alaskan pink salmon caught in cold waters and packed in water with a pinch of salt. It provides high-quality protein with no added fat, and the small, soft, edible bones give it a good amount of calcium, more than milk per 100 g, along with the natural antioxidant astaxanthin that gives salmon its pink colour.",
+        "nl": "De vaste keuze van sporters en gezonde eters: wilde Alaskaanse roze zalm, gevangen in koud water en verpakt in water met een snufje zout. Het levert eiwit van hoge kwaliteit zonder toegevoegd vet, en de kleine, zachte, eetbare graatjes zorgen voor een flinke hoeveelheid calcium, per 100 g meer dan melk, samen met de natuurlijke antioxidant astaxanthine die zalm zijn roze kleur geeft."
+      },
+      "tips": {
+        "ar": [
+          "اهرس السلمون مع عظامه اللينة بالشوكة في طبق السلطة الخضراء، لتحصل على أقصى كمية من الكالسيوم لدعم صحة العظام والأسنان.",
+          "امزجه مع ربع حبة أفوكادو مهروسة وعصير ليمون وخردل ديجون لصنع سلطة سلمون كريمية شهية وصحية بدون مايونيز تجاري.",
+          "اختيار السلمون المحفوظ في الماء بدلاً من الزيت يمنحك السيطرة الكاملة على كمية وجودة الدهون التي تضيفها لطبقك."
+        ],
+        "en": [
+          "Mash the salmon with its soft bones into a green salad to get the most calcium for healthy bones and teeth.",
+          "Mix it with a quarter of a mashed avocado, lemon juice and Dijon mustard for a creamy, healthy salmon salad without shop-bought mayonnaise.",
+          "Choosing salmon packed in water rather than oil gives you full control over the amount and quality of fat you add to your dish."
+        ],
+        "nl": [
+          "Prak de zalm met de zachte graatjes door een groene salade voor zoveel mogelijk calcium voor gezonde botten en tanden.",
+          "Meng hem met een kwart geprakte avocado, citroensap en dijonmosterd voor een romige, gezonde zalmsalade zonder kant-en-klare mayonaise.",
+          "Kiezen voor zalm op water in plaats van olie geeft je volledige controle over hoeveel en welk vet je aan je gerecht toevoegt."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل السلمون المعلب يفقد فوائده مقارنة بالطازج؟",
+            "a": "يحتفظ السلمون البري المعلب بمعظم بروتينه وأوميغا-3، بل ويتفوق في الكالسيوم بسبب طراوة العظام الصالحة للأكل."
+          },
+          {
+            "q": "هل يناسب السلمون البري مرضى السكري؟",
+            "a": "نعم، هو خيار ممتاز؛ بروتين عالي الجودة ودهون أوميغا-3 المرتبطة بصحة القلب والشرايين، دون أي حمل سكري."
+          },
+          {
+            "q": "ما ميزة السلمون \"البري\" مقارنة بالمستزرع؟",
+            "a": "السلمون البري يتغذى طبيعياً في المحيط ويحتوي عادة على دهون كلية أقل من المستزرع، ولونه الوردي يأتي من الأستازانتين في غذائه الطبيعي، بينما يُضاف الأستازانتين إلى علف السلمون المستزرع."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does canned salmon lose its benefits compared with fresh?",
+            "a": "Canned wild salmon keeps most of its protein and omega-3s, and it even provides more calcium thanks to the soft, edible bones."
+          },
+          {
+            "q": "Is wild salmon suitable for people with diabetes?",
+            "a": "Yes, it is an excellent choice: high-quality protein and omega-3 fats linked to heart and artery health, with no glycemic load."
+          },
+          {
+            "q": "What is the advantage of wild salmon over farmed?",
+            "a": "Wild salmon feeds naturally in the ocean and usually contains less total fat than farmed salmon; its pink colour comes from astaxanthin in its natural diet, whereas astaxanthin is added to the feed of farmed salmon."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verliest zalm uit blik zijn voordelen ten opzichte van verse?",
+            "a": "Wilde zalm uit blik behoudt het grootste deel van zijn eiwit en omega-3, en levert zelfs meer calcium dankzij de zachte, eetbare graatjes."
+          },
+          {
+            "q": "Is wilde zalm geschikt voor mensen met diabetes?",
+            "a": "Ja, het is een uitstekende keuze: eiwit van hoge kwaliteit en omega-3-vetten die in verband worden gebracht met de gezondheid van hart en bloedvaten, zonder glykemische lading."
+          },
+          {
+            "q": "Wat is het voordeel van wilde zalm ten opzichte van kweekzalm?",
+            "a": "Wilde zalm eet natuurlijk voedsel in de oceaan en bevat meestal minder totaal vet dan kweekzalm; de roze kleur komt van astaxanthine in het natuurlijke dieet, terwijl astaxanthine aan het voer van kweekzalm wordt toegevoegd."
+          }
+        ]
+      }
+    },
+    "621": {
+      "lead": {
+        "ar": "أيقونة التعليب البرتغالية الفاخرة؛ أسماك السردين الأطلسي الفضي الممتلئ بالنكهة والمطهو داخل العلبة في صلصة طماطم متوسطية غنية مع لمسة شطة حارة وزيت زيتون بكر. يجمع هذا الطبق بين القيمة البروتينية العالية للسردين وأحماض أوميغا-3، وبين مضاد الأكسدة القوي (الليكوبين) في الطماطم المطبوخة، مما يجعله وجبة متكاملة وسريعة ذات قيمة غذائية استثنائية.",
+        "en": "An icon of fine Portuguese canning: flavourful silver Atlantic sardines cooked in the can in a rich Mediterranean tomato sauce with a touch of chilli and virgin olive oil. It combines the high protein and omega-3s of sardines with the powerful antioxidant lycopene from cooked tomatoes, making it a complete, quick meal of exceptional nutritional value.",
+        "nl": "Een icoon van de verfijnde Portugese conservenkunst: smaakvolle, zilveren Atlantische sardines, in het blik gegaard in een rijke mediterrane tomatensaus met een vleugje chili en extra vierge olijfolie. Het combineert het hoge eiwitgehalte en de omega-3 van sardines met de krachtige antioxidant lycopeen uit gekookte tomaten, wat het een complete, snelle maaltijd met uitzonderlijke voedingswaarde maakt."
+      },
+      "tips": {
+        "ar": [
+          "تناوله فوق شريحة من خبز الحبوب الكاملة المحمص أو مع سلطة الكينوا الملونة لتكوين وجبة غداء سريعة ومثالية للنشاط والتركيز.",
+          "لا تتخلص من صلصة الطماطم في العلبة؛ فهي تحتوي على جزء من دهون السردين وأوميغا-3 الذائبة أثناء الطهي ومضادات الأكسدة.",
+          "نسبة الكربوهيدرات الضئيلة جداً (2.4 غ في الحصة) ناتجة عن الطماطم الطبيعية، وتأثيرها على قراءات السكر ضئيل جداً."
+        ],
+        "en": [
+          "Serve it on a slice of toasted wholegrain bread or with a colourful quinoa salad for a quick lunch that supports energy and focus.",
+          "Don’t throw away the tomato sauce in the can; it contains some of the sardine fat and omega-3s released during cooking, as well as antioxidants.",
+          "The very small amount of carbohydrate (2.4 g per portion) comes from the tomatoes, and its effect on blood glucose readings is minimal."
+        ],
+        "nl": [
+          "Eet het op een geroosterde volkorenboterham of met een kleurrijke quinoasalade voor een snelle lunch die energie en focus ondersteunt.",
+          "Gooi de tomatensaus uit het blik niet weg; die bevat een deel van het sardinevet en de omega-3 die tijdens het garen vrijkomen, plus antioxidanten.",
+          "De heel kleine hoeveelheid koolhydraten (2,4 g per portie) komt uit de tomaten, en het effect op je bloedsuikerwaarden is minimaal."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الكالسيوم متوفر في السردين المعلب بالصلصة؟",
+            "a": "نعم، عظام السردين لينة جداً وتؤكل بسهولة، وهي من أفضل مصادر الكالسيوم سهل الامتصاص."
+          },
+          {
+            "q": "هل الشطة الحارة في الصلصة ترفع الحرق؟",
+            "a": "مادة الكابسيسين قد تمنح شعوراً بالدفء وتنشيطاً طفيفاً ومؤقتاً للأيض، لكن أثرها على الوزن محدود."
+          },
+          {
+            "q": "لماذا يُعتبر السردين أكثر أماناً من التونة بشأن الزئبق؟",
+            "a": "لأنه يقع في قاعدة السلسلة الغذائية البحرية وعمره قصير، مما يجعل تراكم الزئبق فيه منخفضاً جداً."
+          }
+        ],
+        "en": [
+          {
+            "q": "Do canned sardines in sauce provide calcium?",
+            "a": "Yes: the bones are very soft and easy to eat, and they are one of the best sources of well-absorbed calcium."
+          },
+          {
+            "q": "Does the chilli in the sauce boost fat burning?",
+            "a": "Capsaicin may give a feeling of warmth and a slight, temporary boost to metabolism, but its effect on weight is limited."
+          },
+          {
+            "q": "Why are sardines safer than tuna when it comes to mercury?",
+            "a": "Because they sit low in the marine food chain and live short lives, so they accumulate very little mercury."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Leveren sardines in saus calcium?",
+            "a": "Ja: de graatjes zijn heel zacht en makkelijk te eten, en ze zijn een van de beste bronnen van goed opneembaar calcium."
+          },
+          {
+            "q": "Verhoogt de chili in de saus de vetverbranding?",
+            "a": "Capsaïcine kan een warm gevoel en een lichte, tijdelijke stimulans van de stofwisseling geven, maar het effect op het gewicht is beperkt."
+          },
+          {
+            "q": "Waarom zijn sardines veiliger dan tonijn wat kwik betreft?",
+            "a": "Omdat ze laag in de voedselketen van de zee staan en kort leven, waardoor ze heel weinig kwik opstapelen."
+          }
+        ]
+      }
+    },
+    "622": {
+      "lead": {
+        "ar": "من أرقى أنواع التونة في خليج بسكاي وشمال إسبانيا؛ تُصطاد فردياً بالصنارة التقليدية حمايةً للبيئة البحرية، وتُحفظ كقطع فيليه بيضاء متماسكة وناعمة كالحرير في زيت الزيتون البكر الممتاز. تتميز لحوم البونيتو بنكهة هادئة ورقيقة وقوام طري لا يقارن بالتونة التجارية المفتتة، وتجمع بين البروتين عالي الجودة ودهون حمض الأوليك المفيدة لصحة القلب والأوعية الدموية.",
+        "en": "One of the finest tunas of the Bay of Biscay and northern Spain: caught one by one with traditional lines to protect the marine environment, and preserved as firm, silky white fillets in extra virgin olive oil. Bonito del Norte has a mild, delicate flavour and a tender texture unlike flaked commercial tuna, combining high-quality protein with oleic acid fats that benefit heart and blood vessel health.",
+        "nl": "Een van de fijnste tonijnsoorten uit de Golf van Biskaje en Noord-Spanje: stuk voor stuk met traditionele lijnen gevangen om het zeemilieu te sparen, en bewaard als stevige, zijdezachte witte filets in extra vierge olijfolie. Bonito del Norte heeft een milde, verfijnde smaak en een malse textuur die niet te vergelijken is met gebrokkelde gewone tonijn, en combineert eiwit van hoge kwaliteit met oliezuurrijke vetten die goed zijn voor hart en bloedvaten."
+      },
+      "tips": {
+        "ar": [
+          "زيت الزيتون داخل العلبة هو زيت بكر ممتاز تشرب عصارة التونة؛ استخدم ملعقة منه مباشرة لتتبيل سلطتك الخضراء دون إهداره.",
+          "تُقدم كطبق مقبلات إسباني أصيل مع شرائح الفلفل الحلو المشوي وقطع الخيار ورشة ملح بحري ناعم.",
+          "وجبة غنية جداً بالبروتين (نحو 30 غرام في الحصة)، مما يجعلها كافية لدعم الكتلة العضلية وتعزيز الشبع لساعات طويلة."
+        ],
+        "en": [
+          "The oil in the can is extra virgin olive oil that has absorbed the tuna juices; use a spoonful of it to dress your green salad instead of wasting it.",
+          "Serve it as an authentic Spanish starter with roasted sweet pepper strips, cucumber and a pinch of fine sea salt.",
+          "A very protein-rich food (about 30 g per portion), enough to support muscle mass and keep you full for hours."
+        ],
+        "nl": [
+          "De olie in het blik is extra vierge olijfolie die het tonijnsap heeft opgenomen; gebruik er een lepel van als dressing voor je groene salade in plaats van hem weg te gooien.",
+          "Serveer hem als authentiek Spaans voorgerecht met reepjes geroosterde paprika, komkommer en een snufje fijn zeezout.",
+          "Zeer eiwitrijk (ongeveer 30 g per portie), genoeg om spiermassa te ondersteunen en je urenlang verzadigd te houden."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما الفرق بين \"بونيتو ديل نورتي\" والتونة العادية (Skipjack)؟",
+            "a": "البونيتو هي التونة البيضاء (الباكورة) ذات الملمس المخملي والنكهة الأرقى ودهون أعلى قليلاً، لكن مستوى الزئبق فيها أعلى من تونة السكيبجاك؛ لذا يكفي تناولها مرة في الأسبوع تقريباً، وعلى الحوامل والأطفال الالتزام بإرشادات الجهات الصحية في بلدهم بشأن كميتها."
+          },
+          {
+            "q": "هل تؤثر التونة المعلبة بالزيت على سكر الدم؟",
+            "a": "لا تحتوي على كربوهيدرات، لذا لا ترفع سكر الدم، ودهون زيت الزيتون تساعد على الشبع."
+          },
+          {
+            "q": "هل تناسب برامج نزول الوزن؟",
+            "a": "نعم، مع مراعاة تصفية جزء من الزيت إن كنت تتبع نظاماً صارماً في عجز السعرات الحرارية اليومية."
+          }
+        ],
+        "en": [
+          {
+            "q": "What is the difference between Bonito del Norte and ordinary (skipjack) tuna?",
+            "a": "Bonito del Norte is white (albacore) tuna with a velvety texture, finer flavour and slightly more fat, but it contains more mercury than skipjack; about one portion a week is enough, and pregnant women and children should follow their national health authority’s advice on how much to eat."
+          },
+          {
+            "q": "Does tuna in oil affect blood sugar?",
+            "a": "It contains no carbohydrate, so it does not raise blood sugar, and the olive oil fats help you stay full."
+          },
+          {
+            "q": "Does it suit weight-loss plans?",
+            "a": "Yes, but drain off some of the oil if you follow a strict daily calorie deficit."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat is het verschil tussen Bonito del Norte en gewone (skipjack) tonijn?",
+            "a": "Bonito del Norte is witte tonijn (albacore) met een fluweelzachte textuur, een fijnere smaak en iets meer vet, maar bevat meer kwik dan skipjack; ongeveer één portie per week is genoeg, en zwangere vrouwen en kinderen volgen het advies van hun nationale gezondheidsinstantie over de hoeveelheid."
+          },
+          {
+            "q": "Heeft tonijn in olie invloed op de bloedsuiker?",
+            "a": "Het bevat geen koolhydraten en verhoogt de bloedsuiker dus niet, en de olijfolievetten helpen je verzadigd te blijven."
+          },
+          {
+            "q": "Past het bij afvallen?",
+            "a": "Ja, maar giet een deel van de olie af als je een strikt dagelijks calorietekort aanhoudt."
+          }
+        ]
+      }
+    },
+    "623": {
+      "lead": {
+        "ar": "من أشهر مقبلات التاباس الإسبانية الكلاسيكية القادمة من شواطئ غاليسيا؛ حبات بلح البحر البرتقالية الممتلئة المطهوة على البخار والمخللة في تتبيلة \"الإسكابيتشي\" العريقة المكونة من زيت الزيتون، والخل، والبابريكا المدخنة، وورق الغار وفصوص الثوم. يُعد بلح البحر مصدراً غنياً بالحديد (أعلى من اللحوم الحمراء)، وفيتامين B12، والزنك، مع نسبة دهون معتدلة وكربوهيدرات طبيعية خفيفة جداً.",
+        "en": "One of the best-known classic Spanish tapas, from the coast of Galicia: plump orange mussels, steamed and marinated in traditional escabeche made with olive oil, vinegar, smoked paprika, bay leaves and garlic. Mussels are a rich source of iron (more than red meat), vitamin B12 and zinc, with moderate fat and a very small amount of natural carbohydrate.",
+        "nl": "Een van de bekendste klassieke Spaanse tapas, van de kust van Galicië: volle oranje mosselen, gestoomd en gemarineerd in traditionele escabeche van olijfolie, azijn, gerookte paprika, laurier en knoflook. Mosselen zijn een rijke bron van ijzer (meer dan rood vlees), vitamine B12 en zink, met een gematigd vetgehalte en heel weinig natuurlijke koolhydraten."
+      },
+      "tips": {
+        "ar": [
+          "وجبة خفيفة مناسبة لمن يحتاجون إلى مزيد من الحديد؛ تناول العلبة مع شرائح الفلفل الرومي الطازج الغني بفيتامين C لتعزيز امتصاص الحديد.",
+          "يُقدم بارداً مباشرة من العلبة مع عصرة ليمون خفيفة، أو يُقلب مع سلطة بطاطا مسلوقة باردة لامتصاص نكهة الخل والبابريكا.",
+          "تشير بعض الدراسات إلى أن الخل قد يبطئ تفريغ المعدة ويخفف ارتفاع السكر بعد الوجبات النشوية، لكن كميته في هذه الصلصة صغيرة."
+        ],
+        "en": [
+          "A good snack if you need more iron; eat the can with fresh bell pepper strips, which are rich in vitamin C and boost iron absorption.",
+          "Serve it cold straight from the can with a light squeeze of lemon, or toss it with a cold boiled-potato salad to soak up the vinegar and paprika flavour.",
+          "Some studies suggest vinegar may slow stomach emptying and soften the rise in blood sugar after starchy meals, but the amount in this sauce is small."
+        ],
+        "nl": [
+          "Een goed tussendoortje als je meer ijzer nodig hebt; eet het blikje met reepjes verse paprika, rijk aan vitamine C, dat de ijzeropname bevordert.",
+          "Eet het koud, direct uit het blik met een scheutje citroen, of schep het door een koude salade van gekookte aardappelen die de smaak van azijn en paprika opneemt.",
+          "Sommige studies wijzen erop dat azijn de maaglediging kan vertragen en de bloedsuikerstijging na zetmeelrijke maaltijden kan afvlakken, maar de hoeveelheid in deze saus is klein."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "لماذا يحتوي بلح البحر على كربوهيدرات عكس الأسماك؟",
+            "a": "لأن الرخويات تخزن الطاقة على شكل جليكوجين في أنسجتها؛ وكميته هنا صغيرة (نحو 5 غ في العلبة) فلا يكاد يؤثر في سكر الدم."
+          },
+          {
+            "q": "هل بلح البحر غني بالحديد حقاً؟",
+            "a": "نعم، علبة واحدة تغطي أضعاف الاحتياج اليومي من فيتامين B12 وجزءاً مهماً من احتياج الحديد، مما يدعم تكوين خلايا الدم."
+          },
+          {
+            "q": "هل صلصة الإسكابيتشي صحية؟",
+            "a": "هي تتبيلة تقليدية تعتمد على زيت الزيتون والخل والتوابل؛ راجع الملصق للتأكد من كمية الملح والمكونات المضافة."
+          }
+        ],
+        "en": [
+          {
+            "q": "Why do mussels contain carbohydrate, unlike fish?",
+            "a": "Because shellfish store energy as glycogen in their tissues; the amount here is small (about 5 g per can), so it barely affects blood sugar."
+          },
+          {
+            "q": "Are mussels really rich in iron?",
+            "a": "Yes: one can covers several times the daily requirement for vitamin B12 and a substantial part of the iron requirement, supporting the formation of blood cells."
+          },
+          {
+            "q": "Is escabeche sauce healthy?",
+            "a": "It is a traditional marinade based on olive oil, vinegar and spices; check the label for the salt content and any added ingredients."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Waarom bevatten mosselen koolhydraten, in tegenstelling tot vis?",
+            "a": "Omdat schelpdieren energie opslaan als glycogeen in hun weefsel; de hoeveelheid is hier klein (ongeveer 5 g per blikje), dus het heeft nauwelijks invloed op de bloedsuiker."
+          },
+          {
+            "q": "Zijn mosselen echt rijk aan ijzer?",
+            "a": "Ja: één blikje dekt meerdere keren de dagelijkse behoefte aan vitamine B12 en een flink deel van de ijzerbehoefte, wat de aanmaak van bloedcellen ondersteunt."
+          },
+          {
+            "q": "Is escabechesaus gezond?",
+            "a": "Het is een traditionele marinade op basis van olijfolie, azijn en kruiden; controleer het etiket op zoutgehalte en toegevoegde ingrediënten."
+          }
+        ]
+      }
+    },
+    "624": {
+      "lead": {
+        "ar": "من أجرأ وأرقى أطباق البحر الأبيض المتوسط (Calamares en su Tinta)؛ قطع الحبار البيضاء الطرية المطهوة ببطء في صلصتها السوداء المكونة من حبر الحبار الطبيعي مع البصل وزيت الزيتون والبهارات. يمنح حبر الحبار هذا الطبق لونه الغامض ونكهته البحرية الغنية، كما يحتوي على صبغة الميلانين الطبيعية وبعض المعادن كالنحاس والحديد، مما يجعله طبقاً يجمع بين اللذة العالية والبروتين قليل السعرات.",
+        "en": "One of the boldest and finest Mediterranean dishes (calamares en su tinta): tender white squid pieces slow-cooked in their black sauce of natural squid ink with onion, olive oil and spices. The ink gives the dish its mysterious colour and rich sea flavour and contains the natural pigment melanin and some minerals such as copper and iron, making it a dish that combines great taste with low-calorie protein.",
+        "nl": "Een van de gewaagdste en fijnste mediterrane gerechten (calamares en su tinta): malse witte stukjes inktvis, langzaam gegaard in hun zwarte saus van natuurlijke inkt met ui, olijfolie en kruiden. De inkt geeft het gerecht zijn mysterieuze kleur en rijke zeesmaak en bevat het natuurlijke pigment melanine en enkele mineralen zoals koper en ijzer; zo combineert dit gerecht veel smaak met caloriearm eiwit."
+      },
+      "tips": {
+        "ar": [
+          "اخلطه مع أرز القرنبيط المبشور والمحمص بزيت الزيتون للحصول على طبق \"باييلا سوداء\" منخفضة الكربوهيدرات وجميلة في التقديم.",
+          "تسخين العلبة بلطف على نار هادئة مع رشة بقدونس مفروم وثوم ناعم يعزز بروز نكهات حبر الحبار العميقة.",
+          "لحم الحبار قليل الدهون بطبيعته، وأغلب دهون العلبة هي دهون صحية قادمة من زيت الزيتون المضاف للصلصة."
+        ],
+        "en": [
+          "Mix it with grated cauliflower rice sautéed in olive oil for a low-carb “black paella” that looks stunning on the plate.",
+          "Gently warming the contents over low heat with chopped parsley and finely minced garlic brings out the deep flavour of the ink.",
+          "Squid is naturally low in fat; most of the fat in the can is healthy fat from the olive oil added to the sauce."
+        ],
+        "nl": [
+          "Meng het met geraspte bloemkoolrijst, gebakken in olijfolie, voor een koolhydraatarme ‘zwarte paella’ die prachtig oogt.",
+          "Verwarm de inhoud zachtjes op laag vuur met gehakte peterselie en fijngesneden knoflook om de diepe smaak van de inkt naar voren te halen.",
+          "Inktvis is van nature vetarm; het meeste vet in het blik is gezond vet uit de olijfolie in de saus."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل حبر الحبار صالح ومفيد للأكل؟",
+            "a": "نعم، هو آمن ويُستخدم منذ قرون في مطابخ البحر المتوسط، ويحتوي على صبغة الميلانين وبعض المعادن."
+          },
+          {
+            "q": "هل يرفع هذا الصنف سكر الدم؟",
+            "a": "لا ينطبق عليه المؤشر الجلايسيمي لقلة كربوهيدراته (نحو 3.5 غ في العلبة، معظمها من البصل في الصلصة)، فلا يسبب قفزة سكرية."
+          },
+          {
+            "q": "هل لحم الحبار المعلب قاسٍ في المضغ؟",
+            "a": "الطهي البطيء والتعقيم بالحرارة داخل العلبة يجعل ألياف الحبار طرية جداً وسهلة الهضم."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is squid ink safe and good to eat?",
+            "a": "Yes: it is safe and has been used for centuries in Mediterranean cooking, and it contains the pigment melanin and some minerals."
+          },
+          {
+            "q": "Does it raise blood sugar?",
+            "a": "The glycemic index does not apply because it has so little carbohydrate (about 3.5 g per can, mostly from the onion in the sauce), so it causes no sugar spike."
+          },
+          {
+            "q": "Is canned squid chewy?",
+            "a": "Slow cooking and heat sterilisation in the can make the squid very tender and easy to digest."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is inktvisinkt veilig en goed om te eten?",
+            "a": "Ja: het is veilig en wordt al eeuwen in de mediterrane keuken gebruikt, en het bevat het pigment melanine en enkele mineralen."
+          },
+          {
+            "q": "Verhoogt het de bloedsuiker?",
+            "a": "De glykemische index is niet van toepassing omdat het zo weinig koolhydraten bevat (ongeveer 3,5 g per blik, vooral uit de ui in de saus), dus het geeft geen suikerpiek."
+          },
+          {
+            "q": "Is inktvis uit blik taai?",
+            "a": "Door het langzaam garen en het steriliseren in het blik wordt de inktvis heel mals en licht verteerbaar."
+          }
+        ]
+      }
+    },
+    "625": {
+      "lead": {
+        "ar": "كنز الشواطئ الرملية المحفوظ ببساطة ونقاء؛ لحوم المحار الصغير المطهوة على البخار والمعبأة في محلولها الملحي الخفيف للحفاظ على طراوتها ونكهتها البحرية العذبة. يُعد المحار الصغير المعلب من أغنى الأغذية بفيتامين B12، حيث توفر الحصة الصغيرة أضعاف الاحتياج اليومي، كما يوفر الحديد والزنك اللذين يدعمان تكوين الهيموغلوبين، في قالب غذائي شبه خالٍ من الدهون وخفيف السعرات.",
+        "en": "A treasure of sandy shores, preserved simply and purely: steamed baby clams packed in their own light brine to keep them tender and sweet-tasting of the sea. Canned baby clams are one of the richest foods in vitamin B12, with a small portion providing many times the daily requirement, and they also supply iron and zinc that support haemoglobin formation, all in an almost fat-free, low-calorie package.",
+        "nl": "Een schat van zandstranden, eenvoudig en puur bewaard: gestoomde kleine venusschelpen in hun eigen lichte pekel, zodat ze mals blijven en zoet naar de zee smaken. Kleine venusschelpen uit blik horen bij de rijkste voedingsmiddelen aan vitamine B12: een kleine portie levert vele malen de dagelijkse behoefte, en ze leveren ook ijzer en zink die de aanmaak van hemoglobine ondersteunen, in een vrijwel vetvrij en caloriearm pakketje."
+      },
+      "tips": {
+        "ar": [
+          "رائع لإضافته في الدقائق الأخيرة إلى شوربات الخضار البحرية أو صلصات المعكرونة البيضاء المصنوعة من الكوسا وزيت الزيتون والبقدونس.",
+          "استخدم ماء المحار المصفى بكمية قليلة لتنكيه مرق الطهي بدلاً من مكعبات المرق الصناعية، مع الانتباه لملوحته.",
+          "يُعد المحار مصدراً جيداً للحديد والزنك وفيتامين B12، وهي عناصر تدعم تكوين الدم ضمن نظام غذائي متوازن."
+        ],
+        "en": [
+          "Great added in the last few minutes to seafood vegetable soups or to white pasta sauces made with courgette, olive oil and parsley.",
+          "Use a little of the strained clam liquid to flavour cooking stock instead of stock cubes, keeping its saltiness in mind.",
+          "Clams are a good source of iron, zinc and vitamin B12, nutrients that support blood formation as part of a balanced diet."
+        ],
+        "nl": [
+          "Heerlijk om in de laatste minuten toe te voegen aan groentesoep met zeevruchten of aan witte pastasauzen met courgette, olijfolie en peterselie.",
+          "Gebruik een beetje van het gezeefde schelpdiervocht om bouillon op smaak te brengen in plaats van bouillonblokjes, en houd rekening met het zout.",
+          "Venusschelpen zijn een goede bron van ijzer, zink en vitamine B12, voedingsstoffen die binnen een evenwichtig eetpatroon de bloedaanmaak ondersteunen."
+        ]
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم تبلغ نسبة فيتامين B12 في المحار الصغير؟",
+            "a": "حصة واحدة (85 غ) تمنح الجسم أضعاف الاحتياج اليومي من فيتامين B12 بكثير، مما يجعله في صدارة الأغذية الطبيعية الغنية به."
+          },
+          {
+            "q": "هل يناسب مرضى السكري؟",
+            "a": "نعم، فهو بروتين منخفض جداً في الدهون، وكربوهيدراته قليلة (نحو 3.4 غ في الحصة) لا ينطبق عليها المؤشر الجلايسيمي."
+          },
+          {
+            "q": "هل يحتوي المحار على كوليسترول مرتفع؟",
+            "a": "تحتوي الرخويات على كوليسترول غذائي معتدل، لكنها قليلة جداً في الدهون المشبعة، وهي العامل الأهم في رفع كوليسترول الدم لدى معظم الناس."
+          }
+        ],
+        "en": [
+          {
+            "q": "How much vitamin B12 is in baby clams?",
+            "a": "One portion (85 g) provides many times the daily requirement of vitamin B12, which puts clams at the top of natural foods rich in it."
+          },
+          {
+            "q": "Is it suitable for people with diabetes?",
+            "a": "Yes: it is very low-fat protein, and its small amount of carbohydrate (about 3.4 g per portion) is too little for the glycemic index to apply."
+          },
+          {
+            "q": "Are clams high in cholesterol?",
+            "a": "Shellfish contain a moderate amount of dietary cholesterol, but they are very low in saturated fat, which is the bigger factor in raising blood cholesterol for most people."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel vitamine B12 zit er in kleine venusschelpen?",
+            "a": "Eén portie (85 g) levert vele malen de dagelijkse behoefte aan vitamine B12, waarmee ze bovenaan staan bij natuurlijke voedingsmiddelen die er rijk aan zijn."
+          },
+          {
+            "q": "Is het geschikt voor mensen met diabetes?",
+            "a": "Ja: het is zeer vetarm eiwit, en de kleine hoeveelheid koolhydraten (ongeveer 3,4 g per portie) is te weinig om de glykemische index toe te passen."
+          },
+          {
+            "q": "Bevatten venusschelpen veel cholesterol?",
+            "a": "Schelpdieren bevatten een gematigde hoeveelheid cholesterol uit voeding, maar heel weinig verzadigd vet, en dat is voor de meeste mensen de belangrijkere factor voor het bloedcholesterol."
+          }
+        ]
+      }
     }
   }
 }

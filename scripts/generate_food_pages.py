@@ -180,6 +180,13 @@ PILOT = {
     589: ('nuts', 15), 590: ('nuts', 10), 591: ('drink', 250), 592: ('drink', 250), 593: ('drink', 250),
     594: ('drink', 250), 595: ('drink', 250), 596: ('drink', 250), 597: ('drink', 250), 598: ('drink', 250),
     599: ('drink', 250), 600: ('pantry', 15),
+    # batch 17: classic European pastries and cakes, cured and canned seafood
+    # (portions from Dr. Wassim's copy, 18 October 2026)
+    601: ('sweets', 80), 602: ('sweets', 85), 603: ('sweets', 100), 604: ('sweets', 110), 605: ('sweets', 35),
+    606: ('sweets', 100), 607: ('sweets', 120), 608: ('sweets', 90), 609: ('sweets', 100), 610: ('sweets', 105),
+    611: ('sweets', 75), 612: ('sweets', 80), 613: ('sweets', 120), 614: ('sweets', 30), 615: ('sweets', 40),
+    616: ('sweets', 90), 617: ('sweets', 95), 618: ('protein', 25), 619: ('protein', 100), 620: ('protein', 120),
+    621: ('protein', 120), 622: ('protein', 110), 623: ('protein', 115), 624: ('protein', 115), 625: ('protein', 85),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -188,7 +195,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 601))
+TEAM_REVIEW |= set(range(207, 626))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt'}
