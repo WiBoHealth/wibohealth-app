@@ -962,7 +962,8 @@ def esc(s):
 # --------------------------------------------------------------------------------------------
 doctor = (ROOT / 'doctor.html').read_text(encoding='utf-8').replace('\r\n', '\n')
 BASE_CSS = re.search(r'    <style>\n(.*?)    </style>\n', doctor, re.S).group(1)
-LOGO_SVG = re.search(r'(<svg class="brand-logo-svg".*?</svg>)', doctor, re.S).group(1)
+LOGO_SVG = ('<img class="brand-logo-svg" src="/images/brand/wibo-logo-64.webp" '   # emerald heart logo
+            'srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">')
 
 PAGE_CSS = """
         a.lang-btn { text-decoration: none; }

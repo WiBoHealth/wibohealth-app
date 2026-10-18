@@ -3,7 +3,7 @@
  * Version: 2.0.0
  */
 
-const CACHE_NAME = 'wibohealth-cache-v2';
+const CACHE_NAME = 'wibohealth-cache-v3';   // v3: new emerald logo and icons
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
