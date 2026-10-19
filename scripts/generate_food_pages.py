@@ -230,6 +230,13 @@ PILOT = {
     763: ('drink', 200), 764: ('drink', 200), 765: ('drink', 200), 766: ('drink', 200), 767: ('drink', 200), 768: ('drink', 200),
     769: ('drink', 200), 770: ('drink', 200), 771: ('drink', 200), 772: ('drink', 200), 773: ('grain', 150), 774: ('grain', 40),
     775: ('grain', 40),
+    # batch 24: breakfast grains, soy and wheat proteins, Japanese dishes, Dutch supermarket staples
+    # (portions from the medical team's copy, 19 October 2026)
+    776: ('grain', 40), 777: ('grain', 30), 778: ('grain', 30), 779: ('sweets', 150), 780: ('grain', 200), 781: ('asian', 100),
+    782: ('asian', 120), 783: ('asian', 35), 784: ('asian', 50), 785: ('asian', 100), 786: ('asian', 100), 787: ('asian', 60),
+    788: ('asian', 120), 789: ('asian', 120), 790: ('asian', 180), 791: ('asian', 120), 792: ('asian', 120), 793: ('dairy_solid', 30),
+    794: ('dairy_drink', 200), 795: ('nuts', 30), 796: ('bakery', 30), 797: ('grain', 35), 798: ('dairy_solid', 30), 799: ('protein', 80),
+    800: ('sweets', 50),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -238,7 +245,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 776))
+TEAM_REVIEW |= set(range(207, 801))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
