@@ -237,6 +237,13 @@ PILOT = {
     788: ('asian', 120), 789: ('asian', 120), 790: ('asian', 180), 791: ('asian', 120), 792: ('asian', 120), 793: ('dairy_solid', 30),
     794: ('dairy_drink', 200), 795: ('nuts', 30), 796: ('bakery', 30), 797: ('grain', 35), 798: ('dairy_solid', 30), 799: ('protein', 80),
     800: ('sweets', 50),
+    # batch 25: Dutch snacks and crisps, world soups, roots and tubers, specialty vegetables, cherimoya
+    # (portions from the medical team's copy, 19 October 2026)
+    801: ('fastfood', 25), 802: ('fastfood', 25), 803: ('fastfood', 220), 804: ('fastfood', 110), 805: ('fastfood', 70), 806: ('fastfood', 75),
+    807: ('fastfood', 85), 808: ('asian', 400), 809: ('indian', 300), 810: ('asian', 300), 811: ('tuber', 150), 812: ('tuber', 150),
+    813: ('tuber', 100), 814: ('tuber', 100), 815: ('veg', 150), 816: ('veg', 150), 817: ('veg', 150), 818: ('veg', 150),
+    819: ('veg', 100), 820: ('veg', 150), 821: ('veg', 100), 822: ('veg', 100), 823: ('veg', 50), 824: ('veg', 50),
+    825: ('fruit', 150),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -245,7 +252,7 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                127, 129, 130, 131, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155,
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
-TEAM_REVIEW |= set(range(207, 801))
+TEAM_REVIEW |= set(range(207, 826))
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
