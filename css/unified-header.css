@@ -418,6 +418,16 @@ body > header .nav-buttons { width: auto !important; }
     body > header .header-controls > .lang-btn { width: 30px !important; }
 }
 
+/* narrowest desktop widths: the heart logo stays, the "WiBo Health" wordmark gives way */
+@media (min-width: 993px) and (max-width: 1080px) {
+    body > header .logo-text, body > header .brand-title { display: none !important; }
+}
+/* Home is back from 1201px: slimmer capsules keep the long Arabic "السكري ومتلازمة الأيض" label on one row */
+@media (min-width: 1201px) and (max-width: 1320px) {
+    body > header .nav-menu, body > header .nav-links-bar { gap: 4px !important; }
+    body > header .nav-link { padding: 0 10px !important; }
+}
+
 /* emerald heart logo image: never stretched, no inherited icon colour or filters */
 body > header img.brand-mark, body > header img.brand-logo-svg { object-fit: contain; display: block; flex-shrink: 0; }
 

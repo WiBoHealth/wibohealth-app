@@ -3,7 +3,7 @@
 // follow <html lang>, which every page's own language switcher sets.
 (function () {
     var HUB = {
-        ar: ['/diabetes.html', 'السكري والأيض'],
+        ar: ['/diabetes.html', 'السكري ومتلازمة الأيض'],
         en: ['/en/diabetes.html', 'Diabetes'],
         nl: ['/nl/diabetes.html', 'Diabetes']
     };

@@ -461,7 +461,7 @@ UI = {
         reviewed_named='تمت مراجعته من قبل: <a href="{doctor}">الدكتور وسيم حبيب</a> · آخر مراجعة {date}',
         portion_note='الحصة المعتادة تقريبية لأغراض المقارنة.',
         theme='تبديل المظهر', footer_rights='© 2026 WiBo Health Group. جميع الحقوق محفوظة.',
-        nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية', partners='الشراكات', diabetes='السكري والأيض',
+        nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية', partners='الشراكات', diabetes='السكري ومتلازمة الأيض',
         methodology='المنهجية والمراجع العلمية'),
     'en': dict(
         dir='ltr', title='{name}: Calories, Glycemic Index & Nutrition Facts | WiBo Health',

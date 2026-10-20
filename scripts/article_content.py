@@ -9,7 +9,7 @@ SUGAR_FREE_CEREALS = dict(
                nl='gezonde-ontbijtgranen-zonder-suiker'),
     hero='healthy-sugar-free-breakfast-cereal-hero.webp', hero_size=(1400, 781),
     bowl='healthy-whole-grain-cereal-bowl.webp',
-    published='2026-10-17', modified='2026-10-17', minutes=9,
+    published='2026-10-17', modified='2026-10-17',
     references=[
         'Regulation (EC) No 1924/2006, Annex: nutrition claims "low sugars" (≤5 g/100 g) and "high fibre" (≥6 g/100 g)',
         'EFSA Journal 2010;8(12):1885 (oat beta-glucan and lowering blood cholesterol)',
@@ -530,7 +530,7 @@ GESTATIONAL_DIABETES = dict(
     section='diabetes',
     slugs=dict(ar='gestational-diabetes', en='gestational-diabetes', nl='zwangerschapsdiabetes'),
     hero='gestational-diabetes-guide-hero.webp', hero_size=(1376, 768),
-    published='2026-10-20', modified='2026-10-20', minutes=8,
+    published='2026-10-20', modified='2026-10-20',
     references=[
         'American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)',
         'American College of Obstetricians and Gynecologists (ACOG). Practice Bulletin No. 190: Gestational Diabetes Mellitus. Obstet Gynecol 2018;131(2):e49–e64',
@@ -541,7 +541,7 @@ GESTATIONAL_DIABETES = dict(
     named_author=True,                                   # user decision 2026-10-20: this guide names Dr. Wassim Habib (byline + schema)
     content=dict(
 ar=dict(
- byline='بقلم وتدقيق سريري: د. وسيم حبيب (Dr. Wassim Habib) – مؤسس WiBo Health',
+ byline='بقلم الدكتور وسيم حبيب',
  title='دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة',
  h1='دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة',
  crumb='سكر الحمل',
@@ -624,7 +624,7 @@ ar=dict(
                 <div class="faq-item"><h3>هل سيستمر السكري معي بعد الولادة؟</h3><p>في أكثر من 90% من الحالات، يعود السكر إلى طبيعته تماماً بعد خروج المشيمة والولادة. سيطلب منكِ طبيبكِ فحصاً بسيطاً بعد 4 إلى 12 أسبوعاً من الولادة للتأكد التام، ثم فحصاً دورياً كل 1 إلى 3 سنوات، لأن سكر الحمل يرفع احتمال الإصابة بالسكري من النوع الثاني لاحقاً. والحفاظ على هذه العادات الغذائية الجميلة التي حميتِ بها نفسكِ وطفلكِ هو أفضل وقاية.</p></div>
             </div>'''),
 en=dict(
- byline='Written & Clinically Reviewed by: Dr. Wassim Habib – Founder of WiBo Health',
+ byline='By Dr. Wassim Habib',
  title='Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step',
  h1='Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step',
  crumb='Gestational diabetes',
@@ -707,7 +707,7 @@ en=dict(
                 <div class="faq-item"><h3>Will the diabetes stay after the birth?</h3><p>In more than 90% of cases, blood sugar returns completely to normal once the placenta is delivered. Your doctor will ask for a simple test 4 to 12 weeks after the birth to be sure, and then a check every 1 to 3 years, because gestational diabetes raises the chance of type 2 diabetes later in life. Keeping the healthy eating habits that protected you and your baby is the best prevention.</p></div>
             </div>'''),
 nl=dict(
- byline='Geschreven en klinisch beoordeeld door: Dr. Wassim Habib – Oprichter van WiBo Health',
+ byline='Door Dr. Wassim Habib',
  title='Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap',
  h1='Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap',
  crumb='Zwangerschapsdiabetes',

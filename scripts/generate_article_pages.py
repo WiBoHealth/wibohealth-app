@@ -28,16 +28,16 @@ from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, e
 ROOT = Path(__file__).resolve().parent.parent
 
 T = {
-    'ar': dict(dir='rtl', section='المقالات الصحية', minutes='دقائق قراءة', published='نُشر في {date} · فريق WiBo Health', published_on='نُشر في {date}',
+    'ar': dict(dir='rtl', section='المقالات الصحية', published='نُشر في {date} · فريق WiBo Health', published_on='نُشر في {date}',
                refs='المصادر العلمية', footer_articles='المقالات', draft='مسودة · قيد الإعداد',
                months=('يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'),
                read='اقرأ المقال', soon='قريباً'),
-    'en': dict(dir='ltr', section='Health articles', minutes='min read', published='Published {date} · WiBo Health team', published_on='Published {date}',
+    'en': dict(dir='ltr', section='Health articles', published='Published {date} · WiBo Health team', published_on='Published {date}',
                refs='Scientific sources', footer_articles='Articles', draft='Draft · in preparation',
                months=('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                        'November', 'December'),
                read='Read the article', soon='Coming soon'),
-    'nl': dict(dir='ltr', section='Gezondheidsartikelen', minutes='min leestijd', published='Gepubliceerd op {date} · WiBo Health-team', published_on='Gepubliceerd op {date}',
+    'nl': dict(dir='ltr', section='Gezondheidsartikelen', published='Gepubliceerd op {date} · WiBo Health-team', published_on='Gepubliceerd op {date}',
                refs='Wetenschappelijke bronnen', footer_articles='Artikelen', draft='Concept · in voorbereiding',
                months=('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober',
                        'november', 'december'),
@@ -349,7 +349,7 @@ def build(a, lang):
             </nav>
             <span class="group-chip">{esc(c["cat"])}</span>
             <h1>{esc(c["h1"])}</h1>{byline}
-            <div class="article-meta"><span><i class="fas fa-clock"></i> {a["minutes"]} {t["minutes"]}</span><span>{published}</span>{draft_chip}</div>
+            <div class="article-meta"><span><i class="fas fa-calendar"></i> {published}</span>{draft_chip}</div>
 {hero_img}
 {render_body(c["body"], lang)}
 
