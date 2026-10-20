@@ -347,6 +347,19 @@
             background: linear-gradient(135deg, #059669 0%, #10b981 100%);
         }
 
+        /* Until the public Play Store release the buttons are static "coming soon" badges (the listing returns 404).
+           Launch day: turn each .play-soon span back into <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi"> */
+        .btn-google-play.play-soon,
+        .btn-google-play.play-soon:hover {
+            cursor: default;
+            transform: none;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(5, 150, 105, 0.22) 100%);
+            color: #047857;
+            border: 2px dashed rgba(16, 185, 129, 0.6);
+            box-shadow: none;
+        }
+        body.dark-mode .btn-google-play.play-soon { color: #6ee7b7; }
+
         .btn-direct-apk {
             background: rgba(255, 255, 255, 0.1);
             color: #ffffff;
@@ -715,10 +728,10 @@
                 </p>
 
                 <div class="cta-download-box">
-                    <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" class="btn-google-play">
-                        <i class="fa-brands fa-google-play" style="font-size: 22px;"></i>
-                        <span data-i18n="btn_google_play">تحميل من Google Play (قريباً 🚀)</span>
-                    </a>
+                    <span class="btn-google-play play-soon" aria-disabled="true">
+                        <i class="fa-brands fa-google-play" style="font-size: 22px;" aria-hidden="true"></i>
+                        <span data-i18n="play_soon">🚀 قريباً على Google Play</span>
+                    </span>
                     <a href="privacy.html" class="btn-direct-apk">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span data-i18n="btn_privacy_badge">أمان وخصوصية أوروبية 100%</span>
@@ -780,10 +793,10 @@
                 </div>
 
                 <div class="diet-cta-row">
-                    <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" rel="noopener" class="btn-google-play">
-                        <i class="fa-brands fa-google-play" style="font-size: 20px;"></i>
-                        <span data-i18n="diet_cta_btn">حمّل بودي واكتشف البرنامج</span>
-                    </a>
+                    <span class="btn-google-play play-soon" aria-disabled="true">
+                        <i class="fa-brands fa-google-play" style="font-size: 20px;" aria-hidden="true"></i>
+                        <span data-i18n="play_soon">🚀 قريباً على Google Play</span>
+                    </span>
                     <span class="diet-cta-note" data-i18n="diet_cta_note">كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.</span>
                 </div>
 
@@ -854,10 +867,10 @@
                         تطبيق بودي يلتزم بأعلى معايير حماية البيانات الأوروبية (GDPR)؛ لا نسجل بياناتك الحساسة، وسجل مسحاتك محفوظ بأمان محلياً على هاتفك فقط.
                     </p>
                 </div>
-                <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" class="btn-google-play">
-                    <i class="fa-solid fa-download"></i>
-                    <span data-i18n="btn_install_now">تثبيت التطبيق مجاناً</span>
-                </a>
+                <span class="btn-google-play play-soon" aria-disabled="true">
+                    <i class="fa-brands fa-google-play" style="font-size: 20px;" aria-hidden="true"></i>
+                    <span data-i18n="play_soon">🚀 قريباً على Google Play</span>
+                </span>
             </div>
         </section>
     </main>
@@ -889,7 +902,6 @@
                 'badge_official': '🛒 دليلك الذكي في السوبرماركت',
                 'hero_title': 'تطبيق <span>بودي 💚 (boodi)</span><br>رفيقك الصحي للتسوق الذكي',
                 'hero_desc': 'ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص مشتقات الخنزير والشبهات بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.',
-                'btn_google_play': 'تحميل من Google Play (قريباً 🚀)',
                 'btn_privacy_badge': 'أمان وخصوصية أوروبية 100%',
                 'features_heading': 'لماذا تطبيق بودي هو خيارك الأذكى؟',
                 'features_subheading': 'ذكاء سريري متطور صُمم لحماية صحتك وصحة عائلتك',
@@ -903,7 +915,6 @@
                 'feat_4_desc': 'خوارزمية ذكية لا تقترح بدائل عشوائية؛ إذا مسحت صنفاً عالي السكر، يقترح لك فوراً بديلاً صحياً من نفس الرف والتصنيف بمعدل سكر أقل!',
                 'banner_title': 'خصوصية كاملة وامتثال للمعايير الأوروبية',
                 'banner_desc': 'تطبيق بودي يلتزم بأعلى معايير حماية البيانات الأوروبية (GDPR)؛ لا نسجل بياناتك الحساسة، وسجل مسحاتك محفوظ بأمان محلياً على هاتفك فقط.',
-                'btn_install_now': 'تثبيت التطبيق مجاناً',
                 'diet_badge': '👑 جديد في تطبيق بودي',
                 'diet_title': 'برنامج الدايت <span>المخصص لنمط حياتك</span>',
                 'diet_lead': 'خطة تغذية متوازنة على مدى 12 أسبوعاً تُبنى حول يومك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health. لا حرمان ولا أطعمة غريبة: وجبات مألوفة تتجدد معك خطوة بخطوة.',
@@ -919,7 +930,7 @@
                 'diet_p5_desc': 'أسئلة سلامة تلقائية تنبهك إن كان وضعك الصحي يحتاج استشارة طبيبك قبل اتباع أي برنامج غذائي.',
                 'diet_p6_title': 'الماسح متصل بخطتك',
                 'diet_p6_desc': 'امسح أي منتج في السوبرماركت ليخبرك بودي فوراً: ✅ يناسب خطتك، 🟡 باعتدال، أو ⚠️ يحتوي صنفاً استبعدته.',
-                'diet_cta_btn': 'حمّل بودي واكتشف البرنامج',
+                'play_soon': '🚀 قريباً على Google Play',
                 'diet_cta_note': 'كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.',
                 'diet_disclaimer': 'البرنامج دليل إرشادي لنمط حياة صحي وتغذية متوازنة، وليس خدمة طبية ولا يغني عن استشارة الطبيب. إذا كنت حاملاً أو مرضعاً أو تتناول أدوية لحالة مزمنة، استشر طبيبك قبل البدء.',
                 'footer_about': 'من نحن',
@@ -936,7 +947,6 @@
                 'badge_official': '🛒 Jouw slimme supermarktgids',
                 'hero_title': 'Ontdek <span>boodi 💚 App</span><br>Jouw Gezonde Winkelgenoot',
                 'hero_desc': 'Geen twijfels meer in de supermarkt! Scan direct de barcode van elk product en ontdek de werkelijke voedingswaarde, de glykemische index (bloedsuikerpiek), insulinerespons, strikte halal- en varkensvleescontrole, en vind direct gezondere alternatieven uit hetzelfde schap.',
-                'btn_google_play': 'Binnenkort op Google Play (Lancering 🚀)',
                 'btn_privacy_badge': '100% Europese Privacy & AVG/GDPR',
                 'features_heading': 'Waarom is boodi Jouw Slimste Keuze?',
                 'features_subheading': 'Geavanceerde klinische intelligentie ontworpen om de gezondheid van jou en je gezin te beschermen',
@@ -950,7 +960,6 @@
                 'feat_4_desc': 'Geen willekeurige suggesties! Scan je een suikerrijk product? boodi adviseert direct een gezonder, minder suikerrijk alternatief binnen exact dezelfde categorie.',
                 'banner_title': 'Strikte Europese Privacy & AVG/GDPR-naleving',
                 'banner_desc': 'boodi voldoet aan de strengste Europese privacyrichtlijnen. Wij slaan geen gevoelige gezondheidsdata extern op; je scangeschiedenis blijft veilig lokaal op je telefoon.',
-                'btn_install_now': 'Installeer boodi Gratis',
                 'diet_badge': '👑 Nieuw in de boodi app',
                 'diet_title': 'Het dieetprogramma <span>dat bij jouw leefstijl past</span>',
                 'diet_lead': 'Een uitgebalanceerd voedingsplan van 12 weken, opgebouwd rond jouw dag en je favoriete gerechten, samengesteld door het voedings- en leefstijlteam van WiBo Health. Geen hongerdieet en geen onbekende producten: herkenbare maaltijden die stap voor stap met je meegroeien.',
@@ -966,7 +975,7 @@
                 'diet_p5_desc': 'Automatische veiligheidsvragen laten je weten of je gezondheidssituatie vraagt om eerst met je arts te overleggen, voordat je aan een voedingsprogramma begint.',
                 'diet_p6_title': 'De scanner kent je plan',
                 'diet_p6_desc': 'Scan een product in de supermarkt en boodi vertelt je direct: ✅ past in je plan, 🟡 met mate, of ⚠️ bevat iets dat je hebt uitgesloten.',
-                'diet_cta_btn': 'Download boodi en ontdek het programma',
+                'play_soon': '🚀 Binnenkort op Google Play',
                 'diet_cta_note': 'Alle details over het programma en het abonnement vind je in de app.',
                 'diet_disclaimer': 'Dit programma is een leefstijlgids voor gezonde, gebalanceerde voeding. Het is geen behandeling van een ziekte en vervangt geen advies van je arts. Ben je zwanger, geef je borstvoeding of gebruik je medicijnen voor een chronische aandoening? Overleg dan eerst met je arts.',
                 'footer_about': 'Over Ons',
@@ -983,7 +992,6 @@
                 'badge_official': '🛒 Your Smart Supermarket Guide',
                 'hero_title': 'Meet <span>boodi 💚 App</span><br>Your Smart Shopping Health Companion',
                 'hero_desc': 'No more supermarket dilemmas! Scan any barcode instantly and let boodi reveal true nutritional facts, glycemic speed, insulin index impact, strict halal and pork-derivative screening, and intelligent healthier alternatives from the exact same shelf.',
-                'btn_google_play': 'Coming Soon to Google Play 🚀',
                 'btn_privacy_badge': '100% EU GDPR Privacy Standard',
                 'features_heading': 'Why is boodi Your Smartest Choice?',
                 'features_subheading': 'Advanced clinical intelligence engineered to safeguard you and your family',
@@ -997,7 +1005,6 @@
                 'feat_4_desc': 'No random suggestions! If you scan a high-sugar item, boodi recommends a healthier lower-sugar alternative strictly within the same grocery category.',
                 'banner_title': 'Strict European Privacy & MDR Compliance',
                 'banner_desc': 'boodi operates in full compliance with European GDPR standards; we never store your private health data remotely—your scan history stays on your phone only.',
-                'btn_install_now': 'Install boodi Free',
                 'diet_badge': '👑 New in the boodi app',
                 'diet_title': 'A diet programme <span>built around your lifestyle</span>',
                 'diet_lead': 'A balanced 12-week eating plan built around your day and the foods you love, created by the WiBo Health nutrition and lifestyle team. No starving and no unfamiliar foods: familiar meals that evolve with you step by step.',
@@ -1013,7 +1020,7 @@
                 'diet_p5_desc': 'Automatic safety questions let you know when your health situation calls for a talk with your doctor before following any eating programme.',
                 'diet_p6_title': 'The scanner knows your plan',
                 'diet_p6_desc': 'Scan any product in the supermarket and boodi tells you instantly: ✅ fits your plan, 🟡 in moderation, or ⚠️ contains something you chose to exclude.',
-                'diet_cta_btn': 'Get boodi and explore the programme',
+                'play_soon': '🚀 Coming Soon on Google Play',
                 'diet_cta_note': 'All programme and subscription details are inside the app.',
                 'diet_disclaimer': 'This programme is a lifestyle guide to healthy, balanced eating. It is not a treatment for any disease and does not replace advice from your doctor. If you are pregnant, breastfeeding or take medication for a chronic condition, talk to your doctor before you start.',
                 'footer_about': 'About Us',
