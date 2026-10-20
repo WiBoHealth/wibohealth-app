@@ -774,6 +774,42 @@
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
         }
 
+        /* Teaser above the food grid for the diet programme in the boodi app (no prices on the site) */
+        .diet-teaser {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--card-bg);
+            border: 1.5px solid rgba(245, 158, 11, 0.5);
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin: 0 0 22px;
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .diet-teaser::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 5px;
+            background: linear-gradient(180deg, #f59e0b, #10b981);
+        }
+        [dir="rtl"] .diet-teaser::before { inset: 0 0 0 auto; }
+        .diet-teaser-icon {
+            flex: 0 0 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(245, 158, 11, 0.14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .diet-teaser-text { flex: 1; min-width: 0; }
+        .diet-teaser-text strong { display: block; font-size: 1.02rem; font-weight: 900; color: var(--text-dark); margin-bottom: 2px; }
+        .diet-teaser-text span { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
         /* المراجع السريرية للمؤشر الجلايسيمي (نفس شريط food-details.html) */
         .gi-sources-box {
             background: var(--card-bg);
@@ -879,6 +915,8 @@
             .category-bar .tab-btn:hover { transform: none; }
             .boodi-food-banner { text-align: center; justify-content: center; }
             .boodi-banner-btn { width: 100%; justify-content: center; }
+            .diet-teaser { flex-wrap: wrap; padding: 16px; }
+            .diet-teaser-text { flex-basis: calc(100% - 64px); }
         }
 
         /* ==========================================================================
@@ -1305,6 +1343,19 @@
             </p>
         </div>
 
+        <!-- Diet programme teaser: leads to the programme section on boodi.html, which links to the app -->
+        <aside class="diet-teaser" aria-labelledby="dietTeaserTitle">
+            <div class="diet-teaser-icon" aria-hidden="true">👑</div>
+            <div class="diet-teaser-text">
+                <strong id="dietTeaserTitle" data-i18n="diet_teaser_title">جديد في تطبيق بودي: برنامج دايت مخصص لنمط حياتك</strong>
+                <span data-i18n="diet_teaser_desc">محتار كيف تنظم هذه الأطعمة في يومك؟ يبني لك بودي خطة وجبات متوازنة لـ 12 أسبوعاً من مطبخك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health.</span>
+            </div>
+            <a href="boodi.html#diet-program" class="boodi-banner-btn">
+                <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
+                <span data-i18n="diet_teaser_btn">اكتشف البرنامج</span>
+            </a>
+        </aside>
+
         <!-- Food Grid -->
         <div class="food-grid" id="foodGrid"></div>
 
@@ -1471,6 +1522,9 @@
                 "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
                 "boodi_banner_desc": "قراءة الأرقام ممتازة، ولكن فحص الباركود في المتجر أسرع! تطبيق بودي يحلل لك المؤشر الجلايسيمي، يفحص الحلال، ويقترح بدائل صحية أقل سكراً فوراً من نفس الرف.",
                 "boodi_banner_btn": "اكتشف تطبيق بودي مجاناً",
+                "diet_teaser_title": "جديد في تطبيق بودي: برنامج دايت مخصص لنمط حياتك",
+                "diet_teaser_desc": "محتار كيف تنظم هذه الأطعمة في يومك؟ يبني لك بودي خطة وجبات متوازنة لـ 12 أسبوعاً من مطبخك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health.",
+                "diet_teaser_btn": "اكتشف البرنامج",
                 "footer_about": "من نحن",
                 "footer_contact": "اتصل بنا",
                 "nav_partners": "الشراكات",
@@ -1540,6 +1594,9 @@
                 "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
                 "boodi_banner_desc": "Checking charts is great, but scanning in the supermarket aisle is faster! boodi deconstructs Glycemic Index, screens Halal status, and discovers healthier alternatives on the spot.",
                 "boodi_banner_btn": "Discover boodi App Free",
+                "diet_teaser_title": "New in the boodi app: a diet programme built around your lifestyle",
+                "diet_teaser_desc": "Not sure how to fit these foods into your day? boodi builds you a balanced 12-week meal plan from your favourite cuisine and foods, created by the WiBo Health nutrition and lifestyle team.",
+                "diet_teaser_btn": "Explore the programme",
                 "footer_about": "About Us",
                 "footer_contact": "Contact Us",
                 "nav_partners": "Partnerships",
@@ -1609,6 +1666,9 @@
                 "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
                 "boodi_banner_desc": "Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert halal-status en tipt gezondere alternatieven direct uit hetzelfde schap.",
                 "boodi_banner_btn": "Ontdek boodi App Gratis",
+                "diet_teaser_title": "Nieuw in de boodi app: een dieetprogramma dat bij jouw leefstijl past",
+                "diet_teaser_desc": "Twijfel je hoe je deze voeding in je dag past? boodi stelt een uitgebalanceerd maaltijdplan van 12 weken voor je samen op basis van je favoriete keuken en gerechten, gemaakt door het voedings- en leefstijlteam van WiBo Health.",
+                "diet_teaser_btn": "Ontdek het programma",
                 "footer_about": "Over Ons",
                 "footer_contact": "Contact",
                 "nav_partners": "Partners",

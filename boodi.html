@@ -473,6 +473,140 @@
             line-height: 1.7;
         }
 
+        /* New in boodi: personalised diet programme (teaser, no prices: plans are shown in the app) */
+        .diet-program {
+            max-width: 1100px;
+            margin: 10px auto 60px;
+            padding: 0 20px;
+            scroll-margin-top: 80px;
+        }
+
+        .diet-program-card {
+            background: var(--wb-card);
+            border: 2px solid rgba(245, 158, 11, 0.45);
+            border-radius: 28px;
+            padding: 40px 34px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12), 0 0 0 6px rgba(16, 185, 129, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diet-program-card::before {
+            content: '';
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 5px;
+            background: linear-gradient(90deg, #10b981, #f59e0b, #10b981);
+        }
+
+        .diet-new-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245, 158, 11, 0.14);
+            color: #b45309;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        body.dark-mode .diet-new-badge { color: #fbbf24; }
+
+        .diet-program-title {
+            font-size: 2.1rem;
+            font-weight: 900;
+            line-height: 1.35;
+            color: var(--wb-text);
+            margin: 16px 0 10px;
+        }
+
+        .diet-program-title span {
+            background: linear-gradient(135deg, #10b981, #0ea5e9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .diet-program-lead {
+            color: var(--wb-muted);
+            font-size: 1.08rem;
+            line-height: 1.85;
+            max-width: 820px;
+        }
+
+        .diet-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 30px 0;
+        }
+
+        .diet-point {
+            background: var(--wb-soft);
+            border: 1px solid var(--wb-border);
+            border-radius: 18px;
+            padding: 18px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .diet-point-icon {
+            flex: 0 0 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(16, 185, 129, 0.14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .diet-point h3 {
+            font-size: 1.02rem;
+            font-weight: 800;
+            color: var(--wb-text);
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        .diet-point p {
+            font-size: 0.92rem;
+            color: var(--wb-muted);
+            line-height: 1.7;
+        }
+
+        .diet-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px 22px;
+        }
+
+        .diet-cta-note {
+            color: var(--wb-muted);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .diet-disclaimer {
+            margin-top: 22px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--wb-border);
+            color: var(--wb-muted);
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 600px) {
+            .diet-program-card { padding: 30px 18px; border-radius: 22px; }
+            .diet-program-title { font-size: 1.6rem; }
+            .diet-cta-row { flex-direction: column; align-items: stretch; text-align: center; }
+            .diet-cta-row .btn-google-play { justify-content: center; }
+        }
+
         /* Footer */
         footer {
             background: #0f172a;
@@ -513,6 +647,19 @@
     </style>
     <link rel="stylesheet" href="css/unified-header.css">
     <!-- text that sat on the old purple page background now follows the shared palette -->
+    <!-- small phones: the header row (logo + 3 languages + theme + back) was wider than 375px; keep the back arrow, drop its label visually -->
+    <style>
+        @media (max-width: 480px) {
+            body > header .nav-back-btn { padding: 0 !important; width: 32px !important; }
+            body > header .nav-back-btn span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+            /* the privacy banner's 280px text column + 30px padding did not fit 320px phones */
+            .smart-banner-card { padding: 28px 18px; }
+            .smart-banner-text { min-width: 0; flex-basis: 100%; }
+        }
+        @media (max-width: 360px) {
+            body > header .brand-logo h1 { display: none !important; }
+        }
+    </style>
     <style>.hero-showcase>.hero-content{order:1}.hero-showcase>.hero-poster-box{order:2}@media(min-width:901px){.hero-showcase>.hero-content{text-align:start}}.app-main-title,.section-header h2{color:var(--wb-text)}.app-description,.section-header p{color:var(--wb-muted)}.btn-direct-apk{background:var(--wb-soft);color:var(--wb-text);border-color:var(--wb-border)}</style>
 </head>
 <body>
@@ -555,7 +702,7 @@
             <div class="hero-content">
                 <div class="app-badge-box">
                     <img src="images/boodi-app-logo.jpeg" alt="شعار تطبيق بودي" class="app-logo-mini">
-                    <span class="app-badge-text" data-i18n="badge_official">تطبيق التوجيه الغذائي والسريري الذكي</span>
+                    <span class="app-badge-text" data-i18n="badge_official">🛒 دليلك الذكي في السوبرماركت</span>
                 </div>
 
                 <h1 class="app-main-title" data-i18n="hero_title">
@@ -577,6 +724,70 @@
                         <span data-i18n="btn_privacy_badge">أمان وخصوصية أوروبية 100%</span>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- New in boodi: personalised diet programme (linked from foods.html and pricing.html as #diet-program) -->
+        <section class="diet-program" id="diet-program" aria-labelledby="dietProgramTitle">
+            <div class="diet-program-card">
+                <span class="diet-new-badge" data-i18n="diet_badge">👑 جديد في تطبيق بودي</span>
+                <h2 class="diet-program-title" id="dietProgramTitle" data-i18n="diet_title">برنامج الدايت <span>المخصص لنمط حياتك</span></h2>
+                <p class="diet-program-lead" data-i18n="diet_lead">خطة تغذية متوازنة على مدى 12 أسبوعاً تُبنى حول يومك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health. لا حرمان ولا أطعمة غريبة: وجبات مألوفة تتجدد معك خطوة بخطوة.</p>
+
+                <div class="diet-points">
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">🗓️</div>
+                        <div>
+                            <h3 data-i18n="diet_p1_title">مراحل تتجدد كل 14 يوماً</h3>
+                            <p data-i18n="diet_p1_desc">تتجدد خطتك كل أسبوعين لتواكب تقدمك وتساعدك على تجاوز فترات ثبات الوزن دون ملل.</p>
+                        </div>
+                    </div>
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">🧮</div>
+                        <div>
+                            <h3 data-i18n="diet_p2_title">احتياجك اليومي محسوب لك</h3>
+                            <p data-i18n="diet_p2_desc">أسئلة قصيرة عن عمرك وطولك ووزنك ونشاطك تقدّر احتياجك من السعرات، وتضبط خطتك بنقص معتدل وآمن.</p>
+                        </div>
+                    </div>
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">🍲</div>
+                        <div>
+                            <h3 data-i18n="diet_p3_title">مطبخك المفضل بلا حرمان</h3>
+                            <p data-i18n="diet_p3_desc">شامي، مصري، مغربي، خليجي، هولندي، إيطالي... اختر مطبخك لتحصل على وجبات تعرفها وتحبها.</p>
+                        </div>
+                    </div>
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">🚫</div>
+                        <div>
+                            <h3 data-i18n="diet_p4_title">استبعد ما لا يناسبك</h3>
+                            <p data-i18n="diet_p4_desc">حدد الأطعمة التي لا تحبها أو تتحسس منها، فلا تظهر في خطتك أبداً.</p>
+                        </div>
+                    </div>
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">🛡️</div>
+                        <div>
+                            <h3 data-i18n="diet_p5_title">فحص سلامة قبل البدء</h3>
+                            <p data-i18n="diet_p5_desc">أسئلة سلامة تلقائية تنبهك إن كان وضعك الصحي يحتاج استشارة طبيبك قبل اتباع أي برنامج غذائي.</p>
+                        </div>
+                    </div>
+                    <div class="diet-point">
+                        <div class="diet-point-icon" aria-hidden="true">📷</div>
+                        <div>
+                            <h3 data-i18n="diet_p6_title">الماسح متصل بخطتك</h3>
+                            <p data-i18n="diet_p6_desc">امسح أي منتج في السوبرماركت ليخبرك بودي فوراً: ✅ يناسب خطتك، 🟡 باعتدال، أو ⚠️ يحتوي صنفاً استبعدته.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="diet-cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=com.wibohealth.boodi" target="_blank" rel="noopener" class="btn-google-play">
+                        <i class="fa-brands fa-google-play" style="font-size: 20px;"></i>
+                        <span data-i18n="diet_cta_btn">حمّل بودي واكتشف البرنامج</span>
+                    </a>
+                    <span class="diet-cta-note" data-i18n="diet_cta_note">كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.</span>
+                </div>
+
+                <p class="diet-disclaimer" data-i18n="diet_disclaimer">البرنامج دليل إرشادي لنمط حياة صحي وتغذية متوازنة، وليس خدمة طبية ولا يغني عن استشارة الطبيب. إذا كنت حاملاً أو مرضعاً أو تتناول أدوية لحالة مزمنة، استشر طبيبك قبل البدء.</p>
             </div>
         </section>
 
@@ -675,7 +886,7 @@
                 'meta_title': 'تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health',
                 'meta_desc': 'حمّل تطبيق بودي boodi الرسمي من WiBo Health Group: ماسح الباركود السريري الذكي لفحص الحلال، المؤشر الجلايسيمي، واكتشاف البدائل الصحية الأقل سكراً من نفس المتجر.',
                 'nav_back_home': 'العودة للرئيسية',
-                'badge_official': 'تطبيق التوجيه الغذائي والسريري الذكي',
+                'badge_official': '🛒 دليلك الذكي في السوبرماركت',
                 'hero_title': 'تطبيق <span>بودي 💚 (boodi)</span><br>رفيقك الصحي للتسوق الذكي',
                 'hero_desc': 'ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص مشتقات الخنزير والشبهات بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.',
                 'btn_google_play': 'تحميل من Google Play (قريباً 🚀)',
@@ -693,6 +904,24 @@
                 'banner_title': 'خصوصية كاملة وامتثال للمعايير الأوروبية',
                 'banner_desc': 'تطبيق بودي يلتزم بأعلى معايير حماية البيانات الأوروبية (GDPR)؛ لا نسجل بياناتك الحساسة، وسجل مسحاتك محفوظ بأمان محلياً على هاتفك فقط.',
                 'btn_install_now': 'تثبيت التطبيق مجاناً',
+                'diet_badge': '👑 جديد في تطبيق بودي',
+                'diet_title': 'برنامج الدايت <span>المخصص لنمط حياتك</span>',
+                'diet_lead': 'خطة تغذية متوازنة على مدى 12 أسبوعاً تُبنى حول يومك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health. لا حرمان ولا أطعمة غريبة: وجبات مألوفة تتجدد معك خطوة بخطوة.',
+                'diet_p1_title': 'مراحل تتجدد كل 14 يوماً',
+                'diet_p1_desc': 'تتجدد خطتك كل أسبوعين لتواكب تقدمك وتساعدك على تجاوز فترات ثبات الوزن دون ملل.',
+                'diet_p2_title': 'احتياجك اليومي محسوب لك',
+                'diet_p2_desc': 'أسئلة قصيرة عن عمرك وطولك ووزنك ونشاطك تقدّر احتياجك من السعرات، وتضبط خطتك بنقص معتدل وآمن.',
+                'diet_p3_title': 'مطبخك المفضل بلا حرمان',
+                'diet_p3_desc': 'شامي، مصري، مغربي، خليجي، هولندي، إيطالي... اختر مطبخك لتحصل على وجبات تعرفها وتحبها.',
+                'diet_p4_title': 'استبعد ما لا يناسبك',
+                'diet_p4_desc': 'حدد الأطعمة التي لا تحبها أو تتحسس منها، فلا تظهر في خطتك أبداً.',
+                'diet_p5_title': 'فحص سلامة قبل البدء',
+                'diet_p5_desc': 'أسئلة سلامة تلقائية تنبهك إن كان وضعك الصحي يحتاج استشارة طبيبك قبل اتباع أي برنامج غذائي.',
+                'diet_p6_title': 'الماسح متصل بخطتك',
+                'diet_p6_desc': 'امسح أي منتج في السوبرماركت ليخبرك بودي فوراً: ✅ يناسب خطتك، 🟡 باعتدال، أو ⚠️ يحتوي صنفاً استبعدته.',
+                'diet_cta_btn': 'حمّل بودي واكتشف البرنامج',
+                'diet_cta_note': 'كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.',
+                'diet_disclaimer': 'البرنامج دليل إرشادي لنمط حياة صحي وتغذية متوازنة، وليس خدمة طبية ولا يغني عن استشارة الطبيب. إذا كنت حاملاً أو مرضعاً أو تتناول أدوية لحالة مزمنة، استشر طبيبك قبل البدء.',
                 'footer_about': 'من نحن',
                 'footer_contact': 'اتصل بنا',
                 'footer_partners': 'الشراكات',
@@ -704,7 +933,7 @@
                 'meta_title': 'boodi App | Jouw Slimme Voedings- & Barcodescanner | WiBo Health',
                 'meta_desc': 'Download de officiële boodi app van WiBo Health: De slimme klinische barcodescanner voor halal-verificatie, glykemische index en gezondere alternatieven in jouw supermarkt.',
                 'nav_back_home': 'Terug naar Home',
-                'badge_official': 'Slimme Klinische Voedingsgids',
+                'badge_official': '🛒 Jouw slimme supermarktgids',
                 'hero_title': 'Ontdek <span>boodi 💚 App</span><br>Jouw Gezonde Winkelgenoot',
                 'hero_desc': 'Geen twijfels meer in de supermarkt! Scan direct de barcode van elk product en ontdek de werkelijke voedingswaarde, de glykemische index (bloedsuikerpiek), insulinerespons, strikte halal- en varkensvleescontrole, en vind direct gezondere alternatieven uit hetzelfde schap.',
                 'btn_google_play': 'Binnenkort op Google Play (Lancering 🚀)',
@@ -722,6 +951,24 @@
                 'banner_title': 'Strikte Europese Privacy & AVG/GDPR-naleving',
                 'banner_desc': 'boodi voldoet aan de strengste Europese privacyrichtlijnen. Wij slaan geen gevoelige gezondheidsdata extern op; je scangeschiedenis blijft veilig lokaal op je telefoon.',
                 'btn_install_now': 'Installeer boodi Gratis',
+                'diet_badge': '👑 Nieuw in de boodi app',
+                'diet_title': 'Het dieetprogramma <span>dat bij jouw leefstijl past</span>',
+                'diet_lead': 'Een uitgebalanceerd voedingsplan van 12 weken, opgebouwd rond jouw dag en je favoriete gerechten, samengesteld door het voedings- en leefstijlteam van WiBo Health. Geen hongerdieet en geen onbekende producten: herkenbare maaltijden die stap voor stap met je meegroeien.',
+                'diet_p1_title': 'Elke 14 dagen een nieuwe fase',
+                'diet_p1_desc': 'Je plan vernieuwt zich elke twee weken, zodat het meegroeit met je voortgang en je zonder verveling over een gewichtsplateau heen helpt.',
+                'diet_p2_title': 'Jouw dagelijkse behoefte, voor je berekend',
+                'diet_p2_desc': 'Een paar korte vragen over leeftijd, lengte, gewicht en activiteit schatten je caloriebehoefte in en stemmen je plan af met een gematigd, veilig tekort.',
+                'diet_p3_title': 'Je favoriete keuken, zonder te missen',
+                'diet_p3_desc': 'Levantijns, Egyptisch, Marokkaans, uit de Golfregio, Nederlands, Italiaans... Kies je keuken en krijg maaltijden die je kent en lekker vindt.',
+                'diet_p4_title': 'Sluit uit wat niet bij je past',
+                'diet_p4_desc': 'Geef aan welke producten je niet lust of waarvoor je overgevoelig bent, en ze komen nooit in je plan.',
+                'diet_p5_title': 'Eerst een veiligheidscheck',
+                'diet_p5_desc': 'Automatische veiligheidsvragen laten je weten of je gezondheidssituatie vraagt om eerst met je arts te overleggen, voordat je aan een voedingsprogramma begint.',
+                'diet_p6_title': 'De scanner kent je plan',
+                'diet_p6_desc': 'Scan een product in de supermarkt en boodi vertelt je direct: ✅ past in je plan, 🟡 met mate, of ⚠️ bevat iets dat je hebt uitgesloten.',
+                'diet_cta_btn': 'Download boodi en ontdek het programma',
+                'diet_cta_note': 'Alle details over het programma en het abonnement vind je in de app.',
+                'diet_disclaimer': 'Dit programma is een leefstijlgids voor gezonde, gebalanceerde voeding. Het is geen behandeling van een ziekte en vervangt geen advies van je arts. Ben je zwanger, geef je borstvoeding of gebruik je medicijnen voor een chronische aandoening? Overleg dan eerst met je arts.',
                 'footer_about': 'Over Ons',
                 'footer_contact': 'Contact',
                 'footer_partners': 'Partners',
@@ -733,7 +980,7 @@
                 'meta_title': 'boodi App | Smart Health & Food Scanner Companion | WiBo Health',
                 'meta_desc': 'Download the official boodi app by WiBo Health: The smart clinical barcode scanner for halal verification, glycemic index, and healthier lower-sugar supermarket alternatives.',
                 'nav_back_home': 'Back to Home',
-                'badge_official': 'Clinical & Smart Dietary Guidance App',
+                'badge_official': '🛒 Your Smart Supermarket Guide',
                 'hero_title': 'Meet <span>boodi 💚 App</span><br>Your Smart Shopping Health Companion',
                 'hero_desc': 'No more supermarket dilemmas! Scan any barcode instantly and let boodi reveal true nutritional facts, glycemic speed, insulin index impact, strict halal and pork-derivative screening, and intelligent healthier alternatives from the exact same shelf.',
                 'btn_google_play': 'Coming Soon to Google Play 🚀',
@@ -751,6 +998,24 @@
                 'banner_title': 'Strict European Privacy & MDR Compliance',
                 'banner_desc': 'boodi operates in full compliance with European GDPR standards; we never store your private health data remotely—your scan history stays on your phone only.',
                 'btn_install_now': 'Install boodi Free',
+                'diet_badge': '👑 New in the boodi app',
+                'diet_title': 'A diet programme <span>built around your lifestyle</span>',
+                'diet_lead': 'A balanced 12-week eating plan built around your day and the foods you love, created by the WiBo Health nutrition and lifestyle team. No starving and no unfamiliar foods: familiar meals that evolve with you step by step.',
+                'diet_p1_title': 'A fresh phase every 14 days',
+                'diet_p1_desc': 'Your plan renews every two weeks to keep pace with your progress and help you move past weight plateaus without boredom.',
+                'diet_p2_title': 'Your daily needs, calculated for you',
+                'diet_p2_desc': 'A few quick questions about your age, height, weight and activity estimate your calorie needs and set your plan at a moderate, safe deficit.',
+                'diet_p3_title': 'Your favourite cuisine, nothing given up',
+                'diet_p3_desc': 'Levantine, Egyptian, Moroccan, Gulf, Dutch, Italian... Choose your cuisine and get meals you know and enjoy.',
+                'diet_p4_title': 'Leave out what does not suit you',
+                'diet_p4_desc': 'Mark the foods you dislike or are sensitive to, and they never appear in your plan.',
+                'diet_p5_title': 'A safety check before you start',
+                'diet_p5_desc': 'Automatic safety questions let you know when your health situation calls for a talk with your doctor before following any eating programme.',
+                'diet_p6_title': 'The scanner knows your plan',
+                'diet_p6_desc': 'Scan any product in the supermarket and boodi tells you instantly: ✅ fits your plan, 🟡 in moderation, or ⚠️ contains something you chose to exclude.',
+                'diet_cta_btn': 'Get boodi and explore the programme',
+                'diet_cta_note': 'All programme and subscription details are inside the app.',
+                'diet_disclaimer': 'This programme is a lifestyle guide to healthy, balanced eating. It is not a treatment for any disease and does not replace advice from your doctor. If you are pregnant, breastfeeding or take medication for a chronic condition, talk to your doctor before you start.',
                 'footer_about': 'About Us',
                 'footer_contact': 'Contact Us',
                 'footer_partners': 'Partnerships',
