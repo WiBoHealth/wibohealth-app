@@ -592,6 +592,17 @@
             transition: transform 0.22s ease;
         }
         .group-card:hover .gc-icon { transform: scale(1.08) rotate(-4deg); }
+        /* photo thumbnail (images/categories/<group>.webp); without .gc-photo the box shows the emoji fallback */
+        .gc-icon.gc-photo {
+            width: 66px;
+            height: 66px;
+            overflow: hidden;
+            background: color-mix(in srgb, var(--accent) 12%, var(--card-bg));
+            border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+            box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 22%, transparent);
+        }
+        .gc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .group-card.active .gc-icon.gc-photo { border-color: var(--accent); }
         .gc-label { font-size: 0.86rem; font-weight: 800; line-height: 1.35; }
         .gc-count {
             font-size: 0.74rem;
@@ -655,6 +666,8 @@
             }
             .group-card:hover { transform: none; }
             .gc-icon { grid-row: 1 / span 2; width: 40px; height: 40px; border-radius: 12px; font-size: 21px; }
+            .gc-icon.gc-photo { width: 44px; height: 44px; border-radius: 12px; box-shadow: none; }
+            .group-card { grid-template-columns: 44px 1fr; }
             .gc-label {
                 font-size: 0.8rem;
                 display: -webkit-box;
@@ -677,9 +690,53 @@
             padding: 16px;
             border-radius: 16px;
             box-shadow: 0 5px 20px var(--shadow);
-            margin-bottom: 22px;
+            margin-bottom: 14px;
             width: 100%;
+            scroll-margin-top: 76px; /* clears the sticky header when a section card scrolls here */
         }
+
+        .results-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            margin: 0 4px 14px;
+        }
+        .results-heading { margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--text-dark); }
+        .results-heading b { color: var(--primary-color); }
+        .results-clear {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1.5px solid rgba(16, 185, 129, 0.45);
+            background: transparent;
+            color: var(--primary-color);
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .results-clear:hover, .results-clear:focus-visible { background: rgba(16, 185, 129, 0.12); outline: none; }
+        .results-clear[hidden] { display: none; }
+
+        .food-grid > .diet-teaser { grid-column: 1 / -1; margin: 0; }
+
+        .results-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 48px 20px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-light);
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+        .results-empty i { font-size: 34px; margin-bottom: 12px; color: #f87171; display: block; }
 
         .search-input {
             width: 100%;
@@ -1402,8 +1459,8 @@
             <div class="cat-grid" id="categoryGrid" role="group"></div>
         </section>
 
-        <!-- Search Box -->
-        <div class="search-box">
+        <!-- Search Box (also the scroll target after a section is picked) -->
+        <div class="search-box" id="searchBox">
             <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 ابحث عن أي طعام أو تصنيف..." oninput="onSearchInput()">
             <p class="search-helper">
                 <i class="fas fa-info-circle" style="color: #10b981;"></i>
@@ -1411,20 +1468,15 @@
             </p>
         </div>
 
-        <!-- Diet programme teaser: leads to the programme section on boodi.html, which links to the app -->
-        <aside class="diet-teaser" aria-labelledby="dietTeaserTitle">
-            <div class="diet-teaser-icon" aria-hidden="true">👑</div>
-            <div class="diet-teaser-text">
-                <strong id="dietTeaserTitle" data-i18n="diet_teaser_title">جديد في تطبيق بودي: برنامج دايت مخصص لنمط حياتك</strong>
-                <span data-i18n="diet_teaser_desc">محتار كيف تنظم هذه الأطعمة في يومك؟ يبني لك بودي خطة وجبات متوازنة لـ 12 أسبوعاً من مطبخك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health.</span>
-            </div>
-            <a href="boodi.html#diet-program" class="boodi-banner-btn">
-                <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
-                <span data-i18n="diet_teaser_btn">اكتشف البرنامج</span>
-            </a>
-        </aside>
+        <!-- What the grid shows right now (section, favourites, search), with a reset button -->
+        <div class="results-bar">
+            <p class="results-heading" id="resultsHeading" aria-live="polite"></p>
+            <button type="button" class="results-clear" id="resultsClear" hidden>
+                <i class="fas fa-xmark" aria-hidden="true"></i> <span data-i18n="results_clear">إلغاء التصفية</span>
+            </button>
+        </div>
 
-        <!-- Food Grid -->
+        <!-- Food Grid (the boodi diet teaser is placed inside it, after the first six foods) -->
         <div class="food-grid" id="foodGrid"></div>
 
         <!-- Scroll Sentinel for Infinite Scrolling -->
@@ -1548,13 +1600,19 @@
                 "nav_doctor": "من نحن",
                 "cat_title": "تصفح الأطعمة حسب القسم",
                 "cat_sub": "صنفاً بقيم غذائية كاملة في 10 أقسام",
-                "items_word": "صنفاً",
                 "tab_all": "الكل",
                 "tab_fav": "أطعمتي المفضلة",
                 "category_bar_label": "تصنيفات الأطعمة",
                 "search_placeholder": "🔍 ابحث عن أي طعام أو تصنيف...",
                 "search_helper": "يمكنك البحث في اسم الطعام أو التصنيف (عربي / English / Nederlands)",
                 "no_results": "لم يتم العثور على أي طعام يطابق بحثك",
+                "results_clear": "إلغاء التصفية",
+                "res_all": "عرض جميع الأصناف ({n})",
+                "res_group": "عرض {n} في قسم {g}",
+                "res_fav": "عرض {n} من أطعمتك المفضلة",
+                "res_fav_group": "عرض {n} من أطعمتك المفضلة في قسم {g}",
+                "res_search": " تطابق «{q}»",
+                "res_none": "لا توجد نتائج لهذا الاختيار",
                 "no_favorites": "لم تضف أي أطعمة إلى المفضلة بعد. اضغط على أيقونة القلب على أي طعام لإضافته هنا!",
                 "calories": "سعرات",
                 "protein": "بروتين",
@@ -1620,13 +1678,19 @@
                 "nav_doctor": "About Us",
                 "cat_title": "Browse foods by section",
                 "cat_sub": "foods with full nutrition facts in 10 sections",
-                "items_word": "items",
                 "tab_all": "All",
                 "tab_fav": "My Favorites",
                 "category_bar_label": "Food categories",
                 "search_placeholder": "🔍 Search any food or category...",
                 "search_helper": "Search by food name or category (EN / NL / AR)",
                 "no_results": "No food found matching your search query",
+                "results_clear": "Clear filter",
+                "res_all": "Showing all foods ({n})",
+                "res_group": "Showing {n} in {g}",
+                "res_fav": "Showing {n} from your favourites",
+                "res_fav_group": "Showing {n} from your favourites in {g}",
+                "res_search": " matching \"{q}\"",
+                "res_none": "No results for this selection",
                 "no_favorites": "No favorite foods saved yet. Click the heart icon on any card to save it here!",
                 "calories": "Calories",
                 "protein": "Protein",
@@ -1692,13 +1756,19 @@
                 "nav_doctor": "Over Ons",
                 "cat_title": "Voeding per categorie",
                 "cat_sub": "voedingsmiddelen met volledige voedingswaarden in 10 categorieën",
-                "items_word": "producten",
                 "tab_all": "Alles",
                 "tab_fav": "Mijn Favorieten",
                 "category_bar_label": "Voedselcategorieën",
                 "search_placeholder": "🔍 Zoek een voedingsmiddel of categorie...",
                 "search_helper": "Zoek op naam of categorie (Nederlands / EN / AR)",
                 "no_results": "Geen voedingsmiddel gevonden dat aan je zoekopdracht voldoet",
+                "results_clear": "Filter wissen",
+                "res_all": "Alle producten ({n})",
+                "res_group": "{n} in {g}",
+                "res_fav": "{n} uit je favorieten",
+                "res_fav_group": "{n} uit je favorieten in {g}",
+                "res_search": " voor \"{q}\"",
+                "res_none": "Geen resultaten voor deze keuze",
                 "no_favorites": "Nog geen favorieten opgeslagen. Klik op het hartje bij een product om het hier te bewaren!",
                 "calories": "Calorieën",
                 "protein": "Eiwit",
@@ -1886,9 +1956,10 @@
                 </button>`;
             grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
                 <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}" style="--accent: ${g.color}">
-                    <span class="gc-icon" aria-hidden="true">${g.icon}</span>
+                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
+                        onerror="const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
                     <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
-                    <span class="gc-count">${counts[g.key] || 0} ${t('items_word')}</span>
+                    <span class="gc-count">${countLabel(counts[g.key] || 0)}</span>
                 </button>`).join('');
         }
 
@@ -1931,12 +2002,76 @@
             filterFoods();
         }
 
+        // After a section is picked, bring the search box and the first results into view
+        function scrollToResults() {
+            const target = document.getElementById('searchBox');
+            if (!target) return;
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        }
+
         document.addEventListener('click', function(e) {
             const btn = e.target.closest && e.target.closest('#categoryBar [data-group], #categoryBar [data-fav]');
             if (!btn) return;
             if (btn.hasAttribute('data-fav')) toggleFavoritesView();
             else selectGroup(btn.getAttribute('data-group'));
+            scrollToResults();
         });
+
+        // "Clear filter": back to all foods, no favourites filter, empty search
+        document.getElementById('resultsClear').addEventListener('click', function() {
+            document.getElementById('searchInput').value = '';
+            showFavorites = false;
+            selectGroup('all');
+        });
+
+        // Arabic count noun agreement follows the last two digits: 1 صنف واحد, 2 صنفان, 3-10 أصناف (also 103-110),
+        // 11-99 صنفاً (also 111-199...), and 100, 101, 102, 200... صنف
+        function countLabel(n) {
+            if (currentLang === 'ar') {
+                if (n === 1) return 'صنف واحد';
+                if (n === 2) return 'صنفان';
+                const r = n % 100;
+                if (r >= 3 && r <= 10) return `${n} أصناف`;
+                if (r <= 2) return `${n} صنف`;
+                return `${n} صنفاً`;
+            }
+            if (currentLang === 'nl') return `${n} ${n === 1 ? 'product' : 'producten'}`;
+            return `${n} ${n === 1 ? 'food' : 'foods'}`;
+        }
+
+        // The line above the grid: what is shown (section / favourites / search) and how many
+        function updateResultsHeading(term) {
+            const heading = document.getElementById('resultsHeading');
+            const clear = document.getElementById('resultsClear');
+            if (!heading) return;
+            const n = currentFilteredList.length;
+            const group = selectedGroup !== 'all' ? getCategoryLabel(selectedGroup, currentLang) : '';
+            let text;
+            if (!n) text = t('res_none');
+            else if (showFavorites) text = (group ? t('res_fav_group') : t('res_fav')).replace('{n}', countLabel(n)).replace('{g}', group);
+            else if (group) text = t('res_group').replace('{n}', countLabel(n)).replace('{g}', group);
+            else text = t('res_all').replace('{n}', n);
+            if (n && term) text += t('res_search').replace('{q}', term);
+            heading.textContent = text;
+            if (clear) clear.hidden = !(selectedGroup !== 'all' || showFavorites || term);
+        }
+
+        // boodi diet programme teaser, shown inside the grid after the first six foods
+        function dietTeaserHtml() {
+            return `
+                <aside class="diet-teaser" aria-labelledby="dietTeaserTitle">
+                    <div class="diet-teaser-icon" aria-hidden="true">👑</div>
+                    <div class="diet-teaser-text">
+                        <strong id="dietTeaserTitle">${t('diet_teaser_title')}</strong>
+                        <span>${t('diet_teaser_desc')}</span>
+                    </div>
+                    <a href="boodi.html#diet-program" class="boodi-banner-btn">
+                        <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
+                        <span>${t('diet_teaser_btn')}</span>
+                    </a>
+                </aside>`;
+        }
 
         window.addEventListener('popstate', function() {
             if (groupFromUrl() !== selectedGroup) selectGroup(groupFromUrl(), false);
@@ -1971,6 +2106,7 @@
                 );
             }
 
+            updateResultsHeading(document.getElementById('searchInput').value.trim());
             renderFoodsIncremental();
         }
 
@@ -1989,7 +2125,7 @@
 
             if (!currentFilteredList || currentFilteredList.length === 0) {
                 const msg = showFavorites && favorites.length === 0 ? t('no_favorites') : t('no_results');
-                grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: white; font-size: 18px; background: rgba(0,0,0,0.15); border-radius: 20px;"><i class="fas fa-heart-broken" style="font-size: 38px; margin-bottom: 12px; color: #fca5a5; display: block;"></i>${msg}</div>`;
+                grid.innerHTML = `<div class="results-empty"><i class="fas fa-heart-broken" aria-hidden="true"></i>${msg}</div>`;
                 if (sentinelText) sentinelText.textContent = '';
                 return;
             }
@@ -1997,7 +2133,7 @@
             const foodsToShow = currentFilteredList.slice(0, visibleCount);
             const unitGram = currentLang === 'ar' ? 'جم' : 'g';
 
-            grid.innerHTML = foodsToShow.map(food => {
+            const cardsHtml = foodsToShow.map(food => {
                 const isFav = favorites.includes(String(food.id));
                 
                 let foodTitle = food.name;
@@ -2055,7 +2191,10 @@
                         </div>
                     </a>
                 `;
-            }).join('');
+            });
+            // the diet teaser follows the first six foods (or the last one, if there are fewer)
+            cardsHtml.splice(Math.min(6, cardsHtml.length), 0, dietTeaserHtml());
+            grid.innerHTML = cardsHtml.join('');
 
             if (sentinelText) {
                 if (visibleCount < currentFilteredList.length) {
