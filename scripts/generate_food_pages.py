@@ -244,6 +244,13 @@ PILOT = {
     813: ('tuber', 100), 814: ('tuber', 100), 815: ('veg', 150), 816: ('veg', 150), 817: ('veg', 150), 818: ('veg', 150),
     819: ('veg', 100), 820: ('veg', 150), 821: ('veg', 100), 822: ('veg', 100), 823: ('veg', 50), 824: ('veg', 50),
     825: ('fruit', 150),
+    # batch 26: tropical fruits, citrus and wild berries, exotic nuts and seeds, fresh water chestnut, European cheeses
+    # (portions from Dr. Wassim's copy, 20 October 2026)
+    826: ('fruit', 100), 827: ('fruit', 100), 828: ('fruit', 100), 829: ('fruit', 15), 830: ('fruit', 15), 831: ('fruit', 100),
+    832: ('fruit', 100), 833: ('fruit', 80), 834: ('fruit', 100), 835: ('fruit', 125), 836: ('fruit', 125), 837: ('fruit', 50),
+    838: ('nuts', 30), 839: ('nuts', 30), 840: ('nuts', 30), 841: ('nuts', 30), 842: ('nuts', 20), 843: ('veg', 100),
+    844: ('dairy_solid', 30), 845: ('dairy_solid', 30), 846: ('dairy_solid', 30), 847: ('dairy_solid', 30),
+    848: ('dairy_solid', 30), 849: ('dairy_solid', 100), 850: ('dairy_solid', 30),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -253,6 +260,13 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
                156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180,
                181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206}
 TEAM_REVIEW |= set(range(207, 826))
+# foods whose copy Dr. Wassim reviewed and signed himself: the page names him with the date he approved it
+NAMED_REVIEW = {i: '2026-10-20' for i in range(826, 851)}
+NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'}}
+
+
+def review_date(fid):
+    return NAMED_REVIEW.get(fid) or (TEAM_REVIEWED if fid in TEAM_REVIEW else REVIEWED)
 # drinks whose third tip is the approved caffeine note (others get the carbohydrate / not-applicable note)
 CAFFEINE = {132, 133, 134, 140}
 SLUG_OVERRIDES = {71: 'greek-yogurt', 7: 'oatmeal'}   # 7 was renamed 'Cooked Oatmeal'; keep its URL
@@ -444,6 +458,7 @@ UI = {
         src_link='المنهجية والتفاصيل ←',
         disclaimer='إخلاء مسؤولية: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.',
         reviewed='راجعه طبياً: <a href="{doctor}">د. وسيم حبيب</a> · آخر مراجعة {date}',
+        reviewed_named='تمت مراجعته من قبل: <a href="{doctor}">الدكتور وسيم حبيب</a> · آخر مراجعة {date}',
         portion_note='الحصة المعتادة تقريبية لأغراض المقارنة.',
         theme='تبديل المظهر', footer_rights='© 2026 WiBo Health Group. جميع الحقوق محفوظة.',
         nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية', partners='الشراكات',
@@ -482,6 +497,7 @@ UI = {
         src_link='Methodology & details →',
         disclaimer='Disclaimer: This guidance is for nutritional lifestyle orientation and does not constitute a diagnostic medical device under EU Regulation MDR 2017/745.',
         reviewed='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
+        reviewed_named='Reviewed by: <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
         portion_note='The typical portion is approximate, for comparison purposes.',
         theme='Toggle theme', footer_rights='© 2026 WiBo Health Group. All rights reserved.',
         nav=('Home', 'Food Guide', 'Calculators', 'Supplements', 'Articles', 'boodi App 💚'), privacy='Privacy', partners='Partnerships',
@@ -519,6 +535,7 @@ UI = {
         src_link='Methodologie & details →',
         disclaimer='Algemene disclaimer: Deze informatie is uitsluitend bedoeld als voedingsadvies en is geen medisch diagnostisch hulpmiddel volgens EU MDR 2017/745.',
         reviewed='Medisch gecontroleerd door <a href="{doctor}">dr. Wassim Habib</a> · Laatst gecontroleerd {date}',
+        reviewed_named='Beoordeeld door: <a href="{doctor}">Dr. Wassim Habib</a> · Laatst beoordeeld {date}',
         portion_note='De gangbare portie is een benadering, bedoeld om te vergelijken.',
         theme='Thema wisselen', footer_rights='© 2026 WiBo Health Group. Alle rechten voorbehouden.',
         nav=('Home', 'Voedingswijzer', 'Calculators', 'Supplementen', 'Artikelen', 'boodi App 💚'), privacy='Privacy', partners='Partners',
@@ -956,12 +973,26 @@ def load_foods():
 
         fid = int(re.search(r'id:\s*(\d+)', line).group(1))
         foods[fid] = dict(
-            id=fid, ar=s('name'), en=s('nameEn'), nl=s('nameNl'), image=s('image'), icon=s('icon'),
+            id=fid, ar=s('name'), en=s('nameEn'), nl=s('nameNl'), image=s('image'), icon=s('icon'), group=s('group'),
             gi=n('gi'), gi_status=s('gi_status'), gi_grade=s('gi_grade'), gi_n=n('gi_n'), gi_range=arr('gi_range'),
             ii=n('ii'), kcal=n('calories') or 0, protein=n('protein') or 0, carbs=n('carbs') or 0, fat=n('fat') or 0,
             fiber=n('fiber') or 0)
         foods[fid]['avail'] = round(max(0.0, foods[fid]['carbs'] - foods[fid]['fiber']), 1)
     return foods
+
+
+def load_group_labels():
+    """key -> {ar, en, nl} from FOOD_GROUPS in js/food-categories.js (the labels of the foods.html filter bar)."""
+    text = (ROOT / 'js' / 'food-categories.js').read_text(encoding='utf-8')
+    labels = {}
+    for row in re.findall(r"\{\s*key:[^\n]*\}", text):
+        get = lambda k: re.search(r"\b%s:\s*'([^']*)'" % k, row).group(1)
+        labels[get('key')] = {l: get(l) for l in LANGS}
+    assert len(labels) == 10, f'expected 10 food groups, found {len(labels)}'
+    return labels
+
+
+FOOD_GROUP_LABELS = load_group_labels()
 
 
 def slugify(name):
@@ -1122,6 +1153,16 @@ def build(food, lang, ctx):
     reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # clinically reviewed estimate
     has_gi = measured or reviewed
     team = food['id'] in TEAM_REVIEW
+    if food['id'] in NAMED_REVIEW:
+        reviewed_line = u['reviewed_named'].format(doctor=site_link('/doctor.html', lang),
+                                                   date=NAMED_REVIEW_TXT[NAMED_REVIEW[food['id']]][lang])
+    elif team:
+        reviewed_line = u['reviewed_team'].format(date=TEAM_REVIEWED_TXT[lang])
+    else:
+        reviewed_line = u['reviewed'].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])
+    # breadcrumb section: the food's master group on foods.html (labels from js/food-categories.js)
+    section = FOOD_GROUP_LABELS.get(food['group'])
+    section_href = site_link(f"/foods.html?group={food['group']}", lang) if section else ''
     p_factor = portion / 100.0
     tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
     if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
@@ -1272,11 +1313,12 @@ def build(food, lang, ctx):
         "reviewedBy": ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
                        {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
                         "url": f"{SITE}/doctor.html"}),
-        "lastReviewed": TEAM_REVIEWED if team else REVIEWED,
+        "lastReviewed": review_date(food['id']),
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
-            {"@type": "ListItem", "position": 2, "name": u['guide'], "item": SITE + site_link('/foods.html', lang)},
-            {"@type": "ListItem", "position": 3, "name": name, "item": urls[lang]}]},
+            {"@type": "ListItem", "position": 2, "name": u['guide'], "item": SITE + site_link('/foods.html', lang)}]
+            + ([{"@type": "ListItem", "position": 3, "name": section[lang], "item": SITE + section_href}] if section else [])
+            + [{"@type": "ListItem", "position": 4 if section else 3, "name": name, "item": urls[lang]}]},
     }
 
     nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
@@ -1360,7 +1402,7 @@ def build(food, lang, ctx):
     <main class="page-wrapper food-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{site_link('/foods.html', lang)}">{u["guide"]}</a> › <span>{esc(name)}</span>
+                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{site_link('/foods.html', lang)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>
 
             <div class="food-hero">
@@ -1408,7 +1450,7 @@ def build(food, lang, ctx):
             </aside>
 
             {src}
-            <p class="reviewed">{u["reviewed_team"].format(date=TEAM_REVIEWED_TXT[lang]) if team else u["reviewed"].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])}</p>
+            <p class="reviewed">{reviewed_line}</p>
             <p class="disclaimer-box">{u["disclaimer"]}</p>
         </article>
     </main>
@@ -1474,7 +1516,7 @@ def main():
     block = ['  <!-- FOOD-PAGES:START -->']
     for fid in PILOT:
         for lang in LANGS:
-            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{TEAM_REVIEWED if fid in TEAM_REVIEW else REVIEWED}</lastmod>',
+            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{review_date(fid)}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in LANGS]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "ar")}"/>', '  </url>']

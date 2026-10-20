@@ -114,7 +114,8 @@ function migrate(food) {
     const category = SOUPS.includes(food.id) ? 'شوربات' : (RECATEGORY[food.id] || oldCat);
     const meta = CATEGORIES[category];
     if (!meta) throw new Error(`id ${food.id}: no mapping for category "${category}"`);
-    let cuisine = CUISINE[food.id] || meta.cuisine || (CATEGORIES[oldCat] && CATEGORIES[oldCat].cuisine) || '';
+    // food.cuisine keeps a tag from an earlier run (soups lose their cuisine category once they are filed as soups)
+    let cuisine = CUISINE[food.id] || meta.cuisine || (CATEGORIES[oldCat] && CATEGORIES[oldCat].cuisine) || food.cuisine || '';
     if (!cuisine) {
         const hit = NAME_CUISINE.find(([re]) => re.test(food.nameEn));
         if (hit) cuisine = hit[1];
