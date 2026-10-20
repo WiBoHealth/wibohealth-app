@@ -221,6 +221,7 @@
                 'meals_badge': '🍳 شو طبخت اليوم؟',
                 'meals_search_ph': 'ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)',
                 'meals_search_btn': 'ابحث 🔍',
+                'tip_label': 'نصيحة اليوم',
                 'home_articles_title': '📚 المقالات الصحية',
                 'home_articles_sub': 'مقالات وأدلة سريرية يراجعها فريق ويبو هيلث الطبي',
                 'home_articles_guides': 'أدلة غذائية أساسية',
@@ -376,6 +377,7 @@
                 'meals_badge': '🍳 What\'s cooking today?',
                 'meals_search_ph': 'Search your daily meal or dish... (e.g. Shawarma, Big Mac, Burrito)',
                 'meals_search_btn': 'Search 🔍',
+                'tip_label': 'Tip of the day',
                 'home_articles_title': '📚 Health Articles',
                 'home_articles_sub': 'Articles and clinical guides reviewed by the WiBo Health medical team',
                 'home_articles_guides': 'Essential nutrition guides',
@@ -531,6 +533,7 @@
                 'meals_badge': '🍳 Wat eten we vandaag?',
                 'meals_search_ph': 'Zoek je maaltijd of gerecht... (bijv. Snert, Stamppot, Kibbeling)',
                 'meals_search_btn': 'Zoeken 🔍',
+                'tip_label': 'Tip van de dag',
                 'home_articles_title': '📚 Gezondheidsartikelen',
                 'home_articles_sub': 'Artikelen en klinische gidsen, beoordeeld door het medisch team van WiBo Health',
                 'home_articles_guides': 'Basisgidsen voeding',
@@ -629,6 +632,7 @@
                     el.setAttribute('aria-label', translations[currentLang][key]);
                 }
             });
+            if (typeof window.renderHomeTip === 'function') window.renderHomeTip(false);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -854,6 +858,74 @@
             :root[dir="rtl"] .meals-search { padding: 5px 14px 5px 5px; }
             .meals-search-input { height: 38px; font-size: 0.85rem; }
             .meals-search-btn { height: 38px; padding: 0 14px; font-size: 0.85rem; }
+        }
+        /* ===== Tip of the day - slim card under the meals search, same width and rhythm ===== */
+        .home-tip {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: calc(100% - 32px);
+            max-width: 760px;
+            margin: 12px auto 0;
+            padding: 12px 14px;
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+            border-radius: 18px;
+            box-shadow: 0 6px 22px rgba(245, 158, 11, 0.12);
+        }
+        html[data-theme="dark"] .home-tip {
+            background: rgba(245, 158, 11, 0.08);
+            border-color: rgba(245, 158, 11, 0.28);
+            box-shadow: none;
+        }
+        .home-tip-ico {
+            flex: 0 0 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            background: rgba(245, 158, 11, 0.18);
+        }
+        .home-tip-body { flex: 1 1 auto; min-width: 0; }
+        .home-tip-label {
+            display: block;
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            color: #b45309;
+            margin-bottom: 1px;
+        }
+        html[data-theme="dark"] .home-tip-label { color: #fbbf24; }
+        .home-tip-text { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.6; color: #334155; }
+        html[data-theme="dark"] .home-tip-text { color: #e2e8f0; }
+        .home-tip-text.is-new { animation: homeTipIn 0.35s ease; }
+        @keyframes homeTipIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+        .home-tip-next {
+            flex: 0 0 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid rgba(245, 158, 11, 0.45);
+            background: rgba(255, 255, 255, 0.7);
+            color: #b45309;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, background-color 0.2s ease;
+        }
+        .home-tip-next:hover, .home-tip-next:focus-visible { transform: rotate(90deg); background: #fde68a; outline: none; }
+        html[data-theme="dark"] .home-tip-next { background: rgba(255, 255, 255, 0.06); color: #fbbf24; }
+        html[data-theme="dark"] .home-tip-next:hover, html[data-theme="dark"] .home-tip-next:focus-visible { background: rgba(245, 158, 11, 0.2); }
+        @media (prefers-reduced-motion: reduce) {
+            .home-tip-text.is-new { animation: none; }
+            .home-tip-next:hover, .home-tip-next:focus-visible { transform: none; }
+        }
+        @media (max-width: 768px) {
+            .home-tip { width: calc(100% - 24px); margin-top: 10px; padding: 10px 12px; gap: 10px; }
+            .home-tip-ico { flex-basis: 34px; height: 34px; font-size: 1.05rem; }
+            .home-tip-text { font-size: 0.85rem; }
         }
         /* ===== What's cooking today? - same static chip strip as the pulse strip, theme-aware surface ===== */
         .meals-ticker {
@@ -2012,6 +2084,69 @@
                data-i18n-placeholder="meals_search_ph" placeholder="ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)" aria-label="ابحث عن طبختك أو وجبتك اليومية... (مثال: ملوخية، منسف، شاورما، برياني)">
         <button type="submit" class="meals-search-btn" data-i18n="meals_search_btn">ابحث 🔍</button>
     </form>
+    <!-- Tip of the day (moved here from foods.html): one tip per day of the week; the arrow shows the next one -->
+    <aside class="home-tip" aria-labelledby="homeTipLabel">
+        <span class="home-tip-ico" aria-hidden="true">💡</span>
+        <div class="home-tip-body">
+            <span class="home-tip-label" id="homeTipLabel" data-i18n="tip_label">نصيحة اليوم</span>
+            <p class="home-tip-text" id="homeTipText" aria-live="polite"></p>
+        </div>
+        <button type="button" class="home-tip-next" id="homeTipNext" aria-label="النصيحة التالية">
+            <i class="fas fa-arrow-rotate-right" aria-hidden="true"></i>
+        </button>
+    </aside>
+    <script>
+        (function () {
+            var TIPS = {
+                ar: [
+                    'الأطعمة ذات المؤشر الجلايسيمي المنخفض تساعد على استقرار سكر الدم بعد الوجبات.',
+                    'كوب ماء قبل الوجبة بنحو 20 دقيقة قد يساعدك على الشعور بالشبع بكمية أقل من الطعام.',
+                    'المشي 15 دقيقة بعد الوجبة يساعد عضلاتك على استخدام سكر الدم ويخفف ارتفاعه.',
+                    'ابدأ وجبتك بالخضار والبروتين ثم النشويات؛ هذا الترتيب يخفف قفزة السكر بعد الأكل.',
+                    'اجعل نصف طبقك من الخضار: أليافها تشبعك وتهدئ امتصاص السكر.',
+                    'اختر الفاكهة كاملة بدل العصير؛ الألياف في الثمرة تبطئ وصول سكرها إلى الدم.',
+                    'النوم الجيد من 7 إلى 8 ساعات يساعد على ضبط الشهية وهرمونات الجوع في اليوم التالي.'
+                ],
+                en: [
+                    'Low glycemic index foods help keep blood sugar steady after meals.',
+                    'A glass of water about 20 minutes before a meal may help you feel full on less food.',
+                    'A 15-minute walk after a meal helps your muscles use blood sugar and softens the rise.',
+                    'Start your meal with vegetables and protein, then the starch: this order softens the sugar spike after eating.',
+                    'Make half your plate vegetables: their fibre fills you up and calms sugar absorption.',
+                    'Choose whole fruit instead of juice: the fibre in the fruit slows its sugar reaching your blood.',
+                    'Good sleep of 7 to 8 hours helps regulate appetite and hunger hormones the next day.'
+                ],
+                nl: [
+                    'Voeding met een lage glykemische index helpt je bloedsuiker na de maaltijd stabiel te houden.',
+                    'Een glas water zo\'n 20 minuten voor de maaltijd kan je helpen sneller verzadigd te zijn.',
+                    'Een wandeling van 15 minuten na het eten helpt je spieren bloedsuiker te gebruiken en dempt de stijging.',
+                    'Begin je maaltijd met groente en eiwit en eet het zetmeel daarna: die volgorde dempt de suikerpiek.',
+                    'Vul de helft van je bord met groente: de vezels verzadigen en zorgen voor een rustigere suikeropname.',
+                    'Kies hele vruchten in plaats van sap: de vezels in de vrucht vertragen de suiker naar je bloed.',
+                    'Goed slapen, 7 tot 8 uur, helpt je eetlust en hongerhormonen de volgende dag te regelen.'
+                ]
+            };
+            var NEXT = { ar: 'النصيحة التالية', en: 'Next tip', nl: 'Volgende tip' };
+            var day = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+            var offset = 0;
+
+            window.renderHomeTip = function (animate) {
+                var lang = (typeof currentLang !== 'undefined' && TIPS[currentLang]) ? currentLang : 'ar';
+                var tips = TIPS[lang];
+                var el = document.getElementById('homeTipText');
+                var btn = document.getElementById('homeTipNext');
+                if (!el) return;
+                el.textContent = tips[(day + offset) % tips.length];
+                if (btn) { btn.setAttribute('aria-label', NEXT[lang]); btn.title = NEXT[lang]; }
+                if (animate) { el.classList.remove('is-new'); void el.offsetWidth; el.classList.add('is-new'); }
+            };
+            document.getElementById('homeTipNext').addEventListener('click', function () {
+                offset++;
+                window.renderHomeTip(true);
+            });
+            window.renderHomeTip(false);
+        })();
+    </script>
     <!-- Main Content -->
     <div class="container">
         <!-- Hero Section -->
