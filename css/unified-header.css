@@ -402,7 +402,7 @@ body > header .nav-buttons { width: auto !important; }
 }
 
 /* mid-width desktops: the logo already links home, so the Home capsule gives way to keep the menu
-   (incl. the Partnerships capsule) on one row until the hamburger takes over at 992px */
+   (incl. the Diabetes and Partnerships capsules) on one row until the hamburger takes over at 992px */
 @media (min-width: 993px) and (max-width: 1320px) {
     body > header .nav-menu .nav-link > i { display: none !important; }
 }
@@ -412,7 +412,7 @@ body > header .nav-buttons { width: auto !important; }
     body > header .nav-links-bar > a.nav-link[href="/?lang=en"],
     body > header .nav-links-bar > a.nav-link[href="/?lang=nl"] { display: none !important; }
 }
-@media (min-width: 993px) and (max-width: 1080px) {
+@media (min-width: 993px) and (max-width: 1200px) {
     body > header .nav-menu, body > header .nav-links-bar { gap: 3px !important; }
     body > header .nav-link { padding: 0 8px !important; font-size: 12px !important; }
     body > header .header-controls > .lang-btn { width: 30px !important; }

@@ -1204,7 +1204,27 @@
         .feature-thumb { width: 140px; height: 100px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 2px solid #34d399; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         .feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .feature-duo .feature-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+        /* Lead article: one wide card above the featured pair, photo beside the text (stacked below 860px) */
+        .leptin-feature-card.feature-lead { max-width: 1100px; margin: 20px auto; padding: 24px; display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-areas: "thumb content" "thumb btn";
+            column-gap: 28px; row-gap: 16px; align-items: center; text-align: start; }
+        .feature-lead .feature-thumb { grid-area: thumb; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+        .feature-lead .leptin-feature-content { grid-area: content; align-self: end; }
+        .feature-lead .leptin-feature-content h3 { font-size: 26px; line-height: 1.45; }
+        .feature-lead .leptin-feature-content p { font-size: 16px; }
+        .feature-lead .leptin-feature-btn { grid-area: btn; justify-self: start; align-self: start; }
+        @media (max-width: 860px) {
+            .leptin-feature-card.feature-lead { grid-template-columns: 1fr; grid-template-areas: "thumb" "content" "btn"; padding: 20px; text-align: center; }
+            .feature-lead .leptin-feature-content h3 { font-size: 21px; }
+            .feature-lead .leptin-feature-btn { justify-self: center; }
+        }
         .latest-article-card[hidden] { display: none; } /* the card's display:flex would override [hidden] */
+        /* The homepage menu carries two more capsules (Recipes, Diabetes) than other pages: tighten it where it would overflow */
+        @media (min-width: 993px) and (max-width: 1080px) { html body > header .logo-text { display: none !important; } }
+        @media (min-width: 1201px) and (max-width: 1320px) {
+            html body > header .nav-menu { gap: 4px !important; }
+            html body > header .nav-menu .nav-link { padding: 0 10px !important; }
+        }
         .feature-badge { display: inline-block; padding: 4px 12px; margin-bottom: 8px; border-radius: 999px; background: rgba(52, 211, 153, 0.18); border: 1px solid #34d399; color: #d1fae5; font-size: 13px; font-weight: 800; }
         @media (max-width: 860px) {
             .feature-duo { grid-template-columns: 1fr; }
@@ -1914,6 +1934,7 @@
                     <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
                     <a href="recipes.html" class="nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات</span></a>
                     <a href="#articles" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                    <a href="/diabetes.html" class="nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">السكري والأيض</span></a>
                     <a href="supplements.html?v=6.0" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات الغذائية</span></a>
                     <a href="boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
                     <a href="partners.html" class="nav-link nav-partners"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">الشراكات</span></a>
@@ -1951,6 +1972,7 @@
         <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات الصحية</span></a>
         <a href="recipes.html" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">الوصفات الصحية</span></a>
         <a href="#articles" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات الصحية</span></a>
+        <a href="/diabetes.html" class="mobile-nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">السكري والأيض</span></a>
         <a href="supplements.html?v=6.0" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">دليل المكملات الغذائية</span></a>
         <a href="about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">من نحن</span></a>
         <a href="boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">تطبيق بودي 💚</span></a>
@@ -2170,7 +2192,20 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- 1. كرت مقال اللبتين الملكي VIP بصورة البنت بأعلى الصفحة فوراً -->
+            <!-- 1. Lead article (first and largest card on the page): point the feat_latest_* i18n keys (and the fallback
+                 text/img here) at the next article to rotate it. Add `hidden` to park the card while no article is ready. -->
+            <div class="leptin-feature-card latest-article-card feature-lead" id="latestArticleCard">
+                <div class="feature-thumb">
+                    <img src="/images/gestational-diabetes-guide-hero.webp" alt="امرأة حامل مبتسمة في مطبخ مشمس مع وعاء توت وأفوكادو" data-i18n-alt="feat_latest_alt" width="1376" height="768" fetchpriority="high" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge" data-i18n="feat_latest_cat">🩺 مقال جديد / السكري ومتلازمة الأيض</span>
+                    <h3 data-i18n="feat_latest_title">دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام وجدول الأكل المسموح والممنوع</h3>
+                    <p data-i18n="feat_latest_sum">اطمئني، سكر الحمل ليس خطأكِ. أرقام التحاليل الطبيعية، نظام الإشارات المرورية للأطعمة، وخطة يومكِ خطوة بخطوة</p>
+                </div>
+                <a href="/diabetes/gestational-diabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">اقرأ الدليل الكامل</a>
+            </div>
+            <!-- 2. Featured pair: leptin article (كرت مقال اللبتين) and the sugar-free cereals guide -->
             <div class="feature-duo">
             <div class="leptin-feature-card">
                 <div class="feature-thumb">
@@ -2197,19 +2232,6 @@
             </div>
             </div>
 
-            <!-- Latest article slot: point the feat_latest_* i18n keys (and the fallback text/img here) at the next article to rotate it.
-                 Add `hidden` to park the card while no article is ready. -->
-            <div class="leptin-feature-card latest-article-card" id="latestArticleCard">
-                <div class="feature-thumb">
-                    <img src="/images/gestational-diabetes-guide-hero.webp" alt="امرأة حامل مبتسمة في مطبخ مشمس مع وعاء توت وأفوكادو" data-i18n-alt="feat_latest_alt" width="1376" height="768" loading="lazy" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge" data-i18n="feat_latest_cat">🩺 مقال جديد / السكري ومتلازمة الأيض</span>
-                    <h3 data-i18n="feat_latest_title">دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام وجدول الأكل المسموح والممنوع</h3>
-                    <p data-i18n="feat_latest_sum">اطمئني، سكر الحمل ليس خطأكِ. أرقام التحاليل الطبيعية، نظام الإشارات المرورية للأطعمة، وخطة يومكِ خطوة بخطوة</p>
-                </div>
-                <a href="/diabetes/gestational-diabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">اقرأ الدليل الكامل</a>
-            </div>
             <script>
                 // A click anywhere on a featured card follows its button, whose href is already in the visitor's language
                 document.querySelectorAll('.feature-duo .leptin-feature-card, .latest-article-card').forEach(function (card) {
@@ -2697,5 +2719,6 @@
         });
     }
     </script>
+    <script src="/js/nav-diabetes.js"></script>
 </body>
 </html>

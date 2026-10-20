@@ -17,7 +17,7 @@ import json
 import re
 from pathlib import Path
 
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, site_link
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -122,9 +122,7 @@ def build(s, lang, vetted):
         f'<li><a href="{page_url(r["slug"], lang, absolute=False)}">{esc(r[NAME[lang]] or r["name"])}'
         f'<span>{esc(r["groupLabel"][lang])}</span></a></li>' for r in related[:4])
 
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
-    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}{" active" if p == "/supplements.html" else ""}">{label}</a>'
-                    for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
+    nav = nav_html(lang, active='/supplements.html')
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(s["slug"], l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'

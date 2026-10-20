@@ -23,7 +23,7 @@ import re
 from pathlib import Path
 
 from article_content import ARTICLES, SECTIONS
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, site_link
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -155,12 +155,11 @@ def render_body(html, lang):
     return re.sub(r'\{site:([^}]+)\}', lambda m: site_link(m.group(1), lang), html)
 
 
-def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', image=None, image_alt='', extra_head=''):
+def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', image=None, image_alt='', extra_head='',
+          active='/#articles'):
     """Full page around `main`: head and SEO tags, header with language links (to `urls`) and footer; shared by articles and hubs."""
     t, u = T[lang], UI[lang]
-    nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
-    nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}{" active" if p == "/#articles" else ""}">{label}</a>'
-                    for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
+    nav = nav_html(lang, active=active)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{urls[l][len(SITE):]}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
@@ -343,7 +342,8 @@ def build(a, lang):
     if hero:
         extra_head += f'\n    <link rel="preload" as="image" href="/images/{a["hero"]}" fetchpriority="high">'
     return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=draft,
-                 og_type='article', image=hero, image_alt=c.get('hero_alt', ''), extra_head=extra_head)
+                 og_type='article', image=hero, image_alt=c.get('hero_alt', ''), extra_head=extra_head,
+                 active=f'/{section_dir(a)}.html' if a.get('section') else '/#articles')
 
 
 def build_hub(key, lang):
@@ -389,7 +389,8 @@ def build_hub(key, lang):
             </div>
             <p class="disclaimer-box">{c["disclaimer"]}</p>
         </article>'''
-    return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=sec.get('draft'))
+    return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=sec.get('draft'),
+                 active=f'/{sec["dir"]}.html')
 
 
 def lang_dir(lang, folder=''):
