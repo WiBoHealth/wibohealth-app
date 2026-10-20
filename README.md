@@ -76,7 +76,7 @@ my-articles.html        عرض المقالات (د. وسيم)
 ```
 css/                    ملفات التنسيق
 js/                     ملفات JavaScript
-  ├── foods-smart-search.js    البحث الذكي
+  ├── food-categories.js       المجموعات العشر لتصنيف الأطعمة
   └── ...
 images/                 الصور والأيقونات
 .well-known/           ملفات التحقق

@@ -5,3 +5,4 @@ insulin_index_report.csv
 __pycache__/
 images/foods/temp_*
 js/data_backup_gi.js
+js/data.backup.js

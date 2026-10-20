@@ -559,6 +559,19 @@
             font-size: 11px;
         }
 
+        .tab-btn.active .tab-count { background: rgba(255,255,255,0.22); }
+
+        /* Category chips: wrap on wide screens, one swipeable row on phones */
+        .category-bar { max-width: 1100px; margin-left: auto; margin-right: auto; }
+        .category-bar .tab-btn { padding: 8px 15px; font-size: 13px; white-space: nowrap; flex: 0 0 auto; }
+        .category-bar .tab-btn:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 2px; }
+        .category-bar .cat-icon { font-size: 16px; line-height: 1; }
+        .category-bar .fav-chip.active {
+            background: #ef4444;
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.35);
+        }
+        .category-bar .fav-chip.active i { color: white !important; }
+
         .tab-btn.active .tab-count {
             background: rgba(255,255,255,0.25);
             color: white;
@@ -850,8 +863,20 @@
         @media (max-width: 600px) {
             .food-grid { grid-template-columns: 1fr; }
             .daily-tip { flex-direction: column; text-align: center; }
-            .filter-tabs { flex-direction: column; }
-            .tab-btn { width: 100%; justify-content: center; }
+            .category-bar {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+                scroll-snap-type: x proximity;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                margin-left: -16px;
+                margin-right: -16px;
+                padding: 4px 16px 10px;
+            }
+            .category-bar::-webkit-scrollbar { display: none; }
+            .category-bar .tab-btn { scroll-snap-align: start; }
+            .category-bar .tab-btn:hover { transform: none; }
             .boodi-food-banner { text-align: center; justify-content: center; }
             .boodi-banner-btn { width: 100%; justify-content: center; }
         }
@@ -1258,21 +1283,16 @@
         <!-- Stats Bar -->
         <div class="stats-bar">
             <h2 data-i18n="stats_db_title">قاعدة بيانات شاملة</h2>
-            <p class="big-number" id="totalCount">1050</p>
+            <p class="big-number" id="totalCount">1056</p>
             <p class="stats-subtitle" data-i18n="stats_db_subtitle">عنصر غذائي مع معلومات غذائية كاملة</p>
         </div>
 
-        <!-- Tabs -->
-        <div class="filter-tabs">
-            <button class="tab-btn active" id="allFoodsTabBtn" onclick="switchFoodTab('all')">
+        <!-- Category chips: "All", the 10 master groups (js/food-categories.js) and favourites; filled by renderCategoryBar() -->
+        <div class="filter-tabs category-bar" id="categoryBar" role="toolbar" aria-label="Food categories">
+            <button class="tab-btn active" type="button" data-group="all" aria-pressed="true">
                 <i class="fas fa-utensils"></i>
-                <span data-i18n="tab_all">جميع الأطعمة</span>
-                <span class="tab-count" id="allFoodsCount">1050</span>
-            </button>
-            <button class="tab-btn" id="favFoodsTabBtn" onclick="switchFoodTab('fav')">
-                <i class="fas fa-heart" style="color: #ef4444;"></i>
-                <span data-i18n="tab_fav">أطعمتي المفضلة</span>
-                <span class="tab-count" id="favFoodsTabCount">0</span>
+                <span data-i18n="tab_all">الكل</span>
+                <span class="tab-count" id="allFoodsCount">1056</span>
             </button>
         </div>
 
@@ -1364,14 +1384,18 @@
     </div>
 
     <!-- Load Food Database -->
-    <script src="js/data.js"></script>
+    <script src="js/data.js?v=20261020"></script>
+    <script src="js/food-categories.js?v=20261020"></script>
     <script src="js/food-pages.js"></script>
 
     <!-- High-Performance Lazy Rendering, SEO & Zero-Shift Engine -->
     <script>
         window.allFoods = [];
         let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]').map(String);
-        let currentTab = 'all';
+        // Filters combine: master group (?group=KEY), favourites toggle and the free-text search
+        let selectedGroup = 'all';
+        let showFavorites = false;
+        const groupKeys = (window.FOOD_GROUPS || []).map(g => g.key);
 
         const CHUNK_SIZE = 36;
         let visibleCount = CHUNK_SIZE;
@@ -1379,53 +1403,12 @@
         let searchDebounceTimer = null;
         let scrollObserver = null;
 
-        const clinicalCategoryShield = {
-            'حبوب': { en: 'Grains & Starches', nl: 'Granen & Zetmeel' },
-            'بقوليات': { en: 'Legumes & Pulses', nl: 'Peulvruchten' },
-            'خضروات': { en: 'Vegetables', nl: 'Groenten' },
-            'فواكه': { en: 'Fruits', nl: 'Fruit' },
-            'ألبان': { en: 'Dairy & Cheese', nl: 'Zuivel & Kaas' },
-            'مكسرات': { en: 'Nuts & Seeds', nl: 'Noten & Zaden' },
-            'بروتين': { en: 'Proteins & Meat', nl: 'Eiwitten & Vlees' },
-            'أطعمة عربية': { en: 'Arabic Cuisine', nl: 'Arabische Gerechten' },
-            'أطعمة هولندية': { en: 'Dutch Cuisine', nl: 'Nederlandse Keuken' },
-            'أطعمة إيطالية': { en: 'Italian Cuisine', nl: 'Italiaanse Keuken' },
-            'أطعمة مكسيكية': { en: 'Mexican Cuisine', nl: 'Mexicaanse Keuken' },
-            'أطعمة آسيوية': { en: 'Asian Cuisine', nl: 'Aziatische Keuken' },
-            'أطعمة فرنسية': { en: 'French Cuisine', nl: 'Franse Keuken' },
-            'أطعمة إسبانية': { en: 'Spanish Cuisine', nl: 'Spaanse Keuken' },
-            'أطعمة يونانية': { en: 'Greek Cuisine', nl: 'Griekse Keuken' },
-            'أطعمة تركية': { en: 'Turkish Cuisine', nl: 'Turkse Keuken' },
-            'أطعمة مغربية': { en: 'Moroccan Cuisine', nl: 'Marokkaanse Keuken' },
-            'أطعمة نباتية': { en: 'Plant-Based', nl: 'Plantaardig' },
-            'مطاعم': { en: 'Fast Food', nl: 'Fastfood' },
-            'حلويات': { en: 'Desserts & Sweets', nl: 'Desserts & Gebak' },
-            'مخبوزات': { en: 'Bakery & Bread', nl: 'Bakkerij & Brood' },
-            'سندويشات': { en: 'Sandwiches & Wraps', nl: 'Broodjes & Wraps' },
-            'وجبات منزلية': { en: 'Home Cooked Meals', nl: 'Huisgemaakte Maaltijden' },
-            'سلطات': { en: 'Fresh Salads', nl: 'Verse Salades' },
-            'شوربات': { en: 'Soups & Stews', nl: 'Soepen & Stoofpotten' },
-            'زيوت': { en: 'Healthy Oils & Fats', nl: 'Gezonde Oliën & Vetten' },
-            'صلصات': { en: 'Sauces & Dips', nl: 'Sauzen & Dips' },
-            'مشروبات': { en: 'Beverages & Drinks', nl: 'Dranken' },
-            'سكريات': { en: 'Natural Sweeteners', nl: 'Natuurlijke Suikers' },
-            'مكملات': { en: 'Clinical Supplements', nl: 'Supplementen' },
-            'وجبات خفيفة': { en: 'Healthy Snacks', nl: 'Tussendoortjes' },
-            'معلبات': { en: 'Preserved & Canned', nl: 'Conserven' },
-            'مشروبات كحولية': { en: 'Alcoholic Beverages', nl: 'Alcoholische Dranken' }
-        };
-
+        // Fine category label on cards and in the modal (all three fields are set for every record in js/data.js)
         function getSafeCategoryName(food, lang) {
             if (!food) return '';
-            if (lang === 'ar') return food.category || '';
-            if (lang === 'nl' && food.categoryNl) return food.categoryNl;
-            if (lang === 'en' && food.categoryEn) return food.categoryEn;
-
-            const baseCat = food.category || '';
-            if (clinicalCategoryShield[baseCat]) {
-                return clinicalCategoryShield[baseCat][lang] || clinicalCategoryShield[baseCat].en || baseCat;
-            }
-            return food.categoryNl || food.categoryEn || baseCat;
+            if (lang === 'nl') return food.categoryNl || food.categoryEn || food.category || '';
+            if (lang === 'en') return food.categoryEn || food.categoryNl || food.category || '';
+            return food.category || '';
         }
 
         const foodsTranslations = {
@@ -1447,8 +1430,9 @@
                 "daily_tip_title": "💡 نصيحة اليوم",
                 "stats_db_title": "قاعدة بيانات شاملة",
                 "stats_db_subtitle": "عنصر غذائي مع معلومات غذائية كاملة",
-                "tab_all": "جميع الأطعمة",
+                "tab_all": "الكل",
                 "tab_fav": "أطعمتي المفضلة",
+                "category_bar_label": "تصنيفات الأطعمة",
                 "search_placeholder": "🔍 ابحث عن أي طعام أو تصنيف...",
                 "search_helper": "يمكنك البحث في اسم الطعام أو التصنيف (عربي / English / Nederlands)",
                 "no_results": "لم يتم العثور على أي طعام يطابق بحثك",
@@ -1515,8 +1499,9 @@
                 "daily_tip_title": "💡 Daily Tip",
                 "stats_db_title": "Comprehensive Database",
                 "stats_db_subtitle": "food items with complete nutritional evidence",
-                "tab_all": "All Foods",
+                "tab_all": "All",
                 "tab_fav": "My Favorites",
+                "category_bar_label": "Food categories",
                 "search_placeholder": "🔍 Search any food or category...",
                 "search_helper": "Search by food name or category (EN / NL / AR)",
                 "no_results": "No food found matching your search query",
@@ -1583,8 +1568,9 @@
                 "daily_tip_title": "💡 Tip van de dag",
                 "stats_db_title": "Complete Database",
                 "stats_db_subtitle": "voedingsmiddelen met volledige wetenschappelijke voedingswaarden",
-                "tab_all": "Alle Voedingsmiddelen",
+                "tab_all": "Alles",
                 "tab_fav": "Mijn Favorieten",
+                "category_bar_label": "Voedselcategorieën",
                 "search_placeholder": "🔍 Zoek een voedingsmiddel of categorie...",
                 "search_helper": "Zoek op naam of categorie (Nederlands / EN / AR)",
                 "no_results": "Geen voedingsmiddel gevonden dat aan je zoekopdracht voldoet",
@@ -1704,6 +1690,7 @@
             }
 
             showDailyTip();
+            renderCategoryBar();
             visibleCount = CHUNK_SIZE;
             filterFoods();
             updateStructuredDataForSEO();
@@ -1759,7 +1746,7 @@
             localStorage.setItem('wibo_favorites', JSON.stringify(favorites));
             updateFavCount();
 
-            if (currentTab === 'fav') {
+            if (showFavorites) {
                 visibleCount = CHUNK_SIZE;
                 filterFoods();
             } else {
@@ -1780,17 +1767,78 @@
             if (tabCount) tabCount.textContent = count;
         }
 
-        function switchFoodTab(tab) {
-            currentTab = tab;
+        // Chips: "All" + one per master group (count = foods in that group) + the favourites toggle
+        function renderCategoryBar() {
+            const bar = document.getElementById('categoryBar');
+            if (!bar) return;
+            const counts = {};
+            allFoods.forEach(f => { counts[f.group] = (counts[f.group] || 0) + 1; });
+
+            const chip = (key, icon, label, count) => `
+                <button class="tab-btn${selectedGroup === key ? ' active' : ''}" type="button" data-group="${key}" aria-pressed="${selectedGroup === key}">
+                    ${icon}<span>${label}</span><span class="tab-count">${count}</span>
+                </button>`;
+
+            bar.setAttribute('aria-label', t('category_bar_label'));
+            bar.innerHTML =
+                chip('all', '<i class="fas fa-utensils"></i>', t('tab_all'), allFoods.length) +
+                (window.FOOD_GROUPS || []).map(g =>
+                    chip(g.key, `<span class="cat-icon" aria-hidden="true">${g.icon}</span>`, getCategoryLabel(g.key, currentLang), counts[g.key] || 0)
+                ).join('') +
+                `<button class="tab-btn fav-chip${showFavorites ? ' active' : ''}" type="button" data-fav="1" aria-pressed="${showFavorites}">
+                    <i class="fas fa-heart" style="color: #ef4444;"></i><span>${t('tab_fav')}</span><span class="tab-count" id="favFoodsTabCount">${favorites.length}</span>
+                </button>`;
+        }
+
+        function updateCategoryBarState() {
+            document.querySelectorAll('#categoryBar [data-group]').forEach(btn => {
+                const on = btn.getAttribute('data-group') === selectedGroup;
+                btn.classList.toggle('active', on);
+                btn.setAttribute('aria-pressed', on);
+            });
+            const favBtn = document.querySelector('#categoryBar [data-fav]');
+            if (favBtn) {
+                favBtn.classList.toggle('active', showFavorites);
+                favBtn.setAttribute('aria-pressed', showFavorites);
+            }
+        }
+
+        function groupFromUrl() {
+            const g = new URLSearchParams(window.location.search).get('group');
+            return groupKeys.includes(g) ? g : 'all';
+        }
+
+        // Changes the group; pushState keeps ?lang, ?search and the #food hash, so modal links still work
+        function selectGroup(group, updateUrl = true) {
+            selectedGroup = groupKeys.includes(group) ? group : 'all';
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                if (selectedGroup === 'all') url.searchParams.delete('group');
+                else url.searchParams.set('group', selectedGroup);
+                if (url.href !== window.location.href) history.pushState({ group: selectedGroup }, '', url);
+            }
+            updateCategoryBarState();
             visibleCount = CHUNK_SIZE;
-            document.getElementById('allFoodsTabBtn').classList.toggle('active', tab === 'all');
-            document.getElementById('favFoodsTabBtn').classList.toggle('active', tab === 'fav');
             filterFoods();
         }
 
         function toggleFavoritesView() {
-            switchFoodTab(currentTab === 'all' ? 'fav' : 'all');
+            showFavorites = !showFavorites;
+            updateCategoryBarState();
+            visibleCount = CHUNK_SIZE;
+            filterFoods();
         }
+
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest && e.target.closest('#categoryBar .tab-btn');
+            if (!btn) return;
+            if (btn.hasAttribute('data-fav')) toggleFavoritesView();
+            else selectGroup(btn.getAttribute('data-group'));
+        });
+
+        window.addEventListener('popstate', function() {
+            if (groupFromUrl() !== selectedGroup) selectGroup(groupFromUrl(), false);
+        });
 
         function onSearchInput() {
             clearTimeout(searchDebounceTimer);
@@ -1804,24 +1852,20 @@
             const term = (document.getElementById('searchInput').value || '').toLowerCase().trim();
             
             let baseList = allFoods;
-            if (currentTab === 'fav') {
-                baseList = allFoods.filter(f => favorites.includes(String(f.id)));
+            if (selectedGroup !== 'all') {
+                baseList = baseList.filter(f => f.group === selectedGroup);
+            }
+            if (showFavorites) {
+                baseList = baseList.filter(f => favorites.includes(String(f.id)));
             }
 
             if (!term) {
                 currentFilteredList = baseList;
             } else {
-                currentFilteredList = baseList.filter(f => 
-                    (f.name && f.name.toLowerCase().includes(term)) ||
-                    (f.nameEn && f.nameEn.toLowerCase().includes(term)) ||
-                    (f.nameNl && f.nameNl.toLowerCase().includes(term)) ||
-                    (f.category && f.category.toLowerCase().includes(term)) ||
-                    (f.categoryEn && f.categoryEn.toLowerCase().includes(term)) ||
-                    (f.categoryNl && f.categoryNl.toLowerCase().includes(term)) ||
-                    (clinicalCategoryShield[f.category] && (
-                        (clinicalCategoryShield[f.category].en && clinicalCategoryShield[f.category].en.toLowerCase().includes(term)) ||
-                        (clinicalCategoryShield[f.category].nl && clinicalCategoryShield[f.category].nl.toLowerCase().includes(term))
-                    ))
+                const has = v => !!v && v.toLowerCase().includes(term);
+                currentFilteredList = baseList.filter(f =>
+                    has(f.name) || has(f.nameEn) || has(f.nameNl) ||
+                    has(f.category) || has(f.categoryEn) || has(f.categoryNl) || has(f.cuisine)
                 );
             }
 
@@ -1842,7 +1886,7 @@
             if (!grid) return;
 
             if (!currentFilteredList || currentFilteredList.length === 0) {
-                const msg = currentTab === 'fav' && favorites.length === 0 ? t('no_favorites') : t('no_results');
+                const msg = showFavorites && favorites.length === 0 ? t('no_favorites') : t('no_results');
                 grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: white; font-size: 18px; background: rgba(0,0,0,0.15); border-radius: 20px;"><i class="fas fa-heart-broken" style="font-size: 38px; margin-bottom: 12px; color: #fca5a5; display: block;"></i>${msg}</div>`;
                 if (sentinelText) sentinelText.textContent = '';
                 return;
@@ -2415,6 +2459,9 @@
             const searchParam = (new URLSearchParams(window.location.search).get('search') || '').trim().slice(0, 80);
             const searchBox = document.getElementById('searchInput');
             if (searchParam && searchBox) searchBox.value = searchParam;
+
+            // ?group=KEY (e.g. foods.html?group=fruits) opens with that category selected
+            selectedGroup = groupFromUrl();
 
             changeLanguage(currentLang);
             updateFavCount();
