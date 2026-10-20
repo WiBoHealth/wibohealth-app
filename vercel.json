@@ -37,7 +37,7 @@
       "permanent": true
     },
     {
-      "source": "/en/:path((?!foods/|supplements/|articles/|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
+      "source": "/en/:path((?!foods/|supplements/|articles/|diabetes|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
       "destination": "/",
       "permanent": true
     },
@@ -47,7 +47,7 @@
       "permanent": true
     },
     {
-      "source": "/nl/:path((?!foods/|supplements/|articles/|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
+      "source": "/nl/:path((?!foods/|supplements/|articles/|diabetes|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
       "destination": "/",
       "permanent": true
     },

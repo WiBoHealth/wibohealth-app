@@ -490,4 +490,302 @@ nl=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS]
+# --------------------------------------------------------------------------------------------
+# Sections: a hub page (<dir>.html per language) plus a folder for its articles (<dir>/<slug>.html).
+# An article joins a section with section='<key>'. draft=True keeps the hub noindex and out of the sitemap.
+# --------------------------------------------------------------------------------------------
+SECTIONS = dict(
+    diabetes=dict(
+        dir='diabetes',
+        content=dict(
+ar=dict(
+ title='السكري ومتلازمة الأيض: دليلك الصحي الشامل | WiBo Health',
+ h1='السكري ومتلازمة الأيض',
+ crumb='السكري ومتلازمة الأيض',
+ desc='أدلة WiBo Health المبنية على المراجع العلمية حول السكري ومقاومة الإنسولين ومتلازمة الأيض: التغذية، النشاط البدني، والمتابعة اليومية.',
+ intro='أدلة مبسطة ومبنية على المراجع العلمية حول السكري ومقاومة الإنسولين ومتلازمة الأيض، يعدّها فريق WiBo Health لمساعدتك على فهم حالتك والتحدث مع طبيبك بثقة.',
+ about=['Diabetes', 'Metabolic syndrome', 'Insulin resistance'],
+ disclaimer='⚖️ إخلاء مسؤولية طبي: المحتوى في هذا القسم مقدم لأغراض التثقيف الصحي العام من WiBo Health، ولا يُعتبر تشخيصاً طبياً ولا بديلاً عن استشارة طبيبك أو فريق الرعاية الصحية.'),
+en=dict(
+ title='Diabetes & Metabolic Health: your complete guide | WiBo Health',
+ h1='Diabetes & Metabolic Health',
+ crumb='Diabetes & Metabolic Health',
+ desc='Evidence-based WiBo Health guides on diabetes, insulin resistance and metabolic syndrome: nutrition, physical activity and day-to-day monitoring.',
+ intro='Clear, evidence-based guides on diabetes, insulin resistance and metabolic syndrome, prepared by the WiBo Health team to help you understand your situation and talk to your doctor with confidence.',
+ about=['Diabetes', 'Metabolic syndrome', 'Insulin resistance'],
+ disclaimer='⚖️ Medical disclaimer: the content in this section is general health education from WiBo Health. It is not a medical diagnosis and does not replace advice from your doctor or care team.'),
+nl=dict(
+ title='Diabetes & metabole gezondheid: je complete gids | WiBo Health',
+ h1='Diabetes & metabole gezondheid',
+ crumb='Diabetes & metabole gezondheid',
+ desc='Wetenschappelijk onderbouwde gidsen van WiBo Health over diabetes, insulineresistentie en het metabool syndroom: voeding, beweging en dagelijkse controle.',
+ intro='Heldere, wetenschappelijk onderbouwde gidsen over diabetes, insulineresistentie en het metabool syndroom, gemaakt door het WiBo Health-team om je situatie beter te begrijpen en met vertrouwen met je arts te praten.',
+ about=['Diabetes', 'Metabolic syndrome', 'Insulin resistance'],
+ disclaimer='⚖️ Medische disclaimer: de inhoud van deze sectie is algemene gezondheidsvoorlichting van WiBo Health. Het is geen medische diagnose en vervangt geen advies van je arts of zorgteam.'),
+        ),
+    ),
+)
+
+GESTATIONAL_DIABETES = dict(
+    section='diabetes',
+    slugs=dict(ar='gestational-diabetes', en='gestational-diabetes', nl='zwangerschapsdiabetes'),
+    hero='gestational-diabetes-guide-hero.webp', hero_size=(1376, 768),
+    published='2026-10-20', modified='2026-10-20', minutes=8,
+    references=[
+        'American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)',
+        'American College of Obstetricians and Gynecologists (ACOG). Practice Bulletin No. 190: Gestational Diabetes Mellitus. Obstet Gynecol 2018;131(2):e49–e64',
+        'National Institute for Health and Care Excellence (NICE). Diabetes in pregnancy: management from preconception to the postnatal period (NG3), 2015, updated 2020',
+        'International Federation of Gynecology and Obstetrics (FIGO). The FIGO Initiative on gestational diabetes mellitus: a pragmatic guide for diagnosis, management, and care. Int J Gynaecol Obstet 2015;131(Suppl 3):S173–S211',
+    ],
+    faq_schema=True,                                     # FAQPage JSON-LD built from the body's faq-item blocks
+    content=dict(
+ar=dict(
+ title='دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة',
+ h1='دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة',
+ crumb='سكر الحمل',
+ cat='السكري ومتلازمة الأيض',
+ desc='كل ما تحتاجين معرفته عن سكر الحمل: أرقام التحاليل الطبيعية على الريق وبعد الأكل، جدول الأطعمة المسموحة والممنوعة لتسطيح منحنى السكر وحماية جنينك، مع خطة وجبات متوازنة ودليل الأطعمة الشامل من WiBo Health.',
+ summary='المعدل الطبيعي بالأرقام، الأطعمة المسموحة والممنوعة، وخطة وجبات يومية متوازنة لتسطيح منحنى السكر.',
+ hero_alt='امرأة حامل مبتسمة في مطبخ مشمس تضع حساس قياس السكر على ذراعها وأمامها وعاء توت وأفوكادو',
+ about=['Gestational diabetes', 'Pregnancy', 'Blood glucose', 'Glycemic index'],
+ disclaimer='⚖️ تنبيه سريري وأمان صحي: هذا الدليل أُعد لأغراض التثقيف الصحي وتعديل نمط الحياة من WiBo Health، وهو مصمم ليتكامل مع خطة الرعاية الطبية التي يقدمها لكِ طبيب النسائية والتوليد المتابع لحملكِ، ولا يُعتبر تشخيصاً طبياً ولا بديلاً عنها.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>اطمئني.. أنتِ وجنينكِ بخير والحل يبدأ بلقمتكِ</span></h2>
+            <p class="lead">أول شعور ينتاب الأم عند سماع جملة "سكر الحمل مرتفع" هو الخوف وعتاب النفس: <em>"هل أكلت حلويات كثيرة؟ هل آذيت طفلي؟"</em>.</p>
+            <p>الحقيقة الطبية التي نريد أن تطمئني إليها فوراً: <strong>سكر الحمل ليس خطأكِ، ولا يعني أبداً أن طفلكِ مريض بالسكري.</strong> هو ببساطة إشارة من جسمكِ يخبركِ فيها أن هرمونات الحمل القوية تضع عبئاً مؤقتاً على معالجة السكريات، وبخطوات غذائية بسيطة وذكية ستعبرين هذه المرحلة بسلام وصحة فائقة لكِ ولمولودكِ.</p>
+
+            <h2 class="section-title"><i class="fas fa-dna"></i> <span>1. ماذا يحدث في جسمكِ حقاً؟ (السر في هرمونات المشيمة)</span></h2>
+            <p>المشيمة ليست مجرد وسيلة لتغذية طفلكِ، بل هي مصنع هرمونات جبار. خلال النصف الثاني من الحمل (خاصة بين الشهرين الخامس والسادس)، تفرز المشيمة هرمونات هدفها الوحيد هو: <em>"تأمين أكبر قدر ممكن من الطاقة والغذاء للجنين ليكبر"</em>.</p>
+            <p>لكي تفعل ذلك، تقوم هذه الهرمونات بجعل خلايا جسمكِ أكثر مقاومة للإنسولين (أي تترك السكر في مجرى الدم ليمر للطفل). في الطبيعي، يتدخل البنكرياس ويفرز كميات إضافية مضاعفة من الإنسولين ليوازن الكفة. ولكن عندما يتأخر البنكرياس قليلاً عن مجاراة هذا الطلب الكبير، يرتفع السكر في الدم، ونسمي هذه الحالة <strong>سكر الحمل</strong>.</p>
+            <div class="tip"><h3>👶 كيف يتأثر الجنين؟</h3><p>إذا بقي السكر مرتفعاً في دم الأم، يمر هذا السكر الزائد للجنين، فيضطر بنكرياس الجنين الصغير لإفراز إنسولين إضافي ليخزن هذا السكر على شكل دهون، مما قد يجعل وزنه كبيراً عند الولادة. لذلك فإن تحكمكِ في طعامكِ هو أكبر درع حماية لنمو طفلكِ بتناسق وأمان.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>2. جدول سكر الحمل: ما هي الأرقام والمعدلات الطبيعية؟</span></h2>
+            <p>عند قياس السكر بجهاز الفحص المنزلي، هناك 3 أرقام ذهبية يجب أن تتذكريها دائماً:</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num"><bdi dir="ltr">&lt; 95 <small>mg/dL</small></bdi></div><h3>على الريق</h3><p>أول ما تستيقظين قبل الإفطار. بالمول (أوروبا): أقل من <bdi>5.3 mmol/L</bdi>.</p></div>
+                <div class="rule-card"><div class="rule-num"><bdi dir="ltr">&lt; 140 <small>mg/dL</small></bdi></div><h3>بعد الوجبة بساعة واحدة</h3><p>بالمول (أوروبا): أقل من <bdi>7.8 mmol/L</bdi>.</p></div>
+                <div class="rule-card"><div class="rule-num"><bdi dir="ltr">&lt; 120 <small>mg/dL</small></bdi></div><h3>بعد الوجبة بساعتين</h3><p>بالمول (أوروبا): أقل من <bdi>6.7 mmol/L</bdi>.</p></div>
+            </div>
+            <h3>لماذا يرتفع السكر أحياناً على الريق؟</h3>
+            <p>في ساعات الفجر، يفرز الكبد كمية طبيعية من الجلوكوز ليعطيكِ طاقة للاستيقاظ (تسمى ظاهرة الفجر). إذا كان السكر الصباحي يرتفع عندكِ، فالحل ليس تجويع نفسكِ ليلاً، بل تناول وجبة خفيفة ذكية قبل النوم (مثل ملعقة زبدة فول سوداني نقية أو حفنة <a href="{food:walnuts}">جوز</a>) لتثبيت إشارات الكبد، مع إخبار طبيبكِ بأرقامكِ الصباحية.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>3. جدول الأكل لسكر الحمل: نظام الإشارات المرورية الذكي</span></h2>
+            <p>بدلاً من الحرمان القاسي، السر الطبي هو <strong>"تسطيح منحنى السكر"</strong>؛ أي تناول وجبات تُمتص ببطء وهدوء وتمنع القفزات الحادة.</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 الضوء الأخضر (كلي منها براحة وأمان - أساس طبقكِ)</div>
+            <ul class="check-list">
+                <li><strong>البروتينات الصافية:</strong> <a href="{food:boiled-egg}">البيض المسلوق</a> أو <a href="{food:egg-omelette}">الأومليت</a>، <a href="{food:grilled-chicken-breast}">صدور الدجاج المشوية</a>، والأسماك الآمنة المطهوة جيداً (كـ<a href="{food:grilled-salmon}">السلمون</a> الغني بدهون أوميغا 3 لبناء دماغ الجنين).</li>
+                <li><strong>الدهون الصحية:</strong> <a href="{food:extra-virgin-olive-oil}">زيت الزيتون البكر الممتاز</a>، <a href="{food:avocado}">الأفوكادو</a>، <a href="{food:walnuts}">الجوز (عين الجمل)</a>، واللوز النيء.</li>
+                <li><strong>الخضار الورقية والألياف:</strong> <a href="{food:spinach}">السبانخ</a>، <a href="{food:zucchini}">الكوسا</a>، <a href="{food:cucumber}">الخيار</a>، <a href="{food:broccoli}">البروكلي</a>، والخس. (الألياف تعمل مثل الإسفنجة في أمعائكِ، تمتص السكر وتجعله يدخل مجرى الدم ببطء شديد).</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 الضوء الأصفر (مفيدة ولكن بحساب وذكاء)</div>
+            <ul class="check-list">
+                <li><strong>الكربوهيدرات المعقدة:</strong> <a href="{food:quinoa}">الكينوا</a>، <a href="{food:oatmeal}">الشوفان الكامل</a> غير السريع، و<a href="{food:sourdough-bread}">خبز الحبة الكاملة المخمر طبيعياً</a> (<bdi>Sourdough</bdi>).</li>
+                <li><strong>الفواكه الصديقة للأنسولين:</strong> <a href="{food:blueberry}">التوت الأزرق</a>، <a href="{food:strawberry}">الفراولة</a>، <a href="{food:apple}">التفاح الأخضر</a>. (نصيحة ذهبية: لا تأكلي الفاكهة وحدها أبداً، تناولي معها دائماً بضع حبات لوز أو ملعقة <a href="{food:greek-yogurt}">لبن يوناني</a> لفرملة امتصاص السكر).</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 الضوء الأحمر (ابتعدي عنها لحماية استقرار أرقامكِ)</div>
+            <ul class="check-list">
+                <li><strong>العصائر (حتى الطبيعية والمعصورة طازجة):</strong> العصير عبارة عن سكر مركز مجرد من الألياف، يرفع السكر كالسهم في دقائق معدودة. استبدليه بالفاكهة الكاملة مع شرب الماء.</li>
+                <li><strong>المخبوزات والنشويات البيضاء:</strong> الخبز الأبيض، المعجنات، الفطائر، وحبوب الإفطار المحلاة.</li>
+                <li><strong>السكريات المقنّعة:</strong> المالتوديكسترين، النشا المعدل، وشراب الذرة، وهي مكونات تُضاف بكثرة لمنتجات "خالية من السكر" لكنها ترفع السكر بشدة!</li>
+            </ul>
+
+
+            <h2 class="section-title"><i class="fas fa-cart-shopping"></i> <span>4. كيف تتسوقين بأمان؟ استعيني بـ "دليل الأطعمة الشامل" في موقعنا</span></h2>
+            <p>التسوق في السوبرماركت قد يكون محيراً؛ فكل منتج يكتب عليه <em>"صحي ومناسب للحمية"</em>. لمساعدتكِ في اتخاذ قرار فوري وصحيح:</p>
+            <ul class="check-list">
+                <li><strong>تصفحي <a href="{site:/foods.html}">دليل الأطعمة في الموقع</a>:</strong> خصصنا لكِ في منصة <strong>WiBo Health</strong> دليلاً سريرياً ضخماً يضم أكثر من 850 صنفاً غذائياً مع تصنيف مؤشرها الجلايسيمي الدقيق وقيمتها الغذائية.</li>
+                <li><strong>أضيفي الموقع لشاشة هاتفكِ (تطبيق الويب السريع):</strong> بنقرة واحدة من متصفحكِ (<bdi>Add to Home Screen</bdi>)، يصبح الموقع متاحاً على شاشة هاتفكِ مثل أي تطبيق، لتفتحي الدليل وأنتِ داخل السوبرماركت وتبحثي عن أي منتج قبل وضعه في سلة المشتريات.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. خطة يومكِ المتوازن: نموذج وجبات واقعي ومشبع</span></h2>
+            <ul class="check-list">
+                <li><strong>وجبة الإفطار:</strong> بيضتان مطهوتان بزيت الزيتون مع شرائح أفوكادو وخضار ورقية (جرجير وخيار)، مع ربع رغيف خبز كامل الحبة.</li>
+                <li><strong>سناك الصباح:</strong> حفنة صغيرة من عين الجمل (الجوز) مع نصف كوب توت طازج.</li>
+                <li><strong>وجبة الغداء:</strong> طبق سلطة ملون كبير بزيت الزيتون والليمون (ابدئي به أولاً)، قطعة سمك أو دجاج مشوي، مع 3 ملاعق كينوا أو <a href="{food:brown-rice}">أرز بني</a> مطبوخ.</li>
+                <li><strong>سناك بعد الظهر:</strong> شرائح خيار وجزر مع ملعقتين من <a href="{food:hummus-with-tahini}">الحمص بالطحينة</a> أو <a href="{food:cottage-cheese}">جبنة قريش</a> مبسترة.</li>
+                <li><strong>وجبة العشاء:</strong> شوربة بروكلي وكوسا دافئة مع صدر دجاج مقطع، مريحة للمعدة وتمنع حموضة الليل.</li>
+                <li><strong>سناك ما قبل النوم:</strong> شريحة تفاح رقيقة مدهونة بملعقة صغيرة من زبدة الفول السوداني الطبيعية 100%.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span>6. حيل سريرية ذكية تضبط السكر دون حرمان</span></h2>
+            <ol class="steps">
+                <li><strong>ترتيب تناول اللقمة في الصحن:</strong> ابدئي بأكل الخضار والسلطة أولاً، ثم البروتين والدهون، واتركي النشويات لآخر الوجبة. هذا الترتيب البسيط يخفف قفزة السكر بعد الوجبة بشكل ملحوظ!</li>
+                <li><strong>المشي السحري لمدة 10 دقائق بعد الطعام:</strong> عندما تمشين بخفة بعد وجبتكِ، تفتح عضلات الساقين أبوابها لامتصاص السكر مباشرة من الدم لحرقه كطاقة، دون أن تطلب أي إنسولين إضافي من البنكرياس.</li>
+                <li><strong>الماء أفضل صديق لكِ:</strong> اجعلي الماء مشروبكِ الأساسي بدلاً من العصائر والمشروبات المحلاة؛ تحتاج الحامل إلى نحو 2.3 لتر من السوائل يومياً (من الماء والطعام معاً)، وهذا يحافظ على ترطيب جسمكِ دون أي سكر إضافي.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>7. أسئلة تهمكِ وإجاباتها من واقع العيادة</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>هل يعني تشخيصي بسكر الحمل أنني سأحتاج حتماً لإبر الإنسولين؟</h3><p>لا على الإطلاق! نحو 70 إلى 85% من الحوامل يتحكمن في أرقام السكر بنجاح وأمان عبر تنظيم الغذاء والمشي الخفيف فقط. والإنسولين لا يُستخدم إلا إذا كانت الأرقام عنيدة لحماية طفلكِ، وهو دواء آمن جداً ولا يعبر المشيمة إلى الجنين.</p></div>
+                <div class="faq-item"><h3>هل سيستمر السكري معي بعد الولادة؟</h3><p>في أكثر من 90% من الحالات، يعود السكر إلى طبيعته تماماً بعد خروج المشيمة والولادة. سيطلب منكِ طبيبكِ فحصاً بسيطاً بعد 4 إلى 12 أسبوعاً من الولادة للتأكد التام، ثم فحصاً دورياً كل 1 إلى 3 سنوات، لأن سكر الحمل يرفع احتمال الإصابة بالسكري من النوع الثاني لاحقاً. والحفاظ على هذه العادات الغذائية الجميلة التي حميتِ بها نفسكِ وطفلكِ هو أفضل وقاية.</p></div>
+            </div>'''),
+en=dict(
+ title='Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step',
+ h1='Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step',
+ crumb='Gestational diabetes',
+ cat='Diabetes & Metabolic Health',
+ desc='Everything you need to know about gestational diabetes: normal fasting and after-meal blood sugar levels, a foods to eat and avoid list to flatten your glucose curve and protect your baby, plus a balanced meal plan and the WiBo Health food guide.',
+ summary='Normal levels in numbers, foods to eat and avoid, and a balanced daily meal plan to flatten your glucose curve.',
+ hero_alt='Smiling pregnant woman in a sunny kitchen wearing a glucose sensor on her arm, with a bowl of berries and an avocado',
+ about=['Gestational diabetes', 'Pregnancy', 'Blood glucose', 'Glycemic index'],
+ disclaimer='⚖️ Clinical safety notice: this guide was prepared by WiBo Health for health education and lifestyle support. It is designed to complement the medical care plan from the obstetrician who follows your pregnancy, and it is not a diagnosis or a substitute for that care.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Take a breath: you and your baby are fine, and the answer starts on your plate</span></h2>
+            <p class="lead">The first thing most mothers feel when they hear "your pregnancy blood sugar is high" is fear and guilt: <em>"Did I eat too many sweets? Have I hurt my baby?"</em></p>
+            <p>Here is the medical truth we want you to hold on to right away: <strong>gestational diabetes is not your fault, and it does not mean your baby has diabetes.</strong> It is simply your body telling you that the powerful pregnancy hormones are putting a temporary load on how you handle sugar. With a few simple, smart food steps you will get through this stage safely and in great health, for you and for your baby.</p>
+
+            <h2 class="section-title"><i class="fas fa-dna"></i> <span>1. What is really happening in your body? (The secret is in the placenta's hormones)</span></h2>
+            <p>The placenta is not just a way to feed your baby; it is a powerful hormone factory. In the second half of pregnancy (especially around the fifth and sixth months), the placenta releases hormones with one goal: <em>"get as much energy and food as possible to the baby so it can grow"</em>.</p>
+            <p>To do that, these hormones make your cells more resistant to insulin (they leave sugar in the bloodstream so it can pass to the baby). Normally your pancreas steps in and releases extra insulin to balance things out. But when the pancreas falls a little behind this high demand, blood sugar rises, and that is what we call <strong>gestational diabetes</strong>.</p>
+            <div class="tip"><h3>👶 How does it affect the baby?</h3><p>If the mother's blood sugar stays high, the extra sugar passes to the baby. The baby's small pancreas then has to make extra insulin to store that sugar as fat, which can make the baby large at birth. That is why managing what you eat is the strongest shield for your baby's healthy, balanced growth.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>2. Gestational diabetes chart: what are the normal levels?</span></h2>
+            <p>When you check your sugar with a home meter, there are 3 golden numbers to remember:</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">&lt; 95 <small>mg/dL</small></div><h3>Fasting</h3><p>As soon as you wake up, before breakfast. In mmol/L (Europe): below 5.3 mmol/L.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 140 <small>mg/dL</small></div><h3>1 hour after a meal</h3><p>In mmol/L (Europe): below 7.8 mmol/L.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 120 <small>mg/dL</small></div><h3>2 hours after a meal</h3><p>In mmol/L (Europe): below 6.7 mmol/L.</p></div>
+            </div>
+            <h3>Why is fasting sugar sometimes high?</h3>
+            <p>In the early morning hours your liver naturally releases glucose to give you energy to wake up (the dawn phenomenon). If your morning sugar runs high, the answer is not to starve yourself at night, but to have a smart bedtime snack (such as a spoon of pure peanut butter or a handful of <a href="{food:walnuts}">walnuts</a>) to steady the liver's signals, and to share your morning numbers with your doctor.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>3. Gestational diabetes food list: the smart traffic-light system</span></h2>
+            <p>Instead of harsh restriction, the medical secret is to <strong>"flatten the glucose curve"</strong>: eat meals that are absorbed slowly and calmly and prevent sharp spikes.</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 Green light (eat freely and safely: the base of your plate)</div>
+            <ul class="check-list">
+                <li><strong>Lean proteins:</strong> <a href="{food:boiled-egg}">boiled eggs</a> or an <a href="{food:egg-omelette}">omelette</a>, <a href="{food:grilled-chicken-breast}">grilled chicken breast</a>, and safe, well-cooked fish (such as <a href="{food:grilled-salmon}">salmon</a>, rich in omega-3 fats for your baby's brain).</li>
+                <li><strong>Healthy fats:</strong> <a href="{food:extra-virgin-olive-oil}">extra virgin olive oil</a>, <a href="{food:avocado}">avocado</a>, <a href="{food:walnuts}">walnuts</a> and raw almonds.</li>
+                <li><strong>Leafy greens and fibre:</strong> <a href="{food:spinach}">spinach</a>, <a href="{food:zucchini}">courgette</a>, <a href="{food:cucumber}">cucumber</a>, <a href="{food:broccoli}">broccoli</a> and lettuce. (Fibre works like a sponge in your gut, soaking up sugar so it enters the bloodstream very slowly.)</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 Yellow light (helpful, but in smart portions)</div>
+            <ul class="check-list">
+                <li><strong>Complex carbohydrates:</strong> <a href="{food:quinoa}">quinoa</a>, whole <a href="{food:oatmeal}">rolled oats</a> (not instant), and naturally fermented whole-grain <a href="{food:sourdough-bread}">sourdough bread</a>.</li>
+                <li><strong>Insulin-friendly fruit:</strong> <a href="{food:blueberry}">blueberries</a>, <a href="{food:strawberry}">strawberries</a>, <a href="{food:apple}">green apple</a>. (Golden tip: never eat fruit on its own; always add a few almonds or a spoon of <a href="{food:greek-yogurt}">Greek yogurt</a> to put the brakes on sugar absorption.)</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 Red light (avoid to keep your numbers stable)</div>
+            <ul class="check-list">
+                <li><strong>Juices (even natural and freshly squeezed):</strong> juice is concentrated sugar stripped of its fibre and sends blood sugar up like an arrow within minutes. Swap it for whole fruit and a glass of water.</li>
+                <li><strong>White bakery products and starches:</strong> white bread, pastries, pies and sweetened breakfast cereals.</li>
+                <li><strong>Hidden sugars:</strong> maltodextrin, modified starch and corn syrup, ingredients often added to "sugar-free" products that still raise blood sugar sharply!</li>
+            </ul>
+
+
+            <h2 class="section-title"><i class="fas fa-cart-shopping"></i> <span>4. How to shop safely: use the complete food guide on our site</span></h2>
+            <p>Supermarket shopping can be confusing; every product says <em>"healthy and diet-friendly"</em>. To help you make the right decision on the spot:</p>
+            <ul class="check-list">
+                <li><strong>Browse the <a href="{site:/foods.html}">food guide on our site</a>:</strong> on <strong>WiBo Health</strong> we built a large clinical guide with more than 850 foods, each with its glycemic index rating and nutritional values.</li>
+                <li><strong>Add the site to your phone's home screen (quick web app):</strong> with one tap in your browser (Add to Home Screen) the site sits on your phone like any app, so you can open the guide in the supermarket and look up any product before it goes in your basket.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. Your balanced day: a realistic, filling meal plan</span></h2>
+            <ul class="check-list">
+                <li><strong>Breakfast:</strong> two eggs cooked in olive oil with avocado slices and leafy greens (rocket and cucumber), plus a quarter of a whole-grain loaf.</li>
+                <li><strong>Morning snack:</strong> a small handful of walnuts with half a cup of fresh berries.</li>
+                <li><strong>Lunch:</strong> a big colourful salad with olive oil and lemon (eat it first), a piece of grilled fish or chicken, and 3 tablespoons of cooked quinoa or <a href="{food:brown-rice}">brown rice</a>.</li>
+                <li><strong>Afternoon snack:</strong> cucumber and carrot sticks with two tablespoons of <a href="{food:hummus-with-tahini}">hummus with tahini</a> or pasteurised <a href="{food:cottage-cheese}">cottage cheese</a>.</li>
+                <li><strong>Dinner:</strong> a warm broccoli and courgette soup with sliced chicken breast, gentle on the stomach and helps prevent night-time heartburn.</li>
+                <li><strong>Bedtime snack:</strong> a thin apple slice spread with a teaspoon of 100% natural peanut butter.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span>6. Smart clinical tricks that steady your sugar without restriction</span></h2>
+            <ol class="steps">
+                <li><strong>Eat your plate in order:</strong> start with vegetables and salad, then protein and fat, and leave the starch for last. This simple order noticeably softens the sugar spike after a meal!</li>
+                <li><strong>The magic 10-minute walk after eating:</strong> when you walk gently after a meal, your leg muscles open their doors to take sugar straight from the blood and burn it as energy, without asking the pancreas for extra insulin.</li>
+                <li><strong>Water is your best friend:</strong> make water your main drink instead of juice and sweetened drinks. In pregnancy you need about 2.3 litres of fluid a day (from water and food together), which keeps you hydrated without any added sugar.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>7. Questions that matter to you, answered from clinical practice</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Does a gestational diabetes diagnosis mean I will definitely need insulin injections?</h3><p>Not at all! About 70 to 85% of pregnant women control their sugar successfully and safely with food changes and light walking alone. Insulin is only used when the numbers stay stubborn, to protect your baby; it is a very safe medicine and does not cross the placenta to the baby.</p></div>
+                <div class="faq-item"><h3>Will the diabetes stay after the birth?</h3><p>In more than 90% of cases, blood sugar returns completely to normal once the placenta is delivered. Your doctor will ask for a simple test 4 to 12 weeks after the birth to be sure, and then a check every 1 to 3 years, because gestational diabetes raises the chance of type 2 diabetes later in life. Keeping the healthy eating habits that protected you and your baby is the best prevention.</p></div>
+            </div>'''),
+nl=dict(
+ title='Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap',
+ h1='Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap',
+ crumb='Zwangerschapsdiabetes',
+ cat='Diabetes & metabole gezondheid',
+ desc='Alles over zwangerschapsdiabetes: normale nuchtere waarden en waarden na het eten, een lijst met wat je wel en niet mag eten om je suikercurve af te vlakken en je baby te beschermen, plus een gebalanceerd dagmenu en de voedingswijzer van WiBo Health.',
+ summary='Normale waarden in cijfers, wat je wel en niet mag eten, en een gebalanceerd dagmenu om je suikercurve af te vlakken.',
+ hero_alt='Lachende zwangere vrouw in een zonnige keuken met een glucosesensor op haar arm, met een kom bessen en een avocado',
+ about=['Gestational diabetes', 'Pregnancy', 'Blood glucose', 'Glycemic index'],
+ disclaimer='⚖️ Klinische veiligheidsmelding: deze gids is door WiBo Health gemaakt voor gezondheidsvoorlichting en leefstijlondersteuning. Hij is bedoeld als aanvulling op het zorgplan van de gynaecoloog of verloskundige die je zwangerschap begeleidt, en is geen diagnose en geen vervanging van die zorg.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Rustig maar: met jou en je baby gaat het goed, en de oplossing begint op je bord</span></h2>
+            <p class="lead">Het eerste wat de meeste moeders voelen als ze horen "je bloedsuiker is te hoog" is angst en schuldgevoel: <em>"Heb ik te veel zoetigheid gegeten? Heb ik mijn baby iets aangedaan?"</em></p>
+            <p>De medische waarheid waar we je meteen gerust mee willen stellen: <strong>zwangerschapsdiabetes is niet jouw schuld, en het betekent niet dat je baby diabetes heeft.</strong> Het is gewoon een signaal van je lichaam dat de sterke zwangerschapshormonen tijdelijk extra druk zetten op de verwerking van suikers. Met een paar eenvoudige, slimme voedingsstappen kom je deze periode veilig en gezond door, voor jou en voor je baby.</p>
+
+            <h2 class="section-title"><i class="fas fa-dna"></i> <span>1. Wat gebeurt er echt in je lichaam? (Het geheim zit in de hormonen van de placenta)</span></h2>
+            <p>De placenta voedt niet alleen je baby; het is ook een krachtige hormoonfabriek. In de tweede helft van de zwangerschap (vooral rond de vijfde en zesde maand) maakt de placenta hormonen met één doel: <em>"zoveel mogelijk energie en voeding naar de baby sturen zodat hij kan groeien"</em>.</p>
+            <p>Daarvoor maken deze hormonen je cellen minder gevoelig voor insuline (ze laten suiker in het bloed zodat die naar de baby kan). Normaal springt je alvleesklier bij en maakt extra insuline om dat te compenseren. Maar als de alvleesklier die grote vraag net niet bijhoudt, stijgt je bloedsuiker. Dat noemen we <strong>zwangerschapsdiabetes</strong>.</p>
+            <div class="tip"><h3>👶 Wat betekent dit voor de baby?</h3><p>Blijft de bloedsuiker van de moeder hoog, dan gaat die extra suiker naar de baby. De kleine alvleesklier van de baby moet dan extra insuline maken om die suiker als vet op te slaan, waardoor de baby bij de geboorte groot kan zijn. Daarom is grip op wat je eet het sterkste schild voor een gezonde, evenwichtige groei van je baby.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>2. Zwangerschapsdiabetes waarden: wat zijn normale bloedsuikerwaarden?</span></h2>
+            <p>Als je je suiker meet met een thuismeter, zijn er 3 gouden getallen om te onthouden:</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">&lt; 5,3 <small>mmol/L</small></div><h3>Nuchter</h3><p>Direct na het opstaan, voor het ontbijt. In mg/dL: onder 95 mg/dL.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 7,8 <small>mmol/L</small></div><h3>1 uur na de maaltijd</h3><p>In mg/dL: onder 140 mg/dL.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 6,7 <small>mmol/L</small></div><h3>2 uur na de maaltijd</h3><p>In mg/dL: onder 120 mg/dL.</p></div>
+            </div>
+            <h3>Waarom is je nuchtere suiker soms hoog?</h3>
+            <p>In de vroege ochtend geeft je lever van nature glucose af om je energie te geven om wakker te worden (het dawn-fenomeen). Is je ochtendsuiker vaak hoog, dan is de oplossing niet om 's avonds te gaan vasten, maar een slim tussendoortje voor het slapengaan (zoals een lepel pure pindakaas of een handje <a href="{food:walnuts}">walnoten</a>) om de signalen van je lever te stabiliseren. Bespreek je ochtendwaarden ook met je arts.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>3. Zwangerschapsdiabetes voedingslijst: het slimme stoplichtsysteem</span></h2>
+            <p>In plaats van streng te lijnen is het medische geheim <strong>"je suikercurve afvlakken"</strong>: maaltijden eten die langzaam en rustig worden opgenomen en scherpe pieken voorkomen.</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 Groen licht (eet gerust: de basis van je bord)</div>
+            <ul class="check-list">
+                <li><strong>Magere eiwitten:</strong> <a href="{food:boiled-egg}">gekookte eieren</a> of een <a href="{food:egg-omelette}">omelet</a>, <a href="{food:grilled-chicken-breast}">gegrilde kipfilet</a>, en veilige, goed gegaarde vis (zoals <a href="{food:grilled-salmon}">zalm</a>, rijk aan omega-3-vetten voor de hersenen van je baby).</li>
+                <li><strong>Gezonde vetten:</strong> <a href="{food:extra-virgin-olive-oil}">extra vierge olijfolie</a>, <a href="{food:avocado}">avocado</a>, <a href="{food:walnuts}">walnoten</a> en ongebrande amandelen.</li>
+                <li><strong>Bladgroenten en vezels:</strong> <a href="{food:spinach}">spinazie</a>, <a href="{food:zucchini}">courgette</a>, <a href="{food:cucumber}">komkommer</a>, <a href="{food:broccoli}">broccoli</a> en sla. (Vezels werken als een spons in je darmen: ze nemen suiker op zodat die heel langzaam in je bloed komt.)</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 Oranje licht (goed, maar met slimme porties)</div>
+            <ul class="check-list">
+                <li><strong>Complexe koolhydraten:</strong> <a href="{food:quinoa}">quinoa</a>, volkoren <a href="{food:oatmeal}">havermout</a> (geen instant), en natuurlijk gerezen volkoren <a href="{food:sourdough-bread}">zuurdesembrood</a>.</li>
+                <li><strong>Insulinevriendelijk fruit:</strong> <a href="{food:blueberry}">blauwe bessen</a>, <a href="{food:strawberry}">aardbeien</a>, <a href="{food:apple}">groene appel</a>. (Gouden tip: eet fruit nooit los; neem er altijd een paar amandelen of een lepel <a href="{food:greek-yogurt}">Griekse yoghurt</a> bij om de suikeropname af te remmen.)</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 Rood licht (vermijd dit om je waarden stabiel te houden)</div>
+            <ul class="check-list">
+                <li><strong>Sappen (ook natuurlijke en versgeperste):</strong> sap is geconcentreerde suiker zonder vezels en laat je bloedsuiker binnen enkele minuten pijlsnel stijgen. Kies liever heel fruit en een glas water.</li>
+                <li><strong>Wit brood en witte zetmeelproducten:</strong> wit brood, gebak, taart en gezoete ontbijtgranen.</li>
+                <li><strong>Verborgen suikers:</strong> maltodextrine, gemodificeerd zetmeel en glucosestroop, ingrediënten die vaak in "suikervrije" producten zitten maar je bloedsuiker flink laten stijgen!</li>
+            </ul>
+
+
+            <h2 class="section-title"><i class="fas fa-cart-shopping"></i> <span>4. Veilig boodschappen doen: gebruik de complete voedingswijzer op onze site</span></h2>
+            <p>Boodschappen doen in de supermarkt kan verwarrend zijn; op elk product staat <em>"gezond en geschikt voor je dieet"</em>. Zo maak je ter plekke de juiste keuze:</p>
+            <ul class="check-list">
+                <li><strong>Blader door de <a href="{site:/foods.html}">voedingswijzer op onze site</a>:</strong> op <strong>WiBo Health</strong> hebben we een uitgebreide klinische gids gemaakt met meer dan 850 voedingsmiddelen, elk met de glykemische index en voedingswaarden.</li>
+                <li><strong>Zet de site op het beginscherm van je telefoon (snelle web-app):</strong> met één tik in je browser (Toevoegen aan beginscherm) staat de site als een app op je telefoon, zodat je de gids in de supermarkt opent en elk product opzoekt voordat het in je mandje gaat.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. Je gebalanceerde dag: een realistisch, verzadigend dagmenu</span></h2>
+            <ul class="check-list">
+                <li><strong>Ontbijt:</strong> twee eieren gebakken in olijfolie met plakjes avocado en bladgroenten (rucola en komkommer), plus een kwart volkorenbrood.</li>
+                <li><strong>Tussendoortje 's ochtends:</strong> een klein handje walnoten met een half kopje verse bessen.</li>
+                <li><strong>Lunch:</strong> een grote, kleurrijke salade met olijfolie en citroen (eet die eerst), een stuk gegrilde vis of kip, en 3 eetlepels gekookte quinoa of <a href="{food:brown-rice}">zilvervliesrijst</a>.</li>
+                <li><strong>Tussendoortje 's middags:</strong> komkommer- en wortelreepjes met twee eetlepels <a href="{food:hummus-with-tahini}">hummus met tahin</a> of gepasteuriseerde <a href="{food:cottage-cheese}">hüttenkäse</a>.</li>
+                <li><strong>Avondeten:</strong> warme broccoli-courgettesoep met reepjes kipfilet, licht voor de maag en helpt maagzuur 's nachts te voorkomen.</li>
+                <li><strong>Voor het slapengaan:</strong> een dun plakje appel met een theelepel 100% natuurlijke pindakaas.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span>6. Slimme klinische trucs die je suiker stabiliseren zonder streng te lijnen</span></h2>
+            <ol class="steps">
+                <li><strong>Eet je bord in de juiste volgorde:</strong> begin met groenten en salade, dan eiwit en vet, en bewaar het zetmeel voor het laatst. Deze simpele volgorde dempt de suikerpiek na de maaltijd merkbaar!</li>
+                <li><strong>De magische wandeling van 10 minuten na het eten:</strong> als je na de maaltijd rustig wandelt, nemen je beenspieren suiker direct uit het bloed op en verbranden die als energie, zonder extra insuline van je alvleesklier te vragen.</li>
+                <li><strong>Water is je beste vriend:</strong> maak water je belangrijkste drank in plaats van sap en gezoete dranken. Tijdens de zwangerschap heb je ongeveer 2,3 liter vocht per dag nodig (uit water en voeding samen), zo blijf je gehydrateerd zonder extra suiker.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>7. Vragen die jou bezighouden, beantwoord vanuit de praktijk</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Betekent de diagnose zwangerschapsdiabetes dat ik zeker insuline moet spuiten?</h3><p>Helemaal niet! Ongeveer 70 tot 85% van de zwangere vrouwen houdt de suikerwaarden goed en veilig onder controle met alleen aanpassingen in voeding en rustig wandelen. Insuline wordt alleen gebruikt als de waarden hardnekkig hoog blijven, om je baby te beschermen; het is een zeer veilig medicijn dat niet via de placenta naar de baby gaat.</p></div>
+                <div class="faq-item"><h3>Blijft de diabetes na de bevalling?</h3><p>In meer dan 90% van de gevallen wordt de bloedsuiker weer helemaal normaal zodra de placenta geboren is. Je arts vraagt 4 tot 12 weken na de bevalling om een eenvoudige test om zeker te zijn, en daarna om een controle elke 1 tot 3 jaar, omdat zwangerschapsdiabetes de kans op diabetes type 2 later vergroot. De gezonde eetgewoonten waarmee je jezelf en je baby beschermde, vasthouden is de beste preventie.</p></div>
+            </div>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, GESTATIONAL_DIABETES]

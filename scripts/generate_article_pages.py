@@ -6,7 +6,13 @@ Output (re-running rebuilds everything, nothing is appended twice):
     articles/<slug>.html       Arabic (x-default)
     en/articles/<slug>.html    English
     nl/articles/<slug>.html    Dutch
+    <section>.html, en/<section>.html, nl/<section>.html          hub page of a section (e.g. diabetes.html)
+    <section>/<slug>.html, en/<section>/..., nl/<section>/...      articles that belong to a section
     sitemap.xml                block between <!-- ARTICLE-PAGES:START --> and <!-- ARTICLE-PAGES:END -->
+
+An article with section='diabetes' is written under that section's folder and its breadcrumb runs through the hub.
+draft=True (article or section) writes the page with noindex and keeps it out of the sitemap, so a placeholder can
+live on the site before its content is ready.
 
 Source: scripts/article_content.py. Editorial policy: the author and publisher are the WiBo Health organization,
 never a named person; structure/function wording only. Design system, header and footer come from
@@ -16,18 +22,26 @@ import json
 import re
 from pathlib import Path
 
-from article_content import ARTICLES
+from article_content import ARTICLES, SECTIONS
 from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, site_link
 
 ROOT = Path(__file__).resolve().parent.parent
 
 T = {
     'ar': dict(dir='rtl', section='المقالات الصحية', minutes='دقائق قراءة', published='نُشر في {date} · فريق WiBo Health',
-               date='17 أكتوبر 2026', refs='المصادر العلمية', footer_articles='المقالات'),
+               refs='المصادر العلمية', footer_articles='المقالات', draft='مسودة · قيد الإعداد',
+               months=('يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'),
+               read='اقرأ المقال', soon='قريباً'),
     'en': dict(dir='ltr', section='Health articles', minutes='min read', published='Published {date} · WiBo Health team',
-               date='17 October 2026', refs='Scientific sources', footer_articles='Articles'),
+               refs='Scientific sources', footer_articles='Articles', draft='Draft · in preparation',
+               months=('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
+                       'November', 'December'),
+               read='Read the article', soon='Coming soon'),
     'nl': dict(dir='ltr', section='Gezondheidsartikelen', minutes='min leestijd', published='Gepubliceerd op {date} · WiBo Health-team',
-               date='17 oktober 2026', refs='Wetenschappelijke bronnen', footer_articles='Artikelen'),
+               refs='Wetenschappelijke bronnen', footer_articles='Artikelen', draft='Concept · in voorbereiding',
+               months=('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober',
+                       'november', 'december'),
+               read='Lees het artikel', soon='Binnenkort'),
 }
 
 EXTRA_CSS = """
@@ -86,17 +100,53 @@ EXTRA_CSS = """
         .recipe-card p:last-child { margin: 0; }
         .ref-list { margin: 10px 0 22px; padding-inline-start: 22px; display: grid; gap: 8px; }
         .ref-list li { color: var(--text-muted); font-size: 0.92rem; overflow-wrap: anywhere; }
+        /* Brand watermark in the corner of an in-article photo: <div class="wm-frame"><img ...></div> */
+        .wm-frame { position: relative; }
+        .wm-frame::after { content: ''; position: absolute; inset-inline-end: 12px; bottom: 12px; width: 40px; height: 40px;
+            background: url('/images/brand/wibo-logo-64.webp') center / contain no-repeat; opacity: 0.85;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45)); pointer-events: none; }
+        .article-page p a, .article-page .check-list a, .article-page .steps a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .article-page p a:hover, .article-page .check-list a:hover, .article-page .steps a:hover { text-decoration: underline; }
+        .rule-card bdi { white-space: nowrap; }
+        .rule-num small { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
+        .draft-chip { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; background: rgba(243, 156, 18, 0.12);
+            border: 1px solid rgba(243, 156, 18, 0.4); color: var(--text-main); }
+        .hub-cards { display: grid; gap: 16px; margin: 16px 0 26px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .hub-card { background: var(--bg-input); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);
+            border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; }
+        .hub-card:hover { border-color: var(--primary); }
+        .hub-card h3 { margin: 0; }
+        .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 """
 
 
-def page_url(slugs, lang, absolute=True):
-    path = f'/articles/{slugs[lang]}.html' if lang == 'ar' else f'/{lang}/articles/{slugs[lang]}.html'
+def section_dir(a):
+    return SECTIONS[a['section']]['dir'] if a.get('section') else 'articles'
+
+
+def is_draft(a):
+    return bool(a.get('draft') or (a.get('section') and SECTIONS[a['section']].get('draft')))
+
+
+def page_url(a, lang, absolute=True):
+    folder = section_dir(a)
+    path = f'/{folder}/{a["slugs"][lang]}.html' if lang == 'ar' else f'/{lang}/{folder}/{a["slugs"][lang]}.html'
+    return SITE + path if absolute else path
+
+
+def hub_url(sec, lang, absolute=True):
+    path = f'/{sec["dir"]}.html' if lang == 'ar' else f'/{lang}/{sec["dir"]}.html'
     return SITE + path if absolute else path
 
 
 def food_url(slug, lang):
     return f'/foods/{slug}.html' if lang == 'ar' else f'/{lang}/foods/{slug}.html'
+
+
+def date_text(iso, lang):
+    y, m, d = (int(x) for x in iso.split('-'))
+    return f'{d} {T[lang]["months"][m - 1]} {y}'
 
 
 def render_body(html, lang):
@@ -105,73 +155,44 @@ def render_body(html, lang):
     return re.sub(r'\{site:([^}]+)\}', lambda m: site_link(m.group(1), lang), html)
 
 
-def build(a, lang):
-    t, u, c = T[lang], UI[lang], a['content'][lang]
-    urls = {l: page_url(a['slugs'], l) for l in LANGS}
-    hero = f"{SITE}/images/{a['hero']}"
-
-    schema = {
-        "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "@id": urls[lang] + '#webpage',
-        "url": urls[lang],
-        "name": c['title'],
-        "headline": c['h1'],
-        "description": c['desc'],
-        "inLanguage": lang,
-        "image": {"@type": "ImageObject", "url": hero, "width": a['hero_size'][0], "height": a['hero_size'][1]},
-        "datePublished": a['published'],
-        "dateModified": a['modified'],
-        "lastReviewed": a['modified'],
-        "about": [{"@type": "Thing", "name": n} for n in c['about']],
-        "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
-        "author": {"@type": "Organization", "name": "WiBo Health", "url": SITE},
-        "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
-                      "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
-        "citation": [{"@type": "CreativeWork", "name": r} for r in a['references']],
-        "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
-            {"@type": "ListItem", "position": 2, "name": t['section'], "item": SITE + site_link('/#articles', lang)},
-            {"@type": "ListItem", "position": 3, "name": c['h1'], "item": urls[lang]}]},
-    }
-
+def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', image=None, image_alt='', extra_head=''):
+    """Full page around `main`: head and SEO tags, header with language links (to `urls`) and footer; shared by articles and hubs."""
+    t, u = T[lang], UI[lang]
     nav_paths = ['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles', '/boodi.html', '/partners.html']
     nav = '\n'.join(f'                <a href="{site_link(p, lang)}" class="nav-link{" nav-partners" if p == "/partners.html" else ""}{" active" if p == "/#articles" else ""}">{label}</a>'
                     for p, label in zip(nav_paths, u['nav'] + (u['partners'],)))
     lang_links = '\n'.join(
-        f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(a["slugs"], l, absolute=False)}" '
+        f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{urls[l][len(SITE):]}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
         for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
-    refs_html = ''.join(f'<li>{esc(r)}</li>' for r in a['references'])
     footer_links = ' <span>•</span> '.join(
         f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
          ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
+    robots = '\n    <meta name="robots" content="noindex, follow">' if draft else ''
+    og_image = (f'\n    <meta property="og:image" content="{image}">\n    <meta property="og:image:alt" content="{esc(image_alt)}">'
+                if image else '')
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{esc(c["title"])}</title>
-    <meta name="description" content="{esc(c["desc"])}">
+    <title>{esc(title)}</title>
+    <meta name="description" content="{esc(desc)}">{robots}
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
     <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{esc(c["title"])}">
-    <meta property="og:description" content="{esc(c["desc"])}">
-    <meta property="og:url" content="{urls[lang]}">
-    <meta property="og:image" content="{hero}">
-    <meta property="og:image:alt" content="{esc(c["hero_alt"])}">
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">
-    <meta property="article:published_time" content="{a['published']}">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="{og_type}">
+    <meta property="og:title" content="{esc(title)}">
+    <meta property="og:description" content="{esc(desc)}">
+    <meta property="og:url" content="{urls[lang]}">{og_image}
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">{extra_head}
+    <meta name="twitter:card" content="{'summary_large_image' if image else 'summary'}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="preload" as="image" href="/images/{a['hero']}" fetchpriority="high">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,21 +231,7 @@ def build(a, lang):
     </header>
 
     <main class="page-wrapper food-page article-page">
-        <article class="about-card">
-            <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{site_link('/#articles', lang)}">{t["section"]}</a> › <span>{esc(c["crumb"])}</span>
-            </nav>
-            <span class="group-chip">{esc(c["cat"])}</span>
-            <h1>{esc(c["h1"])}</h1>
-            <div class="article-meta"><span><i class="fas fa-clock"></i> {a["minutes"]} {t["minutes"]}</span><span>{t["published"].format(date=t["date"])}</span></div>
-            <img class="article-hero-img" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
-
-{render_body(c["body"], lang)}
-
-            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
-            <ol class="ref-list">{refs_html}</ol>
-            <p class="disclaimer-box">{c["disclaimer"]}</p>
-        </article>
+{main}
     </main>
 
     <footer>
@@ -251,34 +258,184 @@ def build(a, lang):
 '''
 
 
+def crumb_parent(a, lang):
+    """(name, href) of the breadcrumb level above an article: its section hub, else the homepage article list."""
+    if a.get('section'):
+        sec = SECTIONS[a['section']]
+        return sec['content'][lang]['crumb'], hub_url(sec, lang, absolute=False)
+    return T[lang]['section'], site_link('/#articles', lang)
+
+
+FAQ_RE = re.compile(r'<div class="faq-item"><h3>(.*?)</h3><p>(.*?)</p></div>', re.S)
+
+
+def plain(html):
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', html)).strip()
+
+
+def faq_graph(page, body, url):
+    """Wrap the page node in an @graph with a FAQPage whose questions are the body's faq-item blocks (one source of truth)."""
+    qa = [{"@type": "Question", "name": plain(q), "acceptedAnswer": {"@type": "Answer", "text": plain(ans)}}
+          for q, ans in FAQ_RE.findall(body)]
+    assert qa, f'faq_schema set but no faq-item blocks in {url}'
+    ctx = page.pop('@context')
+    faq = {"@type": "FAQPage", "@id": url + '#faq', "url": url, "inLanguage": page['inLanguage'],
+           "isPartOf": {"@id": page['@id']}, "mainEntity": qa}
+    return {"@context": ctx, "@graph": [page, faq]}
+
+
+def build(a, lang):
+    t, u, c = T[lang], UI[lang], a['content'][lang]
+    urls = {l: page_url(a, l) for l in LANGS}
+    hero = f"{SITE}/images/{a['hero']}" if a.get('hero') else None
+    parent_name, parent_href = crumb_parent(a, lang)
+    draft = is_draft(a)
+
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "@id": urls[lang] + '#webpage',
+        "url": urls[lang],
+        "name": c['title'],
+        "headline": c['h1'],
+        "description": c['desc'],
+        "inLanguage": lang,
+        "image": {"@type": "ImageObject", "url": hero, "width": a['hero_size'][0], "height": a['hero_size'][1]} if hero else None,
+        "datePublished": a['published'],
+        "dateModified": a['modified'],
+        "lastReviewed": a['modified'],
+        "about": [{"@type": "Thing", "name": n} for n in c['about']],
+        "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+        "author": {"@type": "Organization", "name": "WiBo Health", "url": SITE},
+        "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
+                      "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
+        "citation": [{"@type": "CreativeWork", "name": r} for r in a['references']],
+        "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 2, "name": parent_name, "item": SITE + parent_href},
+            {"@type": "ListItem", "position": 3, "name": c['h1'], "item": urls[lang]}]},
+    }
+    schema.update(a.get('schema_extra', {}).get(lang, {}))   # article-specific fields (e.g. medical audience)
+    schema = {k: v for k, v in schema.items() if v not in (None, [])}
+    if a.get('faq_schema'):
+        schema = faq_graph(schema, render_body(c['body'], lang), urls[lang])
+
+    refs_html = ''.join(f'<li>{esc(r)}</li>' for r in a['references'])
+    refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
+            <ol class="ref-list">{refs_html}</ol>
+''' if refs_html else '')
+    hero_img = (f'''            <img class="article-hero-img" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
+''' if hero else '')
+    draft_chip = f'<span class="draft-chip">{t["draft"]}</span>' if draft else ''
+    main = f'''        <article class="about-card">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{parent_href}">{esc(parent_name)}</a> › <span>{esc(c["crumb"])}</span>
+            </nav>
+            <span class="group-chip">{esc(c["cat"])}</span>
+            <h1>{esc(c["h1"])}</h1>
+            <div class="article-meta"><span><i class="fas fa-clock"></i> {a["minutes"]} {t["minutes"]}</span><span>{t["published"].format(date=date_text(a["published"], lang))}</span>{draft_chip}</div>
+{hero_img}
+{render_body(c["body"], lang)}
+
+{refs}            <p class="disclaimer-box">{c["disclaimer"]}</p>
+        </article>'''
+    extra_head = f'\n    <meta property="article:published_time" content="{a["published"]}">'
+    if hero:
+        extra_head += f'\n    <link rel="preload" as="image" href="/images/{a["hero"]}" fetchpriority="high">'
+    return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=draft,
+                 og_type='article', image=hero, image_alt=c.get('hero_alt', ''), extra_head=extra_head)
+
+
+def build_hub(key, lang):
+    """Section landing page: intro plus one card per article of the section."""
+    sec, t, u = SECTIONS[key], T[lang], UI[lang]
+    c = sec['content'][lang]
+    urls = {l: hub_url(sec, l) for l in LANGS}
+    members = [a for a in ARTICLES if a.get('section') == key]
+    cards = '\n'.join(
+        f'''                <a class="hub-card" href="{page_url(a, lang, absolute=False)}">
+                    <span class="group-chip">{esc(a["content"][lang]["cat"])}</span>
+                    <h3>{esc(a["content"][lang]["h1"])}</h3>
+                    <p>{esc(a["content"][lang]["summary"])}</p>
+                    <span class="card-link">{t["soon"] if is_draft(a) else t["read"]}</span>
+                </a>''' for a in members)
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": urls[lang] + '#webpage',
+        "url": urls[lang],
+        "name": c['title'],
+        "description": c['desc'],
+        "inLanguage": lang,
+        "about": [{"@type": "Thing", "name": n} for n in c['about']],
+        "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+        "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
+                      "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
+        "hasPart": [{"@type": "MedicalWebPage", "name": a['content'][lang]['h1'], "url": page_url(a, lang)}
+                    for a in members if not is_draft(a)],
+        "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 2, "name": c['crumb'], "item": urls[lang]}]},
+    }
+    schema = {k: v for k, v in schema.items() if v not in (None, [])}
+    main = f'''        <article class="about-card">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="{site_link('/', lang)}">{u["home"]}</a> › <span>{esc(c["crumb"])}</span>
+            </nav>
+            <h1>{esc(c["h1"])}</h1>
+            <p class="lead">{c["intro"]}</p>
+            <div class="hub-cards">
+{cards}
+            </div>
+            <p class="disclaimer-box">{c["disclaimer"]}</p>
+        </article>'''
+    return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=sec.get('draft'))
+
+
+def lang_dir(lang, folder=''):
+    return ROOT / (folder if lang == 'ar' else f'{lang}/{folder}'.rstrip('/'))
+
+
 def main():
+    folders = {'articles'} | {s['dir'] for s in SECTIONS.values()}
     for lang in LANGS:
-        out_dir = ROOT / ('articles' if lang == 'ar' else f'{lang}/articles')
-        out_dir.mkdir(parents=True, exist_ok=True)
-        keep = {f'{a["slugs"][lang]}.html' for a in ARTICLES}
-        for old in out_dir.glob('*.html'):          # an article that was removed must not linger
-            if old.name not in keep:
-                old.unlink()
+        for folder in folders:
+            out_dir = lang_dir(lang, folder)
+            out_dir.mkdir(parents=True, exist_ok=True)
+            keep = {f'{a["slugs"][lang]}.html' for a in ARTICLES if section_dir(a) == folder}
+            for old in out_dir.glob('*.html'):          # an article that was removed must not linger
+                if old.name not in keep:
+                    old.unlink()
         for a in ARTICLES:
-            (out_dir / f'{a["slugs"][lang]}.html').write_text(build(a, lang), encoding='utf-8', newline='\n')
+            (lang_dir(lang, section_dir(a)) / f'{a["slugs"][lang]}.html').write_text(build(a, lang), encoding='utf-8', newline='\n')
+        for key, sec in SECTIONS.items():               # a hub sits next to its folder: diabetes.html + diabetes/
+            (lang_dir(lang) / f'{sec["dir"]}.html').write_text(build_hub(key, lang), encoding='utf-8', newline='\n')
+
+    # drafts (articles or whole sections) stay out of the sitemap until they are published
+    entries = [(lambda l, sec=sec: hub_url(sec, l), max((a['modified'] for a in ARTICLES if a.get('section') == k), default=None), None)
+               for k, sec in SECTIONS.items() if not sec.get('draft')]
+    entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero')) for a in ARTICLES if not is_draft(a)]
 
     sm_path = ROOT / 'sitemap.xml'
     sm = sm_path.read_text(encoding='utf-8')
     eol = '\r\n' if '\r\n' in sm else '\n'
     sm = re.sub(r'\s*<!-- ARTICLE-PAGES:START -->.*?<!-- ARTICLE-PAGES:END -->', '', sm, flags=re.S)
     block = ['  <!-- ARTICLE-PAGES:START -->']
-    for a in ARTICLES:
+    for url_of, modified, hero in entries:
         for lang in LANGS:
-            block += ['  <url>', f'    <loc>{page_url(a["slugs"], lang)}</loc>', f'    <lastmod>{a["modified"]}</lastmod>',
-                      '    <changefreq>monthly</changefreq>', '    <priority>0.8</priority>',
-                      f'    <image:image><image:loc>{SITE}/images/{a["hero"]}</image:loc></image:image>' if 'xmlns:image' in sm else None]
-            block = [b for b in block if b is not None]
-            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(a["slugs"], l)}"/>' for l in LANGS]
-            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(a["slugs"], "ar")}"/>', '  </url>']
+            block += ['  <url>', f'    <loc>{url_of(lang)}</loc>']
+            block += [f'    <lastmod>{modified}</lastmod>'] if modified else []
+            block += ['    <changefreq>monthly</changefreq>', '    <priority>0.8</priority>']
+            if hero and 'xmlns:image' in sm:
+                block.append(f'    <image:image><image:loc>{SITE}/images/{hero}</image:loc></image:image>')
+            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in LANGS]
+            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>', '  </url>']
     block.append('  <!-- ARTICLE-PAGES:END -->')
     sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
     sm_path.write_text(sm, encoding='utf-8', newline='')
-    print(f'article pages written: {len(ARTICLES) * len(LANGS)} ({len(ARTICLES)} articles x {len(LANGS)} languages)')
+    drafts = sum(is_draft(a) for a in ARTICLES)
+    print(f'article pages written: {len(ARTICLES) * len(LANGS)} ({len(ARTICLES)} articles x {len(LANGS)} languages, '
+          f'{drafts} draft); section hubs: {len(SECTIONS) * len(LANGS)}')
 
 
 if __name__ == '__main__':

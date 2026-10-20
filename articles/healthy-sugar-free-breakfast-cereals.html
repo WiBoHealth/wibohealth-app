@@ -18,6 +18,7 @@
     <meta property="og:image:alt" content="امرأة مبتسمة تتناول وعاء شوفان كامل مع التوت وبذور الشيا على مائدة الإفطار">
     <meta property="og:locale" content="ar_AR">
     <meta property="article:published_time" content="2026-10-17">
+    <link rel="preload" as="image" href="/images/healthy-sugar-free-breakfast-cereal-hero.webp" fetchpriority="high">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
 {
@@ -118,7 +119,6 @@
     }
 }
     </script>
-    <link rel="preload" as="image" href="/images/healthy-sugar-free-breakfast-cereal-hero.webp" fetchpriority="high">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -825,6 +825,23 @@
         .recipe-card p:last-child { margin: 0; }
         .ref-list { margin: 10px 0 22px; padding-inline-start: 22px; display: grid; gap: 8px; }
         .ref-list li { color: var(--text-muted); font-size: 0.92rem; overflow-wrap: anywhere; }
+        /* Brand watermark in the corner of an in-article photo: <div class="wm-frame"><img ...></div> */
+        .wm-frame { position: relative; }
+        .wm-frame::after { content: ''; position: absolute; inset-inline-end: 12px; bottom: 12px; width: 40px; height: 40px;
+            background: url('/images/brand/wibo-logo-64.webp') center / contain no-repeat; opacity: 0.85;
+            filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45)); pointer-events: none; }
+        .article-page p a, .article-page .check-list a, .article-page .steps a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .article-page p a:hover, .article-page .check-list a:hover, .article-page .steps a:hover { text-decoration: underline; }
+        .rule-card bdi { white-space: nowrap; }
+        .rule-num small { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
+        .draft-chip { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; background: rgba(243, 156, 18, 0.12);
+            border: 1px solid rgba(243, 156, 18, 0.4); color: var(--text-main); }
+        .hub-cards { display: grid; gap: 16px; margin: 16px 0 26px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .hub-card { background: var(--bg-input); border: 1px solid var(--border-color); border-top: 4px solid var(--primary);
+            border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; }
+        .hub-card:hover { border-color: var(--primary); }
+        .hub-card h3 { margin: 0; }
+        .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">

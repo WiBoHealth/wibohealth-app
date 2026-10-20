@@ -38,7 +38,8 @@ def main():
     pages = [ROOT / 'foods.html', ROOT / 'food-details.html']
     static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html'))]
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
-    supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles')
+    supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles',
+                        'diabetes', 'en/diabetes', 'nl/diabetes')
             for p in sorted((ROOT / d).glob('*.html'))]
     # the standalone calculator pages follow the same organisation-only authorship rule
     supp += [p for d in ('.', 'en', 'nl') for p in sorted((ROOT / d).glob('*-calculator.html'))]
@@ -76,7 +77,10 @@ def main():
                     if author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
                         errors.append(f'{rel}: author must be the WiBo Health organisation')
                     if not node.get('citation'):
-                        errors.append(f'{rel}: no citation')
+                        if 'content="noindex' in text:   # a draft placeholder may wait for its sources
+                            print(f'note {rel}: draft without citation (required before publishing)')
+                        else:
+                            errors.append(f'{rel}: no citation')
         if page in static + supp and 'MedicalWebPage' not in found_types:
             errors.append(f'{rel}: no MedicalWebPage block')
 

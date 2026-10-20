@@ -228,6 +228,12 @@
                 'home_articles_read': 'اقرأ المقال',
                 'home_articles_ar_only': ' ',
                 'feat_cereal_href': '/articles/healthy-sugar-free-breakfast-cereals.html',
+                'feat_latest_href': '/diabetes/gestational-diabetes.html',
+                'feat_latest_cat': '🩺 مقال جديد / السكري ومتلازمة الأيض',
+                'feat_latest_title': 'دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام وجدول الأكل المسموح والممنوع',
+                'feat_latest_sum': 'اطمئني، سكر الحمل ليس خطأكِ. أرقام التحاليل الطبيعية، نظام الإشارات المرورية للأطعمة، وخطة يومكِ خطوة بخطوة',
+                'feat_latest_alt': 'امرأة حامل مبتسمة في مطبخ مشمس مع وعاء توت وأفوكادو',
+                'feat_latest_btn': 'اقرأ الدليل الكامل',
                 'pulse_c1_href': '/bmi-calculator.html',
                 'pulse_c2_href': '/tdee-calculator.html',
                 'pulse_c3_href': '/whtr-calculator.html',
@@ -384,6 +390,12 @@
                 'home_articles_read': 'Read article',
                 'home_articles_ar_only': '(article text in Arabic)',
                 'feat_cereal_href': '/en/articles/healthy-sugar-free-breakfast-cereals.html',
+                'feat_latest_href': '/en/diabetes/gestational-diabetes.html',
+                'feat_latest_cat': '🩺 New article / Diabetes & Metabolic Health',
+                'feat_latest_title': 'Gestational Diabetes Guide: normal blood sugar levels and foods to eat and avoid',
+                'feat_latest_sum': 'It is not your fault. Normal test numbers, a traffic-light food list and your day step by step',
+                'feat_latest_alt': 'Smiling pregnant woman in a sunny kitchen with a bowl of berries and an avocado',
+                'feat_latest_btn': 'Read the full guide',
                 'pulse_c1_href': '/en/bmi-calculator.html',
                 'pulse_c2_href': '/en/tdee-calculator.html',
                 'pulse_c3_href': '/en/whtr-calculator.html',
@@ -540,6 +552,12 @@
                 'home_articles_read': 'Lees artikel',
                 'home_articles_ar_only': '(artikeltekst in het Arabisch)',
                 'feat_cereal_href': '/nl/articles/gezonde-ontbijtgranen-zonder-suiker.html',
+                'feat_latest_href': '/nl/diabetes/zwangerschapsdiabetes.html',
+                'feat_latest_cat': '🩺 Nieuw artikel / Diabetes & metabole gezondheid',
+                'feat_latest_title': 'Zwangerschapsdiabetes: normale bloedsuikerwaarden en wat je wel en niet mag eten',
+                'feat_latest_sum': 'Het is niet jouw schuld. Normale waarden, een stoplicht-voedingslijst en je dag stap voor stap',
+                'feat_latest_alt': 'Lachende zwangere vrouw in een zonnige keuken met een kom bessen en een avocado',
+                'feat_latest_btn': 'Lees de volledige gids',
                 'pulse_c1_href': '/nl/bmi-calculator.html',
                 'pulse_c2_href': '/nl/tdee-calculator.html',
                 'pulse_c3_href': '/nl/whtr-calculator.html',
@@ -1182,10 +1200,11 @@
         .feature-duo .leptin-feature-card { margin: 0; max-width: none; flex-direction: column; align-items: stretch; gap: 14px; }
         .feature-duo .leptin-feature-content { display: flex; flex-direction: column; align-items: flex-start; }
         .feature-duo .leptin-feature-btn { align-self: flex-start; }
-        .feature-duo .leptin-feature-card { cursor: pointer; } /* the whole card opens its article (script below the banner) */
+        .feature-duo .leptin-feature-card, .latest-article-card { cursor: pointer; } /* the whole card opens its article (script below the banner) */
         .feature-thumb { width: 140px; height: 100px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 2px solid #34d399; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
         .feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .feature-duo .feature-thumb { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+        .latest-article-card[hidden] { display: none; } /* the card's display:flex would override [hidden] */
         .feature-badge { display: inline-block; padding: 4px 12px; margin-bottom: 8px; border-radius: 999px; background: rgba(52, 211, 153, 0.18); border: 1px solid #34d399; color: #d1fae5; font-size: 13px; font-weight: 800; }
         @media (max-width: 860px) {
             .feature-duo { grid-template-columns: 1fr; }
@@ -2177,9 +2196,23 @@
                 <a href="/articles/healthy-sugar-free-breakfast-cereals.html" class="leptin-feature-btn cereal-feature-btn" data-i18n-href="feat_cereal_href" data-i18n="feat_cereal_btn">اقرأ الدليل الكامل</a>
             </div>
             </div>
+
+            <!-- Latest article slot: point the feat_latest_* i18n keys (and the fallback text/img here) at the next article to rotate it.
+                 Add `hidden` to park the card while no article is ready. -->
+            <div class="leptin-feature-card latest-article-card" id="latestArticleCard">
+                <div class="feature-thumb">
+                    <img src="/images/gestational-diabetes-guide-hero.webp" alt="امرأة حامل مبتسمة في مطبخ مشمس مع وعاء توت وأفوكادو" data-i18n-alt="feat_latest_alt" width="1376" height="768" loading="lazy" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge" data-i18n="feat_latest_cat">🩺 مقال جديد / السكري ومتلازمة الأيض</span>
+                    <h3 data-i18n="feat_latest_title">دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام وجدول الأكل المسموح والممنوع</h3>
+                    <p data-i18n="feat_latest_sum">اطمئني، سكر الحمل ليس خطأكِ. أرقام التحاليل الطبيعية، نظام الإشارات المرورية للأطعمة، وخطة يومكِ خطوة بخطوة</p>
+                </div>
+                <a href="/diabetes/gestational-diabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">اقرأ الدليل الكامل</a>
+            </div>
             <script>
                 // A click anywhere on a featured card follows its button, whose href is already in the visitor's language
-                document.querySelectorAll('.feature-duo .leptin-feature-card').forEach(function (card) {
+                document.querySelectorAll('.feature-duo .leptin-feature-card, .latest-article-card').forEach(function (card) {
                     card.addEventListener('click', function (e) {
                         if (e.target.closest('a')) return;
                         var link = card.querySelector('.leptin-feature-btn');
