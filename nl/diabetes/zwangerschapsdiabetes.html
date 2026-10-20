@@ -65,9 +65,30 @@
                 "url": "https://wibohealth.com/"
             },
             "author": {
-                "@type": "Organization",
-                "name": "WiBo Health",
-                "url": "https://wibohealth.com"
+                "@type": "Person",
+                "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+                "name": "Dr. Wassim Habib",
+                "jobTitle": "Medical Doctor",
+                "description": "Founder of WiBo Health",
+                "url": "https://wibohealth.com/doctor.html",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "WiBo Health",
+                    "url": "https://wibohealth.com"
+                }
+            },
+            "reviewedBy": {
+                "@type": "Person",
+                "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+                "name": "Dr. Wassim Habib",
+                "jobTitle": "Medical Doctor",
+                "description": "Founder of WiBo Health",
+                "url": "https://wibohealth.com/doctor.html",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "WiBo Health",
+                    "url": "https://wibohealth.com"
+                }
             },
             "publisher": {
                 "@type": "Organization",
@@ -865,6 +886,10 @@
         .article-page p a:hover, .article-page .check-list a:hover, .article-page .steps a:hover { text-decoration: underline; }
         .rule-card bdi { white-space: nowrap; }
         .rule-num small { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
+        .article-byline { font-weight: 700; margin: 0 0 10px; color: var(--text-main); }
+        .article-byline i { color: var(--primary); }
+        .article-byline a { color: inherit; text-decoration: none; }
+        .article-byline a:hover { color: var(--primary); }
         .draft-chip { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; background: rgba(243, 156, 18, 0.12);
             border: 1px solid rgba(243, 156, 18, 0.4); color: var(--text-main); }
         .hub-cards { display: grid; gap: 16px; margin: 16px 0 26px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
@@ -914,7 +939,8 @@
             </nav>
             <span class="group-chip">Diabetes &amp; metabole gezondheid</span>
             <h1>Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap</h1>
-            <div class="article-meta"><span><i class="fas fa-clock"></i> 8 min leestijd</span><span>Gepubliceerd op 20 oktober 2026 · WiBo Health-team</span></div>
+            <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="/doctor.html?lang=nl">Geschreven en klinisch beoordeeld door: Dr. Wassim Habib – Oprichter van WiBo Health</a></p>
+            <div class="article-meta"><span><i class="fas fa-clock"></i> 8 min leestijd</span><span>Gepubliceerd op 20 oktober 2026</span></div>
             <img class="article-hero-img" src="/images/gestational-diabetes-guide-hero.webp" alt="Lachende zwangere vrouw in een zonnige keuken met een glucosesensor op haar arm, met een kom bessen en een avocado" width="1376" height="768" fetchpriority="high" decoding="async">
 
             <h2 class="section-title"><i class="fas fa-heart"></i> <span>Rustig maar: met jou en je baby gaat het goed, en de oplossing begint op je bord</span></h2>

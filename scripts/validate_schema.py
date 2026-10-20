@@ -7,7 +7,8 @@ article pages (articles/, en/..., nl/...):
   - no "Product" type anywhere, and no offers / aggregateRating / review / price fields
   - every static food page carries a MedicalWebPage with author (Dr. Wassim Habib) and publisher
   - every supplement, article and calculator page carries a MedicalWebPage authored by the WiBo Health organisation,
-    cites its sources, and never names a personal reviewer (legal requirement for supplement and article content)
+    cites its sources, and never names a personal reviewer (legal requirement for supplement and article content);
+    the only exception is NAMED_AUTHOR_PAGES, which must carry Dr. Wassim Habib as Person author and reviewedBy
   - JSON-LD may be a single node or an @graph of nodes
 It also scans the .js / .html sources for a schema "@type": "Product" built at runtime.
 
@@ -19,6 +20,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+# Articles the user explicitly chose to sign with the doctor's name (2026-10-20): Person author + reviewedBy instead of the organisation
+NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestational-diabetes.html', 'nl/diabetes/zwangerschapsdiabetes.html'}
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}
 LD_RE = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 RUNTIME_PRODUCT_RE = re.compile(r'["\']@type["\']\s*:\s*["\']Product["\']')
@@ -48,7 +51,8 @@ def main():
         rel = page.relative_to(ROOT).as_posix()
         found_types = set()
         text = page.read_text(encoding='utf-8')
-        if page in supp and re.search(r'Wassim|وسيم', text):
+        named = rel in NAMED_AUTHOR_PAGES
+        if page in supp and not named and re.search(r'Wassim|وسيم', text):
             errors.append(f'{rel}: supplement/article page names a personal reviewer')
         for raw in LD_RE.findall(text):
             blocks += 1
@@ -74,7 +78,12 @@ def main():
                         errors.append(f'{rel}: publisher missing')
                 if page in supp:
                     author = node.get('author') or {}
-                    if author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
+                    if named:
+                        for role in ('author', 'reviewedBy'):
+                            person = node.get(role) or {}
+                            if person.get('@type') != 'Person' or person.get('name') != 'Dr. Wassim Habib':
+                                errors.append(f'{rel}: {role} must be Dr. Wassim Habib (named-author article)')
+                    elif author.get('@type') != 'Organization' or author.get('name') != 'WiBo Health':
                         errors.append(f'{rel}: author must be the WiBo Health organisation')
                     if not node.get('citation'):
                         if 'content="noindex' in text:   # a draft placeholder may wait for its sources

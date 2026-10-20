@@ -28,16 +28,16 @@ from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, e
 ROOT = Path(__file__).resolve().parent.parent
 
 T = {
-    'ar': dict(dir='rtl', section='المقالات الصحية', minutes='دقائق قراءة', published='نُشر في {date} · فريق WiBo Health',
+    'ar': dict(dir='rtl', section='المقالات الصحية', minutes='دقائق قراءة', published='نُشر في {date} · فريق WiBo Health', published_on='نُشر في {date}',
                refs='المصادر العلمية', footer_articles='المقالات', draft='مسودة · قيد الإعداد',
                months=('يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'),
                read='اقرأ المقال', soon='قريباً'),
-    'en': dict(dir='ltr', section='Health articles', minutes='min read', published='Published {date} · WiBo Health team',
+    'en': dict(dir='ltr', section='Health articles', minutes='min read', published='Published {date} · WiBo Health team', published_on='Published {date}',
                refs='Scientific sources', footer_articles='Articles', draft='Draft · in preparation',
                months=('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
                        'November', 'December'),
                read='Read the article', soon='Coming soon'),
-    'nl': dict(dir='ltr', section='Gezondheidsartikelen', minutes='min leestijd', published='Gepubliceerd op {date} · WiBo Health-team',
+    'nl': dict(dir='ltr', section='Gezondheidsartikelen', minutes='min leestijd', published='Gepubliceerd op {date} · WiBo Health-team', published_on='Gepubliceerd op {date}',
                refs='Wetenschappelijke bronnen', footer_articles='Artikelen', draft='Concept · in voorbereiding',
                months=('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober',
                        'november', 'december'),
@@ -109,6 +109,10 @@ EXTRA_CSS = """
         .article-page p a:hover, .article-page .check-list a:hover, .article-page .steps a:hover { text-decoration: underline; }
         .rule-card bdi { white-space: nowrap; }
         .rule-num small { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); }
+        .article-byline { font-weight: 700; margin: 0 0 10px; color: var(--text-main); }
+        .article-byline i { color: var(--primary); }
+        .article-byline a { color: inherit; text-decoration: none; }
+        .article-byline a:hover { color: var(--primary); }
         .draft-chip { padding: 3px 10px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; background: rgba(243, 156, 18, 0.12);
             border: 1px solid rgba(243, 156, 18, 0.4); color: var(--text-main); }
         .hub-cards { display: grid; gap: 16px; margin: 16px 0 26px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
@@ -283,12 +287,20 @@ def faq_graph(page, body, url):
     return {"@context": ctx, "@graph": [page, faq]}
 
 
+# Named medical author: only for articles with named_author=True (an explicit, per-article exception to the organisation-only
+# policy, mirrored in validate_schema.py). Same Person node as the food pages.
+DOCTOR = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": "Medical Doctor",
+          "description": "Founder of WiBo Health", "url": f"{SITE}/doctor.html",
+          "worksFor": {"@type": "Organization", "name": "WiBo Health", "url": SITE}}
+
+
 def build(a, lang):
     t, u, c = T[lang], UI[lang], a['content'][lang]
     urls = {l: page_url(a, l) for l in LANGS}
     hero = f"{SITE}/images/{a['hero']}" if a.get('hero') else None
     parent_name, parent_href = crumb_parent(a, lang)
     draft = is_draft(a)
+    named = a.get('named_author')
 
     schema = {
         "@context": "https://schema.org",
@@ -305,7 +317,8 @@ def build(a, lang):
         "lastReviewed": a['modified'],
         "about": [{"@type": "Thing", "name": n} for n in c['about']],
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
-        "author": {"@type": "Organization", "name": "WiBo Health", "url": SITE},
+        "author": DOCTOR if named else {"@type": "Organization", "name": "WiBo Health", "url": SITE},
+        "reviewedBy": DOCTOR if named else None,
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "citation": [{"@type": "CreativeWork", "name": r} for r in a['references']],
@@ -326,13 +339,17 @@ def build(a, lang):
     hero_img = (f'''            <img class="article-hero-img" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
 ''' if hero else '')
     draft_chip = f'<span class="draft-chip">{t["draft"]}</span>' if draft else ''
+    byline = (f'''
+            <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="{site_link('/doctor.html', lang)}">{esc(c["byline"])}</a></p>'''
+              if named else '')
+    published = (t['published_on'] if named else t['published']).format(date=date_text(a['published'], lang))
     main = f'''        <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{parent_href}">{esc(parent_name)}</a> › <span>{esc(c["crumb"])}</span>
             </nav>
             <span class="group-chip">{esc(c["cat"])}</span>
-            <h1>{esc(c["h1"])}</h1>
-            <div class="article-meta"><span><i class="fas fa-clock"></i> {a["minutes"]} {t["minutes"]}</span><span>{t["published"].format(date=date_text(a["published"], lang))}</span>{draft_chip}</div>
+            <h1>{esc(c["h1"])}</h1>{byline}
+            <div class="article-meta"><span><i class="fas fa-clock"></i> {a["minutes"]} {t["minutes"]}</span><span>{published}</span>{draft_chip}</div>
 {hero_img}
 {render_body(c["body"], lang)}
 
