@@ -251,6 +251,14 @@ PILOT = {
     838: ('nuts', 30), 839: ('nuts', 30), 840: ('nuts', 30), 841: ('nuts', 30), 842: ('nuts', 20), 843: ('veg', 100),
     844: ('dairy_solid', 30), 845: ('dairy_solid', 30), 846: ('dairy_solid', 30), 847: ('dairy_solid', 30),
     848: ('dairy_solid', 30), 849: ('dairy_solid', 100), 850: ('dairy_solid', 30),
+    # batch 27: Nordic, Italian, Mexican and French cheeses, cured meats, French pâtés and confit, Belgian classics
+    # (portions from Dr. Wassim's copy, 21 October 2026)
+    851: ('dairy_solid', 30), 852: ('dairy_solid', 30), 853: ('dairy_solid', 20), 854: ('dairy_solid', 15),
+    855: ('dairy_solid', 50), 856: ('dairy_solid', 15), 857: ('dairy_solid', 30), 858: ('protein', 50),
+    859: ('protein', 80), 860: ('protein', 30), 861: ('protein', 35), 862: ('protein', 40), 863: ('protein', 150),
+    864: ('protein', 40), 865: ('condiment', 40), 866: ('home', 250), 867: ('home', 300), 868: ('home', 220),
+    869: ('home', 200), 870: ('salad', 200), 871: ('protein', 100), 872: ('home', 250), 873: ('home', 180),
+    874: ('sweets', 100), 875: ('sweets', 12),
 }
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
@@ -262,7 +270,9 @@ TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44
 TEAM_REVIEW |= set(range(207, 826))
 # foods whose copy Dr. Wassim reviewed and signed himself: the page names him with the date he approved it
 NAMED_REVIEW = {i: '2026-10-20' for i in range(826, 851)}
-NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'}}
+NAMED_REVIEW.update({i: '2026-10-21' for i in range(851, 876)})
+NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'},
+                    '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'}}
 
 
 def review_date(fid):
@@ -450,7 +460,7 @@ UI = {
         reviewed_team='تمت مراجعته من قبل فريق ويبو هيلث الطبي · آخر مراجعة {date}',
         lead_na='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{protein} غ بروتين. ولأن{h} {ya}حتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، فلا ينطبق علي{h} المؤشر الجلايسيمي، ويكون أثر{h} المباشر على سكر الدم ضئيلاً.',
         boodi_title='امسح الباركود في السوبرماركت مع تطبيق بودي 💚',
-        boodi_text='يحلل بودي المنتجات المعلّبة فوراً، ويفحص الحلال، ويقترح بدائل أقل سكراً من نفس الرف.',
+        boodi_text='يحلل بودي المنتجات المعلّبة فوراً، ويفحص المكونات، ويقترح بدائل أقل سكراً من نفس الرف.',
         boodi_btn='اكتشف تطبيق بودي',
         src_gi='📚 المراجع العلمية المعتمدة: الجداول الدولية للمؤشر الجلايسيمي (Atkinson et al., Am J Clin Nutr 2021) • أبحاث جامعة هارفارد الطبية (Harvard Health).',
         src_value='القيمة المعتمدة: متوسط {studies} (النطاق {lo}–{hi})، درجة الثقة {grade}.',
@@ -458,7 +468,7 @@ UI = {
         src_link='المنهجية والتفاصيل ←',
         disclaimer='إخلاء مسؤولية: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.',
         reviewed='راجعه طبياً: <a href="{doctor}">د. وسيم حبيب</a> · آخر مراجعة {date}',
-        reviewed_named='تمت مراجعته من قبل: <a href="{doctor}">الدكتور وسيم حبيب</a> · آخر مراجعة {date}',
+        reviewed_named='تمت المراجعة من قبل <a href="{doctor}">الدكتور وسيم حبيب</a> · آخر مراجعة {date}',
         portion_note='الحصة المعتادة تقريبية لأغراض المقارنة.',
         theme='تبديل المظهر', footer_rights='© 2026 WiBo Health Group. جميع الحقوق محفوظة.',
         nav=('الرئيسية', 'دليل الأطعمة', 'الحاسبات', 'المكملات', 'المقالات', 'تطبيق بودي 💚'), privacy='الخصوصية', partners='الشراكات', diabetes='السكري ومتلازمة الأيض',
@@ -489,7 +499,7 @@ UI = {
         reviewed_team='Reviewed by the WiBo Health medical team · Last reviewed {date}',
         lead_na='Every 100 g of {name} contains {kcal} kcal and {protein} g of protein. Because it has less than 5 g of available carbohydrate per 100 g, the glycemic index does not apply and its direct effect on blood sugar is minimal.',
         boodi_title='Scan supermarket barcodes with the boodi app 💚',
-        boodi_text='boodi analyses packaged products instantly, checks halal status and suggests lower-sugar alternatives from the same shelf.',
+        boodi_text='boodi analyses packaged products instantly, checks the ingredients and suggests lower-sugar alternatives from the same shelf.',
         boodi_btn='Discover the boodi app',
         src_gi='📚 Scientific sources: International Tables of Glycemic Index (Atkinson et al., Am J Clin Nutr 2021) • Harvard Health Publishing.',
         src_value='Approved value: average of {studies} (range {lo}–{hi}), confidence grade {grade}.',
@@ -497,7 +507,7 @@ UI = {
         src_link='Methodology & details →',
         disclaimer='Disclaimer: This guidance is for nutritional lifestyle orientation and does not constitute a diagnostic medical device under EU Regulation MDR 2017/745.',
         reviewed='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
-        reviewed_named='Reviewed by: <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
+        reviewed_named='Reviewed by <a href="{doctor}">Dr. Wassim Habib</a> · Last reviewed {date}',
         portion_note='The typical portion is approximate, for comparison purposes.',
         theme='Toggle theme', footer_rights='© 2026 WiBo Health Group. All rights reserved.',
         nav=('Home', 'Food Guide', 'Calculators', 'Supplements', 'Articles', 'boodi App 💚'), privacy='Privacy', partners='Partnerships', diabetes='Diabetes',
@@ -527,7 +537,7 @@ UI = {
         reviewed_team='Gecontroleerd door het medisch team van WiBo Health · Laatst gecontroleerd {date}',
         lead_na='Elke 100 g {name} bevat {kcal} kcal en {protein} g eiwit. Omdat het minder dan 5 g beschikbare koolhydraten per 100 g bevat, is de glykemische index niet van toepassing en is het directe effect op de bloedsuiker minimaal.',
         boodi_title='Scan barcodes in de supermarkt met de boodi-app 💚',
-        boodi_text='boodi analyseert verpakte producten direct, controleert de halalstatus en stelt suikerarmere alternatieven uit hetzelfde schap voor.',
+        boodi_text='boodi analyseert verpakte producten direct, controleert de ingrediënten en stelt suikerarmere alternatieven uit hetzelfde schap voor.',
         boodi_btn='Ontdek de boodi-app',
         src_gi='📚 Wetenschappelijke bronnen: Internationale GI-tabellen (Atkinson et al., Am J Clin Nutr 2021) • Harvard Health Publishing.',
         src_value='Goedgekeurde waarde: gemiddelde van {studies} (bereik {lo}–{hi}), betrouwbaarheidsgraad {grade}.',
@@ -535,7 +545,7 @@ UI = {
         src_link='Methodologie & details →',
         disclaimer='Algemene disclaimer: Deze informatie is uitsluitend bedoeld als voedingsadvies en is geen medisch diagnostisch hulpmiddel volgens EU MDR 2017/745.',
         reviewed='Medisch gecontroleerd door <a href="{doctor}">dr. Wassim Habib</a> · Laatst gecontroleerd {date}',
-        reviewed_named='Beoordeeld door: <a href="{doctor}">Dr. Wassim Habib</a> · Laatst beoordeeld {date}',
+        reviewed_named='Beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> · Laatst beoordeeld {date}',
         portion_note='De gangbare portie is een benadering, bedoeld om te vergelijken.',
         theme='Thema wisselen', footer_rights='© 2026 WiBo Health Group. Alle rechten voorbehouden.',
         nav=('Home', 'Voedingswijzer', 'Calculators', 'Supplementen', 'Artikelen', 'boodi App 💚'), privacy='Privacy', partners='Partners', diabetes='Diabetes',
@@ -646,6 +656,28 @@ def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, g
 # Arabic: definite form (ال التعريف) and grammatical gender of a food name, for use inside sentences
 # --------------------------------------------------------------------------------------------
 AR_DEFINITE_OVERRIDES = {          # names whose natural definite form does not follow the rules
+    # batch 27: construct phrases and proper names that are already definite
+    'جبنة دانابلو الدنماركية الزرقاء': 'جبنة دانابلو الدنماركية الزرقاء',
+    'جبنة يارلسبيرغ النرويجية': 'جبنة يارلسبيرغ النرويجية',
+    'جبنة برونوست النرويجية البنية': 'جبنة برونوست النرويجية البنية',
+    'جبنة ريكوتا سالاتا الإيطالية': 'جبنة ريكوتا سالاتا الإيطالية',
+    'جبنة كيسو بلانكو المكسيكية': 'جبنة كيسو بلانكو المكسيكية',
+    'جبنة كوتيخا المكسيكية': 'جبنة كوتيخا المكسيكية',
+    'جبنة شيفر الفرنسية بالرماد': 'جبنة شيفر الفرنسية بالرماد',
+    'روبيان بحر الشمال الرمادي المقشر': 'روبيان بحر الشمال الرمادي المقشر',
+    'شتومب بروكسل بالجزر والكراث': 'شتومب بروكسل بالجزر والكراث',
+    'وافل لييج البلجيكي بسكر اللؤلؤ': 'وافل لييج البلجيكي بسكر اللؤلؤ',
+    'بسكويت أيدي أنتويرب بالزبدة واللوز': 'بسكويت أيدي أنتويرب بالزبدة واللوز',
+    'سجق سوجوك بقري تركي': 'سجق السوجوك البقري التركي',
+    'سجق مرقاز مغاربي': 'سجق المرقاز المغاربي',
+    'سيسينا دي ليون الإسبانية (لحم بقري مقدد)': 'سيسينا دي ليون الإسبانية',
+    'بيلتونغ لحم بقري جنوب إفريقي': 'بيلتونغ اللحم البقري الجنوب إفريقي',
+    'درووورس نقانق لحم بقري جنوب إفريقية مجففة': 'الدرووورس الجنوب إفريقي المجفف',
+    'فخذ بط كونفي فرنسي': 'فخذ البط الكونفي الفرنسي',
+    'باتيه كبد الدجاج الفرنسي بالأعشاب': 'باتيه كبد الدجاج الفرنسي',
+    'يخنة ستوفليز الفلمنكية البلجيكية': 'يخنة الستوفليز الفلمنكية البلجيكية',
+    'فاتر زوي البلجيكية بالدجاج والكريمة': 'حساء الفاتر زوي البلجيكي بالدجاج والكريمة',
+    'طماطم محشوة بروبيان بحر الشمال': 'الطماطم المحشوة بروبيان بحر الشمال',
     'ملوخية ورق خضراء': 'الملوخية الخضراء',
     'لحم بقري ستيك مشوي': 'ستيك اللحم البقري المشوي',
     'بيض مسلوق كامل': 'البيض المسلوق',
@@ -944,6 +976,47 @@ def ar_measured_items(n):
     return f'{n} صنفاً مقاساً'
 
 
+# "References & scientific sources" block at the bottom of every food page: only sources that actually back the page
+REF_ATKINSON = ('Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and '
+                'glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632.', 'https://doi.org/10.1093/ajcn/nqab233')
+REF_ISO = ('ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. '
+           'International Organization for Standardization; 2010.', 'https://www.iso.org/standard/43633.html')
+REF_FAO = ('FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. '
+           'Rome; 1998.', 'https://www.fao.org/4/w8079e/w8079e00.htm')
+REF_HOLT = ('Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. '
+            'Am J Clin Nutr. 1997;66(5):1264–1276.', 'https://doi.org/10.1093/ajcn/66.5.1264')
+REF_BAO = ('Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand '
+           'evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992.', 'https://doi.org/10.3945/ajcn.2009.27720')
+REFS_UI = {
+    'ar': dict(title='المراجع والمصادر العلمية',
+               measured='قيمة المؤشر الجلايسيمي مأخوذة من الجداول الدولية: ',
+               reviewed='قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021). تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
+               na='لا ينطبق المؤشر الجلايسيمي لأن الصنف يحتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، واختبار المؤشر يتطلب 25 إلى 50 غ كربوهيدرات متاحة وفق: ',
+               iso='تصنيف المؤشر الجلايسيمي وطريقة قياسه: ',
+               fao='تعريف الكربوهيدرات المتاحة والحمل الجلايسيمي: ',
+               ii='مؤشر الإنسولين: '),
+    'en': dict(title='References & Scientific Sources',
+               measured='The glycemic index value comes from the international tables: ',
+               reviewed='The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the International GI Tables (Atkinson 2021). GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
+               na='The glycemic index does not apply because this food has less than 5 g of available carbohydrate per 100 g, and a GI test requires 25 to 50 g of available carbohydrate, per: ',
+               iso='GI classification and test method: ',
+               fao='Definition of available carbohydrate and glycemic load: ',
+               ii='Insulin index: '),
+    'nl': dict(title='Wetenschappelijke bronnen & Referenties',
+               measured='De waarde van de glykemische index komt uit de internationale tabellen: ',
+               reviewed='De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale GI-tabellen (Atkinson 2021). De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
+               na='De glykemische index is niet van toepassing, omdat dit product minder dan 5 g beschikbare koolhydraten per 100 g bevat, en een GI-test 25 tot 50 g beschikbare koolhydraten vereist, volgens: ',
+               iso='GI-indeling en testmethode: ',
+               fao='Definitie van beschikbare koolhydraten en glykemische lading: ',
+               ii='Insuline-index: '),
+}
+
+
+def ref_cite(ref):
+    text, url = ref
+    return f'{esc(text)} <a href="{url}" target="_blank" rel="noopener">{url.split("//", 1)[1]}</a>'
+
+
 def studies_word(n, lang):
     if lang == 'ar':
         return {1: 'دراسة واحدة', 2: 'دراستين'}.get(n, f'{n} دراسات' if 3 <= n <= 10 else f'{n} دراسة')
@@ -1108,6 +1181,15 @@ PAGE_CSS = """
             font-weight: 600; overflow-wrap: anywhere;
         }
         .source-strip a { color: var(--primary); font-weight: 800; text-decoration: none; white-space: nowrap; }
+        .references {
+            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
+            border-radius: 14px; padding: 4px 18px 14px; margin: 18px 0 10px;
+        }
+        .references .section-title { margin-top: 12px; }
+        .ref-list { margin: 0; padding-inline-start: 22px; color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; overflow-wrap: anywhere; }
+        .ref-list li { margin-bottom: 8px; }
+        .ref-list a, .ref-method a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .ref-method { margin: 4px 0 0; font-size: 0.85rem; font-weight: 800; }
         .disclaimer-box {
             margin-top: 18px; padding: 14px 18px; border-radius: 12px; background: rgba(15, 23, 42, 0.62);
             border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
@@ -1289,19 +1371,26 @@ def build(food, lang, ctx):
     if food['ii'] is not None:
         rows += f'<tr><td>{u["ii_row"]}</td><td colspan="2">{int(food["ii"])} · {u["ii_tested"]}</td></tr>'
 
-    # -------- sources
+    # -------- sources: "References & scientific sources" section (only what actually backs this page)
     method_href = site_link('/methodology.html', lang)
-    src = f'<div class="source-strip">{u["src_gi"]} <a href="{method_href}">{u["src_link"]}</a></div>'
+    r = REFS_UI[lang]
     if measured:
         rng = food['gi_range'] or [food['gi'], food['gi']]
-        src = (f'<div class="source-strip">{u["src_gi"]}<br>' +
-               u['src_value'].format(studies=studies_word(int(food['gi_n'] or 1), lang), lo=int(rng[0]), hi=int(rng[-1]),
-                                     grade=food['gi_grade'] or '-') +
-               f' <a href="{method_href}">{u["src_link"]}</a></div>')
+        items = [r['measured'] + ref_cite(REF_ATKINSON) + ' ' +
+                 u['src_value'].format(studies=studies_word(int(food['gi_n'] or 1), lang), lo=int(rng[0]), hi=int(rng[-1]),
+                                       grade=food['gi_grade'] or '-'),
+                 r['iso'] + ref_cite(REF_ISO)]
     elif reviewed:
-        src = f'<div class="source-strip">{u["src_reviewed"]} <a href="{method_href}">{u["src_link"]}</a></div>'
+        items = [r['reviewed'] + ref_cite(REF_ISO)]
+    else:
+        items = [r['na'] + ref_cite(REF_ISO)]
+    items.append(r['fao'] + ref_cite(REF_FAO))
     if food['ii'] is not None:
-        src += f'<div class="source-strip">{u["src_ii"]}</div>'
+        items.append(r['ii'] + ref_cite(REF_HOLT) + ' • ' + ref_cite(REF_BAO))
+    src = (f'<section class="references" aria-labelledby="refs-title">'
+           f'<h2 class="section-title" id="refs-title"><i class="fas fa-book-medical"></i> <span>{r["title"]}</span></h2>'
+           f'<ol class="ref-list">{"".join(f"<li>{x}</li>" for x in items)}</ol>'
+           f'<p class="ref-method"><a href="{method_href}">{u["src_link"]}</a></p></section>')
 
     # -------- head: SEO
     urls = {l: page_url(slug, l) for l in LANGS}

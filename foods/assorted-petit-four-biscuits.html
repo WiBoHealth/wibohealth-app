@@ -777,6 +777,15 @@
             font-weight: 600; overflow-wrap: anywhere;
         }
         .source-strip a { color: var(--primary); font-weight: 800; text-decoration: none; white-space: nowrap; }
+        .references {
+            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
+            border-radius: 14px; padding: 4px 18px 14px; margin: 18px 0 10px;
+        }
+        .references .section-title { margin-top: 12px; }
+        .ref-list { margin: 0; padding-inline-start: 22px; color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; overflow-wrap: anywhere; }
+        .ref-list li { margin-bottom: 8px; }
+        .ref-list a, .ref-method a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .ref-method { margin: 4px 0 0; font-size: 0.85rem; font-weight: 800; }
         .disclaimer-box {
             margin-top: 18px; padding: 14px 18px; border-radius: 12px; background: rgba(15, 23, 42, 0.62);
             border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
@@ -855,7 +864,7 @@
             <p class="table-note">الحصة المعتادة تقريبية لأغراض المقارنة.</p>
 
             <h2 class="section-title"><i class="fas fa-scale-balanced"></i> <span>مقارنة وبدائل ذكية</span></h2>
-            <p>يأتي في المرتبة 26 بين أصناف فئة الحلويات التي لها مؤشر جلايسيمي (وعددها 52)، من الأقل إلى الأعلى.</p>
+            <p>يأتي في المرتبة 26 بين أصناف فئة الحلويات التي لها مؤشر جلايسيمي (وعددها 54)، من الأقل إلى الأعلى.</p>
             <p><strong>بدائل ذكية من نفس العائلة:</strong></p>
             <ul class="alt-list"></ul>
 
@@ -865,12 +874,12 @@
             <aside class="boodi-card">
                 <div>
                     <h2>امسح الباركود في السوبرماركت مع تطبيق بودي 💚</h2>
-                    <p>يحلل بودي المنتجات المعلّبة فوراً، ويفحص الحلال، ويقترح بدائل أقل سكراً من نفس الرف.</p>
+                    <p>يحلل بودي المنتجات المعلّبة فوراً، ويفحص المكونات، ويقترح بدائل أقل سكراً من نفس الرف.</p>
                 </div>
                 <a class="boodi-btn" href="/boodi.html"><i class="fas fa-barcode"></i> اكتشف تطبيق بودي</a>
             </aside>
 
-            <div class="source-strip">📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021). <a href="/methodology.html">المنهجية والتفاصيل ←</a></div>
+            <section class="references" aria-labelledby="refs-title"><h2 class="section-title" id="refs-title"><i class="fas fa-book-medical"></i> <span>المراجع والمصادر العلمية</span></h2><ol class="ref-list"><li>قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021). تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010. <a href="https://www.iso.org/standard/43633.html" target="_blank" rel="noopener">www.iso.org/standard/43633.html</a></li><li>تعريف الكربوهيدرات المتاحة والحمل الجلايسيمي: FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998. <a href="https://www.fao.org/4/w8079e/w8079e00.htm" target="_blank" rel="noopener">www.fao.org/4/w8079e/w8079e00.htm</a></li></ol><p class="ref-method"><a href="/methodology.html">المنهجية والتفاصيل ←</a></p></section>
             <p class="reviewed">تمت مراجعته من قبل فريق ويبو هيلث الطبي · آخر مراجعة 13 أكتوبر 2026</p>
             <p class="disclaimer-box">إخلاء مسؤولية: هذه البيانات استرشادية لنمط الحياة وليست جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تعديل نظامك العلاجي.</p>
         </article>
