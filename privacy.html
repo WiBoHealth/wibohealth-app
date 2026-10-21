@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'wait_for_update': 500});
+      try { if (localStorage.getItem('wibo_consent') === 'granted') gtag('consent', 'update', {'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted'}); } catch (e) {}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <script>
       gtag('js', new Date());
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
+    <script src="/js/consent.js?v=1" defer></script>
     <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
     <style>html.lang-loading body{visibility:hidden}</style>
     <script>
@@ -774,9 +779,9 @@
                 </ul>
 
                 <!-- Section 3 -->
-                <h2 data-i18n="privacy_section3_title">3. ملفات تعريف الارتباط (Cookies & Local Storage)</h2>
+                <h2 id="cookies" data-i18n="privacy_section3_title">3. ملفات تعريف الارتباط (Cookies & Local Storage)</h2>
                 <p data-i18n="privacy_section3_text">
-                    نستخدم تقنيات التخزين المحلي (Local Storage) وملفات الكوكيز الوظيفية لحفظ تفضيلاتك الأساسية مثل اللغة المختارة (العربية، الإنجليزية، الهولندية) والمظهر الليلي/النهاري، دون تتبع أنشطتك عبر مواقع خارجية. يمكنك تعطيل الكوكيز من إعدادات متصفحك في أي وقت.
+                    نستخدم التخزين المحلي (Local Storage) وكوكيز وظيفية ضرورية لحفظ تفضيلاتك، مثل اللغة والمظهر الليلي أو النهاري، وهذه لا تحتاج إلى موافقة. أما كوكيز التحليل والإعلانات من Google فلا تُفعَّل إلا إذا ضغطت «أوافق» في شريط الكوكيز، ويمكنك سحب موافقتك في أي وقت من زر «إعدادات الكوكيز» أدناه، أو بحذف بيانات الموقع من متصفحك.
                 </p>
 
                 <!-- Section 4 -->
@@ -793,8 +798,9 @@
                 <!-- Section 5 -->
                 <h2 data-i18n="privacy_section5_title">5. أدوات التحليل والإعلانات</h2>
                 <p data-i18n="privacy_section5_text">
-                    نستخدم خدمات Google Analytics لقياس الزيارات بشكل مجهول الهوية، وخدمات Google AdSense / AdMob المعتمدة لعرض إعلانات تتوافق مع اللوائح الأوروبية ومعايير حماية الخصوصية للمستخدمين داخل المنطقة الاقتصادية الأوروبية (EEA).
+                    <strong>Google Analytics 4:</strong> نستخدم Google Analytics، الذي تقدمه شركة Google Ireland Limited، لمعرفة عدد الزيارات والصفحات الأكثر قراءة ومصدر الزوار (مثل محركات البحث)، حتى نحسّن المحتوى. ويعمل وفق وضع الموافقة من Google (Consent Mode v2): قبل موافقتك تبقى كل أنواع التخزين مرفوضة، فلا تُوضع كوكيز تحليل ولا إعلانات، وقد ترسل الصفحة إلى Google إشارات مجهولة بلا كوكيز ولا معرّفات (مثل أن صفحة ما فُتحت). وبعد موافقتك فقط يضع Google Analytics الكوكيز _ga و_ga_* (مدتها حتى سنتين) لتمييز الزيارات المتكررة. لا يخزّن Google Analytics 4 عنوان IP، ولا نربط هذه البيانات بهويتك ولا نستعملها لأي غرض طبي. الأساس القانوني هو موافقتك (المادة 6(1)(أ) من اللائحة العامة لحماية البيانات GDPR). وقد تعالج Google البيانات خارج الاتحاد الأوروبي ضمن إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU-US Data Privacy Framework). وإذا عُرضت إعلانات Google AdSense، فلا تُستعمل كوكيز الإعلانات إلا بموافقتك. للمزيد راجع <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.
                 </p>
+                <p><button type="button" class="cookie-settings-btn" onclick="window.wiboConsent && wiboConsent.open()" style="min-height:44px;padding:8px 18px;border-radius:12px;border:2px solid #059669;background:#059669;color:#fff;font:inherit;font-weight:800;cursor:pointer"><i class="fas fa-cookie-bite"></i> <span data-i18n="privacy_cookie_btn">إعدادات الكوكيز</span></button></p>
 
                 <!-- Section 6 -->
                 <h2 data-i18n="privacy_section6_title">6. حماية البيانات والأمان السيبراني</h2>
@@ -971,7 +977,7 @@
                 privacy_section2_item3: "الرد المباشر على استفسارات المستخدمين ومتابعة طلبات التصحيح",
                 privacy_section2_item4: "إرسال التحديثات السريرية والنصائح التغذوية (بموافقتك الصريحة فقط)",
                 privacy_section3_title: "3. ملفات تعريف الارتباط (Cookies & Local Storage)",
-                privacy_section3_text: "نستخدم تقنيات التخزين المحلي (Local Storage) وملفات الكوكيز الوظيفية لحفظ تفضيلاتك الأساسية مثل اللغة المختارة (العربية، الإنجليزية، الهولندية) والمظهر الليلي/النهاري، دون تتبع أنشطتك عبر مواقع خارجية. يمكنك تعطيل الكوكيز من إعدادات متصفحك في أي وقت.",
+                privacy_section3_text: "نستخدم التخزين المحلي (Local Storage) وكوكيز وظيفية ضرورية لحفظ تفضيلاتك، مثل اللغة والمظهر الليلي أو النهاري، وهذه لا تحتاج إلى موافقة. أما كوكيز التحليل والإعلانات من Google فلا تُفعَّل إلا إذا ضغطت «أوافق» في شريط الكوكيز، ويمكنك سحب موافقتك في أي وقت من زر «إعدادات الكوكيز» أدناه، أو بحذف بيانات الموقع من متصفحك.",
                 privacy_section4_title: "4. مشاركة المعلومات وعدم بيع البيانات",
                 privacy_section4_intro: "نحن لا نبيع ولا نؤجر إطلاقاً بياناتك الشخصية لأي طرف ثالث. تتم مشاركة البيانات التقنية المحدودة فقط في الحالات التالية:",
                 privacy_section4_strong: "لا نبيع ولا نؤجر إطلاقاً",
@@ -979,7 +985,8 @@
                 privacy_section4_item2: "لمزودي البنية التحتية الموثوقين الملتزمين بالـ GDPR فقط: Supabase لتخزين الحسابات (خوادم في فرانكفورت، ألمانيا)، وGoogle Gemini لتحليل صور الأطعمة فقط",
                 privacy_section4_item3: "عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة",
                 privacy_section5_title: "5. أدوات التحليل والإعلانات",
-                privacy_section5_text: "نستخدم خدمات Google Analytics لقياس الزيارات بشكل مجهول الهوية، وخدمات Google AdSense / AdMob المعتمدة لعرض إعلانات تتوافق مع اللوائح الأوروبية ومعايير حماية الخصوصية للمستخدمين داخل المنطقة الاقتصادية الأوروبية (EEA).",
+                privacy_section5_text: "<strong>Google Analytics 4:</strong> نستخدم Google Analytics، الذي تقدمه شركة Google Ireland Limited، لمعرفة عدد الزيارات والصفحات الأكثر قراءة ومصدر الزوار (مثل محركات البحث)، حتى نحسّن المحتوى. ويعمل وفق وضع الموافقة من Google (Consent Mode v2): قبل موافقتك تبقى كل أنواع التخزين مرفوضة، فلا تُوضع كوكيز تحليل ولا إعلانات، وقد ترسل الصفحة إلى Google إشارات مجهولة بلا كوكيز ولا معرّفات (مثل أن صفحة ما فُتحت). وبعد موافقتك فقط يضع Google Analytics الكوكيز _ga و_ga_* (مدتها حتى سنتين) لتمييز الزيارات المتكررة. لا يخزّن Google Analytics 4 عنوان IP، ولا نربط هذه البيانات بهويتك ولا نستعملها لأي غرض طبي. الأساس القانوني هو موافقتك (المادة 6(1)(أ) من اللائحة العامة لحماية البيانات GDPR). وقد تعالج Google البيانات خارج الاتحاد الأوروبي ضمن إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU-US Data Privacy Framework). وإذا عُرضت إعلانات Google AdSense، فلا تُستعمل كوكيز الإعلانات إلا بموافقتك. للمزيد راجع <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">سياسة خصوصية Google</a>.",
+                privacy_cookie_btn: "إعدادات الكوكيز",
                 privacy_section6_title: "6. حماية البيانات والأمان السيبراني",
                 privacy_section6_intro: "نطبق بروتوكولات حماية تقنية وتنظيمية متقدمة لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الفقدان، وتشمل:",
                 privacy_section6_item1: "تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم",
@@ -1063,7 +1070,7 @@
                 privacy_section2_item3: "Responding promptly to support inquiries and handling brand data verification requests",
                 privacy_section2_item4: "Distributing educational nutritional updates (only with your explicit consent)",
                 privacy_section3_title: "3. Cookies & Local Storage",
-                privacy_section3_text: "We utilize modern Local Storage and essential functional cookies to remember your key preferences (such as selected language and dark/light theme) without tracking your browsing activity across third-party websites. You can disable cookies at any time via your browser settings.",
+                privacy_section3_text: "We use Local Storage and essential functional cookies to remember your preferences, such as language and dark or light theme; these do not need consent. Google analytics and advertising cookies are only switched on if you click \"Accept\" in the cookie banner, and you can withdraw your consent at any time with the \"Cookie settings\" button below, or by clearing this site's data in your browser.",
                 privacy_section4_title: "4. Information Sharing & Zero Data Selling",
                 privacy_section4_intro: "We strictly DO NOT sell, rent, or monetize your personal information. Limited technical data is shared only under the following strict conditions:",
                 privacy_section4_strong: "strictly DO NOT sell or rent",
@@ -1071,7 +1078,8 @@
                 privacy_section4_item2: "Only with GDPR-compliant infrastructure providers: Supabase for account storage (servers in Frankfurt, Germany) and Google Gemini exclusively for food photo analysis",
                 privacy_section4_item3: "When legally mandated by European judicial or regulatory authorities",
                 privacy_section5_title: "5. Analytics and Advertising Tools",
-                privacy_section5_text: "We use Google Analytics with IP anonymization to evaluate traffic patterns, and Google AdSense/AdMob to deliver relevant advertisements in full compliance with European privacy standards and Consent Frameworks for EEA users.",
+                privacy_section5_text: "<strong>Google Analytics 4:</strong> we use Google Analytics, provided by Google Ireland Limited, to see how many visits we get, which pages are read most and where visitors come from (such as search engines), so we can improve the content. It runs in Google Consent Mode v2: until you consent, all storage types stay denied, so no analytics or advertising cookies are set, and a page may send Google anonymous signals without cookies or identifiers (for example, that a page was opened). Only after you consent does Google Analytics set the _ga and _ga_* cookies (lasting up to two years) to recognise repeat visits. Google Analytics 4 does not store IP addresses, and we do not link this data to your identity or use it for any medical purpose. The legal basis is your consent (Article 6(1)(a) GDPR). Google may process data outside the EU under the EU-US Data Privacy Framework. If Google AdSense ads are shown, advertising cookies are only used with your consent. See <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google's privacy policy</a> for more.",
+                privacy_cookie_btn: "Cookie settings",
                 privacy_section6_title: "6. Data Security & Technical Measures",
                 privacy_section6_intro: "We implement advanced organizational and technical security measures to safeguard your information against unauthorized access, loss, or alteration:",
                 privacy_section6_item1: "End-to-end data transmission encryption via modern HTTPS / TLS protocols",
@@ -1155,7 +1163,7 @@
                 privacy_section2_item3: "Het beantwoorden van vragen van gebruikers en de afhandeling van rectificatieverzoeken",
                 privacy_section2_item4: "Het versturen van wetenschappelijke gezondheidstips (uitsluitend met jouw uitdrukkelijke toestemming)",
                 privacy_section3_title: "3. Cookies & Lokale Gegevensopslag (Local Storage)",
-                privacy_section3_text: "Wij maken gebruik van Local Storage en functionele cookies om jouw voorkeuren (zoals gekozen taal en dag/nachtmodus) lokaal op te slaan. Wij volgen je surfgedrag niet op externe websites. Je kunt cookies te allen tijde uitschakelen via je browserinstellingen.",
+                privacy_section3_text: "We gebruiken Local Storage en noodzakelijke functionele cookies om je voorkeuren te onthouden, zoals taal en donkere of lichte weergave; hiervoor is geen toestemming nodig. Analytische en advertentiecookies van Google worden alleen geplaatst als je in de cookiebanner op \"Accepteren\" klikt, en je kunt je toestemming op elk moment intrekken met de knop \"Cookie-instellingen\" hieronder, of door de sitegegevens in je browser te wissen.",
                 privacy_section4_title: "4. Gegevensdeling & Verbod op Verkoop van Gegevens",
                 privacy_section4_intro: "Wij verkopen of verhuren jouw persoonsgegevens NOOIT aan derden. Beperkte technische gegevens worden uitsluitend gedeeld onder strikte voorwaarden:",
                 privacy_section4_strong: "verkopen of verhuren jouw persoonsgegevens NOOIT",
@@ -1163,7 +1171,8 @@
                 privacy_section4_item2: "Uitsluitend met AVG-conforme infrastructuurproviders: Supabase voor accountopslag (servers in Frankfurt, Duitsland) en Google Gemini uitsluitend voor de analyse van voedselfoto's",
                 privacy_section4_item3: "Wanneer dit wettelijk verplicht is door bevoegde Europese gerechtelijke of toezichthoudende autoriteiten",
                 privacy_section5_title: "5. Analytische Diensten & Advertenties",
-                privacy_section5_text: "Wij gebruiken Google Analytics met IP-anonimisering voor bezoekersanalyses, en Google AdSense / AdMob voor advertenties die volledig voldoen aan de Europese privacykaders voor gebruikers binnen de Europese Economische Ruimte (EER).",
+                privacy_section5_text: "<strong>Google Analytics 4:</strong> we gebruiken Google Analytics, aangeboden door Google Ireland Limited, om te zien hoeveel bezoeken we krijgen, welke pagina's het meest gelezen worden en waar bezoekers vandaan komen (zoals zoekmachines), zodat we de inhoud kunnen verbeteren. Het werkt met Google Consent Mode v2: zolang je geen toestemming geeft, blijven alle soorten opslag geweigerd, worden er geen analytische of advertentiecookies geplaatst, en kan een pagina Google anonieme signalen zonder cookies of identificatoren sturen (bijvoorbeeld dat een pagina is geopend). Pas na je toestemming plaatst Google Analytics de cookies _ga en _ga_* (geldig tot twee jaar) om herhaalde bezoeken te herkennen. Google Analytics 4 slaat geen IP-adressen op, en we koppelen deze gegevens niet aan je identiteit en gebruiken ze niet voor medische doeleinden. De rechtsgrond is je toestemming (artikel 6, lid 1, onder a AVG). Google kan gegevens buiten de EU verwerken onder het EU-VS Data Privacy Framework. Als er advertenties van Google AdSense worden getoond, worden advertentiecookies alleen met jouw toestemming gebruikt. Zie het <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">privacybeleid van Google</a> voor meer informatie.",
+                privacy_cookie_btn: "Cookie-instellingen",
                 privacy_section6_title: "6. Beveiliging & Cyberveiligheid",
                 privacy_section6_intro: "Wij hanteren geavanceerde technische en organisatorische maatregelen om jouw gegevens te beschermen tegen ongeautoriseerde toegang, verlies of wijziging:",
                 privacy_section6_item1: "Volledige versleuteling van dataverkeer via geavanceerde HTTPS / TLS-protocollen",

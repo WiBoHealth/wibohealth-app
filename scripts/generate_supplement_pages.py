@@ -19,15 +19,20 @@ from pathlib import Path
 
 from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
 
-GA_TAG = """    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'wait_for_update': 500});
+      try { if (localStorage.getItem('wibo_consent') === 'granted') gtag('consent', 'update', {'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted'}); } catch (e) {}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <script>
       gtag('js', new Date());
 
       gtag('config', 'G-WG6S4KXXJS');
-    </script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+    </script>
+    <script src="/js/consent.js?v=1" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
 
 
 ROOT = Path(__file__).resolve().parent.parent
