@@ -22,6 +22,17 @@ from calculator_content import CALCS, T
 from generate_article_pages import EXTRA_CSS as ARTICLE_CSS
 from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
 
+GA_TAG = """    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WG6S4KXXJS');
+    </script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+
+
 ROOT = Path(__file__).resolve().parent.parent
 BY_KEY = {c['key']: c for c in CALCS}
 
@@ -362,6 +373,7 @@ def build(calc, lang):
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">
 <head>
+{GA_TAG}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{esc(c["title"])}</title>

@@ -17,6 +17,17 @@ import json
 import re
 from pathlib import Path
 
+GA_TAG = """    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WG6S4KXXJS');
+    </script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = 'https://wibohealth.com'
 REVIEWED = '2026-10-12'
@@ -1443,6 +1454,7 @@ def build(food, lang, ctx):
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">
 <head>
+{GA_TAG}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{esc(title)}</title>
