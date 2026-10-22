@@ -835,7 +835,7 @@ ar=dict(
                 <li><strong>سكر الدم الصائم (<bdi>Fasting Glucose</bdi>):</strong> فحص يقيس تركيز السكر في دمك بعد صيام ليلة كاملة (8 إلى 10 ساعات).</li>
             </ul>
             <figure class="article-figure figure-narrow">
-                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="مخطط أرقام السكر التراكمي ومرحلة ما قبل السكري بالألوان - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="مخطط أرقام السكر التراكمي ومرحلة ما قبل السكري بالألوان - WiBo Health" width="1024" height="935" loading="lazy" decoding="async">
                 <figcaption>المناطق الثلاث للسكر التراكمي وسكر الصائم وفق معايير الجمعية الأمريكية للسكري (ADA).</figcaption>
             </figure>
             <p>لتوضيح الأرقام بدون أي تعقيد، قسّم الأطباء هذه الأرقام إلى ثلاث مناطق واضحة تماماً:</p>
@@ -1000,7 +1000,7 @@ en=dict(
                 <li><strong>Fasting blood glucose:</strong> a test that measures the sugar concentration in your blood after an overnight fast (8 to 10 hours).</li>
             </ul>
             <figure class="article-figure figure-narrow">
-                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Colour-coded chart of HbA1c and fasting glucose ranges, including prediabetes - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Colour-coded chart of HbA1c and fasting glucose ranges, including prediabetes - WiBo Health" width="1024" height="935" loading="lazy" decoding="async">
                 <figcaption>The three zones for HbA1c and fasting glucose, according to the American Diabetes Association (ADA).</figcaption>
             </figure>
             <p>To make the numbers easy, doctors divide them into three clear zones:</p>
@@ -1165,7 +1165,7 @@ nl=dict(
                 <li><strong>Nuchtere bloedglucose:</strong> een test die de suikerconcentratie in je bloed meet na een nacht vasten (8 tot 10 uur).</li>
             </ul>
             <figure class="article-figure figure-narrow">
-                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Kleurenschema van HbA1c- en nuchtere glucosewaarden, inclusief prediabetes - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Kleurenschema van HbA1c- en nuchtere glucosewaarden, inclusief prediabetes - WiBo Health" width="1024" height="935" loading="lazy" decoding="async">
                 <figcaption>De drie zones voor HbA1c en nuchtere glucose volgens de American Diabetes Association (ADA).</figcaption>
             </figure>
             <p>Om het simpel te houden, delen artsen de waarden in drie duidelijke zones in:</p>
