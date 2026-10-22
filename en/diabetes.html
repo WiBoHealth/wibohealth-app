@@ -829,6 +829,17 @@
         .hub-card:hover { border-color: var(--primary); }
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
+        /* card with a thumbnail: photo beside the text, stacked above it on phones */
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; }
+        .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
+        .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
+        .hub-card-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+        .hub-card-body .group-chip { align-self: flex-start; }
+        @media (max-width: 640px) {
+            .hub-card.has-thumb { flex-direction: column; align-items: stretch; gap: 14px; }
+            .hub-thumb { flex-basis: auto; width: 100%; }
+        }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">
@@ -871,11 +882,14 @@
             <h1>Diabetes &amp; Metabolic Health</h1>
             <p class="lead">Clear, evidence-based guides on diabetes, insulin resistance and metabolic syndrome, prepared by the WiBo Health team to help you understand your situation and talk to your doctor with confidence.</p>
             <div class="hub-cards">
-                <a class="hub-card" href="/en/diabetes/gestational-diabetes.html">
-                    <span class="group-chip">Diabetes &amp; Metabolic Health</span>
-                    <h3>Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step</h3>
-                    <p>Normal levels in numbers, foods to eat and avoid, and a balanced daily meal plan to flatten your glucose curve.</p>
-                    <span class="card-link">Read the article</span>
+                <a class="hub-card has-thumb" href="/en/diabetes/gestational-diabetes.html">
+                    <div class="hub-thumb"><img src="/images/gestational-diabetes-guide-thumb.webp" srcset="/images/gestational-diabetes-guide-thumb.webp 640w, /images/gestational-diabetes-guide-hero.webp 1376w" sizes="(max-width: 640px) 92vw, 300px" alt="Smiling pregnant woman in a sunny kitchen wearing a glucose sensor on her arm, with a bowl of berries and an avocado" width="640" height="357" loading="lazy" decoding="async"></div>
+                    <div class="hub-card-body">
+                        <span class="group-chip">Diabetes &amp; Metabolic Health</span>
+                        <h3>Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step</h3>
+                        <p>Normal levels in numbers, foods to eat and avoid, and a balanced daily meal plan to flatten your glucose curve.</p>
+                        <span class="card-link">Read the article</span>
+                    </div>
                 </a>
             </div>
             <p class="disclaimer-box">⚖️ Medical disclaimer: the content in this section is general health education from WiBo Health. It is not a medical diagnosis and does not replace advice from your doctor or care team.</p>

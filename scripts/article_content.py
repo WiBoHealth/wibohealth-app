@@ -530,6 +530,7 @@ GESTATIONAL_DIABETES = dict(
     section='diabetes',
     slugs=dict(ar='gestational-diabetes', en='gestational-diabetes', nl='zwangerschapsdiabetes'),
     hero='gestational-diabetes-guide-hero.webp', hero_size=(1376, 768),
+    thumb='gestational-diabetes-guide-thumb.webp', thumb_size=(640, 357),   # hub card (diabetes.html), 640px copy of the hero
     published='2026-10-20', modified='2026-10-20',
     references=[
         'American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)',

@@ -23,7 +23,7 @@ import re
 from pathlib import Path
 
 from article_content import ARTICLES, SECTIONS
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block, site_link
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -137,6 +137,17 @@ EXTRA_CSS = """
         .hub-card:hover { border-color: var(--primary); }
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
+        /* card with a thumbnail: photo beside the text, stacked above it on phones */
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; }
+        .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
+        .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
+        .hub-card-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+        .hub-card-body .group-chip { align-self: flex-start; }
+        @media (max-width: 640px) {
+            .hub-card.has-thumb { flex-direction: column; align-items: stretch; gap: 14px; }
+            .hub-thumb { flex-basis: auto; width: 100%; }
+        }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 """
 
@@ -380,19 +391,33 @@ def build(a, lang):
                  active=f'/{section_dir(a)}.html' if a.get('section') else '/#articles')
 
 
+def hub_card(a, lang, t):
+    """One article card on a section hub; an article with a `thumb` shows it beside the text (lazy, hero as 2x source)."""
+    c = a['content'][lang]
+    chip = f'<span class="group-chip">{esc(c["cat"])}</span>'
+    text = (f'<h3>{esc(c["h1"])}</h3>', f'<p>{esc(c["summary"])}</p>',
+            f'<span class="card-link">{t["soon"] if is_draft(a) else t["read"]}</span>')
+    href = page_url(a, lang, absolute=False)
+    if not a.get('thumb'):
+        return f'                <a class="hub-card" href="{href}">\n' + ''.join(
+            f'                    {part}\n' for part in (chip,) + text) + '                </a>'
+    (tw, th), hw = a['thumb_size'], a['hero_size'][0]
+    img = (f'<img src="/images/{a["thumb"]}" srcset="/images/{a["thumb"]} {tw}w, /images/{a["hero"]} {hw}w" '
+           f'sizes="(max-width: 640px) 92vw, 300px" alt="{esc(c["hero_alt"])}" width="{tw}" height="{th}" loading="lazy" decoding="async">')
+    return (f'                <a class="hub-card has-thumb" href="{href}">\n'
+            f'                    <div class="hub-thumb">{img}</div>\n'
+            f'                    <div class="hub-card-body">\n'
+            + ''.join(f'                        {part}\n' for part in (chip,) + text)
+            + '                    </div>\n                </a>')
+
+
 def build_hub(key, lang):
     """Section landing page: intro plus one card per article of the section."""
     sec, t, u = SECTIONS[key], T[lang], UI[lang]
     c = sec['content'][lang]
     urls = {l: hub_url(sec, l) for l in LANGS}
     members = [a for a in ARTICLES if a.get('section') == key]
-    cards = '\n'.join(
-        f'''                <a class="hub-card" href="{page_url(a, lang, absolute=False)}">
-                    <span class="group-chip">{esc(a["content"][lang]["cat"])}</span>
-                    <h3>{esc(a["content"][lang]["h1"])}</h3>
-                    <p>{esc(a["content"][lang]["summary"])}</p>
-                    <span class="card-link">{t["soon"] if is_draft(a) else t["read"]}</span>
-                </a>''' for a in members)
+    cards = '\n'.join(hub_card(a, lang, t) for a in members)
     schema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -451,23 +476,18 @@ def main():
                for k, sec in SECTIONS.items() if not sec.get('draft')]
     entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero')) for a in ARTICLES if not is_draft(a)]
 
-    sm_path = ROOT / 'sitemap.xml'
-    sm = sm_path.read_text(encoding='utf-8')
-    eol = '\r\n' if '\r\n' in sm else '\n'
-    sm = re.sub(r'\s*<!-- ARTICLE-PAGES:START -->.*?<!-- ARTICLE-PAGES:END -->', '', sm, flags=re.S)
-    block = ['  <!-- ARTICLE-PAGES:START -->']
+    image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+    block = []
     for url_of, modified, hero in entries:
         for lang in LANGS:
             block += ['  <url>', f'    <loc>{url_of(lang)}</loc>']
             block += [f'    <lastmod>{modified}</lastmod>'] if modified else []
             block += ['    <changefreq>monthly</changefreq>', '    <priority>0.8</priority>']
-            if hero and 'xmlns:image' in sm:
+            if hero and image_ns:
                 block.append(f'    <image:image><image:loc>{SITE}/images/{hero}</image:loc></image:image>')
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in LANGS]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>', '  </url>']
-    block.append('  <!-- ARTICLE-PAGES:END -->')
-    sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
-    sm_path.write_text(sm, encoding='utf-8', newline='')
+    replace_sitemap_block('ARTICLE-PAGES', block)
     drafts = sum(is_draft(a) for a in ARTICLES)
     print(f'article pages written: {len(ARTICLES) * len(LANGS)} ({len(ARTICLES)} articles x {len(LANGS)} languages, '
           f'{drafts} draft); section hubs: {len(SECTIONS) * len(LANGS)}')

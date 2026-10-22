@@ -829,6 +829,17 @@
         .hub-card:hover { border-color: var(--primary); }
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
+        /* card with a thumbnail: photo beside the text, stacked above it on phones */
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; }
+        .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
+        .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
+        .hub-card-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+        .hub-card-body .group-chip { align-self: flex-start; }
+        @media (max-width: 640px) {
+            .hub-card.has-thumb { flex-direction: column; align-items: stretch; gap: 14px; }
+            .hub-thumb { flex-basis: auto; width: 100%; }
+        }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">
@@ -871,11 +882,14 @@
             <h1>السكري ومتلازمة الأيض</h1>
             <p class="lead">أدلة مبسطة ومبنية على المراجع العلمية حول السكري ومقاومة الإنسولين ومتلازمة الأيض، يعدّها فريق WiBo Health لمساعدتك على فهم حالتك والتحدث مع طبيبك بثقة.</p>
             <div class="hub-cards">
-                <a class="hub-card" href="/diabetes/gestational-diabetes.html">
-                    <span class="group-chip">السكري ومتلازمة الأيض</span>
-                    <h3>دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة</h3>
-                    <p>المعدل الطبيعي بالأرقام، الأطعمة المسموحة والممنوعة، وخطة وجبات يومية متوازنة لتسطيح منحنى السكر.</p>
-                    <span class="card-link">اقرأ المقال</span>
+                <a class="hub-card has-thumb" href="/diabetes/gestational-diabetes.html">
+                    <div class="hub-thumb"><img src="/images/gestational-diabetes-guide-thumb.webp" srcset="/images/gestational-diabetes-guide-thumb.webp 640w, /images/gestational-diabetes-guide-hero.webp 1376w" sizes="(max-width: 640px) 92vw, 300px" alt="امرأة حامل مبتسمة في مطبخ مشمس تضع حساس قياس السكر على ذراعها وأمامها وعاء توت وأفوكادو" width="640" height="357" loading="lazy" decoding="async"></div>
+                    <div class="hub-card-body">
+                        <span class="group-chip">السكري ومتلازمة الأيض</span>
+                        <h3>دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام، جدول الأكل المسموح والممنوع، وخطة يومك خطوة بخطوة</h3>
+                        <p>المعدل الطبيعي بالأرقام، الأطعمة المسموحة والممنوعة، وخطة وجبات يومية متوازنة لتسطيح منحنى السكر.</p>
+                        <span class="card-link">اقرأ المقال</span>
+                    </div>
                 </a>
             </div>
             <p class="disclaimer-box">⚖️ إخلاء مسؤولية طبي: المحتوى في هذا القسم مقدم لأغراض التثقيف الصحي العام من WiBo Health، ولا يُعتبر تشخيصاً طبياً ولا بديلاً عن استشارة طبيبك أو فريق الرعاية الصحية.</p>
