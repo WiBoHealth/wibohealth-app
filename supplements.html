@@ -1153,6 +1153,10 @@
                 <span style="color: #7f8c8d;">|</span>
                 <a href="partners.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 13px;" data-i18n="footer_partners">الشراكات</a>
                 <span style="color: #7f8c8d;">|</span>
+                <a href="/foods/index.html" data-dir-index="foods" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 13px;" data-i18n="footer_food_index">فهرس الأطعمة</a>
+                <span style="color: #7f8c8d;">|</span>
+                <a href="/supplements/index.html" data-dir-index="supplements" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 13px;" data-i18n="footer_supp_index">فهرس المكملات</a>
+                <span style="color: #7f8c8d;">|</span>
                 <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 13px;" data-i18n="footer_privacy">سياسة الخصوصية</a>
                 <span style="color: #7f8c8d;">|</span>
                 <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 13px;" data-i18n="footer_terms">شروط الاستخدام</a>
@@ -1225,6 +1229,8 @@
                 footer_contact: "اتصل بنا",
                 nav_partners: "الشراكات",
                 footer_partners: "الشراكات",
+                footer_food_index: "فهرس الأطعمة",
+                footer_supp_index: "فهرس المكملات",
                 footer_privacy: "سياسة الخصوصية",
                 footer_terms: "شروط الاستخدام",
                 footer_rights: "© 2026 WiBo Health. جميع الحقوق محفوظة.",
@@ -1286,6 +1292,8 @@
                 footer_contact: "Contact Us",
                 nav_partners: "Partnerships",
                 footer_partners: "Partnerships",
+                footer_food_index: "Food index",
+                footer_supp_index: "Supplement index",
                 footer_privacy: "Privacy Policy",
                 footer_terms: "Terms of Use",
                 footer_rights: "© 2026 WiBo Health. All rights reserved.",
@@ -1347,6 +1355,8 @@
                 footer_contact: "Contact",
                 nav_partners: "Partners",
                 footer_partners: "Partners",
+                footer_food_index: "Voedingsindex",
+                footer_supp_index: "Supplementenindex",
                 footer_privacy: "Privacybeleid",
                 footer_terms: "Gebruiksvoorwaarden",
                 footer_rights: "© 2026 WiBo Health. Alle rechten voorbehouden.",
@@ -2199,5 +2209,18 @@
         });
     </script>
     <script src="/js/nav-diabetes.js"></script>
+    <script>
+        // Footer links to the static index pages (every food / supplement page) in the reader's language
+        (function () {
+            function sync() {
+                var l = document.documentElement.lang;
+                document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
+                    a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
+                });
+            }
+            sync();
+            new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        })();
+    </script>
 </body>
 </html>

@@ -4,6 +4,8 @@ Local checks (always):
   - the URL maps to an existing file in the repo
   - no redirect rule in vercel.json matches it (a sitemap URL must not redirect)
   - the page's canonical points to itself and the page is not noindex
+  - the page's <link rel="alternate" hreflang> tags are exactly the sitemap's alternates for that URL
+    (so every language version points to the others and back)
 Live checks (with --live): HEAD each URL without following redirects; only 200 passes.
 
 Usage: python scripts/check_sitemap.py [--live]
@@ -27,9 +29,10 @@ def vercel_redirects():
     rules = []
     for r in json.loads((ROOT / 'vercel.json').read_text(encoding='utf-8')).get('redirects', []):
         src = r['source']
-        # :name(regex) -> (regex), :name* -> .*, :name -> [^/]+
+        # :name(regex) -> (regex), :name* -> .*, :name+ -> .+, :name -> [^/]+
         src = re.sub(r':\w+\(((?:[^()]|\([^()]*\))*)\)', r'(\1)', src)
         src = re.sub(r':\w+\*', '.*', src)
+        src = re.sub(r':\w+\+', '.+', src)
         src = re.sub(r':\w+', '[^/]+', src)
         rules.append((r['source'], re.compile('^' + src + '$')))
     return rules
@@ -44,11 +47,12 @@ def local_file(path):
 def main():
     live = '--live' in sys.argv
     tree = ET.parse(ROOT / 'sitemap.xml')
-    locs, alternates = [], set()
+    locs, alternates, alt_of = [], set(), {}
     for url in tree.getroot().findall('s:url', NS):
-        locs.append(url.find('s:loc', NS).text.strip())
-        for alt in url.findall('x:link', NS):
-            alternates.add(alt.get('href').strip())
+        loc = url.find('s:loc', NS).text.strip()
+        locs.append(loc)
+        alt_of[loc] = {(alt.get('hreflang'), alt.get('href').strip()) for alt in url.findall('x:link', NS)}
+        alternates |= {href for _, href in alt_of[loc]}
     all_urls = sorted(set(locs) | alternates)
     errors = []
 
@@ -60,6 +64,7 @@ def main():
 
     rules = vercel_redirects()
     canon_re = re.compile(r'<link rel="canonical" href="([^"]+)"')
+    hreflang_re = re.compile(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"')
     for u in all_urls:
         if not u.startswith(SITE + '/'):
             errors.append(f'foreign host: {u}')
@@ -78,6 +83,10 @@ def main():
             errors.append(f'canonical mismatch: {u} -> {m.group(1)}')
         if re.search(r'<meta[^>]+name="robots"[^>]+noindex', html, re.I):
             errors.append(f'noindex page in sitemap: {u}')
+        page_alts = set(hreflang_re.findall(html))
+        if u in alt_of and page_alts != alt_of[u]:
+            errors.append(f'hreflang mismatch page vs sitemap: {u} (page-only {sorted(page_alts - alt_of[u])}, '
+                          f'sitemap-only {sorted(alt_of[u] - page_alts)})')
 
     print(f'{len(locs)} <loc> entries, {len(all_urls)} distinct URLs incl. hreflang alternates')
 

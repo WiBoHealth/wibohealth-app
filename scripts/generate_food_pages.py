@@ -1246,6 +1246,25 @@ def site_link(path, lang):
     return f"{path}{'&' if '?' in path else '?'}lang={lang}{hash_}{frag}"
 
 
+def dir_url(kind, lang, absolute=True):
+    """Static index page that links every food or supplement page (scripts/generate_directory_pages.py).
+    foods.html and supplements.html render their cards in JS, so breadcrumbs and footers point here."""
+    path = f'/{kind}/index.html' if lang == 'ar' else f'/{lang}/{kind}/index.html'
+    return SITE + path if absolute else path
+
+
+def replace_sitemap_block(name, lines):
+    """Swap the <!-- NAME:START --> ... <!-- NAME:END --> block of sitemap.xml in place (added before </urlset> the first time),
+    so re-running one generator does not reorder the other blocks."""
+    sm_path = ROOT / 'sitemap.xml'
+    sm = sm_path.read_text(encoding='utf-8')
+    eol = '\r\n' if '\r\n' in sm else '\n'
+    block = eol.join([f'  <!-- {name}:START -->'] + lines + [f'  <!-- {name}:END -->'])
+    pattern = re.compile(r'  <!-- %s:START -->.*?<!-- %s:END -->' % (name, name), re.S)
+    sm = pattern.sub(lambda m: block, sm, count=1) if pattern.search(sm) else sm.replace('</urlset>', block + eol + '</urlset>', 1)
+    sm_path.write_text(sm, encoding='utf-8', newline='')
+
+
 # --------------------------------------------------------------------------------------------
 # Page builder
 # --------------------------------------------------------------------------------------------
@@ -1274,7 +1293,7 @@ def build(food, lang, ctx):
         reviewed_line = u['reviewed'].format(doctor=site_link('/doctor.html', lang), date=REVIEWED_TXT[lang])
     # breadcrumb section: the food's master group on foods.html (labels from js/food-categories.js)
     section = FOOD_GROUP_LABELS.get(food['group'])
-    section_href = site_link(f"/foods.html?group={food['group']}", lang) if section else ''
+    section_href = dir_url('foods', lang, absolute=False) + f"#{food['group']}" if section else ''
     p_factor = portion / 100.0
     tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
     if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
@@ -1435,7 +1454,7 @@ def build(food, lang, ctx):
         "lastReviewed": review_date(food['id']),
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
-            {"@type": "ListItem", "position": 2, "name": u['guide'], "item": SITE + site_link('/foods.html', lang)}]
+            {"@type": "ListItem", "position": 2, "name": u['guide'], "item": dir_url('foods', lang)}]
             + ([{"@type": "ListItem", "position": 3, "name": section[lang], "item": SITE + section_href}] if section else [])
             + [{"@type": "ListItem", "position": 4 if section else 3, "name": name, "item": urls[lang]}]},
     }
@@ -1452,9 +1471,11 @@ def build(food, lang, ctx):
         f'<div class="tip{" warn" if i == 2 else ""}"><h3><i class="fas {tip_icons[i]}"></i> {u["tip_titles"][i]}</h3>'
         f'<p>{esc(tips[i])}</p></div>' for i in range(3))
     footer_links = ' <span>•</span> '.join(
-        f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
-        [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/methodology.html', u['methodology']),
-         ('/doctor.html', 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
+        f'<a href="{href}">{label}</a>' for href, label in
+        [(site_link('/', lang), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
+         (dir_url('supplements', lang, absolute=False), u['nav'][3]), (site_link('/methodology.html', lang), u['methodology']),
+         (site_link('/doctor.html', lang), 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'),
+         (site_link('/partners.html', lang), u['partners']), (site_link('/privacy.html', lang), u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">
@@ -1520,7 +1541,7 @@ def build(food, lang, ctx):
     <main class="page-wrapper food-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{site_link('/foods.html', lang)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
+                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>
 
             <div class="food-hero">
@@ -1624,23 +1645,14 @@ def main():
         encoding='utf-8', newline='\n')
 
     # sitemap block with hreflang alternates
-    sm_path = ROOT / 'sitemap.xml'
-    sm = sm_path.read_text(encoding='utf-8')
-    eol = '\r\n' if '\r\n' in sm else '\n'
-    if 'xmlns:xhtml' not in sm:
-        sm = sm.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-                        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">', 1)
-    sm = re.sub(r'\s*<!-- FOOD-PAGES:START -->.*?<!-- FOOD-PAGES:END -->', '', sm, flags=re.S)
-    block = ['  <!-- FOOD-PAGES:START -->']
+    block = []
     for fid in PILOT:
         for lang in LANGS:
             block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{review_date(fid)}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in LANGS]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "ar")}"/>', '  </url>']
-    block.append('  <!-- FOOD-PAGES:END -->')
-    sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
-    sm_path.write_text(sm, encoding='utf-8', newline='')
+    replace_sitemap_block('FOOD-PAGES', block)
 
     print(f'pages written: {written} ({len(PILOT)} foods x {len(LANGS)} languages)')
     print('measured:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'measured'),

@@ -48,10 +48,6 @@
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://wibohealth.com/">
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/?lang=ar">
-    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/?lang=nl">
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/?lang=en">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -202,6 +198,8 @@
                 'footer_contact': 'اتصل بنا',
                 'nav_partners': 'الشراكات',
                 'footer_partners': 'الشراكات',
+                'footer_food_index': 'فهرس الأطعمة',
+                'footer_supp_index': 'فهرس المكملات',
                 'footer_privacy': 'سياسة الخصوصية',
                 'footer_terms': 'شروط الاستخدام',
                 'footer_calorie_tracker': 'متتبع السعرات الحرارية',
@@ -363,6 +361,8 @@
                 'footer_contact': 'Contact Us',
                 'nav_partners': 'Partnerships',
                 'footer_partners': 'Partnerships',
+                'footer_food_index': 'Food index',
+                'footer_supp_index': 'Supplement index',
                 'footer_privacy': 'Privacy Policy',
                 'footer_terms': 'Terms of Use',
                 'footer_calorie_tracker': 'Calorie Tracker',
@@ -524,6 +524,8 @@
                 'footer_contact': 'Contact',
                 'nav_partners': 'Partners',
                 'footer_partners': 'Partners',
+                'footer_food_index': 'Voedingsindex',
+                'footer_supp_index': 'Supplementenindex',
                 'footer_privacy': 'Privacybeleid',
                 'footer_terms': 'Gebruiksvoorwaarden',
                 'footer_calorie_tracker': 'Calorieënteller',
@@ -2620,6 +2622,10 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="partners.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_partners">الشراكات</a>
             <span style="color: #7f8c8d;">|</span>
+            <a href="/foods/index.html" data-dir-index="foods" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_food_index">فهرس الأطعمة</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/supplements/index.html" data-dir-index="supplements" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_supp_index">فهرس المكملات</a>
+            <span style="color: #7f8c8d;">|</span>
             <a href="privacy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="terms.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">شروط الاستخدام</a>
@@ -2716,5 +2722,18 @@
     }
     </script>
     <script src="/js/nav-diabetes.js"></script>
+    <script>
+        // Footer links to the static index pages (every food / supplement page) in the reader's language
+        (function () {
+            function sync() {
+                var l = document.documentElement.lang;
+                document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
+                    a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
+                });
+            }
+            sync();
+            new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        })();
+    </script>
 </body>
 </html>

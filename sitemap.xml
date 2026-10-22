@@ -31858,4 +31858,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods/antwerp-handjes.html"/>
   </url>
   <!-- FOOD-PAGES:END -->
+  <!-- DIRECTORY-PAGES:START -->
+  <url>
+    <loc>https://wibohealth.com/foods/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods/index.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/foods/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods/index.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/foods/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/foods/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods/index.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/supplements/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/supplements/index.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/supplements/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/supplements/index.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/supplements/index.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/supplements/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/supplements/index.html"/>
+  </url>
+  <!-- DIRECTORY-PAGES:END -->
 </urlset>

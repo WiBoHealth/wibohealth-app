@@ -52,12 +52,12 @@
       "permanent": true
     },
     {
-      "source": "/http\\::path*",
-      "destination": "/",
+      "source": "/:proto(https?)\\:/:host(wibohealth\\.com|www\\.wibohealth\\.com)/:path+",
+      "destination": "/:path+",
       "permanent": true
     },
     {
-      "source": "/https\\::path*",
+      "source": "/:proto(https?)\\::rest(.*)",
       "destination": "/",
       "permanent": true
     }

@@ -5,6 +5,7 @@ static food pages (foods/, en/foods/, nl/foods/), the supplement pages (suppleme
 article pages (articles/, en/..., nl/...):
   - the block parses as JSON (an empty block is an error too)
   - no "Product" type anywhere, and no offers / aggregateRating / review / price fields
+  - the food and supplement index pages (foods/index.html, ...) carry a CollectionPage
   - every static food page carries a MedicalWebPage with author (Dr. Wassim Habib) and publisher
   - every supplement, article and calculator page carries a MedicalWebPage authored by the WiBo Health organisation,
     cites its sources, and never names a personal reviewer (legal requirement for supplement and article content);
@@ -39,15 +40,17 @@ def walk(node, path='$'):
 
 def main():
     pages = [ROOT / 'foods.html', ROOT / 'food-details.html']
-    static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html'))]
+    # index.html in the food and supplement folders is the static index (generate_directory_pages.py): a CollectionPage
+    indexes = [ROOT / d / 'index.html' for d in ('foods', 'en/foods', 'nl/foods', 'supplements', 'en/supplements', 'nl/supplements')]
+    static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
     supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles',
                         'diabetes', 'en/diabetes', 'nl/diabetes')
-            for p in sorted((ROOT / d).glob('*.html'))]
+            for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # the standalone calculator pages follow the same organisation-only authorship rule
     supp += [p for d in ('.', 'en', 'nl') for p in sorted((ROOT / d).glob('*-calculator.html'))]
     errors, blocks = [], 0
-    for page in pages + static + supp:
+    for page in pages + static + supp + [p for p in indexes if p.exists()]:
         rel = page.relative_to(ROOT).as_posix()
         found_types = set()
         text = page.read_text(encoding='utf-8')
@@ -92,6 +95,8 @@ def main():
                             errors.append(f'{rel}: no citation')
         if page in static + supp and 'MedicalWebPage' not in found_types:
             errors.append(f'{rel}: no MedicalWebPage block')
+        if page in indexes and 'CollectionPage' not in found_types:
+            errors.append(f'{rel}: no CollectionPage block')
 
     sources = [p for p in ROOT.glob('*.html')] + [p for p in (ROOT / 'js').glob('*.js')] + \
               [p for d in ('en', 'nl') for p in (ROOT / d).glob('*.html')]

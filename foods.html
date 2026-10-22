@@ -80,10 +80,6 @@
     <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/foods.html">
 
     <!-- Alternate Language Tags for Googlebot (Hreflang) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html?lang=ar">
-    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/foods.html?lang=nl">
-    <link rel="alternate" hreflang="en" href="https://wibohealth.com/foods.html?lang=en">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/foods.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -1534,6 +1530,10 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="partners.html" data-i18n="footer_partners">الشراكات</a>
             <span style="color: #7f8c8d;">|</span>
+            <a href="/foods/index.html" data-dir-index="foods" data-i18n="footer_food_index">فهرس الأطعمة</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/supplements/index.html" data-dir-index="supplements" data-i18n="footer_supp_index">فهرس المكملات</a>
+            <span style="color: #7f8c8d;">|</span>
             <a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
@@ -1663,6 +1663,8 @@
                 "footer_contact": "اتصل بنا",
                 "nav_partners": "الشراكات",
                 "footer_partners": "الشراكات",
+                "footer_food_index": "فهرس الأطعمة",
+                "footer_supp_index": "فهرس المكملات",
                 "footer_privacy": "سياسة الخصوصية",
                 "footer_terms": "شروط الاستخدام",
                 "footer_dev_a": "مُطور بـ",
@@ -1741,6 +1743,8 @@
                 "footer_contact": "Contact Us",
                 "nav_partners": "Partnerships",
                 "footer_partners": "Partnerships",
+                "footer_food_index": "Food index",
+                "footer_supp_index": "Supplement index",
                 "footer_privacy": "Privacy Policy",
                 "footer_terms": "Terms of Use",
                 "footer_dev_a": "Developed with",
@@ -1819,6 +1823,8 @@
                 "footer_contact": "Contact",
                 "nav_partners": "Partners",
                 "footer_partners": "Partners",
+                "footer_food_index": "Voedingsindex",
+                "footer_supp_index": "Supplementenindex",
                 "footer_privacy": "Privacybeleid",
                 "footer_terms": "Algemene Voorwaarden",
                 "footer_dev_a": "Ontwikkeld met",
@@ -2741,5 +2747,18 @@
         }
     </script>
     <script src="/js/nav-diabetes.js"></script>
+    <script>
+        // Footer links to the static index pages (every food / supplement page) in the reader's language
+        (function () {
+            function sync() {
+                var l = document.documentElement.lang;
+                document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
+                    a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
+                });
+            }
+            sync();
+            new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        })();
+    </script>
 </body>
 </html>
