@@ -5517,7 +5517,7 @@
   <!-- ARTICLE-PAGES:START -->
   <url>
     <loc>https://wibohealth.com/diabetes.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
@@ -5527,7 +5527,7 @@
   </url>
   <url>
     <loc>https://wibohealth.com/en/diabetes.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
@@ -5537,7 +5537,7 @@
   </url>
   <url>
     <loc>https://wibohealth.com/nl/diabetes.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
@@ -5574,6 +5574,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/articles/healthy-sugar-free-breakfast-cereals.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/articles/gezonde-ontbijtgranen-zonder-suiker.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/articles/healthy-sugar-free-breakfast-cereals.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/diabetes/prediabetes.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/diabetes/prediabetes.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/diabetes/prediabetes.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
   </url>
   <url>
     <loc>https://wibohealth.com/diabetes/gestational-diabetes.html</loc>

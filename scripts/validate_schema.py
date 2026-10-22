@@ -22,7 +22,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 # Articles the user explicitly chose to sign with the doctor's name (2026-10-20): Person author + reviewedBy instead of the organisation
-NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestational-diabetes.html', 'nl/diabetes/zwangerschapsdiabetes.html'}
+# and the prediabetes guide (2026-10-22, second exception)
+NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestational-diabetes.html', 'nl/diabetes/zwangerschapsdiabetes.html',
+                      'diabetes/prediabetes.html', 'en/diabetes/prediabetes.html', 'nl/diabetes/prediabetes.html'}
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}
 LD_RE = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 RUNTIME_PRODUCT_RE = re.compile(r'["\']@type["\']\s*:\s*["\']Product["\']')

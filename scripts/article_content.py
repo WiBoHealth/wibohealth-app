@@ -793,4 +793,530 @@ nl=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, GESTATIONAL_DIABETES]
+PREDIABETES = dict(
+    section='diabetes',
+    slugs=dict(ar='prediabetes', en='prediabetes', nl='prediabetes'),
+    hero='prediabetes-guide-hero.webp', hero_size=(896, 504),          # 16:9 crop of prediabetes-healthy-breakfast-lifestyle.webp
+    thumb='prediabetes-guide-thumb.webp', thumb_size=(640, 360),
+    published='2026-10-22', modified='2026-10-22',
+    references=[
+        'American Diabetes Association Professional Practice Committee. 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1)',
+        'Diabetes Prevention Program Research Group. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med 2002;346(6):393–403',
+        'Diabetes Prevention Program Research Group. Long-term effects of lifestyle intervention or metformin on diabetes development and microvascular complications over 15-year follow-up: the Diabetes Prevention Program Outcomes Study. Lancet Diabetes Endocrinol 2015;3(11):866–875',
+        'Shukla AP, Iliescu RG, Thomas CE, Aronne LJ. Food order has a significant impact on postprandial glucose and insulin levels. Diabetes Care 2015;38(7):e98–e99',
+        'World Health Organization. Definition and diagnosis of diabetes mellitus and intermediate hyperglycaemia: report of a WHO/IDF consultation. Geneva: WHO; 2006',
+    ],
+    faq_schema=True,
+    named_author=True,                                   # user decision 2026-10-22: second named exception (reviewed by Dr. Wassim Habib)
+    content=dict(
+ar=dict(
+ byline='مراجعة طبية: الدكتور وسيم حبيب',
+ title='مرحلة ما قبل السكري: كيف توقف القطار وتنزّل التراكمي قبل ما يتحول لسكري؟',
+ h1='مرحلة ما قبل السكري: كيف توقف القطار وتنزّل التراكمي قبل ما يتحول لسكري؟',
+ crumb='ما قبل السكري',
+ cat='السكري ومتلازمة الأيض',
+ desc='سكرك التراكمي بين 5.7% و6.4%؟ افهم مرحلة ما قبل السكري بالأرقام، وأعراضها الخفية، وخطة عملية لـ 12 أسبوعاً بالغذاء والحركة والنوم لخفض التراكمي، مبنية على دراسة DPP ومعايير ADA.',
+ summary='معنى أرقام التراكمي والصائم، لماذا تحدث مقاومة الإنسولين، وخطة 12 أسبوعاً بالغذاء والحركة والنوم لإعادة السكر إلى المنطقة الآمنة.',
+ hero_alt='امرأة مبتسمة في مطبخ مشمس تستعد لتناول فطور صحي متوازن',
+ about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
+ disclaimer='⚠️ إخلاء مسؤولية طبي: المحتوى والمعلومات الواردة في هذا المقال مقدمة لأغراض التثقيف الصحي العام ورفع الوعي الغذائي، ولا تُعتبر بأي حال من الأحوال تشخيصاً طبياً، أو خطة علاجية مخصصة، أو بديلاً عن استشارة الطبيب المختص أو مقدم الرعاية الصحية المتابع لحالتك. استشر طبيبك دائماً قبل إجراء تغييرات جذرية في نظامك الغذائي أو أدويتك.',
+ body='''            <p class="lead">تخيّل أنك خرجت للتو من باب المختبر أو عيادة الطبيب، ورقة التحليل بيدك، وعيناك مثبتتان على رقم واحد محاط بدائرة حمراء: السكر التراكمي 5.9% أو 6.1%، أو ربما سكر الصائم 112 ملغ/ديسيلتر.</p>
+            <p>ربما قال لك الطبيب جملة مقتضبة وهو يودعك: <em>"سكرك على الحافة.. انتبه على حالك وخفف أكل"</em>.</p>
+            <p>خرجت إلى الشارع، والأفكار تتزاحم في رأسك كأمواج متلاطمة: هل أصبحت مريض سكري خلاص؟ هل انتهت الأيام التي آكل فيها مع عائلتي براحة؟ هل سأعيش بقية عمري على الأدوية ووخز الإبر؟ من أين أبدأ غداً صباحاً؟</p>
+            <p>قبل أن تترك القلق يلتهم يومك، خذ نفساً عميقاً واقرأ هذه الكلمات بقلبك: <strong>أنت لست مريض سكري، هذا الرقم ليس حكماً نهائياً ولا نهايةً لا رجعة فيها، والأهم من ذلك كله: هذا ليس خطأك.</strong></p>
+            <p>أنت لست في نهاية الطريق، بل أنت تقف في "محطة الإنذار المبكر". ورقة تحليلك هذه لم تكن خبراً سيئاً، بل كانت في الحقيقة أعظم هدية تنبيهية منحك إياها جسمك. هذا المقال ليس كتاباً طبياً معقداً، بل هو خطتك العملية، خطوة بخطوة، لترجع بالسكر التراكمي إلى بر الأمان وتوقف القطار قبل أن يواصل مسيره.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>1. شو يعني "سكرك على الحافة"؟ فك شيفرة ورقة تحليلك ببساطة</span></h2>
+            <p>أول خطوة للتخلص من الخوف هي الفهم؛ فالإنسان عدو ما يجهل. عندما تنظر إلى أرقام تحاليل الدم، ستجد مصطلحين رئيسيين يبحث عنهما آلاف الأشخاص يومياً بلهفة:</p>
+            <ul class="check-list">
+                <li><strong>السكر التراكمي (<bdi>HbA1c</bdi>):</strong> لا يخبرنا بمقدار السكر في دمك اليوم أو بعد وجبة البارحة، بل هو بمثابة "شريط ذكريات" لكريات الدم الحمراء يوثق متوسط السكر الذي سبح في دمك طوال الـ 90 يوماً الماضية.</li>
+                <li><strong>سكر الدم الصائم (<bdi>Fasting Glucose</bdi>):</strong> فحص يقيس تركيز السكر في دمك بعد صيام ليلة كاملة (8 إلى 10 ساعات).</li>
+            </ul>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="مخطط أرقام السكر التراكمي ومرحلة ما قبل السكري بالألوان - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>المناطق الثلاث للسكر التراكمي وسكر الصائم وفق معايير الجمعية الأمريكية للسكري (ADA).</figcaption>
+            </figure>
+            <p>لتوضيح الأرقام بدون أي تعقيد، قسّم الأطباء هذه الأرقام إلى ثلاث مناطق واضحة تماماً:</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 أولاً: منطقة الأمان الخضراء (الوضع الطبيعي)</div>
+            <ul class="check-list">
+                <li><strong>السكر التراكمي:</strong> أقل من 5.7%.</li>
+                <li><strong>سكر الصائم:</strong> أقل من 100 ملغ/ديسيلتر (أقل من 5.6 مليمول/لتر).</li>
+                <li><strong>معناها:</strong> خلاياك حساسة للإنسولين، وبنكرياسك يعمل براحة وهدوء.</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 ثانياً: منطقة التنبيه والفرصة الذهبية (مرحلة ما قبل السكري)</div>
+            <ul class="check-list">
+                <li><strong>السكر التراكمي:</strong> يقع بين 5.7% و6.4%.</li>
+                <li><strong>سكر الصائم:</strong> يقع بين 100 و125 ملغ/ديسيلتر (بين 5.6 و6.9 مليمول/لتر).</li>
+                <li><strong>معناها:</strong> أنت في مرحلة "مقدمات السكري". السكر في دمك أعلى من الطبيعي، لكنه لم يصل بعد إلى عتبة مرض السكري. هنا تكمن نافذة النجاة؛ فالجسم ما زال قادراً على استعادة توازنه إذا رفعت عنه الحمل الزائد.</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 ثالثاً: منطقة الإجراء والمتابعة الطبية (السكري من النوع الثاني)</div>
+            <ul class="check-list">
+                <li><strong>السكر التراكمي:</strong> 6.5% أو أكثر.</li>
+                <li><strong>سكر الصائم:</strong> 126 ملغ/ديسيلتر أو أكثر (في فحصين منفصلين).</li>
+                <li><strong>معناها:</strong> تجاوز الجسم مرحلة التنبيه وأصبح يحتاج لتدخل دوائي ومتابعة منتظمة لمنع المضاعفات.</li>
+            </ul>
+            <div class="tip"><h3>💡 قاعدة ذهبية احفظها جيداً</h3><p>إذا كان تراكمي السكر لديك اليوم 5.8، 6.0، أو حتى 6.3.. فهذا يعني أنك في المنطقة الصفراء. القطار لم يصل بعد إلى المحطة الأخيرة؛ القطار يبطئ سرعته الآن، وأنت تملك المفتاح لتوجيهه إلى مسار الأمان.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> <span>2. ليش تحرك القطار بهاد الاتجاه أصلاً؟ حكاية الباب والمفتاح</span></h2>
+            <p>كثير من الناس يشعرون بالذنب الشديد ويظنون أن ما قبل السكري يحدث فقط لأنهم أكلوا قطعة حلوى إضافية، لكن الحقيقة الفسيولوجية أعمق من ذلك بكثير. لنفهم ما يحدث داخل جسدك، تخيل الآتي:</p>
+            <ol class="steps">
+                <li>في كل مرة تأكل فيها طعاماً (خصوصاً النشويات والسكريات)، يتحول هذا الطعام إلى جلوكوز (سكر) يسبح في مجرى الدم.</li>
+                <li>وجود السكر في الدم يدفع البنكرياس لإفراز هرمون يسمى <strong>الإنسولين</strong>.</li>
+                <li>الإنسولين وظيفته مثل "المفتاح"؛ يذهب إلى خلايا جسمك (العضلات، الكبد)، يفتح قفل الخلية، ليدخل السكر وتستخدمه الخلية لإنتاج الطاقة والحركة.</li>
+            </ol>
+            <h3>أين تكمن المشكلة إذاً؟</h3>
+            <p>مع مرور السنين، وتكرار الوجبات المليئة بالنشويات السريعة، وقلة الحركة، والتوتر الدائم، أصبحت الخلايا ممتلئة بالسكر ولا تريد المزيد. أقفال الأبواب أصبحت "صدئة وثقيلة"؛ هذا ما نسميه علمياً <a href="{site:/insulin-resistance.html}">مقاومة الإنسولين</a>.</p>
+            <p>صار المفتاح العادي لا يفتح الباب بسهولة، فماذا يفعل البنكرياس المسكين؟ يبدأ بالعمل لساعات إضافية (<bdi>Overtime</bdi>)، ويصنع مفاتيح أكثر وأكثر (يفرز كميات هائلة من الإنسولين) حتى يجبر الخلايا على ابتلاع السكر.</p>
+            <p>طالما أن البنكرياس قادر على مضاعفة جهده، يظل سكر دمك طبيعياً لسنوات وأنت لا تدري! ولكن بعد فترة، يبدأ البنكرياس بالتعب والإرهاق، فلا يعود قادراً على مواكبة الطلب الهائل؛ هنا يبدأ السكر بالبقاء في الدم والتراكم تدريجياً، لتبدأ أرقام التحليل بالارتفاع نحو 5.7 و6.0 وما فوقها.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>3. هل كنت تشعر بأعراض ولم تنتبه لها؟</span></h2>
+            <p>يُطلق على مرحلة ما قبل السكري اسم "اللص الصامت"، لأن الغالبية الساحقة لا يشعرون بأي ألم مفاجئ. لكن الجسم في الحقيقة يرسل إشارات خفية، إذا راجعت شريط ذكرياتك في الأشهر الأخيرة ستجد أنك عشت بعضها:</p>
+            <ul class="check-list">
+                <li><strong>غيبوبة الطعام بعد الغداء (<bdi>Food Coma</bdi>):</strong> خمول شديد ورغبة ملحة في النوم فور تناول وجبة غداء غنية بالأرز، الخبز، أو المعكرونة.</li>
+                <li><strong>شراهة السكر بعد ساعتين من الأكل:</strong> تشعر بجوع مفاجئ ورغبة عارمة في تناول شيء حلو، رغم أنك تناولت وجبة مشبعة قبل قليل؛ والسبب هبوط حاد في سكر الدم ناتج عن موجة الإنسولين العالية.</li>
+                <li><strong>دهون البطن والخصر العنيدة:</strong> زيادة ملحوظة في محيط الخصر لا تتزحزح بسهولة؛ فالإنسولين المرتفع هو هرمون تخزين الدهون الأول في الجسم.</li>
+                <li><strong>تغيرات جلدية صغيرة:</strong> ظهور بقع داكنة مخملية خفيفة خلف الرقبة أو تحت الإبط (الشواك الأسود)، أو زوائد جلدية صغيرة حول الرقبة؛ وهي علامات خارجية واضحة لمقاومة الإنسولين.</li>
+                <li><strong>العطش الخفيف والاستيقاظ للتبول ليلاً:</strong> الجسم يبدأ بمحاولة التخلص من بواقي السكر الزائد عن طريق الكلى.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>4. الحقيقة المثبتة: كيف نوقف القطار علمياً ونخفض التراكمي؟</span></h2>
+            <p>دعنا نتفق على حقيقة قاطعة: لا يوجد شاي سحري، ولا خلطة أعشاب على الإنترنت، ولا وصفة سرية تمسح مرحلة ما قبل السكري في ليلة وضحاها. من يخبرك بذلك يبيعك وهماً رخيصاً قد يؤذي صحتك.</p>
+            <p>ولكن، في المقابل، هناك حقيقة طبية أثبتتها أضخم الدراسات العالمية (مثل دراسة برنامج الوقاية من السكري الشهيرة <bdi>DPP</bdi>): خلايا البنكرياس في مرحلة ما قبل السكري لم تمت؛ هي فقط منهكة. وإذا خففت عنها العبء، فإن قدرة الجسم على تجديد حساسية الإنسولين وخفض التراكمي هي قدرة مذهلة وحقيقية!</p>
+            <div class="tip"><h3>📊 ماذا أثبتت الدراسة؟</h3><p>أظهرت الأبحاث أن فقدان ما بين 5% إلى 7% فقط من وزنك الحالي (أي حوالي 4 إلى 6 كغ إذا كان وزنك 80 كغ)، مع تعديلات ذكية في الحركة ونوعية الأكل، يقلل من احتمال تطور الحالة إلى سكري بنسبة <strong>58%</strong>، أي قرابة ضعف تأثير دواء الميتفورمين (31%) في الدراسة نفسها!</p></div>
+            <p>إليك كيف تفعل ذلك عملياً، خطوة بخطوة، وبدون حرمان.</p>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. خطة الصحن الذكي: كيف تأكل وتخفض السكر بدون حرمان أو جوع؟</span></h2>
+            <p>أكبر خطأ يقع فيه من يسمع بكلمة "ما قبل السكري" هو تجويع النفس أو العيش على الخس والماء؛ هذا طريق مسدود ينتهي دائماً بالانتكاس والشراهة. السر لا يكمن في الحرمان، بل في <strong>"ترتيب الأكل"</strong> و<strong>"نوعية المكونات"</strong>.</p>
+
+            <h3>أ. حيلة "ترتيب الأكل" الذهبية (<bdi>Food Sequencing</bdi>)</h3>
+            <p>هل تعلم أن تناول نفس مكونات وجبتك، ولكن بترتيب مختلف، يغير تماماً طريقة تعامل جسمك مع السكر؟ أثبتت الدراسات أن تناول الطعام بهذا الترتيب يخفض ذروة ارتفاع السكر بعد الوجبة بنسبة تصل إلى 40%:</p>
+            <ol class="steps">
+                <li><strong>ابدأ بالألياف أولاً:</strong> صحن السلطة، الخضار الورقية، <a href="{food:cucumber}">الخيار</a>، أو <a href="{food:broccoli}">البروكلي</a>. الألياف تصنع طبقة شبكية هلامية في أمعائك تبطئ امتصاص السكر القادم بعدها.</li>
+                <li><strong>انتقل للبروتين والدهون الصحية ثانياً:</strong> البيض، الدجاج، اللحم، السمك، <a href="{food:avocado}">الأفوكادو</a>، أو الجبن و<a href="{food:extra-virgin-olive-oil}">زيت الزيتون</a>. البروتين يحفز هرمونات الشبع ويبطئ إفراغ المعدة.</li>
+                <li><strong>اترك النشويات للنهاية:</strong> الأرز، الخبز، أو البطاطا؛ حين تصل النشويات إلى أمعائك تكون شبكة الألياف والبروتين جاهزة لاستقبالها وامتصاصها ببطء شديد، مما يمنع القفزات الحادة في السكر.</li>
+            </ol>
+
+            <h3>ب. وجبة الفطور: النغمة التي تقود سائر يومك</h3>
+            <p>إذا بدأت يومك بـ<a href="{food:butter-croissant}">كرواسان</a>، قطعة كيك، حبوب إفطار سكرية (كورن فليكس)، أو شاي محلى بثلاث ملاعق سكر، فأنت تشعل حريقاً في سكر دمك منذ الصباح، وسيبقى الإنسولين مرتفعاً طوال اليوم طلباً للمزيد من الكربوهيدرات.</p>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="فطور صحي متوازن لضبط السكر التراكمي ومقاومة الإنسولين - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
+                <figcaption>فطور يثبّت السكر: بيض، أفوكادو، ورقيات خضراء، مكسرات، توت وبذور، مع ماء وليمون.</figcaption>
+            </figure>
+            <p><strong>الفطور المثالي لتسطيح منحنى السكر:</strong></p>
+            <ul class="check-list">
+                <li><a href="{food:boiled-egg}">بيض مسلوق</a> أو مقلي بزيت زيتون أو زبدة طبيعية.</li>
+                <li>نصف حبة <a href="{food:avocado}">أفوكادو</a> أو حفنة مكسرات نيئة (<a href="{food:raw-almonds}">لوز</a> أو <a href="{food:walnuts}">جوز</a>).</li>
+                <li>صحن غني بالورقيات الخضراء (<a href="{food:arugula-rocket}">جرجير</a>، <a href="{food:spinach}">سبانخ</a>، <a href="{food:cucumber}">خيار</a>).</li>
+                <li>رشة <a href="{food:chia-seeds}">بذور الشيا</a> أو <a href="{food:flax-seeds}">الكتان</a>.</li>
+                <li>كأس ماء مع قطرات ليمون طازج.</li>
+            </ul>
+            <p>(فطور مشبع، غني بالبروتين والدهون النقية، يعطيك طاقة ثابتة لعدة ساعات دون أي هبوط مفاجئ).</p>
+
+            <h3>ج. أطعمة صديقة للبنكرياس اجعلها أساس مائدتك</h3>
+            <ul class="check-list">
+                <li><strong>الخضار الصليبية والورقية:</strong> <a href="{food:spinach}">السبانخ</a>، <a href="{food:arugula-rocket}">الجرجير</a>، <a href="{food:broccoli}">البروكلي</a>، و<a href="{food:cauliflower}">الزهرة</a>؛ تمنحك شبعاً هائلاً وفيتامينات بدون رفع السكر.</li>
+                <li><strong>البقوليات باعتدال:</strong> <a href="{food:lentils}">العدس</a>، <a href="{food:chickpeas}">الحمص</a>، والفاصولياء؛ غنية بألياف تسمى "النشا المقاوم" التي تغذي بكتيريا الأمعاء النافعة.</li>
+                <li><strong>الدهون الصحية النقية:</strong> <a href="{food:extra-virgin-olive-oil}">زيت الزيتون البكر الممتاز</a>، حبات <a href="{food:kalamata-olives}">الزيتون</a>، الطحينة السمسمية، والمكسرات النيئة. الدهون ترفع الإنسولين بدرجة ضئيلة وتمنحك شبعاً مستقراً.</li>
+                <li><strong>الفواكه الذكية منخفضة الحمل السكري:</strong> لا تقطع الفاكهة كلياً، بل اختر الذكي منها: التوت بأنواعه (<a href="{food:blueberry}">التوت الأزرق</a> و<a href="{food:raspberry}">توت العليق</a>)، <a href="{food:strawberry}">الفراولة</a>، و<a href="{food:apple}">التفاح</a> الأخضر الصغير، وتناولها دائماً بعد الوجبة كثمرة كاملة بأليافها وتجنب عصرها تماماً.</li>
+            </ul>
+
+            <h3>د. حيلة النشويات المبردة</h3>
+            <p>إذا كنت تشتهي <a href="{food:white-rice}">الأرز</a> أو <a href="{food:boiled-potato}">البطاطا المسلوقة</a>، اطهها ثم اتركها تبرد في الثلاجة لعدة ساعات قبل تناولها (ويمكنك تسخينها لاحقاً). هذه العملية البسيطة تحول جزءاً من نشوياتها إلى "نشا مقاوم" لا يمتصه الجسم كجلوكوز، بل يمر للأمعاء كغذاء للبكتيريا النافعة، مما يقلل ارتفاع السكر بشكل ملحوظ.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>6. حركة العضلات الذكية: "الإسفنجة" التي تمتص السكر بلا إنسولين</span></h2>
+            <p>إذا سألت أي شخص: ما هو العضو الذي يضبط السكر؟ سيقول لك فوراً: البنكرياس. وهذا نصف الجواب فقط! العضو الحقيقي الآخر الذي يتولى نحو 80% من امتصاص السكر بعد الوجبات هو <strong>عضلاتك الهيكلية</strong>.</p>
+            <p>وهنا السر المذهل الذي لا يعرفه الكثيرون: عندما تتحرك عضلاتك، فإنها قادرة على فتح بواباتها وامتصاص السكر مباشرة من الدم واستخدامه كوقود بدون الحاجة للإنسولين بتاتاً (عبر نواقل تدعى <bdi>GLUT4</bdi>)! أنت بحركتك تعطي البنكرياس استراحة محارب حقيقية.</p>
+            <h3>كيف تستغل هذا السحر يومياً دون الذهاب للجيم؟</h3>
+            <ul class="check-list">
+                <li><strong>سحر الـ 10 إلى 15 دقيقة بعد الأكل:</strong> لا تجلس فور الانتهاء من الغداء أو العشاء. امشِ في غرفتك، تحرك في الحديقة، أو اغسل الأطباق ورتب المنزل. المشي الخفيف مباشرة بعد الوجبة يسحب قمة السكر قبل أن تتراكم في الدم.</li>
+                <li><strong>تمرين عضلة الساق وأنت جالس (<bdi>Soleus Pushups</bdi>):</strong> حتى وأنت جالس على مكتبك أو تشاهد التلفاز، رفع الكعبين وإنزالهما بشكل متكرر يشغل عضلة الساق العميقة، وهي عضلة فريدة تستهلك الجلوكوز بكفاءة استثنائية دون إرهاق جسدي.</li>
+                <li><strong>تمارين المقاومة البسيطة مرتين أسبوعياً:</strong> الحفاظ على كتلتك العضلية عبر تمارين القرفصاء (<bdi>Squats</bdi>) في المنزل أو الضغط على الجدار يبني "مستودعات إضافية" لتخزين السكر مستقبلاً.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>7. النوم والتوتر: الجنديان المجهولان خلف فحص الصائم المرتفع</span></h2>
+            <p>هل تساءلت يوماً: لماذا أستيقظ صباحاً وسكر الصائم لدي 110 أو 115 ملغ/ديسيلتر رغم أنني لم آكل شيئاً طوال 10 ساعات؟ الجواب يكمن في هرمونات التوتر: <a href="{site:/cortisol-stress.html}">الكورتيزول</a> والأدرينالين.</p>
+            <p>عندما تسهر طويلاً أو تعيش تحت ضغط نفسي وقلق مزمن، يفرز جسمك الكورتيزول؛ وهذا الهرمون يرسل إشارة فورية للكبد: <em>"نحن في خطر! أطلق مخزون السكر إلى الدم ليمدنا بالطاقة للهرب!"</em>. لذلك، إذا أصلحت أكلك ولم تصلح نومك، سيبقى سكر الصائم مرتفعاً:</p>
+            <ul class="check-list">
+                <li><strong>نَم من 7 إلى 8 ساعات ليلاً:</strong> ليلة واحدة من قلة النوم (أقل من 5 ساعات) قادرة على تقليل حساسية خلاياك للإنسولين في اليوم التالي بنسبة 25%!</li>
+                <li><strong>أغلق مطبخك قبل 3 ساعات من النوم:</strong> تجنب تناول الطعام في وقت متأخر من الليل حتى تمنح جهازك الهضمي والبنكرياس فرصة لإعادة ضبط النفس وإراحة الكبد أثناء النوم.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>8. خارطة طريقك العملية: الأسابيع الـ 12 القادمة</span></h2>
+            <p>لأن تغيير الحياة لا يحدث بضربة واحدة، قسّم رحلتك إلى أهداف واقعية صغيرة على مدار 12 أسبوعاً (وهي المدة التي تحتاجها كريات الدم الحمراء لتتجدد وينعكس ذلك على فحص التراكمي القادم):</p>
+            <h3>📅 الأسبوع 1 إلى 2: تنظيف السوائل وتثبيت الفطور</h3>
+            <ul class="check-list">
+                <li>توقف تماماً عن شرب السعرات: العصائر (حتى الطبيعية منها)، المشروبات الغازية، والشاي أو القهوة المحلاة. استبدلها بالماء، شاي الأعشاب، أو القهوة السادة.</li>
+                <li>اعتمد الفطور الصباحي المعتمد على البيض، الأفوكادو، والألياف، وودع المعجنات والخبز الأبيض صباحاً.</li>
+            </ul>
+            <h3>📅 الأسبوع 3 إلى 4: عادة المشي وترتيب الصحن</h3>
+            <ul class="check-list">
+                <li>طبق قاعدة الـ 10 دقائق مشي بعد وجبتك الرئيسية فوراً.</li>
+                <li>درب نفسك على أكل الخضار أولاً، ثم اللحوم والبروتينات، وتناول ما تبقى من النشويات في النهاية.</li>
+            </ul>
+            <h3>📅 الأسبوع 5 إلى 8: الصيام الليلي الطبيعي والنشويات الكاملة</h3>
+            <ul class="check-list">
+                <li>أرح جهازك الهضمي بصيام ليلي بسيط: 12 ساعة بين آخر لقمة في العشاء وأول لقمة في فطور الصباح (مثلاً: العشاء الساعة 8 مساءً، والفطور الساعة 8 صباحاً).</li>
+                <li>استبدل الخبز الأبيض والرز الأبيض بـ<a href="{food:whole-wheat-bread}">الخبز المصنوع من الحبوب الكاملة</a> مع بذور الكتان، و<a href="{food:oatmeal}">حبوب الشوفان الحقيقية</a> غير المعالجة.</li>
+            </ul>
+            <h3>📅 الأسبوع 9 إلى 12: الثبات وملاحظة التغيرات</h3>
+            <ul class="check-list">
+                <li>ستلاحظ هنا انخفاضاً حقيقياً في مقاس بنطالك، نشاطاً متواصلاً بعد الغداء دون رغبة بالنوم، واختفاء نوبات الجوع الشديد.</li>
+                <li>حدد موعداً مع طبيبك لإعادة فحص السكر التراكمي في نهاية الشهر الثالث، وشاهد بأم عينيك كيف رجعت الأرقام للوراء!</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. أسئلة شائعة وإجابات تهمك</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>هل هذا يعني أنني سأحتاج حتماً لدواء منظم السكر (مثل الميتفورمين / جلوكوفاج)؟</h3><p>ليس بالضرورة على الإطلاق. معظم الأطباء يعطون مراجعيهم في مرحلة ما قبل السكري مهلة من 3 إلى 6 أشهر لتعديل نمط الحياة بالغذاء والحركة قبل التفكير بأي علاج دوائي. في كثير من الحالات، النزول الطفيف في الوزن والتعديل الغذائي يكون كافياً وحده لإعادة التراكمي للوضع الطبيعي. وإذا رأى طبيبك حاجة للميتفورمين في حالتك، فهو دواء آمن ومساعد مؤقت، والقرار النهائي دائماً يعود لتقييم طبيبك المشرف.</p></div>
+                <div class="faq-item"><h3>كم من الوقت يحتاج السكر التراكمي حتى ينزل؟</h3><p>عمر كريات الدم الحمراء في جسم الإنسان حوالي 90 إلى 120 يوماً. لذلك، أي تحسن تفعله في طعامك وحركتك اليوم سيبدأ بالتأثير فوراً، لكنك لن ترى النتيجة الرقمية الكاملة والدقيقة على ورقة التحليل المخبري إلا بعد مرور 3 أشهر كاملة. لا تتعجل بإعادة الفحص بعد أسبوعين؛ امنح جسمك وقته الطبيعي للترميم.</p></div>
+                <div class="faq-item"><h3>هل يجب أن أقطع الخبز والأرز والفواكه تماماً؟</h3><p>لا! هذا التفكير المتطرف هو سبب فشل معظم الحميات. المطلوب هو "الترشيد والذكاء": تقليل كمية النشويات، استبدال الأبيض منها بالحبوب الكاملة، عدم أكل النشويات وحدها على معدة فارغة، واختيار الفواكه كاملة بأليافها بدلاً من عصرها، وأكلها بعد وجبة دسمة وليس كوجبة خفيفة منفردة.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-heart"></i> <span>رسالة من القلب لكل من يحمل ورقة تحليله اليوم</span></h2>
+            <p>اعتبر هذا اليوم تاريخاً فاصلاً في حياتك، ليس كيوم أصابك فيه مرض، بل كيوم قررت فيه أن تسمع لرسالة جسدك الصادقة وتبدأ بالاهتمام به حقاً.</p>
+            <p>القطار لم يتحول لسكري، وأبواب الرجوع مفتوحة على مصراعيها، والحلول في متناول يدك: في صحن خضار ملون، في ربع ساعة مشي هادئ بعد طعامك، وفي نوم مريح يرمم خلاياك. ابدأ اليوم بوجبتك القادمة فقط.. وسترى كيف سيكافئك جسدك بالحيوية والأمان.</p>
+            <p class="reviewed">تمت مراجعة المقال من قبل الدكتور وسيم حبيب<br>مجموعة ويبو هيلث 🌿</p>'''),
+en=dict(
+ byline='Medically reviewed by Dr. Wassim Habib',
+ title='Prediabetes: How to Stop the Train and Lower Your HbA1c Before It Turns Into Diabetes',
+ h1='Prediabetes: How to Stop the Train and Lower Your HbA1c Before It Turns Into Diabetes',
+ crumb='Prediabetes',
+ cat='Diabetes & Metabolic Health',
+ desc='HbA1c between 5.7% and 6.4%? Understand prediabetes in numbers, its hidden signs, and a practical 12-week plan with food, movement and sleep to bring your HbA1c down, based on the DPP study and ADA standards.',
+ summary='What your HbA1c and fasting numbers mean, why insulin resistance happens, and a 12-week food, movement and sleep plan to bring your blood sugar back to the safe zone.',
+ hero_alt='Smiling woman in a sunny kitchen about to eat a healthy, balanced breakfast',
+ about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
+ disclaimer='⚠️ Medical disclaimer: the content and information in this article are provided for general health education and nutrition awareness. They are in no way a medical diagnosis, a personal treatment plan, or a substitute for advice from your doctor or the healthcare provider who follows your case. Always talk to your doctor before making major changes to your diet or medication.',
+ body='''            <p class="lead">Imagine you have just walked out of the lab or your doctor's office, test results in hand, eyes fixed on one number circled in red: an HbA1c of 5.9% or 6.1%, or maybe a fasting blood sugar of 112 mg/dL.</p>
+            <p>Perhaps your doctor said one short sentence as you left: <em>"Your sugar is borderline... take care of yourself and eat less."</em></p>
+            <p>You step into the street and the thoughts come crashing in like waves: Do I have diabetes now? Are the days of relaxed family meals over? Will I spend the rest of my life on pills and needles? Where do I even start tomorrow morning?</p>
+            <p>Before you let the worry swallow your day, take a deep breath and read these words carefully: <strong>you do not have diabetes, this number is not a final verdict or a point of no return, and most important of all: this is not your fault.</strong></p>
+            <p>You are not at the end of the road; you are standing at the "early warning station". That lab report is not bad news. It is actually the greatest wake-up call your body could give you. This article is not a complicated medical textbook. It is your practical plan, step by step, to bring your HbA1c back to safety and stop the train before it goes any further.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>1. What does "borderline sugar" mean? Decoding your lab report simply</span></h2>
+            <p>The first step to letting go of fear is understanding; we fear what we do not know. When you look at your blood test results, you will find two key terms that thousands of people search for every day:</p>
+            <ul class="check-list">
+                <li><strong>HbA1c (glycated haemoglobin):</strong> it does not tell you how much sugar is in your blood today or after yesterday's dinner. It is a kind of "memory tape" of your red blood cells that records the average sugar in your blood over the past 90 days.</li>
+                <li><strong>Fasting blood glucose:</strong> a test that measures the sugar concentration in your blood after an overnight fast (8 to 10 hours).</li>
+            </ul>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Colour-coded chart of HbA1c and fasting glucose ranges, including prediabetes - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>The three zones for HbA1c and fasting glucose, according to the American Diabetes Association (ADA).</figcaption>
+            </figure>
+            <p>To make the numbers easy, doctors divide them into three clear zones:</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 1. The green safe zone (normal)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> below 5.7%.</li>
+                <li><strong>Fasting glucose:</strong> below 100 mg/dL (below 5.6 mmol/L).</li>
+                <li><strong>What it means:</strong> your cells respond well to insulin and your pancreas works calmly and comfortably.</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 2. The warning zone and golden opportunity (prediabetes)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> between 5.7% and 6.4%.</li>
+                <li><strong>Fasting glucose:</strong> between 100 and 125 mg/dL (5.6 to 6.9 mmol/L).</li>
+                <li><strong>What it means:</strong> you are in the "prediabetes" stage. Your blood sugar is higher than normal but has not reached the diabetes threshold. This is your window of opportunity: the body can still restore its balance once you lift the extra load.</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 3. The action zone with medical follow-up (type 2 diabetes)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> 6.5% or higher.</li>
+                <li><strong>Fasting glucose:</strong> 126 mg/dL or higher (on two separate tests).</li>
+                <li><strong>What it means:</strong> the body has passed the warning stage and needs medication and regular follow-up to prevent complications.</li>
+            </ul>
+            <div class="tip"><h3>💡 A golden rule to remember</h3><p>If your HbA1c today is 5.8, 6.0 or even 6.3, you are in the yellow zone. The train has not reached the last station; it is slowing down right now, and you hold the key to steer it back onto the safe track.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> <span>2. Why did the train head this way in the first place? The story of the lock and the key</span></h2>
+            <p>Many people feel deeply guilty and think prediabetes happens only because they ate one sweet too many. The physiology goes much deeper than that. To understand what is happening inside your body, picture this:</p>
+            <ol class="steps">
+                <li>Every time you eat (especially starches and sugars), the food is turned into glucose (sugar) that travels in your bloodstream.</li>
+                <li>Sugar in the blood prompts the pancreas to release a hormone called <strong>insulin</strong>.</li>
+                <li>Insulin works like a "key": it goes to your body's cells (muscles, liver), unlocks the door, lets the sugar in, and the cell uses it for energy and movement.</li>
+            </ol>
+            <h3>So where is the problem?</h3>
+            <p>Over the years, with repeated meals full of fast starches, little movement and constant stress, the cells have filled up with sugar and do not want more. The locks have become "rusty and stiff": this is what we call <a href="{site:/insulin-resistance.html}">insulin resistance</a>.</p>
+            <p>The normal key no longer opens the door easily, so what does the poor pancreas do? It starts working overtime and makes more and more keys (it releases huge amounts of insulin) to force the cells to take in the sugar.</p>
+            <p>As long as the pancreas can keep doubling its effort, your blood sugar stays normal for years without you knowing! But after a while the pancreas gets tired and can no longer keep up with the huge demand. That is when sugar starts staying in the blood and building up, and your lab numbers begin to climb towards 5.7, 6.0 and beyond.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>3. Did you have symptoms without noticing?</span></h2>
+            <p>Prediabetes is called the "silent thief" because the vast majority feel no sudden pain. But the body does send subtle signals; if you think back over the past months, you may recognise some of them:</p>
+            <ul class="check-list">
+                <li><strong>The after-lunch food coma:</strong> heavy tiredness and an urge to sleep right after a lunch rich in rice, bread or pasta.</li>
+                <li><strong>Sugar cravings two hours after eating:</strong> sudden hunger and a strong urge for something sweet even though you just had a filling meal, caused by a sharp drop in blood sugar after a big insulin wave.</li>
+                <li><strong>Stubborn belly and waist fat:</strong> a noticeable increase in waist size that does not shift easily; high insulin is the body's main fat-storage hormone.</li>
+                <li><strong>Small skin changes:</strong> faint dark, velvety patches on the back of the neck or under the arms (acanthosis nigricans), or small skin tags around the neck; clear outward signs of insulin resistance.</li>
+                <li><strong>Mild thirst and waking up to urinate at night:</strong> the body starts trying to get rid of excess sugar through the kidneys.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>4. The proven truth: how do we stop the train and lower HbA1c, scientifically?</span></h2>
+            <p>Let us agree on one firm fact: there is no magic tea, no herbal mix from the internet and no secret recipe that erases prediabetes overnight. Anyone who tells you otherwise is selling you a cheap illusion that could harm your health.</p>
+            <p>On the other hand, there is a medical fact proven by the largest studies in the world (such as the well-known Diabetes Prevention Program, DPP): in prediabetes the pancreatic cells are not dead; they are only exhausted. Lighten their load, and the body's ability to restore insulin sensitivity and lower HbA1c is real and remarkable!</p>
+            <div class="tip"><h3>📊 What did the study show?</h3><p>Research showed that losing just 5% to 7% of your current weight (about 4 to 6 kg if you weigh 80 kg), together with smart changes in movement and food quality, lowers the chance of progressing to diabetes by <strong>58%</strong>, nearly twice the effect of metformin (31%) in the same study!</p></div>
+            <p>Here is how to do it in practice, step by step, without deprivation.</p>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. The smart plate plan: how to eat and lower your sugar without deprivation or hunger</span></h2>
+            <p>The biggest mistake people make when they hear the word "prediabetes" is starving themselves or living on lettuce and water. That is a dead end that always ends in relapse and binge eating. The secret is not deprivation, but <strong>"food order"</strong> and <strong>"ingredient quality"</strong>.</p>
+
+            <h3>A. The golden "food order" trick (food sequencing)</h3>
+            <p>Did you know that eating the same meal in a different order completely changes how your body handles the sugar? Studies have shown that eating in this order lowers the after-meal blood sugar peak by up to 40%:</p>
+            <ol class="steps">
+                <li><strong>Start with fibre:</strong> a salad, leafy greens, <a href="{food:cucumber}">cucumber</a> or <a href="{food:broccoli}">broccoli</a>. Fibre forms a gel-like mesh in your gut that slows down the absorption of the sugar that follows.</li>
+                <li><strong>Then protein and healthy fats:</strong> eggs, chicken, meat, fish, <a href="{food:avocado}">avocado</a>, or cheese and <a href="{food:extra-virgin-olive-oil}">olive oil</a>. Protein triggers fullness hormones and slows stomach emptying.</li>
+                <li><strong>Leave the starches for last:</strong> rice, bread or potatoes. By the time the starch reaches your gut, the fibre and protein mesh is ready to absorb it very slowly, preventing sharp sugar spikes.</li>
+            </ol>
+
+            <h3>B. Breakfast: the tune that sets the rest of your day</h3>
+            <p>If you start your day with a <a href="{food:butter-croissant}">croissant</a>, a piece of cake, sugary breakfast cereal (corn flakes) or tea with three spoons of sugar, you set your blood sugar on fire from the morning, and insulin stays high all day asking for more carbohydrates.</p>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="Balanced healthy breakfast to support HbA1c control and insulin resistance - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
+                <figcaption>A breakfast that keeps blood sugar steady: eggs, avocado, leafy greens, nuts, berries and seeds, with water and lemon.</figcaption>
+            </figure>
+            <p><strong>The ideal breakfast to flatten your glucose curve:</strong></p>
+            <ul class="check-list">
+                <li><a href="{food:boiled-egg}">Boiled eggs</a>, or eggs fried in olive oil or natural butter.</li>
+                <li>Half an <a href="{food:avocado}">avocado</a> or a handful of raw nuts (<a href="{food:raw-almonds}">almonds</a> or <a href="{food:walnuts}">walnuts</a>).</li>
+                <li>A plate full of leafy greens (<a href="{food:arugula-rocket}">rocket</a>, <a href="{food:spinach}">spinach</a>, <a href="{food:cucumber}">cucumber</a>).</li>
+                <li>A sprinkle of <a href="{food:chia-seeds}">chia</a> or <a href="{food:flax-seeds}">flax seeds</a>.</li>
+                <li>A glass of water with a few drops of fresh lemon.</li>
+            </ul>
+            <p>(A filling breakfast, rich in protein and quality fats, that gives you steady energy for hours without a sudden crash.)</p>
+
+            <h3>C. Pancreas-friendly foods to build your meals around</h3>
+            <ul class="check-list">
+                <li><strong>Cruciferous and leafy vegetables:</strong> <a href="{food:spinach}">spinach</a>, <a href="{food:arugula-rocket}">rocket</a>, <a href="{food:broccoli}">broccoli</a> and <a href="{food:cauliflower}">cauliflower</a>; very filling and full of vitamins without raising your sugar.</li>
+                <li><strong>Legumes in moderation:</strong> <a href="{food:lentils}">lentils</a>, <a href="{food:chickpeas}">chickpeas</a> and beans; rich in a fibre called "resistant starch" that feeds your good gut bacteria.</li>
+                <li><strong>Quality healthy fats:</strong> <a href="{food:extra-virgin-olive-oil}">extra virgin olive oil</a>, <a href="{food:kalamata-olives}">olives</a>, tahini and raw nuts. Fats raise insulin only slightly and keep you full for longer.</li>
+                <li><strong>Smart low-glycaemic-load fruit:</strong> do not cut out fruit completely; choose the smart ones: berries (<a href="{food:blueberry}">blueberries</a>, <a href="{food:raspberry}">raspberries</a>), <a href="{food:strawberry}">strawberries</a> and small green <a href="{food:apple}">apples</a>. Always eat them after a meal, as whole fruit with their fibre, and avoid juicing them.</li>
+            </ul>
+
+            <h3>D. The cooled-starch trick</h3>
+            <p>If you crave <a href="{food:white-rice}">rice</a> or <a href="{food:boiled-potato}">boiled potatoes</a>, cook them and let them cool in the fridge for a few hours before eating (you can reheat them later). This simple step turns part of the starch into "resistant starch" that the body does not absorb as glucose; it passes to the gut as food for good bacteria, which noticeably reduces the rise in blood sugar.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>6. Smart muscle movement: the "sponge" that soaks up sugar without insulin</span></h2>
+            <p>Ask anyone which organ controls blood sugar and they will say: the pancreas. That is only half the answer! The other key organ, which handles about 80% of the sugar uptake after meals, is your <strong>skeletal muscle</strong>.</p>
+            <p>And here is the remarkable secret few people know: when your muscles move, they can open their gates and take sugar straight from the blood to use as fuel, without needing insulin at all (through transporters called GLUT4)! By moving, you give your pancreas a well-earned break.</p>
+            <h3>How to use this every day without going to the gym</h3>
+            <ul class="check-list">
+                <li><strong>The 10-to-15-minute magic after eating:</strong> do not sit down right after lunch or dinner. Walk around your room, move in the garden, or wash the dishes and tidy up. Light walking right after a meal pulls down the sugar peak before it builds up in your blood.</li>
+                <li><strong>The seated calf exercise (soleus push-ups):</strong> even at your desk or in front of the TV, repeatedly raising and lowering your heels works the deep calf muscle, a unique muscle that burns glucose very efficiently without tiring you out.</li>
+                <li><strong>Simple strength exercises twice a week:</strong> keeping your muscle mass with squats at home or wall push-ups builds "extra storage" for sugar in the future.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>7. Sleep and stress: the unknown soldiers behind a high fasting test</span></h2>
+            <p>Have you ever wondered why you wake up with a fasting sugar of 110 or 115 mg/dL even though you have not eaten for 10 hours? The answer lies in the stress hormones: <a href="{site:/cortisol-stress.html}">cortisol</a> and adrenaline.</p>
+            <p>When you stay up late or live with ongoing pressure and anxiety, your body releases cortisol, which sends an instant signal to the liver: <em>"We are in danger! Release the sugar stores into the blood so we have energy to run!"</em> That is why, if you fix your food but not your sleep, your fasting sugar will stay high:</p>
+            <ul class="check-list">
+                <li><strong>Sleep 7 to 8 hours a night:</strong> a single short night (less than 5 hours) can lower your cells' insulin sensitivity by 25% the next day!</li>
+                <li><strong>Close your kitchen 3 hours before bed:</strong> avoid late-night eating so your digestive system and pancreas can reset and your liver can rest while you sleep.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>8. Your practical roadmap: the next 12 weeks</span></h2>
+            <p>Because life changes do not happen in one go, split your journey into small, realistic goals over 12 weeks (the time your red blood cells need to renew, which is what your next HbA1c test will reflect):</p>
+            <h3>📅 Weeks 1 to 2: clean up your drinks and settle your breakfast</h3>
+            <ul class="check-list">
+                <li>Stop drinking calories completely: juices (even natural ones), fizzy drinks, and sweetened tea or coffee. Switch to water, herbal tea or plain coffee.</li>
+                <li>Move to a breakfast built on eggs, avocado and fibre, and say goodbye to pastries and white bread in the morning.</li>
+            </ul>
+            <h3>📅 Weeks 3 to 4: the walking habit and the plate order</h3>
+            <ul class="check-list">
+                <li>Apply the 10-minute walk rule straight after your main meal.</li>
+                <li>Train yourself to eat vegetables first, then meat and protein, and finish with whatever starch is left.</li>
+            </ul>
+            <h3>📅 Weeks 5 to 8: a natural overnight fast and whole grains</h3>
+            <ul class="check-list">
+                <li>Rest your digestive system with a simple overnight fast: 12 hours between your last bite at dinner and your first bite at breakfast (for example, dinner at 8 pm and breakfast at 8 am).</li>
+                <li>Swap white bread and white rice for <a href="{food:whole-wheat-bread}">whole-grain bread</a> with flax seeds, and <a href="{food:oatmeal}">real, unprocessed oats</a>.</li>
+            </ul>
+            <h3>📅 Weeks 9 to 12: stay steady and notice the changes</h3>
+            <ul class="check-list">
+                <li>By now you will notice a real drop in your trouser size, steady energy after lunch without the urge to nap, and fewer intense hunger attacks.</li>
+                <li>Book an appointment with your doctor to recheck your HbA1c at the end of the third month, and see with your own eyes how the numbers have gone back down!</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. Common questions, clear answers</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Does this mean I will definitely need a blood sugar medicine (such as metformin / Glucophage)?</h3><p>Not necessarily at all. Most doctors give people with prediabetes 3 to 6 months to change their lifestyle with food and movement before considering any medication. In many cases, a modest weight loss and a change in diet are enough on their own to bring HbA1c back to normal. If your doctor feels metformin is needed in your case, it is a safe medicine and a temporary help, and the final decision always rests with your doctor's assessment.</p></div>
+                <div class="faq-item"><h3>How long does it take for HbA1c to come down?</h3><p>Red blood cells live about 90 to 120 days. So any improvement you make in your food and movement today starts working right away, but you will only see the full, accurate result on your lab report after a full 3 months. Do not rush to retest after two weeks; give your body its natural time to repair.</p></div>
+                <div class="faq-item"><h3>Do I have to cut out bread, rice and fruit completely?</h3><p>No! That all-or-nothing thinking is why most diets fail. What you need is "moderation and smart choices": eat smaller amounts of starch, swap white versions for whole grains, do not eat starch on its own on an empty stomach, and choose whole fruit with its fibre instead of juice, eaten after a full meal rather than as a snack on its own.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-heart"></i> <span>A heartfelt message to everyone holding their lab report today</span></h2>
+            <p>See today as a turning point in your life: not the day you got ill, but the day you decided to listen to your body's honest message and truly start taking care of it.</p>
+            <p>The train has not turned into diabetes, the way back is wide open, and the answers are within reach: in a colourful plate of vegetables, in a quiet quarter-hour walk after your meal, and in restful sleep that repairs your cells. Start today, with just your next meal, and see how your body rewards you with energy and peace of mind.</p>
+            <p class="reviewed">Reviewed by Dr. Wassim Habib<br>WiBo Health Group 🌿</p>'''),
+nl=dict(
+ byline='Medisch beoordeeld door Dr. Wassim Habib',
+ title='Prediabetes: zo zet je de trein stil en verlaag je je HbA1c voordat het diabetes wordt',
+ h1='Prediabetes: zo zet je de trein stil en verlaag je je HbA1c voordat het diabetes wordt',
+ crumb='Prediabetes',
+ cat='Diabetes & metabole gezondheid',
+ desc='HbA1c tussen 5,7% en 6,4%? Begrijp prediabetes in cijfers, de verborgen signalen en een praktisch 12-wekenplan met voeding, beweging en slaap om je HbA1c te verlagen, gebaseerd op de DPP-studie en de ADA-richtlijnen.',
+ summary='Wat je HbA1c- en nuchtere waarden betekenen, waarom insulineresistentie ontstaat, en een 12-wekenplan met voeding, beweging en slaap om je bloedsuiker terug in de veilige zone te krijgen.',
+ hero_alt='Lachende vrouw in een zonnige keuken die op het punt staat een gezond, gebalanceerd ontbijt te eten',
+ about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
+ disclaimer='⚠️ Medische disclaimer: de inhoud en informatie in dit artikel zijn bedoeld voor algemene gezondheidsvoorlichting en voedingsbewustzijn. Ze zijn op geen enkele manier een medische diagnose, een persoonlijk behandelplan of een vervanging van advies van je arts of de zorgverlener die je volgt. Overleg altijd met je arts voordat je grote veranderingen aanbrengt in je voeding of medicatie.',
+ body='''            <p class="lead">Stel je voor: je loopt net het lab of de spreekkamer van je arts uit, de uitslag in je hand, je ogen gericht op één getal met een rode cirkel eromheen: een HbA1c van 5,9% of 6,1%, of misschien een nuchtere bloedsuiker van 112 mg/dL (6,2 mmol/L).</p>
+            <p>Misschien zei je arts bij het afscheid één korte zin: <em>"Je suiker zit op het randje... let op jezelf en eet wat minder."</em></p>
+            <p>Je staat buiten en de gedachten slaan als golven over je heen: heb ik nu diabetes? Zijn de ontspannen maaltijden met mijn familie voorbij? Moet ik de rest van mijn leven pillen slikken en prikken? Waar begin ik morgenochtend?</p>
+            <p>Voordat de zorgen je hele dag opslokken: haal diep adem en lees dit met aandacht. <strong>Je hebt geen diabetes, dit getal is geen eindoordeel en geen punt zonder terugkeer, en het allerbelangrijkste: het is niet jouw schuld.</strong></p>
+            <p>Je staat niet aan het einde van de weg, maar bij het "vroegtijdige waarschuwingsstation". Die uitslag is geen slecht nieuws. Het is eigenlijk het grootste wake-upsignaal dat je lichaam je kon geven. Dit artikel is geen ingewikkeld medisch handboek, maar je praktische plan, stap voor stap, om je HbA1c terug naar veilig terrein te brengen en de trein stil te zetten voordat hij verder rijdt.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>1. Wat betekent "suiker op het randje"? Je uitslag eenvoudig ontcijferd</span></h2>
+            <p>De eerste stap om angst los te laten is begrijpen; we zijn bang voor wat we niet kennen. In je bloeduitslag vind je twee belangrijke termen waar duizenden mensen elke dag naar zoeken:</p>
+            <ul class="check-list">
+                <li><strong>HbA1c (geglyceerd hemoglobine):</strong> dit zegt niet hoeveel suiker er vandaag of na het eten van gisteren in je bloed zat. Het is een soort "geheugenband" van je rode bloedcellen die de gemiddelde bloedsuiker van de afgelopen 90 dagen vastlegt.</li>
+                <li><strong>Nuchtere bloedglucose:</strong> een test die de suikerconcentratie in je bloed meet na een nacht vasten (8 tot 10 uur).</li>
+            </ul>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/hba1c-prediabetes-blood-sugar-chart.webp" alt="Kleurenschema van HbA1c- en nuchtere glucosewaarden, inclusief prediabetes - WiBo Health" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>De drie zones voor HbA1c en nuchtere glucose volgens de American Diabetes Association (ADA).</figcaption>
+            </figure>
+            <p>Om het simpel te houden, delen artsen de waarden in drie duidelijke zones in:</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 1. De groene, veilige zone (normaal)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> lager dan 5,7% (lager dan 39 mmol/mol).</li>
+                <li><strong>Nuchtere glucose:</strong> lager dan 100 mg/dL (lager dan 5,6 mmol/L).</li>
+                <li><strong>Wat het betekent:</strong> je cellen reageren goed op insuline en je alvleesklier werkt rustig en ontspannen.</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 2. De waarschuwingszone en gouden kans (prediabetes)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> tussen 5,7% en 6,4% (39 tot 47 mmol/mol).</li>
+                <li><strong>Nuchtere glucose:</strong> tussen 100 en 125 mg/dL (5,6 tot 6,9 mmol/L).</li>
+                <li><strong>Wat het betekent:</strong> je zit in de fase "prediabetes". Je bloedsuiker is hoger dan normaal, maar heeft de diabetesgrens nog niet bereikt. Dit is je kans: het lichaam kan zijn balans nog herstellen als je de extra belasting wegneemt.</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 3. De actiezone met medische begeleiding (diabetes type 2)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> 6,5% of hoger (48 mmol/mol of hoger).</li>
+                <li><strong>Nuchtere glucose:</strong> 126 mg/dL of hoger (7,0 mmol/L, bij twee aparte metingen).</li>
+                <li><strong>Wat het betekent:</strong> het lichaam is voorbij de waarschuwingsfase en heeft medicatie en regelmatige controle nodig om complicaties te voorkomen.</li>
+            </ul>
+            <div class="tip"><h3>💡 Een gouden regel om te onthouden</h3><p>Is je HbA1c vandaag 5,8, 6,0 of zelfs 6,3? Dan zit je in de gele zone. De trein heeft het laatste station nog niet bereikt; hij remt nu af, en jij hebt de sleutel in handen om hem terug op het veilige spoor te zetten.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> <span>2. Waarom reed de trein überhaupt deze kant op? Het verhaal van het slot en de sleutel</span></h2>
+            <p>Veel mensen voelen zich erg schuldig en denken dat prediabetes alleen ontstaat omdat ze een snoepje te veel aten. De fysiologie gaat veel dieper. Om te begrijpen wat er in je lichaam gebeurt, stel je het volgende voor:</p>
+            <ol class="steps">
+                <li>Elke keer dat je eet (vooral zetmeel en suikers), wordt het voedsel omgezet in glucose (suiker) die door je bloed stroomt.</li>
+                <li>Suiker in het bloed zet de alvleesklier aan om een hormoon af te geven: <strong>insuline</strong>.</li>
+                <li>Insuline werkt als een "sleutel": het gaat naar je lichaamscellen (spieren, lever), opent het slot, laat de suiker binnen, en de cel gebruikt die voor energie en beweging.</li>
+            </ol>
+            <h3>Waar zit het probleem dan?</h3>
+            <p>Na jaren van maaltijden vol snelle koolhydraten, weinig beweging en constante stress zitten de cellen vol suiker en willen ze niet meer. De sloten zijn "roestig en stroef" geworden: dat noemen we <a href="{site:/insulin-resistance.html}">insulineresistentie</a>.</p>
+            <p>De gewone sleutel opent de deur niet meer makkelijk, dus wat doet de arme alvleesklier? Die gaat overuren draaien en maakt steeds meer sleutels (geeft enorme hoeveelheden insuline af) om de cellen te dwingen de suiker op te nemen.</p>
+            <p>Zolang de alvleesklier zijn inspanning kan verdubbelen, blijft je bloedsuiker jarenlang normaal zonder dat je het merkt! Maar na een tijd raakt de alvleesklier vermoeid en kan hij de enorme vraag niet meer bijbenen. Dan blijft er suiker in het bloed hangen, stapelt die zich op, en beginnen je waarden te stijgen richting 5,7, 6,0 en hoger.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>3. Had je klachten zonder het te merken?</span></h2>
+            <p>Prediabetes wordt de "stille dief" genoemd, omdat de overgrote meerderheid geen plotselinge pijn voelt. Toch stuurt het lichaam subtiele signalen; als je terugdenkt aan de afgelopen maanden, herken je er misschien een paar:</p>
+            <ul class="check-list">
+                <li><strong>De middagdip na de lunch (food coma):</strong> zware vermoeidheid en een sterke behoefte aan slaap direct na een lunch met veel rijst, brood of pasta.</li>
+                <li><strong>Trek in zoet twee uur na het eten:</strong> plotselinge honger en een sterke zin in iets zoets, terwijl je net een vullende maaltijd hebt gegeten, door een snelle daling van de bloedsuiker na een grote insulinegolf.</li>
+                <li><strong>Hardnekkig buik- en buikomvangvet:</strong> een merkbare toename van je middelomtrek die niet makkelijk verdwijnt; een hoge insuline is het belangrijkste vetopslaghormoon van het lichaam.</li>
+                <li><strong>Kleine huidveranderingen:</strong> lichte, donkere, fluweelachtige plekken in de nek of onder de oksels (acanthosis nigricans), of kleine huidflapjes rond de nek; duidelijke uiterlijke tekenen van insulineresistentie.</li>
+                <li><strong>Lichte dorst en 's nachts plassen:</strong> het lichaam probeert overtollige suiker via de nieren kwijt te raken.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>4. De bewezen waarheid: hoe zetten we de trein wetenschappelijk stil en verlagen we de HbA1c?</span></h2>
+            <p>Laten we één ding vaststellen: er bestaat geen wonderthee, geen kruidenmengsel van internet en geen geheim recept dat prediabetes van de ene op de andere dag wegveegt. Wie je dat vertelt, verkoopt je een goedkope illusie die je gezondheid kan schaden.</p>
+            <p>Daartegenover staat een medisch feit dat door de grootste studies ter wereld is bewezen (zoals het bekende Diabetes Prevention Program, DPP): bij prediabetes zijn de cellen van de alvleesklier niet dood, alleen uitgeput. Verlicht hun last, en het vermogen van het lichaam om de insulinegevoeligheid te herstellen en de HbA1c te verlagen is echt en indrukwekkend!</p>
+            <div class="tip"><h3>📊 Wat liet de studie zien?</h3><p>Onderzoek toonde aan dat slechts 5% tot 7% gewichtsverlies (ongeveer 4 tot 6 kg als je 80 kg weegt), samen met slimme aanpassingen in beweging en voedingskwaliteit, de kans op het ontwikkelen van diabetes met <strong>58%</strong> verlaagt: bijna twee keer het effect van metformine (31%) in dezelfde studie!</p></div>
+            <p>Zo pak je het in de praktijk aan, stap voor stap en zonder jezelf iets te ontzeggen.</p>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. Het slimme bordplan: eten en je suiker verlagen zonder honger of strenge regels</span></h2>
+            <p>De grootste fout die mensen maken als ze het woord "prediabetes" horen, is zichzelf uithongeren of leven op sla en water. Dat is een doodlopende weg die altijd eindigt in terugval en eetbuien. Het geheim zit niet in ontbering, maar in <strong>"de volgorde van eten"</strong> en <strong>"de kwaliteit van de ingrediënten"</strong>.</p>
+
+            <h3>A. De gouden truc van de eetvolgorde (food sequencing)</h3>
+            <p>Wist je dat dezelfde maaltijd in een andere volgorde eten volledig verandert hoe je lichaam met suiker omgaat? Studies tonen aan dat eten in deze volgorde de bloedsuikerpiek na de maaltijd tot 40% verlaagt:</p>
+            <ol class="steps">
+                <li><strong>Begin met vezels:</strong> een salade, bladgroenten, <a href="{food:cucumber}">komkommer</a> of <a href="{food:broccoli}">broccoli</a>. Vezels vormen een gelachtig netwerk in je darmen dat de opname van de suiker daarna vertraagt.</li>
+                <li><strong>Daarna eiwit en gezonde vetten:</strong> eieren, kip, vlees, vis, <a href="{food:avocado}">avocado</a>, of kaas en <a href="{food:extra-virgin-olive-oil}">olijfolie</a>. Eiwit zet verzadigingshormonen aan en vertraagt het legen van de maag.</li>
+                <li><strong>Bewaar het zetmeel voor het laatst:</strong> rijst, brood of aardappelen. Als het zetmeel je darmen bereikt, ligt het netwerk van vezels en eiwit al klaar om het heel langzaam op te nemen, zodat scherpe suikerpieken uitblijven.</li>
+            </ol>
+
+            <h3>B. Het ontbijt: de toon voor de rest van je dag</h3>
+            <p>Begin je de dag met een <a href="{food:butter-croissant}">croissant</a>, een stuk cake, gezoete ontbijtgranen (cornflakes) of thee met drie scheppen suiker, dan zet je je bloedsuiker 's ochtends al in brand, en blijft je insuline de hele dag hoog en vraagt om meer koolhydraten.</p>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="Gebalanceerd, gezond ontbijt voor een stabiele HbA1c en minder insulineresistentie - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
+                <figcaption>Een ontbijt dat je bloedsuiker stabiel houdt: eieren, avocado, bladgroenten, noten, bessen en zaden, met water en citroen.</figcaption>
+            </figure>
+            <p><strong>Het ideale ontbijt om je glucosecurve af te vlakken:</strong></p>
+            <ul class="check-list">
+                <li><a href="{food:boiled-egg}">Gekookte eieren</a>, of eieren gebakken in olijfolie of natuurlijke boter.</li>
+                <li>Een halve <a href="{food:avocado}">avocado</a> of een handje ongebrande noten (<a href="{food:raw-almonds}">amandelen</a> of <a href="{food:walnuts}">walnoten</a>).</li>
+                <li>Een bord vol bladgroenten (<a href="{food:arugula-rocket}">rucola</a>, <a href="{food:spinach}">spinazie</a>, <a href="{food:cucumber}">komkommer</a>).</li>
+                <li>Een snufje <a href="{food:chia-seeds}">chiazaad</a> of <a href="{food:flax-seeds}">lijnzaad</a>.</li>
+                <li>Een glas water met een paar druppels verse citroen.</li>
+            </ul>
+            <p>(Een vullend ontbijt, rijk aan eiwit en goede vetten, dat je urenlang stabiele energie geeft zonder plotselinge dip.)</p>
+
+            <h3>C. Alvleesklier-vriendelijke voeding als basis van je maaltijden</h3>
+            <ul class="check-list">
+                <li><strong>Kool- en bladgroenten:</strong> <a href="{food:spinach}">spinazie</a>, <a href="{food:arugula-rocket}">rucola</a>, <a href="{food:broccoli}">broccoli</a> en <a href="{food:cauliflower}">bloemkool</a>; zeer vullend en vol vitamines zonder je suiker te verhogen.</li>
+                <li><strong>Peulvruchten met mate:</strong> <a href="{food:lentils}">linzen</a>, <a href="{food:chickpeas}">kikkererwten</a> en bonen; rijk aan een vezel die "resistent zetmeel" heet en je goede darmbacteriën voedt.</li>
+                <li><strong>Goede, gezonde vetten:</strong> <a href="{food:extra-virgin-olive-oil}">extra vierge olijfolie</a>, <a href="{food:kalamata-olives}">olijven</a>, tahin en ongebrande noten. Vetten verhogen de insuline maar weinig en houden je langer verzadigd.</li>
+                <li><strong>Slim fruit met een lage glykemische lading:</strong> schrap fruit niet helemaal, maar kies slim: bessen (<a href="{food:blueberry}">blauwe bessen</a>, <a href="{food:raspberry}">frambozen</a>), <a href="{food:strawberry}">aardbeien</a> en kleine groene <a href="{food:apple}">appels</a>. Eet ze altijd na een maaltijd, als heel fruit met de vezels, en pers ze niet uit.</li>
+            </ul>
+
+            <h3>D. De truc met afgekoeld zetmeel</h3>
+            <p>Heb je zin in <a href="{food:white-rice}">rijst</a> of <a href="{food:boiled-potato}">gekookte aardappelen</a>? Kook ze en laat ze een paar uur afkoelen in de koelkast voordat je ze eet (opwarmen mag daarna). Deze simpele stap zet een deel van het zetmeel om in "resistent zetmeel", dat het lichaam niet als glucose opneemt maar als voeding voor goede bacteriën naar de darmen laat gaan. Zo stijgt je bloedsuiker merkbaar minder.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>6. Slim bewegen: de "spons" die suiker opneemt zonder insuline</span></h2>
+            <p>Vraag iemand welk orgaan de bloedsuiker regelt en je hoort: de alvleesklier. Dat is maar de helft van het antwoord! Het andere sleutelorgaan, dat na maaltijden ongeveer 80% van de suikeropname voor zijn rekening neemt, zijn je <strong>skeletspieren</strong>.</p>
+            <p>En hier is het verrassende geheim dat weinig mensen kennen: als je spieren bewegen, kunnen ze hun poorten openen en suiker direct uit het bloed opnemen als brandstof, zonder dat daar insuline voor nodig is (via transporters die GLUT4 heten)! Door te bewegen geef je je alvleesklier een welverdiende pauze.</p>
+            <h3>Zo gebruik je dit elke dag, zonder sportschool</h3>
+            <ul class="check-list">
+                <li><strong>De magie van 10 tot 15 minuten na het eten:</strong> ga na de lunch of het avondeten niet meteen zitten. Loop wat door je kamer, beweeg in de tuin, of doe de afwas en ruim op. Licht wandelen direct na de maaltijd trekt de suikerpiek omlaag voordat die zich in je bloed opbouwt.</li>
+                <li><strong>De kuitoefening terwijl je zit (soleus push-ups):</strong> ook achter je bureau of voor de tv: herhaald je hielen optillen en laten zakken traint de diepe kuitspier, een unieke spier die glucose heel efficiënt verbruikt zonder je uit te putten.</li>
+                <li><strong>Eenvoudige krachtoefeningen twee keer per week:</strong> je spiermassa behouden met squats thuis of push-ups tegen de muur bouwt "extra opslag" voor suiker in de toekomst.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>7. Slaap en stress: de onbekende soldaten achter een hoge nuchtere waarde</span></h2>
+            <p>Heb je je ooit afgevraagd waarom je 's ochtends wakker wordt met een nuchtere suiker van 110 of 115 mg/dL (6,1 tot 6,4 mmol/L), terwijl je 10 uur niets hebt gegeten? Het antwoord zit in de stresshormonen: <a href="{site:/cortisol-stress.html}">cortisol</a> en adrenaline.</p>
+            <p>Als je lang opblijft of onder aanhoudende druk en spanning leeft, maakt je lichaam cortisol aan. Dat stuurt meteen een signaal naar de lever: <em>"We zijn in gevaar! Laat de suikervoorraad los in het bloed, zodat we energie hebben om te vluchten!"</em> Daarom blijft je nuchtere suiker hoog als je wel je eten aanpakt, maar niet je slaap:</p>
+            <ul class="check-list">
+                <li><strong>Slaap 7 tot 8 uur per nacht:</strong> één korte nacht (minder dan 5 uur) kan de insulinegevoeligheid van je cellen de volgende dag met 25% verlagen!</li>
+                <li><strong>Sluit je keuken 3 uur voor het slapen:</strong> vermijd laat op de avond eten, zodat je spijsvertering en alvleesklier kunnen herstellen en je lever tijdens de slaap kan rusten.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>8. Je praktische routekaart: de komende 12 weken</span></h2>
+            <p>Omdat een leven niet in één klap verandert, verdeel je de reis in kleine, haalbare doelen over 12 weken (de tijd die je rode bloedcellen nodig hebben om te vernieuwen, en dat ziet je volgende HbA1c-test terug):</p>
+            <h3>📅 Week 1 tot 2: drankjes opschonen en je ontbijt vastleggen</h3>
+            <ul class="check-list">
+                <li>Stop helemaal met calorieën drinken: sappen (ook natuurlijke), frisdranken en gezoete thee of koffie. Kies water, kruidenthee of zwarte koffie.</li>
+                <li>Stap over op een ontbijt met eieren, avocado en vezels, en neem 's ochtends afscheid van gebak en wit brood.</li>
+            </ul>
+            <h3>📅 Week 3 tot 4: de wandelgewoonte en de volgorde op je bord</h3>
+            <ul class="check-list">
+                <li>Pas de 10-minutenregel toe: wandel direct na je hoofdmaaltijd.</li>
+                <li>Train jezelf om eerst groenten te eten, dan vlees en eiwit, en eindig met wat er van het zetmeel over is.</li>
+            </ul>
+            <h3>📅 Week 5 tot 8: een natuurlijke nachtelijke vastenperiode en volkoren producten</h3>
+            <ul class="check-list">
+                <li>Geef je spijsvertering rust met een simpele nachtvasten: 12 uur tussen je laatste hap bij het avondeten en je eerste hap bij het ontbijt (bijvoorbeeld avondeten om 20.00 uur en ontbijt om 8.00 uur).</li>
+                <li>Vervang wit brood en witte rijst door <a href="{food:whole-wheat-bread}">volkorenbrood</a> met lijnzaad, en <a href="{food:oatmeal}">echte, onbewerkte havermout</a>.</li>
+            </ul>
+            <h3>📅 Week 9 tot 12: volhouden en de veranderingen opmerken</h3>
+            <ul class="check-list">
+                <li>Nu merk je echt dat je broek ruimer zit, je hebt na de lunch constante energie zonder slaapbehoefte, en de heftige hongeraanvallen nemen af.</li>
+                <li>Maak een afspraak met je arts om je HbA1c aan het einde van de derde maand opnieuw te laten meten, en zie met eigen ogen hoe de waarden zijn gedaald!</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. Veelgestelde vragen en heldere antwoorden</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Betekent dit dat ik zeker een bloedsuikerverlagend medicijn nodig heb (zoals metformine / Glucophage)?</h3><p>Helemaal niet per se. De meeste artsen geven mensen met prediabetes 3 tot 6 maanden om hun leefstijl met voeding en beweging aan te passen voordat ze aan medicatie denken. In veel gevallen is een beetje gewichtsverlies samen met aangepaste voeding al genoeg om de HbA1c weer normaal te krijgen. Vindt je arts metformine in jouw situatie nodig, dan is het een veilig medicijn en een tijdelijke hulp, en de uiteindelijke beslissing ligt altijd bij de beoordeling van je arts.</p></div>
+                <div class="faq-item"><h3>Hoe lang duurt het voordat de HbA1c daalt?</h3><p>Rode bloedcellen leven ongeveer 90 tot 120 dagen. Elke verbetering in je voeding en beweging werkt dus meteen, maar het volledige, nauwkeurige resultaat zie je pas na 3 volle maanden op je labuitslag. Laat je niet na twee weken al opnieuw testen; geef je lichaam de natuurlijke tijd om te herstellen.</p></div>
+                <div class="faq-item"><h3>Moet ik brood, rijst en fruit helemaal schrappen?</h3><p>Nee! Dat alles-of-niets-denken is de reden dat de meeste diëten mislukken. Wat je nodig hebt is "mate en slimme keuzes": minder zetmeel, de witte varianten vervangen door volkoren, geen zetmeel alleen op een lege maag, en heel fruit met de vezels in plaats van sap, gegeten na een volwaardige maaltijd en niet als losse snack.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Een boodschap uit het hart aan iedereen die vandaag zijn uitslag vasthoudt</span></h2>
+            <p>Zie vandaag als een keerpunt in je leven: niet als de dag waarop je ziek werd, maar als de dag waarop je besloot te luisteren naar de eerlijke boodschap van je lichaam en er echt voor te gaan zorgen.</p>
+            <p>De trein is geen diabetes geworden, de weg terug ligt wijd open en de oplossingen liggen binnen handbereik: in een kleurrijk bord groenten, in een rustig kwartiertje wandelen na het eten en in een goede nachtrust die je cellen herstelt. Begin vandaag, met alleen je volgende maaltijd, en zie hoe je lichaam je beloont met energie en rust.</p>
+            <p class="reviewed">Beoordeeld door Dr. Wassim Habib<br>WiBo Health Group 🌿</p>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES]

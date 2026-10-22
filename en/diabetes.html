@@ -70,6 +70,11 @@
     "hasPart": [
         {
             "@type": "MedicalWebPage",
+            "name": "Prediabetes: How to Stop the Train and Lower Your HbA1c Before It Turns Into Diabetes",
+            "url": "https://wibohealth.com/en/diabetes/prediabetes.html"
+        },
+        {
+            "@type": "MedicalWebPage",
             "name": "Gestational Diabetes Guide: Normal Blood Sugar Levels, Foods to Eat and Avoid, and Your Day Step by Step",
             "url": "https://wibohealth.com/en/diabetes/gestational-diabetes.html"
         }
@@ -768,6 +773,7 @@
         .article-page h3 { font-size: 1.1rem; font-weight: 800; margin: 18px 0 8px; }
         .article-figure { margin: 18px 0 22px; }
         .article-figure img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; box-shadow: var(--shadow); }
+        .article-figure.figure-narrow { max-width: 600px; margin-inline: auto; }   /* portrait photos and square charts */
         .article-figure figcaption { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; text-align: center; }
         .check-list { list-style: none; padding: 0; margin: 10px 0 22px; display: grid; gap: 10px; }
         .check-list li { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px 16px; }
@@ -830,7 +836,7 @@
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
         /* card with a thumbnail: photo beside the text, stacked above it on phones */
-        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; }
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; grid-column: 1 / -1; }   /* one full-width row each */
         .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
         .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
         .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
@@ -882,6 +888,15 @@
             <h1>Diabetes &amp; Metabolic Health</h1>
             <p class="lead">Clear, evidence-based guides on diabetes, insulin resistance and metabolic syndrome, prepared by the WiBo Health team to help you understand your situation and talk to your doctor with confidence.</p>
             <div class="hub-cards">
+                <a class="hub-card has-thumb" href="/en/diabetes/prediabetes.html">
+                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-hero.webp 896w" sizes="(max-width: 640px) 92vw, 300px" alt="Smiling woman in a sunny kitchen about to eat a healthy, balanced breakfast" width="640" height="360" loading="lazy" decoding="async"></div>
+                    <div class="hub-card-body">
+                        <span class="group-chip">Diabetes &amp; Metabolic Health</span>
+                        <h3>Prediabetes: How to Stop the Train and Lower Your HbA1c Before It Turns Into Diabetes</h3>
+                        <p>What your HbA1c and fasting numbers mean, why insulin resistance happens, and a 12-week food, movement and sleep plan to bring your blood sugar back to the safe zone.</p>
+                        <span class="card-link">Read the article</span>
+                    </div>
+                </a>
                 <a class="hub-card has-thumb" href="/en/diabetes/gestational-diabetes.html">
                     <div class="hub-thumb"><img src="/images/gestational-diabetes-guide-thumb.webp" srcset="/images/gestational-diabetes-guide-thumb.webp 640w, /images/gestational-diabetes-guide-hero.webp 1376w" sizes="(max-width: 640px) 92vw, 300px" alt="Smiling pregnant woman in a sunny kitchen wearing a glucose sensor on her arm, with a bowl of berries and an avocado" width="640" height="357" loading="lazy" decoding="async"></div>
                     <div class="hub-card-body">

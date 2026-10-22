@@ -122,7 +122,7 @@ body > header > .header-container,
 body > header > .nav-content,
 body > header > .container {
     width: 100%;
-    max-width: 1250px !important;
+    max-width: 1340px !important; /* room for the full EN/NL capsule row on 1366px laptops (was 1250px) */
     min-height: 60px;
     margin: 0 auto !important;
     padding: 0 14px !important;
@@ -353,7 +353,7 @@ body > header > .container:has(> .nav-menu) {
     align-items: center;
     gap: 8px;
     min-height: 60px;
-    max-width: 1250px !important;
+    max-width: 1340px !important; /* room for the full EN/NL capsule row on 1366px laptops (was 1250px) */
     margin: 0 auto !important;
     padding: 0 14px !important;
 }
@@ -427,6 +427,29 @@ body > header .nav-buttons { width: auto !important; }
     body > header .nav-menu, body > header .nav-links-bar { gap: 4px !important; }
     body > header .nav-link { padding: 0 10px !important; }
 }
+/* Arabic labels are much longer than EN/NL: with icons and full padding they pushed the language and theme buttons
+   off the left edge from 1321px up (the row is capped at 1340px, so wider screens never make room). Slim capsules in RTL. */
+@media (min-width: 1321px) {
+    html[dir="rtl"] body > header .nav-menu .nav-link > i { display: none !important; }
+    html[dir="rtl"] body > header .nav-menu, html[dir="rtl"] body > header .nav-links-bar { gap: 4px !important; }
+    html[dir="rtl"] body > header .nav-link { padding: 0 10px !important; }
+}
+/* safety net for any language or label length: the capsule bar may shrink and wrap onto a second row (the header grows),
+   so the logo and the language / theme buttons always stay on screen */
+@media (min-width: 993px) {
+    body > header .nav-menu, body > header .nav-links-bar {
+        flex: 0 1 auto; min-width: 0; flex-wrap: wrap !important; justify-content: center; row-gap: 6px !important;
+    }
+}
+/* last guard against sideways page scroll; clip (not hidden) keeps the sticky header working */
+body { overflow-x: clip; }
+/* smallest phones (320px): logo + 3 language buttons + theme + menu needed 357px; the wordmark gives way, the heart stays */
+@media (max-width: 360px) {
+    body > header .logo-text, body > header .brand-title, body > header .brand-logo h1, body > header .brand-logo span { display: none !important; }
+}
+/* long Dutch compounds ("Gezondheidsindicatoren") ran 90px past a 390px phone and made mobile browsers zoom the
+   whole page out: headings may break inside a word, hyphenated where the browser knows the language */
+body h1, body h2, body h3, body h4 { overflow-wrap: break-word; -webkit-hyphens: auto; hyphens: auto; }
 
 /* emerald heart logo image: never stretched, no inherited icon colour or filters */
 body > header img.brand-mark, body > header img.brand-logo-svg { object-fit: contain; display: block; flex-shrink: 0; }

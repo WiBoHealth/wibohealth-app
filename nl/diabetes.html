@@ -70,6 +70,11 @@
     "hasPart": [
         {
             "@type": "MedicalWebPage",
+            "name": "Prediabetes: zo zet je de trein stil en verlaag je je HbA1c voordat het diabetes wordt",
+            "url": "https://wibohealth.com/nl/diabetes/prediabetes.html"
+        },
+        {
+            "@type": "MedicalWebPage",
             "name": "Zwangerschapsdiabetes: normale bloedsuikerwaarden, wat mag je wel en niet eten, en je dag stap voor stap",
             "url": "https://wibohealth.com/nl/diabetes/zwangerschapsdiabetes.html"
         }
@@ -768,6 +773,7 @@
         .article-page h3 { font-size: 1.1rem; font-weight: 800; margin: 18px 0 8px; }
         .article-figure { margin: 18px 0 22px; }
         .article-figure img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; box-shadow: var(--shadow); }
+        .article-figure.figure-narrow { max-width: 600px; margin-inline: auto; }   /* portrait photos and square charts */
         .article-figure figcaption { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; text-align: center; }
         .check-list { list-style: none; padding: 0; margin: 10px 0 22px; display: grid; gap: 10px; }
         .check-list li { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px 16px; }
@@ -830,7 +836,7 @@
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
         /* card with a thumbnail: photo beside the text, stacked above it on phones */
-        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; }
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; grid-column: 1 / -1; }   /* one full-width row each */
         .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
         .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
         .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
@@ -882,6 +888,15 @@
             <h1>Diabetes &amp; metabole gezondheid</h1>
             <p class="lead">Heldere, wetenschappelijk onderbouwde gidsen over diabetes, insulineresistentie en het metabool syndroom, gemaakt door het WiBo Health-team om je situatie beter te begrijpen en met vertrouwen met je arts te praten.</p>
             <div class="hub-cards">
+                <a class="hub-card has-thumb" href="/nl/diabetes/prediabetes.html">
+                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-hero.webp 896w" sizes="(max-width: 640px) 92vw, 300px" alt="Lachende vrouw in een zonnige keuken die op het punt staat een gezond, gebalanceerd ontbijt te eten" width="640" height="360" loading="lazy" decoding="async"></div>
+                    <div class="hub-card-body">
+                        <span class="group-chip">Diabetes &amp; metabole gezondheid</span>
+                        <h3>Prediabetes: zo zet je de trein stil en verlaag je je HbA1c voordat het diabetes wordt</h3>
+                        <p>Wat je HbA1c- en nuchtere waarden betekenen, waarom insulineresistentie ontstaat, en een 12-wekenplan met voeding, beweging en slaap om je bloedsuiker terug in de veilige zone te krijgen.</p>
+                        <span class="card-link">Lees het artikel</span>
+                    </div>
+                </a>
                 <a class="hub-card has-thumb" href="/nl/diabetes/zwangerschapsdiabetes.html">
                     <div class="hub-thumb"><img src="/images/gestational-diabetes-guide-thumb.webp" srcset="/images/gestational-diabetes-guide-thumb.webp 640w, /images/gestational-diabetes-guide-hero.webp 1376w" sizes="(max-width: 640px) 92vw, 300px" alt="Lachende zwangere vrouw in een zonnige keuken met een glucosesensor op haar arm, met een kom bessen en een avocado" width="640" height="357" loading="lazy" decoding="async"></div>
                     <div class="hub-card-body">
