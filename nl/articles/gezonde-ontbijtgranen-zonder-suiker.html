@@ -801,6 +801,9 @@
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
+        /* portrait cover (hero_portrait=True): the whole photo, centred, never cropped */
+        .article-hero-img.article-hero-portrait { aspect-ratio: auto; object-fit: contain; max-width: 580px; width: 100%; height: auto;
+            border-radius: 16px; margin: 20px auto; display: block; }
         .article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; color: var(--text-muted); font-size: 0.88rem;
             font-weight: 600; margin-bottom: 18px; }
         .article-page h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }

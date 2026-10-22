@@ -766,6 +766,9 @@
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
+        /* portrait cover (hero_portrait=True): the whole photo, centred, never cropped */
+        .article-hero-img.article-hero-portrait { aspect-ratio: auto; object-fit: contain; max-width: 580px; width: 100%; height: auto;
+            border-radius: 16px; margin: 20px auto; display: block; }
         .article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; color: var(--text-muted); font-size: 0.88rem;
             font-weight: 600; margin-bottom: 18px; }
         .article-page h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
@@ -889,7 +892,7 @@
             <p class="lead">Clear, evidence-based guides on diabetes, insulin resistance and metabolic syndrome, prepared by the WiBo Health team to help you understand your situation and talk to your doctor with confidence.</p>
             <div class="hub-cards">
                 <a class="hub-card has-thumb" href="/en/diabetes/prediabetes.html">
-                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-hero.webp 896w" sizes="(max-width: 640px) 92vw, 300px" alt="Smiling woman in a sunny kitchen about to eat a healthy, balanced breakfast" width="640" height="360" loading="lazy" decoding="async"></div>
+                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-card.webp 1280w" sizes="(max-width: 640px) 92vw, 300px" alt="Balanced healthy breakfast to support HbA1c control and insulin resistance - WiBo Health" width="640" height="360" loading="lazy" decoding="async"></div>
                     <div class="hub-card-body">
                         <span class="group-chip">Diabetes &amp; Metabolic Health</span>
                         <h3>Prediabetes: How to Stop the Train and Lower Your HbA1c Before It Turns Into Diabetes</h3>

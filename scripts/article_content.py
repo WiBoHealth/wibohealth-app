@@ -796,8 +796,10 @@ nl=dict(
 PREDIABETES = dict(
     section='diabetes',
     slugs=dict(ar='prediabetes', en='prediabetes', nl='prediabetes'),
-    hero='prediabetes-guide-hero.webp', hero_size=(896, 504),          # 16:9 crop of prediabetes-healthy-breakfast-lifestyle.webp
-    thumb='prediabetes-guide-thumb.webp', thumb_size=(640, 360),
+    # full portrait cover (user decision 2026-10-22: show the whole scene with the breakfast bowl, never a face-only crop)
+    hero='prediabetes-healthy-breakfast-lifestyle.webp', hero_size=(896, 1200), hero_portrait=True,
+    # 16:9 cards: the whole portrait over a blurred copy of itself (hub card; the 1280px one also feeds the homepage)
+    thumb='prediabetes-guide-thumb.webp', thumb_size=(640, 360), thumb_2x=('prediabetes-guide-card.webp', 1280),
     published='2026-10-22', modified='2026-10-22',
     references=[
         'American Diabetes Association Professional Practice Committee. 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1)',
@@ -817,7 +819,7 @@ ar=dict(
  cat='السكري ومتلازمة الأيض',
  desc='سكرك التراكمي بين 5.7% و6.4%؟ افهم مرحلة ما قبل السكري بالأرقام، وأعراضها الخفية، وخطة عملية لـ 12 أسبوعاً بالغذاء والحركة والنوم لخفض التراكمي، مبنية على دراسة DPP ومعايير ADA.',
  summary='معنى أرقام التراكمي والصائم، لماذا تحدث مقاومة الإنسولين، وخطة 12 أسبوعاً بالغذاء والحركة والنوم لإعادة السكر إلى المنطقة الآمنة.',
- hero_alt='امرأة مبتسمة في مطبخ مشمس تستعد لتناول فطور صحي متوازن',
+ hero_alt='فطور صحي متوازن لضبط السكر التراكمي ومقاومة الإنسولين - WiBo Health',
  about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
  disclaimer='⚠️ إخلاء مسؤولية طبي: المحتوى والمعلومات الواردة في هذا المقال مقدمة لأغراض التثقيف الصحي العام ورفع الوعي الغذائي، ولا تُعتبر بأي حال من الأحوال تشخيصاً طبياً، أو خطة علاجية مخصصة، أو بديلاً عن استشارة الطبيب المختص أو مقدم الرعاية الصحية المتابع لحالتك. استشر طبيبك دائماً قبل إجراء تغييرات جذرية في نظامك الغذائي أو أدويتك.',
  body='''            <p class="lead">تخيّل أنك خرجت للتو من باب المختبر أو عيادة الطبيب، ورقة التحليل بيدك، وعيناك مثبتتان على رقم واحد محاط بدائرة حمراء: السكر التراكمي 5.9% أو 6.1%، أو ربما سكر الصائم 112 ملغ/ديسيلتر.</p>
@@ -901,10 +903,6 @@ ar=dict(
 
             <h3>ب. وجبة الفطور: النغمة التي تقود سائر يومك</h3>
             <p>إذا بدأت يومك بـ<a href="{food:butter-croissant}">كرواسان</a>، قطعة كيك، حبوب إفطار سكرية (كورن فليكس)، أو شاي محلى بثلاث ملاعق سكر، فأنت تشعل حريقاً في سكر دمك منذ الصباح، وسيبقى الإنسولين مرتفعاً طوال اليوم طلباً للمزيد من الكربوهيدرات.</p>
-            <figure class="article-figure figure-narrow">
-                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="فطور صحي متوازن لضبط السكر التراكمي ومقاومة الإنسولين - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
-                <figcaption>فطور يثبّت السكر: بيض، أفوكادو، ورقيات خضراء، مكسرات، توت وبذور، مع ماء وليمون.</figcaption>
-            </figure>
             <p><strong>الفطور المثالي لتسطيح منحنى السكر:</strong></p>
             <ul class="check-list">
                 <li><a href="{food:boiled-egg}">بيض مسلوق</a> أو مقلي بزيت زيتون أو زبدة طبيعية.</li>
@@ -986,7 +984,7 @@ en=dict(
  cat='Diabetes & Metabolic Health',
  desc='HbA1c between 5.7% and 6.4%? Understand prediabetes in numbers, its hidden signs, and a practical 12-week plan with food, movement and sleep to bring your HbA1c down, based on the DPP study and ADA standards.',
  summary='What your HbA1c and fasting numbers mean, why insulin resistance happens, and a 12-week food, movement and sleep plan to bring your blood sugar back to the safe zone.',
- hero_alt='Smiling woman in a sunny kitchen about to eat a healthy, balanced breakfast',
+ hero_alt='Balanced healthy breakfast to support HbA1c control and insulin resistance - WiBo Health',
  about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
  disclaimer='⚠️ Medical disclaimer: the content and information in this article are provided for general health education and nutrition awareness. They are in no way a medical diagnosis, a personal treatment plan, or a substitute for advice from your doctor or the healthcare provider who follows your case. Always talk to your doctor before making major changes to your diet or medication.',
  body='''            <p class="lead">Imagine you have just walked out of the lab or your doctor's office, test results in hand, eyes fixed on one number circled in red: an HbA1c of 5.9% or 6.1%, or maybe a fasting blood sugar of 112 mg/dL.</p>
@@ -1070,10 +1068,6 @@ en=dict(
 
             <h3>B. Breakfast: the tune that sets the rest of your day</h3>
             <p>If you start your day with a <a href="{food:butter-croissant}">croissant</a>, a piece of cake, sugary breakfast cereal (corn flakes) or tea with three spoons of sugar, you set your blood sugar on fire from the morning, and insulin stays high all day asking for more carbohydrates.</p>
-            <figure class="article-figure figure-narrow">
-                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="Balanced healthy breakfast to support HbA1c control and insulin resistance - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
-                <figcaption>A breakfast that keeps blood sugar steady: eggs, avocado, leafy greens, nuts, berries and seeds, with water and lemon.</figcaption>
-            </figure>
             <p><strong>The ideal breakfast to flatten your glucose curve:</strong></p>
             <ul class="check-list">
                 <li><a href="{food:boiled-egg}">Boiled eggs</a>, or eggs fried in olive oil or natural butter.</li>
@@ -1155,7 +1149,7 @@ nl=dict(
  cat='Diabetes & metabole gezondheid',
  desc='HbA1c tussen 5,7% en 6,4%? Begrijp prediabetes in cijfers, de verborgen signalen en een praktisch 12-wekenplan met voeding, beweging en slaap om je HbA1c te verlagen, gebaseerd op de DPP-studie en de ADA-richtlijnen.',
  summary='Wat je HbA1c- en nuchtere waarden betekenen, waarom insulineresistentie ontstaat, en een 12-wekenplan met voeding, beweging en slaap om je bloedsuiker terug in de veilige zone te krijgen.',
- hero_alt='Lachende vrouw in een zonnige keuken die op het punt staat een gezond, gebalanceerd ontbijt te eten',
+ hero_alt='Gebalanceerd, gezond ontbijt voor een stabiele HbA1c en minder insulineresistentie - WiBo Health',
  about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
  disclaimer='⚠️ Medische disclaimer: de inhoud en informatie in dit artikel zijn bedoeld voor algemene gezondheidsvoorlichting en voedingsbewustzijn. Ze zijn op geen enkele manier een medische diagnose, een persoonlijk behandelplan of een vervanging van advies van je arts of de zorgverlener die je volgt. Overleg altijd met je arts voordat je grote veranderingen aanbrengt in je voeding of medicatie.',
  body='''            <p class="lead">Stel je voor: je loopt net het lab of de spreekkamer van je arts uit, de uitslag in je hand, je ogen gericht op één getal met een rode cirkel eromheen: een HbA1c van 5,9% of 6,1%, of misschien een nuchtere bloedsuiker van 112 mg/dL (6,2 mmol/L).</p>
@@ -1239,10 +1233,6 @@ nl=dict(
 
             <h3>B. Het ontbijt: de toon voor de rest van je dag</h3>
             <p>Begin je de dag met een <a href="{food:butter-croissant}">croissant</a>, een stuk cake, gezoete ontbijtgranen (cornflakes) of thee met drie scheppen suiker, dan zet je je bloedsuiker 's ochtends al in brand, en blijft je insuline de hele dag hoog en vraagt om meer koolhydraten.</p>
-            <figure class="article-figure figure-narrow">
-                <img src="/images/prediabetes-healthy-breakfast-lifestyle.webp" alt="Gebalanceerd, gezond ontbijt voor een stabiele HbA1c en minder insulineresistentie - WiBo Health" width="896" height="1200" loading="lazy" decoding="async">
-                <figcaption>Een ontbijt dat je bloedsuiker stabiel houdt: eieren, avocado, bladgroenten, noten, bessen en zaden, met water en citroen.</figcaption>
-            </figure>
             <p><strong>Het ideale ontbijt om je glucosecurve af te vlakken:</strong></p>
             <ul class="check-list">
                 <li><a href="{food:boiled-egg}">Gekookte eieren</a>, of eieren gebakken in olijfolie of natuurlijke boter.</li>

@@ -69,6 +69,9 @@ EXTRA_CSS = """
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
+        /* portrait cover (hero_portrait=True): the whole photo, centred, never cropped */
+        .article-hero-img.article-hero-portrait { aspect-ratio: auto; object-fit: contain; max-width: 580px; width: 100%; height: auto;
+            border-radius: 16px; margin: 20px auto; display: block; }
         .article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; color: var(--text-muted); font-size: 0.88rem;
             font-weight: 600; margin-bottom: 18px; }
         .article-page h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
@@ -365,7 +368,8 @@ def build(a, lang):
     refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
             <ol class="ref-list">{refs_html}</ol>
 ''' if refs_html else '')
-    hero_img = (f'''            <img class="article-hero-img" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
+    hero_cls = 'article-hero-img article-hero-portrait' if a.get('hero_portrait') else 'article-hero-img'
+    hero_img = (f'''            <img class="{hero_cls}" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
 ''' if hero else '')
     draft_chip = f'<span class="draft-chip">{t["draft"]}</span>' if draft else ''
     byline = (f'''
@@ -402,8 +406,10 @@ def hub_card(a, lang, t):
     if not a.get('thumb'):
         return f'                <a class="hub-card" href="{href}">\n' + ''.join(
             f'                    {part}\n' for part in (chip,) + text) + '                </a>'
-    (tw, th), hw = a['thumb_size'], a['hero_size'][0]
-    img = (f'<img src="/images/{a["thumb"]}" srcset="/images/{a["thumb"]} {tw}w, /images/{a["hero"]} {hw}w" '
+    (tw, th) = a['thumb_size']
+    # 2x source: the hero when it has the card's landscape shape, else a dedicated `thumb_2x` (a portrait hero would be cropped)
+    hi, hw = a.get('thumb_2x') or (a['hero'], a['hero_size'][0])
+    img = (f'<img src="/images/{a["thumb"]}" srcset="/images/{a["thumb"]} {tw}w, /images/{hi} {hw}w" '
            f'sizes="(max-width: 640px) 92vw, 300px" alt="{esc(c["hero_alt"])}" width="{tw}" height="{th}" loading="lazy" decoding="async">')
     return (f'                <a class="hub-card has-thumb" href="{href}">\n'
             f'                    <div class="hub-thumb">{img}</div>\n'

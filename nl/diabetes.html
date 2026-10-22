@@ -766,6 +766,9 @@
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
+        /* portrait cover (hero_portrait=True): the whole photo, centred, never cropped */
+        .article-hero-img.article-hero-portrait { aspect-ratio: auto; object-fit: contain; max-width: 580px; width: 100%; height: auto;
+            border-radius: 16px; margin: 20px auto; display: block; }
         .article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; color: var(--text-muted); font-size: 0.88rem;
             font-weight: 600; margin-bottom: 18px; }
         .article-page h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
@@ -889,7 +892,7 @@
             <p class="lead">Heldere, wetenschappelijk onderbouwde gidsen over diabetes, insulineresistentie en het metabool syndroom, gemaakt door het WiBo Health-team om je situatie beter te begrijpen en met vertrouwen met je arts te praten.</p>
             <div class="hub-cards">
                 <a class="hub-card has-thumb" href="/nl/diabetes/prediabetes.html">
-                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-hero.webp 896w" sizes="(max-width: 640px) 92vw, 300px" alt="Lachende vrouw in een zonnige keuken die op het punt staat een gezond, gebalanceerd ontbijt te eten" width="640" height="360" loading="lazy" decoding="async"></div>
+                    <div class="hub-thumb"><img src="/images/prediabetes-guide-thumb.webp" srcset="/images/prediabetes-guide-thumb.webp 640w, /images/prediabetes-guide-card.webp 1280w" sizes="(max-width: 640px) 92vw, 300px" alt="Gebalanceerd, gezond ontbijt voor een stabiele HbA1c en minder insulineresistentie - WiBo Health" width="640" height="360" loading="lazy" decoding="async"></div>
                     <div class="hub-card-body">
                         <span class="group-chip">Diabetes &amp; metabole gezondheid</span>
                         <h3>Prediabetes: zo zet je de trein stil en verlaag je je HbA1c voordat het diabetes wordt</h3>
