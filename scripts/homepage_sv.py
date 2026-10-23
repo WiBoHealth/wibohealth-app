@@ -244,6 +244,6 @@ FOOTER_SOURCES = (
     '                <strong style="color: #ecf0f1;">Medicinsk ansvarsfriskrivning:</strong> Innehållet på WiBo Health är avsett\n'
     '                som allmän information och utbildning. Det ersätter inte råd, diagnos eller behandling från legitimerad\n'
     '                hälso- och sjukvårdspersonal. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning.\n'
-    '                Vid akut fara – ring 112.\n'
+    '                Vid akut fara – ring 112. <a href="/sv/medicinsk-ansvarsfriskrivning.html" style="color: #10b981;">Läs hela ansvarsfriskrivningen</a>\n'
     '            </p>'
 )

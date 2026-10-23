@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/dr-wassim-habib.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -54,6 +55,11 @@
     <meta name="description" id="seo_desc" content="تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health والمشرف الطبي على محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.">
     <meta name="author" content="Dr. Wassim Habib">
     <link rel="canonical" href="https://wibohealth.com/doctor.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/dr-wassim-habib.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html">
+    <!-- SV-ALTERNATES:END -->
 
     <!-- Hreflang Tags for SEO -->
 
@@ -696,6 +702,7 @@
                     <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
                         <span>🇬🇧</span> <span>EN</span>
                     </button>
+                    <a class="lang-btn" data-sv-link href="/sv/dr-wassim-habib.html" hreflang="sv" lang="sv" title="Svenska"><span>🇸🇪</span> <span>SV</span></a>
                 </div>
             </div>
         </div>
@@ -716,13 +723,6 @@
                     </div>
                 </div>
             </div>
-
-            <!--
-                E-E-A-T: add verifiable credentials here once available, e.g.
-                medical degree + university, specialty, BIG-register number (Netherlands),
-                years of practice, professional memberships, LinkedIn/ORCID profile and a real photo.
-                Add the same facts to the Person schema above (alumniOf, hasCredential, sameAs, image).
-            -->
 
             <h2 class="section-title">
                 <i class="fas fa-id-card"></i>

@@ -83,48 +83,6 @@
 
   <!-- الصفحات التعريفية والقانونية -->
   <url>
-    <loc>https://wibohealth.com/about.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/contact.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/privacy.html</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/delete-account.html</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/terms.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/pricing.html</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/doctor.html</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://wibohealth.com/methodology.html</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -5794,6 +5752,121 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/thyroid-health.html"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/trog-skoldkortel.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/thyroid-health.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/doctor.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/dr-wassim-habib.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/dr-wassim-habib.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/dr-wassim-habib.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/about.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/om-oss.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/om-oss.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/om-oss.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/privacy.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/integritetspolicy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/integritetspolicy.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/integritetspolicy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/terms.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/anvandarvillkor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/terms.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/anvandarvillkor.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/anvandarvillkor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/terms.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/medicinsk-ansvarsfriskrivning.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/medicinsk-ansvarsfriskrivning.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/contact.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/kontakt.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/delete-account.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/radera-konto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/delete-account.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/radera-konto.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/delete-account.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/radera-konto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/delete-account.html"/>
   </url>
   <!-- ARTICLE-PAGES:END -->
   <!-- FOOD-PAGES:START -->

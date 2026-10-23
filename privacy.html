@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/integritetspolicy.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -59,6 +60,11 @@
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://wibohealth.com/privacy.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/integritetspolicy.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html">
+    <!-- SV-ALTERNATES:END -->
     
     <!-- Multilingual Hreflang Tags for SEO -->
     
@@ -696,6 +702,7 @@
                 <div class="header-controls">
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    <a class="lang-btn" data-sv-link href="/sv/integritetspolicy.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
                     <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
@@ -760,7 +767,7 @@
                     </li>
                     <li>
                         <strong data-i18n="privacy_contact_info">معلومات الاتصال:</strong>
-                        <span data-i18n="privacy_contact_info_desc">البريد الإلكتروني أو رقم الهاتف عند التواصل معنا لطلب الدعم السريري أو التقني فقط.</span>
+                        <span data-i18n="privacy_contact_info_desc">البريد الإلكتروني أو رقم الهاتف عند التواصل معنا طوعاً لطرح سؤال عام أو لطلب الدعم التقني فقط.</span>
                     </li>
                 </ul>
 
@@ -790,12 +797,14 @@
                     <li data-i18n="privacy_section4_item2">لمزودي البنية التحتية الموثوقين الملتزمين بالـ GDPR فقط: Supabase لتخزين الحسابات (خوادم في فرانكفورت، ألمانيا)، وGoogle Gemini لتحليل صور الأطعمة فقط</li>
                     <li data-i18n="privacy_section4_item3">عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة</li>
                 </ul>
+                <p data-i18n="privacy_hosting_text"><strong>الاستضافة (Vercel):</strong> يُستضاف الموقع لدى شركة Vercel Inc.، التي تعالج بيانات تقنية مثل عنوان IP في سجلات الخادم لتشغيل الموقع وحمايته. إذا نُقلت بيانات إلى خارج الاتحاد الأوروبي فيتم ذلك بالضمانات التي تشترطها اللائحة العامة لحماية البيانات، مثل إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية للمفوضية الأوروبية.</p>
 
                 <!-- Section 5 -->
                 <h2 data-i18n="privacy_section5_title">5. أدوات التحليل والإعلانات</h2>
                 <p data-i18n="privacy_section5_text">
                     <strong>Google Analytics 4:</strong> نستخدم Google Analytics، الذي تقدمه شركة Google Ireland Limited، لمعرفة عدد الزيارات والصفحات الأكثر قراءة ومصدر الزوار (مثل محركات البحث)، حتى نحسّن المحتوى. ويعمل وفق وضع الموافقة من Google (Consent Mode v2): قبل موافقتك تبقى كل أنواع التخزين مرفوضة، فلا تُوضع كوكيز تحليل ولا إعلانات، وقد ترسل الصفحة إلى Google إشارات مجهولة بلا كوكيز ولا معرّفات (مثل أن صفحة ما فُتحت). وبعد موافقتك فقط يضع Google Analytics الكوكيز _ga و_ga_* (مدتها حتى سنتين) لتمييز الزيارات المتكررة. لا يخزّن Google Analytics 4 عنوان IP، ولا نربط هذه البيانات بهويتك ولا نستعملها لأي غرض طبي. الأساس القانوني هو موافقتك (المادة 6(1)(أ) من اللائحة العامة لحماية البيانات GDPR). وقد تعالج Google البيانات خارج الاتحاد الأوروبي ضمن إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU-US Data Privacy Framework). وإذا عُرضت إعلانات Google AdSense، فلا تُستعمل كوكيز الإعلانات إلا بموافقتك. للمزيد راجع <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.
                 </p>
+                <p data-i18n="privacy_crisp_text"><strong>الدردشة المباشرة (Crisp):</strong> زر «دردش معنا» في الصفحة الرئيسية يستخدم خدمة Crisp التي تقدمها شركة Crisp IM SAS في فرنسا (داخل الاتحاد الأوروبي). لا يُحمَّل Crisp إلا عندما تنقر على الزر بنفسك، وعندها يعالج رسائلك وأي اسم أو بريد إلكتروني تكتبه، إضافةً إلى بيانات تقنية مثل عنوان IP ونوع المتصفح، ويخزّن معرّفاً على جهازك ليحفظ المحادثة. الأساس القانوني هو طلبك التواصل معنا وموافقتك (المادة 6(1)(أ) و(ب) من GDPR). نحتفظ بالمحادثات للمدة اللازمة للرد عليك فقط، ويمكنك طلب حذفها في أي وقت. لا تكتب في الدردشة معلومات صحية حساسة، فالمنصة تثقيفية ولا تقدم استشارات طبية.</p>
                 <p><button type="button" class="cookie-settings-btn" onclick="window.wiboConsent && wiboConsent.open()" style="min-height:44px;padding:8px 18px;border-radius:12px;border:2px solid #059669;background:#059669;color:#fff;font:inherit;font-weight:800;cursor:pointer"><i class="fas fa-cookie-bite"></i> <span data-i18n="privacy_cookie_btn">إعدادات الكوكيز</span></button></p>
 
                 <!-- Section 6 -->
@@ -808,6 +817,7 @@
                     <li data-i18n="privacy_section6_item2">تخزين بيانات الحسابات والنسخ الاحتياطية على خوادم Supabase محمية ومشفرة في فرانكفورت، ألمانيا (الاتحاد الأوروبي)</li>
                     <li data-i18n="privacy_section6_item3">مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)</li>
                 </ul>
+                <p data-i18n="privacy_retention_text"><strong>مدد الحفظ:</strong> ملفات تعريف الارتباط الإحصائية حتى سنتين أو حتى سحب موافقتك؛ رسائل البريد الإلكتروني وواتساب والدردشة للمدة اللازمة لمعالجة طلبك فقط؛ بيانات حساب بودي حتى تحذف حسابك؛ والبيانات التي يلزمنا القانون بحفظها (مثل سجلات المشتريات) للمدة التي يحددها القانون.</p>
 
                 <!-- Section 7 -->
                 <h2 data-i18n="privacy_section7_title">7. حقوقك القانونية بموجب اللائحة الأوروبية (GDPR / AVG)</h2>
@@ -890,7 +900,7 @@
                         <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
                     </li>
                     <li>
-                        <span data-i18n="privacy_whatsapp">واتساب الدعم السريري المباشر:</span>
+                        <span data-i18n="privacy_whatsapp">واتساب للأسئلة العامة والدعم:</span>
                         <a href="https://wa.me/31645844585" target="_blank" data-i18n="privacy_whatsapp_link">+31 6 45844585</a>
                     </li>
                 </ul>
@@ -965,7 +975,7 @@
                 privacy_device_info: "معلومات الجهاز:",
                 privacy_device_info_desc: "نوع الجهاز، نظام التشغيل، عنوان IP المجهول، ومعرفات الجهاز التقنية لخدمات PWA.",
                 privacy_contact_info: "معلومات الاتصال:",
-                privacy_contact_info_desc: "البريد الإلكتروني أو رقم الهاتف عند التواصل معنا لطلب الدعم السريري أو التقني فقط.",
+                privacy_contact_info_desc: "البريد الإلكتروني أو رقم الهاتف عند التواصل معنا طوعاً لطرح سؤال عام أو لطلب الدعم التقني فقط.",
                 privacy_section2_title: "2. كيف نستخدم المعلومات",
                 privacy_section2_intro: "نستخدم المعلومات المجمعة للأغراض المشروعة التالية:",
                 privacy_section2_item1: "تحسين تجربة المستخدم وتقديم نتائج بحث وتصفح سريعة ودقيقة",
@@ -980,14 +990,17 @@
                 privacy_section4_item1: "بموافقتك الصريحة والمستنيرة",
                 privacy_section4_item2: "لمزودي البنية التحتية الموثوقين الملتزمين بالـ GDPR فقط: Supabase لتخزين الحسابات (خوادم في فرانكفورت، ألمانيا)، وGoogle Gemini لتحليل صور الأطعمة فقط",
                 privacy_section4_item3: "عند وجود التزام قانوني صريح صادر عن السلطات القضائية أو التنظيمية المختصة",
+                privacy_hosting_text: "<strong>الاستضافة (Vercel):</strong> يُستضاف الموقع لدى شركة Vercel Inc.، التي تعالج بيانات تقنية مثل عنوان IP في سجلات الخادم لتشغيل الموقع وحمايته. إذا نُقلت بيانات إلى خارج الاتحاد الأوروبي فيتم ذلك بالضمانات التي تشترطها اللائحة العامة لحماية البيانات، مثل إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة أو البنود التعاقدية القياسية للمفوضية الأوروبية.",
                 privacy_section5_title: "5. أدوات التحليل والإعلانات",
                 privacy_section5_text: "<strong>Google Analytics 4:</strong> نستخدم Google Analytics، الذي تقدمه شركة Google Ireland Limited، لمعرفة عدد الزيارات والصفحات الأكثر قراءة ومصدر الزوار (مثل محركات البحث)، حتى نحسّن المحتوى. ويعمل وفق وضع الموافقة من Google (Consent Mode v2): قبل موافقتك تبقى كل أنواع التخزين مرفوضة، فلا تُوضع كوكيز تحليل ولا إعلانات، وقد ترسل الصفحة إلى Google إشارات مجهولة بلا كوكيز ولا معرّفات (مثل أن صفحة ما فُتحت). وبعد موافقتك فقط يضع Google Analytics الكوكيز _ga و_ga_* (مدتها حتى سنتين) لتمييز الزيارات المتكررة. لا يخزّن Google Analytics 4 عنوان IP، ولا نربط هذه البيانات بهويتك ولا نستعملها لأي غرض طبي. الأساس القانوني هو موافقتك (المادة 6(1)(أ) من اللائحة العامة لحماية البيانات GDPR). وقد تعالج Google البيانات خارج الاتحاد الأوروبي ضمن إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU-US Data Privacy Framework). وإذا عُرضت إعلانات Google AdSense، فلا تُستعمل كوكيز الإعلانات إلا بموافقتك. للمزيد راجع <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">سياسة خصوصية Google</a>.",
+                privacy_crisp_text: "<strong>الدردشة المباشرة (Crisp):</strong> زر «دردش معنا» في الصفحة الرئيسية يستخدم خدمة Crisp التي تقدمها شركة Crisp IM SAS في فرنسا (داخل الاتحاد الأوروبي). لا يُحمَّل Crisp إلا عندما تنقر على الزر بنفسك، وعندها يعالج رسائلك وأي اسم أو بريد إلكتروني تكتبه، إضافةً إلى بيانات تقنية مثل عنوان IP ونوع المتصفح، ويخزّن معرّفاً على جهازك ليحفظ المحادثة. الأساس القانوني هو طلبك التواصل معنا وموافقتك (المادة 6(1)(أ) و(ب) من GDPR). نحتفظ بالمحادثات للمدة اللازمة للرد عليك فقط، ويمكنك طلب حذفها في أي وقت. لا تكتب في الدردشة معلومات صحية حساسة، فالمنصة تثقيفية ولا تقدم استشارات طبية.",
                 privacy_cookie_btn: "إعدادات الكوكيز",
                 privacy_section6_title: "6. حماية البيانات والأمان السيبراني",
                 privacy_section6_intro: "نطبق بروتوكولات حماية تقنية وتنظيمية متقدمة لحماية بياناتك من الوصول غير المصرح به أو التغيير أو الفقدان، وتشمل:",
                 privacy_section6_item1: "تشفير شامل لكافة البيانات المنقولة باستخدام بروتوكول HTTPS/TLS المتقدم",
                 privacy_section6_item2: "تخزين بيانات الحسابات والنسخ الاحتياطية على خوادم Supabase محمية ومشفرة في فرانكفورت، ألمانيا (الاتحاد الأوروبي)",
                 privacy_section6_item3: "مراجعات أمنية دورية وتطبيق مبدأ الحد الأدنى من جمع البيانات (Data Minimization)",
+                privacy_retention_text: "<strong>مدد الحفظ:</strong> ملفات تعريف الارتباط الإحصائية حتى سنتين أو حتى سحب موافقتك؛ رسائل البريد الإلكتروني وواتساب والدردشة للمدة اللازمة لمعالجة طلبك فقط؛ بيانات حساب بودي حتى تحذف حسابك؛ والبيانات التي يلزمنا القانون بحفظها (مثل سجلات المشتريات) للمدة التي يحددها القانون.",
                 privacy_section7_title: "7. حقوقك القانونية بموجب اللائحة الأوروبية (GDPR / AVG)",
                 privacy_section7_intro: "وفقاً للائحة العامة لحماية البيانات، يحق لك ممارسة الحقوق التالية مجاناً:",
                 privacy_section7_item1: "حق الوصول والاطلاع على بياناتك الشخصية المحفوظة لدينا",
@@ -1001,7 +1014,7 @@
                 privacy_section10_title: "10. تواصل معنا ومسؤول حماية البيانات (DPO)",
                 privacy_section10_intro: "لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:",
                 privacy_email: "البريد الإلكتروني المعتمد للدعم والتصحيح:",
-                privacy_whatsapp: "واتساب الدعم السريري المباشر:",
+                privacy_whatsapp: "واتساب للأسئلة العامة والدعم:",
                 privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi 💚، فإنك تقر بعلمك وموافقتك الكاملة على بنود سياسة الخصوصية هذه.",
                 privacy_back_home: "العودة للرئيسية",
@@ -1058,7 +1071,7 @@
                 privacy_device_info: "Device Information:",
                 privacy_device_info_desc: "Device model, operating system, anonymized IP address, and technical identifiers for PWA functionality.",
                 privacy_contact_info: "Contact Information:",
-                privacy_contact_info_desc: "Email address or phone number only when voluntarily submitting technical or clinical support requests.",
+                privacy_contact_info_desc: "Email address or phone number only when you voluntarily contact us with a general question or a technical support request.",
                 privacy_section2_title: "2. How We Use Information",
                 privacy_section2_intro: "We process collected information for legitimate and transparent purposes:",
                 privacy_section2_item1: "Improving user experience and delivering high-speed, reliable search results",
@@ -1073,14 +1086,17 @@
                 privacy_section4_item1: "With your explicit and informed consent",
                 privacy_section4_item2: "Only with GDPR-compliant infrastructure providers: Supabase for account storage (servers in Frankfurt, Germany) and Google Gemini exclusively for food photo analysis",
                 privacy_section4_item3: "When legally mandated by European judicial or regulatory authorities",
+                privacy_hosting_text: "<strong>Hosting (Vercel):</strong> the website is hosted by Vercel Inc., which processes technical data such as IP addresses in server logs to run and protect the site. Any transfer of data outside the EU takes place with the safeguards required by the GDPR, such as the EU-US Data Privacy Framework or the European Commission’s standard contractual clauses.",
                 privacy_section5_title: "5. Analytics and Advertising Tools",
                 privacy_section5_text: "<strong>Google Analytics 4:</strong> we use Google Analytics, provided by Google Ireland Limited, to see how many visits we get, which pages are read most and where visitors come from (such as search engines), so we can improve the content. It runs in Google Consent Mode v2: until you consent, all storage types stay denied, so no analytics or advertising cookies are set, and a page may send Google anonymous signals without cookies or identifiers (for example, that a page was opened). Only after you consent does Google Analytics set the _ga and _ga_* cookies (lasting up to two years) to recognise repeat visits. Google Analytics 4 does not store IP addresses, and we do not link this data to your identity or use it for any medical purpose. The legal basis is your consent (Article 6(1)(a) GDPR). Google may process data outside the EU under the EU-US Data Privacy Framework. If Google AdSense ads are shown, advertising cookies are only used with your consent. See <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google's privacy policy</a> for more.",
+                privacy_crisp_text: "<strong>Live chat (Crisp):</strong> the “Chat with us” button on the homepage uses Crisp, provided by Crisp IM SAS in France (within the EU). Crisp is only loaded when you click the button yourself; it then processes your messages and any name or email address you enter, plus technical data such as your IP address and browser type, and stores an identifier on your device to keep the conversation. The legal basis is your request to contact us and your consent (Article 6(1)(a) and (b) GDPR). We keep conversations only as long as needed to answer you, and you can ask us to delete them at any time. Please do not share sensitive health information in the chat: the platform is educational and does not provide medical consultations.",
                 privacy_cookie_btn: "Cookie settings",
                 privacy_section6_title: "6. Data Security & Technical Measures",
                 privacy_section6_intro: "We implement advanced organizational and technical security measures to safeguard your information against unauthorized access, loss, or alteration:",
                 privacy_section6_item1: "End-to-end data transmission encryption via modern HTTPS / TLS protocols",
                 privacy_section6_item2: "Encrypted account storage and automated backups on Supabase servers hosted in Frankfurt, Germany (EU)",
                 privacy_section6_item3: "Regular security assessments and strict adherence to the data minimization principle",
+                privacy_retention_text: "<strong>Retention periods:</strong> analytics cookies for up to two years or until you withdraw your consent; emails, WhatsApp messages and chats only as long as needed to handle your request; boodi account data until you delete your account; and data we must keep by law (such as purchase records) for as long as the law requires.",
                 privacy_section7_title: "7. Your Rights Under GDPR & AVG",
                 privacy_section7_intro: "Under European privacy legislation, you have the right to exercise the following rights free of charge:",
                 privacy_section7_item1: "Right of access to your personal data held by us",
@@ -1094,7 +1110,7 @@
                 privacy_section10_title: "10. Contact Us & Data Protection",
                 privacy_section10_intro: "To exercise your legal data rights or submit privacy-related inquiries, please contact our support team via:",
                 privacy_email: "Certified Support & Rectification Email:",
-                privacy_whatsapp: "Direct Clinical WhatsApp:",
+                privacy_whatsapp: "WhatsApp for general questions and support:",
                 privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "By continuing to use WiBo Health and boodi 💚 app, you acknowledge and agree to this Privacy Policy.",
                 privacy_back_home: "Back to Home",
@@ -1151,7 +1167,7 @@
                 privacy_device_info: "Apparaatgegevens:",
                 privacy_device_info_desc: "Apparaattype, besturingssysteem, geanonimiseerd IP-adres en technische parameters voor PWA-functionaliteit.",
                 privacy_contact_info: "Contactgegevens:",
-                privacy_contact_info_desc: "E-mailadres of telefoonnummer wanneer je zelfstandig contact met ons opneemt voor technische of medische ondersteuning.",
+                privacy_contact_info_desc: "E-mailadres of telefoonnummer alleen wanneer je zelf contact met ons opneemt met een algemene vraag of een verzoek om technische ondersteuning.",
                 privacy_section2_title: "2. Doeleinden van gegevensverwerking",
                 privacy_section2_intro: "Wij verwerken de verzamelde gegevens uitsluitend voor de volgende gerechtvaardigde doelen:",
                 privacy_section2_item1: "Het optimaliseren van de gebruikerservaring en het leveren van snelle, nauwkeurige zoekresultaten",
@@ -1166,14 +1182,17 @@
                 privacy_section4_item1: "Met jouw uitdrukkelijke en geïnformeerde toestemming",
                 privacy_section4_item2: "Uitsluitend met AVG-conforme infrastructuurproviders: Supabase voor accountopslag (servers in Frankfurt, Duitsland) en Google Gemini uitsluitend voor de analyse van voedselfoto's",
                 privacy_section4_item3: "Wanneer dit wettelijk verplicht is door bevoegde Europese gerechtelijke of toezichthoudende autoriteiten",
+                privacy_hosting_text: "<strong>Hosting (Vercel):</strong> de website wordt gehost door Vercel Inc., dat technische gegevens zoals IP-adressen in serverlogs verwerkt om de site te laten werken en te beveiligen. Eventuele doorgifte van gegevens buiten de EU gebeurt met de waarborgen die de AVG vereist, zoals het EU-VS Data Privacy Framework of de standaardcontractbepalingen van de Europese Commissie.",
                 privacy_section5_title: "5. Analytische Diensten & Advertenties",
                 privacy_section5_text: "<strong>Google Analytics 4:</strong> we gebruiken Google Analytics, aangeboden door Google Ireland Limited, om te zien hoeveel bezoeken we krijgen, welke pagina's het meest gelezen worden en waar bezoekers vandaan komen (zoals zoekmachines), zodat we de inhoud kunnen verbeteren. Het werkt met Google Consent Mode v2: zolang je geen toestemming geeft, blijven alle soorten opslag geweigerd, worden er geen analytische of advertentiecookies geplaatst, en kan een pagina Google anonieme signalen zonder cookies of identificatoren sturen (bijvoorbeeld dat een pagina is geopend). Pas na je toestemming plaatst Google Analytics de cookies _ga en _ga_* (geldig tot twee jaar) om herhaalde bezoeken te herkennen. Google Analytics 4 slaat geen IP-adressen op, en we koppelen deze gegevens niet aan je identiteit en gebruiken ze niet voor medische doeleinden. De rechtsgrond is je toestemming (artikel 6, lid 1, onder a AVG). Google kan gegevens buiten de EU verwerken onder het EU-VS Data Privacy Framework. Als er advertenties van Google AdSense worden getoond, worden advertentiecookies alleen met jouw toestemming gebruikt. Zie het <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">privacybeleid van Google</a> voor meer informatie.",
+                privacy_crisp_text: "<strong>Livechat (Crisp):</strong> de knop “Chat met ons” op de homepage gebruikt Crisp, aangeboden door Crisp IM SAS in Frankrijk (binnen de EU). Crisp wordt pas geladen wanneer je zelf op de knop klikt; daarna verwerkt het je berichten en een eventuele naam of e-mailadres die je invult, plus technische gegevens zoals je IP-adres en browsertype, en slaat het een kenmerk op je apparaat op om het gesprek te bewaren. De rechtsgrond is je verzoek om contact en je toestemming (artikel 6, lid 1, onder a en b AVG). We bewaren gesprekken alleen zolang nodig is om je te antwoorden, en je kunt op elk moment vragen ze te verwijderen. Deel geen gevoelige gezondheidsinformatie in de chat: het platform is educatief en biedt geen medisch consult.",
                 privacy_cookie_btn: "Cookie-instellingen",
                 privacy_section6_title: "6. Beveiliging & Cyberveiligheid",
                 privacy_section6_intro: "Wij hanteren geavanceerde technische en organisatorische maatregelen om jouw gegevens te beschermen tegen ongeautoriseerde toegang, verlies of wijziging:",
                 privacy_section6_item1: "Volledige versleuteling van dataverkeer via geavanceerde HTTPS / TLS-protocollen",
                 privacy_section6_item2: "Versleutelde accountopslag en back-ups op Supabase-servers in Frankfurt, Duitsland (EU)",
                 privacy_section6_item3: "Regelmatige veiligheidscontroles en strikte naleving van het beginsel van minimale gegevensverwerking",
+                privacy_retention_text: "<strong>Bewaartermijnen:</strong> analytische cookies maximaal twee jaar of tot je je toestemming intrekt; e-mails, WhatsApp-berichten en chats alleen zolang nodig is om je verzoek af te handelen; gegevens van je boodi-account tot je je account verwijdert; en gegevens die we wettelijk moeten bewaren (zoals aankoopgegevens) zolang de wet dat vereist.",
                 privacy_section7_title: "7. Jouw Rechten onder de AVG",
                 privacy_section7_intro: "Onder de Europese privacywetgeving heb je het recht om de volgende rechten kosteloos uit te oefenen:",
                 privacy_section7_item1: "Recht op inzage in jouw persoonsgegevens die wij verwerken",
@@ -1187,7 +1206,7 @@
                 privacy_section10_title: "10. Contact & Functionaris voor Gegevensbescherming",
                 privacy_section10_intro: "Voor het uitoefenen van jouw AVG-rechten of vragen over gegevensbescherming kun je contact opnemen met ons juridisch en technisch team:",
                 privacy_email: "Officieel e-mailadres voor support en rectificatie:",
-                privacy_whatsapp: "Direct klinisch WhatsApp-contact:",
+                privacy_whatsapp: "WhatsApp voor algemene vragen en ondersteuning:",
                 privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "Door het gebruik van WiBo Health en de boodi 💚 app voort te zetten, ga je akkoord met de voorwaarden van dit privacybeleid.",
                 privacy_back_home: "Terug naar Home",

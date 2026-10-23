@@ -15,7 +15,7 @@
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=2" defer></script>
+    <script src="/js/consent.js?v=3" defer></script>
     <meta charset="UTF-8">
     <!-- Critical canvas: paint the page background in the active theme from the very first frame (no white flash) -->
     <style>html{background-color:#f8fafc;color-scheme:light}html[data-theme="dark"]{background-color:#0f172a;color-scheme:dark}</style>
@@ -1519,7 +1519,7 @@
         html[data-theme="dark"] .cta-btn { background: #eef1e8; color: #14532d; }
         html[data-theme="dark"] .stat-article-badge { background: #047857; }
         html[data-theme="dark"] .home-article-more { color: #34d399; }
-        html[data-theme="dark"] a[href^="/doctor.html"][style*="background: #10b981"] { background: #047857 !important; }
+        html[data-theme="dark"] a[href="/sv/dr-wassim-habib.html"][style*="background: #10b981"] { background: #047857 !important; }
 
         /* the two hero feature cards: olive into forest instead of navy into teal */
         html[data-theme="dark"] .leptin-feature-card {
@@ -1570,7 +1570,7 @@
         <span data-i18n="floating_scanner_text">Skanna streckkod (ingrediensskanner)</span>
     </a>
 
-    <!-- Floating chat button (Crisp is only fetched after the page has loaded and gone idle, or on first click) -->
+    <!-- Floating chat button (Crisp is only fetched when the visitor clicks it; privacy policy, section on chat) -->
     <button type="button" class="wibo-chat-btn" id="wiboChatBtn">💬 <span data-l="sv">Chatta med oss</span></button>
     <script>
     (function () {
@@ -1589,13 +1589,11 @@
             s.async = true;
             document.head.appendChild(s);
         }
+        // click-to-load: Crisp (and anything it stores on the device) only loads once the visitor opens the chat
         btn.addEventListener('click', function () {
             load();
             $crisp.push(['do', 'chat:show']);
             $crisp.push(['do', 'chat:open']);
-        });
-        window.addEventListener('load', function () {
-            (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(load, { timeout: 4000 });
         });
     })();
     </script>
@@ -1662,10 +1660,10 @@
         <a href="#articles" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artiklar</span></a>
         <a href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
         <a href="/supplements.html?v=6.0&lang=en" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
-        <a href="/about.html?lang=en" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">Om oss</span></a>
+        <a href="/sv/om-oss.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">Om oss</span></a>
         <a href="/boodi.html?lang=en" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi-appen 💚</span></a>
         <a href="/diet-plan.html?lang=en" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">Gratis kostplan 🎁</span></a>
-        <a href="/contact.html?lang=en" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">Kontakt</span></a>
+        <a href="/sv/kontakt.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">Kontakt</span></a>
         <a href="/partners.html?lang=en" class="mobile-nav-link"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">Samarbeten</span></a>
     </nav>
 
@@ -2076,12 +2074,12 @@
         <!-- Medical oversight (E-E-A-T) -->
         <section style="max-width: 1100px; margin: 40px auto; padding: 0 16px;">
             <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: 18px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 182, 212, 0.10)); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 5px solid #10b981;">
-                <a href="/doctor.html?lang=en" style="flex-shrink: 0; display: block; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.35);"><img src="/images/dr-wassim.webp" alt="Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group" width="72" height="72" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"></a>
+                <a href="/sv/dr-wassim-habib.html" style="flex-shrink: 0; display: block; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.35);"><img src="/images/dr-wassim.webp" alt="Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group" width="72" height="72" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"></a>
                 <div style="flex: 1; min-width: 220px;">
                     <h2 style="margin: 0 0 6px; font-size: 1.3rem;" data-i18n="trust_title">Medicinsk granskning</h2>
                     <p style="margin: 0; line-height: 1.8; opacity: 0.9;" data-i18n="trust_text">Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare och medicinskt ansvarig för WiBo Health Group, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.</p>
                 </div>
-                <a href="/doctor.html?lang=en" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);"><i class="fas fa-stethoscope"></i> <span data-i18n="trust_btn">Möt vår medicinskt ansvarige</span></a>
+                <a href="/sv/dr-wassim-habib.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);"><i class="fas fa-stethoscope"></i> <span data-i18n="trust_btn">Möt vår medicinskt ansvarige</span></a>
             </div>
         </section>
 
@@ -2112,7 +2110,7 @@
                 <a href="/calculators.html?lang=en" class="cta-btn" data-i18n="cta_btn3">Räkna ut ditt dagliga behov</a>
                 <a href="/recipes.html?lang=en" class="cta-btn" data-i18n="cta_btn4">Hälsosamma recept</a>
                 <a href="#articles" class="cta-btn" data-i18n="cta_btn5">Hälsoartiklar</a>
-                <a href="/about.html?lang=en" class="cta-btn" data-i18n="cta_btn6">Om WiBo Healths medicinska team</a>
+                <a href="/sv/om-oss.html" class="cta-btn" data-i18n="cta_btn6">Om WiBo Healths medicinska team</a>
             </div>
         </section>
     </div>
@@ -2120,9 +2118,9 @@
     <!-- Footer -->
     <footer style="background: #2c3e50; color: white; padding: 30px 20px; margin-top: 60px; text-align: center; font-family: 'Cairo', sans-serif;">
         <div style="margin-bottom: 20px;">
-            <a href="/about.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_about">Om oss</a>
+            <a href="/sv/om-oss.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_about">Om oss</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/contact.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_contact">Kontakt</a>
+            <a href="/sv/kontakt.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_contact">Kontakt</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="/partners.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_partners">Samarbeten</a>
             <span style="color: #7f8c8d;">|</span>
@@ -2130,15 +2128,15 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="/supplements/index.html?lang=en" data-dir-index="supplements" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_supp_index">Kosttillskottsregister</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/privacy.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_privacy">Integritetspolicy</a>
+            <a href="/sv/integritetspolicy.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_privacy">Integritetspolicy</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/terms.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">Användarvillkor</a>
+            <a href="/sv/anvandarvillkor.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">Användarvillkor</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/delete-account.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_delete_account">Radera konto</a>
+            <a href="/sv/radera-konto.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_delete_account">Radera konto</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="/calorie-tracker.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_calorie_tracker">Kalorispårare</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/doctor.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">Medicinskt ansvarig</a>
+            <a href="/sv/dr-wassim-habib.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">Medicinskt ansvarig</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. Alla rättigheter förbehållna.</p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 Utvecklad med <span style="color: #10b981;">♥</span> för boodi</p>
@@ -2160,7 +2158,7 @@
                 <strong style="color: #ecf0f1;">Medicinsk ansvarsfriskrivning:</strong> Innehållet på WiBo Health är avsett
                 som allmän information och utbildning. Det ersätter inte råd, diagnos eller behandling från legitimerad
                 hälso- och sjukvårdspersonal. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning.
-                Vid akut fara – ring 112.
+                Vid akut fara – ring 112. <a href="/sv/medicinsk-ansvarsfriskrivning.html" style="color: #10b981;">Läs hela ansvarsfriskrivningen</a>
             </p>
         </div>
     </footer>

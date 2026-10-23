@@ -1933,7 +1933,7 @@
         <span data-i18n="floating_scanner_text">امسح الباركود (فاحص المكونات)</span>
     </a>
 
-    <!-- Floating chat button (Crisp is only fetched after the page has loaded and gone idle, or on first click) -->
+    <!-- Floating chat button (Crisp is only fetched when the visitor clicks it; privacy policy, section on chat) -->
     <button type="button" class="wibo-chat-btn" id="wiboChatBtn">💬 <span data-l="ar">دردش معنا</span><span data-l="en">Chat with us</span><span data-l="nl">Chat met ons</span></button>
     <script>
     (function () {
@@ -1952,13 +1952,11 @@
             s.async = true;
             document.head.appendChild(s);
         }
+        // click-to-load: Crisp (and anything it stores on the device) only loads once the visitor opens the chat
         btn.addEventListener('click', function () {
             load();
             $crisp.push(['do', 'chat:show']);
             $crisp.push(['do', 'chat:open']);
-        });
-        window.addEventListener('load', function () {
-            (window.requestIdleCallback || function (f) { setTimeout(f, 1500); })(load, { timeout: 4000 });
         });
     })();
     </script>

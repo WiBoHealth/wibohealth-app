@@ -32,6 +32,11 @@
       "permanent": true
     },
     {
+      "source": "/pricing.html",
+      "destination": "/boodi.html",
+      "permanent": true
+    },
+    {
       "source": "/my-articles.html",
       "destination": "/#articles",
       "permanent": true
@@ -62,7 +67,7 @@
       "permanent": true
     },
     {
-      "source": "/sv/:path((?!index\\.html$|diabetes|articles/).*)",
+      "source": "/sv/:path((?!index\\.html$|diabetes|articles/|dr-wassim-habib\\.html$|om-oss\\.html$|integritetspolicy\\.html$|anvandarvillkor\\.html$|medicinsk-ansvarsfriskrivning\\.html$|kontakt\\.html$|radera-konto\\.html$).*)",
       "destination": "/sv/index.html",
       "permanent": false
     },

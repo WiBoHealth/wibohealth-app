@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/anvandarvillkor.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -59,6 +60,11 @@
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://wibohealth.com/terms.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/anvandarvillkor.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/terms.html">
+    <!-- SV-ALTERNATES:END -->
     
     <!-- Multilingual Hreflang Tags for SEO & Accelerated Google Indexing -->
     
@@ -696,6 +702,7 @@
                 <div class="header-controls">
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    <a class="lang-btn" data-sv-link href="/sv/anvandarvillkor.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
                     <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
@@ -816,16 +823,14 @@
 
                 <!-- Section 10 -->
                 <h2 data-i18n="terms_section10_title">10. قنوات الدعم والتواصل الرسمي</h2>
-                <p data-i18n="terms_section10_intro">
-                    لأي استفسارات قانونية أو فنية تتعلق بشروط الاستخدام، يُرجى التواصل معنا عبر القنوات الرسمية:
-                </p>
+                <p data-i18n="terms_section10_intro">لأي استفسارات قانونية أو فنية تتعلق بشروط الاستخدام، يُرجى التواصل معنا عبر القنوات الرسمية:</p>
                 <ul>
                     <li>
                         <span data-i18n="terms_email_title">البريد الإلكتروني المعتمد للدعم:</span> 
                         <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
                     </li>
                     <li>
-                        <span data-i18n="terms_whatsapp_title">واتساب الاستشارات السريرية:</span> 
+                        <span data-i18n="terms_whatsapp_title">واتساب للأسئلة العامة والدعم:</span> 
                         <a href="https://wa.me/31645844585" target="_blank" data-i18n="terms_whatsapp_link">+31 6 45844585</a>
                     </li>
                 </ul>
@@ -924,7 +929,7 @@
                 terms_section10_title: "10. قنوات الدعم والتواصل الرسمي",
                 terms_section10_intro: "لأي استفسارات قانونية أو فنية تتعلق بشروط الاستخدام، يُرجى التواصل معنا عبر القنوات الرسمية:",
                 terms_email_title: "البريد الإلكتروني المعتمد للدعم:",
-                terms_whatsapp_title: "واتساب الاستشارات السريرية:",
+                terms_whatsapp_title: "واتساب للأسئلة العامة والدعم:",
                 terms_whatsapp_link: "+31 6 45844585",
                 terms_footer_text: "شكراً لثقتكم بمنظومة WiBo Health وتطبيق boodi 💚. نتمنى لكم رحلة صحية سريرية آمنة وموفقة!",
                 terms_back_home: "العودة للرئيسية",
@@ -985,9 +990,9 @@
                 terms_section9_title: "9. Governing Law & Jurisdiction",
                 terms_section9_text: "These terms are exclusively governed by and construed in accordance with the laws of the Netherlands. Any legal disputes shall be submitted exclusively to the competent courts in the Netherlands.",
                 terms_section10_title: "10. Official Support Channels",
-                terms_section10_intro: "For legal, technical, or clinical inquiries regarding these Terms of Service, contact us via:",
+                terms_section10_intro: "For legal or technical questions about these Terms of Service, contact us via:",
                 terms_email_title: "Certified Support Email:",
-                terms_whatsapp_title: "Clinical WhatsApp Support:",
+                terms_whatsapp_title: "WhatsApp for general questions and support:",
                 terms_whatsapp_link: "+31 6 45844585",
                 terms_footer_text: "Thank you for trusting WiBo Health and boodi 💚 app. We wish you an empowering and healthy journey!",
                 terms_back_home: "Back to Home",
@@ -1048,9 +1053,9 @@
                 terms_section9_title: "9. Toepasselijk Recht & Bevoegde Rechter",
                 terms_section9_text: "Op deze overeenkomst is uitsluitend Nederlands recht van toepassing. Eventuele geschillen die voortvloeien uit deze voorwaarden worden voorgelegd aan de bevoegde Nederlandse rechter.",
                 terms_section10_title: "10. Contact & Officiële Klantenservice",
-                terms_section10_intro: "Voor juridische, technische of medische vragen over deze algemene voorwaarden kun je contact opnemen:",
+                terms_section10_intro: "Voor juridische of technische vragen over deze algemene voorwaarden kun je contact opnemen via:",
                 terms_email_title: "Officieel Support E-mailadres:",
-                terms_whatsapp_title: "Direct Klinisch WhatsApp-contact:",
+                terms_whatsapp_title: "WhatsApp voor algemene vragen en ondersteuning:",
                 terms_whatsapp_link: "+31 6 45844585",
                 terms_footer_text: "Bedankt voor het vertrouwen in WiBo Health en de boodi 💚 app. Wij wensen je een veilige en vitale gezondheidsreis!",
                 terms_back_home: "Terug naar Home",

@@ -24,6 +24,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/radera-konto.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -51,6 +52,11 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0B0F17">
   <link rel="canonical" href="https://wibohealth.com/delete-account.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/delete-account.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/radera-konto.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/delete-account.html">
+    <!-- SV-ALTERNATES:END -->
   <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -110,8 +116,11 @@
     }
     .lang-switcher {
       display: flex;
+      flex-wrap: wrap;          /* four languages: wrap on narrow phones instead of widening the page */
+      justify-content: flex-end;
       gap: 8px;
       margin-inline-start: auto;
+      min-width: 0;
     }
     .lang-btn {
       background: var(--border);
@@ -180,6 +189,7 @@
       <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">العربية</button>
       <button class="lang-btn" data-lang="nl" onclick="setLang('nl')">Nederlands</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')">English</button>
+      <a class="lang-btn" data-sv-link href="/sv/radera-konto.html" hreflang="sv" lang="sv" title="Svenska">Svenska</a>
     </div>
   </div>
 

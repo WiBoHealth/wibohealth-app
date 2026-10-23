@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/kontakt.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -52,13 +53,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags & SEO -->
-    <title id="pageTitle">اتصل بنا والدعم الطبي | WiBo Health & Boodi App</title>
+    <title id="pageTitle">اتصل بنا والدعم | WiBo Health & Boodi App</title>
     <meta name="title" content="اتصل بنا والدعم الطبي | WiBo Health & Boodi App">
-    <meta name="description" id="pageDescription" content="تواصل مع فريق ويبو هيلث الطبي ودعم تطبيق بودي الذكي (Boodi App) - استشارات سريرية، فاحص المكونات الذكي، والدعم الفني المباشر في هولندا والاتحاد الأوروبي.">
-    <meta name="keywords" content="اتصل بنا, WiBo Health, Boodi App, فريق ويبو هيلث الطبي, استشارات طبية, تطبيق بودي, فاحص المكونات, Contact WiBo, Boodi Klantenservice, WiBo Medisch Team">
+    <meta name="description" id="pageDescription" content="تواصل مع فريق ويبو هيلث ودعم تطبيق بودي الذكي (Boodi App) - أسئلة عامة عن المنصة، فاحص المكونات الذكي، والدعم الفني في هولندا والاتحاد الأوروبي.">
+    <meta name="keywords" content="اتصل بنا, WiBo Health, Boodi App, فريق ويبو هيلث, دعم المنصة, تطبيق بودي, فاحص المكونات, Contact WiBo, Boodi Klantenservice, WiBo Medisch Team">
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://wibohealth.com/contact.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/contact.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/kontakt.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/contact.html">
+    <!-- SV-ALTERNATES:END -->
 
     <!-- Multilingual Hreflang Tags for Accelerated Google Indexing -->
 
@@ -66,7 +72,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/contact.html">
     <meta property="og:title" id="ogTitle" content="اتصل بنا | فريق ويبو هيلث الطبي وتطبيق بودي">
-    <meta property="og:description" id="ogDescription" content="قنوات الاتصال المعتمدة للاستشارات الطبية التغذوية والدعم التقني لتطبيق بودي الذكي.">
+    <meta property="og:description" id="ogDescription" content="قنوات الاتصال المعتمدة للأسئلة العامة والدعم التقني لمنصة WiBo Health وتطبيق بودي الذكي.">
     <meta property="og:image" content="https://wibohealth.com/images/logo.png">
     <meta property="og:site_name" content="WiBo Health">
 
@@ -84,9 +90,9 @@
       "@type": "ContactPage",
       "name": "WiBo Health & Boodi App Contact Center",
       "url": "https://wibohealth.com/contact.html",
-      "description": "Officiële contactpagina voor medisch advies, voedingsbegeleiding en Boodi App ondersteuning.",
+      "description": "Official contact page for general questions and support for the WiBo Health platform and the Boodi app.",
       "mainEntity": {
-        "@type": "MedicalBusiness",
+        "@type": "Organization",
         "name": "WiBo Health Group",
         "telephone": "+31645844585",
         "email": "support@wibohealth.com",
@@ -98,7 +104,7 @@
           {
             "@type": "ContactPoint",
             "telephone": "+31645844585",
-            "contactType": "clinical consultation",
+            "contactType": "customer support",
             "availableLanguage": ["Arabic", "Dutch", "English"]
           },
           {
@@ -823,6 +829,7 @@
                 <div class="header-controls">
                     <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                     <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                    <a class="lang-btn" data-sv-link href="/sv/kontakt.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
                     <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
@@ -865,8 +872,8 @@
             <div class="contact-container">
                 <!-- Header Section -->
                 <div class="contact-header">
-                    <h1><i class="fas fa-headset"></i> <span data-i18n="contact_title">اتصل بنا والدعم الطبي</span></h1>
-                    <p data-i18n="contact_intro">نحن هنا للإجابة على استفساراتكم السريرية، دعم حساباتكم، وتقديم المشورة الصحية المعتمدة من فريق ويبو هيلث الطبي.</p>
+                    <h1><i class="fas fa-headset"></i> <span data-i18n="contact_title">اتصل بنا والدعم</span></h1>
+                    <p data-i18n="contact_intro">نحن هنا للإجابة عن أسئلتكم العامة حول المنصة، ودعم حساباتكم في تطبيق بودي. المنصة تثقيفية ولا تقدم تشخيصاً أو علاجاً أو استشارات طبية.</p>
                 </div>
 
                 <!-- Official Clinical Notice -->
@@ -874,7 +881,7 @@
                     <i class="fas fa-certificate"></i>
                     <div>
                         <strong data-i18n="badge_title">المقر الرسمي والدعم المعتمد (هولندا والاتحاد الأوروبي):</strong><br>
-                        <span data-i18n="badge_desc">تُدار الاستشارات والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الطبية الأوروبية (AVG/GDPR).</span>
+                        <span data-i18n="badge_desc">تُدار المنصة التثقيفية والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الأوروبية (AVG/GDPR).</span>
                     </div>
                 </div>
 
@@ -894,15 +901,15 @@
                         </div>
                     </div>
 
-                    <!-- 2. Medical Consultations & WhatsApp -->
+                    <!-- 2. General questions & WhatsApp -->
                     <div class="contact-card-item doctor-card">
                         <div class="card-icon-wrapper">
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="card-details">
-                            <h3><span data-i18n="doctor_consult_title">الاستشارات الطبية والتغذوية المباشرة</span></h3>
-                            <p data-i18n="doctor_consult_desc">حجز استشارة خاصة مع فريق ويبو هيلث الطبي لمتابعة مقاومة الإنسولين، الكبد الدهني، والحميات السريرية.</p>
-                            <a href="https://wa.me/31645844585?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%B7%D8%A8%D9%8A%D8%A9%20%D9%85%D8%B9%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%88%D9%8A%D8%A8%D9%88%20%D9%87%D9%8A%D9%84%D8%AB%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A" target="_blank" rel="noopener" class="card-action-link" style="color: #25d366;">
+                            <h3><span data-i18n="doctor_consult_title">أسئلة عامة ودعم المنصة عبر واتساب</span></h3>
+                            <p data-i18n="doctor_consult_desc">لأسئلتك العامة عن منصة WiBo Health وتطبيق بودي. المنصة تثقيفية ولا تقدم تشخيصاً أو علاجاً أو استشارات طبية فردية.</p>
+                            <a href="https://wa.me/31645844585?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%B9%D9%86%20%D9%85%D9%86%D8%B5%D8%A9%20WiBo%20Health%20/%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%A8%D9%88%D8%AF%D9%8A" target="_blank" rel="noopener" class="card-action-link" style="color: #25d366;">
                                 <i class="fab fa-whatsapp"></i> <span data-i18n="doctor_whatsapp_action">+31 6 45844585 (اضغط للمحادثة المباشرة)</span>
                             </a>
                         </div>
@@ -1001,8 +1008,8 @@
     <script>
         const translations = {
             ar: {
-                page_title: "اتصل بنا والدعم الطبي | WiBo Health & Boodi App",
-                page_desc: "تواصل مع فريق ويبو هيلث الطبي ودعم تطبيق بودي الذكي (Boodi App) - استشارات سريرية، فاحص المكونات الذكي، والدعم الفني المباشر في هولندا والاتحاد الأوروبي.",
+                page_title: "اتصل بنا والدعم | WiBo Health & Boodi App",
+                page_desc: "تواصل مع فريق ويبو هيلث ودعم تطبيق بودي الذكي (Boodi App) - أسئلة عامة عن المنصة، فاحص المكونات الذكي، والدعم الفني في هولندا والاتحاد الأوروبي.",
                 nav_home: "الرئيسية",
                 nav_foods: "الأطعمة",
                 nav_calculators: "الحاسبات",
@@ -1012,14 +1019,14 @@
                 nav_boodi_app: "بودي 💚",
                 nav_free_diet: "دايت مجاني 🎁",
                 nav_contact: "اتصل بنا",
-                contact_title: "اتصل بنا والدعم الطبي",
-                contact_intro: "نحن هنا للإجابة على استفساراتكم السريرية، دعم حساباتكم، وتقديم المشورة الصحية المعتمدة من فريق ويبو هيلث الطبي.",
+                contact_title: "اتصل بنا والدعم",
+                contact_intro: "نحن هنا للإجابة عن أسئلتكم العامة حول المنصة، ودعم حساباتكم في تطبيق بودي. المنصة تثقيفية ولا تقدم تشخيصاً أو علاجاً أو استشارات طبية.",
                 badge_title: "المقر الرسمي والدعم المعتمد (هولندا والاتحاد الأوروبي):",
-                badge_desc: "تُدار الاستشارات والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الطبية الأوروبية (AVG/GDPR).",
+                badge_desc: "تُدار المنصة التثقيفية والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الأوروبية (AVG/GDPR).",
                 boodi_support_title: "دعم تطبيق بودي الذكي (Boodi App)",
                 boodi_support_desc: "استفسارات ماسح الباركود، رصيد المسحات، مشتريات Google Play، واقتراحات تدقيق المنتجات بالسوبرماركت.",
-                doctor_consult_title: "الاستشارات الطبية والتغذوية المباشرة",
-                doctor_consult_desc: "حجز استشارة خاصة مع فريق ويبو هيلث الطبي لمتابعة مقاومة الإنسولين، الكبد الدهني، والحميات السريرية.",
+                doctor_consult_title: "أسئلة عامة ودعم المنصة عبر واتساب",
+                doctor_consult_desc: "لأسئلتك العامة عن منصة WiBo Health وتطبيق بودي. المنصة تثقيفية ولا تقدم تشخيصاً أو علاجاً أو استشارات طبية فردية.",
                 doctor_whatsapp_action: "+31 6 45844585 (اضغط للمحادثة المباشرة)",
                 general_email_title: "المراسلات الرسمية والشراكات",
                 general_email_desc: "للاستفسارات العامة، المقترحات المؤسسية، والشراكات الأكاديمية والطبية مع منظومة WiBo Health.",
@@ -1039,8 +1046,8 @@
                 footer_medical_disclaimer: "إخلاء مسؤولية سريري: منصة WiBo Health وتطبيق بودي أدوات توجيهية استرشادية بيانية تعتمد على مراجع Voedingscentrum وقواعد البيانات الدولية. الاستشارات لا تحل محل الفحص السريري المباشر في حالات الطوارئ الطبية الحرجة."
             },
             en: {
-                page_title: "Contact Us & Medical Support | WiBo Health & Boodi App",
-                page_desc: "Contact WiBo Health clinical team and Boodi App official technical support. Medical consultations, the Smart Ingredient & Diet Scanner, and Dutch/EU inquiries.",
+                page_title: "Contact Us & Support | WiBo Health & Boodi App",
+                page_desc: "Contact the WiBo Health team and Boodi App official support: general questions about the platform, the Smart Ingredient & Diet Scanner, and Dutch/EU inquiries.",
                 nav_home: "Home",
                 nav_foods: "Foods Guide",
                 nav_calculators: "Calculators",
@@ -1050,14 +1057,14 @@
                 nav_boodi_app: "boodi App 💚",
                 nav_free_diet: "Free Diet 🎁",
                 nav_contact: "Contact Us",
-                contact_title: "Contact Us & Clinical Support",
-                contact_intro: "We are here to answer your clinical inquiries, handle account requests, and offer certified healthcare guidance from WiBo Health Medical Team.",
+                contact_title: "Contact Us & Support",
+                contact_intro: "We are here to answer your general questions about the platform and help with your boodi app account. The platform is educational and does not provide diagnosis, treatment or medical consultations.",
                 badge_title: "Official Headquarters & Certified Support (Netherlands & EU):",
-                badge_desc: "All clinical consultations and tech operations are managed by WiBo Health Group based in the Netherlands, in full compliance with EU GDPR/AVG medical standards.",
+                badge_desc: "The educational platform and tech operations are managed by WiBo Health Group based in the Netherlands, in full compliance with EU GDPR/AVG standards.",
                 boodi_support_title: "Boodi App Dedicated Support",
                 boodi_support_desc: "Inquiries regarding the barcode scanner, scan credits, Google Play subscriptions, and supermarket product verification requests.",
-                doctor_consult_title: "Direct Medical & Clinical Consultations",
-                doctor_consult_desc: "Book a personalized clinical consultation with WiBo Health Medical Team for insulin resistance, fatty liver, and metabolic diets.",
+                doctor_consult_title: "General Questions & Platform Support via WhatsApp",
+                doctor_consult_desc: "For general questions about the WiBo Health platform and the Boodi app. The platform is educational and does not provide diagnosis, treatment or individual medical consultations.",
                 doctor_whatsapp_action: "+31 6 45844585 (Click for WhatsApp Chat)",
                 general_email_title: "Official & Institutional Communications",
                 general_email_desc: "For corporate partnerships, medical collaboration, academic research, and general inquiries with WiBo Health Group.",
@@ -1077,8 +1084,8 @@
                 footer_medical_disclaimer: "Clinical Disclaimer: WiBo Health platform and Boodi App provide evidence-based guidance aligned with Voedingscentrum standards. Online advice does not replace emergency in-person medical evaluation."
             },
             nl: {
-                page_title: "Contact & Medische Klantenservice | WiBo Health & Boodi App",
-                page_desc: "Neem contact op met het medische team van WiBo Health en de officiële klantenservice van Boodi App. Klinisch advies, de slimme ingrediënten- en dieetscanner en EU-ondersteuning.",
+                page_title: "Contact & Klantenservice | WiBo Health & Boodi App",
+                page_desc: "Neem contact op met het WiBo Health-team en de officiële klantenservice van Boodi App: algemene vragen over het platform, de slimme ingrediënten- en dieetscanner en EU-ondersteuning.",
                 nav_home: "Home",
                 nav_foods: "Voedingswijzer",
                 nav_calculators: "Calculators",
@@ -1088,14 +1095,14 @@
                 nav_boodi_app: "boodi App 💚",
                 nav_free_diet: "Gratis Voedingsschema 🎁",
                 nav_contact: "Contact",
-                contact_title: "Contact & Medische Klantenservice",
-                contact_intro: "Wij staan klaar om jouw medische vragen te beantwoorden, accountondersteuning te bieden en wetenschappelijk voedingsadvies te leveren door het WiBo Health Medisch Team.",
+                contact_title: "Contact & Klantenservice",
+                contact_intro: "Wij beantwoorden graag je algemene vragen over het platform en helpen je met je boodi-account. Het platform is educatief en biedt geen diagnose, behandeling of medisch consult.",
                 badge_title: "Officieel Hoofdkantoor & Gecertificeerde Ondersteuning (Nederland & EU):",
-                badge_desc: "Alle klinische adviezen en technologische systemen worden officieel beheerd door WiBo Health Group in Nederland, volledig conform de Europese AVG/GDPR richtlijnen.",
+                badge_desc: "Het educatieve platform en de technologische systemen worden officieel beheerd door WiBo Health Group in Nederland, volledig conform de Europese AVG/GDPR-richtlijnen.",
                 boodi_support_title: "Boodi App Klantenservice & Technische Support",
                 boodi_support_desc: "Vragen over de barcodescanner, scansaldo, Google Play abonnementen en verificatie van supermarktproducten in Albert Heijn, Jumbo en Lidl.",
-                doctor_consult_title: "Direct Medisch & Voedingskundig Consult",
-                doctor_consult_desc: "Boek een persoonlijk consult met het WiBo Health Medisch Team voor insulineresistentie, leververvetting en klinische voeding.",
+                doctor_consult_title: "Algemene vragen & platformondersteuning via WhatsApp",
+                doctor_consult_desc: "Voor algemene vragen over het WiBo Health-platform en de Boodi-app. Het platform is educatief en biedt geen diagnose, behandeling of individueel medisch consult.",
                 doctor_whatsapp_action: "+31 6 45844585 (Klik voor direct WhatsApp-contact)",
                 general_email_title: "Zakelijke Correspondentie & Partnerschappen",
                 general_email_desc: "Voor algemene vragen, institutionele samenwerkingen, onderzoek en partnerschappen met WiBo Health Group.",

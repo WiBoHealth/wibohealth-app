@@ -36,8 +36,8 @@
             reject: 'Neka'
         }
     };
-    // languages whose privacy page exists; others link to the English one
-    var PRIVACY = { ar: '', en: '?lang=en', nl: '?lang=nl', sv: '?lang=en' };
+    // privacy page per language (Swedish has its own static page)
+    var PRIVACY = { ar: '/privacy.html', en: '/privacy.html?lang=en', nl: '/privacy.html?lang=nl', sv: '/sv/integritetspolicy.html' };
 
     function stored() {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -98,7 +98,7 @@
         box.setAttribute('aria-labelledby', 'wibo-consent-title');
         box.setAttribute('lang', l);
         box.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
-        var href = '/privacy.html' + PRIVACY[l] + '#cookies';
+        var href = PRIVACY[l] + '#cookies';
         box.innerHTML =
             '<h2 id="wibo-consent-title">' + t.title + '</h2>' +
             '<p>' + t.body + ' <a href="' + href + '">' + t.more + '</a></p>' +

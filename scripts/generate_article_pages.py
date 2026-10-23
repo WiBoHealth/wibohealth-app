@@ -28,6 +28,7 @@ import re
 from pathlib import Path
 
 from article_content import ARTICLES, SECTIONS
+from site_pages_sv import SITE_PAGES_SV
 from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block, site_link
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -43,7 +44,7 @@ GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=2" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+    <script src="/js/consent.js?v=3" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -70,12 +71,22 @@ def alt_langs(a):
     return tuple(l for l in ALL_LANGS if l in a['content'] or l in a.get('legacy', {}))
 
 
+def site_page_url(p, absolute=True):
+    """A Swedish site page (doctor, about, legal, contact): /sv/<slug>.html."""
+    path = f'/sv/{p["slug"]}.html'
+    return SITE + path if absolute else path
+
+
 def sv_page_of(path):
-    """The Swedish article that stands in for a legacy page (e.g. /insulin-resistance.html), or None."""
+    """The Swedish page that stands in for a legacy page (e.g. /insulin-resistance.html, /privacy.html), or None."""
     bare = path.split('#')[0].split('?')[0]
+    frag = '#' + path.split('#', 1)[1] if '#' in path else ''
     for a in ARTICLES:
         if a.get('legacy', {}).get('ar') == bare and SV in a['content']:
-            return page_url(a, SV, absolute=False)
+            return page_url(a, SV, absolute=False) + frag
+    for p in SITE_PAGES_SV:
+        if p['legacy'] == bare:
+            return site_page_url(p, absolute=False) + frag
     return None
 
 
@@ -86,6 +97,8 @@ def link(path, lang):
         return site_link(path, lang)
     if path in ('/', '/#articles'):
         return '/sv/index.html' + path[1:]
+    if path.startswith('/sv/'):
+        return path
     return sv_page_of(path) or site_link(path, 'en')
 
 
@@ -272,10 +285,14 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
         for l, flag, name in (('ar', '🇪🇬', 'العربية'), ('nl', '🇳🇱', 'Nederlands'), ('en', '🇬🇧', 'English'), (SV, '🇸🇪', 'Svenska'))
         if l in (switch or urls))
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
-    footer_links = ' <span>•</span> '.join(
-        f'<a href="{link(p, lang)}">{label}</a>' for p, label in
-        [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
-         ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
+    items = [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
+             ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])]
+    if lang == SV:                                       # the Swedish about, contact and legal pages
+        items = [('/', u['nav'][0]), ('/#articles', t['footer_articles']), ('/about.html', 'Om oss'),
+                 ('/contact.html', 'Kontakt'), ('/privacy.html', 'Integritetspolicy'), ('/terms.html', 'Användarvillkor'),
+                 ('/sv/medicinsk-ansvarsfriskrivning.html', 'Medicinsk ansvarsfriskrivning'), ('/partners.html', u['partners'])]
+    footer_links = ' <span>•</span> '.join(f'<a href="{link(p, lang)}">{label}</a>' for p, label in items)
+    x_default = f'\n    <link rel="alternate" hreflang="x-default" href="{urls["ar"]}">' if 'ar' in urls else ''
     robots = '\n    <meta name="robots" content="noindex, follow">' if draft else ''
     og_image = (f'\n    <meta property="og:image" content="{image}">\n    <meta property="og:image:alt" content="{esc(image_alt)}">'
                 if image else '')
@@ -289,8 +306,7 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
     <title>{esc(title)}</title>
     <meta name="description" content="{esc(desc)}">{robots}
     <link rel="canonical" href="{urls[lang]}">
-{hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
+{hreflang}{x_default}
     <meta property="og:type" content="{og_type}">
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(desc)}">
@@ -538,15 +554,16 @@ def build_hub(key, lang):
                  active=f'/{sec["dir"]}.html')
 
 
-def link_legacy_page(a):
-    """Make the hand-written ?lang page point at its Swedish article: hreflang ar/sv/x-default after the canonical,
-    an SV flag after the EN button and ?lang=sv forwarding in the language boot script. Re-running replaces them."""
-    path = ROOT / a['legacy']['ar'].lstrip('/')
+def link_legacy_page(legacy_ar, sv):
+    """Make a hand-written ?lang page (e.g. /insulin-resistance.html) point at its Swedish version `sv`: hreflang
+    ar/sv/x-default after the canonical, an SV link after the EN language button (in the style of that page's switcher)
+    and ?lang=sv forwarding in the language boot script. Re-running replaces them."""
+    path = ROOT / legacy_ar.lstrip('/')
     raw = path.read_bytes()
     bom, text = raw.startswith(b'\xef\xbb\xbf'), raw.decode('utf-8-sig')
     crlf = '\r\n' in text
     t = text.replace('\r\n', '\n')
-    ar, sv = SITE + a['legacy']['ar'], page_url(a, SV, absolute=False)
+    ar = SITE + legacy_ar
     t = re.sub(r'    <!-- SV-ALTERNATES:START.*?<!-- SV-ALTERNATES:END -->\n', '', t, flags=re.S)
     t = re.sub(r'^ *<a class="lang-btn" data-sv-link[^\n]*\n', '', t, flags=re.M)
     t = re.sub(r'^ *if \(q === \'sv\'\)[^\n]*// sv-forward\n', '', t, flags=re.M)
@@ -556,10 +573,14 @@ def link_legacy_page(a):
              f'    <link rel="alternate" hreflang="x-default" href="{ar}">\n'
              f'    <!-- SV-ALTERNATES:END -->\n')
     t, n1 = re.subn(r'^ *<link rel="canonical"[^>]*>\n', lambda m: m.group(0) + block, t, count=1, flags=re.M)
-    t, n2 = re.subn(r'^( *)(<button class="lang-btn" data-lang-toggle="en"[^\n]*\n)',
-                    lambda m: m.group(1) + m.group(2) + m.group(1) +
-                    f'<a class="lang-btn" data-sv-link href="{sv}" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>\n',
-                    t, count=1, flags=re.M)
+    def sv_link(m):                                      # same look as the page's own EN button
+        inner = m.group(2)
+        label = ('<span>🇸🇪</span> <span>SV</span>' if '<span>' in inner else
+                 '🇸🇪' if re.fullmatch(r'\s*\S{1,4}\s*', inner) else 'Svenska')
+        return (m.group(0) + m.group(1) +
+                f'<a class="lang-btn" data-sv-link href="{sv}" hreflang="sv" lang="sv" title="Svenska">{label}</a>\n')
+    t, n2 = re.subn(r'^( *)<button\b[^>]*\bclass="lang-btn"[^>]*\bdata-lang(?:-toggle)?="en"[^>]*>(.*?)</button>\n',
+                    sv_link, t, count=1, flags=re.M | re.S)
     t, n3 = re.subn(r"^( *)(var q = \(new URLSearchParams\(location\.search\)\.get\('lang'\) \|\| ''\)\.toLowerCase\(\), s = null;\n)",
                     lambda m: m.group(1) + m.group(2) + m.group(1) +
                     f"if (q === 'sv') {{ location.replace('{sv}'); return; }}   // sv-forward\n", t, count=1, flags=re.M)
@@ -569,6 +590,53 @@ def link_legacy_page(a):
     out = (b'\xef\xbb\xbf' if bom else b'') + t.encode('utf-8')
     if out != raw:
         path.write_bytes(out)
+
+
+ORG = {"@type": "Organization", "name": "WiBo Health Group", "url": SITE + '/',
+       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}}
+
+
+def build_site_page(p):
+    """A Swedish doctor / about / legal / contact page (scripts/site_pages_sv.py) in the article shell."""
+    url = site_page_url(p)
+    urls = {'ar': SITE + p['legacy'], SV: url} if p['legacy'] else {SV: url}
+    switch = dict(urls)
+    if p['legacy']:                                      # EN/NL live on the legacy page via ?lang (not hreflang)
+        switch.update({l: SITE + site_link(p['legacy'], l) for l in ('en', 'nl')})
+    elif p.get('switch_ar'):                             # a related page that is not an hreflang alternate (e.g. noindex)
+        switch['ar'] = SITE + p['switch_ar']
+    image = f"{SITE}/images/{p['image']}" if p.get('image') else None
+    schema = {
+        "@context": "https://schema.org",
+        "@type": {'profile': 'ProfilePage', 'about': 'AboutPage', 'contact': 'ContactPage'}.get(p['kind'], 'WebPage'),
+        "@id": url + '#webpage', "url": url, "name": p['title'], "description": p['desc'], "inLanguage": SV,
+        "dateModified": p['modified'],
+        "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+        "publisher": ORG,
+        "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": UI_SV['home'], "item": SITE + link('/', SV)},
+            {"@type": "ListItem", "position": 2, "name": p['crumb'], "item": url}]},
+    }
+    if p['kind'] == 'profile':
+        schema['mainEntity'] = dict(DOCTOR_SV, image=image, url=url)
+    elif p['kind'] == 'about':
+        schema['about'] = ORG
+    elif p['kind'] == 'contact':
+        schema['mainEntity'] = dict(ORG, email='support@wibohealth.com', telephone='+31645844585', contactPoint=[{
+            "@type": "ContactPoint", "contactType": "customer support", "email": "support@wibohealth.com",
+            "telephone": "+31645844585", "availableLanguage": ["Arabic", "Dutch", "English"]}])
+    img = (f'''            <img class="article-hero-img article-hero-portrait" src="/images/{p['image']}" alt="{esc(p['image_alt'])}" width="500" height="500" style="max-width:260px;border-radius:50%" decoding="async">
+''' if image else '')
+    note = f'            <p class="disclaimer-box">{p["footer_note"]}</p>\n' if p.get('footer_note') else ''
+    main = f'''        <article class="about-card">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="{link('/', SV)}">{UI_SV["home"]}</a> › <span>{esc(p["crumb"])}</span>
+            </nav>
+            <h1>{esc(p["h1"])}</h1>
+{img}{p["body"]}{note}        </article>'''
+    return shell(SV, title=p['title'], desc=p['desc'], urls=urls, schema=schema, main=main, draft=False,
+                 og_type='profile' if p['kind'] == 'profile' else 'website', image=image,
+                 image_alt=p.get('image_alt', ''), active=None, switch=switch)
 
 
 def lang_dir(lang, folder=''):
@@ -596,12 +664,18 @@ def main():
 
     for a in ARTICLES:
         if a.get('legacy') and SV in a['content'] and not is_draft(a):
-            link_legacy_page(a)
+            link_legacy_page(a['legacy']['ar'], page_url(a, SV, absolute=False))
+    for p in SITE_PAGES_SV:                              # Swedish doctor, about, legal and contact pages
+        (ROOT / 'sv' / f'{p["slug"]}.html').write_text(build_site_page(p), encoding='utf-8', newline='\n')
+        if p['legacy']:
+            link_legacy_page(p['legacy'], site_page_url(p, absolute=False))
 
     # drafts (articles or whole sections) stay out of the sitemap until they are published
     entries = [(lambda l, sec=sec: hub_url(sec, l), max((a['modified'] for a in ARTICLES if a.get('section') == k), default=None), None,
                 langs_of(sec)) for k, sec in SECTIONS.items() if not sec.get('draft')]
     entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero'), alt_langs(a)) for a in ARTICLES if not is_draft(a)]
+    entries += [(lambda l, p=p: SITE + p['legacy'] if l == 'ar' else site_page_url(p), p['modified'], None,
+                 ('ar', SV) if p['legacy'] else (SV,)) for p in SITE_PAGES_SV]
 
     image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
     block = []
@@ -613,12 +687,17 @@ def main():
             if hero and image_ns:
                 block.append(f'    <image:image><image:loc>{SITE}/images/{hero}</image:loc></image:image>')
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in langs]
-            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>', '  </url>']
+            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>'] if 'ar' in langs else []
+            block += ['  </url>']
     replace_sitemap_block('ARTICLE-PAGES', block)
     sitemap = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
     for a in ARTICLES:                                   # a legacy page now lives in this block: no second hand-written entry
         if a.get('legacy') and not is_draft(a):
             loc = f'<loc>{page_url(a, "ar")}</loc>'
+            assert sitemap.count(loc) == 1, f'{loc} appears {sitemap.count(loc)} times in sitemap.xml: remove the hand-written entry'
+    for p in SITE_PAGES_SV:
+        if p['legacy']:
+            loc = f'<loc>{SITE}{p["legacy"]}</loc>'
             assert sitemap.count(loc) == 1, f'{loc} appears {sitemap.count(loc)} times in sitemap.xml: remove the hand-written entry'
     drafts = sum(is_draft(a) for a in ARTICLES)
     print(f'article pages written: {sum(len(langs_of(a)) for a in ARTICLES)} ({len(ARTICLES)} articles, '

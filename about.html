@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/om-oss.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -53,6 +54,11 @@
     <title data-i18n="page_title_about">من نحن | WiBo Health Group & تطبيق بودي (boodi)</title>
     <meta name="description" id="seo_desc" content="تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.">
     <link rel="canonical" href="https://wibohealth.com/about.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/om-oss.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html">
+    <!-- SV-ALTERNATES:END -->
     
     <!-- Hreflang Tags for SEO -->
     
@@ -554,6 +560,7 @@
                     <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
                         <span>🇬🇧</span> <span>EN</span>
                     </button>
+                    <a class="lang-btn" data-sv-link href="/sv/om-oss.html" hreflang="sv" lang="sv" title="Svenska"><span>🇸🇪</span> <span>SV</span></a>
                 </div>
             </div>
         </div>
@@ -639,11 +646,9 @@
             <!-- Contact & Support Section -->
             <h2 class="section-title">
                 <i class="fas fa-headset"></i>
-                <span data-i18n="about_contact_title">الدعم الطبي والتواصل المؤسسي</span>
+                <span data-i18n="about_contact_title">الدعم والتواصل المؤسسي</span>
             </h2>
-            <p data-i18n="about_contact_text">
-                فريقنا السريري والتقني متاح دائماً للإجابة على استفساراتكم الطبية، اقتراحات التعاون، أو الدعم الفني الخاص بتطبيق بودي عبر بريد الدعم الرسمي المعتمد:
-            </p>
+            <p data-i18n="about_contact_text">فريقنا متاح للإجابة عن أسئلتكم العامة حول المنصة، واقتراحات التعاون، والدعم الفني الخاص بتطبيق بودي عبر قناتنا الرسمية:</p>
 
             <div class="support-card">
                 <div>
@@ -749,8 +754,8 @@
                 serv_3_desc: "معادلات سريرية دقيقة للـ BMI، واحتياج السعرات والماكروز (Mifflin-St Jeor)، ونسبة الخصر (WHtR).",
                 serv_4_title: "تطبيق بودي الذكي (boodi App)",
                 serv_4_desc: "ماسح الباركود الأوروبي لرصد الحلال، بدائل السوبرماركت، والتحليل الكيميائي الفوري.",
-                about_contact_title: "الدعم الطبي والتواصل المؤسسي",
-                about_contact_text: "فريقنا السريري والتقني متاح دائماً للإجابة على استفساراتكم الطبية، اقتراحات التعاون، أو الدعم الفني الخاص بتطبيق بودي عبر بريد الدعم الرسمي المعتمد:",
+                about_contact_title: "الدعم والتواصل المؤسسي",
+                about_contact_text: "فريقنا متاح للإجابة عن أسئلتكم العامة حول المنصة، واقتراحات التعاون، والدعم الفني الخاص بتطبيق بودي عبر قناتنا الرسمية:",
                 support_label: "بريد الدعم والتواصل الرسمي:",
                 support_sub: "فريق الاستجابة الطبية والتقنية - WiBo Health",
                 about_back_home: "العودة للصفحة الرئيسية"
@@ -790,8 +795,8 @@
                 serv_3_desc: "Klinische formules voor BMI, energie- en macrobehoefte (Mifflin-St Jeor) en taille-lengteverhouding (WHtR).",
                 serv_4_title: "boodi App Voedingsscanner",
                 serv_4_desc: "Europese barcodescanner voor halal-monitoring, E-nummers en directe supermarkt-alternatieven.",
-                about_contact_title: "Klinische Ondersteuning & Contact",
-                about_contact_text: "Ons medische en technische team staat klaar om uw vragen te beantwoorden of ondersteuning te bieden voor de boodi app via ons officiële contactadres:",
+                about_contact_title: "Ondersteuning & Contact",
+                about_contact_text: "Ons team staat klaar voor algemene vragen over het platform, samenwerkingsvoorstellen en ondersteuning voor de boodi-app via ons officiële kanaal:",
                 support_label: "Officieel Support- en Contactadres:",
                 support_sub: "Medisch & Technisch Responsteam - WiBo Health",
                 about_back_home: "Terug naar Home"
@@ -831,8 +836,8 @@
                 serv_3_desc: "Clinically rigorous formulas for BMI, TDEE/Macros (Mifflin-St Jeor), and Waist-to-Height Ratio (WHtR).",
                 serv_4_title: "boodi Smart Food Scanner",
                 serv_4_desc: "Real-time European barcode scanning, Halal integrity, and healthy supermarket substitution.",
-                about_contact_title: "Clinical Support & Institutional Contact",
-                about_contact_text: "Our medical and engineering team is always available to answer clinical inquiries, collaboration proposals, or boodi app user support via our verified channel:",
+                about_contact_title: "Support & Institutional Contact",
+                about_contact_text: "Our team is available for general questions about the platform, collaboration proposals and boodi app support via our verified channel:",
                 support_label: "Official Support & Inquiries Channel:",
                 support_sub: "Clinical & Technical Response Team - WiBo Health",
                 about_back_home: "Back to Home"
