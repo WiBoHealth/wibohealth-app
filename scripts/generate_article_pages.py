@@ -10,6 +10,9 @@ Output (re-running rebuilds everything, nothing is appended twice):
     <section>/<slug>.html, en/<section>/..., nl/<section>/...      articles that belong to a section
     sv/...                     Swedish, only for articles and sections whose content has an `sv` entry (hreflang and
                                sitemap then list sv too); Swedish pages link to the English version of untranslated pages
+    legacy=dict(ar='/x.html')  an article that only has Swedish copy here and is the sv version of an older hand-written
+                               ?lang page: the generator writes the Swedish page and adds hreflang ar/sv/x-default, an SV
+                               flag and ?lang=sv forwarding to that page (marked blocks, safe to re-run)
     sitemap.xml                block between <!-- ARTICLE-PAGES:START --> and <!-- ARTICLE-PAGES:END -->
 
 An article with section='diabetes' is written under that section's folder and its breadcrumb runs through the hub.
@@ -62,13 +65,28 @@ def langs_of(item):
     return tuple(l for l in ALL_LANGS if l in item['content'])
 
 
+def alt_langs(a):
+    """hreflang languages of an article: its own pages plus the legacy page it is the Swedish version of."""
+    return tuple(l for l in ALL_LANGS if l in a['content'] or l in a.get('legacy', {}))
+
+
+def sv_page_of(path):
+    """The Swedish article that stands in for a legacy page (e.g. /insulin-resistance.html), or None."""
+    bare = path.split('#')[0].split('?')[0]
+    for a in ARTICLES:
+        if a.get('legacy', {}).get('ar') == bare and SV in a['content']:
+            return page_url(a, SV, absolute=False)
+    return None
+
+
 def link(path, lang):
-    """site_link() for every language: the Swedish homepage is static, other pages without Swedish open in English."""
+    """site_link() for every language: the Swedish homepage is static, pages with a Swedish version open in Swedish,
+    the rest in English."""
     if lang != SV:
         return site_link(path, lang)
     if path in ('/', '/#articles'):
         return '/sv/index.html' + path[1:]
-    return site_link(path, 'en')
+    return sv_page_of(path) or site_link(path, 'en')
 
 
 def nav(lang, active=None):
@@ -214,7 +232,10 @@ def is_draft(a):
 
 def page_url(a, lang, absolute=True):
     folder = section_dir(a)
-    path = f'/{folder}/{a["slugs"][lang]}.html' if lang == 'ar' else f'/{lang}/{folder}/{a["slugs"][lang]}.html'
+    if lang in a.get('legacy', {}):                     # the older hand-written page this article is a translation of
+        path = a['legacy'][lang]
+    else:
+        path = f'/{folder}/{a["slugs"][lang]}.html' if lang == 'ar' else f'/{lang}/{folder}/{a["slugs"][lang]}.html'
     return SITE + path if absolute else path
 
 
@@ -240,16 +261,16 @@ def render_body(html, lang):
 
 
 def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', image=None, image_alt='', extra_head='',
-          active='/#articles'):
+          active='/#articles', switch=None):
     """Full page around `main`: head and SEO tags, header with language links (to `urls`, one per language the page
-    exists in) and footer; shared by articles and hubs."""
+    exists in; `switch` may add ?lang links that are not hreflang alternates) and footer; shared by articles and hubs."""
     t, u = T[lang], ui(lang)
     nav_links = nav(lang, active=active)
     lang_links = '\n'.join(
-        f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{urls[l][len(SITE):]}" '
+        f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{(switch or urls)[l][len(SITE):]}" '
         f'hreflang="{l}" lang="{l}" title="{name}" aria-label="{name}"><span>{flag}</span> <span>{l.upper()}</span></a>'
         for l, flag, name in (('ar', '🇪🇬', 'العربية'), ('nl', '🇳🇱', 'Nederlands'), ('en', '🇬🇧', 'English'), (SV, '🇸🇪', 'Svenska'))
-        if l in urls)
+        if l in (switch or urls))
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
     footer_links = ' <span>•</span> '.join(
         f'<a href="{link(p, lang)}">{label}</a>' for p, label in
@@ -376,16 +397,19 @@ DOCTOR = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": 
           "description": "Founder of WiBo Health", "url": f"{SITE}/doctor.html",
           "worksFor": {"@type": "Organization", "name": "WiBo Health", "url": SITE}}
 # Swedish pages: the role as approved for Sweden (2026-10-23), no job title that reads as a Swedish licence ("läkare")
-DOCTOR_SV = dict(DOCTOR, jobTitle="Grundare och medicinskt ansvarig, WiBo Health Group", description="Grundare av WiBo Health")
+DOCTOR_SV = dict(DOCTOR, jobTitle="Grundare och Medicinskt Ansvarig, WiBo Health Group", description="Grundare av WiBo Health")
 
 
 def build(a, lang):
     t, u, c = T[lang], ui(lang), a['content'][lang]
-    urls = {l: page_url(a, l) for l in langs_of(a)}
+    urls = {l: page_url(a, l) for l in alt_langs(a)}
+    switch = dict(urls)
+    if a.get('legacy'):                                  # its EN/NL live on the legacy page via ?lang (not hreflang)
+        switch.update({l: SITE + site_link(a['legacy']['ar'], l) for l in LANGS if l not in switch})
     hero = f"{SITE}/images/{a['hero']}" if a.get('hero') else None
     parent_name, parent_href = crumb_parent(a, lang)
     draft = is_draft(a)
-    named = a.get('named_author')
+    named = c.get('named_author', a.get('named_author'))   # may differ per language (Swedish pages are signed)
     doctor = DOCTOR_SV if lang == SV else DOCTOR
     references = c.get('references', a['references'])   # a language may list its own sources (Swedish: WHO 2013, Socialstyrelsen)
 
@@ -448,7 +472,7 @@ def build(a, lang):
         extra_head += f'\n    <link rel="preload" as="image" href="/images/{a["hero"]}" fetchpriority="high">'
     return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=draft,
                  og_type='article', image=hero, image_alt=c.get('hero_alt', ''), extra_head=extra_head,
-                 active=f'/{section_dir(a)}.html' if a.get('section') else '/#articles')
+                 active=f'/{section_dir(a)}.html' if a.get('section') else '/#articles', switch=switch)
 
 
 def hub_card(a, lang, t):
@@ -514,6 +538,39 @@ def build_hub(key, lang):
                  active=f'/{sec["dir"]}.html')
 
 
+def link_legacy_page(a):
+    """Make the hand-written ?lang page point at its Swedish article: hreflang ar/sv/x-default after the canonical,
+    an SV flag after the EN button and ?lang=sv forwarding in the language boot script. Re-running replaces them."""
+    path = ROOT / a['legacy']['ar'].lstrip('/')
+    raw = path.read_bytes()
+    bom, text = raw.startswith(b'\xef\xbb\xbf'), raw.decode('utf-8-sig')
+    crlf = '\r\n' in text
+    t = text.replace('\r\n', '\n')
+    ar, sv = SITE + a['legacy']['ar'], page_url(a, SV, absolute=False)
+    t = re.sub(r'    <!-- SV-ALTERNATES:START.*?<!-- SV-ALTERNATES:END -->\n', '', t, flags=re.S)
+    t = re.sub(r'^ *<a class="lang-btn" data-sv-link[^\n]*\n', '', t, flags=re.M)
+    t = re.sub(r'^ *if \(q === \'sv\'\)[^\n]*// sv-forward\n', '', t, flags=re.M)
+    block = (f'    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->\n'
+             f'    <link rel="alternate" hreflang="ar" href="{ar}">\n'
+             f'    <link rel="alternate" hreflang="sv" href="{SITE}{sv}">\n'
+             f'    <link rel="alternate" hreflang="x-default" href="{ar}">\n'
+             f'    <!-- SV-ALTERNATES:END -->\n')
+    t, n1 = re.subn(r'^ *<link rel="canonical"[^>]*>\n', lambda m: m.group(0) + block, t, count=1, flags=re.M)
+    t, n2 = re.subn(r'^( *)(<button class="lang-btn" data-lang-toggle="en"[^\n]*\n)',
+                    lambda m: m.group(1) + m.group(2) + m.group(1) +
+                    f'<a class="lang-btn" data-sv-link href="{sv}" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>\n',
+                    t, count=1, flags=re.M)
+    t, n3 = re.subn(r"^( *)(var q = \(new URLSearchParams\(location\.search\)\.get\('lang'\) \|\| ''\)\.toLowerCase\(\), s = null;\n)",
+                    lambda m: m.group(1) + m.group(2) + m.group(1) +
+                    f"if (q === 'sv') {{ location.replace('{sv}'); return; }}   // sv-forward\n", t, count=1, flags=re.M)
+    assert (n1, n2, n3) == (1, 1, 1), f'{path.name}: canonical/EN button/boot script not found {(n1, n2, n3)}'
+    if crlf:
+        t = t.replace('\n', '\r\n')
+    out = (b'\xef\xbb\xbf' if bom else b'') + t.encode('utf-8')
+    if out != raw:
+        path.write_bytes(out)
+
+
 def lang_dir(lang, folder=''):
     return ROOT / (folder if lang == 'ar' else f'{lang}/{folder}'.rstrip('/'))
 
@@ -537,10 +594,14 @@ def main():
             if lang in langs_of(sec):
                 (lang_dir(lang) / f'{sec["dir"]}.html').write_text(build_hub(key, lang), encoding='utf-8', newline='\n')
 
+    for a in ARTICLES:
+        if a.get('legacy') and SV in a['content'] and not is_draft(a):
+            link_legacy_page(a)
+
     # drafts (articles or whole sections) stay out of the sitemap until they are published
     entries = [(lambda l, sec=sec: hub_url(sec, l), max((a['modified'] for a in ARTICLES if a.get('section') == k), default=None), None,
                 langs_of(sec)) for k, sec in SECTIONS.items() if not sec.get('draft')]
-    entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero'), langs_of(a)) for a in ARTICLES if not is_draft(a)]
+    entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero'), alt_langs(a)) for a in ARTICLES if not is_draft(a)]
 
     image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
     block = []
@@ -554,6 +615,11 @@ def main():
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in langs]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>', '  </url>']
     replace_sitemap_block('ARTICLE-PAGES', block)
+    sitemap = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+    for a in ARTICLES:                                   # a legacy page now lives in this block: no second hand-written entry
+        if a.get('legacy') and not is_draft(a):
+            loc = f'<loc>{page_url(a, "ar")}</loc>'
+            assert sitemap.count(loc) == 1, f'{loc} appears {sitemap.count(loc)} times in sitemap.xml: remove the hand-written entry'
     drafts = sum(is_draft(a) for a in ARTICLES)
     print(f'article pages written: {sum(len(langs_of(a)) for a in ARTICLES)} ({len(ARTICLES)} articles, '
           f'{sum(SV in langs_of(a) for a in ARTICLES)} with Swedish, {drafts} draft); '

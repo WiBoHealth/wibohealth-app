@@ -6,7 +6,7 @@ GI figures follow the site's own food pages (GI wording bands: <=55 low, 56-69 m
 
 SUGAR_FREE_CEREALS = dict(
     slugs=dict(ar='healthy-sugar-free-breakfast-cereals', en='healthy-sugar-free-breakfast-cereals',
-               nl='gezonde-ontbijtgranen-zonder-suiker'),
+               nl='gezonde-ontbijtgranen-zonder-suiker', sv='frukostflingor-utan-socker'),
     hero='healthy-sugar-free-breakfast-cereal-hero.webp', hero_size=(1400, 781),
     bowl='healthy-whole-grain-cereal-bowl.webp',
     published='2026-10-17', modified='2026-10-17',
@@ -487,6 +487,168 @@ nl=dict(
 
             <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Conclusie</span></h2>
             <p>Het ontbijt is meer dan een manier om de ochtendhonger te stillen: het is het eerste signaal dat je hormonen, focus en energie voor uren afstemt. Zoete ontbijtgranen vervangen door volkoren granen zonder toegevoegde suiker is een van de eenvoudigste en meest effectieve gezondheidskeuzes voor je hart, je gewicht en je dagelijkse energie.</p>'''),
+# Swedish (2026-10-23): Swedish shelf terms (havregryn, müsli, Nyckelhålet, "varav sockerarter"); only EU-authorised
+# claims (oat beta-glucan); no cinnamon/insulin claim; neutral scanner wording; signed by Dr. Wassim Habib.
+sv=dict(
+ named_author=True,
+ byline='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ title='Frukostflingor utan socker: de bästa valen i butiken för energi som håller | WiBo Health',
+ h1='Frukostflingor utan socker: de bästa valen i butiken för energi som håller',
+ crumb='Frukostflingor utan socker',
+ cat='Smarta inköp',
+ desc='Så väljer du frukostflingor utan tillsatt socker: läs näringsdeklarationen och de dolda sockernamnen, gränserna för socker och fiber, de bästa valen i butiken, allergiråd och tre snabba recept.',
+ summary='Många ”nyttiga” frukostflingor är efterrätt i förklädnad. Lär dig läsa förpackningen och hitta flingorna utan tillsatt socker.',
+ hero_alt='Leende kvinna som äter en skål fullkornshavre med bär och chiafrön vid frukostbordet',
+ bowl_alt='Skål med fullkornsflingor, valnötter, mandlar, bär och kanel medan mjölk hälls i',
+ about=['Breakfast cereals', 'Added sugar', 'Whole grains', 'Glycemic index'],
+ disclaimer='⚖️ Medicinsk ansvarsfriskrivning: informationen i den här guiden är allmän hälso- och kostinformation från WiBo Health, byggd på publicerad forskning och Europeiska livsmedelssäkerhetsmyndighetens (EFSA) bedömningar. Den är ingen medicinsk diagnos och ersätter inte råd från legitimerad hälso- och sjukvårdspersonal, till exempel din läkare eller en legitimerad dietist. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning.',
+ body='''            <h2 class="section-title"><i class="fas fa-store"></i> <span>Inledning: fällan med den ”nyttiga frukosten” i butiken</span></h2>
+            <p class="lead">Känner du igen dig? Du vaknar motiverad att leva hälsosamt och häller upp en skål flingor som reklamen kallar ”vitaminrika”, ”en källa till fiber” och ”bra för figuren”. Ändå sjunker energin bara två timmar senare, du blir trög, kanske får lite huvudvärk och längtar efter något sött eller en kopp kaffe till.</p>
+            <p>Vad hände? Många flingor som säljs som ”nyttiga” eller ”fitness” är egentligen efterrätt i förklädnad: vissa populära sorter, särskilt de som riktar sig till barn, innehåller 30–40 % socker, alltså nästan en sked socker för varannan sked flingor.</p>
+            <p>I den här praktiska guiden, byggd på EU:s regler för näringspåståenden, lär du dig att välja frukostflingor utan tillsatt socker, att läsa näringsdeklarationen, vilka alternativ som faktiskt finns på hyllan och hur du håller energin jämn och huvudet klart ända fram till lunch.</p>
+
+            <h2 class="section-title"><i class="fas fa-magnifying-glass"></i> <span>1. Hur gömmer sig sockret i flingpaketet?</span></h2>
+            <p>När du läser ingredienslistan står ”socker” kanske inte först, så produkten verkar bara lätt sötad. Men många tillverkare delar upp sockret på 4–5 ingredienser med olika namn, så att var och en hamnar längre ner i listan. Ser du något av de här namnen är det tillsatt socker:</p>
+            <ul class="check-list">
+                <li><strong>Glukos-fruktossirap:</strong> ett industriellt socker som tas upp snabbt.</li>
+                <li><strong>Maltodextrin:</strong> en bearbetad stärkelse med högt glykemiskt index.</li>
+                <li><strong>Kornmaltextrakt:</strong> ger flingorna en brun, ”fullkornsaktig” färg och extra sötma.</li>
+                <li><strong>Andra namn:</strong> druvsocker, sackaros, dextros, glukossirap, sirap, lönnsirap och fruktjuicekoncentrat.</li>
+            </ul>
+            <div class="tip"><p><strong>Den gyllene regeln:</strong> riktigt bra flingor har ofta en enda rad i ingredienslistan, till exempel ”100 % fullkornshavre”.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>2. Fyra siffror som avgör framför hyllan</span></h2>
+            <p>För att bestämma dig på några sekunder, kom ihåg de här värdena per 100 g. Gränserna för socker och fiber är desamma som EU:s villkor för påståendena ”lågt sockerinnehåll” och ”fiberrik”:</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">&lt; 5 g</div><h3>Socker (varav sockerarter)</h3><p>Står det ”utan tillsatt socker” på paketet är sockret i tabellen spannmålets eget naturliga socker.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 6 g</div><h3>Fiber</h3><p>Gärna 8–10 g. Fiber gör att sockret tas upp långsammare.</p></div>
+                <div class="rule-card"><div class="rule-num">85–100 %</div><h3>Fullkorn</h3><p>Fullkorn ska stå först i ingredienslistan.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 0,5 g</div><h3>Salt</h3><p>Ju mindre salt, desto bättre.</p></div>
+            </div>
+            <p>Ett snabbt stöd i svenska butiker är <strong>Nyckelhålet</strong>: symbolen visar att produkten är ett hälsosammare val inom sin grupp, med mer fullkorn och fiber och mindre socker och salt.</p>
+
+            <h2 class="section-title"><i class="fas fa-cart-shopping"></i> <span>3. Jämförelse och smart inköpsguide</span></h2>
+            <p>I stället för att gå vilse bland dussintals märken har vi delat in de vanligaste alternativen i tre tydliga grupper (länkarna leder till vår livsmedelsguide, som än så länge finns på engelska):</p>
+            <figure class="article-figure">
+                <img src="/images/healthy-whole-grain-cereal-bowl.webp" alt="Skål med fullkornsflingor, valnötter, mandlar, bär och kanel medan mjölk hälls i" width="1100" height="614" loading="lazy" decoding="async">
+                <figcaption>En skål fullkorn utan tillsatt socker, toppad med naturella nötter, färska bär och kanel.</figcaption>
+            </figure>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> Grupp 1: guldvalen (mest näring, längst mättnad)</div>
+            <div class="cereal-cards">
+                <div class="cereal-card">
+                    <h3>Havregryn (fullkornshavre)</h3>
+                    <div class="chip-row"><span class="chip">370 kcal</span><span class="chip">Tillsatt socker: 0 g</span><span class="chip">Fiber 10–11 g</span><span class="chip">Protein 13 g</span><span class="chip">GI lågt (55)</span></div>
+                    <p><strong>Ingredienser:</strong> 100 % fullkornshavre, inget annat.</p>
+                    <p>Havre innehåller den lösliga fibern betaglukan, som bildar en gel i tarmen. Betaglukan från havre bidrar till att upprätthålla normala kolesterolnivåer i blodet (EU-godkänt påstående; den gynnsamma effekten uppnås vid ett dagligt intag av 3 g betaglukan från havre), och havren ger energi som frigörs långsamt under flera timmar.</p>
+                    <a class="card-link" href="{food:oatmeal}">Näringsvärden för havre →</a>
+                </div>
+                <div class="cereal-card">
+                    <h3>Müsli utan tillsatt socker</h3>
+                    <div class="chip-row"><span class="chip">Tillsatt socker: 0 g</span><span class="chip">Naturligt socker 3–4 g</span><span class="chip">Fiber 9–10 g</span><span class="chip">GI lågt (≈45)</span></div>
+                    <p><strong>Ingredienser:</strong> flingor av havre, råg och vete med linfrön och naturella nötter.</p>
+                    <p><strong>Tänk på:</strong> välj orostad müsli; knaprig müsli är oftast rostad med olja och socker.</p>
+                    <a class="card-link" href="{food:swiss-muesli-no-sugar}">Näringsvärden för müsli →</a>
+                </div>
+                <div class="cereal-card">
+                    <h3>Rågflingor</h3>
+                    <div class="chip-row"><span class="chip">Tillsatt socker: 0 g</span><span class="chip">Fiber ≈13 g</span><span class="chip">GI lågt (≈45)</span></div>
+                    <p><strong>Ingredienser:</strong> 100 % fullkornsråg, valsad.</p>
+                    <p>Ett klassiskt nordiskt val med mycket fiber. Koka som gröt eller blanda med havregryn.</p>
+                    <a class="card-link" href="{food:whole-rye-flakes}">Näringsvärden för rågflingor →</a>
+                </div>
+            </div>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> Grupp 2: godkänt, med villkor</div>
+            <div class="cereal-cards">
+                <div class="cereal-card ok">
+                    <h3>Osötade cornflakes</h3>
+                    <div class="chip-row"><span class="chip">Tillsatt socker: 0 g</span><span class="chip">Fiber 3–4 g</span><span class="chip hi">GI högt (≈79)</span></div>
+                    <p><strong>Ingredienser:</strong> malen majs med en nypa salt och tillsatta vitaminer, utan sockerglasyr.</p>
+                    <p><strong>Tips:</strong> de bryts ner mycket snabbare än havre, så ät dem inte ensamma med lättmjölk. Lägg alltid till protein och nyttigt fett (grekisk yoghurt eller kvarg med en näve valnötter eller chiafrön) så stiger blodsockret långsammare.</p>
+                    <a class="card-link" href="{food:unsweetened-corn-flakes}">Näringsvärden för cornflakes →</a>
+                </div>
+            </div>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> Grupp 3: bäst att undvika</div>
+            <div class="cereal-cards">
+                <div class="cereal-card avoid">
+                    <h3>Knaprig granola och rostad müsli</h3>
+                    <div class="chip-row"><span class="chip hi">Socker 22–30 g</span></div>
+                    <p>Flingorna blandas med olja och glukossirap och rostas för att bli knapriga, så sockerhalten närmar sig en bit kaka.</p>
+                    <a class="card-link" href="{food:granola-honey-nut}">Näringsvärden för granola →</a>
+                </div>
+                <div class="cereal-card avoid">
+                    <h3>Färgglada flingor och chokladflingor för barn</h3>
+                    <div class="chip-row"><span class="chip hi">Socker 32–42 g</span><span class="chip hi">Fiber &lt; 1,5 g</span><span class="chip hi">GI högt</span></div>
+                    <p>Mycket socker och nästan ingen fiber ger en snabb blodsockerhöjning, ofta följd av en dipp i energi och koncentration före lunch.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> <span>4. Vad händer i kroppen efter en söt frukost?</span></h2>
+            <p>När du börjar dagen med sötade flingor följer en snabb kedja av reaktioner:</p>
+            <ol class="steps">
+                <li><strong>En snabb blodsockertopp:</strong> enkla sockerarter når blodet på några minuter och blodsockret stiger kraftigt.</li>
+                <li><strong>Mycket insulin frisätts:</strong> bukspottkörteln frisätter mycket insulin för att få ner blodsockret igen.</li>
+                <li><strong>Kroppen växlar till lagring:</strong> så länge insulinet är högt använder kroppen mindre av sitt lagrade fett som bränsle och lagrar i stället överskottet av socker.</li>
+                <li><strong>En dipp efteråt:</strong> två–tre timmar senare kan blodsockret sjunka snabbt, så att du blir okoncentrerad, hungrig och sugen på bullar eller godis.</li>
+            </ol>
+            <p>Fullkornsflingor utan socker och med mycket fiber ger en lugnare blodsockerkurva och lägre insulin under förmiddagen.</p>
+
+            <h2 class="section-title"><i class="fas fa-seedling"></i> <span>5. Smarta toppingar som gör skålen mättande</span></h2>
+            <ul class="check-list">
+                <li><strong><a href="{food:walnuts}">Valnötter</a>:</strong> en valnöt (två halvor) ger ungefär 26 kcal, främst från omättat fett, bland annat växtbaserad omega-3 (alfa-linolensyra).</li>
+                <li><strong>Naturella cashewnötter och mandlar:</strong> en liten näve (10–12 nötter) innehåller magnesium och zink.</li>
+                <li><strong><a href="{food:chia-seeds}">Chiafrön</a> och <a href="{food:flax-seeds}">krossade linfrön</a>:</strong> en matsked chiafrön ger ungefär 4 g fiber och binder vätska till en gel som mättar länge.</li>
+                <li><strong><a href="{food:ceylon-cinnamon}">Ceylonkanel</a>:</strong> en varm, söt smak helt utan socker.</li>
+                <li><strong><a href="{food:blueberry}">Färska bär</a>:</strong> lågt glykemiskt index och mycket färgämnen (antocyaniner); blåbär och lingon är klassiska nordiska val.</li>
+            </ul>
+
+            <div class="allergy-box" role="note">
+                <h2>⚠️ Allergiinformation</h2>
+                <ul>
+                    <li><strong>Celiaki (glutenintolerans):</strong> havre är naturligt glutenfri men odlas och mals ofta i anläggningar som också hanterar vete och blir då förorenad. Vid celiaki ska du bara köpa havre som är märkt glutenfri.</li>
+                    <li><strong>Allergi mot nötter och jordnötter:</strong> undvik valnötter, cashewnötter, mandlar och jordnötssmör, och använd solrosfrön, pumpafrön eller chiafrön i stället.</li>
+                    <li><strong>Laktosintolerans:</strong> använd laktosfri mjölk eller en osötad växtdryck (till exempel havre- eller sojadryck berikad med kalcium och D-vitamin).</li>
+                </ul>
+            </div>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>6. Granska ett flingpaket på några sekunder med boodi-appen</h2>
+                    <p>Skanna streckkoden med mobilen så visar boodi det totala sockerinnehållet och dolda sockernamn, Nutri-Score och tveksamma tillsatser (som E471), och föreslår alternativ med mindre socker från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-bowl-food"></i> <span>7. Tre snabba frukostrecept utan socker</span></h2>
+            <div class="recipe-cards">
+                <div class="recipe-card">
+                    <h3>Overnight oats</h3>
+                    <p><strong>Ingredienser:</strong> 4 matskedar havregryn + 2 dl osötad havre- eller mandeldryck + 1 tesked chiafrön + en nypa kanel + en näve blåbär.</p>
+                    <p><strong>Gör så här:</strong> blanda allt i en burk, sätt på locket och ställ in i kylen innan du går och lägger dig. På morgonen har det blivit en krämig pudding som kan ätas direkt.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>Müsliskål med grekisk yoghurt</h3>
+                    <p><strong>Ingredienser:</strong> 4 matskedar müsli utan tillsatt socker + 150 g <a href="{food:greek-yogurt}">grekisk yoghurt</a> eller kvarg + 4 valnötter + ett strö krossade linfrön.</p>
+                    <p><strong>Värde:</strong> ungefär 15 g protein och nyttiga fetter som håller hungern borta till lunch.</p>
+                </div>
+                <div class="recipe-card">
+                    <h3>Varm gröt</h3>
+                    <p><strong>Ingredienser:</strong> 1 dl havregryn eller rågflingor kokta i mjölk eller vatten + 1 tesked <a href="{food:natural-peanut-butter}">100 % naturligt jordnötssmör</a> (utan palmolja och socker) + färska bär.</p>
+                    <p><strong>Värde:</strong> varm och skonsam energi kalla morgnar. Jordnötsallergi? Använd solrosfrösmör i stället.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>8. Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Är honung ett bra sätt att söta flingorna?</h3><p>Honung är i kroppen främst fruktos och glukos och höjer blodsockret och insulinet som annat socker. Om du använder honung, håll dig till en halv tesked; ännu bättre är att vänja smaklökarna vid kanel och färsk frukt.</p></div>
+                <div class="faq-item"><h3>Passar flingor utan socker vid insulinresistens?</h3><p>Ja, särskilt havregryn, rågflingor och osötad müsli, så länge du kombinerar dem med protein och nötter så att sockret tas upp långsamt och blodsockret inte stiger plötsligt.</p></div>
+                <div class="faq-item"><h3>Hur ser jag att müslin är utan socker?</h3><p>Titta på raden <em>varav sockerarter</em> i näringsdeklarationen; den ska inte vara mer än 5 g per 100 g. Du kan också skanna streckkoden med boodi-appen för en tydlig bedömning.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Sammanfattning</span></h2>
+            <p>Frukosten är mer än ett sätt att stilla morgonhungern: den sätter tonen för energin och koncentrationen i flera timmar. Att byta söta flingor mot fullkorn utan tillsatt socker är ett av de enklaste valen du kan göra för din vardagsenergi och din vikt.</p>'''),
     ),
 )
 
@@ -1473,7 +1635,7 @@ sv=dict(
                 <li>Insulinet fungerar som en ”nyckel”: det går till kroppens celler (muskler, lever), låser upp dörren, släpper in sockret och cellen använder det som energi.</li>
             </ol>
             <h3>Var ligger då problemet?</h3>
-            <p>Med åren, med upprepade måltider fulla av snabb stärkelse, lite rörelse och ständig stress, har cellerna fyllts med socker och vill inte ta emot mer. Låsen har blivit ”rostiga och tröga”: det är det vi kallar <a href="{site:/insulin-resistance.html}">insulinresistens</a> (artikel på engelska).</p>
+            <p>Med åren, med upprepade måltider fulla av snabb stärkelse, lite rörelse och ständig stress, har cellerna fyllts med socker och vill inte ta emot mer. Låsen har blivit ”rostiga och tröga”: det är det vi kallar <a href="{site:/insulin-resistance.html}">insulinresistens</a>.</p>
             <p>Den vanliga nyckeln öppnar inte längre dörren lika lätt, så vad gör den stackars bukspottkörteln? Den börjar arbeta övertid och tillverkar fler och fler nycklar (den frisätter stora mängder insulin) för att tvinga cellerna att ta in sockret.</p>
             <p>Så länge bukspottkörteln orkar dubbla sin insats håller sig blodsockret normalt i flera år utan att du märker något! Men efter ett tag blir bukspottkörteln trött och hinner inte längre med det stora behovet. Då börjar sockret stanna kvar och samlas i blodet, och dina provsvar börjar klättra mot 39, 42 mmol/mol och uppåt.</p>
 
@@ -1582,4 +1744,197 @@ sv=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES]
+# --------------------------------------------------------------------------------------------
+# Swedish versions of the older hand-written articles (decision 2026-10-23). Each has only `sv` content here; `legacy`
+# names the existing ?lang page (AR/EN/NL) it translates, which becomes its hreflang ar / x-default partner.
+# Rules: HbA1c in mmol/mol, glucose in mmol/l; EU 1924/2006 (no cure/reverse/detox wording, authorised claims only);
+# signed "Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group" (byline and schema, 2026-10-23).
+# --------------------------------------------------------------------------------------------
+SV_BYLINE = 'Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group'
+SV_DISCLAIMER = ('⚖️ Medicinsk ansvarsfriskrivning: innehållet i den här artikeln är allmän hälsoinformation och utbildning från '
+                 'WiBo Health. Det är ingen medicinsk diagnos eller personlig behandlingsplan och ersätter inte råd, diagnos eller '
+                 'behandling från legitimerad hälso- och sjukvårdspersonal. Prata med din läkare innan du gör större förändringar '
+                 'i kost eller läkemedel. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.')
+
+INSULIN_RESISTANCE_SV = dict(
+    legacy=dict(ar='/insulin-resistance.html'),
+    slugs=dict(sv='insulinresistens-hba1c'),
+    hero='exercise-insulin.jpg', hero_size=(1376, 751),
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'American Diabetes Association Professional Practice Committee. 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1)',
+        'World Health Organization. Use of glycated haemoglobin (HbA1c) in the diagnosis of diabetes mellitus. Geneva: WHO; 2011',
+        'Shukla AP, Iliescu RG, Thomas CE, Aronne LJ. Food order has a significant impact on postprandial glucose and insulin levels. Diabetes Care 2015;38(7):e98–e99',
+        'Colberg SR, Sigal RJ, Yardley JE, et al. Physical Activity/Exercise and Diabetes: A Position Statement of the American Diabetes Association. Diabetes Care 2016;39(11):2065–2079',
+        'Blomhoff R, Andersen R, Arnesen EK, et al. Nordic Nutrition Recommendations 2023. Copenhagen: Nordic Council of Ministers; 2023',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='HbA1c och insulinresistens: så förstår du dina värden och vad du kan göra själv | WiBo Health',
+ h1='HbA1c och insulinresistens: så förstår du dina värden och vad du kan göra själv',
+ crumb='HbA1c och insulinresistens',
+ cat='Diabetes och metabol hälsa',
+ desc='Vad HbA1c i mmol/mol betyder, hur insulinresistens uppstår, de dolda tecknen och hur mat, måltidsordning och rörelse kan förbättra insulinkänsligheten och sänka HbA1c.',
+ summary='Vad ditt HbA1c betyder, de dolda tecknen på insulinresistens och de levnadsvanor som kan förbättra insulinkänsligheten.',
+ hero_alt='Leende kvinna som joggar på en grusväg i grönskan – rörelse förbättrar musklernas insulinkänslighet',
+ about=['HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention', 'Glycemic index'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">Många människor lever nära gränsen till typ 2-diabetes utan att veta om det, eftersom tillståndet utvecklas i det tysta under flera år. Bakom den tysta utvecklingen ligger nästan alltid <strong>insulinresistens</strong>.</p>
+            <p>Att regelbundet följa sitt HbA1c gör det möjligt att upptäcka förändringar tidigt, långt innan de hinner påverka blodkärl, nerver, njurar och hjärta. I den här guiden förklarar vi sambandet mellan HbA1c och insulinresistens, och vilka levnadsvanor som enligt forskningen kan förbättra kroppens insulinkänslighet.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>Vad är HbA1c och varför är det viktigt?</span></h2>
+            <p>HbA1c (långtidssocker) är ett blodprov som speglar ditt genomsnittliga blodsocker de senaste 2–3 månaderna. Principen är enkel: när det finns mycket glukos i blodet binder en del av det till hemoglobinet, proteinet som bär syre i de röda blodkropparna.</p>
+            <p>Eftersom en röd blodkropp lever i ungefär 120 dagar ger HbA1c en stabil bild över lång tid, till skillnad från ett enstaka fasteglukos som kan påverkas av gårdagens middag eller av stress. I Sverige anges HbA1c i <strong>mmol/mol</strong>.</p>
+
+            <h2 class="section-title"><i class="fas fa-chart-simple"></i> <span>Så tolkas HbA1c-värdet</span></h2>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">&lt; 39 <small>mmol/mol</small></div><h3>Normalt</h3><p>Cellerna svarar bra på insulin och ämnesomsättningen fungerar väl.</p></div>
+                <div class="rule-card"><div class="rule-num">39–47 <small>mmol/mol</small></div><h3>Förhöjt (prediabetes)</h3><p>En tidig varningssignal: bukspottkörteln arbetar hårdare för att hålla blodsockret i schack. Intervallet kommer från ADA och används internationellt.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 48 <small>mmol/mol</small></div><h3>Diabetes</h3><p>Gränsen för typ 2-diabetes. Diagnosen ställs av läkare, i regel efter två förhöjda prov.</p></div>
+            </div>
+            <p>Läs mer om gränsvärdena, fasteglukos och sockerbelastning i vår <a href="/sv/diabetes/prediabetes.html">guide om prediabetes</a>.</p>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> <span>Insulinresistens: drivkraften bakom ett stigande HbA1c</span></h2>
+            <p>Insulin är ett hormon från bukspottkörteln som fungerar som en nyckel: det öppnar cellernas dörrar (framför allt i muskler, lever och fettväv) så att glukos kan komma in och användas som energi. Vid insulinresistens har ”låsen” blivit tröga och svarar sämre på nyckeln.</p>
+            <p>Bukspottkörteln kompenserar då genom att frisätta allt mer insulin. Med tiden orkar betacellerna inte hålla samma takt, insulinproduktionen räcker inte till och glukos blir kvar i blodet, och då börjar HbA1c stiga.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>Dolda tecken på insulinresistens</span></h2>
+            <ul class="check-list">
+                <li><strong>Acanthosis nigricans:</strong> mörka, sammetslena hudpartier i hudveck, särskilt i nacken, i armhålorna och över knogarna.</li>
+                <li><strong>Hudflikar (fibrom):</strong> små ofarliga hudutskott, ofta på halsen och bröstet.</li>
+                <li><strong>Bukfetma:</strong> ett ökat midjemått (över 102 cm för män och 88 cm för kvinnor) är ett tydligt tecken på rubbad ämnesomsättning.</li>
+                <li><strong>Trötthet efter maten:</strong> stark sömnighet och ”hjärndimma” efter kolhydratrika måltider, på grund av snabba blodsockertoppar och följande dippar.</li>
+                <li><strong>Starkt sötsug:</strong> trots att det finns mycket socker i blodet får cellerna inte in det, och hjärnan signalerar hunger efter snabba kolhydrater.</li>
+            </ul>
+            <p>Har du flera av de här tecknen? Ta upp det med din vårdcentral, som kan ta HbA1c och fasteglukos.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Skanna varor i butiken med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se sockerinnehåll och dolda sockernamn direkt, och hitta alternativ med mindre socker från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>Levnadsvanor som förbättrar insulinkänsligheten och kan sänka HbA1c</span></h2>
+            <p>Det goda beskedet är att insulinkänsligheten ofta kan förbättras påtagligt med ändrade levnadsvanor, och att prediabetes i många fall kan återgå till normala värden. Målet är inte att svälta sig, utan att undvika de stora blodsocker- och insulintopparna efter måltiderna. (Länkarna till livsmedlen leder till vår livsmedelsguide, som än så länge finns på engelska.)</p>
+
+            <h3>1. Välj livsmedel med lågt glykemiskt index (GI)</h3>
+            <p>Glykemiskt index rangordnar kolhydratrika livsmedel efter hur snabbt de höjer blodsockret:</p>
+            <ul class="check-list">
+                <li><strong>Begränsa livsmedel med högt GI:</strong> vitt bröd, vitt ris, tillsatt socker, juice och friterad potatis, som ger snabba och höga blodsockertoppar.</li>
+                <li><strong>Välj oftare alternativ med lågt GI:</strong> <a href="{food:oatmeal}">havregryn</a>, baljväxter (<a href="{food:lentils}">linser</a>, <a href="{food:chickpeas}">kikärter</a>), <a href="{food:quinoa}">quinoa</a>, fullkornsknäckebröd och naturella nötter, som släpper ut glukos gradvis.</li>
+            </ul>
+
+            <h3>2. Ät mer fiber</h3>
+            <p>Fiber, särskilt den lösliga, gör att magsäcken töms långsammare och att glukos tas upp i lugnare takt. Sikta på minst 25–35 gram fiber per dag, som de nordiska näringsrekommendationerna anger, från grönsaker, baljväxter, fullkorn, <a href="{food:chia-seeds}">chiafrön</a> och bär.</p>
+
+            <h3>3. Ät i smart ordning</h3>
+            <p>Studier visar att måltidens ordning påverkar blodsockret märkbart: börja med fiber (sallad och grönsaker), fortsätt med protein och fett (kyckling, fisk, ägg, olivolja) och ät kolhydraterna sist. Den enkla vanan kan sänka blodsockertoppen efter maten med upp till 40 %.</p>
+
+            <h3>4. Låt musklerna ta hand om sockret</h3>
+            <p>Skelettmuskulaturen är kroppens största ”förråd” för glukos. Styrketräning och en rask promenad på 10 minuter efter maten aktiverar transportörer (GLUT4) som för in glukos i muskelcellerna, även utan insulin.</p>
+            <p>Minst 150 minuter måttlig fysisk aktivitet i veckan, kombinerat med styrketräning två gånger i veckan, förbättrar insulinkänsligheten och kan ge ett lägre HbA1c vid nästa kontroll.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Hur lång tid tar det innan HbA1c sjunker efter ändrade levnadsvanor?</h3><p>Eftersom de röda blodkropparna förnyas på ungefär 90–120 dagar rekommenderas att HbA1c tas om först efter tre månader med nya vanor, för att se den verkliga förändringen.</p></div>
+                <div class="faq-item"><h3>Kan insulinkänsligheten förbättras utan läkemedel?</h3><p>Ja, i många fall. När bukspottkörtelns betaceller fortfarande fungerar kan en viktnedgång på 7–10 % och mer muskelmassa förbättra insulinkänsligheten påtagligt. Hur mycket som går att förbättra skiljer sig mellan personer, och din läkare bedömer om du även behöver läkemedel.</p></div>
+            </div>'''),
+    ),
+)
+
+FATTY_LIVER_SV = dict(
+    legacy=dict(ar='/fatty-liver.html'),
+    slugs=dict(sv='fettlever'),
+    hero='fatty-liver-lifestyle.jpeg', hero_size=(1376, 1376), hero_portrait=True,
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'European Association for the Study of the Liver (EASL), EASD, EASO. EASL–EASD–EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD). J Hepatol 2024;81(3):492–542',
+        'Rinella ME, Lazarus JV, Ratziu V, et al. A multisociety Delphi consensus statement on new fatty liver disease nomenclature. J Hepatol 2023;79(6):1542–1556',
+        'Vilar-Gomez E, Martinez-Perez Y, Calzadilla-Bertot L, et al. Weight loss through lifestyle modification significantly reduces features of nonalcoholic steatohepatitis. Gastroenterology 2015;149(2):367–378',
+        'Schwarz JM, Noworolski SM, Erkin-Cakmak A, et al. Effects of dietary fructose restriction on liver fat, de novo lipogenesis, and insulin kinetics in children with obesity. Gastroenterology 2017;153(3):743–752',
+        'Commission Regulation (EU) No 432/2012: authorised health claims (choline and normal liver function)',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Fettlever (MASLD): så uppstår den tyst och vad du kan göra för levern | WiBo Health',
+ h1='Fettlever (MASLD): så uppstår den tyst och vad du kan göra för levern',
+ crumb='Fettlever',
+ cat='Diabetes och metabol hälsa',
+ desc='Fettlever (MASLD) i klartext: hur fruktos och insulinresistens lagrar fett i levern, stadierna, de dolda tecknen, hur den upptäcks i svensk vård och de levnadsvanor som minskar leverfettet.',
+ summary='Hur fettlever uppstår, varför den ofta inte märks, hur den upptäcks och vilka vanor som minskar leverfettet.',
+ hero_alt='Kvinna som stretchar på en yogamatta, framför en kopp svart kaffe, bär, avokado och chiafrön – vardagsvanor för levern',
+ about=['Fatty liver', 'MASLD', 'Insulin resistance', 'Fructose'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">Levern är kroppens kemiska kraftverk med hundratals uppgifter: den bygger proteiner, lagrar energi och tar hand om omsättningen av fett och socker. Ändå har ungefär var fjärde vuxen i världen för mycket fett i levern utan att dricka mycket alkohol, ett tillstånd som i dag kallas <strong>MASLD</strong> (metabolt associerad steatotisk leversjukdom), tidigare NAFLD.</p>
+            <p>Det lömska med fettlever är att den oftast inte gör ont: levern saknar smärtnerver, så fettinlagringen kan pågå i många år utan symtom. I den här guiden förklarar vi hur socker, särskilt fruktos, och insulinresistens driver fettinlagringen, och vilka levnadsvanor som enligt forskningen minskar leverfettet.</p>
+            <div class="tip"><h3>Viktigt att veta</h3><p>Många med fettlever har helt normala levervärden (ALAT och ASAT). Ett vanligt leverprov räcker därför inte för att utesluta fettlever. I svensk vård används ofta <strong>FIB-4</strong>, ett riskindex som räknas fram från ålder, ALAT, ASAT och trombocyter, och vid behov elastografi (till exempel FibroScan) för att bedöma risken för fibros.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>Fruktos: varför flytande socker belastar levern</span></h2>
+            <p>Musklerna, hjärtat och hjärnan använder glukos som bränsle. Fruktos (som finns i glukos-fruktossirap, läsk och juice) tas däremot nästan helt om hand av levern.</p>
+            <p>När fruktos kommer i stora mängder, särskilt i flytande form, får levern mer än den hinner använda och omvandlar överskottet till fett, så kallad fettnybildning (de novo-lipogenes).</p>
+
+            <h2 class="section-title"><i class="fas fa-rotate"></i> <span>Insulinresistens och den onda cirkeln</span></h2>
+            <p>När fett samlas i leverns celler blir de sämre på att svara på insulin. Normalt bromsar insulinet leverns egen sockerproduktion efter en måltid; vid fettlever fortsätter levern i stället att släppa ut socker i blodet, även när du fastar.</p>
+            <p>Det högre blodsockret får bukspottkörteln att frisätta mer insulin, och det höga insulinet driver i sin tur på fettnybildningen i levern. Därför hänger fettlever, insulinresistens och prediabetes ofta ihop.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Skydda din lever: granska varor med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att hitta dolt socker, glukos-fruktossirap och härdade fetter direkt, och se alternativ från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-layer-group"></i> <span>Fettleverns stadier</span></h2>
+            <ul class="check-list">
+                <li><strong>1. Enkel fettlever (MASL):</strong> fett utgör mer än 5 % av leverns vikt, utan inflammation. Det här stadiet kan gå tillbaka med viktnedgång och ändrade levnadsvanor.</li>
+                <li><strong>2. Fettleverinflammation (MASH):</strong> fettet orsakar inflammation och cellskador. Viktnedgång kan minska inflammationen; följs upp av läkare.</li>
+                <li><strong>3. Fibros och cirros:</strong> leverväv ersätts av ärrvävnad. Kräver utredning och uppföljning hos specialist.</li>
+            </ul>
+            <figure class="article-figure">
+                <img src="/images/fatty-liver-chart.jpeg" alt="Jämförelse mellan en frisk lever och en fettlever" width="2816" height="1536" loading="lazy" decoding="async">
+                <figcaption>En frisk lever jämfört med en fettlever (bildtexter på engelska).</figcaption>
+            </figure>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>Dolda varningstecken</span></h2>
+            <p>Fettlever ger oftast inga symtom, men kroppen kan visa vissa tecken:</p>
+            <ul class="check-list">
+                <li><strong>Trötthet och ”hjärndimma”:</strong> särskilt efter måltider.</li>
+                <li><strong>Tyngdkänsla under höger revbensbåge:</strong> en molande känsla när levern blir större.</li>
+                <li><strong>Ökat midjemått:</strong> bukfettet speglar ofta hur mycket fett som finns i levern.</li>
+                <li><strong>Blodfetter:</strong> höga triglycerider och lågt HDL-kolesterol är vanliga vid fettlever.</li>
+            </ul>
+            <p>Känner du igen dig, eller har du typ 2-diabetes eller bukfetma? Prata med din vårdcentral om en bedömning av levern.</p>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>Levnadsvanor som minskar leverfettet</span></h2>
+            <p>Levercellerna har en god förmåga att återhämta sig. När belastningen minskar börjar fettet i levern minska redan inom några veckor:</p>
+
+            <h3>1. Ta bort söta drycker och tillsatt socker</h3>
+            <p>Grunden är att sluta med läsk, juice, söta bakverk och vitt mjöl. En studie visade att leverns fettnybildning och leverfettet minskade redan efter nio dagar när tillsatt fruktos byttes mot stärkelse.</p>
+
+            <h3>2. Ge levern en paus på natten</h3>
+            <p>En nattfasta på 12–14 timmar mellan kvällsmat och frukost sänker insulinnivån och ger levern tid att använda sitt lagrade fett. Har du diabetes och tar blodsockersänkande läkemedel, eller är du gravid, prata med din läkare innan du ändrar måltidsrytmen.</p>
+
+            <h3>3. Kaffe kan ingå</h3>
+            <p>Svart kaffe utan socker passar bra i en leverfrämjande vardag. Observationsstudier har sett ett samband mellan måttligt kaffedrickande och lägre risk för leverfibros, och EASL:s riktlinjer nämner detta, men ett samband är inte samma sak som ett bevis, och kaffe ersätter inte ändrade levnadsvanor.</p>
+
+            <h3>4. Kolin från ägg och fisk</h3>
+            <p>Kolin behövs för att levern ska kunna ”paketera” fett och skicka ut det i blodet. <strong>Kolin bidrar till att upprätthålla normal leverfunktion</strong> (EU-godkänt påstående). Bra källor är ägg och fisk.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Måste jag sluta äta frukt om jag har fettlever?</h3><p>Nej. Hel frukt innehåller fiber som gör att fruktosen tas upp långsamt. Välj gärna bär och äpplen, ät frukten hel och undvik juice och smoothies.</p></div>
+                <div class="faq-item"><h3>Hur lång tid tar det att minska leverfettet?</h3><p>Vid tidig fettlever minskar en viktnedgång på 7–10 % leverfettet påtagligt och kan normalisera levervärdena inom några månader. Vid en viktnedgång på minst 10 % har studier också sett att inflammation och fibros kan minska. Din läkare följer upp med prover.</p></div>
+            </div>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, INSULIN_RESISTANCE_SV, FATTY_LIVER_SV]

@@ -32,6 +32,11 @@
       "permanent": true
     },
     {
+      "source": "/my-articles.html",
+      "destination": "/#articles",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true
@@ -57,7 +62,7 @@
       "permanent": true
     },
     {
-      "source": "/sv/:path((?!index\\.html$|diabetes).*)",
+      "source": "/sv/:path((?!index\\.html$|diabetes|articles/).*)",
       "destination": "/sv/index.html",
       "permanent": false
     },

@@ -26,6 +26,8 @@ ROOT = Path(__file__).resolve().parent.parent
 NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestational-diabetes.html', 'nl/diabetes/zwangerschapsdiabetes.html',
                       'diabetes/prediabetes.html', 'en/diabetes/prediabetes.html', 'nl/diabetes/prediabetes.html',
                       'sv/diabetes/prediabetes.html', 'sv/diabetes/graviditetsdiabetes.html'}   # Swedish versions (2026-10-23)
+# every Swedish article is signed by Dr. Wassim Habib (decision 2026-10-23)
+NAMED_AUTHOR_PAGES |= {f'sv/articles/{p.name}' for p in (ROOT / 'sv' / 'articles').glob('*.html')}
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}
 LD_RE = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 RUNTIME_PRODUCT_RE = re.compile(r'["\']@type["\']\s*:\s*["\']Product["\']')
@@ -48,7 +50,7 @@ def main():
     static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
     supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles',
-                        'diabetes', 'en/diabetes', 'nl/diabetes', 'sv/diabetes')
+                        'diabetes', 'en/diabetes', 'nl/diabetes', 'sv/diabetes', 'sv/articles')
             for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # the standalone calculator pages follow the same organisation-only authorship rule
     supp += [p for d in ('.', 'en', 'nl') for p in sorted((ROOT / d).glob('*-calculator.html'))]

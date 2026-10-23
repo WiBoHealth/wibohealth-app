@@ -187,16 +187,6 @@
             box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
         }
 
-        .btn-preview {
-            background: #ffc107;
-            color: #333;
-        }
-
-        .btn-preview:hover {
-            background: #e0a800;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
-        }
 
         .btn-clear {
             background: #dc3545;
@@ -454,9 +444,6 @@
                     <button class="btn btn-export" onclick="exportArticle()">
                         <i class="fas fa-download"></i> تصدير JSON
                     </button>
-                    <button class="btn btn-preview" onclick="previewArticle()">
-                        <i class="fas fa-eye"></i> معاينة
-                    </button>
                     <button class="btn btn-clear" onclick="clearForm()">
                         <i class="fas fa-trash"></i> مسح الكل
                     </button>
@@ -700,26 +687,6 @@
             link.click();
         }
 
-        // معاينة المقال
-        function previewArticle() {
-            const title = document.getElementById('articleTitle').value.trim();
-            const content = document.getElementById('articleContent').innerHTML.trim();
-
-            if (!title || !content) {
-                alert('⚠️ الرجاء ملء العنوان والمحتوى أولاً!');
-                return;
-            }
-
-            const article = {
-                title: title,
-                content: content,
-                author: 'من نحن',
-                date: new Date().toLocaleDateString('ar-EG')
-            };
-
-            localStorage.setItem('previewArticle', JSON.stringify(article));
-            window.open('my-articles.html?preview=true', '_blank');
-        }
 
         // تحميل المقالات من localStorage (Fallback)
         function loadArticlesFromLocalStorage() {

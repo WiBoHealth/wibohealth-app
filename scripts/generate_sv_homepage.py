@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from homepage_sv import ALT, FOOTER_SOURCES, MEALS, META, T, TIPS  # noqa: E402
+from generate_article_pages import sv_page_of  # noqa: E402  (legacy article -> its Swedish page)
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / 'index.html'
@@ -138,6 +139,8 @@ def links(t):
         if not url.startswith('/'):
             url = '/' + url
         path = url.split('#')[0].split('?')[0]
+        if name == 'href' and m.start() > body and sv_page_of(path):     # older article with a Swedish version
+            return '%s="%s"' % (name, sv_page_of(path))
         if name == 'href' and path.endswith('.html') and m.start() > body:
             url = re.sub(r'^([^#]*?)(\?[^#]*)?(#.*)?$',
                          lambda p: p.group(1) + (p.group(2) + '&' if p.group(2) else '?') + 'lang=en' + (p.group(3) or ''), url)

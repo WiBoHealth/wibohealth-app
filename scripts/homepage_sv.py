@@ -3,7 +3,7 @@
 # Clinical wording: HbA1c in mmol/mol, glucose in mmol/l; GI bands as on the food pages (≤55 low, 56–69 medium, ≥70 high).
 # No cure/prevention claims on foods (EU 1924/2006), no religious terms (neutral wording rule).
 # Article and tool links go to the English pages until their Swedish versions exist, and say so in the button text;
-# the diabetes guides have Swedish pages (/sv/diabetes/).
+# the diabetes guides and the translated articles have Swedish pages (/sv/diabetes/, /sv/articles/).
 
 META = dict(
     title='WiBo Health – din guide till blodsocker, glykemiskt index och sund mat',
@@ -50,11 +50,11 @@ T = {
     'card_badge_hba1c': 'Ny medicinsk artikel 🩺',
     'card_title_hba1c': 'HbA1c och insulinresistens',
     'card_desc_hba1c': 'Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.',
-    'card_btn_hba1c': 'Läs artikeln (på engelska) <i class="fa-solid fa-arrow-right"></i>',
+    'card_btn_hba1c': 'Läs artikeln <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_fatty_liver': 'Medicinsk guide 🩺',
     'card_title_fatty_liver': 'Fettlever och fruktos',
-    'card_desc_fatty_liver': 'Hur levern omvandlar flytande socker till bukfett, och hur levnadsvanor kan hjälpa levern att återhämta sig.',
-    'card_btn_fatty_liver': 'Läs artikeln (på engelska) <i class="fa-solid fa-arrow-right"></i>',
+    'card_desc_fatty_liver': 'Hur levern omvandlar flytande socker till fett, och vilka levnadsvanor som minskar leverfettet.',
+    'card_btn_fatty_liver': 'Läs artikeln <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_cortisol': 'Hormonguide 🩺',
     'card_title_cortisol': 'Kortisol och stressmage',
     'card_desc_cortisol': 'Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.',
@@ -146,11 +146,11 @@ T = {
     'meals_search_btn': 'Sök 🔍',
     'tip_label': 'Dagens tips',
     'home_articles_title': '📚 Hälsoartiklar',
-    'home_articles_sub': 'Artiklar och medicinska guider som granskas av WiBo Healths medicinska team (just nu på engelska)',
+    'home_articles_sub': 'Artiklar och medicinska guider som granskas av WiBo Healths medicinska team (några finns än så länge bara på engelska)',
     'home_articles_guides': 'Grundläggande kostguider',
     'home_articles_read': 'Läs artikeln',
     'home_articles_ar_only': '(artikeltexten är på arabiska)',
-    'feat_cereal_href': '/en/articles/healthy-sugar-free-breakfast-cereals.html',
+    'feat_cereal_href': '/sv/articles/frukostflingor-utan-socker.html',
     'feat_latest_href': '/sv/diabetes/prediabetes.html',
     'feat_latest_cat': '🆕 Ny guide / Diabetes och metabol hälsa',
     'feat_latest_title': 'Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
@@ -171,9 +171,8 @@ T = {
     'feat_cereal_cat': '🌾 Ny artikel / Exklusiv guide',
     'feat_cereal_title': 'Frukostflingor utan socker: din guide till en pigg start på dagen',
     'feat_cereal_sum': 'Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller',
-    'feat_cereal_btn': 'Läs guiden (på engelska)',
+    'feat_cereal_btn': 'Läs hela guiden',
     'feat_cereal_alt': 'Kvinna som äter en skål fullkornshavre med bär',
-    'ha_l1': 'Medicinsk inköpsguide och glykemiskt index (på arabiska)',
     'ha_l2': 'Periodisk fasta och myterna i sociala medier',
     'ha_l3': 'HbA1c och insulinresistens',
     'ha_l4': 'Dold fettlever och insulinresistens',
