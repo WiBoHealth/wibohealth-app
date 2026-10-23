@@ -1700,7 +1700,7 @@ sv=dict(
             </ul>
 
             <h2 class="section-title"><i class="fas fa-moon"></i> <span>7. Sömn och stress: de okända soldaterna bakom ett högt fastevärde</span></h2>
-            <p>Har du undrat varför du vaknar med ett fasteglukos på 6,1 eller 6,4 mmol/l trots att du inte ätit på 10 timmar? Svaret finns i stresshormonerna: <a href="{site:/cortisol-stress.html}">kortisol</a> (artikel på engelska) och adrenalin.</p>
+            <p>Har du undrat varför du vaknar med ett fasteglukos på 6,1 eller 6,4 mmol/l trots att du inte ätit på 10 timmar? Svaret finns i stresshormonerna: <a href="{site:/cortisol-stress.html}">kortisol</a> och adrenalin.</p>
             <p>När du är uppe sent eller lever med ständig press och oro frisätter kroppen kortisol, som skickar en omedelbar signal till levern: <em>”Vi är i fara! Släpp ut sockerförråden i blodet så att vi har energi att fly!”</em> Därför förblir fastevärdet högt om du rättar till maten men inte sömnen:</p>
             <ul class="check-list">
                 <li><strong>Sov 7–8 timmar per natt:</strong> redan en enda kort natt (under 5 timmar) kan sänka cellernas insulinkänslighet med 25 % nästa dag!</li>
@@ -1937,4 +1937,232 @@ sv=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, INSULIN_RESISTANCE_SV, FATTY_LIVER_SV]
+LEPTIN_SV = dict(
+    legacy=dict(ar='/leptin-resistance.html'),
+    slugs=dict(sv='leptinresistens'),
+    hero='leptin-hero.jpeg', hero_size=(1376, 768),
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'Friedman JM. Leptin and the endocrine control of energy balance. Nat Metab 2019;1(8):754–764',
+        'Banks WA, Coon AB, Robinson SM, et al. Triglycerides induce leptin resistance at the blood-brain barrier. Diabetes 2004;53(5):1253–1260',
+        'Spiegel K, Tasali E, Penev P, Van Cauter E. Brief communication: sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. Ann Intern Med 2004;141(11):846–850',
+        'Blomhoff R, Andersen R, Arnesen EK, et al. Nordic Nutrition Recommendations 2023. Copenhagen: Nordic Council of Ministers; 2023',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Varför äter jag men blir aldrig mätt? Leptin, mättnadshormonet som hjärnan slutar lyssna på | WiBo Health',
+ h1='Varför äter jag men blir aldrig mätt? Leptin, mättnadshormonet som hjärnan slutar lyssna på',
+ crumb='Leptin och mättnad',
+ cat='Hormoner och ämnesomsättning',
+ desc='Ständig hunger handlar sällan om dålig karaktär. Så fungerar mättnadshormonet leptin, varför hjärnan kan sluta lyssna på det och vilka vanor kring mat, sömn och måltidsrytm som hjälper.',
+ summary='Hur mättnadshormonet leptin fungerar, varför hjärnan kan sluta lyssna på det och vilka vardagsvanor som hjälper mättnaden tillbaka.',
+ hero_alt='Kvinna som öppnar kylskåpet sent på kvällen – nattligt sötsug och hunger',
+ about=['Leptin', 'Leptin resistance', 'Appetite', 'Satiety'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">”Du har ätit upp lunchen, druckit kaffet och satt dig för att vila. Tio minuter senare står du framför kylskåpet och letar. Och någon säger: du har ju ingen viljestyrka!”</p>
+            <p>Vänta lite. Ständig hunger handlar i de flesta fall inte om dålig karaktär. Bakom den ligger fysiologi: ett samspel mellan hormoner och hjärnans styrcentrum för hunger och mättnad.</p>
+
+            <h2 class="section-title"><i class="fas fa-brain"></i> <span>1. Vad är leptin?</span></h2>
+            <p>Kroppens fettceller frisätter ett hormon som heter <strong>leptin</strong>. Det är ett slags mättnadsbud: leptinet färdas med blodet till hypotalamus, hjärnans styrcentral, och berättar att det finns energi i förråden, så att hungern kan dämpas och kroppen kan använda energin som vanligt.</p>
+            <p>När systemet fungerar känner du dig nöjd efter en måltid och kan gå flera timmar utan att tänka på mat.</p>
+
+            <h2 class="section-title"><i class="fas fa-ear-deaf"></i> <span>2. När hjärnan slutar lyssna: leptinresistens</span></h2>
+            <p>Vid övervikt är problemet sällan för lite leptin. Tvärtom finns det ofta gott om leptin i blodet, men hjärnan svarar sämre på signalen. Det kallas <strong>leptinresistens</strong>.</p>
+            <figure class="article-figure">
+                <img src="/images/leptin-brain.jpeg" alt="Illustration av hur leptin når hypotalamus och hur signalen kan blockeras" width="1376" height="768" loading="lazy" decoding="async">
+                <figcaption>Leptinsignalen till hjärnans hypotalamus (bildtexter på engelska).</figcaption>
+            </figure>
+            <p>Forskningen pekar på flera bidragande faktorer. Djurstudier tyder på att höga blodfetter (triglycerider), som bland annat ökar av mycket socker i flytande form, kan försämra leptinets transport in i hjärnan. Även långvarig låggradig inflammation och för lite sömn verkar försämra signalen.</p>
+
+            <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>3. Hjärnan tror att det är svält</span></h2>
+            <p>Tänk dig situationen: kroppen har stora energiförråd, men eftersom mättnadssignalen inte når fram uppfattar hjärnan läget som brist. Den svarar som den alltid gjort vid svält: hungern ökar, suget efter snabba kolhydrater blir starkare och kroppen blir mer sparsam med energi.</p>
+            <p>Hungern är alltså verklig, inte inbillning.</p>
+
+            <h2 class="section-title"><i class="fas fa-apple-whole"></i> <span>4. Frukt eller juice? En viktig skillnad</span></h2>
+            <p>Hel frukt i lagom mängd, som ett äpple eller en näve bär, är bra: fibrerna gör att sockret tas upp långsamt. Problemet är juice, där fibrerna har tagits bort och fem frukter ryms i ett glas som dricks på några sekunder, och tillsatt socker och glukos-fruktossirap i kex, godis och färdigmat.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>5. Tecken på att mättnadssignalen inte fungerar</span></h2>
+            <ul class="check-list">
+                <li>Du blir sugen på något sött eller salt en halvtimme efter en måltid.</li>
+                <li>Envist fett runt magen och midjan som inte påverkas av vanlig kaloriräkning.</li>
+                <li>Stark trötthet och sömnighet direkt efter maten.</li>
+                <li>Plötslig hunger sent på kvällen eller på natten.</li>
+            </ul>
+            <p>Tecknen är vanliga och kan ha många orsaker, till exempel insulinresistens eller sköldkörtelrubbningar. Prata med din vårdcentral om du är osäker.</p>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>6. Vanor som hjälper mättnaden tillbaka</span></h2>
+            <ul class="check-list">
+                <li><strong>Välj fettkällorna med omsorg:</strong> använd rapsolja och olivolja i matlagningen och ät gärna fisk, nötter och frön, som de nordiska näringsrekommendationerna anger. Begränsa friterad snabbmat och ultraprocessade produkter.</li>
+                <li><strong>Stäng av kranen för flytande socker:</strong> ät frukten hel och undvik juice, läsk och sötade drycker.</li>
+                <li><strong>Ge kroppen en paus på natten:</strong> en nattfasta på 12–14 timmar sänker insulinnivån. Läs mer i vår artikel om <a href="{site:/intermittent-fasting.html}">periodisk fasta</a>.</li>
+                <li><strong>Sov tillräckligt och i mörker:</strong> redan några nätter med för lite sömn sänker leptinet och höjer hungerhormonet ghrelin, så att aptiten ökar nästa dag. Sikta på 7–9 timmar.</li>
+                <li><strong>Ät protein och fiber vid varje måltid:</strong> de mättar längst och dämpar blodsockersvängningarna.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Kan jag ta leptin som tillskott?</h3><p>Nej. Leptin är ett protein som inte tas upp från tarmen, och det finns inga kosttillskott som höjer leptinkänsligheten. Det som påverkar signalen är mat, sömn, rörelse och vikt.</p></div>
+                <div class="faq-item"><h3>Är ständig hunger ett tecken på sjukdom?</h3><p>Oftast inte, men stark hunger tillsammans med törst, täta toalettbesök eller oförklarlig viktförändring ska alltid kontrolleras. Kontakta din vårdcentral eller ring 1177.</p></div>
+            </div>'''),
+    ),
+)
+
+CORTISOL_SV = dict(
+    legacy=dict(ar='/cortisol-stress.html'),
+    slugs=dict(sv='kortisol-och-stress'),
+    hero='cortisol-lifestyle.jpeg', hero_size=(1024, 1024), hero_portrait=True,
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'Chrousos GP. Stress and disorders of the stress system. Nat Rev Endocrinol 2009;5(7):374–381',
+        'Epel ES, McEwen B, Seeman T, et al. Stress and body shape: stress-induced cortisol secretion is consistently greater among women with central fat. Psychosom Med 2000;62(5):623–632',
+        "Nieman LK, Biller BMK, Findling JW, et al. The diagnosis of Cushing's syndrome: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab 2008;93(5):1526–1540",
+        'Commission Regulation (EU) No 432/2012: authorised health claims (magnesium, vitamin C)',
+        'EFSA Scientific Committee on Food. Tolerable upper intake levels for vitamins and minerals. Parma: EFSA; 2006 (magnesium from supplements: 250 mg/day)',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Kortisol eller kortison? Stresshormonet och bukfettet | WiBo Health',
+ h1='Kortisol eller kortison? Stresshormonet och bukfettet',
+ crumb='Kortisol och stress',
+ cat='Hormoner och ämnesomsättning',
+ desc='Skillnaden mellan kroppens stresshormon kortisol och läkemedlet kortison, hur långvarig stress påverkar bukfett och blodsocker, när du ska söka vård och vardagsvanor som lugnar stressystemet.',
+ summary='Skillnaden mellan kortisol och kortison, hur långvarig stress påverkar bukfettet och vardagsvanor som lugnar stressystemet.',
+ hero_alt='Kvinna som står stilla i en solig skog – återhämtning och lugn för stressystemet',
+ about=['Cortisol', 'Stress', 'Visceral fat', 'Cortisone'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">Hur många gånger har du ätit enligt planen och tränat regelbundet, men magen har ändå inte rört sig? Ofta handlar det inte om viljestyrka eller felräknade kalorier, utan om ett hormon som styr mycket av kroppens energi: <strong>kortisol</strong>.</p>
+            <p>Kortisol är ett livsviktigt hormon som hjälper oss att klara påfrestningar. Men när stressen aldrig släpper och sömnen blir för kort kan samma hormon bidra till högre blodsocker och mer fett runt magen. I den här guiden förklarar vi hur det hänger ihop, reder ut skillnaden mellan kortisol och kortison och går igenom vardagsvanor som lugnar stressystemet.</p>
+            <div class="tip"><h3>Viktig skillnad: kortisol och kortison</h3><p><strong>Kortisol</strong> är kroppens eget stresshormon, som bildas i binjurebarken efter ett dygnsmönster och vid stress. <strong>Kortison</strong> är ett läkemedel (tabletter, sprutor, krämer eller inhalationer) som omvandlas till kortisol i kroppen och används mot bland annat inflammation, astma och reumatiska sjukdomar. Det ena bildar kroppen själv, det andra skrivs ut av läkare.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-chart-line"></i> <span>Hur påverkar långvarig stress bukfettet?</span></h2>
+            <p>Vid stress aktiverar hjärnan den så kallade HPA-axeln (hypotalamus–hypofys–binjure), och binjurarna frisätter kortisol. Kortisolets uppgift är att snabbt göra energi tillgänglig, bland annat genom att höja blodsockret.</p>
+            <p>I dag är stressen oftast psykisk och långvarig, utan den fysiska ansträngning som skulle använda energin. Blodsockret förblir högre, insulinet stiger, och kombinationen av mycket kortisol och mycket insulin gynnar fettinlagring runt magen och de inre organen. Studier har sett att personer med mer bukfett ofta reagerar med högre kortisol vid stress.</p>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/cortisol-adrenal-chart.jpeg" alt="Illustration av binjurarna ovanpå njurarna, där kortisol bildas" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>Binjurarna sitter ovanpå njurarna och bildar kortisol (bildtexter på engelska).</figcaption>
+            </figure>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Stress höjer blodsockret – välj maten med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se socker och dolda sockernamn direkt, och hitta alternativ som ger ett jämnare blodsocker.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-wave-square"></i> <span>Kortvarig och långvarig stress</span></h2>
+            <ul class="check-list">
+                <li><strong>Kortvarig stress:</strong> kortisolet stiger för att hantera en utmaning och sjunker när den är över. Det är normalt och nyttigt.</li>
+                <li><strong>Långvarig stress:</strong> kroppen får inte tillräcklig återhämtning, sömnen försämras och suget efter sött och salt ökar. Med tiden kan det påverka blodsocker, vikt och humör.</li>
+            </ul>
+            <p>”Binjuretrötthet” är ingen erkänd medicinsk diagnos. Har du varit stressad länge och känner dig utmattad, sover dåligt eller har svårt att återhämta dig, kontakta din vårdcentral; långvarig stress kan leda till utmattningssyndrom, som behöver bedömas och behandlas av vården.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-doctor"></i> <span>Tecken som ska kontrolleras av läkare</span></h2>
+            <p>Vissa tecken beror inte på vardagsstress utan kan tyda på att kroppen bildar för mycket kortisol av andra skäl (Cushings syndrom) eller på biverkningar av kortisonbehandling. Sök vård om du har flera av dem:</p>
+            <ul class="check-list">
+                <li>Rundare ansikte (”månansikte”) och fett i nacken.</li>
+                <li>Tunna armar och ben samtidigt som magen växer.</li>
+                <li>Breda, rödlila bristningar på magen.</li>
+                <li>Muskelsvaghet, särskilt i lår och höfter.</li>
+                <li>Högt blodtryck eller högt blodsocker som är svårt att få ner.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>Vardagsvanor som lugnar stressystemet</span></h2>
+            <p>Att få ner stressnivån kräver varken svält eller lugnande medel, utan vanor som ger kroppen signalen att den är trygg:</p>
+            <h3>1. Dagsljus på morgonen</h3>
+            <p>Gå ut i dagsljus 10–15 minuter inom en timme efter att du vaknat. Ljuset hjälper dygnsrytmen, ger mer pigghet på dagen och bättre sömn på kvällen. Under den mörka delen av året räcker även en promenad i dagsljus mitt på dagen.</p>
+            <h3>2. Kaffe med eftertanke</h3>
+            <p>Koffein höjer kortisolet något. Märker du att du blir orolig eller sover sämre, drick kaffet efter frukosten i stället för på fastande mage och undvik kaffe sent på eftermiddagen.</p>
+            <h3>3. Mat först, tillskott sist</h3>
+            <p>Det finns inga kosttillskott som är godkända för att sänka kortisol. Regelbundna måltider med protein, fiber och grönsaker ger ett jämnare blodsocker och mindre stressreaktioner. Magnesium (från fullkorn, baljväxter, nötter och gröna bladgrönsaker) <strong>bidrar till normal psykologisk funktion</strong> och C-vitamin (från bär, citrusfrukter, paprika och kål) <strong>bidrar till att minska trötthet och utmattning</strong> (EU-godkända påståenden). Om du tar magnesium som tillskott: högst 250 mg per dag, enligt EFSA:s övre gräns.</p>
+            <h3>4. Rörelse som återhämtning</h3>
+            <p>Mycket hård konditionsträning ovanpå långvarig stress och sömnbrist kan öka belastningen ytterligare. Satsa hellre på styrketräning några gånger i veckan och dagliga promenader på 30–45 minuter i lugnt tempo, gärna i naturen.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Kan jag mäta mitt kortisol för att se om jag är stressad?</h3><p>Kortisolprover (i blod, saliv eller urin) används främst för att utreda hormonsjukdomar, till exempel Cushings syndrom eller binjurebarksvikt, och tolkas av läkare. Vid vardaglig stress säger ett enskilt prov sällan särskilt mycket; hur du sover, återhämtar dig och mår är viktigare.</p></div>
+                <div class="faq-item"><h3>Jag tar kortison och har gått upp i vikt. Vad gör jag?</h3><p>Längre kortisonbehandling kan ge ökad aptit, vätskeansamling och att fett lagras om, särskilt runt magen och i ansiktet. Prata med din läkare om dosen och om stöd med mat och rörelse. Sluta aldrig ta kortison på egen hand, eftersom det kan vara farligt.</p></div>
+            </div>'''),
+    ),
+)
+
+INTERMITTENT_FASTING_SV = dict(
+    legacy=dict(ar='/intermittent-fasting.html'),
+    slugs=dict(sv='periodisk-fasta'),
+    hero='fasting-hero.jpeg', hero_size=(1376, 768),
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'de Cabo R, Mattson MP. Effects of intermittent fasting on health, aging, and disease. N Engl J Med 2019;381(26):2541–2551',
+        'Ho KY, Veldhuis JD, Johnson ML, et al. Fasting enhances growth hormone secretion and amplifies the complex rhythms of growth hormone secretion in man. J Clin Invest 1988;81(4):968–975',
+        'Betts JA, Richardson JD, Chowdhury EA, et al. The causal role of breakfast in energy balance and health: a randomized controlled trial in lean adults. Am J Clin Nutr 2014;100(2):539–547',
+        'Lowe DA, Wu N, Rohdin-Bibby L, et al. Effects of time-restricted eating on weight loss and other metabolic parameters in women and men with overweight and obesity: the TREAT randomized clinical trial. JAMA Intern Med 2020;180(11):1491–1499',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Periodisk fasta och myterna i sociala medier: vad säger forskningen? | WiBo Health',
+ h1='Periodisk fasta och myterna i sociala medier: vad säger forskningen?',
+ crumb='Periodisk fasta',
+ cat='Hormoner och ämnesomsättning',
+ desc='Periodisk fasta utan myter: vad som händer med insulin och fettförråd när du fastar, hur du bryter fastan klokt, vad du gör vid huvudvärk och vem som inte ska fasta.',
+ summary='Vad som händer i kroppen när du fastar, hur du bryter fastan klokt och vem som inte ska fasta.',
+ hero_alt='Leende kvinna med ett glas vatten med citron i ett ljust kök',
+ about=['Intermittent fasting', 'Time-restricted eating', 'Insulin', 'Breakfast'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">”Svälter du? Rädd att ämnesomsättningen kraschar och musklerna försvinner? Ät var tredje timme och hoppa aldrig över frukosten, dagens viktigaste måltid!”</p>
+            <p>Låt oss granska de råden med forskningen i handen. För de flesta friska vuxna är en längre paus mellan måltiderna varken farlig för ämnesomsättningen eller musklerna, och frukosten är inte nödvändig för alla.</p>
+            <div class="tip"><h3>Vem ska inte fasta?</h3><p>Fasta passar inte om du är <strong>gravid eller ammar</strong>, har eller har haft en <strong>ätstörning</strong>, är <strong>under 18 år</strong>, är <strong>underviktig</strong> eller har <strong>typ 1-diabetes</strong>. Har du <strong>typ 2-diabetes och tar insulin eller andra blodsockersänkande läkemedel</strong> kan fasta ge för lågt blodsocker; prata alltid med din läkare först.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-toggle-on"></i> <span>1. Fasta handlar inte bara om kalorier, utan om insulin</span></h2>
+            <p>Många tror att viktnedgång bara är matematik. Kalorier spelar roll, men hormonet <strong>insulin</strong> styr mycket av hur kroppen använder och lagrar energin.</p>
+            <p>När du äter ofta under hela dagen ligger insulinet högt, och då använder kroppen mindre av sitt lagrade fett. Under en längre paus sjunker insulinet, hormonet glukagon tar över och kroppen börjar i högre grad använda sina fettförråd som bränsle.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Bryt fastan klokt med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se socker och glykemiskt index direkt, och välj ett mål som ger jämnt blodsocker efter fastan.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-dumbbell"></i> <span>2. Försvinner musklerna?</span></h2>
+            <p>Vid kortare fasta ökar kroppens frisättning av tillväxthormon, som bland annat hjälper till att skydda muskelmassan. Studier av tidsbegränsat ätande visar att det viktigaste för musklerna är att du äter tillräckligt med protein under dina måltider och fortsätter att styrketräna.</p>
+            <p>Forskning, mest från djur- och cellstudier, visar också att fasta sätter i gång <strong>autofagi</strong>, cellernas eget återvinningssystem. Hur stor betydelse det har för människors hälsa undersöks fortfarande.</p>
+
+            <h2 class="section-title"><i class="fas fa-mug-saucer"></i> <span>3. Är frukosten dagens viktigaste måltid?</span></h2>
+            <p>Idén blev populär under 1900-talet, inte minst genom reklam för frukostflingor. Randomiserade studier har inte visat att frukost i sig är nödvändig för en sund vikt; för vissa passar frukost bra, för andra inte. Det som spelar störst roll är vad och hur mycket du äter totalt, och att du inte småäter hela dagen.</p>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>4. Det vanligaste misstaget: att bryta fastan fel</span></h2>
+            <p>Den som har fastat i många timmar och sedan bryter fastan med smoothies, bullar och vitt bröd får en snabb blodsockertopp, ofta följd av en dipp med trötthet och nytt sötsug. Bryt hellre fastan så här:</p>
+            <ul class="check-list">
+                <li><strong>Börja med något varmt:</strong> ett glas vatten eller en kopp buljong eller soppa.</li>
+                <li><strong>Fiber och nyttigt fett:</strong> en grön sallad med olivolja.</li>
+                <li><strong>Protein:</strong> ägg, fisk, kyckling, baljväxter eller magert kött, som mättar utan stora blodsockersvängningar.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-head-side-virus"></i> <span>5. Huvudvärk och trötthet när du fastar</span></h2>
+            <p>Många nybörjare får huvudvärk eller känner sig yra under de första dagarna. Det beror ofta på för lite vätska och salt, eftersom njurarna gör sig av med mer vatten och natrium när insulinet sjunker, och ibland på att man saknar sitt vanliga kaffe.</p>
+            <p>Drick ordentligt med vatten under dagen. En kopp buljong kan hjälpa vid huvudvärk; har du högt blodtryck eller hjärt- eller njursjukdom, prata med din läkare om salt. Blir du yr, skakig eller mår dåligt: avbryt fastan och ät något.</p>
+
+            <h2 class="section-title"><i class="fas fa-venus"></i> <span>6. Råd till kvinnor</span></h2>
+            <p>Kvinnors hormonsystem kan reagera känsligare på långa fastor. Undvik dagliga fastor på 20–24 timmar; ett ätfönster med 12–16 timmars nattfasta brukar räcka. Många mår bättre av att korta fastan och äta mer långsamma kolhydrater, som fullkorn och quinoa, veckan före mensen. Får du oregelbunden mens eller mår sämre, avbryt och prata med vården.</p>
+            <p>Kort sagt: en nattfasta på 12–16 timmar, mycket vatten, två eller tre näringsrika måltider med protein och grönsaker, och en rask promenad på 30 minuter varje dag. Det är inte svårare än så.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Bryter svart kaffe eller te fastan?</h3><p>Nej. Svart kaffe, osötat te och vatten innehåller nästan inga kalorier och höjer inte insulinet nämnvärt. Mjölk, socker och söta drycker bryter däremot fastan.</p></div>
+                <div class="faq-item"><h3>Är periodisk fasta säker för alla?</h3><p>Nej. Den passar de flesta friska vuxna, men inte vid graviditet och amning, ätstörningar, undervikt eller typ 1-diabetes, och vid typ 2-diabetes med blodsockersänkande läkemedel bara i samråd med läkare.</p></div>
+            </div>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, INSULIN_RESISTANCE_SV, FATTY_LIVER_SV,
+            LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV]

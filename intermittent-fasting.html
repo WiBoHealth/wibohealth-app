@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/articles/periodisk-fasta.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -60,6 +61,11 @@
 
     <!-- Self-Referencing Canonical Tag -->
     <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/intermittent-fasting.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/intermittent-fasting.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/periodisk-fasta.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/intermittent-fasting.html">
+    <!-- SV-ALTERNATES:END -->
 
     <!-- Alternate Language Tags for Googlebot (Hreflang) -->
 
@@ -609,6 +615,7 @@
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                 <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                <a class="lang-btn" data-sv-link href="/sv/articles/periodisk-fasta.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>

@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/articles/leptinresistens.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -51,6 +52,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://wibohealth.com/leptin-resistance.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/leptin-resistance.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/leptinresistens.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/leptin-resistance.html">
+    <!-- SV-ALTERNATES:END -->
     <title data-i18n="meta_title">ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health</title>
     <meta name="description" content="دليل سريري شامل لكشف لغز الجوع المستمر ومقاومة هرمون اللبتين، والفرق بين سكر الفواكه الطبيعي والفركتوز السائل، مع خطة إعادة حساسية مستقبلات الشبع. بقلم فريق ويبو هيلث الطبي.">
     <meta name="keywords" content="مقاومة اللبتين, هرمون الشبع, الجوع المستمر, سكر الفركتوز, ويبو هيلث, دكتور وسيم حبيب, WiBo Health, leptin resistance">
@@ -343,6 +349,7 @@
             <div class="header-controls">
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                <a class="lang-btn" data-sv-link href="/sv/articles/leptinresistens.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
                 <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">

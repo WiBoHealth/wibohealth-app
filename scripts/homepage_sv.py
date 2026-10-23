@@ -45,7 +45,7 @@ T = {
 
     'leptin_banner_title': '🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)',
     'leptin_banner_desc': 'Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen',
-    'leptin_banner_btn': 'Läs guiden (på engelska) 🩺',
+    'leptin_banner_btn': 'Läs guiden 🩺',
 
     'card_badge_hba1c': 'Ny medicinsk artikel 🩺',
     'card_title_hba1c': 'HbA1c och insulinresistens',
@@ -58,7 +58,7 @@ T = {
     'card_badge_cortisol': 'Hormonguide 🩺',
     'card_title_cortisol': 'Kortisol och stressmage',
     'card_desc_cortisol': 'Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.',
-    'card_btn_cortisol': 'Läs artikeln (på engelska) <i class="fa-solid fa-arrow-right"></i>',
+    'card_btn_cortisol': 'Läs artikeln <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_magnesium': 'Kosttillskottsguide 💊',
     'card_title_magnesium': 'Magnesiumformer – vilken passar dig?',
     'card_desc_magnesium': 'Osäker på vilket magnesium du ska köpa? Så väljer du rätt form för sömn, muskler eller stress.',
@@ -69,8 +69,8 @@ T = {
     'card_btn_bones': 'Läs artikeln (på engelska) <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_fasting': 'Medicinsk guide 🔥',
     'card_title_fasting': 'Periodisk fasta och myterna i sociala medier',
-    'card_desc_fasting': 'Vad forskningen säger om tillväxthormon och autofagi, myten om frukosten och hur du hanterar huvudvärk vid fasta.',
-    'card_btn_fasting': 'Läs artikeln (på engelska) <i class="fa-solid fa-arrow-right"></i>',
+    'card_desc_fasting': 'Vad som händer i kroppen när du fastar, myten om frukosten, hur du hanterar huvudvärk och vem som inte ska fasta.',
+    'card_btn_fasting': 'Läs artikeln <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_thyroid': 'Medicinsk guide 🦋',
     'card_title_thyroid': 'Trög sköldkörtel och långsam ämnesomsättning',
     'card_desc_thyroid': 'Om omvandlingen från T4 till T3, vad ett TSH-prov visar och inte visar, och selenets och zinkens roll.',
