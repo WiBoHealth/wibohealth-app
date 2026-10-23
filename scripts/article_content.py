@@ -2164,5 +2164,244 @@ sv=dict(
     ),
 )
 
+# Batch 3: nutrient articles. Only authorised health claims, worded as in Commission Regulation (EU) No 432/2012
+# (Swedish versions); supplement magnesium max 250 mg/day (EFSA UL); iodised salt and max 6 g salt/day (Livsmedelsverket).
+MAGNESIUM_SV = dict(
+    legacy=dict(ar='/magnesium-types.html'),
+    slugs=dict(sv='magnesiumformer'),
+    hero='magnesium-types-chart.jpeg', hero_size=(1024, 1024), hero_portrait=True,
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods (magnesium)',
+        'EFSA Scientific Committee on Food. Tolerable upper intake levels for vitamins and minerals. Parma: EFSA; 2006 (magnesium from supplements: 250 mg/day)',
+        'Firoz M, Graber M. Bioavailability of US commercial magnesium preparations. Magnes Res 2001;14(4):257–262',
+        'Blomhoff R, Andersen R, Arnesen EK, et al. Nordic Nutrition Recommendations 2023. Copenhagen: Nordic Council of Ministers; 2023',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Magnesiumformer: citrat, bisglycinat eller oxid – vad är skillnaden? | WiBo Health',
+ h1='Magnesiumformer: citrat, bisglycinat eller oxid – vad är skillnaden?',
+ crumb='Magnesiumformer',
+ cat='Kosttillskott',
+ desc='Vad skiljer magnesiumformerna åt, hur mycket som är säkert som tillskott (högst 250 mg per dag), vilka läkemedel magnesium påverkar och när maten räcker.',
+ summary='Skillnaden mellan magnesiumformerna, den säkra tillskottsdosen och vilka läkemedel magnesium påverkar.',
+ hero_alt='Illustration av en magnesiummolekyl och kapslar',
+ about=['Magnesium', 'Dietary supplements', 'Minerals'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">Du står på apoteket och möts av burkar med namn som bisglycinat, citrat, malat, oxid och taurat. Vilken ska du välja, och behöver du ens ett tillskott?</p>
+            <p>Magnesium är ett mineral som kroppen behöver för hundratals enzymreaktioner. Magnesium <strong>bidrar till normal muskelfunktion</strong>, <strong>till normal funktion i nervsystemet</strong>, <strong>till normal energiomsättning</strong> och <strong>till att minska trötthet och utmattning</strong> (EU-godkända påståenden). I ett tillskott är magnesium alltid bundet till ett annat ämne, och det ämnet påverkar hur väl magnesiumet tas upp och hur magen reagerar.</p>
+            <div class="tip"><h3>Börja med maten</h3><p>De flesta friska som äter varierat får tillräckligt med magnesium från maten: fullkorn, havregryn, baljväxter, nötter, frön (till exempel pumpafrön), gröna bladgrönsaker och mörk choklad. Brist är ovanlig hos friska, men vanligare vid till exempel långvarig diarré, hög alkoholkonsumtion och vissa läkemedel.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>Magnesiumoxid: billig men sämre upptag</span></h2>
+            <p>Magnesiumoxid är den billigaste och vanligaste formen. Den innehåller mycket magnesium per tablett men tas upp sämre i tarmen än de organiska formerna, och det som inte tas upp kan verka lösande på magen.</p>
+
+            <h2 class="section-title"><i class="fas fa-table-list"></i> <span>De vanligaste formerna</span></h2>
+            <ul class="check-list">
+                <li><strong>Magnesiumbisglycinat (glycinat):</strong> magnesium bundet till aminosyran glycin. Tas upp väl och brukar vara skonsamt för magen, vilket gör det till ett vanligt val för den som får magbesvär av andra former.</li>
+                <li><strong>Magnesiumcitrat:</strong> bundet till citronsyra. Tas upp väl. Vid högre doser verkar det lätt lösande, vilket en del uppskattar och andra vill undvika.</li>
+                <li><strong>Magnesiummalat:</strong> bundet till äppelsyra. Tas upp väl; ett alternativ för den som vill ta magnesium till frukost.</li>
+                <li><strong>Magnesiumtaurat:</strong> bundet till aminosyran taurin. Mindre studerat än citrat och bisglycinat.</li>
+                <li><strong>Magnesiumoxid:</strong> mest magnesium per tablett, men sämst upptag och mest magbesvär.</li>
+            </ul>
+            <p>Oavsett form gäller samma godkända påståenden för magnesium; det finns inga EU-godkända påståenden om att en viss form skulle hjälpa mot sömnproblem eller oro.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Granska innehållet med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se ingredienser och näringsinnehåll direkt och jämföra produkter från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-user-doctor"></i> <span>Tecken som kan bero på magnesiumbrist</span></h2>
+            <p>Symtomen är ospecifika och har oftast andra orsaker, men vid uttalad brist kan man få:</p>
+            <ul class="check-list">
+                <li>Muskelkramper och muskelryckningar, till exempel i vaderna eller ögonlocket.</li>
+                <li>Trötthet och svaghet.</li>
+                <li>Hjärtklappning eller oregelbunden puls.</li>
+            </ul>
+            <p>Har du hjärtklappning, oregelbunden puls eller kramper som inte går över, kontakta vården i stället för att börja med tillskott på egen hand.</p>
+
+            <h2 class="section-title"><i class="fas fa-prescription-bottle"></i> <span>Om du tar magnesium som tillskott</span></h2>
+            <h3>1. Dosen: högst 250 mg per dag</h3>
+            <p>EFSA har satt den övre gränsen för magnesium från kosttillskott till <strong>250 mg per dag</strong> för vuxna. Räkna på mängden ren magnesium (”elementärt magnesium”) som står i innehållsdeklarationen, inte på vikten av hela föreningen. Över den gränsen ökar risken för diarré och magbesvär.</p>
+            <h3>2. Tidpunkt</h3>
+            <p>Ta tillskottet i samband med en måltid om magen är känslig. Citrat, som kan verka lösande, tar många hellre på kvällen.</p>
+            <h3>3. Läkemedel som påverkas</h3>
+            <p>Magnesium kan minska upptaget av vissa läkemedel. Ta magnesium med minst <strong>2–4 timmars mellanrum</strong> från levotyroxin (sköldkörtelhormon), järn- och kalciumtillskott, vissa antibiotika (tetracykliner och kinoloner) och bisfosfonater mot benskörhet. Fråga på apoteket om du är osäker.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Visar ett vanligt blodprov om jag har magnesiumbrist?</h3><p>Det vanliga provet i Sverige är magnesium i blodplasma. Eftersom nästan allt magnesium finns i skelettet och cellerna kan ett normalt värde i vissa fall finnas trots låga förråd, så läkaren väger in symtom och sjukdomshistoria.</p></div>
+                <div class="faq-item"><h3>Är det säkert att ta magnesium varje dag länge?</h3><p>För friska vuxna med normal njurfunktion är tillskott upp till 250 mg per dag säkert. Har du nedsatt njurfunktion, hjärtsjukdom eller långsam puls ska du prata med din läkare innan du börjar, eftersom magnesium då kan ansamlas i kroppen.</p></div>
+            </div>'''),
+    ),
+)
+
+BONE_HEALTH_SV = dict(
+    legacy=dict(ar='/bone-health-minerals.html'),
+    slugs=dict(sv='skeletthalsa-och-mineraler'),
+    hero='bone-vitality-lifestyle.jpeg', hero_size=(1024, 1024), hero_portrait=True,
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'Kanis JA, Cooper C, Rizzoli R, Reginster JY. European guidance for the diagnosis and management of osteoporosis in postmenopausal women. Osteoporos Int 2019;30(1):3–44',
+        'Blomhoff R, Andersen R, Arnesen EK, et al. Nordic Nutrition Recommendations 2023. Copenhagen: Nordic Council of Ministers; 2023',
+        'Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods (calcium, vitamin D, vitamin K, magnesium, protein)',
+        'Socialstyrelsen. Nationella riktlinjer för rörelseorganens sjukdomar: osteoporos. Stockholm: Socialstyrelsen; 2021',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Skeletthälsa: mer än kalcium – D-vitamin, protein, rörelse och mineraler | WiBo Health',
+ h1='Skeletthälsa: mer än kalcium – D-vitamin, protein, rörelse och mineraler',
+ crumb='Skeletthälsa och mineraler',
+ cat='Kost och mineraler',
+ desc='Starka ben bygger på mer än kalcium: D-vitamin, protein, magnesium, rörelse och balansträning. Om benskörhet, vem som bör utredas, jodberikat salt och vad du kan göra själv.',
+ summary='Vad skelettet behöver utöver kalcium, vem som bör utredas för benskörhet och vad du kan göra själv.',
+ hero_alt='Äldre kvinna som tar en rask promenad i en solig park – rörelse för starka ben',
+ about=['Bone health', 'Osteoporosis', 'Calcium', 'Vitamin D'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">Värk i knäna, knakande leder, ont i ryggen – och oron för benskörhet. Den första reaktionen är ofta att köpa kalciumtabletter och dricka mer mjölk. Men skelettet är levande vävnad som byggs om hela livet, och det behöver betydligt mer än kalcium.</p>
+            <p>Sverige har en av världens högsta förekomster av höftfrakturer, och benmassan minskar naturligt med åldern, särskilt hos kvinnor efter klimakteriet. Det går inte att stoppa åldrandet, men mat, rörelse och livsstil påverkar hur starkt skelettet är och hur snabbt det förändras.</p>
+
+            <h2 class="section-title"><i class="fas fa-bone"></i> <span>Näringsämnen som skelettet behöver</span></h2>
+            <ul class="check-list">
+                <li><strong>Kalcium:</strong> behövs för att upprätthålla normal benstomme. Finns i mjölk, yoghurt, ost, berikade växtdrycker, gröna bladgrönsaker, mandlar och sesamfrön.</li>
+                <li><strong>D-vitamin:</strong> bidrar till normalt upptag och utnyttjande av kalcium och till att upprätthålla normal benstomme. Bildas i huden av solljus på sommaren och finns i fet fisk, ägg samt berikad mjölk och margarin.</li>
+                <li><strong>Protein:</strong> bidrar till att upprätthålla normal benstomme. Fisk, ägg, mejeriprodukter, baljväxter och kött.</li>
+                <li><strong>Magnesium:</strong> bidrar till att upprätthålla normal benstomme. Fullkorn, nötter, frön och baljväxter.</li>
+                <li><strong>K-vitamin:</strong> bidrar till att upprätthålla normal benstomme. Gröna bladgrönsaker, kål och vissa ostar.</li>
+            </ul>
+            <p>(Formuleringarna ovan är EU-godkända hälsopåståenden.) En varierad kost med grönsaker, fullkorn, baljväxter, fisk och mejeriprodukter eller berikade alternativ ger skelettet det mesta av det det behöver.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Jämför mejeri- och växtdrycker med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se om en växtdryck är berikad med kalcium och D-vitamin, och hur mycket socker den innehåller.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-sun"></i> <span>D-vitamin under det svenska vinterhalvåret</span></h2>
+            <p>Från oktober till mars är solen i Sverige för svag för att huden ska bilda D-vitamin. Då kommer D-vitaminet från maten. Livsmedelsverket rekommenderar extra D-vitamin som tillskott till vissa grupper, till exempel personer som sällan är ute i dagsljus, som täcker huden, har mörk hudfärg eller är 75 år och äldre. Följ dosen på förpackningen eller din läkares råd; mer är inte bättre, eftersom för mycket D-vitamin kan vara skadligt.</p>
+            <p>D-vitamin är fettlösligt, så ta tillskottet tillsammans med en måltid.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>Rörelse som bygger och skyddar skelettet</span></h2>
+            <ul class="check-list">
+                <li><strong>Belastande träning:</strong> promenader, trappgång, dans och lätta hopp stimulerar benvävnaden.</li>
+                <li><strong>Styrketräning</strong> två–tre gånger i veckan stärker både muskler och ben.</li>
+                <li><strong>Balansträning:</strong> de flesta frakturer hos äldre orsakas av fall, och balansträning minskar risken att falla.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-ban-smoking"></i> <span>Det som försvagar skelettet</span></h2>
+            <ul class="check-list">
+                <li>Rökning och hög alkoholkonsumtion.</li>
+                <li>Låg kroppsvikt och långvariga, hårda bantningskurer.</li>
+                <li>Långvarig behandling med kortison i tablettform.</li>
+                <li>Tidigt klimakterium.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-user-doctor"></i> <span>När ska man utredas för benskörhet?</span></h2>
+            <p>Prata med din vårdcentral om du har brutit något vid ett lågenergitrauma (till exempel fallit från stående och brutit handleden), har tagit kortison länge, har haft tidigt klimakterium eller har benskörhet i släkten. Risken bedöms ofta med verktyget FRAX och vid behov med bentäthetsmätning (DXA).</p>
+
+            <h2 class="section-title"><i class="fas fa-shaker"></i> <span>Salt: välj jodberikat och ät mindre</span></h2>
+            <p>Havssalt och rosa salt är kemiskt i stort sett samma sak som vanligt bordssalt (natriumklorid), och mängden andra mineraler i dem är för liten för att ha betydelse. Livsmedelsverket rekommenderar i stället <strong>jodberikat salt</strong>, eftersom jod behövs och ofta saknas i ojodiserade specialsalter, och att vuxna äter <strong>högst 6 gram salt per dag</strong>, för blodtryckets skull.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Räcker det att dricka mjölk för att få starka ben?</h3><p>Mjölk och andra mejeriprodukter är bra kalciumkällor, men skelettet behöver också D-vitamin, protein, rörelse och balansträning. Det är helheten som räknas. Dricker du inte mjölk fungerar växtdrycker berikade med kalcium och D-vitamin.</p></div>
+                <div class="faq-item"><h3>Ska jag ta K2-vitamin tillsammans med D-vitamin?</h3><p>De flesta får tillräckligt med K-vitamin från maten. Tar du blodförtunnande läkemedel av typen warfarin ska du inte börja med K-vitamintillskott, eftersom det påverkar läkemedlets effekt; prata alltid med din läkare först.</p></div>
+            </div>'''),
+    ),
+)
+
+THYROID_SV = dict(
+    legacy=dict(ar='/thyroid-health.html'),
+    slugs=dict(sv='trog-skoldkortel'),
+    hero='thyroid-hero.jpeg', hero_size=(1376, 768),
+    published='2026-10-23', modified='2026-10-23',
+    named_author=True,
+    faq_schema=True,
+    references=[
+        'Chaker L, Razvi S, Bensenor IM, et al. Hypothyroidism. Nat Rev Dis Primers 2022;8(1):30',
+        'Jonklaas J, Bianco AC, Bauer AJ, et al. Guidelines for the treatment of hypothyroidism: prepared by the American Thyroid Association task force on thyroid hormone replacement. Thyroid 2014;24(12):1670–1751',
+        'EFSA Panel on Nutrition, Novel Foods and Food Allergens. Scientific opinion on the tolerable upper intake level for selenium. EFSA J 2023;21(1):7704',
+        'Commission Regulation (EU) No 432/2012 establishing a list of permitted health claims made on foods (selenium, iodine)',
+        'Blomhoff R, Andersen R, Arnesen EK, et al. Nordic Nutrition Recommendations 2023. Copenhagen: Nordic Council of Ministers; 2023',
+    ],
+    content=dict(
+sv=dict(
+ byline=SV_BYLINE,
+ title='Trög sköldkörtel: TSH, T4 och T3 i klartext och vad du kan göra själv | WiBo Health',
+ h1='Trög sköldkörtel: TSH, T4 och T3 i klartext och vad du kan göra själv',
+ crumb='Trög sköldkörtel',
+ cat='Hormoner och ämnesomsättning',
+ desc='Äter du lite men går ändå upp i vikt, fryser och är trött? Så fungerar sköldkörteln, vad TSH, T4 och T3 betyder, symtomen på underfunktion, jod och selen i maten och när du ska söka vård.',
+ summary='Hur sköldkörteln fungerar, vad proverna betyder, symtomen på underfunktion och när du ska söka vård.',
+ hero_alt='Leende kvinna i kavaj i en ljus mottagning',
+ about=['Hypothyroidism', 'Thyroid', 'TSH', 'Iodine'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <p class="lead">”Du äter knappt något och går ändå inte ner ett gram? Du tappar hår, fryser om händer och fötter mitt i sommaren och är ständigt trött?” Sådana besvär kan ha många orsaker, och en av dem är en sköldkörtel som arbetar för långsamt.</p>
+            <p>Underfunktion i sköldkörteln (hypotyreos) är vanlig, särskilt hos kvinnor, och den vanligaste orsaken i Sverige är den autoimmuna sjukdomen Hashimotos tyreoidit. Den goda nyheten är att tillståndet är lätt att upptäcka med blodprov och att behandlingen fungerar bra.</p>
+
+            <h2 class="section-title"><i class="fas fa-dna"></i> <span>1. Vad gör sköldkörteln?</span></h2>
+            <p>Sköldkörteln är en liten fjärilsformad körtel nedtill på halsen. Dess hormoner styr tempot i kroppens ämnesomsättning: hur mycket energi cellerna gör av med, hur varm du är, hur fort hjärtat slår och hur magen arbetar.</p>
+            <p>När sköldkörteln är trög går allt långsammare: du blir trött, fryser lätt, får förstoppning och kan gå upp i vikt trots att du inte äter mer.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>2. TSH, T4 och T3 – vad betyder proverna?</span></h2>
+            <ul class="check-list">
+                <li><strong>TSH</strong> bildas i hypofysen i hjärnan och ”beställer” hormon från sköldkörteln. När sköldkörteln arbetar för lite stiger TSH. TSH är därför det första och viktigaste provet.</li>
+                <li><strong>Fritt T4 (FT4)</strong> är sköldkörtelns huvudsakliga hormon. Det tas ofta tillsammans med TSH.</li>
+                <li><strong>T3</strong> är den mest aktiva formen. Det mesta bildas av T4 ute i kroppens vävnader, bland annat i levern och njurarna.</li>
+            </ul>
+            <p>Har du kvar tydliga symtom trots normala prover, ta upp det med din läkare: symtomen kan bero på något annat, till exempel järnbrist, D-vitaminbrist, sömnbrist eller depression, som också behöver utredas.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>3. Vanliga tecken på underfunktion</span></h2>
+            <ul class="check-list">
+                <li>Trötthet, orkeslöshet och ökat sömnbehov.</li>
+                <li>Frusenhet, torr hud och håravfall.</li>
+                <li>Förstoppning.</li>
+                <li>Svullnad i ansiktet, särskilt runt ögonen på morgonen.</li>
+                <li>Viktuppgång utan att man äter mer.</li>
+                <li>Koncentrationssvårigheter, nedstämdhet och sämre minne.</li>
+            </ul>
+            <p>Känner du igen flera av tecknen, boka tid på vårdcentralen och be om provtagning.</p>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>📱 Hitta jodberikat salt och jämför varor med boodi-appen 💚</h2>
+                    <p>Skanna streckkoden för att se ingredienser och näringsinnehåll direkt och jämföra produkter från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-seedling"></i> <span>4. Jod och selen – i lagom mängd</span></h2>
+            <ul class="check-list">
+                <li><strong>Jod</strong> bidrar till normal produktion av sköldkörtelhormon och normal sköldkörtelfunktion. I Sverige kommer det mesta jodet från <strong>jodberikat salt</strong>, mejeriprodukter, ägg och fisk. Havssalt och andra specialsalter innehåller ofta lite eller inget jod. Tillskott med tång och alger kan däremot innehålla alldeles för mycket jod, vilket också kan störa sköldkörteln.</li>
+                <li><strong>Selen</strong> bidrar till normal sköldkörtelfunktion. Selen finns i fisk, skaldjur, ägg, kött och mejeriprodukter. Paranötter innehåller mycket och mycket varierande mängder selen; ät dem bara då och då och kombinera dem inte med selentillskott, eftersom för mycket selen är skadligt (EFSA:s övre gräns är 255 mikrogram per dag för vuxna).</li>
+            </ul>
+            <p>(Formuleringarna om jod och selen är EU-godkända hälsopåståenden.) Om du redan har en diagnostiserad sköldkörtelsjukdom: ta inte jod- eller selentillskott utan att ha pratat med din läkare.</p>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>5. Vardagsvanor som stöder ämnesomsättningen</span></h2>
+            <ul class="check-list">
+                <li><strong>Undvik hårda svältdieter:</strong> mycket låga energiintag gör att kroppen sparar energi och sänker ämnesomsättningen. En nattfasta på 12–14 timmar är en mer skonsam rytm.</li>
+                <li><strong>Ät protein vid varje måltid</strong> och styrketräna, så att du behåller muskelmassan.</li>
+                <li><strong>Sov 7–9 timmar</strong> och hitta sätt att hantera långvarig stress.</li>
+                <li><strong>Begränsa söta drycker och tillsatt socker,</strong> som belastar levern.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Hur behandlas underfunktion i sköldkörteln?</h3><p>Läkaren skriver ut sköldkörtelhormon (levotyroxin) i tablettform och följer upp dosen med blodprov. Tabletten tas på fastande mage, och järn, kalcium och magnesium ska tas med minst fyra timmars mellanrum. Ta aldrig sköldkörtelhormon utan recept.</p></div>
+                <div class="faq-item"><h3>Kan jag få igång en trög sköldkörtel med kost eller tillskott?</h3><p>Vid en sjukdom som Hashimotos tyreoidit kan kost och tillskott inte ersätta behandling. En varierad kost med tillräckligt med jod och selen behövs för att sköldkörteln ska fungera normalt, men extra tillskott hjälper inte den som redan får i sig tillräckligt.</p></div>
+            </div>'''),
+    ),
+)
+
 ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, INSULIN_RESISTANCE_SV, FATTY_LIVER_SV,
-            LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV]
+            LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV, MAGNESIUM_SV, BONE_HEALTH_SV, THYROID_SV]

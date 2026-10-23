@@ -40,18 +40,6 @@
   </url>
 
   <!-- المقالات السريرية الحديثة (Content Pillars) -->
-  <url>
-    <loc>https://wibohealth.com/magnesium-types.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/bone-health-minerals.html</loc>
-    <lastmod>2026-10-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <!-- الأدلة والمحتوى الصحي -->
   <url>
@@ -123,12 +111,6 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/thyroid-health.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://wibohealth.com/pricing.html</loc>
@@ -5758,6 +5740,60 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/intermittent-fasting.html"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/periodisk-fasta.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/intermittent-fasting.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/magnesium-types.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/magnesium-types.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/magnesiumformer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/magnesium-types.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/articles/magnesiumformer.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/magnesium-types.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/magnesiumformer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/magnesium-types.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/bone-health-minerals.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/bone-health-minerals.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/skeletthalsa-och-mineraler.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bone-health-minerals.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/articles/skeletthalsa-och-mineraler.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/bone-health-minerals.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/skeletthalsa-och-mineraler.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bone-health-minerals.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/thyroid-health.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/thyroid-health.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/trog-skoldkortel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/thyroid-health.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/articles/trog-skoldkortel.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/thyroid-health.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/trog-skoldkortel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/thyroid-health.html"/>
   </url>
   <!-- ARTICLE-PAGES:END -->
   <!-- FOOD-PAGES:START -->
