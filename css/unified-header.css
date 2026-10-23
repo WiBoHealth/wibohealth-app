@@ -304,6 +304,9 @@ body > header .lang-switcher-container .lang-btn { height: 28px !important; }
         min-width: 27px !important; padding: 0 5px !important;
     }
 }
+/* segmented switcher (generated pages: flag + code per button) with four languages: flags only at every width
+   (decision 2026-10-23); the language name stays in each link's title / aria-label */
+body > header .lang-switcher-container:has(> .lang-btn ~ .lang-btn ~ .lang-btn ~ .lang-btn) > .lang-btn > span:last-child { display: none; }
 
 /* one row everywhere: logo | nav | actions (pages whose own CSS stacked or wrapped the header) */
 body > header .header-content,

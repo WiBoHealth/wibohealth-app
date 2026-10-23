@@ -142,7 +142,7 @@ def links(t):
             url = re.sub(r'^([^#]*?)(\?[^#]*)?(#.*)?$',
                          lambda p: p.group(1) + (p.group(2) + '&' if p.group(2) else '?') + 'lang=en' + (p.group(3) or ''), url)
         return '%s="%s"' % (name, url)
-    t = re.sub(r'\b(href|src|srcset)="([^"]+)"', lambda m: fix(m) if ' ' not in m.group(2) else m.group(0), t)
+    t = re.sub(r'(?<![-\w])(href|src|srcset)="([^"]+)"', lambda m: fix(m) if ' ' not in m.group(2) else m.group(0), t)
     t = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="%s"' % ', '.join(
         (p if p.startswith('/') else '/' + p) for p in m.group(1).split(', ')), t)
     # the static directory pages come in ar/en/nl: Swedish readers get the English index
@@ -185,8 +185,8 @@ def localise_rest(t):
     t = rep('id="homeTipNext" aria-label="النصيحة التالية"', 'id="homeTipNext" aria-label="Nästa tips"', t)
     t = rep('title="المظهر"', 'title="Byt tema"', t)
     # diabetes capsule (js/nav-diabetes.js sets the same at runtime)
-    t = rep('href="/diabetes.html?lang=en" class="nav-link nav-diabetes"', 'href="/en/diabetes.html" class="nav-link nav-diabetes"', t)
-    t = rep('href="/diabetes.html?lang=en" class="mobile-nav-link nav-diabetes"', 'href="/en/diabetes.html" class="mobile-nav-link nav-diabetes"', t)
+    t = rep('href="/diabetes.html?lang=en" class="nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="nav-link nav-diabetes"', t)
+    t = rep('href="/diabetes.html?lang=en" class="mobile-nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"', t)
     t = rep('<span class="nav-diabetes-label">السكري ومتلازمة الأيض</span>', '<span class="nav-diabetes-label">Diabetes</span>', t, count=2)
     # Arabic image alts without an i18n key
     for src, alt in ALT.items():

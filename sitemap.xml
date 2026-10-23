@@ -5537,6 +5537,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes.html"/>
   </url>
   <url>
@@ -5547,6 +5548,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes.html"/>
   </url>
   <url>
@@ -5557,6 +5559,18 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/diabetes.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes.html"/>
   </url>
   <url>
@@ -5597,6 +5611,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
   </url>
   <url>
@@ -5607,6 +5622,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
   </url>
   <url>
@@ -5617,6 +5633,18 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/diabetes/prediabetes.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/prediabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/prediabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/prediabetes.html"/>
   </url>
   <url>
@@ -5627,6 +5655,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/zwangerschapsdiabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/graviditetsdiabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
   </url>
   <url>
@@ -5637,6 +5666,7 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/zwangerschapsdiabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/graviditetsdiabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
   </url>
   <url>
@@ -5647,6 +5677,18 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/gestational-diabetes.html"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/zwangerschapsdiabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/graviditetsdiabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/diabetes/graviditetsdiabetes.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/diabetes/gestational-diabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/diabetes/zwangerschapsdiabetes.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/diabetes/graviditetsdiabetes.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
   </url>
   <!-- ARTICLE-PAGES:END -->

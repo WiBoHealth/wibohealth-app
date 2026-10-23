@@ -522,13 +522,22 @@ nl=dict(
  intro='Heldere, wetenschappelijk onderbouwde gidsen over diabetes, insulineresistentie en het metabool syndroom, gemaakt door het WiBo Health-team om je situatie beter te begrijpen en met vertrouwen met je arts te praten.',
  about=['Diabetes', 'Metabolic syndrome', 'Insulin resistance'],
  disclaimer='⚖️ Medische disclaimer: de inhoud van deze sectie is algemene gezondheidsvoorlichting van WiBo Health. Het is geen medische diagnose en vervangt geen advies van je arts of zorgteam.'),
+# Swedish (2026-10-23): HbA1c in mmol/mol, glucose in mmol/l with a decimal comma; Swedish care pathways (vårdcentral, MVC, 1177)
+sv=dict(
+ title='Diabetes och metabol hälsa: din kompletta guide | WiBo Health',
+ h1='Diabetes och metabol hälsa',
+ crumb='Diabetes och metabol hälsa',
+ desc='Medicinskt granskade guider från WiBo Health om prediabetes, graviditetsdiabetes och insulinresistens: mat, rörelse, sömn och vad dina provsvar betyder.',
+ intro='Tydliga guider, byggda på vetenskapliga källor, om diabetes, insulinresistens och metabolt syndrom. WiBo Health-teamet tar fram dem för att hjälpa dig att förstå din situation och prata tryggt med din vårdcentral eller barnmorska. Blodsockervärden anges i mmol/l och HbA1c i mmol/mol, precis som i svensk vård.',
+ about=['Diabetes', 'Metabolic syndrome', 'Insulin resistance'],
+ disclaimer='⚖️ Medicinsk ansvarsfriskrivning: innehållet i den här delen är allmän hälsoinformation och utbildning från WiBo Health. Det är ingen medicinsk diagnos och ersätter inte råd, diagnos eller behandling från legitimerad hälso- och sjukvårdspersonal. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.'),
         ),
     ),
 )
 
 GESTATIONAL_DIABETES = dict(
     section='diabetes',
-    slugs=dict(ar='gestational-diabetes', en='gestational-diabetes', nl='zwangerschapsdiabetes'),
+    slugs=dict(ar='gestational-diabetes', en='gestational-diabetes', nl='zwangerschapsdiabetes', sv='graviditetsdiabetes'),
     hero='gestational-diabetes-guide-hero.webp', hero_size=(1376, 768),
     thumb='gestational-diabetes-guide-thumb.webp', thumb_size=(640, 357),   # hub card (diabetes.html), 640px copy of the hero
     published='2026-10-20', modified='2026-10-20',
@@ -790,12 +799,108 @@ nl=dict(
                 <div class="faq-item"><h3>Betekent de diagnose zwangerschapsdiabetes dat ik zeker insuline moet spuiten?</h3><p>Helemaal niet! Ongeveer 70 tot 85% van de zwangere vrouwen houdt de suikerwaarden goed en veilig onder controle met alleen aanpassingen in voeding en rustig wandelen. Insuline wordt alleen gebruikt als de waarden hardnekkig hoog blijven, om je baby te beschermen; het is een zeer veilig medicijn dat niet via de placenta naar de baby gaat.</p></div>
                 <div class="faq-item"><h3>Blijft de diabetes na de bevalling?</h3><p>In meer dan 90% van de gevallen wordt de bloedsuiker weer helemaal normaal zodra de placenta geboren is. Je arts vraagt 4 tot 12 weken na de bevalling om een eenvoudige test om zeker te zijn, en daarna om een controle elke 1 tot 3 jaar, omdat zwangerschapsdiabetes de kans op diabetes type 2 later vergroot. De gezonde eetgewoonten waarmee je jezelf en je baby beschermde, vasthouden is de beste preventie.</p></div>
             </div>'''),
+# Swedish: glucose only in mmol/l; WHO 2013 diagnostic limits as recommended by Socialstyrelsen (2015); targets are set by the
+# maternity team. Food pages are English for now, said once in the text.
+sv=dict(
+ byline='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ title='Graviditetsdiabetes: normala blodsockervärden, vad du kan äta och din dag steg för steg',
+ h1='Graviditetsdiabetes: normala blodsockervärden, vad du kan äta och din dag steg för steg',
+ crumb='Graviditetsdiabetes',
+ cat='Diabetes och metabol hälsa',
+ desc='Allt du behöver veta om graviditetsdiabetes: gränsvärden och målvärden i mmol/l, en trafikljuslista över mat som jämnar ut blodsockerkurvan och skyddar ditt barn, ett balanserat dagsschema och WiBo Healths livsmedelsguide.',
+ summary='Värdena i mmol/l, vad du kan äta och undvika, och ett balanserat dagsschema som jämnar ut blodsockerkurvan.',
+ hero_alt='Leende gravid kvinna i ett soligt kök med en glukossensor på armen, en skål bär och en avokado',
+ about=['Gestational diabetes', 'Pregnancy', 'Blood glucose', 'Glycemic index'],
+ references=[
+     'World Health Organization. Diagnostic criteria and classification of hyperglycaemia first detected in pregnancy. Geneva: WHO; 2013',
+     'Socialstyrelsen. Gränsvärden för graviditetsdiabetes – stöd för beslut om behandling. Stockholm: Socialstyrelsen; 2015',
+     'American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)',
+     'American College of Obstetricians and Gynecologists (ACOG). Practice Bulletin No. 190: Gestational Diabetes Mellitus. Obstet Gynecol 2018;131(2):e49–e64',
+     'National Institute for Health and Care Excellence (NICE). Diabetes in pregnancy: management from preconception to the postnatal period (NG3), 2015, updated 2020',
+     'International Federation of Gynecology and Obstetrics (FIGO). The FIGO Initiative on gestational diabetes mellitus: a pragmatic guide for diagnosis, management, and care. Int J Gynaecol Obstet 2015;131(Suppl 3):S173–S211',
+ ],
+ disclaimer='⚖️ Medicinsk ansvarsfriskrivning: den här guiden har tagits fram av WiBo Health som allmän hälsoinformation och stöd för levnadsvanor. Den kompletterar den vård du får av din barnmorska, mödravårdscentral (MVC) och specialistmödravård, och ersätter inte råd, diagnos eller behandling från legitimerad hälso- och sjukvårdspersonal. Kontakta din barnmorska, din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Andas lugnt: du och ditt barn mår bra, och svaret börjar på tallriken</span></h2>
+            <p class="lead">Det första de flesta blivande mammor känner när de hör ”ditt blodsocker är för högt” är oro och skuld: <em>”Har jag ätit för mycket sött? Har jag skadat mitt barn?”</em></p>
+            <p>Här är den medicinska sanningen vi vill att du håller fast vid redan nu: <strong>graviditetsdiabetes är inte ditt fel, och det betyder inte att ditt barn har diabetes.</strong> Det är kroppens sätt att berätta att de kraftfulla graviditetshormonerna tillfälligt belastar hur du hanterar socker. Med några enkla och smarta steg kring maten tar du dig tryggt igenom den här perioden, både du och ditt barn.</p>
+
+            <h2 class="section-title"><i class="fas fa-dna"></i> <span>1. Vad händer egentligen i kroppen? (Hemligheten finns i moderkakans hormoner)</span></h2>
+            <p>Moderkakan är inte bara barnets matledning, den är också en kraftfull hormonfabrik. Under graviditetens andra halva (särskilt runt femte och sjätte månaden) frisätter den hormoner med ett enda mål: <em>”få fram så mycket energi och näring som möjligt till barnet så att det kan växa”</em>.</p>
+            <p>För att lyckas gör hormonerna dina celler mer motståndskraftiga mot insulin (sockret får stanna kvar i blodet så att det kan gå över till barnet). Normalt svarar bukspottkörteln med att frisätta extra insulin. Men när bukspottkörteln inte riktigt hinner med det höga behovet stiger blodsockret, och det är det vi kallar <strong>graviditetsdiabetes</strong>.</p>
+            <div class="tip"><h3>👶 Hur påverkas barnet?</h3><p>Om mammans blodsocker är högt under längre tid går det extra sockret över till barnet. Barnets lilla bukspottkörtel får då tillverka extra insulin för att lagra sockret som fett, vilket kan göra barnet stort vid födseln. Därför är maten ditt starkaste skydd för barnets friska och jämna tillväxt.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>2. Vilka värden gäller? Gränsvärden och målvärden i mmol/l</span></h2>
+            <h3>Så ställs diagnosen i Sverige</h3>
+            <p>Diagnosen ställs med en sockerbelastning (OGTT med 75 g glukos). Socialstyrelsen rekommenderar sedan 2015 WHO:s gränsvärden, mätt i venöst plasma: graviditetsdiabetes föreligger om <strong>fasteglukos är 5,1 mmol/l eller högre</strong>, <strong>värdet efter 1 timme är 10,0 mmol/l eller högre</strong> eller <strong>värdet efter 2 timmar är 8,5 mmol/l eller högre</strong>. Det räcker att ett av värdena ligger över gränsen. Hur och när provet tas kan skilja sig något mellan regioner, så din barnmorska berättar hur det går till där du bor.</p>
+            <h3>Målvärden när du mäter själv hemma</h3>
+            <p>När du mäter med blodsockermätare hemma finns det tre gyllene värden att komma ihåg. Det här är de internationella målvärdena (ADA, ACOG och NICE); <strong>din diabetesbarnmorska eller läkare på specialistmödravården sätter dina egna målvärden</strong>, och de kan skilja sig något mellan regioner:</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">&lt; 5,3 <small>mmol/l</small></div><h3>Fastande</h3><p>Direkt när du vaknar, före frukost.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 7,8 <small>mmol/l</small></div><h3>1 timme efter måltid</h3><p>Räknat från att du började äta.</p></div>
+                <div class="rule-card"><div class="rule-num">&lt; 6,7 <small>mmol/l</small></div><h3>2 timmar efter måltid</h3><p>Om din barnmorska ber dig mäta efter 2 timmar i stället.</p></div>
+            </div>
+            <h3>Varför är fastevärdet ibland högt?</h3>
+            <p>Under de tidiga morgontimmarna frisätter levern naturligt glukos för att ge dig energi att vakna (gryningsfenomenet). Om ditt morgonvärde är högt är lösningen inte att svälta dig på kvällen, utan att äta ett smart kvällsmål (till exempel en sked naturligt jordnötssmör eller en näve <a href="{food:walnuts}">valnötter</a>) som lugnar leverns signaler, och att visa dina morgonvärden för din barnmorska.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>3. Mat vid graviditetsdiabetes: det smarta trafikljussystemet</span></h2>
+            <p>I stället för hårda förbud är den medicinska hemligheten att <strong>”platta till blodsockerkurvan”</strong>: att äta måltider som tas upp långsamt och lugnt och som förhindrar kraftiga toppar. (Länkarna till livsmedlen leder till vår livsmedelsguide, som än så länge finns på engelska.)</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 Grönt ljus (ät fritt och tryggt: basen på din tallrik)</div>
+            <ul class="check-list">
+                <li><strong>Magert protein:</strong> <a href="{food:boiled-egg}">kokta ägg</a> eller <a href="{food:egg-omelette}">omelett</a>, <a href="{food:grilled-chicken-breast}">grillad kycklingfilé</a> och genomstekt fisk som är säker under graviditeten (till exempel <a href="{food:grilled-salmon}">lax</a>, rik på omega-3-fetter för barnets hjärna).</li>
+                <li><strong>Nyttiga fetter:</strong> <a href="{food:extra-virgin-olive-oil}">extra jungfruolivolja</a>, <a href="{food:avocado}">avokado</a>, <a href="{food:walnuts}">valnötter</a> och naturella mandlar.</li>
+                <li><strong>Gröna bladgrönsaker och fiber:</strong> <a href="{food:spinach}">spenat</a>, <a href="{food:zucchini}">zucchini</a>, <a href="{food:cucumber}">gurka</a>, <a href="{food:broccoli}">broccoli</a> och sallad. (Fibrer fungerar som en svamp i tarmen som suger upp sockret, så att det når blodet mycket långsamt.)</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 Gult ljus (bra, men i smarta portioner)</div>
+            <ul class="check-list">
+                <li><strong>Långsamma kolhydrater:</strong> <a href="{food:quinoa}">quinoa</a>, hela <a href="{food:oatmeal}">havregryn</a> (inte snabbgröt) och naturligt jäst <a href="{food:sourdough-bread}">surdegsbröd</a> av fullkorn.</li>
+                <li><strong>Insulinvänlig frukt:</strong> <a href="{food:blueberry}">blåbär</a>, <a href="{food:strawberry}">jordgubbar</a> och <a href="{food:apple}">grönt äpple</a>. (Gyllene tips: ät aldrig frukten ensam, lägg alltid till några mandlar eller en sked <a href="{food:greek-yogurt}">grekisk yoghurt</a> som bromsar sockerupptaget.)</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 Rött ljus (undvik för att hålla värdena stabila)</div>
+            <ul class="check-list">
+                <li><strong>Juice (även naturell och nypressad):</strong> juice är koncentrerat socker utan fibrer och skickar upp blodsockret som en pil på några minuter. Byt till hel frukt och ett glas vatten.</li>
+                <li><strong>Vitt bröd och bakverk:</strong> vitt bröd, wienerbröd, kanelbullar, pajer och sötade frukostflingor.</li>
+                <li><strong>Dolt socker:</strong> maltodextrin, modifierad stärkelse och glukossirap, ingredienser som ofta finns i ”sockerfria” produkter men ändå höjer blodsockret kraftigt!</li>
+            </ul>
+
+
+            <h2 class="section-title"><i class="fas fa-cart-shopping"></i> <span>4. Handla tryggt: använd livsmedelsguiden på vår webbplats</span></h2>
+            <p>Det kan vara förvirrande att handla, när varje produkt kallar sig <em>”nyttig och bra för dig”</em>. För att hjälpa dig att välja rätt direkt i butiken:</p>
+            <ul class="check-list">
+                <li><strong>Bläddra i <a href="{site:/foods.html}">livsmedelsguiden på vår webbplats</a> (än så länge på engelska):</strong> på <strong>WiBo Health</strong> har vi byggt en stor guide med mer än 850 livsmedel, vart och ett med sitt glykemiska index och sina näringsvärden.</li>
+                <li><strong>Lägg webbplatsen på telefonens hemskärm (snabb webbapp):</strong> med ett tryck i webbläsaren (Lägg till på hemskärmen) ligger webbplatsen på telefonen som vilken app som helst, så att du kan slå upp en vara i butiken innan den hamnar i korgen.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. Din balanserade dag: ett realistiskt och mättande dagsschema</span></h2>
+            <ul class="check-list">
+                <li><strong>Frukost:</strong> två ägg stekta i olivolja med avokadoskivor och gröna blad (ruccola och gurka), plus en skiva fullkornsbröd eller ett fullkornsknäckebröd.</li>
+                <li><strong>Förmiddagsmellanmål:</strong> en liten näve valnötter och en halv deciliter färska bär.</li>
+                <li><strong>Lunch:</strong> en stor färgglad sallad med olivolja och citron (ät den först), en bit grillad fisk eller kyckling och 3 matskedar kokt quinoa eller <a href="{food:brown-rice}">fullkornsris</a>.</li>
+                <li><strong>Eftermiddagsmellanmål:</strong> gurk- och morotsstavar med två matskedar <a href="{food:hummus-with-tahini}">hummus med tahini</a> eller pastöriserad <a href="{food:cottage-cheese}">keso</a>.</li>
+                <li><strong>Middag:</strong> en varm soppa på broccoli och zucchini med skivad kycklingfilé, skonsam för magen och bra mot halsbränna på kvällen.</li>
+                <li><strong>Kvällsmål:</strong> en tunn äppelskiva med en tesked 100 % naturligt jordnötssmör.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> <span>6. Smarta knep som stabiliserar blodsockret utan förbud</span></h2>
+            <ol class="steps">
+                <li><strong>Ät tallriken i rätt ordning:</strong> börja med grönsaker och sallad, fortsätt med protein och fett och spara stärkelsen till sist. Den enkla ordningen dämpar blodsockertoppen efter maten märkbart!</li>
+                <li><strong>Den magiska promenaden på 10 minuter efter maten:</strong> när du promenerar lugnt efter en måltid öppnar benmusklerna sina dörrar och tar socker direkt från blodet som energi, utan att be bukspottkörteln om extra insulin.</li>
+                <li><strong>Vatten är din bästa vän:</strong> gör vatten till din huvuddryck i stället för juice och söta drycker. Under graviditeten behöver du ungefär 2,3 liter vätska per dag (från dryck och mat tillsammans), så håller du vätskebalansen utan tillsatt socker.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>7. Frågor som är viktiga för dig, besvarade utifrån klinisk erfarenhet</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Betyder graviditetsdiabetes att jag säkert behöver ta insulin?</h3><p>Inte alls! Ungefär 70–85 % av de gravida klarar att hålla blodsockret på en bra och säker nivå med enbart ändrade matvanor och lugna promenader. Insulin används bara om värdena förblir höga, för att skydda ditt barn; det är ett mycket säkert läkemedel som inte passerar moderkakan till barnet.</p></div>
+                <div class="faq-item"><h3>Finns diabetesen kvar efter förlossningen?</h3><p>I mer än 90 % av fallen blir blodsockret helt normalt igen när moderkakan har fötts. Efter förlossningen följs du upp med ett enkelt prov för att vara säker, och sedan rekommenderas regelbundna kontroller på vårdcentralen, eftersom graviditetsdiabetes ökar risken för typ 2-diabetes senare i livet. Din barnmorska berättar hur uppföljningen går till i din region. Att behålla de goda matvanorna som skyddade dig och ditt barn är det bästa du kan göra för din hälsa framåt.</p></div>
+            </div>'''),
     ),
 )
 
 PREDIABETES = dict(
     section='diabetes',
-    slugs=dict(ar='prediabetes', en='prediabetes', nl='prediabetes'),
+    slugs=dict(ar='prediabetes', en='prediabetes', nl='prediabetes', sv='prediabetes'),
     # full portrait cover (user decision 2026-10-22: show the whole scene with the breakfast bowl, never a face-only crop)
     hero='prediabetes-healthy-breakfast-lifestyle.webp', hero_size=(896, 1200), hero_portrait=True,
     # 16:9 cards: the whole portrait over a blurred copy of itself (hub card; the 1280px one also feeds the homepage)
@@ -1306,6 +1411,174 @@ nl=dict(
             <p>Zie vandaag als een keerpunt in je leven: niet als de dag waarop je ziek werd, maar als de dag waarop je besloot te luisteren naar de eerlijke boodschap van je lichaam en er echt voor te gaan zorgen.</p>
             <p>De trein is geen diabetes geworden, de weg terug ligt wijd open en de oplossingen liggen binnen handbereik: in een kleurrijk bord groenten, in een rustig kwartiertje wandelen na het eten en in een goede nachtrust die je cellen herstelt. Begin vandaag, met alleen je volgende maaltijd, en zie hoe je lichaam je beloont met energie en rust.</p>
             <p class="reviewed">Beoordeeld door Dr. Wassim Habib<br>WiBo Health Group 🌿</p>'''),
+# Swedish: HbA1c only in mmol/mol (IFCC), glucose only in mmol/l. Fasting limits per WHO as used in Swedish care (IFG 6,1–6,9),
+# with the ADA limit named; IGT from the OGTT explained; the HbA1c 39–47 band is presented as international (ADA), not Swedish.
+# The %-based ADA chart image is left out on purpose (the zones below carry the numbers).
+sv=dict(
+ byline='Medicinskt granskad av Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ title='Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
+ h1='Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
+ crumb='Prediabetes',
+ cat='Diabetes och metabol hälsa',
+ desc='HbA1c mellan 39 och 47 mmol/mol eller förhöjt fasteglukos? Förstå prediabetes i siffror, de dolda tecknen och en praktisk 12-veckorsplan med mat, rörelse och sömn för att sänka ditt HbA1c, byggd på DPP-studien.',
+ summary='Vad ditt HbA1c och fasteglukos betyder, varför insulinresistens uppstår och en 12-veckorsplan med mat, rörelse och sömn för att få tillbaka blodsockret till normala nivåer.',
+ hero_alt='Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health',
+ about=['Prediabetes', 'HbA1c', 'Insulin resistance', 'Type 2 diabetes prevention'],
+ disclaimer='⚖️ Medicinsk ansvarsfriskrivning: innehållet i den här artikeln är allmän hälsoinformation och utbildning om kost och levnadsvanor. Det är ingen medicinsk diagnos eller personlig behandlingsplan och ersätter inte råd, diagnos eller behandling från legitimerad hälso- och sjukvårdspersonal. Prata alltid med din läkare innan du gör större förändringar i din kost eller dina läkemedel. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.',
+ body='''            <p class="lead">Tänk dig att du just har gått ut från vårdcentralen, med provsvaren i handen och blicken fäst vid ett enda rödmarkerat värde: ett HbA1c på 41 eller 43 mmol/mol, eller kanske ett fasteglukos på 6,2 mmol/l.</p>
+            <p>Kanske sa läkaren en kort mening när du gick: <em>”Ditt blodsocker ligger lite högt … ta hand om dig och ät lite mindre.”</em></p>
+            <p>Du kommer ut på gatan och tankarna sköljer över dig som vågor: Har jag diabetes nu? Är de avslappnade familjemiddagarna slut? Ska jag leva på tabletter och sprutor resten av livet? Var ska jag ens börja i morgon bitti?</p>
+            <p>Innan oron tar över din dag, andas djupt och läs de här orden noga: <strong>du har inte diabetes, värdet är ingen slutgiltig dom och ingen punkt utan återvändo, och viktigast av allt: det är inte ditt fel.</strong></p>
+            <p>Du står inte vid vägens slut, du står vid ”förvarningsstationen”. Provsvaret är inga dåliga nyheter. Det är faktiskt den bästa väckarklocka kroppen kan ge dig. Den här artikeln är ingen krånglig medicinsk lärobok, utan din praktiska plan, steg för steg, för att få tillbaka ditt HbA1c till trygga nivåer och bromsa tåget innan det går längre.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>1. Vad betyder ”lite högt blodsocker”? Så läser du dina provsvar</span></h2>
+            <p>Det första steget bort från rädslan är att förstå; vi är rädda för det vi inte känner till. I dina provsvar hittar du oftast de här begreppen:</p>
+            <ul class="check-list">
+                <li><strong>HbA1c (långtidssocker):</strong> visar inte hur mycket socker du har i blodet i dag eller efter gårdagens middag. Det är de röda blodkropparnas ”minne”, som speglar ditt genomsnittliga blodsocker de senaste cirka 90 dagarna. I Sverige anges det i mmol/mol.</li>
+                <li><strong>Fasteglukos (fP-glukos):</strong> blodsockret efter en natts fasta (8–10 timmar), angivet i mmol/l.</li>
+                <li><strong>Sockerbelastning (OGTT):</strong> du dricker en sockerlösning med 75 g glukos och blodsockret mäts efter 2 timmar. Provet visar hur väl kroppen tar hand om en sockermängd.</li>
+            </ul>
+            <p>Prediabetes är ett samlingsnamn för två tillstånd som kan förekomma var för sig eller tillsammans: <strong>förhöjt fasteglukos</strong> (IFG, ibland kallat nedsatt fasteglukos), där blodsockret är för högt efter nattens fasta, och <strong>nedsatt glukostolerans</strong> (IGT), där kroppen har svårt att ta hand om sockret vid en sockerbelastning. För att göra siffrorna enkla delas de in i tre tydliga zoner:</p>
+
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 1. Den gröna trygga zonen (normalt)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> under 39 mmol/mol.</li>
+                <li><strong>Fasteglukos:</strong> under 6,1 mmol/l enligt WHO, som används i svensk vård. (Amerikanska ADA drar gränsen lägre, vid 5,6 mmol/l.)</li>
+                <li><strong>Sockerbelastning:</strong> under 7,8 mmol/l efter 2 timmar.</li>
+                <li><strong>Vad det betyder:</strong> dina celler svarar bra på insulin och bukspottkörteln arbetar lugnt och bekvämt.</li>
+            </ul>
+
+            <div class="tier-title tier-ok"><span class="tier-dot"></span> 🟡 2. Varningszonen och den gyllene möjligheten (prediabetes)</div>
+            <ul class="check-list">
+                <li><strong>Förhöjt fasteglukos (IFG):</strong> 6,1–6,9 mmol/l (WHO). Enligt ADA räknas redan 5,6–6,9 mmol/l.</li>
+                <li><strong>Nedsatt glukostolerans (IGT):</strong> 7,8–11,0 mmol/l två timmar efter sockerbelastning.</li>
+                <li><strong>HbA1c:</strong> 39–47 mmol/mol. Det här intervallet kommer från ADA och används internationellt; i svensk vård finns inget officiellt HbA1c-intervall för prediabetes, men ett värde i det här spannet är en tydlig signal att se över levnadsvanorna och följa upp provet.</li>
+                <li><strong>Vad det betyder:</strong> ditt blodsocker är högre än normalt men har inte nått gränsen för diabetes. Det här är ditt möjlighetsfönster: kroppen kan fortfarande återfå sin balans när du lättar på den extra belastningen.</li>
+            </ul>
+
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 3. Zonen för åtgärd och medicinsk uppföljning (typ 2-diabetes)</div>
+            <ul class="check-list">
+                <li><strong>HbA1c:</strong> 48 mmol/mol eller högre.</li>
+                <li><strong>Fasteglukos:</strong> 7,0 mmol/l eller högre.</li>
+                <li><strong>Sockerbelastning:</strong> 11,1 mmol/l eller högre efter 2 timmar.</li>
+                <li><strong>Vad det betyder:</strong> diagnosen ställs av läkare, i regel efter två förhöjda prov tagna vid olika tillfällen. Kroppen har då passerat varningsstadiet och behöver regelbunden uppföljning, ofta också läkemedel, för att förebygga komplikationer.</li>
+            </ul>
+            <div class="tip"><h3>💡 En gyllene regel att komma ihåg</h3><p>Om ditt HbA1c i dag är 40, 42 eller till och med 45 mmol/mol är du i den gula zonen. Tåget har inte nått slutstationen; det saktar in just nu, och du har nyckeln till att styra tillbaka det på rätt spår.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-key"></i> <span>2. Varför tog tåget den här vägen från början? Berättelsen om låset och nyckeln</span></h2>
+            <p>Många känner stor skuld och tror att prediabetes bara beror på att de ätit en bulle för mycket. Fysiologin går mycket djupare än så. För att förstå vad som händer i kroppen, föreställ dig det här:</p>
+            <ol class="steps">
+                <li>Varje gång du äter (särskilt stärkelse och socker) omvandlas maten till glukos (socker) som färdas i blodet.</li>
+                <li>Sockret i blodet får bukspottkörteln att frisätta ett hormon som heter <strong>insulin</strong>.</li>
+                <li>Insulinet fungerar som en ”nyckel”: det går till kroppens celler (muskler, lever), låser upp dörren, släpper in sockret och cellen använder det som energi.</li>
+            </ol>
+            <h3>Var ligger då problemet?</h3>
+            <p>Med åren, med upprepade måltider fulla av snabb stärkelse, lite rörelse och ständig stress, har cellerna fyllts med socker och vill inte ta emot mer. Låsen har blivit ”rostiga och tröga”: det är det vi kallar <a href="{site:/insulin-resistance.html}">insulinresistens</a> (artikel på engelska).</p>
+            <p>Den vanliga nyckeln öppnar inte längre dörren lika lätt, så vad gör den stackars bukspottkörteln? Den börjar arbeta övertid och tillverkar fler och fler nycklar (den frisätter stora mängder insulin) för att tvinga cellerna att ta in sockret.</p>
+            <p>Så länge bukspottkörteln orkar dubbla sin insats håller sig blodsockret normalt i flera år utan att du märker något! Men efter ett tag blir bukspottkörteln trött och hinner inte längre med det stora behovet. Då börjar sockret stanna kvar och samlas i blodet, och dina provsvar börjar klättra mot 39, 42 mmol/mol och uppåt.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>3. Hade du symtom utan att märka det?</span></h2>
+            <p>Prediabetes kallas ibland ”den tysta tjuven” eftersom de allra flesta inte känner någon plötslig smärta. Men kroppen skickar diskreta signaler; om du tänker tillbaka på de senaste månaderna känner du kanske igen några av dem:</p>
+            <ul class="check-list">
+                <li><strong>Matkoman efter lunch:</strong> tung trötthet och sömnighet direkt efter en lunch rik på ris, bröd eller pasta.</li>
+                <li><strong>Sötsug två timmar efter maten:</strong> plötslig hunger och starkt sug efter något sött trots att du nyss ätit en mättande måltid, orsakat av ett snabbt blodsockerfall efter en stor insulinvåg.</li>
+                <li><strong>Envist fett runt magen och midjan:</strong> ett märkbart större midjemått som är svårt att få bort; högt insulin är kroppens viktigaste fettlagringshormon.</li>
+                <li><strong>Små hudförändringar:</strong> svaga mörka, sammetslena fläckar i nacken eller under armarna (acanthosis nigricans), eller små hudflikar runt halsen; tydliga yttre tecken på insulinresistens.</li>
+                <li><strong>Lätt törst och nattliga toalettbesök:</strong> kroppen börjar försöka göra sig av med överskottssocker via njurarna.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>4. Den bevisade sanningen: hur bromsar vi tåget och sänker HbA1c vetenskapligt?</span></h2>
+            <p>Låt oss vara överens om ett faktum: det finns inget magiskt te, ingen örtblandning från nätet och inget hemligt recept som raderar prediabetes över en natt. Den som påstår något annat säljer en billig illusion som kan skada din hälsa.</p>
+            <p>Däremot finns det ett medicinskt faktum som bevisats i några av världens största studier (som den välkända Diabetes Prevention Program, DPP): vid prediabetes är bukspottkörtelns celler inte döda, bara utmattade. Lätta på deras börda, så är kroppens förmåga att återfå insulinkänsligheten och sänka HbA1c verklig och anmärkningsvärd!</p>
+            <div class="tip"><h3>📊 Vad visade studien?</h3><p>Forskningen visade att en viktnedgång på bara 5–7 % av din nuvarande vikt (ungefär 4–6 kg om du väger 80 kg), tillsammans med smarta förändringar i rörelse och matkvalitet, minskade risken att utveckla diabetes med <strong>58 %</strong>, nästan dubbelt så mycket som läkemedlet metformin (31 %) i samma studie!</p></div>
+            <p>Så här gör du i praktiken, steg för steg, utan att svälta dig. (Länkarna till livsmedlen leder till vår livsmedelsguide, som än så länge finns på engelska.)</p>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>5. Den smarta tallriken: så äter du för ett lägre blodsocker utan hunger</span></h2>
+            <p>Det vanligaste misstaget när man hör ordet ”prediabetes” är att svälta sig eller leva på sallad och vatten. Det är en återvändsgränd som nästan alltid slutar med återfall och hetsätning. Hemligheten är inte att avstå, utan <strong>”matens ordning”</strong> och <strong>”råvarornas kvalitet”</strong>.</p>
+
+            <h3>A. Det gyllene knepet med matens ordning</h3>
+            <p>Visste du att samma måltid, äten i en annan ordning, helt ändrar hur kroppen hanterar sockret? Studier har visat att den här ordningen kan sänka blodsockertoppen efter maten med upp till 40 %:</p>
+            <ol class="steps">
+                <li><strong>Börja med fibrerna:</strong> sallad, gröna blad, <a href="{food:cucumber}">gurka</a> eller <a href="{food:broccoli}">broccoli</a>. Fibrerna bildar ett geléartat nät i tarmen som bromsar upptaget av sockret som kommer efter.</li>
+                <li><strong>Sedan protein och nyttigt fett:</strong> ägg, kyckling, kött, fisk, <a href="{food:avocado}">avokado</a> eller ost och <a href="{food:extra-virgin-olive-oil}">olivolja</a>. Proteinet sätter i gång mättnadshormonerna och gör att magsäcken töms långsammare.</li>
+                <li><strong>Spara stärkelsen till sist:</strong> ris, bröd eller potatis. När stärkelsen når tarmen är nätet av fibrer och protein redo att ta upp den mycket långsamt, vilket förhindrar kraftiga sockertoppar.</li>
+            </ol>
+
+            <h3>B. Frukosten: tonen för resten av dagen</h3>
+            <p>Om du börjar dagen med en <a href="{food:butter-croissant}">croissant</a>, en kanelbulle, sockrade flingor eller te med tre sockerbitar sätter du fart på blodsockret redan på morgonen, och insulinet ligger högt hela dagen och ber om mer kolhydrater.</p>
+            <p><strong>Den perfekta frukosten för en jämn blodsockerkurva:</strong></p>
+            <ul class="check-list">
+                <li><a href="{food:boiled-egg}">Kokta ägg</a>, eller ägg stekta i olivolja eller smör.</li>
+                <li>En halv <a href="{food:avocado}">avokado</a> eller en näve naturella nötter (<a href="{food:raw-almonds}">mandlar</a> eller <a href="{food:walnuts}">valnötter</a>).</li>
+                <li>En tallrik full av gröna blad (<a href="{food:arugula-rocket}">ruccola</a>, <a href="{food:spinach}">spenat</a>, <a href="{food:cucumber}">gurka</a>).</li>
+                <li>Ett strö av <a href="{food:chia-seeds}">chiafrön</a> eller <a href="{food:flax-seeds}">linfrön</a>.</li>
+                <li>Ett glas vatten med några droppar färsk citron.</li>
+            </ul>
+            <p>(En mättande frukost rik på protein och bra fetter, som ger jämn energi i flera timmar utan plötslig dipp.)</p>
+
+            <h3>C. Livsmedel som avlastar bukspottkörteln, att bygga dina måltider kring</h3>
+            <ul class="check-list">
+                <li><strong>Kål och gröna bladgrönsaker:</strong> <a href="{food:spinach}">spenat</a>, <a href="{food:arugula-rocket}">ruccola</a>, <a href="{food:broccoli}">broccoli</a> och <a href="{food:cauliflower}">blomkål</a>; mycket mättande och fulla av vitaminer utan att höja blodsockret.</li>
+                <li><strong>Baljväxter med måtta:</strong> <a href="{food:lentils}">linser</a>, <a href="{food:chickpeas}">kikärter</a> och bönor; rika på en fiber som kallas ”resistent stärkelse” och som ger näring åt de goda tarmbakterierna.</li>
+                <li><strong>Nyttiga fetter av god kvalitet:</strong> <a href="{food:extra-virgin-olive-oil}">extra jungfruolivolja</a>, <a href="{food:kalamata-olives}">oliver</a>, tahini och naturella nötter. Fett höjer insulinet bara lite och håller dig mätt längre.</li>
+                <li><strong>Smart frukt med låg glykemisk belastning:</strong> uteslut inte frukt helt, välj de smarta: bär (<a href="{food:blueberry}">blåbär</a>, <a href="{food:raspberry}">hallon</a>), <a href="{food:strawberry}">jordgubbar</a> och små gröna <a href="{food:apple}">äpplen</a>. Ät dem efter en måltid, hela och med sina fibrer, och undvik att pressa dem till juice.</li>
+            </ul>
+
+            <h3>D. Knepet med avsvalnad stärkelse</h3>
+            <p>Om du är sugen på <a href="{food:white-rice}">ris</a> eller <a href="{food:boiled-potato}">kokt potatis</a>, koka dem och låt dem svalna i kylen några timmar innan du äter (du kan värma dem igen). Det enkla steget omvandlar en del av stärkelsen till ”resistent stärkelse” som kroppen inte tar upp som glukos; den går vidare till tarmen som mat åt de goda bakterierna, vilket märkbart dämpar blodsockerhöjningen.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>6. Smart muskelrörelse: ”svampen” som suger upp socker utan insulin</span></h2>
+            <p>Fråga vem som helst vilket organ som styr blodsockret så svarar de: bukspottkörteln. Det är bara halva svaret! Det andra nyckelorganet, som står för ungefär 80 % av sockerupptaget efter måltider, är din <strong>skelettmuskulatur</strong>.</p>
+            <p>Och här är hemligheten som få känner till: när musklerna rör sig kan de öppna sina portar och ta socker direkt från blodet som bränsle, helt utan insulin (via transportörer som kallas GLUT4)! Genom att röra på dig ger du bukspottkörteln en välförtjänt paus.</p>
+            <h3>Så använder du det varje dag utan gym</h3>
+            <ul class="check-list">
+                <li><strong>De magiska 10–15 minuterna efter maten:</strong> sätt dig inte direkt efter lunch eller middag. Gå runt i rummet, rör dig i trädgården eller diska och plocka undan. En lätt promenad direkt efter maten drar ner sockertoppen innan den byggs upp i blodet.</li>
+                <li><strong>Vadövningen sittande (soleus push-ups):</strong> även vid skrivbordet eller framför tv:n kan du upprepade gånger lyfta och sänka hälarna. Det arbetar den djupa vadmuskeln, en unik muskel som förbränner glukos mycket effektivt utan att trötta ut dig.</li>
+                <li><strong>Enkla styrkeövningar två gånger i veckan:</strong> att behålla muskelmassan med knäböj hemma eller armhävningar mot väggen bygger ”extra förråd” för socker i framtiden.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>7. Sömn och stress: de okända soldaterna bakom ett högt fastevärde</span></h2>
+            <p>Har du undrat varför du vaknar med ett fasteglukos på 6,1 eller 6,4 mmol/l trots att du inte ätit på 10 timmar? Svaret finns i stresshormonerna: <a href="{site:/cortisol-stress.html}">kortisol</a> (artikel på engelska) och adrenalin.</p>
+            <p>När du är uppe sent eller lever med ständig press och oro frisätter kroppen kortisol, som skickar en omedelbar signal till levern: <em>”Vi är i fara! Släpp ut sockerförråden i blodet så att vi har energi att fly!”</em> Därför förblir fastevärdet högt om du rättar till maten men inte sömnen:</p>
+            <ul class="check-list">
+                <li><strong>Sov 7–8 timmar per natt:</strong> redan en enda kort natt (under 5 timmar) kan sänka cellernas insulinkänslighet med 25 % nästa dag!</li>
+                <li><strong>Stäng köket 3 timmar före sänggåendet:</strong> undvik sena måltider så att matsmältningen och bukspottkörteln kan återhämta sig och levern får vila medan du sover.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>8. Din praktiska färdplan: de kommande 12 veckorna</span></h2>
+            <p>Eftersom livsstilsförändringar inte sker på en gång, dela upp resan i små, realistiska mål under 12 veckor (den tid de röda blodkropparna behöver för att förnyas, vilket är det ditt nästa HbA1c-prov speglar):</p>
+            <h3>📅 Vecka 1–2: rensa bland dryckerna och lägg om frukosten</h3>
+            <ul class="check-list">
+                <li>Sluta dricka kalorier helt: juice (även naturell), läsk och sötat te eller kaffe. Byt till vatten, örtte eller svart kaffe.</li>
+                <li>Gå över till en frukost byggd på ägg, avokado och fibrer, och säg hej då till wienerbröd och vitt bröd på morgonen.</li>
+            </ul>
+            <h3>📅 Vecka 3–4: promenadvanan och tallrikens ordning</h3>
+            <ul class="check-list">
+                <li>Inför regeln om 10 minuters promenad direkt efter huvudmålet.</li>
+                <li>Träna dig att äta grönsakerna först, sedan kött och protein, och avsluta med den stärkelse som är kvar.</li>
+            </ul>
+            <h3>📅 Vecka 5–8: en naturlig nattfasta och fullkorn</h3>
+            <ul class="check-list">
+                <li>Låt matsmältningen vila med en enkel nattfasta: 12 timmar mellan kvällens sista tugga och frukostens första (till exempel middag kl. 20 och frukost kl. 8).</li>
+                <li>Byt vitt bröd och vitt ris mot <a href="{food:whole-wheat-bread}">fullkornsbröd</a> med linfrön, fullkornsknäckebröd och <a href="{food:oatmeal}">riktiga, obearbetade havregryn</a>.</li>
+            </ul>
+            <h3>📅 Vecka 9–12: håll i och lägg märke till förändringarna</h3>
+            <ul class="check-list">
+                <li>Nu märker du en verklig skillnad i byxstorleken, jämn energi efter lunch utan behov av tupplur och färre kraftiga hungerattacker.</li>
+                <li>Boka tid på vårdcentralen för att ta om ditt HbA1c i slutet av tredje månaden, och se med egna ögon hur värdena har gått ner!</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. Vanliga frågor, tydliga svar</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Betyder det här att jag måste ta blodsockersänkande läkemedel (som metformin)?</h3><p>Inte alls nödvändigtvis. Vid prediabetes är ändrade levnadsvanor, mat och rörelse, förstahandsåtgärden, och i Sverige används läkemedel som metformin sällan i det här skedet. I många fall räcker en måttlig viktnedgång och ändrade matvanor för att få tillbaka HbA1c till normala nivåer. Om din läkare bedömer att du behöver läkemedel är metformin ett väl beprövat och säkert läkemedel, och beslutet ligger alltid hos din läkare.</p></div>
+                <div class="faq-item"><h3>Hur lång tid tar det innan HbA1c går ner?</h3><p>De röda blodkropparna lever i ungefär 90–120 dagar. Varje förbättring du gör i mat och rörelse i dag börjar verka direkt, men det fullständiga och rättvisande resultatet syns i provsvaren först efter tre hela månader. Ta inte om provet efter två veckor; ge kroppen den tid den naturligt behöver för att återhämta sig.</p></div>
+                <div class="faq-item"><h3>Måste jag sluta helt med bröd, ris och frukt?</h3><p>Nej! Det där allt-eller-inget-tänkandet är skälet till att de flesta dieter misslyckas. Det du behöver är ”måttlighet och smarta val”: ät mindre mängder stärkelse, byt vita varianter mot fullkorn, ät inte stärkelse ensam på fastande mage, och välj hel frukt med sina fibrer i stället för juice, gärna efter en måltid i stället för som ett ensamt mellanmål.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Ett varmt budskap till dig som håller dina provsvar i handen i dag</span></h2>
+            <p>Se dagen i dag som en vändpunkt i ditt liv: inte dagen då du blev sjuk, utan dagen då du bestämde dig för att lyssna på kroppens ärliga budskap och verkligen börja ta hand om den.</p>
+            <p>Tåget har inte blivit diabetes, vägen tillbaka är vidöppen och svaren finns nära: i en färgglad tallrik grönsaker, i en lugn kvarts promenad efter maten och i en vilsam sömn som reparerar dina celler. Börja i dag, med bara din nästa måltid, och se hur kroppen belönar dig med energi och sinnesro.</p>
+            <p class="reviewed">Granskad av Dr. Wassim Habib<br>Grundare och medicinskt ansvarig, WiBo Health Group 🌿</p>'''),
     ),
 )
 

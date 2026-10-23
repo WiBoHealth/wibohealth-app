@@ -1,12 +1,12 @@
 // Header link to the Diabetes & Metabolic Health hub on the hand-written root pages.
-// The hub is a static page per language (/diabetes.html, /en/diabetes.html, /nl/diabetes.html), so the link and its label
+// The hub is a static page per language (/diabetes.html, /en/, /nl/ and /sv/diabetes.html), so the link and its label
 // follow <html lang>, which every page's own language switcher sets.
 (function () {
     var HUB = {
         ar: ['/diabetes.html', 'السكري ومتلازمة الأيض'],
         en: ['/en/diabetes.html', 'Diabetes'],
         nl: ['/nl/diabetes.html', 'Diabetes'],
-        sv: ['/en/diabetes.html', 'Diabetes']   // English hub until /sv/diabetes.html exists (phase 2)
+        sv: ['/sv/diabetes.html', 'Diabetes']
     };
 
     function apply() {

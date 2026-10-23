@@ -2,7 +2,8 @@
 # T mirrors the keys of the `translations` dictionary in index.html (ar/en/nl); the generator fails if a key is missing.
 # Clinical wording: HbA1c in mmol/mol, glucose in mmol/l; GI bands as on the food pages (≤55 low, 56–69 medium, ≥70 high).
 # No cure/prevention claims on foods (EU 1924/2006), no religious terms (neutral wording rule).
-# Article and tool links go to the English pages until their Swedish versions exist, and say so in the button text.
+# Article and tool links go to the English pages until their Swedish versions exist, and say so in the button text;
+# the diabetes guides have Swedish pages (/sv/diabetes/).
 
 META = dict(
     title='WiBo Health – din guide till blodsocker, glykemiskt index och sund mat',
@@ -150,19 +151,19 @@ T = {
     'home_articles_read': 'Läs artikeln',
     'home_articles_ar_only': '(artikeltexten är på arabiska)',
     'feat_cereal_href': '/en/articles/healthy-sugar-free-breakfast-cereals.html',
-    'feat_latest_href': '/en/diabetes/prediabetes.html',
+    'feat_latest_href': '/sv/diabetes/prediabetes.html',
     'feat_latest_cat': '🆕 Ny guide / Diabetes och metabol hälsa',
     'feat_latest_title': 'Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
     'feat_latest_sum': ('HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en '
                         '12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.'),
     'feat_latest_alt': 'Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health',
-    'feat_latest_btn': 'Läs guiden (på engelska)',
-    'feat_gest_href': '/en/diabetes/gestational-diabetes.html',
+    'feat_latest_btn': 'Läs hela guiden',
+    'feat_gest_href': '/sv/diabetes/graviditetsdiabetes.html',
     'feat_gest_cat': '🩺 Diabetes och metabol hälsa',
     'feat_gest_title': 'Graviditetsdiabetes: normala blodsockervärden och vad du kan äta',
     'feat_gest_sum': 'Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg',
     'feat_gest_alt': 'Leende gravid kvinna i ett soligt kök med en skål bär och en avokado',
-    'feat_gest_btn': 'Läs guiden (på engelska)',
+    'feat_gest_btn': 'Läs hela guiden',
     'pulse_c1_href': '/en/bmi-calculator.html',
     'pulse_c2_href': '/en/tdee-calculator.html',
     'pulse_c3_href': '/en/whtr-calculator.html',

@@ -24,7 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 # Articles the user explicitly chose to sign with the doctor's name (2026-10-20): Person author + reviewedBy instead of the organisation
 # and the prediabetes guide (2026-10-22, second exception)
 NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestational-diabetes.html', 'nl/diabetes/zwangerschapsdiabetes.html',
-                      'diabetes/prediabetes.html', 'en/diabetes/prediabetes.html', 'nl/diabetes/prediabetes.html'}
+                      'diabetes/prediabetes.html', 'en/diabetes/prediabetes.html', 'nl/diabetes/prediabetes.html',
+                      'sv/diabetes/prediabetes.html', 'sv/diabetes/graviditetsdiabetes.html'}   # Swedish versions (2026-10-23)
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}
 LD_RE = re.compile(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', re.S)
 RUNTIME_PRODUCT_RE = re.compile(r'["\']@type["\']\s*:\s*["\']Product["\']')
@@ -47,7 +48,7 @@ def main():
     static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
     supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles',
-                        'diabetes', 'en/diabetes', 'nl/diabetes')
+                        'diabetes', 'en/diabetes', 'nl/diabetes', 'sv/diabetes')
             for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # the standalone calculator pages follow the same organisation-only authorship rule
     supp += [p for d in ('.', 'en', 'nl') for p in sorted((ROOT / d).glob('*-calculator.html'))]
@@ -101,7 +102,7 @@ def main():
             errors.append(f'{rel}: no CollectionPage block')
 
     sources = [p for p in ROOT.glob('*.html')] + [p for p in (ROOT / 'js').glob('*.js')] + \
-              [p for d in ('en', 'nl') for p in (ROOT / d).glob('*.html')]
+              [p for d in ('en', 'nl', 'sv') for p in (ROOT / d).glob('*.html')]
     for src in sources:
         text = src.read_text(encoding='utf-8', errors='replace')
         for m in RUNTIME_PRODUCT_RE.finditer(text):

@@ -1,4 +1,4 @@
-"""Generate static, crawlable article pages in three languages.
+"""Generate static, crawlable article pages in three languages, plus Swedish where an article has Swedish copy.
 
     python scripts/generate_article_pages.py
 
@@ -8,6 +8,8 @@ Output (re-running rebuilds everything, nothing is appended twice):
     nl/articles/<slug>.html    Dutch
     <section>.html, en/<section>.html, nl/<section>.html          hub page of a section (e.g. diabetes.html)
     <section>/<slug>.html, en/<section>/..., nl/<section>/...      articles that belong to a section
+    sv/...                     Swedish, only for articles and sections whose content has an `sv` entry (hreflang and
+                               sitemap then list sv too); Swedish pages link to the English version of untranslated pages
     sitemap.xml                block between <!-- ARTICLE-PAGES:START --> and <!-- ARTICLE-PAGES:END -->
 
 An article with section='diabetes' is written under that section's folder and its breadcrumb runs through the hub.
@@ -38,10 +40,51 @@ GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=1" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+    <script src="/js/consent.js?v=2" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
 
 
 ROOT = Path(__file__).resolve().parent.parent
+SV = 'sv'
+ALL_LANGS = LANGS + (SV,)   # Swedish is opt-in per article / section; the food generator's LANGS stay ar/en/nl
+
+# generate_food_pages.UI has no Swedish: the strings the article shell needs
+UI_SV = dict(dir='ltr', nav=('Hem', 'Livsmedelsguide', 'Kalkylatorer', 'Kosttillskott', 'Artiklar', 'boodi-appen 💚'),
+             home='Hem', theme='Byt tema', footer_rights='© 2026 WiBo Health Group. Alla rättigheter förbehållna.',
+             methodology='Metod och vetenskapliga källor', partners='Samarbeten', privacy='Integritet', diabetes='Diabetes')
+
+
+def ui(lang):
+    return UI_SV if lang == SV else UI[lang]
+
+
+def langs_of(item):
+    """Languages an article or section exists in (ar/en/nl always, sv when it has Swedish copy)."""
+    return tuple(l for l in ALL_LANGS if l in item['content'])
+
+
+def link(path, lang):
+    """site_link() for every language: the Swedish homepage is static, other pages without Swedish open in English."""
+    if lang != SV:
+        return site_link(path, lang)
+    if path in ('/', '/#articles'):
+        return '/sv/index.html' + path[1:]
+    return site_link(path, 'en')
+
+
+def nav(lang, active=None):
+    """nav_html() for every language; the Swedish header points at /sv/ pages where they exist, English elsewhere."""
+    if lang != SV:
+        return nav_html(lang, active=active)
+    u = UI_SV
+    items = list(zip(['/', '/foods.html', '/calculators.html', '/supplements.html', '/#articles'], u['nav'][:5]))
+    items += [('/diabetes.html', u['diabetes']), ('/boodi.html', u['nav'][5]), ('/partners.html', u['partners'])]
+    out = []
+    for path, label in items:
+        href = '/sv/diabetes.html' if path == '/diabetes.html' else link(path, SV)
+        cls = 'nav-link' + {'/partners.html': ' nav-partners', '/diabetes.html': ' nav-diabetes'}.get(path, '') + (' active' if path == active else '')
+        out.append(f'                <a href="{href}" class="{cls}">{label}</a>')
+    return '\n'.join(out)
+
 
 T = {
     'ar': dict(dir='rtl', section='المقالات الصحية', published='نُشر في {date} · فريق WiBo Health', published_on='نُشر في {date}',
@@ -58,6 +101,11 @@ T = {
                months=('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober',
                        'november', 'december'),
                read='Lees het artikel', soon='Binnenkort'),
+    'sv': dict(dir='ltr', section='Hälsoartiklar', published='Publicerad {date} · WiBo Health-teamet', published_on='Publicerad {date}',
+               refs='Vetenskapliga källor', footer_articles='Artiklar', draft='Utkast · under arbete',
+               months=('januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober',
+                       'november', 'december'),
+               read='Läs artikeln', soon='Kommer snart'),
 }
 
 EXTRA_CSS = """
@@ -176,6 +224,7 @@ def hub_url(sec, lang, absolute=True):
 
 
 def food_url(slug, lang):
+    lang = 'en' if lang == SV else lang      # no Swedish food pages yet: the English one
     return f'/foods/{slug}.html' if lang == 'ar' else f'/{lang}/foods/{slug}.html'
 
 
@@ -187,21 +236,23 @@ def date_text(iso, lang):
 def render_body(html, lang):
     """Content may link foods as {food:slug} and site pages as {site:/path}; resolve them for the language."""
     html = re.sub(r'\{food:([a-z0-9-]+)\}', lambda m: food_url(m.group(1), lang), html)
-    return re.sub(r'\{site:([^}]+)\}', lambda m: site_link(m.group(1), lang), html)
+    return re.sub(r'\{site:([^}]+)\}', lambda m: link(m.group(1), lang), html)
 
 
 def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', image=None, image_alt='', extra_head='',
           active='/#articles'):
-    """Full page around `main`: head and SEO tags, header with language links (to `urls`) and footer; shared by articles and hubs."""
-    t, u = T[lang], UI[lang]
-    nav = nav_html(lang, active=active)
+    """Full page around `main`: head and SEO tags, header with language links (to `urls`, one per language the page
+    exists in) and footer; shared by articles and hubs."""
+    t, u = T[lang], ui(lang)
+    nav_links = nav(lang, active=active)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{urls[l][len(SITE):]}" '
-        f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
-    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
+        f'hreflang="{l}" lang="{l}" title="{name}" aria-label="{name}"><span>{flag}</span> <span>{l.upper()}</span></a>'
+        for l, flag, name in (('ar', '🇪🇬', 'العربية'), ('nl', '🇳🇱', 'Nederlands'), ('en', '🇬🇧', 'English'), (SV, '🇸🇪', 'Svenska'))
+        if l in urls)
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
     footer_links = ' <span>•</span> '.join(
-        f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
+        f'<a href="{link(p, lang)}">{label}</a>' for p, label in
         [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
          ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
     robots = '\n    <meta name="robots" content="noindex, follow">' if draft else ''
@@ -223,7 +274,7 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(desc)}">
     <meta property="og:url" content="{urls[lang]}">{og_image}
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">{extra_head}
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">{extra_head}
     <meta name="twitter:card" content="{'summary_large_image' if image else 'summary'}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
@@ -247,12 +298,12 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
 <body>
     <header>
         <div class="header-container">
-            <a href="{site_link('/', lang)}" class="brand-link">
+            <a href="{link('/', lang)}" class="brand-link">
                 {LOGO_SVG}
                 <span class="brand-title">WiBo Health</span>
             </a>
             <nav class="nav-links-bar">
-{nav}
+{nav_links}
             </nav>
             <div class="header-actions">
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" title="{u["theme"]}" aria-label="{u["theme"]}">
@@ -298,7 +349,7 @@ def crumb_parent(a, lang):
     if a.get('section'):
         sec = SECTIONS[a['section']]
         return sec['content'][lang]['crumb'], hub_url(sec, lang, absolute=False)
-    return T[lang]['section'], site_link('/#articles', lang)
+    return T[lang]['section'], link('/#articles', lang)
 
 
 FAQ_RE = re.compile(r'<div class="faq-item"><h3>(.*?)</h3><p>(.*?)</p></div>', re.S)
@@ -324,15 +375,19 @@ def faq_graph(page, body, url):
 DOCTOR = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": "Medical Doctor",
           "description": "Founder of WiBo Health", "url": f"{SITE}/doctor.html",
           "worksFor": {"@type": "Organization", "name": "WiBo Health", "url": SITE}}
+# Swedish pages: the role as approved for Sweden (2026-10-23), no job title that reads as a Swedish licence ("läkare")
+DOCTOR_SV = dict(DOCTOR, jobTitle="Grundare och medicinskt ansvarig, WiBo Health Group", description="Grundare av WiBo Health")
 
 
 def build(a, lang):
-    t, u, c = T[lang], UI[lang], a['content'][lang]
-    urls = {l: page_url(a, l) for l in LANGS}
+    t, u, c = T[lang], ui(lang), a['content'][lang]
+    urls = {l: page_url(a, l) for l in langs_of(a)}
     hero = f"{SITE}/images/{a['hero']}" if a.get('hero') else None
     parent_name, parent_href = crumb_parent(a, lang)
     draft = is_draft(a)
     named = a.get('named_author')
+    doctor = DOCTOR_SV if lang == SV else DOCTOR
+    references = c.get('references', a['references'])   # a language may list its own sources (Swedish: WHO 2013, Socialstyrelsen)
 
     schema = {
         "@context": "https://schema.org",
@@ -349,13 +404,13 @@ def build(a, lang):
         "lastReviewed": a['modified'],
         "about": [{"@type": "Thing", "name": n} for n in c['about']],
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
-        "author": DOCTOR if named else {"@type": "Organization", "name": "WiBo Health", "url": SITE},
-        "reviewedBy": DOCTOR if named else None,
+        "author": doctor if named else {"@type": "Organization", "name": "WiBo Health", "url": SITE},
+        "reviewedBy": doctor if named else None,
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
-        "citation": [{"@type": "CreativeWork", "name": r} for r in a['references']],
+        "citation": [{"@type": "CreativeWork", "name": r} for r in references],
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + link('/', lang)},
             {"@type": "ListItem", "position": 2, "name": parent_name, "item": SITE + parent_href},
             {"@type": "ListItem", "position": 3, "name": c['h1'], "item": urls[lang]}]},
     }
@@ -364,7 +419,7 @@ def build(a, lang):
     if a.get('faq_schema'):
         schema = faq_graph(schema, render_body(c['body'], lang), urls[lang])
 
-    refs_html = ''.join(f'<li>{esc(r)}</li>' for r in a['references'])
+    refs_html = ''.join(f'<li>{esc(r)}</li>' for r in references)
     refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
             <ol class="ref-list">{refs_html}</ol>
 ''' if refs_html else '')
@@ -373,12 +428,12 @@ def build(a, lang):
 ''' if hero else '')
     draft_chip = f'<span class="draft-chip">{t["draft"]}</span>' if draft else ''
     byline = (f'''
-            <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="{site_link('/doctor.html', lang)}">{esc(c["byline"])}</a></p>'''
+            <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="{link('/doctor.html', lang)}">{esc(c["byline"])}</a></p>'''
               if named else '')
     published = (t['published_on'] if named else t['published']).format(date=date_text(a['published'], lang))
     main = f'''        <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{parent_href}">{esc(parent_name)}</a> › <span>{esc(c["crumb"])}</span>
+                <a href="{link('/', lang)}">{u["home"]}</a> › <a href="{parent_href}">{esc(parent_name)}</a> › <span>{esc(c["crumb"])}</span>
             </nav>
             <span class="group-chip">{esc(c["cat"])}</span>
             <h1>{esc(c["h1"])}</h1>{byline}
@@ -420,10 +475,10 @@ def hub_card(a, lang, t):
 
 def build_hub(key, lang):
     """Section landing page: intro plus one card per article of the section."""
-    sec, t, u = SECTIONS[key], T[lang], UI[lang]
+    sec, t, u = SECTIONS[key], T[lang], ui(lang)
     c = sec['content'][lang]
-    urls = {l: hub_url(sec, l) for l in LANGS}
-    members = [a for a in ARTICLES if a.get('section') == key]
+    urls = {l: hub_url(sec, l) for l in langs_of(sec)}
+    members = [a for a in ARTICLES if a.get('section') == key and lang in a['content']]
     cards = '\n'.join(hub_card(a, lang, t) for a in members)
     schema = {
         "@context": "https://schema.org",
@@ -440,13 +495,13 @@ def build_hub(key, lang):
         "hasPart": [{"@type": "MedicalWebPage", "name": a['content'][lang]['h1'], "url": page_url(a, lang)}
                     for a in members if not is_draft(a)],
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + link('/', lang)},
             {"@type": "ListItem", "position": 2, "name": c['crumb'], "item": urls[lang]}]},
     }
     schema = {k: v for k, v in schema.items() if v not in (None, [])}
     main = f'''        <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <span>{esc(c["crumb"])}</span>
+                <a href="{link('/', lang)}">{u["home"]}</a> › <span>{esc(c["crumb"])}</span>
             </nav>
             <h1>{esc(c["h1"])}</h1>
             <p class="lead">{c["intro"]}</p>
@@ -465,39 +520,44 @@ def lang_dir(lang, folder=''):
 
 def main():
     folders = {'articles'} | {s['dir'] for s in SECTIONS.values()}
-    for lang in LANGS:
+    for lang in ALL_LANGS:
+        mine = [a for a in ARTICLES if lang in langs_of(a)]
         for folder in folders:
             out_dir = lang_dir(lang, folder)
+            keep = {f'{a["slugs"][lang]}.html' for a in mine if section_dir(a) == folder}
+            if not keep and not out_dir.exists():       # no empty sv/articles folder
+                continue
             out_dir.mkdir(parents=True, exist_ok=True)
-            keep = {f'{a["slugs"][lang]}.html' for a in ARTICLES if section_dir(a) == folder}
             for old in out_dir.glob('*.html'):          # an article that was removed must not linger
                 if old.name not in keep:
                     old.unlink()
-        for a in ARTICLES:
+        for a in mine:
             (lang_dir(lang, section_dir(a)) / f'{a["slugs"][lang]}.html').write_text(build(a, lang), encoding='utf-8', newline='\n')
         for key, sec in SECTIONS.items():               # a hub sits next to its folder: diabetes.html + diabetes/
-            (lang_dir(lang) / f'{sec["dir"]}.html').write_text(build_hub(key, lang), encoding='utf-8', newline='\n')
+            if lang in langs_of(sec):
+                (lang_dir(lang) / f'{sec["dir"]}.html').write_text(build_hub(key, lang), encoding='utf-8', newline='\n')
 
     # drafts (articles or whole sections) stay out of the sitemap until they are published
-    entries = [(lambda l, sec=sec: hub_url(sec, l), max((a['modified'] for a in ARTICLES if a.get('section') == k), default=None), None)
-               for k, sec in SECTIONS.items() if not sec.get('draft')]
-    entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero')) for a in ARTICLES if not is_draft(a)]
+    entries = [(lambda l, sec=sec: hub_url(sec, l), max((a['modified'] for a in ARTICLES if a.get('section') == k), default=None), None,
+                langs_of(sec)) for k, sec in SECTIONS.items() if not sec.get('draft')]
+    entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero'), langs_of(a)) for a in ARTICLES if not is_draft(a)]
 
     image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
     block = []
-    for url_of, modified, hero in entries:
-        for lang in LANGS:
+    for url_of, modified, hero, langs in entries:
+        for lang in langs:
             block += ['  <url>', f'    <loc>{url_of(lang)}</loc>']
             block += [f'    <lastmod>{modified}</lastmod>'] if modified else []
             block += ['    <changefreq>monthly</changefreq>', '    <priority>0.8</priority>']
             if hero and image_ns:
                 block.append(f'    <image:image><image:loc>{SITE}/images/{hero}</image:loc></image:image>')
-            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in LANGS]
+            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{url_of(l)}"/>' for l in langs]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{url_of("ar")}"/>', '  </url>']
     replace_sitemap_block('ARTICLE-PAGES', block)
     drafts = sum(is_draft(a) for a in ARTICLES)
-    print(f'article pages written: {len(ARTICLES) * len(LANGS)} ({len(ARTICLES)} articles x {len(LANGS)} languages, '
-          f'{drafts} draft); section hubs: {len(SECTIONS) * len(LANGS)}')
+    print(f'article pages written: {sum(len(langs_of(a)) for a in ARTICLES)} ({len(ARTICLES)} articles, '
+          f'{sum(SV in langs_of(a) for a in ARTICLES)} with Swedish, {drafts} draft); '
+          f'section hubs: {sum(len(langs_of(s)) for s in SECTIONS.values())}')
 
 
 if __name__ == '__main__':
