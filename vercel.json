@@ -52,6 +52,16 @@
       "permanent": true
     },
     {
+      "source": "/sv",
+      "destination": "/sv/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/sv/:path((?!index\\.html$|diabetes).*)",
+      "destination": "/sv/index.html",
+      "permanent": false
+    },
+    {
       "source": "/:proto(https?)\\:/:host(wibohealth\\.com|www\\.wibohealth\\.com)/:path+",
       "destination": "/:path+",
       "permanent": true

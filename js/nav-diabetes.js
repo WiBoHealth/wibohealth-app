@@ -5,7 +5,8 @@
     var HUB = {
         ar: ['/diabetes.html', 'السكري ومتلازمة الأيض'],
         en: ['/en/diabetes.html', 'Diabetes'],
-        nl: ['/nl/diabetes.html', 'Diabetes']
+        nl: ['/nl/diabetes.html', 'Diabetes'],
+        sv: ['/en/diabetes.html', 'Diabetes']   // English hub until /sv/diabetes.html exists (phase 2)
     };
 
     function apply() {

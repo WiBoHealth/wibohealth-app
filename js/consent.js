@@ -27,15 +27,24 @@
             more: 'Privacybeleid',
             accept: 'Accepteren',
             reject: 'Weigeren'
+        },
+        sv: {
+            title: 'Cookies',
+            body: 'Vi använder Google Analytics för att mäta besök och förbättra webbplatsen, och Google kan använda cookies för annonser. De här cookierna används bara om du samtycker, och du kan när som helst ändra ditt val på integritetssidan.',
+            more: 'Integritetspolicy',
+            accept: 'Acceptera',
+            reject: 'Neka'
         }
     };
+    // languages whose privacy page exists; others link to the English one
+    var PRIVACY = { ar: '', en: '?lang=en', nl: '?lang=nl', sv: '?lang=en' };
 
     function stored() {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
     }
 
     function lang() {
-        var q = /[?&]lang=(ar|en|nl)\b/.exec(location.search);
+        var q = /[?&]lang=(ar|en|nl|sv)\b/.exec(location.search);
         if (q) return q[1];
         var l = (document.documentElement.getAttribute('lang') || 'ar').slice(0, 2).toLowerCase();
         return TEXT[l] ? l : 'ar';
@@ -89,7 +98,7 @@
         box.setAttribute('aria-labelledby', 'wibo-consent-title');
         box.setAttribute('lang', l);
         box.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
-        var href = '/privacy.html' + (l === 'ar' ? '' : '?lang=' + l) + '#cookies';
+        var href = '/privacy.html' + PRIVACY[l] + '#cookies';
         box.innerHTML =
             '<h2 id="wibo-consent-title">' + t.title + '</h2>' +
             '<p>' + t.body + ' <a href="' + href + '">' + t.more + '</a></p>' +

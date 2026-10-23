@@ -298,6 +298,11 @@ body > header .lang-switcher-container .lang-btn { height: 28px !important; }
     body > header .toggle-btn,
     body > header .nav-back-btn,
     body > header .lang-toggle { min-width: 30px !important; height: 30px !important; padding: 0 7px !important; }
+    /* four language flags (AR/EN/NL/SV): slimmer flags and gaps keep the controls inside 375px phones */
+    body > header .header-controls:has(> .lang-btn ~ .lang-btn ~ .lang-btn ~ .lang-btn) { gap: 2px !important; }
+    body > header .header-controls:has(> .lang-btn ~ .lang-btn ~ .lang-btn ~ .lang-btn) > .lang-btn {
+        min-width: 27px !important; padding: 0 5px !important;
+    }
 }
 
 /* one row everywhere: logo | nav | actions (pages whose own CSS stacked or wrapped the header) */
@@ -408,6 +413,7 @@ body > header .nav-buttons { width: auto !important; }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
     body > header .nav-menu > a.nav-link[href="/"],
+    body > header .nav-menu > a.nav-link[href="/sv/index.html"],
     body > header .nav-links-bar > a.nav-link[href="/"],
     body > header .nav-links-bar > a.nav-link[href="/?lang=en"],
     body > header .nav-links-bar > a.nav-link[href="/?lang=nl"] { display: none !important; }
