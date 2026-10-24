@@ -29,7 +29,7 @@ from pathlib import Path
 
 from article_content import ARTICLES, SECTIONS
 from site_pages_sv import SITE_PAGES_SV
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block, site_link
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block, site_link, sv_slugs
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -111,7 +111,8 @@ def nav(lang, active=None):
     items += [('/diabetes.html', u['diabetes']), ('/boodi.html', u['nav'][5]), ('/partners.html', u['partners'])]
     out = []
     for path, label in items:
-        href = '/sv/diabetes.html' if path == '/diabetes.html' else link(path, SV)
+        # the food guide capsule opens the static Swedish food index; links in the copy keep the full (English) guide
+        href = {'/diabetes.html': '/sv/diabetes.html', '/foods.html': '/sv/foods/index.html'}.get(path) or link(path, SV)
         cls = 'nav-link' + {'/partners.html': ' nav-partners', '/diabetes.html': ' nav-diabetes'}.get(path, '') + (' active' if path == active else '')
         out.append(f'                <a href="{href}" class="{cls}">{label}</a>')
     return '\n'.join(out)
@@ -257,8 +258,12 @@ def hub_url(sec, lang, absolute=True):
     return SITE + path if absolute else path
 
 
+SV_FOOD_SLUGS = sv_slugs()
+
+
 def food_url(slug, lang):
-    lang = 'en' if lang == SV else lang      # no Swedish food pages yet: the English one
+    if lang == SV and slug not in SV_FOOD_SLUGS:      # foods without a Swedish page open in English
+        lang = 'en'
     return f'/foods/{slug}.html' if lang == 'ar' else f'/{lang}/foods/{slug}.html'
 
 

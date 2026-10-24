@@ -210,7 +210,7 @@ MEALS = [
     ('/en/foods/swedish-meatballs-kottbullar-with-cream-gravy.html', '🧆', 'Köttbullar med gräddsås', 'GI lågt', 25),
     ('/en/foods/swedish-whole-rye-crispbread-knackebrod.html', '🌾', 'Fullkornsknäckebröd av råg', 'GI lågt', 48),
     ('/en/foods/nordic-gravlax-cured-salmon-with-fresh-dill.html', '🐟', 'Gravad lax med dill', 'GI ej tillämpligt', None),
-    ('/en/foods/oatmeal.html', '🥣', 'Havregrynsgröt', 'GI lågt', 55),
+    ('/sv/foods/oatmeal.html', '🥣', 'Havregrynsgröt', 'GI lågt', 55),
     ('/en/foods/lentil-soup.html', '🍲', 'Linssoppa', 'GI lågt', 30),
     ('/en/foods/wild-swedish-lingonberry-jam-low-sugar.html', '🫐', 'Lingonsylt med mindre socker', 'GI lågt', 45),
     ('/en/foods/swedish-cardamom-cinnamon-bun-kanelbulle.html', '🥐', 'Kanelbulle', 'GI medel', 65),

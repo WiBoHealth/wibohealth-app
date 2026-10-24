@@ -22,7 +22,7 @@ from pathlib import Path
 
 from calculator_content import CALCS, T
 from generate_article_pages import EXTRA_CSS as ARTICLE_CSS, SV, UI_SV, link, nav as site_nav
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, sv_slugs
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -158,8 +158,12 @@ def page_url(calc, lang, absolute=True):
     return SITE + path if absolute else path
 
 
+SV_FOOD_SLUGS = sv_slugs()
+
+
 def food_url(slug, lang):
-    lang = 'en' if lang == SV else lang      # no Swedish food pages yet: the English one
+    if lang == SV and slug not in SV_FOOD_SLUGS:      # foods without a Swedish page open in English
+        lang = 'en'
     return f'/foods/{slug}.html' if lang == 'ar' else f'/{lang}/foods/{slug}.html'
 
 

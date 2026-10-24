@@ -7,6 +7,7 @@ Run it after generate_food_pages.py and generate_supplement_pages.py (it reads t
 Output:
     foods/index.html, en/foods/index.html, nl/foods/index.html                    every food page, grouped by food group
     supplements/index.html, en/supplements/index.html, nl/supplements/index.html  every supplement page, grouped by area
+    sv/foods/index.html   the foods with a Swedish page (food_sv.PUBLISH), with links to the full English index and guide
     sitemap.xml   block between <!-- DIRECTORY-PAGES:START --> and <!-- DIRECTORY-PAGES:END -->
 
 foods.html and supplements.html build their cards in JavaScript, and /en/*.html and /nl/*.html hubs redirect to /,
@@ -17,7 +18,9 @@ import json
 import re
 from pathlib import Path
 
-from generate_food_pages import (BASE_CSS, FOOD_GROUP_LABELS, LANGS, LOGO_SVG, PAGE_CSS, SITE, UI, dir_url, esc,
+import food_sv as FSV
+from generate_article_pages import link, nav as sv_nav
+from generate_food_pages import (BASE_CSS, FOOD_GROUP_LABELS, LANGS, LOGO_SVG, PAGE_CSS, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
 from generate_supplement_pages import GA_TAG, NAME as SUPP_NAME, load_supplements
 
@@ -38,6 +41,11 @@ T = {
                    desc='Alle pagina\'s van de voedingswijzer op één plek ({n} voedingsmiddelen), per voedingsgroep: calorieën, eiwit, koolhydraten en glykemische index.',
                    intro='Alle pagina\'s van de voedingswijzer op één plek, gesorteerd per voedingsgroep. Elk voedingsmiddel heeft een eigen pagina met calorieën, eiwit en koolhydraten, en waar beschikbaar de glykemische index en glykemische lading.',
                    cta='Open de interactieve gids om te zoeken en te vergelijken', count='{n} voedingsmiddelen'),
+        SV: dict(title='Livsmedelsregister: {n} livsmedel med kalorier och glykemiskt index | WiBo Health', h1='Livsmedelsregister',
+                 desc='Livsmedelsguidens svenska sidor på ett ställe ({n} livsmedel), sorterade efter livsmedelsgrupp: kalorier, protein, kolhydrater och glykemiskt index.',
+                 intro='Livsmedelsguidens svenska sidor på ett ställe, sorterade efter livsmedelsgrupp. Varje livsmedel har en egen sida med kalorier, protein och kolhydrater, och glykemiskt index och glykemisk belastning där de finns.',
+                 cta='Öppna den interaktiva guiden (på engelska) för att söka och jämföra', count='{n} livsmedel',
+                 full='Hela livsmedelsregistret på engelska ({n} livsmedel)'),
     },
     'supplements': {
         'ar': dict(title='فهرس المكملات الغذائية: {n} مكملاً بالجرعات والتداخلات الدوائية | WiBo Health', h1='فهرس المكملات الغذائية',
@@ -83,8 +91,9 @@ def food_sections():
     for fid, slug in slugs.items():
         f = foods[int(fid)]
         names = {l: f[l] or f['en'] for l in LANGS}
-        subs = {'ar': f['en'], 'en': f['nl'], 'nl': f['en']}
-        sections[f['group']].append((slug, names, {l: subs[l] if subs[l] != names[l] else '' for l in LANGS}))
+        names[SV] = FSV.NAMES[int(fid)][0] if int(fid) in FSV.PUBLISH else ''      # '' = no Swedish page
+        subs = {'ar': f['en'], 'en': f['nl'], 'nl': f['en'], SV: f['en']}
+        sections[f['group']].append((slug, names, {l: subs[l] if subs[l] != names[l] else '' for l in LANGS + (SV,)}))
     return [(key, FOOD_GROUP_LABELS[key], items) for key, items in sections.items() if items]
 
 
@@ -96,12 +105,27 @@ def supplement_sections():
     return [('a-z', {'ar': 'كل المكملات أبجدياً', 'en': 'All supplements A–Z', 'nl': 'Alle supplementen A–Z'}, items)]
 
 
+def dir_langs(kind):
+    """Swedish has a food index only (no Swedish supplement pages yet)."""
+    return LANGS + (SV,) if kind == 'foods' else LANGS
+
+
+def sv_key(name):
+    """Swedish alphabetical order: å, ä, ö after z."""
+    return name.casefold().translate(str.maketrans({'å': '{1', 'ä': '{2', 'ö': '{3'}))
+
+
 def build(kind, lang, sections):
     t, u = T[kind][lang], UI[lang]
+    total = sum(len(items) for _, _, items in sections)
+    if lang == SV:                          # only the foods that have a Swedish page
+        sections = [(a, labels, [it for it in items if it[1][SV]]) for a, labels, items in sections]
+        sections = [sec for sec in sections if sec[2]]
     n = sum(len(items) for _, _, items in sections)
     title, desc = t['title'].format(n=n), t['desc'].format(n=n)
-    urls = {l: dir_url(kind, l) for l in LANGS}
+    urls = {l: dir_url(kind, l) for l in dir_langs(kind)}
     hub = '/foods.html' if kind == 'foods' else '/supplements.html'
+    L = (lambda path: link(path, lang)) if lang == SV else (lambda path: site_link(path, lang))
     hub_label = u['guide'] if kind == 'foods' else t['guide']
     other = 'supplements' if kind == 'foods' else 'foods'
 
@@ -118,11 +142,11 @@ def build(kind, lang, sections):
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "dateModified": UPDATED,
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + L('/')},
             {"@type": "ListItem", "position": 2, "name": t['h1'], "item": urls[lang]}]},
     }
 
-    for_lang = lambda items: sorted(items, key=lambda it: it[1][lang].casefold())
+    for_lang = lambda items: sorted(items, key=lambda it: sv_key(it[1][lang]) if lang == SV else it[1][lang].casefold())
     jump = ''.join(f'<a class="group-chip" href="#{anchor}">{esc(labels[lang])} ({len(items)})</a>'
                    for anchor, labels, items in sections) if len(sections) > 1 else ''
     body = '\n'.join(
@@ -133,18 +157,31 @@ def build(kind, lang, sections):
             for slug, names, subs in for_lang(items)) + '</ul>'
         for anchor, labels, items in sections)
 
-    nav = nav_html(lang, active=hub)
+    nav = sv_nav(lang, active=hub) if lang == SV else nav_html(lang, active=hub)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{dir_url(kind, l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
-    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
-    footer_links = ' <span>•</span> '.join(
-        f'<a href="{href}">{label}</a>' for href, label in
-        [(site_link('/', lang), u['nav'][0]), (dir_url('foods', lang, absolute=False), T['foods'][lang]['h1']),
-         (dir_url('supplements', lang, absolute=False), T['supplements'][lang]['h1']),
-         (site_link('/methodology.html', lang), u['methodology']), (site_link('/partners.html', lang), u['partners']),
-         (site_link('/privacy.html', lang), u['privacy'])])
+        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
+    if lang == SV:                          # Swedish: the English supplement index and the full English food index
+        footer_links = ' <span>•</span> '.join(
+            f'<a href="{href}">{label}</a>' for href, label in
+            [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), t['h1']),
+             (dir_url('supplements', 'en', absolute=False), 'Kosttillskottsregister (på engelska)'),
+             (L('/methodology.html'), u['methodology']), (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
+        other_link = (f'<a class="guide-link" href="{dir_url("foods", "en", absolute=False)}"><i class="fas fa-list"></i> '
+                      f'{esc(t["full"].format(n=total))}</a>')
+        hub_href = site_link(hub, 'en')
+    else:
+        footer_links = ' <span>•</span> '.join(
+            f'<a href="{href}">{label}</a>' for href, label in
+            [(site_link('/', lang), u['nav'][0]), (dir_url('foods', lang, absolute=False), T['foods'][lang]['h1']),
+             (dir_url('supplements', lang, absolute=False), T['supplements'][lang]['h1']),
+             (site_link('/methodology.html', lang), u['methodology']), (site_link('/partners.html', lang), u['partners']),
+             (site_link('/privacy.html', lang), u['privacy'])])
+        other_link = (f'<a class="guide-link" href="{dir_url(other, lang, absolute=False)}"><i class="fas fa-list"></i> '
+                      f'{esc(T[other][lang]["h1"])}</a>')
+        hub_href = site_link(hub, lang)
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">
@@ -162,7 +199,7 @@ def build(kind, lang, sections):
     <meta property="og:description" content="{esc(desc)}">
     <meta property="og:url" content="{urls[lang]}">
     <meta property="og:image" content="{SITE}/images/logo.png">
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
@@ -183,7 +220,7 @@ def build(kind, lang, sections):
 <body>
     <header>
         <div class="header-container">
-            <a href="{site_link('/', lang)}" class="brand-link">
+            <a href="{L('/')}" class="brand-link">
                 {LOGO_SVG}
                 <span class="brand-title">WiBo Health</span>
             </a>
@@ -204,12 +241,12 @@ def build(kind, lang, sections):
     <main class="page-wrapper food-page directory-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <span>{esc(t["h1"])}</span>
+                <a href="{L('/')}">{u["home"]}</a> › <span>{esc(t["h1"])}</span>
             </nav>
             <h1>{esc(t["h1"])}</h1>
             <p class="lead">{esc(t["intro"])} <strong>{esc(t["count"].format(n=n))}</strong></p>
-            <a class="guide-link" href="{site_link(hub, lang)}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>
-            <a class="guide-link" href="{dir_url(other, lang, absolute=False)}"><i class="fas fa-list"></i> {esc(T[other][lang]["h1"])}</a>
+            <a class="guide-link" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>
+            {other_link}
             {f'<nav class="dir-jump" aria-label="{esc(hub_label)}">{jump}</nav>' if jump else ''}
 {body}
         </article>
@@ -242,14 +279,17 @@ def main():
     kinds = {'foods': food_sections(), 'supplements': supplement_sections()}
     lines = []
     for kind, sections in kinds.items():
-        for lang in LANGS:
+        for lang in dir_langs(kind):
             out = ROOT / dir_url(kind, lang, absolute=False).lstrip('/')
+            out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(build(kind, lang, sections), encoding='utf-8', newline='\n')
-            lines += ['  <url>', f'    <loc>{dir_url(kind, lang)}</loc>', f'    <lastmod>{UPDATED}</lastmod>',
+            lastmod = FSV.REVIEWED if lang == SV else UPDATED
+            lines += ['  <url>', f'    <loc>{dir_url(kind, lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>weekly</changefreq>', '    <priority>0.8</priority>']
-            lines += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{dir_url(kind, l)}"/>' for l in LANGS]
+            lines += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{dir_url(kind, l)}"/>' for l in dir_langs(kind)]
             lines += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{dir_url(kind, "ar")}"/>', '  </url>']
-        print(f'{kind}: {sum(len(i) for _, _, i in sections)} links in {len(sections)} sections x {len(LANGS)} languages')
+        print(f'{kind}: {sum(len(i) for _, _, i in sections)} links in {len(sections)} sections x {len(LANGS)} languages'
+              + (f', Swedish index: {len(FSV.PUBLISH)} foods' if kind == 'foods' else ''))
     replace_sitemap_block('DIRECTORY-PAGES', lines)
 
 

@@ -6,6 +6,8 @@ Output (re-running rebuilds everything, nothing is appended twice):
     foods/<slug>.html            Arabic (x-default)
     en/foods/<slug>.html         English
     nl/foods/<slug>.html         Dutch
+    sv/foods/<slug>.html         Swedish, only for the foods in food_sv.PUBLISH (copy and names in scripts/food_sv.py;
+                                 links to pages without a Swedish version open in English)
     js/food-pages.js             id -> slug map used by foods.html / food-details.html
     sitemap.xml                  block between <!-- FOOD-PAGES:START --> and <!-- FOOD-PAGES:END -->
 
@@ -16,6 +18,8 @@ import html
 import json
 import re
 from pathlib import Path
+
+import food_sv as FSV
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -40,6 +44,8 @@ REVIEWED_TXT = {'ar': '12 أكتوبر 2026', 'en': '12 October 2026', 'nl': '12
 TEAM_REVIEWED = '2026-10-13'             # batch 2: reviewed by the WiBo Health medical team
 TEAM_REVIEWED_TXT = {'ar': '13 أكتوبر 2026', 'en': '13 October 2026', 'nl': '13 oktober 2026'}
 LANGS = ('ar', 'en', 'nl')
+SV = 'sv'
+ALL_LANGS = LANGS + (SV,)        # Swedish is opt-in per food (food_sv.PUBLISH); LANGS stays ar/en/nl for the other generators
 
 # --------------------------------------------------------------------------------------------
 # Pilot batch: id -> (group, typical portion in grams). Portions are approximate household
@@ -638,6 +644,7 @@ VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provi
 def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, glv=None, g=None, reviewed=False):
     """Three questions whose answers are computed from the food's own numbers."""
     f, u = FAQ[lang], UI[lang]
+    lv, lg = u.get('levels_txt', u['levels']), u.get('levels_gl', u['levels'])
     v = dict(VERBS[lang][1 if food['id'] in PLURAL.get(lang, set()) else 0])
     if 'is_' in v:
         v['Is_'] = v['is_'].capitalize()
@@ -658,7 +665,7 @@ def build_faq(food, lang, name, portion, measured, gi=None, lvl=None, gl=None, g
         w = f['w_general']
     a1 = w.format(name=name, kcal=round(kcal), p=portion, kcal_p=kcal_p, ppk=fmt(ppk), fiber=fmt(food['fiber']), **v)
     if measured:
-        a2 = f['s_reviewed' if reviewed else 's_measured'].format(gi=gi, level=u['levels'][lvl], p=portion, gl=fmt(gl), gl_level=u['levels'][glv],
+        a2 = f['s_reviewed' if reviewed else 's_measured'].format(gi=gi, level=lv[lvl], p=portion, gl=fmt(gl), gl_level=lg[glv],
                                     advice=f['s_advice'][glv].format(**v), **v)
     else:
         tmpl = f['s_na_zero'] if food['avail'] < 0.5 else f['s_na']
@@ -1038,7 +1045,18 @@ def studies_word(n, lang):
         return {1: 'دراسة واحدة', 2: 'دراستين'}.get(n, f'{n} دراسات' if 3 <= n <= 10 else f'{n} دراسة')
     if lang == 'en':
         return '1 study' if n == 1 else f'{n} studies'
+    if lang == SV:
+        return FSV.studies_word(n)
     return '1 studie' if n == 1 else f'{n} studies'
+
+
+# Swedish copy (scripts/food_sv.py): tuples indexed by language get a fourth entry, dicts a 'sv' key
+UI[SV], FAQ[SV], REFS_UI[SV] = FSV.UI, FSV.FAQ, FSV.REFS_UI
+VERBS[SV] = (dict(), dict())
+GROUPS = {k: v + (FSV.GROUPS[k],) for k, v in GROUPS.items()}
+CARB_NOTE, NA_NOTE = CARB_NOTE + (FSV.CARB_NOTE,), NA_NOTE + (FSV.NA_NOTE,)
+for _g, _tips in FSV.TIPS.items():
+    TIPS[_g] = TIPS[_g] + (_tips,)
 
 
 # --------------------------------------------------------------------------------------------
@@ -1077,6 +1095,7 @@ def load_group_labels():
     for row in re.findall(r"\{\s*key:[^\n]*\}", text):
         get = lambda k: re.search(r"\b%s:\s*'([^']*)'" % k, row).group(1)
         labels[get('key')] = {l: get(l) for l in LANGS}
+        labels[get('key')][SV] = FSV.GROUP_LABELS[get('key')]
     assert len(labels) == 10, f'expected 10 food groups, found {len(labels)}'
     return labels
 
@@ -1088,9 +1107,12 @@ def slugify(name):
     return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
 
+DECIMAL = '.'        # ',' while a Swedish page is built (set in build())
+
+
 def fmt(x):
     x = round(x, 1)
-    return str(int(x)) if float(x).is_integer() else str(x)
+    return (str(int(x)) if float(x).is_integer() else str(x)).replace('.', DECIMAL)
 
 
 def gi_level(v):
@@ -1238,6 +1260,31 @@ def nav_html(lang, active=None):
     return '\n'.join(out)
 
 
+def langs_of(fid):
+    """Languages a food page exists in: ar/en/nl always, sv for the foods in food_sv.PUBLISH."""
+    return ALL_LANGS if fid in FSV.PUBLISH else LANGS
+
+
+def sv_slugs():
+    """Slugs of the foods with a Swedish page (from js/food-pages.js), for the article and calculator generators."""
+    pages = json.loads(re.search(r'window\.FOOD_PAGES = (\{.*\});', (ROOT / 'js' / 'food-pages.js').read_text(encoding='utf-8')).group(1))
+    return {slug for fid, slug in pages.items() if int(fid) in FSV.PUBLISH}
+
+
+def food_url(slug, fid, lang, absolute=True):
+    """A food page in the reader's language; on a Swedish page, foods without a Swedish version open in English."""
+    return page_url(slug, lang if lang in langs_of(fid) else 'en', absolute)
+
+
+def any_link(path, lang):
+    """site_link() for every language; Swedish uses the article generator's map of /sv/ pages (imported here, because
+    generate_article_pages imports this module)."""
+    if lang != SV:
+        return site_link(path, lang)
+    from generate_article_pages import link
+    return link(path, lang)
+
+
 def site_link(path, lang):
     """Link to a regular site page in the reader's language."""
     if lang == 'ar':
@@ -1269,22 +1316,35 @@ def replace_sitemap_block(name, lines):
 # Page builder
 # --------------------------------------------------------------------------------------------
 def build(food, lang, ctx):
+    global DECIMAL
+    DECIMAL = ',' if lang == SV else '.'
     u = UI[lang]
-    li = LANGS.index(lang)
+    li = ALL_LANGS.index(lang)
+    lv, lg = u.get('levels_txt', u['levels']), u.get('levels_gl', u['levels'])    # GI / GL level words in running text
     slug, group, portion = ctx['slug'][food['id']], PILOT[food['id']][0], PILOT[food['id']][1]
     name = food[lang] or food['en']
     # inside Arabic sentences the name takes the definite article; headings keep the display name
-    sname = ar_definite(name) if lang == 'ar' else name
-    g = ar_pron(name) if lang == 'ar' else {}
-    subtitle = {'ar': food['en'], 'en': food['nl'], 'nl': food['en']}[lang]
+    sname = ar_definite(name) if lang == 'ar' else (FSV.NAMES[food['id']][1] if lang == SV else name)
+    if lang == 'ar':
+        g = ar_pron(name)
+    elif lang == SV:                        # capitalised sentence name and the pronoun (det / de for plural names)
+        plural = food['id'] in FSV.PLURAL
+        det = 'de' if plural else 'det'
+        g = {'Name': sname[:1].upper() + sname[1:], 'det': det, 'Det': det.capitalize(), 'dem': 'dem' if plural else 'det'}
+    else:
+        g = {}
+    subtitle = {'ar': food['en'], 'en': food['nl'], 'nl': food['en'], SV: food['en']}[lang]
     if subtitle == name:
         subtitle = ''
     group_name = GROUPS[group][li]
+    group_txt = group_name.lower() if lang == SV else group_name      # "i gruppen spannmål och stärkelse"
     measured = food['gi_status'] == 'measured' and food['gi'] is not None      # Atkinson 2021
     reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # clinically reviewed estimate
     has_gi = measured or reviewed
     team = food['id'] in TEAM_REVIEW
-    if food['id'] in NAMED_REVIEW:
+    if lang == SV:                          # one approved review line for every Swedish page
+        reviewed_line = u['reviewed'].format(doctor=any_link('/doctor.html', lang), date=FSV.REVIEWED_TXT)
+    elif food['id'] in NAMED_REVIEW:
         reviewed_line = u['reviewed_named'].format(doctor=site_link('/doctor.html', lang),
                                                    date=NAMED_REVIEW_TXT[NAMED_REVIEW[food['id']]][lang])
     elif team:
@@ -1294,6 +1354,7 @@ def build(food, lang, ctx):
     # breadcrumb section: the food's master group on foods.html (labels from js/food-categories.js)
     section = FOOD_GROUP_LABELS.get(food['group'])
     section_href = dir_url('foods', lang, absolute=False) + f"#{food['group']}" if section else ''
+    L = lambda path: any_link(path, lang)
     p_factor = portion / 100.0
     tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
     if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
@@ -1306,18 +1367,18 @@ def build(food, lang, ctx):
         lvl = gi_level(gi)
         gl = round(gi * food['avail'] * p_factor / 100, 1)
         glv = gl_level(gl)
-        lead = u['lead_reviewed'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=u['levels'][lvl], p=portion,
-                                         gl=fmt(gl), gl_level=u['levels'][glv], **g)
-        desc = u['desc_reviewed'].format(name=name, kcal=kcal, gi=gi, level=u['levels'][lvl], gl=fmt(gl), p=portion)
+        lead = u['lead_reviewed'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=lv[lvl], p=portion,
+                                         gl=fmt(gl), gl_level=lg[glv], **g)
+        desc = u['desc_reviewed'].format(name=name, kcal=kcal, gi=gi, level=lv[lvl], gl=fmt(gl), p=portion)
     elif measured:
         gi = int(food['gi'])
         lvl = gi_level(gi)
         gl = round(gi * food['avail'] * p_factor / 100, 1)
         glv = gl_level(gl)
         studies = studies_word(int(food['gi_n'] or 1), lang)
-        lead = u['lead_measured'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=u['levels'][lvl], studies=studies,
-                                         p=portion, gl=fmt(gl), gl_level=u['levels'][glv], **g)
-        desc = u['desc_measured'].format(name=name, kcal=kcal, gi=gi, level=u['levels'][lvl], gl=fmt(gl), p=portion)
+        lead = u['lead_measured'].format(name=sname, kcal=kcal, avail=avail, gi=gi, level=lv[lvl], studies=studies,
+                                         p=portion, gl=fmt(gl), gl_level=lg[glv], **g)
+        desc = u['desc_measured'].format(name=name, kcal=kcal, gi=gi, level=lv[lvl], gl=fmt(gl), p=portion)
     else:
         lead = u['lead_na'].format(name=sname, kcal=kcal, protein=protein, **g)
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
@@ -1347,7 +1408,8 @@ def build(food, lang, ctx):
     # -------- comparison & alternatives (within the pilot group)
     peers = [ctx['foods'][i] for i, (g, _) in PILOT.items() if g == group]
     def link_item(f, right):
-        return (f'<li><a href="{page_url(ctx["slug"][f["id"]], lang, absolute=False)}">{esc(f[lang] or f["en"])}'
+        return (f'<li><a href="{food_url(ctx["slug"][f["id"]], f["id"], lang, absolute=False)}">'
+                f'{esc(f[lang] or f["en"])}'
                 f'<span>{right}</span></a></li>')
     family = [ctx['foods'][i] for i in ALTERNATIVES.get(food['id'], []) if i in PILOT]
     def gi_of(f):
@@ -1357,17 +1419,17 @@ def build(food, lang, ctx):
             ranked = sorted([f for f in peers if f['gi_status'] == 'measured'], key=lambda f: f['gi'])
             rank = [f['id'] for f in ranked].index(food['id']) + 1
             compare_txt = u['rank_measured'].format(rank=rank, m=len(ranked), m_items=ar_measured_items(len(ranked)),
-                                                    group=group_name, **g)
+                                                    group=group_txt, **g)
         else:
             ranked = sorted([f for f in peers if gi_of(f) is not None], key=gi_of)
             rank = [f['id'] for f in ranked].index(food['id']) + 1
-            compare_txt = u['rank_reviewed'].format(rank=rank, m=len(ranked), group=group_name, **g)
+            compare_txt = u['rank_reviewed'].format(rank=rank, m=len(ranked), group=group_txt, **g)
         if rank == 1:
             compare_txt += ' ' + u['lowest_note']
         lower = sorted([f for f in family if gi_of(f) is not None and gi_of(f) < food['gi']], key=gi_of)
         alts = (lower + [f for f in family if f not in lower])[:3]
         alt_title = u['alt_lower'] if alts and len(lower) == len(alts) else u['alt_family']
-        alt_html = ''.join(link_item(f, f"{u['gi']} {int(gi_of(f))}" if gi_of(f) is not None
+        alt_html = ''.join(link_item(f, f"{u.get('gi_short', u['gi'])} {int(gi_of(f))}" if gi_of(f) is not None
                                      else f"{round(f['kcal'])} {u['kcal_unit']}") for f in alts)
     else:
         if group in ('protein', 'dairy_solid'):
@@ -1380,7 +1442,7 @@ def build(food, lang, ctx):
             v = str(kcal)
             tmpl = u['rank_kcal']
         rank = [f['id'] for f in ranked].index(food['id']) + 1
-        compare_txt = tmpl.format(v=v, rank=rank, m=len(ranked), group=group_name, **g)
+        compare_txt = tmpl.format(v=v, rank=rank, m=len(ranked), group=group_txt, **g)
         alt_title = u['alt_same']
         alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}") for f in family[:3])
 
@@ -1407,7 +1469,7 @@ def build(food, lang, ctx):
         rows += f'<tr><td>{u["ii_row"]}</td><td colspan="2">{int(food["ii"])} · {u["ii_tested"]}</td></tr>'
 
     # -------- sources: "References & scientific sources" section (only what actually backs this page)
-    method_href = site_link('/methodology.html', lang)
+    method_href = L('/methodology.html')
     r = REFS_UI[lang]
     if measured:
         rng = food['gi_range'] or [food['gi'], food['gi']]
@@ -1428,9 +1490,19 @@ def build(food, lang, ctx):
            f'<p class="ref-method"><a href="{method_href}">{u["src_link"]}</a></p></section>')
 
     # -------- head: SEO
-    urls = {l: page_url(slug, l) for l in LANGS}
+    urls = {l: page_url(slug, l) for l in langs_of(food['id'])}
     image_abs = f'{SITE}/{food["image"]}' if food['image'] else f'{SITE}/images/logo.png'
-    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
+    if lang == SV:                           # the Swedish role (no title that reads as a Swedish licence)
+        from generate_article_pages import DOCTOR_SV
+        doctor = {k: DOCTOR_SV[k] for k in ('@type', '@id', 'name', 'jobTitle', 'url')}
+        reviewer = doctor
+    else:
+        doctor = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib",
+                  "jobTitle": "Medical Doctor", "url": f"{SITE}/doctor.html"}
+        reviewer = ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
+                    {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
+                     "url": f"{SITE}/doctor.html"})
     # Educational page, never a Product: Google requires offers/review/aggregateRating on Product,
     # which an information site cannot give (Search Console error, pages left unindexed).
     schema = {
@@ -1442,28 +1514,30 @@ def build(food, lang, ctx):
         "description": desc,
         "inLanguage": lang,
         "primaryImageOfPage": {"@type": "ImageObject", "url": image_abs},
-        "about": {"@type": "Thing", "name": food['en'], "alternateName": [food['ar'], food['nl']]},
+        "about": {"@type": "Thing", "name": food['en'],
+                  "alternateName": [food['ar'], food['nl']] + ([food[SV]] if SV in urls else [])},
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
-        "author": {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib",
-                   "jobTitle": "Medical Doctor", "url": f"{SITE}/doctor.html"},
+        "author": doctor,
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
-        "reviewedBy": ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
-                       {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
-                        "url": f"{SITE}/doctor.html"}),
-        "lastReviewed": review_date(food['id']),
+        "reviewedBy": reviewer,
+        "lastReviewed": FSV.REVIEWED if lang == SV else review_date(food['id']),
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + L('/')},
             {"@type": "ListItem", "position": 2, "name": u['guide'], "item": dir_url('foods', lang)}]
             + ([{"@type": "ListItem", "position": 3, "name": section[lang], "item": SITE + section_href}] if section else [])
             + [{"@type": "ListItem", "position": 4 if section else 3, "name": name, "item": urls[lang]}]},
     }
 
-    nav = nav_html(lang, active=None)
+    if lang == SV:
+        from generate_article_pages import nav as sv_nav
+        nav = sv_nav(lang, active=None)
+    else:
+        nav = nav_html(lang, active=None)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(slug, l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
+        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
     img_html = (f'<img src="/{food["image"]}" alt="{esc(name)}" width="350" height="350">' if food['image']
                 else f'<div class="food-emoji" aria-hidden="true">{food["icon"] or "🍽️"}</div>')
     tip_icons = ('fa-check-circle', 'fa-utensils', 'fa-triangle-exclamation')
@@ -1472,10 +1546,11 @@ def build(food, lang, ctx):
         f'<p>{esc(tips[i])}</p></div>' for i in range(3))
     footer_links = ' <span>•</span> '.join(
         f'<a href="{href}">{label}</a>' for href, label in
-        [(site_link('/', lang), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
-         (dir_url('supplements', lang, absolute=False), u['nav'][3]), (site_link('/methodology.html', lang), u['methodology']),
-         (site_link('/doctor.html', lang), 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'),
-         (site_link('/partners.html', lang), u['partners']), (site_link('/privacy.html', lang), u['privacy'])])
+        [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
+         (dir_url('supplements', 'en' if lang == SV else lang, absolute=False), u['nav'][3]),   # no Swedish supplement pages yet
+         (L('/methodology.html'), u['methodology']),
+         (L('/doctor.html'), 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'),
+         (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">
@@ -1493,7 +1568,7 @@ def build(food, lang, ctx):
     <meta property="og:description" content="{esc(desc)}">
     <meta property="og:url" content="{urls[lang]}">
     <meta property="og:image" content="{image_abs}">
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
@@ -1520,7 +1595,7 @@ def build(food, lang, ctx):
 <body>
     <header>
         <div class="header-container">
-            <a href="{site_link('/', lang)}" class="brand-link">
+            <a href="{L('/')}" class="brand-link">
                 {LOGO_SVG}
                 <span class="brand-title">WiBo Health</span>
             </a>
@@ -1541,7 +1616,7 @@ def build(food, lang, ctx):
     <main class="page-wrapper food-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
+                <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>
 
             <div class="food-hero">
@@ -1585,7 +1660,7 @@ def build(food, lang, ctx):
                     <h2>{u["boodi_title"]}</h2>
                     <p>{u["boodi_text"]}</p>
                 </div>
-                <a class="boodi-btn" href="{site_link('/boodi.html', lang)}"><i class="fas fa-barcode"></i> {u["boodi_btn"]}</a>
+                <a class="boodi-btn" href="{L('/boodi.html')}"><i class="fas fa-barcode"></i> {u["boodi_btn"]}</a>
             </aside>
 
             {src}
@@ -1627,11 +1702,14 @@ def main():
     assert not missing, f'unknown food ids: {missing}'
     slugs = {i: overrides.get(str(i), {}).get('slug') or SLUG_OVERRIDES.get(i) or slugify(foods[i]['en']) for i in PILOT}
     assert len(set(slugs.values())) == len(slugs), 'duplicate slugs'
+    assert FSV.PUBLISH <= set(FSV.NAMES) and set(FSV.NAMES) <= set(PILOT), 'food_sv: unknown food ids'
+    for fid in foods:
+        foods[fid][SV] = FSV.NAMES[fid][0] if fid in FSV.NAMES else ''
     ctx = dict(foods=foods, slug=slugs, overrides=overrides)
 
     written = 0
     for fid in PILOT:
-        for lang in LANGS:
+        for lang in langs_of(fid):
             out = ROOT / (f'foods/{slugs[fid]}.html' if lang == 'ar' else f'{lang}/foods/{slugs[fid]}.html')
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(build(foods[fid], lang, ctx), encoding='utf-8', newline='\n')
@@ -1647,14 +1725,15 @@ def main():
     # sitemap block with hreflang alternates
     block = []
     for fid in PILOT:
-        for lang in LANGS:
-            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{review_date(fid)}</lastmod>',
+        for lang in langs_of(fid):
+            lastmod = FSV.REVIEWED if lang == SV else review_date(fid)
+            block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
-            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in LANGS]
+            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in langs_of(fid)]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "ar")}"/>', '  </url>']
     replace_sitemap_block('FOOD-PAGES', block)
 
-    print(f'pages written: {written} ({len(PILOT)} foods x {len(LANGS)} languages)')
+    print(f'pages written: {written} ({len(PILOT)} foods x {len(LANGS)} languages, {len(FSV.PUBLISH)} also in Swedish)')
     print('measured:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'measured'),
           '| reviewed:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'reviewed'),
           '| not applicable:', sum(1 for i in PILOT if foods[i]['gi_status'] == 'not_applicable'))

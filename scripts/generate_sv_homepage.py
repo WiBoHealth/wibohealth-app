@@ -139,6 +139,8 @@ def links(t):
         if not url.startswith('/'):
             url = '/' + url
         path = url.split('#')[0].split('?')[0]
+        if name == 'href' and m.start() > body and path in ('/foods.html', '/foods/index.html'):   # Swedish food index
+            return '%s="/sv/foods/index.html"' % name
         if name == 'href' and m.start() > body and sv_page_of(path):     # older article with a Swedish version
             return '%s="%s"' % (name, sv_page_of(path))
         if name == 'href' and path.endswith('.html') and m.start() > body:
@@ -148,9 +150,9 @@ def links(t):
     t = re.sub(r'(?<![-\w])(href|src|srcset)="([^"]+)"', lambda m: fix(m) if ' ' not in m.group(2) else m.group(0), t)
     t = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="%s"' % ', '.join(
         (p if p.startswith('/') else '/' + p) for p in m.group(1).split(', ')), t)
-    # the static directory pages come in ar/en/nl: Swedish readers get the English index
+    # the static directory pages: Swedish readers get the Swedish food index and the English supplement index
     t = rep("a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/'",
-            "a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? '/en' : '') + '/'", t)
+            "a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? (a.getAttribute('data-dir-index') === 'foods' ? '/sv' : '/en') : '') + '/'", t)
     # the food search matches English (and Arabic/Dutch) names: open the guide in English
     t = rep('<form class="meals-search" action="/foods.html" method="get" role="search">',
             '<form class="meals-search" action="/foods.html" method="get" role="search">\n'

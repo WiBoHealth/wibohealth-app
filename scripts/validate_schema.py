@@ -46,8 +46,8 @@ def walk(node, path='$'):
 def main():
     pages = [ROOT / 'foods.html', ROOT / 'food-details.html']
     # index.html in the food and supplement folders is the static index (generate_directory_pages.py): a CollectionPage
-    indexes = [ROOT / d / 'index.html' for d in ('foods', 'en/foods', 'nl/foods', 'supplements', 'en/supplements', 'nl/supplements')]
-    static = [p for d in ('foods', 'en/foods', 'nl/foods') for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
+    indexes = [ROOT / d / 'index.html' for d in ('foods', 'en/foods', 'nl/foods', 'sv/foods', 'supplements', 'en/supplements', 'nl/supplements')]
+    static = [p for d in ('foods', 'en/foods', 'nl/foods', 'sv/foods') for p in sorted((ROOT / d).glob('*.html')) if p not in indexes]
     # supplement and article pages are authored by the WiBo Health organisation and must never name a person
     supp = [p for d in ('supplements', 'en/supplements', 'nl/supplements', 'articles', 'en/articles', 'nl/articles',
                         'diabetes', 'en/diabetes', 'nl/diabetes', 'sv/diabetes', 'sv/articles')
