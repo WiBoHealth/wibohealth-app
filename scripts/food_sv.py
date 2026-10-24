@@ -12,7 +12,7 @@ PUBLISH lists the foods that get a Swedish page (all of NAMES).
 REVIEWED = '2026-10-24'
 REVIEWED_TXT = '24 oktober 2026'
 
-# foods with a Swedish page: 1-600 (1-50 samples approved 2026-10-24); set below NAMES
+# foods with a Swedish page: 1-700 (1-50 samples approved 2026-10-24); set below NAMES
 
 NAMES = {
     1: ('Vitt ris, kokt', 'kokt vitt ris'),
@@ -616,6 +616,106 @@ NAMES = {
     598: ('Gurkmejamjölk med svartpeppar och ingefära', 'gurkmejamjölk'),
     599: ('Vatten med gurka, citron och mynta', 'gurkvatten med mynta'),
     600: ('Apelsinblomsvatten, destillerat', 'apelsinblomsvatten'),
+    601: ('Chokladéclair med vaniljkräm', 'chokladéclair'),
+    602: ('Profiteroles med varm chokladsås', 'profiteroles'),
+    603: ('Mille-feuille (tompouce)', 'mille-feuille'),
+    604: ('Citronmarängpaj', 'citronmarängpaj'),
+    605: ('Macarons, blandade smaker', 'macarons'),
+    606: ('Chokladfondant (lavakaka)', 'chokladfondant'),
+    607: ('Schwarzwaldtårta med körsbär', 'schwarzwaldtårta'),
+    608: ('Sachertårta', 'sachertårta'),
+    609: ('Morotskaka med färskostfrosting', 'morotskaka'),
+    610: ('Red velvet-tårta med färskostfrosting', 'red velvet-tårta'),
+    611: ('Cannoli med söt ricotta', 'cannoli'),
+    612: ('Panettone', 'panettone'),
+    613: ('Pannacotta med vanilj och bärsås', 'pannacotta'),
+    614: ('Savoiardikex (ladyfingers)', 'savoiardikex'),
+    615: ('Cantuccini med mandel', 'cantuccini'),
+    616: ('Victoriatårta med sylt', 'victoriatårta'),
+    617: ('Scones med clotted cream och sylt', 'scones'),
+    618: ('Bottarga (torkad multrom)', 'bottarga'),
+    619: ('Kippers (rökt sill)', 'kippers'),
+    620: ('Rosa vildlax, konserverad i vatten', 'konserverad rosa lax'),
+    621: ('Sardiner i stark tomatsås, portugisiska', 'sardiner i tomatsås'),
+    622: ('Vit tonfisk (bonito del norte) i olivolja', 'vit tonfisk i olivolja'),
+    623: ('Blåmusslor i escabeche', 'blåmusslor i escabeche'),
+    624: ('Bläckfisk i egen bläck, konserverad', 'bläckfisk i bläck'),
+    625: ('Venusmusslor i lake, konserverade', 'venusmusslor'),
+    626: ('Torsklever, rökt, konserverad', 'rökt torsklever'),
+    627: ('Tortellini med ricotta och spenat, kokta', 'tortellini'),
+    628: ('Ravioli med svamp och parmesan, kokta', 'ravioli'),
+    629: ('Tagliatelle med ägg, färsk, kokt', 'tagliatelle'),
+    630: ('Penne rigate av durumvete, kokt', 'penne rigate'),
+    631: ('Fusilli av fullkornsvete, kokt', 'fullkornsfusilli'),
+    632: ('Lasagneplattor av fullkornsvete, torra', 'lasagneplattor'),
+    633: ('Pesto alla genovese med basilika och pinjenötter', 'pesto'),
+    634: ('Röd pesto med soltorkade tomater och mandel', 'röd pesto'),
+    635: ('Soltorkade tomater i extra jungfruolivolja', 'soltorkade tomater'),
+    636: ('Silverlök, sötsur inlagd', 'silverlök'),
+    637: ('Giardiniera (inlagda italienska grönsaker)', 'giardiniera'),
+    638: ('Burger King Whopper, flamgrillad', 'Whopper'),
+    639: ('Burger King Chicken Royale', 'Chicken Royale'),
+    640: ("McDonald's McFlurry med Oreo", 'McFlurry'),
+    641: ("McDonald's äppelpaj, varm", "äppelpaj från McDonald's"),
+    642: ('Mozzarellasticks, friterade, med marinarasås', 'mozzarellasticks'),
+    643: ('Lökringar, friterade', 'lökringar'),
+    644: ('Buffalo wings (starka kycklingvingar)', 'buffalo wings'),
+    645: ('Kycklingburgare med friterad filé och majonnäs', 'kycklingburgare'),
+    646: ('Rostbiffsmacka med smält cheddar', 'rostbiffsmacka'),
+    647: ('Curly fries, kryddade', 'curly fries'),
+    648: ('Klyftpotatis med skal och rosmarin, ugnsbakad', 'klyftpotatis'),
+    649: ('Philly cheesesteak med ribeye, lök och ost', 'philly cheesesteak'),
+    650: ('Kycklingvingar med honungs-BBQ-glaze, rökta', 'BBQ-kycklingvingar'),
+    651: ('Empanadas med nötkött och oliver, ugnsbakade', 'empanadas'),
+    652: ('Ceviche på vit fisk med lime', 'ceviche'),
+    653: ('Arepas av vit majs med ost', 'arepas'),
+    654: ('Tostones (friterad grön mjölbanan)', 'tostones'),
+    655: ('Maduros (ugnsbakad mogen mjölbanan)', 'maduros'),
+    656: ('Tamales av majsdeg med kyckling', 'tamales'),
+    657: ('Feijoada med svarta bönor och nötkött', 'feijoada'),
+    658: ('Pão de queijo (ostbröd av tapioka)', 'pão de queijo'),
+    659: ('Quesadilla med svamp och monterey jack', 'quesadilla'),
+    660: ('Chimichanga med kyckling, friterad', 'chimichanga'),
+    661: ('Köttbullar med gräddsås', 'köttbullar'),
+    662: ('Lingonsylt', 'lingonsylt'),
+    663: ('Knäckebröd av fullkornsråg', 'fullkornsknäckebröd'),
+    664: ('Gravad lax med dill', 'gravad lax'),
+    665: ('Smørrebrød med sill och ägg', 'smørrebrød'),
+    666: ('Kanelbulle med kardemumma', 'kanelbulle'),
+    667: ('Hasselbackspotatis', 'hasselbackspotatis'),
+    668: ('Borsjtj med gräddfil', 'borsjtj'),
+    669: ('Pierogi med potatis och ost', 'pierogi'),
+    670: ('Gulasch på nötkött, ungersk', 'gulasch'),
+    671: ('Golubtsy (kåldolmar med köttfärs och ris)', 'golubtsy'),
+    672: ('Oliviersallad med potatis, ärter och ägg', 'oliviersallad'),
+    673: ('Blinier av bovete', 'blinier'),
+    674: ('Tapiokastärkelse', 'tapiokastärkelse'),
+    675: ('Potatismjöl', 'potatismjöl'),
+    676: ('Fullkornsrismjöl av brunt ris, glutenfritt', 'fullkornsrismjöl'),
+    677: ('Havremjöl av fullkorn, finmalet', 'havremjöl'),
+    678: ('Riskli av brunt ris', 'riskli'),
+    679: ('Durumvetegryn (semolina), grova', 'durumvetegryn'),
+    680: ('Röd quinoa, ekologisk, kokt', 'kokt röd quinoa'),
+    681: ('Svart quinoa, kokt', 'kokt svart quinoa'),
+    682: ('Amarant, kokt', 'kokt amarant'),
+    683: ('Amarantmjöl, ekologiskt', 'amarantmjöl'),
+    684: ('Svart ris (thailändskt), kokt', 'kokt svart ris'),
+    685: ('Rött ris från Himalaya, kokt', 'kokt rött ris'),
+    686: ('Nudlar av brunt fullkornsris, glutenfria, kokta', 'fullkornsrisnudlar'),
+    687: ('Fylld duva med freekeh och ghee', 'fylld duva'),
+    688: ('Ugnsstekt anka med kryddad lökfyllning (morta)', 'ugnsstekt anka'),
+    689: ('Taro med mangold, koriander och vitlök', 'tarogryta'),
+    690: ('Spenatgryta med kikärter och nötkött', 'spenatgryta'),
+    691: ('Ejjeh (örtomelett med persilja och lök)', 'ejjeh'),
+    692: ('Damascensk kebab med aubergine i form', 'kebab med aubergine'),
+    693: ('Fylld killing med kryddat ris och nötter', 'fylld killing'),
+    694: ('Långstekt lammbog med vitlök och potatis', 'långstekt lammbog'),
+    695: ('Lammkotletter, kolgrillade, med rosmarin', 'grillade lammkotletter'),
+    696: ('Galayet bandora (tomatpanna med köttfärs)', 'galayet bandora'),
+    697: ('Mgalgal (stekt kryddat nötkött)', 'mgalgal'),
+    698: ('Saltah (jemenitisk gryta med bockhornsklöverskum)', 'saltah'),
+    699: ('Fahsah (jemenitisk köttgryta i stengryta)', 'fahsah'),
+    700: ('Malawah (jemenitiskt flagigt bröd med ghee)', 'malawah'),
 }
 PUBLISH = set(NAMES)
 # foods allowed to use the computed Swedish copy where the other languages carry food-specific copy (none since
@@ -629,7 +729,8 @@ PLURAL = {18, 19, 20, 21, 22, 23, 24, 25, 28, 40,
           232, 233, 234, 235, 260, 264, 276, 278, 293,
           314, 316, 317, 329, 350, 352, 356, 373, 374, 381, 382, 383, 384, 385, 386, 397, 398, 399, 400,
           411, 412, 413, 425, 426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 448, 449, 451, 465, 479,
-          504, 508, 523, 527, 543, 546, 556, 557, 558, 559, 564, 574, 575, 581, 582, 583, 585, 586, 587, 588, 589, 590}
+          504, 508, 523, 527, 543, 546, 556, 557, 558, 559, 564, 574, 575, 581, 582, 583, 585, 586, 587, 588, 589, 590,
+          602, 605, 611, 614, 615, 617, 619, 621, 623, 625, 627, 628, 632, 635, 642, 643, 644, 647, 650, 651, 653, 654, 655, 656, 661, 669, 671, 673, 679, 686, 695}
 
 # js/food-categories.js master groups (breadcrumb section on the food page)
 GROUP_LABELS = {
@@ -7327,4 +7428,1207 @@ OVERRIDES = {
                         a='Det innehåller flyktiga aromatiska oljor från pomeransblommorna.'),
                    dict(q='Vad är näringsvärdet i en matsked (15 ml)?',
                         a='Inga kalorier, inget fett och inga kolhydrater; bara ren arom.')]),
+    # foods 601-700: translated from the approved Arabic copy (2026-10-24, four checked blocks of 25)
+    601: dict(lead='En ikon bland de lyxiga franska bakverken som fångar hjärtat med sin lätthet: den består av spröd, '
+                   'noggrant gräddad petit choux-deg (pâte à choux) fylld med sammetslen vaniljkräm och täckt med ett '
+                   'fylligt lager ganache av mörk choklad eller mjölkchoklad. Éclairen ger en balanserad smakupplevelse '
+                   'där fettet i smöret och äggen och proteinet i krämen bromsar sockerupptaget jämfört med enkla '
+                   'sockerrika sötsaker, vilket gör den till ett val att njuta av medvetet och med måtta vid festliga '
+                   'tillfällen.',
+              tips=('Njut av en halv eller en hel éclair som efterrätt efter en komplett huvudmåltid rik på fibrer och '
+                    'bladgrönsaker, och undvik att äta den som ett lätt frukostmål eller på fastande mage.',
+                    'Den kan göras hemma med lättmjölk och naturliga kalorisnåla sötningsmedel i krämen, och med mörk '
+                    'choklad (70 % eller mer) till glasyren för mindre tillsatt socker.',
+                    'Eftersom den innehåller både socker och mättat fett rekommenderas den som har insulinresistens att '
+                    'mäta blodsockret två timmar efter att ha ätit den för att se hur kroppen reagerar.'),
+              faq=[dict(q='Passar chokladéclair vid viktnedgång?',
+                        a='Den kan ingå i kosten om kalorierna räknas in (cirka 210 kcal per styck), men det är bättre att '
+                          'låta den vara en belöning då och då och hålla det dagliga kaloriunderskottet.'),
+                   dict(q='Hur påverkar chokladéclair blodsockret?',
+                        a='Tack vare krämens fett och protein stiger blodsockret gradvis jämfört med flytande sötsaker, '
+                          'men den måttliga glykemiska belastningen (12) kräver att portionen hålls noga.'),
+                   dict(q='Vad är skillnaden mellan chokladéclair och andra mäktiga bakverk?',
+                        a='Petit choux-degen jäser upp av vattenånga och ägg och är ihålig och lätt jämfört med friterade '
+                          'degar som munkar, vilket ger en relativt lägre koncentration av kolhydrater.')]),
+    602: dict(lead='De klassiska och glada franska petit choux-bollarna som ger en lyxig känsla av värme: de små bollarna '
+                   'fylls lätt med vaniljkräm eller lätt glass och toppas med en varm, blank chokladsås som hälls över '
+                   'precis före serveringen. Den lilla storleken gör det lätt att styra portionen jämfört med stora '
+                   'tårtbitar, och den varma chokladen ger mycket tillfredsställelse med en liten mängd.',
+              tips=('Nöj dig med två små bollar och be om chokladsåsen vid sidan av så att du själv doppar dem; det '
+                    'minskar det tillsatta sockret tydligt.',
+                    'Att byta den traditionella glassfyllningen mot vispad grekisk yoghurt med vanilj och kakaonibs ger '
+                    'mer protein och tydligt färre kalorier.',
+                    'Observera att färdig chokladsås på restauranger kan innehålla glukossirap eller majssirap med hög '
+                    'fruktoshalt, så fråga gärna om ingredienserna eller gör den hemma av ren kakao och lite mjölk.'),
+              faq=[dict(q='Är profiteroles ett bra val när man bantar?',
+                        a='Den stora fördelen är att portionen är lätt att dela upp; en boll (cirka 85 kcal) låter dig '
+                          'njuta av den lyxiga smaken utan att förstöra dina dagliga mål.'),
+                   dict(q='Hur påverkar chokladsåsen det glykemiska indexet?',
+                        a='Såsen tillför snabbt upptaget socker, men smöret och äggen i petit choux-bollarna dämpar en '
+                          'plötslig blodsockerstegring, så att indexet stannar i det medelhöga intervallet (58).'),
+                   dict(q='Vad är bäst för energin: att äta profiteroles ensamma eller efter en måltid?',
+                        a='Ät dem alltid efter en balanserad måltid med protein och fibrer, så undviker du trötthet efter '
+                          'sockret (sugar crash).')]),
+    603: dict(lead='Den anrika franska bakelsen ”tusen blad”, känd för sin legendariska krispighet och sina många flagiga '
+                   'lager, och som i Nederländerna och Belgien kallas tompouce med sin blanka rosa glasyr. Den görs av '
+                   'spröda smördegsark med rikliga lager av tjock vaniljkräm (crème pâtissière). Trots den världsberömda '
+                   'smaken hör den till de sötsaker som har hög energitäthet och snabbt nedbruten stärkelse, vilket kräver '
+                   'särskild omsorg och noggrann beräkning vid vikt- och blodsockerkontroll.',
+              tips=('Dela biten med en vän eller ät bara hälften, och undvik söta drycker eller juice till; en kopp grönt '
+                    'te eller svart kaffe är den bästa följeslagaren för att balansera smaken.',
+                    'Den vita eller rosa fondantglasyren kan bytas mot en mycket lätt nypa kanel eller osötat kakaopulver '
+                    'för mindre enkla sockerarter.',
+                    'Den höga glykemiska belastningen (25,8) gör att den som har diabetes bör vara försiktig och samordna '
+                    'den med dagens stärkelseportioner eller röra på sig, till exempel med en rask promenad, efteråt.'),
+              faq=[dict(q='Varför har mille-feuille en hög glykemisk belastning trots vaniljkrämen?',
+                        a='Därför att de flagiga deglagren görs av stora mängder raffinerat mjöl, och det koncentrerade '
+                          'sockret i glasyren ökar portionens totala mängd snabbt upptagna kolhydrater.'),
+                   dict(q='Skiljer sig den nederländska tompoucen från den traditionella franska mille-feuillen?',
+                        a='Den huvudsakliga skillnaden ligger i den tjocka rosa fondantglasyren och den fastare '
+                          'vaniljkrämen; båda ligger mycket nära varandra i kalorier och sockerbelastning.'),
+                   dict(q='Hur minskar jag effekten på energin under dagen?',
+                        a='Se till att måltiden före den inte är rik på stärkelse, utan fokusera på protein och gröna '
+                          'fibrer för att bromsa matsmältningen.')]),
+    604: dict(lead='Den förtrollande harmonin mellan citronens friska syra och sötman i den luftiga marängen, krispig '
+                   'utanpå och mjuk inuti; pajen vilar på en mördegsbotten (shortcrust) med tjock citronkräm och toppas '
+                   'med äggvita som vispats med socker. Citronens naturliga syra kännetecknar den, och vissa studier tyder '
+                   'på att sura livsmedel kan bromsa magsäckstömningen, vilket kan förklara att det glykemiska indexet är '
+                   'lägre än för många liknande sötsaker. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 55).',
+              tips=('Marängen består av äggvita och koncentrerat socker; njut av citronkrämen med botten och ät bara en '
+                    'mycket liten del av marängtoppen, så minskar sockret i portionen tydligt.',
+                    'Mandelmjöl i pajbotten ger fett och vegetabiliskt protein och minskar kolhydraterna i botten '
+                    'kraftigt.',
+                    'Även om det glykemiska indexet (55) är lågt är den glykemiska belastningen för en hel portion hög '
+                    '(24,7); därför är portionens storlek avgörande för att blodsockret inte ska stiga.'),
+              faq=[dict(q='Hjälper citronsaft verkligen till att sänka det glykemiska indexet?',
+                        a='Vissa studier tyder på att sura livsmedel (som citronsaft eller vinäger) i en stärkelserik '
+                          'måltid kan bromsa magsäckstömningen och dämpa blodsockerstegringen efteråt, men effekten är '
+                          'begränsad och tar inte bort effekten av sockret i marängen.'),
+                   dict(q='Passar citronmarängpaj för den som äter kalorisnålt?',
+                        a='Fetthalten (11 g per 100 g) är lägre än i chokladbakverk och smörkrämstårtor, men den '
+                          'innehåller fortfarande mycket enkla sockerarter som kräver måtta.'),
+                   dict(q='Hur räknar jag ut de tillgängliga kolhydraterna i citronmarängpaj?',
+                        a='Dra av fibrerna (1,3 g) från de totala kolhydraterna (46,2 g) i en vanlig portion, så blir de '
+                          'tillgängliga kolhydraterna cirka 44,9 g.')]),
+    605: dict(lead='Ett förfinat och färgglatt mästerverk bland franska bakverk, med krispigt skal och mjuk insida som '
+                   'smälter i munnen. Macaronens näringsmässiga särprägel är att den främst bygger på rent malt mandelmjöl '
+                   'och äggvita i stället för vitt vetemjöl, vilket ger en respektabel andel enkelomättat fett, '
+                   'vegetabiliskt protein och fibrer. Den lilla vikten och den koncentrerade, fylliga smaken gör den till '
+                   'en av de sötsaker där portionen är lättast att styra.',
+              tips=('Macarons passar den som tycker om en liten sötbit till kaffet; en eller två ger en speciell '
+                    'smakupplevelse med bara 140 kcal för två.',
+                    'Att välja fyllning av mörk ganache gjord på mörk choklad, eller osötad bärpuré, ger ett bättre '
+                    'näringsvärde än industriella smörkrämsfyllningar.',
+                    'Traditionella macarons är naturligt fria från vetemjöl och kan därför passa den som undviker gluten; '
+                    "den som har celiaki bör välja en produkt märkt 'glutenfri' för att undvika kontaminering i "
+                    'produktionen.'),
+              faq=[dict(q='Är macarons ett bättre val än vanliga kakor?',
+                        a='Mandelmjölet ger dem fett och bättre fiberinnehåll än kex som bygger på vitt mjöl och härdat '
+                          'fett, men florsocker är fortfarande en huvudingrediens.'),
+                   dict(q='Vad är den glykemiska belastningen för en enda macaron?',
+                        a='En macaron på 17,5 g har en glykemisk belastning på bara cirka 6,2, vilket är lågt och passar '
+                          'som en lugn efterrätt.'),
+                   dict(q='Ändrar de olika smakerna det glykemiska indexet?',
+                        a='Ja, smaker som pistage, mandel och mörk kakao är mer balanserade för blodsockret än '
+                          'saltkaramell eller söta sylter.')]),
+    606: dict(lead='Chokladälskarnas favorit över hela världen: en varm kaka med genomgräddad yta som döljer en flytande, '
+                   'fyllig kärna som rinner ut mjukt. Trots den rika smaken gör de äkta recepten med mörk choklad rik på '
+                   'kakaosmör och ägg att fettet bromsar matsmältningen jämfört med enkla sockerrika sötsaker, vilket gör '
+                   'den till en lyxig upplevelse att njuta av medvetet och med måtta.',
+              tips=('Eftersom den innehåller mycket energi är det bäst att dela formen eller äta den efter en balanserad '
+                    'huvudmåltid rik på fibrer och magert protein.',
+                    'Mörk choklad med minst 70 % kakao, mindre tillsatt socker och mandelmjöl minskar sockerbelastningen '
+                    'tydligt.',
+                    'Undvik att toppa den med feta kommersiella glasskulor, och använd i stället några färska hallon för '
+                    'en frisk smak utan att höja den glykemiska belastningen.'),
+              faq=[dict(q='Höjer den höga kakaohalten näringsvärdet?',
+                        a='Ja, mörk kakao innehåller flavonoider och magnesium.'),
+                   dict(q='Varför är den glykemiska belastningen hög trots det medelhöga indexet?',
+                        a='Därför att belastningen tar hänsyn till den totala mängden tillgängliga kolhydrater i en '
+                          'portion (41 g).'),
+                   dict(q='När är det bäst att äta den?',
+                        a='Efter en komplett måltid och före en period av fysisk aktivitet, så att kroppen använder '
+                          'energin effektivt.')]),
+    607: dict(lead='En pärla bland de traditionella tyska bakverken (Schwarzwälder Kirschtorte): lager av luftig '
+                   'kakaosockerkaka med syrliga körsbär, flingor av mörk choklad och vispad grädde. Den är en omtyckt '
+                   'balans mellan sötma och körsbärssmak, där de naturliga körsbären ger fibrer och antocyaniner, vilket '
+                   'ger den en egen näringsprofil bland traditionella bakverk.',
+              tips=('En vanlig bit är mättande och generös; att dela den med en vän gör att du kan njuta av den äkta '
+                    'smaken med måttligt antal kalorier.',
+                    'Färska eller frysta körsbär som inte kokats i sockerlag och mindre socker i grädden minskar de enkla '
+                    'sockerarterna tydligt.',
+                    'Observera att vissa kommersiella recept använder koncentrerad sockerlag för att fukta kakan, vilket '
+                    'kräver uppmärksamhet för den som följer sitt blodsocker.'),
+              faq=[dict(q='Tillför körsbären något verkligt?',
+                        a='Ja, körsbär är en frukt med lågt glykemiskt index som innehåller antocyaniner.'),
+                   dict(q='Är den lättare än cheesecake?',
+                        a='Den luftiga sockerkaksbotten gör att fetthalten oftast är lägre än i cheesecake gjord på fet '
+                          'färskost.'),
+                   dict(q='Hur påverkar grädden sockerupptaget?',
+                        a='Gräddens fett bromsar magsäckstömningen och glukosflödet jämfört med helt fettfria sötsaker.')]),
+    608: dict(lead='En ikon på Wiens historiska kaféer: en kompakt chokladsockerkaka med ett tunt lager silad aprikossylt '
+                   'i mitten, täckt av en fast och blank ganache av mörk choklad. Den äkta österrikiska karaktären '
+                   'balanserar den fina chokladens beska med aprikosens naturliga syra, och den serveras traditionellt med '
+                   'svart kaffe utan socker.',
+              tips=('Den skärs traditionellt i tunna skivor eftersom den är kompakt och mättande; en liten bit till kaffet '
+                    'ger smakupplevelsen med en naturligt avvägd portion.',
+                    'Aprikossylt gjord på 100 % frukt utan raffinerat socker minskar den totala sockerbelastningen.',
+                    'Ganachen på ytan innehåller mycket snabbt nedbrutet socker, så räkna med den i dagens totala '
+                    'stärkelse.'),
+              faq=[dict(q='Vad gör aprikossylten?',
+                        a='Den ger sockerkakan fukt och bryter chokladens fyllighet med en lätt syrlig ton.'),
+                   dict(q='Är den mäktig jämfört med andra tårtor?',
+                        a='Fetthalten är måttlig och lägre än i smörkrämstårtor, eftersom den främst bygger på kakao och '
+                          'ägg.'),
+                   dict(q='Hur bromsar vi sockerupptaget?',
+                        a='Ät den efter en måltid med grönsaker och magert protein, och undvik söta drycker till.')]),
+    609: dict(lead='Ett av de varmaste och mest omtyckta bakverken; morotskakan förenar den värmande smaken av kanel och '
+                   'ingefära med fukten från färskriven morot och valnötternas krispighet, täckt med ett lager len '
+                   'färskostfrosting. Moroten, som innehåller fibrer och betakaroten, och valnötterna med sitt fett bidrar '
+                   'till ett mer måttligt glykemiskt index än traditionella vita kakor.',
+              tips=('Att skrapa bort en del av den söta frostingen med gaffeln minskar de enkla sockerarterna och '
+                    'kalorierna tydligt, medan den kryddiga smaken behålls.',
+                    'Baka den med havremjöl eller fullkornsvetemjöl, öka andelen valnötter och morot, och använd färskost '
+                    'med låg fetthalt och måttlig sötning i frostingen.',
+                    'Kanel ger kakan dess karaktäristiska värmande smak.'),
+              faq=[dict(q='Blir morotskakan ett bättre val bara för att den innehåller morot?',
+                        a='Den innehåller mer näringsämnen som A-vitamin och fibrer, men den är fortfarande en kaka med '
+                          'energi och socker som kräver måtta.'),
+                   dict(q='Varför är det glykemiska indexet (58) bättre än för vanlig kaka?',
+                        a='Tack vare morotens fibrer och valnötternas vegetabiliska fett, som bromsar nedbrytningen av '
+                          'stärkelsen.'),
+                   dict(q='Passar den i en stärkelsesnål kost?',
+                        a='En bit innehåller cirka 43 g nettokolhydrater, så den passar en balanserad kost om portionerna '
+                          'räknas noga.')]),
+    610: dict(lead='Den sammetsröda kakan, känd för sin karmosinröda färg och satinmjuka konsistens; den förenar en lätt '
+                   'kakaosmak med kärnmjölkens (buttermilk) milda syra och rikliga lager söt färskostfrosting. '
+                   'Kombinationen ger den dess särskilda luftighet, och den är en stjärna vid fester; portionens storlek '
+                   'behöver beaktas på grund av den höga socker- och energitätheten.',
+              tips=('På grund av den höga glykemiska belastningen rekommenderas en halv bit som efterrätt vid festliga '
+                    'tillfällen efter en huvudmåltid rik på grönsaker och protein.',
+                    'Använd naturligt rödbetspulver för att få den karaktäristiska röda färgen i stället för konstgjorda '
+                    'färgämnen, och minska sockret i frostingen.',
+                    'Den glykemiska belastningen för en bit (35,8) är hög, så en lätt fysisk aktivitet som en promenad '
+                    'rekommenderas efter tillfällen med den här typen av sötsaker.'),
+              faq=[dict(q='Vad är hemligheten bakom den sammetslena konsistensen?',
+                        a='Reaktionen mellan den lätta kärnmjölken och den lilla mängden kakao ger smeten en unik mjukhet '
+                          'och len fasthet.'),
+                   dict(q='Skiljer den sig från chokladkaka?',
+                        a='Ja, mängden kakao är mycket liten och smaken bygger mer på vanilj och balansen mellan syran och '
+                          'frostingen.'),
+                   dict(q='Hur gör vi med livsmedelsfärger?',
+                        a='Det är alltid bättre att använda naturliga växtextrakt som rödbetsjuice eller rödbetspulver.')]),
+    611: dict(lead='Det mest kända som det anrika sicilianska köket har skapat: krispiga och spröda rör av friterad deg '
+                   'kryddad med kanel, som fylls direkt vid beställning med len, silad ricottakräm sötad med vanilj och '
+                   'bitar av mörk choklad eller pistage. Den krämiga kärnan bygger på ricotta, som innehåller '
+                   'vassleprotein och kalcium, vilket ger en proteintäthet som gör sockerupptaget lugnare och långsammare '
+                   'än för bakverk fyllda med industriell sockerkräm.',
+              tips=('En cannoli mättar väl; ät den helst färsk efter en balanserad huvudmåltid så att ricottans fett och '
+                    'protein bromsar matsmältningen.',
+                    'Att grädda cannolirören i airfryer i stället för att fritera dem minskar fettet kraftigt, och färsk '
+                    'ricotta med naturligt sötningsmedel minimerar sockret.',
+                    'Skalet innehåller stekfett, så den som håller koll på blodfetterna bör nöja sig med en cannoli och '
+                    'inte äta fler samma dag.'),
+              faq=[dict(q='Gör ricottan cannoli till ett bättre val?',
+                        a='Den ger mer protein och kalcium och mättar mer, men cannoli är fortfarande en sötsak med fett '
+                          'och friterad stärkelse som kräver en måttlig portion.'),
+                   dict(q='Hur påverkar cannoli blodsockret?',
+                        a='Tack vare ricottans protein blir det ingen kraftig plötslig stegring utan en relativt måttlig '
+                          'kurva med en måttlig glykemisk belastning (13,9).'),
+                   dict(q='Kan den som har insulinresistens äta cannoli?',
+                        a='Ja, som en sötsak vid festliga tillfällen, en halv eller en liten cannoli, med en promenad '
+                          'efteråt.')]),
+    612: dict(lead='Det lyxiga italienska festbrödet från Milano, med extremt luftig konsistens, en hög kupol och doft av '
+                   'kanderade apelsinskal, blötlagda russin och vaniljkorn. Det kräver långsam jäsning med naturlig surdeg '
+                   'i flera dagar, vilket ger en unik luftig struktur som smälter i munnen, med en smak som förenar rent '
+                   'smör och torkad frukts sötma.',
+              tips=('Den långa jäsningen gör brödet lättsmält, men den torkade frukten höjer sockerbelastningen; nöj dig '
+                    'med en tunn skiva till morgonens espresso utan tillbehör.',
+                    'Undvik att bre chokladsåser eller extra smör på skivan som vissa gör; den aromatiska smaken är fyllig '
+                    'och räcker helt på egen hand.',
+                    'Russin och kanderade citrusskal är en koncentrerad källa till enkla kolhydrater, vilket kräver '
+                    'uppmärksamhet för den som följer sitt HbA1c.'),
+              faq=[dict(q='Sänker den naturliga jäsningen panettonens glykemiska index?',
+                        a='Den långa jäsningen förbättrar nedbrytningen av glutenet och brödets konsistens, men sockret '
+                          'och russinen håller indexet i det medelhöga intervallet (65).'),
+                   dict(q='Hur många skivor kan man äta vid festliga tillfällen?',
+                        a='En skiva (80 g) motsvarar en huvudsaklig stärkelseportion, så det är bäst att dra av den från '
+                          'stärkelsen i måltiden före.'),
+                   dict(q='Vad är skillnaden mot sockerkaka?',
+                        a='Panettone är ett bröd som jäst med naturlig jäst och smör, och fetthalten är betydligt lägre än '
+                          'i mäktiga gräddtårtor.')]),
+    613: dict(lead='Den kungliga piemontesiska efterrätten vars namn betyder ”kokt grädde”: färsk grädde och mjölk kokas '
+                   'med äkta vaniljstänger och kyls sedan till en sammetslen konsistens som darrar lätt och elegant, och '
+                   'garneras med en frisk syrlig hallonpuré. Mjölkens naturliga fett och bärens fibrer ger efterrätten ett '
+                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 55), vilket gör den till ett av de mildare '
+                   'efterrättsvalen.',
+              tips=('Ett utmärkt val efter fisk eller lätta kötträtter, och den glykemiska belastningen (11,6) är en av de '
+                    'bästa bland lyxiga västerländska efterrätter.',
+                    'Att göra bärsåsen genom att mosa färska bär utan att koka dem med raffinerat socker bevarar '
+                    'C-vitaminet och minskar kolhydraterna i såsen tydligt.',
+                    'Den som håller koll på det totala fettet kan blanda halva mängden grädde med mandeldryck eller '
+                    'skummjölk och naturligt gelatin, så behålls samma härliga konsistens med mindre fett.'),
+              faq=[dict(q='Tillför gelatinet i pannacottan något näringsvärde?',
+                        a='Gelatin är ett protein som utvinns ur kollagen, men mängden i en portion är mycket liten (några '
+                          'gram), så det är ingen viktig näringskälla; dess huvudsakliga roll är att ge fasthet.'),
+                   dict(q='Varför är det glykemiska indexet lågt?',
+                        a='Därför att andelen tillsatt socker är avvägd och kommer i en fet miljö som tas upp långsamt, '
+                          'tillsammans med bär som innehåller ellagsyra.'),
+                   dict(q='Passar den vid lågkolhydratkost?',
+                        a='Den traditionella varianten innehåller cirka 21 g tillgängliga kolhydrater per glas, men med '
+                          'ett kalorifritt sötningsmedel (som erytritol) och färska osötade bär passar den '
+                          'lågkolhydratkost.')]),
+    614: dict(lead='De historiska svampkexen som härstammar från furstarna av Savojen och är grundingrediensen i tiramisu '
+                   'och charlotte. Kexen har en mycket lätt och porös struktur som suger upp kaffe och smaker mästerligt. '
+                   'De gräddas av vispade äggvitor och äggulor med mjöl och lite socker på ytan som ger en mjuk '
+                   'krispighet. Eftersom de innehåller lite fett och mycket snabbt nedbruten stärkelse räknas de till '
+                   'livsmedel med högt glykemiskt index (en kliniskt granskad uppskattning, 70).',
+              tips=('Undvik att äta dem torra och ensamma som mellanmål; det är bättre att använda dem i klassisk '
+                    'tiramisu, där mascarponens fett och protein dämpar blodsockertoppen från kexen.',
+                    'Doppa dem i espresso utan att tillsätta socker i doppvätskan.',
+                    'Det höga glykemiska indexet (70) gör att de bryts ned i blodet nästan lika snabbt som vitt bröd, så '
+                    'håll noga koll på hur många du äter.'),
+              faq=[dict(q='Är savoiardikex kalorisnåla?',
+                        a='Ett kex innehåller cirka 38 kcal och mycket lite fett, men det mesta av energin kommer från '
+                          'raffinerade och snabbt upptagna kolhydrater.'),
+                   dict(q='Varför är det glykemiska indexet högt (70)?',
+                        a='På grund av lite fett och fibrer som bromsar matsmältningen, och den porösa strukturen som gör '
+                          'att matsmältningsenzymerna snabbt når stärkelsen.'),
+                   dict(q='Vad är ett bättre alternativ till kexen i tiramisu?',
+                        a='De kan bytas mot skivor av stärkelsesnål mandelsockerkaka.')]),
+    615: dict(lead='Ett mästerverk från Toscana, känt för sin torra krispighet som trotsar tiden; kexen gräddas två gånger '
+                   '(biscotti) för den omtyckta hårdheten som mjuknar förtrollande när de doppas i kaffe eller te. Kexen '
+                   'är fulla av hela rostade mandlar som utgör en stor del av vikten, vilket ger enkelomättat fett, '
+                   'magnesium, fibrer och protein som bromsar blodsockerstegringen jämfört med vanliga kex. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+              tips=('En eller två till en kopp svart kaffe är ett mycket gott mellanmål; de kräver ordentlig tuggning.',
+                    'Andelen oskalad mandel kan ökas till 35 % av receptets vikt och fullkornsvetemjöl användas för en '
+                    'bättre sockerbelastning och mer fibrer.',
+                    'Mandeln ger fett men höjer energitätheten, så nöj dig med portionen på 40 g.'),
+              faq=[dict(q='Varför är det glykemiska indexet för cantuccini lägre än för vanliga kex?',
+                        a='Därför att de hela mandlarna ger ett nätverk av fett och fibrer som bromsar nedbrytningen av '
+                          'stärkelsen i tarmen.'),
+                   dict(q='Passar de som en lätt sötsak vid diabetes?',
+                        a='Det går, om portionen beaktas (ett eller två kex) och räknas in i dagens kolhydrater (cirka 26 '
+                          'g i två kex); de ger en jämnare blodsockerkurva än spröda kex.'),
+                   dict(q='Hur behåller de sin fräschhet och hårdhet?',
+                        a='Tack vare den dubbla gräddningen som tar bort fukten, så att de naturligt behåller sin kvalitet '
+                          'i många veckor.')]),
+    616: dict(lead='En pärla på det klassiska engelska tebordet, uppkallad efter drottning Victoria: två lager gyllene, '
+                   'mjuk sockerkaka med fyllig smak av rent smör och vaniljextrakt, med ett rikligt lager jordgubbs- eller '
+                   'hallonsylt och färsk vispad grädde emellan och lite florsocker på toppen. En varm festtårta som '
+                   'förenar enkelhet och elegans, där portionen behöver beaktas på grund av sockret i sylten och den vita '
+                   'degen.',
+              tips=('Den passar utmärkt att dela med vänner vid festliga tillfällen; en halv bit med svart te utan socker '
+                    'ger den traditionella brittiska upplevelsen med måtta.',
+                    'Använd fruktsylt kokad med 100 % frukt och utan raffinerat socker, eller fyll den med mosade färska '
+                    'jordgubbar i stället för söt sylt.',
+                    'Den glykemiska belastningen (29,1) räknas som hög; därför rekommenderas att inte äta den på fastande '
+                    'mage.'),
+              faq=[dict(q='Vad skiljer victoriatårtan från vanlig sockerkaka?',
+                        a='Lika delar smör, socker, mjöl och ägg, vilket ger en smörigare, fastare och saftigare '
+                          'konsistens än vanlig sockerkaka.'),
+                   dict(q='Hur styr jag effekten på min vikt?',
+                        a='Räkna in de 324 kcal i den dagliga energibudgeten, och undvik att kombinera den med läsk eller '
+                          'juice.'),
+                   dict(q='Är sylten den främsta orsaken till det höjda indexet?',
+                        a='Sylten är en av de viktiga faktorerna tillsammans med sockret och det vita mjölet i kakan; '
+                          'kommersiell sylt innehåller sackaros och koncentrerad glukossirap, och att byta den mot '
+                          'naturlig frukt minskar sockerbelastningen tydligt.')]),
+    617: dict(lead='Den mest kända välkomstritualen på den engelska landsbygden och i Devon och Cornwall: varma, fylliga '
+                   'brittiska bakverk med en konsistens mellan mjuk kaka och sprött kex. Den varma sconen delas på mitten '
+                   'och breds med tjock engelsk grädde som kokats långsamt (clotted cream) och lite blank jordgubbssylt. '
+                   'Trots den fylliga och lockande smaken gör kombinationen av koncentrerat vetemjöl, gräddens fett och '
+                   'syltens socker sconen till en måltid med hög energi- och sockerbelastning som kräver medveten måltid.',
+              tips=('Ät bara en halv scone med en tesked grädde, och byt sylten mot färska jordgubbsskivor, så halveras '
+                    'kalorierna och stärkelsen.',
+                    'Att baka sconesen med fullkornsmjöl och tillsätta chia- eller linfrön ger mer fibrer och längre '
+                    'mättnad.',
+                    'Clotted cream innehåller mer än 55 % fett, vilket betyder att en färdig scone är en hel måltid och '
+                    'inte bara en lätt efterrätt.'),
+              faq=[dict(q='Äts scones varma eller kalla?',
+                        a='De är bäst varma direkt från ugnen så att de behåller sin spröda konsistens och grädden smälter '
+                          'mjukt över dem.'),
+                   dict(q='Varför är den glykemiska belastningen hög?',
+                        a='Därför att en scone samlar cirka 44 g snabbt tillgängliga kolhydrater mellan degen och den söta '
+                          'sylten.'),
+                   dict(q='Hur balanserar jag måltiden efter scones?',
+                        a='Låt nästa måltid vara mycket rik på bladgrönsaker och magert protein och fri från stärkelse.')]),
+    618: dict(lead='”Medelhavets guld”: naturlig rom från grå multe som saltats och torkats och skyddas av ett vaxlager i '
+                   'Italien och Grekland. Den har en djup, koncentrerad havssmak och en fast bärnstensfärgad konsistens '
+                   'som lätt rivs över rätter. Näringsmässigt är den en koncentrerad källa till fullvärdigt protein, '
+                   'omega-3-fettsyror (DHA och EPA), zink och E-vitamin, och den saknar nästan kolhydrater.',
+              tips=('Att riva 15 till 25 g över en tallrik fullkornspasta eller zucchininudlar lyfter rättens smak och '
+                    'proteininnehåll utan tunga såser.',
+                    'Den tillagas inte på hög värme; den rivs eller skärs i mycket tunna skivor och läggs på tallriken vid '
+                    'serveringen för att bevara smak och konsistens.',
+                    'På grund av torkningen med havssalt innehåller den mycket natrium; därför är det bäst att inte salta '
+                    'måltiden ytterligare, särskilt för den som är känslig för natrium.'),
+              faq=[dict(q='Varför är det glykemiska indexet inte tillämpligt?',
+                        a='Därför att den är fiskrom som främst består av protein och fett, och kolhydraterna är nästan '
+                          'obefintliga (cirka 0,4 g per portion).'),
+                   dict(q='Vilka är bottargans viktigaste näringsvärden?',
+                        a='Den är en koncentrerad källa till protein och omega-3-fettsyror (EPA och DHA).'),
+                   dict(q='Passar den vid keto och periodisk fasta?',
+                        a='Den passar vid keto eftersom kolhydraterna nästan saknas; vid periodisk fasta äts den bara '
+                          'under ätfönstret, och den höga salthalten bör beaktas.')]),
+    619: dict(lead='Den anrika brittiska havsfrukosten: hela atlantiska sillar som delas längs ryggen, saltas och röks '
+                   'långsamt över ekspån så att de får sin kopparguldiga färg och ikoniska rökdoft. Kippers hör till de '
+                   'mest näringsrika feta fiskarna; de innehåller omega-3-fettsyror, naturligt D-vitamin och B12-vitamin '
+                   'med rent protein, och påverkar inte blodsockret.',
+              tips=('De serveras traditionellt med kokt ägg och grillade tomatskivor; en proteinrik frukost som mättar i '
+                    'många timmar.',
+                    'Värm dem snabbt med ånga eller i en non-stick panna med lite olivolja och rikligt med citron för att '
+                    'mildra röksmaken och balansera saltet.',
+                    'Rökt sill innehåller en hel del salt från saltningen; att blötlägga den kort i kallt vatten före '
+                    'tillagningen kan minska natriumhalten.'),
+              faq=[dict(q='Är kippers bra för skelettet?',
+                        a='De hör till de livsmedel som innehåller mycket D-vitamin och fosfor; D-vitamin bidrar till '
+                          'normalt upptag av kalcium och till att bibehålla normal benstomme.'),
+                   dict(q='Hur påverkar de blodsockret?',
+                        a='De höjer inte blodsockret eftersom de saknar kolhydrater, och proteinet och fettet bidrar till '
+                          'mättnad när de äts i måltiden.'),
+                   dict(q='Kan de ätas varje vecka utan risk?',
+                        a='Ja, eftersom sill är en liten fisk som lever av plankton är kvicksilverhalten mycket låg '
+                          'jämfört med stora fiskar.')]),
+    620: dict(lead='Ett utmärkt val för den som tränar eller håller koll på kosten: rosa vildlax från Alaska som fångas i '
+                   'kallt vatten och konserveras i vatten med lite salt. Den ger protein av hög kvalitet utan tillsatt '
+                   'fett, och de små mjuka, ätbara benen ger en god mängd kalcium – mer än mjölk per 100 g – samt det '
+                   'naturliga färgämnet astaxantin som ger laxen dess rosa färg.',
+              tips=('Mosa laxen med de mjuka benen med en gaffel i en grön sallad, så får du mest kalcium; kalcium behövs '
+                    'för att bibehålla normal benstomme och normala tänder.',
+                    'Blanda den med en fjärdedels mosad avokado, citronsaft och dijonsenap till en god krämig laxröra utan '
+                    'kommersiell majonnäs.',
+                    'Lax i vatten i stället för olja ger dig full kontroll över mängden och kvaliteten på fettet du '
+                    'tillsätter.'),
+              faq=[dict(q='Förlorar konserverad lax sina näringsvärden jämfört med färsk?',
+                        a='Konserverad vildlax behåller det mesta av sitt protein och omega-3 och innehåller dessutom mer '
+                          'kalcium tack vare de mjuka ätbara benen.'),
+                   dict(q='Passar vildlax vid diabetes?',
+                        a='Ja, den är ett utmärkt val med protein av hög kvalitet och omega-3 utan glykemisk belastning; '
+                          'EPA och DHA bidrar till hjärtats normala funktion vid ett dagligt intag på 250 mg.'),
+                   dict(q="Vad är fördelen med 'vild' lax jämfört med odlad?",
+                        a='Vildlax äter naturligt i havet och innehåller oftast mindre totalt fett än odlad lax, och den '
+                          'rosa färgen kommer från astaxantin i den naturliga födan, medan astaxantin tillsätts i fodret '
+                          'till odlad lax.')]),
+    621: dict(lead='En ikon bland lyxiga portugisiska konserver: fylliga silverglänsande atlantiska sardiner som tillagas '
+                   'i burken i en rik medelhavstomatsås med lite chili och jungfruolivolja. Rätten förenar sardinernas '
+                   'höga proteinvärde och omega-3 med lykopenet i de tillagade tomaterna, vilket gör den till en snabb och '
+                   'komplett måltid.',
+              tips=('Ät dem på en skiva rostat fullkornsbröd eller med en färgglad quinoasallad till en snabb lunch.',
+                    'Häll inte bort tomatsåsen i burken; den innehåller en del av sardinernas fett och det omega-3 som '
+                    'lösts upp vid tillagningen.',
+                    'Den mycket lilla mängden kolhydrater (2,4 g per portion) kommer från de naturliga tomaterna och '
+                    'påverkar blodsockret mycket lite.'),
+              faq=[dict(q='Finns det kalcium i konserverade sardiner i sås?',
+                        a='Ja, sardinbenen är mycket mjuka och äts lätt, och de är en bra källa till kalcium.'),
+                   dict(q='Ökar den starka chilin i såsen förbränningen?',
+                        a='Capsaicin kan ge en känsla av värme, men effekten på vikten är begränsad.'),
+                   dict(q='Varför räknas sardiner som säkrare än tonfisk när det gäller kvicksilver?',
+                        a='Därför att de befinner sig längst ned i havets näringskedja och lever kort, vilket gör att '
+                          'kvicksilverhalten är mycket låg.')]),
+    622: dict(lead='En av de finaste sorterna tonfisk från Biscayabukten och norra Spanien; den fångas en och en med '
+                   'traditionell lina för att skydda havsmiljön och konserveras som fasta, vita filébitar, mjuka som '
+                   'siden, i extra jungfruolivolja. Bonito har en mild och fin smak och en mör konsistens som inte går att '
+                   'jämföra med smulad kommersiell tonfisk, och den förenar protein av hög kvalitet med oljesyra.',
+              tips=('Olivoljan i burken är extra jungfruolivolja som har tagit upp tonfiskens saft; använd en sked direkt '
+                    'till din gröna sallad i stället för att slänga den.',
+                    'Den serveras som en äkta spansk förrätt med skivor av grillad paprika, gurka och lite fint havssalt.',
+                    'En måltid med mycket protein (cirka 30 g per portion); protein bidrar till att bibehålla muskelmassa.'),
+              faq=[dict(q="Vad är skillnaden mellan 'bonito del norte' och vanlig tonfisk (skipjack)?",
+                        a='Bonito är vit tonfisk (albacore) med sammetslen konsistens, finare smak och något mer fett, men '
+                          'kvicksilverhalten är högre än i skipjack; därför räcker det att äta den ungefär en gång i '
+                          'veckan, och gravida och barn bör följa Livsmedelsverkets råd om hur mycket de äter.'),
+                   dict(q='Påverkar tonfisk i olja blodsockret?',
+                        a='Den innehåller inga kolhydrater och höjer därför inte blodsockret, och olivoljans fett bidrar '
+                          'till mättnad.'),
+                   dict(q='Passar den vid viktnedgång?',
+                        a='Ja, men låt en del av oljan rinna av om du följer ett strikt dagligt kaloriunderskott.')]),
+    623: dict(lead='En av de mest kända klassiska spanska tapasrätterna från Galiciens kuster: fylliga orange blåmusslor '
+                   'som ångkokats och lagts in i den anrika escabechemarinaden av olivolja, vinäger, rökt paprika, '
+                   'lagerblad och vitlöksklyftor. Blåmusslor innehåller mycket järn (mer än rött kött), B12-vitamin och '
+                   'zink, med måttlig fetthalt och mycket lite naturliga kolhydrater.',
+              tips=('Ett lämpligt mellanmål för den som behöver mer järn; ät burken med skivor av färsk paprika som '
+                    'innehåller C-vitamin, eftersom C-vitamin ökar järnupptaget.',
+                    'Servera dem kalla direkt ur burken med en lätt skvätt citron, eller vänd dem med en kall kokt '
+                    'potatissallad som tar upp smaken av vinäger och paprika.',
+                    'Vissa studier tyder på att vinäger kan bromsa magsäckstömningen och dämpa blodsockerstegringen efter '
+                    'stärkelserika måltider, men mängden i den här såsen är liten.'),
+              faq=[dict(q='Varför innehåller blåmusslor kolhydrater, till skillnad från fisk?',
+                        a='Därför att blötdjur lagrar energi som glykogen i vävnaderna; mängden här är liten (cirka 5 g '
+                          'per burk) och påverkar knappast blodsockret.'),
+                   dict(q='Innehåller blåmusslor verkligen mycket järn?',
+                        a='Ja, en burk täcker flera gånger det dagliga behovet av B12-vitamin och en viktig del av '
+                          'järnbehovet; järn och B12-vitamin bidrar till normal bildning av röda blodkroppar.'),
+                   dict(q='Är escabechesåsen ett bra val?',
+                        a='Den är en traditionell marinad av olivolja, vinäger och kryddor; läs etiketten för att '
+                          'kontrollera mängden salt och tillsatta ingredienser.')]),
+    624: dict(lead='En av de djärvaste och mest förfinade rätterna i Medelhavsområdet (calamares en su tinta): mjuka vita '
+                   'bläckfiskbitar som tillagas långsamt i sin svarta sås av naturligt bläckfiskbläck med lök, olivolja '
+                   'och kryddor. Bläcket ger rätten dess mystiska färg och fylliga havssmak, och det innehåller det '
+                   'naturliga pigmentet melanin och vissa mineraler som koppar och järn, vilket gör rätten till en '
+                   'kombination av njutning och kalorisnålt protein.',
+              tips=('Blanda den med riven blomkål som rostats i olivolja till en stärkelsesnål och vacker ”svart paella”.',
+                    'Att värma burken varsamt på låg värme med lite hackad persilja och finhackad vitlök lyfter fram '
+                    'bläckets djupa smaker.',
+                    'Bläckfiskkött är naturligt magert, och det mesta av fettet i burken kommer från olivoljan som '
+                    'tillsatts i såsen.'),
+              faq=[dict(q='Är bläckfiskbläck ätbart och nyttigt?',
+                        a='Ja, det är säkert och har använts i århundraden i medelhavsköket, och det innehåller pigmentet '
+                          'melanin och vissa mineraler.'),
+                   dict(q='Höjer den här rätten blodsockret?',
+                        a='Det glykemiska indexet är inte tillämpligt eftersom kolhydraterna är få (cirka 3,5 g per burk, '
+                          'mest från löken i såsen), så den ger ingen blodsockertopp.'),
+                   dict(q='Är konserverad bläckfisk seg att tugga?',
+                        a='Den långsamma tillagningen och värmesteriliseringen i burken gör bläckfiskens fibrer mycket '
+                          'mjuka och lättsmälta.')]),
+    625: dict(lead='Sandsträndernas skatt bevarad enkelt och rent: kött från små venusmusslor som ångkokats och packats i '
+                   'sin lätta lake för att behålla mörheten och den milda havssmaken. Små konserverade musslor hör till de '
+                   'livsmedel som innehåller mest B12-vitamin – en liten portion ger flera gånger det dagliga behovet – '
+                   'och de ger även järn och zink, nästan utan fett.',
+              tips=('Utmärkta att tillsätta de sista minuterna i grönsakssoppor med skaldjur eller i vita pastasåser med '
+                    'zucchini, olivolja och persilja.',
+                    'Använd lite av det silade musselspadet för att smaksätta buljongen i stället för industriella '
+                    'buljongtärningar, men tänk på salthalten.',
+                    'Musslorna är en bra källa till järn, zink och B12-vitamin; järn och B12-vitamin bidrar till normal '
+                    'bildning av röda blodkroppar och hemoglobin.'),
+              faq=[dict(q='Hur mycket B12-vitamin finns i små venusmusslor?',
+                        a='En portion (85 g) ger kroppen många gånger det dagliga behovet av B12-vitamin, vilket gör dem '
+                          'till ett av de livsmedel som innehåller mest.'),
+                   dict(q='Passar de vid diabetes?',
+                        a='Ja, de är protein med mycket lite fett, och kolhydraterna är få (cirka 3,4 g per portion), så '
+                          'det glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Innehåller musslor mycket kolesterol?',
+                        a='Blötdjur innehåller en måttlig mängd kolesterol i maten, men mycket lite mättat fett, som är '
+                          'den viktigaste faktorn bakom höjt blodkolesterol hos de flesta.')]),
+    626: dict(lead='”Nordatlantens guld”, varsamt rökt; torsklever har en krämig konsistens som smälter i munnen med en '
+                   'lyxig havssmak. Den är en naturlig och mycket rik källa till omega-3-fettsyror och D- och A-vitamin, '
+                   'med nästan inga kolhydrater, så det glykemiska indexet är inte tillämpligt.',
+              tips=('Ät den helst mosad på en skiva rostat fullkornsbröd med en skvätt färsk citron för att balansera det '
+                    'naturliga fettet.',
+                    'Nöj dig med en liten portion i veckan (en halv burk) för att få nyttan utan för mycket av de '
+                    'fettlösliga vitaminerna.',
+                    'Klinisk varning till gravida: eftersom den innehåller mycket stora mängder animaliskt A-vitamin '
+                    '(retinol) rekommenderas att den undviks under graviditeten för att förebygga för högt intag av '
+                    'A-vitamin.'),
+              title='Hur många kalorier har rökt torsklever? Råd och portioner | WiBo Health',
+              desc='En halv burk isländsk torsklever (60 g) ger 246 kcal och omega-3-fett med nästan inga kolhydrater. Läs '
+                   'om D-vitamin och de viktigaste råden för gravida.',
+              faq=[dict(q='Hur påverkar konserverad torsklever blodsockret?',
+                        a='Kolhydraterna är nästan obefintliga, så effekten på blodsockret är mycket liten.'),
+                   dict(q='Vad är skillnaden mellan torsklever och levertran?',
+                        a='Konserverad lever är ett helt livsmedel som ger protein, naturligt fett och vitaminer, medan '
+                          'levertran är ett rent fettextrakt.')]),
+    627: dict(lead='Traditionella italienska pastaknyten med len fyllning; degen av durumvetegryn förenas med en fyllning '
+                   'av ricotta och gröna spenatblad. Ricottans protein bromsar nedbrytningen av stärkelsen, vilket ger ett '
+                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 50). Värdena på den här sidan gäller kokta '
+                   'tortellini.',
+              tips=('Servera dem med en lätt sås av färsk tomat (marinara) i stället för tunga gräddsåser, så hålls de '
+                    'totala kalorierna i schack.',
+                    'Börja måltiden med en grön sallad för mer fibrer och en lägre glykemisk belastning för hela måltiden.'),
+              title='Hur många kalorier har tortellini med ricotta? GI | WiBo Health',
+              desc='En portion kokta tortellini (150 g) innehåller 255 kcal och 10 g protein, med ett lågt glykemiskt '
+                   'index (50). Läs hur ostfyllningen påverkar mättnad och blodsocker.'),
+    628: dict(lead='Italienska raviolikuddar fulla av smak av vild svamp och lagrad parmesan. Svampen ger fibrer och '
+                   'fyllig smak som mättar, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50). '
+                   'Värdena på den här sidan gäller kokta ravioli.',
+              tips=('Att koka pastan al dente håller ihop stärkelsen och bromsar nedbrytningen i tarmen.',
+                    'Lite extra jungfruolivolja och salviablad räcker för att lyfta fram svampsmaken utan industriellt '
+                    'fett.'),
+              title='Hur många kalorier har ravioli med svamp? GI | WiBo Health',
+              desc='En vanlig portion kokta ravioli (150 g) innehåller 248 kcal och 9,3 g protein, med ett lågt glykemiskt '
+                   'index (50). Läs om den vilda svampen och ravioli vid bantning.'),
+    629: dict(lead='Breda gyllene pastaband gjorda av durumvetemjöl och färsk äggula; ägget ger en mjuk konsistens och en '
+                   'högre andel protein som mättar och bromsar stärkelseupptaget. Värdena på den här sidan gäller kokt '
+                   'tagliatelle. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50).',
+              tips=('Att tillsätta protein som kycklingbröst eller grillade räkor gör måltiden komplett och dämpar '
+                    'blodsockerresponsen.',
+                    'En måttlig portion (140 g kokt) räcker som huvudrätt, särskilt med grönsaker och protein.'),
+              title='Hur många kalorier har tagliatelle med ägg? GI | WiBo Health',
+              desc='En portion kokt äggtagliatelle (140 g) innehåller 203 kcal och 7,8 g protein, med ett lågt glykemiskt '
+                   'index (50). Läs om skillnaden mellan äggpasta och vanlig pasta.'),
+    630: dict(lead='Den omtyckta räfflade rörpastan av naturliga durumvetegryn; den suger upp vatten och ger en mättande '
+                   'volym med bara 203 kcal per portion och ett lågt glykemiskt index (en kliniskt granskad uppskattning, '
+                   '45).',
+              tips=('Att koka den al dente (9–10 minuter) bromsar nedbrytningen av stärkelsen och sänker det glykemiska '
+                    'indexet jämfört med att koka den för länge.',
+                    'Blanda den med rikligt med broccoli eller zucchini, så blir rätten större utan många extra kalorier.'),
+              title='Hur många kalorier har kokt penne rigate? GI | WiBo Health',
+              desc='En skål kokt penne rigate (150 g) innehåller bara 203 kcal, med ett lågt glykemiskt index (45). Läs '
+                   'varför al dente-kokning hjälper till att hålla blodsockret i schack.'),
+    631: dict(lead='Gyllene spiraler rika på kli och grodd från fullkornsvete; de innehåller mycket fibrer (6 g per '
+                   'portion) som mättar länge, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 42).',
+              tips=('Ett bra val vid diabetes och insulinresistens i stället för traditionell vit pasta.',
+                    'Spiralformen håller kvar grönsakssåser och olivolja utan att tungt fett behöver tillsättas.'),
+              title='Hur många kalorier har fullkornsfusilli? GI | WiBo Health',
+              desc='En portion kokt fullkornsfusilli (150 g) innehåller 192 kcal och 6 g fibrer, med ett lågt glykemiskt '
+                   'index (42). Ett klokt val vid diabetes och bantning.'),
+    632: dict(lead='Breda plattor av oraffinerat fullkornsvetemjöl; de ger en stadig och fiberrik grund för en bättre '
+                   'lasagne, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48). Värdena på den '
+                   'här sidan gäller torra plattor före tillagning.',
+              tips=('Bygg lasagnen i lager med skivor av zucchini och aubergine och en sås av mager köttfärs, så minskar '
+                    'mängden plattor och fibrerna ökar.',
+                    'Kom ihåg att vikten 70 g gäller torra plattor innan de har sugit upp såsen i ugnen.'),
+              title='Hur många kalorier har lasagneplattor av fullkorn? GI | WiBo Health',
+              desc='Två lasagneplattor av fullkorn (70 g torra) innehåller 242 kcal och 5,6 g fibrer, med ett lågt '
+                   'glykemiskt index (48). Läs hur du bygger en mättande lasagne.'),
+    633: dict(lead='Genuas gröna pärla: en frisk och aromatisk blandning av basilikablad, extra jungfruolivolja, rostade '
+                   'pinjenötter och parmesan. Den ger enkelomättat fett och påverkar blodsockret mycket lite. Det '
+                   'glykemiska indexet är inte tillämpligt.',
+              tips=('Tillaga inte peston på hög värme, utan blanda den med den varma pastan vid serveringen så att '
+                    'olivoljans kvalitet och basilikans doft bevaras.',
+                    'En till två matskedar räcker för att ge fyllig smak och lång mättnad utan överskott av kalorier.'),
+              title='Hur många kalorier har grön pesto? GI och portion | WiBo Health',
+              desc='Två matskedar italiensk basilikapesto (30 g) ger 131 kcal och omättat fett och påverkar blodsockret '
+                   'mycket lite. Läs om lämplig portion per dag.'),
+    634: dict(lead='Den röda kustversionen av italiensk pesto; den blandar sötman i soltorkade tomater med rostad mandel '
+                   'och olivolja. Den innehåller lykopen, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 25).',
+              tips=('Använd den som ett lätt bredbart pålägg på smörgåsar i stället för industriell majonnäs.',
+                    'Förvara burken i kylskåpet och täck ytan med en sked olivolja så att de naturliga ingredienserna inte '
+                    'oxiderar.'),
+              title='Hur många kalorier har röd pesto med tomat? GI | WiBo Health',
+              desc='Två matskedar röd pesto (30 g) innehåller 114 kcal, fett och lykopen, med ett lågt glykemiskt index '
+                   '(25). Ett italienskt val till sallader.'),
+    635: dict(lead='Koncentrerade tomater som torkats i medelhavssolen och lagts i extra jungfruolivolja; en källa till '
+                   'fibrer och lykopen med varm smak, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 35).',
+              tips=('Att låta bitarna rinna av försiktigt på hushållspapper minskar kalorierna märkbart utan att påverka '
+                    'den fylliga smaken.',
+                    'Att skära två tomater över den gröna salladen gör att du inte behöver tillsätta salt och industriella '
+                    'dressingar.'),
+              title='Hur många kalorier har soltorkade tomater? GI | WiBo Health',
+              desc='En portion soltorkade tomater i olivolja (30 g) ger 65 kcal och innehåller fibrer och lykopen, med ett '
+                   'lågt glykemiskt index (35). Läs om dem vid diabetes och bantning.'),
+    636: dict(lead='Små, krispiga pärlvita silverlökar som lagts in i en blandning av vinäger och kryddor; ett mycket lätt '
+                   'val som ger kraftig smak och frisk krispighet med bara cirka 11 kcal per portion. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Ett utmärkt tillbehör till kallskuret och grillat för att bryta fylligheten utan att tillföra fett.',
+                    'Att skölja lökarna i vatten före ätandet minskar natriumet och det lilla sockret i lagen för den som '
+                    'håller koll på saltet.'),
+              title='Hur många kalorier har inlagd silverlök? GI | WiBo Health',
+              desc='Fem inlagda silverlökar (30 g) ger bara 11 kcal, med ett lågt glykemiskt index (25). Läs om '
+                   'näringsvärdet i ett fräscht tillskott till sallader och måltider.'),
+    637: dict(lead='Klassiska krispiga italienska grönsaker (blomkål, morot, selleri och paprika) som lagts in i vinäger '
+                   'och aromatiska örter; en fräsch medelhavsförrätt som nästan saknar kalorier och mättar med sina '
+                   'fibrer. Det glykemiska indexet är inte tillämpligt.',
+              tips=('Utmärkt som krispigt mellanmål mellan måltiderna för att dämpa suget efter salta och feta snacks.',
+                    'Naturlig vinäger kan bidra till att bromsa magsäckstömningen när den äts i början av måltiden.'),
+              title='Hur många kalorier har giardiniera? Näringsvärde | WiBo Health',
+              desc='En halv kopp italiensk giardiniera (50 g) ger bara 11 kcal och naturliga fibrer och påverkar '
+                   'blodsockret mycket lite. En fräsch förrätt vid viktnedgång.'),
+    638: dict(lead='Burger Kings ikoniska flamgrillade hamburgare med nötkött, tomat, sallat och majonnäs; en mättande '
+                   'snabbmåltid med mycket protein, men den kräver medvetenhet om de många kalorierna och det höga '
+                   'fettinnehållet. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 66).',
+              tips=('Att beställa hamburgaren ”utan majonnäs” tar bort cirka 150 kcal och 16 g fett.',
+                    'Att hoppa över halva det övre brödet minskar de snabba kolhydraterna med nästan 40 %.',
+                    'Näringsvärdena för snabbmat är ungefärliga och kan variera mellan länder, restauranger och lokala '
+                    'tillagningssätt, och WiBo Health har ingen koppling till något av dessa varumärken.'),
+              title='Hur många kalorier har en Whopper? Näringsvärde | WiBo Health',
+              desc='En Burger King Whopper innehåller 657 kcal, 28 g protein och 40 g fett, med en glykemisk belastning på '
+                   '30,7. Läs om smarta sätt att tydligt minska kalorierna och fettet.'),
+    639: dict(lead='Burger Kings avlånga smörgås med krispig kycklingfilé, sallat och majonnäs; den ger en omtyckt '
+                   'krispighet och bra kycklingprotein, men friteringen och ströbrödspaneringen ökar både stärkelsen och '
+                   'fettet. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+              tips=('Att byta vanlig majonnäs mot senap ger kraftig smak utan extra kalorier från fett.',
+                    'Undvik att kombinera den med pommes frites och söta läskedrycker, så överskrider du inte den dagliga '
+                    'energibudgeten.',
+                    'Näringsvärdena för snabbmat är ungefärliga och kan variera mellan länder, restauranger och lokala '
+                    'tillagningssätt, och WiBo Health har ingen koppling till något av dessa varumärken.'),
+              title='Hur många kalorier har Chicken Royale? Näringsvärde | WiBo Health',
+              desc='En krispig Chicken Royale innehåller 590 kcal, 24 g protein och 51 g tillgängliga kolhydrater. Läs om '
+                   'fettet och hur den blir lättare för magen och blodsockret.'),
+    640: dict(lead="McDonald's mest populära glassdessert, som förenar den mjuka glassens konsistens med smulor av Oreokex "
+                   'med kakao. En sötsak rik på enkla sockerarter som kräver försiktighet och bör ätas sällan. Det '
+                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+              tips=('Att dela bägaren med någon annan är det snabbaste sättet att minska kolhydraterna (cirka 26 g i '
+                    'stället för 52 g).',
+                    'Ät den som efterrätt efter en balanserad proteinrik huvudmåltid, inte ensam på fastande mage.',
+                    'Näringsvärdena för snabbmat är ungefärliga och kan variera mellan länder, restauranger och lokala '
+                    'tillagningssätt, och WiBo Health har ingen koppling till något av dessa varumärken.'),
+              title='Hur många kalorier har McFlurry med Oreo? GI | WiBo Health',
+              desc='En McFlurry med Oreo innehåller 340 kcal och 52 g kolhydrater, med en hög glykemisk belastning (32,1). '
+                   'Läs om effekten på blodsockret och lättare efterrättsval.'),
+    641: dict(lead='Den klassiska krispiga pajen fylld med varma äppelbitar och aromatisk kanelsås; den ger en trivsam och '
+                   'omtyckt smak, men mängden socker och fettet i den flagiga degen behöver beaktas. Det glykemiska '
+                   'indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+              tips=('Den innehåller mindre fett och färre kalorier än munkar och stora feta glassdesserter, men den är '
+                    'fortfarande rik på enkla sockerarter.',
+                    'En kopp svart kaffe eller te utan socker är en balanserad följeslagare som minskar lusten att '
+                    'beställa mer.',
+                    'Näringsvärdena för snabbmat är ungefärliga och kan variera mellan länder, restauranger och lokala '
+                    'tillagningssätt, och WiBo Health har ingen koppling till något av dessa varumärken.'),
+              title="Hur många kalorier har McDonald's äppelpaj? GI | WiBo Health",
+              desc="En varm äppelpaj från McDonald's innehåller 250 kcal och 32 g tillgängliga kolhydrater, med en "
+                   'glykemisk belastning på 21. Läs om näringsvärdet jämfört med andra sötsaker.'),
+    642: dict(lead='Smältande ostpinnar täckta med ett gyllene krispigt ströbrödshölje och doppade i tomatsås; '
+                   'mozzarellans höga protein bromsar kolhydratupptaget, så det glykemiska indexet är lågt (en kliniskt '
+                   'granskad uppskattning, 52).',
+              tips=('Att tillaga dem i airfryer ger en liknande krispighet och minskar fettet med cirka en tredjedel '
+                    'jämfört med fritering.',
+                    'Det räcker med 2 till 3 pinnar för att bli nöjd tack vare ostens fett och protein.'),
+              title='Hur många kalorier har mozzarellasticks? GI | WiBo Health',
+              desc='Tre friterade mozzarellasticks med marinara (85 g) ger 238 kcal och 10 g protein, med ett lågt '
+                   'glykemiskt index (52). Läs tips för mindre fett och fritering.'),
+    643: dict(lead='Lökringar som doppats i smet och friterats gyllene; trots lökens egna näringsämnen suger det yttre '
+                   'höljet upp stora mängder frityrolja, vilket höjer kalorierna och den glykemiska belastningen. Det '
+                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 68).',
+              tips=('Att grädda lökringarna i ugnen med lite olja i stället för att fritera dem minskar kalorierna '
+                    'kraftigt.',
+                    'Undvik att doppa dem i söta såser som kommersiell barbecuesås.'),
+              title='Hur många kalorier har friterade lökringar? GI | WiBo Health',
+              desc='En portion friterade lökringar (85 g) innehåller 323 kcal och 35 g snabb stärkelse, med en hög '
+                   'glykemisk belastning (24). Läs varför de är mäktiga och om bättre alternativ.'),
+    644: dict(lead='Friterade kycklingvingar kryddade med stark chilisås och smält smör; de har en hög proteintäthet och '
+                   'nästan inga kolhydrater, vilket gör att effekten på blodsockret är mycket liten. Det glykemiska '
+                   'indexet är inte tillämpligt.',
+              tips=('Ett lämpligt val vid stärkelsesnål kost eller keto, eftersom originalreceptet saknar mjöl och '
+                    'ströbröd.',
+                    'Selleristavarna till ger fibrer och vätska som balanserar chilins hetta.'),
+              title='Hur många kalorier har buffalo wings? Protein | WiBo Health',
+              desc='Fyra starka buffalo wings (85 g kött) ger 221 kcal och 19 g protein med nästan inga kolhydrater, så '
+                   'det glykemiska indexet är inte tillämpligt. Ett val vid keto.'),
+    645: dict(lead='Kryddat och krispigt kycklingbröst i ett mjukt hamburgerbröd med majonnäs och sallat; en snabb lunch '
+                   'som ger 23 g protein som mättar, men mängden stärkelse och fett i den friterade paneringen behöver '
+                   'beaktas. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+              tips=('Att välja grillad kyckling (grilled chicken) i stället för krispig sparar cirka 140 kcal och halverar '
+                    'ungefär fettet.',
+                    'Be om extra sallat och hoppa över skeden majonnäs för att minska de onödiga kalorierna.'),
+              title='Hur många kalorier har en friterad kycklingburgare? | WiBo Health',
+              desc='En hel krispig kycklingburgare (200 g) innehåller 480 kcal, 23 g protein och 24 g fett. Läs smarta '
+                   'tips för färre kalorier och ett bättre alternativ.'),
+    646: dict(lead='Tunna, varma skivor rostbiff täckta med smält cheddar i rostat bröd; en snabbmåltid med hög andel '
+                   'protein och relativt lite stärkelse jämfört med friterade kycklingburgare. Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 52).',
+              tips=('Den höga proteinandelen (28 g) gör den till ett av de bättre valen på snabbmatsrestauranger; protein '
+                    'bidrar till att bibehålla muskelmassa.',
+                    'Välj fullkornsbröd om det finns, och undvik tillsatta söta såser.'),
+              title='Hur många kalorier har rostbiffsmacka med cheddar? | WiBo Health',
+              desc='En rostbiffsmacka med smält cheddar (180 g) ger 410 kcal och 28 g protein, med ett lågt glykemiskt '
+                   'index (52). Ett bra val för den som vill ha protein och mättnad.'),
+    647: dict(lead='Krispiga friterade potatisspiraler kryddade med paprika och vitlökspulver; de är mycket populära tack '
+                   'vare den kraftiga smaken, men det höga glykemiska indexet (en kliniskt granskad uppskattning, 72) '
+                   'kräver att portionen styrs.',
+              tips=('Portionens storlek är det viktigaste; dela förpackningen med sällskapet och undvik att äta den stora '
+                    'storleken ensam.',
+                    'Tänk på den höga salthalten, och välj vatten i stället för läsk till.'),
+              title='Hur många kalorier har curly fries? GI | WiBo Health',
+              desc='En portion kryddade curly fries (115 g) innehåller 368 kcal och stärkelse, med ett högt glykemiskt '
+                   'index (72). Läs hur friteringen och kryddorna påverkar blodsockret.'),
+    648: dict(lead='Naturliga potatisklyftor som ugnsbakats med det fiberrika skalet och smaksatts med rosmarin och '
+                   'olivolja; ett betydligt bättre alternativ till pommes frites med mycket mindre fett och måttligt antal '
+                   'kalorier. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+              tips=('Att behålla potatisskalet bevarar fibrerna och kaliumet och bromsar stärkelseupptaget.',
+                    'Att krydda dem med rosmarin och paprika ger en härlig smak utan feta såser.'),
+              title='Hur många kalorier har ugnsbakad klyftpotatis? GI | WiBo Health',
+              desc='En portion ugnsbakad klyftpotatis (130 g) innehåller bara 215 kcal och 4,5 g fibrer med lite fett. Det '
+                   'bästa alternativet till friterad potatis.'),
+    649: dict(lead='Den legendariska amerikanska smörgåsen från Philadelphia: skivor av ribeye som tillagas på plåt med '
+                   'karamelliserad lök och täcks med smält ost; den ger en stor portion protein (32 g). Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+              tips=('Att be om mer lök och grillad grön paprika ger måltiden mer volym och utmärkta fibrer.',
+                    'Den enkla storleken är mycket mättande och räcker som komplett huvudrätt utan tillbehör.'),
+              title='Hur många kalorier har philly cheesesteak? GI | WiBo Health',
+              desc='En philly cheesesteak (280 g) ger 520 kcal och 32 g protein, med ett lågt glykemiskt index (55). Läs '
+                   'om näringsvärdet och hur du håller fettet i schack.'),
+    650: dict(lead='Grillade kycklingvingar glaserade med rökig barbecuesås med en touch av naturlig honung; en '
+                   'oemotståndlig blandning av rök och sötma med mycket protein och ett lågt glykemiskt index (en kliniskt '
+                   'granskad uppskattning, 35).',
+              tips=('Att välja ugnsgrillade vingar i stället för friterade minskar kalorierna och det totala fettet '
+                    'tydligt.',
+                    'Honungs-BBQ-såsen tillför socker, så håll koll på de tillgängliga kolhydraterna om du följer en '
+                    'lågkolhydratkost.'),
+              title='Hur många kalorier har BBQ-vingar med honung? GI | WiBo Health',
+              desc='Fyra kycklingvingar med honungs-BBQ (85 g kött) ger 234 kcal och 18 g protein, med ett lågt glykemiskt '
+                   'index (35). Läs hur honungs- och BBQ-glazen påverkar bantningen.'),
+    651: dict(lead='Folkliga argentinska piroger som gräddas i ugnen med en fyllning av köttfärs kryddad med spiskummin '
+                   'och paprika, oliver och kokt ägg; de ger bra protein och ett lågt glykemiskt index (en kliniskt '
+                   'granskad uppskattning, 54).',
+              tips=('Att grädda empanadas i ugnen i stället för att fritera dem sparar ungefär en tredjedel av fettet och '
+                    'kalorierna.',
+                    'En empanada med en sallad av tomat och sallat är en komplett och mättande latinamerikansk lunch.'),
+              title='Hur många kalorier har argentinsk empanada? GI | WiBo Health',
+              desc='En ugnsbakad argentinsk empanada (100 g) innehåller 260 kcal och 11 g protein, med ett lågt glykemiskt '
+                   'index (54). Läs om fyllningen med kött och oliver vid bantning.'),
+    652: dict(lead='En ikon i det anrika peruanska köket: färska tärningar av vit fisk som ”tillagas kallt” i limesyra '
+                   '(leche de tigre) med rödlök och koriander; rik på protein, och det glykemiska indexet är inte '
+                   'tillämpligt.',
+              tips=('En utmärkt rätt för den som tränar eller följer en strikt kost, tack vare den höga proteintätheten '
+                    'och att den saknar tillsatt fett.',
+                    'Tänk på majsen och sötpotatisen som traditionellt serveras till om du håller koll på nettostärkelsen.',
+                    'Varning till gravida och personer med nedsatt immunförsvar: fisken behandlas med citrussyra och '
+                    'tillagas inte med värme, så den bör undvikas under graviditeten och av den som har nedsatt '
+                    'immunförsvar för att undvika bakterier och parasiter.'),
+              title='Hur många kalorier har peruansk ceviche? Protein | WiBo Health',
+              desc='En tallrik peruansk ceviche (150 g) ger 24 g protein och bara 143 kcal och påverkar inte blodsockret. '
+                   'Ett fräscht val vid viktnedgång eller insulinresistens.'),
+    653: dict(lead='Grillade colombianska plättar av vitt majsbröd fyllda med smält ost; de är naturligt glutenfria, '
+                   'krispiga utanpå och mjuka inuti, och det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'uppskattning, 65).',
+              tips=('Att grilla arepas på en torr plåt i stället för att steka dem i olja minskar kalorierna och fettet '
+                    'märkbart.',
+                    'Den glykemiska belastningen per arepa (24,3) är relativt hög; nöj dig därför med en till frukost med '
+                    'ett kokt ägg.'),
+              title='Hur många kalorier har colombiansk arepa med ost? | WiBo Health',
+              desc='En colombiansk arepa med ost (120 g) innehåller 282 kcal och 37 g kolhydrater, med en glykemisk '
+                   'belastning på 24,3. Läs om näringsvärdet och hur du styr portionen.'),
+    654: dict(lead='Skivor av grön, omogen mjölbanan som friteras, plattas till och steks igen tills de blir krispiga och '
+                   'gyllene; de innehåller mycket resistent stärkelse som bromsar matsmältningen, och det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 50).',
+              tips=('Att tillaga dem i airfryer med lite olivolja ger utmärkt krispighet med hälften av fettet.',
+                    'Ett bra alternativ till vanliga potatischips, med betydligt färre kalorier och mindre fett per 100 g.'),
+              title='Hur många kalorier har tostones? GI | WiBo Health',
+              desc='En portion tostones (100 g) innehåller 175 kcal och 28 g kolhydrater, med ett lågt glykemiskt index '
+                   '(50) tack vare den resistenta stärkelsen. Läs om skillnaden mot vanlig banan.'),
+    655: dict(lead='Skivor av mogen mjölbanan med svart skal som gräddas långsamt i ugnen; under mognaden omvandlas '
+                   'stärkelsen till naturligt socker som karamelliseras av värmen, vilket ger en koncentrerad sötma och '
+                   'ett medelhögt glykemiskt index (en kliniskt granskad uppskattning, 62).',
+              tips=('Ugnsgräddning utan tillsatt socker lyfter fram den naturliga sötman och sparar mycket fett jämfört '
+                    'med latinamerikansk fritering i mycket olja.',
+                    'Ät dem med en proteinkälla som svarta bönor för att dämpa upptaget av det naturliga sockret i blodet.'),
+              title='Hur många kalorier har ugnsbakade maduros? GI | WiBo Health',
+              desc='En portion ugnsbakade maduros (100 g) ger 140 kcal med naturlig karamellsötma och ett medelhögt '
+                   'glykemiskt index (62). Läs om alternativ till traditionell fritering.'),
+    656: dict(lead='En av de äldsta traditionella rätterna i Mesoamerika: majsdeg som behandlats genom nixtamalisering, '
+                   'fylld med bitar av kycklingbröst och chilisås och inlindad i majsblad för att ångkokas mjukt; det '
+                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52).',
+              tips=('Den traditionella behandlingen av majsen med kalk (nixtamalisering) ökar biotillgängligheten av '
+                    'niacin och förbättrar degens näringsvärde.',
+                    'En tamal räcker gott som mättande lunch tack vare fibrerna och kycklingproteinet.'),
+              title='Hur många kalorier har mexikanska tamales? GI | WiBo Health',
+              desc='En tamal av majsdeg med kyckling (150 g) innehåller 330 kcal och 15 g protein, med ett lågt glykemiskt '
+                   'index (52). Läs om ångkokningen och blodsockret.'),
+    657: dict(lead='Den lyxiga brasilianska nationalrätten: en gryta av svarta bönor som tillagas långsamt med bitar av '
+                   'nötkött, vitlök och lagerblad; rik på fibrer (15 g per portion) och protein, och det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 35). Traditionell feijoada görs oftast på '
+                   'fläskkött och fläskprodukter; värdena och beskrivningen här gäller varianten med nötkött.',
+              tips=('De svarta bönornas rikliga fibrer bromsar sockerupptaget.',
+                    'Nöj dig med grytan och en grön sallad och minska mängden vitt ris till, så förblir sockerbelastningen '
+                    'låg.'),
+              title='Hur många kalorier har brasiliansk feijoada? GI | WiBo Health',
+              desc='En skål brasiliansk feijoada (250 g) ger 35 g protein och 15 g fibrer, med ett lågt glykemiskt index '
+                   '(35) och en glykemisk belastning på 8,8. En mättande rätt.'),
+    658: dict(lead='De kända gyllene brasilianska brödbollarna med seg och smältande ostig konsistens; de görs av naturlig '
+                   'tapiokastärkelse och Minasost, är naturligt glutenfria och kräver att portionen styrs eftersom '
+                   'tapiokastärkelsen bryts ned snabbt. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'uppskattning, 68).',
+              tips=('Ett bra val för den som undviker gluten, men tapiokastärkelsen tas upp snabbt; nöj dig därför med två '
+                    'bollar som mellanmål.',
+                    'Ät dem varma direkt från ugnen och njut av den mjuka osten utan att tillsätta smör.'),
+              title='Hur många kalorier har pão de queijo? GI | WiBo Health',
+              desc='Fyra brasilianska ostbröd av tapioka (100 g) innehåller 275 kcal, är glutenfria och har en glykemisk '
+                   'belastning på 23. Läs om den sega konsistensen och portionen.'),
+    659: dict(lead='En gyllene tortilla som rostats på plåt och fyllts med stekt vild svamp och smält monterey jack; '
+                   'ostens protein och svampens fibrer väger upp tortillastärkelsens snabba upptag, så det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 45).',
+              tips=('Att använda fullkornstortilla och dubbla mängden svamp ger mer fibrer och färre totala kalorier.',
+                    'Använd färsk salsa av tomat och koriander i stället för gräddfil.'),
+              title='Hur många kalorier har quesadilla med svamp? GI | WiBo Health',
+              desc='En quesadilla med svamp och monterey jack (150 g) ger 19,5 g mättande protein, med ett lågt glykemiskt '
+                   'index (45). Läs om bättre sätt att laga den med måttligt fett.'),
+    660: dict(lead='Den mexikanska burriton som friteras i het olja tills den blir krispig och fylls med kyckling, ris och '
+                   'ost; en måltid med mycket energi och fett, nära 1 000 kcal, som kräver full försiktighet i en '
+                   'balanserad kost. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+              tips=('Energivarning: en chimichanga motsvarar nästan halva dagens kaloribehov och mer än två tredjedelar av '
+                    'den dagliga fettgränsen; därför är det bättre att dela den med någon annan.',
+                    'Att byta fritering mot ugnsgräddning eller airfryer sparar direkt cirka 300 kcal.'),
+              title='Hur många kalorier har friterad chimichanga? | WiBo Health',
+              desc='En friterad chimichanga (250 g) innehåller nästan 990 kcal och 50 g fett, med en hög glykemisk '
+                   'belastning (48,6). Läs om ugnsbakning, som sparar hälften av kalorierna.'),
+    661: dict(lead='Det skandinaviska kökets favorit: köttbullar av nötkött milt kryddade med muskot och kryddpeppar i en '
+                   'fyllig svensk gräddsås med protein och lite stärkelse. Värdena här gäller köttbullar av enbart '
+                   'nötkött; tänk på att det traditionella svenska receptet på restauranger och i butiker ofta görs på en '
+                   'blandning av nöt- och fläskfärs. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   '25).',
+              tips=('Det glykemiska indexet och den glykemiska belastningen är låga eftersom kött och sås innehåller lite '
+                    'kolhydrater.',
+                    'Ät dem gärna med ugnsrostade grönsaker eller blomkålsmos i stället för stora mängder mäktigt '
+                    'potatismos.'),
+              title='Hur många kalorier har köttbullar med gräddsås? GI | WiBo Health',
+              desc='Köttbullar med gräddsås (150 g) ger 24 g protein med en mycket låg glykemisk belastning (2,9). Läs om '
+                   'balansen mellan fett och lite stärkelse vid bantning.'),
+    662: dict(lead='Sylt av de små röda vilda bären som växer i de svenska skogarna; den har en syrlig och söt smak och '
+                   'innehåller mycket polyfenoler och naturlig bensoesyra. Det glykemiska indexet är lågt (en kliniskt '
+                   'granskad uppskattning, 45).',
+              tips=('Sorter med lite tillsatt socker lyfter fram bärens vilda syrliga smak och sänker sockerbelastningen '
+                    'till bara 3,5 per portion.',
+                    'En tesked till köttet, på skandinaviskt vis, ger en balanserad smak utan att höja sockret nämnvärt.'),
+              title='Hur många kalorier har lingonsylt? GI | WiBo Health',
+              desc='En sked lingonsylt med lite socker (20 g) innehåller 35 kcal och polyfenoler, med ett lågt glykemiskt '
+                   'index (45). En utmärkt följeslagare till nordiska rätter.'),
+    663: dict(lead='Traditionellt svenskt knäckebröd gjort av 100 % fullkornsråg, vatten och salt; mycket fiberrikt (16 g '
+                   'per 100 g), med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 48) och en mättnad som '
+                   'håller länge.',
+              tips=('Ett utmärkt alternativ till vitt bröd till frukost och middag; rågens fibrer bromsar matsmältningen.',
+                    'Bred på ricotta eller lägg på avokadoskivor och kokt ägg för en komplett måltid med låg glykemisk '
+                    'belastning.'),
+              title='Hur många kalorier har knäckebröd av råg? GI | WiBo Health',
+              desc='Två skivor svenskt fullkornsknäckebröd (25 g) ger 85 kcal och 4 g fibrer, med ett lågt glykemiskt '
+                   'index (48). Ett utmärkt val för mättnad.'),
+    664: dict(lead='Ett mästerverk i det skandinaviska havsköket: skivor av färsk norsk lax som rimmats med havssalt, '
+                   'pepparkorn och aromatiska gröna dillkvistar; rik på omega-3-fettsyror och nästan utan kolhydrater. Det '
+                   'glykemiska indexet är inte tillämpligt.',
+              tips=('Den traditionella söta senaps- och dillsåsen till gravad lax innehåller socker; använd därför mycket '
+                    'lite.',
+                    'Passar utmärkt vid keto och lågkolhydratkost; EPA och DHA bidrar till hjärtats normala funktion vid '
+                    'ett dagligt intag på 250 mg.',
+                    'Hälsovarning: gravad lax är rimmad fisk som inte värmebehandlats, så den bör undvikas under '
+                    'graviditeten och av den som har nedsatt immunförsvar, och den höga salthalten bör beaktas vid högt '
+                    'blodtryck.'),
+              title='Hur många kalorier har gravad lax? Omega-3 och GI | WiBo Health',
+              desc='En portion skandinavisk gravad lax (60 g) innehåller 111 kcal, 13 g protein och omega-3-fett, utan '
+                   'kolhydrater, och det glykemiska indexet är inte tillämpligt.'),
+    665: dict(lead='Den kända danska öppna smörgåsen på kompakt rågbröd med sillfiléer, skivor av kokt ägg, rödlök och '
+                   'dill; en måltid rik på fibrer och omega-3, med ett lågt glykemiskt index (en kliniskt granskad '
+                   'uppskattning, 48).',
+              tips=('Botten av fullkornsrågbröd mättar mycket och bromsar nedbrytningen av stärkelsen jämfört med vitt '
+                    'rostat bröd.',
+                    'Tänk på salthalten i den inlagda sillen om du har högt blodtryck.'),
+              title='Hur många kalorier har smørrebrød med sill? GI | WiBo Health',
+              desc='Ett öppet smørrebrød med sill och ägg (150 g) ger 21 g protein och 7 g fibrer, med ett lågt glykemiskt '
+                   'index (48). En komplett skandinavisk lunch.'),
+    666: dict(lead='Kungen av den svenska fikan: rullar av deg kryddad med mald kardemumma, fyllda med smör och kanel och '
+                   'toppade med krispigt pärlsocker; en varm sötsak som kräver måtta på grund av den höga '
+                   'sockerbelastningen. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+              tips=('Kanel och kardemumma ger en fyllig smak, men mängden i en bulle är liten och väger inte upp effekten '
+                    'av sockret och det vita mjölet i degen; håll därför koll på portionen.',
+                    'Njut av den med en kopp svart kaffe utan socker för att balansera sötman, och undvik söta drycker '
+                    'till.'),
+              title='Hur många kalorier har en kanelbulle? GI | WiBo Health',
+              desc='En svensk kanelbulle med kardemumma (90 g) innehåller 306 kcal och har en hög glykemisk belastning '
+                   '(30,1). Läs om fikan och hur du njuter av den med måtta.'),
+    667: dict(lead='En skapelse från den historiska restaurangen Hasselbacken i Stockholm: potatisar som skivats tunt men '
+                   'hänger ihop som ett dragspel och rostas i ugnen med smör och rosmarin; krispiga utanpå och mjuka '
+                   'inuti, med ett högt glykemiskt index (en kliniskt granskad uppskattning, 72).',
+              tips=('Att behålla skalet ger fibrer, och att låta den kokta potatisen kallna i kylskåpet i några timmar och '
+                    'sedan värma den igen ökar den resistenta stärkelsen och dämpar blodsockerstegringen.',
+                    'Använd olivolja i stället för smält smör för en högre andel omättat fett.'),
+              title='Hur många kalorier har hasselbackspotatis? GI | WiBo Health',
+              desc='En hasselbackspotatis (150 g) innehåller 233 kcal och stärkelse, med ett högt glykemiskt index (72). '
+                   'Läs om hur tillagningen påverkar blodsockret.'),
+    668: dict(lead='En pärla i det ukrainska matarvet med internationellt erkännande: en karmosinröd rödbetssoppa med '
+                   'vitkål, morot och bitar av nötkött och lite gräddfil; den innehåller naturliga nitrater, och det '
+                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 38).',
+              tips=('Rödbetor innehåller betalainer och naturliga nitrater.',
+                    'En mättande soppa som är en utmärkt middag för lång mättnad.'),
+              title='Hur många kalorier har ukrainsk borsjtj? GI | WiBo Health',
+              desc='En skål ukrainsk borsjtj (300 g) ger 19,5 g protein och 8,4 g fibrer, med ett lågt glykemiskt index '
+                   '(38). En soppa med naturliga nitrater.'),
+    669: dict(lead='Klassiska polska degknyten som kokas i vatten och fylls med potatismos, färsk keso och karamelliserad '
+                   'lök; de ger värme och mättnad med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 55), '
+                   'men en hel portion har en hög glykemisk belastning.',
+              tips=('Ät dem kokta och undvik att steka dem i smör eller baconfett, så minskar kalorierna och det mättade '
+                    'fettet.',
+                    'Börja måltiden med en surkålssallad för mer fibrer och långsammare upptag av knytenas kolhydrater.'),
+              title='Hur många kalorier har polska pierogi? GI | WiBo Health',
+              desc='Fyra kokta polska pierogi (150 g) innehåller 323 kcal och 11 g protein, med ett lågt glykemiskt index '
+                   '(55). Läs om skillnaden mellan kokta och stekta vid diabetes.'),
+    670: dict(lead='Det anrika ungerska kökets stolthet: bitar av nötkött som tillagas långsamt i timmar med rikligt med '
+                   'söt ungersk paprika, lök och paprika; en måltid med mycket protein (60 g per portion) och ett lågt '
+                   'glykemiskt index (en kliniskt granskad uppskattning, 30).',
+              tips=('En utmärkt proteinkälla som är rik på järn; protein bidrar till att öka muskelmassan. Kolhydraterna '
+                    'är få och kommer från de tillagade grönsakerna och paprikan.',
+                    'Ät den gärna på egen hand eller med stekta grönsaker och undvik tung pasta till om du följer en '
+                    'stärkelsesnål kost.'),
+              title='Hur många kalorier har ungersk gulasch? Protein | WiBo Health',
+              desc='En skål ungersk gulasch (250 g) ger 60 g protein och en mycket låg glykemisk belastning (4,1). En '
+                   'klassisk vinterrätt med järn och paprika.'),
+    671: dict(lead='Mjuka kålbladsrullar fyllda med en blandning av köttfärs och ris som tillagas i en aromatisk sås av '
+                   'tomat och morot; en balanserad måltid som ger protein och kålens fibrer, med ett lågt glykemiskt index '
+                   '(en kliniskt granskad uppskattning, 45).',
+              tips=('Kålbladens fibrer bromsar upptaget av risstärkelsen i fyllningen, vilket ger en måttlig '
+                    'blodsockerrespons.',
+                    'Att använda mager köttfärs minskar de totala kalorierna.'),
+              title='Hur många kalorier har golubtsy (kåldolmar)? GI | WiBo Health',
+              desc='Två golubtsy (250 g) innehåller 388 kcal, 27,5 g protein och 7 g fibrer, med ett lågt glykemiskt index '
+                   '(45). En balanserad hemlagad måltid vid diabetes.'),
+    672: dict(lead='Den mest kända festsalladen i Östeuropa: tärningar av kall kokt potatis, morot, ärter, saltgurka och '
+                   'ägg med majonnäs; det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52) tack vare den '
+                   'resistenta stärkelse som bildas när potatisen kyls.',
+              tips=('Hemligheten bakom det låga indexet (52): när kokt potatis kyls omorganiseras stärkelsemolekylerna så '
+                    'att stärkelsen smälts långsamt.',
+                    'Att byta halva mängden majonnäs mot grekisk yoghurt minskar fettet och kalorierna tydligt och ger mer '
+                    'protein.'),
+              title='Hur många kalorier har oliviersallad? GI | WiBo Health',
+              desc='En portion oliviersallad med potatis, ärter och ägg (150 g) innehåller 263 kcal, med ett lågt '
+                   'glykemiskt index (52) tack vare resistent stärkelse. Läs om lättare dressing.'),
+    673: dict(lead='Små, luftiga ryska pannkakor gjorda av bovetemjöl; de har en mild jordig smak och innehåller rutin och '
+                   'fibrer, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50). Värdena på den här '
+                   'sidan gäller naturella blinier utan tillbehör.',
+              tips=('Bovetemjöl är naturligt glutenfritt, men många recept på blinier blandar det med vetemjöl; '
+                    'kontrollera därför ingredienserna om du undviker gluten.',
+                    'Servera dem med rökt lax och keso till en frukost rik på protein och fett i stället för söt sylt.'),
+              title='Hur många kalorier har blinier av bovete? GI | WiBo Health',
+              desc='Fyra blinier av bovete (100 g) innehåller 195 kcal, rutin och magnesium, med ett lågt glykemiskt index '
+                   '(50). Ett fint alternativ till vita pannkakor.'),
+    674: dict(lead='Ren vit stärkelse som utvinns ur roten från den tropiska kassavaplantan (maniok); ett utmärkt '
+                   'förtjockningsmedel för soppor, såser och glutenfria bakverk, som kräver måtta eftersom den rena '
+                   'stärkelsen tas upp snabbt (glykemiskt index högt, en kliniskt granskad uppskattning, 70).',
+              tips=('Den äts inte ensam utan används för att binda och reda; en sked räcker för att ge en hel kastrull '
+                    'soppa fast konsistens.',
+                    'Vid diabetes: se upp med för mycket bakverk som helt bygger på tapioka, eftersom de höjer blodsockret '
+                    'lika snabbt som vitt bröd.'),
+              title='Hur många kalorier har tapiokastärkelse? GI | WiBo Health',
+              desc='En matsked tapiokastärkelse (20 g) innehåller 72 kcal ren stärkelse, med ett högt glykemiskt index '
+                   '(70). Läs om hur den redar soppor och om alternativ.'),
+    675: dict(lead='Ren stärkelse som utvinns ur naturlig potatis; den har stor förmåga att reda vid lägre temperatur än '
+                   'majsstärkelse och ger såser glans och klarhet, med ett högt glykemiskt index (en kliniskt granskad '
+                   'uppskattning, 75).',
+              tips=('Förtjockningsförmågan är dubbelt så stor; använd därför hälften av den mängd vetemjöl du brukar '
+                    'använda, så sparar du kolhydrater.',
+                    'Rått, okokt potatismjöl innehåller resistent stärkelse, men så snart det kokas i vatten blir det '
+                    'snabbt upptagen stärkelse.'),
+              title='Hur många kalorier har potatismjöl? GI | WiBo Health',
+              desc='En matsked potatismjöl (20 g) ger 68 kcal för att reda såser, med ett högt glykemiskt index (75). Läs '
+                   'om effekten på blodsockret och stärkelsesnåla alternativ.'),
+    676: dict(lead='Näringsrikt mjöl malet av hela bruna riskorn med skal och kli; ett naturligt och glutenfritt val som '
+                   'ger B-vitaminer, med ett medelhögt glykemiskt index (en kliniskt granskad uppskattning, 62).',
+              tips=('Blanda det med havre- eller mandelmjöl för att sänka bakverkens samlade glykemiska belastning och öka '
+                    'andelen protein.',
+                    'Ett bra val vid glutenintolerans och veteallergi, men räkna noga med kolhydraterna i portionen.',
+                    'Säkerhetsvarning: brunt ris och riskli innehåller mer oorganisk arsenik än vitt ris; variera därför '
+                    'mjölsorterna och låt inte detta vara det enda mjölet i mat till spädbarn och små barn.'),
+              title='Hur många kalorier har fullkornsrismjöl? GI | WiBo Health',
+              desc='En portion mjöl av brunt ris (30 g) ger 109 kcal och naturliga fibrer, med ett medelhögt glykemiskt '
+                   'index (62). Ett näringsrikt glutenfritt alternativ i bakning.'),
+    677: dict(lead='Mjöl av hela havrekorn med lösliga betaglukanfibrer och vegetabiliskt protein; det har en fin '
+                   'konsistens och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 52) och mättar länge.',
+              tips=('Ett utmärkt val för pannkakor och bakverk vid diabetes och för den som tränar.',
+                    'Havrens betaglukan bidrar till att bibehålla normala kolesterolnivåer i blodet; den gynnsamma '
+                    'effekten uppnås vid ett dagligt intag på 3 g betaglukan från havre.'),
+              title='Hur många kalorier har havremjöl? Betaglukan och GI | WiBo Health',
+              desc='En portion havremjöl (30 g) innehåller 113 kcal och 3 g fibrer med betaglukan, med ett lågt glykemiskt '
+                   'index (52). Ett klokt alternativ till vetemjöl i pannkakor och bröd.'),
+    678: dict(lead='Det gyllene yttre lagret på det bruna riskornet; mycket fiberrikt (21 g per 100 g) med B-vitaminer, '
+                   'magnesium och fett, och med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 30).',
+              tips=('Tillsätt en sked i yoghurten eller morgonens havregryn för att fördubbla fibrerna och sänka måltidens '
+                    'samlade sockerbelastning.',
+                    'Förvara det i kylskåp i en tättslutande burk så att fettet skyddas mot oxidation.',
+                    'Säkerhetsvarning: riskornets skal kan koncentrera oorganisk arsenik, så vuxna bör äta det med måtta '
+                    'och det bör inte ges till spädbarn och små barn.'),
+              title='Hur många kalorier har riskli? Fibrer och GI | WiBo Health',
+              desc='En sked riskli (15 g) ger 47 kcal och 3,2 g fibrer, med ett lågt glykemiskt index (30). Läs om '
+                   'mättnaden och om råd för säker konsumtion.'),
+    679: dict(lead='Gryn av durumvete med en god halt protein och sammanhållande gluten; grundingrediensen i pasta och fin '
+                   'couscous, med en tät stärkelsestruktur som ger ett medelhögt glykemiskt index (en kliniskt granskad '
+                   'uppskattning, 60). Värdena på den här sidan gäller torra gryn före tillagning.',
+              tips=('Att koka dem al dente håller ihop stärkelsemolekylerna i proteinnätverket och bromsar matsmältningen.',
+                    'Det slutliga glykemiska indexet beror på tillagningen; det är lägre i ångkokt couscous och pasta än i '
+                    'tunn gröt.'),
+              title='Hur många kalorier har durumvetegryn? GI | WiBo Health',
+              desc='En portion grova durumvetegryn (40 g torra) ger 144 kcal och 5 g protein, med ett medelhögt glykemiskt '
+                   'index (60). Ett utmärkt val för fast pasta och couscous.'),
+    680: dict(lead='Kokta röda quinoafrön från Anderna; de behåller en mild krispighet och innehåller alla nio essentiella '
+                   'aminosyror (fullvärdigt protein), med fibrer och ett lågt glykemiskt index (en kliniskt granskad '
+                   'uppskattning, 50).',
+              tips=('Ett utmärkt alternativ till vitt ris i lunchrätter; quinoan mättar längre och ger en mer balanserad '
+                    'blodsockerrespons.',
+                    'Att skölja quinoan väl före kokningen tar bort de naturliga beska saponinerna och ger en mild och god '
+                    'smak.'),
+              title='Hur många kalorier har kokt röd quinoa? GI | WiBo Health',
+              desc='En skål kokt röd quinoa (150 g) innehåller 180 kcal och 6,6 g fullvärdigt protein, med ett lågt '
+                   'glykemiskt index (50). Ett utmärkt alternativ till vitt ris i sallader.'),
+    681: dict(lead='Den mest sällsynta och särpräglade quinoan med kolsvart färg och jordig, hasselnötsliknande smak; den '
+                   'innehåller antocyaninpigment och fibrer, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 48).',
+              tips=('Det hårda yttre skalet håller ihop fröna vid kokningen och ger mer olösliga fibrer.',
+                    'Blanda den med vit och röd quinoa till en färgglad och näringsrik sallad.'),
+              title='Hur många kalorier har kokt svart quinoa? GI | WiBo Health',
+              desc='En portion kokt svart quinoa (150 g) ger 177 kcal och 4,5 g fibrer, med ett lågt glykemiskt index '
+                   '(48). Sällsynta frön med antocyaninpigment.'),
+    682: dict(lead='Aztekernas legendariska mycket små frön med en mild geléartad konsistens; amarant är naturligt '
+                   'glutenfri och ger kalcium, magnesium och vegetabiliskt protein, med ett lågt glykemiskt index (en '
+                   'kliniskt granskad uppskattning, 50).',
+              tips=('Konsistensen liknar en len gröt; ett utmärkt varmt alternativ till havregrynsgröt till frukost med '
+                    'lite nötter.',
+                    'Att koka 1 kopp amarant med 2,5 koppar vatten ger den bästa krämiga och jämna konsistensen.'),
+              title='Hur många kalorier har kokt amarant? GI | WiBo Health',
+              desc='En skål kokt amarant (150 g) innehåller bara 153 kcal och 5,7 g protein, med ett lågt glykemiskt index '
+                   '(50). Ett gammalt, glutenfritt spannmål.'),
+    683: dict(lead='Glutenfritt mjöl malet av hela amarantfrön; det överträffar traditionellt spannmålsmjöl genom att '
+                   'innehålla mycket av aminosyran lysin, som de flesta spannmål saknar, och fibrer, med ett lågt '
+                   'glykemiskt index (en kliniskt granskad uppskattning, 55).',
+              tips=('Blanda 20–30 % amarantmjöl i glutenfria mjölblandningar för bättre proteinkvalitet och näringsvärde.',
+                    'Det ger bakverken en varm nötig smak och en saftig och sammanhållen konsistens.'),
+              title='Hur många kalorier har amarantmjöl? Lysin och GI | WiBo Health',
+              desc='En portion amarantmjöl (30 g) innehåller 111 kcal och mycket av aminosyran lysin, med ett lågt '
+                   'glykemiskt index (55). Ett näringsrikt glutenfritt alternativ i bakning.'),
+    684: dict(lead='Det gamla ”kejsarriset”, känt för sin mörklila färg och fasta konsistens; det innehåller mycket '
+                   'antocyaniner och fibrer, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45), '
+                   'vilket gör det till ett betydligt bättre val än vitt ris.',
+              tips=('Den naturliga lila färgen kommer från antocyaniner.',
+                    'Det behöver längre koktid (cirka 30 minuter eller mer) på grund av kliet, och blötläggning i förväg '
+                    'förkortar tiden; undvik att koka det för länge så att det faller sönder, så behålls det låga indexet.'),
+              title='Hur många kalorier har kokt svart ris? GI | WiBo Health',
+              desc='En skål kokt svart kejsarris (150 g) innehåller 195 kcal och antocyaniner, med ett lågt glykemiskt '
+                   'index (45). Ett bättre val än vitt ris.'),
+    685: dict(lead='Det eleganta bergsriset som odlas på sluttningarna i Himalaya och Bhutan; det behåller sitt röda kli '
+                   'som innehåller mineraler och flavonoider och har en karaktäristisk nötig smak, med ett lågt glykemiskt '
+                   'index (en kliniskt granskad uppskattning, 52).',
+              tips=('Att blötlägga riset i 20 minuter före kokningen förkortar tillagningstiden och ger en mjuk och '
+                    'lättsmält konsistens.',
+                    'Utmärkt till grillat och grönsaker eftersom kolhydraterna bryts ned långsamt.'),
+              title='Hur många kalorier har kokt rött ris? GI | WiBo Health',
+              desc='En portion kokt rött ris från Bhutan (150 g) ger 188 kcal och helt kli, med ett lågt glykemiskt index '
+                   '(52). Ett balanserat asiatiskt alternativ till vitt ris.'),
+    686: dict(lead='Asiatiska nudelband av mjöl från brunt fullkornsris och vatten; de är glutenfria och ger mer fibrer än '
+                   'nudlar av vitt ris, med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 53). Värdena på '
+                   'den här sidan gäller kokta nudlar.',
+              tips=('Skölj nudlarna i kallt vatten direkt efter kokningen för att få bort ytstärkelsen och behålla '
+                    'fastheten.',
+                    'Kombinera dem med grillade kycklingskivor och rikligt med kål, paprika och broccoli för att sänka '
+                    'måltidens sockerbelastning.'),
+              title='Hur många kalorier har nudlar av brunt ris? GI | WiBo Health',
+              desc='En portion kokta nudlar av brunt ris (150 g) innehåller 210 kcal, är glutenfria och har ett lågt '
+                   'glykemiskt index (53). Ett bättre alternativ till vita risnudlar.'),
+    687: dict(lead='En pärla bland de traditionella egyptiska festrätterna: mört duvkött, som innehåller järn, fyllt med '
+                   'grön rostad freekeh kryddad med kryddor och naturlig ghee; en mättande proteinrik måltid med freekehns '
+                   'utmärkta fibrer och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 40).',
+              tips=('Den gröna freekehn innehåller betydligt mer fibrer än ris och ger måltiden en måttlig glykemisk '
+                    'belastning.',
+                    'Att bryna duvan i ugnen i stället för att steka den i mycket ghee minskar fettet och kalorierna '
+                    'märkbart.'),
+              title='Hur många kalorier har fylld duva med freekeh? | WiBo Health',
+              desc='En egyptisk duva fylld med freekeh (250 g) ger 55 g protein och 8,8 g fibrer, med ett lågt glykemiskt '
+                   'index (40). Läs om freekeh och mättnad.'),
+    688: dict(lead='Den mest kända rätten från den anrika egyptiska staden Damietta: ugnsstekt anka fylld med ”morta”, '
+                   'finhackad lök som gnidits med spiskummin, kardemumma och svartpeppar; rent protein med hög fetthalt '
+                   'och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 25).',
+              tips=('Det glykemiska indexet är mycket lågt eftersom rätten saknar egentlig stärkelse; de få kolhydraterna '
+                    'kommer bara från den kryddade löken.',
+                    'Att ta bort ankskinnet före ätandet halverar det mättade fettet och kalorierna för den som håller '
+                    'koll på energibudgeten.',
+                    'Kalorivarning: 200 g ger 620 kcal och 42 g fett, det vill säga mer än hälften av den dagliga '
+                    'fettgränsen; därför är det bättre att nöja sig med en halv portion med sallad för den som håller koll '
+                    'på vikten eller blodfetterna.'),
+              title='Hur många kalorier har anka med morta? Protein | WiBo Health',
+              desc='En portion anka med morta och lök (200 g) ger 46 g protein med en mycket låg glykemisk belastning '
+                   '(2,8). Läs om lökfyllningen med spiskummin vid bantning.'),
+    689: dict(lead='Den varma, gröna egyptiska vintersoppan: tärningar av taro som tillagas i köttbuljong med en sås av '
+                   'grön mangold och koriander fräst med vitlök (taqleya); rik på fibrer och resistent stärkelse, med ett '
+                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 55).',
+              tips=('Taro innehåller fibrer och resistent stärkelse som bidrar till mättnad.',
+                    'Begränsa mängden ris till, eftersom taro i sig är en viktig stärkelsekälla med hög glykemisk '
+                    'belastning (24,8).',
+                    'Säkerhets- och läkemedelsvarning: taro måste tillagas ordentligt, eftersom rå taro innehåller '
+                    'kristaller av kalciumoxalat som irriterar mun och svalg. Taro och mangold innehåller mycket oxalat, '
+                    'och mangold innehåller mycket K-vitamin; detta bör beaktas av den som har haft njursten, och den som '
+                    'tar warfarin bör äta en jämn mängd.'),
+              title='Hur många kalorier har taro med mangold? GI | WiBo Health',
+              desc='En skål egyptisk taro med mangold (250 g) ger 10 g mättande fibrer och ett lågt glykemiskt index (55). '
+                   'Läs om taro och mangold vid diabetes.'),
+    690: dict(lead='Den klassiska egyptiska spenatgrytan som tillagas i tomatsås med kikärter, bitar av nötkött och grön '
+                   'koriander; en måltid rik på järn och protein, och det glykemiska indexet är inte tillämpligt eftersom '
+                   'de tillgängliga kolhydraterna är få.',
+              tips=('Pressa en halv färsk citron över rätten; C-vitamin ökar järnupptaget.',
+                    'Kikärterna ger lösliga fibrer och vegetabiliskt protein som kompletterar nötköttets protein.',
+                    'Läkemedels- och hälsovarning: spenat innehåller mycket K-vitamin, så den som tar blodförtunnande '
+                    'läkemedel (som warfarin) bör äta en jämn mängd utan kraftiga svängningar. Spenat innehåller också '
+                    'mycket oxalat, och den som har haft njursten rekommenderas måtta.'),
+              title='Hur många kalorier har spenatgryta med kikärter? | WiBo Health',
+              desc='En skål egyptisk spenatgryta med kikärter och kött (250 g) innehåller 27,5 g protein och 9,5 g fibrer '
+                   'och påverkar inte blodsockret. Ett komplett val rikt på järn.'),
+    691: dict(lead='Den traditionella levantinska omeletten med ägg och örter, blandad med rikligt med hackad grön '
+                   'persilja, mynta och lök och en nypa spiskummin och kanel; en frukost eller kvällsmat med mycket '
+                   'protein och fett, och det glykemiska indexet är inte tillämpligt.',
+              tips=('Att grädda ejjeh i ugnen i en form smord med olivolja i stället för att steka den ger samma goda smak '
+                    'med mindre fett.',
+                    'Den rikliga persiljan ger lutein och apigenin samt C-vitamin.'),
+              title='Hur många kalorier har ejjeh med persilja? Protein | WiBo Health',
+              desc='Två bitar levantinsk ejjeh med persilja och ägg (120 g) ger 14,4 g protein och nästan inga '
+                   'kolhydrater; det glykemiska indexet är inte tillämpligt. En ketofrukost.'),
+    692: dict(lead='Kronan bland de damascenska ugnsrätterna: lager av grillad köttfärskebab kryddad med sju kryddor, '
+                   'varvad med skivor av karamelliserad aubergine och tomat; mycket protein (50 g) och mycket låg '
+                   'glykemisk belastning (4,3). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+              tips=('Att grilla auberginen i ugnen i stället för att fritera den i olja minskar det totala fettet kraftigt '
+                    'utan att påverka den rökiga smaken.',
+                    'Auberginens fibrer bromsar matsmältningen och mättar, och skalet innehåller nasunin.'),
+              title='Hur många kalorier har kebab med aubergine? GI | WiBo Health',
+              desc='En portion damascensk kebab med aubergine (250 g) ger 50 g protein och 8 g fibrer, med en mycket låg '
+                   'glykemisk belastning (4,3). En lyxig lunch vid bantning.'),
+    693: dict(lead='Mästaren bland de lyxiga arabiska festrätterna: mört killingkött som rostas långsamt och fylls med ris '
+                   'kryddat med kanel och kardemumma och rostade nötter; en festmåltid med mycket protein (78 g) och många '
+                   'kalorier och mycket stärkelse. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+              tips=('Fokusera på killingköttet med gröna sallader och minska portionen ris för att sänka den höga '
+                    'glykemiska belastningen (38,2).',
+                    'Killingkött innehåller naturligt mindre mättat fett än lammkött, vilket gör det till ett bra '
+                    'proteinval när riset hålls åt sidan.',
+                    'Kalorivarning: en festportion (300 g) ger nästan 1 020 kcal, ungefär halva dagens behov; därför är '
+                    'det bättre att nöja sig med hälften med sallad.'),
+              title='Hur många kalorier har fylld killing med ris? | WiBo Health',
+              desc='En portion fylld killing (300 g) ger 78 g protein och nästan 1 000 kcal, med en hög glykemisk '
+                   'belastning (38,2). Läs tips för att hantera festmåltider klokt.'),
+    694: dict(lead='Långsam ugnstillagning när den är som bäst: lammbog som smälter i munnen, stekt med hela '
+                   'vitlöksklyftor, rosmarinkvistar och potatistärningar som sugit upp saften; mycket protein (62,5 g) och '
+                   'en fyllighet som kräver koll på kalorierna. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 45).',
+              tips=('Lammfettet fördröjer magsäckstömningen och bromsar upptaget av potatisstärkelsen, vilket ger ett lågt '
+                    'index (45).',
+                    'Håll en måttlig portion och ät en riklig sallad av ruccola och gurka till för att balansera '
+                    'fylligheten.',
+                    'Kalorivarning: portionen (250 g) ger 800 kcal och 47,5 g fett, ungefär två tredjedelar av den dagliga '
+                    'fettgränsen; därför är det bättre att minska portionen för den som håller koll på vikten eller '
+                    'blodfetterna.'),
+              title='Hur många kalorier har lammbog med potatis? | WiBo Health',
+              desc='En portion långstekt lammbog med potatis (250 g) ger 62,5 g protein och 800 kcal, med en måttlig '
+                   'glykemisk belastning (12,2). Läs tips för att hålla fettet i schack.'),
+    695: dict(lead='De godaste bitarna lammkött grillade över glöd med en marinad av rosmarin och olivolja; fullvärdigt '
+                   'animaliskt protein med hög biotillgänglighet, rikt på järn, zink och B12-vitamin, helt utan '
+                   'kolhydrater. Det glykemiska indexet är inte tillämpligt.',
+              tips=('Ett lämpligt livsmedel vid keto och lågkolhydratkost; kotletterna mättar ordentligt och höjer inte '
+                    'blodsockret, även om protein stimulerar en viss insulinfrisättning.',
+                    'Att skära bort överflödigt fett före grillningen minskar det mättade fettet märkbart medan köttet '
+                    'förblir mört.'),
+              title='Hur många kalorier har grillade lammkotletter? | WiBo Health',
+              desc='Tre kolgrillade lammkotletter (150 g kött) ger 37,5 g protein utan kolhydrater; det glykemiska indexet '
+                   'är inte tillämpligt. Ett proteinrikt val vid keto.'),
+    696: dict(lead='Den mest kända folkliga pannrätten på den jordanska landsbygden: lokala tomater som får fräsa med '
+                   'köttfärs, extra jungfruolivolja, stark chili och vitlök; en måltid med lykopen och mycket låg '
+                   'sockerbelastning (2,7). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Att tillaga tomaterna med olivolja ökar upptaget av lykopen tydligt.',
+                    'Ät den med sked eller med fullkornsbröd i stället för vitt bröd för att inte höja måltidens '
+                    'sockerbelastning.'),
+              title='Hur många kalorier har galayet bandora? Lykopen | WiBo Health',
+              desc='En panna galayet bandora med köttfärs (200 g) innehåller 28 g protein och lykopen, med en mycket låg '
+                   'glykemisk belastning (2,7). Läs hur den lagas vid bantning och diabetes.'),
+    697: dict(lead='En anrik festrätt från Hijaz: möra bitar av nötkött som bryns snabbt på plåt med lök, spiskummin, '
+                   'koriander och grön chili; utmärkt protein (48 g), och det glykemiska indexet är inte tillämpligt '
+                   'eftersom kolhydraterna är få.',
+              tips=('En utmärkt måltid för den som tränar hårt, med protein, zink och järn; protein bidrar till att '
+                    'bibehålla muskelmassa.',
+                    'Använd olivolja vid stekningen och undvik tillsatt härdat fett.'),
+              title='Hur många kalorier har mgalgal? Protein och GI | WiBo Health',
+              desc='En portion kryddad mgalgal från Hijaz (200 g) ger 48 g protein och påverkar inte blodsockret. En '
+                   'klassisk saudisk frukost- och kvällsrätt rik på järn.'),
+    698: dict(lead='Den ikoniska jemenitiska nationalrätten som serveras kokande i en stengryta (madra): köttbuljong och '
+                   'grönsaker som täcks med ett skum av vispad bockhornsklöver (hilba) och en stark sås (sahawiq); lågt '
+                   'glykemiskt index (en kliniskt granskad uppskattning, 35) och rikligt med fibrer.',
+              tips=('Bockhornsklöver innehåller mycket lösliga fibrer och har studerats som kosttillskott i betydligt '
+                    'högre doser än i rätten; skummet är därför ingen behandling för blodsockret, men det tillför fibrer '
+                    'och en karaktäristisk smak.',
+                    'Ät saltah direkt med sked eller med ett halvt fullkornsbröd för att njuta av den utan att höja '
+                    'sockerbelastningen.'),
+              title='Hur många kalorier har jemenitisk saltah? GI | WiBo Health',
+              desc='En stengryta jemenitisk saltah (300 g) ger 33 g protein och 10,5 g fibrer, med ett lågt glykemiskt '
+                   'index (35). Läs om skummet av vispad bockhornsklöver.'),
+    699: dict(lead='En av de godaste traditionella jemenitiska kötträtterna: bitar av kalvkött som tillagas tills de '
+                   'smälter och smulas i sin koncentrerade, kryddiga buljong med skum av bockhornsklöver medan den kokar i '
+                   'stengrytan; mycket protein (78 g), och det glykemiska indexet är inte tillämpligt.',
+              tips=('Rätten innehåller mycket zink, järn och B12-vitamin och saknar helt stärkelse i sig.',
+                    'Det enda att vara försiktig med är mängden bröd till; njut av köttet och den fylliga buljongen med '
+                    'sked, så förblir måltiden ketovänlig och påverkar blodsockret lite.'),
+              title='Hur många kalorier har jemenitisk fahsah? Protein | WiBo Health',
+              desc='En stengryta jemenitisk fahsah med kalvkött (300 g) ger 78 g protein och påverkar inte blodsockret. En '
+                   'näringsrik och mycket mättande jemenitisk folkrätt.'),
+    700: dict(lead='Det kända flagiga jemenitiska brödet som gräddas i tandoor och penslas med lager av naturlig ghee och '
+                   'svartkummin; det har en krispig, flagig konsistens som liknar feteer meshaltet, och den höga '
+                   'glykemiska belastningen (37,1) kräver att portionen styrs. Det glykemiska indexet är medelhögt (en '
+                   'kliniskt granskad uppskattning, 68).',
+              tips=('Ett bröd innehåller cirka 55 g nettokolhydrater; att dela brödet och ta en fjärdedel till hälften är '
+                    'det klokaste valet vid diabetes.',
+                    'Svartkumminet på ytan ger en karaktäristisk smak.'),
+              title='Hur många kalorier har malawah med ghee? GI | WiBo Health',
+              desc='Ett flagigt jemenitiskt malawahbröd med ghee (120 g) innehåller 372 kcal och har en hög glykemisk '
+                   'belastning (37,1). Läs hur du äter det medvetet till saltah och fahsah.'),
 }
