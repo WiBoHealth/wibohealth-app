@@ -118,9 +118,9 @@ NAMES = {
     100: ('Räkor, grillade', 'grillade räkor'),
 }
 PUBLISH = set(NAMES)
-# foods 1-50 went live with the computed Swedish copy (approved 2026-10-24) although the other languages carry
-# food-specific copy; every later food needs its Swedish version in OVERRIDES
-COMPUTED_COPY = set(range(1, 51))
+# foods allowed to use the computed Swedish copy where the other languages carry food-specific copy (none since
+# foods 1-50 got their translated copy, 2026-10-24)
+COMPUTED_COPY = set()
 
 # names that take a plural pronoun in the sentences ({det}/{dem}: "de"/"dem" instead of "det")
 PLURAL = {18, 19, 20, 21, 22, 23, 24, 25, 28, 40,
@@ -274,6 +274,313 @@ def studies_word(n):
 # in the authorised EU 432/2012 wording with their conditions of use, Livsmedelsverket advice where it applies, GI and GL
 # words that match the badge bands, no religious or cultural-occasion references.
 OVERRIDES = {
+    # foods 1-50: translated from the approved Arabic copy (2026-10-24, overnight batch)
+    1: dict(lead='Vitt ris är en självklar del av vardagsmaten i de flesta arabiska hem, men eftersom det smälts snabbt är det en '
+                 'utmaning vid diabetes och insulinresistens. Det glykemiska indexet är medelhögt (65) och en hel portion har en hög '
+                 'glykemisk belastning. Det betyder inte att du måste avstå: hemligheten ligger i hur du tillagar det och att du '
+                 'kombinerar det med fibrer och protein.',
+            tips=('Ät en grön sallad eller din proteinkälla tio minuter före riset; fibrerna bildar ett gelliknande nätverk som tydligt '
+                  'bromsar upptaget av stärkelsen i riset.',
+                  'Hemligheten med resistent stärkelse: kyl det kokta riset i kylskåpet i 12–24 timmar innan du värmer det igen. Då '
+                  'ombildas stärkelsemolekylerna och mängden resistent stärkelse ökar, vilket kan ge en jämnare blodsockerkurva.')),
+    2: dict(lead='Fullkornsris behåller hela kliskiktet och grodden och innehåller därför mer kostfiber och magnesium. Det uppmätta '
+                 'glykemiska indexet (68, medelhögt) ligger nära vitt ris på grund av den långa koktiden, men fibrerna och '
+                 'mikronäringsämnena bromsar det faktiska upptaget i kroppen.',
+            tips=('Ett utmärkt val när du bygger en balanserad måltid vid insulinresistens; de rikliga fibrerna ger långvarig mättnad.',
+                  'Blötlägg fullkornsriset i några timmar före kokning: det blir lättare att smälta, innehållet av fytinsyra minskar och '
+                  'koktiden blir kortare, vilket bevarar fibrerna.')),
+    3: dict(lead='Det vanligaste och snabbaste brödet att äta, men det tas upp snabbt eftersom det bakas på siktat mjöl utan kli och '
+                 'fibrer. Det ger en snabb stegring av blodsocker och insulin och har ett högt glykemiskt index (70).',
+            tips=('Undvik att äta det ensamt; fyll eller bred det alltid med en källa till fett eller protein, som kokt ägg, avokado '
+                  'eller olivolja, för att bromsa upptaget.',
+                  'Att rosta en skiva vitt bröd i brödrosten, eller frysa den och sedan rosta den, förändrar stärkelsemolekylerna något '
+                  'och sänker det glykemiska svaret en aning.')),
+    4: dict(lead='Det vinnande vardagsalternativet för dig som vill ha jämn energi: fullkornsmjöl med sina naturliga fibrer ger ett '
+                 'lågt glykemiskt index (54) och en långvarig mättnad som motverkar plötsliga blodsockerfall.',
+            tips=("Passar utmärkt till en mättande frukost; kontrollera ingrediensförteckningen så att mjölet är '100 % fullkornsvete' "
+                  'och inte vitt mjöl färgat med karamellfärg.',
+                  'Välj helst bröd som jäst långsamt med surdeg; den naturliga jäsningen bryter ned en del av stärkelsen och sänker '
+                  'det glykemiska indexet ytterligare.')),
+    5: dict(lead='Tvärtemot den vanliga uppfattningen att pasta får blodsockret att rusa har kokt pasta ett lågt glykemiskt index (49). '
+                 'Förklaringen är att degen pressas vid tillverkningen, så att stärkelsemolekylerna blir kompakta och svåra för '
+                 'matsmältningsenzymerna att bryta ned.',
+            tips=('Servera den med en naturlig tomatsås, olivolja och en mager proteinkälla, och undvik färdiga såser med dolt socker '
+                  'eller härdad grädde.',
+                  'Al dente-regeln: koka pastan tills den är klar men fortfarande har lite tuggmotstånd, och undvik att koka den tills '
+                  'den blir mjuk; fast pasta smälts betydligt långsammare.')),
+    6: dict(lead='Det gyllene alternativet för pastaälskare: fibrerna från fullkornet kombineras med protein, och det glykemiska '
+                 'indexet är lågt (42) tack vare den kompakta strukturen, som bromsar matsmältningen och ger en verklig mättnad utan '
+                 'trötthet efter maten.',
+            tips=('Kombinera den med en sås på tomat, vitlök och olivolja och bitar av grillat kycklingbröst; undvik färdiga såser med '
+                  'mycket socker och härdade oljor.',
+                  'Koka den al dente i 8–9 minuter och undvik att koka den för länge, så att fibrerna håller ihop och upptaget inte går '
+                  'snabbare.')),
+    7: dict(lead='Den klassiska hälsosamma frukosten: havregrynsgröt ger lösliga betaglukanfibrer och har ett lågt glykemiskt index (55). '
+                 'Havregrynen suger upp vatten eller mjölk under kokningen och sväller, vilket ger en varm och mättande skål med ett '
+                 'måttligt antal kalorier.',
+            tips=('Använd vanliga havregryn och koka gröten på vatten eller lättmjölk; undvik portionspåsar med snabbgröt som innehåller '
+                  'tillsatt socker och smakämnen.',
+                  'Toppa med chiafrön, lite kanel och en näve färska bär för mer fibrer, utan att du behöver tillsätta raffinerat socker.'),
+            title='Hur många kalorier har havregrynsgröt? Glykemiskt index och viktnedgång | WiBo Health',
+            desc='En skål kokt havregrynsgröt (250 g) innehåller 170 kcal (68 kcal per 100 g) och har ett lågt glykemiskt index (55). '
+                 'Läs om skillnaden mellan torra och kokta havregryn och hur gröten påverkar mättnad och blodsocker.',
+            faq=[dict(q='Vad är skillnaden i kalorier mellan torra och kokta havregryn?',
+                      a='Torra havregryn innehåller ungefär 380 kcal per 100 g. När de kokas på vatten suger de upp mycket vätska, så en '
+                        'skål kokt gröt (250 g) ger bara omkring 170 kcal (68 kcal per 100 g kokt gröt). Kokar du gröten på mjölk ökar '
+                        'energin beroende på mängd och sort.'),
+                 dict(q='Hur bidrar havregrynsgröt till ett jämnt blodsocker?',
+                      a='Betaglukanfibrerna bildar en mild gel i matsmältningskanalen som bromsar upptaget av kolhydrater och ger en '
+                        'lugnare och jämnare energikurva.'),
+                 dict(q='Är kokt havregrynsgröt ett bra val vid viktnedgång?',
+                      a='Ja. Gröten sväller och binder vatten, så du får en stor skål för relativt få kalorier, vilket kan göra det '
+                        'lättare att klara dig utan mellanmål de närmaste timmarna efter frukosten.')]),
+    8: dict(lead='Ett gyllene frö från Anderna som skiljer sig från andra stärkelsekällor genom att vara en fullständig proteinkälla med '
+                 'alla nio essentiella aminosyror. Det glykemiska indexet är lågt (52).',
+            tips=('Ett bra alternativ till vitt ris för dig som tränar för att bygga muskler och håller koll på ditt HbA1c, utan att '
+                  'avstå från stärkelsens mättande energi.',
+                  'Skölj quinoan i en finmaskig sil under rinnande vatten före kokning för att få bort de bittra saponinerna, och koka '
+                  'den i grönsaksbuljong med en nypa spiskummin.')),
+    9: dict(lead='Hjälten i det traditionella levantinska köket och ett av de mest balanserade spannmålen, med ett lågt glykemiskt '
+                 'index (47) och mycket kostfiber, järn och zink, vilket gör att det står sig väl jämfört med de flesta sorters ris.',
+            tips=('Ett av de smartaste vardagsalternativen vid diabetes; bulgur tas upp mycket långsamt och håller dig mätt i många timmar.',
+                  'Koka grov bulgur med olivolja, lök och linser (den klassiska rätten mujaddara) eller med tomater; kombinationen av '
+                  'olivolja och bulgur ger en bra näringsmässig balans.')),
+    10: dict(lead='Det nordafrikanska kökets juvel, gjord på mannagryn av vete. Den har lätt konsistens, tillagas snabbt och har ett '
+                  'medelhögt glykemiskt index (62), vilket gör den till ett gott sätt att variera kosten när den lagas på traditionellt vis.',
+             tips=('Undvik att äta den ensam; servera den på traditionellt maghrebiskt vis med mycket grönsaker som zucchini, morot och '
+                   'pumpa och med kyckling eller kikärter för att sänka den glykemiska belastningen.',
+                   'Ånga couscousen (i en couscousière) över grönsaksbuljong och kryddor i stället för att koka den i vatten, så håller '
+                   'kornen ihop och behåller sitt värde.')),
+    11: dict(lead='Gyllene korn som kombinerar naturlig sötma med komplexa kolhydrater och ett medelhögt glykemiskt index (56). Majs '
+                  'innehåller kostfiber och karotenoider som lutein.',
+             tips=('Räkna den som måltidens stärkelse och inte som en vanlig grönsak; en majskolv är en fullständig kolhydratportion i sig.',
+                   'Koka majsen i vatten utan socker eller margarin, ät hela kornen med det fiberrika skalet och undvik konserverad majs '
+                   'med tillsatt socker.')),
+    12: dict(lead='Ett traditionellt bröd och ett av de bästa valen vid diabetes och insulinresistens: det glykemiska indexet är lågt '
+                  '(34), och brödet innehåller lösliga betaglukanfibrer som bildar en naturlig barriär i tarmen och hjälper till att '
+                  'dämpa blodsockertoppar.',
+             tips=('Ett utmärkt val till vardagsfrukosten; det ger jämn energi i många timmar utan plötsliga energidippar.',
+                   'Köp det från bagerier som använder äkta fullkornsmjöl av korn, och ät det med ett kokt ägg och olivolja för en '
+                   'komplett frukost.')),
+    13: dict(lead='Förenar brödets mjukhet med havrens fördelar; det glykemiska indexet är lågt (47), vilket gör det till ett utmärkt '
+                  'alternativ till vitt bröd för dig som vill hålla koll på vikten och blodsockret.',
+             tips=('En skiva till frukosten räcker ofta, tack vare de täta fibrerna som sväller i magen och ger en långvarig känsla av mättnad.',
+                   'Läs etiketten och kontrollera att brödet inte innehåller tillsatt socker eller en stor andel siktat vetemjöl.')),
+    14: dict(lead='Basmatiris har långa korn och en aromatisk doft och är det smartaste valet bland de vita rissorterna: det innehåller '
+                  'naturligt mer amylos, en stärkelse som smälts långsamt, vilket ger ett mer måttligt glykemiskt index (61, medelhögt) '
+                  'och en jämnare matsmältning.',
+             tips=('Ett bra vardagsalternativ till kortkornigt ris; tillsammans med tillagade grönsaker eller baljväxter ger det '
+                   'långvarig mättnad utan kraftiga blodsockertoppar.',
+                   'Blötlägg basmatiriset i 30 minuter och skölj det väl före kokning, och koka det sedan på låg värme; det hjälper till '
+                   'att bevara den fasta stärkelsestrukturen och den långsamma matsmältningen.')),
+    15: dict(lead='En kulturskatt från Levanten: grönt vete som skördas tidigt och rostas. Det innehåller protein och järn, dubbelt så '
+                  'mycket kostfiber som fullkornsris och har ett lågt glykemiskt index (43), vilket passar bra vid diabetes.',
+             tips=('Ett utmärkt alternativ till vitt ris i kyckling- och kötträtter; den rökiga smaken och den fasta konsistensen gör den '
+                   'till en mättande familjemåltid.',
+                   'Koka den i en mager kycklingbuljong med lök, en nypa kanel och svartpeppar, på låg värme tills den har sugit upp '
+                   'buljongen och blivit mjuk.')),
+    16: dict(lead='Ett gammalt traditionellt spannmål som är naturligt glutenfritt och innehåller magnesium, men det glykemiska indexet '
+                  'är högt (71), så det gäller att tänka på portionen och på vad du äter till.',
+             tips=('Ett bra val för dig som undviker gluten, till exempel vid celiaki; ät det alltid med mycket bladgrönsaker och '
+                   'protein för att bromsa upptaget.',
+                   'Koka hirsen som alternativ till ris eller gör en varm gröt med olivolja, och blötlägg den i vatten i två timmar före '
+                   'kokningen så blir den lättare att smälta.')),
+    17: dict(lead='Havrekornets yttre, mycket koncentrerade lager och en av de rikaste källorna till lösliga fibrer, med ett medelhögt '
+                  'glykemiskt index (56). Betaglukaner från havre bidrar till att bibehålla normala kolesterolhalter i blodet; den '
+                  'gynnsamma effekten uppnås vid ett dagligt intag av 3 g betaglukaner från havre.',
+             tips=('Tillsätt två matskedar i yoghurt, soppa eller bakning; det gör måltiden fylligare och mer mättande utan att tillföra '
+                   'många kalorier.',
+                   'Drick alltid två glas vatten när du äter havrekli, så att betaglukanfibrerna kan svälla och göra sitt jobb i tarmen.')),
+    18: dict(lead='Kronjuvelen bland baljväxterna och ett av de bästa livsmedlen vid diabetes: linser har ett av de lägsta glykemiska '
+                  'indexen (25) och innehåller mycket vegetabiliskt protein, järn och lösliga fibrer.',
+             tips=('Ett idealiskt vardagslivsmedel; ät linser som varm soppa i början av måltiden eller i sallader för att hålla dig mätt länge.',
+                   'Pressa en halv färsk citron över linserna; C-vitamin ökar järnupptaget, och citronen ger dessutom en härlig smak.')),
+    19: dict(lead='En baljväxt med lång tradition i vår matkultur som kombinerar långsamt nedbruten stärkelse med vegetabiliskt protein '
+                  'och har ett lågt glykemiskt index (37), vilket gör den till en trogen vän vid diabetes.',
+             tips=('Ät kikärter hela i sallader eller som ett krispigt, ugnsrostat mellanmål med kryddor; de mättar och stoppar plötslig hunger.',
+                   'Blötlägg torkade kikärter i 12–24 timmar och byt vatten innan du kokar dem; det bryter ned en del av de sockerarter '
+                   'som orsakar gaser och gör proteinet lättare att ta upp.')),
+    20: dict(lead='Hjälten på det traditionella frukostbordet: bondbönor kombinerar vegetabiliskt protein med mycket fibrer, och det '
+                  'låga glykemiska indexet (40) bidrar till jämn energi i flera timmar.',
+             tips=('En idealisk frukosträtt för dig som vill ha kontroll över aptiten och småätandet; ät bönorna med sked, med olivolja, '
+                   'spiskummin och citron, i stället för att doppa ett helt bröd i dem.',
+                   'Mosa dem försiktigt med pressad vitlök, citronsaft och en nypa spiskummin, som är skonsammare mot magen, och tillsätt '
+                   'en sked extra jungfruolivolja.')),
+    21: dict(lead='En av de baljväxter som är snällast mot blodsockret: det glykemiska indexet är lågt (31), och bönorna innehåller '
+                  'naturliga ämnen som delvis bromsar de enzymer som bryter ned stärkelse, vilket hjälper till att motverka '
+                  'blodsockertoppar.',
+             tips=('En varm vinterlunch; ät vita bönor i sås med lite basmatiris, eller som en mustig soppa.',
+                   'Blötlägg torkade bönor i 12 timmar och byt vatten för att minska gaserna, och koka dem i en naturlig sås på tomat och '
+                   'vitlök med magert kött.')),
+    22: dict(lead='Kidneybönor innehåller antioxidanter och lösliga fibrer och har ett lågt glykemiskt index (37), vilket ger en jämn '
+                  'blodsockerkurva.',
+             tips=('Utmärkta i sallader, soppor och grytor; de trögflytande fibrerna hjälper till att hålla blodsockret i schack efter måltiden.',
+                   'En viktig säkerhetsregel: torkade kidneybönor ska blötläggas ordentligt och sedan koka kraftigt i minst 10 minuter för '
+                   'att förstöra det giftiga lektinet innan du fortsätter tillagningen.')),
+    23: dict(lead='En liten böna med stor näringskraft: den innehåller zink, järn och folat och har ett lågt glykemiskt index (33), som '
+                  'är skonsamt mot magen och bidrar till ett stabilt HbA1c.',
+             tips=('Utmärkta i ugnsrätter, grytor och kalla sallader; en prisvärd och komplett måltid som mättar väl.',
+                   'Koka dem mjuka med en nypa spiskummin, och servera dem varma med olivolja, färsk koriander och citronsaft.')),
+    24: dict(lead='Ett av de bästa gröna proteinmellanmålen: färska sojabönsbaljor med nästan ingen stärkelse, ett glykemiskt index på '
+                  'högst 18 och fullständigt vegetabiliskt protein.',
+             tips=('Ett perfekt mellanmål mellan måltiderna eller framför tv:n; det stillar hungern och ger något att tugga på utan '
+                   'tillsatt socker eller ohälsosamt fett.',
+                   'Ånga eller koka hela baljorna i bara 5 minuter med en nypa grovt havssalt, och tryck sedan ut bönorna med tänderna.')),
+    25: dict(lead='Medelhavets historiska tilltugg: lupinbönor innehåller mycket protein (16,4 g per 100 g) och nästan ingen stärkelse, '
+                  'och det glykemiska indexet (15) gör dem till en favorit vid ketokost och diabetes.',
+             tips=('Ett smart alternativ till chips och andra snacks; en liten näve mättar förvånansvärt bra och håller hungern borta i '
+                   'flera timmar.',
+                   'Köp färdigkokta lupinbönor, eller blötlägg och koka dem ordentligt i vatten med salt, spiskummin och citronsaft, och ät '
+                   'dem med det tunna skalet för att få med mest fibrer.')),
+    26: dict(lead='Ett näringsrikt livsmedel som har fått ett oförtjänt dåligt rykte i bantningskulturen: potatis hör till de mest '
+                  'mättande livsmedlen tack vare den höga vattenhalten och innehåller kalium. Den glykemiska effekten (GI 69, medelhögt) '
+                  'beror helt på hur du tillagar den.',
+             tips=('Ät alltid potatisen med skalet för mer fibrer, och kombinera den med en mager proteinkälla eller en grön sallad för att '
+                   'bromsa flödet av glukos till blodet.',
+                   'Nedkylningshemligheten: koka potatisen hel med skal och låt den svalna helt innan du äter den, till exempel i en kall '
+                   'sallad med olivolja och örter. Nedkylningen bildar resistent stärkelse, som märkbart sänker det glykemiska indexet.')),
+    27: dict(lead='Sötpotatis innehåller betakaroten, som kroppen omvandlar till A-vitamin. Trots den naturliga sötman gör det glykemiska '
+                  'indexet (67, medelhögt) och de täta fibrerna den till ett bra val för uthållig energi.',
+             tips=('Ett utmärkt alternativ till lunchens stärkelse eller som energimåltid före träning; den ger en verklig mättnad som '
+                   'hjälper dig att stå emot sötsug.',
+                   'Koka den helst eller ugnsbaka den lätt med skalet på, och undvik att rosta den så länge att den karamelliseras kraftigt, '
+                   'eftersom det kan påskynda nedbrytningen av sockret.')),
+    28: dict(lead='Den populäraste snabbmaten, men pommes frites kombinerar snabbt upptagen stärkelse med oljor som hettats upp till höga '
+                  'temperaturer. Det ger ett högt glykemiskt index (75) och mycket energi som påverkar insulinet kraftigt.',
+             tips=('Spara dem till enstaka tillfällen och mycket små portioner; ät en stor sallad eller grillat protein först för att bromsa '
+                   'upptaget av fett och stärkelse.',
+                   'Gör dem hemma: skär potatisen med skalet på och tillaga den i airfryer med en matsked olivolja för att minska '
+                   'kalorierna och de oxiderade oljorna.')),
+    29: dict(lead='En favorit hos både vuxna och barn, men när potatisen mosas bryts cellstrukturen ned helt, så att '
+                  'matsmältningsenzymerna snabbt omvandlar den till socker. Det glykemiska indexet är högt (79), så det gäller att äta '
+                  'den med eftertanke.',
+             tips=('Vid insulinresistens: ät bara en liten portion, eller byt ut hälften mot blomkålsmos för att lura smaklökarna och '
+                   'halvera stärkelsen.',
+                   'Mosa potatisen med extra jungfruolivolja, lite vitlöksbuljong och örter i stället för margarin och mjölk; naturligt '
+                   'fett hjälper till att bromsa den snabba matsmältningen.')),
+    30: dict(lead='Tomaten innehåller antioxidanter, bland annat det välkända färgämnet lykopen. Den består till 95 % av vatten och har '
+                  'nästan inga kalorier, vilket gör den till en grönsak du kan äta fritt och som är mycket skonsam mot blodsockret.',
+             tips=('Ät tomater fritt i sallader och vardagsmåltider; det låga kolhydratinnehållet och fibrerna gör dem till ett tryggt '
+                   'val vid diabetes eller viktnedgång.',
+                   'Att lätt tillaga tomater med olivolja kan göra att kroppen tar upp upp till fyra gånger mer lykopen än från råa tomater.')),
+    31: dict(lead='Ett av de bästa livsmedlen för att få i sig vätska: vatten och fibrer som fyller magen och svalkar kroppen med nästan '
+                  'inga kalorier. Gurkan påverkar knappt insulinet eller blodsockret, hur mycket du än äter.',
+             tips=('Det smarta valet för mättnad mellan måltiderna och när du är sugen på något krispigt på kvällen; doppa den i labneh '
+                   'eller hummus i stället för chips och kex.',
+                   'Ät den alltid med det gröna skalet, där kisel, fibrer och antioxidanter finns i högst halt.')),
+    32: dict(lead='Den mest omtyckta mångsidiga grönsaken vid viktnedgång: mjuk och lätt konsistens och nästan inga kalorier gör den till '
+                  'ett smart alternativ för dig som vill minska på stärkelsen utan att tallriken känns tom.',
+             tips=('Utmärkt i ugnsformar och soppor; en generös mängd ger en behaglig mättnad och bidrar till en jämn blodsockernivå.',
+                   'Skär den på längden i tunna band som pastaersättning (zoodles) med naturlig tomatsås, så får du samma njutning som av '
+                   'pasta med en fjärdedel av stärkelsen.')),
+    33: dict(lead='Auberginen innehåller antioxidanter, bland annat färgämnet nasunin i skalet. Den är mycket skonsam mot blodsockret, med '
+                  'ett lågt glykemiskt index (15) och nästan inga kalorier.',
+             tips=('Utmärkt som kryddig röra med tahini, vitlök och citron (baba ganoush), eller i skikt i stället för lasagneplattor och '
+                   'pasta vid kost med mindre stärkelse.',
+                   'Rosta hela auberginen i ugnen eller över gaslåga tills fruktköttet är mjukt, och undvik att fritera den, eftersom den '
+                   'suger upp fett som en svamp.')),
+    34: dict(lead='Trots den gamla myten att morötter höjer blodsockret visar mätningar att det glykemiska indexet är lågt (39) och att en '
+                  'morot på 80 g har en glykemisk belastning på bara 2,2. Moroten innehåller betakaroten, som kroppen omvandlar till '
+                  'A-vitamin, och A-vitamin bidrar till att bibehålla normal syn och till immunsystemets normala funktion.',
+             tips=('Ett utmärkt krispigt mellanmål när du äter den rå, eller ett färgglatt tillskott som ger mer fibrer i grytor och '
+                   'grönsakssoppor.',
+                   'Ät den rå med hummus eller labneh; om du kokar den, låt den inte koka sönder, så behåller fibrerna sin struktur och det '
+                   'glykemiska indexet förblir lågt.')),
+    35: dict(lead='Jätten i den korsblommiga familjen och en källa till ämnet sulforafan. De täta fibrerna bromsar sockerupptaget och är '
+                  'föda för tarmens bakterier.',
+             tips=('Ät en liten tallrik i början av lunchen; fibrerna bildar en naturlig barriär i tarmen som hjälper till att förhindra '
+                   'plötsliga blodsockertoppar efter måltiden.',
+                   'Ånga den i bara 4–5 minuter så att den behåller sin klargröna färg och lätta krispighet, och undvik lång kokning i '
+                   'vatten så att C-vitaminet och andra ämnen inte går förlorade.')),
+    36: dict(lead='Ett av världens smartaste alternativ till ris och potatis: fyllig konsistens och nästan ingen stärkelse gör blomkålen '
+                  'till ett trumfkort vid diabetes och lågkolhydratkost, så att du kan njuta av dina favoriträtter utan oro.',
+             tips=('Ett fantastiskt vardagsalternativ: byt ut hälften av riset i måltiden mot blomkålsris för att lura ögat och magen och '
+                   'direkt halvera stärkelsen.',
+                   'Riv blomkålen eller mixa den i matberedare till riskornsstorlek och fräs den några minuter i panna med olivolja och lök, '
+                   'eller koka och mosa den som ett utmärkt alternativ till potatismos.')),
+    37: dict(lead='Världens mest kända bladgrönsak, som innehåller folat, järn och antioxidanter. Den har nästan inga kalorier och ingen '
+                  'glykemisk effekt, vilket gör den idealisk för att fylla tallriken utan att påverka insulinet.',
+             tips=('Ät den färsk som salladsbas med citron och olivolja, eller tillagad till huvudrätten, så att tarmbakterierna får rena fibrer.',
+                   'Tillsätt alltid citronsaft till spenaten; C-vitamin ökar järnupptaget. Undvik att koka den länge i vatten, så bevaras '
+                   'vitaminerna.')),
+    38: dict(lead='Drottningen på det gröna bordet och en av de mest älskade traditionella rätterna: jutemalva innehåller magnesium, järn '
+                  'och naturliga fibrer. Den är nästan fri från tillgängliga kolhydrater och ett fritt och tryggt val vid diabetes.',
+             tips=('En underbar vardagsrätt vid diabetes eller bantning; den ger snabbt en behaglig mättnad och hjälper till att dämpa '
+                   'blodsockerstegringen när den äts med en måttlig mängd ris.',
+                   'Koka den i en mager kyckling- eller köttbuljong och gör den avslutande frästen av vitlök och koriander i olivolja i '
+                   'stället för industriellt framställt ghee, med en skvätt färsk citron; C-vitamin ökar järnupptaget.')),
+    39: dict(lead='En god vän för matsmältningen och blodsockret, känd för sin unika konsistens och sitt höga innehåll av trögflytande '
+                  'fibrer. Okra innehåller mycket lite energi, och kolhydratinnehållet är så lågt att glykemiskt index inte är tillämpligt.',
+             tips=('Det naturliga, trögflytande pektinet lägger sig försiktigt mot tarmväggen och hjälper till att bromsa upptaget av '
+                   'stärkelse och socker när du äter okra till ris eller kött.',
+                   'Koka den i naturlig tomatsås med olivolja, vitlök och koriander, och skär inte bort topparna för djupt före '
+                   'tillagningen, så behåller den sin lätta konsistens.')),
+    40: dict(lead='Ett genialt livsmedel som förenar köttig smak med grönsakens konsistens och nästan inga kalorier. Champinjoner '
+                  'innehåller selen och B-vitaminer och saknar snabba kolhydrater, vilket gör dem till ett bra val vid insulinresistens.',
+             tips=('Ett smart knep för att dryga ut måltiden: byt ut hälften av köttfärsen eller stärkelsen i ugnsrätter och soppor mot '
+                   'hackade champinjoner, utan att förlora den mättande smaken.',
+                   'Bryn dem i het panna med en skvätt olivolja, en pressad vitlöksklyfta och en nypa timjan. Blötlägg dem inte i vatten, '
+                   'då suger de upp det och blir sladdriga; torka av dem med en fuktig duk innan du skivar dem.')),
+    41: dict(lead='Kronärtskockan innehåller den präbiotiska fibern inulin, som är föda för tarmens bakterier, och har ett lågt '
+                  'glykemiskt index (15).',
+             tips=('Ett bra val om du vill äta mer fibrer; 100 g innehåller 5,4 g kostfiber.',
+                   'Koka kronärtskockshjärtan i vatten med citron, olivolja och vitlök, och njut av dem som en fin och hälsosam förrätt.')),
+    42: dict(lead='En elegant grönsak som innehåller antioxidanter som glutation samt K-vitamin. De tillgängliga kolhydraterna är nästan '
+                  'noll (under 2 g), och sparrisen påverkar praktiskt taget inte blodsockret.',
+             tips=('Ett fint tillbehör till grillad biff eller lax.',
+                   'Fräs den i het panna i bara 3–4 minuter med en sked olivolja, lite vitlök och havssalt, så att den förblir krispig och mör.')),
+    43: dict(lead='Idrottarnas favorit: rödbetor innehåller naturligt nitrat. Det glykemiska indexet är medelhögt (64), men en liten '
+                  'portion på 80 g har en låg glykemisk belastning (3,5).',
+             tips=('Lägg en halv kokt rödbeta i en grön sallad för färg, smak och fibrer.',
+                   'Koka den med skalet, skala den när den är klar och skär den i tärningar med olivolja, äppelcidervinäger och persilja '
+                   'för att bromsa matsmältningen av det naturliga sockret.')),
+    44: dict(lead='Den omtyckta pepparaktiga bladgrönsaken innehåller naturligt nitrat och antioxidanter. Ingen glykemisk effekt och '
+                  'nästan inga kalorier: den fyller tallriken med näring utan att påverka insulinet.',
+             tips=('Gör den till en självklar följeslagare till lunch och middag; att äta den före måltiden kan hjälpa till att dämpa '
+                   'måltidens blodsockertoppar.',
+                   'Ät den färsk och väl sköljd med en skvätt citron, sumak och några droppar olivolja, som en fräsch sallad.')),
+    45: dict(lead='Löken innehåller kvercetin och organiska svavelföreningar och har ett lågt glykemiskt index (15).',
+             tips=('Grunden i matlagningen och en självklar salladsingrediens; fibrerna är föda för tarmbakterierna och bidrar till ett '
+                   'stabilt blodsocker på sikt.',
+                   'Ät den rå i sallader för att få med mest kvercetin, eller fräs den lätt i olivolja och undvik att steka den tills den bränns.')),
+    46: dict(lead='En av naturens mest smakrika kryddor, med den bioaktiva föreningen allicin. Den lilla dagliga mängden (en eller två '
+                  'klyftor) gör att den glykemiska effekten i praktiken är noll.',
+             tips=('En självklar del av vardagens hälsosamma rätter, som ger mycket smak.',
+                   'Pressa en vitlöksklyfta och låt den vila i luften i 5–10 minuter innan du tillagar eller äter den; under pausen bildas allicin.')),
+    47: dict(lead='En utmärkt källa till C-vitamin, med ännu mer än apelsin! Grön paprika har nästan inga kalorier och högst 2,9 g '
+                  'tillgängliga kolhydrater per 100 g, vilket gör den till en grönsak du kan äta fritt utan påverkan på blodsockret.',
+             tips=('Ett fräscht och krispigt mellanmål som stillar suget efter salt; skär den i stavar och ät med labneh eller hummus, '
+                   'eller lägg den i alla sommarsallader.',
+                   'Ät den färsk och rå för att bevara det värmekänsliga C-vitaminet, eller rosta den kort i ugnsrätter och med kött utan '
+                   'att tillaga den för länge.')),
+    48: dict(lead='Den mest kända vardagsfrukten, som innehåller lösliga pektinfibrer och har ett lågt glykemiskt index (38), vilket gör '
+                  'den till ett utmärkt fruktval vid diabetes och bantning.',
+             tips=('Ät alltid hela äpplet med skalet och undvik äppeljuice; juicen höjer blodsockret snabbt eftersom pektinfibrerna saknas.',
+                   'Ät äppelskivor med en nypa malen kanel eller lite naturligt jordnötssmör för ett mer mättande och balanserat mellanmål.')),
+    49: dict(lead='Naturens bärbara energimellanmål: bananen innehåller kalium och B6-vitamin och har ett lågt glykemiskt index (52). '
+                  'Kolhydraterna förändras när bananen mognar, från resistent stärkelse till naturligt socker, vilket gör den till ett bra '
+                  'val för idrottare och för vardagens aktiviteter.',
+             tips=('Vid diabetes eller insulinresistens: välj helst fasta bananer med lätt gröna toppar, som innehåller mer resistent '
+                   'stärkelse som smälts långsamt.',
+                   'För längre mättnad: kombinera en halv banan med en källa till fett eller protein, som naturligt jordnötssmör eller '
+                   'grekisk yoghurt.'),
+             title='Hur många kalorier har en banan? Kalorier efter storlek och glykemiskt index | WiBo Health',
+             desc='Hur många kalorier har en banan? En medelstor banan innehåller cirka 105 kcal (89 kcal per 100 g) och har ett lågt '
+                  'glykemiskt index (52). Se kalorierna efter storlek och hur bananen påverkar kosten och blodsockret.',
+             faq=[dict(q='Hur många kalorier har en banan beroende på storlek?',
+                       a='En liten banan (cirka 100 g) ger 89 kcal, en medelstor (118–120 g) ungefär 105–107 kcal och en stor (cirka '
+                         '140 g) omkring 125 kcal.'),
+                  dict(q='Passar banan vid bantning och viktnedgång?',
+                       a='Ja. Bananen innehåller fibrer som pektin och resistent stärkelse, och om du räknar in en banan i ditt dagliga '
+                         'energiintag passar den bra i planen.'),
+                  dict(q='Vilket är bäst för blodsockret: grön eller mogen gul banan?',
+                       a='Omogna, gröna bananer har ett lägre glykemiskt index och mer resistent stärkelse, medan stärkelsen i mogna, '
+                         'brunprickiga bananer har omvandlats till enkla sockerarter som tas upp snabbare.')]),
+    50: dict(lead='En naturlig C-vitaminbomb som innehåller citrusflavonoider och fibrer som bromsar sockerupptaget, med ett lågt '
+                  'glykemiskt index (42).',
+             tips=('Ät hela apelsinen med klyftorna och den tunna vita hinnan, och undvik att pressa den; ett glas juice innehåller sockret '
+                   'från tre apelsiner utan fibrerna.',
+                   'Skär den i bitar och ät den färsk, eller lägg de fräscha klyftorna i en grön sallad med valnötter och ruccola.')),
     51: dict(lead='En svalkande sommarfrukt som till cirka 92 % består av vatten och innehåller färgämnet lykopen. Det glykemiska '
                   'indexet är 50 (lågt), och tack vare den höga vattenhalten har en skiva på 280 g en glykemisk belastning på 10,6 (medelhög).',
              tips=('Håll dig till en måttlig portion, ungefär en skiva, och undvik att äta stora mängder på en gång.',
