@@ -20,6 +20,12 @@
         "ar": "يُعد الأرز الأبيض ركيزة المائدة اليومية في معظم البيوت العربية، لكنه يمثل تحدياً لمرضى السكري ومقاومة الإنسولين بسبب سرعة هضمه. بمؤشر جلايسيمي متوسط (65) وحمل جلايسيمي مرتفع نسبياً للحصة الكاملة، لا يعني ذلك حرمان نفسك منه، بل السر كله يكمن في طريقة طهيه ومشاركته مع الألياف والبروتين.",
         "en": "White rice is a staple of the daily table in most Arab homes, but it is a challenge for people with diabetes and insulin resistance because it is digested quickly. With a medium glycemic index (65) and a relatively high glycemic load for a full portion, this does not mean you have to give it up: the whole secret lies in how you cook it and in pairing it with fibre and protein.",
         "nl": "Witte rijst is in de meeste Arabische huishoudens een vaste basis van de dagelijkse maaltijd, maar voor mensen met diabetes en insulineresistentie is het een uitdaging omdat het snel wordt verteerd. Met een gemiddelde glykemische index (65) en een relatief hoge glykemische lading voor een volle portie hoef je het niet te laten staan: het hele geheim zit in hoe je het kookt en in de combinatie met vezels en eiwit."
+      },
+      "title": {
+        "en": "White Rice Glycemic Index 65: How to Lower It | WiBo Health"
+      },
+      "desc": {
+        "en": "Cooked white rice has a medium GI of 65 and a high load of 26.9 per 150 g. The fridge trick, portion size and pairings that soften the sugar rise."
       }
     },
     "2": {
@@ -263,6 +269,12 @@
         "ar": "حبات ذهبية تجمع بين الحلاوة الطبيعية والنشويات المعقدة بمؤشر جلايسيمي معتدل (56)، وتعد مصدراً ممتازاً لمضادات الأكسدة ومفيدة لصحة العيون والألياف.",
         "en": "Golden kernels that combine natural sweetness with complex carbohydrates, with a moderate glycemic index (56); corn is an excellent source of antioxidants and fibre, and good for eye health.",
         "nl": "Gouden korrels die natuurlijke zoetheid combineren met complexe koolhydraten, met een gematigde glykemische index (56); maïs is een uitstekende bron van antioxidanten en vezels, en goed voor de ogen."
+      },
+      "title": {
+        "en": "Boiled Corn Calories: 86 kcal per 100 g, GI 56 | WiBo Health"
+      },
+      "desc": {
+        "en": "Boiled corn has 86 kcal per 100 g and a medium GI of 56 (Atkinson 2021). Fibre, glycemic load and how to eat it with diabetes."
       }
     },
     "14": {
@@ -326,6 +338,12 @@
         "ar": "درة التاج وأفضل غذاء على الإطلاق لمرضى السكري وصحة القلب؛ يمتلك واحداً من أقل المؤشرات الجلايسيمية في العالم (25)، ويزخر بجرعة هائلة من البروتين النباتي والحديد والألياف الذائبة.",
         "en": "The crown jewel and one of the very best foods for people with diabetes and for heart health; lentils have one of the lowest glycemic indexes in the world (25) and are packed with plant protein, iron and soluble fibre.",
         "nl": "Het kroonjuweel en een van de allerbeste voedingsmiddelen voor mensen met diabetes en voor de gezondheid van het hart; linzen hebben een van de laagste glykemische indexen ter wereld (25) en zitten boordevol plantaardig eiwit, ijzer en oplosbare vezels."
+      },
+      "title": {
+        "ar": "المؤشر الجلايسيمي للعدس: 25 فقط ومنخفض للسكري | WiBo Health"
+      },
+      "desc": {
+        "ar": "لماذا يُعد العدس من أقل الأطعمة تأثيراً في السكر؟ مؤشر جلايسيمي 25 وحمل 4.5 لحصة 150 غ وفق Atkinson 2021، مع نصائح لتناوله لمرضى السكري."
       }
     },
     "19": {
@@ -473,6 +491,12 @@
         "ar": "صديق الترطيب الأول؛ ماء وألياف نقية تملأ المعدة وتنعش الجسم بسعرات تقترب من الصفر. لا يرفع الإنسولين ولا يغير قراءات السكر مهما تناولت منه بحرية.",
         "en": "Your number-one hydration friend: water and pure fibre that fill the stomach and refresh the body with close to zero calories. It hardly affects insulin or blood sugar readings, however freely you eat it.",
         "nl": "Je hydratatievriend nummer één: water en pure vezels die de maag vullen en het lichaam verfrissen met bijna nul calorieën. Het heeft nauwelijks effect op insuline of bloedsuikerwaarden, hoeveel je er ook van eet."
+      },
+      "title": {
+        "ar": "المؤشر الجلايسيمي للخيار: 15 سعرة لكل 100 غ | WiBo Health"
+      },
+      "desc": {
+        "ar": "هل يرفع الخيار السكر؟ في 100 غ منه 15 سعرة وكربوهيدرات قليلة جداً، لذلك لا ينطبق عليه المؤشر الجلايسيمي. القيم الكاملة ونصائح لمرضى السكري."
       }
     },
     "32": {
@@ -641,6 +665,12 @@
         "ar": "الفاكهة اليومية الأكثر أماناً وشهرة، غنية بألياف البكتين الذائبة التي تنظم حركة الأمعاء، وتتميز بمؤشر جلايسيمي منخفض جداً (38) يجعلها خيار الفاكهة المثالي لمريض السكر والدايت.",
         "en": "The safest and best-known everyday fruit, rich in soluble pectin fibre that supports regular bowel movements, with a very low glycemic index (38) that makes it the ideal fruit choice for people with diabetes and anyone on a diet.",
         "nl": "De veiligste en bekendste dagelijkse vrucht, rijk aan oplosbare pectinevezels die een regelmatige stoelgang ondersteunen, met een zeer lage glykemische index (38) die hem de ideale fruitkeuze maakt voor mensen met diabetes en iedereen die op dieet is."
+      },
+      "title": {
+        "ar": "المؤشر الجلايسيمي للتفاح: 38 منخفض للسكري | WiBo Health"
+      },
+      "desc": {
+        "ar": "التفاح مؤشره الجلايسيمي 38 وحمله 6.6 لتفاحة متوسطة (150 غ) وفق Atkinson 2021. القيم الغذائية الكاملة وكيف تأكله دون ارتفاع في السكر."
       }
     },
     "49": {
@@ -737,6 +767,12 @@
         "ar": "قنبلة فيتامين C الطبيعية، غني بالفلافونويدات الحمضية الواقية للشرايين والألياف المهدئة لامتصاص السكر، بمؤشر جلايسيمي منخفض ومريح (42).",
         "en": "A natural vitamin C bomb, rich in citrus flavonoids that support healthy arteries and in fibre that slows sugar absorption, with a comfortably low glycemic index (42).",
         "nl": "Een natuurlijke vitamine C-bom, rijk aan citrusflavonoïden die gezonde slagaders ondersteunen en aan vezels die de suikeropname vertragen, met een prettig lage glykemische index (42)."
+      },
+      "title": {
+        "ar": "المؤشر الجلايسيمي للبرتقال 42: أفضل من العصير | WiBo Health"
+      },
+      "desc": {
+        "ar": "البرتقال مؤشره الجلايسيمي 42 وحمله 5.2 لحبة متوسطة (130 غ). لماذا الحبة الكاملة أفضل من العصير لمرضى السكري؟"
       }
     },
     "51": {
@@ -1052,6 +1088,20 @@
         "ar": "الجبنة المحبوبة ذات القوام المتماسك الشهي الذي لا يذوب عند الحرارة. صفر نشويات وغنية بالبروتين المشبع، وتعد إضافة فاخرة لترقية أي طبق صحي.",
         "en": "The much-loved cheese with a firm, delicious texture that does not melt when heated. Zero starch and rich in filling protein, it is a premium addition that upgrades any healthy dish.",
         "nl": "De geliefde kaas met een stevige, smakelijke structuur die niet smelt bij verhitting. Nul zetmeel en rijk aan verzadigend eiwit, een luxe toevoeging die elk gezond gerecht naar een hoger niveau tilt."
+      },
+      "title": {
+        "en": "Is Halloumi Healthy? Protein, Salt & Calories | WiBo Health"
+      },
+      "desc": {
+        "en": "Halloumi has 21 g protein and 316 kcal per 100 g, and it is salty. How much to eat, who should limit it and how to cook it with less fat."
+      },
+      "faq_extra": {
+        "en": [
+          {
+            "q": "Is halloumi healthy?",
+            "a": "Halloumi can be part of a balanced diet in moderate portions. 100 g gives 21 g of protein and 316 kcal with almost no carbohydrate, so it hardly affects blood sugar, but it is high in fat and salt. A typical portion is 30 g (about 95 kcal); people who need to limit salt, for example because of high blood pressure, should keep portions small."
+          }
+        ]
       }
     },
     "79": {
@@ -1325,6 +1375,12 @@
           "De beste keuze voor een dagelijks ontbijt; het geeft je urenlang rustige, gelijkmatige energie zonder plotselinge energiedip.",
           "Koop het bij bakkers die echt volkoren gerstemeel gebruiken, en eet het met een gekookt ei en olijfolie voor een compleet ontbijt."
         ]
+      },
+      "title": {
+        "ar": "المؤشر الجلايسيمي لخبز الشعير: 34 منخفض للسكري | WiBo Health"
+      },
+      "desc": {
+        "ar": "خبز الشعير مؤشره الجلايسيمي 34 وحمله 6.4 لحصة 50 غ، أي أقل بكثير من الخبز الأبيض. القيم الكاملة وكيف تتأكد أنه خبز شعير حقيقي."
       }
     },
     "13": {
@@ -1514,6 +1570,12 @@
           "Bewaar het voor af en toe en in een heel kleine portie; eet eerst een grote salade of gegrild eiwit om de opname van vet en zetmeel te vertragen.",
           "Maak ze zelf: snijd aardappelen met schil en bak ze in een airfryer met één eetlepel olijfolie, voor minder calorieën en minder geoxideerde oliën."
         ]
+      },
+      "title": {
+        "en": "French Fries Glycemic Index: 75 (High) & Tips | WiBo Health"
+      },
+      "desc": {
+        "en": "French fries have a high GI of 75 and 312 kcal per 100 g. Why frying and portion size matter, and how to enjoy them with diabetes."
       }
     },
     "33": {
@@ -3023,6 +3085,12 @@
           "De slimste keuze voor koffie en smoothies bij diabetes of insulineresistentie; het geeft een aangename melkachtige structuur zonder lactose of snelle suiker.",
           "Lees het etiket zorgvuldig om zeker te zijn dat er 'ongezoet' op staat; gewone supermarktvarianten bevatten toegevoegde suikers en smaakstoffen die de index verhogen."
         ]
+      },
+      "title": {
+        "en": "Unsweetened Almond Milk: 15 kcal per 100 g | WiBo Health"
+      },
+      "desc": {
+        "en": "Unsweetened almond milk has just 15 kcal and almost no sugar per 100 g. What to check on the label and how to use it in coffee and smoothies."
       }
     },
     "136": {
@@ -3065,6 +3133,12 @@
           "Een prima alternatief voor bewerkte sportdranken na zware inspanning of op warme dagen; het hydrateert en voorziet de spieren van kalium.",
           "Drink vers, natuurlijk kokoswater rechtstreeks uit de vrucht, en vermijd kant-en-klare flessen met toegevoegde rietsuiker of kunstmatige smaakstoffen."
         ]
+      },
+      "title": {
+        "en": "Coconut Water Glycemic Index: 54 & 19 kcal | WiBo Health"
+      },
+      "desc": {
+        "en": "Coconut water has a low GI of 54 and 19 kcal per 100 g. Is it OK with diabetes, how it compares with sports drinks, and which cartons have added sugar."
       }
     },
     "138": {
@@ -3995,6 +4069,12 @@
           "Serveer het gekoeld op een bedje ijs met een scheutje citroen of een paar druppels natriumarme sojasaus, om te genieten van de natuurlijke zoetheid en verse smaak van de vis zonder zware sauzen.",
           "⚠️ Zorg dat de zalm van een betrouwbare bron komt en bedoeld is om rauw te eten (sashimikwaliteit); zwangere en borstvoedende vrouwen en mensen met een verminderde weerstand moeten het volledig vermijden, vanwege het risico op een bacteriële infectie."
         ]
+      },
+      "title": {
+        "en": "Salmon Sashimi Calories: 127 kcal & Zero Carbs | WiBo Health"
+      },
+      "desc": {
+        "en": "100 g of salmon sashimi has 127 kcal, 20 g protein and zero carbs. Omega-3, raw-fish safety rules and who should avoid it."
       }
     },
     "179": {
@@ -8093,6 +8173,20 @@
           "Rooster je plak brioche licht om van de natuurlijke botersmaak te genieten zonder er nog jam of chocolade op te hoeven smeren.",
           "Brioche is een energierijk product dat geraffineerd zetmeel, vet en suiker combineert, dus mensen met diabetes en wie een streng dieet volgt, moeten het behandelen als een zeldzaam zoetje en niet als dagelijks brood."
         ]
+      },
+      "title": {
+        "en": "Is Brioche Healthy? Calories, Carbs & GI 70 | WiBo Health"
+      },
+      "desc": {
+        "en": "A 35 g slice of brioche has about 132 kcal and a high GI of 70. What the butter and eggs change, and smarter ways to enjoy it with diabetes."
+      },
+      "faq_extra": {
+        "en": [
+          {
+            "q": "Is brioche bread healthy?",
+            "a": "Brioche is an enriched bread made with butter and eggs: a 35 g slice gives about 132 kcal, and its white flour gives it a high glycemic index of 70. It fits a balanced diet as an occasional treat; with diabetes, keep to one slice and eat it with a protein such as eggs or cheese rather than with jam."
+          }
+        ]
       }
     },
     "349": {
@@ -8243,6 +8337,12 @@
           "Meng het met water, olijfolie, komijn en een snufje zout en laat het beslag een halfuur rusten; bak het daarna in een hete pan tot dunne, goudbruine, knapperige en eiwitrijke pannenkoekjes.",
           "Kikkererwtenmeel is rijk aan foliumzuur, ijzer en resistente vezels; het is een van de veiligste meelsoorten voor een stabiele bloedsuiker en zeer geschikt voor sporters en vegetariërs."
         ]
+      },
+      "title": {
+        "en": "Besan (Chickpea Flour) Glycemic Index: 35, Low | WiBo Health"
+      },
+      "desc": {
+        "en": "Chickpea flour (besan) has a low GI of 35 and a glycemic load of 4.9 per 30 g. Full nutrition facts and how to use it in flatbreads and pancakes."
       }
     },
     "355": {
@@ -8818,6 +8918,12 @@
           "Verwijder de zaadjes en witte zaadlijsten als je minder pit en meer kruidige smaak wilt, en laat commerciële jalapeño uit blik met suiker en conserveermiddelen liggen.",
           "De capsaïcine in jalapeño ondersteunt de doorbloeding en je natuurlijke energieverbranding; heb je een gevoelige maag of reflux, dan houdt strikte matigheid het comfortabel en voorkom je irritatie."
         ]
+      },
+      "title": {
+        "en": "Jalapeño Pepper: 29 kcal & Almost Zero Carbs | WiBo Health"
+      },
+      "desc": {
+        "en": "A jalapeño has 29 kcal per 100 g and almost no carbohydrate, so it barely affects blood sugar. Nutrition facts, capsaicin and easy ways to use it."
       }
     },
     "378": {
@@ -8868,6 +8974,12 @@
           "Schil de harde schil eraf, snijd hem in blokjes en rooster hem in de oven met olijfolie, kaneel en een snufje zwarte peper tot het vruchtvlees karamelliseert en zacht en fluweelzacht wordt, of pureer hem tot een warme wintersoep.",
           "Flespompoen is rijk aan bètacaroteen, vitamine A en oplosbare vezels die de weerstand en de darm ondersteunen; een vaste, bescheiden portie geeft verzadiging en plezier zonder zorgen over een stijgende glucose."
         ]
+      },
+      "title": {
+        "nl": "Flespompoen voedingswaarde: 45 kcal en GI 51 | WiBo Health"
+      },
+      "desc": {
+        "nl": "Flespompoen bevat 45 kcal per 100 g en heeft een lage GI van 51. Voedingswaarde per portie, koolhydraten en tips om hem te bereiden."
       }
     },
     "380": {
@@ -9348,9 +9460,9 @@
     "399": {
       "slug": "brazil-nuts",
       "lead": {
-        "ar": "الحبات الكبيرة العملاقة القادمة من أعماق غابات الأمازون؛ حبة واحدة منها تمثل صيدلية طبيعية لغناها الأسطوري بعنصر \"السيلينيوم\" العضوي. كربوهيدراتها شبه منعدمة ومؤشرها الجلايسيمي غير منطبق، وتعد المكمل الغذائي الطبيعي الأول لصحة الغدة الدرقية.",
-        "en": "Giant nuts from deep in the Amazon rainforest; a single nut is a natural pharmacy thanks to its legendary content of organic selenium. They contain almost no carbohydrate, so a glycemic index does not apply, and they are the number-one natural supplement for thyroid health.",
-        "nl": "Reusachtige noten uit het hart van het Amazoneregenwoud; één noot is een natuurlijke apotheek dankzij het legendarische gehalte aan organisch selenium. Ze bevatten bijna geen koolhydraten, dus een glykemische index is niet van toepassing, en ze zijn het natuurlijke supplement nummer één voor de schildklier."
+        "ar": "تُعد المكسرات البرازيلية من أغنى المصادر الغذائية بعنصر السيلينيوم، ويساهم السيلينيوم في الوظيفة الطبيعية للغدة الدرقية. كربوهيدراتها شبه منعدمة ولا ترفع سكر الدم، ومؤشرها الجلايسيمي غير منطبق.",
+        "en": "Large nuts from the Amazon rainforest and one of the richest food sources of selenium. They contain almost no carbohydrate, so a glycemic index does not apply. Selenium contributes to the normal thyroid function.",
+        "nl": "Grote noten uit het Amazoneregenwoud en een van de rijkste voedingsbronnen van selenium. Ze bevatten bijna geen koolhydraten, dus een glykemische index is niet van toepassing. Selenium draagt bij tot een normale werking van de schildklier."
       },
       "tips": {
         "ar": [
@@ -9367,6 +9479,20 @@
           "Eén tot hooguit twee noten per dag geven direct verzadiging en dekken 100% van de seleniumbehoefte van je lichaam en schildklier, samen met antioxidanten.",
           "Eet ze rauw en knapperig zoals ze zijn in de ochtend met een glas water, en rooster ze niet te sterk om de fijne vetzuren en mineralen te beschermen.",
           "⚠️ Belangrijke klinische dosiswaarschuwing: paranoten bevatten extreem veel selenium; eet er niet te veel van, houd het bij één of twee per dag en eet nooit meer dan 3 tot 4 per dag om seleniumvergiftiging (selenose) te voorkomen."
+        ]
+      },
+      "title": {
+        "en": "Brazil Nuts: Selenium & How Many a Day Is Safe | WiBo Health"
+      },
+      "desc": {
+        "en": "Brazil nuts are one of the richest food sources of selenium. Selenium contributes to the normal thyroid function, and 1–2 nuts a day is enough."
+      },
+      "faq_extra": {
+        "en": [
+          {
+            "q": "How many Brazil nuts a day is safe?",
+            "a": "One or two Brazil nuts a day is enough for most adults. They are one of the richest food sources of selenium and the amount varies a lot from nut to nut, so regularly eating more than 3 to 4 a day can take you above the safe upper limit of 255 µg of selenium a day set by EFSA (2023). Selenium contributes to the normal thyroid function."
+          }
         ]
       }
     },
@@ -12981,6 +13107,12 @@
             "a": "Omdat het vet en eiwit in de eidooiers en room de maaglediging vertragen in vergelijking met puur suikerrijke zoetigheid."
           }
         ]
+      },
+      "title": {
+        "en": "Pastel de Nata Calories: 179 kcal per Tart | WiBo Health"
+      },
+      "desc": {
+        "en": "One 60 g pastel de nata has about 179 kcal and a medium GI of 62. Sugar, fat and how to fit this Portuguese custard tart into a balanced diet."
       }
     },
     "453": {
@@ -19053,6 +19185,12 @@
             "a": "Een paratha gevuld met gekruide aardappel; heel rijk en zetmeelrijk, en één kan meer dan 380 kcal bevatten."
           }
         ]
+      },
+      "title": {
+        "en": "Paratha Calories: 275 kcal per 80 g & GI 62 | WiBo Health"
+      },
+      "desc": {
+        "en": "One 80 g paratha gives about 275 kcal and a medium GI of 62. Full nutrition facts, the ghee factor and what to eat with it to soften the sugar rise."
       }
     },
     "541": {
@@ -25231,12 +25369,12 @@
     "640": {
       "title": {
         "ar": "كم سعرة في ماك فلوري أوريو ماكدونالدز؟ المؤشر وحقائق السكر | WiBo Health",
-        "en": "McDonald's Oreo McFlurry Calories & Sugar Facts | WiBo Health",
+        "en": "McFlurry Calories: 340 kcal & 52 g Net Carbs | WiBo Health",
         "nl": "Calorieën McFlurry Oreo McDonald's: voedingswaarde & suikers | WiBo Health"
       },
       "desc": {
         "ar": "كوب ماك فلوري أوريو يحتوي على 340 سعرة و52غ كربوهيدرات بحمل جلايسيمي مرتفع (32.1). اكتشف تأثيره على سكر الدم والخيارات الأخف للتحلية.",
-        "en": "An Oreo McFlurry cup packs 340 kcal and 52g net carbs with a high glycemic load of 32.1. Understand its sugar impact and discover lighter dessert swaps.",
+        "en": "A regular Oreo McFlurry (180 g) has about 340 kcal and 52 g net carbs, with a high glycemic load. What it means for blood sugar, and lighter swaps.",
         "nl": "Een McFlurry met Oreo levert 340 kcal en 52g koolhydraten met een hoge glykemische lading (32,1). Bekijk de voedingswaarden en tips voor matiging."
       },
       "lead": {
@@ -25261,7 +25399,15 @@
           "Voedingswaarden van fastfood zijn bij benadering en kunnen per land, vestiging en lokale bereiding verschillen; WiBo Health is niet verbonden aan deze merken."
         ]
       },
-      "slug": "mcdonalds-mcflurry-with-oreo-cookies"
+      "slug": "mcdonalds-mcflurry-with-oreo-cookies",
+      "faq_extra": {
+        "en": [
+          {
+            "q": "How many calories are in a McFlurry?",
+            "a": "A regular McFlurry with Oreo (about 180 g) has about 340 kcal and 52 g of net carbohydrate, with a high glycemic load of 32.1. With diabetes, choose the smallest size or share it, and have it after a meal rather than on its own."
+          }
+        ]
+      }
     },
     "641": {
       "title": {
@@ -29654,12 +29800,12 @@
       "slug": "assorted-petit-four-biscuits",
       "title": {
         "ar": "كم سعرة في البيتفور المشكل بالزبدة؟ بسكويت الشاي والمناسبات | WiBo Health",
-        "en": "Petit Four Calories: Butter Tea Biscuits for Occasions | WiBo Health",
+        "en": "Petit Four Calories: 83 kcal per Butter Piece | WiBo Health",
         "nl": "Calorieën petitfours: boterkoekjes bij de thee | WiBo Health"
       },
       "desc": {
         "ar": "قطعة بيتفور بالزبدة والمربى (18غ) تمنحك طاقة ناعمة ونكهة كلاسيكية بمؤشر جلايسيمي 62. تعرف على سعراتها وطريقة تناولها باعتدال.",
-        "en": "One 18g butter and jam petit four gives you gentle energy and a classic flavour, with a GI of 62. See its calories and how to enjoy it in moderation.",
+        "en": "One 18 g butter petit four has about 83 kcal and a medium GI of 62. Full nutrition facts and how to enjoy them in moderation at tea time.",
         "nl": "Eén petitfour met boter en jam (18g) geeft zachte energie en een klassieke smaak, met een GI van 62. Bekijk de calorieën en hoe je er met mate van geniet."
       },
       "lead": {

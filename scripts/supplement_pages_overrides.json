@@ -1,0 +1,20 @@
+{
+  "supplements": {
+    "valerian-root": {
+      "title": {
+        "en": "Valerian Root: Safe Dose & Drug Interactions | WiBo Health"
+      },
+      "desc": {
+        "en": "Typical dose 300–600 mg of extract, who should avoid it and which medicines it interacts with. A safety guide based on EFSA and NIH sources."
+      }
+    },
+    "aged-garlic-extract": {
+      "title": {
+        "ar": "الثوم المعتق: الجرعة الآمنة وتداخلات الأدوية | WiBo Health"
+      },
+      "desc": {
+        "ar": "ما الثوم المعتق وكيف يختلف عن الثوم الطازج؟ الجرعة المستخدمة 600–1200 ملغ يومياً، ومن يجب أن يتجنبه، وتداخلاته الدوائية. وفق EFSA وNIH."
+      }
+    }
+  }
+}

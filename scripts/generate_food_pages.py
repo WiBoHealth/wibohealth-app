@@ -628,13 +628,13 @@ PLURAL = {'en': {18, 19, 22, 53, 62, 63, 68, 20, 21, 23, 25, 28, 80, 81, 82, 83,
                  411, 412, 413, 414, 420, 424, 425,
                  426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 443, 448, 449,
                  451, 465, 472, 476, 478, 479, 495,
-                 504, 508, 510, 527, 543, 546},
+                 504, 508, 510, 527, 543, 546, 399},
           'nl': {17, 18, 19, 22, 40, 53, 62, 63, 68, 20, 21, 23, 24, 25, 28, 42, 45, 52, 56, 57, 58, 60, 80, 81, 82,
                  83, 84, 85, 87, 88, 89, 99, 100, 113, 117, 142, 151, 161, 162, 183, 220, 232, 233, 234, 235, 260, 276, 284, 292, 293, 302,
                  411, 412, 413, 423, 424, 425,
                  426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 440, 443, 448, 449,
                  451, 465, 472, 476, 478, 479, 495,
-                 504, 508, 527, 543, 546}}
+                 504, 508, 527, 543, 546, 399}}
 VERBS = {'en': (dict(is_='is', does='does', contains='contains', provides='provides'),
                 dict(is_='are', does='do', contains='contain', provides='provide')),
          'nl': (dict(is_='is', bevat='bevat', levert='levert'), dict(is_='zijn', bevat='bevatten', levert='leveren')),
@@ -1107,7 +1107,7 @@ def slugify(name):
     return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
 
 
-DECIMAL = '.'        # ',' while a Swedish page is built (set in build())
+DECIMAL = '.'        # ',' while a Swedish or Dutch page is built (set in build())
 
 
 def fmt(x):
@@ -1317,7 +1317,7 @@ def replace_sitemap_block(name, lines):
 # --------------------------------------------------------------------------------------------
 def build(food, lang, ctx):
     global DECIMAL
-    DECIMAL = ',' if lang == SV else '.'
+    DECIMAL = ',' if lang in (SV, 'nl') else '.'
     u = UI[lang]
     li = ALL_LANGS.index(lang)
     lv, lg = u.get('levels_txt', u['levels']), u.get('levels_gl', u['levels'])    # GI / GL level words in running text
@@ -1704,12 +1704,13 @@ def main():
     assert len(set(slugs.values())) == len(slugs), 'duplicate slugs'
     assert FSV.PUBLISH <= set(FSV.NAMES) and set(FSV.NAMES) <= set(PILOT), 'food_sv: unknown food ids'
     # Swedish versions of the food-specific copy sit in food_sv.OVERRIDES; a Swedish page may not fall back to the
-    # computed text where the other languages carry approved copy
+    # computed text where the other languages carry approved copy (copy approved in Arabic; a search snippet written
+    # for one language, e.g. an English-only title, needs no Swedish twin)
     for fid, o in FSV.OVERRIDES.items():
         for key, value in o.items():
             overrides.setdefault(str(fid), {}).setdefault(key, {})[SV] = list(value) if key == 'tips' else value
     gaps = [(fid, key) for fid in FSV.PUBLISH - FSV.COMPUTED_COPY for key, value in overrides.get(str(fid), {}).items()
-            if isinstance(value, dict) and 'en' in value and SV not in value]
+            if isinstance(value, dict) and 'ar' in value and 'en' in value and SV not in value]
     assert not gaps, f'food_sv: Swedish copy missing for {gaps}'
     for fid in foods:
         foods[fid][SV] = FSV.NAMES[fid][0] if fid in FSV.NAMES else ''

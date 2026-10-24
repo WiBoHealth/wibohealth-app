@@ -244,6 +244,8 @@ def widget(calc, lang):
                   '<div class="breakdown-val" id="r_target">--</div></div>'
                   f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["diff_label"])}</div>'
                   '<div class="breakdown-val" id="r_diff">--</div></div></div>')
+    if lang in ('nl', SV):                  # empty-state value with the decimal comma the page script uses
+        result = result.replace('id="r_main">0.0', 'id="r_main">0,0')
     return f'''<section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
                     <h2 class="calc-card-title" id="calc-title"><i class="fas {calc["icon"]}" aria-hidden="true"></i> {esc(w["card_title"])}</h2>

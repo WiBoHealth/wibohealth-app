@@ -9,7 +9,8 @@ Output (re-running rebuilds everything, nothing is appended twice):
     js/supplement-pages.js        slugs that have a static page (used by the supplements.html modal)
     sitemap.xml                   block (replaced in place) between <!-- SUPPLEMENT-PAGES:START --> and <!-- SUPPLEMENT-PAGES:END -->
 
-Source: js/supplements-data.js. Only records that carry `references` (the clinically vetted ones) get a page.
+Source: js/supplements-data.js, plus per-language search snippets (title / desc) in
+scripts/supplement_pages_overrides.json. Only records that carry `references` (the clinically vetted ones) get a page.
 Content is attributed to the published sources (EFSA / NIH / PubMed), never to a named reviewer, and uses
 structure/function wording only. Design system, header and footer come from generate_food_pages.py.
 """
@@ -99,6 +100,28 @@ def clip(text, limit):
     return text if len(text) <= limit else text[:limit].rsplit(' ', 1)[0].rstrip('،,;؛.') + '…'
 
 
+def clip_sentence(text, limit, longest=200):
+    """Whole sentences of text that fit in limit (the first one may run to `longest`). A first sentence longer than
+    that ends at its last clause break (; ، , : or an opening bracket) inside `longest`, with a full stop, so the
+    snippet never stops mid-phrase."""
+    text = ' '.join(text.split())
+    sentences = re.split(r'(?<=[.!?؟])\s+', text)
+    if len(sentences[0]) > longest:
+        head = text[:longest]
+        cut = max(head.rfind(c) for c in ';؛،,:(')
+        return head[:cut].rstrip() + '.' if cut > 30 else clip(text, longest)
+    out = sentences[0]
+    for sentence in sentences[1:]:
+        if len(out) + len(sentence) + 1 > limit:
+            break
+        out += ' ' + sentence
+    return out
+
+
+SNIPPETS = json.loads((ROOT / 'scripts' / 'supplement_pages_overrides.json').read_text(encoding='utf-8')).get(
+    'supplements', {}) if (ROOT / 'scripts' / 'supplement_pages_overrides.json').exists() else {}
+
+
 def build(s, lang, vetted):
     t, u, suf = T[lang], UI[lang], SUF[lang]
     name = s[NAME[lang]] or s['name']
@@ -106,7 +129,11 @@ def build(s, lang, vetted):
     desc_txt = s['summary' + suf]
     dose = s['dosage' + suf]
     title = t['title'].format(name=name)
-    meta_desc = clip(t['desc'].format(name=name, desc=clip(desc_txt, 90), dose=dose['recommended']), 300)
+    meta_desc = t['desc'].format(name=name, desc=clip_sentence(desc_txt, 110), dose=dose['recommended'])
+    meta_desc = clip_sentence(meta_desc, 400, longest=400)     # whole sentences only: a long dose line drops the closing ones
+    snip = SNIPPETS.get(s['slug'], {})
+    title = snip.get('title', {}).get(lang) or title
+    meta_desc = snip.get('desc', {}).get(lang) or meta_desc
     urls = {l: page_url(s['slug'], l) for l in LANGS}
     guide_href = site_link('/supplements.html', lang) + '#' + s['slug']
 

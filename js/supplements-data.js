@@ -6417,7 +6417,7 @@ const supplementsData = [
     {
         id: 89,
         slug: "aged-garlic-extract",
-        name: "خلاصة الثوم المعتق لدعم القلب والشرايين",
+        name: "خلاصة الثوم المعتق (عديمة الرائحة)",
         englishName: "Aged Garlic Extract (Odourless)",
         nameNl: "Gerijpt Knoflookextract (Geurloos)",
         category: "صحة-عامة",
