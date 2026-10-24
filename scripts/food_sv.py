@@ -12,7 +12,7 @@ PUBLISH lists the foods that get a Swedish page (all of NAMES).
 REVIEWED = '2026-10-24'
 REVIEWED_TXT = '24 oktober 2026'
 
-# foods with a Swedish page: 1-500 (1-50 samples approved 2026-10-24); set below NAMES
+# foods with a Swedish page: 1-600 (1-50 samples approved 2026-10-24); set below NAMES
 
 NAMES = {
     1: ('Vitt ris, kokt', 'kokt vitt ris'),
@@ -516,6 +516,106 @@ NAMES = {
     498: ('Shanklishsallad med tomat och lök', 'shanklishsallad'),
     499: ('Pomeransmarmelad (bitter apelsinmarmelad)', 'pomeransmarmelad'),
     500: ('Johannesbrödsirap, naturlig', 'johannesbrödsirap'),
+    501: ('Shish kebab av lamm, grillad', 'lammshishkebab'),
+    502: ('Iskender kebab med tomatsås och yoghurt', 'iskender kebab'),
+    503: ('Adana kebab, stark', 'adana kebab'),
+    504: ('Manti med vitlöksyoghurt', 'manti'),
+    505: ('Pide med ost och ägg', 'pide'),
+    506: ('Börek med spenat och fetaost', 'spenatbörek'),
+    507: ('İmam bayıldı (fylld aubergine i olivolja)', 'imam bayıldı'),
+    508: ('Izgara köfte (grillade köttbullar)', 'izgara köfte'),
+    509: ('Yaylasoppa med yoghurt, mynta och ris', 'yaylasoppa'),
+    510: ('Çiğ köfte, vegansk (bulgurbiffar)', 'vegansk çiğ köfte'),
+    511: ('Lokum med pistage', 'lokum'),
+    512: ('Turkiskt äppelte med kanel', 'turkiskt äppelte'),
+    513: ('Lammtagine med katrinplommon och mandel', 'lammtagine'),
+    514: ('Fisktagine med chermoula', 'fisktagine'),
+    515: ('Kycklingtagine med saltad citron och oliver', 'kycklingtagine'),
+    516: ('Pastilla med kyckling och mandel', 'kycklingpastilla'),
+    517: ('Pastilla med skaldjur och glasnudlar', 'skaldjurspastilla'),
+    518: ('Harira (marockansk soppa)', 'harira'),
+    519: ('Couscous med sju grönsaker och nötkött', 'couscous med sju grönsaker'),
+    520: ('Zaalouk (aubergineröra)', 'zaalouk'),
+    521: ('Taktouka (paprika- och tomatsallad)', 'taktouka'),
+    522: ('Batbout (marockanskt stekpannebröd)', 'batbout'),
+    523: ('Baghrir (marockanska mannagrynspannkakor)', 'baghrir'),
+    524: ('Harcha (marockanskt mannagrynsbröd)', 'harcha'),
+    525: ('Chebakia med honung och sesam', 'chebakia'),
+    526: ('Sellou (rostat mjöl med mandel och sesam)', 'sellou'),
+    527: ('Saltade citroner, marockanska', 'saltade citroner'),
+    528: ('Harissa (tunisisk chilipasta)', 'harissa'),
+    529: ('Kolhapurikyckling (stark curry med kokos)', 'kolhapurikyckling'),
+    530: ('Rogan josh (lammcurry från Kashmir)', 'rogan josh'),
+    531: ('Kycklingkorma med cashewkräm', 'kycklingkorma'),
+    532: ('Vindaloo (stark curry från Goa)', 'vindaloo'),
+    533: ('Dal makhani (krämiga svarta linser)', 'dal makhani'),
+    534: ('Chana masala (kryddig kikärtscurry)', 'chana masala'),
+    535: ('Aloo gobi (potatis och blomkål)', 'aloo gobi'),
+    536: ('Bhindi masala (stekt okra)', 'bhindi masala'),
+    537: ('Äggcurry, indisk', 'äggcurry'),
+    538: ('Samosa med grönsaker', 'grönsakssamosa'),
+    539: ('Roti av fullkornsvete (chapati utan olja)', 'fullkornsroti'),
+    540: ('Paratha, stekt i ghee', 'paratha'),
+    541: ('Mangolassi med kardemumma', 'mangolassi'),
+    542: ('Masala chai med mjölk', 'masala chai'),
+    543: ('Gulab jamun i sockerlag', 'gulab jamun'),
+    544: ('Kheer (indisk risgrynspudding)', 'kheer'),
+    545: ('Pho med nötkött', 'pho'),
+    546: ('Vietnamesiska vårrullar med räkor, färska', 'vietnamesiska vårrullar'),
+    547: ('Tom yum goong (stark räksoppa)', 'tom yum goong'),
+    548: ('Grön thaicurry med kokosmjölk', 'grön thaicurry'),
+    549: ('Röd thaicurry med bambuskott', 'röd thaicurry'),
+    550: ('Som tam (grön papayasallad)', 'som tam'),
+    551: ('Mango sticky rice med kokosgrädde', 'mango sticky rice'),
+    552: ('Kung pao-kyckling med jordnötter och chili', 'kung pao-kyckling'),
+    553: ('Pekinganka med hoisinsås', 'pekinganka'),
+    554: ('Wokat nötkött med broccoli i ostronsås', 'wokat nötkött med broccoli'),
+    555: ('Mapo tofu med nötfärs och szechuanpeppar', 'mapo tofu'),
+    556: ('Teägg, kinesiska, med fem kryddor', 'kinesiska teägg'),
+    557: ('Glasnudlar av mungbönsstärkelse, kokta', 'kokta glasnudlar'),
+    558: ('Sobanudlar av 100 % bovete', 'sobanudlar'),
+    559: ('Udonnudlar, kokta', 'kokta udonnudlar'),
+    560: ('Bibimbap med ägg, nötkött och grönsaker', 'bibimbap'),
+    561: ('Bulgogi (koreanskt marinerat nötkött)', 'bulgogi'),
+    562: ('Gyoza med kyckling, stekta', 'kycklinggyoza'),
+    563: ('Wakame, torkad och blötlagd', 'wakame'),
+    564: ('Norirak, rostade', 'norirak'),
+    565: ('Shiitakesvamp, tillagad', 'tillagad shiitake'),
+    566: ('Enokisvamp, färsk', 'enokisvamp'),
+    567: ('Bipollen, obehandlat', 'bipollen'),
+    568: ('Manukahonung (med angiven MGO-halt)', 'manukahonung'),
+    569: ('Vetegräspulver, ekologiskt', 'vetegräspulver'),
+    570: ('Macapulver (peruansk macarot)', 'macapulver'),
+    571: ('Baobabpulver, ekologiskt', 'baobabpulver'),
+    572: ('Kakaopulver, rått, osötat', 'rått kakaopulver'),
+    573: ('Kakaosmör, kallpressat', 'kakaosmör'),
+    574: ('Kakaonibs, råa', 'kakaonibs'),
+    575: ('Linfrö, nymalda', 'nymalda linfrön'),
+    576: ('Solrosfrösmör, naturellt', 'solrosfrösmör'),
+    577: ('Pumpafrösmör, rått', 'pumpafrösmör'),
+    578: ('Linfröolja, kallpressad', 'linfröolja'),
+    579: ('Svartkumminolja, kallpressad', 'svartkumminolja'),
+    580: ('Levertran, norsk', 'levertran'),
+    581: ('Hjortron', 'hjortron'),
+    582: ('Havtornsbär', 'havtornsbär'),
+    583: ('Fläderbär, kokta', 'kokta fläderbär'),
+    584: ('Kvitten, pocherat med kanel', 'pocherat kvitten'),
+    585: ('Aprikoser, soltorkade, osvavlade', 'soltorkade aprikoser'),
+    586: ('Svarta mullbär, färska', 'svarta mullbär'),
+    587: ('Vita mullbär, torkade', 'torkade vita mullbär'),
+    588: ('Sötkastanjer, rostade', 'rostade kastanjer'),
+    589: ('Pinjenötter', 'pinjenötter'),
+    590: ('Svarta sesamfrön', 'svarta sesamfrön'),
+    591: ('Kombucha, opastöriserad', 'kombucha'),
+    592: ('Vattenkefir med fikon och citron', 'vattenkefir'),
+    593: ('Rooiboste', 'rooiboste'),
+    594: ('Grönt te med jasmin', 'jasminte'),
+    595: ('Earl Grey-te med bergamott', 'Earl Grey-te'),
+    596: ('Oolongte', 'oolongte'),
+    597: ('Rostad maskrosrot (kaffeersättning)', 'rostad maskrosrot'),
+    598: ('Gurkmejamjölk med svartpeppar och ingefära', 'gurkmejamjölk'),
+    599: ('Vatten med gurka, citron och mynta', 'gurkvatten med mynta'),
+    600: ('Apelsinblomsvatten, destillerat', 'apelsinblomsvatten'),
 }
 PUBLISH = set(NAMES)
 # foods allowed to use the computed Swedish copy where the other languages carry food-specific copy (none since
@@ -528,7 +628,8 @@ PLURAL = {18, 19, 20, 21, 22, 23, 24, 25, 28, 40,
           117, 142, 161, 162, 171, 183, 184, 197, 198,
           232, 233, 234, 235, 260, 264, 276, 278, 293,
           314, 316, 317, 329, 350, 352, 356, 373, 374, 381, 382, 383, 384, 385, 386, 397, 398, 399, 400,
-          411, 412, 413, 425, 426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 448, 449, 451, 465, 479}
+          411, 412, 413, 425, 426, 427, 428, 429, 430, 431, 432, 434, 435, 436, 437, 438, 439, 442, 448, 449, 451, 465, 479,
+          504, 508, 523, 527, 543, 546, 556, 557, 558, 559, 564, 574, 575, 581, 582, 583, 585, 586, 587, 588, 589, 590}
 
 # js/food-categories.js master groups (breadcrumb section on the food page)
 GROUP_LABELS = {
@@ -5500,4 +5601,1730 @@ OVERRIDES = {
                         a='Den ger cirka 40 kcal, 0,3 g protein, inget fett och cirka 10 g kolhydrater, samt kalcium.'),
                    dict(q='Innehåller johannesbrödsirap järn?',
                         a='Ja, den innehåller järn och B-vitaminer.')]),
+    # foods 501-600: translated from the approved Arabic copy and FAQ (2026-10-24, four checked blocks of 25)
+    501: dict(lead='Turkisk shish kebab av lamm (kuzu şiş) är en pärla i den anatoliska grillkonsten: möra tärningar av '
+                   'lammkött marinerade i paprikasås, olivolja och lök och grillade över kol. Det glykemiska indexet är '
+                   'inte tillämpligt eftersom rätten saknar kolhydrater, och den är en proteinrik måltid som mättar väl '
+                   'utan att påverka blodsockret.',
+              tips=('Ät spetten med gaffel tillsammans med lök kryddad med sumak och en sallad av grillade grönsaker, och '
+                    'undvik att rulla in dem i vitt bröd.',
+                    'En marinad av lökjuice, olivolja och yoghurt med pul biber räcker för att möra köttet; grilla det på '
+                    'låg värme så att det förblir saftigt utan att ytan bränns.',
+                    'Lammkött innehåller hemjärn, B12-vitamin och zink; zink och B12-vitamin bidrar till immunsystemets '
+                    'normala funktion. Den som har hjärtsjukdom bör vara måttlig med svansfettet.'),
+              faq=[dict(q='Höjer turkisk shish kebab blodsockret?',
+                        a='Nej; det är grillat kött utan stärkelse, och det ger ingen blodsockerstegring.'),
+                   dict(q='Hur många kalorier och hur mycket protein finns i 150 g lammshishkebab?',
+                        a='Portionen ger cirka 295 kcal, 28 g protein och 18 g naturligt fett, med nästan inga '
+                          'kolhydrater.'),
+                   dict(q='Passar shish kebab vid keto och viktnedgång?',
+                        a='Ja, den är en typisk ketorätt som mättar i många timmar.')]),
+    502: dict(lead='Iskender kebab (İskender kebap) är staden Bursas stolthet: tunna skivor av kebabkött över bitar av '
+                   'pidebröd som dränkts i fyllig tomatsås och smält smör och serveras med yoghurt. Det glykemiska indexet '
+                   'är lågt (en kliniskt granskad uppskattning, 45), eftersom fettet i köttet och yoghurten bromsar '
+                   'upptaget av brödets stärkelse.',
+              tips=('Börja med köttskivorna och yoghurten, och nöj dig med några små bitar av det såsindränkta brödet i '
+                    'botten av tallriken för att hålla kolhydraterna i schack.',
+                    'Be om lite smör i stället för en generös skvätt brynt smör, så halveras det mättade fettet medan den '
+                    'kungliga smaken behålls.',
+                    'Yoghurten till ger mjölksyra och protein som bromsar magsäckstömningen, men rätten innehåller mycket '
+                    'kalorier och mättat fett och kräver stor måtta.'),
+              faq=[dict(q='Passar iskender kebab vid diabetes?',
+                        a='Ja, med försiktighet; det glykemiska indexet är lågt (cirka 45), men rätten innehåller både '
+                          'mycket stärkelse och fett, så ät inte allt bröd under köttet.'),
+                   dict(q='Vad är näringsvärdet i en vanlig tallrik iskender kebab (300 g)?',
+                        a='Tallriken innehåller cirka 520 kcal, 34 g protein, 28 g fett och cirka 32 g stärkelse.'),
+                   dict(q='Vad bidrar tomatsåsen och yoghurten med i rätten?',
+                        a='Tomatsåsen ger lykopen och yoghurten ger kalcium.')]),
+    503: dict(lead='Adana kebab är kungen bland de starka grillrätterna i södra Turkiet: handhackad köttfärs på breda '
+                   'spett, kryddad med stark röd paprika och svansfett och grillad över glödande kol. Det glykemiska '
+                   'indexet är inte tillämpligt eftersom rätten saknar kolhydrater, och den är en het festrätt som väcker '
+                   'sinnena.',
+              tips=('Ät spettet med gaffel tillsammans med grillad grön chili och tomat och en sallad av persilja och '
+                    'sumak, och undvik rullar av vitt lavashbröd.',
+                    'Att bara gnida in köttet med söt och stark paprika och salt, utan mjöl eller ströbröd, bevarar den '
+                    'turkiska äktheten och gör att rätten saknar stärkelse.',
+                    'Chilin innehåller capsaicin; den som har IBS eller sur reflux bör vara försiktig med de starka '
+                    'kryddorna.'),
+              faq=[dict(q='Höjer adana kebab blodsockret?',
+                        a='Nej, den påverkar inte blodsockret; den består bara av protein, fett och röd paprika, och det '
+                          'glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier finns i ett vanligt spett adana kebab (150 g)?',
+                        a='Spettet ger cirka 320 kcal, 26 g protein och 24 g naturligt fett från svansfettet, med nästan '
+                          'inga kolhydrater.'),
+                   dict(q='Vad är skillnaden mellan adana kebab och urfa kebab?',
+                        a='Adana kebab är mycket stark med het röd paprika, medan urfa kebab har mild smak utan chili och '
+                          'passar en känslig mage.')]),
+    504: dict(lead='Turkisk manti (Kayseri mantısı) är mycket små degknyten fyllda med köttfärs som kokas i vatten och '
+                   'toppas med vitlöksyoghurt och brynt smör med sumak och mynta. Det glykemiska indexet är lågt (en '
+                   'kliniskt granskad uppskattning, 53) tack vare den rikliga yoghurten och köttfyllningen som bromsar '
+                   'degens stärkelse.',
+              tips=('Var generös med vitlöksyoghurten över tallriken; proteinet och yoghurtens syra dämpar '
+                    'blodsockertoppen från knytenas stärkelse.',
+                    'Koka mantin al dente så att de håller formen, vilket sänker det glykemiska indexet, och använd '
+                    'naturell yoghurt med låg fetthalt och tomatsås i stället för att dränka dem i smör.',
+                    'Vitlöksyoghurten ger mjölksyrabakterier och allicin; det viktiga är att hålla koll på mängden deg vid '
+                    'diabetes och insulinresistens.'),
+              faq=[dict(q='Passar turkisk manti vid diabetes?',
+                        a='Ja, med måtta; det glykemiska indexet är lågt (cirka 53) tack vare yoghurten och köttet, och '
+                          'det viktiga är en måttlig portion (en kopp, 200–250 g).'),
+                   dict(q='Vad är näringsvärdet i en tallrik turkisk manti (250 g)?',
+                        a='Tallriken innehåller cirka 380 kcal, 18 g protein, 14 g fett och cirka 42 g stärkelse.'),
+                   dict(q='Varför gör turkiska familjer mantin så små?',
+                        a='Ett folkligt talesätt i Kayseri säger att en skicklig kock får plats med 40 manti i en matsked, '
+                          'som ett tecken på noggrannhet och fin deg!')]),
+    505: dict(lead='Turkisk pide med ost och ägg (peynirli yumurtalı pide) är den traditionella anatoliska båten av deg '
+                   'som gräddas på sten och fylls med turkisk kaşarost och flytande äggula. Det glykemiska indexet är '
+                   'medelhögt (en kliniskt granskad uppskattning, 60), och den är en anrik turkisk frukost som mättar väl.',
+              tips=('Dela båten med någon och ät bara hälften tillsammans med en riklig turkisk grönsakstallrik med tomat, '
+                    'gurka, oliver och ruccola.',
+                    'Gör degen med fullkornsvetemjöl eller urspannmål för mer fibrer, och lägg ägget den sista minuten av '
+                    'gräddningen så att det blir ett näringsrikt stekt ägg utan att brännas.',
+                    'Ägg och ost ger kolin och fullvärdigt protein, men mycket gul ost och vitt mjöl ger fler kalorier och '
+                    'mer mättat fett för den som har kärlsjukdom.'),
+              faq=[dict(q='Varför är det glykemiska indexet för turkisk pide medelhögt (60)?',
+                        a='Därför att degen görs av fint vitt mjöl; proteinet och fettet i osten och ägget bromsar '
+                          'upptaget, men den glykemiska belastningen förblir märkbar.'),
+                   dict(q='Hur många kalorier finns i en halv pide med ost och ägg (200 g)?',
+                        a='Portionen innehåller cirka 420 kcal, 19 g fullvärdigt protein, 18 g fett och cirka 45 g '
+                          'kolhydrater.'),
+                   dict(q='Kan pide bli ett bättre val vid viktnedgång?',
+                        a='Ja, med lorost med låg fetthalt, en mycket tunn degbotten och fyllning av spenat och ägg.')]),
+    506: dict(lead='Turkisk spenatbörek (ıspanaklı börek) hör till de mest kända bakverken av spröd yufkadeg, med en '
+                   'fyllig fyllning av färska spenatblad, lorost eller fetaost och rostad lök som gräddas gyllene och '
+                   'krispig. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52) tack vare den rikliga '
+                   'spenaten och proteinet i fyllningen.',
+              tips=('Ät en rektangulär bit stor som en handflata med en kopp osötat turkiskt te och en grön sallad; ett '
+                    'lätt mellanmål till frukost eller arbetspausen.',
+                    'Pensla yufkaarken med olivolja och lite lättmjölk i stället för smält smör och ghee, så halveras det '
+                    'mättade fettet.',
+                    'Spenat innehåller lutein, magnesium, kalium och järn; kalium bidrar till att bibehålla ett normalt '
+                    'blodtryck.'),
+              faq=[dict(q='Är spenatbörek bättre vid diabetes än börek med ost och potatis?',
+                        a='Ja, betydligt bättre; spenatfyllningen innehåller mycket fibrer och nästan ingen stärkelse, '
+                          'vilket sänker det glykemiska indexet till cirka 52.'),
+                   dict(q='Vad är näringsvärdet i en vanlig bit spenatbörek (120 g)?',
+                        a='Den ger cirka 240 kcal, 8 g protein, 12 g fett och cirka 24 g kolhydrater som smälts i måttlig '
+                          'takt.'),
+                   dict(q='Hur undviker jag halsbränna efter börek?',
+                        a='Undvik friterade bakverk och välj ugnsbakad börek, och pressa ur spenaten ordentligt när du '
+                          'fyller den.')]),
+    507: dict(lead='İmam bayıldı är en pärla i det osmanska vegetariska köket med olivolja (zeytinyağlılar): mjuka '
+                   'auberginer fyllda med karamelliserad lök, tomat, vitlök och persilja som tillagas långsamt i '
+                   'jungfruolivolja. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Den serveras traditionellt kall eller rumstempererad; ät den med gaffel som en lätt vegetarisk middag '
+                    'utan bröd och njut av den söta olivoljesaften.',
+                    'Rosta auberginen i ugnen efter att ha snittat den på längden i stället för att fritera den i mycket '
+                    'olja; auberginen suger upp olja som en svamp, och ugnen håller rätten lätt.',
+                    'Auberginens skal innehåller nasunin, olivoljan oljesyra och vitlöken allicin.'),
+              faq=[dict(q="Varför heter rätten 'imam bayıldı' (imamen svimmade)?",
+                        a='Enligt den osmanska anekdoten svimmade imamen av hur god rätten var, eller när han såg hur '
+                          'mycket fin jungfruolivolja som gick åt!'),
+                   dict(q='Passar imam bayıldı vid diabetes och keto?',
+                        a='Ja, mycket bra; det glykemiska indexet är lågt (cirka 25) och fettet är omättat.'),
+                   dict(q='Vad är näringsvärdet i en vanlig portion imam bayıldı (200 g)?',
+                        a='Portionen innehåller cirka 160 kcal, 3 g protein, 11 g fett från olivoljan och 12 g kolhydrater '
+                          '(varav 6 g fibrer).')]),
+    508: dict(lead='Turkiska izgara köfte är grillade köttbullar som är omtyckta i varje hörn av Turkiet för sin fasthet, '
+                   'saftighet och kryddning med lök och spiskummin. Det glykemiska indexet är inte tillämpligt eftersom de '
+                   'saknar kolhydrater, och de är en proteinrik familjemåltid; protein bidrar till att bibehålla '
+                   'muskelmassa.',
+              tips=('Ät 3 till 4 grillade köttbullar med turkisk piyaz (sallad av vita bönor med lök och sumak) till en '
+                    'mättande och komplett måltid.',
+                    'Knåda köttfärsen väl med riven och urpressad lök, spiskummin och peppar, och nöj dig med en sked '
+                    'grova brödsmulor så att de håller ihop utan mer stärkelse.',
+                    'De ger fullvärdigt protein, zink och animaliskt järn.'),
+              faq=[dict(q='Höjer turkiska grillade köttbullar blodsockret?',
+                        a='Nej, de påverkar inte blodsockret; de är kött nästan utan kolhydrater, och det glykemiska '
+                          'indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier och hur mycket protein finns i 150 g izgara köfte?',
+                        a='Portionen ger cirka 290 kcal, 25 g protein och 20 g naturligt fett, med mindre än 2 g '
+                          'kolhydrater.'),
+                   dict(q='Är grillade köttbullar bättre än stekta?',
+                        a='Grillning över eld låter överflödigt fett droppa av och undviker att köttet suger upp härdade '
+                          'vegetabiliska oljor.')]),
+    509: dict(lead='Turkisk yaylasoppa (yayla çorbası, ängssoppan) är en varm soppa på yoghurt och ris med doft av torkad '
+                   'mynta och olivolja och en traditionell rätt i Anatolien. Det glykemiska indexet är lågt (en kliniskt '
+                   'granskad uppskattning, 40), och soppan är mild för magen.',
+              tips=('Drick en varm skål i början av måltiden eller som lätt middag; yoghurten och myntan ger en lugn '
+                    'mättnad före sänggåendet.',
+                    'Använd en avvägd mängd basmatiris eller bulgur (två matskedar per kastrull), och red soppan med '
+                    'naturell yoghurt och äggula och avsluta med mynta fräst i olivolja.',
+                    'Soppan är lättsmält och innehåller protein, kalcium och zink.'),
+              faq=[dict(q='Höjer yaylasoppa blodsockret vid diabetes?',
+                        a='Nej, det glykemiska indexet är lågt (cirka 40), och mjölksyran och proteinet i yoghurten '
+                          'bromsar upptaget av den lilla mängden ris.'),
+                   dict(q='Vad är näringsvärdet i en vanlig tallrik yaylasoppa (300 g)?',
+                        a='Tallriken ger cirka 180 kcal, 8 g protein, 6 g fett och cirka 22 g kolhydrater.'),
+                   dict(q='Vad innehåller yaylasoppa?',
+                        a='Den förenar yoghurt med mjölksyrabakterier och mynta.')]),
+    510: dict(lead='Vegansk çiğ köfte (etsiz çiğ köfte) är det populäraste gatusnacket i Turkiet: en slät massa av '
+                   'handknådad fin bulgur med paprikapasta, tomat, valnötter, granatäppelsirap och kryddor. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 45), och den äts inrullad i färska salladsblad.',
+              tips=('Lägg köftestavarna i ett stort romansalladsblad och pressa över rikligt med citronsaft; salladen ger '
+                    'vätska och fibrer som mättar direkt.',
+                    'Ingredienserna knådas kraftigt länge tills bulguren mjuknar av knådningens värme och syran i tomaten '
+                    'och citronen, utan tillagning och utan rått kött.',
+                    'Den moderna veganska varianten saknar risken med bakterier och parasiter från det råa köttet i den '
+                    'gamla varianten, och den innehåller vegetabiliskt järn och fibrer.'),
+              faq=[dict(q='Passar vegansk çiğ köfte vid diabetes och bantning?',
+                        a='Ja, ett bra och snabbt val; det glykemiska indexet är lågt (cirka 45), och fibrerna i bulguren '
+                          'och salladen dämpar blodsockerstegringen.'),
+                   dict(q='Vad är näringsvärdet i 100 g vegansk çiğ köfte (4 stavar)?',
+                        a='Den innehåller cirka 180 kcal, 5,5 g vegetabiliskt protein, 4 g omättat fett (från valnötterna) '
+                          'och 32 g kolhydrater som smälts långsamt.'),
+                   dict(q='Innehåller den som säljs i butiker rått kött?',
+                        a='I Turkiet är det enligt moderna livsmedelsregler förbjudet att sälja çiğ köfte med rått kött '
+                          'kommersiellt, och alla butiker säljer den veganska varianten med bulgur och nötter.')]),
+    511: dict(lead='Turkisk lokum är sultanernas historiska konfekt med mjuk, seg geléartad konsistens och smak av '
+                   'rosenvatten och mastix, täckt med stärkelse och pistagenötter. Det glykemiska indexet är högt (en '
+                   'kliniskt granskad uppskattning, 75), eftersom den består av rent socker och raffinerad stärkelse, '
+                   'vilket kräver största försiktighet vid diabetes.',
+              tips=('Nöj dig med en mycket liten bit (15–20 g) till en kopp osötat turkiskt kaffe, och bara vid festliga '
+                    'tillfällen.',
+                    'Välj alltid lokum fylld med hela nötter som pistage eller valnötter; nötternas fett bromsar '
+                    'sockerupptaget något.',
+                    'Sträng klinisk varning: en snabbt upptagen sötsak som höjer blodsockret mycket snabbt; den som har '
+                    'diabetes eller insulinresistens bör undvika den till vardags.'),
+              faq=[dict(q='Varför är det glykemiska indexet för turkisk lokum högt?',
+                        a='Därför att den görs av vitt socker, glukossirap och raffinerad majsstärkelse, som snabbt blir '
+                          'blodsocker så fort den smälter i munnen.'),
+                   dict(q='Hur många kalorier finns i två bitar turkisk lokum (30 g)?',
+                        a='Portionen innehåller cirka 112 kcal, nästan inget protein eller fett (cirka 1 g från pistagen) '
+                          'och består främst av cirka 25 g socker.'),
+                   dict(q='Är lokum med pistage ett bättre val?',
+                        a='Ja, något bättre, eftersom pistagen ger protein och fibrer som minskar den glykemiska '
+                          'belastningen jämfört med naturell lokum av bara socker och stärkelse.')]),
+    512: dict(lead='Turkiskt äppelte (elma çayı) är den aromatiska välkomstdrycken i Istanbuls basarer: torkade '
+                   'äppelskivor med kanelstänger och kryddnejlika som dras i kokande vatten. Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 30), och teet är ett varmt alternativ utan koffein och utan '
+                   'industriellt socker.',
+              tips=('Drick det varmt i klassiska turkiska teglas efter måltiden eller på kvällen.',
+                    'Koka naturliga äppelskivor och kanelstänger i en tekanna utan att tillsätta socker, och se upp med '
+                    'snabbpulver för äppelte som är fullt av socker och konstgjorda aromer.',
+                    'Kanel och naturliga äpplen innehåller polyfenoler.'),
+              faq=[dict(q='Höjer naturligt turkiskt äppelte blodsockret?',
+                        a='Nej; om det görs av riktiga äppelskivor utan tillsatt socker är kolhydraterna nästan '
+                          'obefintliga och det glykemiska indexet lågt.'),
+                   dict(q='Vad är skillnaden mellan naturligt äppelte och snabbpulver?',
+                        a='Kommersiellt pulver består av vitt socker, citronsyra och konstgjorda aromer som höjer '
+                          'blodsockret kraftigt, medan det naturliga avkoket saknar tillsatt socker.'),
+                   dict(q='Vad är näringsvärdet i en kopp naturligt äppelte (250 ml)?',
+                        a='Koppen innehåller cirka 25 kcal från den urlakade äppelsaften, inget fett eller protein och '
+                          'cirka 5 g naturligt fruktsocker.')]),
+    513: dict(lead='Lammtagine med honungsglaserade katrinplommon och aprikoser är den lyxiga marockanska festrätten: '
+                   'lammkött som tillagas långsamt i lerkruka med saffran och ingefära och garneras med katrinplommon och '
+                   'krispig mandel. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45) tack vare det '
+                   'rikliga köttproteinet och de torkade fruktens fibrer.',
+              tips=('Fokusera på de möra köttbitarna med gaffel tillsammans med ett katrinplommon och rostad mandel, och '
+                    'undvik att doppa mycket vitt bröd i såsen.',
+                    'Tillaga köttet i en tagine av lera på låg värme, och karamellisera katrinplommonen med '
+                    'apelsinblomsvatten, kanel och mycket lite honung i stället för stora mängder socker.',
+                    'Katrinplommon innehåller pektin och sorbitol; den som har diabetes bör begränsa dem på grund av den '
+                    'koncentrerade sötman.'),
+              faq=[dict(q='Passar lammtagine med katrinplommon vid diabetes?',
+                        a='Ja, med måtta; det glykemiska indexet är lågt (cirka 45) eftersom måltiden främst består av '
+                          'protein och fett, och det viktiga är att nöja sig med ett eller två katrinplommon och undvika '
+                          'vitt bröd.'),
+                   dict(q='Vad är näringsvärdet i en vanlig portion lammtagine med katrinplommon (300 g)?',
+                        a='Portionen innehåller cirka 440 kcal, 32 g protein, 22 g fett och cirka 26 g kolhydrater från de '
+                          'torkade frukterna.'),
+                   dict(q='Vad är hemligheten med att laga mat i en tagine av lera?',
+                        a='Det koniska locket kondenserar ångan och för den hela tiden tillbaka till köttet, så att det '
+                          'tillagas i sin egen saft, blir mycket mört och behöver mycket lite fett.')]),
+    514: dict(lead='Fisktagine med marockansk chermoula är en atlantisk havsrätt som doftar av koriander, vitlök, '
+                   'spiskummin, paprika, olivolja och saltad citron, med skivor av paprika, tomat och morot. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom rätten saknar stärkelse.',
+              tips=('Ät fiskbitarna med de kokta grönsakerna i buljongen direkt med gaffel; en mättande och komplett '
+                    'medelhavslunch som inte behöver något bröd till.',
+                    'Den äkta chermoulamarinaden lyfter fram fiskens fräschhet; tillaga den i en tagine av lera med skivor '
+                    'av tomat och paprika utan att tillsätta vatten, så får du njuta av den rena saften.',
+                    'Rätten innehåller omega-3-fettsyror från fisken, jod, selen och C-vitamin.'),
+              faq=[dict(q='Höjer marockansk fisktagine blodsockret?',
+                        a='Nej; den består av protein från havet, vattenrika grönsaker och olivolja, och det glykemiska '
+                          'indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier finns i 300 g fisktagine?',
+                        a='Portionen innehåller cirka 265 kcal, 30 g protein, 12 g fett och mindre än 8 g kolhydrater från '
+                          'grönsakerna.'),
+                   dict(q='Vad är chermoula?',
+                        a='En klassisk marockansk blandning av koriander, persilja, vitlök, olivolja, citronsaft, '
+                          'spiskummin och paprika.')]),
+    515: dict(lead='Kycklingtagine med saltad citron och gröna oliver är den mest älskade och kända hemrätten i Marocko: '
+                   'kyckling som tillagas tills den smälter med lök, saffran och ingefära och den lagrade citronens syra. '
+                   'Det glykemiska indexet är inte tillämpligt, och rätten ger god och lätt proteinrik mat.',
+              tips=('Njut av kycklingbitarna med den tjocka löksåsen (daghmira) och oliverna med gaffel, eller med en '
+                    'avvägd mängd grovt bröd och en marockansk sallad.',
+                    'Tillaga kycklingen på låg värme tills löken karamelliseras (daghmira) utan mjöl eller stärkelse; den '
+                    'saltade citronens syra gör att du inte behöver tillsätta bordssalt.',
+                    'Marinaden innehåller ingefära, gurkmeja och saffran; saltet i citronen och oliverna kräver måtta vid '
+                    'högt blodtryck.'),
+              faq=[dict(q='Passar kycklingtagine med citron och oliver vid bantning och keto?',
+                        a='Ja, den är en utmärkt keto- och bantningsrätt med protein och olivfett utan nämnvärda '
+                          'kolhydrater eller socker.'),
+                   dict(q='Vad är näringsvärdet i 300 g kycklingtagine med oliver?',
+                        a='Portionen ger cirka 320 kcal, 34 g protein, 18 g fett och mindre än 5 g kolhydrater från den '
+                          'karamelliserade löken.'),
+                   dict(q='Är daghmirasåsen ett bra val?',
+                        a='Ja, den består av lök som karamelliserats i olivolja med naturliga kryddor och saffran, inte av '
+                          'härdat fett.')]),
+    516: dict(lead='Kycklingpastilla från Fès är höjdpunkten i det anrika marockanska köket och förenar salt och sött: '
+                   'tunna, krispiga lager av warqadeg runt en fyllning av kyckling och ägg som karamelliserats med mandel, '
+                   'kanel och lite socker. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58), '
+                   'och rätten är ett mästerverk för förnäma fester.',
+              tips=('En medelstor triangel räcker för att njuta av smaken; ät den efter en grön sallad för att minska '
+                    'upptaget av sockret på ytan och degens stärkelse.',
+                    'För en lättare hemgjord variant: hoppa över florsockret, nöj dig med äkta kanel och använd rostad '
+                    'mandel som inte friterats i olja.',
+                    'Den ger protein och magnesium från mandeln, men florsockret och smöret i degen höjer den glykemiska '
+                    'belastningen, vilket kräver stor måtta vid diabetes.'),
+              faq=[dict(q='Varför är det glykemiska indexet för kycklingpastilla medelhögt (58)?',
+                        a='Därför att mandelns fett och proteinet i kycklingen och äggen bromsar upptaget av fyllningens '
+                          'socker och degens stärkelse, men rätten innehåller fortfarande mycket kalorier.'),
+                   dict(q='Hur många kalorier finns i en vanlig portion kycklingpastilla (150 g)?',
+                        a='Portionen innehåller cirka 400 kcal, 20 g protein, 22 g fett och cirka 32 g stärkelse och '
+                          'socker.'),
+                   dict(q='Kan den som har diabetes smaka pastilla?',
+                        a='Ja, en liten bit (100 g) utan florsocker på ytan, som en del av en kaloriberäknad måltid vid '
+                          'festliga tillfällen.')]),
+    517: dict(lead='Stark skaldjurspastilla (pastilla aux fruits de mer) är pastillans friska och heta havsversion: en '
+                   'lyxig fyllning av bläckfisk, räkor, vit fisk, glasnudlar, sojasås och harissa i filodeg. Det '
+                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52), med syrlig och kryddig smak.',
+              tips=('Ät en medelstor bit med en skvätt färsk citron; proteinet från skaldjuren utgör den största delen av '
+                    'fyllningen och mättar länge.',
+                    'Minska andelen glasnudlar och dubbla mängden skaldjur och grönsaker som svamp och paprika, och grädda '
+                    'den i ugnen med lite olivolja i stället för smör.',
+                    'Skaldjuren ger zink, jod och B12-vitamin, och harissan ger chili; håll koll på natriumet från '
+                    'sojasåsen och skaldjurssåserna.'),
+              faq=[dict(q='Är skaldjurspastilla bättre vid diabetes än kycklingpastilla?',
+                        a='Ja, bättre; den saknar karamelliserat florsocker och innehåller mycket protein från havet och '
+                          'starka kryddor, vilket ger ett lägre glykemiskt index (cirka 52).'),
+                   dict(q='Vad är näringsvärdet i en portion skaldjurspastilla (150 g)?',
+                        a='Den ger cirka 290 kcal, 24 g protein, 12 g fett och cirka 22 g stärkelse från degen och '
+                          'nudlarna.'),
+                   dict(q='Höjer skaldjurspastilla kolesterolet?',
+                        a='Kolesterolet i räkor och bläckfisk påverkar blodkolesterolet lite hos de flesta; det viktiga är '
+                          'att inte ta för mycket fett på degen.')]),
+    518: dict(lead='Marockansk harira är drottningen bland soppor i Maghreb: en fyllig och sammetslen soppa med kikärter, '
+                   'linser, kött, färska tomatbitar, selleri och koriander, redd med lite mjöl. Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 38), och soppan är en komplett måltid.',
+              tips=('Ät en skål varm harira med ett kokt ägg och en dadel; baljväxterna och fibrerna fyller magen och '
+                    'dämpar suget efter sötsaker efter måltiden.',
+                    'Red soppan med lite fullkornsmjöl eller havremjöl, eller mosa en del av kikärterna och linserna för '
+                    'att göra den tjockare utan extra vitt mjöl.',
+                    'Kikärter och linser innehåller fibrer, och det låga glykemiska indexet dämpar plötsliga '
+                    'blodsockerstegringar vid diabetes.'),
+              faq=[dict(q='Höjer marockansk harira blodsockret snabbt?',
+                        a='Nej, det glykemiska indexet är lågt (cirka 38), och baljväxternas fibrer och protein gör att '
+                          'glukosen tas upp långsamt.'),
+                   dict(q='Vad är näringsvärdet i en vanlig tallrik marockansk harira (300 g)?',
+                        a='Tallriken ger cirka 260 kcal, 14 g fullvärdigt protein, 6 g fett och cirka 36 g komplexa '
+                          'kolhydrater rika på fibrer.'),
+                   dict(q='Hur gör jag hariran lättare för magen?',
+                        a='Blötlägg kikärterna, ta bort skalen och koka dem väl med selleri och ingefära, så minskar '
+                          'gasbildningen.')]),
+    519: dict(lead='Marockansk couscous med sju grönsaker är en traditionell familjerätt i Maghreb: ångkokta mannagryn som '
+                   'dränks i aromatisk grönsaksbuljong med pumpa, morot, rova, zucchini, kål, kikärter och kött. Det '
+                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58), och rätten visar '
+                   'medelhavsodlingens rikedom.',
+              tips=('Fyll halva tallriken med de olika grönsakerna, köttet och kikärterna, och nöj dig med en halv kopp '
+                    'couscous med het buljong över, så sänks den samlade glykemiska belastningen.',
+                    'Välj couscous av fullkornsdurumvete (blé complet) eller kornscouscous (belboula) för mer fibrer och '
+                    'ett tydligt lägre glykemiskt index.',
+                    'De sju grönsakerna ger en rik variation av växtämnen och lösliga fibrer, och det viktiga vid diabetes '
+                    'är att styra mängden couscous.'),
+              faq=[dict(q='Passar couscous med sju grönsaker vid diabetes?',
+                        a='Ja, mycket bra om andelen grönsaker och kött är större än couscousen; det glykemiska indexet är '
+                          'medelhögt (cirka 58), och grönsakernas fibrer bromsar blodsockerstegringen.'),
+                   dict(q='Hur många kalorier finns i en komplett portion couscous med grönsaker och kött (350 g)?',
+                        a='Portionen innehåller cirka 450 kcal, 24 g protein, 12 g fett och cirka 58 g kolhydrater rika på '
+                          'fibrer och mineraler.'),
+                   dict(q='Vad är fördelen med kornscouscous (belboula)?',
+                        a='Kornscouscous innehåller betaglukaner och har ett betydligt lägre glykemiskt index än couscous '
+                          'av vete.')]),
+    520: dict(lead='Marockansk zaalouk är den främsta varma förrätten i det marockanska köket: grillad eller kokt '
+                   'aubergine som mosas med färsk tomat, vitlök, koriander, spiskummin, paprika och jungfruolivolja. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom rätten saknar nettostärkelse.',
+              tips=('Ät den med gaffel som varm eller kall dipp till grillat och fisk, eller doppa gurk- och morotsstavar, '
+                    'och undvik vitt bröd.',
+                    'Att grilla auberginen på låg värme ger den en förtrollande rökig smak; tillaga den med tomat och '
+                    'olivolja utan socker, så förblir den lätt.',
+                    'Rätten förenar auberginens fibrer med lykopen från tomaten och olivolja.'),
+              faq=[dict(q='Passar zaalouk vid keto och bantning?',
+                        a='Ja, mycket bra; nettokolhydraterna är få och den ger omättat fett och viktiga vitaminer.'),
+                   dict(q='Vad är näringsvärdet i 100 g marockansk zaalouk?',
+                        a='Den ger cirka 85 kcal (mest från jungfruolivoljan), 2 g protein, 5 g fett och 8,5 g kolhydrater '
+                          '(varav cirka 4 g fibrer).'),
+                   dict(q='Kan zaalouk hjälpa vid viktnedgång?',
+                        a='Ja, den mättar länge tack vare de många fibrerna och har en kraftig kryddig smak som minskar '
+                          'suget efter fet mat.')]),
+    521: dict(lead='Marockansk taktouka är en varm och färgglad sallad: grillad och skalad paprika som sjuder på låg värme '
+                   'med tjock tomatsås, olivolja, vitlök, spiskummin och paprikapulver. Det glykemiska indexet är inte '
+                   'tillämpligt eftersom den saknar stärkelse, och den innehåller mycket C-vitamin.',
+              tips=('Servera den varm eller kall till grillad fisk eller fågeltaginer; den söta och rökiga smaken berikar '
+                    'bordet helt utan socker.',
+                    'Grilla den gröna och röda paprikan över eld och skala den utan att skölja den i vatten, så bevaras '
+                    'den djupa grillsmaken, och låt den sedan sjuda med tomat och jungfruolivolja.',
+                    'Grillad paprika hör till de livsmedel som innehåller mest C-vitamin; C-vitamin bidrar till '
+                    'immunsystemets normala funktion.'),
+              faq=[dict(q='Höjer taktouka blodsockret?',
+                        a='Nej, den påverkar inte blodsockret; den består av vattenrika grönsaker och jungfruolivolja, och '
+                          'det glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier finns i 100 g taktouka?',
+                        a='Portionen innehåller cirka 80 kcal, 1,5 g protein, 4,5 g fett och 7 g naturliga kolhydrater.'),
+                   dict(q='Vad är skillnaden mellan taktouka och zaalouk?',
+                        a='Taktouka bygger helt på grillad paprika och tomat, medan zaalouk främst bygger på mosad '
+                          'aubergine.')]),
+    522: dict(lead='Marockansk batbout (litet matloubröd som gräddas i stekpanna) är ett runt, luftigt bröd som är ihåligt '
+                   'inuti som en ficka och mycket omtyckt till smörgåsar vid frukost. Det glykemiska indexet är medelhögt '
+                   '(en kliniskt granskad uppskattning, 65), och portionen behöver hållas måttlig vid diabetes.',
+              tips=('Ät ett litet bröd (stort som en handflata) fyllt med tonfisk eller kokt ägg med sallat och tomat; '
+                    'proteinet och fibrerna bromsar upptaget av brödets stärkelse.',
+                    'Gör batbout med 50 % fullkornsdurumvete eller kornmjöl blandat med vetemjöl för mer fibrer och '
+                    'långsammare nedbrytning.',
+                    'Gräddning i en het torr panna gör brödet lätt och fritt från fett, men det vita mjölet höjer '
+                    'blodsockret snabbt om det inte kombineras med protein.'),
+              faq=[dict(q='Varför är det glykemiska indexet för batbout medelhögt (65)?',
+                        a='Därför att det görs av fint jäst mjöl som gräddas snabbt på plåten, så att stärkelsekedjorna '
+                          'bryts ned lätt och snabbt i tarmen.'),
+                   dict(q='Vad är näringsvärdet i ett litet vanligt batbout (70 g)?',
+                        a='Brödet ger cirka 180 kcal, 6 g protein, 1 g fett och cirka 36 g snabbt upptagna kolhydrater.'),
+                   dict(q='Är batbout av fullkornsvete bättre vid diabetes?',
+                        a='Ja, betydligt bättre; batbout med kli innehåller mycket fibrer som bromsar sockerupptaget och '
+                          'mättar flera timmar längre.')]),
+    523: dict(lead='Marockanska baghrir (pannkakorna med tusen hål) är de kända pannkakorna från Maghreb med täta, '
+                   'förtrollande hål som suger upp honung och smält smör; de görs av fina mannagryn och jäst och gräddas '
+                   'bara på ena sidan. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65), och de '
+                   'pryder de traditionella frukostborden.',
+              tips=('Ät en medelstor pannkaka med lite olivolja eller naturlig honung, tillsammans med ett kokt ägg och en '
+                    'kopp te utan socker.',
+                    'Grädda baghrir i en kall non-stick panna som torkas av med vatten mellan varje pannkaka, så får du de '
+                    'täta hålen utan fett i tillagningen.',
+                    'Själva smeten är fettfri, men risken vid diabetes kommer från förmågan att suga upp stora mängder '
+                    'smör och honung, så mängden fett och sötning behöver styras.'),
+              faq=[dict(q='Kan den som har diabetes äta baghrir?',
+                        a='Ja, en liten pannkaka stor som en handflata (80 g), om den smörjs med en tesked naturlig honung '
+                          'eller olivolja i stället för att dränkas i sirap.'),
+                   dict(q='Hur många kalorier finns i en vanlig baghrir utan tillbehör (80 g)?',
+                        a='En naturell pannkaka innehåller cirka 170 kcal, 4,5 g protein, mindre än 2 g fett och 34 g '
+                          'stärkelse.'),
+                   dict(q='Vad är hemligheten bakom de täta hålen i baghrir?',
+                        a='Den dubbla jäsningen med jäst och bakpulver och gräddningen på medelvärme på bara ena sidan gör '
+                          'att luftbubblorna spricker uppåt och bildar de kända hålen.')]),
+    524: dict(lead='Marockansk harcha är det gyllene stekpannebrödet av mannagryn, smör och olivolja, krispigt utanpå och '
+                   'mjukt inuti, och en följeslagare till eftermiddagsfikat på marockanska kaféer. Det glykemiska indexet '
+                   'är medelhögt (en kliniskt granskad uppskattning, 68), och brödet ger varm och koncentrerad energi.',
+              tips=('Nöj dig med en liten triangel (stor som en handflata) och bred på vit färskost eller olivolja i '
+                    'stället för söt marmelad, så vägs mannagrynens stärkelse upp.',
+                    'Gör harcha med jungfruolivolja och fullkornsmannagryn i stället för industriellt smör och raffinerade '
+                    'mannagryn, så minskar det mättade fettet och fibrerna fördubblas.',
+                    'Mannagryn innehåller mycket snabb stärkelse och många kalorier; därför kräver harcha strikt '
+                    'portionskontroll vid insulinresistens och fettlever.'),
+              faq=[dict(q='Varför höjer harcha blodsockret snabbt?',
+                        a='Därför att den bygger på fina mannagryn som bryts ned snabbt, och det glykemiska indexet är '
+                          'medelhögt (cirka 68), vilket kräver måtta i mängden.'),
+                   dict(q='Vad är näringsvärdet i en vanlig bit harcha (80 g)?',
+                        a='Den ger cirka 235 kcal, 5 g protein, 7 g fett och cirka 38 g stärkelse.'),
+                   dict(q='Är harcha av korngryn (belboula) ett bättre val?',
+                        a='Ja, betydligt bättre; att byta vetemannagryn mot korngryn ger mer betaglukaner och ett tydligt '
+                          'lägre glykemiskt index vid diabetes.')]),
+    525: dict(lead='Marockansk chebakia (mkharqa) är en anrik festlig sötsak: ett invecklat flätat bakverk som friteras i '
+                   'olja och doppas i naturlig honung kryddad med apelsinblomsvatten, saffran och kanel och garneras med '
+                   'rostade sesamfrön. Det glykemiska indexet är högt (en kliniskt granskad uppskattning, 72), och den är '
+                   'en energi- och sockerbomb som kräver stor försiktighet.',
+              tips=('En liten bit räcker helt för att smaka den traditionella smaken vid festliga tillfällen efter en '
+                    'komplett proteinrik måltid, och den bör inte ätas dagligen.',
+                    'För en bättre hemgjord variant: grädda chebakian i ugnen i stället för att fritera den, och pensla '
+                    'med lite honung och sesam i stället för att doppa den djupt.',
+                    'Sträng klinisk varning: kombinationen av fritering i olja, koncentrerad honung och vitt mjöl höjer '
+                    'blodsockret och blodfetterna (triglyceriderna) mycket snabbt.'),
+              faq=[dict(q='Kan den som har diabetes äta chebakia vid festliga tillfällen?',
+                        a='Det rekommenderas att avstå; om du vill smaka, nöj dig med en halv mycket liten bit efter '
+                          'måltiden och räkna med cirka 9 g snabbt socker.'),
+                   dict(q='Hur många kalorier finns i en medelstor chebakia (30 g)?',
+                        a='En bit innehåller cirka 125 kcal, 2 g protein, 5 g fett och cirka 19 g kolhydrater och socker.'),
+                   dict(q='Vad bidrar sesamen och anisen med i chebakia?',
+                        a='Sesamfröna, anisen och den malda mandeln i degen ger kalcium och aromatiska oljor, men sockret '
+                          'och friteringen väger tyngre.')]),
+    526: dict(lead='Marockansk sellou (sfouf, tqawt) är en traditionell, energität blandning som förr gjordes efter '
+                   'förlossning och till högtider: rostat mjöl, rostad mandel, malda sesamfrön, anis och kanel med '
+                   'olivolja eller honung. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50) tack '
+                   'vare de rikliga nötterna och fettet.',
+              tips=('Ät bara två matskedar (30 g) som förmiddagsmål; fettet i mandeln och sesamen ger ett långvarigt '
+                    'mellanmål.',
+                    'Gör sellou på rostat kornmjöl eller havremjöl i stället för vitt mjöl, och använd jungfruolivolja och '
+                    'lite äkta honung; undvik florsocker och smält smör.',
+                    'Sellou innehåller vegetabiliskt kalcium, magnesium, E-vitamin och enkelomättat fett.'),
+              faq=[dict(q='Varför är det glykemiska indexet för sellou relativt lågt (50) jämfört med andra traditionella '
+                          'sötsaker?',
+                        a='Därför att hälften av vikten består av sesamfrön och hel mandel, vars fett och fibrer tydligt '
+                          'bromsar nedbrytningen av det rostade mjölet.'),
+                   dict(q='Vad är näringsvärdet i 30 g sellou (två matskedar)?',
+                        a='Portionen ger cirka 145 kcal, 3,5 g protein, 8 g fett och 14 g kolhydrater rika på fibrer och '
+                          'mineraler.'),
+                   dict(q='Passar sellou för den som vill gå upp i vikt?',
+                        a='Ja, den är ett bra val för viktuppgång tack vare det naturligt höga energiinnehållet och fettet '
+                          'från nötterna.')]),
+    527: dict(lead='Saltade citroner (lagrade citroner på marockanskt vis) är själen i det marockanska köket: hela '
+                   'citroner som lagras i sin egen saft och havssalt i månader tills skalet blir sammetslent och smörigt '
+                   'med koncentrerad doft. Det glykemiska indexet är inte tillämpligt eftersom de saknar stärkelse, och de '
+                   'ger mycket smak med få kalorier.',
+              tips=('Använd en fjärdedel finhackat citronskal i taginer, grytor, fisk och grillat; den kraftiga smaken gör '
+                    'att du inte behöver industriella buljongtärningar.',
+                    'Skölj citronbiten i vatten innan du hackar den och tillsätt inget extra salt i rätten; saltet från '
+                    'lagringen räcker för att salta hela rätten.',
+                    'Lagrade citrusskal innehåller mycket limonen och flyktiga oljor; saltet kräver full försiktighet vid '
+                    'högt blodtryck.'),
+              faq=[dict(q='Höjer saltade citroner blodsockret?',
+                        a='Nej, de påverkar inte blodsockret; de saknar stärkelse och socker, och det glykemiska indexet '
+                          'är inte tillämpligt.'),
+                   dict(q='Vad är näringsvärdet i en matsked hackad saltad citron (10 g)?',
+                        a='Den innehåller mindre än 4 kcal, inget fett eller protein och mindre än 1 g naturliga '
+                          'kolhydrater från skalet.'),
+                   dict(q='Varför föredrar marockanska kockar skalet framför fruktköttet?',
+                        a='Därför att lagringen bryter ned skalets beska och gör det smörigt och rikt på koncentrerade '
+                          'aromatiska oljor, medan fruktköttet bara är surt och skarpt.')]),
+    528: dict(lead='Harissa från Maghreb (stark chilipasta med kummin, vitlök och olivolja) är ett tunisiskt och '
+                   'marockanskt arv som är upptaget på Unescos lista: en eldröd krydda som väcker sinnena och ger rätterna '
+                   'en varm, oemotståndlig smak. Det glykemiska indexet är inte tillämpligt eftersom en portion nästan '
+                   'saknar kolhydrater.',
+              tips=('Tillsätt en tesked i tomatsåser, eller blanda den med olivolja som dipp till grillat och fisk.',
+                    'Den görs genom att torkad röd chili gnids med vitlök, kumminfrön, torkad koriander och ren '
+                    'jungfruolivolja; undvik kommersiella sorter med tillsatt stärkelse eller socker.',
+                    'Harissa innehåller koncentrerat capsaicin; den får inte ätas vid aktivt magsår.'),
+              faq=[dict(q='Höjer stark harissa blodsockret?',
+                        a='Nej, kolhydraterna i en sked harissa är mycket få (cirka 1 g).'),
+                   dict(q='Hur många kalorier finns i en matsked naturlig harissa (15 g)?',
+                        a='Den innehåller bara cirka 13 kcal, främst från dropparna jungfruolivolja och chilipulvret, utan '
+                          'härdat fett.'),
+                   dict(q='Ger harissa hemorrojder?',
+                        a='Chili orsakar inte hemorrojder i sig, men kan ge smärtsam irritation vid tarmtömning hos den '
+                          'som redan har analfissur eller inflammerade hemorrojder.')]),
+    529: dict(lead='Kolhapurikyckling är en av de mest kända och djärvaste starka rätterna i västra Indien: möra '
+                   'kycklingbitar som tillagas i en mörkröd sås med smak av rostad kokos, garam masala och kashmirisk '
+                   'chili. Det glykemiska indexet är inte tillämpligt eftersom rätten saknar nettokolhydrater, och den är '
+                   'en eldig proteinrätt.',
+              tips=('Ät kycklingbitarna med den fylliga såsen med sked tillsammans med gurksallad med yoghurt (raita) för '
+                    'att dämpa hettan, och undvik att ta mycket vitt ris.',
+                    'Att rosta korianderfrön och spiskummin med färsk riven kokos ger såsen en naturligt tjock konsistens '
+                    'utan mjöl eller stärkelse.',
+                    'De starka indiska kryddorna ger rätten dess karaktär, men rätten är mycket stark och kräver '
+                    'försiktighet vid känslig mage och sur reflux.'),
+              faq=[dict(q='Passar kolhapurikyckling vid keto?',
+                        a='Ja, den är en utmärkt ketorätt: kyckling och protein med fett från kokosen och kryddor helt '
+                          'utan socker.'),
+                   dict(q='Vad är näringsvärdet i 250 g kolhapurikyckling?',
+                        a='Portionen innehåller cirka 310 kcal, 33 g protein, 18 g fett och mindre än 5 g kolhydrater från '
+                          'kryddorna.'),
+                   dict(q='Höjer kashmirisk chili blodsockret?',
+                        a='Nej, den påverkar inte blodsockret; den ger en djupröd färg och varm smak med måttlig hetta.')]),
+    530: dict(lead='Rogan josh är en lyxig pärla i det kashmiriska köket: bitar av lamm- eller kalvkött som tillagas '
+                   'långsamt i en aromatisk röd buljong av kashmirisk chili, yoghurt, ingefära, fänkål och kardemumma. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom rätten saknar stärkelse, och den är en varm '
+                   'vinterrätt.',
+              tips=('Ät de möra köttbitarna med gaffel tillsammans med den aromatiska såsen, och nöj dig med en halv roti '
+                    'av fullkornsvete.',
+                    'Hemligheten bakom äkta rogan josh är att köttet tillagas långsamt i yoghurt och senapsolja eller '
+                    'naturlig ghee med kashmiriska kryddor, utan lök eller vitlök i det kashmiriska originalreceptet.',
+                    'Lammkött innehåller hemjärn, zink och B12-vitamin, och såsen kryddas med fänkål och ingefära.'),
+              faq=[dict(q='Höjer rogan josh blodsockret?',
+                        a='Nej; rätten består av kött, kryddor och yoghurt utan snabb stärkelse, och det glykemiska '
+                          'indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier och hur mycket protein finns i 250 g rogan josh?',
+                        a='Portionen ger cirka 340 kcal, 31 g protein, 22 g naturligt fett och mindre än 4 g kolhydrater '
+                          'från kryddorna.'),
+                   dict(q='Vad ger rogan josh dess karaktäristiska djupröda färg?',
+                        a='Naturlig kashmirisk chili och rötterna från den traditionella växten ratanjot, en naturlig färg '
+                          'helt utan konstgjorda färgämnen.')]),
+    531: dict(lead='Kycklingkorma är den aristokratiska rätten i det moguliska köket i Indien: möra kycklingbitar i en '
+                   'elfenbensvit, sammetslen sås med yoghurt, mandel- och cashewpasta och milda kryddor som kardemumma och '
+                   'muskot. Det glykemiska indexet är inte tillämpligt eftersom rätten nästan saknar nettostärkelse (cirka '
+                   '2,5 g per 100 g), och den är en förnäm och mild rätt.',
+              tips=('Ät kycklingbitarna med nötsåsen med sked; fettet och proteinet mättar länge utan att du behöver '
+                    'naanbröd av vitt mjöl.',
+                    'Kormans konsistens bygger på cashew- och mandelpasta och yoghurt utan mjöl eller stärkelse, och den '
+                    'innehåller enkelomättat fett.',
+                    'Cashew och mandel ger magnesium och fett, men rätten innehåller mycket kalorier och portionen behöver '
+                    'hållas i schack vid viktnedgång.'),
+              faq=[dict(q='Är kycklingkorma stark som andra indiska curryrätter?',
+                        a='Nej, korma är en mycket mild och krämig rätt utan chili, omtyckt av barn och av den som inte '
+                          'tål starka kryddor.'),
+                   dict(q='Vad är näringsvärdet i 250 g kycklingkorma?',
+                        a='Portionen innehåller cirka 360 kcal, 32 g protein, 24 g fett från nötterna och bara cirka 6 g '
+                          'kolhydrater.'),
+                   dict(q='Passar kycklingkorma vid diabetes?',
+                        a='Ja, mycket bra; den påverkar blodsockret lite, och nötternas fett och proteinet dämpar '
+                          'blodsockerstegringen.')]),
+    532: dict(lead='Vindaloo är en legend från den indiska delstaten Goa med portugisiskt ursprung: köttbitar som tillagas '
+                   'i en eldig, syrlig sås kryddad med vinäger, vitlök, stark röd chili och spiskummin. Det glykemiska '
+                   'indexet är inte tillämpligt eftersom rätten saknar stärkelse, och den är den djärvaste och starkaste '
+                   'av alla curryrätter.',
+              tips=('Ät den försiktigt med gaffel tillsammans med en kall gurksallad med yoghurt för att dämpa de '
+                    'brännande kryddorna, och undvik att ta mycket stärkelse till.',
+                    'Att marinera köttet i vinäger, vitlök och chili i flera timmar bryter ned köttfibrerna så att det '
+                    'snabbt smälter i munnen.',
+                    'Vindaloo innehåller ättiksyra och capsaicin; rätten är mycket stark och ska helt undvikas vid magsår '
+                    'och ulcerös kolit.'),
+              faq=[dict(q='Höjer vindaloo blodsockret?',
+                        a='Nej, den påverkar inte blodsockret; den består av kött, vinäger och kryddor utan socker, och '
+                          'det glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Hur många kalorier finns i 250 g vindaloo?',
+                        a='Portionen ger cirka 310 kcal, 30 g protein, 19 g fett och mindre än 5 g kolhydrater från '
+                          'vitlöken och kryddorna.'),
+                   dict(q='Vad är hemligheten bakom den syrliga smaken i vindaloo?',
+                        a="Naturlig vinäger; ordet kommer från den portugisiska rätten vinha d'alhos, som betyder kött "
+                          'marinerat i vinäger och vitlök.')]),
+    533: dict(lead='Dal makhani är en pärla bland rätterna från Punjab i Indien: hela svarta linser (urad dal) och '
+                   'kidneybönor som tillagas långsamt i många timmar på låg värme med tomat, smör, ingefära och lite '
+                   'grädde. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 38), och rätten är en '
+                   'mättande och mycket len vegetarisk måltid.',
+              tips=('Ät en varm skål med sked som huvudrätt eller doppa en roti av fullkornsvete i den; proteinet och de '
+                    'lösliga fibrerna mättar i flera timmar.',
+                    'Långsam tillagning av de svarta linserna ger en naturligt smörig konsistens; du kan minska smöret och '
+                    'grädden till en sked och låta linserna själva stå för krämigheten.',
+                    'Svarta linser och kidneybönor innehåller mycket lösliga fibrer, järn och magnesium.'),
+              faq=[dict(q='Passar dal makhani vid diabetes och insulinresistens?',
+                        a='Ja, mycket bra; det glykemiska indexet är lågt (cirka 38), och de komplexa fibrerna gör att '
+                          'glukosen frisätts långsamt i blodet.'),
+                   dict(q='Vad är näringsvärdet i 200 g dal makhani?',
+                        a='Portionen innehåller cirka 220 kcal, 10 g vegetabiliskt protein, 8 g fibrer och cirka 26 g '
+                          'kolhydrater som smälts långsamt.'),
+                   dict(q='Vad är skillnaden mellan dal makhani och vanlig gul indisk dal?',
+                        a='Gul dal är lätt, snabblagad och tunn, medan dal makhani görs av hela svarta linser och bönor '
+                          'och har en tung, sammetslen konsistens och djup kryddig smak.')]),
+    534: dict(lead='Chana masala är den kända, kryddiga kikärtsrätten från norra Indien: kokta kikärter som drar åt sig en '
+                   'sås av tomat, lök, ingefära, garam masala och torkat mangopulver (amchur). Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 32), och rätten är en vegetarisk måltid rik på järn.',
+              tips=('Ät den med sked tillsammans med en grönsakssallad, lite färsk koriander och en skvätt citron; '
+                    'C-vitamin ökar järnupptaget.',
+                    'Blötlägg kikärterna över natten, och använd amchurpulver (omogen mango) eller citronsaft för den äkta '
+                    'indiska syran utan tillsatt socker.',
+                    'Kikärter innehåller mycket fibrer, och det låga glykemiska indexet gör rätten till ett bra val när '
+                    'blodsockret ska hållas i schack.'),
+              faq=[dict(q='Kan chana masala hjälpa vid viktnedgång?',
+                        a='Ja; kikärter innehåller mycket vegetabiliskt protein och fibrer och mättar i många timmar efter '
+                          'måltiden.'),
+                   dict(q='Hur många kalorier och hur mycket protein finns i 200 g chana masala?',
+                        a='Portionen ger cirka 210 kcal, 11 g vegetabiliskt protein, 9 g fibrer och cirka 30 g komplexa '
+                          'kolhydrater.'),
+                   dict(q='Ger indiska kikärter gaser i tarmen?',
+                        a='Att koka kikärterna med färsk ingefära, spiskumminfrön och svartkummin som i det indiska '
+                          'receptet minskar gasbildningen och gör dem lättare att smälta.')]),
+    535: dict(lead='Aloo gobi är den klassiska indiska hemrätten med potatis och blomkål: krispiga blomkålsbuketter och '
+                   'stekta potatistärningar med gurkmeja, ingefära, spiskummin och koriander. Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 48), eftersom blomkålens fibrer uppväger potatisens höga '
+                   'glykemiska index.',
+              tips=('Se till att portionen innehåller mer blomkål än potatis, och ät den med gaffel tillsammans med en bit '
+                    'grillat protein eller en grön sallad.',
+                    'Tillaga blomkålen och potatisen i en torr panna med ånga och kryddor utan mycket vatten, så behåller '
+                    'blomkålen sin krispighet utan att falla sönder eller suga upp stekfett.',
+                    'Blomkål innehåller sulforafan, och gurkmejan ger kurkumin.'),
+              faq=[dict(q='Passar aloo gobi vid diabetes trots potatisen?',
+                        a='Ja, med måtta; det glykemiska indexet är lågt (cirka 48) eftersom den stora mängden blomkål, '
+                          'kryddorna och senapsoljan bromsar upptaget av potatisstärkelsen.'),
+                   dict(q='Vad är näringsvärdet i 200 g tillagad aloo gobi?',
+                        a='Portionen innehåller cirka 160 kcal, 4 g protein, 5 g fett och 24 g kolhydrater (varav 5 g '
+                          'fibrer).'),
+                   dict(q='Hur gör jag aloo gobi ketovänlig?',
+                        a='Byt ut potatistärningarna mot zucchini eller tofu, eller nöj dig med enbart blomkål (gobi '
+                          'masala).')]),
+    536: dict(lead='Bhindi masala är den indiska rätten med krispig stekt okra: skivade okraskidor som steks på hög värme '
+                   'med lök, tomat, spiskummin, mangopulver och varma kryddor helt utan slemmighet. Det glykemiska indexet '
+                   'är lågt (en kliniskt granskad uppskattning, 25), och rätten är ett bra val vid diabetes.',
+              tips=('Ät den med gaffel som huvudsakligt grönsakstillbehör; den krispiga konsistensen och den syrliga '
+                    'smaken ger stor njutning.',
+                    'Hemligheten är att torka okran helt efter sköljningen innan den skärs, och att steka den på hög värme '
+                    'med citronsaft så att slemämnena inte frigörs.',
+                    'Okra innehåller slemämnen (mucilage), en typ av lösliga fibrer.'),
+              faq=[dict(q='Varför är okra ett bra val vid diabetes?',
+                        a='Därför att det glykemiska indexet är lågt (cirka 25), och de lösliga fibrerna dämpar plötsliga '
+                          'blodsockertoppar.'),
+                   dict(q='Hur många kalorier finns i 150 g bhindi masala?',
+                        a='Portionen innehåller cirka 130 kcal, 4 g protein, 5 g fett och cirka 16,5 g kolhydrater (varav '
+                          '6 g fibrer).'),
+                   dict(q='Förlorar indisk okra sina näringsämnen utan sås?',
+                        a='Torrstekning bevarar C-vitaminet och zinken betydligt bättre än lång kokning i vatten.')]),
+    537: dict(lead='Indisk äggcurry (anda curry) är en billig, proteinrik och snabb måltid: kokta ägg som lätt bryns i '
+                   'olja och läggs i en currysås av tomat, lök, ingefära, kokosmjölk och kryddor. Det glykemiska indexet '
+                   'är inte tillämpligt eftersom rätten saknar nettokolhydrater, och den passar bra vid keto och bantning.',
+              tips=('Ät två ägg med den goda såsen med gaffel tillsammans med en grön sallad; en komplett proteinrik '
+                    'måltid som mättar hela kvällen.',
+                    'Gör små skåror med kniven i de kokta äggen innan du bryner dem med gurkmeja, så att currysåsens smak '
+                    'tränger in ända till gulan.',
+                    'Äggulan innehåller kolin, lutein och B12-vitamin, och såsen kryddas med gurkmeja och ingefära.'),
+              faq=[dict(q='Höjer äggcurry blodsockret?',
+                        a='Nej, den påverkar inte blodsockret; den består av protein, fett och kryddor utan stärkelse, och '
+                          'det glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Vad är näringsvärdet i en portion äggcurry (två ägg med sås, 250 g)?',
+                        a='Portionen ger cirka 270 kcal, 15 g fullvärdigt protein, 20 g fett och mindre än 5 g kolhydrater '
+                          'från tomatsåsen.'),
+                   dict(q='Passar äggcurry för den som tränar?',
+                        a='Ja, den är ett bra och billigt val med animaliskt protein av hög kvalitet utan härdat fett; '
+                          'protein bidrar till att öka muskelmassan.')]),
+    538: dict(lead='Indisk grönsakssamosa är den mest kända krispiga gatuförrätten i Indien med sin karaktäristiska '
+                   'pyramidform: en krispig deg fylld med kryddad potatis, ärter, koriander och rostade spiskumminfrön. '
+                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 54), och den är en god förrätt där '
+                   'portionen behöver styras.',
+              tips=('Nöj dig med en medelstor samosa med mynta- och korianderchutney, och undvik att doppa den i söt '
+                    'kommersiell tamarindsås.',
+                    'Grädda samosan i airfryer eller ugn efter att ha penslat den med lite olja i stället för att fritera '
+                    'den i mycket olja; du får samma krispighet med hälften av kalorierna.',
+                    'Ärterna, spiskumminen och koriandern i fyllningen ger fibrer, men den friterade degen och '
+                    'potatisstärkelsen kräver försiktighet vid diabetes och viktkontroll.'),
+              faq=[dict(q='Är grönsakssamosa tillåten vid diabetes?',
+                        a='Ja, bara en (100 g), helst ugnsbakad; det glykemiska indexet ligger på gränsen 54 (lågt), och '
+                          'det viktiga är att inte äta för mycket friterad stärkelse.'),
+                   dict(q='Hur många kalorier finns i en vanlig indisk grönsakssamosa (100 g)?',
+                        a='En friterad samosa innehåller cirka 260 kcal, 5 g protein, 14 g fett och 28 g kolhydrater.'),
+                   dict(q='Vilken chutney passar bäst till samosa?',
+                        a='Chutney på mynta och koriander med citron och grön chili, eftersom den saknar socker.')]),
+    539: dict(lead='Indisk roti (chapati) är det dagliga osyrade brödet av fullkornsvete som gräddas på en het torr plåt '
+                   'utan en droppe olja. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52), och '
+                   'brödet är ett indiskt vardagsval som passar vid diabetes och bantning.',
+              tips=('Ät ett eller två bröd stora som en handflata till dal, stekta grönsaker och protein, utan att pensla '
+                    'dem med mycket ghee.',
+                    'Fullkornsvetemjöl (atta) knådas bara med ljummet vatten, kavlas tunt och gräddas på en het tawa tills '
+                    'det blåser upp av ångan inuti, helt utan olja.',
+                    'Roti innehåller vetekli, olösliga fibrer och B-vitaminer, vilket gör den till ett betydligt bättre '
+                    'val än kommersiellt naanbröd av vitt mjöl.'),
+              faq=[dict(q='Varför anses roti vara det bästa brödet vid diabetes?',
+                        a='Därför att den görs av fullkornsvetemjöl med kli utan socker och olja, och det glykemiska '
+                          'indexet är lågt (cirka 52).'),
+                   dict(q='Vad är näringsvärdet i en indisk roti (40 g)?',
+                        a='Brödet ger bara cirka 110 kcal, 3,5 g protein, mindre än 1 g fett och 22 g komplexa kolhydrater '
+                          'rika på fibrer.'),
+                   dict(q='Vad är skillnaden mellan roti, chapati och paratha?',
+                        a='Roti och chapati är torrt fullkornsbröd utan olja, medan paratha kavlas ut i lager med ghee '
+                          'eller olja och innehåller mer kalorier och fett.')]),
+    540: dict(lead='Indisk paratha är det flagiga och krispiga frukostbrödet: vetedeg som kavlas ut och viks i lager med '
+                   'ghee eller olja och steks på plåten tills den får gyllene färg och spröd konsistens. Det glykemiska '
+                   'indexet är medelhögt (en kliniskt granskad uppskattning, 62), och brödet ger mättande vinterenergi som '
+                   'kräver måtta.',
+              tips=('Nöj dig med ett medelstort bröd och ät det med grekisk yoghurt eller kokt ägg och färska grönsaker, '
+                    'och undvik paratha fylld med dubbelstekt potatis.',
+                    'Gör paratha med fullkornsvetemjöl och pensla lagren med lite naturlig ghee eller olivolja i stället '
+                    'för härdat vegetabiliskt fett.',
+                    'Lagren med fett ger god smak och bromsar upptaget något, men fördubblar kalorierna och det mättade '
+                    'fettet; därför rekommenderas ett enda bröd vid hjärtsjukdom och diabetes.'),
+              faq=[dict(q='Passar paratha vid diabetes?',
+                        a='Det glykemiska indexet är medelhögt (cirka 62), men kalorierna och fettet är höga, så det är '
+                          'bättre att äta torr roti till vardags och spara paratha till festliga tillfällen.'),
+                   dict(q='Hur många kalorier finns i en vanlig indisk paratha (80 g)?',
+                        a='Brödet innehåller cirka 275 kcal, 5 g protein, 12 g fett och cirka 35 g stärkelse.'),
+                   dict(q='Vad är fylld paratha (aloo paratha)?',
+                        a='En paratha fylld med kryddad potatis; den är mycket mäktig och rik på stärkelse, och ett bröd '
+                          'kan innehålla mer än 380 kcal.')]),
+    541: dict(lead='Mangolassi är världens mest kända indiska sommardryck: en sammetslen och svalkande blandning av mogen '
+                   'tropisk mango, yoghurt och filmjölk med en nypa kardemumma och saffran. Det glykemiska indexet är lågt '
+                   '(en kliniskt granskad uppskattning, 48) tack vare det rikliga proteinet och fettet i yoghurten.',
+              tips=('Drick ett litet kallt glas som svalkande efterrätt efter en stark måltid; mjölkproteinet kasein '
+                    'släcker hettan från de brännande kryddorna i munnen direkt.',
+                    'Mixa färsk naturlig mango med grekisk yoghurt med låg fetthalt, isbitar och en nypa kardemumma utan '
+                    'att tillsätta vitt socker eller sirap.',
+                    'Yoghurten ger mjölksyrabakterier, kalcium och protein, och mangon ger A- och C-vitamin, men '
+                    'kommersiell lassi innehåller tillsatt socker som snabbt höjer kalorierna.'),
+              faq=[dict(q='Passar mangolassi vid diabetes?',
+                        a='Ja, i den naturliga osötade varianten och i en liten portion (150–200 ml); det glykemiska '
+                          'indexet är lågt (cirka 48) tack vare yoghurtens protein.'),
+                   dict(q='Vad är näringsvärdet i ett glas hemgjord mangolassi (250 ml)?',
+                        a='Glaset ger cirka 170 kcal, 7 g protein, 4 g fett och cirka 26 g kolhydrater och naturligt '
+                          'fruktsocker.'),
+                   dict(q='Varför släcker mjölkprodukter hettan från chili i indisk mat?',
+                        a='Därför att kaseinet i mjölk och yoghurt löser upp och bryter ned de feta capsaicinmolekylerna '
+                          'som fastnar på tungans värmereceptorer, till skillnad från vatten som sprider dem.')]),
+    542: dict(lead='Indisk masala chai med mjölk och kryddor är den mest kända varma gatudrycken i Indien: starkt svart te '
+                   'som kokas med mjölk och en förtrollande blandning av färsk ingefära, kardemumma, kanel, kryddnejlika '
+                   'och svartpeppar. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45) tack vare '
+                   'mjölkfettet.',
+              tips=('Drick det varmt som en härlig morgondryck som värmer kroppen, och drick det utan vitt socker så att '
+                    'du njuter av kryddornas naturliga sötma.',
+                    'Koka de nymalda kryddorna med svart te och mjölk på låg värme tills smakerna förenas, och använd '
+                    'naturliga sötningsmedel som stevia eller drick det osötat.',
+                    'Ingefära, kanel och kryddnejlika ger drycken dess karaktär.'),
+              faq=[dict(q='Höjer indisk masala chai blodsockret?',
+                        a='Om det görs utan tillsatt socker är det glykemiska indexet lågt (cirka 45) och det höjer inte '
+                          'blodsockret.'),
+                   dict(q='Vad är näringsvärdet i en kopp osötad masala chai med mjölk (250 ml)?',
+                        a='Koppen innehåller cirka 90 kcal från mjölkens protein och fett, med 5 g protein och 8 g '
+                          'kolhydrater från naturlig laktos.'),
+                   dict(q='Vad är skillnaden mellan karak och indisk masala chai?',
+                        a='Indisk masala chai fokuserar på de sex kryddorna (ingefära, kanel, kardemumma, kryddnejlika, '
+                          'svartpeppar och fänkål) med färsk mjölk, medan karak från Gulfstaterna oftast görs på '
+                          'kondenserad mjölk, kardemumma och saffran.')]),
+    543: dict(lead='Gulab jamun är den obestridda kungen bland indiska och pakistanska sötsaker: mjuka gyllene bollar av '
+                   'torkade mjölkfasta ämnen (khoya) som friteras varsamt och dränks i en aromatisk sockerlag kryddad med '
+                   'kardemumma, rosenvatten och saffran. Det glykemiska indexet är högt (en kliniskt granskad '
+                   'uppskattning, 78), eftersom de är en socker- och sirapsbomb som kräver stor försiktighet.',
+              tips=('Nöj dig med en mycket liten boll vid stora festliga tillfällen, pressa ur överflödig sockerlag innan '
+                    'du äter den, och ät den aldrig på fastande mage.',
+                    'Bollarna kan gräddas i airfryer och läggas i en lätt lag sötad med steviaextrakt, rosenvatten och '
+                    'saffran för att minska den kraftiga effekten på blodsockret.',
+                    'Sträng klinisk varning: en snabbt upptagen sötsak som förenar fritering i ghee med full indränkning i '
+                    'sockerlag; den höjer blodsockret och insulinet mycket snabbt.'),
+              faq=[dict(q='Är gulab jamun förbjudet vid diabetes?',
+                        a='Det rekommenderas att helt avstå; om du vill smaka, nöj dig med en halv liten boll efter en '
+                          'komplett måltid och följ blodsockervärdena noga.'),
+                   dict(q='Hur många kalorier finns i två gulab jamun (50 g)?',
+                        a='Portionen innehåller cirka 190 kcal, 3 g protein, 6 g fett och cirka 32 g snabbt upptaget '
+                          'socker.'),
+                   dict(q="Varför heter de 'gulab jamun'?",
+                        a="'Gulab' betyder rosenvatten på persiska, och 'jamun' syftar på den mörka indiska "
+                          'jambolanfrukten, som de liknar i storlek och form.')]),
+    544: dict(lead='Indisk kheer är den äldsta traditionella risgrynspuddingen på den indiska subkontinenten: basmatiris '
+                   'som tillagas mycket långsamt i standardmjölk tills det löses upp till en krämig och aromatisk '
+                   'konsistens kryddad med kardemumma och saffran och garnerad med pistage och mandel. Det glykemiska '
+                   'indexet är medelhögt (en kliniskt granskad uppskattning, 60), och den är en varm festlig efterrätt.',
+              tips=('Ät en liten kall skål som efterrätt efter en proteinrik lunch; nötterna och kanelen hjälper till att '
+                    'bromsa sockerupptaget.',
+                    'Koka riset i lättmjölk på mycket låg värme, och använd malda dadlar eller naturliga sötningsmedel i '
+                    'stället för raffinerat vitt socker för färre kalorier.',
+                    'Mjölken och nötterna ger kalcium, protein och fett, men den långkokta risstärkelsen och sockret '
+                    'kräver måtta vid diabetes.'),
+              faq=[dict(q='Vad är skillnaden mellan indisk kheer och arabisk risgrynspudding?',
+                        a='Kheer kokas i timmar tills mjölken karamelliseras och får en ljust beige färg, utan tillsatt '
+                          'raffinerad stärkelse, och kryddas med kardemumma, saffran, kewravatten, cashew och pistage.'),
+                   dict(q='Vad är näringsvärdet i en vanlig skål indisk kheer (150 g)?',
+                        a='Skålen ger cirka 230 kcal, 6 g protein, 6 g fett och cirka 39 g kolhydrater och socker.'),
+                   dict(q='Kan kheer göras utan ris för den som har diabetes?',
+                        a='Ja, det finns ett känt indiskt recept med valnötter, riven morot eller havre, som är betydligt '
+                          'skonsammare för blodsockret.')]),
+    545: dict(lead='Vietnamesisk pho (phở bò) är Vietnams mest kända nationalsoppa: en klar nötköttsbuljong som sjuder på '
+                   'låg värme i 12 timmar med stjärnanis, kanel och ingefära och hälls över risnudlar, tunna köttskivor '
+                   'och färska örter. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50), eftersom '
+                   'buljongen och proteinet dominerar över stärkelsen.',
+              tips=('Börja med att dricka den aromatiska buljongen och äta köttskivorna, och fyll skålen med en stor näve '
+                    'böngroddar, basilika, mynta och lime med mindre nudlar.',
+                    'Hemligheten bakom pho är att svedja ingefäran och löken över eld innan de kokas med nötköttsbenen och '
+                    'kryddorna, så att det bildas en djup och klar kollagenrik buljong utan tillsatta oljor.',
+                    'Nötköttsbuljongen innehåller upplöst kollagen och glycin, och risnudlarna är lätta och glutenfria för '
+                    'den som följer en känslig kost.'),
+              faq=[dict(q='Passar vietnamesisk pho vid diabetes och bantning?',
+                        a='Ja, mycket bra om mängden risnudlar begränsas; buljongen innehåller protein och kollagen utan '
+                          'tungt fett, och det glykemiska indexet är lågt (cirka 50).'),
+                   dict(q='Vad är näringsvärdet i en stor skål pho med nötkött (500 g)?',
+                        a='Skålen ger cirka 400 kcal, 28 g protein, 8 g fett och cirka 48 g kolhydrater från risnudlarna '
+                          'och grönsakerna.'),
+                   dict(q='Varför läggs köttet rått i den heta pho-skålen (phở tái)?',
+                        a='De mycket tunna köttskivorna läggs råa i skålen och den kokande buljongen hälls genast över, så '
+                          'att de tillagas på sekunder och förblir möra och saftiga. Livsmedelsverket avråder gravida från '
+                          'kött som inte är genomstekt; be då om genomkokt kött.')]),
+    546: dict(lead='Färska vietnamesiska vårrullar (gỏi cuốn, summer rolls) är rullar fulla av fräschhet: kokta räkor och '
+                   'färska örter som mynta och koriander, sallat och gurka rullade i tunt, genomskinligt rispapper. Det '
+                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och de är ett omtyckt val för den '
+                   'som vill äta enkel och ren mat.',
+              tips=('Ät två till tre rullar och doppa dem i naturlig jordnötssås eller en sås av lime och chili; en lätt '
+                    'och fräsch måltid.',
+                    'Blöt rispapperet några sekunder i ljummet vatten tills det mjuknar och rulla det tätt runt räkorna '
+                    'och örterna; undvik att fritera dem, så förblir de färska sommarrullar.',
+                    'De saknar härdat fett och gluten och ger protein från havet med mycket vätska från de färska örterna '
+                    'och grönsakerna.'),
+              faq=[dict(q='Vad är skillnaden mellan färska sommarrullar och friterade vårrullar?',
+                        a='Sommarrullarna äts färska i genomskinligt rispapper helt utan fritering, medan friterade '
+                          'vårrullar friteras i mycket olja och blir mäktiga.'),
+                   dict(q='Hur många kalorier finns i två sommarrullar med räkor (150 g)?',
+                        a='Portionen innehåller cirka 165 kcal, 11 g protein, cirka 2 g fett och 24 g kolhydrater.'),
+                   dict(q='Höjer rispapperet blodsockret?',
+                        a='Rispapperet är mycket tunt och väger bara några gram, och fyllningen av räkor och grönsaker gör '
+                          'att effekten på blodsockret blir långsam och måttlig (cirka 35).')]),
+    547: dict(lead='Tom yum goong är världens mest kända syrliga och starka thailändska soppa: en fräsch räksoppa som '
+                   'kokas med citrongräs, kaffirlimeblad, galangal, chili och halmsvamp. Det glykemiska indexet är inte '
+                   'tillämpligt eftersom soppan saknar stärkelse.',
+              tips=('Drick den syrliga, heta buljongen och ät räkorna och svampen med sked, och tugga inte de stora '
+                    'bitarna galangal och citrongräs, som bara är till för smaken.',
+                    'Koka räkskalen med de aromatiska thailändska örterna till en koncentrerad buljong, och lägg i räkorna '
+                    'de sista tre minuterna så att de förblir möra och saftiga.',
+                    'De tre thailändska örterna (galangal, citrongräs och limeblad) ger soppan dess karaktär, men den '
+                    'syrliga hettan kräver måtta vid magkatarr.'),
+              faq=[dict(q='Höjer tom yum blodsockret?',
+                        a='Nej; den är en klar buljong med räkor, svamp och aromatiska kryddor utan stärkelse, och det '
+                          'glykemiska indexet är inte tillämpligt.'),
+                   dict(q='Vad är näringsvärdet i en skål tom yum med räkor (300 g)?',
+                        a='Skålen ger bara cirka 130 kcal, 18 g protein, 3 g fett och mindre än 5 g naturliga kolhydrater.'),
+                   dict(q='Vad är skillnaden mellan klar tom yum (nam sai) och krämig tom yum (nam khon)?',
+                        a='Den klara är en ren och lätt örtbuljong, medan den krämiga får kokosmjölk eller evaporerad '
+                          'mjölk och chilipasta och innehåller mer kalorier och fett.')]),
+    548: dict(lead='Grön thaicurry (gaeng kiew wan) är kungen bland curryrätterna i Bangkok: kycklingbitar och runda '
+                   'thailändska auberginer som tillagas i kokosmjölk med stark grön chilipasta, thaibasilika och '
+                   'kaffirlimeblad. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och rätten '
+                   'förenar chilins hetta med kokosens krämiga sötma.',
+              tips=('Ät kyckling- och auberginebitarna med den aromatiska kokossåsen med sked, och nöj dig med två till '
+                    'tre matskedar basmati- eller jasminris.',
+                    'Fräs den gröna currypastan i en sked kokosgrädde tills de aromatiska oljorna separerar och doften '
+                    'kommer fram, och undvik att tillsätta mycket palmsocker.',
+                    'Kokosmjölk innehåller medellånga fettsyror (MCT), och basilikan och chilin ger rätten dess karaktär.'),
+              faq=[dict(q='Passar grön thaicurry vid diabetes och keto?',
+                        a='Ja, den är en mycket bra ketorätt; det glykemiska indexet är lågt (cirka 35) och den innehåller '
+                          'protein och fett som dämpar blodsockerstegringen när den äts utan ris.'),
+                   dict(q='Hur många kalorier finns i 250 g grön thaicurry med kyckling?',
+                        a='Portionen innehåller cirka 320 kcal, 24 g protein, 22 g fett från kokosen och cirka 7 g '
+                          'kolhydrater från grönsakerna.'),
+                   dict(q='Vad gör grön curry starkare än röd curry?',
+                        a="Pastan görs av färsk grön thailändsk fågelögonchili (bird's eye chili), som är mycket stark och "
+                          'skarp jämfört med torkad röd chili.')]),
+    549: dict(lead='Röd thaicurry (gaeng phed) är en varm thailändsk rätt med djup smak: kyckling- eller räkbitar som '
+                   'tillagas i kokosmjölk kryddad med torkad röd thailändsk chilipasta, citrongräs, vitlök, bambuskott och '
+                   'basilika. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och rätten ger en '
+                   'lyxig asiatisk smakbalans.',
+              tips=('Njut av rätten med gaffel och sked tillsammans med bambuskotten och köttet, och ät en grön sallad '
+                    'till för att minska behovet av stärkelse vid sidan av.',
+                    'Tillsätt bambuskott och paprika för mer fibrer och mättnad, och använd naturlig osötad kokosmjölk.',
+                    'Rätten förenar röd chili, kokosmjölk och galangal, men kokosens mättade fett kräver måtta för den som '
+                    'håller koll på det totala fettet.'),
+              faq=[dict(q='Vad är skillnaden mellan röd och grön thaicurry?',
+                        a='Röd curry bygger på torkad röd chili och är varmare, djupare och mindre skarp än grön curry, '
+                          'som görs av färsk och skarp grön chili.'),
+                   dict(q='Vad är näringsvärdet i 250 g röd thaicurry?',
+                        a='Den ger cirka 310 kcal, 23 g protein, 21 g fett (bland annat MCT) och cirka 8 g kolhydrater som '
+                          'tas upp lugnt.'),
+                   dict(q='Passar röd thaicurry vid insulinresistens?',
+                        a='Ja, mycket bra; nettokolhydraterna är få, det glykemiska indexet är lågt (cirka 35) och den '
+                          'mättar länge.')]),
+    550: dict(lead='Thailändsk grön papayasallad (som tam) är Asiens mest kända och fräschaste sallad: tunna, krispiga '
+                   'strimlor av omogen grön papaya som stöts i mortel med chili, vitlök, lime, fisksås, tomat och '
+                   'jordnötter. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+              tips=('Ät den som en fräsch förrätt före huvudrätten; fibrerna fyller en stor del av magen.',
+                    'Ingredienserna stöts i en mortel av trä så att smakerna blandas och papayastrimlorna mjuknar; be om '
+                    'en halv tesked palmsocker eller inget alls, så hålls blodsockret i schack.',
+                    'Grön papaya innehåller mycket av enzymet papain, som bryter ned protein. Gravida bör helt undvika '
+                    'omogen papaya.'),
+              faq=[dict(q='Passar grön papayasallad när man bantar?',
+                        a='Ja, den är en av de bästa salladerna vid bantning; fibrerna ger en härlig krispig mättnad.'),
+                   dict(q='Hur många kalorier finns i en vanlig tallrik thailändsk som tam (200 g)?',
+                        a='Tallriken innehåller cirka 130 kcal (mest från skeden rostade jordnötter), 4 g protein, 5 g '
+                          'fett och 18 g kolhydrater som tas upp långsamt.'),
+                   dict(q='Hur skiljer sig grön papaya från mogen orange papaya?',
+                        a='Den gröna används som en krispig grönsak med lite socker och mycket enzymer och resistent '
+                          'stärkelse, medan den mogna är en söt orange frukt rik på fruktos.')]),
+    551: dict(lead='Mango sticky rice är världens mest kända thailändska gatudessert, som förenar mangons naturliga '
+                   'tropiska sötma med klibbigt ris i varm kokosmjölk och lite krispig sesam. En fyllig rätt som smeker '
+                   'sinnena, men som kräver eftertanke på grund av den rikliga snabbt upptagna stärkelsen.',
+              tips=('Ät den inte som ett mellanmål på fastande mage; det är bättre att dela tallriken med familjen och äta '
+                    'den efter en måltid rik på fibrer och protein, så kommer sockret långsammare ut i blodet.',
+                    'Minska det tillsatta vita sockret i kokossåsen, låt den mogna mangons naturliga sötma räcka, och byt '
+                    'ut en del av det vita riset mot svart eller brunt klibbris för mer fibrer.',
+                    'Vid diabetes och insulinresistens har rätten en hög glykemisk belastning (45). Se till att portionen '
+                    'inte är större än halva den vanliga mängden (75 g), och ta en promenad på 15 minuter efter måltiden.'),
+              faq=[dict(q='Höjer thailändsk mango sticky rice blodsockret snabbt?',
+                        a='Ja, klibbris innehåller mycket snabbt nedbruten amylopektinstärkelse, och det glykemiska '
+                          'indexet är medelhögt nära gränsen till högt (68), så det höjer blodsockret snabbt om det inte '
+                          'äts i en begränsad och avvägd mängd.'),
+                   dict(q='Passar den vid bantning eller viktnedgång?',
+                        a='Den är en rätt med mycket kalorier (cirka 367 kcal per 150 g) och mättat fett från '
+                          'kokosmjölken; därför passar den inte till vardags och kan bara ätas i en liten portion vid ett '
+                          'festligt tillfälle.'),
+                   dict(q='Vad är näringsvärdet i en vanlig portion (150 g)?',
+                        a='Portionen ger 367 kcal, 5,3 g protein, 8,2 g fett och 66 g nettokolhydrater.')]),
+    552: dict(lead='Kung pao-kyckling är kungen i det starka szechuanköket: en klassisk och livfull rätt som blandar möra '
+                   'kycklingbitar med rostade jordnötter och den stickande szechuanpepparn som ger munnen en känsla av '
+                   'värme och fräschhet. En måltid med mycket protein som inte behöver mycket stärkelse.',
+              tips=('En komplett måltid i sig; ät den med en krispig grön sallad eller en handfull kokt basmatiris i '
+                    'stället för stekt ris fullt av olja.',
+                    'Tillaga ingredienserna i wok med snabb omrörning och bara en sked sesamolja, och undvik för mycket '
+                    'majsstärkelse eller raffinerat socker i marinaden.',
+                    'Det glykemiska indexet är lågt (45) och den glykemiska belastningen låg (8 per 200 g); protein bidrar '
+                    'till att bibehålla muskelmassa. Den som har högt blodtryck bör vara uppmärksam på natriumet från '
+                    'sojasåsen.'),
+              faq=[dict(q='Hur många kalorier finns i en tallrik kung pao-kyckling?',
+                        a='En portion på 200 g som lagats hemma med lite olja innehåller cirka 480 kcal och mycket protein '
+                          '(44 g).'),
+                   dict(q='Passar den vid keto och insulinresistens?',
+                        a='Ja, mycket bra, om den görs utan tillsatt socker eller honung i såsen; den bygger på fettet i '
+                          'jordnötterna och proteinet i kycklingen.'),
+                   dict(q='Hur påverkar jordnötterna i rätten blodsockret?',
+                        a='Fettet och fibrerna i jordnötterna bromsar tydligt nedbrytningen av måltiden och mättar i flera '
+                          'timmar.')]),
+    553: dict(lead='Pekinganka är en ikon i det kinesiska kejserliga köket: ett gyllene, glasklart och mycket krispigt '
+                   'skinn över mört kött fullt av smak. Den serveras traditionellt med färska gurkskivor, salladslök och '
+                   'hoisinsås inrullade i tunna kinesiska pannkakor.',
+              tips=('Lägg mycket gurka och salladslök i rullen för att balansera ankans fyllighet, och njut av det '
+                    'krispiga köttet utan att ta för mycket av den söta hoisinsåsen.',
+                    'Vertikal stekning i ugn eller airfryer gör att det mesta av överflödigt fett droppar ned i '
+                    'långpannan, så att den gyllene krispigheten behålls och kalorierna minskar.',
+                    'Ankkött saknar kolhydrater och det glykemiska indexet är lågt (25), men kommersiell hoisinsås '
+                    'innehåller socker; därför rekommenderas bara en tunn pensling vid diabetes.'),
+              faq=[dict(q='Är skinnet på pekinganka ett bra val eller fullt av fett?',
+                        a='Ankskinn innehåller en god andel enkelomättat fett (oljesyra, som i olivolja), men det '
+                          'innehåller många kalorier och bör ätas med måtta.'),
+                   dict(q='Är pekinganka tillåten vid keto?',
+                        a='Ankkött och skinn passar vid keto, men byt ut pannkakorna mot salladsblad och använd sojasås '
+                          'utan socker i stället för hoisin.'),
+                   dict(q='Vad är näringsvärdet i 150 g pekinganka?',
+                        a='Portionen ger 435 kcal, 30 g protein, 30 g fett och 9,3 g nettokolhydrater (mest från skeden '
+                          'hoisin).')]),
+    554: dict(lead='Den mest omtyckta rätten på asiatiska restauranger för den som vill äta lätt: möra skivor av kalvkött '
+                   'i harmoni med gröna broccolibuketter och ostronsås med djup umamismak. Det glykemiska indexet är inte '
+                   'tillämpligt eftersom kolhydraterna är få.',
+              tips=('En utmärkt rätt till lunch eller middag efter träning; broccolin mättar väl, och nötköttet ger järn, '
+                    'zink och B12-vitamin.',
+                    'Wokfräs broccolin i bara 3 till 4 minuter med ånga så att den förblir krispig; lång tillagning gör '
+                    'att den förlorar sulforafan.',
+                    'Rättens glykemiska belastning är nära noll, och den ger ingen nämnvärd blodsockerstegring.'),
+              faq=[dict(q='Kan nötkött med broccoli hjälpa vid viktnedgång?',
+                        a='Ja, den är ett bra val tack vare balansen mellan mycket protein och broccolins fibrer, som '
+                          'mättar länge med måttligt antal kalorier (cirka 438 kcal per 250 g).'),
+                   dict(q='Hur påverkar rätten blodsockret?',
+                        a='Den glykemiska belastningen är nära noll, och rätten ger ingen nämnvärd blodsockerstegring.'),
+                   dict(q='Vad är näringsvärdet i 250 g?',
+                        a='Den innehåller 438 kcal, 52 g fullvärdigt protein, 18 g fett och bara 10 g nettokolhydrater.')]),
+    555: dict(lead='Mapo tofu är ett anrikt mästerverk från provinsen Sichuan: mjuka, silkeslena tofutärningar i en '
+                   'glödande röd sås med smak av szechuanpeppar och sesamolja och lite köttfärs. En rätt som förenar de '
+                   'asiatiska kryddornas värme med det lätta vegetabiliska sojaproteinet.',
+              tips=('Tofun suger upp såsens smaker utmärkt; ät den som en varm rätt kalla dagar med stekta grönsaker som '
+                    'dämpar kryddornas hetta.',
+                    'Koka tofutärningarna i saltat vatten i en minut innan du lägger dem i såsen så att de inte faller '
+                    'sönder när du rör, och använd äkta szechuanpeppar.',
+                    'Stärkelsen är mycket låg (mindre än 5 g per 100 g), så det glykemiska indexet är inte tillämpligt och '
+                    'den glykemiska belastningen obefintlig; ett bra val vid insulinresistens för den som vill ha en '
+                    'mättande måltid med lite stärkelse.'),
+              faq=[dict(q='Passar mapo tofu vid diabetes?',
+                        a='Ja, mycket bra; tofu höjer inte blodsockret.'),
+                   dict(q='Passar den i vegetarisk kost?',
+                        a='Den traditionella varianten innehåller köttfärs, men köttet kan lätt bytas mot hackad '
+                          'shiitakesvamp till en helt vegetarisk rätt med mycket protein.'),
+                   dict(q='Vad är näringsvärdet i 250 g?',
+                        a='Den innehåller cirka 360 kcal, 30 g protein, 22,5 g fett och bara 7,5 g nettokolhydrater.')]),
+    556: dict(lead='Det mest kända traditionella mellanmålet på Asiens gator och tågstationer: kokta ägg med sprucket skal '
+                   'som dras i timmar i en aromatisk buljong av svart te, kanelstänger, stjärnanis och sojasås, så att de '
+                   'får förtrollande marmorerade ränder och en djup, jordig smak. Det glykemiska indexet är inte '
+                   'tillämpligt eftersom de nästan saknar kolhydrater.',
+              tips=('Ett komplett proteinrikt mellanmål för den som tränar eller arbetar; äggen kan förvaras i kylskåp och '
+                    'ätas kalla som en snabb måltid som stillar hungern mellan måltiderna.',
+                    'Knacka försiktigt på det kokta äggets skal med baksidan av en sked så att det bildas fina sprickor '
+                    'där teets ämnen kan tränga in i äggvitan.',
+                    'Teägg saknar nästan helt kolhydrater och påverkar inte blodsockret, och de innehåller kolin; kolin '
+                    'bidrar till normal leverfunktion.'),
+              faq=[dict(q='Ändrar tedragningen äggens näringsvärde?',
+                        a='Svart te och stjärnanis tillför flavonoider och polyfenoler utan att tillföra några kalorier.'),
+                   dict(q='Passar teägg vid keto och periodisk fasta?',
+                        a='Ja, de är ett utmärkt val för att bryta en periodisk fasta och passar bra vid keto och '
+                          'lågkolhydratkost; de mättar jämnt och länge.'),
+                   dict(q='Vad är näringsvärdet i ett ägg (50 g)?',
+                        a='Det innehåller 74 kcal, 6,4 g protein, 5,1 g fett och 0,6 g kolhydrater.')]),
+    557: dict(lead='Kristallklara glasnudlar av ren mungbönsstärkelse har en hal, elastisk och mycket behaglig konsistens '
+                   'att tugga, och de suger upp soppor och såser utan att förlora formen. De är naturligt glutenfria, och '
+                   'det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 39).',
+              tips=('Ät dem inte ensamma som en ren nudelrätt; tillsätt rikligt med bladgrönsaker, kycklingskivor eller '
+                    'räkor för att sänka hela måltidens glykemiska belastning.',
+                    'Blötlägg dem i hett vatten i bara några minuter i stället för att koka dem länge; lång kokning '
+                    'påskyndar nedbrytningen av stärkelsen, medan kort blötläggning bevarar den geléartade strukturen.',
+                    'Det glykemiska indexet är lågt (39) tack vare mungbönsstärkelsen, som är rik på amylos, vilket gör '
+                    'dem till ett bra alternativ till vanliga nudlar och pasta av vitt mjöl vid diabetes.'),
+              faq=[dict(q='Är glasnudlar glutenfria?',
+                        a='Ja, de görs bara av mungbönsstärkelse och vatten och är naturligt glutenfria; kontrollera '
+                          'förpackningen om du har celiaki.'),
+                   dict(q='Passar glasnudlar vid viktnedgång?',
+                        a='Kalorierna är måttliga efter tillagning (cirka 157 kcal per 150 g kokta) eftersom de suger upp '
+                          'mycket vatten och fyller magen, men stärkelsen (38 g) behöver räknas in.'),
+                   dict(q='Vad är skillnaden mot risnudlar?',
+                        a='Mungbönsnudlar ger ett betydligt långsammare sockerupptag än nudlar av vitt ris, som har ett '
+                          'tydligt högre glykemiskt index.')]),
+    558: dict(lead='Japanska sobanudlar är mörkbruna nudlar med jordig, nötaktig smak som traditionellt görs av '
+                   'fullkornsbovetemjöl utan vete. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 46), '
+                   'och de är en förfinad japansk rätt som serveras kall med tsuyusås på sommaren eller varm på vintern.',
+              tips=('Kall soba med noriremsor, salladslök och lite wasabi är en utmärkt lunch.',
+                    'Koka dem i bara 5 minuter och skölj dem genast i iskallt rinnande vatten; sköljningen tar bort '
+                    'ytstärkelsen, ger nudlarna fast konsistens och sänker det glykemiska indexet.',
+                    'Det glykemiska indexet är lågt (46) och den glykemiska belastningen måttlig (12,6), och de innehåller '
+                    'rutin.'),
+              faq=[dict(q='Hur vet jag att sobanudlarna är fria från vete?',
+                        a="Läs ingrediensförteckningen noga och leta efter '100 % buckwheat' (juwari soba), eftersom många "
+                          'kommersiella sorter blandar bovete med vanligt vetemjöl.'),
+                   dict(q='Passar soba vid diabetes och insulinresistens?',
+                        a='Ja, de hör till de bästa komplexa stärkelsekällorna vid diabetes; det glykemiska indexet är '
+                          'lågt, och de innehåller D-chiro-inositol.'),
+                   dict(q='Vad är näringsvärdet i en vanlig portion (150 g kokta)?',
+                        a='Portionen ger 148 kcal, 7,6 g vegetabiliskt protein, 0,2 g fett och 27,3 g nettokolhydrater med '
+                          '4 g fibrer.')]),
+    559: dict(lead='Den som älskar nudlar vet vilken trygghet en skål udonsoppa ger: breda, tjocka och mjuka nudlar med '
+                   'stor elasticitet och sidenlen mjukhet som stillar suget efter god pasta i varm buljong. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+              tips=('Udon görs av vetemjöl, så låt dem inte vara den enda ingrediensen i skålen; fyll den med '
+                    'dashibuljong, kokt ägg, spenat och shiitakesvamp för en balanserad måltid.',
+                    'Ät udon al dente och koka dem inte för länge, så att glutenbindningarna inte bryts ned och stärkelsen '
+                    'blir snabbt upptagen.',
+                    'Det glykemiska indexet är lågt men på gränsen (55), och den glykemiska belastningen för 200 g är '
+                    'relativt hög (28,4); därför bör den som har diabetes begränsa mängden eller välja soba i stället.'),
+              faq=[dict(q='Gör udonnudlar att man går upp i vikt?',
+                        a='En mättande portion (200 g kokta) innehåller 260 kcal och 51,6 g nettokolhydrater; med klar '
+                          'buljong och grönsaker är den en måttlig måltid, men med friterade tillbehör och tjocka såser '
+                          'bidrar den till viktuppgång.'),
+                   dict(q='Är udon glutenfria?',
+                        a='Nej, klassisk udon görs av vitt vetemjöl med mycket gluten, som ger den karaktäristiska sega '
+                          'konsistensen, så den passar inte vid celiaki.'),
+                   dict(q='Vad är näringsvärdet i en skål på 200 g?',
+                        a='Den ger 260 kcal, 8 g protein, 1 g fett och 51,6 g nettokolhydrater.')]),
+    560: dict(lead='Ett färgglatt konstverk i en het lerskål: en av de mest kända rätterna i det koreanska köket, som '
+                   'förenar ris med kryddade grönsaker (morot, spenat, zucchini och böngroddar), kalvkött, ett stekt ägg i '
+                   'mitten och den goda starka gochujangsåsen. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 52).',
+              tips=('Blanda alla ingredienser snabbt innan du äter så att köttsaften förenas med äggets värme och såsen; '
+                    'den stora färgvariationen ger många olika vitaminer och mineraler.',
+                    'Beställ eller laga den med brunt ris i stället för vitt, och använd fermenterade grönsaker (kimchi).',
+                    'Rätten innehåller fibrer och protein och har ett lågt glykemiskt index (52), men en hel portion (300 '
+                    'g) innehåller en hel del ris (glykemisk belastning 39); vid diabetes rekommenderas att halvera riset '
+                    'och dubbla grönsakerna och ägget.'),
+              faq=[dict(q='Är bibimbap en balanserad måltid?',
+                        a='Ja, den är en av de mest balanserade asiatiska rätterna, med fullvärdigt protein från kött och '
+                          'ägg, fibrer från fem sorters grönsaker och stärkelse.'),
+                   dict(q='Hur många kalorier finns i en skål bibimbap?',
+                        a='En mättande skål på 300 g innehåller cirka 585 kcal och 28,5 g protein och mättar i många '
+                          'timmar.'),
+                   dict(q='Vad tillför kimchin och grönsakerna i bibimbap?',
+                        a='De fermenterade grönsakerna innehåller mjölksyrabakterier och fibrer.')]),
+    561: dict(lead='Bulgogi är världens mest kända koreanska grillrätt: tunna, möra skivor av kalvkött som smälter i '
+                   'munnen, marinerade i en förtrollande blandning av mosat asiatiskt päron, sesamolja, soja och vitlök. '
+                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25), och rätten mättar ordentligt.',
+              tips=('Rulla in de grillade köttskivorna i stora salladsblad med en skiva färsk vitlök och en tesked kimchi; '
+                    'det traditionella koreanska sättet minskar behovet av bröd och ger fräsch krispighet.',
+                    'Låt päronmosets naturliga sötma möra köttet och undvik raffinerat vitt socker i marinaden, och grilla '
+                    'köttet snabbt på hög värme så att saften stannar kvar.',
+                    'Det glykemiska indexet är lågt (25) och den glykemiska belastningen nästan obefintlig (2,4), och '
+                    'rätten är ett bra val vid diabetes och för den som tränar tack vare det höga proteininnehållet (36 g '
+                    'per portion); protein bidrar till att bibehålla muskelmassa.'),
+              faq=[dict(q='Passar bulgogi vid keto och lågkolhydratkost?',
+                        a='Ja, mycket bra, om den görs hemma utan tillsatt socker eller majssirap, som vissa restauranger '
+                          'använder.'),
+                   dict(q='Hur många kalorier finns i en portion grillad bulgogi?',
+                        a='En portion på 150 g innehåller cirka 322 kcal och mycket järn, zink och B12-vitamin.'),
+                   dict(q='Höjer päronmarinaden blodsockret?',
+                        a='Päronet används i liten mängd för sina enzymer som mörar köttet, och det höga proteinet och '
+                          'sesamfettet dämpar blodsockerstegringen.')]),
+    562: dict(lead='Den omtyckta japanska förrätten förenar två härliga motsatser: en gyllene, mycket krispig botten och '
+                   'en mjuk, ångkokt ovansida som omsluter en fyllig fyllning av kycklingfärs med purjolök och frisk '
+                   'ingefära. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+              tips=('Ät högst 4 till 6 stycken som en del av en komplett måltid med en grön sallad eller varm misosoppa, '
+                    'så undviker du att äta för mycket deg.',
+                    'Använd tekniken att först steka snabbt i en sked olja och sedan ångkoka, undvik fritering, och byt ut '
+                    'färdiga såser mot risvinäger med några droppar natriumreducerad soja.',
+                    'Det glykemiska indexet är lågt (48) och den glykemiska belastningen för 6 stycken (150 g) är 16,2; de '
+                    'räknas som måttlig stärkelse vid diabetes och höjer inte blodsockret kraftigt tack vare '
+                    'kycklingproteinet.'),
+              faq=[dict(q='Gör gyoza att man går upp i vikt när man bantar?',
+                        a='6 stycken som stekts lätt och sedan ångkokats ger 315 kcal; med måtta förstör de inte '
+                          'bantningen, och hemligheten är att inte fritera dem.'),
+                   dict(q='Hur minskar jag stärkelsen i gyoza vid insulinresistens?',
+                        a='Välj mycket tunna degark, och dubbla fyllningen av kyckling, kål och purjolök på degens '
+                          'bekostnad.'),
+                   dict(q='Vad är näringsvärdet i 6 stycken (150 g)?',
+                        a='De innehåller 315 kcal, 13,5 g protein, 12,8 g fett och 33,8 g nettokolhydrater.')]),
+    563: dict(lead='Havets gröna gåva: ett havsgrönsak som växer i rent vatten och sväller när den blötläggs till mjuka, '
+                   'smaragdgröna remsor med lätt jodsmak och naturligt fräsch sälta, och som är stjärnan i japansk '
+                   'misosoppa. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+              tips=('Lägg en matsked blötlagd wakame i den dagliga salladen eller soppan; fibrerna suger upp vatten och '
+                    'fyller magen.',
+                    'Blötlägg den i ljummet vatten i bara 5 minuter och låt den rinna av; koka den inte länge, så att '
+                    'fukoidan och de värmekänsliga vitaminerna bevaras.',
+                    'Det glykemiska indexet och den glykemiska belastningen är nära noll (0,4), och wakame innehåller '
+                    'naturligt jod; jod bidrar till normal produktion av sköldkörtelhormoner.'),
+              faq=[dict(q='Är wakame bra vid underfunktion i sköldkörteln?',
+                        a='Wakame hör till de rikaste naturliga källorna till jod, som behövs för att bilda '
+                          'sköldkörtelhormoner, men den som har överfunktion i sköldkörteln eller autoimmun '
+                          'sköldkörtelinflammation (Hashimoto) bör vara försiktig, eftersom för mycket jod kan förvärra '
+                          'tillståndet.'),
+                   dict(q='Vad är fukoxantin i wakame?',
+                        a='Fukoxantin är ett naturligt pigment som finns i brunalger som wakame.'),
+                   dict(q='Hur många kalorier finns i en portion blötlagd wakame (30 g)?',
+                        a='Den innehåller bara 14 kcal, 1 g protein och cirka 2,6 g nettokolhydrater.')]),
+    564: dict(lead='De svarta, krispiga arken som omsluter världens mest kända sushibitar: fjäderlätta ark av torkade och '
+                   'varsamt rostade rödalger som ger god umamismak och en krispighet som gör dem till ett alternativ till '
+                   'kommersiella chips. Det glykemiska indexet är inte tillämpligt eftersom nettostärkelsen är nära noll.',
+              tips=('Ät dem som ett krispigt mellanmål mellan måltiderna eller använd dem i stället för bröd för att rulla '
+                    'in tonfisk och avokado; de höjer inte blodsockret och innehåller mineraler.',
+                    'Välj ark som rostats i olivolja eller sesamolja utan härdade oljor, och förvara förpackningen tätt '
+                    'tillsluten med fuktabsorberande påse så att de förblir krispiga.',
+                    'Nettostärkelsen är nära noll, så det glykemiska indexet är inte tillämpligt, och de innehåller lite '
+                    'B12-vitamin.'),
+              faq=[dict(q='Är noriark tillåtna vid keto?',
+                        a='Ja, de passar mycket bra; ett ark innehåller nästan inga kolhydrater och ger mineraler.'),
+                   dict(q='Är noriark ett bra alternativ till potatischips för barn?',
+                        a='Ja, de ger samma goda krispighet men utan härdade oljor och utan raffinerad stärkelse, och de '
+                          'innehåller jod och järn.'),
+                   dict(q='Hur många kalorier och hur mycket protein finns i ett noriark (3 g)?',
+                        a='Det innehåller cirka 10 kcal, cirka 1,2 g protein och ingen nettostärkelse.')]),
+    565: dict(lead='Shiitake är kejsarnas svamp i det gamla asiatiska köket: tjocka bruna hattar med köttig konsistens och '
+                   'träaktig umamismak som ger soppor och grytor ett fantastiskt djup. Det glykemiska indexet är lågt (en '
+                   'kliniskt granskad uppskattning, 15).',
+              tips=('Ett mycket bra sätt att ersätta kött i rätter vid diabetes och övervikt; svampen ger samma tuggkänsla '
+                    'som kött med en fjärdedel av kalorierna och utan kolesterol.',
+                    'Snabb stekning med lite olivolja och krossad vitlök, eller tillagning i soppor, frigör lentinan och '
+                    'bevarar den köttiga konsistensen.',
+                    'Det glykemiska indexet är lågt (15) och den glykemiska belastningen för 80 g bara 1,5; svampen '
+                    'innehåller betaglukanfibrer.'),
+              faq=[dict(q='Vilka ämnen finns i shiitakesvamp?',
+                        a='Den innehåller polysackariden betaglukan och lentinan.'),
+                   dict(q='Vad är eritadenin i shiitake?',
+                        a='Eritadenin är ett naturligt ämne som förekommer i shiitakesvamp.'),
+                   dict(q='Vad är näringsvärdet i 80 g tillagad shiitake?',
+                        a='Portionen ger 45 kcal, 1,8 g protein, 1,7 g fibrer och 9,8 g nettokolhydrater som tas upp '
+                          'långsamt.')]),
+    566: dict(lead='Långa, snövita trådar med små runda huvuden som påminner om knappnålar; enokisvamp har en unik '
+                   'krispighet och mycket mild, fruktig smak och är en självklar stjärna i asiatiska varma grytor (hot '
+                   'pot). Det glykemiska indexet är inte tillämpligt eftersom stärkelsen är låg.',
+              tips=('Lägg en näve enoki i den heta soppskålen en minut innan du äter; krispigheten gör måltiden roligare '
+                    'och får dig att tugga långsamt.',
+                    'Skär bort den sammanvuxna rotbasen och skölj svampen varsamt; tillaga den inte längre än två minuter, '
+                    'så att den inte blir gummiaktig och förlorar sin omtyckta krispighet.',
+                    'Det glykemiska indexet är inte tillämpligt och den glykemiska belastningen försumbar; svampen '
+                    'innehåller mycket olösliga fibrer.'),
+              faq=[dict(q='Kan enokisvamp hjälpa vid viktnedgång?',
+                        a='Ja, den passar mycket bra vid bantning; 80 g innehåller bara 30 kcal och fyller magen väl.'),
+                   dict(q='Kan enoki ätas rå i sallader?',
+                        a='Den bör alltid ångkokas eller läggas i hett vatten i en minut för att döda eventuella bakterier '
+                          'på ytan och göra fibrerna lättare att smälta. Livsmedelsverket rekommenderar att enokisvamp '
+                          'alltid upphettas ordentligt eftersom den kan innehålla listeria.'),
+                   dict(q='Vad är näringsvärdet i 80 g?',
+                        a='Portionen ger 30 kcal, 2,2 g protein, 2,2 g fibrer och 4 g nettokolhydrater.')]),
+    567: dict(lead='Små gyllene och orange kulor som arbetsbina samlar från blommornas nektar och pollen; bipollen '
+                   'innehåller enzymer, vitaminer och alla essentiella aminosyror. Det glykemiska indexet är lågt (en '
+                   'kliniskt granskad uppskattning, 30).',
+              tips=('Börja med en fjärdedels tesked per dag och öka gradvis till en matsked (10 g); strö den över grekisk '
+                    'yoghurt eller havregryn till frukost.',
+                    'Blanda den aldrig med kokande eller heta drycker, så att de värmekänsliga B-vitaminerna och enzymerna '
+                    'inte förstörs.',
+                    'Det glykemiska indexet är lågt (30) och den glykemiska belastningen för en matsked bara 1,0.'),
+              faq=[dict(q='Vem bör vara försiktig med bipollen?',
+                        a='Den som har svår allergi mot bistick eller säsongsbunden pollenallergi; testa först med ett '
+                          'enda korn.'),
+                   dict(q='Vad innehåller bipollen?',
+                        a='Den innehåller protein med essentiella aminosyror, B-vitaminer och kolhydrater.'),
+                   dict(q='Vad är näringsvärdet i en matsked (10 g)?',
+                        a='Den innehåller 31 kcal, 2,4 g fullvärdigt protein och 3,4 g naturliga kolhydrater.')]),
+    568: dict(lead='Manukahonung kommer från Nya Zeelands orörda skogar: en tjock, mörk honung som bina samlar från '
+                   'manukabuskens blommor, känd i hela världen för sitt innehåll av metylglyoxal (MGO). Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+              tips=('Ät en tesked till en matsked (10–20 g), eller lös upp den i ljummet (inte kokande) vatten.',
+                    'Använd en träsked eller plastsked och kontrollera att förpackningen anger en verifierad MGO-halt. '
+                    'Barn under ett år ska inte äta honung (Livsmedelsverket).',
+                    'Det glykemiska indexet är lågt men på gränsen (55), och den glykemiska belastningen för en matsked '
+                    '(20 g) är 8,8; vid diabetes räknas den som socker i en begränsad portion och inte som ett fritt '
+                    'alternativ till socker.'),
+              faq=[dict(q='Vad betyder MGO på manukahonung?',
+                        a='MGO står för metylglyoxal, det ämne vars halt anges på förpackningen, till exempel MGO 400+.'),
+                   dict(q='Är manukahonung ett säkert val vid diabetes?',
+                        a='Den är fortfarande honung som innehåller glukos och fruktos, så portionen bör inte överstiga en '
+                          'matsked (20 g) och den ska räknas in noga i förhållande till insulin- eller läkemedelsdosen.'),
+                   dict(q='Vad är näringsvärdet i en matsked (20 g)?',
+                        a='Den ger 62 kcal och 16 g nettokolhydrater från naturligt socker.')]),
+    569: dict(lead='Vetegräspulver är koncentrerat klorofyll: små gröna skott som skördas innan kornen bildas och '
+                   'frystorkas till ett mycket grönt pulver som samlar bladgrönsakernas näring i en tesked. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 15).',
+              tips=('Blanda en tesked (5 g) med ett glas kallt vatten och en skvätt citron på morgonen.',
+                    'Blanda det inte med heta drycker, och använd en handmixer så att pulvret löses upp utan klumpar, '
+                    'gärna med lite grön äppeljuice för att mildra den gräsiga smaken.',
+                    'Det glykemiska indexet är lågt (15) och den glykemiska belastningen obefintlig (0,1); vetegräs är '
+                    'glutenfritt eftersom det skördas innan de glutenhaltiga vetekornen bildas.'),
+              faq=[dict(q='Är vetegräspulver glutenfritt vid celiaki?',
+                        a='Ja, gluten finns bara i kornen, medan själva gräset är glutenfritt, men välj en produkt som är '
+                          'certifierad glutenfri (Certified Gluten-Free) för att undvika kontaminering.'),
+                   dict(q='Vad innehåller vetegräs?',
+                        a='Det innehåller klorofyll och tylakoider.'),
+                   dict(q='Vad är näringsvärdet i 5 g?',
+                        a='Det ger bara 13 kcal, 1,4 g protein och cirka 0,4 g nettokolhydrater med en god mängd A- och '
+                          'C-vitamin.')]),
+    570: dict(lead='Macapulver kommer från de peruanska Anderna: en rotknöl som växer under mycket hårda förhållanden högt '
+                   'upp i bergen och mals till ett jordfärgat pulver med nötig karamellsmak. Det glykemiska indexet är '
+                   'lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Tillsätt en tesked (5–10 g) i varm kakao eller morgonens smoothie.',
+                    'Välj gelatiniserad maca om din mage är känslig, eftersom den tunga stärkelsen har brutits ned så att '
+                    'den blir lättare att smälta.',
+                    'Det glykemiska indexet är lågt (25) och den glykemiska belastningen för 10 g bara 1,4.'),
+              faq=[dict(q='Påverkar maca hormonerna?',
+                        a='Det finns inga belägg för att maca förändrar hormonnivåerna i blodet.'),
+                   dict(q='Innehåller maca koffein?',
+                        a='Nej, maca innehåller inget koffein.'),
+                   dict(q='Vad är näringsvärdet i en matsked (10 g)?',
+                        a='Den innehåller 32 kcal, 1,4 g protein och 5,8 g komplexa kolhydrater samt järn och kalium.')]),
+    571: dict(lead='Frukten från det afrikanska ”livets träd”: baobabfrukten torkar naturligt på grenarna i solens värme '
+                   'och mals till ett gott, syrligt pulver med mycket C-vitamin och lösliga fibrer. Det glykemiska indexet '
+                   'är inte tillämpligt eftersom nettokolhydraterna i en portion är få.',
+              tips=('En matsked i dricksvattnet eller i naturlig juice ger mycket C-vitamin; C-vitamin ökar järnupptaget '
+                    'och bidrar till normal kollagenbildning för hudens normala funktion.',
+                    'Ett bra naturligt alternativ till citron i salladsdressingar, eller att röra ned i frukostyoghurten.',
+                    'Nästan hälften av vikten är lösliga fibrer, och nettokolhydraterna i en vanlig portion (10 g) är '
+                    'högst 2,5 g.'),
+              faq=[dict(q='Hur mycket C-vitamin finns i baobab?',
+                        a='Den innehåller ungefär sex gånger så mycket C-vitamin som färska apelsiner; C-vitamin bidrar '
+                          'till immunsystemets normala funktion och till normal kollagenbildning.'),
+                   dict(q='Vad innehåller baobab för fibrer?',
+                        a='Baobab innehåller mycket lösliga fibrer, som fermenteras i tarmen och bildar kortkedjiga '
+                          'fettsyror.'),
+                   dict(q='Vad är näringsvärdet i en sked (10 g)?',
+                        a='Den innehåller bara 24 kcal, 4,5 g lösliga fibrer och bara 2,5 g nettokolhydrater.')]),
+    572: dict(lead='Riktig choklad som naturen skapade den innan industrin och sockret: kakaobönor som pressats och malts '
+                   'kallt utan alkalisering (non-alkalized) och som behåller en mycket hög halt av flavanoler. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom nettokolhydraterna i en portion är få.',
+              tips=('En matsked i en kopp varm mandeldryck med en nypa kanel blir en kraftfull varm choklad utan ett enda '
+                    'gram socker.',
+                    'Låt det inte koka; tillsätt kakaopulvret när mjölken har värmts så att de värmekänsliga flavanolerna '
+                    'bevaras, och använd ren stevia om du vill söta.',
+                    'Nettokolhydraterna i en vanlig portion (10 g) är högst 2,4 g, så det glykemiska indexet är inte '
+                    'tillämpligt och den glykemiska belastningen nära noll; kakao innehåller mycket magnesium.'),
+              faq=[dict(q='Vad är skillnaden mellan rå kakao (cacao) och vanlig kakao (cocoa)?',
+                        a='Vanlig kakao utsätts för hög värme och alkalisering (holländsk metod), som gör att den förlorar '
+                          'en stor del av flavanolerna, medan rå kakao bearbetas kallt och behåller det mesta.'),
+                   dict(q='Är rå kakao tillåten vid keto?',
+                        a='Ja, den är grundingrediensen i ketobakverk tack vare de många fibrerna, det naturliga fettet '
+                          'och de mycket få nettokolhydraterna.'),
+                   dict(q='Vad är näringsvärdet i en matsked (10 g)?',
+                        a='Den ger 38 kcal, 2,4 g protein, 3,4 g fibrer och bara 2,4 g nettokolhydrater samt magnesium.')]),
+    573: dict(lead='Det lyxiga, aromatiska vegetabiliska fettet som ger chokladen dess förtrollande sammetslena smältning: '
+                   'ett rent fett som utvinns genom kallpressning av kakaobönor, med fyllig chokladdoft; det är fast i '
+                   'rumstemperatur och smälter vid kroppstemperatur. Det glykemiska indexet är inte tillämpligt eftersom '
+                   'det saknar kolhydrater.',
+              tips=('Grunden för hemgjord ketochoklad och fat bombs; ren fettenergi som mättar i flera timmar.',
+                    'Smält det i vattenbad (bain-marie) och blanda med rått kakaopulver och munkfruktsötning till mörka '
+                    'chokladkakor som är bättre än de färdiga.',
+                    'Kakaosmör saknar helt kolhydrater, så det glykemiska indexet är inte tillämpligt; det innehåller '
+                    'mycket stearinsyra, en mättad fettsyra.'),
+              faq=[dict(q='Höjer kakaosmör blodsockret?',
+                        a='Nej, det höjer inte blodsockret eftersom det saknar kolhydrater.'),
+                   dict(q='Är kakaosmör ätbart eller bara för hudvård?',
+                        a='Rent kakaosmör av livsmedelskvalitet (food grade) är ätbart och är grundingrediensen i vit och '
+                          'mörk choklad.'),
+                   dict(q='Hur många kalorier finns i en matsked (10 g)?',
+                        a='Den innehåller 88 kcal och 10 g rent fett, inga kolhydrater och inget protein.')]),
+    574: dict(lead='Naturliga, krispiga chokladflingor utan socker och utan bearbetning: rena kakaobönor som krossats till '
+                   'små bitar, med djup chokladbeska och härlig krispighet som ger frukosten en förfinad prägel. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom nettokolhydraterna i en portion är få.',
+              tips=('Strö en matsked över havregryn, yoghurt eller fruktsallad; du får krispighet och chokladsmak utan att '
+                    'blodsockret stiger.',
+                    'Använd dem i stället för sötade chokladknappar (chocolate chips) i bakning, eller ät dem med mandel '
+                    'som ett krispigt mellanmål.',
+                    'Nettokolhydraterna i en portion (15 g) är högst 1,8 g, så det glykemiska indexet är inte tillämpligt '
+                    'och den glykemiska belastningen obefintlig; kakaonibs innehåller mycket teobromin.'),
+              faq=[dict(q='Kan kakaonibs hjälpa vid viktnedgång?',
+                        a='De innehåller mycket fibrer och har en naturlig beska som kan minska suget efter sötsaker.'),
+                   dict(q='Innehåller kakaonibs koffein?',
+                        a='De innehåller mycket lite koffein; det mesta av de stimulerande ämnena utgörs av teobromin.'),
+                   dict(q='Vad är näringsvärdet i 15 g (en rågad matsked)?',
+                        a='Portionen innehåller 88 kcal, 2 g protein, 7,5 g fett och 2,7 g fibrer med bara 1,8 g '
+                          'nettokolhydrater.')]),
+    575: dict(lead='Linfrön är en rik källa till vegetabiliskt omega-3 (ALA): små gyllene eller bruna frön där malningen '
+                   'frigör oljan och lignanerna, och som med vatten bildar en geléartad massa. Det glykemiska indexet är '
+                   'inte tillämpligt eftersom nettokolhydraterna är nära noll.',
+              tips=('Ät en matsked malda linfrön om dagen (10 g) med ett glas ljummet vatten eller med filmjölk; hela frön '
+                    'passerar tarmen utan att tas upp, så nymalning är en förutsättning.',
+                    'Mal bara en mängd som räcker en vecka och förvara den i en mörk glasburk i kylskåpet; omega-3-fettet '
+                    'är mycket känsligt för oxidation, ljus och värme.',
+                    'Linfrön innehåller slemämnen (mucilage) och ALA; ALA bidrar till att bibehålla normala '
+                    'kolesterolnivåer i blodet. Den gynnsamma effekten uppnås vid ett dagligt intag på 2 g ALA. '
+                    'Livsmedelsverket avråder från att äta mer än 2 matskedar krossade eller malda linfrön per dag '
+                    '(cyanogena glykosider).'),
+              faq=[dict(q='Varför ska linfrön malas innan man äter dem?',
+                        a='Linfrönas skal är mycket hårt och kan inte brytas ned av magsaften, så fröna passerar '
+                          'oförändrade utan att det värdefulla omega-3-fettet tas upp, om de inte mals.'),
+                   dict(q='Hur fungerar linfrön i tarmen?',
+                        a='När de äts med vatten sväller fibrerna och ökar tarminnehållets volym och mjukhet.'),
+                   dict(q='Vad är näringsvärdet i en matsked (10 g)?',
+                        a='Den innehåller 53 kcal, 1,8 g protein och 4,2 g fett, varav cirka 2,3 g vegetabiliskt omega-3 '
+                          '(ALA), och 2,7 g fibrer med 0,2 g nettokolhydrater.')]),
+    576: dict(lead='Ett naturligt alternativ till jordnötssmör för den som är allergisk mot nötter: en krämig, slät pasta '
+                   'med fyllig och rostad smak som görs av 100 % solrosfrön utan tillsatt olja eller raffinerat socker. '
+                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Bred en matsked (16 g) på äppelskivor eller fullkornsrostat bröd, eller tillsätt den i morgonens '
+                    'smoothie; den mättar gott och ger E-vitamin.',
+                    "Välj sorter vars ingrediensförteckning bara anger 'rostade solrosfrön och en nypa havssalt', och "
+                    'undvik härdade vegetabiliska oljor som tillsätts för att oljan inte ska separera.',
+                    'Det glykemiska indexet är lågt (25) och den glykemiska belastningen för en matsked bara 0,4.'),
+              faq=[dict(q='Är solrosfrösmör ett säkert val för barn i skolan?',
+                        a='Ja, det är ett utmärkt nötfritt val (nut-free) eftersom det saknar vanliga allergener som '
+                          'jordnötter och trädnötter.'),
+                   dict(q='Hur mycket E-vitamin innehåller solrosfrösmör?',
+                        a='En matsked innehåller cirka en fjärdedel av det dagliga behovet av E-vitamin; E-vitamin bidrar '
+                          'till att skydda cellerna mot oxidativ stress.'),
+                   dict(q='Vad är näringsvärdet i en matsked (16 g)?',
+                        a='Den ger 99 kcal, 2,7 g protein, 8,9 g omättat fett och 1,8 g nettokolhydrater.')]),
+    577: dict(lead='Smaragdgrönt smör med zink och magnesium: en mörk pasta med unik grön färg och djup jordig smak som '
+                   'görs av råa pumpafrön. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 20).',
+              tips=('En matsked före sänggåendet med en bit keso; pumpafrösmöret innehåller tryptofan och magnesium, och '
+                    'magnesium bidrar till normal muskelfunktion.',
+                    'Välj kallpressat och rått smör (inte hårt rostat) så att fettet och klorofyllet skyddas mot '
+                    'oxidation.',
+                    'Det glykemiska indexet är lågt (20) och den glykemiska belastningen obefintlig (0,2); smöret '
+                    'innehåller mycket zink.'),
+              faq=[dict(q='Vad innehåller pumpafrösmör?',
+                        a='Det innehåller koncentrerat zink och växtsteroler.'),
+                   dict(q='Innehåller pumpafrösmör tryptofan?',
+                        a='Ja, det innehåller aminosyran tryptofan och magnesium.'),
+                   dict(q='Vad är näringsvärdet i en matsked (16 g)?',
+                        a='Den innehåller 93 kcal, 4,5 g protein, 7,7 g fett och bara 0,9 g nettokolhydrater.')]),
+    578: dict(lead='Den gyllene oljan som i Levanten och Egypten kallas ”den heta oljan”: en ren olja som kallpressas av '
+                   'linfrön och hör till de oljor som innehåller mest alfa-linolensyra (ALA), vegetabiliskt omega-3. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom oljan saknar kolhydrater.',
+              tips=('Ringla en matsked över varma bondbönor (ful medames), hummus eller sallad; laga inte mat med den och '
+                    'värm den aldrig, eftersom stekvärme förstör omega-3-fettet och omvandlar det till skadliga '
+                    'föreningar.',
+                    'Förvara den i en mycket mörk flaska i kylskåpsdörren och använd den inom en månad efter öppning; '
+                    'smaken är frisk och mycket lätt bitter, och om den blir skarpt bitter har den oxiderat.',
+                    'Linfröolja saknar kolhydrater och innehåller mycket ALA; ALA bidrar till att bibehålla normala '
+                    'kolesterolnivåer i blodet. Den gynnsamma effekten uppnås vid ett dagligt intag på 2 g ALA.'),
+              faq=[dict(q='Får man värma linfröolja eller laga mat med den?',
+                        a='Nej, absolut inte; rökpunkten är mycket låg och omega-3-bindningarna bryts ned och oxiderar av '
+                          'värme, så den ska bara användas kall.'),
+                   dict(q='Kan linfröolja ersätta fiskolja?',
+                        a='Den ger vegetabiliskt omega-3 (ALA), som kroppen i begränsad grad omvandlar till EPA och DHA, '
+                          'och den är ett bra val för vegetarianer.'),
+                   dict(q='Hur många kalorier finns i en matsked (10 g)?',
+                        a='Den innehåller 88 kcal och 10 g fett (varav cirka 5,3 g vegetabiliskt omega-3) och inga '
+                          'kolhydrater.')]),
+    579: dict(lead='Svartkumminolja är en mörk olja med skarp och värmande smak som kallpressas av svartkumminfrön '
+                   '(Nigella sativa) och innehåller ämnet tymokinon. Det glykemiska indexet är inte tillämpligt eftersom '
+                   'den saknar stärkelse.',
+              tips=('Ta en tesked (5 ml) på morgonen blandad med en tesked naturlig honung eller med citronsaft för att '
+                    'mildra den skarpa smaken i halsen.',
+                    'Se till att den är kallpressad (cold-pressed) och oraffinerad, och förvara den skyddad från köksvärme '
+                    'och direkt solljus.',
+                    'Den som tar diabetesläkemedel eller blodförtunnande läkemedel ska rådfråga sin läkare innan den '
+                    'används, eftersom den kan förstärka läkemedlens effekt.'),
+              faq=[dict(q='Vad innehåller svartkumminolja?',
+                        a='Den innehåller tymokinon och fett.'),
+                   dict(q='Vad är tymokinon?',
+                        a='Tymokinon är det mest kända aktiva ämnet i svartkumminfrön.'),
+                   dict(q='Vilken mängd är rimlig per dag?',
+                        a='En tesked (5 g = 44 kcal) räcker; ta inte för mycket, för att undvika belastning på levern '
+                          'eller kraftigt blodtrycksfall.')]),
+    580: dict(lead='Ett traditionellt kosttillskott i Skandinavien: en ren olja som utvinns ur levern från vild arktisk '
+                   'torsk och som i en sked förenar marint omega-3 (EPA och DHA) med en hög naturlig dos D3-vitamin och '
+                   'A-vitamin. Det glykemiska indexet är inte tillämpligt eftersom den saknar kolhydrater.',
+              tips=('Ta en tesked (5 ml) till lunch eller frukost; fettet i måltiden förbättrar upptaget av de fettlösliga '
+                    'D- och A-vitaminerna.',
+                    'Välj molekylärt renade sorter utan kvicksilver och tungmetaller, gärna med naturlig smak som citron '
+                    'för att dölja fisksmaken, och förvara alltid flaskan i kylskåp efter öppning.',
+                    'EPA och DHA bidrar till hjärtats normala funktion (vid ett dagligt intag på 250 mg), och D-vitamin '
+                    'bidrar till immunsystemets normala funktion. Till gravida: överskrid inte den rekommenderade dosen '
+                    'och rådfråga din läkare, eftersom höga doser A-vitamin kan skada fostret.'),
+              faq=[dict(q='Vad är skillnaden mellan levertran och vanlig fiskolja (fish oil)?',
+                        a='Vanlig fiskolja utvinns ur fiskköttet och innehåller bara omega-3, medan levertran utvinns ur '
+                          'levern och utöver omega-3 innehåller koncentrerat naturligt D3- och A-vitamin.'),
+                   dict(q='Vad bidrar D-vitaminet och DHA i levertran med?',
+                        a='D-vitamin bidrar till att bibehålla normal benstomme, och DHA bidrar till att bibehålla normal '
+                          'hjärnfunktion (vid ett dagligt intag på 250 mg DHA).'),
+                   dict(q='Vad är näringsvärdet i en tesked (5 g)?',
+                        a='Den innehåller 45 kcal och 5 g fett, varav cirka 1 g omega-3 (EPA och DHA), och täcker det '
+                          'mesta eller hela det dagliga behovet av D3-vitamin beroende på produkt.')]),
+    581: dict(lead='Hjortron är Arktis sällsynta guld och de orörda skandinaviska skogarnas frukt: glittrande '
+                   'bärnstensfärgade bär som liknar hallon men har en varm gyllene färg och en syrlig smak som blandar '
+                   'aprikos och honung; de växer var för sig på kalla myrar och är en dyr delikatess. Det glykemiska '
+                   'indexet är inte tillämpligt eftersom nettokolhydraterna är få.',
+              tips=('Njut av dem färska eller med yoghurt och nötter, eller som en varm sås utan socker över grillad ost '
+                    'som man gör i Lappland.',
+                    'Ät dem helst färska eller frysta utan lång kokning, så att ellagsyran och det värmekänsliga '
+                    'C-vitaminet bevaras.',
+                    'Nettokolhydraterna är högst 2,7 g per 100 g, så det glykemiska indexet är inte tillämpligt och den '
+                    'glykemiska belastningen försumbar; bären innehåller ellagsyra och polyfenoler.'),
+              faq=[dict(q='Varför kallas hjortron för Arktis guld?',
+                        a='Därför att de inte odlas kommersiellt utan plockas för hand med stor möda på kalla arktiska '
+                          'myrar, och varje planta ger bara ett enda bär.'),
+                   dict(q='Vad innehåller hjortron?',
+                        a='De innehåller mycket polyfenoler och naturlig bensoesyra.'),
+                   dict(q='Vad är näringsvärdet i 100 g hjortron?',
+                        a='De innehåller 51 kcal, 1,3 g protein, hela 6,3 g fibrer och bara 2,7 g nettokolhydrater.')]),
+    582: dict(lead='Havtornsbär är små, starkt orange bär som växer på taggiga buskar längs kusterna, med kraftig, frisk '
+                   'syra och en unik orange olja i fruktköttet; havtorn hör till de få växter som innehåller omega-7. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom nettokolhydraterna nästan saknas.',
+              tips=('Syran är mycket kraftig; pressa en näve med morotsjuice eller mixa i en smoothie, eller ta en sked '
+                    'osötad koncentrerad juice utspädd med vatten.',
+                    'Drick den som färsk, kall juice utan värmepastörisering så att det sällsynta omega-7-fettet och '
+                    'C-vitaminet bevaras.',
+                    'Nettokolhydraterna nästan saknas, så det glykemiska indexet är inte tillämpligt och den glykemiska '
+                    'belastningen försumbar; bären innehåller omega-7 (palmitoleinsyra).'),
+              faq=[dict(q='Vad är omega-7 i havtorn?',
+                        a='Omega-7 är palmitoleinsyra, en enkelomättad fettsyra som finns i havtornsbärens fruktkött.'),
+                   dict(q='Hur mycket C-vitamin innehåller havtorn jämfört med citron och apelsin?',
+                        a='Havtorn innehåller många gånger mer C-vitamin än citron och apelsin; C-vitamin bidrar till '
+                          'immunsystemets normala funktion.'),
+                   dict(q='Vad är näringsvärdet i 50 g?',
+                        a='Portionen ger 41 kcal, 2,6 g vegetabiliskt fett och bara cirka 0,8 g nettokolhydrater.')]),
+    583: dict(lead='Fläderbär är glänsande svarta bär som växer i hängande klasar och som i europeisk folktradition är '
+                   'kända som en vintersaft. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+              tips=('Ät dem alltid som kokt och silad saft, eller som hemgjord sylt med ett sötningsmedel; en matsked om '
+                    'dagen under vintern.',
+                    'Viktig klinisk varning: fläderbär får aldrig ätas råa; råa bär, blad och stjälkar innehåller '
+                    'cyanogena glykosider som ger illamående, kräkningar och förgiftning, och ordentlig upphettning bryter '
+                    'ned ämnena och gör bären säkra.',
+                    'Det glykemiska indexet är lågt (30) och den glykemiska belastningen för 50 g bara 1,7; bären '
+                    'innehåller mycket antocyaniner.'),
+              faq=[dict(q='Vad innehåller fläderbär?',
+                        a='De innehåller mycket antocyaniner och fibrer.'),
+                   dict(q='Är fläderbär ett säkert val vid diabetes?',
+                        a='Kokta bär i sig innehåller lite socker och är ett säkert val, men var försiktig med kommersiell '
+                          'fläderbärssaft som är full av glukossirap och tillsatt socker.'),
+                   dict(q='Vad är näringsvärdet i 50 g kokta bär utan socker?',
+                        a='Portionen ger 36 kcal, 3,5 g fibrer och bara 5,7 g nettokolhydrater.')]),
+    584: dict(lead='Kvitten är höstens doftande gyllene frukt med anrikt damascenskt och turkiskt ursprung: en hård frukt '
+                   'som vid varsam pochering blir mjuka bärnstens- och rosafärgade bitar med doft av kryddnejlika och '
+                   'kanelens värme, till en mild vinterdessert. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'uppskattning, 35).',
+              tips=('Ett bra alternativ till mäktiga orientaliska sötsaker; ät det varmt efter lunch eller med en sked '
+                    'grädde eller grekisk yoghurt och krossade valnötter.',
+                    'Pochera det i vatten kryddat med kanelstänger, stjärnanis och kryddnejlika utan socker; kanelen ger '
+                    'en känsla av naturlig sötma, och nöj dig med en liten sked honung om du vill.',
+                    'Det glykemiska indexet är lågt (35) och den glykemiska belastningen för 150 g låg (7,0); kvitten '
+                    'innehåller pektinfibrer.'),
+              faq=[dict(q='Höjer pocherat kvitten HbA1c?',
+                        a='Kvitten innehåller mycket pektin och fibrer och höjer inte blodsockret nämnvärt, så länge det '
+                          'inte kokas i sockerlag.'),
+                   dict(q='Vad innehåller kvitten?',
+                        a='Kvitten innehåller pektin och sammandragande garvämnen.'),
+                   dict(q='Vad är näringsvärdet i 150 g kvitten pocherat med kanel?',
+                        a='Portionen ger 85 kcal, 2,9 g fibrer och 20 g naturliga kolhydrater som smälts långsamt.')]),
+    585: dict(lead='Mörka bergsaprikoser som torkats i ren sol: naturligt torkade utan tillsatt svaveldioxid, så att de '
+                   'behåller sin mörkt jordbruna färg och äkta karamell- och honungssmak med mycket kalium. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 30).',
+              tips=('Ät 3 till 4 aprikoser (40 g) före träning eller med valnötter som ett mellanmål.',
+                    'Välj bruna torkade aprikoser och undvik de starkt orange; den orange färgen visar att svavel '
+                    '(sulfiter) har använts, som kan ge allergi och astmaanfall hos känsliga personer.',
+                    'Det glykemiska indexet är lågt (30) och den glykemiska belastningen för 40 g är 6,7; aprikoserna '
+                    'innehåller mycket kalium, och kalium bidrar till att bibehålla ett normalt blodtryck.'),
+              faq=[dict(q='Varför har naturligt torkade aprikoser en mörkbrun färg?',
+                        a='Därför att fruktsockret karamelliseras naturligt i solens värme utan svavel som bevarar färgen, '
+                          'och den bruna färgen är ett tecken på naturlig torkning.'),
+                   dict(q='Vad innehåller torkade aprikoser?',
+                        a='De innehåller cellulosafibrer och sorbitol samt vegetabiliskt järn och A-vitamin.'),
+                   dict(q='Vad är näringsvärdet i 40 g (cirka 4 aprikoser)?',
+                        a='Portionen ger 96 kcal, 1,4 g protein, 2,9 g fibrer och 22,3 g naturliga kolhydrater.')]),
+    586: dict(lead='Svarta mullbär är Levantens lyxiga sommarfrukt: mörka bär fulla av förtrollande karmosinröd saft som '
+                   'blandar sötma med frisk syra. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Ät dem färska under säsongen som ett fräscht mellanmål ensamma eller med yoghurt och nötter; den '
+                    'djupröda färgen som fastnar på fingrarna kommer från antocyaninerna.',
+                    'Skölj dem mycket varsamt i kallt vatten och ät dem färska direkt; koka dem inte och tillsätt inget '
+                    'socker, så bevaras C-vitaminet och flavonoiderna.',
+                    'Det glykemiska indexet är lågt (25) och den glykemiska belastningen för 100 g bara 2,0; bären '
+                    'innehåller mycket antocyaniner.'),
+              faq=[dict(q='Höjer svarta mullbär blodsockret?',
+                        a='Nej, det glykemiska indexet är lågt (25) och sockret tas upp långsamt, vilket gör dem till ett '
+                          'bra fruktval vid diabetes.'),
+                   dict(q='Vad innehåller svarta mullbär?',
+                        a='De innehåller antocyaniner, flavonoider och C-vitamin.'),
+                   dict(q='Vad är näringsvärdet i 100 g färska mullbär?',
+                        a='Portionen ger 43 kcal, 1,4 g protein, 1,7 g fibrer och bara 8,1 g nettokolhydrater.')]),
+    587: dict(lead='Naturens krispiga godis och ett alternativ till russin och sötsaker: vita mullbär som torkats '
+                   'naturligt till en ljus bärnstensfärg, med smak av karamell och honung och lätt krispighet. Det '
+                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35).',
+              tips=('En liten näve (30 g) till kaffet eller teet i stället för sötsaker, eller blandade med råa nötter och '
+                    'havregryn.',
+                    'Välj naturligt torkade bär utan tillsatt sockerlag eller svavel; konsistensen ska vara elastisk och '
+                    'måttligt krispig, inte stenhård.',
+                    'Det glykemiska indexet är lågt (35) och den glykemiska belastningen för 30 g är 6,6; bären innehåller '
+                    'växtämnet DNJ.'),
+              faq=[dict(q='Vad är DNJ i vita mullbär?',
+                        a='DNJ (1-deoxynojirimycin) är ett naturligt växtämne som finns i mullbär.'),
+                   dict(q='Passar torkade vita mullbär vid viktnedgång?',
+                        a='De ger naturlig sötma i stället för raffinerat socker, men de är torkad frukt med koncentrerade '
+                          'kalorier, så nöj dig med en liten näve om dagen.'),
+                   dict(q='Vad är näringsvärdet i 30 g?',
+                        a='Portionen innehåller cirka 96 kcal, 3 g vegetabiliskt protein, 3,6 g fibrer och 18,9 g '
+                          'nettokolhydrater.')]),
+    588: dict(lead='Vinterns doft och de kalla kvällarnas värme: sötkastanjer skiljer sig helt från andra nötter, med en '
+                   'stärkelserik, krämig konsistens som påminner om sötpotatis och en karamelliserad smak från kolelden. '
+                   'Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 60).',
+              tips=('Ät en portion med cirka 8 varma rostade kastanjer (80 g) som eftermiddagsmål eller före träning; de '
+                    'mättar länge.',
+                    'Skär ett kryss i skalet före rostningen så att de inte spricker, och rosta dem i ugn eller airfryer '
+                    'tills skalet blir krispigt och lätt att skala utan att kärnan bränns.',
+                    'Det glykemiska indexet är medelhögt (60) och den glykemiska belastningen för 80 g (cirka 8 kastanjer) '
+                    'är 17,7; till skillnad från valnötter och mandel innehåller de mycket stärkelse och lite fett, så de '
+                    'räknas som stärkelse vid diabetes.'),
+              faq=[dict(q='Är kastanjer nötter eller stärkelse?',
+                        a='Näringsmässigt räknas kastanjer mer som stärkelse än som feta nötter; de innehåller mycket lite '
+                          'fett och mycket komplex stärkelse och C-vitamin.'),
+                   dict(q='Gör rostade kastanjer att man går upp i vikt?',
+                        a='80 g innehåller cirka 170 kcal och är ett mättande mellanmål, men stora mängder ökar det '
+                          'dagliga stärkelseintaget.'),
+                   dict(q='Vad är näringsvärdet i 80 g rostade kastanjer?',
+                        a='Portionen ger 170 kcal, 2 g protein, mindre än 2 g fett och 29,5 g nettokolhydrater med 6,5 g '
+                          'fibrer.')]),
+    589: dict(lead='Pinjenötter är aristokraten på det levantinska bordet: små elfenbensvita frön som med möda samlas från '
+                   'pinjeträdens kottar, med smörig, fet smak och en konsistens som smälter i munnen. Det glykemiska '
+                   'indexet är lågt (en kliniskt granskad uppskattning, 15).',
+              tips=('Strö en matsked (15 g) råa eller lätt rostade pinjenötter över fatteh, hummus eller ruccolasallad, '
+                    'eller använd dem som huvudingrediens i italiensk pesto.',
+                    'Rosta dem på mycket låg värme utan olja i bara två minuter; pinjenötternas egen olja räcker för att '
+                    'ge dem färg, och hög värme bränner dem snabbt.',
+                    'Det glykemiska indexet är lågt (15) och den glykemiska belastningen nästan obefintlig (0,2); de '
+                    'innehåller den unika pinolensyran.'),
+              faq=[dict(q='Vad är pinolensyra?',
+                        a='Pinolensyra (pinolenic acid) är en fettsyra som är karaktäristisk för pinjenötter.'),
+                   dict(q='Vad innehåller pinjenötter för fett och mineraler?',
+                        a='De innehåller mycket enkelomättat fett, magnesium och E-vitamin.'),
+                   dict(q='Vad är näringsvärdet i en matsked (15 g)?',
+                        a='Den ger 101 kcal, 2 g protein, 10,2 g fett och bara 1,4 g nettokolhydrater.')]),
+    590: dict(lead='Svarta sesamfrön är små koksvarta, oskalade frön som innehåller mer polyfenoler och mineraler än '
+                   'skalade vita sesamfrön och ger rätter och bröd en ren, rostad och nötig smak. Det glykemiska indexet '
+                   'är lågt (en kliniskt granskad uppskattning, 25).',
+              tips=('Strö en matsked (10 g) över sallader, nudlar, ägg eller havregryn; tugga dem väl eller krossa dem '
+                    'lätt så att kalciumet och mineralerna i skalet frigörs.',
+                    'Lätt rostning i en torr panna i en minut väcker de aromatiska oljorna och sesaminet och gör fröna '
+                    'lättare att smälta.',
+                    'Det glykemiska indexet är lågt (25) och den glykemiska belastningen obefintlig (0,3); fröna hör till '
+                    'de vegetabiliska livsmedel som innehåller mest kalcium, järn och zink.'),
+              faq=[dict(q='Vad är skillnaden mellan svarta och vita sesamfrön?',
+                        a='Svarta sesamfrön behåller hela sitt naturliga skal och innehåller därför betydligt mer kalcium, '
+                          'fibrer och polyfenoler än skalade vita sesamfrön.'),
+                   dict(q='Vad innehåller svarta sesamfrön mer?',
+                        a='De innehåller koppar, järn och fettsyror.'),
+                   dict(q='Vad är näringsvärdet i en matsked (10 g)?',
+                        a='Den ger 57 kcal, 1,8 g protein, 5 g fett och 1,2 g nettokolhydrater med 1,2 g fibrer.')]),
+    591: dict(lead='Kombucha är en naturligt bubblande dryck: svart och grönt te som fermenterats av en levande kultur av '
+                   'bakterier och jäst (SCOBY), vilket ger ett syrligt, lätt sött och kolsyrat te som ett alternativ till '
+                   'läsk.',
+              tips=('Börja med ett halvt glas (120 ml) om dagen till lunch tills magen har vant sig, och drick sedan gärna '
+                    'ett helt glas (250 ml).',
+                    'Drick den kyld, och välj råa opastöriserade sorter (raw unpasteurized) om du vill ha levande '
+                    'bakterier; undvik sorter med socker eller konstgjorda aromer som tillsatts efter fermenteringen.',
+                    'Bakterierna förbrukar en stor del av sockret under fermenteringen och bildar organiska syror, så det '
+                    'glykemiska indexet är inte tillämpligt, men ett glas (250 ml) innehåller fortfarande cirka 11 g '
+                    'socker som ska räknas in vid diabetes.'),
+              faq=[dict(q='Innehåller kombucha alkohol eller socker?',
+                        a='Fermenteringen lämnar kvar socker (cirka 11 g per glas) och spår av alkohol (mindre än 0,5 %), '
+                          'och den är ett lättare alternativ till läsk, som innehåller mer än dubbelt så mycket socker.'),
+                   dict(q='Vad innehåller kombucha?',
+                        a='Den innehåller ättiksyra, glukonsyra och levande bakterier.'),
+                   dict(q='Vad är näringsvärdet i ett glas (250 ml)?',
+                        a='Glaset ger cirka 45 kcal, inget fett och cirka 11 g kolhydrater från det naturliga socker som '
+                          'finns kvar.')]),
+    592: dict(lead='Vattenkefir är en fräsch fermenterad dryck helt utan mjölk och laktos: kristallklara geléartade korn '
+                   'som lever på en lag av torkade fikon och citron och bildar ett bubblande vatten med frisk smak och '
+                   'miljontals levande bakterier.',
+              tips=('Ett bra modernt alternativ till sötade juicer och läsk för barn och vuxna; drick den kall sommartid '
+                    'efter måltiderna.',
+                    'Om du gör den hemma, låt den fermentera i 48 timmar tills kefirkornen har förbrukat det mesta av '
+                    'sockret och bildat naturlig kolsyra och en frisk syrlig smak.',
+                    'Det glykemiska indexet är inte tillämpligt eftersom det mesta av sockret förbrukas under '
+                    'fermenteringen, men ett glas (250 ml) innehåller cirka 9,5 g socker; den passar den som är allergisk '
+                    'mot mjölkprotein eller inte tål laktos.'),
+              faq=[dict(q='Vad är skillnaden mellan vattenkefir och mjölkkefir?',
+                        a='Mjölkkefir bygger på fermenterad mjölk och innehåller kasein och protein, medan vattenkefir '
+                          'bygger på vatten och frukt, är helt vegansk och mycket lätt.'),
+                   dict(q='Passar den vid diabetes?',
+                        a='Ja, med måtta, eftersom bakterierna förbrukar det mesta av sockret och omvandlar det till '
+                          'syror; men ett helt glas innehåller fortfarande cirka 9,5 g socker som ska räknas in.'),
+                   dict(q='Vad är näringsvärdet i ett glas (250 ml)?',
+                        a='Det innehåller bara cirka 38 kcal, inget fett och cirka 9,5 g nettokolhydrater.')]),
+    593: dict(lead='Rooiboste är den rubinröda, varma drycken från Cederbergsbergen i Sydafrika: tunna, nålformade blad '
+                   'som fermenteras naturligt och ger ett te med lätt honungs- och jordig sötma. Det är naturligt '
+                   'koffeinfritt, och det glykemiska indexet är inte tillämpligt eftersom det saknar kolhydrater.',
+              tips=('En varm kopp på kvällen före sänggåendet; rooibos saknar koffein och kan drickas hela dagen av både '
+                    'vuxna och barn.',
+                    'Låt det dra i kokande vatten i 5 till 7 minuter; bladen tål lång dragning utan att bli skarpt beska '
+                    'eftersom de innehåller lite sammandragande garvämnen.',
+                    'Rooibos saknar helt kalorier och stärkelse, så det glykemiska indexet är inte tillämpligt; teet '
+                    'innehåller ämnet aspalatin (aspalathin).'),
+              faq=[dict(q='Hämmar rooiboste järnupptaget som vanligt te?',
+                        a='Den stora fördelen är att det innehåller mycket lite garvämnen och oxalat, så det påverkar inte '
+                          'upptaget av järn eller kalcium nämnvärt.'),
+                   dict(q='Innehåller rooibos något koffein?',
+                        a='Det är naturligt 100 % koffeinfritt (inte kemiskt koffeinfritt), vilket gör det till en bra '
+                          'dryck före sänggåendet.'),
+                   dict(q='Vad är näringsvärdet i en kopp (250 ml) utan socker?',
+                        a='Den innehåller bara cirka 2 kcal, ingen stärkelse och inget fett, samt polyfenoler.')]),
+    594: dict(lead='Jasminte är en av de finaste teceremonierna i kinesisk tradition: unga gröna teblad från våren som '
+                   'förvaras och doftsätts nattetid över färska jasminblommor så att de tar upp den rika doften. Det '
+                   'glykemiska indexet är inte tillämpligt eftersom teet saknar kolhydrater.',
+              tips=('Drick det på morgonen eller mitt på dagen; teet innehåller naturligt koffein och aminosyran L-teanin.',
+                    'Använd vatten på 80 °C (inte kokande) och låt teet dra i bara två till tre minuter, så undviker du '
+                    'beska och bevarar de aromatiska oljorna.',
+                    'Jasminte saknar stärkelse och socker, så det glykemiska indexet är inte tillämpligt; tebladen '
+                    'innehåller katekiner (EGCG).'),
+              faq=[dict(q='Vad ger jasminteet dess doft?',
+                        a='Doften kommer från jasminblommornas aromatiska ämnen, bland annat linalool.'),
+                   dict(q='Vad är EGCG i grönt te?',
+                        a='EGCG är den vanligaste katekinen i grönt te.'),
+                   dict(q='Vad är näringsvärdet i en kopp (250 ml)?',
+                        a='Kalorierna är nära noll (mindre än 3 kcal), och teet saknar fett och stärkelse.')]),
+    595: dict(lead='Earl Grey är världens mest kända aristokratiska engelska te: fint svart te från Ceylon eller Indien '
+                   'blandat med eterisk olja som pressats ur skalet på italiensk bergamott, med en frisk citrusdoft som '
+                   'väcker sinnena. Det glykemiska indexet är inte tillämpligt eftersom teet saknar kolhydrater.',
+              tips=('En utmärkt morgondryck; drick det varmt med en tunn citronskiva eller några droppar vegetabilisk '
+                    'dryck.',
+                    'Låt det dra i kokande vatten (100 °C) i 3 till 4 minuter; välj sorter som doftsatts med ren naturlig '
+                    'bergamottolja och undvik billiga konstgjorda aromer.',
+                    'Teet saknar kalorier och stärkelse, så det glykemiska indexet är inte tillämpligt; bergamott '
+                    'innehåller flavonoider, men mängden i en kopp te är mycket liten.'),
+              faq=[dict(q='Vad är bergamott i Earl Grey?',
+                        a='Bergamott är en aromatisk citrusfrukt som odlas i södra Italien och som innehåller flavanoner.'),
+                   dict(q='Vad är Earl Grey för slags te?',
+                        a='Det är svart te smaksatt med olja från bergamottens skal.'),
+                   dict(q='Vad är näringsvärdet i en kopp (250 ml) utan socker?',
+                        a='Cirka 2 kcal, inget fett och ingen stärkelse.')]),
+    596: dict(lead='Oolong är en pärla från provinsen Fujian och det kända Tieguanyin-teet: ett te i ett förtrollande '
+                   'mellanläge mellan friskt grönt te och djupt svart te, som genomgår en noggrann delvis oxidation som '
+                   'ger en komplex blommig och fruktig smak. Det glykemiska indexet är inte tillämpligt eftersom teet '
+                   'saknar kolhydrater.',
+              tips=('Drick en varm kopp 30 minuter efter en mäktig måltid; i kinesisk tradition är oolong känt som en '
+                    'dryck efter fet mat.',
+                    'Låt det dra i vatten på 90 °C; det fantastiska med de rullade oolongbladen är att samma blad kan dras '
+                    '3 eller 4 gånger och ge ett nytt smaklager varje gång.',
+                    'Oolong saknar stärkelse och socker, så det glykemiska indexet är inte tillämpligt; teet innehåller '
+                    'särskilda polymeriserade polyfenoler.'),
+              faq=[dict(q='Vad är oolongte?',
+                        a='Ett delvis oxiderat te mellan grönt och svart te.'),
+                   dict(q='Hur mycket koffein innehåller oolong?',
+                        a='Det innehåller en måttlig mängd koffein (mindre än kaffe och svart te och något mer än grönt '
+                          'te).'),
+                   dict(q='Vad är näringsvärdet i en kopp (250 ml)?',
+                        a='Inget fett, ingen stärkelse och mindre än 3 kcal.')]),
+    597: dict(lead='Rostad maskrosrot är det örtalternativ som smakar mest som fylligt kaffe: rötterna från vild maskros '
+                   'rostas och mals till en mörk dryck med djup jordig smak och behaglig beska som påminner om espresso, '
+                   'men helt utan koffein. Det glykemiska indexet är inte tillämpligt eftersom stärkelsen är mycket låg.',
+              tips=('En varm kopp på morgonen för den som vill minska på koffeinet, eller efter middagen.',
+                    'Koka en matsked krossade rötter i ett glas vatten i 5 minuter och sila; du kan tillsätta en skvätt '
+                    'mandeldryck eller en nypa kanel för en naturlig latte.',
+                    'Stärkelsen är mycket låg, så det glykemiska indexet är inte tillämpligt, och kalorierna är få; '
+                    'rötterna innehåller den lösliga fibern inulin.'),
+              faq=[dict(q='Vad innehåller maskrosrot?',
+                        a='Den innehåller den lösliga fibern inulin och beska ämnen.'),
+                   dict(q='Är maskrosdryck urindrivande?',
+                        a='Maskros används traditionellt som urindrivande, och bladen innehåller mycket kalium; den som '
+                          'tar urindrivande läkemedel eller litium ska rådfråga sin läkare först.'),
+                   dict(q='Vad är näringsvärdet i en kopp (250 ml)?',
+                        a='Cirka 12 kcal och cirka 2,3 g nettokolhydrater, mest inulin.')]),
+    598: dict(lead='Gurkmejamjölk (golden milk) är den kända varma ayurvediska drycken: varm mjölk i solens färg med ren '
+                   'gurkmeja, en nypa svartpeppar, ingefära och kanel som värmer kroppen. Det glykemiska indexet är lågt '
+                   '(en kliniskt granskad uppskattning, 30).',
+              tips=('Ett varmt glas en halvtimme före sänggåendet.',
+                    'Den gyllene regeln: drick aldrig gurkmeja utan en nypa svartpeppar och några droppar fett (som '
+                    'kokosolja); piperinet i pepparn ökar upptaget av kurkumin kraftigt (upp till 2 000 %).',
+                    'Det glykemiska indexet är lågt (30) och den glykemiska belastningen för 250 ml är 3,8; drycken '
+                    'innehåller kurkumin.'),
+              faq=[dict(q='Varför ska man tillsätta svartpeppar och fett i gurkmejamjölk?',
+                        a='Kurkumin tas naturligt upp dåligt och är fettlösligt; svartpeppar ökar upptaget ungefär '
+                          'tjugofalt, och fettet hjälper det att nå blodet.'),
+                   dict(q='Hur mycket kurkumin innehåller ett glas gurkmejamjölk?',
+                        a='Mängden kurkumin i ett glas är betydligt mindre än de koncentrerade doser som har studerats.'),
+                   dict(q='Vad är näringsvärdet i ett glas (250 ml)?',
+                        a='Det innehåller cirka 163 kcal, 8 g protein, 8 g fett och 12,8 g nettokolhydrater.')]),
+    599: dict(lead='Ett uppfriskande sommarvatten: rent vatten med krispiga gurkskivor, citronskivor och färska myntablad, '
+                   'där varje klunk ger fräschhet och svalka. Det glykemiska indexet är inte tillämpligt eftersom drycken '
+                   'nästan saknar kolhydrater.',
+              tips=('Fyll en glasflaska och drick ur den under dagen och vid träning; det uppmuntrar dig att dricka mer '
+                    'vatten om du inte tycker om smaken av vanligt vatten.',
+                    'Krossa myntabladen varsamt med en sked så att mentololjorna frigörs, och låt ingredienserna dra i '
+                    'iskallt vatten i två timmar i kylskåpet före drickandet; pressa inte citronen hårt, så blir det inte '
+                    'beskt.',
+                    'Kalorierna och stärkelsen är nästan obefintliga, så det glykemiska indexet är inte tillämpligt; '
+                    'gurkan och citronen ger små mängder kalium och C-vitamin.'),
+              faq=[dict(q='Hjälper vatten med gurka och mynta vid viktnedgång?',
+                        a='Indirekt; det är ett bra alternativ till sötade juicer och läsk och gör att du dricker mer '
+                          'vatten.'),
+                   dict(q='Hur länge håller vattnet i kylskåpet?',
+                        a='Det är bäst att dricka det inom 24 timmar, och du kan fylla på nytt vatten över samma gurk- och '
+                          'myntaskivor två till tre gånger samma dag.'),
+                   dict(q='Vad är näringsvärdet i ett glas (250 ml)?',
+                        a='Det innehåller bara cirka 7 kcal och cirka 1,3 g nettokolhydrater.')]),
+    600: dict(lead='Apelsinblomsvatten är Orientens doft i levantinska och nordafrikanska rätter: en ren, klar vätska som '
+                   'ångdestilleras ur blommorna från pomeransträdet (bitter apelsin), med en förtrollande blommig '
+                   'citrusdoft som ger drycker och sötsaker en unik smak. Det glykemiska indexet är inte tillämpligt '
+                   'eftersom det saknar kolhydrater.',
+              tips=('Tillsätt en matsked (15 ml) i en kopp varmt vatten och drick efter mäktiga måltider som ”vitt kaffe”, '
+                    'eller använd det som naturlig arom i sötsaker.',
+                    'Välj 100 % rent destillerat apelsinblomsvatten utan kemiska aromer eller alkohol; några droppar '
+                    'räcker för en kraftig smak.',
+                    'Det saknar helt kalorier, stärkelse och socker, så det glykemiska indexet är inte tillämpligt.'),
+              faq=[dict(q='Vad är libanesiskt ”vitt kaffe”?',
+                        a='En folklig varm dryck som görs genom att blanda en matsked destillerat apelsinblomsvatten i en '
+                          'kopp kokande vatten, ibland med en nypa kardemumma eller kanel, och som dricks efter maten.'),
+                   dict(q='Vad innehåller apelsinblomsvatten?',
+                        a='Det innehåller flyktiga aromatiska oljor från pomeransblommorna.'),
+                   dict(q='Vad är näringsvärdet i en matsked (15 ml)?',
+                        a='Inga kalorier, inget fett och inga kolhydrater; bara ren arom.')]),
 }
