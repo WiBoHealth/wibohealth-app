@@ -1825,7 +1825,7 @@ sv=dict(
             <h3>1. Välj livsmedel med lågt glykemiskt index (GI)</h3>
             <p>Glykemiskt index rangordnar kolhydratrika livsmedel efter hur snabbt de höjer blodsockret:</p>
             <ul class="check-list">
-                <li><strong>Begränsa livsmedel med högt GI:</strong> vitt bröd, vitt ris, tillsatt socker, juice och friterad potatis, som ger snabba och höga blodsockertoppar.</li>
+                <li><strong>Begränsa livsmedel med högt GI:</strong> <a href="{food:white-bread}">vitt bröd</a>, <a href="{food:white-rice}">vitt ris</a>, tillsatt socker, juice och friterad potatis, som ger snabba och höga blodsockertoppar.</li>
                 <li><strong>Välj oftare alternativ med lågt GI:</strong> <a href="{food:oatmeal}">havregryn</a>, baljväxter (<a href="{food:lentils}">linser</a>, <a href="{food:chickpeas}">kikärter</a>), <a href="{food:quinoa}">quinoa</a>, fullkornsknäckebröd och naturella nötter, som släpper ut glukos gradvis.</li>
             </ul>
 
@@ -1924,14 +1924,14 @@ sv=dict(
             <p>En nattfasta på 12–14 timmar mellan kvällsmat och frukost sänker insulinnivån och ger levern tid att använda sitt lagrade fett. Har du diabetes och tar blodsockersänkande läkemedel, eller är du gravid, prata med din läkare innan du ändrar måltidsrytmen.</p>
 
             <h3>3. Kaffe kan ingå</h3>
-            <p>Svart kaffe utan socker passar bra i en leverfrämjande vardag. Observationsstudier har sett ett samband mellan måttligt kaffedrickande och lägre risk för leverfibros, och EASL:s riktlinjer nämner detta, men ett samband är inte samma sak som ett bevis, och kaffe ersätter inte ändrade levnadsvanor.</p>
+            <p><a href="{food:black-coffee}">Svart kaffe</a> utan socker passar bra i en leverfrämjande vardag. Observationsstudier har sett ett samband mellan måttligt kaffedrickande och lägre risk för leverfibros, och EASL:s riktlinjer nämner detta, men ett samband är inte samma sak som ett bevis, och kaffe ersätter inte ändrade levnadsvanor.</p>
 
             <h3>4. Kolin från ägg och fisk</h3>
-            <p>Kolin behövs för att levern ska kunna ”paketera” fett och skicka ut det i blodet. <strong>Kolin bidrar till att upprätthålla normal leverfunktion</strong> (EU-godkänt påstående). Bra källor är ägg och fisk.</p>
+            <p>Kolin behövs för att levern ska kunna ”paketera” fett och skicka ut det i blodet. <strong>Kolin bidrar till att upprätthålla normal leverfunktion</strong> (EU-godkänt påstående). Bra källor är <a href="{food:boiled-egg}">ägg</a> och fisk.</p>
 
             <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
             <div class="faq-list">
-                <div class="faq-item"><h3>Måste jag sluta äta frukt om jag har fettlever?</h3><p>Nej. Hel frukt innehåller fiber som gör att fruktosen tas upp långsamt. Välj gärna bär och äpplen, ät frukten hel och undvik juice och smoothies.</p></div>
+                <div class="faq-item"><h3>Måste jag sluta äta frukt om jag har fettlever?</h3><p>Nej. Hel frukt innehåller fiber som gör att fruktosen tas upp långsamt. Välj gärna bär och <a href="{food:apple}">äpplen</a>, ät frukten hel och undvik juice och smoothies.</p></div>
                 <div class="faq-item"><h3>Hur lång tid tar det att minska leverfettet?</h3><p>Vid tidig fettlever minskar en viktnedgång på 7–10 % leverfettet påtagligt och kan normalisera levervärdena inom några månader. Vid en viktnedgång på minst 10 % har studier också sett att inflammation och fibros kan minska. Din läkare följer upp med prover.</p></div>
             </div>'''),
     ),
@@ -2383,7 +2383,7 @@ sv=dict(
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>4. Jod och selen – i lagom mängd</span></h2>
             <ul class="check-list">
                 <li><strong>Jod</strong> bidrar till normal produktion av sköldkörtelhormon och normal sköldkörtelfunktion. I Sverige kommer det mesta jodet från <strong>jodberikat salt</strong>, mejeriprodukter, ägg och fisk. Havssalt och andra specialsalter innehåller ofta lite eller inget jod. Tillskott med tång och alger kan däremot innehålla alldeles för mycket jod, vilket också kan störa sköldkörteln.</li>
-                <li><strong>Selen</strong> bidrar till normal sköldkörtelfunktion. Selen finns i fisk, skaldjur, ägg, kött och mejeriprodukter. Paranötter innehåller mycket och mycket varierande mängder selen; ät dem bara då och då och kombinera dem inte med selentillskott, eftersom för mycket selen är skadligt (EFSA:s övre gräns är 255 mikrogram per dag för vuxna).</li>
+                <li><strong>Selen</strong> bidrar till normal sköldkörtelfunktion. Selen finns i fisk, skaldjur, ägg, kött och mejeriprodukter. <a href="{food:brazil-nuts}">Paranötter</a> innehåller mycket och mycket varierande mängder selen; ät dem bara då och då och kombinera dem inte med selentillskott, eftersom för mycket selen är skadligt (EFSA:s övre gräns är 255 mikrogram per dag för vuxna).</li>
             </ul>
             <p>(Formuleringarna om jod och selen är EU-godkända hälsopåståenden.) Om du redan har en diagnostiserad sköldkörtelsjukdom: ta inte jod- eller selentillskott utan att ha pratat med din läkare.</p>
 

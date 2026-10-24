@@ -1115,6 +1115,119 @@ def fmt(x):
     return (str(int(x)) if float(x).is_integer() else str(x)).replace('.', DECIMAL)
 
 
+# <title>: the longest suffix that keeps the whole title within TITLE_MAX characters (Google cuts at about 60), so a
+# long food name gets a shorter suffix instead of a cut-off title. Order of retreat: shorter suffix, the name without
+# its (bracketed) part, no brand, the name cut before a joining word, and only then the name cut at any word.
+TITLE_MAX = 60
+TITLE_BRAND = ' | WiBo Health'
+TITLE_SUFFIXES = {
+    'ar': (': السعرات والمؤشر الجلايسيمي والقيم الغذائية', ': السعرات والمؤشر الجلايسيمي', ': سعرات ومؤشر جلايسيمي',
+           ': السعرات وGI'),
+    'en': (': Calories, Glycemic Index & Nutrition', ': Calories & Glycemic Index', ': Calories, GI & Nutrition',
+           ': Calories, Carbs & GI', ': Calories & GI'),
+    'nl': (': calorieën, glykemische index & voedingswaarde', ': calorieën, GI & voedingswaarde',
+           ': calorieën & glykemische index', ': calorieën, koolhydraten & GI', ': calorieën en GI-waarde',
+           ': calorieën & GI'),
+    'sv': (': kalorier, glykemiskt index och näringsvärde', ': kalorier och glykemiskt index',
+           ': kalorier, GI och näringsvärde', ': kalorier, kolhydrater och GI', ': kalorier och GI-värde',
+           ': kalorier och GI'),
+}
+# a shortened name stops before one of these words (Arabic: before a word joined with و or ب), never on them
+TITLE_JOINS = {'ar': ('مع',), 'en': ('with', 'and', '&', 'in', 'on'), 'nl': ('met', 'en', '&', 'in', 'op'),
+               'sv': ('med', 'och', '&', 'i', 'på')}
+
+
+def fit_title(name, lang):
+    suffixes = sorted(TITLE_SUFFIXES[lang], key=len, reverse=True)
+    short = re.sub(r'\s*\([^)]*\)', '', name).strip() or name
+    words = short.split()
+    # the name cut before a joining word, longest first: "Gemista gevulde tomaten en paprika's met rijst" -> "Gemista
+    # gevulde tomaten"; Arabic "صلصة تزاتزيكي يونانية بالزبادي ..." -> "صلصة تزاتزيكي يونانية"
+    joins = TITLE_JOINS[lang]
+    cuts = [' '.join(words[:k]) for k in range(len(words) - 1, 1, -1)
+            if words[k].lower() in joins or (lang == 'ar' and words[k][:1] in 'وب' and len(words[k]) > 3)]
+    # the whole name without the brand beats a shortened name with it (Google shows the site name anyway)
+    for names in (dict.fromkeys((name, short)), cuts):
+        for brand in (TITLE_BRAND, ''):
+            for nm in names:
+                for suf in suffixes:
+                    if len(nm + suf + brand) <= TITLE_MAX:
+                        return nm + suf + brand
+    suf = suffixes[-1]
+    while len(words) > 1 and len(' '.join(words) + suf) > TITLE_MAX:
+        words.pop()
+    return ' '.join(words).rstrip(' ,،-–&') + suf
+
+
+# "Read also": the medical guides that belong to a food, in the reader's language (titles as published, without
+# their claim wording). Swedish pages link the Swedish article where one exists, otherwise the English page.
+READ_ALSO_TITLE = {'ar': 'اقرأ أيضاً', 'en': 'Read also', 'nl': 'Lees ook', 'sv': 'Läs även'}
+READ_ALSO_KIND = {'guide': {'ar': 'دليل', 'en': 'Guide', 'nl': 'Gids', 'sv': 'Guide'},
+                  'article': {'ar': 'مقال', 'en': 'Article', 'nl': 'Artikel', 'sv': 'Artikel'},
+                  'supplement': {'ar': 'مكمل', 'en': 'Supplement', 'nl': 'Supplement', 'sv': 'Kosttillskott (engelska)'}}
+READ_ALSO = {
+    'insulin': ('article', {
+        'ar': ('/insulin-resistance.html', 'السكر التراكمي ومقاومة الإنسولين: الدليل الشامل'),
+        'en': ('/insulin-resistance.html?lang=en', 'HbA1c & Insulin Resistance: Comprehensive Clinical Guide'),
+        'nl': ('/insulin-resistance.html?lang=nl', 'HbA1c & Insulineresistentie: De Complete Klinische Gids'),
+        'sv': ('/sv/articles/insulinresistens-hba1c.html', 'HbA1c och insulinresistens: så förstår du dina värden')}),
+    'prediabetes': ('guide', {
+        'ar': ('/diabetes/prediabetes.html', 'مرحلة ما قبل السكري: كيف توقف القطار وتنزّل التراكمي قبل ما يتحول لسكري؟'),
+        'en': ('/en/diabetes/prediabetes.html', 'Prediabetes: How to Stop the Train and Lower Your HbA1c'),
+        'nl': ('/nl/diabetes/prediabetes.html', 'Prediabetes: zo zet je de trein stil en verlaag je je HbA1c'),
+        'sv': ('/sv/diabetes/prediabetes.html', 'Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c')}),
+    'gestational': ('guide', {
+        'ar': ('/diabetes/gestational-diabetes.html', 'دليل سكر الحمل الشامل: المعدل الطبيعي بالأرقام وجدول الأكل'),
+        'en': ('/en/diabetes/gestational-diabetes.html', 'Gestational Diabetes Guide: Normal Levels and Foods to Eat'),
+        'nl': ('/nl/diabetes/zwangerschapsdiabetes.html', 'Zwangerschapsdiabetes: normale waarden en wat je mag eten'),
+        'sv': ('/sv/diabetes/graviditetsdiabetes.html', 'Graviditetsdiabetes: normala blodsockervärden och vad du kan äta')}),
+    'thyroid': ('article', {
+        'ar': ('/thyroid-health.html', 'لغز خمول الغدة الدرقية وبطء الحرق'),
+        'en': ('/thyroid-health.html?lang=en', 'The Hidden Thyroid Sluggishness'),
+        'nl': ('/thyroid-health.html?lang=nl', 'De verborgen trage schildklier'),
+        'sv': ('/sv/articles/trog-skoldkortel.html', 'Trög sköldkörtel: TSH, T4 och T3 i klartext')}),
+    'selenium': ('supplement', {
+        'ar': ('/supplements/selenium.html', 'السيلينيوم (سيلينوميثيونين)'),
+        'en': ('/en/supplements/selenium.html', 'Selenium (L-Selenomethionine)'),
+        'nl': ('/nl/supplements/selenium.html', 'Selenium (L-Selenomethionine)'),
+        'sv': ('/en/supplements/selenium.html', 'Selen (L-selenometionin)')}),
+    'fatty_liver': ('article', {
+        'ar': ('/fatty-liver.html', 'الكبد الدهني الخفي: دليلك السريري'),
+        'en': ('/fatty-liver.html?lang=en', 'Silent Fatty Liver (MASLD/NAFLD): Clinical Guide'),
+        'nl': ('/fatty-liver.html?lang=nl', 'Stille Leververvetting (MASLD/NAFLD): Klinische Gids'),
+        'sv': ('/sv/articles/fettlever.html', 'Fettlever (MASLD): så uppstår den tyst och vad du kan göra')}),
+}
+STARCH_GROUPS = {'grain', 'tuber', 'bakery', 'sweets', 'fastfood', 'sandwich', 'dried'}
+SELENIUM_FOODS = {399}            # the selenium supplement page is linked from Brazil nuts only (approved 2026-10-24)
+DISH_GROUPS = {'arabic', 'fastfood', 'mexican', 'latin', 'italian', 'spanish', 'french', 'greek', 'turkish', 'moroccan',
+               'indian', 'asian', 'home', 'sandwich'}
+
+
+def read_also_keys(food, group, gi):
+    """Up to three guides, most specific first: nuts and seeds -> thyroid (+ selenium for Brazil nuts), fats -> fatty
+    liver, starches, sweets and GI >= 56 -> insulin resistance + prediabetes, GI <= 55 -> prediabetes + gestational
+    diabetes, fatty dishes (15 g fat or more per 100 g) -> fatty liver. Alcohol only links the fatty-liver article."""
+    if group == 'alcohol':
+        return ['fatty_liver']
+    keys = []
+    if group == 'nuts':
+        keys += ['thyroid'] + (['selenium'] if food['id'] in SELENIUM_FOODS else [])
+    if group == 'fat':
+        keys += ['fatty_liver']
+    if group in STARCH_GROUPS or (gi is not None and gi >= 56):
+        keys += ['insulin', 'prediabetes']
+    if gi is not None and gi <= 55:
+        keys += ['prediabetes', 'gestational']
+    if group in DISH_GROUPS and food['fat'] >= 15:
+        keys += ['fatty_liver']
+    return list(dict.fromkeys(keys or ['prediabetes']))[:3]
+
+
+def fit_override_title(title):
+    """An approved search title stays as written; only the brand goes when the title would be cut."""
+    return title[:-len(TITLE_BRAND)] if len(title) > TITLE_MAX and title.endswith(TITLE_BRAND) else title
+
+
 def gi_level(v):
     return 0 if v <= 55 else (1 if v < 70 else 2)
 
@@ -1196,6 +1309,7 @@ PAGE_CSS = """
         }
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .read-also a { overflow-wrap: anywhere; }      /* long names such as (L-Selenomethionine) on 320 px */
         .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
         .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
         .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
@@ -1384,9 +1498,10 @@ def build(food, lang, ctx):
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
     # a doctor-approved introduction replaces the computed lead (the numbers stay in the cards and table)
     lead = ctx['overrides'].get(str(food['id']), {}).get('lead', {}).get(lang) or lead
-    title = u['title'].format(name=name)
+    title = fit_title(name, lang)
     # search-tuned <title> and meta description for high-traffic foods (also used for og: and JSON-LD)
-    title = ctx['overrides'].get(str(food['id']), {}).get('title', {}).get(lang) or title
+    title_override = ctx['overrides'].get(str(food['id']), {}).get('title', {}).get(lang)
+    title = fit_override_title(title_override) if title_override else title
     desc = ctx['overrides'].get(str(food['id']), {}).get('desc', {}).get(lang) or desc
 
     # -------- FAQ (answers computed from the numbers, unless doctor-approved questions are given)
@@ -1400,6 +1515,10 @@ def build(food, lang, ctx):
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
     faq_html = ''.join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
+    read_also = [(READ_ALSO[k][0], *READ_ALSO[k][1][lang])
+                 for k in read_also_keys(food, group, food['gi'] if has_gi else None)]
+    read_also_html = ''.join(f'<li><a href="{href}">{esc(label)}<span>{READ_ALSO_KIND[kind][lang]}</span></a></li>'
+                             for kind, href, label in read_also)
     faq_schema = {
         "@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang,
         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq],
@@ -1517,6 +1636,7 @@ def build(food, lang, ctx):
         "about": {"@type": "Thing", "name": food['en'],
                   "alternateName": [food['ar'], food['nl']] + ([food[SV]] if SV in urls else [])},
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+        "relatedLink": [SITE + href for _, href, _ in read_also],
         "author": doctor,
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
@@ -1654,6 +1774,9 @@ def build(food, lang, ctx):
 
             <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>{FAQ[lang]["title"]}</span></h2>
             <section class="faq-list">{faq_html}</section>
+
+            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{READ_ALSO_TITLE[lang]}</span></h2>
+            <ul class="alt-list read-also">{read_also_html}</ul>
 
             <aside class="boodi-card">
                 <div>
