@@ -12,7 +12,7 @@ PUBLISH lists the foods that get a Swedish page (all of NAMES).
 REVIEWED = '2026-10-24'
 REVIEWED_TXT = '24 oktober 2026'
 
-# foods with a Swedish page: 1-50 (samples approved 2026-10-24); set below NAMES
+# foods with a Swedish page: 1-200 (1-50 samples approved 2026-10-24); set below NAMES
 
 NAMES = {
     1: ('Vitt ris, kokt', 'kokt vitt ris'),
@@ -116,6 +116,106 @@ NAMES = {
     98: ('Tonfisk i vatten, konserverad', 'konserverad tonfisk i vatten'),
     99: ('Sardiner i olja, konserverade', 'konserverade sardiner i olja'),
     100: ('Räkor, grillade', 'grillade räkor'),
+    101: ('Ägg, kokt', 'kokt ägg'),
+    102: ('Omelett med smör', 'omelett med smör'),
+    103: ('Nötlever, grillad', 'grillad nötlever'),
+    104: ('Hummus med tahini', 'hummus med tahini'),
+    105: ('Falafel, friterad', 'friterad falafel'),
+    106: ('Ful medames med olivolja och spiskummin', 'ful medames'),
+    107: ('Baba ganoush (aubergineröra)', 'baba ganoush'),
+    108: ('Tabbouleh med persilja', 'tabbouleh'),
+    109: ('Fattoush med granatäpplesirap och olivolja', 'fattoush'),
+    110: ('Molokhia med kyckling', 'molokhia med kyckling'),
+    111: ('Kycklingshawarma', 'kycklingshawarma'),
+    112: ('Shawarma med nötkött', 'shawarma med nötkött'),
+    113: ('Shish taouk, grillad', 'grillad shish taouk'),
+    114: ('Kofta, kolgrillad', 'kolgrillad kofta'),
+    115: ('Kibbeh, friterad', 'friterad kibbeh'),
+    116: ('Kibbeh nayeh (rå kibbeh)', 'rå kibbeh'),
+    117: ('Vinbladsdolmar med olivolja (yalanji)', 'vinbladsdolmar'),
+    118: ('Zucchini fylld med köttfärs och ris', 'fylld zucchini'),
+    119: ('Mansaf med lammkött', 'mansaf'),
+    120: ('Maqluba med kyckling och aubergine', 'maqluba'),
+    121: ('Mujaddara med bulgur och olivolja', 'mujaddara'),
+    122: ('Fatteh med kikärter, yoghurt och nötter', 'fatteh med kikärter'),
+    123: ('Sayadieh, fisk med ris och stekt lök', 'sayadieh'),
+    124: ('Musakhan med kyckling', 'musakhan'),
+    125: ('Shakshuka med ägg och tomat', 'shakshuka'),
+    126: ('Linssoppa, gul', 'gul linssoppa'),
+    127: ('Koshari, egyptisk', 'egyptisk koshari'),
+    128: ('Olivolja, extra jungfru', 'extra jungfruolivolja'),
+    129: ('Ghee (skirat smör)', 'ghee'),
+    130: ('Kokosolja, jungfru', 'jungfrukokosolja'),
+    131: ('Tahini (sesampasta)', 'tahini'),
+    132: ('Kaffe, svart (espresso)', 'svart kaffe'),
+    133: ('Grönt te', 'grönt te'),
+    134: ('Matcha, japansk', 'matcha'),
+    135: ('Mandeldryck, osötad', 'osötad mandeldryck'),
+    136: ('Ayran (saltad yoghurtdryck)', 'ayran'),
+    137: ('Kokosvatten, naturellt', 'naturellt kokosvatten'),
+    138: ('Apelsinjuice, färskpressad', 'färskpressad apelsinjuice'),
+    139: ('Granatäpplejuice, naturell', 'naturell granatäpplejuice'),
+    140: ('Cola, vanlig (med socker)', 'vanlig cola'),
+    141: ('Big Mac', 'Big Mac'),
+    142: ('Kycklingnuggets (6 st)', 'kycklingnuggets'),
+    143: ('Friterad kyckling (KFC)', 'friterad kyckling'),
+    144: ('Pizza margherita (bit)', 'pizza margherita'),
+    145: ('Pizza med pepperoni (bit)', 'pizza med pepperoni'),
+    146: ('Subway-smörgås med teriyakikyckling', 'Subway-smörgås med teriyakikyckling'),
+    147: ('Coleslaw (vitkålssallad)', 'coleslaw'),
+    148: ('Baklava med pistage', 'baklava'),
+    149: ('Knafeh nabulsieh med ost', 'knafeh'),
+    150: ('Basbousa med ghee', 'basbousa'),
+    151: ('Maamoul med dadlar och fänkålsfrö', 'maamoul med dadlar'),
+    152: ('Sesamhalva med nötter', 'sesamhalva'),
+    153: ('Mahalabia med mjölk och mastix', 'mahalabia'),
+    154: ('Rispudding med kanel', 'rispudding'),
+    155: ('Mörk choklad 85 %', 'mörk choklad 85 %'),
+    156: ('Smörcroissant', 'smörcroissant'),
+    157: ('Cheesecake, New York', 'cheesecake'),
+    158: ('Taco med nötfärs', 'taco med nötfärs'),
+    159: ('Burrito med kyckling och bönor', 'burrito med kyckling och bönor'),
+    160: ('Quesadilla med smält ost', 'quesadilla med ost'),
+    161: ('Kycklingfajitas med paprika och lök', 'kycklingfajitas'),
+    162: ('Nachos med ost', 'nachos med ost'),
+    163: ('Guacamole', 'guacamole'),
+    164: ('Tomatsalsa, stark', 'stark tomatsalsa'),
+    165: ('Chili con carne', 'chili con carne'),
+    166: ('Lasagne med köttfärs och béchamel', 'lasagne'),
+    167: ('Spaghetti carbonara', 'spaghetti carbonara'),
+    168: ('Spaghetti bolognese', 'spaghetti bolognese'),
+    169: ('Fettuccine Alfredo med grädde', 'fettuccine Alfredo'),
+    170: ('Svamprisotto med parmesan', 'svamprisotto'),
+    171: ('Potatisgnocchi', 'potatisgnocchi'),
+    172: ('Calzone (fylld, vikt pizza)', 'calzone'),
+    173: ('Bruschetta med tomat och basilika', 'bruschetta'),
+    174: ('Caprese (mozzarella och tomat)', 'caprese'),
+    175: ('Minestrone', 'minestrone'),
+    176: ('Sushi, laxrulle', 'laxsushi'),
+    177: ('Sushi, California roll', 'California roll'),
+    178: ('Sashimi på rå lax', 'laxsashimi'),
+    179: ('Ramen med kyckling', 'kycklingramen'),
+    180: ('Pad thai', 'pad thai'),
+    181: ('Kyckling teriyaki', 'kyckling teriyaki'),
+    182: ('Kyckling katsu, panerad', 'kyckling katsu'),
+    183: ('Dumplings, ångkokta (gyoza)', 'ångkokta dumplings'),
+    184: ('Vårrullar med grönsaker, friterade', 'friterade vårrullar'),
+    185: ('Misosoppa', 'misosoppa'),
+    186: ('Tofu, naturell', 'naturell tofu'),
+    187: ('Tempeh', 'tempeh'),
+    188: ('Kimchi', 'kimchi'),
+    189: ('Kyckling tikka masala', 'kyckling tikka masala'),
+    190: ('Palak paneer (spenat och indisk ost)', 'palak paneer'),
+    191: ('Kycklingbiryani', 'kycklingbiryani'),
+    192: ('Naanbröd med vitlök', 'vitlöksnaan'),
+    193: ('Dal, indisk linssoppa', 'dal'),
+    194: ('Baguette', 'baguette'),
+    195: ('Tortillabröd', 'tortillabröd'),
+    196: ('Pitabröd', 'pitabröd'),
+    197: ('Fatayer med spenat', 'fatayer med spenat'),
+    198: ('Fatayer med ost', 'fatayer med ost'),
+    199: ('Lahmacun (sfiha med köttfärs)', 'lahmacun'),
+    200: ("Manakish med za'atar och olivolja", "manakish med za'atar"),
 }
 PUBLISH = set(NAMES)
 # foods allowed to use the computed Swedish copy where the other languages carry food-specific copy (none since
@@ -124,7 +224,8 @@ COMPUTED_COPY = set()
 
 # names that take a plural pronoun in the sentences ({det}/{dem}: "de"/"dem" instead of "det")
 PLURAL = {18, 19, 20, 21, 22, 23, 24, 25, 28, 40,
-          52, 53, 56, 57, 58, 60, 61, 62, 63, 68, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 100}
+          52, 53, 56, 57, 58, 60, 61, 62, 63, 68, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 99, 100,
+          117, 142, 161, 162, 171, 183, 184, 197, 198}
 
 # js/food-categories.js master groups (breadcrumb section on the food page)
 GROUP_LABELS = {
@@ -169,6 +270,10 @@ TIPS = {
               'Ät den färsk och i säsong; att kombinera den med en näve nötter eller yoghurt kan dämpa glukossvaret.', CARB_NOTE),
     'veg': ('Grönsaker är rika på vatten och kostfiber och kan gärna fylla halva tallriken.',
             'Ät den rå eller lätt ångkokt för att bevara vitaminerna, och använd lite olja vid tillagningen.', NA_NOTE),
+    'drink': ('Nästan fri från kalorier och socker när den dricks utan tillsatser.',
+              'Undvik socker, sirap och grädde; det är de som tillför kalorier och glykemisk belastning.',
+              'Innehåller koffein; drick med måtta, särskilt på kvällen, och rådfråga din läkare om du är gravid eller tar '
+              'läkemedel som påverkas av koffein.'),
 }
 
 UI = dict(
@@ -798,4 +903,797 @@ OVERRIDES = {
               tips=('Passar till snabba luncher och middagar och höjer inte blodsockret.',
                     'Stek dem i en het panna i bara 3 minuter med vitlök, färsk koriander, citronsaft och en nypa paprikapulver, och undvik '
                     'panerade räkor och majonnäs.')),
+    # foods 101-200: translated from the approved Arabic copy (2026-10-24, four checked blocks of 25)
+    101: dict(lead='Guldstandarden för fullvärdigt protein och ett av de livsmedel som påverkar blodsockret minst. Ägget '
+                   'innehåller nästan ingen stärkelse (inget glykemiskt index), mättar väl och innehåller fettlösliga '
+                   'vitaminer.',
+              tips=('Ett utmärkt sätt att börja dagen till frukost; det ger en jämn blodsockerkurva under förmiddagen och '
+                    'kan minska suget efter stärkelserik mat.',
+                    'Koka ägget så att gulan fortfarande är lite krämig (mellankokt), för att bevara de kolinrika fetterna '
+                    'och de ämnen som är känsliga för hög värme.')),
+    102: dict(lead='Den klassiska, mättande frukosten: äggets fullvärdiga protein tillsammans med smörets naturliga fett, '
+                   'utan stärkelse och utan glykemisk effekt, för ett stabilt blodsocker på morgonen.',
+              tips=('Börja dagen med den tillsammans med en kopp te eller svart kaffe utan socker; den mättar väl ända '
+                    'fram till lunch.',
+                    'Vispa två ägg med lite salt och svartpeppar och stek dem på låg värme i en tesked smör; tillsätt '
+                    'spenatblad eller svamp för mer fibrer och näring.')),
+    103: dict(lead='Ett av naturens rikaste förråd av vitaminer och mineraler: levern är rik på A-vitamin, järn och '
+                   'B-vitaminer. Den innehåller ingen nämnvärd stärkelse (ingen glykemisk effekt).',
+              tips=('Ett bra val för järnintaget; ät den en gång i veckan och pressa citron över, eftersom C-vitamin ökar '
+                    'järnupptaget.',
+                    'Grilla eller fräs den snabbt på hög värme med vitlök, spiskummin och olivolja i bara några minuter; '
+                    'för lång tillagning gör den seg och minskar de värmekänsliga vitaminerna.',
+                    '⚠️ Gravida rekommenderas att inte äta mycket lever, eftersom den innehåller mycket stora mängder '
+                    'A-vitamin.')),
+    104: dict(lead='Kungen bland de levantinska mezerätterna och en ikon i medelhavsköket: kokta kikärter, sesamtahini och '
+                   'olivolja ger en fin balans mellan fibrer och omättat fett, med ett lågt glykemiskt index (25) som '
+                   'bromsar sockerupptaget.',
+              tips=('En utmärkt frukost eller förrätt till vardags vid diabetes; ät den med sked eller som dipp till '
+                    'gurk-, morots- och paprikastavar i stället för ett helt tunnbröd.',
+                    'Gör den hemma: koka kikärterna väl och mixa dem med ren sesamtahini, citronsaft, vitlök och extra '
+                    'jungfruolivolja, och undvik färdig hummus med tillsatta raffinerade vegetabiliska oljor.')),
+    105: dict(lead='En krispig favorit i Levanten och Egypten, gjord främst av kikärter, bondbönor och örter. Det ger ett '
+                   'lågt glykemiskt index (35) och en hel del fibrer; den enda utmaningen är att falafeln suger upp mycket '
+                   'frityrolja.',
+              tips=('Ät två till tre falaflar till frukost i ett litet fullkornsbröd med en stor sallad, och undvik att '
+                    'äta sex eller sju på en gång för att hålla energiintaget i schack.',
+                    'Tillaga dem i airfryer eller ugn med lite olivolja penslad på; du får samma goda krispighet med '
+                    'ungefär hälften så mycket uppsuget fett.')),
+    106: dict(lead='Frukostens ryggrad och hemligheten bakom en jämn och mättande förmiddag: bondbönor med mycket protein '
+                   'och fibrer smälts långsamt och har ett lågt glykemiskt index (38), vilket ger en jämn blodsockerkurva '
+                   'i flera timmar.',
+              tips=('Ett självklart förstahandsval vid insulinresistens eller om du snabbt blir hungrig på morgonen; '
+                    'spiskummin, citron och olivolja gör den till en fiberrik och smakrik rätt.',
+                    'Mosa bönorna halvvägs med skalet kvar, där mycket av fibrerna finns, i stället för att sila bort '
+                    'skalen; tillsätt vitlök, spiskummin, citron och rikligt med extra jungfruolivolja.')),
+    107: dict(lead='Grillens aromatiska, rökiga smak: grillad aubergine mosad med tahini och olivolja blir en röra med '
+                   'mycket lite stärkelse (GI 15) som knappt påverkar blodsockret.',
+              tips=('En smakrik dipp vid bantning och diabetes; den krämiga, fylliga smaken kan ersätta majonnäs och '
+                    'industriellt framställda såser.',
+                    'Grilla auberginen med skalet på över kol eller gaslåga tills insidan är rökig, blanda den sedan med '
+                    'ren tahini, krossad vitlök och citronsaft, och toppa med granatäpplekärnor och persilja.')),
+    108: dict(lead='Den levantinska salladens drottning och en grön fiberkälla: 80 % persilja och mynta med en lätt touch '
+                   'av grov bulgur, olivolja och citron. Det ger ett lågt glykemiskt index (28) och en rejäl mängd '
+                   'C-vitamin.',
+              tips=('Börja alltid lunchen med den; fibrerna i persiljan och olivoljan kan bromsa upptaget av stärkelsen i '
+                    'huvudrätten, och salladen ger en fräsch mättnad.',
+                    'Håll dig till grundregeln: mycket persilja, mynta, tomat, olivolja och citron, och bara en liten sked '
+                    'blötlagd bulgur.')),
+    109: dict(lead='Den färgglada salladen på det orientaliska bordet, med färska grönsaker, krispigt bröd och sumak. Det '
+                   'glykemiska indexet är lågt (38), och salladen ger mycket vätska och fibrer, vilket ger en jämnare '
+                   'blodsockerkurva.',
+              tips=('En självklar rätt för att inleda måltiden eller lunchen; bladgrönsakerna, rädisorna och gurkan ger '
+                    'rejält med volym, och fibrerna bromsar glukosupptaget.',
+                    'Rosta bitar av fullkornsbröd i ugn eller airfryer med olivolja i stället för att fritera dem, och '
+                    'använd 100 % naturell granatäpplesirap utan tillsatt socker.')),
+    110: dict(lead='En klassisk och värmande rätt från Levanten: molokhiablad som kokas med magert kycklingkött, koriander '
+                   'och vitlök. Den är nästan fri från kolhydrater (ingen glykemisk effekt) och mättar väl.',
+              tips=('En komplett måltid vid diabetes och bantning; ät den med sked tillsammans med kycklingbitarna och '
+                    'lite pressad citron, och nöj dig med tre eller fyra skedar vitt ris vid sidan om.',
+                    'Låt den sjuda på låg värme i naturlig kycklingbuljong, smaksätt med olivolja, hackad vitlök och '
+                    'torkad koriander, och tillsätt citron, eftersom C-vitamin ökar järnupptaget.')),
+    111: dict(lead='Den populäraste gatumaten i arabvärlden: kryddade kycklingskivor grillade på spett, med mycket magert '
+                   'protein. Det glykemiska indexet beror helt på vilket bröd den rullas in i och hur mycket (lågt, 45).',
+              tips=('Det smartaste valet vid diabetes eller bantning är en shawarmatallrik: ät den kryddade kycklingen med '
+                    'gaffel tillsammans med naturlig vitlökssås, inlagda grönsaker och sallad, utan det stora brödet.',
+                    'Vill du äta den som wrap, välj ett litet fullkornsbröd och använd en vitlökssås gjord på grekisk '
+                    'yoghurt och olivolja i stället för färdig majonnäs.')),
+    112: dict(lead='Kryddade skivor av nötkött med persilja, lök, sumak och tahinisås: mycket protein och naturligt fett '
+                   'med ett lågt glykemiskt index (40), och rätten mättar länge.',
+              tips=('Beställ den som en tallrik grillat kött med piyazsallad (persilja, lök och sumak) och tahinisås; en '
+                    'proteinrik måltid som mättar i många timmar utan någon kraftig blodsockertopp.',
+                    'Tahinisås med citron är den perfekta följeslagaren till köttets fett; sesamfettet bromsar upptaget '
+                    'och ger en äkta orientalisk smak.')),
+    113: dict(lead='Tärningar av kycklingbröst marinerade i yoghurt, vitlök, citron och kryddor och grillade över kol: '
+                   'magert protein helt utan stärkelse (det glykemiska indexet är inte tillämpligt) och mycket lättsmält.',
+              tips=('Det säkraste valet på restaurang vid diabetes eller bantning; ät den med en grön sallad och baba '
+                    'ganoush för en mättande och balanserad restaurangmåltid.',
+                    'Grilla den över kol eller på grillen hemma tills den är genomstekt men fortfarande saftig, och '
+                    'servera med grillade vitlöksklyftor och grillad lök.')),
+    114: dict(lead='En blandning av köttfärs, lök, persilja och orientaliska kryddor: rikligt med protein, järn och zink '
+                   'utan tillsatt stärkelse (ingen glykemisk effekt), och den mättar länge.',
+              tips=('Passar utmärkt vid lågkolhydratkost och keto; protein bidrar till att öka och bibehålla muskelmassan. '
+                    'Ät de grillade koftaspetten med grön sallad och yoghurt i stället för pommes frites eller vitt bröd.',
+                    'Grilla dem så att överflödigt smält fett får droppa av, och se till att inget ströbröd eller mjöl '
+                    'blandas i färsen.')),
+    115: dict(lead='En ikon i det aleppiska och levantinska köket: ett krispigt skal av bulgur och magert kött, fyllt med '
+                   'köttfärs, lök och valnötter. Det glykemiska indexet är lågt (52) tack vare den långsamt smälta '
+                   'bulguren och proteinet.',
+              tips=('En eller två bitar räcker gott som portion i en balanserad måltid; ät en grön sallad eller yoghurt '
+                    'med gurka till för att balansera energin och fettet från friteringen.',
+                    'Grädda dem i ugn eller airfryer med lite olivolja penslad på för samma krispighet utan stora mängder '
+                    'olja.')),
+    116: dict(lead='En förfinad traditionell rätt från Levanten: mycket färskt nöt- eller lammkött som stöts med fin '
+                   'bulgur, mynta och kryddor. Den har ett lågt glykemiskt index (38) och protein av hög kvalitet.',
+              tips=('En festlig rätt som passar vid diabetes och bantning; den mättar väl utan att höja blodsockret '
+                    'nämnvärt, eftersom det magra köttet ger mycket protein i förhållande till den måttliga mängden '
+                    'bulgur.',
+                    'Servera den med extra jungfruolivolja, färsk mynta, ruccola och salladslök, och köp alltid köttet '
+                    'färskt och rent från en pålitlig källa.',
+                    '⚠️ Köttet måste vara helt färskt och komma från en pålitlig källa; rätten rekommenderas inte för '
+                    'gravida, barn eller personer med nedsatt immunförsvar, på grund av risken för bakteriell infektion.')),
+    117: dict(lead='Allas favorit på det kalla mezebordet: vinblad fyllda med ris, hackade grönsaker, olivolja och '
+                   'granatäpplesirap. Fibrerna i vinbladen, olivoljan och citronen bromsar stärkelsen i riset, så att det '
+                   'glykemiska indexet blir lågt (42).',
+              tips=('En utmärkt kall förrätt; ät dem med måtta (4–5 dolmar), eftersom den fylliga, syrliga smaken gör att '
+                    'några få räcker för att du ska känna dig behagligt mätt.',
+                    'Låt dem sjuda på mycket låg värme med skivad potatis och tomat, citronsaft och olivolja, och prova '
+                    'fullkornsris eller bulgur i fyllningen för mer fibrer.')),
+    118: dict(lead='Den mest balanserade varma husmansrätten: ett tunt, vattenrikt zucchiniskal runt en fyllning av '
+                   'köttfärs och lite ris, vilket ger ett lågt glykemiskt index (45).',
+              tips=('En komplett måltid som passar vid diabetes och viktnedgång; två fyllda zucchinier i en buljong med '
+                    'tomat, vitlök och mynta mättar väl utan att kännas tunga.',
+                    'Gör fyllningen av 70 % mager köttfärs och bara 30 % ris, och koka den i en naturlig sås av tomat, '
+                    'vitlök och torkad mynta utan sötad tomatpuré på burk.')),
+    119: dict(lead='De jordanska festmåltidernas kung och en symbol för arabisk gästfrihet: ris kokat med mört lammkött, '
+                   'syrlig jameedsås (fermenterad torkad yoghurt) och rostad mandel. Köttets fett och proteinet i jameeden '
+                   'bromsar upptaget av stärkelsen i riset, så att det glykemiska indexet blir lågt (52).',
+              tips=('Utmaningen med mansaf är den höga energitätheten; ta en måttlig portion ris (en kopp), fokusera på '
+                    'köttet och den varma jameedsåsen, och ät ruccola och salladslök till.',
+                    'Koka riset med lite naturligt ghee i stället för härdat fett, och drick jameedsåsen långsamt; den '
+                    'fermenterade, syrliga smaken gör att måltiden känns lättare.')),
+    120: dict(lead='Ett berömt paradnummer i det palestinska och levantinska köket: lager av karamelliserad aubergine, '
+                   'kyckling och kryddat ris. De lösliga fibrerna i auberginen och proteinet i kycklingen bromsar upptaget '
+                   'av stärkelsen i riset, så att det glykemiska indexet blir lågt (55).',
+              tips=('En härlig och komplett familjerätt; ta en portion där hälften är aubergine och kyckling och en '
+                    'fjärdedel ris, och ät en gurksallad med yoghurt till.',
+                    'Ugnsrosta auberginskivorna med lite olivolja i stället för att fritera dem; du sparar hundratals '
+                    'kalorier och slipper att de suger upp bränd olja.')),
+    121: dict(lead='"De fattigas guld" och en av de mest balanserade måltiderna som finns: grov bulgur, bruna linser, '
+                   'olivolja och lök kompletterar varandra till ett fullvärdigt protein med mycket fibrer och ett lågt '
+                   'glykemiskt index (38).',
+              tips=('En av de växtbaserade kombinationer som rekommenderas mest vid diabetes; den mättar länge och ger '
+                    'jämna blodsockervärden hela dagen.',
+                    'Laga den med grov bulgur i stället för vitt ris, använd extra jungfruolivolja och servera den med en '
+                    'grön sallad eller en skål naturell yoghurt.')),
+    122: dict(lead='Den lyxiga frukosten från Damaskus: kokta kikärter toppade med en sås av yoghurt, tahini och vitlök '
+                   'samt rostat bröd. Proteinet i kikärterna och yoghurten bromsar upptaget av brödet, så att det '
+                   'glykemiska indexet blir lågt (45).',
+              tips=('En rik och mycket mättande frukost; rosta brödet i ugnen i stället för att steka det i ghee, fokusera '
+                    'på kikärterna och yoghurten och ta bara lite bröd.',
+                    'Gör såsen av naturell yoghurt, ren tahini, citronsaft och vitlök, och toppa med pinjenötter eller '
+                    'lätt rostad mandel.')),
+    123: dict(lead='Kustkökets pärla: brunt, smakrikt ris kokat i fiskbuljong med karamelliserad lök och kryddor, serverat '
+                   'med bitar av färsk fisk. Fiskens magra protein ger riset ett lågt glykemiskt index (52).',
+              tips=('En balanserad fiskmåltid som kombinerar stärkelse för energi med lätt protein från fisken; ta en '
+                    'rejäl bit fisk och en måttlig mängd ris.',
+                    'Karamellisera löken i olivolja på låg värme tills den får en naturlig brun färg utan att brännas, och '
+                    'servera med en lätt tartarsås gjord på yoghurt, vitlök och citron.')),
+    124: dict(lead='Det traditionella palestinska kökets stolthet: tabunbröd dränkt i extra jungfruolivolja med lök '
+                   'karamelliserad med sumak och ugnsstekt kyckling. Den rikliga olivoljan och proteinet bromsar upptaget '
+                   'av brödet, så att det glykemiska indexet blir lågt (55).',
+              tips=('En rätt för högtider och sammankomster; ta en fjärdedels bröd med lök och sumak, en fjärdedels '
+                    'kyckling och en skål yoghurt för att balansera fettrikedomen.',
+                    'Använd äkta, oraffinerad palestinsk extra jungfruolivolja och ren, syrlig sumak, och ugnsstek '
+                    'kycklingen tills den får fin färg och köttsaften rinner över löken.')),
+    125: dict(lead='En mättande och älskad frukosträtt i hela arabvärlden: ägg som får sjuda långsamt i en sås av tomat, '
+                   'lök, paprika och olivolja. Mycket lite kolhydrater (GI 20), mycket protein, och rätten mättar i flera '
+                   'timmar.',
+              tips=('En idealisk frukost vid diabetes och för dig som äter keto eller lågkolhydratkost; den ger en '
+                    'ordentlig mättnad på morgonen och påverkar blodsocker och insulin mycket lite.',
+                    'Ät den med sked tillsammans med en skiva rostat fullkornsbröd eller gurkskivor, och laga såsen på '
+                    'olivolja och färska tomater med en nypa spiskummin, paprikapulver och lite chili.')),
+    126: dict(lead='Vintervärme i en skål: mosad soppa på gula linser med lök, spiskummin, olivolja och citron. Den har '
+                   'ett lågt glykemiskt index (30) och innehåller mycket lösliga fibrer.',
+              tips=('En perfekt förrätt till lunch eller middag som fyller magen och dämpar storätandet; börja måltiden '
+                    'med den, så äter du ofta mindre stärkelse efteråt.',
+                    'Koka den på gula linser, vatten, lök, spiskummin och olivolja, och undvik för mycket potatis och '
+                    'färdiga buljongtärningar med mycket salt och smakförstärkare.')),
+    127: dict(lead='Kungen bland Egyptens folkrätter: en mäktig, stärkelserik blandning av ris, linser, pasta och kikärter '
+                   'med tomatsås, vitlöksvinäger (daqqa) och krispig lök. Linserna och kikärterna bromsar stärkelsen, så '
+                   'att det glykemiska indexet blir medelhögt (58).',
+              tips=('En måltid med mycket stärkelse; vid diabetes kan du be om en portion med extra linser, kikärter och '
+                    'tomatsås och hälften så mycket ris och pasta.',
+                    'Ta gärna rikligt med daqqa (vinäger med vitlök) och stark tomatsås, som ger mycket smak.')),
+    128: dict(lead='Medelhavskostens självklara fett: olivoljan består främst av enkelomättat fett och påverkar inte '
+                   'blodsockret. Att ersätta mättat fett med omättat fett i kosten bidrar till att bibehålla normala '
+                   'kolesterolhalter i blodet.',
+              tips=('Ringla en till två matskedar om dagen över sallad, ful medames eller hummus; olivolja tillsammans med '
+                    'stärkelse bromsar upptaget.',
+                    'Använd den kall eller vid skonsam tillagning på låg värme, och undvik att hetta upp den till '
+                    'rökpunkten, så bevaras de känsliga polyfenolerna.')),
+    129: dict(lead='Ett traditionellt och rent fett från ko- eller fårmjölk, där vattnet, laktosen och mjölkproteinet har '
+                   'tagits bort. Inga kolhydrater och ingen glykemisk effekt, och ghee tål höga stektemperaturer väl.',
+              tips=('Ett bra fett för stekning och bryning med måtta i stället för härdade fetter; en tesked till ägg '
+                    'eller grönsaker påverkar inte blodsockret.',
+                    'Välj naturligt ghee gjort på riktigt smör utan tillsatta aromer, och använd det sparsamt eftersom det '
+                    'är mycket energitätt.')),
+    130: dict(lead='Ett tropiskt fett som innehåller medellånga fettsyror (MCT) och är helt fritt från kolhydrater.',
+              tips=('Populärt bland dem som äter keto eller lågkolhydratkost och bland idrottare, till exempel en tesked i '
+                    'morgonkaffet.',
+                    'Välj kallpressad jungfrukokosolja med en lätt arom; den passar för skonsam matlagning och bakning, '
+                    'men eftersom den är rik på mättat fett bör den användas med måtta.')),
+    131: dict(lead='Ren sesam i krämig form: vegetabiliskt fett, kalcium och magnesium i koncentrerad form, med ett lågt '
+                   'glykemiskt index (12). Tillsammans med söt mat kan tahinins fett bromsa sockerupptaget.',
+              tips=('Ett bra sällskap vid diabetes när du äter dadlar eller frukt; en halv tesked tahini på en dadel '
+                    'bromsar sockerflödet till blodet och dämpar en plötslig insulinstegring.',
+                    'Välj tahini gjord på 100 % sesamfrön utan tillsatt vitt mjöl eller billiga vegetabiliska oljor (ett '
+                    'naturligt lager sesamolja lägger sig ofta överst).')),
+    132: dict(lead='Världens populäraste morgondryck. Svart kaffe innehåller klorogensyra, är fritt från kolhydrater, '
+                   'nästan fritt från kalorier och påverkar inte blodsockret.',
+              tips=('Drick det utan socker och utan sötade kaffegräddar, som tillför socker och kalorier.',
+                    'Brygg det som bryggkaffe, espresso eller lätt arabiskt eller turkiskt kaffe, och drick ett glas '
+                    'vatten till varje kopp för att få i dig tillräckligt med vätska.')),
+    133: dict(lead='Grönt te innehåller katekiner, bland annat EGCG. Drycken är i princip fri från kalorier och stärkelse.',
+              tips=('Gott mellan måltiderna eller en halvtimme efter lunch, och det påverkar varken blodsocker eller '
+                    'insulin.',
+                    'Låt de gröna tebladen dra i hett men inte kokande vatten (cirka 80 °C) i två till tre minuter, och '
+                    'undvik att koka teet, eftersom garvämnena (tanninerna) då ger en bitter och sträv smak.')),
+    134: dict(lead='Pulver av hela gröna teblad med katekiner (EGCG) och aminosyran L-teanin, utan socker och utan '
+                   'glykemisk effekt.',
+              tips=('Drick den varm på morgonen eller före träning.',
+                    'Vispa matchapulvret med en bambuvisp i hett men inte kokande vatten och drick den utan socker, eller '
+                    'blanda den med osötad mandeldryck som ett alternativ till kaféernas sötade latte.')),
+    135: dict(lead='Ett av de mest energisnåla växtbaserade alternativen: vatten med pressad mandel där socker och '
+                   'stärkelse nästan saknas, med 15 kcal per 100 g och ingen effekt på blodsockret.',
+              tips=('Ett smart val vid diabetes och insulinresistens till kaffe och smoothies; den ger en krämig '
+                    'konsistens utan laktos och utan snabbt socker.',
+                    "Läs ingrediensförteckningen noga och kontrollera att det står 'osötad'; vanliga varianter i butiken "
+                    'innehåller tillsatt socker och aromer som höjer det glykemiska indexet.')),
+    136: dict(lead='En svalkande sommardryck: yoghurt utspädd med vatten och en nypa havssalt. Den är syrad, innehåller '
+                   'protein och har ett lågt glykemiskt index (25).',
+              tips=('Ett perfekt sällskap till mastiga måltider som grillat kött och kabsa; den släcker törsten och '
+                    'innehåller inget tillsatt socker.',
+                    'Gör den hemma genom att vispa naturell yoghurt med kallt vatten, en nypa salt och torkad mynta; en '
+                    'naturlig törstsläckare som ersätter saltet du förlorar genom svett på sommaren.')),
+    137: dict(lead='Idrottarnas naturliga elektrolytdryck: vatten från den gröna kokosnöten, som innehåller kalium och '
+                   'magnesium och har ett lågt glykemiskt index (54) och få kalorier.',
+              tips=('Ett bra alternativ till industriella sportdrycker efter hård träning eller på varma dagar; den ger '
+                    'vätska och kalium.',
+                    'Drick färskt kokosvatten direkt från frukten och undvik förpackade varianter med tillsatt rörsocker '
+                    'eller konstgjorda aromer.')),
+    138: dict(lead='Den vanligaste drycken på frukostbordet. Apelsinjuice innehåller mycket C-vitamin, men när apelsinen '
+                   'pressas skiljs fibrerna bort och fruktsockret koncentreras i en vätska som tas upp snabbt (GI 50).',
+              tips=('Ett glas juice kräver 3–4 pressade apelsiner; därför är det bättre vid diabetes och bantning att äta '
+                    'en hel apelsin med klyftor och fibrer än att dricka silad juice.',
+                    'Om du vill dricka den, nöj dig med ett halvt litet glas (100 ml) efter en proteinrik frukost med till '
+                    'exempel ägg, och drick den inte på tom mage, så undviker du en snabb blodsockertopp.')),
+    139: dict(lead='Granatäpplejuice innehåller polyfenoler, men när kärnorna med sina fibrer silas bort blir sockret mer '
+                   'koncentrerat; det glykemiska indexet är lågt (53).',
+              tips=('Juicen innehåller mycket polyfenoler, men vid diabetes bör den drickas med måtta: nöj dig med ett '
+                    'halvt glas utspätt med vatten.',
+                    'Pressa den färsk hemma och drick den direkt utan att sila bort de fina fibrerna, och undvik helt '
+                    'färdiga granatäpplejuicer med tillsatt socker och färgämnen.')),
+    140: dict(lead='Världens mest kända läsk: en sockerlösning som tas upp snabbt, helt utan protein, fibrer eller annat '
+                   'näringsvärde, med ett medelhögt glykemiskt index (63) som belastar bukspottkörteln hårt.',
+              tips=('En burk (330 ml) innehåller cirka 9 teskedar socker (36 g) som når blodet inom några minuter; undvik '
+                    'den helt om du har diabetes eller fettlever.',
+                    'Byt ut den mot naturligt kolsyrat vatten med citronskivor och myntablad eller osötat iste, för att '
+                    'njuta av något svalkande utan sockret.')),
+    141: dict(lead='Den mest beställda snabbmatshamburgaren: två köttbiffar, vitt bröd och Big Mac-sås. Fettet i köttet '
+                   'och såsen bromsar nedbrytningen av brödet, så att det glykemiska indexet blir lågt (55), men kalori- '
+                   'och fetthalten är hög.',
+              tips=('En måltid med mycket kalorier, industriellt framställt fett och salt; om du ändå äter den, hoppa över '
+                    'pommes frites och läsk och drick vatten för att hålla nere måltidens belastning.',
+                    'Det smartaste knepet vid bantning och diabetes är att ta bort den övre eller mittersta brödbiten och '
+                    'äta burgaren med grön sallad, så minskar kolhydraterna rejält direkt.')),
+    142: dict(lead='Bitar av malet kycklingkött med ett friterat ströbrödshölje; protein- och fetthalten gör att det '
+                   'glykemiska indexet blir lågt (46), men det friterade mjölhöljet i industriell frityrolja höjer '
+                   'kalorierna och mängden oxiderat fett.',
+              tips=('Ett val med mindre kolhydrater jämfört med en stor hamburgare eller pommes frites; hemligheten är att '
+                    'undvika att doppa dem i barbecuesås och söt sås med fruktosrik majssirap.',
+                    'Gör dem hemma: skär kycklingbröst i bitar, vänd dem i havre- eller mandelmjöl och grädda dem i '
+                    'airfryer för att minska de härdade oljorna.')),
+    143: dict(lead='Hela kycklingbitar som kryddats och friterats i den kända ströbrödsblandningen; själva kycklingköttet '
+                   'innehåller ingen stärkelse, och kolhydraterna kommer bara från det krispiga skalet, med ett lågt '
+                   'glykemiskt index (45), men skalet är fullt av frityrolja.',
+              tips=('Proteinet bromsar blodsockerstegringen, men den stora mängden friterat fett är tung för '
+                    'matsmältningen; ät en bit med coleslaw utan söt majonnäs.',
+                    'Ta bort hälften av det krispiga skinnet, så slipper du ungefär hälften av den uppsugna oljan och '
+                    'mjölet utan att kycklingen förlorar sin saftighet och smak.')),
+    144: dict(lead='Den klassiska italienska pizzan: en deg på vitt mjöl med tomatsås och mozzarella. Ostens fett och '
+                   'protein bromsar nedbrytningen av degen, med ett medelhögt glykemiskt index (60), men kalorierna ökar '
+                   'snabbt.',
+              tips=('En bit räcker som en balanserad portion; ät en stor grön sallad med olivolja och vinäger före pizzan '
+                    'för att bromsa nedbrytningen av degen.',
+                    'Välj tunn, stenugnsbakad pizza (thin crust) på fullkornsmjöl om det finns, och undvik tjocka pizzor '
+                    'med ostfyllda kanter.')),
+    145: dict(lead='Den mäktigaste pizzan: en bit deg täckt med mozzarella och torkad pepperonikorv. Det glykemiska '
+                   'indexet är medelhögt (60) tack vare den höga fetthalten, men den innehåller mycket kalorier, mättat '
+                   'fett och salt.',
+              tips=('Nöj dig med en bit och drick rikligt med vatten för att balansera saltet; undvik söt läsk till, '
+                    'eftersom den kraftigt ökar måltidens sockerbelastning.',
+                    'Torka av oljan som ligger på ytan med en bit hushållspapper innan du äter, så blir du av med en hel '
+                    'del överflödigt fett.')),
+    146: dict(lead='Det mest flexibla snabbmatsvalet: kryddade skivor av kycklingbröst i Subway-bröd med grönsaker. Det '
+                   'glykemiska indexet är lågt (52), och hemligheten ligger i valet av bröd och såser.',
+              tips=('Beställ smörgåsen med fullkornsbröd (Wheat) och be om alla färska grönsaker som finns (sallad, tomat, '
+                    'gurka, paprika) för att få mer fibrer.',
+                    'Teriyakisåsen innehåller tillsatt socker; byt ut den mot olivolja, vinäger och naturlig senap för att '
+                    'minska stärkelsen och det dolda sockret.')),
+    147: dict(lead='Sallad av riven vitkål och morot med majonnäsdressing; fibrerna från den korsblommiga kålen är '
+                   'utmärkta och det glykemiska indexet är lågt (35), men färdig dressing innehåller ofta tillsatt socker.',
+              tips=('Ett mellanmål eller tillbehör med fibrer från kålen; tänk på att dressingen kan vara söt, och ta en '
+                    'liten portion (en halv kopp).',
+                    'Gör den hemma genom att blanda kål och morot med grekisk yoghurt, en sked naturlig majonnäs, '
+                    'citronsaft och lite senap utan tillsatt socker, så får du en fräsch hemgjord coleslaw.')),
+    148: dict(lead='Drottningen bland de orientaliska bakverken: krispiga degblad fyllda med pistage och dränkta i '
+                   'sockerlag och ghee. Trots den intensiva sötman bromsar fettet från pistagen och ghee sockret något, '
+                   'med ett medelhögt glykemiskt index (67), men socker- och kaloriinnehållet är mycket högt.',
+              tips=('En sötsak för glada högtider med en strikt portion: bara en liten bit efter en fiberrik måltid, och '
+                    'undvik att äta den på tom mage, så slipper du en kraftig insulinstegring.',
+                    'Drick en kopp osötat arabiskt kaffe med en nypa kanel till; kaffets beska bryter sötman i munnen.')),
+    149: dict(lead='Levantens stora favorit: gyllene degtrådar med mild vit ost och varm sockerlag. Det glykemiska indexet '
+                   'är högt (72), och den höjer blodsockret snabbt eftersom den suger upp mycket sockerlag.',
+              tips=('Vid diabetes: ät högst två små bitar och be konditoriet halvera sockerlagen eller byta ut den mot en '
+                    'lag sötad med stevia.',
+                    'Proteinet i knafehns ost bromsar stärkelsen något jämfört med sötsaker gjorda på industriell grädde; '
+                    'drick ett stort glas vatten efteråt.')),
+    150: dict(lead='Gyllene mannagrynskaka dränkt i sockerlag och ghee och toppad med mandel; de fina mannagrynen och '
+                   'sockerlagen gör att den smälts snabbt, med ett högt glykemiskt index (70) och en hög kolhydrattäthet.',
+              tips=('Ät en halv liten bit som efterrätt efter en komplett lunch med sallad och protein, och undvik att äta '
+                    'den på morgonen eller mellan måltiderna.',
+                    'Om du bakar den själv, byt ut hälften av sockret i lagen mot stevia och strö rikligt med rå mandel på '
+                    'ytan för mer fibrer och omättat fett.')),
+    151: dict(lead='Glädjen vid högtider och fester: en mannagrynskaka knådad med ghee och fylld med naturlig dadelmassa '
+                   'och anis. Fibrerna från dadlarna och fettet från ghee ger ett medelhögt glykemiskt index (62), mer '
+                   'måttligt än för bakverk som dränkts i sockerlag.',
+              tips=('Det bästa och renaste valet bland de orientaliska bakverken, eftersom sötman främst kommer från '
+                    'naturliga dadlar; en bit till kaffet räcker gott för att njuta.',
+                    'Välj maamoul bakad på fullkornsmjöl och fylld med naturliga dadlar utan tillsatt vitt socker i '
+                    'dadelmassan.')),
+    152: dict(lead='Bakverkens vetenskapliga överraskning: trots sockret består halvan till mer än hälften av sesamtahini, '
+                   'och sesamens fett och fibrer bromsar sockerupptaget, så att det glykemiska indexet blir lågt (45).',
+              tips=('En liten sked mättar snabbt utan någon kraftig blodsockertopp, men den höga energitätheten kräver att '
+                    'du håller dig till en liten portion.',
+                    'Ät den med en skiva rostat fullkornsbröd eller gurkbitar till frukost, så blir frukosten mer '
+                    'mättande.')),
+    153: dict(lead='En mild mjölkpudding med smak av apelsinblomsvatten och mastix, kokad på majsstärkelse och mjölk. Det '
+                   'glykemiska indexet är lågt (55) och kalorierna är färre än i friterade sötsaker och sötsaker i '
+                   'sockerlag.',
+              tips=('En mild sommardessert; gör du den hemma kan du halvera sockret och toppa med kanel och naturella '
+                    'nötter för mer fibrer.',
+                    'Använd standardmjölk och majsstärkelse med måtta, och låt naturlig vanilj och apelsinblomsvatten ge '
+                    'en känsla av sötma utan att du behöver mycket socker.')),
+    154: dict(lead='En kärleksfull traditionell rätt där riskorn kokas i mjölk, sötas med socker och toppas med kanel; det '
+                   'glykemiska indexet är medelhögt (65) tack vare mjölkproteinet som bromsar riset.',
+              tips=('En liten skål kall rispudding räcker som en mättande efterrätt efter lunchen; strö rikligt med kanel '
+                    'på ytan för en varm och fyllig smak.',
+                    'Om du gör den hemma, koka basmatiris i mjölk och använd stevia eller mycket lite socker, och njut av '
+                    'den krämiga smaken utan blodsockertoppar.')),
+    155: dict(lead='Mörk choklad med hög kakaohalt består till stor del av kakaosmör och innehåller flavonoider och mycket '
+                   'fibrer; det glykemiska indexet är lågt (20) och blodsockret stiger mycket lite.',
+              tips=('Ett mellanmål som kan stilla sötsuget; två små rutor till en kopp svart kaffe räcker.',
+                    'Läs alltid etiketten och kontrollera att kakaohalten är minst 85 %; mjölkchoklad och vit choklad '
+                    'innehåller mycket socker och härdade fetter och saknar de här egenskaperna.')),
+    156: dict(lead='Doften av en nybakad fransk smörcroissant på morgonen är svår att motstå och en älskad start på dagen, '
+                   'men den vanligaste frågan är: höjer den blodsockret snabbt? Svaret är ja. Kombinationen av vitt, '
+                   'siktat mjöl och smörlager gör att kolhydraterna tas upp relativt snabbt, med ett glykemiskt index på '
+                   '67, vilket kan ge snabb energi följd av ett snabbt blodsockerfall och tidig hunger.',
+              tips=('Gör inte croissanten till en ensam frukost på tom mage; kombinera den alltid med en proteinkälla, som '
+                    'ett kokt ägg eller en skiva naturell ost, och byt ut juice och söta drycker mot svart kaffe eller '
+                    'varmt te utan socker.',
+                    'Värm croissanten i ugnen några minuter, så framhävs smörsmaken och du nöjer dig lättare med en halv '
+                    'eller en liten croissant som du äter långsamt och njuter av, i stället för att äta den snabbt i '
+                    'farten.',
+                    'Om du håller koll på blodsockret eller vill gå ner i vikt rekommenderas croissanten som ett '
+                    'genomtänkt undantag en gång i veckan, tillsammans med en proteinrik frukost som håller dig mätt hela '
+                    'förmiddagen.')),
+    157: dict(lead='En av de klassiska desserter som sötsugna oftast frågar om: påverkar cheesecake blodsockret mindre än '
+                   'vanlig sockerkaka? Tack vare fyllningen av färskost med mycket fett och protein tas sockret upp '
+                   'relativt långsamt, med ett glykemiskt index på 55, men den höga energitätheten och det koncentrerade '
+                   'sockret kräver att du är medveten om storleken på biten.',
+              tips=('Ät din lilla bit som en lyxig efterrätt efter en komplett huvudmåltid med grönsaker och protein, och '
+                    'undvik att äta den som mellanmål mellan måltiderna, så blir insulinsvängningarna mindre.',
+                    'Byt ut färdiga söta såser och sylter mot några färska blåbär eller jordgubbar med en nypa kanel; '
+                    'bären ger en frisk och ren sötma.',
+                    'Även om sockret tas upp relativt långsamt kan en medelstor bit innehålla mer än 350 kalorier, så det '
+                    'kan vara klokt att nöja sig med en tredjedel eller en halv bit för att behålla energibalansen.')),
+    158: dict(lead='För dig som älskar latinamerikanska smaker är taco med nötfärs en snabb och omtyckt måltid, och många '
+                   'undrar om den passar för ett stabilt blodsocker. Den stora fördelen är den proteinrika nötfärsen, som '
+                   'bromsar nedbrytningen av tacoskalet och ger ett lågt glykemiskt index, och tacon mättar väl.',
+              tips=('Fyll tacon med rikligt med strimlad sallad, tomatbitar och färsk koriander och pressa över lite lime; '
+                    'de extra fibrerna bromsar upptaget av majsstärkelsen tydligt.',
+                    'Välj tacoskal av fullkornsmajsmjöl som bakats i ugnen i stället för friterade skal, så minskar '
+                    'kalorierna och det oxiderade fettet.',
+                    'Var uppmärksam på färdiga tacokryddblandningar, som ofta innehåller majsstärkelse och socker som '
+                    'förtjockningsmedel; krydda hellre färsen själv med spiskummin, paprikapulver och vitlök.')),
+    159: dict(lead='En burrito är en mäktig mexikansk måltid, och dess värde ligger i kombinationen av grillad kyckling '
+                   'och bönor. Bönorna ger komplexa kolhydrater med mycket lösliga fibrer, men den stora vita tortillan '
+                   'och tillsatt ris kan snabbt höja måltidens glykemiska belastning.',
+              tips=('För att undvika blodsockertoppar och trötthet efter lunchen kan du prova en burrito bowl utan den '
+                    'stora tortillan, med fokus på kyckling och bönor och färgglada fajitagrönsaker.',
+                    'Be att få byta ut det vita riset mot mer svarta bönor eller grillade grönsaker, och välj färsk salsa '
+                    'i stället för flytande ostsåser.',
+                    'Vid diabetes eller viktkontroll: kom ihåg att en hel burrito med bröd och ris kan innehålla mer än 70 '
+                    'g kolhydrater; genom att ändra innehållet får du det bästa av rätten med ungefär hälften så mycket '
+                    'kolhydrater.')),
+    160: dict(lead='Värmen från smält ost i en rostad tortilla gör quesadillan till ett av de godaste snabba tröstvalen, '
+                   'men hur påverkar den vikt och blodsocker? Ostens fett och protein bromsar nedbrytningen av stärkelsen '
+                   'i brödet, men eftersom brödet bakas på vitt, siktat vetemjöl behöver portionen hanteras klokt så att '
+                   'kalorierna inte blir för många.',
+              tips=('Ät inte quesadillan ensam; börja med en grön sallad och doppa bitarna i naturlig guacamole, som '
+                    'innehåller enkelomättat fett, i stället för industriellt framställda gräddsåser.',
+                    'Förstärk fyllningen med strimlat kycklingbröst, svamp eller grillad paprika vid sidan av osten; det '
+                    'ökar protein- och fiberinnehållet och minskar mängden ost som behövs.',
+                    'Quesadillan innehåller mycket mättat fett och salt, så att dela rätten med någon annan är det bästa '
+                    'sättet att njuta av smaken.')),
+    161: dict(lead='Ett av de smartaste och godaste valen på latinamerikanska restauranger för dig som vill äta '
+                   'balanserat. Fajitas bygger i grunden på grillat kycklingbröst med strimlad färgglad paprika och lök, '
+                   'vilket gör att själva grundrätten innehåller lite kolhydrater, mycket protein och mycket C-vitamin.',
+              tips=('Ät kycklingen och de grillade grönsakerna med gaffel som huvudrätt och nöj dig med en liten tortilla, '
+                    'eller byt ut brödet helt och rulla in de varma fajitabitarna i stora, krispiga salladsblad.',
+                    'Be att kycklingen och grönsakerna steks i lite olivolja i stället för mycket raffinerad olja, och '
+                    'njut av grillsmaken och de aromatiska kryddorna som oregano och spiskummin.',
+                    'Fajitas i sig är ett utmärkt val för en jämn blodsockernivå; det som främst höjer blodsockret är inte '
+                    'det som ligger i pannan, utan hur många tortillor du äter till.')),
+    162: dict(lead='En favorit på kvällar och sammankomster, men friterade majschips täckta med industriellt framställd '
+                   'cheddarost gör nachos till en snabbt smält kaloribomb. Den vanliga frågan är hur man äter dem utan att '
+                   'drabbas av trötthet och en blodsockertopp, och hemligheten är att göra om "chips med ost" till en '
+                   'balanserad måltid.',
+              tips=('Gör nachos till en rätt att dela med familj eller vänner i stället för att ställa en egen tallrik '
+                    'framför dig, och ät några bitar i taget medan du fokuserar på samtalet och sällskapet.',
+                    'Lägg till grillad kyckling, svarta bönor, pico de gallo (tomat, lök och koriander) och jalapeñoskivor '
+                    'för mer protein och fibrer och färre friterade chips.',
+                    'Färdiga nachosåser innehåller mycket härdat fett, salt och dold stärkelse, så att baka tortillachips '
+                    'i ugnen med naturlig ost hemma är ett bättre alternativ.')),
+    163: dict(lead='Den traditionella mexikanska avokadoröran, köksgrönt guld: den innehåller nästan inga nettokolhydrater '
+                   'men mycket enkelomättat fett och lösliga fibrer, så det glykemiska indexet är inte tillämpligt, och '
+                   'den mättar länge.',
+              tips=('Använd guacamole som ett smart alternativ till majonnäs och industriellt framställda såser i '
+                    'smörgåsar och rätter, och ät den som dipp till krispiga gurk- och morotsstavar i stället för färdiga '
+                    'kex och chips.',
+                    'Mosa färsk avokado med gaffel tillsammans med limesaft, hackad tomat, färsk koriander och lite '
+                    'havssalt; limen hindrar avokadon från att mörkna.',
+                    'Den höga fetthalten gör den energität, så två till tre matskedar räcker gott för att göra måltiden '
+                    'mättande.')),
+    164: dict(lead='Med sin fräscha blandning av färska tomater, lök, koriander och chili är salsa en av de bästa '
+                   'naturliga såserna som finns. Den innehåller mycket lite kalorier och kolhydrater och ger en '
+                   'oemotståndlig smak åt vilken rätt som helst utan någon blodsockertopp.',
+              tips=('Använd salsa som en färgglad grundsås till morgonens ägg, grillat kycklingbröst och fisk, för att '
+                    'bryta enformigheten i bantningskosten med en levande smak; tomaterna innehåller lykopen.',
+                    'Gör salsan hemma och rå (salsa fresca) för att bevara C-vitaminet och mikronäringsämnena, och '
+                    'tillsätt några droppar äppelcidervinäger och limesaft för en god syrlighet.',
+                    'När du köper färdig salsa, läs alltid ingrediensförteckningen och kontrollera att den är fri från '
+                    'tillsatt socker och modifierad majsstärkelse, som vissa tillverkare använder som förtjockningsmedel.')),
+    165: dict(lead='En gryta av köttfärs med röda bönor, tomat och chili: en värmande och mycket mättande vinterrätt. '
+                   'Kombinationen av köttets protein och bönornas fibrer ger ett lågt glykemiskt index (38).',
+              tips=('Njut av chilin som en komplett och mättande gryta i en djup skål med en färsk bladsallad vid sidan '
+                    'om, och undvik att servera den på berg av vitt ris, som ökar stärkelsebelastningen.',
+                    'Låt chilin sjuda långsamt på låg värme så att kryddorna blandas med bönorna, och toppa gärna med en '
+                    'tesked naturell grekisk yoghurt i stället för gräddfil för mer protein.',
+                    'En utmärkt rätt för aktiva personer och för dig som vill ha ett stabilt blodsocker länge tack vare '
+                    'fibrerna; drick rikligt med vatten, så hanterar magen baljväxternas fibrer lättare.')),
+    166: dict(lead='Det italienska kökets drottning och den mest värmande familjerätten på helgerna. Den vanligaste frågan '
+                   'är om lasagne med köttfärs och béchamel höjer blodsockret snabbt. Sanningen är att köttfärsen, '
+                   'mozzarellan och tomatsåsen bromsar upptaget av pastaplattorna och ger ett lågt glykemiskt index (52), '
+                   'men béchamelns fyllighet och den höga stärkelsemängden gör att storleken på biten är det som verkligen '
+                   'avgör.',
+              tips=('Börja måltiden med en rejäl grön bladsallad med olivolja och äppelcidervinäger; fibrerna kan bromsa '
+                    'upptaget av stärkelsen i pastan. Ät sedan en medelstor bit utan att äta dig övermätt.',
+                    'Ett smart kökstrick: byt ut hälften av lasagneplattorna mot tunna skivor av zucchini eller grillad '
+                    'aubergine; det minskar kolhydraterna betydligt och ökar fiber- och vatteninnehållet med bibehållen '
+                    'fyllig konsistens.',
+                    'En medelstor bit lasagne är en komplett, energität och fettrik måltid, så njut av den som huvudrätt '
+                    'och undvik vitlöksbröd eller söta desserter direkt efteråt.')),
+    167: dict(lead='Den äkta romerska pastan som miljoner älskar för sin sammetslena sås av äggula och parmesan eller '
+                   'pecorino. Många blir förvånade över att klassisk spaghetti inte höjer blodsockret så kraftigt som man '
+                   'tror: kokad al dente och tillsammans med äggets protein och ostens fett får den ett lågt glykemiskt '
+                   'index (50) och smälts gradvis.',
+              tips=('Begränsa din portion till högst cirka en kopp kokt spaghetti, och ät den med broccoli eller grillad '
+                    'sparris vid sidan om för en bättre balans mellan näringsämnen och fibrer.',
+                    'Pastans hemlighet är al dente-regeln: koka inte spaghettin tills den blir mjuk, utan ta upp den medan '
+                    'den fortfarande har tuggmotstånd; då behåller stärkelsen en kompakt struktur som '
+                    'matsmältningsenzymerna inte bryter ned till socker lika snabbt.',
+                    'Eftersom originalreceptet innehåller mycket mättat fett och salt är det bättre att laga den med färsk '
+                    'äggula, mindre tillsatt salt och mer smak från svartpeppar och naturlig ost.')),
+    168: dict(lead='Den mest kända och spridda husmansrätten i världen: spaghetti med en ragùsås rik på köttfärs och '
+                   'långkokta tomater. Den fina balansen mellan köttets protein och tomaternas fibrer ger rätten ett lågt '
+                   'glykemiskt index (50), vilket gör den till ett tryggt och mättande val om du håller koll på mängden.',
+              tips=('Vänd på den vanliga tallriksmodellen: låt köttfärssåsen och grönsakerna ta upp ungefär två '
+                    'tredjedelar av tallriken och pastan en måttlig del, så blir måltiden mer mättande och '
+                    'stärkelsebelastningen lägre.',
+                    'Tillsätt riven morot, hackad svamp och finhackad selleri i tomatsåsen under tillagningen; grönsakerna '
+                    'som kokas med köttet förstärker smaken och ger mer lösliga fibrer utan att smaken ändras märkbart.',
+                    'När tomatsåsen kokas med olivolja och kött tas lykopenet upp bättre.')),
+    169: dict(lead='Breda fettuccineband i en sås av grädde, smör och parmesan ger en fyllig och lyxig smak. Utmaningen '
+                   'med Alfredo är inte en snabb blodsockerstegring, eftersom det rikliga fettet bromsar magsäckstömningen '
+                   'och ger ett lågt glykemiskt index (48), utan den höga energitätheten, som kräver att du äter klokt.',
+              tips=('Gör fettuccine Alfredo till en rätt för speciella tillfällen och lägg alltid till en ren '
+                    'proteinkälla, som grillat kycklingbröst eller räkor, så minskar lusten att äta stora mängder pasta.',
+                    'Gör en mindre mäktig version hemma genom att byta ut en del av den tjocka matlagningsgrädden mot '
+                    'naturlig kycklingbuljong eller mjölk, med äkta parmesan, lite vitlök och muskotnöt för en äkta och '
+                    'frisk smak.',
+                    'Om du håller koll på blodfetterna, tänk på att en klassisk Alfredo på restaurang innehåller mycket '
+                    'mättat fett, så att dela tallriken är ett klokt val.')),
+    170: dict(lead='Det berömda italienska risets mästerverk, med en sammetslen konsistens som smälter i munnen. Men den '
+                   'viktiga frågan är: påverkar risotto blodsockret mindre än vanligt ris? I själva verket görs risotto på '
+                   'arborioris, ett kortkornigt ris med mycket amylopektin som bryts ned snabbt, vilket ger ett medelhögt '
+                   'glykemiskt index (68), så det behöver kombineras klokt för att bromsa nedbrytningen.',
+              tips=('Ät inte risotton ensam som huvudrätt, utan som tillbehör i storlek med en knytnäve tillsammans med en '
+                    'rejäl bit grillad fisk eller kyckling och en ruccolasallad med rikligt med olivolja.',
+                    'Laga risotton med rikligt med färsk skivad svamp och naturlig kycklingbuljong; svampen tillför fibrer '
+                    'som kan bromsa upptaget av risets stärkelse.',
+                    'Om du älskar risotto och har insulinresistens rekommenderas att du undviker grädde och för mycket '
+                    'smör, nöjer dig med lite äkta parmesan och tuggar riskornen mycket långsamt.')),
+    171: dict(lead='De små, mjuka gnocchibitarna ser ut som aptitliga kuddar, men grundingredienserna är mosad kokt '
+                   'potatis och vetemjöl. Eftersom stärkelsen i mosad potatis bryts ned mycket snabbt har gnocchi ett '
+                   'medelhögt glykemiskt index (68), vilket kan ge en snabb blodsockerstegring om de inte kombineras med '
+                   'fibrer och fett.',
+              tips=('Minska antalet gnocchi på tallriken och låt dem bli en lyxig stärkelsedetalj, och börja gärna '
+                    'måltiden med en krispig grönsallad för att dämpa glukostoppen i blodet.',
+                    'Undvik söta färdiga såser och välj i stället pesto med extra jungfruolivolja, pinjenötter och färsk '
+                    'basilika; det enkelomättade fettet i olivoljan bromsar upptaget av stärkelsen i gnocchin.',
+                    'Om du äter lågkolhydratkost eller är känslig för glukos kan du prova blomkålsgnocchi som ett smart '
+                    'hemgjort alternativ med samma konsistens och mycket mindre stärkelse.')),
+    172: dict(lead='Calzone är hela pizzanjutningen, men inrullad och tätt försluten så att all saftighet, värme och smält '
+                   'ost stannar inuti. Den har en tjock deg och en kompakt fyllning, vilket gör den till en måltid med '
+                   'mycket kolhydrater och kalorier och ett medelhögt glykemiskt index (58), så den kräver en smart plan '
+                   'för hur du delar och äter den.',
+              tips=('Den gyllene regeln med calzone är att dela; en halv calzone med en fräsch italiensk sallad räcker '
+                    'gott för att du ska bli mätt och nöjd utan att känna dig tung och trött efter maten.',
+                    'Be om en fyllning med mycket spenat, svamp, lök och grillad paprika tillsammans med kyckling eller '
+                    'magert nötkött, och undvik charkuterier och kanter fyllda med mer industriell ost.',
+                    'Den slutna degen stänger in olja och fett, så låt den svalna lite och torka av överflödig olja på '
+                    'skorpan med hushållspapper; det minskar onödigt fett och gör den lättare att smälta.')),
+    173: dict(lead='En symbol för enkelhet och elegans bland de toskanska förrätterna: krispiga, rostade brödskivor '
+                   'toppade med en strålande blandning av mogna tomater, vitlök, aromatisk basilika och extra '
+                   'jungfruolivolja. Ett fräscht och glatt val med en måttlig mängd stärkelse och ett lågt glykemiskt '
+                   'index (55).',
+              tips=('En till två bitar bruschetta räcker gott som en aptitlig inledning före huvudrätten och kan dämpa den '
+                    'värsta hungern.',
+                    'Rosta brödskivorna ordentligt tills de är gyllene och krispiga, eftersom rostning delvis ändrar hur '
+                    'snabbt stärkelsen bryts ned, och gnid in brödet med en färsk vitlöksklyfta innan du lägger på '
+                    'tomatblandningen för mer smak.',
+                    'Använd alltid färska, hela tomater som du hackar för hand och undvik sötad tomatpuré på burk, och '
+                    'välj kallpressad extra jungfruolivolja.')),
+    174: dict(lead='Mästerverket från den italienska ön Capri sammanfattar medelhavskostens skönhet i sin enkelhet: skivor '
+                   'av färsk mozzarella, mogna röda tomater och doftande gröna basilikablad med en stråle extra '
+                   'jungfruolivolja. Rätten påverkar i praktiken inte blodsockret; nettokolhydraterna är försumbara och '
+                   'det glykemiska indexet är inte tillämpligt.',
+              tips=('En utmärkt rätt att inleda lunch eller middag med; proteinet i mozzarellan och det enkelomättade '
+                    'fettet i olivoljan kan tillsammans bromsa nedbrytningen av stärkelsen i måltiden som följer.',
+                    'Strö över lite havssalt och nymalen svartpeppar och ringla en liten mängd traditionell, osötad '
+                    'balsamvinäger, och undvik tjock färdig balsamicokräm med tillsatt socker eller karamell.',
+                    'Ett idealiskt och klassiskt val vid diabetes, insulinresistens, keto och lågkolhydratkost, eftersom '
+                    'rätten mättar ordentligt utan någon kolhydratbelastning.')),
+    175: dict(lead='Den rustika, traditionella grönsakssoppan som gått i arv i italienska familjer. Soppan är full av '
+                   'zucchini, morot, vita bönor, selleri och tomat med en liten mängd små pastabitar. Det glykemiska '
+                   'indexet är lågt (39), och den är ett utmärkt exempel på en rätt som ger ett stabilt blodsocker.',
+              tips=('En härlig rätt att inleda lunchen eller middagen med; den varma soppan fyller en stor del av magen '
+                    'och ger en tidig känsla av mättnad, så att du lättare undviker att äta för mycket av de mäktiga '
+                    'rätterna som följer.',
+                    'Koka grönsakerna på låg värme så att de behåller lite tuggmotstånd och inte blir helt mosiga, och öka '
+                    'mängden bönor och bladgrönsaker samtidigt som du håller pastan till ett minimum.',
+                    'Bönorna i minestronen innehåller lösliga fibrer och folat.')),
+    176: dict(lead='Sushi är älskat över hela världen som en symbol för lättsam och elegant mat, men den vanligaste frågan '
+                   'är: höjer sushiriset blodsockret? Sushiris smaksätts med vinäger och tillsatt socker, vilket ger ett '
+                   'lågt glykemiskt index (52), och laxens fett med omega-3 och laxens protein bromsar upptaget och ger '
+                   'måltiden en fin balans.',
+              tips=('Börja måltiden med en skål misosoppa eller en edamamesallad för fibrer och protein, och nöj dig med '
+                    '6–8 bitar som en komplett måltid; undvik friterade rullar (crunchy) och rullar dränkta i söta, '
+                    'krämiga såser.',
+                    'Doppa sushibiten med laxsidan, inte rissidan, i utspädd sojasås, så suger riset inte upp för mycket '
+                    'salt, och njut av lite naturlig wasabi för smakens skull.',
+                    '⚠️ Laxen måste vara färsk, avsedd för sushi och fryst i förväg enligt säkerhetsreglerna för fisk; rå '
+                    'fisk rekommenderas inte för gravida, barn eller personer med nedsatt immunförsvar, på grund av risken '
+                    'för parasiter och bakterier.')),
+    177: dict(lead='Den mest beställda och populära rullen i världen: mjuk avokado, krispig gurka och crabsticks i en '
+                   'välformad rulle av ris och rostade sesamfrön. En fräsch och lättsam måltid med ett lågt glykemiskt '
+                   'index (55), men tänk på att industriellt framställda crabsticks innehåller dold stärkelse.',
+              tips=('Håll portionen till 6–8 bitar och komplettera med en grön sallad för mer fibrer, så att stärkelsen '
+                    'tas upp gradvis.',
+                    'Njut av naturlig inlagd ingefära mellan bitarna för att rensa smaklökarna, och undvik extra stark '
+                    'majonnäs ovanpå rullarna.',
+                    'Crabsticks (surimi) är bearbetat fiskprotein med tillsatt majsstärkelse; de är alltså inte rent '
+                    'protein för dig som äter strikt lågkolhydratkost och bör räknas som stärkelse.')),
+    178: dict(lead='Ren mat i sin finaste form: skivor av färsk lax utan ett enda riskorn eller tillsatt socker. Inga '
+                   'nettokolhydrater, och det glykemiska indexet är inte tillämpligt, vilket gör den till ett mycket '
+                   'blodsockervänligt val och en utmärkt källa till omega-3-fettsyror och protein av hög kvalitet.',
+              tips=('Ett oslagbart val för en ren mättnad; protein bidrar till att öka och bibehålla muskelmassan. Ät den '
+                    'med krispiga gurkskivor och sjögrässallad (wakame) för ett mineralrikt komplement.',
+                    'Ät den kyld på en bädd av is med lite pressad citron eller några droppar sojasås med reducerad '
+                    'salthalt, så njuter du av fiskens naturliga sötma och fräscha smak utan tunga såser.',
+                    '⚠️ Köp laxen från en pålitlig källa och avsedd att ätas rå (sashimikvalitet); gravida, ammande och '
+                    'personer med nedsatt immunförsvar bör helt avstå, för att undvika risken för bakteriella infektioner '
+                    'från fisk.')),
+    179: dict(lead='Japans mest kända skål för värme och välbehag: en smakrik kycklingbuljong med färska vetenudlar, ett '
+                   'kokt ägg och möra kycklingskivor. Den viktigaste frågan är om ramen passar vid bantning och för '
+                   'blodsockret. Proteinet och buljongen mättar väl, men vetenudlarna är en rik kolhydratkälla med ett '
+                   'lågt glykemiskt index (55), och den koncentrerade buljongen innehåller mycket salt.',
+              tips=('Ät först det kokta ägget, kycklingbitarna och grönsakerna för att bromsa upptaget av nudlarnas '
+                    'stärkelse, och ät bara hälften av nudlarna i skålen för att spara kolhydrater.',
+                    'Be om en mindre salt buljong utan tillsatt fett, och lägg till mer bambuskott, salladslök och '
+                    'shiitakesvamp för mer näringsämnen.',
+                    'Undvik att dricka upp hela buljongen i botten av skålen; den innehåller mycket stora mängder salt, '
+                    'som kan ge vätskeansamling och höjt blodtryck hos personer som är känsliga för salt.')),
+    180: dict(lead='Thailändsk gatumat i en glad rätt: stekta risnudlar blandade med ägg, rostade jordnötter och tofu '
+                   'eller räkor. Hemligheten bakom smaken är blandningen av surt och sött, men färdig tamarindsås '
+                   'innehåller ofta tillsatt socker; det glykemiska indexet ligger på 52, i det låga intervallet, och '
+                   'stärkelsen bryts ned relativt snabbt.',
+              tips=('Be om mindre socker om det går och pressa en hel lime över rätten; limens syra kan bromsa '
+                    'nedbrytningen av stärkelsen. Blanda i krispiga, råa böngroddar för mer fibrer.',
+                    'Fokusera på en större andel räkor eller tofu och ägg och en mindre mängd risnudlar, och njut av de '
+                    'krossade jordnötterna, vars fett bromsar nedbrytningen av kolhydraterna.',
+                    'Risnudlar är naturligt glutenfria, men personer med glutenintolerans eller veteallergi bör '
+                    'kontrollera att sojasåsen och fisksåsen i marinaden är helt glutenfria.')),
+    181: dict(lead='Möra kycklingbitar i blank teriyakisås förenar animaliskt protein av hög kvalitet med en omtyckt '
+                   'asiatisk smak. Men det många missar är att traditionell teriyakisås bygger på socker eller '
+                   'karamelliserad honung med soja, vilket höjer måltidens glykemiska index (45) trots att själva '
+                   'kycklingen saknar stärkelse.',
+              tips=('Ät teriyakikycklingen med en rejäl portion ångkokt broccoli eller asiatiska grönsaker i stället för '
+                    'ett berg av vitt ris, för att undvika att såsens socker ger en snabb glukosstegring.',
+                    'När du lagar den hemma, pensla kycklingen med lite sås i stället för att doppa den, och byt gärna ut '
+                    'hälften av sockret mot ett sötningsmedel tillsammans med färsk ingefära och vitlök för en kraftig '
+                    'smak utan fritt socker.',
+                    'Vid diabetes eller viktkontroll: kom ihåg att två matskedar färdig teriyakisås kan innehålla mer än '
+                    '10 g tillsatt socker, så att vara sparsam med såsen gör hela skillnaden.')),
+    182: dict(lead='Kycklingfilé panerad i japanskt pankoströbröd och friterad tills den blir helt gyllene och krispig. '
+                   'Katsu ger en oemotståndlig krispighet och rent protein, men paneringen och den uppsugna frityroljan '
+                   'höjer rättens glykemiska belastning och kalorier (GI 55) jämfört med vanlig grillad kyckling.',
+              tips=('Katsu serveras traditionellt med ett berg av finstrimlad vitkål; hoppa aldrig över den! Ät upp kålen '
+                    'först med lite citron; fibrerna kan bromsa upptaget av paneringens stärkelse.',
+                    'Du kan göra en gyllene katsu med mindre fett i airfryer med lite olivolja; det ger samma japanska '
+                    'krispighet med ungefär hälften så mycket uppsuget fett och kalorier.',
+                    'Den tillhörande tonkatsusåsen är söt och påminner mycket om barbecuesås; ha lite vid sidan om att '
+                    'doppa i, och undvik att hälla hela såsen över de krispiga kycklingbitarna.')),
+    183: dict(lead='Asiens tunna degknyten fyllda med köttfärs eller grönsaker och ångkokta i bambukorgar. Fördelen med '
+                   'ångkokning är att degen förblir tunn och helt fri från frityrolja, vilket ger ett lågt glykemiskt '
+                   'index (48).',
+              tips=('Håll portionen till 4–6 stycken som ett mättande mellanmål, och ät en tallrik kokta gröna '
+                    'bladgrönsaker (som pak choi) till för mer fibrer.',
+                    'Välj fyllningar med mycket kött och grönsaker som kål och salladslök, och doppa i en blandning av '
+                    'kinesisk svart vinäger, hackad ingefära och lite sesamolja i stället för söta såser.',
+                    'Ångkokta dumplings är ett betydligt bättre val än friterade, krispiga dumplings (potstickers); du '
+                    'slipper det härdade frityrfettet och får en jämnare blodsockernivå.')),
+    184: dict(lead='Krispiga asiatiska grönsaksrullar är en av världens mest kända förrätter: spröda degblad som omsluter '
+                   'kål, morot och svamp. Trots den grönsaksrika fyllningen gör friteringen i mycket olja och det '
+                   'stärkelserika degbladet dem till en snabb kaloritillförsel, med ett lågt glykemiskt index (50).',
+              tips=('Gör dem inte till en huvudrätt, utan ät en eller högst två som förrätt, och undvik att doppa dem i '
+                    'färdig sweet chilisås med fruktosrik majssirap.',
+                    'Det bästa alternativet är färska, icke-friterade vietnamesiska vårrullar (summer rolls) i mjukt '
+                    'rispapper med mynta och räkor; de ger en fräsch krispighet med betydligt färre kalorier.',
+                    'Friterade vårrullar suger snabbt upp olja eftersom degbladen är så tunna, så låt dem rinna av väl på '
+                    'hushållspapper direkt när de tas upp ur oljan; det minskar överflödigt fett och gör dem lättare att '
+                    'smälta.')),
+    185: dict(lead='Kärnan i det traditionella japanska köket: en mild buljong med fermenterad sojabönspasta, '
+                   'tofutärningar och sjögräs (wakame). Soppan påverkar i praktiken inte blodsockret; nettokolhydraterna '
+                   'är försumbara och det glykemiska indexet är inte tillämpligt.',
+              tips=('En utmärkt soppa att inleda en asiatisk måltid med; den varma soppan fyller en stor del av magen, '
+                    'vilket motverkar storätande och ger en mer balanserad måltid.',
+                    'Rör ned misopastan i slutet av tillagningen, direkt efter att du stängt av värmen, och undvik att '
+                    'koka den kraftigt, eftersom kraftig kokning förstör de levande bakterierna från den naturliga '
+                    'jäsningen.',
+                    'Misosoppa innehåller mycket salt från den saltade jäsningen, så om du har högt blodtryck '
+                    'rekommenderas en liten skål om dagen.')),
+    186: dict(lead='Grundstenen för vegetabiliskt protein i Fjärran Östern: ren, pressad sojabönsostmassa i kuber. Tofu är '
+                   'nästan fri från nettokolhydrater (cirka 1,6 g per 100 g) och det glykemiska indexet är inte '
+                   'tillämpligt, vilket gör den till ett utmärkt val för ett stabilt blodsocker.',
+              tips=('Ett utmärkt vegetariskt val för en balanserad måltid utan glukostoppar; woka den med blandade '
+                    'grönsaker i lite sesamolja med ingefära och vitlök.',
+                    'Hemligheten bakom smaken är att pressa ut vätskan: pressa tofublocket under en tung handduk i 15 '
+                    'minuter innan du skär det, så suger det upp kryddorna som en svamp och får en härligt krispig yta vid '
+                    'tillagningen.',
+                    'Tofu innehåller naturliga isoflavoner, kalcium och järn; den är ett tryggt och mycket mättande '
+                    'alternativ i vegetarisk kost och vid insulinresistens.')),
+    187: dict(lead='Indonesiens traditionella skatt: hela, fermenterade sojabönor som bildar ett fast block med en omtyckt '
+                   'nötig smak. Tempeh skiljer sig från många andra proteinkällor genom att hela bönan behålls under '
+                   'fermenteringen, och det glykemiska indexet är lågt (20).',
+              tips=('Skär tempeh i tunna skivor och grilla dem i airfryer eller ugn med sojasås och olivolja; det ger en '
+                    'rejäl mättnad i flera timmar.',
+                    'Att ångkoka tempehskivorna i 5 minuter innan du marinerar dem tar bort en lätt bitter smak och låter '
+                    'kryddorna och marinaden tränga djupt in i det fermenterade blocket.',
+                    'Under den naturliga fermenteringen bryts fytinsyran och en del av proteinerna ned, vilket kan '
+                    'förbättra upptaget av mineraler som magnesium, järn och zink jämfört med ofermenterade sojabönor.')),
+    188: dict(lead='Pärlan i det koreanska köket som har erövrat världen: traditionellt fermenterad kål med koreansk '
+                   'chili, vitlök och ingefära. Nettokolhydraterna är nära noll och det glykemiska indexet är inte '
+                   'tillämpligt; den innehåller fibrer och levande mjölksyrabakterier.',
+              tips=('Ät två matskedar kall kimchi till ris- eller kötträtter; den syrliga, starka smaken passar bra till '
+                    'måltidens stärkelse.',
+                    'Njut av den rå och krispig utan att utsätta den för hög värme, så bevaras de levande '
+                    'mjölksyrabakterierna som bildats under veckornas fermentering.',
+                    'Kimchi innehåller mycket salt och starka kryddor, så introducera den gradvis om du har känslig mage '
+                    'eller halsbränna.')),
+    189: dict(lead='Det indiska kökets mest kända ambassadör: möra tandoorikycklingbitar i en krämig tomatsås med '
+                   'aromatiska kryddor som ingefära och garam masala. Kycklingen ger rent protein och såsens fett bromsar '
+                   'matsmältningen, vilket ger måltiden ett lågt glykemiskt index (45) och en långvarig mättnad.',
+              tips=('Njut av kycklingbitarna med en generös mängd sås och ät dem tillsammans med tillagade grönsaker eller '
+                    'gurksallad med yoghurt (raita) i stället för stora mängder vitt ris.',
+                    'När du lagar den hemma kan du byta ut en del av matlagningsgrädden mot naturell grekisk yoghurt; det '
+                    'minskar det mättade fettet och ökar proteinet utan att förstöra den sammetslena konsistensen.',
+                    'Färdiga såser på restauranger kan innehålla tillsatt socker för att balansera tomatens syra, så '
+                    'måttlighet och äkta kryddor hjälper dig att undvika osynligt tillsatt socker.')),
+    190: dict(lead='Indiens främsta gröna vegetariska mästerverk: kryddat mos av färsk spenat med tärningar av den '
+                   'traditionella osten paneer. Rätten innehåller fibrer, järn och kalcium och har ett lågt glykemiskt '
+                   'index (30), vilket gör den till ett utmärkt val för ett stabilt blodsocker och en behaglig mättnad.',
+              tips=('Ett utmärkt val till lunch eller middag; spenaten innehåller magnesium och paneern ger protein som '
+                    'bryts ned långsamt.',
+                    'Tillaga spenaten varsamt utan att koka den för länge, så behåller den sin klara färg och sina '
+                    'vitaminer, och tillsätt lite färsk ingefära och spiskummin för smakens skull.',
+                    'Om du räknar kalorier noga är det bättre att bryna osttärningarna i en torr panna med lite naturligt '
+                    'ghee än att fritera dem i mycket olja, och att hålla portionen måttlig.')),
+    191: dict(lead='Det indiska bordets sultan: omsorgsfulla lager av långkornigt basmatiris, kryddad kyckling, saffran '
+                   'och varma kryddor. Basmatiris har naturligt ett lägre glykemiskt index än kortkornigt ris, och '
+                   'tillsammans med kycklingens protein och marinadens fett blir det glykemiska indexet medelhögt (58), '
+                   'men rätten är energität och kräver medvetenhet om portionen.',
+              tips=('Fyll halva tallriken med yoghurtsallad med gurka och mynta (raita) och kycklingbitarna först, och '
+                    'lägg sedan till en måttlig portion biryaniris; yoghurten och grönsakerna bromsar effektivt upptaget '
+                    'av risets stärkelse.',
+                    'Blötlägg basmatiriset i 30 minuter och skölj det väl för att få bort överflödig ytstärkelse, och ånga '
+                    'kycklingen och riset i en tätt sluten gryta (dum-metoden) för att minska den tillsatta oljan.',
+                    'Tänk på portionen: biryani är en komplett och energität måltid, så undvik läsk och efterrätt direkt '
+                    'efteråt, så slipper du känna dig övermätt och trött.')),
+    192: dict(lead='Det spröda, platta brödet som bakas mot väggarna i lerugnen tandoor och penslas med smör, vitlök och '
+                   'koriander. Naan bakas främst på vitt, siktat och jäst mjöl, vilket ger ett högt glykemiskt index (71) '
+                   'och en snabb nedbrytning till socker om det äts ensamt.',
+              tips=('Ät inte naanbröd ensamt som mellanmål, utan bryt små bitar att äta proteinrika rätter med, som '
+                    'tandoorikyckling eller dal, och undvik att äta ett helt bröd själv.',
+                    'När du bakar det hemma kan du blanda fullkornsvetemjöl och vitt mjöl i lika delar för mer fibrer, och '
+                    'pensla det med olivolja och hackad vitlök i stället för mycket smör.',
+                    'Ett stort naanbröd kan ge 45–50 g snabba kolhydrater, så att dela brödet är ett smart val för '
+                    'blodsockret.')),
+    193: dict(lead='Kärnan i indiska hem och en symbol för enkel matlagning: en långsamt kokt soppa på gula linser med '
+                   'gurkmeja, spiskummin och ingefära. Dal innehåller mycket vegetabiliskt protein och lösliga fibrer och '
+                   'har ett lågt glykemiskt index (32), vilket gör den till en utmärkt mat för långvarig mättnad.',
+              tips=('Börja måltiden med en varm skål dal; de rikliga fibrerna kan bromsa upptaget av stärkelsen i resten '
+                    'av måltiden, och soppan ger snabbt en behaglig känsla av mättnad.',
+                    'Pressa över färsk citron precis före servering, eftersom C-vitamin ökar järnupptaget, och strö över '
+                    'en nypa spiskummin.',
+                    'Dal är ett utmärkt, värmande vegetariskt alternativ till tunga rätter under vinterdagarna och passar '
+                    'mycket bra vid diabetes, så länge den inte tillagas med överdrivna mängder fett.')),
+    194: dict(lead='De franska bageriernas ikon med sin gyllene, krispiga skorpa och sitt luftiga, vita inkråm. Baguetten '
+                   'bakas på högraffinerat vitt vetemjöl, vilket gör att stärkelsen tas upp mycket snabbt, med ett högt '
+                   'glykemiskt index (73), och det förklarar varför man snabbt blir hungrig igen om man äter den ensam.',
+              tips=('Undvik att äta baguetten ensam eller med sylt; kombinera alltid din skiva med en källa till protein '
+                    "och fett, som naturlig ost, ägg eller olivolja med za'atar, för att bromsa blodsockerstegringen.",
+                    'Välj baguette på fullkorn eller med långsam naturlig jäsning (surdeg) om det finns; mjölksyran som '
+                    'bildas vid den långsamma jäsningen sänker det glykemiska indexet märkbart.',
+                    'En liten bit lika lång som handflatan (cirka 50 g) räcker för att njuta av den franska krispigheten; '
+                    'om du håller koll på vikten och blodsockret är det bättre att låta den vara ett undantag i en '
+                    'balanserad måltid.')),
+    195: dict(lead='Det platta, mjuka brödet som är grunden i de mest kända latinamerikanska rätterna, som taco och '
+                   'fajitas. Traditionella majstortillor har ett lågt glykemiskt index (52) tack vare att majsen behandlas '
+                   'med kalk (nixtamalisering), vilket bevarar fibrerna, medan tortillor av vitt vetemjöl tas upp snabbare '
+                   'och innehåller mer kalorier.',
+              tips=('Välj alltid tortillor av gul majs eller fullkornsvete och nöj dig med två små, fyllda generöst med '
+                    'protein som kyckling och fisk samt bladgrönsaker och avokado.',
+                    'Värm tortillan i en torr, het panna utan olja; den torra värmen ger tillbaka mjukheten och den '
+                    'naturliga rostade smaken utan osynliga kalorier från fett.',
+                    'Läs ingrediensförteckningen på förpackade tortillor; många färdiga produkter innehåller härdade '
+                    'vegetabiliska oljor och socker för att hålla dem mjuka länge.')),
+    196: dict(lead='Det orientaliska bordets härskare och frukostsmörgåsarnas grund, men eftersom det är så tunt och '
+                   'lättätet äter vi ofta mycket av det utan att tänka på det. Den höga stärkelsetätheten ger ett högt '
+                   'glykemiskt index (70), vilket kräver medvetenhet om portionsstorlek och fyllning.',
+              tips=('Ett bröd motsvarar ungefär två till tre skivor rostbröd; fyll brödet till 70 % med grönsaker och '
+                    'magert protein (som ägg, ful medames eller kyckling) för att minska brödets andel.',
+                    'Välj pitabröd bakat på fullkornsmjöl eller med kli, och rosta det i ugnen med lite olivolja och '
+                    "za'atar i stället för att fritera det.")),
+    197: dict(lead='Den trekantiga pärlan bland de levantinska bakverken: en tunn deg som omsluter en generös fyllning av '
+                   'färsk spenat kryddad med extra jungfruolivolja, lök och syrlig sumak. Balansen mellan sumakens syra, '
+                   'spenatens fibrer och olivoljan ger ett lågt glykemiskt index (52), och de hör till de minst mäktiga '
+                   'pajerna.',
+              tips=('En till två medelstora fatayer räcker som frukost eller kvällsmat, tillsammans med en kopp varmt te '
+                    'utan socker och en tallrik gurk- och tomatskivor.',
+                    'Hemligheten bakom en riktigt god levantinsk spenatpaj är att öka mängden spenatfyllning och göra '
+                    'degen mycket tunn, och att krama ur spenaten väl så att smaken av sumak och olivolja behålls.',
+                    'Spenat innehåller folat, järn och C-vitamin, och fatayer är ett utmärkt vegetariskt val som hela '
+                    'familjen tycker om när de bakas i ugnen utan fritering.')),
+    198: dict(lead='Den älskade morgonvärmen i varje kvarter: en gyllene bakad deg fylld med mild vit ost och en nypa '
+                   'svartkummin. Ostens protein och fett bromsar nedbrytningen av degens stärkelse och ger ett lågt '
+                   'glykemiskt index (50), och de mättar länge.',
+              tips=('Ät fatayer långsamt och njut av dem som en kompakt huvudmåltid, gärna tillsammans med bladgrönsaker '
+                    'som färsk mynta och ruccola för mer fibrer och för att balansera ostens salthalt.',
+                    'Lägg osten i ljummet vatten innan du gör fatayer, så försvinner överflödigt salt, och tillsätt '
+                    'svartkummin och sesamfrön, som ger fett och en traditionell smak.',
+                    'Osten i fatayer innehåller en hel del kalcium men kan vara fettrik, så det räcker att äta en '
+                    'medelstor bit för att bli mätt utan att belasta matsmältningen.')),
+    199: dict(lead='Pärlan i Aleppos och Levantens bagerier: en mycket tunn och krispig deg toppad med kryddad köttfärs '
+                   'med granatäpplesirap, tomat och pinjenötter. Den tunna degen och den höga mängden animaliskt protein '
+                   'och fett ger ett medelhögt glykemiskt index (60).',
+              tips=('Ät lahmacun med en skål yoghurt eller gurksallad med yoghurt; yoghurtens protein bromsar upptaget av '
+                    'kolhydraterna, och måltiden blir mer mättande.',
+                    'Grädda lahmacun på plåt eller i mycket varm ugn i bara några minuter, så blir den snabbt krispig utan '
+                    'att köttet torkar, och var sparsam med färdig granatäpplesirap sötad med socker.',
+                    'Levantinsk lahmacun har en fördel jämfört med västerländsk pizza tack vare den tunna degen, som '
+                    'minskar andelen stärkelse till förmån för köttets protein; den blir en utmärkt måltid när du äter 2–3 '
+                    'stycken med grönsaker.')),
+    200: dict(lead="Levantens morgondoft: ett bakat bröd täckt med malen vild timjan (za'atar), sesamfrön och extra "
+                   'jungfruolivolja. Olivoljans enkelomättade fett bromsar nedbrytningen av vetedegen och ger manakish med '
+                   "za'atar ett lågt glykemiskt index (55).",
+              tips=('Ät en halv manakish eller en liten tillsammans med tomat- och gurkskivor och oliver, och drick '
+                    'salvia- eller myntate utan socker för en balanserad morgon.',
+                    "Använd en äkta za'atarblandning med mycket sesam och riktig vild timjan utan tillsatt rostat mjöl, "
+                    'och välj kallpressad extra jungfruolivolja.',
+                    'Den rikliga oljan och degen gör brödet kalorität, så att hålla brödet litet är nyckeln för dig som '
+                    'vill hålla vikten.')),
 }
