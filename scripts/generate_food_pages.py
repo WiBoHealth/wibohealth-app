@@ -1703,6 +1703,14 @@ def main():
     slugs = {i: overrides.get(str(i), {}).get('slug') or SLUG_OVERRIDES.get(i) or slugify(foods[i]['en']) for i in PILOT}
     assert len(set(slugs.values())) == len(slugs), 'duplicate slugs'
     assert FSV.PUBLISH <= set(FSV.NAMES) and set(FSV.NAMES) <= set(PILOT), 'food_sv: unknown food ids'
+    # Swedish versions of the food-specific copy sit in food_sv.OVERRIDES; a Swedish page may not fall back to the
+    # computed text where the other languages carry approved copy
+    for fid, o in FSV.OVERRIDES.items():
+        for key, value in o.items():
+            overrides.setdefault(str(fid), {}).setdefault(key, {})[SV] = list(value) if key == 'tips' else value
+    gaps = [(fid, key) for fid in FSV.PUBLISH - FSV.COMPUTED_COPY for key, value in overrides.get(str(fid), {}).items()
+            if isinstance(value, dict) and 'en' in value and SV not in value]
+    assert not gaps, f'food_sv: Swedish copy missing for {gaps}'
     for fid in foods:
         foods[fid][SV] = FSV.NAMES[fid][0] if fid in FSV.NAMES else ''
     ctx = dict(foods=foods, slug=slugs, overrides=overrides)
