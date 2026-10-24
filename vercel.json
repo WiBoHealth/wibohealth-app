@@ -67,7 +67,7 @@
       "permanent": true
     },
     {
-      "source": "/sv/:path((?!index\\.html$|diabetes|articles/|dr-wassim-habib\\.html$|om-oss\\.html$|integritetspolicy\\.html$|anvandarvillkor\\.html$|medicinsk-ansvarsfriskrivning\\.html$|kontakt\\.html$|radera-konto\\.html$).*)",
+      "source": "/sv/:path((?!index\\.html$|diabetes|articles/|dr-wassim-habib\\.html$|om-oss\\.html$|integritetspolicy\\.html$|anvandarvillkor\\.html$|medicinsk-ansvarsfriskrivning\\.html$|kontakt\\.html$|radera-konto\\.html$|calculators\\.html$|boodi\\.html$|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
       "destination": "/sv/index.html",
       "permanent": false
     },

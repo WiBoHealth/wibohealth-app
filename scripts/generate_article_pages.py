@@ -608,7 +608,7 @@ def build_site_page(p):
     image = f"{SITE}/images/{p['image']}" if p.get('image') else None
     schema = {
         "@context": "https://schema.org",
-        "@type": {'profile': 'ProfilePage', 'about': 'AboutPage', 'contact': 'ContactPage'}.get(p['kind'], 'WebPage'),
+        "@type": {'profile': 'ProfilePage', 'about': 'AboutPage', 'contact': 'ContactPage', 'collection': 'CollectionPage'}.get(p['kind'], 'WebPage'),
         "@id": url + '#webpage', "url": url, "name": p['title'], "description": p['desc'], "inLanguage": SV,
         "dateModified": p['modified'],
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},

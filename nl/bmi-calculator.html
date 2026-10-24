@@ -14,7 +14,7 @@
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=1" defer></script>
+    <script src="/js/consent.js?v=3" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI berekenen: calculator en gezond gewicht | WiBo Health</title>
@@ -23,6 +23,7 @@
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/bmi-calculator.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/bmi-calculator.html">
     <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/bmi-calculator.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/bmi-calculator.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/bmi-calculator.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WiBo Health">
@@ -857,6 +858,9 @@
         .article-page h2.section-title { margin-top: 30px; }
         .article-hero-img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-md);
             box-shadow: var(--shadow); margin: 6px 0 18px; display: block; background: var(--bg-input); }
+        /* portrait cover (hero_portrait=True): the whole photo, centred, never cropped */
+        .article-hero-img.article-hero-portrait { aspect-ratio: auto; object-fit: contain; max-width: 580px; width: 100%; height: auto;
+            border-radius: 16px; margin: 20px auto; display: block; }
         .article-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; color: var(--text-muted); font-size: 0.88rem;
             font-weight: 600; margin-bottom: 18px; }
         .article-page h1 { font-size: 2rem; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
@@ -864,6 +868,7 @@
         .article-page h3 { font-size: 1.1rem; font-weight: 800; margin: 18px 0 8px; }
         .article-figure { margin: 18px 0 22px; }
         .article-figure img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; box-shadow: var(--shadow); }
+        .article-figure.figure-narrow { max-width: 600px; margin-inline: auto; }   /* portrait photos and square charts */
         .article-figure figcaption { color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; text-align: center; }
         .check-list { list-style: none; padding: 0; margin: 10px 0 22px; display: grid; gap: 10px; }
         .check-list li { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px 16px; }
@@ -925,6 +930,17 @@
         .hub-card:hover { border-color: var(--primary); }
         .hub-card h3 { margin: 0; }
         .hub-card p { color: var(--text-muted); margin: 0; font-size: 0.95rem; }
+        /* card with a thumbnail: photo beside the text, stacked above it on phones */
+        .hub-card.has-thumb { flex-direction: row; align-items: center; gap: 20px; grid-column: 1 / -1; }   /* one full-width row each */
+        .hub-thumb { flex: 0 0 clamp(180px, 34%, 300px); aspect-ratio: 16 / 10; border-radius: var(--radius-sm); overflow: hidden; background: var(--border-color); }
+        .hub-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+        .hub-card.has-thumb:hover .hub-thumb img { transform: scale(1.03); }
+        .hub-card-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+        .hub-card-body .group-chip { align-self: flex-start; }
+        @media (max-width: 640px) {
+            .hub-card.has-thumb { flex-direction: column; align-items: stretch; gap: 14px; }
+            .hub-thumb { flex-basis: auto; width: 100%; }
+        }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
         .page-wrapper.calc-page { max-width: 920px; }
@@ -950,6 +966,9 @@
         .form-control { width: 100%; padding: 13px 16px; background: var(--bg-input); border: 1px solid var(--border-color);
             border-radius: var(--radius-md); color: var(--text-main); font-size: 1rem; font-family: inherit; outline: none; }
         .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+        /* long option labels (activity levels) must not widen the field on phones (WebKit sizes a select to its longest option) */
+        .form-group { min-width: 0; }
+        select.form-control { min-width: 0; max-width: 100%; white-space: normal; text-overflow: ellipsis; }
         select.form-control option { background: var(--bg-main); color: var(--text-main); }
         html[data-theme="dark"] select.form-control option { background: #121810; }
         .calc-submit-btn { width: 100%; padding: 15px; background: #047857; color: #fff; border: 0; border-radius: var(--radius-md);
@@ -985,7 +1004,7 @@
         .formula-box { background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
             border-radius: var(--radius-sm); padding: 14px 18px; margin: 10px 0 18px; font-weight: 800; text-align: center;
             font-family: ui-monospace, Consolas, monospace; font-size: 0.98rem; overflow-x: auto; }
-        .table-wrap { overflow-x: auto; margin: 10px 0 22px; border: 1px solid var(--border-color); border-radius: var(--radius-md); }
+        .table-wrap { overflow-x: auto; max-width: 100%; margin: 10px 0 22px; border: 1px solid var(--border-color); border-radius: var(--radius-md); }
         .data-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 460px; }
         .data-table th, .data-table td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); text-align: start; vertical-align: top; }
         .data-table th { font-weight: 800; background: rgba(16, 185, 129, 0.08); color: var(--text-main); }
@@ -1045,9 +1064,10 @@
                     <i class="fas fa-sun" id="themeIcon"></i>
                 </button>
                 <div class="lang-switcher-container">
-                    <a class="lang-btn" href="/bmi-calculator.html" hreflang="ar" lang="ar"><span>🇪🇬</span> <span>AR</span></a>
-                    <a class="lang-btn active" href="/nl/bmi-calculator.html" hreflang="nl" lang="nl"><span>🇳🇱</span> <span>NL</span></a>
-                    <a class="lang-btn" href="/en/bmi-calculator.html" hreflang="en" lang="en"><span>🇬🇧</span> <span>EN</span></a>
+                    <a class="lang-btn" href="/bmi-calculator.html" hreflang="ar" lang="ar" title="العربية" aria-label="العربية"><span>🇪🇬</span> <span>AR</span></a>
+                    <a class="lang-btn active" href="/nl/bmi-calculator.html" hreflang="nl" lang="nl" title="Nederlands" aria-label="Nederlands"><span>🇳🇱</span> <span>NL</span></a>
+                    <a class="lang-btn" href="/en/bmi-calculator.html" hreflang="en" lang="en" title="English" aria-label="English"><span>🇬🇧</span> <span>EN</span></a>
+                    <a class="lang-btn" href="/sv/bmi-calculator.html" hreflang="sv" lang="sv" title="Svenska" aria-label="Svenska"><span>🇸🇪</span> <span>SV</span></a>
                 </div>
             </div>
         </div>

@@ -1072,8 +1072,24 @@
         // Use recipes from complete database
         let allRecipes = recipesDatabase || [];
         
+        // ?lang= (links from the EN/NL/SV pages) wins over a stored choice and is remembered for the lookups below;
+        // the page has Arabic and English copy, so every other language reads English
+        (function () {
+            var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+            if (!q) return;
+            q = q === 'ar' ? 'ar' : 'en';
+            try { localStorage.setItem('wibo_language', q); localStorage.setItem('wibohealth_language', q); } catch (e) {}
+        })();
+        // without a stored choice: Arabic only for Arabic pages/browsers (the head boot script set <html lang>)
+        function recipesDefaultLang() { return document.documentElement.lang === 'ar' ? 'ar' : 'en'; }
+        // a stored 'nl' or 'sv' (set by other pages) has no copy here: read it as English
+        function recipesLang() {
+            var s = localStorage.getItem('wibohealth_language') || localStorage.getItem('wibo_language');
+            return s === 'ar' || s === 'en' ? s : recipesDefaultLang();
+        }
+
         // Get current language from localStorage
-        let currentLang = localStorage.getItem('wibo_language') || 'ar';
+        let currentLang = recipesLang();
         
         // Store current open recipe ID
         let currentOpenRecipeId = null;
@@ -1121,7 +1137,7 @@
             const dayOfYear = Math.floor(diff / oneDay);
             
             const tipIndex = dayOfYear % dailyCookingTips.length;
-            const currentLang = localStorage.getItem('wibo_language') || 'ar';
+            const currentLang = recipesLang();
             const tip = dailyCookingTips[tipIndex];
             
             const tipElement = document.getElementById('tipText');
@@ -1193,7 +1209,7 @@
         // Load theme and initialize
         window.addEventListener('DOMContentLoaded', function() {
             // Get current language from localStorage (check unified system first)
-            currentLang = localStorage.getItem('wibohealth_language') || localStorage.getItem('wibo_language') || 'ar';
+            currentLang = recipesLang();
             console.log('Page loaded with language:', currentLang);
             
             // Setup language toggle buttons
@@ -1292,11 +1308,11 @@
                                 <i class="fas fa-clock"></i> ${getField(recipe, 'time')}
                             </span>
                             <span class="recipe-meta-item">
-                                <i class="fas fa-fire"></i> ${recipe.calories} <span data-lang="ar">سعرة</span><span data-lang="en" style="display: none;">cal</span>
+                                <i class="fas fa-fire"></i> ${recipe.calories} <span data-lang="ar"${currentLang === 'ar' ? '' : ' style="display: none;"'}>سعرة</span><span data-lang="en"${currentLang === 'ar' ? ' style="display: none;"' : ''}>cal</span>
                             </span>
                         </div>
                         <p class="recipe-description">${recipe.description || (getField(recipe, 'steps') ? getField(recipe, 'steps')[0] : '')}</p>
-                        <button class="recipe-btn" onclick="openRecipeModal(${recipe.id || index})"><span data-lang="ar">عرض الوصفة</span><span data-lang="en" style="display: none;">View Recipe</span></button>
+                        <button class="recipe-btn" onclick="openRecipeModal(${recipe.id || index})"><span data-lang="ar"${currentLang === 'ar' ? '' : ' style="display: none;"'}>عرض الوصفة</span><span data-lang="en"${currentLang === 'ar' ? ' style="display: none;"' : ''}>View Recipe</span></button>
                     </div>
                 </div>
             `).join('');

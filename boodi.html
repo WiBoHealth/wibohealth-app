@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/boodi.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -57,6 +58,11 @@
     <meta name="keywords" content="تطبيق بودي, boodi, boodi app, ماسح باركود, فاحص المكونات, المؤشر الجلايسيمي, ويبو هيلث, WiBo Health, بدائل صحية, دايت, سكري, barcodescanner, ingredient scanner, glykemische index">
     <meta name="author" content="WiBo Health Group">
     <link rel="canonical" href="https://wibohealth.com/boodi.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/boodi.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/boodi.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/boodi.html">
+    <!-- SV-ALTERNATES:END -->
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
@@ -704,6 +710,7 @@
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                 <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                <a class="lang-btn" data-sv-link href="/sv/boodi.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -780,7 +787,7 @@
                         <div class="diet-point-icon" aria-hidden="true">🍲</div>
                         <div>
                             <h3 data-i18n="diet_p3_title">مطبخك المفضل بلا حرمان</h3>
-                            <p data-i18n="diet_p3_desc">شامي، مصري، مغربي، خليجي، هولندي، إيطالي... اختر مطبخك لتحصل على وجبات تعرفها وتحبها.</p>
+                            <p data-i18n="diet_p3_desc">يشمل برنامج الدايت المخصص في بودي جميع مطابخ العالم: اختر المطبخ الذي تفضله بحرية تامة، واحصل على وجبات تعرفها وتحبها.</p>
                         </div>
                     </div>
                     <div class="diet-point">
@@ -903,7 +910,7 @@
             <a href="terms.html" data-i18n="footer_terms">شروط الاستخدام</a>
         </div>
         <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. جميع الحقوق محفوظة | تطبيق بودي 💚</p>
-        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;" data-i18n="footer_made_for">💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي</p>
     </footer>
 
     <!-- Translations & Theme Engine -->
@@ -937,7 +944,7 @@
                 'diet_p2_title': 'احتياجك اليومي محسوب لك',
                 'diet_p2_desc': 'أسئلة قصيرة عن عمرك وطولك ووزنك ونشاطك تقدّر احتياجك من السعرات، وتضبط خطتك بنقص معتدل وآمن.',
                 'diet_p3_title': 'مطبخك المفضل بلا حرمان',
-                'diet_p3_desc': 'شامي، مصري، مغربي، خليجي، هولندي، إيطالي... اختر مطبخك لتحصل على وجبات تعرفها وتحبها.',
+                'diet_p3_desc': 'يشمل برنامج الدايت المخصص في بودي جميع مطابخ العالم: اختر المطبخ الذي تفضله بحرية تامة، واحصل على وجبات تعرفها وتحبها.',
                 'diet_p4_title': 'استبعد ما لا يناسبك',
                 'diet_p4_desc': 'حدد الأطعمة التي لا تحبها أو تتحسس منها، فلا تظهر في خطتك أبداً.',
                 'diet_p5_title': 'فحص سلامة قبل البدء',
@@ -945,6 +952,7 @@
                 'diet_p6_title': 'الماسح متصل بخطتك',
                 'diet_p6_desc': 'امسح أي منتج في السوبرماركت ليخبرك بودي فوراً: ✅ يناسب خطتك، 🟡 باعتدال، أو ⚠️ يحتوي صنفاً استبعدته.',
                 'play_soon': '🚀 قريباً على Google Play',
+                'footer_made_for': '💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي',
                 'diet_cta_note': 'كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.',
                 'diet_disclaimer': 'البرنامج دليل إرشادي لنمط حياة صحي وتغذية متوازنة، وليس خدمة طبية ولا يغني عن استشارة الطبيب. إذا كنت حاملاً أو مرضعاً أو تتناول أدوية لحالة مزمنة، استشر طبيبك قبل البدء.',
                 'footer_about': 'من نحن',
@@ -982,7 +990,7 @@
                 'diet_p2_title': 'Jouw dagelijkse behoefte, voor je berekend',
                 'diet_p2_desc': 'Een paar korte vragen over leeftijd, lengte, gewicht en activiteit schatten je caloriebehoefte in en stemmen je plan af met een gematigd, veilig tekort.',
                 'diet_p3_title': 'Je favoriete keuken, zonder te missen',
-                'diet_p3_desc': 'Levantijns, Egyptisch, Marokkaans, uit de Golfregio, Nederlands, Italiaans... Kies je keuken en krijg maaltijden die je kent en lekker vindt.',
+                'diet_p3_desc': 'Het persoonlijke dieetprogramma van boodi omvat alle keukens ter wereld: kies vrij de keuken die je het liefst eet en krijg maaltijden die je kent en lekker vindt.',
                 'diet_p4_title': 'Sluit uit wat niet bij je past',
                 'diet_p4_desc': 'Geef aan welke producten je niet lust of waarvoor je overgevoelig bent, en ze komen nooit in je plan.',
                 'diet_p5_title': 'Eerst een veiligheidscheck',
@@ -990,6 +998,7 @@
                 'diet_p6_title': 'De scanner kent je plan',
                 'diet_p6_desc': 'Scan een product in de supermarkt en boodi vertelt je direct: ✅ past in je plan, 🟡 met mate, of ⚠️ bevat iets dat je hebt uitgesloten.',
                 'play_soon': '🚀 Binnenkort op Google Play',
+                'footer_made_for': '💚 Gemaakt met <span style="color: #10b981;">♥</span> voor boodi',
                 'diet_cta_note': 'Alle details over het programma en het abonnement vind je in de app.',
                 'diet_disclaimer': 'Dit programma is een leefstijlgids voor gezonde, gebalanceerde voeding. Het is geen behandeling van een ziekte en vervangt geen advies van je arts. Ben je zwanger, geef je borstvoeding of gebruik je medicijnen voor een chronische aandoening? Overleg dan eerst met je arts.',
                 'footer_about': 'Over Ons',
@@ -1027,7 +1036,7 @@
                 'diet_p2_title': 'Your daily needs, calculated for you',
                 'diet_p2_desc': 'A few quick questions about your age, height, weight and activity estimate your calorie needs and set your plan at a moderate, safe deficit.',
                 'diet_p3_title': 'Your favourite cuisine, nothing given up',
-                'diet_p3_desc': 'Levantine, Egyptian, Moroccan, Gulf, Dutch, Italian... Choose your cuisine and get meals you know and enjoy.',
+                'diet_p3_desc': 'The personalised boodi diet programme covers all world cuisines: choose any cuisine you prefer, freely, and get meals you know and enjoy.',
                 'diet_p4_title': 'Leave out what does not suit you',
                 'diet_p4_desc': 'Mark the foods you dislike or are sensitive to, and they never appear in your plan.',
                 'diet_p5_title': 'A safety check before you start',
@@ -1035,6 +1044,7 @@
                 'diet_p6_title': 'The scanner knows your plan',
                 'diet_p6_desc': 'Scan any product in the supermarket and boodi tells you instantly: ✅ fits your plan, 🟡 in moderation, or ⚠️ contains something you chose to exclude.',
                 'play_soon': '🚀 Coming Soon on Google Play',
+                'footer_made_for': '💚 Made with <span style="color: #10b981;">♥</span> for boodi',
                 'diet_cta_note': 'All programme and subscription details are inside the app.',
                 'diet_disclaimer': 'This programme is a lifestyle guide to healthy, balanced eating. It is not a treatment for any disease and does not replace advice from your doctor. If you are pregnant, breastfeeding or take medication for a chronic condition, talk to your doctor before you start.',
                 'footer_about': 'About Us',

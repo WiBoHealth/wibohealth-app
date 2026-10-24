@@ -1421,6 +1421,9 @@
         }
 
         function detectInitialLang() {
+            // ?lang= (links from the EN/NL/SV pages) wins over a stored choice
+            const urlLang = (new URLSearchParams(location.search).get('lang') || '').toLowerCase();
+            if (urlLang === 'ar' || urlLang === 'en' || urlLang === 'nl') return urlLang;
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) return saved;
             const phone = (navigator.language || '').toLowerCase();

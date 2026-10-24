@@ -1,4 +1,4 @@
-"""Generate the standalone calculator pages (one page per calculator, three languages).
+"""Generate the standalone calculator pages (one page per calculator, three languages plus Swedish).
 
     python scripts/generate_calculator_pages.py
 
@@ -6,6 +6,8 @@ Output (re-running rebuilds everything):
     <slug>.html        Arabic (x-default), e.g. bmi-calculator.html
     en/<slug>.html     English
     nl/<slug>.html     Dutch
+    sv/<slug>.html     Swedish (copy in calc_sv.py; links use generate_article_pages.link, so pages without a Swedish
+                       version open in English)
     sitemap.xml        block between <!-- CALCULATOR-PAGES:START --> and <!-- CALCULATOR-PAGES:END -->
 
 Source: scripts/calculator_content.py. Each page = a working calculator + a long-form clinical guide + FAQ.
@@ -19,8 +21,8 @@ import re
 from pathlib import Path
 
 from calculator_content import CALCS, T
-from generate_article_pages import EXTRA_CSS as ARTICLE_CSS
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, site_link
+from generate_article_pages import EXTRA_CSS as ARTICLE_CSS, SV, UI_SV, link, nav as site_nav
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -35,11 +37,21 @@ GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=1" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+    <script src="/js/consent.js?v=3" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
 
 
 ROOT = Path(__file__).resolve().parent.parent
 BY_KEY = {c['key']: c for c in CALCS}
+ALL_LANGS = LANGS + (SV,)
+NAMES = {'ar': 'العربية', 'nl': 'Nederlands', 'en': 'English', SV: 'Svenska'}
+
+
+def langs_of(calc):
+    return tuple(l for l in ALL_LANGS if l in calc['content'])
+
+
+def ui(lang):
+    return UI_SV if lang == SV else UI[lang]
 
 CALC_CSS = """
         .page-wrapper.calc-page { max-width: 920px; }
@@ -65,6 +77,9 @@ CALC_CSS = """
         .form-control { width: 100%; padding: 13px 16px; background: var(--bg-input); border: 1px solid var(--border-color);
             border-radius: var(--radius-md); color: var(--text-main); font-size: 1rem; font-family: inherit; outline: none; }
         .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); }
+        /* long option labels (activity levels) must not widen the field on phones (WebKit sizes a select to its longest option) */
+        .form-group { min-width: 0; }
+        select.form-control { min-width: 0; max-width: 100%; white-space: normal; text-overflow: ellipsis; }
         select.form-control option { background: var(--bg-main); color: var(--text-main); }
         html[data-theme="dark"] select.form-control option { background: #121810; }
         .calc-submit-btn { width: 100%; padding: 15px; background: #047857; color: #fff; border: 0; border-radius: var(--radius-md);
@@ -100,7 +115,7 @@ CALC_CSS = """
         .formula-box { background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
             border-radius: var(--radius-sm); padding: 14px 18px; margin: 10px 0 18px; font-weight: 800; text-align: center;
             font-family: ui-monospace, Consolas, monospace; font-size: 0.98rem; overflow-x: auto; }
-        .table-wrap { overflow-x: auto; margin: 10px 0 22px; border: 1px solid var(--border-color); border-radius: var(--radius-md); }
+        .table-wrap { overflow-x: auto; max-width: 100%; margin: 10px 0 22px; border: 1px solid var(--border-color); border-radius: var(--radius-md); }
         .data-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 460px; }
         .data-table th, .data-table td { padding: 11px 14px; border-bottom: 1px solid var(--border-color); text-align: start; vertical-align: top; }
         .data-table th { font-weight: 800; background: rgba(16, 185, 129, 0.08); color: var(--text-main); }
@@ -144,6 +159,7 @@ def page_url(calc, lang, absolute=True):
 
 
 def food_url(slug, lang):
+    lang = 'en' if lang == SV else lang      # no Swedish food pages yet: the English one
     return f'/foods/{slug}.html' if lang == 'ar' else f'/{lang}/foods/{slug}.html'
 
 
@@ -151,7 +167,7 @@ def render_body(html, lang):
     """Content links foods as {food:slug}, site pages as {site:/path} and sibling calculators as {calc:key}."""
     html = re.sub(r'\{food:([a-z0-9-]+)\}', lambda m: food_url(m.group(1), lang), html)
     html = re.sub(r'\{calc:([a-z]+)\}', lambda m: page_url(BY_KEY[m.group(1)], lang, absolute=False), html)
-    return re.sub(r'\{site:([^}]+)\}', lambda m: site_link(m.group(1), lang), html)
+    return re.sub(r'\{site:([^}]+)\}', lambda m: link(m.group(1), lang), html)
 
 
 def opt(value, label, selected=False):
@@ -302,7 +318,7 @@ LOGIC = {
 def script(calc, lang):
     w = calc['content'][lang]['ui']
     strings = {k: v for k, v in w.items() if k.startswith(('st_', 'tip', 'cups', 'ok_'))}
-    locale = {'ar': 'en-US', 'en': 'en-GB', 'nl': 'nl-NL'}[lang]
+    locale = {'ar': 'en-US', 'en': 'en-GB', 'nl': 'nl-NL', SV: 'sv-SE'}[lang]
     return f'''    <script>
         (function () {{
             var S = {json.dumps(strings, ensure_ascii=False)};
@@ -323,9 +339,9 @@ def script(calc, lang):
 
 
 def build(calc, lang):
-    t, u, c = T[lang], UI[lang], calc['content'][lang]
-    urls = {l: page_url(calc, l) for l in LANGS}
-    hub = site_link('/calculators.html', lang)
+    t, u, c = T[lang], ui(lang), calc['content'][lang]
+    urls = {l: page_url(calc, l) for l in langs_of(calc)}
+    hub = link('/calculators.html', lang)
 
     faq_schema = {"@type": "FAQPage", "@id": urls[lang] + '#faq', "inLanguage": lang,
                   "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub('<[^>]+>', '', a)}}
@@ -349,31 +365,34 @@ def build(calc, lang):
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "citation": [{"@type": "CreativeWork", "name": r} for r in calc['references']],
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + link('/', lang)},
             {"@type": "ListItem", "position": 2, "name": t['hub'], "item": SITE + hub},
             {"@type": "ListItem", "position": 3, "name": c['crumb'], "item": urls[lang]}]},
     }
     schema = {"@context": "https://schema.org", "@graph": [page_schema, faq_schema]}
 
-    nav = nav_html(lang, active='/calculators.html')
+    nav = site_nav(lang, active='/calculators.html')
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(calc, l, absolute=False)}" '
-        f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
-    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
+        f'hreflang="{l}" lang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}"><span>{flag}</span> <span>{l.upper()}</span></a>'
+        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
     calc_nav = ''.join(f'<a href="{page_url(o, lang, absolute=False)}"{" class=\"current\" aria-current=\"page\"" if o is calc else ""}>'
                        f'<i class="fas {o["icon"]}" aria-hidden="true"></i> {esc(o["content"][lang]["short"])}</a>' for o in CALCS)
     faq_html = ''.join(f'<details><summary>{esc(q)}</summary><p>{a}</p></details>' for q, a in c['faq'])
     related = ''.join(f'<a class="related-card" href="{page_url(o, lang, absolute=False)}"><i class="fas {o["icon"]}" aria-hidden="true"></i>'
                       f'<strong>{esc(o["content"][lang]["short"])}</strong><span>{esc(o["content"][lang]["blurb"])}</span></a>'
                       for o in CALCS if o is not calc)
-    related += (f'<a class="related-card" href="{site_link("/foods.html", lang)}"><i class="fas fa-apple-whole" aria-hidden="true"></i>'
+    related += (f'<a class="related-card" href="{link("/foods.html", lang)}"><i class="fas fa-apple-whole" aria-hidden="true"></i>'
                 f'<strong>{esc(t["foods_title"])}</strong><span>{esc(t["foods_blurb"])}</span></a>')
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in calc['references'])
-    footer_links = ' <span>•</span> '.join(
-        f'<a href="{site_link(p, lang)}">{label}</a>' for p, label in
-        [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/calculators.html', t['hub']), ('/#articles', t['footer_articles']),
-         ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])])
+    items = [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/calculators.html', t['hub']), ('/#articles', t['footer_articles']),
+             ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])]
+    if lang == SV:                                       # the Swedish about, contact and legal pages
+        items = [('/', u['nav'][0]), ('/calculators.html', t['hub']), ('/#articles', t['footer_articles']),
+                 ('/about.html', 'Om oss'), ('/contact.html', 'Kontakt'), ('/privacy.html', 'Integritetspolicy'),
+                 ('/terms.html', 'Användarvillkor'), ('/sv/medicinsk-ansvarsfriskrivning.html', 'Medicinsk ansvarsfriskrivning')]
+    footer_links = ' <span>•</span> '.join(f'<a href="{link(p, lang)}">{label}</a>' for p, label in items)
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">
@@ -392,7 +411,7 @@ def build(calc, lang):
     <meta property="og:description" content="{esc(c["desc"])}">
     <meta property="og:url" content="{urls[lang]}">
     <meta property="og:image" content="{SITE}/images/icon-512.png">
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <meta name="twitter:card" content="summary">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
@@ -416,7 +435,7 @@ def build(calc, lang):
 <body>
     <header>
         <div class="header-container">
-            <a href="{site_link('/', lang)}" class="brand-link">
+            <a href="{link('/', lang)}" class="brand-link">
                 {LOGO_SVG}
                 <span class="brand-title">WiBo Health</span>
             </a>
@@ -437,7 +456,7 @@ def build(calc, lang):
     <main class="page-wrapper food-page article-page calc-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{hub}">{t["hub"]}</a> › <span>{esc(c["crumb"])}</span>
+                <a href="{link('/', lang)}">{u["home"]}</a> › <a href="{hub}">{t["hub"]}</a> › <span>{esc(c["crumb"])}</span>
             </nav>
             <span class="group-chip">{esc(c["cat"])}</span>
             <h1>{esc(c["h1"])}</h1>
@@ -457,7 +476,7 @@ def build(calc, lang):
 
             <section class="boodi-funnel-card">
                 <div><h2>{t["boodi_title"]}</h2><p>{t["boodi_text"]}</p></div>
-                <a href="{site_link('/boodi.html', lang)}" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> {t["boodi_cta"]}</a>
+                <a href="{link('/boodi.html', lang)}" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> {t["boodi_cta"]}</a>
             </section>
 
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
@@ -492,11 +511,12 @@ def build(calc, lang):
 
 
 def main():
-    for lang in LANGS:
+    for lang in ALL_LANGS:
         out_dir = ROOT if lang == 'ar' else ROOT / lang
         out_dir.mkdir(parents=True, exist_ok=True)
         for calc in CALCS:
-            (out_dir / f'{calc["slug"]}.html').write_text(build(calc, lang), encoding='utf-8', newline='\n')
+            if lang in langs_of(calc):
+                (out_dir / f'{calc["slug"]}.html').write_text(build(calc, lang), encoding='utf-8', newline='\n')
 
     sm_path = ROOT / 'sitemap.xml'
     sm = sm_path.read_text(encoding='utf-8')
@@ -504,15 +524,16 @@ def main():
     sm = re.sub(r'\s*<!-- CALCULATOR-PAGES:START -->.*?<!-- CALCULATOR-PAGES:END -->', '', sm, flags=re.S)
     block = ['  <!-- CALCULATOR-PAGES:START -->']
     for calc in CALCS:
-        for lang in LANGS:
+        for lang in langs_of(calc):
             block += ['  <url>', f'    <loc>{page_url(calc, lang)}</loc>', f'    <lastmod>{calc["modified"]}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.9</priority>']
-            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(calc, l)}"/>' for l in LANGS]
+            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(calc, l)}"/>' for l in langs_of(calc)]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(calc, "ar")}"/>', '  </url>']
     block.append('  <!-- CALCULATOR-PAGES:END -->')
     sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
     sm_path.write_text(sm, encoding='utf-8', newline='')
-    print(f'calculator pages written: {len(CALCS) * len(LANGS)} ({len(CALCS)} calculators x {len(LANGS)} languages)')
+    print(f'calculator pages written: {sum(len(langs_of(c)) for c in CALCS)} ({len(CALCS)} calculators, '
+          f'{sum(SV in langs_of(c) for c in CALCS)} with Swedish)')
 
 
 if __name__ == '__main__':

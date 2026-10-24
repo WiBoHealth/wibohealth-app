@@ -358,4 +358,65 @@ SITE_PAGES_SV = [
             <p>Läs mer i vår <a href="/sv/integritetspolicy.html">integritetspolicy</a>.</p>
 ''',
     ),
+    dict(
+        key='calculators', slug='calculators', legacy='/calculators.html', kind='collection', modified='2026-10-23',
+        title='Hälsokalkylatorer: BMI, kaloribehov, vätskebehov och midja-längd-kvot | WiBo Health',
+        h1='Hälsokalkylatorer', crumb='Hälsokalkylatorer',
+        desc='Gratis hälsokalkylatorer byggda på riktlinjer från WHO, EFSA och NICE: BMI, dagligt kaloribehov (TDEE), vätskebehov och midja-längd-kvot.',
+        body='''            <p class="lead">Verktyg för vardagen, byggda på riktlinjer från Världshälsoorganisationen (WHO), Europeiska livsmedelssäkerhetsmyndigheten (EFSA) och brittiska NICE. Varje kalkylator har en utförlig guide om vad resultatet betyder och vad du kan göra.</p>
+            <div class="hub-cards">
+                <a class="hub-card" href="/sv/bmi-calculator.html"><h3><i class="fas fa-weight-scale"></i> Kroppsmasseindex (BMI)</h3><p>Klassa din vikt och se det hälsosamma viktintervallet för din längd.</p><span class="card-link">Öppna kalkylatorn →</span></a>
+                <a class="hub-card" href="/sv/tdee-calculator.html"><h3><i class="fas fa-fire-flame-curved"></i> Dagligt kaloribehov (TDEE)</h3><p>Basalomsättning, kalorier för att behålla vikten, gå ner i fett eller bygga muskler, och fördelning av protein, fett och kolhydrater.</p><span class="card-link">Öppna kalkylatorn →</span></a>
+                <a class="hub-card" href="/sv/water-calculator.html"><h3><i class="fas fa-droplet"></i> Dagligt vätskebehov</h3><p>Rätt mängd vätska för din vikt och aktivitet, jämfört med EFSA:s referensvärden.</p><span class="card-link">Öppna kalkylatorn →</span></a>
+                <a class="hub-card" href="/sv/whtr-calculator.html"><h3><i class="fas fa-ruler-combined"></i> Midja-längd-kvot (WHtR)</h3><p>Ett enkelt mått på bukfett och metabol risk: håll midjan under halva din längd.</p><span class="card-link">Öppna kalkylatorn →</span></a>
+            </div>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>boodi 💚 – streckkodsskanner och glykemiskt index</h2>
+                    <p>Kalorier berättar inte hela historien: hur maten påverkar blodsocker och insulin spelar också roll. Skanna streckkoder i butiken och se ingredienser, tillsatser och hälsosammare alternativ på några sekunder.</p>
+                </div>
+                <a class="boodi-btn" href="/sv/boodi.html"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+''',
+        footer_note='Kalkylatorerna är utbildande verktyg för vuxna och ställer inga diagnoser. ' + CARE,
+    ),
+    dict(
+        key='boodi', slug='boodi', legacy='/boodi.html', kind='webpage', modified='2026-10-23',
+        title='boodi 💚 – appen som skannar streckkoder, ingredienser och glykemiskt index | WiBo Health',
+        h1='Möt boodi 💚 – din smarta hjälp i butiken', crumb='boodi-appen',
+        desc='boodi skannar streckkoder och visar näringsvärden, glykemiskt index, ingredienser och tillsatser, och föreslår hälsosammare alternativ från samma hylla. Med ett kostprogram för en hälsosam livsstil.',
+        image='boodi-app-logo.jpeg', image_alt='boodi-appens logotyp',
+        body='''            <p class="lead">Slut på velandet i butiken! Skanna en streckkod och boodi visar näringsvärden, hur snabbt maten påverkar blodsockret, ingredienser och tillsatser – och föreslår hälsosammare alternativ från samma hylla.</p>
+            <p><span class="boodi-btn" aria-disabled="true" style="cursor:default;opacity:.9;white-space:normal;text-align:center"><i class="fab fa-google-play"></i> 🚀 Kommer snart på Google Play</span></p>
+
+            <h2 class="section-title"><i class="fas fa-star"></i> <span>Vad gör boodi?</span></h2>
+            <div class="hub-cards">
+                <div class="hub-card"><h3><i class="fas fa-barcode"></i> Snabb streckkodsskanning</h3><p>Hämtar uppgifter från stora internationella livsmedelsdatabaser och visar kalorier och dolt socker på några sekunder.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-list-check"></i> Ingredienser och tillsatser</h3><p>Visar tillsatser (E-nummer), allergener och ingredienser du själv har valt att undvika, så att du vet vad du äter och kan välja det som passar din kost.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-chart-line"></i> Glykemiskt index och insulinsvar</h3><p>Visar hur snabbt ett livsmedel höjer blodsockret – ett stöd för dig som vill ha jämnare blodsocker och en sundare ämnesomsättning.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-right-left"></i> Alternativ från samma hylla</h3><p>Inga slumpmässiga förslag: skannar du en vara med mycket socker föreslår boodi ett alternativ med mindre socker inom samma varugrupp.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-shield-halved"></i> Integritet enligt GDPR</h3><p>Din skanningshistorik sparas bara på din telefon. Läs mer i vår <a href="/sv/integritetspolicy.html">integritetspolicy</a>.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-leaf"></i> <span>Ett kostprogram för din livsstil</span></h2>
+            <p>En balanserad kostplan på 12 veckor, byggd kring din vardag och maten du tycker om, framtagen av WiBo Healths team för kost och livsstil. Ingen svält och inga konstiga livsmedel – bekanta måltider som utvecklas med dig steg för steg.</p>
+            <ul class="check-list">
+                <li><strong>En ny fas var 14:e dag:</strong> planen förnyas varannan vecka i takt med dina framsteg, så att du kommer förbi viktplatåer utan att tröttna.</li>
+                <li><strong>Ditt dagliga behov uträknat:</strong> några snabba frågor om ålder, längd, vikt och aktivitet uppskattar ditt kaloribehov och lägger planen på ett måttligt, säkert underskott.</li>
+                <li><strong>Alla världens kök:</strong> boodis personliga kostprogram omfattar alla världens kök – välj fritt det kök du föredrar och få måltider du känner igen och tycker om.</li>
+                <li><strong>Välj bort det som inte passar:</strong> markera livsmedel du inte tycker om eller inte tål, så kommer de aldrig med i planen.</li>
+                <li><strong>En säkerhetskontroll innan du börjar:</strong> automatiska frågor visar när din hälsa gör att du bör prata med vården innan du följer ett kostprogram.</li>
+                <li><strong>Skannern känner till din plan:</strong> skanna en vara och boodi visar direkt ✅ passar din plan, 🟡 med måtta eller ⚠️ innehåller något du valt bort.</li>
+            </ul>
+            <p class="disclaimer-box">Programmet är en livsstilsguide till hälsosam och balanserad mat. Det är ingen behandling av någon sjukdom och ersätter inte råd från vården. Är du gravid, ammar eller tar läkemedel för en kronisk sjukdom, prata med din vårdcentral innan du börjar.</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-info"></i> <span>Bra att veta</span></h2>
+            <ul class="check-list">
+                <li>boodi är ett verktyg för information och livsstil och <strong>ingen medicinteknisk produkt</strong>. Appen ställer inga diagnoser och räknar inte ut insulin- eller läkemedelsdoser.</li>
+                <li>Kontrollera alltid förpackningen, särskilt vid allergier, eftersom databasernas uppgifter kan innehålla fel.</li>
+                <li>Frågor om appen? Se <a href="/sv/kontakt.html">kontakt och support</a>. Vill du radera ditt konto? Se <a href="/sv/radera-konto.html">Radera konto</a>.</li>
+            </ul>
+''',
+    ),
 ]

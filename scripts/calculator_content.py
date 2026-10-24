@@ -1,7 +1,7 @@
 """Content for the standalone calculator pages (see generate_calculator_pages.py).
 
 Each calculator lives in its own module (calc_bmi.py, calc_tdee.py, calc_water.py, calc_whtr.py) with AR / EN / NL
-copy: SEO title and description, lead, the widget strings, a long-form clinical guide (body HTML), FAQ and references.
+copy (Swedish in calc_sv.py): SEO title and description, lead, the widget strings, a long-form clinical guide (body HTML), FAQ and references.
 Body placeholders: {food:slug} links a food page, {calc:key} a sibling calculator, {site:/path} a regular site page.
 Editorial policy: author and publisher are the WiBo Health organisation; no personal names.
 """
@@ -11,6 +11,11 @@ from calc_water import WATER
 from calc_whtr import WHTR
 
 CALCS = [BMI, TDEE, WATER, WHTR]
+
+# Swedish (2026-10-23): copy in calc_sv.py, built as /sv/<slug>.html
+from calc_sv import SV, T_SV  # noqa: E402
+for _calc in CALCS:
+    _calc['content']['sv'] = SV[_calc['key']]
 
 # Page chrome shared by every calculator page, per language.
 T = {
@@ -36,3 +41,4 @@ T = {
         boodi_text='Cijfers alleen zijn niet genoeg: wat je eet bepaalt je insuline- en bloedsuikerreactie. Scan barcodes in de supermarkt en zie de glykemische index, ingrediënten en gezondere alternatieven.',
         boodi_cta='Ontdek de Boodi-app'),
 }
+T['sv'] = T_SV
