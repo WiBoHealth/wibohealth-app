@@ -14,9 +14,11 @@ Output (re-running rebuilds everything, nothing is appended twice):
 Sources: js/data.js (values, GI provenance), doctor.html (design system: CSS, logo, nav labels).
 Per-food text can be overridden in scripts/food_pages_overrides.json (lead, tips, faq, slug, title, desc).
 """
+import hashlib
 import html
 import json
 import re
+import sys
 from pathlib import Path
 
 import food_sv as FSV
@@ -1248,39 +1250,108 @@ BASE_CSS = re.search(r'    <style>\n(.*?)    </style>\n', doctor, re.S).group(1)
 LOGO_SVG = ('<img class="brand-logo-svg" src="/images/brand/wibo-logo-64.webp" '   # emerald heart logo
             'srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">')
 
+# Inline SVG icons (24 px grid, drawn with currentColor) in place of the Font Awesome stylesheet and webfont
+ICON_PATHS = {
+    'check': '<circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/>',
+    'utensils': '<path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/>',
+    'warn': '<path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/>',
+    'table': '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 9.5V20"/>',
+    'scale': '<path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/>',
+    'question': '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.1"/>',
+    'book': '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/>',
+    'barcode': '<path d="M4 5v14M7 5v14M10.5 5v14M13 5v14M16.5 5v14M20 5v14"/>',
+    'bolt': '<path d="M13 2.5 4.5 13.5H11L10 21.5l8.5-11H12z"/>',
+    'sun': '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+    'moon': '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+}
+
+
+def icon(name, cls=''):
+    return (f'<svg class="ico{" " + cls if cls else ""}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">'
+            f'{ICON_PATHS[name]}</svg>')
+
 PAGE_CSS = """
         a.lang-btn { text-decoration: none; }
         .food-page h1, .food-page h3, .food-page td, .boodi-card h2, .food-page strong { color: var(--text-main); }
         .food-page { max-width: 980px; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px; }
+        .ico { width: 1.1em; height: 1.1em; flex-shrink: 0; vertical-align: -0.18em; fill: none; stroke: currentColor;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .theme-toggle-btn .ico { width: 16px; height: 16px; }
+        .theme-toggle-btn .ti-moon, html[data-theme="light"] .theme-toggle-btn .ti-sun { display: none; }
+        html[data-theme="light"] .theme-toggle-btn .ti-moon { display: inline-block; }
+        .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .breadcrumb a { color: var(--text-muted); text-decoration: none; }
         .breadcrumb a:hover { color: var(--primary); }
-        .food-hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
-        .food-hero img, .food-hero .food-emoji {
-            width: 150px; height: 150px; border-radius: 22px; object-fit: cover; flex-shrink: 0;
-            border: 3px solid var(--primary-glow); box-shadow: var(--shadow); background: var(--bg-input);
-        }
-        .food-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-        .food-hero-text { flex: 1; min-width: 220px; }
-        .food-hero-text h1 { font-size: 2rem; font-weight: 900; line-height: 1.3; margin-bottom: 4px; }
-        .food-subtitle { color: var(--text-muted); font-weight: 600; }
+        /* compact hero: thumbnail beside the name */
+        .fp-hero { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+        .fp-hero img, .fp-hero .food-emoji { width: 96px; height: 96px; border-radius: 18px; object-fit: cover; flex-shrink: 0;
+            border: 2px solid var(--primary-glow); background: var(--bg-input); }
+        .fp-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 2.6rem; }
+        .fp-hero-text { min-width: 0; }
+        .fp-hero-text h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.25; margin: 0 0 4px; overflow-wrap: anywhere; }
+        .fp-sub { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; color: var(--text-muted); font-weight: 600; font-size: 0.88rem; }
         .group-chip {
-            display: inline-block; margin-top: 10px; padding: 4px 14px; border-radius: 999px; font-size: 0.82rem;
+            display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.76rem;
             font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
         }
-        .lead { font-size: 1.04rem; margin: 6px 0 22px; }
+        /* quick answer (static, the medium portion) */
+        .quick-answer { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3);
+            border-inline-start: 4px solid var(--primary); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 14px; }
+        .quick-answer h2 { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 800; color: var(--primary); margin: 0 0 4px; }
+        .about-card .quick-answer p { margin: 0; font-size: 0.95rem; line-height: 1.75; color: var(--text-main); }
+        /* macro card: portion pills, energy ring, 2x2 macros, GI / GL */
+        .fp { --c-carb: #38bdf8; --c-prot: #a78bfa; --c-fat: #fb7185; --c-fib: #34d399; }
+        html[data-theme="light"] .fp { --c-carb: #0284c7; --c-prot: #7c3aed; --c-fat: #e11d48; --c-fib: #059669; }
+        .macro-card { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px; margin-bottom: 16px; }
+        .servings { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; border: 0; padding: 0; margin: 0 0 12px; min-width: 0; }
+        .pill { position: relative; cursor: pointer; }
+        .pill input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+        .pill > span { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px;
+            padding: 4px 2px; border-radius: 12px; border: 1px solid var(--border-color); background: var(--bg-card);
+            text-align: center; line-height: 1.2; transition: background .15s, border-color .15s, color .15s; }
+        .pill-name { white-space: nowrap; font-size: 0.74rem; font-weight: 800; color: var(--text-main); }
+        .pill small { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+        .pill input:checked + span { background: var(--primary); border-color: var(--primary); }
+        .pill input:checked + span .pill-name, .pill input:checked + span small { color: #ffffff; }
+        html[data-theme="dark"] .pill input:checked + span { background: #047857; border-color: #047857; }
+        .pill input:focus-visible + span { outline: 2px solid var(--primary); outline-offset: 2px; }
+        .macro-body { display: flex; align-items: center; gap: 14px; }
+        .donut { position: relative; width: 116px; height: 116px; flex-shrink: 0; margin: 0; }
+        .donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        html[dir="rtl"] .donut svg { transform: rotate(-90deg) scaleY(-1); }   /* clockwise from the top in RTL too */
+        .donut circle { fill: none; stroke-width: 5.2; }
+        .donut .track { stroke: var(--border-color); }
+        .donut .seg-c { stroke: var(--c-carb); } .donut .seg-p { stroke: var(--c-prot); } .donut .seg-f { stroke: var(--c-fat); }
+        .donut figcaption { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; }
+        .donut figcaption b { font-size: 1.55rem; font-weight: 900; color: var(--text-main); font-variant-numeric: tabular-nums; }
+        .donut figcaption span { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+        .macro-legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; flex: 1; min-width: 0; }
+        .macro-legend li { display: grid; grid-template-columns: 10px minmax(0, 1fr); column-gap: 6px; align-items: center; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .dot-c { background: var(--c-carb); } .dot-p { background: var(--c-prot); } .dot-f { background: var(--c-fat); } .dot-fib { background: var(--c-fib); }
+        .m-name { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .m-val { grid-column: 2; font-size: 1.05rem; font-weight: 900; color: var(--text-main); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .m-pct { grid-column: 2; white-space: nowrap; font-size: 0.7rem; font-weight: 600; color: var(--text-muted); }
+        .about-card .macro-note { margin: 8px 0 0; font-size: 0.68rem; font-weight: 600; color: var(--text-muted); text-align: center; }
+        .gi-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+        .gi-box { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "label label" "num badge" "sub sub";
+            align-items: center; column-gap: 8px; background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 8px 10px; }
+        .gi-label { grid-area: label; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+        .gi-num { grid-area: num; font-size: 1.45rem; font-weight: 900; line-height: 1.2; font-variant-numeric: tabular-nums; min-width: 2.4ch; }
+        .gi-num.low { color: #10b981; } .gi-num.medium { color: #f39c12; } .gi-num.high { color: #e74c3c; } .gi-num.muted { color: var(--text-muted); }
+        html[data-theme="dark"] .gi-num.low { color: #6ee7b7; } html[data-theme="dark"] .gi-num.medium { color: #fcd34d; }
+        html[data-theme="dark"] .gi-num.high { color: #fca5a5; }
+        .gi-box .badge { grid-area: badge; justify-self: start; margin: 0; max-width: 100%; text-align: center; }
+        .gi-sub { grid-area: sub; font-size: 0.68rem; font-weight: 600; color: var(--text-muted); }
+        /* introduction: two lines until "read more" (the class is set by js/food-serving.js) */
+        .lead-fold { margin-bottom: 6px; }
+        .about-card .lead-fold .lead { margin: 0; font-size: 0.95rem; }
+        .lead-fold.clamped .lead { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .more-btn { background: none; border: 0; padding: 4px 0; color: var(--primary); font: inherit; font-size: 0.85rem; font-weight: 800; cursor: pointer; }
         .reviewed { font-size: 0.85rem; color: var(--text-muted); margin: 12px 0 0; }
         .reviewed a { color: var(--primary); text-decoration: none; font-weight: 700; }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 26px; }
-        .stat-box {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md);
-            padding: 16px 12px; text-align: center;
-        }
-        .stat-box h2 { font-size: 0.82rem; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
-        .stat-num { font-size: 2rem; font-weight: 900; line-height: 1.2; }
-        .stat-num.low { color: #10b981; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
-        .stat-num.muted { color: var(--text-muted); } .stat-num.kcal { color: #3498db; } .stat-num.protein { color: #9b59b6; }
-        .stat-sub { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
         .badge {
             display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem;
             font-weight: 700; border: 1px solid transparent;
@@ -1289,14 +1360,22 @@ PAGE_CSS = """
         .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #f39c12; }
         .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #e74c3c; }
         .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-muted); }
-        .tip-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .tip {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
-            border-radius: var(--radius-sm); padding: 14px 18px;
-        }
-        .tip h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; display: flex; gap: 8px; align-items: center; }
-        .tip.warn { border-inline-start-color: #f39c12; }
-        .tip p { color: var(--text-muted); margin: 0; }
+        /* tips and FAQ: accordions, the first one open */
+        .acc-list { display: grid; gap: 8px; margin: 8px 0 22px; }
+        .acc { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+        .acc.tip { border-inline-start: 4px solid var(--primary); }
+        .acc.tip.warn { border-inline-start-color: #f39c12; }
+        .acc summary { list-style: none; cursor: pointer; padding: 12px 14px; font-weight: 800; color: var(--text-main);
+            display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .acc summary::-webkit-details-marker { display: none; }
+        .acc summary::after { content: "+"; margin-inline-start: auto; padding-inline-start: 8px; font-weight: 900; color: var(--primary); font-size: 1.1rem; }
+        .acc[open] summary::after { content: "\\2212"; }
+        .acc summary h3 { font-size: inherit; font-weight: inherit; margin: 0; }
+        .acc.tip summary .ico { color: var(--primary); } .acc.tip.warn summary .ico { color: #f39c12; }
+        .about-card .acc p { margin: 0; padding: 0 14px 12px; color: var(--text-muted); }
+        .section-title .ico { width: 0.95em; height: 0.95em; }
+        .boodi-btn .ico { width: 18px; height: 18px; }
+        .nutrition-table td b { font-weight: 700; font-variant-numeric: tabular-nums; }
         .nutrition-table { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 0.95rem; }
         .nutrition-table th, .nutrition-table td { padding: 11px 12px; border-bottom: 1px solid var(--border-color); text-align: start; }
         .nutrition-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
@@ -1310,10 +1389,6 @@ PAGE_CSS = """
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
         .read-also a { overflow-wrap: anywhere; }      /* long names such as (L-Selenomethionine) on 320 px */
-        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
-        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
-        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -1347,12 +1422,117 @@ PAGE_CSS = """
             border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
         }
         html[data-theme="light"] .disclaimer-box { background: #f1f5f9; border-color: rgba(15, 23, 42, 0.12); color: #334155; }
+        @media (min-width: 761px) {
+            .donut { width: 150px; height: 150px; }
+            .macro-legend { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
         @media (max-width: 760px) {
-            .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .food-hero { flex-direction: column; text-align: center; }
-            .food-hero-text h1 { font-size: 1.6rem; }
+            .food-page.page-wrapper { margin: 12px auto 50px; padding: 0 10px; }
+            .food-page .about-card { padding: 16px 14px; }
+            .food-page .section-title { font-size: 1.15rem; margin: 22px 0 10px; }
+            .fp-hero img, .fp-hero .food-emoji { width: 72px; height: 72px; border-radius: 16px; }
+            .fp-hero .food-emoji { font-size: 2rem; }
+            .fp-hero-text h1 { font-size: 1.45rem; }
+            .fp-hero-text h1.long { font-size: 1.2rem; }
+            .donut { width: 104px; height: 104px; }
+            .macro-body { gap: 10px; }
+        }
+        @media (max-width: 360px) {
+            .donut { width: 92px; height: 92px; }
+            .donut figcaption b { font-size: 1.3rem; }
+            .pill-name { font-size: 0.68rem; }
         }
 """
+
+
+# Mobile-first top of the page (approved by Dr. Wassim, 25 October 2026): quick answer, portion pills, energy ring.
+# Quick answer: the approved Arabic sentence and its faithful translations; qa_na is its first sentence, for foods
+# without a glycemic index. Portions: 100 g and 0.5 / 1.0 / 1.5 x the approved typical portion (medium = typical).
+SERVING_FACTORS = (('small', 0.5), ('medium', 1.0), ('large', 1.5))
+FP_UI = {
+    'ar': dict(
+        qa_title='الإجابة السريعة',
+        qa='في حصة متوسطة من {name} ({g} غ) توجد {kcal} سعرة حرارية، مع {net} غ كاربوهيدرات صافية و{protein} غ بروتين. '
+           'مؤشر{h} الجلايسيمي {gi} ({gi_level}) في سرعة رفع السكر، بينما حمل{h} الجلايسيمي للحصة {gl} ({gl_level}) في تأثير{h} الفعلي.',
+        qa_na='في حصة متوسطة من {name} ({g} غ) توجد {kcal} سعرة حرارية، مع {net} غ كاربوهيدرات صافية و{protein} غ بروتين.',
+        choose='اختر الحصة', card='القيم الغذائية حسب الحصة', ref='مرجعي', g100='100 غ',
+        servings=dict(small='حصة صغيرة', medium='حصة متوسطة', large='حصة كبيرة'),
+        short=dict(small='صغيرة', medium='متوسطة', large='كبيرة'),
+        col='{label} ({g} غ)', macros=('كربوهيدرات', 'بروتين', 'دهون', 'ألياف'), pct='{v}%',
+        energy_note='النسب المئوية من إجمالي الطاقة (السعرات)', energy_aria='توزيع الطاقة: كربوهيدرات {c}، بروتين {p}، دهون {f}',
+        gi_same='ثابت لكل الحصص', more='اقرأ المزيد', less='عرض أقل'),
+    'en': dict(
+        qa_title='Quick answer',
+        qa='A medium portion of {name} ({g} g) contains {kcal} kcal, with {net} g of net carbohydrates and {protein} g of protein. '
+           'Its glycemic index is {gi} ({gi_level}) for how fast it raises blood sugar, while its glycemic load per portion is '
+           '{gl} ({gl_level}) for its actual effect.',
+        qa_na='A medium portion of {name} ({g} g) contains {kcal} kcal, with {net} g of net carbohydrates and {protein} g of protein.',
+        choose='Choose a portion', card='Nutrition by portion', ref='reference', g100='100 g',
+        servings=dict(small='Small portion', medium='Medium portion', large='Large portion'),
+        short=dict(small='Small', medium='Medium', large='Large'),
+        col='{label} ({g} g)', macros=('Carbs', 'Protein', 'Fat', 'Fibre'), pct='{v}%',
+        energy_note='Percentages of total energy (calories)', energy_aria='Energy split: carbohydrates {c}, protein {p}, fat {f}',
+        gi_same='Same for every portion', more='Read more', less='Show less'),
+    'nl': dict(
+        qa_title='Snel antwoord',
+        qa='Een middelgrote portie {name} ({g} g) bevat {kcal} kcal, met {net} g netto koolhydraten en {protein} g eiwit. '
+           'De glykemische index is {gi} ({gi_level}) voor hoe snel de bloedsuiker stijgt, terwijl de glykemische lading per '
+           'portie {gl} ({gl_level}) is voor het werkelijke effect.',
+        qa_na='Een middelgrote portie {name} ({g} g) bevat {kcal} kcal, met {net} g netto koolhydraten en {protein} g eiwit.',
+        choose='Kies een portie', card='Voedingswaarden per portie', ref='referentie', g100='100 g',
+        servings=dict(small='Kleine portie', medium='Middelgrote portie', large='Grote portie'),
+        short=dict(small='Klein', medium='Middel', large='Groot'),
+        col='{label} ({g} g)', macros=('Koolhydraten', 'Eiwit', 'Vet', 'Vezels'), pct='{v}%',
+        energy_note='Percentages van de totale energie (calorieën)', energy_aria='Energieverdeling: koolhydraten {c}, eiwit {p}, vet {f}',
+        gi_same='Gelijk voor elke portie', more='Lees meer', less='Toon minder'),
+    SV: dict(
+        qa_title='Snabbt svar',
+        qa='En medelstor portion {name} ({g} g) innehåller {kcal} kcal, med {net} g nettokolhydrater och {protein} g protein. '
+           'Det glykemiska indexet är {gi} ({gi_level}) för hur snabbt blodsockret stiger, medan den glykemiska belastningen per '
+           'portion är {gl} ({gl_level}) för den faktiska effekten.',
+        qa_na='En medelstor portion {name} ({g} g) innehåller {kcal} kcal, med {net} g nettokolhydrater och {protein} g protein.',
+        choose='Välj portion', card='Näringsvärde per portion', ref='referens', g100='100 g',
+        servings=dict(small='Liten portion', medium='Medelstor portion', large='Stor portion'),
+        short=dict(small='Liten', medium='Medel', large='Stor'),
+        col='{label} ({g} g)', macros=('Kolhydrater', 'Protein', 'Fett', 'Fiber'), pct='{v} %',
+        energy_note='Andel av den totala energin (kalorier)', energy_aria='Energifördelning: kolhydrater {c}, protein {p}, fett {f}',
+        gi_same='Samma för alla portioner', more='Läs mer', less='Visa mindre'),
+}
+
+
+def num_attr(x):
+    """A per-100 g value for a data-v100 attribute: the same float the page was computed from."""
+    return repr(float(x))
+
+
+def energy_ring(food):
+    """Energy split (carbohydrate x4, protein x4, fat x9) as dash lengths on a ring of length 100, precomputed."""
+    e = (('c', food['carbs'] * 4), ('p', food['protein'] * 4), ('f', food['fat'] * 9))
+    total = sum(v for _, v in e)
+    share = {k: (v / total * 100 if total else 0.0) for k, v in e}
+    segs, start = [], 0.0
+    for k, _ in e:
+        a = share[k]
+        if a >= 0.05:
+            gap = 0.9 if a > 3 else 0.3                     # a thin gap between segments, kept visible on small shares
+            dash = max(a - gap, 0.3)
+            segs.append(f'<circle class="seg seg-{k}" cx="21" cy="21" r="15.9155" pathLength="100" '
+                        f'stroke-dasharray="{dash:.2f} {100 - dash:.2f}" stroke-dashoffset="{-start:.2f}"/>')
+        start += a
+    return share, ''.join(segs)
+
+
+def write_assets():
+    """css/food-page.css (the design system from doctor.html + the food page styles) and the cache-busting versions."""
+    css = '/* Generated by scripts/generate_food_pages.py - do not edit by hand. */\n' + \
+          '\n'.join(line[8:] if line.startswith('        ') else line for line in (BASE_CSS + PAGE_CSS).split('\n'))
+    (ROOT / 'css' / 'food-page.css').write_text(css, encoding='utf-8', newline='\n')
+    js = (ROOT / 'js' / 'food-serving.js').read_text(encoding='utf-8')
+    short = lambda s: hashlib.sha1(s.encode('utf-8')).hexdigest()[:8]
+    return short(css), short(js)
+
+
+ASSET_VER = ('', '')      # (css/food-page.css, js/food-serving.js) content hashes, set in main()
 
 
 def page_url(slug, lang, absolute=True):
@@ -1514,7 +1694,8 @@ def build(food, lang, ctx):
         faq = build_faq(food, lang, sname, portion, False, g=g)
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
-    faq_html = ''.join(f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
+    faq_html = ''.join(f'<details class="acc"{" open" if i == 0 else ""}><summary><h3>{esc(q)}</h3></summary><p>{esc(a)}</p></details>'
+                       for i, (q, a) in enumerate(faq))
     read_also = [(READ_ALSO[k][0], *READ_ALSO[k][1][lang])
                  for k in read_also_keys(food, group, food['gi'] if has_gi else None)]
     read_also_html = ''.join(f'<li><a href="{href}">{esc(label)}<span>{READ_ALSO_KIND[kind][lang]}</span></a></li>'
@@ -1565,21 +1746,68 @@ def build(food, lang, ctx):
         alt_title = u['alt_same']
         alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}") for f in family[:3])
 
-    # -------- cards
-    if has_gi:
-        gi_card = (f'<div class="stat-num {["low", "medium", "high"][lvl]}">{gi}</div>'
-                   f'<span class="badge {["low", "medium", "high"][lvl]}">{u["levels"][lvl]}</span>')
-        if reviewed:
-            gi_card += f'<div class="stat-sub">{u["gi_reviewed"]}</div>'
-        gl_card = (f'<div class="stat-num {["low", "medium", "high"][glv]}">{fmt(gl)}</div>'
-                   f'<div class="stat-sub">{u["per_portion"].format(p=portion)}</div>')
-    else:
-        gi_card = f'<div class="stat-num muted">—</div><span class="badge neutral">{u["na"]}</span>'
-        gl_card = f'<div class="stat-num muted">—</div><span class="badge neutral">{u["na"]}</span>'
+    # -------- quick answer (static: the medium portion = the approved typical portion)
+    fu = FP_UI[lang]
+    qa_args = dict(name=sname, g=portion, kcal=round(food['kcal'] * p_factor), net=fmt(food['avail'] * p_factor),
+                   protein=fmt(food['protein'] * p_factor), **g)
+    quick = (fu['qa'].format(gi=gi, gi_level=lv[lvl], gl=fmt(gl), gl_level=lg[glv], **qa_args) if has_gi
+             else fu['qa_na'].format(**qa_args))
 
-    # -------- nutrition table
+    # -------- macro card: portion pills (the medium one checked), energy ring, 2x2 macros, GI / GL
+    LV = ('low', 'medium', 'high')
+    def live(v100, integer=False):          # a number that follows the portion; it shows the medium portion
+        v = v100 * p_factor
+        return (f'<b data-v100="{num_attr(v100)}"{" data-int" if integer else ""}>'
+                f'{round(v) if integer else fmt(v)}</b>')
+    pills = [f'<label class="pill"><input type="radio" name="serving" value="100" data-label="{fu["g100"]}" data-col="{u["col100"]}">'
+             f'<span><span class="pill-name">{fu["g100"]}</span><small>{fu["ref"]}</small></span></label>']
+    for key, factor in SERVING_FACTORS:
+        grams = max(1, int(portion * factor + 0.5))
+        label = fu['servings'][key]
+        pills.append(f'<label class="pill"><input type="radio" name="serving" value="{grams}" data-label="{label} · {grams} {u["gram"]}"'
+                     f' data-col="{esc(fu["col"].format(label=label, g=grams))}"'
+                     f'{" checked data-default" if key == "medium" else ""}><span><span class="pill-name">'
+                     f'{fu["short"].get(key, label)}</span><small>{grams} {u["gram"]}</small></span></label>')
+    share, ring = energy_ring(food)
+    pct = lambda k: fu['pct'].format(v=fmt(share[k]))
+    macros = ''.join(
+        f'<li><i class="dot dot-{k}"></i><span class="m-name">{fu["macros"][i]}</span>'
+        f'<span class="m-val">{live(v)} {u["gram"]}</span><span class="m-pct">{pct(k) if k != "fib" else "&nbsp;"}</span></li>'
+        for i, (k, v) in enumerate((('c', food['carbs']), ('p', food['protein']), ('f', food['fat']), ('fib', food['fiber']))))
+    if has_gi:
+        gi_box = (f'<span class="gi-num {LV[lvl]}">{gi}</span><span class="badge {LV[lvl]}">{u["levels"][lvl]}</span>'
+                  f'<span class="gi-sub">{u["gi_reviewed"] if reviewed else fu["gi_same"]}</span>')
+        gl_box = (f'<span class="gi-num {LV[glv]}" id="glNum">{fmt(gl)}</span>'
+                  f'<span class="badge {LV[glv]}" id="glBadge">{u["levels"][glv]}</span>'
+                  f'<span class="gi-sub" id="glSub">{u["per_portion"].format(p=portion)}</span>')
+        gi_data = f' data-gi="{gi}" data-avail="{num_attr(food["avail"])}" data-levels="{"|".join(u["levels"])}"' \
+                  f' data-gl-tpl="{esc(u["per_portion"])}"'
+    else:
+        gi_box = gl_box = f'<span class="gi-num muted">—</span><span class="badge neutral">{u["na"]}</span>'
+        gi_data = ''
+    macro_card = f'''<section class="macro-card" id="macroCard" aria-label="{fu["card"]}" data-dec="{DECIMAL}"{gi_data}>
+                <fieldset class="servings">
+                    <legend class="sr-only">{fu["choose"]}</legend>
+                    {"".join(pills)}
+                </fieldset>
+                <p class="sr-only" id="servingLive" aria-live="polite"></p>
+                <div class="macro-body">
+                    <figure class="donut" role="img" aria-label="{fu["energy_aria"].format(c=pct("c"), p=pct("p"), f=pct("f"))}">
+                        <svg viewBox="0 0 42 42" aria-hidden="true"><circle class="track" cx="21" cy="21" r="15.9155"/>{ring}</svg>
+                        <figcaption>{live(food["kcal"], integer=True)}<span>{u["kcal_unit"]}</span></figcaption>
+                    </figure>
+                    <ul class="macro-legend">{macros}</ul>
+                </div>
+                <p class="macro-note">{fu["energy_note"]}</p>
+                <div class="gi-strip">
+                    <div class="gi-box"><span class="gi-label">{u["gi"]}</span>{gi_box}</div>
+                    <div class="gi-box"><span class="gi-label">{u["gl"]}</span>{gl_box}</div>
+                </div>
+            </section>'''
+
+    # -------- nutrition table (the portion column follows the pills)
     def row(label, v100, unit):
-        return (f'<tr><td>{label}</td><td>{fmt(v100)} {unit}</td><td>{fmt(v100 * p_factor)} {unit}</td></tr>')
+        return (f'<tr><td>{label}</td><td>{fmt(v100)} {unit}</td><td>{live(v100)} {unit}</td></tr>')
     rows = ''.join([
         row(u['rows'][0], food['kcal'], u['kcal_unit']), row(u['rows'][1], food['protein'], u['gram']),
         row(u['rows'][2], food['carbs'], u['gram']), row(u['rows'][3], food['avail'], u['gram']),
@@ -1604,7 +1832,7 @@ def build(food, lang, ctx):
     if food['ii'] is not None:
         items.append(r['ii'] + ref_cite(REF_HOLT) + ' • ' + ref_cite(REF_BAO))
     src = (f'<section class="references" aria-labelledby="refs-title">'
-           f'<h2 class="section-title" id="refs-title"><i class="fas fa-book-medical"></i> <span>{r["title"]}</span></h2>'
+           f'<h2 class="section-title" id="refs-title">{icon("book")} <span>{r["title"]}</span></h2>'
            f'<ol class="ref-list">{"".join(f"<li>{x}</li>" for x in items)}</ol>'
            f'<p class="ref-method"><a href="{method_href}">{u["src_link"]}</a></p></section>')
 
@@ -1658,12 +1886,12 @@ def build(food, lang, ctx):
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(slug, l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
         for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
-    img_html = (f'<img src="/{food["image"]}" alt="{esc(name)}" width="350" height="350">' if food['image']
+    img_html = (f'<img src="/{food["image"]}" alt="{esc(name)}" width="96" height="96" decoding="async">' if food['image']
                 else f'<div class="food-emoji" aria-hidden="true">{food["icon"] or "🍽️"}</div>')
-    tip_icons = ('fa-check-circle', 'fa-utensils', 'fa-triangle-exclamation')
+    tip_icons = ('check', 'utensils', 'warn')
     tips_html = ''.join(
-        f'<div class="tip{" warn" if i == 2 else ""}"><h3><i class="fas {tip_icons[i]}"></i> {u["tip_titles"][i]}</h3>'
-        f'<p>{esc(tips[i])}</p></div>' for i in range(3))
+        f'<details class="acc tip{" warn" if i == 2 else ""}"{" open" if i == 0 else ""}><summary>{icon(tip_icons[i])}'
+        f'<h3>{u["tip_titles"][i]}</h3></summary><p>{esc(tips[i])}</p></details>' for i in range(3))
     footer_links = ' <span>•</span> '.join(
         f'<a href="{href}">{label}</a>' for href, label in
         [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
@@ -1695,7 +1923,6 @@ def build(food, lang, ctx):
     <script type="application/ld+json">
 {json.dumps(faq_schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1708,9 +1935,9 @@ def build(food, lang, ctx):
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{{transition:none!important;animation-duration:0s!important}}</style>
     <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){{window.__tsw=requestAnimationFrame(function(){{h.classList.remove('theme-transitioning')}})}})}},true);</script>
-    <style>
-{BASE_CSS}{PAGE_CSS}    </style>
+    <link rel="stylesheet" href="/css/food-page.css?v={ASSET_VER[0]}">
     <link rel="stylesheet" href="/css/unified-header.css">
+    <script src="/js/food-serving.js?v={ASSET_VER[1]}" defer></script>
 </head>
 <body>
     <header>
@@ -1724,7 +1951,7 @@ def build(food, lang, ctx):
             </nav>
             <div class="header-actions">
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" title="{u["theme"]}" aria-label="{u["theme"]}">
-                    <i class="fas fa-sun" id="themeIcon"></i>
+                    {icon("sun", "ti-sun")}{icon("moon", "ti-moon")}
                 </button>
                 <div class="lang-switcher-container">
 {lang_links}
@@ -1733,49 +1960,51 @@ def build(food, lang, ctx):
         </div>
     </header>
 
-    <main class="page-wrapper food-page">
+    <main class="page-wrapper food-page fp">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>
 
-            <div class="food-hero">
+            <div class="fp-hero">
                 {img_html}
-                <div class="food-hero-text">
-                    <h1>{esc(name)}</h1>
-                    {f'<div class="food-subtitle">{esc(subtitle)}</div>' if subtitle else ''}
-                    <span class="group-chip">{group_name}</span>
+                <div class="fp-hero-text">
+                    <h1{' class="long"' if len(name) > 30 else ''}>{esc(name)}</h1>
+                    <div class="fp-sub">{f'<span class="food-subtitle">{esc(subtitle)}</span>' if subtitle else ''}<span class="group-chip">{group_name}</span></div>
                 </div>
             </div>
 
-            <p class="lead">{esc(lead)}</p>
-
-            <section class="stat-grid" aria-label="{u["gi"]}">
-                <div class="stat-box"><h2>{u["gi"]}</h2>{gi_card}</div>
-                <div class="stat-box"><h2>{u["gl"]}</h2>{gl_card}</div>
-                <div class="stat-box"><h2>{u["kcal"]}</h2><div class="stat-num kcal">{kcal}</div><div class="stat-sub">{u["kcal_unit"]} {u["per100"]}</div></div>
-                <div class="stat-box"><h2>{u["protein"]}</h2><div class="stat-num protein">{protein}</div><div class="stat-sub">{u["gram"]} {u["per100"]}</div></div>
+            <section class="quick-answer" aria-labelledby="qa-title">
+                <h2 id="qa-title">{icon("bolt")} {fu["qa_title"]}</h2>
+                <p>{esc(quick)}</p>
             </section>
 
-            <h2 class="section-title"><span>{u["tips"]}</span></h2>
-            <div class="tip-list">{tips_html}</div>
+            {macro_card}
 
-            <h2 class="section-title"><i class="fas fa-table-list"></i> <span>{u["table"]}</span></h2>
+            <div class="lead-fold" id="leadFold">
+                <p class="lead" id="leadText">{esc(lead)}</p>
+                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="{fu["more"]}" data-less="{fu["less"]}" hidden>{fu["more"]}</button>
+            </div>
+
+            <h2 class="section-title"><span>{u["tips"]}</span></h2>
+            <div class="acc-list">{tips_html}</div>
+
+            <h2 class="section-title">{icon("table")} <span>{u["table"]}</span></h2>
             <table class="nutrition-table">
-                <thead><tr><th>{u["nutrient"]}</th><th>{u["col100"]}</th><th>{u["colp"].format(p=portion)}</th></tr></thead>
+                <thead><tr><th>{u["nutrient"]}</th><th>{u["col100"]}</th><th id="colServing">{u["colp"].format(p=portion)}</th></tr></thead>
                 <tbody>{rows}</tbody>
             </table>
             <p class="table-note">{u["portion_note"]}</p>
 
-            <h2 class="section-title"><i class="fas fa-scale-balanced"></i> <span>{u["compare"]}</span></h2>
+            <h2 class="section-title">{icon("scale")} <span>{u["compare"]}</span></h2>
             <p>{esc(compare_txt)}</p>
             <p><strong>{alt_title}</strong></p>
             <ul class="alt-list">{alt_html}</ul>
 
-            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>{FAQ[lang]["title"]}</span></h2>
-            <section class="faq-list">{faq_html}</section>
+            <h2 class="section-title">{icon("question")} <span>{FAQ[lang]["title"]}</span></h2>
+            <div class="acc-list">{faq_html}</div>
 
-            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{READ_ALSO_TITLE[lang]}</span></h2>
+            <h2 class="section-title">{icon("book")} <span>{READ_ALSO_TITLE[lang]}</span></h2>
             <ul class="alt-list read-also">{read_also_html}</ul>
 
             <aside class="boodi-card">
@@ -1783,7 +2012,7 @@ def build(food, lang, ctx):
                     <h2>{u["boodi_title"]}</h2>
                     <p>{u["boodi_text"]}</p>
                 </div>
-                <a class="boodi-btn" href="{L('/boodi.html')}"><i class="fas fa-barcode"></i> {u["boodi_btn"]}</a>
+                <a class="boodi-btn" href="{L('/boodi.html')}">{icon("barcode")} {u["boodi_btn"]}</a>
             </aside>
 
             {src}
@@ -1799,9 +2028,7 @@ def build(food, lang, ctx):
 
     <script>
         function applyTheme(theme) {{
-            document.documentElement.setAttribute('data-theme', theme);
-            var icon = document.getElementById('themeIcon');
-            if (icon) icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            document.documentElement.setAttribute('data-theme', theme);     // the sun / moon icon follows in CSS
         }}
         function toggleTheme() {{
             var next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
@@ -1838,14 +2065,24 @@ def main():
     for fid in foods:
         foods[fid][SV] = FSV.NAMES[fid][0] if fid in FSV.NAMES else ''
     ctx = dict(foods=foods, slug=slugs, overrides=overrides)
+    global ASSET_VER
+    ASSET_VER = write_assets()
 
+    # --only 63,127,...: rebuild just these foods (a trial batch); the slug map and the sitemap are left as they are
+    only = None
+    if '--only' in sys.argv:
+        only = [int(x) for x in sys.argv[sys.argv.index('--only') + 1].split(',')]
+        assert set(only) <= set(PILOT), f'unknown food ids: {set(only) - set(PILOT)}'
     written = 0
-    for fid in PILOT:
+    for fid in (only or PILOT):
         for lang in langs_of(fid):
             out = ROOT / (f'foods/{slugs[fid]}.html' if lang == 'ar' else f'{lang}/foods/{slugs[fid]}.html')
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(build(foods[fid], lang, ctx), encoding='utf-8', newline='\n')
             written += 1
+    if only:
+        print(f'pages written: {written} ({len(only)} foods, --only)')
+        return
 
     # id -> slug map for foods.html / food-details.html
     (ROOT / 'js' / 'food-pages.js').write_text(

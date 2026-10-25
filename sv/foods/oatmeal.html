@@ -151,7 +151,6 @@
     ]
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -164,656 +163,9 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <style>
-        :root {
-            --bg-main: #0b0f19;
-            --bg-card: #131c2e;
-            --bg-input: #1e293b;
-            --header-bg: rgba(11, 15, 25, 0.85);
-            --primary: #10b981;
-            --primary-hover: #059669;
-            --primary-glow: rgba(16, 185, 129, 0.25);
-            --secondary: #06b6d4;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --radius-lg: 20px;
-            --radius-md: 14px;
-            --radius-sm: 8px;
-            --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        html[data-theme="light"] {
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
-            --bg-input: #f1f5f9;
-            --header-bg: rgba(255, 255, 255, 0.9);
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --border-color: rgba(0, 0, 0, 0.09);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            min-height: 100vh;
-            line-height: 1.8;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        html[lang="en"] body, html[lang="nl"] body {
-            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
-        }
-
-        /* Slim Header 2.0 (Height: 60px) */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            height: 60px;
-            background: var(--header-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            transition: background 0.3s ease;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-
-        .brand-logo-svg {
-            width: 36px;
-            height: 36px;
-            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.3));
-        }
-
-        .brand-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #10b981 0%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.5px;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .theme-toggle-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
-            font-size: 0.95rem;
-        }
-
-        .theme-toggle-btn:hover {
-            color: var(--primary);
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        .lang-switcher-container {
-            display: inline-flex;
-            align-items: center;
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-radius: 9999px;
-            padding: 2px;
-            gap: 2px;
-        }
-
-        .lang-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 10px;
-            border: none;
-            background: transparent;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 9999px;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
-        }
-
-        .lang-btn:hover { color: var(--text-main); }
-
-        .lang-btn.active {
-            background: var(--primary);
-            color: #ffffff;
-            box-shadow: 0 2px 8px var(--primary-glow);
-        }
-
-        .nav-links-bar {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .nav-link {
-            padding: 6px 14px;
-            border-radius: var(--radius-sm);
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--text-main);
-            background: rgba(16, 185, 129, 0.1);
-        }
-
-        .nav-link.active { color: var(--primary); }
-
-        /* Main Container */
-        .page-wrapper {
-            max-width: 960px;
-            margin: 30px auto 70px;
-            padding: 0 20px;
-        }
-
-        .about-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 45px;
-            box-shadow: var(--shadow);
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .about-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(16, 185, 129, 0.1);
-            color: var(--primary);
-            border: 1px solid rgba(16, 185, 129, 0.25);
-            padding: 6px 16px;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 14px;
-        }
-
-        .about-title {
-            font-size: 2.3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-
-        .about-subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 35px 0 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .about-card p {
-            color: var(--text-main);
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            line-height: 1.85;
-        }
-
-        .about-card strong {
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        /* Official Boodi App Banner */
-        .boodi-official-banner {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 2px solid var(--primary);
-            border-radius: var(--radius-md);
-            padding: 28px;
-            margin: 35px 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .boodi-banner-content {
-            flex: 2;
-            min-width: 280px;
-        }
-
-        .boodi-tag-official {
-            display: inline-block;
-            background: var(--primary);
-            color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: 800;
-            padding: 3px 10px;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .boodi-banner-content h3 {
-            font-size: 1.35rem;
-            font-weight: 900;
-            color: var(--text-main);
-            margin-bottom: 8px;
-        }
-
-        .boodi-banner-content p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .boodi-cta-btn {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-            color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px var(--primary-glow);
-            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
-        }
-
-        .boodi-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-        }
-
-        /* Pillars List */
-        .pillars-list {
-            list-style: none;
-            margin: 20px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-        }
-
-        .pillar-item {
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            padding: 16px;
-            border-radius: var(--radius-md);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .pillar-item:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
-        }
-
-        .pillar-title {
-            font-weight: 800;
-            font-size: 1rem;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .pillar-desc {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* Support Contact Card */
-        .support-card {
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 24px;
-            margin-top: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .support-email-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 800;
-            padding: 10px 20px;
-            border-radius: var(--radius-sm);
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.25);
-            transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s, transform 0.2s, top 0.2s, right 0.2s, bottom 0.2s, left 0.2s, width 0.2s, height 0.2s, max-height 0.2s, visibility 0.2s;
-        }
-
-        .support-email-link:hover {
-            background: var(--primary);
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        .back-home-box {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .back-home-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-input);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
-        }
-
-        .back-home-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 60px;
-            border-top: 1px solid var(--border-color);
-            padding: 35px 20px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.88rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover { color: var(--primary); }
-
-        @media (max-width: 860px) {
-            .about-card { padding: 25px 20px; }
-            .about-title { font-size: 1.8rem; }
-            .nav-links-bar { display: none; }
-        }
-
-        /* ===== Doctor profile ===== */
-        .doctor-hero {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-
-        .doctor-avatar {
-            width: 128px;
-            height: 128px;
-            overflow: hidden;
-            flex-shrink: 0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.6rem;
-            color: #ffffff;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            box-shadow: 0 0 0 6px var(--primary-glow);
-        }
-
-        .doctor-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
-        }
-
-        .doctor-hero-text { flex: 1; min-width: 220px; }
-        .doctor-hero-text .about-title { margin-bottom: 4px; }
-
-        .doctor-role {
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 1.05rem;
-        }
-
-        .method-list {
-            list-style: none;
-            display: grid;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .method-list li {
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-inline-start: 4px solid var(--primary);
-            border-radius: var(--radius-sm);
-            padding: 14px 18px;
-            color: var(--text-main);
-            line-height: 1.7;
-        }
-
-        .doctor-articles {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .doctor-article-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 16px;
-            background: var(--bg-input);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 700;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
-        }
-
-        .doctor-article-link i { color: var(--primary); }
-
-        .doctor-article-link:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        .medical-note {
-            margin-top: 25px;
-            padding: 16px 18px;
-            border-radius: var(--radius-sm);
-            background: rgba(245, 158, 11, 0.08);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        a.lang-btn { text-decoration: none; }
-        .food-page h1, .food-page h3, .food-page td, .boodi-card h2, .food-page strong { color: var(--text-main); }
-        .food-page { max-width: 980px; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px; }
-        .breadcrumb a { color: var(--text-muted); text-decoration: none; }
-        .breadcrumb a:hover { color: var(--primary); }
-        .food-hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
-        .food-hero img, .food-hero .food-emoji {
-            width: 150px; height: 150px; border-radius: 22px; object-fit: cover; flex-shrink: 0;
-            border: 3px solid var(--primary-glow); box-shadow: var(--shadow); background: var(--bg-input);
-        }
-        .food-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-        .food-hero-text { flex: 1; min-width: 220px; }
-        .food-hero-text h1 { font-size: 2rem; font-weight: 900; line-height: 1.3; margin-bottom: 4px; }
-        .food-subtitle { color: var(--text-muted); font-weight: 600; }
-        .group-chip {
-            display: inline-block; margin-top: 10px; padding: 4px 14px; border-radius: 999px; font-size: 0.82rem;
-            font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
-        }
-        .lead { font-size: 1.04rem; margin: 6px 0 22px; }
-        .reviewed { font-size: 0.85rem; color: var(--text-muted); margin: 12px 0 0; }
-        .reviewed a { color: var(--primary); text-decoration: none; font-weight: 700; }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 26px; }
-        .stat-box {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md);
-            padding: 16px 12px; text-align: center;
-        }
-        .stat-box h2 { font-size: 0.82rem; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
-        .stat-num { font-size: 2rem; font-weight: 900; line-height: 1.2; }
-        .stat-num.low { color: #10b981; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
-        .stat-num.muted { color: var(--text-muted); } .stat-num.kcal { color: #3498db; } .stat-num.protein { color: #9b59b6; }
-        .stat-sub { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
-        .badge {
-            display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem;
-            font-weight: 700; border: 1px solid transparent;
-        }
-        .badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #10b981; }
-        .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #f39c12; }
-        .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #e74c3c; }
-        .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-muted); }
-        .tip-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .tip {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
-            border-radius: var(--radius-sm); padding: 14px 18px;
-        }
-        .tip h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; display: flex; gap: 8px; align-items: center; }
-        .tip.warn { border-inline-start-color: #f39c12; }
-        .tip p { color: var(--text-muted); margin: 0; }
-        .nutrition-table { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 0.95rem; }
-        .nutrition-table th, .nutrition-table td { padding: 11px 12px; border-bottom: 1px solid var(--border-color); text-align: start; }
-        .nutrition-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
-        .nutrition-table td:not(:first-child) { font-weight: 700; }
-        .table-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 26px; }
-        .alt-list { list-style: none; display: grid; gap: 10px; margin: 10px 0 26px; padding: 0; }
-        .alt-list a {
-            display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-radius: var(--radius-sm);
-            background: var(--bg-input); border: 1px solid var(--border-color); color: var(--text-main); text-decoration: none; font-weight: 700;
-        }
-        .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
-        .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
-        .read-also a { overflow-wrap: anywhere; }      /* long names such as (L-Selenomethionine) on 320 px */
-        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
-        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
-        .faq-item p { color: var(--text-muted); margin: 0; }
-        .boodi-card {
-            display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
-            padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(6, 182, 212, 0.12));
-            border: 1px solid rgba(16, 185, 129, 0.35);
-        }
-        .boodi-card h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
-        .boodi-card p { color: var(--text-muted); margin: 0; }
-        .boodi-btn {
-            display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 30px; background: var(--primary);
-            color: #ffffff; font-weight: 800; text-decoration: none; white-space: nowrap;
-        }
-        .boodi-btn:hover { background: var(--primary-hover); }
-        .source-strip {
-            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
-            border-radius: 14px; padding: 12px 16px; margin-bottom: 10px; color: var(--text-muted); font-size: 0.85rem;
-            font-weight: 600; overflow-wrap: anywhere;
-        }
-        .source-strip a { color: var(--primary); font-weight: 800; text-decoration: none; white-space: nowrap; }
-        .references {
-            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
-            border-radius: 14px; padding: 4px 18px 14px; margin: 18px 0 10px;
-        }
-        .references .section-title { margin-top: 12px; }
-        .ref-list { margin: 0; padding-inline-start: 22px; color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; overflow-wrap: anywhere; }
-        .ref-list li { margin-bottom: 8px; }
-        .ref-list a, .ref-method a { color: var(--primary); font-weight: 700; text-decoration: none; }
-        .ref-method { margin: 4px 0 0; font-size: 0.85rem; font-weight: 800; }
-        .disclaimer-box {
-            margin-top: 18px; padding: 14px 18px; border-radius: 12px; background: rgba(15, 23, 42, 0.62);
-            border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
-        }
-        html[data-theme="light"] .disclaimer-box { background: #f1f5f9; border-color: rgba(15, 23, 42, 0.12); color: #334155; }
-        @media (max-width: 760px) {
-            .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .food-hero { flex-direction: column; text-align: center; }
-            .food-hero-text h1 { font-size: 1.6rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="/css/food-page.css?v=d1f9342d">
     <link rel="stylesheet" href="/css/unified-header.css">
+    <script src="/js/food-serving.js?v=d923383d" defer></script>
 </head>
 <body>
     <header>
@@ -834,7 +186,7 @@
             </nav>
             <div class="header-actions">
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" title="Byt tema" aria-label="Byt tema">
-                    <i class="fas fa-sun" id="themeIcon"></i>
+                    <svg class="ico ti-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="ico ti-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
                 </button>
                 <div class="lang-switcher-container">
                     <a class="lang-btn" href="/foods/oatmeal.html" hreflang="ar" lang="ar"><span>🇪🇬</span> <span>AR</span></a>
@@ -846,49 +198,69 @@
         </div>
     </header>
 
-    <main class="page-wrapper food-page">
+    <main class="page-wrapper food-page fp">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="/sv/index.html">Hem</a> › <a href="/sv/foods/index.html">Livsmedelsguide</a> › <a href="/sv/foods/index.html#grains_bakery">Bröd, spannmål och alternativ</a> › <span>Havregrynsgröt</span>
             </nav>
 
-            <div class="food-hero">
-                <img src="/images/foods/oatmeal.webp" alt="Havregrynsgröt" width="350" height="350">
-                <div class="food-hero-text">
+            <div class="fp-hero">
+                <img src="/images/foods/oatmeal.webp" alt="Havregrynsgröt" width="96" height="96" decoding="async">
+                <div class="fp-hero-text">
                     <h1>Havregrynsgröt</h1>
-                    <div class="food-subtitle">Cooked Oatmeal</div>
-                    <span class="group-chip">Spannmål och stärkelse</span>
+                    <div class="fp-sub"><span class="food-subtitle">Cooked Oatmeal</span><span class="group-chip">Spannmål och stärkelse</span></div>
                 </div>
             </div>
 
-            <p class="lead">Den klassiska hälsosamma frukosten: havregrynsgröt ger lösliga betaglukanfibrer och har ett lågt glykemiskt index (55). Havregrynen suger upp vatten eller mjölk under kokningen och sväller, vilket ger en varm och mättande skål med ett måttligt antal kalorier.</p>
-
-            <section class="stat-grid" aria-label="Glykemiskt index">
-                <div class="stat-box"><h2>Glykemiskt index</h2><div class="stat-num low">55</div><span class="badge low">Lågt</span></div>
-                <div class="stat-box"><h2>Glykemisk belastning</h2><div class="stat-num medium">14,2</div><div class="stat-sub">per portion om 250 g</div></div>
-                <div class="stat-box"><h2>Kalorier</h2><div class="stat-num kcal">68</div><div class="stat-sub">kcal per 100 g</div></div>
-                <div class="stat-box"><h2>Protein</h2><div class="stat-num protein">2,4</div><div class="stat-sub">g per 100 g</div></div>
+            <section class="quick-answer" aria-labelledby="qa-title">
+                <h2 id="qa-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 2.5 4.5 13.5H11L10 21.5l8.5-11H12z"/></svg> Snabbt svar</h2>
+                <p>En medelstor portion havregrynsgröt (250 g) innehåller 170 kcal, med 25,8 g nettokolhydrater och 6 g protein. Det glykemiska indexet är 55 (lågt) för hur snabbt blodsockret stiger, medan den glykemiska belastningen per portion är 14,2 (medelhög) för den faktiska effekten.</p>
             </section>
 
-            <h2 class="section-title"><span>💡 Smarta kostråd</span></h2>
-            <div class="tip-list"><div class="tip"><h3><i class="fas fa-check-circle"></i> Råd om konsumtion</h3><p>Använd vanliga havregryn och koka gröten på vatten eller lättmjölk; undvik portionspåsar med snabbgröt som innehåller tillsatt socker och smakämnen.</p></div><div class="tip"><h3><i class="fas fa-utensils"></i> Bästa tillagningssätt</h3><p>Toppa med chiafrön, lite kanel och en näve färska bär för mer fibrer, utan att du behöver tillsätta raffinerat socker.</p></div><div class="tip warn"><h3><i class="fas fa-triangle-exclamation"></i> Viktig kostnotering</h3><p>Vid diabetes eller insulinresistens rekommenderas det alltid att utgå från måltidens totala glykemiska belastning (GL) i stället för att enbart förlita sig på det glykemiska indexet.</p></div></div>
+            <section class="macro-card" id="macroCard" aria-label="Näringsvärde per portion" data-dec="," data-gi="55" data-avail="10.3" data-levels="Lågt|Medelhögt|Högt" data-gl-tpl="per portion om {p} g">
+                <fieldset class="servings">
+                    <legend class="sr-only">Välj portion</legend>
+                    <label class="pill"><input type="radio" name="serving" value="100" data-label="100 g" data-col="Per 100 g"><span><span class="pill-name">100 g</span><small>referens</small></span></label><label class="pill"><input type="radio" name="serving" value="125" data-label="Liten portion · 125 g" data-col="Liten portion (125 g)"><span><span class="pill-name">Liten</span><small>125 g</small></span></label><label class="pill"><input type="radio" name="serving" value="250" data-label="Medelstor portion · 250 g" data-col="Medelstor portion (250 g)" checked data-default><span><span class="pill-name">Medel</span><small>250 g</small></span></label><label class="pill"><input type="radio" name="serving" value="375" data-label="Stor portion · 375 g" data-col="Stor portion (375 g)"><span><span class="pill-name">Stor</span><small>375 g</small></span></label>
+                </fieldset>
+                <p class="sr-only" id="servingLive" aria-live="polite"></p>
+                <div class="macro-body">
+                    <figure class="donut" role="img" aria-label="Energifördelning: kolhydrater 68,4 %, protein 13,7 %, fett 17,9 %">
+                        <svg viewBox="0 0 42 42" aria-hidden="true"><circle class="track" cx="21" cy="21" r="15.9155"/><circle class="seg seg-c" cx="21" cy="21" r="15.9155" pathLength="100" stroke-dasharray="67.48 32.52" stroke-dashoffset="-0.00"/><circle class="seg seg-p" cx="21" cy="21" r="15.9155" pathLength="100" stroke-dasharray="12.78 87.22" stroke-dashoffset="-68.38"/><circle class="seg seg-f" cx="21" cy="21" r="15.9155" pathLength="100" stroke-dasharray="17.05 82.95" stroke-dashoffset="-82.05"/></svg>
+                        <figcaption><b data-v100="68.0" data-int>170</b><span>kcal</span></figcaption>
+                    </figure>
+                    <ul class="macro-legend"><li><i class="dot dot-c"></i><span class="m-name">Kolhydrater</span><span class="m-val"><b data-v100="12.0">30</b> g</span><span class="m-pct">68,4 %</span></li><li><i class="dot dot-p"></i><span class="m-name">Protein</span><span class="m-val"><b data-v100="2.4">6</b> g</span><span class="m-pct">13,7 %</span></li><li><i class="dot dot-f"></i><span class="m-name">Fett</span><span class="m-val"><b data-v100="1.4">3,5</b> g</span><span class="m-pct">17,9 %</span></li><li><i class="dot dot-fib"></i><span class="m-name">Fiber</span><span class="m-val"><b data-v100="1.7">4,2</b> g</span><span class="m-pct">&nbsp;</span></li></ul>
+                </div>
+                <p class="macro-note">Andel av den totala energin (kalorier)</p>
+                <div class="gi-strip">
+                    <div class="gi-box"><span class="gi-label">Glykemiskt index</span><span class="gi-num low">55</span><span class="badge low">Lågt</span><span class="gi-sub">Samma för alla portioner</span></div>
+                    <div class="gi-box"><span class="gi-label">Glykemisk belastning</span><span class="gi-num medium" id="glNum">14,2</span><span class="badge medium" id="glBadge">Medelhögt</span><span class="gi-sub" id="glSub">per portion om 250 g</span></div>
+                </div>
+            </section>
 
-            <h2 class="section-title"><i class="fas fa-table-list"></i> <span>Näringsvärde</span></h2>
+            <div class="lead-fold" id="leadFold">
+                <p class="lead" id="leadText">Den klassiska hälsosamma frukosten: havregrynsgröt ger lösliga betaglukanfibrer och har ett lågt glykemiskt index (55). Havregrynen suger upp vatten eller mjölk under kokningen och sväller, vilket ger en varm och mättande skål med ett måttligt antal kalorier.</p>
+                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="Läs mer" data-less="Visa mindre" hidden>Läs mer</button>
+            </div>
+
+            <h2 class="section-title"><span>💡 Smarta kostråd</span></h2>
+            <div class="acc-list"><details class="acc tip" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg><h3>Råd om konsumtion</h3></summary><p>Använd vanliga havregryn och koka gröten på vatten eller lättmjölk; undvik portionspåsar med snabbgröt som innehåller tillsatt socker och smakämnen.</p></details><details class="acc tip"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg><h3>Bästa tillagningssätt</h3></summary><p>Toppa med chiafrön, lite kanel och en näve färska bär för mer fibrer, utan att du behöver tillsätta raffinerat socker.</p></details><details class="acc tip warn"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg><h3>Viktig kostnotering</h3></summary><p>Vid diabetes eller insulinresistens rekommenderas det alltid att utgå från måltidens totala glykemiska belastning (GL) i stället för att enbart förlita sig på det glykemiska indexet.</p></details></div>
+
+            <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 9.5V20"/></svg> <span>Näringsvärde</span></h2>
             <table class="nutrition-table">
-                <thead><tr><th>Näringsämne</th><th>Per 100 g</th><th>Per vanlig portion (250 g)</th></tr></thead>
-                <tbody><tr><td>Kalorier</td><td>68 kcal</td><td>170 kcal</td></tr><tr><td>Protein</td><td>2,4 g</td><td>6 g</td></tr><tr><td>Kolhydrater</td><td>12 g</td><td>30 g</td></tr><tr><td>Tillgängliga kolhydrater</td><td>10,3 g</td><td>25,8 g</td></tr><tr><td>Fett</td><td>1,4 g</td><td>3,5 g</td></tr><tr><td>Kostfiber</td><td>1,7 g</td><td>4,2 g</td></tr><tr><td>Insulinindex</td><td colspan="2">40 · kliniskt testat (Holt / Bao)</td></tr></tbody>
+                <thead><tr><th>Näringsämne</th><th>Per 100 g</th><th id="colServing">Per vanlig portion (250 g)</th></tr></thead>
+                <tbody><tr><td>Kalorier</td><td>68 kcal</td><td><b data-v100="68.0">170</b> kcal</td></tr><tr><td>Protein</td><td>2,4 g</td><td><b data-v100="2.4">6</b> g</td></tr><tr><td>Kolhydrater</td><td>12 g</td><td><b data-v100="12.0">30</b> g</td></tr><tr><td>Tillgängliga kolhydrater</td><td>10,3 g</td><td><b data-v100="10.3">25,8</b> g</td></tr><tr><td>Fett</td><td>1,4 g</td><td><b data-v100="1.4">3,5</b> g</td></tr><tr><td>Kostfiber</td><td>1,7 g</td><td><b data-v100="1.7">4,2</b> g</td></tr><tr><td>Insulinindex</td><td colspan="2">40 · kliniskt testat (Holt / Bao)</td></tr></tbody>
             </table>
             <p class="table-note">Den vanliga portionen är ungefärlig och avsedd för jämförelse.</p>
 
-            <h2 class="section-title"><i class="fas fa-scale-balanced"></i> <span>Jämförelse och smarta alternativ</span></h2>
+            <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"/></svg> <span>Jämförelse och smarta alternativ</span></h2>
             <p>Det hamnar på plats 5 av 13 uppmätta livsmedel i gruppen spannmål och stärkelse efter glykemiskt index (lägst först).</p>
             <p><strong>Smarta alternativ i samma familj:</strong></p>
             <ul class="alt-list"><li><a href="/sv/foods/quinoa.html">Quinoa, kokt<span>GI 52</span></a></li><li><a href="/sv/foods/whole-wheat-bread.html">Fullkornsbröd av vete<span>GI 54</span></a></li><li><a href="/sv/foods/oat-bran.html">Havrekli<span>GI 56</span></a></li></ul>
 
-            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
-            <section class="faq-list"><div class="faq-item"><h3>Vad är skillnaden i kalorier mellan torra och kokta havregryn?</h3><p>Torra havregryn innehåller ungefär 380 kcal per 100 g. När de kokas på vatten suger de upp mycket vätska, så en skål kokt gröt (250 g) ger bara omkring 170 kcal (68 kcal per 100 g kokt gröt). Kokar du gröten på mjölk ökar energin beroende på mängd och sort.</p></div><div class="faq-item"><h3>Hur bidrar havregrynsgröt till ett jämnt blodsocker?</h3><p>Betaglukanfibrerna bildar en mild gel i matsmältningskanalen som bromsar upptaget av kolhydrater och ger en lugnare och jämnare energikurva.</p></div><div class="faq-item"><h3>Är kokt havregrynsgröt ett bra val vid viktnedgång?</h3><p>Ja. Gröten sväller och binder vatten, så du får en stor skål för relativt få kalorier, vilket kan göra det lättare att klara dig utan mellanmål de närmaste timmarna efter frukosten.</p></div></section>
+            <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.1"/></svg> <span>Vanliga frågor</span></h2>
+            <div class="acc-list"><details class="acc" open><summary><h3>Vad är skillnaden i kalorier mellan torra och kokta havregryn?</h3></summary><p>Torra havregryn innehåller ungefär 380 kcal per 100 g. När de kokas på vatten suger de upp mycket vätska, så en skål kokt gröt (250 g) ger bara omkring 170 kcal (68 kcal per 100 g kokt gröt). Kokar du gröten på mjölk ökar energin beroende på mängd och sort.</p></details><details class="acc"><summary><h3>Hur bidrar havregrynsgröt till ett jämnt blodsocker?</h3></summary><p>Betaglukanfibrerna bildar en mild gel i matsmältningskanalen som bromsar upptaget av kolhydrater och ger en lugnare och jämnare energikurva.</p></details><details class="acc"><summary><h3>Är kokt havregrynsgröt ett bra val vid viktnedgång?</h3></summary><p>Ja. Gröten sväller och binder vatten, så du får en stor skål för relativt få kalorier, vilket kan göra det lättare att klara dig utan mellanmål de närmaste timmarna efter frukosten.</p></details></div>
 
-            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>Läs även</span></h2>
+            <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/></svg> <span>Läs även</span></h2>
             <ul class="alt-list read-also"><li><a href="/sv/articles/insulinresistens-hba1c.html">HbA1c och insulinresistens: så förstår du dina värden<span>Artikel</span></a></li><li><a href="/sv/diabetes/prediabetes.html">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c<span>Guide</span></a></li><li><a href="/sv/diabetes/graviditetsdiabetes.html">Graviditetsdiabetes: normala blodsockervärden och vad du kan äta<span>Guide</span></a></li></ul>
 
             <aside class="boodi-card">
@@ -896,10 +268,10 @@
                     <h2>Skanna streckkoder i butiken med boodi-appen 💚</h2>
                     <p>boodi analyserar förpackade produkter direkt, granskar ingredienserna och föreslår alternativ med mindre socker från samma hylla.</p>
                 </div>
-                <a class="boodi-btn" href="/sv/boodi.html"><i class="fas fa-barcode"></i> Upptäck boodi-appen</a>
+                <a class="boodi-btn" href="/sv/boodi.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5v14M7 5v14M10.5 5v14M13 5v14M16.5 5v14M20 5v14"/></svg> Upptäck boodi-appen</a>
             </aside>
 
-            <section class="references" aria-labelledby="refs-title"><h2 class="section-title" id="refs-title"><i class="fas fa-book-medical"></i> <span>Referenser och vetenskapliga källor</span></h2><ol class="ref-list"><li>Värdet för glykemiskt index kommer från de internationella tabellerna: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632. <a href="https://doi.org/10.1093/ajcn/nqab233" target="_blank" rel="noopener">doi.org/10.1093/ajcn/nqab233</a> Godkänt värde: medelvärdet av 9 studier (intervall 48–76), evidensgrad A.</li><li>GI-indelning och testmetod: ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010. <a href="https://www.iso.org/standard/43633.html" target="_blank" rel="noopener">www.iso.org/standard/43633.html</a></li><li>Definition av tillgängliga kolhydrater och glykemisk belastning: FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998. <a href="https://www.fao.org/4/w8079e/w8079e00.htm" target="_blank" rel="noopener">www.fao.org/4/w8079e/w8079e00.htm</a></li><li>Insulinindex: Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. Am J Clin Nutr. 1997;66(5):1264–1276. <a href="https://doi.org/10.1093/ajcn/66.5.1264" target="_blank" rel="noopener">doi.org/10.1093/ajcn/66.5.1264</a> • Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992. <a href="https://doi.org/10.3945/ajcn.2009.27720" target="_blank" rel="noopener">doi.org/10.3945/ajcn.2009.27720</a></li></ol><p class="ref-method"><a href="/methodology.html?lang=en">Metod och detaljer →</a></p></section>
+            <section class="references" aria-labelledby="refs-title"><h2 class="section-title" id="refs-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/></svg> <span>Referenser och vetenskapliga källor</span></h2><ol class="ref-list"><li>Värdet för glykemiskt index kommer från de internationella tabellerna: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632. <a href="https://doi.org/10.1093/ajcn/nqab233" target="_blank" rel="noopener">doi.org/10.1093/ajcn/nqab233</a> Godkänt värde: medelvärdet av 9 studier (intervall 48–76), evidensgrad A.</li><li>GI-indelning och testmetod: ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010. <a href="https://www.iso.org/standard/43633.html" target="_blank" rel="noopener">www.iso.org/standard/43633.html</a></li><li>Definition av tillgängliga kolhydrater och glykemisk belastning: FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998. <a href="https://www.fao.org/4/w8079e/w8079e00.htm" target="_blank" rel="noopener">www.fao.org/4/w8079e/w8079e00.htm</a></li><li>Insulinindex: Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. Am J Clin Nutr. 1997;66(5):1264–1276. <a href="https://doi.org/10.1093/ajcn/66.5.1264" target="_blank" rel="noopener">doi.org/10.1093/ajcn/66.5.1264</a> • Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992. <a href="https://doi.org/10.3945/ajcn.2009.27720" target="_blank" rel="noopener">doi.org/10.3945/ajcn.2009.27720</a></li></ol><p class="ref-method"><a href="/methodology.html?lang=en">Metod och detaljer →</a></p></section>
             <p class="reviewed">Granskad av <a href="/sv/dr-wassim-habib.html">Dr. Wassim Habib</a> | Grundare och Medicinskt Ansvarig, WiBo Health Group · Senast granskad 24 oktober 2026</p>
             <p class="disclaimer-box">Ansvarsfriskrivning: informationen är vägledning för kost och levnadsvanor och är ingen medicinteknisk produkt för diagnostik enligt EU-förordningen MDR 2017/745. Den ersätter inte råd från hälso- och sjukvården.</p>
         </article>
@@ -912,9 +284,7 @@
 
     <script>
         function applyTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            var icon = document.getElementById('themeIcon');
-            if (icon) icon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+            document.documentElement.setAttribute('data-theme', theme);     // the sun / moon icon follows in CSS
         }
         function toggleTheme() {
             var next = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark' ? 'light' : 'dark';
