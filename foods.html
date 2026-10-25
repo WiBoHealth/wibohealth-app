@@ -1897,8 +1897,12 @@
             }
 
             renderCategoryBar();
-            visibleCount = CHUNK_SIZE;
+            // Same cards in the new language, and the food at the top of the screen stays there. (Cutting the list back
+            // to the first batch here left a reader who had scrolled down below the last card, so the foods and their
+            // photos seemed to vanish, also after switching back.)
+            const anchor = firstVisibleCard();
             filterFoods();
+            restoreCardAnchor(anchor);
             updateStructuredDataForSEO();
 
             if (modalFoodId !== null) {
@@ -1965,7 +1969,7 @@
                 </button>`;
             grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
                 <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}" style="--accent: ${g.color}">
-                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
+                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
                         onerror="const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
                     <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
                     <span class="gc-count">${countLabel(counts[g.key] || 0)}</span>
@@ -2127,9 +2131,29 @@
             return currentLang === 'ar' ? `/foods/${slug}.html` : `/${currentLang}/foods/${slug}.html`;
         }
 
-        // Cards show the 96 px thumbnail (images/foods/thumb/, made by scripts/make_food_thumbs.py), not the 350 px photo
+        // Cards show the 96 px thumbnail (images/foods/thumb/, made by scripts/make_food_thumbs.py), not the 350 px photo.
+        // Root-absolute paths, so the address the page is opened under never matters.
         function foodThumb(image) {
-            return String(image).replace(/^(\/?images\/foods\/)/, '$1thumb/');
+            return '/' + String(image).replace(/^\//, '').replace(/^images\/foods\//, 'images/foods/thumb/');
+        }
+        function foodPhoto(image) {
+            return '/' + String(image).replace(/^\//, '');
+        }
+
+        // The first food card on screen (below the sticky header) and its distance from the top of the window
+        function firstVisibleCard() {
+            const grid = document.getElementById('foodGrid');
+            if (!grid) return null;
+            for (const card of grid.querySelectorAll('.food-card')) {
+                const rect = card.getBoundingClientRect();
+                if (rect.bottom > 80) return { id: card.getAttribute('data-card-id'), top: rect.top };
+            }
+            return null;
+        }
+        function restoreCardAnchor(anchor) {
+            if (!anchor) return;
+            const card = document.querySelector(`.food-card[data-card-id="${anchor.id}"]`);
+            if (card) window.scrollBy({ top: card.getBoundingClientRect().top - anchor.top, behavior: 'instant' });
         }
 
         // A failed photo is not given up at once (a passing network hiccup used to leave the emoji for good):
@@ -2147,22 +2171,25 @@
             }
         }
 
-        function renderFoodsIncremental() {
+        let renderedCount = 0;   // food cards in the grid now
+
+        // append = true: the next batch of the infinite scroll (the list and the language are unchanged)
+        function renderFoodsIncremental(append = false) {
             const grid = document.getElementById('foodGrid');
             const sentinelText = document.getElementById('sentinelText');
             if (!grid) return;
 
             if (!currentFilteredList || currentFilteredList.length === 0) {
+                renderedCount = 0;
                 const msg = showFavorites && favorites.length === 0 ? t('no_favorites') : t('no_results');
                 grid.innerHTML = `<div class="results-empty"><i class="fas fa-heart-broken" aria-hidden="true"></i>${msg}</div>`;
                 if (sentinelText) sentinelText.textContent = '';
                 return;
             }
 
-            const foodsToShow = currentFilteredList.slice(0, visibleCount);
             const unitGram = currentLang === 'ar' ? 'جم' : 'g';
 
-            const cardsHtml = foodsToShow.map(food => {
+            const cardHtml = food => {
                 const isFav = favorites.includes(String(food.id));
                 
                 let foodTitle = food.name;
@@ -2192,7 +2219,7 @@
                         </button>
                        ${food.image ? `
     <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid rgba(16, 185, 129, 0.25);">
-        <img src="${foodThumb(food.image)}" alt="${foodTitle}" width="76" height="76" loading="lazy" decoding="async" data-full="${food.image}" style="width: 100%; height: 100%; object-fit: cover;" onerror="foodImageError(this)">
+        <img src="${foodThumb(food.image)}" alt="${foodTitle}" width="76" height="76" loading="lazy" decoding="async" data-full="${foodPhoto(food.image)}" style="width: 100%; height: 100%; object-fit: cover;" onerror="foodImageError(this)">
     </div>
     <div class="food-icon" style="display: none;">${food.icon || '🍽️'}</div>
 ` : `
@@ -2220,10 +2247,18 @@
                         </div>
                     </a>
                 `;
-            });
-            // the diet teaser follows the first six foods (or the last one, if there are fewer)
-            cardsHtml.splice(Math.min(6, cardsHtml.length), 0, dietTeaserHtml());
-            grid.innerHTML = cardsHtml.join('');
+            };
+            if (append && renderedCount > 0 && renderedCount < visibleCount) {
+                // next batch while scrolling: only the new cards are added, the ones on screen (and their loaded
+                // photos) stay as they are instead of the whole grid being rebuilt
+                grid.insertAdjacentHTML('beforeend', currentFilteredList.slice(renderedCount, visibleCount).map(cardHtml).join(''));
+            } else {
+                const cardsHtml = currentFilteredList.slice(0, visibleCount).map(cardHtml);
+                // the diet teaser follows the first six foods (or the last one, if there are fewer)
+                cardsHtml.splice(Math.min(6, cardsHtml.length), 0, dietTeaserHtml());
+                grid.innerHTML = cardsHtml.join('');
+            }
+            renderedCount = Math.min(visibleCount, currentFilteredList.length);
 
             if (sentinelText) {
                 if (visibleCount < currentFilteredList.length) {
@@ -2646,7 +2681,7 @@
                 if (entries[0].isIntersecting) {
                     if (visibleCount < currentFilteredList.length) {
                         visibleCount += CHUNK_SIZE;
-                        renderFoodsIncremental();
+                        renderFoodsIncremental(true);
                     }
                 }
             }, {
