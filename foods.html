@@ -44,9 +44,8 @@
     </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
-    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
-    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
-    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
+    <!-- Instant theme toggle: the page has no colour, background, border or shadow transitions, so light/dark repaints in
+         one style pass (toggleTheme writes html[data-theme] and body.dark-mode together) -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -204,7 +203,7 @@
             min-height: 100vh;
             color: var(--text-dark);
             line-height: 1.8;
-            transition: background 0.3s ease;
+            transition: none;
         }
 
         html[lang="en"] body, html[lang="nl"] body {
@@ -244,7 +243,7 @@
             width: 100%;
             max-width: 100%;
             overflow-x: hidden;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
         }
 
         .header-content {
@@ -310,7 +309,7 @@
             border-radius: 20px;
             font-weight: 700;
             font-size: 13px;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease;
             white-space: nowrap;
             display: inline-flex;
             align-items: center;
@@ -353,7 +352,7 @@
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease;
             color: var(--text-dark);
             flex-shrink: 0;
             padding: 0;
@@ -438,7 +437,7 @@
                 box-shadow: -5px 0 20px rgba(0,0,0,0.4);
                 z-index: 9999;
                 padding: 70px 20px 20px;
-                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+                transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
                 overflow-y: auto;
             }
             [dir="ltr"] .mobile-nav-menu { right: auto; left: -100%; }
@@ -507,7 +506,7 @@
             font-weight: 800;
             cursor: pointer;
             box-shadow: 0 4px 15px var(--shadow);
-            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
+            transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
             font-family: inherit;
             display: inline-flex;
             align-items: center;
@@ -573,7 +572,7 @@
             font-family: inherit;
             text-align: center;
             cursor: pointer;
-            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+            transition: transform 0.22s ease;
         }
         .group-card:hover {
             transform: translateY(-4px);
@@ -720,7 +719,7 @@
             font-size: 0.85rem;
             font-weight: 800;
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            transition: none;
         }
         .results-clear:hover, .results-clear:focus-visible { background: rgba(16, 185, 129, 0.12); outline: none; }
         .results-clear[hidden] { display: none; }
@@ -747,7 +746,7 @@
             border-radius: 10px;
             font-size: 14px;
             font-family: inherit;
-            transition: background-color 0.25s, color 0.25s, border-color 0.25s, opacity 0.25s, transform 0.25s, top 0.25s, right 0.25s, bottom 0.25s, left 0.25s, width 0.25s, height 0.25s, max-height 0.25s, visibility 0.25s;
+            transition: opacity 0.25s, transform 0.25s, max-height 0.25s;
             background: var(--card-bg);
             color: var(--text-dark);
         }
@@ -780,7 +779,7 @@
             border-radius: 18px;
             padding: 18px;
             box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.25s ease;
             position: relative;
             overflow: hidden;
             text-decoration: none;
@@ -820,7 +819,7 @@
             justify-content: center;
             font-size: 16px;
             color: #94a3b8;
-            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease;
             z-index: 10;
         }
 
@@ -919,7 +918,7 @@
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
-            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
+            transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
             white-space: nowrap;
         }
 
@@ -1047,7 +1046,7 @@
             width: 100%;
         }
 
-        footer a { color: #94a3b8; text-decoration: none; margin: 0 8px; transition: color 0.2s; }
+        footer a { color: #94a3b8; text-decoration: none; margin: 0 8px; transition: none; }
         footer a:hover { color: #10b981; }
 
         @media (max-width: 600px) {
@@ -1127,7 +1126,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.2s ease, transform 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .food-modal-close:hover { background: rgba(255, 255, 255, 0.4); transform: rotate(90deg); }
@@ -1154,7 +1153,7 @@
             align-items: center;
             justify-content: center;
             gap: 6px;
-            transition: background 0.2s ease;
+            transition: none;
         }
         .food-modal-share i { font-size: 15px; }
         .food-modal-share:hover { background: rgba(255, 255, 255, 0.4); }
@@ -2720,9 +2719,12 @@
         });
 
         function toggleTheme() {
-            // body.dark-mode is mirrored to html[data-theme] (theme sync at the top of <body>); the sun / moon icon follows in CSS
-            document.body.classList.toggle('dark-mode');
-            localStorage.setItem('wibo_theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            // html[data-theme] and body.dark-mode change in the same task: one style pass for the whole page (the theme sync
+            // observer then finds both in step); the sun / moon icon follows in CSS. No re-render, no DOM queries.
+            const theme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.body.classList.toggle('dark-mode', theme === 'dark');
+            try { localStorage.setItem('wibo_theme', theme); } catch (e) {}
         }
 
         function toggleMobileMenu() {
