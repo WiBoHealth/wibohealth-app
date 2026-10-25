@@ -1566,21 +1566,6 @@
     <script src="js/data.js?v=20261020b"></script>
     <script src="js/food-categories.js?v=20261020b"></script>
     <script src="js/food-pages.js"></script>
-    <!-- Old shared links (foods.html#brown-rice, #food-612) go straight to the food's own page; ?lang=en|nl|sv keeps the language -->
-    <script>
-        (function () {
-            var key = '';
-            try { key = decodeURIComponent(location.hash.replace(/^#/, '')); } catch (e) { return; }
-            if (!key) return;
-            var map = window.FOOD_PAGES || {}, byId = /^food-(\d+)$/.exec(key), id = byId ? byId[1] : null, slug = null;
-            if (id) slug = map[id] || null;
-            else for (var k in map) if (map[k] === key) { slug = key; break; }
-            if (!slug && !id) return;
-            var lang = new URLSearchParams(location.search).get('lang');
-            var prefix = (lang === 'en' || lang === 'nl' || lang === 'sv') ? '/' + lang : '';
-            location.replace(slug ? prefix + '/foods/' + slug + '.html' : '/food-details.html?id=' + encodeURIComponent(id));
-        })();
-    </script>
 
     <!-- High-Performance Lazy Rendering, SEO & Zero-Shift Engine -->
     <script>
@@ -2182,7 +2167,7 @@
                         <div class="card-gi"><span class="gi-num ${getGILevel(cardGI)}">GI ${cardGI}</span>${food.gi_status === 'reviewed' ? `<span class="gi-est">${t('gi_reviewed_badge')}</span>` : ''}</div>`;
 
                 return `
-                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}">
+                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}" onclick="return openFoodModalFromCard(event, '${food.id}')">
                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
                                 data-food-id="${food.id}" 
                                 onclick="toggleFavorite(event, '${food.id}')"
@@ -2620,7 +2605,8 @@
         window.addEventListener('popstate', function() {
             const food = foodFromHash(location.hash);
             if (!food) { hideFoodModal(); return; }
-            location.replace(foodPageHref(food.id));   // hash typed or pasted into the address bar: the food's own page
+            if (history.state && history.state.foodModal) openFoodModal(food.id, { fromHistory: true });
+            else openFoodModalFromLink(food);   // hash typed or pasted into the address bar
         });
 
         // A reload keeps the history state; clear it so closing never leaves the page
@@ -2735,7 +2721,7 @@
             setupInfiniteScroll();
 
             const linkedFood = foodFromHash(location.hash);
-            if (linkedFood) location.replace(foodPageHref(linkedFood.id));   // normally done by the early redirect after js/food-pages.js
+            if (linkedFood) openFoodModalFromLink(linkedFood);
         });
 
         function toggleTheme() {
