@@ -14,13 +14,14 @@ foods.html and supplements.html build their cards in JavaScript, and /en/*.html 
 so without these pages the 3,000+ static pages are only reachable through the sitemap and each other.
 The food and supplement pages link here from their breadcrumb and footer.
 """
+import hashlib
 import json
 import re
 from pathlib import Path
 
 import food_sv as FSV
 from generate_article_pages import link, nav as sv_nav
-from generate_food_pages import (BASE_CSS, FOOD_GROUP_LABELS, LANGS, LOGO_SVG, PAGE_CSS, SITE, SV, UI, dir_url, esc,
+from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
 from generate_supplement_pages import GA_TAG, NAME as SUPP_NAME, load_supplements
 
@@ -69,10 +70,19 @@ EXTRA_CSS = """
         .dir-list { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
         .dir-list a { font-weight: 700; }
         .dir-list span { white-space: normal; text-align: end; font-size: 0.85rem; }
+        /* food indexes: 48 px thumbnail (images/foods/thumb/) or the food's emoji before the name */
+        .dir-list a:has(.dir-media) { justify-content: flex-start; align-items: center; padding: 8px 12px; }
+        .dir-list a:has(.dir-media) > span { margin-inline-start: auto; }
+        .dir-media { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0; object-fit: cover; background: var(--bg-card); }
+        span.dir-media { display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0; }
         .guide-link { display: inline-flex; align-items: center; gap: 8px; margin: 4px 8px 22px 0; padding: 10px 18px; border-radius: 30px;
             border: 1px solid var(--primary); color: var(--primary); font-weight: 800; text-decoration: none; }
         .guide-link:hover { background: var(--primary-glow); }
 """
+
+
+# the design system and food page styles, written and cached as css/food-page.css by generate_food_pages.py
+CSS_VER = hashlib.sha1((ROOT / 'css' / 'food-page.css').read_bytes()).hexdigest()[:8]
 
 
 def item_url(kind, slug, lang):
@@ -85,7 +95,8 @@ def read_slug_map(js_file, var):
 
 
 def food_sections():
-    """[(anchor, {lang: label}, [(slug, {lang: name}, {lang: subtitle})])] in the foods.html filter-bar order."""
+    """[(anchor, {lang: label}, [(slug, {lang: name}, {lang: subtitle}, thumbnail path or '', emoji)])] in the foods.html
+    filter-bar order. Thumbnails come from scripts/make_food_thumbs.py."""
     foods, slugs = load_foods(), read_slug_map('food-pages.js', 'FOOD_PAGES')
     sections = {key: [] for key in FOOD_GROUP_LABELS}
     for fid, slug in slugs.items():
@@ -93,7 +104,11 @@ def food_sections():
         names = {l: f[l] or f['en'] for l in LANGS}
         names[SV] = FSV.NAMES[int(fid)][0] if int(fid) in FSV.PUBLISH else ''      # '' = no Swedish page
         subs = {'ar': f['en'], 'en': f['nl'], 'nl': f['en'], SV: f['en']}
-        sections[f['group']].append((slug, names, {l: subs[l] if subs[l] != names[l] else '' for l in LANGS + (SV,)}))
+        thumb = f"/images/foods/thumb/{Path(f['image']).name}" if f['image'] else ''
+        if thumb and not (ROOT / thumb.lstrip('/')).is_file():
+            raise SystemExit(f'missing thumbnail {thumb}: run scripts/make_food_thumbs.py')
+        sections[f['group']].append((slug, names, {l: subs[l] if subs[l] != names[l] else '' for l in LANGS + (SV,)},
+                                     thumb, f['icon'] or '🍽️'))
     return [(key, FOOD_GROUP_LABELS[key], items) for key, items in sections.items() if items]
 
 
@@ -149,12 +164,22 @@ def build(kind, lang, sections):
     for_lang = lambda items: sorted(items, key=lambda it: sv_key(it[1][lang]) if lang == SV else it[1][lang].casefold())
     jump = ''.join(f'<a class="group-chip" href="#{anchor}">{esc(labels[lang])} ({len(items)})</a>'
                    for anchor, labels, items in sections) if len(sections) > 1 else ''
+    shown = [0]                             # the first thumbnails load at once, the rest when scrolled near (lazy)
+    def media(item):
+        if len(item) < 5:                   # supplements: no pictures
+            return ''
+        shown[0] += 1
+        thumb, emoji = item[3], item[4]
+        if not thumb:                       # no photo yet: the food's emoji in the same 48 px box
+            return f'<span class="dir-media" aria-hidden="true">{emoji}</span>'
+        return (f'<img class="dir-media" src="{thumb}" width="48" height="48" '
+                f'loading="{"eager" if shown[0] <= 8 else "lazy"}" decoding="async" alt="">')
     body = '\n'.join(
         f'            <h2 class="section-title" id="{anchor}"><span>{esc(labels[lang])}</span></h2>\n'
         f'            <ul class="alt-list dir-list">' + ''.join(
-            f'<li><a href="{item_url(kind, slug, lang)}">{esc(names[lang])}'
-            + (f'<span>{esc(subs[lang])}</span>' if subs[lang] else '') + '</a></li>'
-            for slug, names, subs in for_lang(items)) + '</ul>'
+            f'<li><a href="{item_url(kind, item[0], lang)}">{media(item)}{esc(item[1][lang])}'
+            + (f'<span>{esc(item[2][lang])}</span>' if item[2][lang] else '') + '</a></li>'
+            for item in for_lang(items)) + '</ul>'
         for anchor, labels, items in sections)
 
     nav = sv_nav(lang, active=hub) if lang == SV else nav_html(lang, active=hub)
@@ -213,8 +238,8 @@ def build(kind, lang, sections):
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){{var t;try{{t=localStorage.getItem('wibo_theme')}}catch(e){{}}if(t!=='dark'&&t!=='light'){{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{{localStorage.setItem('wibo_theme',t)}}catch(e){{}}}}h.setAttribute('data-theme',t)}})(document.documentElement);</script>
-    <style>
-{BASE_CSS}{PAGE_CSS}{EXTRA_CSS}    </style>
+    <link rel="stylesheet" href="/css/food-page.css?v={CSS_VER}">
+    <style>{EXTRA_CSS}    </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>

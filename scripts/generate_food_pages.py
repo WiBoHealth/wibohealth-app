@@ -1532,6 +1532,24 @@ def write_assets():
     return short(css), short(js)
 
 
+# js/* is served with a one-year immutable cache, so the hand-written pages that load the food data must ask for it by a
+# content hash: a new batch (data.js) or a new page (food-pages.js) then reaches every visitor at once.
+STAMPED_PAGES = ('foods.html', 'food-details.html')
+STAMPED_SCRIPTS = ('data.js', 'food-pages.js', 'food-categories.js')
+
+
+def stamp_script_versions():
+    vers = {n: hashlib.sha1((ROOT / 'js' / n).read_bytes()).hexdigest()[:8] for n in STAMPED_SCRIPTS}
+    for page in STAMPED_PAGES:
+        path = ROOT / page
+        text = path.read_text(encoding='utf-8')
+        new = re.sub(r'src="(/?)js/(%s)(?:\?v=[^"]*)?"' % '|'.join(re.escape(n) for n in STAMPED_SCRIPTS),
+                     lambda m: f'src="{m.group(1)}js/{m.group(2)}?v={vers[m.group(2)]}"', text)
+        if new != text:
+            path.write_text(new, encoding='utf-8', newline='\n')
+    return vers
+
+
 ASSET_VER = ('', '')      # (css/food-page.css, js/food-serving.js) content hashes, set in main()
 
 
@@ -2082,6 +2100,7 @@ def main():
             written += 1
     if only:
         print(f'pages written: {written} ({len(only)} foods, --only)')
+        print('script versions in foods.html / food-details.html:', stamp_script_versions())
         return
 
     # id -> slug map for foods.html / food-details.html
@@ -2090,6 +2109,7 @@ def main():
         '// Food id -> slug of its static page (/foods/<slug>.html, /en/foods/..., /nl/foods/...).\n'
         f'window.FOOD_PAGES = {json.dumps({str(k): v for k, v in sorted(slugs.items())}, separators=(",", ":"))};\n',
         encoding='utf-8', newline='\n')
+    print('script versions in foods.html / food-details.html:', stamp_script_versions())
 
     # sitemap block with hreflang alternates
     block = []
