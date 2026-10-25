@@ -1967,13 +1967,37 @@
                 <button class="tab-btn fav-chip${showFavorites ? ' active' : ''}" type="button" data-fav="1" aria-pressed="${showFavorites}">
                     <i class="fas fa-heart" style="color: #ef4444;"></i><span>${t('tab_fav')}</span><span class="tab-count" id="favFoodsTabCount">${favorites.length}</span>
                 </button>`;
-            grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
+            const groups = window.FOOD_GROUPS || [];
+            // Built once; a language switch only rewrites the labels and counts, so the ten section photos stay on
+            // screen untouched (rebuilding them asked for every photo again, and a failed request left the emoji)
+            if (grid.querySelectorAll('.group-card').length === groups.length && groups.length) {
+                groups.forEach(g => {
+                    const card = grid.querySelector(`.group-card[data-group="${g.key}"]`);
+                    if (!card) return;
+                    card.querySelector('.gc-label').textContent = getCategoryLabel(g.key, currentLang);
+                    card.querySelector('.gc-count').textContent = countLabel(counts[g.key] || 0);
+                });
+                return;
+            }
+            grid.innerHTML = groups.map(g => `
                 <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}" style="--accent: ${g.color}">
-                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
-                        onerror="const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
+                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" decoding="async"
+                        data-emoji="${g.icon}" onerror="categoryImageError(this)"></span>
                     <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
                     <span class="gc-count">${countLabel(counts[g.key] || 0)}</span>
                 </button>`).join('');
+        }
+
+        // A section photo that fails is retried once after a moment; only a second failure shows the section's emoji
+        function categoryImageError(img) {
+            if (!img.dataset.retry) {
+                img.dataset.retry = '1';
+                setTimeout(() => { img.src = img.src.split('?')[0] + '?retry=1'; }, 1500);
+                return;
+            }
+            const box = img.parentNode;
+            box.classList.remove('gc-photo');
+            box.textContent = img.dataset.emoji;
         }
 
         function updateCategoryBarState() {
