@@ -1379,6 +1379,21 @@
         }
     </style>
     <link rel="stylesheet" href="css/unified-header.css">
+    <!-- Header menu on one row (desktop): the shared safety net lets the capsules wrap, and from 1321px the English and
+         Dutch capsules (with icons and full padding) wrapped inside the 60px header: links pushed to the top edge and
+         Partnerships on a second row. Same slim capsules as Arabic at that width, and no wrapping. -->
+    <style>
+        @media (min-width: 993px) {
+            body > header .nav-menu { flex-wrap: nowrap !important; align-items: center; }
+            body > header .nav-menu .nav-link { white-space: nowrap; }
+            body > header .nav-menu .nav-link.active:not(:hover) { transform: none; }   /* on the centre line with the rest */
+        }
+        @media (min-width: 1321px) {
+            body > header .nav-menu .nav-link > i { display: none !important; }
+            body > header .nav-menu { gap: 4px !important; }
+            body > header .nav-link { padding: 0 10px !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
@@ -1950,6 +1965,15 @@
             if (tabCount) tabCount.textContent = count;
         }
 
+        // A photo that fails to load (a passing network hiccup) is not given up at once: it is asked for again after a
+        // moment, and only a second failure shows the emoji (section cards and food cards). Returns true while retrying.
+        function retryImageOnce(img) {
+            if (img.dataset.retry) return false;
+            img.dataset.retry = '1';
+            setTimeout(() => { img.src = img.src.split('?')[0] + '?retry=1'; }, 1500);
+            return true;
+        }
+
         // Chips: "All" + one per master group (count = foods in that group) + the favourites toggle
         // "All" and favourites as pills; the 10 master groups as cards (icon, label, item count, accent colour)
         function renderCategoryBar() {
@@ -1970,8 +1994,8 @@
                 </button>`;
             grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
                 <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}" style="--accent: ${g.color}">
-                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
-                        onerror="const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
+                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
+                        onerror="if (retryImageOnce(this)) return; const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
                     <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
                     <span class="gc-count">${countLabel(counts[g.key] || 0)}</span>
                 </button>`).join('');
@@ -2177,7 +2201,7 @@
                         </button>
                        ${food.image ? `
     <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid rgba(16, 185, 129, 0.25);">
-        <img src="${food.image}" alt="${foodTitle}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
+        <img src="${food.image}" alt="${foodTitle}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="if (retryImageOnce(this)) return; this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
     </div>
     <div class="food-icon" style="display: none;">${food.icon || '🍽️'}</div>
 ` : `
