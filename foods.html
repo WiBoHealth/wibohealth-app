@@ -21,11 +21,11 @@
         (function (d) {
             var h = d.documentElement;
             try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
+                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl' || x === 'sv'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
+                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : n.indexOf('sv') === 0 ? 'sv' : 'en');
                 h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
                 if (l === 'ar') return;
                 h.classList.add('lang-loading');
@@ -58,10 +58,23 @@
             const queryLang = urlParams.get('lang')?.toLowerCase();
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             const phone = (navigator.language || '').toLowerCase();
-            const lang = (queryLang === 'ar' || queryLang === 'en' || queryLang === 'nl') ? queryLang : 
-                         ((saved === 'ar' || saved === 'en' || saved === 'nl') ? saved : 
-                         (phone.startsWith('ar') ? 'ar' : (phone.startsWith('nl') ? 'nl' : 'en')));
+            const ok = x => x === 'ar' || x === 'en' || x === 'nl' || x === 'sv';
+            const lang = ok(queryLang) ? queryLang : (ok(saved) ? saved :
+                         (phone.startsWith('ar') ? 'ar' : phone.startsWith('nl') ? 'nl' : phone.startsWith('sv') ? 'sv' : 'en'));
             document.documentElement.lang = lang;
+            // Swedish food names (js/food-names-sv.js) are downloaded only for the Swedish view
+            let svNames = null;
+            window.loadSvNames = function () {
+                if (!svNames) svNames = new Promise(resolve => {
+                    const sc = document.createElement('script');
+                    sc.src = '/js/food-names-sv.js?v=c23278a5';
+                    sc.async = true;
+                    sc.onload = sc.onerror = () => resolve();
+                    document.head.appendChild(sc);
+                });
+                return svNames;
+            };
+            if (lang === 'sv') window.loadSvNames();
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
             if (window.scrollTo) {
                 window.scrollTo(0, 0);
@@ -336,6 +349,7 @@
 
         .header-actions {
             display: flex;
+            flex-wrap: nowrap;
             align-items: center;
             gap: 5px;
             flex-shrink: 0;
@@ -1393,6 +1407,11 @@
             body > header .nav-menu { gap: 4px !important; }
             body > header .nav-link { padding: 0 10px !important; }
         }
+        /* Phones: four language buttons + favourites, theme and menu take 234px, so up to 420px the header shows the logo
+           without the wordmark (the shared stylesheet does this up to 360px) and nothing runs off the screen edge. */
+        @media (max-width: 420px) {
+            body > header .logo-text { display: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -1413,14 +1432,14 @@
 
             <!-- Desktop Nav Menu -->
             <nav class="nav-menu">
-                <a href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
+                <a data-sv-href="/sv/" href="/" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">الرئيسية</span></a>
                 <a href="foods.html" class="nav-link active"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">دليل الأطعمة</span></a>
-                <a href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
+                <a data-sv-href="/sv/calculators.html" href="calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">الحاسبات</span></a>
                 <a href="supplements.html" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">المكملات</span></a>
-                <a href="/#articles" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
+                <a data-sv-href="/sv/#articles" href="/#articles" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">المقالات</span></a>
                 <a href="/diabetes.html" class="nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">السكري ومتلازمة الأيض</span></a>
-                <a href="boodi.html" class="nav-link boodi-link"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
-                <a href="about.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">من نحن</span></a>
+                <a data-sv-href="/sv/boodi.html" href="boodi.html" class="nav-link boodi-link"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">بودي 💚</span></a>
+                <a data-sv-href="/sv/om-oss.html" href="about.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">من نحن</span></a>
                 <a href="partners.html" class="nav-link nav-partners"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">الشراكات</span></a>
             </nav>
 
@@ -1429,6 +1448,7 @@
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
                 <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
+                <button class="lang-btn" data-lang-toggle="sv" onclick="changeLanguage('sv')" title="Svenska">🇸🇪</button>
                 
                 <button class="favorites-btn" onclick="toggleFavoritesView()" title="المفضلة">
                     <i class="fas fa-heart" style="color: #ef4444;"></i>
@@ -1579,7 +1599,7 @@
 
     <!-- Load Food Database -->
     <script src="js/data.js?v=20261020b"></script>
-    <script src="js/food-categories.js?v=20261020b"></script>
+    <script src="js/food-categories.js?v=1b314b6e"></script>
     <script src="js/food-pages.js"></script>
 
     <!-- High-Performance Lazy Rendering, SEO & Zero-Shift Engine -->
@@ -1602,7 +1622,16 @@
             if (!food) return '';
             if (lang === 'nl') return food.categoryNl || food.categoryEn || food.category || '';
             if (lang === 'en') return food.categoryEn || food.categoryNl || food.category || '';
+            if (lang === 'sv') return getCategoryLabel(food.group, 'sv') || food.categoryEn || '';
             return food.category || '';
+        }
+
+        // Food name in the reader's language (Swedish: the approved names of scripts/food_sv.py, else English)
+        function foodName(food, lang) {
+            if (lang === 'en') return food.nameEn || food.name;
+            if (lang === 'nl') return food.nameNl || food.nameEn || food.name;
+            if (lang === 'sv') return (window.FOOD_NAMES_SV || {})[String(food.id)] || food.nameEn || food.name;
+            return food.name;
         }
 
         const foodsTranslations = {
@@ -1845,20 +1874,101 @@
                 "footer_dev_a": "Ontwikkeld met",
                 "footer_dev_b": "voor boodi",
                 "footer_rights": "© 2026 WiBo Health Group. Alle rechten voorbehouden | Medisch Team WiBo Health"
+            },
+            sv: {
+                "calc_strip_title": "Räkna ut ditt behov och välj sedan din mat",
+                "calc_strip_bmi": "Kroppsmasseindex (BMI)",
+                "calc_strip_tdee": "Dagligt kaloribehov (TDEE)",
+                "calc_strip_water": "Dagligt vätskebehov",
+                "calc_strip_whtr": "Midja-längd-kvot (WHtR)",
+                "meta_title": "Livsmedelsguide: glykemiskt index, insulinindex och kalorier | WiBo Health",
+                "meta_desc": "Livsmedelsguide med glykemiskt index (GI), insulinindex (II), kalorier, protein, kolhydrater, fett och kostfiber för metabol hälsa och diabetes. WiBo Healths medicinska team.",
+                "nav_home": "Hem",
+                "nav_foods": "Livsmedelsguide",
+                "nav_calculators": "Kalkylatorer",
+                "nav_supplements": "Kosttillskott",
+                "nav_articles": "Artiklar",
+                "nav_boodi_app": "boodi-appen 💚",
+                "nav_doctor": "Om oss",
+                "cat_title": "Bläddra bland livsmedel efter grupp",
+                "cat_sub": "livsmedel med fullständigt näringsvärde i 10 grupper",
+                "tab_all": "Alla",
+                "tab_fav": "Mina favoriter",
+                "category_bar_label": "Livsmedelsgrupper",
+                "search_placeholder": "🔍 Sök efter livsmedel eller grupp...",
+                "search_helper": "Sök på livsmedlets namn eller grupp (SV / EN / NL / AR)",
+                "no_results": "Inget livsmedel matchar din sökning",
+                "results_clear": "Rensa filter",
+                "res_all": "Visar alla livsmedel ({n})",
+                "res_group": "Visar {n} i {g}",
+                "res_fav": "Visar {n} bland dina favoriter",
+                "res_fav_group": "Visar {n} bland dina favoriter i {g}",
+                "res_search": " som matchar ”{q}”",
+                "res_none": "Inga resultat för det här urvalet",
+                "no_favorites": "Du har inga sparade favoriter ännu. Klicka på hjärtat på ett kort för att spara det här!",
+                "calories": "Kalorier",
+                "protein": "Protein",
+                "carbs": "Kolhydrater",
+                "fats": "Fett",
+                "loading_more": "Laddar fler livsmedel...",
+                "modal_close": "Stäng",
+                "modal_gi": "Glykemiskt index (GI)",
+                "modal_ii": "Insulinindex (II)",
+                "modal_calories": "Kalorier",
+                "modal_kcal": "kcal",
+                "gi_low": "Lågt 🟢",
+                "gi_medium": "Medelhögt 🟡",
+                "gi_high": "Högt 🔴",
+                "ii_low": "Lågt 🟢",
+                "ii_medium": "Måttligt 🟡",
+                "ii_high": "Högt 🔴",
+                "ii_tested_badge": "Kliniskt testat (Holt / Bao) ✅",
+                "ii_not_tested": "Inte kliniskt testat",
+                "modal_per_100g": "Näringsvärde per 100 g",
+                "modal_full_details": "Öppna livsmedlets egen sida",
+                "modal_copy_link": "Kopiera direktlänk till livsmedlet",
+                "modal_link_copied": "Länken har kopierats",
+                "modal_loading": "Laddar fullständiga detaljer",
+                "modal_load_error": "De fullständiga detaljerna kunde inte laddas just nu. Du kan öppna livsmedlets sida med knappen nedan.",
+                "gi_not_applicable": "Ej tillämpligt",
+                "gi_not_available": "Saknas",
+                "gi_reviewed_badge": "Kliniskt granskad uppskattning",
+                "methodology_line": "Värdena är uppmätta eller beräknade enligt en dokumenterad metod",
+                "methodology_link": "Metod och vetenskapliga källor",
+                "gi_sources": "📚 Uppmätta värden för glykemiskt index (GI) kommer från de internationella GI-tabellerna (Atkinson et al., Am J Clin Nutr 2021) och Harvard Health Publishing; värden märkta ”kliniskt granskad uppskattning” är uppskattningar som granskats av WiBo Healths medicinska team.",
+                "clinical_disclaimer": "Ansvarsfriskrivning: WiBo Healths livsmedelsdatabas och boodi-appen är informativa verktyg för vägledning om levnadsvanor och är ingen medicinteknisk produkt för diagnostik enligt EU-förordningen MDR 2017/745.",
+                "boodi_banner_title": "📱 Skanna streckkoder i butiken med boodi-appen 💚",
+                "boodi_banner_desc": "boodi analyserar förpackade produkter direkt, granskar ingredienserna och föreslår alternativ med mindre socker från samma hylla.",
+                "boodi_banner_btn": "Upptäck boodi-appen",
+                "diet_teaser_title": "Nytt i boodi-appen: ett kostprogram för din livsstil",
+                "diet_teaser_desc": "Osäker på hur du får in de här livsmedlen i vardagen? boodi tar fram en balanserad kostplan på 12 veckor utifrån det kök och den mat du tycker om, framtagen av WiBo Healths team för kost och livsstil.",
+                "diet_teaser_btn": "Utforska programmet",
+                "footer_about": "Om oss",
+                "footer_contact": "Kontakta oss",
+                "nav_partners": "Samarbeten",
+                "footer_partners": "Samarbeten",
+                "footer_food_index": "Livsmedelsregister",
+                "footer_supp_index": "Kosttillskottsregister (på engelska)",
+                "footer_privacy": "Integritetspolicy",
+                "footer_terms": "Användarvillkor",
+                "footer_dev_a": "Utvecklad med",
+                "footer_dev_b": "för boodi",
+                "footer_rights": "© 2026 WiBo Health Group. Alla rättigheter förbehållna."
             }
         };
 
         function getInitialLanguage() {
             const urlParams = new URLSearchParams(window.location.search);
             const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) return queryLang;
+            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en' || queryLang === 'sv')) return queryLang;
 
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) return saved;
+            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en' || saved === 'sv')) return saved;
             
             const phone = (navigator.language || '').toLowerCase();
             if (phone.startsWith('nl')) return 'nl';
             if (phone.startsWith('ar')) return 'ar';
+            if (phone.startsWith('sv')) return 'sv';
             return 'en';
         }
 
@@ -1869,6 +1979,11 @@
         }
 
         function changeLanguage(lang) {
+            // Swedish: render once the names have arrived (a failed download falls back to the English names)
+            if (lang === 'sv' && !window.FOOD_NAMES_SV && !window.svNamesTried) {
+                window.loadSvNames().then(() => { window.svNamesTried = true; changeLanguage('sv'); });
+                return;
+            }
             currentLang = lang;
             localStorage.setItem('preferred_language', lang);
             localStorage.setItem('wibo_language', lang);
@@ -1903,7 +2018,13 @@
                 btn.classList.toggle('active', btn.getAttribute('data-lang-toggle') === lang);
             });
 
-            // calculator pages exist per language: /bmi-calculator.html, /en/..., /nl/...
+            // header links that have a Swedish page switch to it in Swedish
+            document.querySelectorAll('[data-sv-href]').forEach(a => {
+                if (!a.dataset.baseHref) a.dataset.baseHref = a.getAttribute('href');
+                a.setAttribute('href', lang === 'sv' ? a.dataset.svHref : a.dataset.baseHref);
+            });
+
+            // calculator pages exist per language: /bmi-calculator.html, /en/..., /nl/..., /sv/...
             document.querySelectorAll('[data-calc-page]').forEach(a => {
                 a.href = (lang === 'ar' ? '/' : '/' + lang + '/') + a.getAttribute('data-calc-page') + '.html';
             });
@@ -1916,7 +2037,8 @@
                 descMeta.setAttribute('content', foodsTranslations[lang]['meta_desc']);
             }
 
-            renderCategoryBar();
+            // the section cards keep their photos: only labels and counts change with the language
+            if (!relabelCategoryBar()) renderCategoryBar();
             visibleCount = CHUNK_SIZE;
             filterFoods();
             updateStructuredDataForSEO();
@@ -2001,6 +2123,28 @@
                 </button>`).join('');
         }
 
+        // Language switch: new labels and counts on the cards already on screen; their <img> elements are left alone.
+        // Returns false while the bar has not been built yet.
+        function relabelCategoryBar() {
+            const quick = document.getElementById('categoryQuick');
+            const grid = document.getElementById('categoryGrid');
+            if (!quick || !grid || !grid.querySelector('.group-card')) return false;
+            const counts = {};
+            allFoods.forEach(f => { counts[f.group] = (counts[f.group] || 0) + 1; });
+            quick.setAttribute('aria-label', t('category_bar_label'));
+            grid.setAttribute('aria-label', t('category_bar_label'));
+            const allLabel = quick.querySelector('[data-group="all"] > span:not(.tab-count)');
+            if (allLabel) allLabel.textContent = t('tab_all');
+            const favLabel = quick.querySelector('[data-fav] > span:not(.tab-count)');
+            if (favLabel) favLabel.textContent = t('tab_fav');
+            grid.querySelectorAll('.group-card').forEach(card => {
+                const key = card.getAttribute('data-group');
+                card.querySelector('.gc-label').textContent = getCategoryLabel(key, currentLang);
+                card.querySelector('.gc-count').textContent = countLabel(counts[key] || 0);
+            });
+            return true;
+        }
+
         function updateCategoryBarState() {
             document.querySelectorAll('#categoryBar [data-group]').forEach(btn => {
                 const on = btn.getAttribute('data-group') === selectedGroup;
@@ -2075,6 +2219,7 @@
                 return `${n} صنفاً`;
             }
             if (currentLang === 'nl') return `${n} ${n === 1 ? 'product' : 'producten'}`;
+            if (currentLang === 'sv') return `${n} livsmedel`;
             return `${n} ${n === 1 ? 'food' : 'foods'}`;
         }
 
@@ -2139,7 +2284,7 @@
             } else {
                 const has = v => !!v && v.toLowerCase().includes(term);
                 currentFilteredList = baseList.filter(f =>
-                    has(f.name) || has(f.nameEn) || has(f.nameNl) ||
+                    has(f.name) || has(f.nameEn) || has(f.nameNl) || has((window.FOOD_NAMES_SV || {})[String(f.id)]) ||
                     has(f.category) || has(f.categoryEn) || has(f.categoryNl) || has(f.cuisine)
                 );
             }
@@ -2174,12 +2319,7 @@
             const cardsHtml = foodsToShow.map(food => {
                 const isFav = favorites.includes(String(food.id));
                 
-                let foodTitle = food.name;
-                if (currentLang === 'en') {
-                    foodTitle = food.nameEn || food.name;
-                } else if (currentLang === 'nl') {
-                    foodTitle = food.nameNl || food.nameEn || food.name;
-                }
+                const foodTitle = foodName(food, currentLang);
 
                 const catTitle = getSafeCategoryName(food, currentLang);
                 const calVal = Math.round(food.nutrition?.calories || 0);
@@ -2321,7 +2461,7 @@
 
         // '/foods/x.html', '/en/foods/x.html', '/nl/foods/x.html' -> food
         function foodFromPagePath(pathname) {
-            const m = /^\/(?:(?:en|nl)\/)?foods\/([^\/]+)\.html$/.exec(pathname);
+            const m = /^\/(?:(?:en|nl|sv)\/)?foods\/([^\/]+)\.html$/.exec(pathname);
             return m ? foodFromHash('#' + m[1]) : null;
         }
 
@@ -2367,6 +2507,7 @@
             let title = nameAr, subtitle = nameEn;
             if (lang === 'en') { title = nameEn || nameAr; subtitle = nameNl && nameNl !== title ? nameNl : ''; }
             else if (lang === 'nl') { title = nameNl || nameEn || nameAr; subtitle = nameEn && nameEn !== title ? nameEn : ''; }
+            else if (lang === 'sv') { title = foodName(food, 'sv'); subtitle = nameEn && nameEn !== title ? nameEn : ''; }
 
             document.getElementById('foodModalTitle').textContent = title;
             document.getElementById('foodModalSubtitle').textContent = subtitle;
@@ -2378,7 +2519,7 @@
             const media = document.getElementById('foodModalMedia');
             const icon = escapeHtml(food.icon || '🍽️');
             media.innerHTML = food.image
-                ? `<img src="${escapeHtml(food.image)}" alt="${escapeHtml(title)}" width="350" height="350" onerror="this.parentElement.textContent='${icon}'">`
+                ? `<img src="${escapeHtml(food.image)}" alt="${escapeHtml(title)}" width="350" height="350" onerror="if (retryImageOnce(this)) return; this.parentElement.textContent='${icon}'">`
                 : icon;
 
             const n = food.nutrition || {};
@@ -2682,8 +2823,7 @@
             // Summary list of the indexable food pages. Never Product: Google requires
             // offers/review/aggregateRating on it, which an information site cannot give.
             const itemsToSchema = allFoods.filter(f => (window.FOOD_PAGES || {})[String(f.id)]).slice(0, 100).map((f, index) => {
-                const name = (currentLang === 'en') ? (f.nameEn || f.name) :
-                             (currentLang === 'nl') ? (f.nameNl || f.nameEn || f.name) : f.name;
+                const name = foodName(f, currentLang);
                 return {
                     "@type": "ListItem",
                     "position": index + 1,
@@ -2702,7 +2842,7 @@
 
         window.addEventListener('storage', function(e) {
             if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en')) {
+                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en' || e.newValue === 'sv')) {
                     changeLanguage(e.newValue);
                 }
             }
@@ -2777,7 +2917,10 @@
             function sync() {
                 var l = document.documentElement.lang;
                 document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
-                    a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
+                    var d = a.getAttribute('data-dir-index');
+                    // Swedish: the Swedish food index; the supplement index has no Swedish version (English one)
+                    var p = l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? (d === 'foods' ? '/sv' : '/en') : '';
+                    a.href = p + '/' + d + '/index.html';
                 });
             }
             sync();
