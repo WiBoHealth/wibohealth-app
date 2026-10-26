@@ -1560,16 +1560,10 @@
         @media (max-width: 860px) { .feature-duo.feature-trio { grid-template-columns: minmax(0, 1fr); } }
     </style>
     <!-- Article cards on phones (2026-10-25): a compact horizontal list - 85 px thumbnail beside the section badge, the title
-         (two lines at most) and the reading time. The summary and the big button are hidden; the button stays as an invisible
+         (two lines at most). The summary and the big button are hidden; the button stays as an invisible
          layer over the whole card, so the card is still one tap target and reachable by keyboard. -->
     <style id="compact-article-cards">
-        .read-time { display: none; }
-        .read-time [data-rl] { display: none; }
-        html[lang="ar"] .read-time [data-rl="ar"], html[lang="en"] .read-time [data-rl="en"],
-        html[lang="nl"] .read-time [data-rl="nl"], html[lang="sv"] .read-time [data-rl="sv"] { display: inline; }
         @media (max-width: 768px) {
-            .read-time { display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; font-size: 11.5px; font-weight: 700; color: #a7f3d0; }
-            .read-time svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; flex-shrink: 0; }
 
             /* featured articles: the lead card and the row of three */
             .hero .leptin-feature-card, .hero .leptin-feature-card.feature-lead {
@@ -1615,7 +1609,7 @@
         }
     </style>
     <!-- Article cards on small phones (< 640px, preview 2026-10-26): two columns of compact cards (16:10 picture, section
-         badge, title on two lines, reading time); an odd last card keeps the full-width row layout above. The prediabetes
+         badge, title on two lines); an odd last card keeps the full-width row layout above. The prediabetes
          guide stays one slim full-width row. Builds on #compact-article-cards (same markup, the tap layer included). -->
     <style id="two-column-article-cards">
         @media (max-width: 639px) {
@@ -1628,7 +1622,6 @@
             .hero .feature-lead .feature-thumb { width: 64px !important; height: 64px !important; border-radius: 10px; }
             .hero .feature-lead .feature-badge { font-size: 10px; padding: 1px 8px; margin-bottom: 3px; }
             .hero .feature-lead .leptin-feature-content h3 { font-size: 14px !important; line-height: 1.4 !important; }
-            .hero .feature-lead .read-time { margin-top: 2px; }
 
             /* two-column grids: the three featured guides and the article grid */
             .feature-duo.feature-trio, .hero-stats { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1650,7 +1643,6 @@
             .hero .feature-trio .leptin-feature-content h3, .hero-stats .stat-article-details h4 {
                 font-size: 13px !important; line-height: 1.45 !important; min-height: 2.9em;      /* two lines, so the cards line up */
             }
-            .hero .feature-trio .read-time, .hero-stats .read-time { font-size: 10.5px; margin-top: 3px; }
 
             /* odd last card: the full-width row of #compact-article-cards */
             .hero .feature-trio .leptin-feature-card:last-child:nth-child(odd),
@@ -1676,12 +1668,10 @@
     </style>
     <!-- Tablet and desktop (640px and up, preview 2026-10-26), in the same style as the phone cards: the prediabetes guide as
          one slim row (picture, text, button; at most ~190px high), the three featured guides and the article grid as compact
-         cards (16:10 picture, section badge, title on two lines, reading time; the whole card is the link), the article grid in
+         cards (16:10 picture, section badge, title on two lines; the whole card is the link), the article grid in
          3 columns (tablet) or 4 (desktop), and the supplement comparison as a slim ribbon. -->
     <style id="compact-cards-wide">
         @media (min-width: 640px) {
-            .read-time { display: inline-flex; align-items: center; gap: 5px; margin-top: 4px; font-size: 12px; font-weight: 700; color: #a7f3d0; }
-            .read-time svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; flex-shrink: 0; }
 
             /* slim prediabetes banner */
             .hero .leptin-feature-card.feature-lead.feature-glow {
@@ -1695,7 +1685,6 @@
             .hero .feature-lead .leptin-feature-content { grid-area: content; display: flex !important; flex-direction: column;
                 align-items: flex-start !important; min-width: 0; padding: 0 !important; text-align: start !important; }
             .hero .feature-lead .feature-badge { margin: 0 0 4px; font-size: 11.5px; line-height: 1.5; padding: 1px 11px; }
-            .hero .feature-lead .read-time { margin-top: 2px; }
             .hero .feature-lead .leptin-feature-content h3 { margin: 0; font-size: 1.22rem !important; line-height: 1.4 !important;
                 display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
             .hero .feature-lead .leptin-feature-content p { display: -webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
@@ -2047,7 +2036,6 @@
                 <div class="leptin-feature-content">
                     <span class="feature-badge feature-badge-new" data-i18n="feat_latest_cat">🆕 Ny guide / Diabetes och metabol hälsa</span>
                     <h3 data-i18n="feat_latest_title">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes</h3>
-                    <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">12 min läsning</span></span>
                     <p data-i18n="feat_latest_sum">HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.</p>
                 </div>
                 <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs hela guiden</a>
@@ -2060,7 +2048,6 @@
                 </div>
                 <div class="leptin-feature-content">
                     <h3 data-i18n="leptin_banner_title">🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)</h3>
-                    <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">3 min läsning</span></span>
                     <p data-i18n="leptin_banner_desc">Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen</p>
                 </div>
                 <a href="/sv/articles/leptinresistens.html" class="leptin-feature-btn" data-i18n="leptin_banner_btn">Läs guiden 🩺</a>
@@ -2074,7 +2061,6 @@
                 <div class="leptin-feature-content">
                     <span class="feature-badge" data-i18n="feat_cereal_cat">🌾 Ny artikel / Exklusiv guide</span>
                     <h3 data-i18n="feat_cereal_title">Frukostflingor utan socker: din guide till en pigg start på dagen</h3>
-                    <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">7 min läsning</span></span>
                     <p data-i18n="feat_cereal_sum">Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller</p>
                 </div>
                 <a href="/sv/articles/frukostflingor-utan-socker.html" class="leptin-feature-btn cereal-feature-btn" data-i18n-href="feat_cereal_href" data-i18n="feat_cereal_btn">Läs hela guiden</a>
@@ -2088,7 +2074,6 @@
                 <div class="leptin-feature-content">
                     <span class="feature-badge" data-i18n="feat_gest_cat">🩺 Diabetes och metabol hälsa</span>
                     <h3 data-i18n="feat_gest_title">Graviditetsdiabetes: normala blodsockervärden och vad du kan äta</h3>
-                    <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">6 min läsning</span></span>
                     <p data-i18n="feat_gest_sum">Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg</p>
                 </div>
                 <a href="/sv/diabetes/graviditetsdiabetes.html" class="leptin-feature-btn" data-i18n-href="feat_gest_href" data-i18n="feat_gest_btn">Läs hela guiden</a>
@@ -2125,7 +2110,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_hba1c">HbA1c och insulinresistens</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">4 min läsning</span></span>
                         <p data-i18n="card_desc_hba1c">Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.</p>
                         <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2138,7 +2122,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_fatty_liver">Fettlever och fruktos</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">5 min läsning</span></span>
                         <p data-i18n="card_desc_fatty_liver">Hur levern omvandlar flytande socker till fett, och vilka levnadsvanor som minskar leverfettet.</p>
                         <span class="stat-read-more" data-i18n="card_btn_fatty_liver">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2151,7 +2134,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_cortisol">Kortisol och stressmage</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">4 min läsning</span></span>
                         <p data-i18n="card_desc_cortisol">Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.</p>
                         <span class="stat-read-more" data-i18n="card_btn_cortisol">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2164,7 +2146,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_magnesium">Magnesiumformer – vilken passar dig?</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">4 min läsning</span></span>
                         <p data-i18n="card_desc_magnesium">Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.</p>
                         <span class="stat-read-more" data-i18n="card_btn_magnesium">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2177,7 +2158,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_bones">Skeletthälsa: mer än kalcium</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">4 min läsning</span></span>
                         <p data-i18n="card_desc_bones">Skelettet behöver mer än kalcium: om D-vitamin, protein, rörelse och balansträning, och när du ska utredas för benskörhet.</p>
                         <span class="stat-read-more" data-i18n="card_btn_bones">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2190,7 +2170,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_fasting">Periodisk fasta och myterna i sociala medier</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">4 min läsning</span></span>
                         <p data-i18n="card_desc_fasting">Vad som händer i kroppen när du fastar, myten om frukosten, hur du hanterar huvudvärk och vem som inte ska fasta.</p>
                         <span class="stat-read-more" data-i18n="card_btn_fasting">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
@@ -2203,7 +2182,6 @@
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_thyroid">Trög sköldkörtel och långsam ämnesomsättning</h4>
-                        <span class="read-time"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-rl="sv">3 min läsning</span></span>
                         <p data-i18n="card_desc_thyroid">Vad TSH, T4 och T3 betyder, de vanliga tecknen på underfunktion och jod och selen i maten.</p>
                         <span class="stat-read-more" data-i18n="card_btn_thyroid">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
