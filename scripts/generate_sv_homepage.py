@@ -200,6 +200,8 @@ def localise_rest(t):
     for src, alt in ALT.items():
         t = sub(r'(<img [^>]*src="/%s"[^>]*alt=")[^"]*(")' % re.escape(src), r'\g<1>%s\2' % attr(alt).replace('\\', r'\\'),
                 t, flags=re.S, what='alt ' + src)
+    # reading times on the article cards: only the Swedish label
+    t = sub(r'<span data-rl="(?:ar|en|nl)">[^<]*</span>', '', t, count=0, what='reading-time labels')
     t = rep('aria-label="WiBo Health highlights"', 'aria-label="WiBo Health – höjdpunkter"', t)
     t = rep('aria-label="What\'s cooking today"', 'aria-label="Vad blir det till middag"', t)
     # the three long nutrition guides are Arabic-only: not on the Swedish page
