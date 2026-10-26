@@ -152,7 +152,7 @@ def links(t):
         (p if p.startswith('/') else '/' + p) for p in m.group(1).split(', ')), t)
     # the static directory pages: Swedish readers get the Swedish food index and the English supplement index
     t = rep("a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/'",
-            "a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? (a.getAttribute('data-dir-index') === 'foods' ? '/sv' : '/en') : '') + '/'", t)
+            "a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? '/sv' : '') + '/'", t)
     # the food search matches English (and Arabic/Dutch) names: open the guide in English
     t = rep('<form class="meals-search" action="/foods.html" method="get" role="search">',
             '<form class="meals-search" action="/foods.html" method="get" role="search">\n'
@@ -192,6 +192,9 @@ def localise_rest(t):
     # diabetes capsule (js/nav-diabetes.js sets the same at runtime)
     t = rep('href="/diabetes.html?lang=en" class="nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="nav-link nav-diabetes"', t)
     t = rep('href="/diabetes.html?lang=en" class="mobile-nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"', t)
+    # supplements capsule: the Swedish supplement index
+    t = rep('href="/supplements.html?v=6.0&lang=en" class="nav-link"', 'href="/sv/supplements/index.html" class="nav-link"', t)
+    t = rep('href="/supplements.html?v=6.0&lang=en" class="mobile-nav-link"', 'href="/sv/supplements/index.html" class="mobile-nav-link"', t)
     t = rep('<span class="nav-diabetes-label">السكري ومتلازمة الأيض</span>', '<span class="nav-diabetes-label">Diabetes</span>', t, count=2)
     # Arabic image alts without an i18n key
     for src, alt in ALT.items():

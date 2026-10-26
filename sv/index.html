@@ -1620,7 +1620,7 @@
                     <a href="/sv/calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">Kalkylatorer</span></a>
                     <a href="#articles" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artiklar</span></a>
                     <a href="/sv/diabetes.html" class="nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
-                    <a href="/supplements.html?v=6.0&lang=en" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
+                    <a href="/sv/supplements/index.html" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
                     <a href="/sv/boodi.html" class="nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi-appen 💚</span></a>
                     <a href="/partners.html?lang=en" class="nav-link nav-partners"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">Samarbeten</span></a>
                 </nav>
@@ -1659,7 +1659,7 @@
         <a href="/recipes.html?lang=en" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">Recept</span></a>
         <a href="#articles" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artiklar</span></a>
         <a href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
-        <a href="/supplements.html?v=6.0&lang=en" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
+        <a href="/sv/supplements/index.html" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
         <a href="/sv/om-oss.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">Om oss</span></a>
         <a href="/sv/boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi-appen 💚</span></a>
         <a href="/diet-plan.html?lang=en" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">Gratis kostplan 🎁</span></a>
@@ -2236,7 +2236,7 @@
             function sync() {
                 var l = document.documentElement.lang;
                 document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
-                    a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? (a.getAttribute('data-dir-index') === 'foods' ? '/sv' : '/en') : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
+                    a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? '/sv' : '') + '/' + a.getAttribute('data-dir-index') + '/index.html';
                 });
             }
             sync();

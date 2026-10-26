@@ -111,8 +111,9 @@ def nav(lang, active=None):
     items += [('/diabetes.html', u['diabetes']), ('/boodi.html', u['nav'][5]), ('/partners.html', u['partners'])]
     out = []
     for path, label in items:
-        # the food guide capsule opens the static Swedish food index; links in the copy keep the full (English) guide
-        href = {'/diabetes.html': '/sv/diabetes.html', '/foods.html': '/sv/foods/index.html'}.get(path) or link(path, SV)
+        # the food and supplement capsules open the static Swedish indexes; links in the copy keep the full (English) guides
+        href = {'/diabetes.html': '/sv/diabetes.html', '/foods.html': '/sv/foods/index.html',
+                '/supplements.html': '/sv/supplements/index.html'}.get(path) or link(path, SV)
         cls = 'nav-link' + {'/partners.html': ' nav-partners', '/diabetes.html': ' nav-diabetes'}.get(path, '') + (' active' if path == active else '')
         out.append(f'                <a href="{href}" class="{cls}">{label}</a>')
     return '\n'.join(out)

@@ -1922,7 +1922,7 @@ def build(food, lang, ctx):
     footer_links = ' <span>•</span> '.join(
         f'<a href="{href}">{label}</a>' for href, label in
         [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
-         (dir_url('supplements', 'en' if lang == SV else lang, absolute=False), u['nav'][3]),   # no Swedish supplement pages yet
+         (dir_url('supplements', lang, absolute=False), u['nav'][3]),
          (L('/methodology.html'), u['methodology']),
          (L('/doctor.html'), 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'),
          (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
