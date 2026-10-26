@@ -118,6 +118,81 @@ NAMES = {
     'vitamin-a': 'A-vitamin (retinylpalmitat och betakaroten)',
     'biotin': 'Biotin (B7-vitamin)',
     'molybdenum': 'Molybden (glycinat)',
+    # third batch (101-174 in the data order), 2026-10-26
+    's-adenosyl-methionine': 'SAMe (S-adenosyl-L-metionin)',
+    'grape-seed-extract': 'Druvkärnextrakt (95 % OPC)',
+    'chlorella': 'Chlorella (sprängd cellvägg)',
+    'pantothenic-acid': 'Pantotensyra (B5-vitamin)',
+    'riboflavin': 'Riboflavin (B2-vitamin)',
+    'thiamine': 'Tiamin (B1-vitamin) och benfotiamin',
+    'niacin': 'Niacin (B3-vitamin) – nikotinamid',
+    'folate': 'Folat (L-metylfolat, aktivt B9-vitamin)',
+    'pyridoxine': 'B6-vitamin (pyridoxin/P5P)',
+    'manganese': 'Mangan (bisglycinat)',
+    'bilberry-extract': 'Blåbärsextrakt (25 % antocyaner)',
+    'hawthorn-berry': 'Hagtorn (Crataegus)',
+    'dandelion-root': 'Maskrosrot (Taraxacum officinale)',
+    'burdock-root': 'Kardborrerot (Arctium lappa)',
+    'black-elderberry': 'Fläderbärsextrakt (Sambucus nigra)',
+    'cat-s-claw': 'Kattklo (Uncaria tomentosa)',
+    'olive-leaf-extract': 'Olivbladsextrakt (oleuropein)',
+    'echinacea': 'Röd solhatt (Echinacea purpurea)',
+    'african-mango': 'Afrikansk mango (Irvingia gabonensis)',
+    'horny-goat-weed': 'Sockblomma (Epimedium, ikariin)',
+    'evening-primrose-oil': 'Nattljusolja (GLA)',
+    'black-cohosh': 'Silverax (Cimicifuga racemosa)',
+    'phosphatidic-acid': 'Fosfatidsyra (PA, Mediator®)',
+    'ursolic-acid': 'Ursolsyra',
+    'shilajit': 'Shilajit (renad, mumijo)',
+    'dong-quai': 'Dong quai (Angelica sinensis)',
+    'vitex': 'Munkpeppar (Vitex agnus-castus)',
+    'wild-yam': 'Vild jams (Dioscorea villosa)',
+    'ceramides': 'Fytoceramider (för huden)',
+    'hyaluronic-acid': 'Hyaluronsyra (natriumhyaluronat)',
+    'krill-oil': 'Krillolja (antarktisk, omega-3 i fosfolipidform)',
+    'magnesium-threonate': 'Magnesium-L-treonat (Magtein®)',
+    'copper': 'Koppar (glukonat/bisglycinat)',
+    'plant-sterols-and-stanols': 'Växtsteroler och växtstanoler',
+    'red-yeast-rice': 'Röd jästris (monakolin K under 3 mg)',
+    'nattokinase': 'Nattokinas (NSK-SD®)',
+    'bromelain': 'Bromelain (ananasenzym)',
+    'papain': 'Papain (papayaenzym)',
+    'full-spectrum-digestive-enzymes': 'Matsmältningsenzymer (bredspektrum)',
+    'l-tyrosine': 'L-tyrosin',
+    'vitamin-b12': 'B12-vitamin (metylkobalamin)',
+    'potassium-citrate': 'Kaliumcitrat',
+    'silica': 'Kisel (ortokiselsyra/åkerfräken)',
+    'pumpkin-seed-oil': 'Pumpafröolja',
+    'sage-extract': 'Salviaextrakt (Salvia officinalis)',
+    'anise-seeds': 'Anis (Pimpinella anisum)',
+    'chamomile-flowers': 'Kamomillextrakt (Matricaria chamomilla)',
+    'cumin-seeds': 'Spiskumminextrakt (Cuminum cyminum)',
+    'hibiscus-flower-tea': 'Hibiskusextrakt (Hibiscus sabdariffa)',
+    'glutathione': 'Reducerat glutation (Setria®)',
+    'artichoke-extract': 'Kronärtskocksbladsextrakt (Cynara scolymus)',
+    'cranberry-extract': 'Tranbärsextrakt (36 mg PAC)',
+    'nettle-leaf-root': 'Brännässla (Urtica dioica)',
+    'beta-glucan': 'Betaglukan (jäst och havre)',
+    'cluster-dextrin': 'Cyklisk dextrin (cluster dextrin, HBCD)',
+    'electrolytes-mix': 'Elektrolyter (natrium, kalium, magnesium)',
+    'tart-cherry-extract': 'Surkörsbärsextrakt (Montmorency)',
+    'saffron-extract': 'Saffransextrakt (affron®/Satiereal®)',
+    'betaine-hcl': 'Betain-HCl (med pepsin)',
+    'slippery-elm': 'Ulmus rubra-bark (slippery elm)',
+    'marshmallow-root': 'Läkemalvarot (Althaea officinalis)',
+    'dgl-licorice': 'DGL-lakrits (deglycyrrhiziniserad)',
+    'peppermint-oil': 'Pepparmyntsolja (enterokapslar)',
+    'nicotinamide-riboside': 'Nikotinamidribosid (NR, Niagen®)',
+    'banaba-leaf-extract': 'Banababladsextrakt (korosolsyra)',
+    'american-ginseng': 'Amerikansk ginseng (Panax quinquefolius)',
+    'flaxseed-extract': 'Linfrölignaner (SDG)',
+    'mulberry-leaf-extract': 'Vitt mullbärsbladsextrakt (DNJ)',
+    'green-coffee-bean-extract': 'Grönt kaffebönsextrakt (klorogensyra)',
+    'capsimax': 'Capsimax® (chiliextrakt)',
+    'oil-of-oregano': 'Oreganoolja (karvakrol)',
+    'bee-propolis': 'Propolis',
+    'wheatgrass': 'Vetegräs (ekologiskt pulver)',
+    'frankincense': 'Boswellia serrata-extrakt (AKBA)',
 }
 
 # groupLabel['en'] of js/supplements-data.js -> Swedish (the groups of the first and second batch)
@@ -185,6 +260,16 @@ GROUP_LABELS = {
     'Vision, immunity & skin': 'Syn, immunförsvar och hud',
     'Hair, skin & energy': 'Hår, hud och energi',
     'Essential minerals': 'Essentiella mineraler',
+    # third batch
+    'Mood & joints': 'Sinnesstämning och leder',
+    'B vitamins & energy': 'B-vitaminer och energi',
+    "Women's health & skin": 'Kvinnors hälsa och hud',
+    "Women's health & hormonal balance": 'Kvinnors hälsa och hormonbalans',
+    'Skin & hydration': 'Hud och fukt',
+    'Cholesterol & heart health': 'Kolesterol och hjärthälsa',
+    'Digestive enzymes': 'Matsmältningsenzymer',
+    'Hair, nails & skin': 'Hår, naglar och hud',
+    'Urinary tract health': 'Urinvägarnas hälsa',
 }
 
 # page chrome (the T dict of generate_supplement_pages.py)
@@ -987,8 +1072,9 @@ COPY.update({
                     frequency='Fördelat på två doser'),
         forms='Rena kapslar med NAC i fri form; en lätt svavellukt är normal och visar att de aktiva tiolgrupperna finns kvar.',
         warnings=['Kan ge illamående och lätt halsbränna; ta det med två glas vatten',
-                  'Inte för personer med cysteinallergi eller sällsynta cystinnjurstenar',
-                  'Klassificeras som läkemedel i vissa europeiska länder; använd det enligt de lokala reglerna'],
+                  'Inte för personer med cysteinallergi eller sällsynta cystinnjurstenar'],
+        # the record's general line (a medicine in some European countries) is left out (approved 2026-10-26):
+        # the Swedish one is in EXTRA_WARNINGS
         interactions='Varning vid kärlkrampsläkemedel: NAC interagerar med nitroglycerin och andra nitrater och kan ge ett '
                      'kraftigt blodtrycksfall och svår huvudvärk. Ta det med två timmars mellanrum från antibiotika som tas '
                      'via munnen och från medicinskt kol.',
@@ -1510,16 +1596,1019 @@ COPY.update({
         naturalSources='Baljväxter (linser, bönor, ärter), fullkorn, nötter och lever.'),
 })
 
+# third batch (101-174 in the data order), part A
+COPY.update({
+    's-adenosyl-methionine': dict(
+        summary='Ett ämne som levern bildar av aminosyran metionin och kroppens viktigaste metylgivare; det deltar i '
+                'bildningen av signalsubstanser (serotonin och dopamin), glutation och broskets byggstenar, och kliniska '
+                'studier tyder på att det stödjer sinnesstämningen och ledernas komfort och rörlighet.',
+        dosage=dict(recommended='400–800 mg per dag',
+                    timing='På morgonen på fastande mage, en halvtimme före frukost, med ett stort glas vatten',
+                    frequency='En gång per dag'),
+        forms='Enterodragerade SAMe-tabletter i förseglade blister, eftersom molekylen är mycket känslig för fukt och magsyra.',
+        warnings=['Inte för personer med bipolär sjukdom, eftersom det kan utlösa maniska episoder',
+                  'Kan ge lätta magbesvär, eller sömnsvårigheter om det tas på kvällen',
+                  'Undvik under graviditet och amning, eftersom säkerhetsdata är otillräckliga'],
+        interactions='Viktig varning (serotonergt syndrom): kombinera det aldrig med antidepressiva läkemedel (SSRI, SNRI, '
+                     'MAO-hämmare), 5-HTP, johannesört, tramadol eller triptaner.',
+        naturalSources='Kroppen bildar det av metionin (kött, fisk, ägg); maten innehåller inga betydande mängder.'),
+    'grape-seed-extract': dict(
+        summary='Ett extrakt rikt på proantocyanidiner (OPC), växtantioxidanter som hjälper till att skydda kollagenfibrerna '
+                'i huden och blodkärlsväggarna; studier tyder på att det stödjer venerna och cirkulationen, lindrar tunga, '
+                'svullna ben efter långt stillasittande och stödjer en strålande, jämn hudton.',
+        dosage=dict(recommended='100–300 mg per dag', timing='Efter frukost eller lunch', frequency='En gång per dag'),
+        forms='Druvkärnextrakt standardiserat till 95 % proantocyanidiner (OPC), i kapslar eller tabletter.',
+        warnings=['Sluta två veckor före en operation på grund av den lätt blodförtunnande effekten',
+                  'Undvik under graviditet och amning, eftersom säkerhetsdata är otillräckliga'],
+        interactions='Använd det med försiktighet tillsammans med blodförtunnande och blodplättshämmande läkemedel (warfarin, '
+                     'acetylsalicylsyra, klopidogrel), eftersom risken för blödning kan öka.',
+        naturalSources='Kärnor och skal av röda druvor, mörka bär och mörk choklad.'),
+    'chlorella': dict(
+        summary='Mikroskopiska gröna alger rika på klorofyll, protein, järn och K-vitamin; en klinisk studie tyder på att '
+                'chlorella stödjer aktiviteten hos immunförsvarets NK-celler och en annan att den stödjer normala nivåer av '
+                'blodfetter och antioxidanter, och den stödjer matsmältningen och en regelbunden mage.',
+        dosage=dict(recommended='2–3 g per dag',
+                    timing='20 minuter före en måltid med ett stort glas vatten, eller i gröna smoothies',
+                    frequency='Fördelat på två doser'),
+        forms='Tabletter eller pulver av chlorella med sprängd cellvägg för ett bra upptag, helst testade fria från '
+              'tungmetaller.',
+        warnings=['Kan ge lätta gaser eller grön avföring de första dagarna, vilket är övergående',
+                  'Innehåller jod; rådgör med din läkare om du har en sköldkörtelsjukdom',
+                  'Undvik om du är allergisk mot alger eller jod'],
+        interactions='Chlorella är rik på K-vitamin och kan därför försvaga warfarin (Waran) och andra '
+                     'K-vitaminantagonister; håll den dagliga mängden jämn och berätta det för din läkare. Den kan störa '
+                     'immunhämmande läkemedel.',
+        naturalSources='Ett tillskott i sig; klorofyll finns i mörka bladgrönsaker som spenat och persilja.'),
+    'pantothenic-acid': dict(
+        summary='Pantotensyra bidrar till normal energiomsättning, till att minska trötthet och utmattning, till normal '
+                'mental prestation och till normal syntes och omsättning av steroidhormoner, D-vitamin och vissa '
+                'signalsubstanser (EFSA-godkända påståenden); den ingår i koenzym A (CoA), som förbränner kolhydrater och fett.',
+        dosage=dict(recommended='50–100 mg per dag (referensintaget på EU-märkningen är 6 mg och EFSA:s adekvata intag för '
+                                'vuxna är 5 mg; doser upp till 500 mg används under professionell uppföljning)',
+                    timing='På morgonen till frukost', frequency='En gång per dag'),
+        forms='Kalcium-D-pantotenat, eller pantetin, den aktiva formen.',
+        warnings=['Ett mycket säkert vattenlösligt vitamin som inte ansamlas i kroppen; överskottet lämnar kroppen med urinen',
+                  'Mycket stora doser (över 2000 mg) kan ge lös avföring'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats vid de vanliga doserna.',
+        naturalSources='Lever, äggula, svamp, avokado, baljväxter och fullkorn.'),
+    'riboflavin': dict(
+        summary='Riboflavin bidrar till normal energiomsättning, till att bibehålla normal syn, normal hud och normala '
+                'slemhinnor, till att skydda cellerna mot oxidativ stress och till att minska trötthet och utmattning '
+                '(EFSA-godkända påståenden); det är riboflavin som färgar urinen klargul efter intaget, vilket är normalt och '
+                'ofarligt.',
+        dosage=dict(recommended='10–25 mg per dag (referensintaget är 1,4 mg; de höga doserna på 200–400 mg som används i '
+                                'studier är endast för användning under medicinsk uppföljning)',
+                    timing='På morgonen till frukost', frequency='En gång per dag'),
+        forms='Rent riboflavin, eller den aktiva formen riboflavin-5\'-fosfat (R5P).',
+        warnings=['Ett mycket säkert vattenlösligt vitamin; EFSA har inte fastställt någon övre gräns eftersom inga '
+                  'biverkningar har setts',
+                  'Klargul urin är normalt och inget att oroa sig för'],
+        interactions='Tricykliska antidepressiva läkemedel, vissa antipsykotiska läkemedel (klorpromazin) och p-piller kan '
+                     'sänka nivåerna i kroppen.',
+        naturalSources='Mjölk och mejeriprodukter, ägg, lever, kött, mandlar och svamp.'),
+    'thiamine': dict(
+        summary='Tiamin bidrar till normal energiomsättning, till nervsystemets normala funktion, till normal psykologisk '
+                'funktion och till hjärtats normala funktion (EFSA-godkända påståenden); det omvandlar glukos till energi '
+                'som försörjer hjärnans celler och de perifera nerverna, och behovet ökar med en kost rik på socker och '
+                'stärkelse.',
+        dosage=dict(recommended='50–100 mg per dag (referensintaget är 1,1 mg)', timing='Till frukost eller lunch',
+                    frequency='En gång per dag'),
+        forms='Tiaminhydroklorid eller tiaminmononitrat, eller fettlösligt benfotiamin, som har högre biotillgänglighet.',
+        warnings=['Ett mycket säkert vattenlösligt vitamin; EFSA har inte fastställt någon övre gräns',
+                  'Hög alkoholkonsumtion tömmer kraftigt förråden av tiamin'],
+        interactions='Vätskedrivande läkemedel (särskilt furosemid) ökar förlusterna via urinen, och stora mängder kaffe och '
+                     'te kan minska upptaget.',
+        naturalSources='Fullkorn, fläskkött, baljväxter, solrosfrön och nötter.'),
+    'niacin': dict(
+        summary='Niacin bidrar till normal energiomsättning, till nervsystemets normala funktion, till normal psykologisk '
+                'funktion, till att bibehålla normal hud och normala slemhinnor och till att minska trötthet och utmattning '
+                '(EFSA-godkända påståenden); det är råvaran till NAD+, som cellerna behöver för att producera energi.',
+        dosage=dict(recommended='Nikotinamid: 16–50 mg per dag (referensintaget är 16 mg). Nikotinsyra: högst 10 mg per dag',
+                    timing='Till en hel måltid mitt på dagen', frequency='En gång per dag'),
+        forms='Nikotinamid är den föredragna formen eftersom den inte ger rodnad; nikotinsyra ger rodnad och värme i ansikte '
+              'och hals (niacinflush) i ungefär en halvtimme.',
+        warnings=['EFSA:s övre gränser: 10 mg per dag för nikotinsyra och 900 mg för nikotinamid',
+                  'Stora läkemedelsdoser (över 500 mg) kräver kontroll av leverenzymerna och är endast för användning under '
+                  'medicinsk uppföljning',
+                  'Använd det med försiktighet om du har gikt eller magsår'],
+        interactions='Niacin kan förstärka blodtryckssänkande läkemedel och statiner (högre risk för muskelsmärta vid höga '
+                     'doser) och kan påverka blodsockerkontrollen hos personer med diabetes.',
+        naturalSources='Kyckling, tonfisk, lax, jordnötter, svamp och fullkorn.'),
+    'folate': dict(
+        summary='Folat bidrar till normal blodbildning, till normal homocysteinomsättning, till normal celldelning, till '
+                'tillväxt av moderns vävnader under graviditet och till att minska trötthet och utmattning (EFSA-godkända '
+                'påståenden); metylfolat är den aktiva form som kroppen använder direkt, utan omvandling.',
+        dosage=dict(recommended='400–800 µg per dag (EFSA:s övre gräns är 1000 µg per dag)',
+                    timing='På morgonen, med eller utan mat', frequency='En gång per dag'),
+        forms='Kalcium-L-metylfolat (L-5-MTHF), ett bra alternativ för personer med varianter av MTHFR-genen som bromsar '
+              'omvandlingen av vanlig folsyra.',
+        warnings=['Höga doser kan dölja tecknen på brist på B12-vitamin, så det tas helst tillsammans med B12',
+                  'Kvinnor som planerar en graviditet rekommenderas att ta 400 µg per dag från 4 veckor före befruktningen '
+                  'till vecka 8 av graviditeten'],
+        interactions='Folat kan minska effekten av metotrexat och vissa läkemedel mot epilepsi (fenytoin), och dessa '
+                     'läkemedel och metformin sänker folatnivåerna. Fråga din läkare innan du kombinerar dem.',
+        naturalSources='Mörka bladgrönsaker, baljväxter, sparris, broccoli, lever och citrusfrukter.'),
+    'pyridoxine': dict(
+        summary='B6-vitamin bidrar till nervsystemets normala funktion, till normal psykologisk funktion, till normal '
+                'bildning av röda blodkroppar, till immunsystemets normala funktion, till regleringen av hormonaktiviteten '
+                'och till att minska trötthet och utmattning (EFSA-godkända påståenden); det omvandlar aminosyran '
+                'tryptofan till serotonin.',
+        dosage=dict(recommended='Mindre än 12 mg per dag från alla källor sammanlagt (P5P i 5–10 mg; referensintaget är 1,4 mg)',
+                    timing='På morgonen till frukost', frequency='En gång per dag'),
+        forms='Pyridoxal-5\'-fosfat (P5P), den aktiva formen, eller pyridoxinhydroklorid.',
+        warnings=['EFSA:s övre gräns (2023) för vuxna är 12 mg per dag från alla källor sammanlagt; överskrid den inte',
+                  'Långvarig användning över gränsen är kopplad till perifer sensorisk neuropati (domningar och stickningar i '
+                  'händer och fötter); sluta genast om sådana symtom uppstår',
+                  'Kontrollera märkningen: B6 finns också i multivitaminer, magnesiumtillskott och B-komplex'],
+        interactions='B6-vitamin minskar effekten av levodopa (när det används utan karbidopa) och kan sänka nivåerna av '
+                     'fenytoin och fenobarbital. Isoniazid och penicillamin tömmer förråden av B6.',
+        naturalSources='Kyckling, fisk, potatis, bananer, kikärter och nötter.'),
+    'manganese': dict(
+        summary='Ett spårämne som bidrar till normal energiomsättning, till att bibehålla normal benstomme, till normal '
+                'bildning av bindväv och till att skydda cellerna mot oxidativ stress (EFSA-godkända påståenden); det ingår '
+                'i MnSOD, ett antioxidativt enzym inne i mitokondrierna.',
+        dosage=dict(recommended='2–4 mg per dag (referensintaget är 2 mg och EFSA:s adekvata intag är 3 mg)',
+                    timing='Till lunch', frequency='En gång per dag'),
+        forms='Manganbisglycinatkelat eller manganglukonat, ofta i ledpreparat med glukosamin och kollagen.',
+        warnings=['EFSA har inte fastställt någon säker övre gräns för mangan eftersom data är otillräckliga, så håll dig '
+                  'till måttliga doser',
+                  'Undvik det vid kronisk leversjukdom, eftersom levern gör sig av med mangan',
+                  'Brist är ovanlig hos personer som äter fullkorn, te och nötter'],
+        interactions='Mangan konkurrerar med järn, kalcium och magnesium om upptaget, så ta det med två timmars mellanrum '
+                     'från dem; det minskar upptaget av tetracykliner och kinolonantibiotika.',
+        naturalSources='Fullkorn, te, nötter (hasselnötter, valnötter), baljväxter, ananas och spenat.'),
+    'bilberry-extract': dict(
+        summary='Ett extrakt av europeiska vilda blåbär (Vaccinium myrtillus) rikt på antocyaner; kliniska studier tyder på '
+                'att det lindrar ansträngda och trötta ögon hos personer som arbetar många timmar vid skärm och stödjer '
+                'ciliarmuskeln som ställer in skärpan.',
+        dosage=dict(recommended='80–160 mg per dag', timing='Efter en måltid med ett glas vatten', frequency='En gång per dag'),
+        forms='Blåbärsextrakt standardiserat till 25 % antocyaner, i kapslar.',
+        warnings=['Tolereras väl i de vanliga doserna',
+                  'Undvik det koncentrerade extraktet under graviditet och amning, eftersom säkerhetsdata är otillräckliga'],
+        interactions='I höga doser kan det förstärka blodförtunnande och blodplättshämmande läkemedel (warfarin, '
+                     'acetylsalicylsyra) och sänka blodsockret ytterligare tillsammans med diabetesläkemedel.',
+        naturalSources='Färska eller frysta blåbär, amerikanska blåbär och svarta vinbär.'),
+    'hawthorn-berry': dict(
+        summary='En traditionell europeisk växt rik på flavonoider och procyanidiner; den används traditionellt för att '
+                'stödja hjärtats normala funktion och cirkulationen, och en klinisk studie tyder på att den stödjer ett '
+                'normalt blodtryck hos personer med lätt förhöjda värden.',
+        dosage=dict(recommended='300–600 mg standardiserat extrakt per dag', timing='Till en måltid på morgonen eller kvällen',
+                    frequency='Fördelat på två doser'),
+        forms='Extrakt av hagtornsblad, blommor och bär standardiserat för flavonoider eller procyanidiner (som WS 1442).',
+        warnings=['Ersätter inte förskrivna hjärtläkemedel; personer med hjärtsjukdom bör rådgöra med sin behandlande läkare '
+                  'före användning',
+                  'Undvik under graviditet och amning',
+                  'Kan ge lätt yrsel eller magbesvär'],
+        interactions='Viktig varning: hagtorn kan förstärka digoxin, betablockerare, ACE-hämmare, kalciumkanalblockerare och '
+                     'nitrater, så kombinera den bara med dem under din behandlande läkares uppföljning.',
+        naturalSources='Färska eller torkade hagtornsbär (används som te eller sylt).'),
+    'dandelion-root': dict(
+        summary='En traditionell växt rik på bitterämnen och inulin; roten används traditionellt för att stödja en normal '
+                'matsmältning och gallflödet, som hjälper till att smälta fett, och bladen används traditionellt för att '
+                'stödja ett normalt urinflöde.',
+        dosage=dict(recommended='500–1000 mg rotpulver (eller 250–500 mg koncentrerat extrakt)',
+                    timing='15 minuter före måltiderna med en kopp varmt vatten', frequency='1–2 gånger per dag'),
+        forms='Torkat maskrosrotspulver eller koncentrerat extrakt i kapslar, eller te på rostad rot.',
+        warnings=['Ska inte användas vid gallgångshinder, gallblåseinflammation eller gallsten utan medicinsk uppföljning',
+                  'Undvik om du är allergisk mot korgblommiga växter (kamomill, krysantemum)',
+                  'Kan ge lätt halsbränna'],
+        interactions='Maskros kan förstärka vätskedrivande läkemedel och höja litiumhalten i blodet, och den kan minska '
+                     'upptaget av kinolonantibiotika. Använd den med försiktighet tillsammans med diabetesläkemedel.',
+        naturalSources='Färska maskrosblad i sallader och te på rostad maskrosrot.'),
+    'burdock-root': dict(
+        summary='En traditionell rot rik på den prebiotiska fibern inulin, som ger näring åt nyttiga tarmbakterier, och på '
+                'antioxidativa polyfenoler; den används traditionellt för att stödja matsmältningen, en regelbunden mage och '
+                'en klar hud.',
+        dosage=dict(recommended='400–800 mg per dag', timing='Till lunch med rikligt med vatten', frequency='En gång per dag'),
+        forms='Torkat kardborrerotspulver eller extrakt i kapslar, eller te på roten.',
+        warnings=['Undvik om du är allergisk mot korgblommiga växter (kamomill, krysantemum)',
+                  'Undvik under graviditet och amning',
+                  'Köp den endast från pålitliga källor, eftersom roten kan förväxlas med den giftiga roten av belladonna'],
+        interactions='Kardborrerot kan sänka blodsockret ytterligare tillsammans med diabetesläkemedel och kan förstärka '
+                     'vätskedrivande och blodförtunnande läkemedel.',
+        naturalSources='Färsk kardborrerot (gobo) i japansk matlagning, cikoria, kronärtskocka och lök.'),
+    'black-elderberry': dict(
+        summary='Ett extrakt av kokta svarta fläderbär rikt på antocyaner och flavonoider; en metaanalys av kliniska studier '
+                'tyder på att det förkortar och lindrar symtom från de övre luftvägarna när det tas tidigt, och det stödjer '
+                'immunsystemets normala funktion under förkylningssäsongen.',
+        dosage=dict(recommended='300–500 mg standardiserat extrakt per dag som förebyggande stöd, och upp till 1000 mg '
+                                'fördelat på flera doser i 3–5 dagar vid de första tecknen på förkylning',
+                    timing='Direkt efter en måltid', frequency='1–3 gånger per dag'),
+        forms='Standardiserat fläderbärsextrakt (som Rubini eller Sambucol) i kapslar, sirap eller sugtabletter.',
+        warnings=['Använd endast tillverkade produkter; råa eller omogna bär, blad och stjälkar innehåller giftiga '
+                  'cyanogena ämnen',
+                  'Undvik under graviditet och amning, eftersom säkerhetsdata är otillräckliga',
+                  'Rådgör med din läkare om du har en autoimmun sjukdom'],
+        interactions='Fläder kan störa immunhämmande läkemedel (som läkemedel efter transplantation) och kan förstärka '
+                     'vätskedrivande läkemedel och diabetesläkemedel.',
+        naturalSources='Sylt och saft gjorda på kokta fläderbär.'),
+    'cat-s-claw': dict(
+        summary='Barken av en växt från Amazonas som används traditionellt för att stödja ledernas komfort och ett normalt '
+                'immunsvar; en studie på friska frivilliga tyder på att vattenextraktet stödjer reparationen av DNA och '
+                'skyddar cellerna mot oxidativ stress.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt per dag', timing='Till en rejäl måltid',
+                    frequency='En gång per dag'),
+        forms='Vattenextrakt av kattklobark standardiserat för oxindolalkaloider, i kapslar.',
+        warnings=['Ska inte användas under graviditet eller amning, eller av kvinnor som försöker bli gravida',
+                  'Inte för personer med autoimmuna sjukdomar (som lupus eller MS) eller organtransplanterade',
+                  'Sluta två veckor före en operation'],
+        interactions='Kattklo interagerar med immunhämmande och blodförtunnande läkemedel (warfarin) och kan förstärka '
+                     'blodtryckssänkande läkemedel; den kan hämma CYP3A4 och därmed höja blodnivåerna av vissa läkemedel.',
+        naturalSources='Finns inte i maten; barken används som traditionellt te i Sydamerika.'),
+    'olive-leaf-extract': dict(
+        summary='Ett extrakt rikt på oleuropein och hydroxityrosol, antioxidanter som är typiska för medelhavskosten; '
+                'kliniska studier tyder på att det stödjer normalt blodtryck och normala blodfetter och förbättrar '
+                'insulinkänsligheten hos vuxna med övervikt.',
+        dosage=dict(recommended='500–1000 mg per dag', timing='Till frukost eller lunch', frequency='Fördelat på två doser'),
+        forms='Olivbladsextrakt standardiserat till 15–20 % oleuropein, i kapslar eller som flytande extrakt.',
+        warnings=['Tolereras väl; kan ge lätta magbesvär eller huvudvärk de första dagarna',
+                  'Undvik under graviditet och amning, eftersom säkerhetsdata är otillräckliga'],
+        interactions='Olivbladsextrakt kan förstärka blodtrycks- och diabetesläkemedel, så följ dina värden när du kombinerar '
+                     'dem; använd det med försiktighet tillsammans med blodförtunnande läkemedel.',
+        naturalSources='Extra jungfruolivolja, oliver och te på olivblad.'),
+    'echinacea': dict(
+        summary='En traditionell ört som används under korta perioder för att stödja kroppens naturliga försvar under '
+                'förkylningssäsongen; metaanalyser tyder på en möjlig nytta för att förebygga och förkorta förkylningar, '
+                'med resultat som varierar mellan produkter.',
+        dosage=dict(recommended='300–500 mg standardiserat extrakt 3 gånger per dag vid de första tecknen på förkylning, '
+                                'i 5–7 dagar, sedan uppehåll',
+                    timing='Till måltiderna', frequency='3 gånger per dag'),
+        forms='Standardiserad saft eller extrakt av de ovanjordiska delarna av Echinacea purpurea, i kapslar eller droppar.',
+        warnings=['Använd den inte kontinuerligt i mer än 10 dagar',
+                  'Inte för personer som är allergiska mot korgblommiga växter, eller som har autoimmuna eller progressiva '
+                  'systemiska sjukdomar (som tuberkulos eller hiv)',
+                  'Rekommenderas inte för barn under 12 år'],
+        interactions='Röd solhatt kan störa immunhämmande läkemedel och påverka CYP450-enzymerna, vilket ändrar nivåerna av '
+                     'vissa läkemedel (som midazolam och koffein).',
+        naturalSources='Finns inte i maten; används som örtte eller extrakt.'),
+    'african-mango': dict(
+        summary='Ett extrakt av fröna från Irvingia gabonensis, rikt på löslig fiber; en klinisk studie tyder på att det '
+                'stödjer aptitkontroll, vikt, midjemått och blodfetter tillsammans med en balanserad kost, medan en '
+                'systematisk översikt beskriver evidensens kvalitet som fortfarande begränsad.',
+        dosage=dict(recommended='150 mg två gånger per dag (eller 300 mg en gång)',
+                    timing='30–60 minuter före en måltid med ett glas vatten', frequency='1–2 gånger per dag'),
+        forms='Standardiserat extrakt av afrikanska mangofrön (IGOB131) i kapslar.',
+        warnings=['Kan ge lätt muntorrhet, huvudvärk eller gaser de första dagarna; drick tillräckligt med vatten',
+                  'Undvik under graviditet och amning',
+                  'Det ersätter inte en balanserad kost och fysisk aktivitet'],
+        interactions='Det kan sänka blodsockret ytterligare tillsammans med diabetesläkemedel; ta andra läkemedel en timme '
+                     'före eller två timmar efter, eftersom fibern kan minska deras upptag.',
+        naturalSources='Fröna av irvingiafrukten (används i västafrikansk matlagning för att reda soppor).'),
+    'horny-goat-weed': dict(
+        summary='En traditionell asiatisk ört rik på ikariin; laboratorie- och djurstudier tyder på att ikariin stödjer '
+                'bildningen av kväveoxid och avslappningen av blodkärlen, vilket kan stödja ett normalt blodflöde och '
+                'vitaliteten, även om tillräckliga studier på människor fortfarande saknas.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt per dag', timing='En timme efter en måltid',
+                    frequency='En gång per dag'),
+        forms='Epimediumbladextrakt standardiserat till 10–20 % ikariin, i kapslar.',
+        warnings=['Kan sänka blodtrycket och ge yrsel; undvik det vid lågt blodtryck eller hjärtsjukdom',
+                  'Ska inte användas under graviditet eller amning',
+                  'Höga doser och långvarig användning kan ge hjärtklappning och irritabilitet'],
+        interactions='Viktig varning: kombinera det aldrig med nitrater mot hjärtsjukdom eller PDE5-hämmare (sildenafil, '
+                     'tadalafil) på grund av risken för ett kraftigt blodtrycksfall; använd det med försiktighet tillsammans '
+                     'med blodtryckssänkande och blodförtunnande läkemedel.',
+        naturalSources='Finns inte i maten; bladen används traditionellt som te i Kina.'),
+    'evening-primrose-oil': dict(
+        summary='En fröolja rik på gammalinolensyra (GLA), en omega-6-fettsyra; en metaanalys tyder på att den lindrar '
+                'cykliska bröstbesvär kopplade till menstruationscykeln, och en klinisk studie tyder på att den stödjer '
+                'hudens fuktighet, mjukhet och elasticitet hos friska vuxna.',
+        dosage=dict(recommended='1000–2000 mg per dag', timing='Till huvudmåltider som innehåller fett',
+                    frequency='Fördelat på två doser'),
+        forms='Kapslar med kallpressad nattljusolja standardiserad till 9–10 % GLA.',
+        warnings=['Sluta två veckor före en operation',
+                  'Använd den med försiktighet om du har haft krampanfall',
+                  'Undvik under graviditet om det inte sker under medicinsk uppföljning'],
+        interactions='Nattljusolja kan öka risken för blödning tillsammans med blodförtunnande och blodplättshämmande '
+                     'läkemedel (warfarin, acetylsalicylsyra, klopidogrel), och bör undvikas med fentiaziner eftersom den '
+                     'kan sänka kramptröskeln.',
+        naturalSources='Gurkörtsfröolja, svartvinbärsfröolja och hampfröolja.'),
+    'black-cohosh': dict(
+        summary='Roten av en nordamerikansk växt som används för att stödja välbefinnandet under klimakteriet; en metaanalys '
+                'tyder på att den minskar värmevallningar och nattliga svettningar med cirka 26 %, det spanska sällskapet '
+                'för klimakteriet bekräftar effekten och säkerheten hos standardiserade extrakt, och den hjälper till att '
+                'lugna humörsvängningar och dålig sömn i den här livsfasen.',
+        dosage=dict(recommended='40–80 mg standardiserat extrakt per dag', timing='Till frukost eller middag',
+                    frequency='1–2 gånger per dag'),
+        forms='Standardiserat isopropanol- eller etanolextrakt av silveraxrot (som Remifemin®).',
+        warnings=['Levervarning (EMA): undvik den vid leversjukdom; sluta genast och kontakta läkare om huden eller ögonen '
+                  'gulnar, urinen blir mörk eller du får smärta i övre delen av buken',
+                  'Inte för kvinnor som har haft östrogenkänsliga tumörer (som bröstcancer) utan medicinsk uppföljning',
+                  'Använd den inte i mer än 6 månader utan att rådgöra med läkare; ska inte användas under graviditet eller '
+                  'amning'],
+        interactions='Använd den med försiktighet tillsammans med läkemedel som belastar levern (som höga doser paracetamol '
+                     'och statiner), och kombinera den inte med hormonersättningsbehandling eller tamoxifen utan medicinsk '
+                     'uppföljning.',
+        naturalSources='Finns inte i maten; roten används som örtextrakt.'),
+    'phosphatidic-acid': dict(
+        summary='En naturlig fosfolipid som fungerar som signalmolekyl och aktiverar mTOR, signalvägen som driver '
+                'muskelproteinsyntesen; kliniska studier tyder på att intag tillsammans med styrketräning stödjer större '
+                'ökningar av fettfri massa och styrka än enbart träning.',
+        dosage=dict(recommended='750 mg per dag',
+                    timing='30–60 minuter före träning på träningsdagar, och till en måltid på vilodagar',
+                    frequency='En gång per dag'),
+        forms='Fosfatidsyra utvunnen ur sojalecitin (Mediator®), i kapslar.',
+        warnings=['Framställd av soja; undvik den om du är allergisk mot soja',
+                  'Den tolererades väl i studier som varade upp till 8 veckor; långsiktiga säkerhetsdata saknas',
+                  'Den hjälper bara tillsammans med ett regelbundet styrketräningsprogram'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats vid de vanliga doserna.',
+        naturalSources='Små mängder i kål, spenat och sojalecitin.'),
+    'ursolic-acid': dict(
+        summary='Ett växtämne som finns i äppelskal, rosmarin och basilika; djurstudier tyder på att det bevarar '
+                'muskelmassan och stödjer brunt fett och insulinkänsligheten, och en liten studie på människor tyder på att '
+                'det stödjer muskelstyrkan tillsammans med styrketräning, även om evidensen från människor fortfarande är '
+                'begränsad.',
+        dosage=dict(recommended='150–300 mg per dag', timing='Till huvudmåltider som innehåller fett, för bättre upptag',
+                    frequency='1–2 gånger per dag'),
+        forms='Extrakt av äppelskal eller rosmarin standardiserat för ursolsyra, i kapslar.',
+        warnings=['Evidensen från människor är begränsad; de flesta resultat kommer från djurstudier',
+                  'Undvik under graviditet och amning, eftersom säkerhetsdata är otillräckliga'],
+        interactions='Ursolsyra kan sänka blodsockret något, så använd den med försiktighet tillsammans med diabetesläkemedel.',
+        naturalSources='Äppelskal, rosmarin, basilika, timjan och tranbär.'),
+    'shilajit': dict(
+        summary='Ett naturligt harts från Himalayas klippor rikt på fulvosyra och mineraler; en dubbelblind studie tyder på '
+                'att det stödjer normala nivåer av totalt och fritt testosteron hos friska män efter 90 dagar, och en annan '
+                'att det hjälper till att bibehålla muskelstyrkan mot träningströtthet.',
+        dosage=dict(recommended='250–500 mg per dag', timing='På morgonen till frukost, eller upplöst i varmt vatten',
+                    frequency='1–2 gånger per dag'),
+        forms='Renad, standardiserad shilajit (som PrimaVie®) testad fri från tungmetaller och mykotoxiner, i kapslar.',
+        warnings=['Använd aldrig rå, orenad shilajit, eftersom den kan vara förorenad med tungmetaller',
+                  'Undvik den vid hemokromatos (järnöverskott) eller gikt',
+                  'Ska inte användas under graviditet, amning eller före 18 års ålder'],
+        interactions='Shilajit kan förstärka blodtrycks- och diabetesläkemedel; kombinera det inte med '
+                     'testosteronersättning (TRT).',
+        naturalSources='Finns inte i maten; den samlas in från sprickor i bergsklippor.'),
+})
+
+# third batch, part B
+COPY.update({
+    'dong-quai': dict(
+        summary="En rot som i traditionell kinesisk medicin kallas 'kvinnornas ginseng'; den används traditionellt för att "
+                'stödja cirkulationen i bäckenområdet, välbefinnandet under menstruationen och varma händer och fötter, även '
+                'om modern klinisk evidens fortfarande är begränsad.',
+        dosage=dict(recommended='500–1000 mg rotpulver (eller 200–400 mg standardiserat extrakt)',
+                    timing='Till lunch med ett stort glas vatten', frequency='En gång per dag'),
+        forms='Torkat rotpulver av dong quai, eller extrakt standardiserat för ferulsyra eller ligustilid.',
+        warnings=['Ska inte användas under graviditet, eftersom den kan utlösa livmodersammandragningar; undvik under amning',
+                  'Undvik den vid östrogenkänsliga tillstånd eller riklig menstruationsblödning',
+                  'Den kan göra huden mer känslig för solljus; använd solskydd'],
+        interactions='Viktig varning: den innehåller kumariner som kan förstärka warfarin, blodförtunnande och '
+                     'blodplättshämmande läkemedel och öka risken för blödning; sluta två veckor före en operation.',
+        naturalSources='Ingår inte i västerländsk mat; roten används i soppor och te i det kinesiska köket.'),
+    'vitex': dict(
+        summary='Frukten av en buske från Medelhavsområdet som verkar på dopaminreceptorer i hypofysen och hjälper till att '
+                'reglera frisättningen av prolaktin; en metaanalys av randomiserade studier tyder på att den lindrar '
+                'premenstruella besvär som ömma bröst, humörsvängningar och irritabilitet.',
+        dosage=dict(recommended='20–40 mg standardiserat torrextrakt per dag (eller 200–400 mg fruktpulver)',
+                    timing='På morgonen på nästan tom mage', frequency='En gång per dag, under minst 3 menstruationscykler'),
+        forms='Standardiserat torrextrakt av munkpepparfrukt (som Ze 440 eller BNO 1095), eller fruktpulver.',
+        warnings=['Ska inte användas under graviditet eller amning',
+                  'Undvik den vid östrogenkänsliga tillstånd eller sjukdomar i hypofysen',
+                  'Kan ge lätt illamående, huvudvärk eller hudutslag'],
+        interactions='Munkpeppar kan störa hormonella preventivmedel och hormonbehandling, och läkemedel som verkar på dopamin '
+                     '(dopaminagonister som bromokriptin, och antipsykotiska läkemedel).',
+        naturalSources='Ingår inte i vanlig mat; frukten användes förr som ersättning för peppar.'),
+    'wild-yam': dict(
+        summary='En traditionell rot rik på diosgenin; den används traditionellt för att lindra kramper i tarmen och '
+                'bäckenets muskler. Diosgenin omvandlas inte till progesteron eller andra hormoner i kroppen, trots vad '
+                'marknadsföringen påstår, och en klinisk studie fann ingen märkbar effekt på klimakteriebesvär eller '
+                'hormonnivåer.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt per dag', timing='Till kvällsmåltiden',
+                    frequency='En gång per dag'),
+        forms='Extrakt av vild jamsrot standardiserat till 10–16 % diosgenin, i kapslar.',
+        warnings=['Den ersätter inte hormonbehandling, och krämer eller kapslar med vild jams innehåller inget riktigt '
+                  'progesteron',
+                  'Höga doser kan ge magbesvär eller illamående',
+                  'Undvik under graviditet och amning och vid östrogenkänsliga tillstånd'],
+        interactions='Teoretiskt kan den störa p-piller, hormonbehandling och östradiol; fråga din läkare innan du kombinerar dem.',
+        naturalSources='Vild jams äts inte som mat; ätliga jamsarter (Dioscorea) äts kokta i Afrika och Asien.'),
+    'ceramides': dict(
+        summary='Växtlipider som liknar de ceramider som bygger upp hudbarriären och minskar med åldern; dubbelblinda studier '
+                'tyder på att intag via munnen stödjer hudens fuktighet, elasticitet och mjukhet och minskar vattenförlusten '
+                'genom huden.',
+        dosage=dict(recommended='100–350 mg extrakt per dag', timing='Till en måltid som innehåller fett',
+                    frequency='En gång per dag'),
+        forms='Ceramider utvunna ur glutenfritt vete (Lipowheat®) eller ur ris eller konjak, i kapslar.',
+        warnings=['Säkra och väl tolererade',
+                  'För personer med celiaki eller veteallergi är ceramider från ris eller konjak det bättre valet'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats.',
+        naturalSources='Vete, ris, sötpotatis, konjak och sojabönor.'),
+    'hyaluronic-acid': dict(
+        summary='En molekyl som binder stora mängder vatten och finns naturligt i huden och ledvätskan; en dubbelblind '
+                'studie och en ny analys tyder på att intag via munnen stödjer hudens fuktighet och elasticitet och mildrar '
+                'synliga fina linjer, och den används också för att stödja smidiga och bekväma leder.',
+        dosage=dict(recommended='100–200 mg per dag', timing='På morgonen eller till lunch, med ett stort glas vatten',
+                    frequency='En gång per dag'),
+        forms='Natriumhyaluronat med låg till medelhög molekylvikt framställt genom fermentering, i kapslar.',
+        warnings=['Säkert och väl tolererat hos vuxna',
+                  'Rekommenderas inte under graviditet, amning eller för barn, eftersom data är otillräckliga',
+                  'Drick tillräckligt med vatten under dagen'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats.',
+        naturalSources='Benbuljong, fågelskinn och brosk (i små mängder).'),
+    'krill-oil': dict(
+        summary='En marin källa till EPA och DHA bundna till fosfolipider, naturligt rik på astaxantin; EPA och DHA bidrar '
+                'till att hjärtat fungerar normalt vid 250 mg per dag (EFSA-godkänt påstående), och kliniska studier tyder '
+                'på att krillolja stödjer normala triglyceridnivåer och ledernas komfort.',
+        dosage=dict(recommended='1000–1500 mg krillolja per dag (som ger minst 250 mg EPA och DHA tillsammans)',
+                    timing='Till en måltid som innehåller fett', frequency='En gång per dag'),
+        forms='Krilloljekapslar från certifierat antarktiskt fiske (som MSC), som ger EPA och DHA i fosfolipidform med '
+              'astaxantin.',
+        warnings=['Inte för personer som är allergiska mot kräftdjur eller skaldjur',
+                  'Sluta två veckor före en operation',
+                  'Undvik under graviditet och amning om det inte sker under medicinsk uppföljning'],
+        interactions='Krillolja kan förstärka blodförtunnande och blodplättshämmande läkemedel (warfarin, acetylsalicylsyra, '
+                     'klopidogrel) och sänka blodtrycket ytterligare tillsammans med blodtryckssänkande läkemedel.',
+        naturalSources='Fet fisk (lax, makrill, sardiner, sill) och skaldjur.'),
+    'magnesium-threonate': dict(
+        summary='En form av magnesium som är framtagen för att höja magnesiumhalten i hjärnan; magnesium bidrar till '
+                'nervsystemets normala funktion, till normal psykologisk funktion och till att minska trötthet och '
+                'utmattning (EFSA-godkända påståenden), en djurstudie tyder på att det stödjer inlärning och minne, och en '
+                'ny klinisk studie tyder på att det förbättrar sömnkvaliteten och funktionen under dagen.',
+        dosage=dict(recommended='1000–2000 mg Magtein® per dag (som ger cirka 72–144 mg elementärt magnesium)',
+                    timing='En dos till lunch och en en timme före sänggåendet', frequency='Fördelat på två doser'),
+        forms='Varumärkt magnesium-L-treonat (Magtein®), i kapslar eller pulver.',
+        warnings=['EFSA:s övre gräns för magnesium från kosttillskott är 250 mg per dag; räkna med magnesiumet i alla dina '
+                  'tillskott',
+                  'Använd det med försiktighet om du har njursvikt, eftersom njurarna gör sig av med magnesium',
+                  'Det är skonsammare mot tarmen än andra magnesiumformer, men kan ge dåsighet eller lätt huvudvärk'],
+        interactions='Det minskar upptaget av tetracykliner, kinolonantibiotika och läkemedel mot benskörhet '
+                     '(bisfosfonater), så ta det med minst två timmars mellanrum från dem.',
+        naturalSources='Magnesium: mörka bladgrönsaker, nötter och frön, baljväxter, fullkorn och mörk choklad.'),
+    'copper': dict(
+        summary='Ett spårämne som bidrar till normal transport av järn i kroppen, till normal pigmentering av hår och hud, '
+                'till att bibehålla normal bindväv, till immunsystemets och nervsystemets normala funktion och till att '
+                'skydda cellerna mot oxidativ stress (EFSA-godkända påståenden); koppar är en nödvändig partner vid '
+                'långvarigt intag av zinktillskott.',
+        dosage=dict(recommended='1–2 mg per dag (referensintaget är 1 mg och EFSA:s adekvata intag är 1,3–1,6 mg för vuxna)',
+                    timing='Till lunch', frequency='En gång per dag'),
+        forms='Kopparglukonat eller kopparbisglycinatkelat.',
+        warnings=['EFSA:s övre gräns för vuxna är 5 mg per dag från alla källor',
+                  'Inte för personer med Wilsons sjukdom (ärftlig kopparansamling)',
+                  'Ta inte höga doser ensamt utan behov eller provsvar'],
+        interactions='Höga doser zink minskar upptaget av koppar, så ta dem med två timmars mellanrum; koppar minskar upptaget '
+                     'av tetracykliner, kinolonantibiotika och penicillamin.',
+        naturalSources='Lever, ostron, cashewnötter och andra nötter, sesamfrön, mörk choklad och baljväxter.'),
+    'plant-sterols-and-stanols': dict(
+        summary='Växtsteroler och växtstanoler har visats sänka kolesterolhalten i blodet. Högt kolesterol är en riskfaktor '
+                'för utveckling av kranskärlssjukdom. Ett dagligt intag av 1,5–2,4 g sänker kolesterolet med 7–10 % inom '
+                '2–3 veckor (EFSA-godkänt påstående), eftersom de konkurrerar med kolesterolet om upptaget i tarmen.',
+        dosage=dict(recommended='1,5–3 g per dag (överskrid inte 3 g per dag från alla källor)',
+                    timing='Till huvudmåltiden som innehåller fett', frequency='1–2 gånger per dag'),
+        forms='Växtsterol- eller växtstanolestrar i kapslar, eller tillsatta i berikade livsmedel.',
+        warnings=['Endast avsett för personer som vill sänka sitt kolesterol; passar inte gravida, ammande eller barn under '
+                  '5 år',
+                  'Personer som tar kolesterolsänkande läkemedel bör rådgöra med sin läkare före användning',
+                  'De kan minska upptaget av betakaroten något; ät rikligt med färgstarka frukter och grönsaker'],
+        interactions='De förstärker effekten av kolesterolläkemedel (statiner, ezetimib), så rådgör med din läkare när du '
+                     'kombinerar dem.',
+        naturalSources='Vegetabiliska oljor, nötter och frön, baljväxter och fullkorn (i mängder långt under den verksamma '
+                       'dosen).'),
+    'red-yeast-rice': dict(
+        summary='Ris som fermenterats med svampen Monascus purpureus, som bildar monakolin K, en hämmare av HMG-CoA-reduktas, '
+                'enzymet som bildar kolesterol i levern; en placebokontrollerad studie och en översikt i JACC tyder på att '
+                'det stödjer normala nivåer av totalkolesterol och LDL-kolesterol.',
+        dosage=dict(recommended='Mindre än 3 mg monakolin K per dag (EU:s lagstadgade gräns enligt förordning (EU) 2022/860)',
+                    timing='På kvällen till middagen', frequency='En gång per dag'),
+        forms='Extrakt av röd jästris standardiserat för monakolin K (mindre än 3 mg per daglig portion) och testat fritt '
+              'från citrinin.',
+        warnings=['Obligatoriska varningar (EU 2022/860): inte för gravida eller ammande, personer under 18 år eller personer '
+                  'över 70 år',
+                  'Använd det inte tillsammans med någon annan produkt som innehåller röd jästris, eller med '
+                  'kolesterolsänkande läkemedel',
+                  'Kontakta läkare om något hälsoproblem uppstår, särskilt oförklarlig muskelsmärta eller muskelsvaghet'],
+        interactions='Viktig varning: kombinera det aldrig med statiner eller fibrater. CYP3A4-hämmare (grapefruktjuice, '
+                     'klaritromycin, itrakonazol, vissa hivläkemedel) ökar risken för muskelskador.',
+        naturalSources='Ingår inte i västerländsk mat; fermenterat rött ris används traditionellt som livsmedelsfärg i det '
+                       'asiatiska köket.'),
+    'nattokinase': dict(
+        summary='Ett enzym från japanska fermenterade sojabönor (natto) som kan bryta ned proteinet fibrin; en randomiserad '
+                'studie tyder på att det stödjer normalt blodtryck och normala nivåer av von Willebrand-faktor, och en annan '
+                'studie på människor att det stödjer normala nivåer av fibrinogen och koagulationsfaktorer, vilket hjälper '
+                'blodet att flöda fritt.',
+        dosage=dict(recommended='2000 FU per dag (cirka 100 mg)',
+                    timing='På fastande mage: en halvtimme före frukost eller en timme före sänggåendet',
+                    frequency='En gång per dag'),
+        forms='Nattokinas standardiserat i fibrinolytiska enheter (FU), renat och fritt från K2-vitamin (som NSK-SD®), i kapslar.',
+        warnings=['Inte för personer med blödningsrubbningar eller aktivt magsår; sluta två veckor före en operation eller ett '
+                  'tandingrepp',
+                  'Undvik det om du är allergisk mot soja',
+                  'Ska inte användas under graviditet eller amning'],
+        interactions='Viktig varning: kombinera det inte med blodförtunnande eller blodplättshämmande läkemedel (warfarin, '
+                     'heparin, acetylsalicylsyra, klopidogrel, nyare antikoagulantia) utan medicinsk uppföljning, på grund av '
+                     'risken för blödning. Det kan också förstärka blodtryckssänkande läkemedel.',
+        naturalSources='Natto (japanska fermenterade sojabönor).'),
+    'bromelain': dict(
+        summary='En blandning av proteinnedbrytande enzymer från ananasstjälkar; till maten hjälper den till att smälta '
+                'protein, och mellan måltiderna används den för att stödja ledernas komfort och minska svullnad, och en '
+                'klinisk studie tyder på att den lindrar lätta knäbesvär och förbättrar välbefinnandet hos friska vuxna.',
+        dosage=dict(recommended='500 mg per dag',
+                    timing='För matsmältningen: till en proteinrik måltid. För ledernas komfort: mellan måltiderna på tom mage',
+                    frequency='1–2 gånger per dag'),
+        forms='Bromelain standardiserat för enzymaktivitet (minst 2400 GDU/g), i kapslar eller tabletter.',
+        warnings=['Undvik det om du är allergisk mot ananas, latex, papain eller gräspollen',
+                  'Sluta två veckor före en operation och undvik det vid aktivt magsår',
+                  'Undvik under graviditet och amning'],
+        interactions='Bromelain ökar upptaget av vissa antibiotika (amoxicillin, tetracyklin) och kan förstärka '
+                     'blodförtunnande och blodplättshämmande läkemedel.',
+        naturalSources='Färsk ananas (särskilt kärnan och stjälken).'),
+    'papain': dict(
+        summary='Ett proteinnedbrytande enzym från saven i omogen papaya; det hjälper till att bryta ned proteinerna i kött '
+                'och baljväxter, och en klinisk studie av ett papayapreparat tyder på att det lindrar matsmältningsbesvär, '
+                'uppblåsthet och förstoppning.',
+        dosage=dict(recommended='100–300 mg till en måltid', timing='Med första tuggan av en proteinrik huvudmåltid',
+                    frequency='Till huvudmåltiderna'),
+        forms='Rent papainpulver standardiserat i USP-enheter, eller tuggtabletter av papaya.',
+        warnings=['Undvik det om du är allergisk mot papaya, latex, kiwi eller fikon',
+                  'Ska inte användas i tillskottsdoser under graviditet',
+                  'Undvik det vid aktivt magsår'],
+        interactions='Papain kan förstärka warfarin och höja PK(INR); följ dina värden när du kombinerar dem.',
+        naturalSources='Färsk papaya (särskilt omogen).'),
+    'full-spectrum-digestive-enzymes': dict(
+        summary='En blandning av enzymer som hjälper till att smälta måltidens olika delar: amylas för stärkelse, proteas för '
+                'protein, lipas för fett och laktas för mjölksocker; en randomiserad studie tyder på att ett '
+                'multienzymkomplex lindrar symtomen vid funktionell dyspepsi och uppblåsthet.',
+        dosage=dict(recommended='1–2 kapslar till en måltid', timing='Med första tuggan av en huvudmåltid',
+                    frequency='Till huvudmåltiderna'),
+        forms='Ett enzymkomplex från växter eller mikroorganismer (som DigeZyme®) i kapslar.',
+        warnings=['Undvik det vid aktivt magsår eller akut bukspottkörtelinflammation',
+                  'Det ersätter inte förskrivna bukspottkörtelenzymer vid bukspottkörtelsvikt',
+                  'Kontakta läkare om matsmältningsbesvären varar mer än två veckor'],
+        interactions='Akarbos och miglitol kan minska effekten av amylas; använd det med försiktighet tillsammans med '
+                     'blodförtunnande läkemedel om det innehåller bromelain eller papain.',
+        naturalSources='Ananas, papaya, kiwi, mango och fermenterade livsmedel (kefir, surkål).'),
+    'l-tyrosine': dict(
+        summary='En aminosyra som kroppen använder för att bilda dopamin, noradrenalin och sköldkörtelhormoner; en klinisk '
+                'översikt tyder på att den stödjer mental prestation och arbetsminne i krävande situationer, som sömnbrist '
+                'och hård mental stress, när dessa signalsubstanser tar slut.',
+        dosage=dict(recommended='500–1000 mg (upp till 1500 mg under perioder med hård mental belastning)',
+                    timing='På morgonen på fastande mage, 30 minuter före maten, med ett glas vatten',
+                    frequency='En gång per dag vid behov'),
+        forms='L-tyrosin i fri form i kapslar eller pulver, eller N-acetyl-L-tyrosin (NALT).',
+        warnings=['Inte för personer med överfunktion i sköldkörteln eller Graves sjukdom',
+                  'Undvik det vid melanom eller svår fenylketonuri (PKU)',
+                  'Undvik under graviditet och amning'],
+        interactions='Viktig varning: kombinera det aldrig med antidepressiva MAO-hämmare på grund av risken för en kraftig '
+                     'blodtrycksstegring; använd det med försiktighet tillsammans med sköldkörtelläkemedel (levotyroxin) och '
+                     'levodopa.',
+        naturalSources='Ägg, kyckling, fisk, ost, sojabönor och mandlar.'),
+    'vitamin-b12': dict(
+        summary='B12-vitamin bidrar till nervsystemets normala funktion, till normal psykologisk funktion, till normal '
+                'bildning av röda blodkroppar, till normal energiomsättning och till att minska trötthet och utmattning '
+                '(EFSA-godkända påståenden); veganer, äldre och personer som länge tar metformin eller syrahämmande '
+                'läkemedel behöver det mest.',
+        dosage=dict(recommended='500–1000 µg per dag (referensintaget är 2,5 µg; högre doser kompenserar för ett dåligt upptag)',
+                    timing='På morgonen till frukost', frequency='En gång per dag'),
+        forms='Metylkobalamin eller adenosylkobalamin, eller det stabila cyanokobalaminet; sublinguala tabletter finns.',
+        warnings=['Ett mycket säkert vattenlösligt vitamin; EFSA har inte fastställt någon övre gräns',
+                  'Bestående domningar i händer eller fötter kräver ett blodprov för B12 hos din läkare',
+                  'Veganer behöver en regelbunden källa till B12'],
+        interactions='Metformin, protonpumpshämmare (som omeprazol) och H2-blockerare sänker upptaget av B12 vid långvarig '
+                     'användning; ta höga doser C-vitamin med två timmars mellanrum.',
+        naturalSources='Lever, skaldjur, fisk, rött kött, ägg och mejeriprodukter.'),
+    'potassium-citrate': dict(
+        summary='Kalium bidrar till att bibehålla ett normalt blodtryck och till normal muskelfunktion och nervsystemets '
+                'normala funktion (EFSA-godkända påståenden); en metaanalys i BMJ kopplar ett högre kaliumintag till ett '
+                'hälsosammare blodtryck, särskilt vid en salt kost.',
+        dosage=dict(recommended='200–400 mg elementärt kalium (det totala dagliga behovet enligt EFSA är cirka 3500 mg, '
+                                'främst från maten)',
+                    timing='Till en hel måltid med ett stort glas vatten', frequency='1–2 gånger per dag'),
+        forms='Kaliumcitrat i kapslar eller pulver; citratformen är skonsam mot magen.',
+        warnings=['Inte för personer med njursvikt eller högt kalium i blodet',
+                  'Överskrid inte dosen utan provsvar, eftersom för mycket kalium kan störa hjärtrytmen',
+                  'Kan ge lätta magbesvär'],
+        interactions='Viktig varning: kombinera det inte med kaliumsparande diuretika (spironolakton, amilorid), '
+                     'ACE-hämmare, angiotensinreceptorblockerare eller saltersättning med kalium utan medicinsk uppföljning.',
+        naturalSources='Bananer, potatis, avokado, spenat, baljväxter, torkade aprikoser och yoghurt.'),
+    'silica': dict(
+        summary='Kisel deltar i uppbyggnaden av kollagen och bindväv i hud, hår, naglar och skelett; en klinisk studie tyder '
+                'på att kolinstabiliserad ortokiselsyra (ch-OSA) stödjer styrkan och tjockleken hos tunt hår hos kvinnor.',
+        dosage=dict(recommended='10 mg elementärt kisel (ch-OSA), eller 300–500 mg standardiserat åkerfräkenextrakt',
+                    timing='Till lunch med rikligt med vatten', frequency='En gång per dag'),
+        forms='Kolinstabiliserad ortokiselsyra (ch-OSA), den form som tas upp bäst, eller standardiserat åkerfräkenextrakt '
+              'fritt från tiaminas.',
+        warnings=['Åkerfräkenextrakt måste vara fritt från tiaminas, eftersom tiaminas tömmer förråden av B1-vitamin',
+                  'Undvik åkerfräken vid njur- eller hjärtsjukdom, eftersom den är vätskedrivande',
+                  'Undvik under graviditet och amning'],
+        interactions='Åkerfräken kan förstärka vätskedrivande läkemedel och sänka kaliumet; använd den med försiktighet '
+                     'tillsammans med litium och digoxin.',
+        naturalSources='Havre, korn och fullkornsris, bananer, gröna bönor och mineralvatten.'),
+    'pumpkin-seed-oil': dict(
+        summary='En kallpressad olja rik på växtsteroler, linolsyra och E-vitamin; en ettårig klinisk studie tyder på att '
+                'den stödjer bekväm vattenkastning hos äldre män, och en annan randomiserad studie rapporterar mer hår hos '
+                'män med ärftligt håravfall.',
+        dosage=dict(recommended='1000–2000 mg olja per dag', timing='Till en huvudmåltid', frequency='1–2 gånger per dag'),
+        forms='Kapslar med kallpressad pumpafröolja, eller hela pumpafrön.',
+        warnings=['Mycket säker och väl tolererad',
+                  'Svårigheter att kissa eller blod i urinen kräver en läkarkontroll för att utesluta andra orsaker'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats; berätta för din läkare om du tar '
+                     'prostataläkemedel.',
+        naturalSources='Råa eller rostade pumpafrön.'),
+    'sage-extract': dict(
+        summary='En ört från Medelhavsområdet som används traditionellt för att minska kraftig svettning (traditionell '
+                'användning enligt EMA); en multicenterstudie rapporterar ungefär 50–64 % färre värmevallningar hos kvinnor '
+                'i klimakteriet med ett preparat av färsk salvia, och en studie med en närbesläktad salviaart tyder på stöd '
+                'för korttidsminnet.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt med låg tujonhalt per dag', timing='Till frukost eller middag',
+                    frequency='En gång per dag'),
+        forms='Tabletter eller standardiserat extrakt av salviablad med låg tujonhalt.',
+        warnings=['Ska inte användas under graviditet eller amning; salvia kan minska mjölkproduktionen',
+                  'Inte för personer med epilepsi, eftersom tujon kan sänka kramptröskeln',
+                  'Använd endast produkter med låg tujonhalt, och överskrid inte dosen'],
+        interactions='Salvia kan interagera med läkemedel mot epilepsi, lugnande medel och diabetesläkemedel; fråga din läkare '
+                     'innan du kombinerar dem.',
+        naturalSources='Färska eller torkade salviablad (används i te och matlagning).'),
+    'anise-seeds': dict(
+        summary='Aromatiska frön rika på anetol som används traditionellt för att lindra kramper i matsmältningen, '
+                'uppblåsthet och gaser (traditionell användning enligt EMA); en klinisk studie tyder på att enterodragerade '
+                'kapslar med anisolja lindrade symtomen vid IBS.',
+        dosage=dict(recommended='1–2 g fröpulver (eller 300–600 mg standardiserat extrakt)',
+                    timing='Efter en måltid med en kopp varmt vatten', frequency='1–3 gånger per dag'),
+        forms='Pulver av anisfrön eller te, eller enterodragerade kapslar med anisolja.',
+        warnings=['Undvik det om du är allergisk mot flockblommiga växter (selleri, fänkål, koriander)',
+                  'Undvik den koncentrerade oljan under graviditet, amning och hos barn, och vid östrogenkänsliga tillstånd'],
+        interactions='Teoretiskt kan anis störa hormonbehandling, p-piller och tamoxifen, eftersom anetol har en svag '
+                     'östrogenliknande effekt.',
+        naturalSources='Anisfrön (används i te och bakning).'),
+    'chamomile-flowers': dict(
+        summary='Blommor rika på flavonoiden apigenin, som binder till GABA-receptorer i hjärnan; en långvarig klinisk studie '
+                'tyder på att ett standardiserat kamomillextrakt stödde lugnet och lindrade ångestsymtom, och kamomill '
+                'används traditionellt för att lindra kramper i mage och tarm.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt per dag',
+                    timing='45 minuter före sänggåendet, eller efter måltiderna för magens komfort',
+                    frequency='1–2 gånger per dag'),
+        forms='Kamomillextrakt standardiserat till 1,2 % apigenin, eller te på blommorna.',
+        warnings=['Undvik det om du är allergisk mot korgblommiga växter (ambrosia, krysantemum)',
+                  'Kan ge dåsighet; kör inte bil efter intag',
+                  'Undvik det koncentrerade extraktet under graviditet'],
+        interactions='Kamomill förstärker lugnande medel och sömnmedel och kan förstärka warfarin och andra blodförtunnande '
+                     'läkemedel.',
+        naturalSources='Kamomillte.'),
+    'cumin-seeds': dict(
+        summary='Aromatiska frön som används traditionellt för att stödja matsmältningen och lindra uppblåsthet; '
+                'metaanalyser av kliniska studier tyder på att tillskott av spiskummin kan stödja normala nivåer av '
+                'blodfetter och blodsocker och viktmått som en del av en hälsosam livsstil.',
+        dosage=dict(recommended='300–500 mg koncentrerat extrakt (eller 1–2 g pulver)',
+                    timing='15 minuter före huvudmåltiderna med ett glas vatten', frequency='1–2 gånger per dag'),
+        forms='Koncentrerat extrakt av spiskumminfrön i kapslar, eller fröpulver.',
+        warnings=['Säkert i de mängder som används i mat och i vanliga doser',
+                  'Undvik det koncentrerade extraktet under graviditet och amning',
+                  'Sluta två veckor före en operation'],
+        interactions='Spiskummin kan sänka blodsockret ytterligare tillsammans med diabetesläkemedel och kan förstärka '
+                     'blodförtunnande läkemedel.',
+        naturalSources='Spiskumminfrön (används i matlagning och kryddblandningar).'),
+    'hibiscus-flower-tea': dict(
+        summary='Blommor rika på antocyaner och polyfenoler; en metaanalys av randomiserade studier tyder på att hibiskus '
+                'stödjer normalt systoliskt och diastoliskt blodtryck, en klinisk studie bekräftar detta hos vuxna med lätt '
+                'förhöjt blodtryck, och den har en lätt vätskedrivande effekt.',
+        dosage=dict(recommended='400–800 mg standardiserat extrakt per dag (eller 2–3 koppar te)',
+                    timing='Till frukost eller lunch', frequency='1–2 gånger per dag'),
+        forms='Hibiskusextrakt standardiserat för antocyaner i kapslar, eller te på blommorna.',
+        warnings=['Undvik det om du har lågt blodtryck',
+                  'Undvik under graviditet och amning',
+                  'Rådgör med din läkare om du behandlar ditt blodtryck med läkemedel'],
+        interactions='Hibiskus kan förstärka blodtryckssänkande och vätskedrivande läkemedel (som hydroklortiazid) och kan '
+                     'minska upptaget av klorokin; följ dina värden när du kombinerar dem.',
+        naturalSources='Hibiskuste (varmt eller iskallt).'),
+    'glutathione': dict(
+        summary='En tripeptid som är en av de viktigaste antioxidanterna inne i cellerna och hjälper till att återvinna C- och '
+                'E-vitamin; en randomiserad studie tyder på att intag via munnen höjer kroppens glutationförråd, och en '
+                'översikt pekar på stöd för en strålande, jämn hudton.',
+        dosage=dict(recommended='250 mg per dag', timing='På morgonen på fastande mage', frequency='En gång per dag'),
+        forms='Reducerat glutation framställt genom fermentering (som Setria®), eller den liposomala formen.',
+        warnings=['Tolereras väl; kan ge lätt uppblåsthet',
+                  'Undvik under graviditet och amning, eftersom data är otillräckliga',
+                  'Personer med astma: undvik inhalerat glutation, och använd formen som tas via munnen endast efter samråd '
+                  'med läkare'],
+        interactions='Använd det inte under cytostatikabehandling utan din specialists godkännande, eftersom det kan påverka '
+                     'hur vissa läkemedel verkar.',
+        naturalSources='Kroppen bildar det av cystein, glycin och glutamat; finns i sparris, avokado och spenat.'),
+})
+
+# third batch, part C
+COPY.update({
+    'artichoke-extract': dict(
+        summary='Blad rika på cynarin och luteolin som stimulerar gallflödet; en klinisk studie tyder på att '
+                'kronärtskocksextrakt lindrade matsmältningsbesvär och uppblåsthet efter feta måltider, och en metaanalys '
+                'tyder på att det stödjer normala nivåer av kolesterol och triglycerider.',
+        dosage=dict(recommended='300–600 mg standardiserat extrakt per dag',
+                    timing='15 minuter före huvudmåltiderna med ett glas vatten', frequency='1–2 gånger per dag'),
+        forms='Kronärtskocksbladsextrakt standardiserat till 2,5–5 % cynarin.',
+        warnings=['Ska inte användas vid gallgångshinder; rådgör med läkare om du har gallsten',
+                  'Undvik det om du är allergisk mot korgblommiga växter',
+                  'Undvik under graviditet och amning'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats; använd det med försiktighet tillsammans med '
+                     'kolesterolläkemedel.',
+        naturalSources='Färska eller konserverade kronärtskockor (hjärtan och blad).'),
+    'cranberry-extract': dict(
+        summary='Rikt på proantocyanidiner av typ A (PAC), som hindrar E. coli-bakterier från att fästa vid blåsväggen; den '
+                'uppdaterade Cochraneöversikten (2023) kopplar tranbärsprodukter till färre återkommande urinvägsbesvär hos '
+                'mottagliga kvinnor och hos barn.',
+        dosage=dict(recommended='En mängd som ger minst 36 mg PAC per dag',
+                    timing='På kvällen före sänggåendet med ett stort glas vatten', frequency='En gång per dag'),
+        forms='Standardiserat tranbärsextrakt som ger minst 36 mg PAC per dag.',
+        warnings=['Det ersätter inte ett läkarbesök om du har kraftig sveda, feber, ryggsmärta eller blod i urinen',
+                  'Använd det med försiktighet om du har haft njursten av oxalat'],
+        interactions='Tranbär kan förstärka warfarin och höja PK(INR); följ dina värden när du kombinerar dem.',
+        naturalSources='Färska eller osötade torkade tranbär och osötad tranbärsjuice.'),
+    'nettle-leaf-root': dict(
+        summary='En växt med två användningsområden: en klinisk studie på 620 män tyder på att extrakt av nässelrot stödde '
+                'urinflödet och bekväm vattenkastning hos äldre män, medan en laboratoriestudie tyder på att bladextraktet '
+                'verkar på histaminreceptorer, vilket kan stödja välbefinnandet under pollensäsongen.',
+        dosage=dict(recommended='Rot: 300–600 mg extrakt. Blad: 300–500 mg extrakt', timing='Till måltiderna',
+                    frequency='1–2 gånger per dag'),
+        forms='Extrakt av nässelrot för bekväm vattenkastning, och frystorkat bladextrakt för våren.',
+        warnings=['Lätt vätskedrivande; drick tillräckligt med vatten',
+                  'Långvariga svårigheter att kissa kräver en läkarkontroll för att utesluta andra orsaker',
+                  'Undvik under graviditet och amning'],
+        interactions='Brännässla kan förstärka vätskedrivande, blodtryckssänkande och diabetesläkemedel och höja '
+                     'litiumnivåerna; nässelblad är rika på K-vitamin, så var försiktig med warfarin.',
+        naturalSources='Kokta färska nässelblad (nässelsoppa) och nässelte.'),
+    'beta-glucan': dict(
+        summary='Fiber från jästens cellvägg eller från havre. Betaglukan från havre har visats sänka kolesterolhalten i '
+                'blodet vid 3 g per dag (EFSA-godkänt påstående), och högt kolesterol är en riskfaktor för kranskärlssjukdom; '
+                'en klinisk studie tyder på att betaglukan från jäst minskade svårighetsgraden av symtom från de övre '
+                'luftvägarna.',
+        dosage=dict(recommended='Immunförsvar: 250 mg betaglukan från jäst. Kolesterol: 3 g betaglukan från havre fördelat '
+                                'på måltiderna',
+                    timing='På morgonen med ett glas vatten, eller till måltiderna för havre', frequency='Dagligen'),
+        forms='Betaglukan från jäst (β-1,3/1,6) för immunförsvaret, och betaglukan från havre eller havrekli för kolesterolet.',
+        warnings=['Tolereras väl; betaglukan från havre kan ge lätta gaser i början',
+                  'Rådgör med läkare om du har en autoimmun sjukdom eller Crohns sjukdom',
+                  'Personer med celiaki bör välja betaglukan från jäst eller certifierat glutenfri havre'],
+        interactions='Betaglukan kan störa immunhämmande läkemedel; ta havrefiber med två timmars mellanrum från andra '
+                     'läkemedel, eftersom den kan minska deras upptag.',
+        naturalSources='Havre och havrekli, korn, svamp och bakjäst.'),
+    'cluster-dextrin': dict(
+        summary='En starkt förgrenad kolhydrat med hög molekylvikt och låg osmolalitet som lämnar magen snabbt med mindre '
+                'tyngdkänsla; en djurstudie tyder på att den stödjer uthålligheten, och en ny studie på människor tyder på '
+                'att den stödjer muskelprestationen vid styrketräning.',
+        dosage=dict(recommended='25–50 g upplöst i 500–750 ml vatten', timing='I små klunkar under eller direkt efter träning',
+                    frequency='På dagar med lång eller hård träning'),
+        forms='Rent lösligt pulver av cyklisk dextrin (HBCD).',
+        warnings=['En källa till kalorier och socker; avsedd för personer som utför långvarigt eller hårt fysiskt arbete',
+                  'Använd den med försiktighet om du har diabetes eller insulinresistens, och följ ditt blodsocker'],
+        interactions='Doserna av diabetesläkemedel och insulin kan behöva justeras.',
+        naturalSources='Framställs av majsstärkelse genom enzymatisk omvandling; finns inte i maten i den här formen.'),
+    'electrolytes-mix': dict(
+        summary='En blandning av natrium, kalium, magnesium och klorid; magnesium bidrar till elektrolytbalansen och kalium '
+                'till normal muskelfunktion (EFSA-godkända påståenden), och American College of Sports Medicine rekommenderar '
+                'att vätska och salter ersätts efter kraftig svettning.',
+        dosage=dict(recommended='En portionspåse eller skopa upplöst i 500–750 ml vatten',
+                    timing='Under långa fastor, eller under och efter träning med kraftig svettning',
+                    frequency='1–2 gånger per dag vid behov'),
+        forms='Sockerfria portionspåsar, brustabletter eller pulver med elektrolyter.',
+        warnings=['Om du har njursvikt eller högt blodtryck, rådgör med din läkare innan du tar extra natrium och kalium',
+                  'Överskrid inte den mängd som rekommenderas på förpackningen'],
+        interactions='Viktig varning: använd dem med försiktighet tillsammans med ACE-hämmare, angiotensinreceptorblockerare, '
+                     'kaliumsparande diuretika och litium.',
+        naturalSources='Saltad grönsaksbuljong, kokosvatten, bananer, bladgrönsaker och nötter.'),
+    'tart-cherry-extract': dict(
+        summary='Ett surkörsbär rikt på antocyaner som naturligt innehåller melatonin; en dubbelblind studie tyder på att '
+                'juicen höjde melatoninnivåerna och förbättrade sömntiden och sömnkvaliteten, och en metaanalys tyder på att '
+                'den stödjer musklernas återhämtning efter hård träning.',
+        dosage=dict(recommended='500–1200 mg extrakt per dag (eller 30 ml juicekoncentrat)',
+                    timing='På kvällen till middagen eller en timme före sänggåendet', frequency='1–2 gånger per dag'),
+        forms='Standardiserat extrakt av Montmorency-körsbär i kapslar, eller osötat juicekoncentrat.',
+        warnings=['Tolereras väl; juicekoncentratet innehåller naturligt socker, så räkna med det i ditt dagliga kaloriintag',
+                  'Kan ge lätta magbesvär vid höga doser'],
+        interactions='I höga doser kan det förstärka blodförtunnande läkemedel.',
+        naturalSources='Färska, frysta eller osötade torkade surkörsbär.'),
+    'saffron-extract': dict(
+        summary='Ett extrakt rikt på krocin och safranal; en metaanalys av randomiserade studier tyder på att det stödjer en '
+                'positiv sinnesstämning hos vuxna med lätt till måttlig nedstämdhet, och en klinisk studie tyder på att det '
+                'minskade småätandet och ökade mättnadskänslan.',
+        dosage=dict(recommended='28–30 mg standardiserat extrakt per dag', timing='På morgonen till frukost eller till lunch',
+                    frequency='En gång per dag (eller fördelat på två doser)'),
+        forms='Standardiserat saffransextrakt (som affron® eller Satiereal®) i kapslar.',
+        warnings=['Överskrid inte dosen: mycket stora mängder saffran (flera gram) är giftiga',
+                  'Ska inte användas i tillskottsdoser under graviditet, eftersom det kan utlösa livmodersammandragningar; '
+                  'undvik under amning',
+                  'Undvik det om du har bipolär sjukdom'],
+        interactions='Viktig varning: kombinera det inte med antidepressiva läkemedel (SSRI, SNRI) utan medicinsk uppföljning; '
+                     'det kan förstärka blodtryckssänkande och blodförtunnande läkemedel.',
+        naturalSources='Saffranstrådar (används i små mängder i matlagning).'),
+    'betaine-hcl': dict(
+        summary='En källa till saltsyra som tillfälligt höjer surheten i magen; en studie på friska frivilliga tyder på att '
+                'det snabbt gjorde magen sur igen efter läkemedelsorsakad låg magsyra, vilket stödjer proteinsmältningen och '
+                'pepsinets aktivitet hos personer med låg magsyra.',
+        dosage=dict(recommended='350–650 mg (en kapsel) till en proteinrik måltid',
+                    timing='Mitt i måltiden med klunkar av vatten; öppna eller tugga inte kapseln',
+                    frequency='Endast till proteinrika måltider'),
+        forms='Kapslar med betain-HCl, ofta med enzymet pepsin.',
+        warnings=['Ska inte användas vid aktivt mag- eller tolvfingertarmssår eller magkatarr',
+                  'Sluta genast om du känner sveda eller värme i magen',
+                  'Återkommande halsbränna kräver en läkarkontroll innan du använder det'],
+        interactions='Viktig varning: kombinera det aldrig med NSAID-smärtstillande (ibuprofen, acetylsalicylsyra) eller '
+                     'kortison, på grund av risken för magirritation; det är meningslöst tillsammans med syrahämmande '
+                     'läkemedel (som omeprazol).',
+        naturalSources='Betain finns i rödbetor, spenat och fullkornsvete; hydrokloridformen finns endast som tillskott.'),
+    'slippery-elm': dict(
+        summary='En bark rik på växtslem, som bildar en gel med vatten som täcker slemhinnan i matstrupe, mage och tarm; den '
+                'används traditionellt för att lindra halsbränna och irritation, och en liten pilotstudie tyder på att en '
+                'blandning som innehåller den stödde tarmens komfort och regelbundenhet, även om evidensen fortfarande är '
+                'begränsad.',
+        dosage=dict(recommended='400–800 mg (eller 1 tesked pulver i ett halvt glas ljummet vatten)',
+                    timing='30 minuter efter måltiderna eller en timme före sänggåendet', frequency='1–3 gånger per dag'),
+        forms='Pulver, kapslar eller sugtabletter av barken.',
+        warnings=['Återkommande halsbränna kräver en läkarkontroll',
+                  'Undvik under graviditet',
+                  'Drick tillräckligt med vatten till den'],
+        interactions='Barken täcker tarmväggen och kan fördröja upptaget av andra läkemedel; ta den med minst två timmars '
+                     'mellanrum från alla läkemedel.',
+        naturalSources='Ingår inte i vanlig mat; innerbarken används som pulver eller te.'),
+    'marshmallow-root': dict(
+        summary='Rötter rika på slemfiber som bildar ett skyddande lager över slemhinnorna; den används traditionellt för att '
+                'lindra irritation i mun och hals och torrhosta, och för att lindra lätta magbesvär (traditionell '
+                'användning enligt EMA).',
+        dosage=dict(recommended='400–1000 mg extrakt eller pulver per dag', timing='Mellan måltiderna med rikligt med vatten',
+                    frequency='1–3 gånger per dag'),
+        forms='Pulver eller extrakt av läkemalvarot, en kall rotinfusion, eller sirap.',
+        warnings=['Hosta som varar mer än en vecka eller med feber kräver en läkarkontroll',
+                  'Undvik under graviditet och amning, eftersom data är otillräckliga',
+                  'Sockrad sirap kan höja blodsockret'],
+        interactions='Den täcker magväggen och kan fördröja upptaget av andra läkemedel; ta den med två timmars mellanrum '
+                     'från alla läkemedel.',
+        naturalSources='Ingår inte i vanlig mat; rötterna används som infusion eller sirap.'),
+    'dgl-licorice': dict(
+        summary='Lakrits där det blodtryckshöjande glycyrrhizinet har tagits bort, så att flavonoiderna som stödjer magens '
+                'skyddande slemlager finns kvar; en dubbelblind studie tyder på att ett extrakt av lakritsflavonoider '
+                'lindrade symtomen vid funktionell dyspepsi.',
+        dosage=dict(recommended='380–760 mg', timing='Tugga tabletten väl 20 minuter före huvudmåltiderna',
+                    frequency='Upp till 3 gånger per dag'),
+        forms='Tuggtabletter med DGL (10:1), eller extrakt av lakritsflavonoider (som GutGard®).',
+        warnings=['Kontrollera att produkten är deglycyrrhiziniserad (DGL); vanlig lakrits höjer blodtrycket och sänker '
+                  'kaliumet',
+                  'Återkommande halsbränna eller sväljsvårigheter kräver en läkarkontroll',
+                  'Undvik under graviditet'],
+        interactions='DGL-formen interagerar vanligtvis inte med blodtryckssänkande läkemedel; vanlig lakrits interagerar med '
+                     'vätskedrivande läkemedel, digoxin och kortison.',
+        naturalSources='Lakritsrot (den traditionella drycken innehåller glycyrrhizin).'),
+    'peppermint-oil': dict(
+        summary='En olja rik på mentol som får tarmens glatta muskulatur att slappna av; två metaanalyser av kliniska studier '
+                'tyder på att enterokapslar med pepparmyntsolja lindrade buksmärta och IBS-symtom. Enterodrageringen hindrar '
+                'kapseln från att öppnas i magen och minskar därmed halsbrännan.',
+        dosage=dict(recommended='0,2 ml (cirka 180–200 mg) per kapsel',
+                    timing='30–60 minuter före en måltid med kallt vatten; dela eller tugga inte',
+                    frequency='Upp till 3 gånger per dag'),
+        forms='Enterokapslar med pepparmyntsolja (cirka 0,2 ml per kapsel).',
+        warnings=['Undvik den vid kraftigt sura uppstötningar eller hiatusbråck',
+                  'Inte för barn under 8 år',
+                  'Undvik den vid gallsten eller gallgångshinder'],
+        interactions='Syraneutraliserande och syrahämmande läkemedel kan lösa upp enterodrageringen för tidigt, så ta dem med '
+                     'två timmars mellanrum; den kan höja nivåerna av ciklosporin.',
+        naturalSources='Färska myntablad och pepparmyntste (långt mindre koncentrerat än oljan).'),
+    'nicotinamide-riboside': dict(
+        summary='En form av B3-vitamin som är godkänd i EU som nytt livsmedel (nikotinamidribosidklorid) och som cellerna '
+                'omvandlar till NAD+, som mitokondrierna behöver för att producera energi; en dubbelblind studie tyder på att '
+                'det på ett säkert sätt höjde NAD+-nivåerna hos medelålders och äldre vuxna.',
+        dosage=dict(recommended='Upp till 300 mg per dag (EU:s godkända maxdos för vuxna)',
+                    timing='På morgonen till frukost eller lunch', frequency='En gång per dag'),
+        forms='Nikotinamidribosidklorid (som Niagen®) i kapslar.',
+        warnings=['Endast godkänt för vuxna; ska inte användas under graviditet eller amning',
+                  'Det ger inte den hudrodnad som är känd från nikotinsyra',
+                  'Räkna med niacinet i alla dina tillskott'],
+        interactions='Inga viktiga läkemedelsinteraktioner har rapporterats vid de godkända doserna.',
+        naturalSources='Mycket små mängder i mjölk och jäst.'),
+    'banaba-leaf-extract': dict(
+        summary='Blad från trädet Lagerstroemia speciosa, rika på korosolsyra; en klinisk översikt tyder på att '
+                'banabaextrakt och korosolsyra stödjer cellernas glukosupptag och normala blodsockernivåer efter måltiderna.',
+        dosage=dict(recommended='32–48 mg av ett extrakt med 1 % korosolsyra (eller 10 mg av ett extrakt med 18 %)',
+                    timing='15 minuter före huvudmåltiden', frequency='1–2 gånger per dag'),
+        forms='Banabaextrakt standardiserat till 1 % eller 18 % korosolsyra.',
+        warnings=['Det kan sänka blodsockret; kontrollera ditt blodsocker regelbundet om du följer det',
+                  'Undvik det vid njursjukdom',
+                  'Undvik under graviditet och amning'],
+        interactions='Viktig varning: banaba kan förstärka diabetesläkemedel och insulin och ge lågt blodsocker; fråga din '
+                     'läkare om att justera doserna.',
+        naturalSources='Ingår inte i vanlig mat; bladen används traditionellt som te i Sydostasien.'),
+    'american-ginseng': dict(
+        summary='En typ av ginseng som anses lugnare än asiatisk ginseng; en randomiserad studie tyder på att den stödjer '
+                'arbetsminnet och den mentala prestationen, en annan studie tyder på att den dämpade blodsockerstegringen '
+                'efter måltiderna, och den används traditionellt för att stödja anpassningen till stress.',
+        dosage=dict(recommended='200–1000 mg standardiserat extrakt per dag', timing='På morgonen till frukost',
+                    frequency='En gång per dag'),
+        forms='Extrakt av amerikansk ginsengrot standardiserat för ginsenosider.',
+        warnings=['Undvik under graviditet och amning',
+                  'Använd den med försiktighet vid östrogenkänsliga tillstånd',
+                  'Kan ge lätta sömnsvårigheter om den tas på kvällen'],
+        interactions='Viktig varning: den kan försvaga warfarin och förstärka diabetesläkemedel, så att blodsockret sjunker '
+                     'ytterligare; använd den med försiktighet tillsammans med MAO-hämmare.',
+        naturalSources='Ingår inte i vanlig mat; roten används som te eller extrakt.'),
+    'flaxseed-extract': dict(
+        summary='Växtämnen (lignaner) som koncentreras i linfrön och verkar som milda växtöstrogener; en metaanalys tyder på '
+                'att tillskott av linfrö stödjer ett normalt blodtryck, och en översikt pekar på en roll för lignaner i '
+                'maten i att stödja hjärtats och blodkärlens hälsa.',
+        dosage=dict(recommended='100–300 mg SDG-extrakt per dag', timing='Till maten', frequency='En gång per dag'),
+        forms='Linfrölignanextrakt standardiserat för SDG, eller krossade linfrön.',
+        warnings=['Använd det med försiktighet vid östrogenkänsliga tillstånd (som vissa brösttumörer) utan medicinsk '
+                  'uppföljning',
+                  'Undvik tillskottsdoser under graviditet och amning'],
+        interactions='Det kan störa hormonella läkemedel och tamoxifen; ta det med två timmars mellanrum från andra läkemedel '
+                     'om det innehåller linfiber.',
+        naturalSources='Krossade linfrön, sesamfrön och fullkorn.'),
+    'mulberry-leaf-extract': dict(
+        summary='Blad från vitt mullbärsträd (Morus alba), rika på 1-DNJ, som tillfälligt bromsar de sockernedbrytande '
+                'enzymerna i tarmen; en klinisk studie tyder på att mullbärsbladsextrakt dämpade stegringen av glukos och '
+                'insulin efter en kolhydratrik måltid.',
+        dosage=dict(recommended='250–500 mg standardiserat extrakt', timing='5–10 minuter före en kolhydratrik måltid',
+                    frequency='Till stärkelserika måltider'),
+        forms='Extrakt av vita mullbärsblad standardiserat för 1-DNJ (som Reducose®).',
+        warnings=['Kan ge lätta gaser eller uppblåsthet de första dagarna',
+                  'Undvik under graviditet och amning'],
+        interactions='Det kan förstärka diabetesläkemedel (särskilt akarbos, som verkar på liknande sätt) och sänka '
+                     'blodsockret ytterligare; fråga din läkare.',
+        naturalSources='Te på vita mullbärsblad.'),
+    'green-coffee-bean-extract': dict(
+        summary='Orostade kaffebönor rika på klorogensyra, som delvis förstörs vid rostningen; en metaanalys av randomiserade '
+                'studier tyder på att det stödjer viktmått, särskilt hos personer med övervikt, och en annan metaanalys '
+                'tyder på stöd för vissa markörer för hjärta och ämnesomsättning.',
+        dosage=dict(recommended='400–800 mg per dag', timing='Till frukost eller lunch', frequency='Fördelat på två doser'),
+        forms='Grönt kaffeextrakt standardiserat till 45–50 % klorogensyra.',
+        warnings=['Det innehåller lite koffein; undvik det på kvällen om du är känslig för koffein',
+                  'Undvik under graviditet och amning',
+                  'Det ersätter inte en balanserad kost och fysisk aktivitet'],
+        interactions='Räkna med koffeinet tillsammans med kaffe och energidrycker; använd det med försiktighet tillsammans med '
+                     'centralstimulerande medel, blodtryckssänkande och blodförtunnande läkemedel.',
+        naturalSources='Gröna, orostade kaffebönor.'),
+    'capsimax': dict(
+        summary='Ett chilipepparextrakt rikt på capsaicinoider i dragerade pärlor som skyddar magen från att svida; en '
+                'randomiserad studie tyder på att pärlorna höjde frisättningen av katekolaminer och blodmarkörer för '
+                'fettfrisättning, vilket kan stödja värmebildningen och kaloriförbränningen.',
+        dosage=dict(recommended='100 mg per dag (som ger cirka 2 mg capsaicinoider)',
+                    timing='Till frukost eller 30 minuter före träning', frequency='En gång per dag'),
+        forms='Dragerade Capsimax®-pärlor (OmniBead®) i kapslar.',
+        warnings=['Undvik det vid aktivt magsår eller kraftigt sura uppstötningar',
+                  'Dela eller tugga inte kapseln',
+                  'Undvik under graviditet och amning'],
+        interactions='Det kan förstärka blodförtunnande och blodplättshämmande läkemedel; använd det med försiktighet '
+                     'tillsammans med blodtryckssänkande läkemedel och ACE-hämmare.',
+        naturalSources='Chilipeppar och stark röd paprika.'),
+    'oil-of-oregano': dict(
+        summary='En eterisk olja rik på karvakrol och tymol; en omfattande översikt beskriver dess antioxidativa och '
+                'antimikrobiella egenskaper i laboratoriestudier, och den används traditionellt under korta perioder för att '
+                'stödja halsens och magens komfort under förkylningssäsongen, även om evidensen från människor fortfarande är '
+                'begränsad.',
+        dosage=dict(recommended='100–200 mg olja i en utspädd kapsel', timing='Till en huvudmåltid',
+                    frequency='1–2 gånger per dag i högst 10–14 dagar'),
+        forms='Kapslar med oreganoolja utspädd i olivolja, standardiserad till 70–80 % karvakrol; drick aldrig den '
+              'koncentrerade oljan outspädd.',
+        warnings=['Ska inte användas under graviditet, amning eller av barn',
+                  'Använd den inte kontinuerligt i mer än 10–14 dagar',
+                  'Undvik den om du är allergisk mot kransblommiga växter (mynta, basilika, timjan)'],
+        interactions='Oreganoolja kan förstärka blodförtunnande läkemedel och diabetesläkemedel och kan minska upptaget av '
+                     'järn, så ta den med två timmars mellanrum från järntillskott.',
+        naturalSources='Oregano och vild timjan (i de mängder som används i matlagning).'),
+    'bee-propolis': dict(
+        summary='Ett harts som bina samlar från trädknoppar, rikt på flavonoider och polyfenoler; en randomiserad studie '
+                'tyder på att ett standardiserat propolisextrakt hjälpte lätta symtom från de övre luftvägarna att gå över '
+                'snabbare, och en metaanalys tyder på att det stödjer normala inflammationsmarkörer.',
+        dosage=dict(recommended='300–500 mg standardiserat extrakt per dag', timing='Till maten',
+                    frequency='1–2 gånger per dag'),
+        forms='Propolisextrakt standardiserat för polyfenoler, i kapslar, halsspray eller sugtabletter.',
+        warnings=['Inte för personer som är allergiska mot biprodukter (honung, pollen, bigift) eller som har allergisk astma',
+                  'Sluta två veckor före en operation',
+                  'Undvik under graviditet och amning'],
+        interactions='Propolis kan förstärka blodförtunnande och blodplättshämmande läkemedel.',
+        naturalSources='Produkter från bikupan; små mängder i rå honung.'),
+    'wheatgrass': dict(
+        summary='Vetets unga skott innan kornet bildas, rika på klorofyll, A-, C- och E-vitamin och järn; vetegräs används '
+                'som en koncentrerad källa till gröna växter som stödjer vitaliteten och en regelbunden matsmältning, och en '
+                'översikt beskriver dess antioxidativa egenskaper men påpekar ett glapp mellan laboratorieforskning och '
+                'klinisk forskning.',
+        dosage=dict(recommended='3–5 g pulver per dag', timing='På morgonen, uppblandat i vatten eller juice',
+                    frequency='En gång per dag'),
+        forms='Torkat ekologiskt vetegräspulver, kapslar eller färsk juice.',
+        warnings=['Skotten är naturligt glutenfria, men personer med celiaki bör endast välja certifierat glutenfria '
+                  'produkter för att undvika kontaminering',
+                  'Kan ge lätt illamående i början; börja med en liten mängd',
+                  'Undvik det om du är allergisk mot gräs'],
+        interactions='Vetegräs är rikt på K-vitamin och kan därför försvaga warfarin; håll den dagliga mängden jämn och '
+                     'berätta det för din läkare.',
+        naturalSources='Mörka bladgrönsaker som spenat, ruccola och grönkål.'),
+    'frankincense': dict(
+        summary='Hartset från trädet Boswellia serrata, rikt på boswelliasyror, främst AKBA, som hämmar det '
+                'inflammationsrelaterade enzymet 5-LOX; en metaanalys av kontrollerade studier tyder på att boswellia stödde '
+                'ledernas komfort och rörlighet och lindrade stelhet.',
+        dosage=dict(recommended='100–250 mg standardiserat extrakt per dag', timing='Till en måltid som innehåller fett',
+                    frequency='1–2 gånger per dag'),
+        forms='Boswelliaextrakt standardiserat till 20–30 % AKBA (som AprèsFlex® eller 5-Loxin®).',
+        warnings=['Tolereras väl; kan ge lätta magbesvär eller diarré',
+                  'Undvik under graviditet och amning',
+                  'Svår ledsmärta, eller smärta med svullnad och värme, kräver en läkarkontroll'],
+        interactions='Boswellia kan förstärka blodförtunnande och blodplättshämmande läkemedel; använd det med försiktighet '
+                     'tillsammans med immunhämmande läkemedel.',
+        naturalSources='Rökelse (boswelliaharts), som traditionellt tuggas eller dras som te.'),
+})
+
 
 def sv_numbers(text):
     """Swedish number style: a space as thousands separator (1 000, not in years such as 2023) and no line break
     between a number and its unit."""
     import re
     # a four-digit amount: followed by a unit or by the dash of a range (1000–2000 mg, 2500 mg; not EFSA 2023)
-    text = re.sub(r'(?<![\d.,\w-])(\d)(\d{3})(?=\s*(?:–\s*\d|mg\b|g\b|IE\b|µg|ml\b))',
+    text = re.sub(r'(?<![\d.,\w-])(\d)(\d{3})(?=\s*(?:–\s*\d|mg\b|g\b|IE\b|µg|ml\b|FU\b|GDU\b))',
                   lambda m: m.group(1) + NB + m.group(2), text)
     text = re.sub(r'(?<=\d) (?=\d{3}\b)', NB, text)                     # 1 000 already written with a plain space
-    return re.sub(r'(?<=\d) (?=(?:mg|g|µg|IE|kg|ml|ppm|%)(?!\w))', NB, text)
+    return re.sub(r'(?<=\d) (?=(?:mg|g|µg|IE|kg|ml|ppm|FU|GDU|%)(?!\w))', NB, text)
 
 
 def _apply(value):
