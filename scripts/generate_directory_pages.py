@@ -20,6 +20,7 @@ import re
 from pathlib import Path
 
 import food_sv as FSV
+import supplement_sv as SSV
 from generate_article_pages import link, nav as sv_nav
 from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
@@ -61,6 +62,12 @@ T = {
                    desc='Alle pagina\'s van de supplementengids op één plek ({n} supplementen), per gebied: aanbevolen dosis, waarschuwingen en interacties met medicijnen volgens EFSA en NIH.',
                    intro='Alle pagina\'s van de supplementengids op één plek, gesorteerd per gebied. Elk supplement heeft een eigen pagina met de aanbevolen dosis, de beste vormen, waarschuwingen en interacties met medicijnen, met de gepubliceerde wetenschappelijke bronnen (EFSA / NIH / PubMed).',
                    cta='Open de interactieve supplementengids', count='{n} supplementen', guide='Supplementengids'),
+        SV: dict(title='Kosttillskottsregister: {n} kosttillskott med dosering och interaktioner med läkemedel | WiBo Health',
+                 h1='Kosttillskottsregister',
+                 desc='Kosttillskottsguidens svenska sidor på ett ställe ({n} kosttillskott), i bokstavsordning: rekommenderad dos, varningar och interaktioner med läkemedel enligt EFSA och NIH.',
+                 intro='Kosttillskottsguidens svenska sidor på ett ställe, i bokstavsordning. Varje kosttillskott har en egen sida med rekommenderad dos, de bästa beredningsformerna, varningar och interaktioner med läkemedel, med publicerade vetenskapliga källor (EFSA / NIH / PubMed).',
+                 cta='Öppna den interaktiva kosttillskottsguiden (på engelska)', count='{n} kosttillskott', guide='Kosttillskottsguide',
+                 full='Hela kosttillskottsregistret på engelska ({n} kosttillskott)'),
     },
 }
 
@@ -115,14 +122,22 @@ def food_sections():
 def supplement_sections():
     """One A-Z section: the ~70 area labels hold two or three supplements each, so the area goes beside the name."""
     pages = read_slug_map('supplement-pages.js', 'SUPP_PAGES')
-    items = [(s['slug'], {l: s[SUPP_NAME[l]] or s['name'] for l in LANGS}, s['groupLabel'])
-             for s in load_supplements() if s.get('references') and s['slug'] in pages]
-    return [('a-z', {'ar': 'كل المكملات أبجدياً', 'en': 'All supplements A–Z', 'nl': 'Alle supplementen A–Z'}, items)]
+    items = []
+    for s in load_supplements():
+        if not (s.get('references') and s['slug'] in pages):
+            continue
+        names = {l: s[SUPP_NAME[l]] or s['name'] for l in LANGS}
+        names[SV] = SSV.NAMES[s['slug']] if s['slug'] in SSV.PUBLISH else ''   # '' = no Swedish page
+        areas = dict(s['groupLabel'])
+        areas[SV] = SSV.GROUP_LABELS.get(s['groupLabel']['en'], '') if names[SV] else ''
+        items.append((s['slug'], names, areas))
+    return [('a-z', {'ar': 'كل المكملات أبجدياً', 'en': 'All supplements A–Z', 'nl': 'Alle supplementen A–Z',
+                     SV: 'Alla kosttillskott A–Ö'}, items)]
 
 
 def dir_langs(kind):
-    """Swedish has a food index only (no Swedish supplement pages yet)."""
-    return LANGS + (SV,) if kind == 'foods' else LANGS
+    """Swedish has a food index and, once supplement_sv.PUBLISH has pages, a supplement index."""
+    return LANGS + (SV,) if kind == 'foods' or SSV.PUBLISH else LANGS
 
 
 def sv_key(name):
@@ -133,7 +148,7 @@ def sv_key(name):
 def build(kind, lang, sections):
     t, u = T[kind][lang], UI[lang]
     total = sum(len(items) for _, _, items in sections)
-    if lang == SV:                          # only the foods that have a Swedish page
+    if lang == SV:                          # only the foods / supplements that have a Swedish page
         sections = [(a, labels, [it for it in items if it[1][SV]]) for a, labels, items in sections]
         sections = [sec for sec in sections if sec[2]]
     n = sum(len(items) for _, _, items in sections)
@@ -188,13 +203,13 @@ def build(kind, lang, sections):
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
         for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
-    if lang == SV:                          # Swedish: the English supplement index and the full English food index
+    if lang == SV:                          # Swedish: both Swedish indexes, and the full English index of this kind
         footer_links = ' <span>•</span> '.join(
             f'<a href="{href}">{label}</a>' for href, label in
-            [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), t['h1']),
-             (dir_url('supplements', 'en', absolute=False), 'Kosttillskottsregister (på engelska)'),
+            [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), T['foods'][SV]['h1']),
+             (dir_url('supplements', lang, absolute=False), T['supplements'][SV]['h1']),
              (L('/methodology.html'), u['methodology']), (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
-        other_link = (f'<a class="guide-link" href="{dir_url("foods", "en", absolute=False)}"><i class="fas fa-list"></i> '
+        other_link = (f'<a class="guide-link" href="{dir_url(kind, "en", absolute=False)}"><i class="fas fa-list"></i> '
                       f'{esc(t["full"].format(n=total))}</a>')
         hub_href = site_link(hub, 'en')
     else:
@@ -308,13 +323,13 @@ def main():
             out = ROOT / dir_url(kind, lang, absolute=False).lstrip('/')
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(build(kind, lang, sections), encoding='utf-8', newline='\n')
-            lastmod = FSV.REVIEWED if lang == SV else UPDATED
+            lastmod = (FSV.REVIEWED if kind == 'foods' else SSV.REVIEWED) if lang == SV else UPDATED
             lines += ['  <url>', f'    <loc>{dir_url(kind, lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>weekly</changefreq>', '    <priority>0.8</priority>']
             lines += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{dir_url(kind, l)}"/>' for l in dir_langs(kind)]
             lines += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{dir_url(kind, "ar")}"/>', '  </url>']
         print(f'{kind}: {sum(len(i) for _, _, i in sections)} links in {len(sections)} sections x {len(LANGS)} languages'
-              + (f', Swedish index: {len(FSV.PUBLISH)} foods' if kind == 'foods' else ''))
+              + f', Swedish index: {len(FSV.PUBLISH if kind == "foods" else SSV.PUBLISH)} {kind}')
     replace_sitemap_block('DIRECTORY-PAGES', lines)
 
 

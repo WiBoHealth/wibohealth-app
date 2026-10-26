@@ -1,4 +1,4 @@
-"""Generate static, crawlable supplement pages in three languages.
+"""Generate static, crawlable supplement pages in three languages, plus Swedish for the supplements in supplement_sv.PUBLISH.
 
     python scripts/generate_supplement_pages.py
 
@@ -6,6 +6,7 @@ Output (re-running rebuilds everything, nothing is appended twice):
     supplements/<slug>.html       Arabic (x-default)
     en/supplements/<slug>.html    English
     nl/supplements/<slug>.html    Dutch
+    sv/supplements/<slug>.html    Swedish (supplement_sv.PUBLISH; copy translated from the approved data in supplement_sv.py)
     js/supplement-pages.js        slugs that have a static page (used by the supplements.html modal)
     sitemap.xml                   block (replaced in place) between <!-- SUPPLEMENT-PAGES:START --> and <!-- SUPPLEMENT-PAGES:END -->
 
@@ -18,7 +19,9 @@ import json
 import re
 from pathlib import Path
 
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, dir_url, esc, nav_html, replace_sitemap_block, site_link
+from generate_food_pages import (BASE_CSS, LOGO_SVG, SITE, LANGS, ALL_LANGS, SV, UI, any_link, dir_url, esc, nav_html,
+                                 replace_sitemap_block, site_link)
+import supplement_sv as SSV
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -70,8 +73,31 @@ T = {
         disclaimer='⚖️ Medische disclaimer: De informatie en gegevens hier zijn uitsluitend bedoeld voor gezondheidsvoorlichting en voedingsadvies. Ze vormen geen medische diagnose en vervangen nooit een direct consult bij je behandelend arts of apotheker. Overleg altijd met je arts voordat je met een supplement begint, vooral tijdens zwangerschap of borstvoeding of bij langdurig medicijngebruik.',
         date='17 oktober 2026', footer_supp='Supplementengids'),
 }
+T[SV] = SSV.UI
 SUF = {'ar': '', 'en': 'En', 'nl': 'Nl'}
 NAME = {'ar': 'name', 'en': 'englishName', 'nl': 'nameNl'}
+
+
+def langs_of(slug):
+    """Languages a supplement page exists in: ar/en/nl always, sv for the supplements in supplement_sv.PUBLISH."""
+    return ALL_LANGS if slug in SSV.PUBLISH else LANGS
+
+
+def field(s, key, lang):
+    """A text field of the record in `lang`; Swedish comes from supplement_sv.COPY, with its approved Swedish warnings
+    (legal status) first."""
+    if lang != SV:
+        return s.get(key + SUF[lang])
+    value = SSV.COPY[s['slug']].get(key)
+    return SSV.EXTRA_WARNINGS.get(s['slug'], []) + value if key == 'warnings' else value
+
+
+def supp_name(s, lang):
+    return SSV.NAMES[s['slug']] if lang == SV else (s[NAME[lang]] or s['name'])
+
+
+def group_label(s, lang):
+    return SSV.GROUP_LABELS[s['groupLabel']['en']] if lang == SV else s['groupLabel'][lang]
 
 EXTRA_CSS = """
         .dose-table td:first-child { color: var(--text-muted); font-weight: 700; width: 38%; }
@@ -81,6 +107,10 @@ EXTRA_CSS = """
             border: 1px solid var(--primary); color: var(--primary); font-weight: 800; text-decoration: none; }
         .guide-link:hover { background: var(--primary-glow); }
 """
+
+# the page styles the supplement markup is built on (not the food page styles, which changed with template v2)
+_css = (ROOT / 'scripts' / 'supplement_page.css').read_text(encoding='utf-8')
+SUPP_PAGE_CSS = _css[_css.index('*/\n') + 3:]
 
 
 def load_supplements():
@@ -123,19 +153,20 @@ SNIPPETS = json.loads((ROOT / 'scripts' / 'supplement_pages_overrides.json').rea
 
 
 def build(s, lang, vetted):
-    t, u, suf = T[lang], UI[lang], SUF[lang]
-    name = s[NAME[lang]] or s['name']
+    t, u = T[lang], UI[lang]
+    L = lambda path: any_link(path, lang)              # Swedish: /sv/ pages where they exist, English elsewhere
+    name = supp_name(s, lang)
     subtitle = s['englishName'] if lang != 'en' and s['englishName'] != name else ''
-    desc_txt = s['summary' + suf]
-    dose = s['dosage' + suf]
+    desc_txt = field(s, 'summary', lang)
+    dose = field(s, 'dosage', lang)
     title = t['title'].format(name=name)
     meta_desc = t['desc'].format(name=name, desc=clip_sentence(desc_txt, 110), dose=dose['recommended'])
     meta_desc = clip_sentence(meta_desc, 400, longest=400)     # whole sentences only: a long dose line drops the closing ones
     snip = SNIPPETS.get(s['slug'], {})
     title = snip.get('title', {}).get(lang) or title
     meta_desc = snip.get('desc', {}).get(lang) or meta_desc
-    urls = {l: page_url(s['slug'], l) for l in LANGS}
-    guide_href = site_link('/supplements.html', lang) + '#' + s['slug']
+    urls = {l: page_url(s['slug'], l) for l in langs_of(s['slug'])}
+    guide_href = L('/supplements.html') + '#' + s['slug']
 
     schema = {
         "@context": "https://schema.org",
@@ -150,45 +181,51 @@ def build(s, lang, vetted):
                   "description": desc_txt,
                   "recommendedIntake": {"@type": "RecommendedDoseSchedule", "name": dose['recommended'],
                                         "frequency": dose['frequency']},
-                  "safetyConsideration": ' '.join(w.rstrip('.') + '.' for w in s['warnings' + suf]) + ' ' + s['interactions' + suf]},
+                  "safetyConsideration": ' '.join(w.rstrip('.') + '.' for w in field(s, 'warnings', lang)) + ' ' + field(s, 'interactions', lang)},
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
         "author": {"@type": "Organization", "name": "WiBo Health", "url": SITE},
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "citation": [{"@type": "CreativeWork", "name": r} for r in s['references']],
-        "lastReviewed": s.get('reviewed', '2026-10-17'),
+        "lastReviewed": SSV.REVIEWED if lang == SV else s.get('reviewed', '2026-10-17'),
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + site_link('/', lang)},
+            {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + L('/')},
             {"@type": "ListItem", "position": 2, "name": t['guide'], "item": dir_url('supplements', lang)},
             {"@type": "ListItem", "position": 3, "name": name, "item": urls[lang]}]},
     }
 
-    group = s['groupLabel'][lang]
+    group = group_label(s, lang)
     related = [r for r in vetted if r['id'] != s['id'] and r['groupLabel']['ar'] == s['groupLabel']['ar']]
     related += [r for r in vetted if r['id'] != s['id'] and r not in related and r['category'] == s['category']]
+    # on a Swedish page, a related supplement without a Swedish page opens in English
+    rel_lang = lambda r: lang if lang in langs_of(r['slug']) else 'en'
     related_html = ''.join(
-        f'<li><a href="{page_url(r["slug"], lang, absolute=False)}">{esc(r[NAME[lang]] or r["name"])}'
-        f'<span>{esc(r["groupLabel"][lang])}</span></a></li>' for r in related[:4])
+        f'<li><a href="{page_url(r["slug"], rel_lang(r), absolute=False)}">{esc(supp_name(r, rel_lang(r)))}'
+        f'<span>{esc(group_label(r, rel_lang(r)))}</span></a></li>' for r in related[:4])
 
-    nav = nav_html(lang, active='/supplements.html')
+    if lang == SV:
+        from generate_article_pages import nav as sv_nav
+        nav = sv_nav(lang, active='/supplements.html')
+    else:
+        nav = nav_html(lang, active='/supplements.html')
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(s["slug"], l, absolute=False)}" '
         f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧')))
-    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in LANGS)
-    warnings_html = ''.join(f'<div class="tip warn"><p>{esc(w)}</p></div>' for w in s['warnings' + suf])
+        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
+    warnings_html = ''.join(f'<div class="tip warn"><p>{esc(w)}</p></div>' for w in field(s, 'warnings', lang))
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in s['references'])
-    forms_txt = s.get('forms' + suf)
+    forms_txt = field(s, 'forms', lang)
     forms_html = (f'<h2 class="section-title"><i class="fas fa-capsules"></i> <span>{t["forms"]}</span></h2>'
                   f'<div class="tip-list"><div class="tip"><p>{esc(forms_txt)}</p></div></div>') if forms_txt else ''
-    natural = s.get('naturalSources' + suf)
+    natural = field(s, 'naturalSources', lang)
     natural_html = (f'<h2 class="section-title"><i class="fas fa-seedling"></i> <span>{t["sources_food"]}</span></h2>'
                     f'<div class="tip-list"><div class="tip"><p>{esc(natural)}</p></div></div>') if natural else ''
     footer_links = ' <span>•</span> '.join(
         f'<a href="{href}">{label}</a>' for href, label in
-        [(site_link('/', lang), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
-         (dir_url('supplements', lang, absolute=False), t['footer_supp']), (site_link('/methodology.html', lang), u['methodology']),
-         (site_link('/partners.html', lang), u['partners']), (site_link('/privacy.html', lang), u['privacy'])])
+        [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
+         (dir_url('supplements', lang, absolute=False), t['footer_supp']), (L('/methodology.html'), u['methodology']),
+         (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">
@@ -206,7 +243,7 @@ def build(s, lang, vetted):
     <meta property="og:description" content="{esc(meta_desc)}">
     <meta property="og:url" content="{urls[lang]}">
     <meta property="og:image" content="{SITE}/images/logo.png">
-    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL')[lang]}">
+    <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
@@ -223,13 +260,13 @@ def build(s, lang, vetted):
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{{transition:none!important;animation-duration:0s!important}}</style>
     <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){{window.__tsw=requestAnimationFrame(function(){{h.classList.remove('theme-transitioning')}})}})}},true);</script>
     <style>
-{BASE_CSS}{PAGE_CSS}{EXTRA_CSS}    </style>
+{BASE_CSS}{SUPP_PAGE_CSS}{EXTRA_CSS}    </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="{site_link('/', lang)}" class="brand-link">
+            <a href="{L('/')}" class="brand-link">
                 {LOGO_SVG}
                 <span class="brand-title">WiBo Health</span>
             </a>
@@ -250,7 +287,7 @@ def build(s, lang, vetted):
     <main class="page-wrapper food-page supplement-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{site_link('/', lang)}">{u["home"]}</a> › <a href="{dir_url('supplements', lang, absolute=False)}">{t["guide"]}</a> › <span>{esc(name)}</span>
+                <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('supplements', lang, absolute=False)}">{t["guide"]}</a> › <span>{esc(name)}</span>
             </nav>
 
             <div class="food-hero">
@@ -280,7 +317,7 @@ def build(s, lang, vetted):
             <div class="tip-list">{warnings_html}</div>
 
             <h2 class="section-title"><i class="fas fa-pills"></i> <span>{t["inter"]}</span></h2>
-            <div class="tip-list"><div class="tip"><p>{esc(s["interactions" + suf])}</p></div></div>
+            <div class="tip-list"><div class="tip"><p>{esc(field(s, "interactions", lang))}</p></div></div>
 
             <a class="guide-link" href="{guide_href}"><i class="fas fa-capsules"></i> {t["open_guide"]}</a>
             {f'<h2 class="section-title"><i class="fas fa-layer-group"></i> <span>{t["related"]}</span></h2><ul class="alt-list">{related_html}</ul>' if related_html else ''}
@@ -320,15 +357,20 @@ def build(s, lang, vetted):
 
 def main():
     vetted = [s for s in load_supplements() if s.get('references')]
-    for lang in LANGS:
+    missing = SSV.PUBLISH - {s['slug'] for s in vetted}
+    assert not missing, f'supplement_sv.PUBLISH: no vetted record for {missing}'
+    written = 0
+    for lang in ALL_LANGS:
         out_dir = ROOT / ('supplements' if lang == 'ar' else f'{lang}/supplements')
         out_dir.mkdir(parents=True, exist_ok=True)
-        keep = {f'{s["slug"]}.html' for s in vetted} | {'index.html'}   # index.html: generate_directory_pages.py
+        pages = [s for s in vetted if lang in langs_of(s['slug'])]
+        keep = {f'{s["slug"]}.html' for s in pages} | {'index.html'}   # index.html: generate_directory_pages.py
         for old in out_dir.glob('*.html'):          # a supplement that lost its page must not linger
             if old.name not in keep:
                 old.unlink()
-        for s in vetted:
+        for s in pages:
             (out_dir / f'{s["slug"]}.html').write_text(build(s, lang, vetted), encoding='utf-8', newline='\n')
+            written += 1
 
     (ROOT / 'js' / 'supplement-pages.js').write_text(
         '// Generated by scripts/generate_supplement_pages.py - do not edit by hand.\n'
@@ -338,13 +380,15 @@ def main():
 
     block = []
     for s in vetted:
-        for lang in LANGS:
-            block += ['  <url>', f'    <loc>{page_url(s["slug"], lang)}</loc>', f'    <lastmod>{s.get("reviewed", "2026-10-17")}</lastmod>',
+        for lang in langs_of(s['slug']):
+            lastmod = SSV.REVIEWED if lang == SV else s.get("reviewed", "2026-10-17")
+            block += ['  <url>', f'    <loc>{page_url(s["slug"], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.6</priority>']
-            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(s["slug"], l)}"/>' for l in LANGS]
+            block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(s["slug"], l)}"/>' for l in langs_of(s['slug'])]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(s["slug"], "ar")}"/>', '  </url>']
     replace_sitemap_block('SUPPLEMENT-PAGES', block)
-    print(f'supplement pages written: {len(vetted) * len(LANGS)} ({len(vetted)} supplements x {len(LANGS)} languages)')
+    print(f'supplement pages written: {written} ({len(vetted)} supplements x {len(LANGS)} languages, '
+          f'{len(SSV.PUBLISH)} also in Swedish)')
 
 
 if __name__ == '__main__':

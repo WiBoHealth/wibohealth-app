@@ -1,0 +1,106 @@
+/* Page styles of the supplement pages (scripts/generate_supplement_pages.py): the food page styles of before the food
+   template v2 (b2a3a6f9), which the supplement page markup (.food-hero, .tip, .stat-grid...) is built on. Inlined between
+   BASE_CSS and EXTRA_CSS; kept here so a change to the food page styles does not restyle the supplement pages. */
+
+        a.lang-btn { text-decoration: none; }
+        .food-page h1, .food-page h3, .food-page td, .boodi-card h2, .food-page strong { color: var(--text-main); }
+        .food-page { max-width: 980px; }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px; }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .food-hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
+        .food-hero img, .food-hero .food-emoji {
+            width: 150px; height: 150px; border-radius: 22px; object-fit: cover; flex-shrink: 0;
+            border: 3px solid var(--primary-glow); box-shadow: var(--shadow); background: var(--bg-input);
+        }
+        .food-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+        .food-hero-text { flex: 1; min-width: 220px; }
+        .food-hero-text h1 { font-size: 2rem; font-weight: 900; line-height: 1.3; margin-bottom: 4px; }
+        .food-subtitle { color: var(--text-muted); font-weight: 600; }
+        .group-chip {
+            display: inline-block; margin-top: 10px; padding: 4px 14px; border-radius: 999px; font-size: 0.82rem;
+            font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+        .lead { font-size: 1.04rem; margin: 6px 0 22px; }
+        .reviewed { font-size: 0.85rem; color: var(--text-muted); margin: 12px 0 0; }
+        .reviewed a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 26px; }
+        .stat-box {
+            background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md);
+            padding: 16px 12px; text-align: center;
+        }
+        .stat-box h2 { font-size: 0.82rem; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
+        .stat-num { font-size: 2rem; font-weight: 900; line-height: 1.2; }
+        .stat-num.low { color: #10b981; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
+        .stat-num.muted { color: var(--text-muted); } .stat-num.kcal { color: #3498db; } .stat-num.protein { color: #9b59b6; }
+        .stat-sub { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
+        .badge {
+            display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem;
+            font-weight: 700; border: 1px solid transparent;
+        }
+        .badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #10b981; }
+        .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #f39c12; }
+        .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #e74c3c; }
+        .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-muted); }
+        .tip-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .tip {
+            background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
+            border-radius: var(--radius-sm); padding: 14px 18px;
+        }
+        .tip h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; display: flex; gap: 8px; align-items: center; }
+        .tip.warn { border-inline-start-color: #f39c12; }
+        .tip p { color: var(--text-muted); margin: 0; }
+        .nutrition-table { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 0.95rem; }
+        .nutrition-table th, .nutrition-table td { padding: 11px 12px; border-bottom: 1px solid var(--border-color); text-align: start; }
+        .nutrition-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
+        .nutrition-table td:not(:first-child) { font-weight: 700; }
+        .table-note { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 26px; }
+        .alt-list { list-style: none; display: grid; gap: 10px; margin: 10px 0 26px; padding: 0; }
+        .alt-list a {
+            display: flex; justify-content: space-between; gap: 12px; padding: 12px 16px; border-radius: var(--radius-sm);
+            background: var(--bg-input); border: 1px solid var(--border-color); color: var(--text-main); text-decoration: none; font-weight: 700;
+        }
+        .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
+        .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
+        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
+        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+        .faq-item p { color: var(--text-muted); margin: 0; }
+        .boodi-card {
+            display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+            padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(6, 182, 212, 0.12));
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+        .boodi-card h2 { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
+        .boodi-card p { color: var(--text-muted); margin: 0; }
+        .boodi-btn {
+            display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 30px; background: var(--primary);
+            color: #ffffff; font-weight: 800; text-decoration: none; white-space: nowrap;
+        }
+        .boodi-btn:hover { background: var(--primary-hover); }
+        .source-strip {
+            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
+            border-radius: 14px; padding: 12px 16px; margin-bottom: 10px; color: var(--text-muted); font-size: 0.85rem;
+            font-weight: 600; overflow-wrap: anywhere;
+        }
+        .source-strip a { color: var(--primary); font-weight: 800; text-decoration: none; white-space: nowrap; }
+        .references {
+            background: var(--bg-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary);
+            border-radius: 14px; padding: 4px 18px 14px; margin: 18px 0 10px;
+        }
+        .references .section-title { margin-top: 12px; }
+        .ref-list { margin: 0; padding-inline-start: 22px; color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; overflow-wrap: anywhere; }
+        .ref-list li { margin-bottom: 8px; }
+        .ref-list a, .ref-method a { color: var(--primary); font-weight: 700; text-decoration: none; }
+        .ref-method { margin: 4px 0 0; font-size: 0.85rem; font-weight: 800; }
+        .disclaimer-box {
+            margin-top: 18px; padding: 14px 18px; border-radius: 12px; background: rgba(15, 23, 42, 0.62);
+            border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
+        }
+        html[data-theme="light"] .disclaimer-box { background: #f1f5f9; border-color: rgba(15, 23, 42, 0.12); color: #334155; }
+        @media (max-width: 760px) {
+            .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .food-hero { flex-direction: column; text-align: center; }
+            .food-hero-text h1 { font-size: 1.6rem; }
+        }
