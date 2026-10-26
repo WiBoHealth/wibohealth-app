@@ -99,6 +99,29 @@
         .guide-link { display: inline-flex; align-items: center; gap: 8px; margin: 4px 8px 22px 0; padding: 10px 18px; border-radius: 30px;
             border: 1px solid var(--primary); color: var(--primary); font-weight: 800; text-decoration: none; }
         .guide-link:hover { background: var(--primary-glow); }
+        /* supplement indexes: a dense grid of small cards (name, area below) - 2 columns on phones, up to 5 on desktop */
+        .supplements-directory.food-page { max-width: 1240px; }
+        .supplements-directory .about-card { padding: 22px 24px; }
+        .supplements-directory h1 { font-size: 1.6rem; margin-bottom: 6px; }
+        .supplements-directory .lead { font-size: 0.92rem; line-height: 1.6; margin: 0 0 12px; }
+        .supplements-directory .guide-link { margin: 0 6px 14px 0; padding: 7px 14px; font-size: 0.85rem; gap: 6px; }
+        .supplements-directory .section-title { font-size: 1.05rem; margin: 6px 0 10px; }
+        .supplements-directory .dir-list { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 0 0 12px; }
+        .supplements-directory .dir-list a { flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 3px;
+            height: 100%; box-sizing: border-box; padding: 9px 11px; border-radius: 12px; font-size: 0.86rem; line-height: 1.35;
+            overflow-wrap: anywhere; }
+        .supplements-directory .dir-list span { text-align: start; font-size: 0.72rem; line-height: 1.35; font-weight: 600; }
+        @media (max-width: 1100px) { .supplements-directory .dir-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        @media (max-width: 860px) { .supplements-directory .dir-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (max-width: 600px) {
+            .supplements-directory .about-card { padding: 16px 12px; }
+            .supplements-directory h1 { font-size: 1.35rem; }
+            .supplements-directory .lead { font-size: 0.85rem; }
+            .supplements-directory .guide-link { padding: 6px 12px; font-size: 0.8rem; margin-bottom: 8px; }
+            .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+            .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
+            .supplements-directory .dir-list span { font-size: 0.68rem; }
+        }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
@@ -133,7 +156,7 @@
         </div>
     </header>
 
-    <main class="page-wrapper food-page directory-page">
+    <main class="page-wrapper food-page directory-page foods-directory">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="/">الرئيسية</a> › <span>فهرس الأطعمة</span>

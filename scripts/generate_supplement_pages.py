@@ -106,6 +106,15 @@ EXTRA_CSS = """
         .guide-link { display: inline-flex; align-items: center; gap: 8px; margin: 4px 0 22px; padding: 10px 18px; border-radius: 30px;
             border: 1px solid var(--primary); color: var(--primary); font-weight: 800; text-decoration: none; }
         .guide-link:hover { background: var(--primary-glow); }
+        /* related supplements: a long name moves the group label to its own line instead of pushing it off a phone screen */
+        .alt-list a { flex-wrap: wrap; row-gap: 2px; min-width: 0; overflow-wrap: anywhere; }
+        .alt-list a > span { white-space: normal; margin-inline-start: auto; text-align: end; }
+        /* very long names and dose lines wrap on 320px screens instead of widening the page */
+        .food-hero-text { min-width: 0; }
+        .food-hero-text h1 { overflow-wrap: anywhere; }
+        .dose-table { table-layout: fixed; }
+        .dose-table td { overflow-wrap: anywhere; }
+        .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
 """
 
 # the page styles the supplement markup is built on (not the food page styles, which changed with template v2)
