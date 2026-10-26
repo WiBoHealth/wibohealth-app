@@ -1,6 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- Every food with a static page lives at /foods/<slug>.html (+ /en, /nl, /sv): send old ?id= links there at once -->
+    <script src="/js/food-pages.js?v=a953189d"></script>
+    <script>
+      (function () {
+        try {
+          var p = new URLSearchParams(location.search), slug = (window.FOOD_PAGES || {})[p.get('id') || ''];
+          if (!slug) return;
+          var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl' || x === 'sv'; }, s = null;
+          try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
+          var q = (p.get('lang') || '').toLowerCase(), l = ok(q) ? q : ok(s) ? s : 'ar';
+          location.replace(l === 'ar' ? '/foods/' + slug + '.html' : '/' + l + '/foods/' + slug + '.html');
+        } catch (e) {}
+      })();
+    </script>
     <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -72,17 +86,12 @@
     <!-- Primary SEO & Googlebot Crawling Tags -->
     <title data-i18n="page_title_food_details">تفاصيل الطعام - WiBo Health</title>
     <meta name="description" id="metaDescription" content="تفاصيل غذائية شاملة عن الطعام: المؤشر الجلايسيمي، مؤشر الأنسولين، السعرات الحرارية، البروتين، الكربوهيدرات، الدهون، الألياف - تحليل غذائي معتمد من فريق ويبو هيلث الطبي.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="robots" content="noindex, follow">
     <meta name="author" content="فريق ويبو هيلث الطبي">
     
     <!-- Self-Referencing Canonical Tag -->
     <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/food-details.html">
     
-    <!-- Hreflang Tags for SEO & Googlebot -->
-    <link rel="alternate" id="hreflangAr" hreflang="ar" href="https://wibohealth.com/food-details.html?lang=ar">
-    <link rel="alternate" id="hreflangNl" hreflang="nl" href="https://wibohealth.com/food-details.html?lang=nl">
-    <link rel="alternate" id="hreflangEn" hreflang="en" href="https://wibohealth.com/food-details.html?lang=en">
-    <link rel="alternate" id="hreflangDefault" hreflang="x-default" href="https://wibohealth.com/food-details.html">
 
     <!-- Open Graph Tags -->
     <meta property="og:type" content="article">
@@ -862,7 +871,6 @@
 
     <!-- Food Database -->
     <script src="js/data.js?v=caaa629f"></script>
-    <script src="js/food-pages.js?v=a953189d"></script>
 
     <script>
         // ===== الدرع المناعي لترجمة الفئات السريرية (Zero-Arabic Category Shield) =====
@@ -1378,34 +1386,18 @@ if (food.image) {
         }
 
         function updateCanonicalAndHreflang(fId) {
-            // Pilot foods have a static page: point canonical + hreflang there to avoid duplicate content
+            // Foods with a static page: point canonical there (this page is noindex; hreflang lives on the static pages)
             const slug = (window.FOOD_PAGES || {})[String(fId)];
             if (slug) {
                 const base = 'https://wibohealth.com';
                 const set = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
                 set('canonicalTag', `${base}/foods/${slug}.html`);
-                set('hreflangAr', `${base}/foods/${slug}.html`);
-                set('hreflangEn', `${base}/en/foods/${slug}.html`);
-                set('hreflangNl', `${base}/nl/foods/${slug}.html`);
-                set('hreflangDefault', `${base}/foods/${slug}.html`);
                 const ogUrlEl = document.getElementById('ogUrl');
                 if (ogUrlEl) ogUrlEl.setAttribute('content', `${base}/foods/${slug}.html`);
                 return;
             }
             const canonical = document.getElementById('canonicalTag');
             if (canonical) canonical.href = `https://wibohealth.com/food-details.html?id=${fId}`;
-
-            const arHref = document.getElementById('hreflangAr');
-            if (arHref) arHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=ar`;
-
-            const nlHref = document.getElementById('hreflangNl');
-            if (nlHref) nlHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=nl`;
-
-            const enHref = document.getElementById('hreflangEn');
-            if (enHref) enHref.href = `https://wibohealth.com/food-details.html?id=${fId}&lang=en`;
-
-            const defHref = document.getElementById('hreflangDefault');
-            if (defHref) defHref.href = `https://wibohealth.com/food-details.html?id=${fId}`;
 
             const ogUrl = document.getElementById('ogUrl');
             if (ogUrl) ogUrl.setAttribute('content', `https://wibohealth.com/food-details.html?id=${fId}`);
