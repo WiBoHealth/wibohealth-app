@@ -1073,194 +1073,7 @@
             .diet-teaser-text { flex-basis: calc(100% - 64px); }
         }
 
-        /* ==========================================================================
-           Food details modal (same pattern as the supplements modal)
-           ========================================================================== */
-        body.food-modal-open {
-            position: fixed;
-            left: 0;
-            right: 0;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .food-modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            z-index: 10000;
-            overflow-y: auto;
-            overscroll-behavior: contain;
-            padding: 20px 16px;
-        }
-
-        .food-modal.active {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            animation: fmFade 0.2s ease;
-        }
-
-        @keyframes fmFade { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fmRise { from { transform: translateY(18px); opacity: 0; } to { transform: none; opacity: 1; } }
-
-        .food-modal-content {
-            background: var(--card-bg);
-            color: var(--text-dark);
-            border-radius: 20px;
-            max-width: 760px;
-            width: 100%;
-            margin: 30px auto;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-            animation: fmRise 0.25s ease;
-        }
-
-        .food-modal-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: #ffffff;
-            padding: 26px 22px 22px;
-            text-align: center;
-            position: relative;
-        }
-
-        .food-modal-close {
-            position: absolute;
-            top: 16px;
-            width: 36px;
-            height: 36px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            color: #ffffff;
-            font-size: 18px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
-
-        .food-modal-close:hover { background: rgba(255, 255, 255, 0.4); transform: rotate(90deg); }
-        .food-modal-close:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
-        [dir="rtl"] .food-modal-close { left: 16px; right: auto; }
-        [dir="ltr"] .food-modal-close { right: 16px; left: auto; }
-
-        /* Copy direct link: the corner opposite the close button */
-        .food-modal-share {
-            position: absolute;
-            top: 16px;
-            height: 36px;
-            min-width: 36px;
-            padding: 0 11px;
-            border: none;
-            border-radius: 18px;
-            background: rgba(255, 255, 255, 0.25);
-            color: #ffffff;
-            font: inherit;
-            font-size: 0.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            transition: background 0.2s ease;
-        }
-        .food-modal-share i { font-size: 15px; }
-        .food-modal-share:hover { background: rgba(255, 255, 255, 0.4); }
-        .food-modal-share:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
-        .food-modal-share.copied { background: #ffffff; color: var(--secondary-color); }
-        .food-modal-share .fm-share-text { display: none; }
-        .food-modal-share.copied .fm-share-text { display: inline; }
-        [dir="rtl"] .food-modal-share { right: 16px; left: auto; }
-        [dir="ltr"] .food-modal-share { left: 16px; right: auto; }
-        .fm-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
-        .food-modal-media {
-            width: min(240px, 62vw);
-            aspect-ratio: 1 / 1;
-            margin: 4px auto 14px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.18);
-            border: 3px solid rgba(255, 255, 255, 0.55);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 90px;
-        }
-
-        .food-modal-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        .food-modal-title { font-size: 1.5rem; font-weight: 800; line-height: 1.4; margin: 0 0 2px; }
-        .food-modal-subtitle { font-size: 0.95rem; opacity: 0.92; margin: 0; }
-
-        .food-modal-category {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 4px 14px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.22);
-            font-size: 0.85rem;
-            font-weight: 700;
-        }
-
-        .food-modal-body { padding: 22px; }
-
-        .fm-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 12px;
-        }
-
-        .fm-card {
-            background: rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 14px 12px;
-            text-align: center;
-            min-width: 0;
-        }
-
-        body.dark-mode .fm-card { background: var(--wb-soft); }
-
-        .fm-card.fm-index { border-top: 4px solid #94a3b8; }
-        .fm-card.fm-index.low { border-top-color: #10b981; }
-        .fm-card.fm-index.medium { border-top-color: #f59e0b; }
-        .fm-card.fm-index.high { border-top-color: #ef4444; }
-
-        .fm-label { font-size: 0.8rem; color: var(--text-light); font-weight: 700; line-height: 1.4; }
-        .fm-value { font-size: 1.6rem; font-weight: 800; color: var(--text-dark); line-height: 1.3; margin-top: 4px; }
-        .fm-value small { font-size: 0.85rem; font-weight: 700; color: var(--text-light); }
-        .fm-value.untested { color: var(--text-light); }
-
-        .fm-level {
-            display: inline-block;
-            margin-top: 6px;
-            padding: 2px 10px;
-            border-radius: 12px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            background: rgba(148, 163, 184, 0.15);
-            color: var(--text-light);
-        }
-
-        .fm-index.low .fm-level { background: rgba(16, 185, 129, 0.14); color: #059669; }
-        .fm-index.medium .fm-level { background: rgba(245, 158, 11, 0.16); color: #b45309; }
-        .fm-index.high .fm-level { background: rgba(239, 68, 68, 0.14); color: #dc2626; }
-        body.dark-mode .fm-index.low .fm-level { color: #34d399; }
-        body.dark-mode .fm-index.medium .fm-level { color: #fbbf24; }
-        body.dark-mode .fm-index.high .fm-level { color: #f87171; }
-
-        .fm-badge { display: block; margin-top: 6px; font-size: 0.72rem; font-weight: 700; color: #059669; }
-        body.dark-mode .fm-badge { color: #34d399; }
-        .fm-badge.reviewed { color: #64748b; }
-        body.dark-mode .fm-badge.reviewed { color: #94a3b8; }
+        /* GI pill on the food cards */
         .card-gi { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 6px 0 2px; font-size: 0.78rem; font-weight: 800; }
         .card-gi .gi-num { padding: 2px 10px; border-radius: 999px; }
         .card-gi .gi-num.low { background: rgba(16, 185, 129, 0.14); color: #059669; }
@@ -1271,126 +1084,6 @@
         body.dark-mode .card-gi .gi-num.high { color: #f87171; }
         .card-gi .gi-est { font-size: 0.68rem; font-weight: 700; color: #64748b; }
         body.dark-mode .card-gi .gi-est { color: #94a3b8; }
-
-        .fm-note { margin: 14px 0 0; font-size: 0.8rem; color: var(--text-light); text-align: center; }
-
-        .fm-full-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 16px;
-            padding: 12px 18px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: #ffffff;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
-        }
-
-        .fm-full-link:hover { filter: brightness(1.05); }
-
-        /* Full details, loaded from the food's own static page (foods/<slug>.html) */
-        .fm-full {
-            --fp-input: rgba(0, 0, 0, 0.03);
-            --fp-primary: #10b981;
-            line-height: 1.75;
-            text-align: start;
-        }
-        body.dark-mode .fm-full { --fp-input: rgba(255, 255, 255, 0.05); }
-        #foodModalFull { margin-top: 22px; }
-        .fm-full h2, .fm-full h3, .fm-full td, .fm-full strong { color: var(--text-dark); }
-        .fm-full p { color: var(--text-dark); margin: 0 0 12px; }
-        .fm-full .lead { font-size: 1.02rem; margin: 0 0 20px; }
-        .fm-full .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px; }
-        .fm-full .stat-box { background: var(--fp-input); border: 1px solid var(--border-color); border-radius: 14px; padding: 14px 10px; text-align: center; min-width: 0; }
-        .fm-full .stat-box h2 { font-size: 0.78rem; color: var(--text-light); font-weight: 700; margin: 0 0 6px; line-height: 1.4; }
-        .fm-full .stat-num { font-size: 1.7rem; font-weight: 900; line-height: 1.2; color: var(--text-dark); }
-        .fm-full .stat-num.low { color: #10b981; } .fm-full .stat-num.medium { color: #f39c12; } .fm-full .stat-num.high { color: #e74c3c; }
-        .fm-full .stat-num.muted { color: var(--text-light); } .fm-full .stat-num.kcal { color: #3498db; } .fm-full .stat-num.protein { color: #9b59b6; }
-        .fm-full .stat-sub { font-size: 0.75rem; color: var(--text-light); font-weight: 600; }
-        .fm-full .badge { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; border: 1px solid transparent; }
-        .fm-full .badge.low { background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.45); color: #059669; }
-        .fm-full .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #b45309; }
-        .fm-full .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #dc2626; }
-        .fm-full .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-light); }
-        body.dark-mode .fm-full .badge.low { color: #34d399; }
-        body.dark-mode .fm-full .badge.medium { color: #fbbf24; }
-        body.dark-mode .fm-full .badge.high { color: #f87171; }
-        .fm-full .section-title { font-size: 1.2rem; font-weight: 800; color: var(--fp-primary); margin: 26px 0 12px; display: flex; align-items: center; gap: 10px; }
-        .fm-full .tip-list { display: grid; gap: 10px; margin: 8px 0 22px; }
-        .fm-full .tip { background: var(--fp-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--fp-primary); border-radius: 8px; padding: 12px 16px; }
-        .fm-full .tip h3 { font-size: 0.98rem; font-weight: 800; margin: 0 0 4px; display: flex; gap: 8px; align-items: center; }
-        .fm-full .tip h3 i { color: var(--fp-primary); }
-        .fm-full .tip.warn { border-inline-start-color: #f39c12; }
-        .fm-full .tip.warn h3 i { color: #f39c12; }
-        .fm-full .tip p { color: var(--text-light); margin: 0; }
-        .fm-full .table-wrap { overflow-x: auto; }
-        .fm-full .nutrition-table { width: 100%; border-collapse: collapse; margin: 8px 0 6px; font-size: 0.92rem; }
-        .fm-full .nutrition-table th, .fm-full .nutrition-table td { padding: 10px; border-bottom: 1px solid var(--border-color); text-align: start; }
-        .fm-full .nutrition-table th { color: var(--fp-primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
-        .fm-full .nutrition-table td:not(:first-child) { font-weight: 700; }
-        .fm-full .table-note { font-size: 0.78rem; color: var(--text-light); margin-bottom: 22px; }
-        .fm-full .alt-list { list-style: none; display: grid; gap: 8px; margin: 8px 0 22px; padding: 0; }
-        .fm-full .alt-list a { display: flex; justify-content: space-between; gap: 12px; padding: 11px 14px; border-radius: 8px; background: var(--fp-input); border: 1px solid var(--border-color); color: var(--text-dark); text-decoration: none; font-weight: 700; }
-        .fm-full .alt-list a:hover { border-color: var(--fp-primary); color: var(--fp-primary); }
-        .fm-full .alt-list span { color: var(--text-light); font-weight: 600; white-space: nowrap; }
-        .fm-full .faq-list { display: grid; gap: 10px; margin: 8px 0 22px; }
-        .fm-full .faq-item { background: var(--fp-input); border: 1px solid var(--border-color); border-radius: 8px; padding: 12px 16px; }
-        .fm-full .faq-item h3 { font-size: 0.98rem; font-weight: 800; margin: 0 0 6px; }
-        .fm-full .faq-item p { color: var(--text-light); margin: 0; }
-        .fm-full .source-strip { background: var(--fp-input); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--fp-primary); border-radius: 12px; padding: 10px 14px; margin-bottom: 10px; color: var(--text-light); font-size: 0.82rem; font-weight: 600; overflow-wrap: anywhere; }
-        .fm-full .source-strip a, .fm-full .reviewed a { color: var(--fp-primary); font-weight: 800; text-decoration: none; }
-        .fm-full .reviewed { font-size: 0.82rem; color: var(--text-light); margin: 10px 0 0; }
-        .fm-full .disclaimer-box { margin-top: 14px; padding: 12px 16px; border-radius: 12px; background: rgba(0, 0, 0, 0.04); border: 1px solid var(--border-color); color: var(--text-light); font-size: 0.8rem; text-align: center; }
-        body.dark-mode .fm-full .disclaimer-box { background: rgba(15, 23, 42, 0.62); }
-
-        .fm-loading { display: grid; gap: 10px; margin-top: 22px; }
-        .fm-loading span { display: block; height: 14px; border-radius: 7px; background: linear-gradient(90deg, rgba(148, 163, 184, 0.15), rgba(148, 163, 184, 0.32), rgba(148, 163, 184, 0.15)); background-size: 200% 100%; animation: fmShimmer 1.2s linear infinite; }
-        .fm-loading span:nth-child(2) { width: 85%; } .fm-loading span:nth-child(3) { width: 65%; }
-        @keyframes fmShimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
-        .fm-card.fm-gl { grid-column: 1 / -1; text-align: center; line-height: 1.4; }
-        .fm-card.fm-gl .stat-num { font-size: 1.6rem; }
-        .fm-load-error { margin-top: 18px; text-align: center; color: var(--text-light); font-size: 0.9rem; }
-
-        .fm-page-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 18px;
-            padding: 11px 18px;
-            border-radius: 30px;
-            border: 1px solid var(--border-color);
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-decoration: none;
-        }
-        .fm-page-link:hover { border-color: var(--primary-color); }
-
-        /* Wide screens: a roomy layout, nutrient cards in one row, page sections in two columns */
-        @media (min-width: 900px) {
-            .food-modal-content { max-width: 1080px; }
-            .food-modal-header { padding: 30px 80px 26px; }
-            .food-modal-body { padding: 30px 44px 40px; }
-            .fm-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-            .fm-card.fm-gl { grid-column: span 2; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-            .fm-full { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; align-items: start; }
-            .fm-full > * { grid-column: 1 / -1; }
-            .fm-full > .fm-sec { grid-column: auto; min-width: 0; }
-            .fm-full > .fm-sec:last-of-type:nth-of-type(odd) { grid-column: 1 / -1; }
-            .fm-full .fm-sec .section-title:first-child { margin-top: 18px; }
-        }
-
-        @media (max-width: 600px) {
-            .fm-full .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .food-modal { padding: 10px; }
-            .food-modal-content { margin: 10px auto; }
-            .food-modal-title { font-size: 1.3rem; }
-            .fm-value { font-size: 1.35rem; }
-        }
     </style>
     <link rel="stylesheet" href="css/unified-header.css">
     <!-- Header menu on one row (desktop): the shared safety net lets the capsules wrap, and from 1321px the English and
@@ -1577,30 +1270,26 @@
         <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">مُطور بـ</span> <span style="color: #10b981;">♥</span> <span data-i18n="footer_dev_b">من أجل بودي</span></p>
     </footer>
 
-    <!-- Food Details Modal -->
-    <div class="food-modal" id="foodModal" role="dialog" aria-modal="true" aria-labelledby="foodModalTitle" aria-hidden="true">
-        <div class="food-modal-content">
-            <div class="food-modal-header">
-                <button type="button" class="food-modal-close" id="foodModalClose" onclick="closeFoodModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-                <button type="button" class="food-modal-share" id="foodModalShare" onclick="copyFoodLink()">
-                    <i class="fas fa-link"></i><span class="fm-share-text" id="foodModalShareText"></span>
-                </button>
-                <span class="fm-sr-only" id="foodModalStatus" role="status" aria-live="polite"></span>
-                <div class="food-modal-media" id="foodModalMedia"></div>
-                <h2 class="food-modal-title" id="foodModalTitle"></h2>
-                <p class="food-modal-subtitle" id="foodModalSubtitle"></p>
-                <span class="food-modal-category" id="foodModalCategory"></span>
-            </div>
-            <div class="food-modal-body" id="foodModalBody"></div>
-        </div>
-    </div>
 
     <!-- Load Food Database -->
     <script src="js/data.js?v=ef6666b6"></script>
     <script src="js/food-categories.js?v=1b314b6e"></script>
     <script src="js/food-pages.js?v=a953189d"></script>
+    <!-- Old shared links (foods.html#brown-rice, #food-612) go straight to the food's own page in the reader's language -->
+    <script>
+        (function () {
+            var key = '';
+            try { key = decodeURIComponent(location.hash.replace(/^#/, '')); } catch (e) { return; }
+            if (!key) return;
+            var map = window.FOOD_PAGES || {}, byId = /^food-(\d+)$/.exec(key), id = byId ? byId[1] : null, slug = null;
+            if (id) slug = map[id] || null;
+            else for (var k in map) if (map[k] === key) { slug = key; break; }
+            if (!slug && !id) return;
+            var l = document.documentElement.lang;   // set in <head>: ?lang=, saved choice, then the browser language
+            var prefix = (l === 'en' || l === 'nl' || l === 'sv') ? '/' + l : '';
+            location.replace(slug ? prefix + '/foods/' + slug + '.html' : '/food-details.html?id=' + encodeURIComponent(id));
+        })();
+    </script>
 
     <!-- High-Performance Lazy Rendering, SEO & Zero-Shift Engine -->
     <script>
@@ -2042,11 +1731,6 @@
             visibleCount = CHUNK_SIZE;
             filterFoods();
             updateStructuredDataForSEO();
-
-            if (modalFoodId !== null) {
-                const openFood = allFoods.find(f => String(f.id) === modalFoodId);
-                if (openFood) renderFoodModal(openFood);
-            }
         }
 
         function toggleFavorite(event, foodId) {
@@ -2331,7 +2015,7 @@
                         <div class="card-gi"><span class="gi-num ${getGILevel(cardGI)}">GI ${cardGI}</span>${food.gi_status === 'reviewed' ? `<span class="gi-est">${t('gi_reviewed_badge')}</span>` : ''}</div>`;
 
                 return `
-                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}" onclick="return openFoodModalFromCard(event, '${food.id}')">
+                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}">
                         <button class="favorite-btn ${isFav ? 'active' : ''}" 
                                 data-food-id="${food.id}" 
                                 onclick="toggleFavorite(event, '${food.id}')"
@@ -2383,22 +2067,8 @@
             }
         }
 
-        // ==========================================================================
-        // Food details modal: opens in place with the full details, keeps scroll
-        // position, search and tab. The URL gets #<slug>, so the food is linkable
-        // and the back button closes the modal instead of leaving the page.
-        // ==========================================================================
-        let modalFoodId = null;
-        let modalScrollY = 0;
-        let modalReturnFocus = null;
-        let modalLoadToken = 0;
-        let copyResetTimer = null;
+        // Food cards and old shared links (foods.html#brown-rice, #food-612): every food opens its own static page
         let slugToFoodId = null;
-        const fullDetailsCache = new Map();   // page path -> Promise of { gl, body } (HTML)
-
-        function escapeHtml(value) {
-            return String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
-        }
 
         // GI is shown when measured (Atkinson 2021) or a clinically reviewed estimate (labelled as such)
         function getKnownGI(food) {
@@ -2407,39 +2077,11 @@
             return null;
         }
 
-        function hasTestedII(food) {
-            return food.ii !== undefined && food.ii !== null && food.ii !== '' && !isNaN(Number(food.ii));
-        }
-
         // GI: <=55 low | 56-69 medium | >=70 high (International GI Tables)
         function getGILevel(value) {
             if (value >= 70) return 'high';
             if (value > 55) return 'medium';
             return 'low';
-        }
-
-        // II: <40 low | 40-69 moderate | >=70 high
-        function getIILevel(value) {
-            if (value >= 70) return 'high';
-            if (value >= 40) return 'medium';
-            return 'low';
-        }
-
-        function openFoodModalFromCard(event, foodId) {
-            // Ctrl/Cmd/Shift/middle click keep the normal link to food-details.html
-            if (event && (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button > 0)) return true;
-            if (event) event.preventDefault();
-            modalReturnFocus = event ? event.currentTarget : null;
-            openFoodModal(foodId);
-            return false;
-        }
-
-        function foodSlug(foodId) {
-            return (window.FOOD_PAGES || {})[String(foodId)] || null;
-        }
-
-        function foodHash(food) {
-            return '#' + (foodSlug(food.id) || `food-${food.id}`);
         }
 
         // '#brown-rice' or '#food-612' -> food
@@ -2459,332 +2101,10 @@
             return id ? (allFoods.find(f => String(f.id) === String(id)) || null) : null;
         }
 
-        // '/foods/x.html', '/en/foods/x.html', '/nl/foods/x.html' -> food
-        function foodFromPagePath(pathname) {
-            const m = /^\/(?:(?:en|nl|sv)\/)?foods\/([^\/]+)\.html$/.exec(pathname);
-            return m ? foodFromHash('#' + m[1]) : null;
-        }
-
-        // Direct link to share: the food's own indexable page in the current language
-        function absoluteFoodUrl(food) {
-            return new URL(foodPageHref(food.id), 'https://wibohealth.com/').href;
-        }
-
-        function openFoodModal(foodId, opts = {}) {
-            const food = allFoods.find(f => String(f.id) === String(foodId));
-            if (!food) return;
-            modalFoodId = String(food.id);
-            renderFoodModal(food);
-
-            const modal = document.getElementById('foodModal');
-            const hash = foodHash(food);
-            if (!modal.classList.contains('active')) {
-                modalScrollY = window.scrollY;
-                // Let the phone/browser back button close the modal instead of leaving the page.
-                // Push before locking the body, so the browser saves the real scroll position
-                // for this entry and restores it (not 0) when the modal is closed.
-                if (!opts.fromHistory && !(history.state && history.state.foodModal)) {
-                    history.pushState({ foodModal: true }, '', hash);
-                }
-                // Lock the page behind the modal without losing the scroll position
-                document.body.style.top = `-${modalScrollY}px`;
-                document.body.classList.add('food-modal-open');
-                modal.classList.add('active');
-                modal.setAttribute('aria-hidden', 'false');
-            } else if (!opts.fromHistory && location.hash !== hash) {
-                // Another food opened from inside the modal: same history entry, new hash
-                history.replaceState({ foodModal: true }, '', hash);
-            }
-            modal.scrollTop = 0;
-            document.getElementById('foodModalClose').focus({ preventScroll: true });
-        }
-
-        function renderFoodModal(food) {
-            const lang = currentLang;
-            const nameAr = food.name || '';
-            const nameEn = food.nameEn || '';
-            const nameNl = food.nameNl || '';
-            let title = nameAr, subtitle = nameEn;
-            if (lang === 'en') { title = nameEn || nameAr; subtitle = nameNl && nameNl !== title ? nameNl : ''; }
-            else if (lang === 'nl') { title = nameNl || nameEn || nameAr; subtitle = nameEn && nameEn !== title ? nameEn : ''; }
-            else if (lang === 'sv') { title = foodName(food, 'sv'); subtitle = nameEn && nameEn !== title ? nameEn : ''; }
-
-            document.getElementById('foodModalTitle').textContent = title;
-            document.getElementById('foodModalSubtitle').textContent = subtitle;
-            document.getElementById('foodModalCategory').textContent = getSafeCategoryName(food, lang);
-            document.getElementById('foodModalClose').setAttribute('aria-label', t('modal_close'));
-            document.getElementById('foodModalClose').title = t('modal_close');
-            resetCopyButton();
-
-            const media = document.getElementById('foodModalMedia');
-            const icon = escapeHtml(food.icon || '🍽️');
-            media.innerHTML = food.image
-                ? `<img src="${escapeHtml(food.image)}" alt="${escapeHtml(title)}" width="350" height="350" onerror="if (retryImageOnce(this)) return; this.parentElement.textContent='${icon}'">`
-                : icon;
-
-            const n = food.nutrition || {};
-            const unitGram = lang === 'ar' ? 'جم' : 'g';
-            const gi = getKnownGI(food);
-            const giKnown = gi !== null;
-            const giReviewed = giKnown && food.gi_status === 'reviewed';
-            const giLevel = giKnown ? getGILevel(gi) : '';
-            const iiTested = hasTestedII(food);
-            const ii = Number(food.ii);
-            const iiLevel = iiTested ? getIILevel(ii) : '';
-            const hasPage = !!foodSlug(food.id);
-
-            document.getElementById('foodModalBody').innerHTML = `
-                <div class="fm-grid" id="foodModalGrid">
-                    <div class="fm-card fm-index ${giLevel}">
-                        <div class="fm-label">${t('modal_gi')}</div>
-                        <div class="fm-value ${giKnown ? '' : 'untested'}">${giKnown ? gi : '—'}</div>
-                        ${giKnown ? `<span class="fm-level">${t('gi_' + giLevel)}</span>${giReviewed ? `<span class="fm-badge reviewed">${t('gi_reviewed_badge')}</span>` : ''}` : `<span class="fm-level">${t(food.gi_status === 'not_applicable' ? 'gi_not_applicable' : 'gi_not_available')}</span>`}
-                    </div>
-                    <div class="fm-card fm-index ${iiLevel}">
-                        <div class="fm-label">${t('modal_ii')}</div>
-                        <div class="fm-value ${iiTested ? '' : 'untested'}">${iiTested ? ii : '—'}</div>
-                        ${iiTested
-                            ? `<span class="fm-level">${t('ii_' + iiLevel)}</span><span class="fm-badge">${t('ii_tested_badge')}</span>`
-                            : `<span class="fm-level">${t('ii_not_tested')}</span>`}
-                    </div>
-                    <div class="fm-card">
-                        <div class="fm-label">${t('modal_calories')}</div>
-                        <div class="fm-value">${Math.round(n.calories || 0)} <small>${t('modal_kcal')}</small></div>
-                    </div>
-                    <div class="fm-card">
-                        <div class="fm-label">${t('protein')}</div>
-                        <div class="fm-value">${(n.protein || 0).toFixed(1)}<small>${unitGram}</small></div>
-                    </div>
-                    <div class="fm-card">
-                        <div class="fm-label">${t('carbs')}</div>
-                        <div class="fm-value">${(n.carbs || 0).toFixed(1)}<small>${unitGram}</small></div>
-                    </div>
-                    <div class="fm-card">
-                        <div class="fm-label">${t('fats')}</div>
-                        <div class="fm-value">${((n.fat !== undefined) ? n.fat : (n.fats || 0)).toFixed(1)}<small>${unitGram}</small></div>
-                    </div>
-                </div>
-                <p class="fm-note">${t('modal_per_100g')}</p>
-                ${hasPage ? `
-                <div class="fm-full" id="foodModalFull" aria-busy="true">
-                    <div class="fm-loading" role="img" aria-label="${escapeHtml(t('modal_loading'))}"><span></span><span></span><span></span></div>
-                </div>
-                <a class="fm-page-link" href="${foodPageHref(food.id)}">
-                    <i class="fas fa-up-right-from-square"></i> <span>${t('modal_full_details')}</span>
-                </a>` : `
-                <a class="fm-full-link" href="${foodPageHref(food.id)}">
-                    <i class="fas fa-chart-column"></i> <span>${t('modal_full_details')}</span>
-                </a>`}
-            `;
-            if (hasPage) loadFullDetails(food);
-        }
-
-        // Full details come from the food's static page, so the modal and the indexed page
-        // always show the same doctor-reviewed text. Cached per page; prefetched on hover/touch.
-        function fetchFullDetails(path) {
-            if (!fullDetailsCache.has(path)) {
-                const request = fetch(path, { credentials: 'same-origin' })
-                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
-                    .then(extractFullDetails)
-                    .catch(err => { fullDetailsCache.delete(path); throw err; });
-                fullDetailsCache.set(path, request);
-            }
-            return fullDetailsCache.get(path);
-        }
-
-        function extractFullDetails(html) {
-            const doc = new DOMParser().parseFromString(html, 'text/html');
-            const article = doc.querySelector('main.food-page article');
-            if (!article) throw new Error('food page without article');
-            // The modal header already shows name, image and group; the app promo stays on the page
-            article.querySelectorAll('.breadcrumb, .food-hero, .boodi-card, script, style').forEach(el => el.remove());
-            // GI, calories and protein are in the summary grid; only the glycemic load moves over
-            let gl = '';
-            const stats = article.querySelector('.stat-grid');
-            if (stats) {
-                const glBox = stats.querySelector('.stat-box:nth-child(2)');
-                if (glBox) {
-                    const label = glBox.querySelector('h2');
-                    const labelText = label ? label.textContent : '';
-                    if (label) label.remove();
-                    gl = `<div class="fm-label">${escapeHtml(labelText)}</div>${glBox.innerHTML}`;
-                }
-                stats.remove();
-            }
-            article.querySelectorAll('table').forEach(table => {
-                const wrap = doc.createElement('div');
-                wrap.className = 'table-wrap';
-                table.replaceWith(wrap);
-                wrap.appendChild(table);
-            });
-            // Group each heading with its content so wide screens can lay the sections out in two columns
-            const tail = el => el.matches('.source-strip, .reviewed, .disclaimer-box');
-            [...article.children].forEach(el => {
-                if (!el.matches('h2.section-title')) return;
-                const sec = doc.createElement('section');
-                sec.className = 'fm-sec';
-                el.replaceWith(sec);
-                sec.appendChild(el);
-                while (sec.nextElementSibling && !sec.nextElementSibling.matches('h2.section-title') && !tail(sec.nextElementSibling)) {
-                    sec.appendChild(sec.nextElementSibling);
-                }
-            });
-            return { gl, body: article.innerHTML };
-        }
-
-        function loadFullDetails(food) {
-            const token = ++modalLoadToken;
-            fetchFullDetails(foodPageHref(food.id)).then(({ gl, body }) => {
-                if (token !== modalLoadToken) return;
-                const box = document.getElementById('foodModalFull');
-                const grid = document.getElementById('foodModalGrid');
-                if (!box) return;
-                if (gl && grid) grid.children[1].insertAdjacentHTML('afterend', `<div class="fm-card fm-gl fm-full">${gl}</div>`);
-                box.innerHTML = body;
-                box.removeAttribute('aria-busy');
-            }).catch(() => {
-                if (token !== modalLoadToken) return;
-                const box = document.getElementById('foodModalFull');
-                if (!box) return;
-                box.innerHTML = `<p class="fm-load-error">${t('modal_load_error')}</p>`;
-                box.removeAttribute('aria-busy');
-            });
-        }
-
-        function prefetchFullDetails(foodId) {
-            if (foodSlug(foodId)) fetchFullDetails(foodPageHref(foodId)).catch(() => {});
-        }
-
-        // Prefetch after a short hover (not while the pointer only passes over the grid), at once on touch
-        (function setupPrefetch() {
-            const grid = document.getElementById('foodGrid');
-            if (!grid) return;
-            let hoverTimer = null;
-            grid.addEventListener('pointerover', function(e) {
-                const card = e.target.closest('.food-card');
-                if (!card) return;
-                clearTimeout(hoverTimer);
-                hoverTimer = setTimeout(() => prefetchFullDetails(card.dataset.cardId), 150);
-            });
-            grid.addEventListener('pointerout', function() { clearTimeout(hoverTimer); });
-            grid.addEventListener('touchstart', function(e) {
-                const card = e.target.closest('.food-card');
-                if (card) prefetchFullDetails(card.dataset.cardId);
-            }, { passive: true });
-            grid.addEventListener('focusin', function(e) {
-                const card = e.target.closest('.food-card');
-                if (card) prefetchFullDetails(card.dataset.cardId);
-            });
-        })();
-
-        // An alternative food linked inside the modal opens in the modal too
-        document.getElementById('foodModalBody').addEventListener('click', function(e) {
-            const link = e.target.closest('a[href]');
-            if (!link || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey || e.button > 0) return;
-            const url = new URL(link.href, location.href);
-            if (url.origin !== location.origin) return;
-            const food = foodFromPagePath(url.pathname);
-            if (!food || String(food.id) === modalFoodId) return;
-            e.preventDefault();
-            openFoodModal(food.id);
-        });
-
-        function resetCopyButton() {
-            clearTimeout(copyResetTimer);
-            const btn = document.getElementById('foodModalShare');
-            btn.classList.remove('copied');
-            btn.setAttribute('aria-label', t('modal_copy_link'));
-            btn.title = t('modal_copy_link');
-            document.getElementById('foodModalShareText').textContent = '';
-            btn.querySelector('i').className = 'fas fa-link';
-        }
-
-        function legacyCopy(text) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.setAttribute('readonly', '');
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
-            let ok = false;
-            try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-            ta.remove();
-            return ok;
-        }
-
-        function copyFoodLink() {
-            const food = allFoods.find(f => String(f.id) === modalFoodId);
-            if (!food) return;
-            const url = absoluteFoodUrl(food);
-            const done = () => {
-                const btn = document.getElementById('foodModalShare');
-                btn.classList.add('copied');
-                btn.querySelector('i').className = 'fas fa-check';
-                document.getElementById('foodModalShareText').textContent = t('modal_link_copied');
-                document.getElementById('foodModalStatus').textContent = t('modal_link_copied');
-                clearTimeout(copyResetTimer);
-                copyResetTimer = setTimeout(resetCopyButton, 2200);
-            };
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(url).then(done, () => { if (legacyCopy(url)) done(); });
-            } else if (legacyCopy(url)) {
-                done();
-            }
-        }
-
-        function hideFoodModal() {
-            const modal = document.getElementById('foodModal');
-            if (!modal.classList.contains('active')) return;
-            modalLoadToken++;
-            modal.classList.remove('active');
-            modal.setAttribute('aria-hidden', 'true');
-            document.body.classList.remove('food-modal-open');
-            document.body.style.top = '';
-            window.scrollTo({ top: modalScrollY, left: 0, behavior: 'instant' });
-            modalFoodId = null;
-            document.getElementById('foodModalStatus').textContent = '';
-            if (modalReturnFocus && document.body.contains(modalReturnFocus)) {
-                modalReturnFocus.focus({ preventScroll: true });
-            }
-            modalReturnFocus = null;
-        }
-
-        function closeFoodModal() {
-            // Drop the history entry added on open; popstate then hides the modal
-            if (history.state && history.state.foodModal) {
-                history.back();
-            } else {
-                hideFoodModal();
-                if (location.hash) history.replaceState(null, '', location.pathname + location.search);
-            }
-        }
-
-        // Opened from a shared link (foods.html#brown-rice): put the plain list entry under the
-        // modal entry, so closing or pressing back shows the list instead of leaving the site.
-        function openFoodModalFromLink(food) {
-            history.replaceState(null, '', location.pathname + location.search);
-            openFoodModal(food.id);
-        }
-
-        window.addEventListener('popstate', function() {
+        // A #slug typed or pasted later goes to the food's page as well
+        window.addEventListener('hashchange', function() {
             const food = foodFromHash(location.hash);
-            if (!food) { hideFoodModal(); return; }
-            if (history.state && history.state.foodModal) openFoodModal(food.id, { fromHistory: true });
-            else openFoodModalFromLink(food);   // hash typed or pasted into the address bar
-        });
-
-        // A reload keeps the history state; clear it so closing never leaves the page
-        if (history.state && history.state.foodModal) {
-            history.replaceState(null, '');
-        }
-
-        document.getElementById('foodModal').addEventListener('click', function(e) {
-            if (e.target === this) closeFoodModal();
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && modalFoodId !== null) closeFoodModal();
+            if (food) location.replace(foodPageHref(food.id));
         });
 
         function setupInfiniteScroll() {
@@ -2885,7 +2205,7 @@
             setupInfiniteScroll();
 
             const linkedFood = foodFromHash(location.hash);
-            if (linkedFood) openFoodModalFromLink(linkedFood);
+            if (linkedFood) location.replace(foodPageHref(linkedFood.id));   // normally done by the early redirect
         });
 
         function toggleTheme() {
