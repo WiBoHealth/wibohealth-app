@@ -54,6 +54,19 @@
         });
     }
 
+    // Back to the food guide: a reader who came from foods.html goes back in history, so the browser (or foods.html
+    // itself) returns to the same place in the list; anyone else (search engine, shared link) follows the link.
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-back]');
+        if (!a || e.defaultPrevented || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+        var ref = null;
+        try { ref = new URL(document.referrer); } catch (err) { return; }
+        if (ref.origin === location.origin && /^\/foods(\.html)?$/.test(ref.pathname) && history.length > 1) {
+            e.preventDefault();
+            history.back();
+        }
+    });
+
     // Introduction: two lines and a "read more" button; the full text stays in the HTML for readers and search engines
     var fold = document.getElementById('leadFold');
     if (fold) {

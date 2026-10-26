@@ -1731,6 +1731,7 @@
             visibleCount = CHUNK_SIZE;
             filterFoods();
             updateStructuredDataForSEO();
+            restoreListPosition();
         }
 
         function toggleFavorite(event, foodId) {
@@ -2101,6 +2102,71 @@
             return id ? (allFoods.find(f => String(f.id) === String(id)) || null) : null;
         }
 
+        // Back from a food page: the list returns to the same place. A card click saves the scroll position, the food and
+        // the list state (section, favourites, search, cards shown); the next load of this page that is a step back in
+        // history (browser back or the page's back button), or that comes from that food's page, restores them once.
+        document.getElementById('foodGrid').addEventListener('click', function(e) {
+            const card = e.target.closest('a.food-card');
+            if (!card || e.target.closest('.favorite-btn')) return;
+            const id = card.getAttribute('data-card-id');
+            try {
+                sessionStorage.setItem('foods_scroll_pos', String(Math.round(window.scrollY)));
+                sessionStorage.setItem('foods_last_food', (window.FOOD_PAGES || {})[id] || `food-${id}`);
+                sessionStorage.setItem('foods_list_state', JSON.stringify({
+                    id, group: selectedGroup, fav: showFavorites, visible: visibleCount,
+                    search: document.getElementById('searchInput').value
+                }));
+            } catch (err) {}
+        });
+
+        function takeSavedListPosition() {
+            let pos = null, slug = null, state = null;
+            try {
+                pos = sessionStorage.getItem('foods_scroll_pos');
+                slug = sessionStorage.getItem('foods_last_food');
+                state = JSON.parse(sessionStorage.getItem('foods_list_state') || 'null');
+                ['foods_scroll_pos', 'foods_last_food', 'foods_list_state'].forEach(k => sessionStorage.removeItem(k));
+            } catch (err) { return null; }
+            if (pos === null || !slug || !state) return null;
+            const nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || {};
+            let fromFood = false;
+            try { fromFood = new URL(document.referrer).pathname.endsWith('/foods/' + slug + '.html'); } catch (err) {}
+            if (nav.type !== 'back_forward' && !fromFood) return null;
+            return { pos: Number(pos) || 0, state };
+        }
+
+        let pendingListRestore = null;
+
+        // Runs after the cards of the restored list are on screen (end of changeLanguage)
+        function restoreListPosition() {
+            const saved = pendingListRestore;
+            pendingListRestore = null;
+            if (!saved) return;
+            if (saved.state.visible > visibleCount) {
+                visibleCount = saved.state.visible;
+                renderFoodsIncremental();
+            }
+            const anchor = () => {
+                const card = document.querySelector(`#foodGrid a.food-card[data-card-id="${CSS.escape(String(saved.state.id))}"]`);
+                if (card) card.scrollIntoView({ block: 'center', behavior: 'instant' });
+                else window.scrollTo({ top: saved.pos, behavior: 'instant' });
+            };
+            anchor();
+            // Web fonts and images that finish after this change the card heights above: anchor again on the card,
+            // unless the reader has started scrolling
+            let moved = false;
+            const stop = () => { moved = true; };
+            ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, stop, { once: true, passive: true }));
+            const again = () => { if (!moved) anchor(); };
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
+            if (document.readyState !== 'complete') window.addEventListener('load', again, { once: true });
+        }
+
+        // A page kept whole by the browser (back/forward cache) is already in place: drop the saved position
+        window.addEventListener('pageshow', function(e) {
+            if (e.persisted) try { ['foods_scroll_pos', 'foods_last_food', 'foods_list_state'].forEach(k => sessionStorage.removeItem(k)); } catch (err) {}
+        });
+
         // A #slug typed or pasted later goes to the food's page as well
         window.addEventListener('hashchange', function() {
             const food = foodFromHash(location.hash);
@@ -2199,6 +2265,16 @@
 
             // ?group=KEY (e.g. foods.html?group=fruits) opens with that category selected
             selectedGroup = groupFromUrl();
+
+            // Back from a food page: the same section, favourites view and search as when the card was followed
+            pendingListRestore = takeSavedListPosition();
+            if (pendingListRestore) {
+                const st = pendingListRestore.state;
+                selectedGroup = groupKeys.includes(st.group) ? st.group : 'all';
+                showFavorites = !!st.fav;
+                if (searchBox) searchBox.value = String(st.search || '').slice(0, 80);
+                history.scrollRestoration = 'manual';
+            }
 
             changeLanguage(currentLang);
             updateFavCount();

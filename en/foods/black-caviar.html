@@ -159,9 +159,9 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <link rel="stylesheet" href="/css/food-page.css?v=d1f9342d">
+    <link rel="stylesheet" href="/css/food-page.css?v=261e93fa">
     <link rel="stylesheet" href="/css/unified-header.css">
-    <script src="/js/food-serving.js?v=d923383d" defer></script>
+    <script src="/js/food-serving.js?v=3abbeb27" defer></script>
 </head>
 <body>
     <header>
@@ -196,6 +196,7 @@
 
     <main class="page-wrapper food-page fp">
         <article class="about-card">
+            <a class="fp-back" href="/foods.html?lang=en" data-back><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span>Back to foods</span></a>
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="/?lang=en">Home</a> › <a href="/en/foods/index.html">Food guide</a> › <a href="/en/foods/index.html#proteins_legumes">Proteins, Meats &amp; Legumes</a> › <span>Black Caviar</span>
             </nav>
