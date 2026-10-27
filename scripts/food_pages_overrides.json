@@ -22,7 +22,7 @@
         "nl": "Witte rijst is in de meeste Arabische huishoudens een vaste basis van de dagelijkse maaltijd, maar voor mensen met diabetes en insulineresistentie is het een uitdaging omdat het snel wordt verteerd. Met een gemiddelde glykemische index (65) en een relatief hoge glykemische lading voor een volle portie hoef je het niet te laten staan: het hele geheim zit in hoe je het kookt en in de combinatie met vezels en eiwit."
       },
       "title": {
-        "en": "White Rice Glycemic Index 65: How to Lower It | WiBo Health"
+        "en": "White Rice Calories & Glycemic Index 65: How to Lower It | WiBo Health"
       },
       "desc": {
         "en": "Cooked white rice has a medium GI of 65 and a high load of 26.9 per 150 g. The fridge trick, portion size and pairings that soften the sugar rise."
@@ -340,7 +340,7 @@
         "nl": "Het kroonjuweel en een van de allerbeste voedingsmiddelen voor mensen met diabetes en voor de gezondheid van het hart; linzen hebben een van de laagste glykemische indexen ter wereld (25) en zitten boordevol plantaardig eiwit, ijzer en oplosbare vezels."
       },
       "title": {
-        "ar": "المؤشر الجلايسيمي للعدس: 25 فقط ومنخفض للسكري | WiBo Health"
+        "ar": "سعرات العدس والمؤشر الجلايسيمي 25: منخفض للسكري | WiBo Health"
       },
       "desc": {
         "ar": "لماذا يُعد العدس من أقل الأطعمة تأثيراً في السكر؟ مؤشر جلايسيمي 25 وحمل 4.5 لحصة 150 غ وفق Atkinson 2021، مع نصائح لتناوله لمرضى السكري."
@@ -493,7 +493,7 @@
         "nl": "Je hydratatievriend nummer één: water en pure vezels die de maag vullen en het lichaam verfrissen met bijna nul calorieën. Het heeft nauwelijks effect op insuline of bloedsuikerwaarden, hoeveel je er ook van eet."
       },
       "title": {
-        "ar": "المؤشر الجلايسيمي للخيار: 15 سعرة لكل 100 غ | WiBo Health"
+        "ar": "سعرات الخيار والمؤشر الجلايسيمي: 15 سعرة لكل 100 غ | WiBo Health"
       },
       "desc": {
         "ar": "هل يرفع الخيار السكر؟ في 100 غ منه 15 سعرة وكربوهيدرات قليلة جداً، لذلك لا ينطبق عليه المؤشر الجلايسيمي. القيم الكاملة ونصائح لمرضى السكري."
@@ -667,7 +667,7 @@
         "nl": "De veiligste en bekendste dagelijkse vrucht, rijk aan oplosbare pectinevezels die een regelmatige stoelgang ondersteunen, met een zeer lage glykemische index (38) die hem de ideale fruitkeuze maakt voor mensen met diabetes en iedereen die op dieet is."
       },
       "title": {
-        "ar": "المؤشر الجلايسيمي للتفاح: 38 منخفض للسكري | WiBo Health"
+        "ar": "سعرات التفاح والمؤشر الجلايسيمي 38: منخفض للسكري | WiBo Health"
       },
       "desc": {
         "ar": "التفاح مؤشره الجلايسيمي 38 وحمله 6.6 لتفاحة متوسطة (150 غ) وفق Atkinson 2021. القيم الغذائية الكاملة وكيف تأكله دون ارتفاع في السكر."
@@ -769,7 +769,7 @@
         "nl": "Een natuurlijke vitamine C-bom, rijk aan citrusflavonoïden die gezonde slagaders ondersteunen en aan vezels die de suikeropname vertragen, met een prettig lage glykemische index (42)."
       },
       "title": {
-        "ar": "المؤشر الجلايسيمي للبرتقال 42: أفضل من العصير | WiBo Health"
+        "ar": "سعرات البرتقال والمؤشر الجلايسيمي 42: أفضل من العصير | WiBo Health"
       },
       "desc": {
         "ar": "البرتقال مؤشره الجلايسيمي 42 وحمله 5.2 لحبة متوسطة (130 غ). لماذا الحبة الكاملة أفضل من العصير لمرضى السكري؟"
@@ -1377,7 +1377,7 @@
         ]
       },
       "title": {
-        "ar": "المؤشر الجلايسيمي لخبز الشعير: 34 منخفض للسكري | WiBo Health"
+        "ar": "سعرات خبز الشعير والمؤشر الجلايسيمي 34: منخفض للسكري | WiBo Health"
       },
       "desc": {
         "ar": "خبز الشعير مؤشره الجلايسيمي 34 وحمله 6.4 لحصة 50 غ، أي أقل بكثير من الخبز الأبيض. القيم الكاملة وكيف تتأكد أنه خبز شعير حقيقي."
@@ -1572,7 +1572,7 @@
         ]
       },
       "title": {
-        "en": "French Fries Glycemic Index: 75 (High) & Tips | WiBo Health"
+        "en": "French Fries Calories & Glycemic Index: 75 (High) & Tips | WiBo Health"
       },
       "desc": {
         "en": "French fries have a high GI of 75 and 312 kcal per 100 g. Why frying and portion size matter, and how to enjoy them with diabetes."
@@ -3087,7 +3087,7 @@
         ]
       },
       "title": {
-        "en": "Unsweetened Almond Milk: 15 kcal per 100 g | WiBo Health"
+        "en": "Unsweetened Almond Milk Calories: 15 kcal per 100 g | WiBo Health"
       },
       "desc": {
         "en": "Unsweetened almond milk has just 15 kcal and almost no sugar per 100 g. What to check on the label and how to use it in coffee and smoothies."
@@ -3135,7 +3135,7 @@
         ]
       },
       "title": {
-        "en": "Coconut Water Glycemic Index: 54 & 19 kcal | WiBo Health"
+        "en": "Coconut Water Calories & Glycemic Index: 54 & 19 kcal | WiBo Health"
       },
       "desc": {
         "en": "Coconut water has a low GI of 54 and 19 kcal per 100 g. Is it OK with diabetes, how it compares with sports drinks, and which cartons have added sugar."
@@ -8339,7 +8339,7 @@
         ]
       },
       "title": {
-        "en": "Besan (Chickpea Flour) Glycemic Index: 35, Low | WiBo Health"
+        "en": "Besan (Chickpea Flour) Calories & Glycemic Index: 35, Low | WiBo Health"
       },
       "desc": {
         "en": "Chickpea flour (besan) has a low GI of 35 and a glycemic load of 4.9 per 30 g. Full nutrition facts and how to use it in flatbreads and pancakes."
@@ -8920,7 +8920,7 @@
         ]
       },
       "title": {
-        "en": "Jalapeño Pepper: 29 kcal & Almost Zero Carbs | WiBo Health"
+        "en": "Jalapeño Pepper Calories: 29 kcal & Almost Zero Carbs | WiBo Health"
       },
       "desc": {
         "en": "A jalapeño has 29 kcal per 100 g and almost no carbohydrate, so it barely affects blood sugar. Nutrition facts, capsaicin and easy ways to use it."
@@ -8976,7 +8976,7 @@
         ]
       },
       "title": {
-        "nl": "Flespompoen voedingswaarde: 45 kcal en GI 51 | WiBo Health"
+        "nl": "Flespompoen calorieën & voedingswaarde: 45 kcal en GI 51 | WiBo Health"
       },
       "desc": {
         "nl": "Flespompoen bevat 45 kcal per 100 g en heeft een lage GI van 51. Voedingswaarde per portie, koolhydraten en tips om hem te bereiden."
@@ -9482,7 +9482,7 @@
         ]
       },
       "title": {
-        "en": "Brazil Nuts: Selenium & How Many a Day Is Safe | WiBo Health"
+        "en": "Brazil Nuts Calories, Selenium & How Many a Day Is Safe | WiBo Health"
       },
       "desc": {
         "en": "Brazil nuts are one of the richest food sources of selenium. Selenium contributes to the normal thyroid function, and 1–2 nuts a day is enough."

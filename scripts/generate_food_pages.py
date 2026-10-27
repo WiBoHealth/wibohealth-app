@@ -1117,22 +1117,18 @@ def fmt(x):
     return (str(int(x)) if float(x).is_integer() else str(x)).replace('.', DECIMAL)
 
 
-# <title>: the longest suffix that keeps the whole title within TITLE_MAX characters (Google cuts at about 60), so a
-# long food name gets a shorter suffix instead of a cut-off title. Order of retreat: shorter suffix, the name without
-# its (bracketed) part, no brand, the name cut before a joining word, and only then the name cut at any word.
-TITLE_MAX = 60
+# <title>: the name plus the full keyword suffix (calories, glycemic index, nutrition facts), which is never shortened:
+# Google ranks on the whole title, the ~60 characters are only what it displays (keywords cut on 2026-10-24 cost
+# impressions; restored 2026-10-27, approved by Dr. Wassim Habib). Order of retreat for a long title: the brand, the
+# name's (bracketed) part, then the name cut before a joining word, so the title stays within TITLE_HARD_MAX.
+TITLE_MAX = 60                  # the brand is kept only while the whole title fits in this
+TITLE_HARD_MAX = 80
 TITLE_BRAND = ' | WiBo Health'
 TITLE_SUFFIXES = {
-    'ar': (': السعرات والمؤشر الجلايسيمي والقيم الغذائية', ': السعرات والمؤشر الجلايسيمي', ': سعرات ومؤشر جلايسيمي',
-           ': السعرات وGI'),
-    'en': (': Calories, Glycemic Index & Nutrition', ': Calories & Glycemic Index', ': Calories, GI & Nutrition',
-           ': Calories, Carbs & GI', ': Calories & GI'),
-    'nl': (': calorieën, glykemische index & voedingswaarde', ': calorieën, GI & voedingswaarde',
-           ': calorieën & glykemische index', ': calorieën, koolhydraten & GI', ': calorieën en GI-waarde',
-           ': calorieën & GI'),
-    'sv': (': kalorier, glykemiskt index och näringsvärde', ': kalorier och glykemiskt index',
-           ': kalorier, GI och näringsvärde', ': kalorier, kolhydrater och GI', ': kalorier och GI-värde',
-           ': kalorier och GI'),
+    'ar': ': السعرات والمؤشر الجلايسيمي والقيم الغذائية',
+    'en': ': Calories, Glycemic Index & Nutrition Facts',
+    'nl': ': calorieën, glykemische index & voedingswaarde',
+    'sv': ': kalorier, glykemiskt index och näringsvärde',
 }
 # a shortened name stops before one of these words (Arabic: before a word joined with و or ب), never on them
 TITLE_JOINS = {'ar': ('مع',), 'en': ('with', 'and', '&', 'in', 'on'), 'nl': ('met', 'en', '&', 'in', 'op'),
@@ -1140,7 +1136,9 @@ TITLE_JOINS = {'ar': ('مع',), 'en': ('with', 'and', '&', 'in', 'on'), 'nl': ('
 
 
 def fit_title(name, lang):
-    suffixes = sorted(TITLE_SUFFIXES[lang], key=len, reverse=True)
+    suf = TITLE_SUFFIXES[lang]
+    if len(name + suf + TITLE_BRAND) <= TITLE_MAX:
+        return name + suf + TITLE_BRAND
     short = re.sub(r'\s*\([^)]*\)', '', name).strip() or name
     words = short.split()
     # the name cut before a joining word, longest first: "Gemista gevulde tomaten en paprika's met rijst" -> "Gemista
@@ -1148,15 +1146,10 @@ def fit_title(name, lang):
     joins = TITLE_JOINS[lang]
     cuts = [' '.join(words[:k]) for k in range(len(words) - 1, 1, -1)
             if words[k].lower() in joins or (lang == 'ar' and words[k][:1] in 'وب' and len(words[k]) > 3)]
-    # the whole name without the brand beats a shortened name with it (Google shows the site name anyway)
-    for names in (dict.fromkeys((name, short)), cuts):
-        for brand in (TITLE_BRAND, ''):
-            for nm in names:
-                for suf in suffixes:
-                    if len(nm + suf + brand) <= TITLE_MAX:
-                        return nm + suf + brand
-    suf = suffixes[-1]
-    while len(words) > 1 and len(' '.join(words) + suf) > TITLE_MAX:
+    for nm in dict.fromkeys((name, short, *cuts)):
+        if len(nm + suf) <= TITLE_HARD_MAX:
+            return nm + suf
+    while len(words) > 1 and len(' '.join(words) + suf) > TITLE_HARD_MAX:
         words.pop()
     return ' '.join(words).rstrip(' ,،-–&') + suf
 
