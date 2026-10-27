@@ -24,7 +24,8 @@ import supplement_sv as SSV
 from generate_article_pages import link, nav as sv_nav
 from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
-from generate_supplement_pages import GA_TAG, NAME as SUPP_NAME, SEARCH_CSS, load_supplements, search_html, search_script
+from generate_supplement_pages import (GA_TAG, NAME as SUPP_NAME, COMPARE_CSS, SEARCH_CSS, compare_hint_html, compare_pick_html,
+                                       compare_shell_html, load_supplements, search_html, search_script)
 
 ROOT = Path(__file__).resolve().parent.parent
 UPDATED = '2026-10-22'
@@ -232,7 +233,7 @@ def build(kind, lang, sections):
     body = '\n'.join(
         f'            <h2 class="section-title" id="{anchor}"><span>{esc(labels[lang])}</span></h2>\n'
         f'            <ul class="alt-list dir-list">' + ''.join(
-            f'<li><a href="{item_url(kind, item[0], lang)}">{media(item)}{esc(item[1][lang])}'
+            f'<li>{compare_pick_html(item[0], lang) if kind == "supplements" else ""}<a href="{item_url(kind, item[0], lang)}">{media(item)}{esc(item[1][lang])}'
             + (f'<span>{esc(item[2][lang])}</span>' if item[2][lang] else '') + '</a></li>'
             for item in for_lang(items)) + '</ul>'
         for anchor, labels, items in sections)
@@ -294,7 +295,7 @@ def build(kind, lang, sections):
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){{var t;try{{t=localStorage.getItem('wibo_theme')}}catch(e){{}}if(t!=='dark'&&t!=='light'){{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{{localStorage.setItem('wibo_theme',t)}}catch(e){{}}}}h.setAttribute('data-theme',t)}})(document.documentElement);</script>
     <link rel="stylesheet" href="/css/food-page.css?v={CSS_VER}">
-    <style>{EXTRA_CSS}{SEARCH_CSS if kind == 'supplements' else ''}    </style>
+    <style>{EXTRA_CSS}{SEARCH_CSS + COMPARE_CSS if kind == 'supplements' else ''}    </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>
@@ -326,11 +327,12 @@ def build(kind, lang, sections):
             <h1>{esc(t["h1"])}</h1>
             {f'<a class="guide-link guide-link-hub" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>' if kind == 'supplements' else ''}
             {search_html(lang) if kind == 'supplements' else ''}
-            <p class="lead">{esc(t["intro"])} <strong>{esc(t["count"].format(n=n))}</strong></p>
+            {compare_hint_html(lang) if kind == 'supplements' else f'<p class="lead">{esc(t["intro"])} <strong>{esc(t["count"].format(n=n))}</strong></p>'}
             {'' if kind == 'supplements' else f'<a class="guide-link" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>'}
             {other_link}
             {f'<nav class="dir-jump" aria-label="{esc(hub_label)}">{jump}</nav>' if jump else ''}
 {body}
+            {compare_shell_html(lang) if kind == 'supplements' else ''}
         </article>
     </main>
 

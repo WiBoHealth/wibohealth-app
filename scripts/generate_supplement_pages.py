@@ -128,6 +128,104 @@ SEARCH_CSS = """
         .supp-search-results .none { padding: 8px 10px; color: var(--text-muted); font-size: 0.88rem; }
 """
 
+
+# --- comparison on the supplement indexes (js/supplement-compare.js), shared with generate_directory_pages.py ----------
+COMPARE_HINT = {
+    'ar': '⚖️ قارن بين المكملات واكتشف مدى التوافق والتعارض بينها (علّم على مكملين أو أكثر)',
+    'en': '⚖️ Compare supplements: check compatibility & interactions (select 2 or more)',
+    'nl': '⚖️ Vergelijk supplementen: bekijk compatibiliteit en interacties',
+    SV: '⚖️ Jämför kosttillskott och se kompatibilitet och interaktioner (välj 2 eller fler)',
+}
+COMPARE_UI = {
+    'ar': dict(compare='قارن', clear='مسح', close='إغلاق', title='مقارنة المكملات', pick='اختر للمقارنة',
+               hint='اختر مكملاً آخر على الأقل', max='يمكنك مقارنة 5 مكملات كحد أقصى'),
+    'en': dict(compare='Compare', clear='Clear', close='Close', title='Supplement comparison', pick='Select to compare',
+               hint='Select at least one more', max='You can compare up to 5 supplements'),
+    'nl': dict(compare='Vergelijk', clear='Wissen', close='Sluiten', title='Supplementen vergelijken', pick='Selecteer om te vergelijken',
+               hint='Selecteer er nog minstens één', max='U kunt maximaal 5 supplementen vergelijken'),
+    SV: dict(compare='Jämför', clear='Rensa', close='Stäng', title='Jämförelse av kosttillskott', pick='Välj för att jämföra',
+             hint='Välj minst ett till', max='Du kan jämföra högst 5 kosttillskott'),
+}
+
+
+def compare_hint_html(lang):
+    return f'<p class="supp-compare-hint">{esc(COMPARE_HINT[lang])}</p>'
+
+
+def compare_pick_html(slug, lang):
+    return f'<input type="checkbox" class="supp-pick" value="{slug}" aria-label="{esc(COMPARE_UI[lang]["pick"])}">'
+
+
+def compare_shell_html(lang):
+    """The bar that appears once a supplement is ticked, and the comparison window."""
+    u, t = COMPARE_UI[lang], T[lang]
+    labels = dict(u, rec=t['rec'], timing=t['timing'], freq=t['freq'], warnings=t['warnings'], inter=t['inter'])
+    data_ui = esc(json.dumps(labels, ensure_ascii=False))
+    src = f'/js/supplement-compare-{lang}.js?v={asset_ver(f"supplement-compare-{lang}.js")}'
+    return (f'<div id="suppCompare" data-lang="{lang}" data-src="{src}" data-ui="{data_ui}">'
+            f'<div class="supp-compare-bar" hidden><span class="hint">{esc(u["hint"])}</span>'
+            f'<button type="button" class="go"><i class="fas fa-scale-balanced" aria-hidden="true"></i> {esc(u["compare"])} (<span class="n">0</span>)</button>'
+            f'<button type="button" class="clear">{esc(u["clear"])}</button></div>'
+            f'<div class="supp-compare-modal" role="dialog" aria-modal="true" aria-label="{esc(u["title"])}" hidden>'
+            f'<div class="supp-compare-panel"><div class="supp-compare-head"><h2>{esc(u["title"])}</h2>'
+            f'<button type="button" class="close" aria-label="{esc(u["close"])}"><i class="fas fa-xmark" aria-hidden="true"></i></button></div>'
+            f'<div class="supp-compare-body"></div></div></div></div>'
+            f'<script src="/js/supplement-compare.js?v={asset_ver("supplement-compare.js")}" defer></script>')
+
+
+COMPARE_CSS = """
+        .supp-compare-hint { margin: 0 0 14px; padding: 10px 14px; border-radius: 14px; font-weight: 700; font-size: 0.92rem; line-height: 1.5;
+            color: var(--text-main); background: linear-gradient(135deg, rgba(16, 185, 129, 0.14), rgba(14, 165, 233, 0.14));
+            border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 4px solid var(--primary); }
+        .supplements-directory .dir-list li { position: relative; }
+        .supp-pick { position: absolute; top: 7px; inset-inline-end: 7px; z-index: 2; width: 20px; height: 20px; margin: 0; cursor: pointer;
+            appearance: none; -webkit-appearance: none; border-radius: 6px; border: 1.5px solid #fff; background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18); }
+        .supp-pick:checked { background: #064e3b url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 14px no-repeat; }
+        .supp-pick:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+        .supp-compare-bar { position: fixed; z-index: 1500; bottom: 18px; inset-inline: 0; margin: 0 auto; width: fit-content; max-width: calc(100% - 24px);
+            display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 999px; background: var(--bg-card);
+            border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); }
+        .supp-compare-bar[hidden] { display: none; }
+        .supp-compare-bar .hint { font-size: 0.82rem; color: var(--text-muted); padding-inline: 6px; }
+        .supp-compare-bar button { border: 0; border-radius: 999px; padding: 8px 16px; font: inherit; font-weight: 800; font-size: 0.9rem; cursor: pointer; }
+        .supp-compare-bar .go { color: #fff; background: linear-gradient(135deg, #10b981, #0ea5e9); }
+        .supp-compare-bar .go:disabled { opacity: 0.5; cursor: default; }
+        .supp-compare-bar .clear { background: var(--bg-input); color: var(--text-main); }
+        .supp-compare-modal { position: fixed; inset: 0; z-index: 2000; background: rgba(2, 6, 23, 0.6); display: flex; align-items: flex-start;
+            justify-content: center; padding: 24px 12px; overflow-y: auto; }
+        .supp-compare-modal[hidden] { display: none; }
+        .supp-compare-panel { width: 100%; max-width: 1100px; background: var(--bg-card); color: var(--text-main); border-radius: 18px;
+            border: 1px solid var(--border-color); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35); overflow: hidden; }
+        .supp-compare-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; color: #fff;
+            background: linear-gradient(135deg, #10b981, #0ea5e9); }
+        .supp-compare-head h2 { margin: 0; font-size: 1.05rem; color: #fff; }
+        .supp-compare-head .close { border: 0; background: rgba(255, 255, 255, 0.2); color: #fff; width: 34px; height: 34px; border-radius: 50%; cursor: pointer; font-size: 16px; }
+        .supp-compare-scroll { overflow-x: auto; }
+        .supp-compare-body table { width: 100%; border-collapse: collapse; font-size: 0.86rem; line-height: 1.55; }
+        .supp-compare-body th, .supp-compare-body td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); vertical-align: top;
+            text-align: start; min-width: 170px; overflow-wrap: anywhere; }
+        .supp-compare-body thead th { text-align: center; }
+        .supp-compare-body thead th .ic { display: block; font-size: 26px; line-height: 1.2; }
+        .supp-compare-body thead th a { color: var(--primary); font-weight: 800; text-decoration: none; }
+        .supp-compare-body thead th small { display: block; color: var(--text-muted); font-weight: 600; }
+        .supp-compare-body tbody th { min-width: 120px; color: var(--text-muted); font-weight: 800; white-space: nowrap; background: var(--bg-input);
+            position: sticky; inset-inline-start: 0; z-index: 1; }          /* the row names stay in view while the table scrolls */
+        @media (max-width: 600px) {
+            .supp-compare-body tbody th { min-width: 0; white-space: normal; width: 92px; font-size: 0.8rem; }
+            .supp-compare-body th, .supp-compare-body td { min-width: 150px; padding: 8px 10px; }
+            .supp-compare-body tbody th { min-width: 92px; }
+        }
+        .supp-compare-body ul { margin: 0; padding-inline-start: 18px; }
+        .supp-compare-body .loading { padding: 20px; text-align: center; }
+        /* solid surfaces: the theme's card colours are see-through in dark mode */
+        .supp-compare-panel, .supp-compare-bar { background: #ffffff; }
+        .supp-compare-body tbody th { background: #f1f5f9; }
+        .supp-compare-bar .clear { background: #f1f5f9; }
+        html[data-theme="dark"] .supp-compare-panel, html[data-theme="dark"] .supp-compare-bar { background: #0f172a; }
+        html[data-theme="dark"] .supp-compare-body tbody th, html[data-theme="dark"] .supp-compare-bar .clear { background: #1e293b; }
+"""
+
 def langs_of(slug):
     """Languages a supplement page exists in: ar/en/nl always, sv for the supplements in supplement_sv.PUBLISH."""
     return ALL_LANGS if slug in SSV.PUBLISH else LANGS
@@ -448,6 +546,18 @@ def main():
                                                 SSV.NAMES.get(s['slug']) if s['slug'] in SSV.PUBLISH else None, s.get('icon') or '💊']
                                                for s in vetted], ensure_ascii=False, separators=(',', ':')) + ';\n',
         encoding='utf-8', newline='\n')
+
+    # per-language data of the comparison on the supplement indexes (js/supplement-compare.js)
+    for lang in ALL_LANGS:
+        rows = {s['slug']: [supp_name(s, lang), s.get('icon') or '💊', group_label(s, lang), field(s, 'dosage', lang)['recommended'],
+                            field(s, 'dosage', lang)['timing'], field(s, 'dosage', lang)['frequency'], field(s, 'warnings', lang),
+                            field(s, 'interactions', lang)]
+                for s in vetted if lang in langs_of(s['slug'])}
+        (ROOT / 'js' / f'supplement-compare-{lang}.js').write_text(
+            '// Generated by scripts/generate_supplement_pages.py - do not edit by hand.\n'
+            '// slug -> [name, icon, area, recommended dose, timing, frequency, [warnings], interactions] for js/supplement-compare.js.\n'
+            'window.SUPP_COMPARE = ' + json.dumps(rows, ensure_ascii=False, separators=(',', ':')) + ';\n',
+            encoding='utf-8', newline='\n')
 
     missing = SSV.PUBLISH - {s['slug'] for s in vetted}
     assert not missing, f'supplement_sv.PUBLISH: no vetted record for {missing}'
