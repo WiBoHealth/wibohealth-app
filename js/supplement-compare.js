@@ -26,7 +26,20 @@
         return '/' + lang + '/supplements/' + slug + '.html';
     }
 
+    // while the cookie banner (js/consent.js) is on screen, the bar sits just above it instead of under it
+    function place() {
+        var c = document.getElementById('wibo-consent'), off = 18;
+        if (c && getComputedStyle(c).display !== 'none' && getComputedStyle(c).visibility !== 'hidden') {   // fixed: no offsetParent
+            var r = c.getBoundingClientRect();
+            if (r.height && r.top < innerHeight) off = Math.max(18, innerHeight - r.top + 10);
+        }
+        bar.style.bottom = off + 'px';
+    }
+    document.addEventListener('click', function () { setTimeout(place, 60); });
+    addEventListener('resize', place);
+
     function update() {
+        place();
         bar.hidden = picked.length === 0;
         count.textContent = picked.length;
         go.disabled = picked.length < 2;
