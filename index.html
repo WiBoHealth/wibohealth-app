@@ -249,6 +249,12 @@
                 'feat_gest_sum': 'اطمئني، سكر الحمل ليس خطأكِ. أرقام التحاليل الطبيعية، نظام الإشارات المرورية للأطعمة، وخطة يومكِ خطوة بخطوة',
                 'feat_gest_alt': 'امرأة حامل مبتسمة في مطبخ مشمس مع وعاء توت وأفوكادو',
                 'feat_gest_btn': 'اقرأ الدليل الكامل',
+                'feat_liver_href': '/articles/fatty-liver-and-visceral-fat.html',
+                'feat_liver_cat': '🫀 مقال جديد / الكبد ومتلازمة الأيض',
+                'feat_liver_title': 'الكبد الدهني أعراضه وأسبابه .. والخبر السعيد تجده في هذا المقال الشامل',
+                'feat_liver_sum': 'لماذا يتراكم الدهن في الكبد حتى عند النحيفين؟ التحاليل التي تكشفه، وخطة 12 أسبوعاً لتقليل دهون الكبد والكرش الحشوي.',
+                'feat_liver_alt': 'امرأة تضع يدها على بطنها في مطبخ مشرق، في إشارة إلى أعراض الكبد الدهني',
+                'feat_liver_btn': 'اقرأ المقال',
                 'pulse_c1_href': '/bmi-calculator.html',
                 'pulse_c2_href': '/tdee-calculator.html',
                 'pulse_c3_href': '/whtr-calculator.html',
@@ -417,6 +423,12 @@
                 'feat_gest_sum': 'It is not your fault. Normal test numbers, a traffic-light food list and your day step by step',
                 'feat_gest_alt': 'Smiling pregnant woman in a sunny kitchen with a bowl of berries and an avocado',
                 'feat_gest_btn': 'Read the full guide',
+                'feat_liver_href': '/en/articles/fatty-liver-and-visceral-fat.html',
+                'feat_liver_cat': '🫀 New article / Liver & Metabolic Health',
+                'feat_liver_title': 'Fatty Liver: Symptoms, Causes & The Good News in This Complete Guide',
+                'feat_liver_sum': 'Why fat builds up in the liver even in slim people, the tests that find it, and a 12-week plan to reduce liver fat and visceral belly fat.',
+                'feat_liver_alt': 'A woman with her hand on her stomach in a bright kitchen, illustrating fatty liver symptoms',
+                'feat_liver_btn': 'Read the article',
                 'pulse_c1_href': '/en/bmi-calculator.html',
                 'pulse_c2_href': '/en/tdee-calculator.html',
                 'pulse_c3_href': '/en/whtr-calculator.html',
@@ -585,6 +597,12 @@
                 'feat_gest_sum': 'Het is niet jouw schuld. Normale waarden, een stoplicht-voedingslijst en je dag stap voor stap',
                 'feat_gest_alt': 'Lachende zwangere vrouw in een zonnige keuken met een kom bessen en een avocado',
                 'feat_gest_btn': 'Lees de volledige gids',
+                'feat_liver_href': '/nl/articles/fatty-liver-and-visceral-fat.html',
+                'feat_liver_cat': '🫀 Nieuw artikel / Lever & metabole gezondheid',
+                'feat_liver_title': 'Leververvetting: Symptomen, oorzaken en het goede nieuws in deze complete gids',
+                'feat_liver_sum': 'Waarom vet zich ook bij slanke mensen in de lever ophoopt, welke onderzoeken het aantonen en een 12-wekenplan tegen levervet en visceraal buikvet.',
+                'feat_liver_alt': 'Een vrouw met haar hand op haar buik in een lichte keuken, als beeld voor leververvetting',
+                'feat_liver_btn': 'Lees het artikel',
                 'pulse_c1_href': '/nl/bmi-calculator.html',
                 'pulse_c2_href': '/nl/tdee-calculator.html',
                 'pulse_c3_href': '/nl/whtr-calculator.html',
@@ -2112,6 +2130,11 @@
         }
         @media (min-width: 1025px) {
             .hero .hero-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .feature-duo.feature-trio.feature-quad { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        /* four featured guides: 2 x 2 on tablets */
+        @media (min-width: 640px) and (max-width: 1024px) {
+            .feature-duo.feature-trio.feature-quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
     </style>
 </head>
@@ -2235,7 +2258,7 @@
                         <a href="/water-calculator.html" class="pulse-pill" data-i18n-href="pulse_c4_href"><span class="pulse-ico" aria-hidden="true">💧</span><span data-i18n="pulse_c4">حاسبة احتياج الماء اليومي (EFSA)</span></a>
                         <a href="leptin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a1">لغز اللبتين: ليش عم آكل وما عم أشبع؟!</span></a>
                         <a href="insulin-resistance.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a2">السكر التراكمي ومقاومة الإنسولين</span></a>
-                        <a href="fatty-liver.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">الكبد الدهني الخفي والفركتوز</span></a>
+                        <a href="/articles/fatty-liver-and-visceral-fat.html" class="pulse-pill" data-i18n-href="feat_liver_href"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">الكبد الدهني الخفي والفركتوز</span></a>
                         <a href="cortisol-stress.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a4">الكورتيزول والكرش العصبي</span></a>
                         <a href="magnesium-types.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a5">أنواع المغنيسيوم واختيار الأنسب</span></a>
                         <a href="bone-health-minerals.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a6">خفايا الكالسيوم وهشاشة العظام</span></a>
@@ -2446,8 +2469,21 @@
                 </div>
                 <a href="/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">اقرأ الدليل الكامل</a>
             </div>
-            <!-- 2. Featured row: leptin article (كرت مقال اللبتين), the sugar-free cereals guide and the gestational diabetes guide -->
-            <div class="feature-duo feature-trio">
+            <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide
+                 and the gestational diabetes guide (4 cards: 2x2 below 1025px, one row of 4 above) -->
+            <div class="feature-duo feature-trio feature-quad">
+            <div class="leptin-feature-card">
+                <div class="feature-thumb">
+                    <img src="/images/fatty-liver-guide-thumb.webp" srcset="/images/fatty-liver-guide-thumb.webp 640w, /images/fatty-liver-guide-card.webp 1280w" sizes="(max-width: 640px) 46vw, 300px" alt="امرأة تضع يدها على بطنها في مطبخ مشرق، في إشارة إلى أعراض الكبد الدهني" data-i18n-alt="feat_liver_alt" width="640" height="360" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge feature-badge-new" data-i18n="feat_liver_cat">🫀 مقال جديد / الكبد ومتلازمة الأيض</span>
+                    <h3 data-i18n="feat_liver_title">الكبد الدهني أعراضه وأسبابه .. والخبر السعيد تجده في هذا المقال الشامل</h3>
+                    <p data-i18n="feat_liver_sum">لماذا يتراكم الدهن في الكبد حتى عند النحيفين؟ التحاليل التي تكشفه، وخطة 12 أسبوعاً لتقليل دهون الكبد والكرش الحشوي.</p>
+                </div>
+                <a href="/articles/fatty-liver-and-visceral-fat.html" class="leptin-feature-btn" data-i18n-href="feat_liver_href" data-i18n="feat_liver_btn">اقرأ المقال</a>
+            </div>
+
             <div class="leptin-feature-card">
                 <div class="feature-thumb">
                     <img src="images/leptin-hero.jpeg" alt="ليش عم آكل وما عم أشبع">
@@ -2518,18 +2554,6 @@
                         <h4 data-i18n="card_title_hba1c">السكر التراكمي ومقاومة الإنسولين</h4>
                         <p data-i18n="card_desc_hba1c">دليلك السريري الشامل لفهم أرقام التحليل، وأعراض مقاومة الإنسولين الخفية، وخطة استعادة حساسية الخلايا.</p>
                         <span class="stat-read-more" data-i18n="card_btn_hba1c">اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i></span>
-                    </div>
-                </a>
-
-                <a href="fatty-liver.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_fatty_liver">دليل سريري 🩺</div>
-                    <div class="stat-thumb-container">
-                        <img src="images/fatty-liver-lifestyle.jpeg" alt="الكبد الدهني الخفي والفركتوز" class="stat-article-img" loading="lazy">
-                    </div>
-                    <div class="stat-article-details">
-                        <h4 data-i18n="card_title_fatty_liver">الكبد الدهني الخفي والفركتوز</h4>
-                        <p data-i18n="card_desc_fatty_liver">كيف يحوّل الكبد السكر السائل إلى دهون حشوية؟ وخطة التعافي السريرية لخفض إنزيمات الكبد وعكس التشحم.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_fatty_liver">اضغط لقراءة المقال كاملاً <i class="fa-solid fa-arrow-left"></i></span>
                     </div>
                 </a>
 
@@ -2691,7 +2715,7 @@
             <div class="home-articles-links">
                 <a href="intermittent-fasting.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">⏱️</span><span data-i18n="ha_l2">الصيام المتقطع وخرافات السوشيال ميديا</span></a>
                 <a href="insulin-resistance.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🩸</span><span data-i18n="ha_l3">السكر التراكمي ومقاومة الإنسولين</span></a>
-                <a href="fatty-liver.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🫀</span><span data-i18n="ha_l4">الكبد الدهني الخفي ومقاومة الإنسولين</span></a>
+                <a href="/articles/fatty-liver-and-visceral-fat.html" class="home-article-link" data-i18n-href="feat_liver_href"><span class="home-article-icon" aria-hidden="true">🫀</span><span data-i18n="ha_l4">الكبد الدهني الخفي ومقاومة الإنسولين</span></a>
                 <a href="leptin-resistance.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🧠</span><span data-i18n="ha_l5">لغز هرمون اللبتين والشبع</span></a>
                 <a href="thyroid-health.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🦋</span><span data-i18n="ha_l6">خمول الغدة الدرقية وبطء الحرق</span></a>
                 <a href="cortisol-stress.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">😮‍💨</span><span data-i18n="ha_l7">الكورتيزول وهرمون التوتر</span></a>

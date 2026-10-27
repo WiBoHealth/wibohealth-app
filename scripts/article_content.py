@@ -1847,96 +1847,6 @@ sv=dict(
     ),
 )
 
-FATTY_LIVER_SV = dict(
-    legacy=dict(ar='/fatty-liver.html'),
-    slugs=dict(sv='fettlever'),
-    hero='fatty-liver-lifestyle.jpeg', hero_size=(1376, 1376), hero_portrait=True,
-    published='2026-10-23', modified='2026-10-23',
-    named_author=True,
-    faq_schema=True,
-    references=[
-        'European Association for the Study of the Liver (EASL), EASD, EASO. EASL–EASD–EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD). J Hepatol 2024;81(3):492–542',
-        'Rinella ME, Lazarus JV, Ratziu V, et al. A multisociety Delphi consensus statement on new fatty liver disease nomenclature. J Hepatol 2023;79(6):1542–1556',
-        'Vilar-Gomez E, Martinez-Perez Y, Calzadilla-Bertot L, et al. Weight loss through lifestyle modification significantly reduces features of nonalcoholic steatohepatitis. Gastroenterology 2015;149(2):367–378',
-        'Schwarz JM, Noworolski SM, Erkin-Cakmak A, et al. Effects of dietary fructose restriction on liver fat, de novo lipogenesis, and insulin kinetics in children with obesity. Gastroenterology 2017;153(3):743–752',
-        'Commission Regulation (EU) No 432/2012: authorised health claims (choline and normal liver function)',
-    ],
-    content=dict(
-sv=dict(
- byline=SV_BYLINE,
- title='Fettlever (MASLD): så uppstår den tyst och vad du kan göra för levern | WiBo Health',
- h1='Fettlever (MASLD): så uppstår den tyst och vad du kan göra för levern',
- crumb='Fettlever',
- cat='Diabetes och metabol hälsa',
- desc='Fettlever (MASLD) i klartext: hur fruktos och insulinresistens lagrar fett i levern, stadierna, de dolda tecknen, hur den upptäcks i svensk vård och de levnadsvanor som minskar leverfettet.',
- summary='Hur fettlever uppstår, varför den ofta inte märks, hur den upptäcks och vilka vanor som minskar leverfettet.',
- hero_alt='Kvinna som stretchar på en yogamatta, framför en kopp svart kaffe, bär, avokado och chiafrön – vardagsvanor för levern',
- about=['Fatty liver', 'MASLD', 'Insulin resistance', 'Fructose'],
- disclaimer=SV_DISCLAIMER,
- body='''            <p class="lead">Levern är kroppens kemiska kraftverk med hundratals uppgifter: den bygger proteiner, lagrar energi och tar hand om omsättningen av fett och socker. Ändå har ungefär var fjärde vuxen i världen för mycket fett i levern utan att dricka mycket alkohol, ett tillstånd som i dag kallas <strong>MASLD</strong> (metabolt associerad steatotisk leversjukdom), tidigare NAFLD.</p>
-            <p>Det lömska med fettlever är att den oftast inte gör ont: levern saknar smärtnerver, så fettinlagringen kan pågå i många år utan symtom. I den här guiden förklarar vi hur socker, särskilt fruktos, och insulinresistens driver fettinlagringen, och vilka levnadsvanor som enligt forskningen minskar leverfettet.</p>
-            <div class="tip"><h3>Viktigt att veta</h3><p>Många med fettlever har helt normala levervärden (ALAT och ASAT). Ett vanligt leverprov räcker därför inte för att utesluta fettlever. I svensk vård används ofta <strong>FIB-4</strong>, ett riskindex som räknas fram från ålder, ALAT, ASAT och trombocyter, och vid behov elastografi (till exempel FibroScan) för att bedöma risken för fibros.</p></div>
-
-            <h2 class="section-title"><i class="fas fa-flask"></i> <span>Fruktos: varför flytande socker belastar levern</span></h2>
-            <p>Musklerna, hjärtat och hjärnan använder glukos som bränsle. Fruktos (som finns i glukos-fruktossirap, läsk och juice) tas däremot nästan helt om hand av levern.</p>
-            <p>När fruktos kommer i stora mängder, särskilt i flytande form, får levern mer än den hinner använda och omvandlar överskottet till fett, så kallad fettnybildning (de novo-lipogenes).</p>
-
-            <h2 class="section-title"><i class="fas fa-rotate"></i> <span>Insulinresistens och den onda cirkeln</span></h2>
-            <p>När fett samlas i leverns celler blir de sämre på att svara på insulin. Normalt bromsar insulinet leverns egen sockerproduktion efter en måltid; vid fettlever fortsätter levern i stället att släppa ut socker i blodet, även när du fastar.</p>
-            <p>Det högre blodsockret får bukspottkörteln att frisätta mer insulin, och det höga insulinet driver i sin tur på fettnybildningen i levern. Därför hänger fettlever, insulinresistens och prediabetes ofta ihop.</p>
-
-            <div class="boodi-card">
-                <div>
-                    <h2>📱 Skydda din lever: granska varor med boodi-appen 💚</h2>
-                    <p>Skanna streckkoden för att hitta dolt socker, glukos-fruktossirap och härdade fetter direkt, och se alternativ från samma hylla.</p>
-                </div>
-                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
-            </div>
-
-            <h2 class="section-title"><i class="fas fa-layer-group"></i> <span>Fettleverns stadier</span></h2>
-            <ul class="check-list">
-                <li><strong>1. Enkel fettlever (MASL):</strong> fett utgör mer än 5 % av leverns vikt, utan inflammation. Det här stadiet kan gå tillbaka med viktnedgång och ändrade levnadsvanor.</li>
-                <li><strong>2. Fettleverinflammation (MASH):</strong> fettet orsakar inflammation och cellskador. Viktnedgång kan minska inflammationen; följs upp av läkare.</li>
-                <li><strong>3. Fibros och cirros:</strong> leverväv ersätts av ärrvävnad. Kräver utredning och uppföljning hos specialist.</li>
-            </ul>
-            <figure class="article-figure">
-                <img src="/images/fatty-liver-chart.jpeg" alt="Jämförelse mellan en frisk lever och en fettlever" width="2816" height="1536" loading="lazy" decoding="async">
-                <figcaption>En frisk lever jämfört med en fettlever (bildtexter på engelska).</figcaption>
-            </figure>
-
-            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>Dolda varningstecken</span></h2>
-            <p>Fettlever ger oftast inga symtom, men kroppen kan visa vissa tecken:</p>
-            <ul class="check-list">
-                <li><strong>Trötthet och ”hjärndimma”:</strong> särskilt efter måltider.</li>
-                <li><strong>Tyngdkänsla under höger revbensbåge:</strong> en molande känsla när levern blir större.</li>
-                <li><strong>Ökat midjemått:</strong> bukfettet speglar ofta hur mycket fett som finns i levern.</li>
-                <li><strong>Blodfetter:</strong> höga triglycerider och lågt HDL-kolesterol är vanliga vid fettlever.</li>
-            </ul>
-            <p>Känner du igen dig, eller har du typ 2-diabetes eller bukfetma? Prata med din vårdcentral om en bedömning av levern.</p>
-
-            <h2 class="section-title"><i class="fas fa-route"></i> <span>Levnadsvanor som minskar leverfettet</span></h2>
-            <p>Levercellerna har en god förmåga att återhämta sig. När belastningen minskar börjar fettet i levern minska redan inom några veckor:</p>
-
-            <h3>1. Ta bort söta drycker och tillsatt socker</h3>
-            <p>Grunden är att sluta med läsk, juice, söta bakverk och vitt mjöl. En studie visade att leverns fettnybildning och leverfettet minskade redan efter nio dagar när tillsatt fruktos byttes mot stärkelse.</p>
-
-            <h3>2. Ge levern en paus på natten</h3>
-            <p>En nattfasta på 12–14 timmar mellan kvällsmat och frukost sänker insulinnivån och ger levern tid att använda sitt lagrade fett. Har du diabetes och tar blodsockersänkande läkemedel, eller är du gravid, prata med din läkare innan du ändrar måltidsrytmen.</p>
-
-            <h3>3. Kaffe kan ingå</h3>
-            <p><a href="{food:black-coffee}">Svart kaffe</a> utan socker passar bra i en leverfrämjande vardag. Observationsstudier har sett ett samband mellan måttligt kaffedrickande och lägre risk för leverfibros, och EASL:s riktlinjer nämner detta, men ett samband är inte samma sak som ett bevis, och kaffe ersätter inte ändrade levnadsvanor.</p>
-
-            <h3>4. Kolin från ägg och fisk</h3>
-            <p>Kolin behövs för att levern ska kunna ”paketera” fett och skicka ut det i blodet. <strong>Kolin bidrar till att upprätthålla normal leverfunktion</strong> (EU-godkänt påstående). Bra källor är <a href="{food:boiled-egg}">ägg</a> och fisk.</p>
-
-            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Vanliga frågor</span></h2>
-            <div class="faq-list">
-                <div class="faq-item"><h3>Måste jag sluta äta frukt om jag har fettlever?</h3><p>Nej. Hel frukt innehåller fiber som gör att fruktosen tas upp långsamt. Välj gärna bär och <a href="{food:apple}">äpplen</a>, ät frukten hel och undvik juice och smoothies.</p></div>
-                <div class="faq-item"><h3>Hur lång tid tar det att minska leverfettet?</h3><p>Vid tidig fettlever minskar en viktnedgång på 7–10 % leverfettet påtagligt och kan normalisera levervärdena inom några månader. Vid en viktnedgång på minst 10 % har studier också sett att inflammation och fibros kan minska. Din läkare följer upp med prover.</p></div>
-            </div>'''),
-    ),
-)
-
 LEPTIN_SV = dict(
     legacy=dict(ar='/leptin-resistance.html'),
     slugs=dict(sv='leptinresistens'),
@@ -2403,5 +2313,615 @@ sv=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, INSULIN_RESISTANCE_SV, FATTY_LIVER_SV,
+# --------------------------------------------------------------------------------------------
+# Fatty liver and visceral fat (2026-10-27): replaces /fatty-liver.html (ar/en/nl via ?lang) and /sv/articles/fettlever.html,
+# which now 301 here (vercel.json). Copy by Dr. Wassim Habib, signed by him (user decision 2026-10-27, third named exception).
+# Approved corrections: neutral scanner wording (no halal), milk thistle is not "Swedish", published weight-loss figures
+# (5% / 7-10% / >=10%) instead of "7-10% melts >80%", no "80% chance" for waist size, EU-authorised wording for omega-3
+# (2 g, blood triglycerides), choline (lipid metabolism, liver function) and magnesium (energy metabolism), "studies
+# suggest" for milk thistle, coffee, olive oil and sulforaphane, fasting safety note, recover/regress instead of
+# cure/treatment, trans fats and reused frying oil instead of all refined vegetable oils, boodi as "coming soon".
+# Also listed on the diabetes hub (hubs=['diabetes']) although it lives in /articles/.
+# --------------------------------------------------------------------------------------------
+FATTY_LIVER_GUIDE = dict(
+    hubs=['diabetes'],
+    slugs=dict(ar='fatty-liver-and-visceral-fat', en='fatty-liver-and-visceral-fat', nl='fatty-liver-and-visceral-fat',
+               sv='fatty-liver-and-visceral-fat'),
+    # square cover shown whole (portrait rule); 16:9 cards = the whole photo over a blurred copy of itself
+    hero='fatty-liver-visceral-fat.webp', hero_size=(1024, 1024), hero_portrait=True,
+    thumb='fatty-liver-guide-thumb.webp', thumb_size=(640, 360), thumb_2x=('fatty-liver-guide-card.webp', 1280),
+    published='2026-10-27', modified='2026-10-27',
+    references=[
+        'Rinella ME, Lazarus JV, Ratziu V, et al. A multisociety Delphi consensus statement on new fatty liver disease nomenclature. J Hepatol 2023;79(6):1542–1556',
+        'European Association for the Study of the Liver (EASL), European Association for the Study of Diabetes (EASD), European Association for the Study of Obesity (EASO). EASL–EASD–EASO Clinical Practice Guidelines on the management of metabolic dysfunction-associated steatotic liver disease (MASLD). J Hepatol 2024;81(3):492–542',
+        'Vilar-Gomez E, Martinez-Perez Y, Calzadilla-Bertot L, et al. Weight loss through lifestyle modification significantly reduces features of nonalcoholic steatohepatitis. Gastroenterology 2015;149(2):367–378',
+        'Promrat K, Kleiner DE, Niemeier HM, et al. Randomized controlled trial testing the effects of weight loss on nonalcoholic steatohepatitis. Hepatology 2010;51(1):121–129',
+        'Kennedy OJ, Roderick P, Buchanan R, Fallowfield JA, Hayes PC, Parkes J. Systematic review with meta-analysis: coffee consumption and the risk of cirrhosis. Aliment Pharmacol Ther 2016;43(5):562–574',
+        'Alberti KG, Eckel RH, Grundy SM, et al. Harmonizing the metabolic syndrome. Circulation 2009;120(16):1640–1645 (waist circumference thresholds)',
+        'Commission Regulation (EU) No 432/2012: authorised health claims for DHA/EPA (normal blood triglyceride levels, 2 g/day), choline (normal lipid metabolism, normal liver function) and magnesium (normal energy-yielding metabolism)',
+    ],
+    faq_schema=True,
+    named_author=True,                                   # user decision 2026-10-27: signed by Dr. Wassim Habib (byline + schema)
+    content=dict(
+ar=dict(
+ byline='بقلم الدكتور وسيم حبيب',
+ title='الكبد الدهني أعراضه وأسبابه .. والخبر السعيد تجده في هذا المقال الشامل',
+ h1='الكبد الدهني أعراضه وأسبابه .. والخبر السعيد تجده في هذا المقال الشامل',
+ crumb='الكبد الدهني والدهون الحشوية',
+ cat='الكبد ومتلازمة الأيض',
+ desc='أعراض الكبد الدهني وأسبابه الحقيقية، ولماذا يصيب النحيفين أيضاً، والتحاليل التي تكشفه، وجدول الأطعمة الصديقة والمعادية للكبد، وخطة عملية لـ 12 أسبوعاً لتقليل دهون الكبد والكرش الحشوي.',
+ summary='لماذا يتراكم الدهن في الكبد حتى عند النحيفين، وكيف تكشفه التحاليل، وخطة 12 أسبوعاً بالغذاء والحركة لتقليل دهون الكبد والكرش الحشوي.',
+ hero_alt='امرأة تضع يدها على بطنها في مطبخ مشرق، في إشارة إلى أعراض الكبد الدهني والدهون الحشوية',
+ about=['Fatty liver disease', 'MASLD', 'Visceral fat', 'Insulin resistance'],
+ disclaimer='⚖️ إخلاء مسؤولية طبي: هذا المقال مقدم لأغراض التثقيف الصحي وتعديل نمط الحياة من WiBo Health، ولا يُعتبر تشخيصاً طبياً ولا بديلاً عن استشارة طبيبك. استشر طبيبك قبل الصيام المتقطع أو تناول أي مكمل غذائي، خاصة إذا كنت تتناول أدوية أو كنتِ حاملاً أو مرضعاً.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>مقدمة من القلب: رسالة إلى كل من يشعر بتعب غير مفهوم</span></h2>
+            <p class="lead">إذا كنت تستيقظ في الصباح بعد ثماني ساعات نوم وتشعر وكأنك لم تنم دقيقة واحدة، أو لاحظت أن محيط خصرك بدأ يتسع تدريجياً وأصبح لديك "كرش صلب" يرفض الزوال مهما خففت طعامك، أو ربما أجريت فحص دم روتينياً ففوجئت بالطبيب يقول لك بنبرة هادئة: "تحاليلك جيدة، لكن لديك القليل من الدهون على الكبد"، فهذا الدليل كُتب خصيصاً من أجلك.</p>
+            <p>أول ما أريدك أن تعرفه وتضعه في قلبك كطبيب يتحدث إلى صديق: <strong>لا تقلق، ولست وحدك، والأهم من كل ذلك أن كبدك قادر على التعافي؛ ففي المراحل المبكرة يمكن أن تتراجع دهونه بالكامل خلال أسابيع إلى أشهر قليلة.</strong></p>
+            <p>الكبد الدهني ليس حكماً مؤبداً، والدهون الحشوية التي تختبئ خلف عضلات بطنك ليست قدراً محتوماً. في هذا المقال سنضع المصطلحات الطبية المعقدة جانباً، ونتحدث بلغة الحياة اليومية: ما الذي يحدث داخل جسدك بهدوء؟ لماذا يصاب به حتى الأشخاص النحيفون؟ وما الخطة اليومية البسيطة التي تقلل هذه الدهون وتعيد إليك صفاء ذهنك وطاقتك وخفتك؟</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-info"></i> <span>1. ما هو الكبد الدهني والكرش الحشوي أصلاً؟ (ولماذا يصيب حتى النحيفين؟)</span></h2>
+            <p>لنتخيل معاً أن جسدك منزل أنيق، والكبد هو "المطبخ المركزي ومحطة التصفية" في هذا المنزل. وظيفته الأساسية تحويل الطعام إلى طاقة، وتخزين القليل من المغذيات، وتنقية دمك على مدار الساعة.</p>
+            <p>في الحالة الطبيعية يحتوي الكبد على نسبة قليلة جداً من الدهون (أقل من 5% من وزنه). وعندما تتجاوز الدهون المخزنة فيه 5% نصبح أمام حالة نسميها طبياً <strong>الكبد الدهني</strong>، وتحديداً النوع المرتبط بمتلازمة الأيض والإفراط في السكريات والنشويات، واسمه العلمي الحديث <bdi>MASLD</bdi>.</p>
+            <h3>أسطورة "الدهون تأتي من أكل الدهون"</h3>
+            <p>أكبر خرافة يقع فيها الناس هي الاعتقاد بأن أكل دهون اللحم أو الزيت هو ما يسبب دهون الكبد. الحقيقة السريرية أن العدو الأول للكبد الدهني هو <strong>السكر والنشويات المكررة، وخاصة سكر الفركتوز</strong>.</p>
+            <p>عندما تتناول مشروباً غازياً أو عصيراً محلى أو وجبة سريعة غنية بالدقيق الأبيض، يمتص جسدك هذه السكريات بسرعة هائلة. العضلات لا تستوعب كل هذه الطاقة، فيضطر الكبد إلى تحويل السكر الفائض إلى دهون ثلاثية بعملية داخلية سريعة.</p>
+            <h3>لغز "النحيف الذي يمتلك كبداً دهنياً" (ظاهرة <bdi>TOFI</bdi>)</h3>
+            <p>كثير من الناس يقولون: "يا دكتور، وزني 65 كغ ولا أعاني من سمنة واضحة، كيف يخبرني الطبيب أن عندي كبداً دهنياً؟". هنا يأتي دور <strong>الدهون الحشوية</strong> (<bdi>Visceral Fat</bdi>). الدهون في أجسادنا نوعان:</p>
+            <ul class="check-list">
+                <li><strong>الدهون تحت الجلد (<bdi>Subcutaneous Fat</bdi>):</strong> الدهون اللينة التي يمكنك الإمساك بها بيدك في البطن أو الفخذين، وهي أقل خطراً من الناحية الصحية.</li>
+                <li><strong>الدهون الحشوية العميقة (الكرش الصلب):</strong> دهون تختبئ في عمق التجويف البطني وتلتف حول الكبد والبنكرياس والأمعاء. لا تستطيع مسكها باليد، وهي تتصرف كأنها "غدة صماء" نشطة تضخ مواد التهابية وأحماضاً دهنية مباشرة إلى الكبد عبر الوريد البابي.</li>
+            </ul>
+            <p>لذلك يمكن أن تكون نحيف الذراعين والساقين، لكنك تحمل كبداً دهنياً متعباً بسبب نمط الأكل غير الصحي وقلة الحركة والإجهاد المستمر.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>2. كيف يخبرك جسدك؟ علامات دهون الكبد الخفية</span></h2>
+            <p>الكبد عضو صبور للغاية؛ فنسيجه الداخلي لا يحتوي على أعصاب لنقل الألم، ولهذا يسميه الأطباء "المرض الصامت". هو لا يصرخ متألماً في بداياته، لكنه يرسل إشارات خفيفة يخلط الناس بينها وبين إرهاق الحياة اليومية:</p>
+            <h3>أ) الخمول الشديد وضبابية الدماغ بعد الوجبات</h3>
+            <p>إذا تناولت غداء فيه خبز أو أرز وشعرت بعده برغبة ملحة في النوم، أو عجزت عن التركيز وشعرت بأن تفكيرك "مغبش"، فقد تكون هذه إشارة إلى <a href="{site:/insulin-resistance.html}">مقاومة الإنسولين</a> وإلى أن كبدك يجهد في معالجة السكر والدهون.</p>
+            <h3>ب) ثقل خفيف في الجانب الأيمن العلوي من البطن</h3>
+            <p>يقع الكبد تحت القفص الصدري في الجهة اليمنى. عندما يتضخم بسبب تجمع الدهون يضغط على الغشاء الخارجي المحيط به (محفظة غليسون)، فتشعر بثقل أو "انزعاج خفيف" كأن وسادة صغيرة تضغط على خاصرتك اليمنى، خاصة عند الانحناء أو ارتداء ملابس ضيقة.</p>
+            <h3>ج) اتساع محيط الخصر وظهور "الكرش الكبدي"</h3>
+            <p>تراكم دهون البطن الصلبة علامة واضحة ترافق الكبد الدهني كثيراً. إذا تجاوز محيط خصرك بالشريط المتري <strong>94 سم للرجال أو 80 سم للنساء</strong>، فهذه إشارة إلى زيادة الدهون الحشوية، وتستحق فحص كبدك. يمكنك أيضاً حساب <a href="{site:/whtr-calculator.html}">نسبة الخصر إلى الطول</a> في ثوانٍ.</p>
+            <h3>د) العلامات الجلدية وتصبغات الرقبة</h3>
+            <p>هل لاحظت زوائد جلدية صغيرة حول الرقبة أو تحت الإبطين؟ أو خطوطاً داكنة كالمخمل خلف رقبتك؟ هذه ليست أوساخاً ولا مشكلة جلدية سطحية؛ إنها ترتبط غالباً بارتفاع الإنسولين في الدم ومقاومته، وهي حالة كثيراً ما ترافق الكبد الدهني.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>3. الفحوصات والتحاليل: كيف تتأكد من صحة كبدك؟</span></h2>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/visceral-fat-liver-anatomy.webp" alt="رسم تشريحي يوضح الدهون تحت الجلد والدهون الحشوية حول الكبد والأمعاء، مع خلايا كبد محمّلة بقطرات الدهون" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>الدهون تحت الجلد مقابل الدهون الحشوية التي تحيط بالأعضاء، وفي الدائرة خلايا كبد محمّلة بقطرات الدهون (التشحم).</figcaption>
+            </figure>
+            <p>لا داعي للخوف من التحاليل، ففحص الكبد اليوم أصبح سهلاً ودقيقاً:</p>
+            <ul class="check-list">
+                <li><strong>إنزيمات الكبد في الدم (<bdi>ALT &amp; AST</bdi>):</strong> عندما تلتهب خلايا الكبد بسبب الدهون، تتسرب هذه الإنزيمات إلى الدم. إنزيم <bdi>ALT</bdi> هو المؤشر الأكثر خصوصية للكبد؛ فإذا وجدته مرتفعاً عن حده الطبيعي فهو دليل على أن الدهون بدأت تُحدث التهاباً خفيفاً.</li>
+                <li><strong>الموجات فوق الصوتية (السونار):</strong> فحص غير مؤلم يدوم خمس دقائق. يظهر الكبد السليم بلون رمادي داكن، بينما يظهر الكبد الدهني بلون أبيض ساطع عاكس (يسميه الأطباء "الكبد الساطع" <bdi>Bright Liver</bdi>).</li>
+                <li><strong>السكر التراكمي (<bdi>HbA1c</bdi>) ومقاومة الإنسولين (<bdi>HOMA-IR</bdi>):</strong> لأن الكبد الدهني ومتلازمة الأيض و<a href="/diabetes/prediabetes.html">مرحلة ما قبل السكري</a> تسير معاً كثيراً، يخبرك السكر التراكمي هل بدأ هذا العبء الدهني يؤثر على تعامل جسمك مع الجلوكوز.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-champagne-glasses"></i> <span>4. الخبر السعيد الذي يستحق الاحتفال: الكبد قادر على التعافي!</span></h2>
+            <p>الكبد هو العضو الوحيد في جسم الإنسان الذي يمتلك قدرة استثنائية على تجديد خلاياه ذاتياً (<bdi>Regeneration</bdi>)؛ فلو استُؤصل جزء من كبد سليم جراحياً، ينمو الباقي ويعود إلى حجمه الطبيعي تقريباً.</p>
+            <p>ماذا يعني هذا لك؟ يعني أنه بمجرد أن تتوقف عن إغراقه بالسكريات المكررة والدهون المتحولة، وتبدأ باتباع خطة متوازنة، يبدأ الكبد في استخدام الدهون المخزنة فيه وقوداً.</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">5%</div><h3>نزول 5% من الوزن</h3><p>يقلل كمية الدهون في الكبد بوضوح.</p></div>
+                <div class="rule-card"><div class="rule-num">7–10%</div><h3>نزول 7 إلى 10%</h3><p>يُنهي الالتهاب الدهني عند كثير من المرضى ويعيد الإنزيمات إلى أرقامها الطبيعية في الغالب.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 10%</div><h3>نزول 10% أو أكثر</h3><p>قد يعكس التليف الكبدي المبكر نفسه.</p></div>
+            </div>
+            <p>وتظهر هذه النتائج عادة خلال شهرين إلى ثلاثة أشهر (12 أسبوعاً) من الالتزام بالغذاء والحركة، وفق الدراسات السريرية وإرشادات الجمعيات الأوروبية للكبد والسكري والسمنة.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>5. جدول الأكل المسموح والممنوع: قائمة تنظيف دهون الكبد في المطبخ</span></h2>
+            <p>صيدليتك الحقيقية موجودة في ثلاجتك. إليك خريطة الأطعمة المدعومة بالأبحاث:</p>
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 أطعمة "أصدقاء الكبد"</div>
+            <ul class="check-list">
+                <li><strong><a href="{food:black-coffee}">القهوة السوداء الصافية</a>:</strong> تشير دراسات رصدية كثيرة إلى أن شرب 2 إلى 3 أكواب يومياً (بدون سكر) يرتبط بانخفاض دهون الكبد وبانخفاض خطر تليفه، ويُعزى ذلك إلى مضادات أكسدة مثل حمض الكلوروجينيك.</li>
+                <li><strong>الخضار الصليبية (<a href="{food:broccoli}">البروكلي</a>، <a href="{food:cauliflower}">القرنبيط</a>، الملفوف، <a href="{food:arugula-rocket}">الجرجير</a>):</strong> غنية بمركب كبريتي يسمى السولفورافان (<bdi>Sulforaphane</bdi>)، وتشير دراسات إلى أنه ينشط إنزيمات الكبد المسؤولة عن التخلص من السموم.</li>
+                <li><strong><a href="{food:extra-virgin-olive-oil}">زيت الزيتون البكر الممتاز</a>:</strong> يحتوي على حمض الأوليك ومضادات أكسدة؛ وتشير دراسات إلى أن ملعقتين يومياً على السلطة، ضمن النمط المتوسطي، تحسن إنزيمات الكبد وحساسية الإنسولين.</li>
+                <li><strong>الأسماك الدهنية (<a href="{food:grilled-salmon}">السلمون</a>، <a href="{food:canned-sardines}">السردين</a>، <a href="{food:mackerel}">الماكريل</a>):</strong> مصدر طبيعي لأوميغا 3 (<bdi>EPA/DHA</bdi>) التي تسهم في الحفاظ على المستوى الطبيعي للدهون الثلاثية في الدم.</li>
+                <li><strong><a href="{food:artichoke}">الخرشوف (الأرضي شوكي)</a>:</strong> غني بمادة السينارين (<bdi>Cynarin</bdi>) التي يُعتقد أنها تحفز إفراز العصارة الصفراوية وتساعد الكبد على تصريف الدهون.</li>
+            </ul>
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 أطعمة "أعداء الكبد" (يجب إيقافها فوراً)</div>
+            <ul class="check-list">
+                <li><strong>المشروبات الغازية وعصائر الفواكه الجاهزة:</strong> حتى لو كُتب عليها "طبيعية 100%"، فإن شرب 30 غراماً من الفركتوز السائل بدون ألياف بمثابة رصاصة مباشرة على خلايا الكبد.</li>
+                <li><strong>الدهون المتحولة وزيوت القلي المعاد تسخينها:</strong> السمن الصناعي المهدرج وزيت المقالي المستخدم مراراً يرفعان الالتهاب ويزيدان تراكم الدهون الحشوية.</li>
+                <li><strong>المخبوزات والحلويات المصنوعة من الدقيق الأبيض:</strong> يتحول <a href="{food:white-bread}">الخبز الأبيض</a> إلى سكر في دمك أسرع من ملعقة السكر نفسها.</li>
+                <li><strong>المقليات والوجبات فائقة التصنيع (<bdi>Ultra-Processed Foods</bdi>):</strong> مثل <a href="{food:french-fries}">البطاطا المقلية</a>؛ تجمع بين الدهون الضارة والملح والنشويات سريعة الامتصاص، وهي التركيبة التي ترهق الكبد أيضياً.</li>
+            </ul>
+            <h3>📊 المقارنة السريعة: اختر هذا 🟢 بدلاً من هذا 🔴</h3>
+            <div class="rule-cards">
+                <div class="rule-card"><h3>المشروبات</h3><p>🟢 قهوة سوداء، <a href="{food:green-tea}">شاي أخضر</a>، ماء بليمون<br>🔴 مشروبات غازية، عصائر، مشروبات طاقة</p></div>
+                <div class="rule-card"><h3>الدهون والزيوت</h3><p>🟢 زيت زيتون بكر، <a href="{food:avocado}">أفوكادو</a>، دهن الأسماك<br>🔴 دهون متحولة، زيت قلي معاد، سمن نباتي مهدرج</p></div>
+                <div class="rule-card"><h3>البروتين</h3><p>🟢 <a href="{food:boiled-egg}">بيض</a>، سمك سلمون، <a href="{food:grilled-chicken-breast}">صدور دجاج</a>، <a href="{food:lentils}">عدس</a><br>🔴 لحوم مصنعة، هوت دوغ، برغر مقلي</p></div>
+                <div class="rule-card"><h3>النشويات</h3><p>🟢 <a href="{food:oatmeal}">شوفان حبة كاملة</a>، <a href="{food:quinoa}">كينوا</a>، عدس، <a href="{food:blueberry}">توت</a><br>🔴 خبز أبيض، معجنات، بسكويت، سكر أبيض</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-capsules"></i> <span>6. المكملات الغذائية الداعمة لصحة الكبد (وفق الأبحاث)</span></h2>
+            <p>إذا كنت تبحث عن خطوة إضافية بجانب الأكل الصحي، فهذه أكثر المكملات دراسة. استشر طبيبك أو الصيدلي قبل البدء، خاصة إذا كنت تتناول أدوية:</p>
+            <ul class="check-list">
+                <li><strong><a href="/supplements/milk-thistle.html">شوك الحليب</a> (<bdi>Milk Thistle – Silymarin</bdi>):</strong> نبات بري استُخدم تقليدياً لدعم الكبد منذ قرون. المادة الفعالة فيه (السيليمارين) مضاد أكسدة، وتشير دراسات إلى أنها تحمي خلايا الكبد، لكن الأدلة على البشر ما زالت محدودة.</li>
+                <li><strong><a href="/supplements/omega-3-fish-oil.html">أحماض أوميغا 3</a> (<bdi>EPA/DHA</bdi>):</strong> تناول 2 غرام يومياً من <bdi>EPA</bdi> و<bdi>DHA</bdi> يسهم في الحفاظ على المستوى الطبيعي للدهون الثلاثية في الدم، ولا ينبغي تجاوز 5 غرامات يومياً من المكملات.</li>
+                <li><strong><a href="/supplements/choline-bitartrate.html">الكولين</a> (<bdi>Choline</bdi>):</strong> يوجد طبيعياً في صفار البيض و<a href="{food:beef-liver}">الكبدة البقرية</a>، ويسهم في استقلاب الدهون الطبيعي وفي الحفاظ على وظائف الكبد الطبيعية؛ فهو يدخل في تصنيع نواقل الدهون (<bdi>VLDL</bdi>) التي تُخرج الدهون من الكبد، ونقصه الشديد يرتبط بتراكم الدهون فيه.</li>
+                <li><strong><a href="/supplements/magnesium.html">المغنيسيوم</a> (<bdi>Glycinate / Malate</bdi>):</strong> يسهم في استقلاب الطاقة الطبيعي، ويرتبط انخفاض مستواه في الدراسات بمقاومة الإنسولين.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-calendar-check"></i> <span>7. خطة الـ 12 أسبوعاً العملية لتقليل دهون الكبد والكرش الحشوي</span></h2>
+            <p>كيف تطبق هذا الكلام غداً عندما تستيقظ من نومك؟ إليك الخطة السهلة:</p>
+            <h3>الأسبوع 1 إلى 4: إيقاف النزيف الأيضي (وقف السكريات والفركتوز)</h3>
+            <ol class="steps">
+                <li>الامتناع التام عن كل ما يحتوي على سكر مضاف أو شراب الذرة عالي الفركتوز.</li>
+                <li>استبدال الخبز الأبيض بخبز الحبة الكاملة أو الشعير أو الحمص.</li>
+                <li>شرب كوبين من الماء فور الاستيقاظ، يليهما فنجان قهوة سوداء سادة.</li>
+                <li>المشي السريع 20 دقيقة يومياً؛ فالمشي من ألد أعداء الدهون الحشوية.</li>
+            </ol>
+            <h3>الأسبوع 5 إلى 8: <a href="{site:/intermittent-fasting.html}">الصيام المتقطع</a> الهادئ (14/10 أو 16/8)</h3>
+            <ol class="steps">
+                <li>اجعل آخر وجبة في الساعة السابعة مساءً، وأول وجبة في العاشرة أو الحادية عشرة صباح اليوم التالي.</li>
+                <li>خلال ساعات الصيام ينفد مخزون الجليكوجين من الكبد، فيضطر إلى حرق دهونه الداخلية لإنتاج الطاقة.</li>
+                <li>ركّز على وجبات عالية البروتين والألياف لضمان الشبع ومنع هبوط السكر المفاجئ.</li>
+            </ol>
+            <div class="tip"><h3>⚠️ تنبيه قبل الصيام</h3><p>إذا كنت تتناول أدوية السكري (خاصة الإنسولين أو أدوية السلفونيل يوريا)، أو كنتِ حاملاً أو مرضعاً، أو لديك تاريخ مع اضطرابات الأكل، فلا تبدأ الصيام المتقطع قبل استشارة طبيبك؛ فقد يلزم تعديل الجرعات لتجنب هبوط السكر.</p></div>
+            <h3>الأسبوع 9 إلى 12: حصد الثمار وإعادة الفحص</h3>
+            <ol class="steps">
+                <li>يلاحظ كثيرون انخفاض محيط الخصر بين 4 و8 سم.</li>
+                <li>يتراجع شعور الخمول بعد الأكل بوضوح، وتشعر بخفة في الحركة.</li>
+                <li>كرر فحص إنزيمات الكبد (<bdi>ALT/AST</bdi>) والسونار مع طبيبك، وقد تفاجأ أنت وطبيبك بالنتيجة الجديدة.</li>
+            </ol>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>8. كيف سيساعدك تطبيق بودي (Boodi) في هذه الرحلة؟ (قريباً)</h2>
+                    <p>تقليل دهون الكبد يحتاج إلى حساب دقيق لعجز السعرات (نحو 500 سعرة يومياً) دون أن تشعر بالحرمان أو تنهار طاقتك. في تطبيق بودي صممنا برنامج الدايت المتوازن وفق معادلة <bdi>Mifflin-St Jeor</bdi> المعتمدة، مع الفحص الفوري للباركود:</p>
+                    <ul class="check-list">
+                        <li><strong>فاحص المكونات والتفضيلات:</strong> يخبرك فوراً إذا كان المنتج يحتوي على دهون مهدرجة أو سكريات خفية.</li>
+                        <li><strong>شجرة البدائل:</strong> إن كنت تحب الأرز أو الخبز أو المعكرونة، يقترح عليك بودي بدائل لا ترفع سكر الدم بسرعة.</li>
+                        <li><strong>مطبخ مفتوح من كل مطابخ العالم:</strong> يتيح لك تطبيق خطة الـ 12 أسبوعاً بأكلاتك المحببة دون فرض نمط غربي جاف.</li>
+                    </ul>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> تعرّف على Boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. الأسئلة الأكثر بحثاً حول الكبد الدهني</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>هل شرب خل التفاح يذيب دهون الكبد؟</h3><p>خل التفاح الطبيعي (ملعقة صغيرة مخففة في كوب ماء كبير قبل الوجبة) قد يحسن حساسية الإنسولين ويقلل الارتفاع الحاد في السكر بعد الأكل، مما يخفف العبء على الكبد، لكنه ليس حلاً سحرياً بمفرده دون تعديل جودة طعامك.</p></div>
+                <div class="faq-item"><h3>كم من الوقت يحتاج الكبد ليتخلص من الدهون؟</h3><p>تبدأ دهون الكبد بالانخفاض خلال أسبوعين تقريباً من قطع السكريات، وتصل النتائج إلى ذروتها بعد 8 إلى 12 أسبوعاً من الالتزام بنظام غذائي منضبط ونشاط بدني منتظم.</p></div>
+                <div class="faq-item"><h3>هل الفواكه ممنوعة تماماً لمن يعانون من الكبد الدهني؟</h3><p>لا. الفاكهة الكاملة تحتوي على ألياف وفيتامينات وماء تبطئ امتصاص السكر. المسموح حبة إلى حبتين يومياً من الفواكه منخفضة السكر (مثل التوت و<a href="{food:strawberry}">الفراولة</a> و<a href="{food:apple}">التفاح الأخضر</a> و<a href="{food:kiwi}">الكيوي</a>). أما الممنوع فهو عصير الفواكه، لأنه يجرد الفاكهة من أليافها ويضخ كمية فركتوز مركزة تتجه فوراً إلى الكبد.</p></div>
+                <div class="faq-item"><h3>هل الكبد الدهني خطير، وهل يسبب السرطان؟</h3><p>الكبد الدهني في مراحله الأولى قابل للتراجع في أغلب الحالات. الخطورة تحدث إذا أُهمل لسنوات طويلة مع استمرار التدخين والسكري غير المنضبط، فقد يتطور إلى التهاب كبدي دهني (<bdi>MASH</bdi>، المعروف سابقاً بـ <bdi>NASH</bdi>) ثم إلى تليف، ونادراً إلى سرطان الكبد. لهذا فإن اكتشافه اليوم والبدء في التعامل معه الآن هو أعظم هدية تقدمها لجسدك ومستقبلك.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>خاتمة: ابدأ اليوم.. كبدك ينتظر خطوتك الأولى</span></h2>
+            <p>لست بحاجة إلى تغيير حياتك بالكامل في يوم واحد. ابدأ اليوم بقرار بسيط: استبدل المشروب الغازي بكوب ماء بارد مع شريحة ليمون، وامشِ 20 دقيقة في الهواء الطلق، واستمتع بفنجان قهوتك الصباحية بدون سكر، وتابع إطلاق تطبيق بودي قريباً ليرافقك خطوة بخطوة.</p>
+            <p>صحتك أغلى ما تملك، وكبدك يستحق أن تمنحه فرصة ليتنفس ويعود نقياً كما كان.</p>'''),
+en=dict(
+ byline='By Dr. Wassim Habib',
+ title='Fatty Liver: Symptoms, Causes & The Good News in This Complete Guide',
+ h1='Fatty Liver: Symptoms, Causes & The Good News in This Complete Guide',
+ crumb='Fatty liver and visceral fat',
+ cat='Liver & Metabolic Health',
+ desc='Fatty liver symptoms and their real causes, why slim people get it too, the tests that find it, liver-friendly and liver-unfriendly foods, and a practical 12-week plan to reduce liver fat and visceral belly fat.',
+ summary='Why fat builds up in the liver even in slim people, how tests detect it, and a 12-week food and movement plan to reduce liver fat and visceral belly fat.',
+ hero_alt='A woman with her hand on her stomach in a bright kitchen, illustrating the symptoms of fatty liver and visceral fat',
+ about=['Fatty liver disease', 'MASLD', 'Visceral fat', 'Insulin resistance'],
+ disclaimer='⚖️ Medical disclaimer: this article is health education and lifestyle guidance from WiBo Health. It is not a medical diagnosis and does not replace advice from your doctor. Talk to your doctor before starting intermittent fasting or any food supplement, especially if you take medication or are pregnant or breastfeeding.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>From the heart: a message to anyone who feels tired for no clear reason</span></h2>
+            <p class="lead">If you wake up after eight hours of sleep feeling as if you haven't slept a minute, if your waist has slowly been getting wider and you now have a "hard belly" that won't shift however little you eat, or if a routine blood test ended with your doctor calmly saying, "Your results are fine, but there's a little fat on your liver", then this guide was written for you.</p>
+            <p>The first thing I want you to know and take to heart, as a doctor talking to a friend: <strong>don't worry, you are not alone, and above all your liver can recover; in the early stages its fat can disappear completely within a few weeks to a few months.</strong></p>
+            <p>Fatty liver is not a life sentence, and the visceral fat hiding behind your abdominal muscles is not your destiny. In this article we'll set the complicated medical terms aside and talk in everyday language: what is quietly happening inside your body? Why do even slim people get it? And what simple daily plan reduces this fat and gives you back your clear head, your energy and your lightness?</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-info"></i> <span>1. What are fatty liver and visceral belly fat? (And why do slim people get them too?)</span></h2>
+            <p>Imagine your body is a well-kept house and the liver is its "central kitchen and filtering station". Its main jobs are turning food into energy, storing a small reserve of nutrients and cleaning your blood around the clock.</p>
+            <p>Normally the liver contains very little fat (less than 5% of its weight). When the fat stored in it goes above 5%, we call it <strong>fatty liver</strong>, and in particular the type linked to metabolic syndrome and too much sugar and starch, whose modern scientific name is <bdi>MASLD</bdi>.</p>
+            <h3>The myth that "fat comes from eating fat"</h3>
+            <p>The biggest myth is that eating meat fat or oil is what causes liver fat. Clinically, the number one enemy of a fatty liver is <strong>sugar and refined starch, especially fructose</strong>.</p>
+            <p>When you drink a soft drink or a sweetened juice, or eat a fast-food meal full of white flour, your body absorbs these sugars very quickly. Your muscles can't take up all that energy, so the liver has to turn the surplus sugar into triglycerides in a fast internal process.</p>
+            <h3>The puzzle of the "slim person with a fatty liver" (<bdi>TOFI</bdi>)</h3>
+            <p>Many people say, "Doctor, I weigh 65 kg and I'm not visibly overweight. How can I have a fatty liver?" This is where <strong>visceral fat</strong> comes in. The fat in our bodies comes in two kinds:</p>
+            <ul class="check-list">
+                <li><strong>Subcutaneous fat:</strong> the soft fat you can pinch on your belly or thighs. From a health point of view it is the less harmful kind.</li>
+                <li><strong>Deep visceral fat (the hard belly):</strong> fat hidden deep in the abdominal cavity, wrapped around the liver, pancreas and intestines. You can't pinch it, and it behaves like an active "endocrine gland", sending inflammatory substances and fatty acids straight to the liver through the portal vein.</li>
+            </ul>
+            <p>So you can have slim arms and legs and still carry a tired, fatty liver because of unhealthy eating habits, too little movement and constant stress.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>2. How does your body tell you? The hidden signs of liver fat</span></h2>
+            <p>The liver is a very patient organ: its inner tissue has no nerves that carry pain, which is why doctors call fatty liver a "silent disease". It doesn't cry out in the early stages, but it sends quiet signals that people mistake for the tiredness of everyday life:</p>
+            <h3>a) Heavy tiredness and brain fog after meals</h3>
+            <p>If a lunch with bread or rice leaves you desperate for a nap, or you can't concentrate and your thinking feels "foggy", this may be a sign of <a href="{site:/insulin-resistance.html}">insulin resistance</a> and of a liver struggling to process sugar and fat.</p>
+            <h3>b) A mild heaviness in the upper right of the abdomen</h3>
+            <p>The liver sits under the ribs on the right. When it swells with fat, it presses on the membrane around it (Glisson's capsule), and you may feel a heaviness or "mild discomfort", as if a small cushion were pressing on your right side, especially when you bend over or wear tight clothes.</p>
+            <h3>c) A growing waist and a "liver belly"</h3>
+            <p>A build-up of hard belly fat often goes hand in hand with fatty liver. If your waist measures more than <strong>94 cm for men or 80 cm for women</strong>, that points to extra visceral fat and is worth a liver check. You can also work out your <a href="{site:/whtr-calculator.html}">waist-to-height ratio</a> in seconds.</p>
+            <h3>d) Skin signs and darker patches on the neck</h3>
+            <p>Have you noticed small skin tags around your neck or under your arms, or dark, velvety lines on the back of your neck? This isn't dirt or a surface skin problem; these signs are often linked to high insulin levels and insulin resistance, a condition that frequently goes with fatty liver.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>3. Tests: how can you check your liver?</span></h2>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/visceral-fat-liver-anatomy.webp" alt="Anatomical illustration of subcutaneous fat and visceral fat around the liver and intestines, with liver cells filled with fat droplets" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>Subcutaneous fat versus the visceral fat around the organs; in the circle, liver cells filled with fat droplets (steatosis).</figcaption>
+            </figure>
+            <p>There's no need to be afraid of the tests; checking the liver is easy and accurate today:</p>
+            <ul class="check-list">
+                <li><strong>Liver enzymes in the blood (<bdi>ALT &amp; AST</bdi>):</strong> when liver cells become inflamed by fat, these enzymes leak into the blood. <bdi>ALT</bdi> is the most liver-specific marker; if it is above the normal range, the fat has started to cause mild inflammation.</li>
+                <li><strong>Ultrasound:</strong> a painless five-minute scan. A healthy liver looks dark grey, while a fatty liver looks bright white and reflective (doctors call it a "bright liver").</li>
+                <li><strong>HbA1c and insulin resistance (<bdi>HOMA-IR</bdi>):</strong> fatty liver, metabolic syndrome and <a href="/en/diabetes/prediabetes.html">prediabetes</a> often go together, so your HbA1c shows whether this fat load has started to affect how your body handles glucose.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-champagne-glasses"></i> <span>4. The good news worth celebrating: your liver can recover!</span></h2>
+            <p>The liver is the only organ in the human body with an exceptional ability to regenerate its own cells: if part of a healthy liver is removed in surgery, the rest grows back to almost its normal size.</p>
+            <p>What does that mean for you? As soon as you stop flooding it with refined sugar and trans fats and start a balanced plan, the liver begins to use its stored fat as fuel.</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">5%</div><h3>Losing 5% of your weight</h3><p>Clearly reduces the amount of fat in the liver.</p></div>
+                <div class="rule-card"><div class="rule-num">7–10%</div><h3>Losing 7 to 10%</h3><p>Resolves fatty inflammation in many patients and usually brings liver enzymes back to normal.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 10%</div><h3>Losing 10% or more</h3><p>Can even reverse early liver fibrosis.</p></div>
+            </div>
+            <p>These results usually appear within two to three months (12 weeks) of sticking to better food and more movement, according to clinical studies and the guidelines of the European liver, diabetes and obesity societies.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>5. Foods to choose and foods to avoid: your kitchen plan for a cleaner liver</span></h2>
+            <p>Your real pharmacy is in your fridge. Here is a map of the foods backed by research:</p>
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 "Liver-friendly" foods</div>
+            <ul class="check-list">
+                <li><strong><a href="{food:black-coffee}">Plain black coffee</a>:</strong> many observational studies suggest that 2 to 3 cups a day (without sugar) are linked to less liver fat and a lower risk of liver fibrosis, thanks to antioxidants such as chlorogenic acid.</li>
+                <li><strong>Cruciferous vegetables (<a href="{food:broccoli}">broccoli</a>, <a href="{food:cauliflower}">cauliflower</a>, cabbage, <a href="{food:arugula-rocket}">rocket</a>):</strong> rich in a sulphur compound called sulforaphane, which studies suggest activates the liver enzymes that clear toxins.</li>
+                <li><strong><a href="{food:extra-virgin-olive-oil}">Extra virgin olive oil</a>:</strong> contains oleic acid and antioxidants; studies suggest that two tablespoons a day on salads, as part of a Mediterranean diet, improve liver enzymes and insulin sensitivity.</li>
+                <li><strong>Oily fish (<a href="{food:grilled-salmon}">salmon</a>, <a href="{food:canned-sardines}">sardines</a>, <a href="{food:mackerel}">mackerel</a>):</strong> a natural source of omega-3 (<bdi>EPA/DHA</bdi>), which contributes to the maintenance of normal blood triglyceride levels.</li>
+                <li><strong><a href="{food:artichoke}">Artichoke</a>:</strong> rich in cynarin, which is thought to stimulate bile flow and help the liver clear fat.</li>
+            </ul>
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 "Liver-unfriendly" foods (stop these now)</div>
+            <ul class="check-list">
+                <li><strong>Soft drinks and ready-made fruit juices:</strong> even when the label says "100% natural", drinking 30 g of liquid fructose without fibre is like firing a bullet straight at your liver cells.</li>
+                <li><strong>Trans fats and reused frying oil:</strong> hydrogenated margarine and frying oil used over and over raise inflammation and add to visceral fat.</li>
+                <li><strong>Baked goods and sweets made with white flour:</strong> <a href="{food:white-bread}">white bread</a> turns into sugar in your blood faster than a spoonful of sugar itself.</li>
+                <li><strong>Fried and ultra-processed foods:</strong> such as <a href="{food:french-fries}">French fries</a>; they combine harmful fats, salt and fast-absorbed starch, the mix that strains the liver's metabolism.</li>
+            </ul>
+            <h3>📊 Quick comparison: choose this 🟢 instead of this 🔴</h3>
+            <div class="rule-cards">
+                <div class="rule-card"><h3>Drinks</h3><p>🟢 Black coffee, <a href="{food:green-tea}">green tea</a>, water with lemon<br>🔴 Soft drinks, juices, energy drinks</p></div>
+                <div class="rule-card"><h3>Fats and oils</h3><p>🟢 Extra virgin olive oil, <a href="{food:avocado}">avocado</a>, oily fish<br>🔴 Trans fats, reused frying oil, hydrogenated margarine</p></div>
+                <div class="rule-card"><h3>Protein</h3><p>🟢 <a href="{food:boiled-egg}">Eggs</a>, salmon, <a href="{food:grilled-chicken-breast}">chicken breast</a>, <a href="{food:lentils}">lentils</a><br>🔴 Processed meat, hot dogs, fried burgers</p></div>
+                <div class="rule-card"><h3>Starches</h3><p>🟢 <a href="{food:oatmeal}">Whole-grain oats</a>, <a href="{food:quinoa}">quinoa</a>, lentils, <a href="{food:blueberry}">berries</a><br>🔴 White bread, pastries, biscuits, white sugar</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-capsules"></i> <span>6. Food supplements that support liver health (according to research)</span></h2>
+            <p>If you want an extra step alongside healthy eating, these are the most studied supplements. Talk to your doctor or pharmacist first, especially if you take medication:</p>
+            <ul class="check-list">
+                <li><strong><a href="/en/supplements/milk-thistle.html">Milk thistle</a> (silymarin):</strong> a wild plant used traditionally for the liver for centuries. Its active substance, silymarin, is an antioxidant, and studies suggest it protects liver cells, although the evidence in people is still limited.</li>
+                <li><strong><a href="/en/supplements/omega-3-fish-oil.html">Omega-3 fatty acids</a> (<bdi>EPA/DHA</bdi>):</strong> 2 g of EPA and DHA a day contributes to the maintenance of normal blood triglyceride levels; supplements should not exceed 5 g a day.</li>
+                <li><strong><a href="/en/supplements/choline-bitartrate.html">Choline</a>:</strong> found naturally in egg yolk and <a href="{food:beef-liver}">beef liver</a>, it contributes to normal lipid metabolism and to the maintenance of normal liver function; it is needed to make the fat carriers (<bdi>VLDL</bdi>) that move fat out of the liver, and a severe shortage is linked to fat building up there.</li>
+                <li><strong><a href="/en/supplements/magnesium.html">Magnesium</a> (glycinate / malate):</strong> contributes to normal energy-yielding metabolism, and studies link low magnesium levels to insulin resistance.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-calendar-check"></i> <span>7. The practical 12-week plan to reduce liver fat and visceral belly fat</span></h2>
+            <p>How do you put all this into practice tomorrow morning? Here is the easy plan:</p>
+            <h3>Weeks 1 to 4: stop the metabolic leak (cut sugar and fructose)</h3>
+            <ol class="steps">
+                <li>Cut out everything with added sugar or high-fructose corn syrup.</li>
+                <li>Swap white bread for whole-grain, barley or chickpea bread.</li>
+                <li>Drink two glasses of water as soon as you wake up, followed by a cup of plain black coffee.</li>
+                <li>Walk briskly for 20 minutes a day; walking is one of visceral fat's worst enemies.</li>
+            </ol>
+            <h3>Weeks 5 to 8: gentle <a href="{site:/intermittent-fasting.html}">intermittent fasting</a> (14/10 or 16/8)</h3>
+            <ol class="steps">
+                <li>Have your last meal at 7 pm and your first meal at 10 or 11 am the next day.</li>
+                <li>During the fasting hours the liver's glycogen store runs out, so it has to burn its own fat for energy.</li>
+                <li>Focus on meals high in protein and fibre to stay full and avoid sudden blood sugar dips.</li>
+            </ol>
+            <div class="tip"><h3>⚠️ Before you fast</h3><p>If you take diabetes medication (especially insulin or sulfonylureas), are pregnant or breastfeeding, or have a history of eating disorders, don't start intermittent fasting before talking to your doctor; your doses may need adjusting to avoid low blood sugar.</p></div>
+            <h3>Weeks 9 to 12: reap the rewards and retest</h3>
+            <ol class="steps">
+                <li>Many people notice their waist shrinking by 4 to 8 cm.</li>
+                <li>The after-meal tiredness clearly fades and you feel lighter on your feet.</li>
+                <li>Repeat your liver enzymes (<bdi>ALT/AST</bdi>) and ultrasound with your doctor; you and your doctor may be pleasantly surprised by the new result.</li>
+            </ol>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>8. How will the Boodi app help you on this journey? (Coming soon)</h2>
+                    <p>Reducing liver fat takes an accurate calorie deficit (about 500 kcal a day) without feeling deprived or running out of energy. In the Boodi app we built a balanced diet programme on the established <bdi>Mifflin-St Jeor</bdi> equation, together with instant barcode scanning:</p>
+                    <ul class="check-list">
+                        <li><strong>Ingredient and preference scanner:</strong> tells you straight away whether a product contains hydrogenated fats or hidden sugars.</li>
+                        <li><strong>Swap tree:</strong> if you love rice, bread or pasta, Boodi suggests alternatives that don't raise your blood sugar quickly.</li>
+                        <li><strong>An open kitchen with all the world's cuisines:</strong> follow the 12-week plan with the dishes you love, without a dry Western diet forced on you.</li>
+                    </ul>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Discover Boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. The most searched questions about fatty liver</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Does apple cider vinegar melt liver fat?</h3><p>Natural apple cider vinegar (a teaspoon diluted in a large glass of water before a meal) may improve insulin sensitivity and soften the sharp rise in blood sugar after eating, which eases the load on the liver. On its own, without improving what you eat, it is not a magic solution.</p></div>
+                <div class="faq-item"><h3>How long does it take the liver to get rid of fat?</h3><p>Liver fat starts to fall within about two weeks of cutting out sugar, and the results peak after 8 to 12 weeks of a disciplined diet and regular physical activity.</p></div>
+                <div class="faq-item"><h3>Is fruit completely off limits with a fatty liver?</h3><p>No. Whole fruit contains fibre, vitamins and water that slow down sugar absorption. One or two pieces a day of low-sugar fruit (such as berries, <a href="{food:strawberry}">strawberries</a>, <a href="{food:apple}">green apples</a> and <a href="{food:kiwi}">kiwi</a>) are fine. Fruit juice is what to avoid, because it strips the fruit of its fibre and delivers a concentrated dose of fructose that goes straight to the liver.</p></div>
+                <div class="faq-item"><h3>Is fatty liver dangerous, and can it cause cancer?</h3><p>In its early stages, fatty liver can be reversed in most cases. The danger comes when it is ignored for many years alongside smoking and poorly controlled diabetes: it can progress to fatty liver inflammation (<bdi>MASH</bdi>, formerly <bdi>NASH</bdi>), then to fibrosis and, rarely, to liver cancer. That is why finding it today and starting to deal with it now is the greatest gift you can give your body and your future.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Conclusion: start today, your liver is waiting for your first step</span></h2>
+            <p>You don't need to change your whole life in one day. Start today with one simple decision: swap the soft drink for a glass of cold water with a slice of lemon, walk for 20 minutes outdoors, enjoy your morning coffee without sugar, and keep an eye out for the launch of the Boodi app, coming soon to guide you step by step.</p>
+            <p>Your health is the most precious thing you have, and your liver deserves the chance to breathe and become clean again.</p>'''),
+nl=dict(
+ byline='Door Dr. Wassim Habib',
+ title='Leververvetting: Symptomen, oorzaken en het goede nieuws in deze complete gids',
+ h1='Leververvetting: Symptomen, oorzaken en het goede nieuws in deze complete gids',
+ crumb='Leververvetting en visceraal vet',
+ cat='Lever & metabole gezondheid',
+ desc='Symptomen van leververvetting en de echte oorzaken, waarom ook slanke mensen het krijgen, welke onderzoeken het aantonen, levervriendelijke en leveronvriendelijke voeding, en een praktisch 12-wekenplan tegen leververvetting en visceraal buikvet.',
+ summary='Waarom vet zich ook bij slanke mensen in de lever ophoopt, hoe onderzoek het aantoont, en een 12-wekenplan met voeding en beweging tegen leververvetting en visceraal buikvet.',
+ hero_alt='Een vrouw met haar hand op haar buik in een lichte keuken, als beeld voor de symptomen van leververvetting en visceraal vet',
+ about=['Fatty liver disease', 'MASLD', 'Visceral fat', 'Insulin resistance'],
+ disclaimer='⚖️ Medische disclaimer: dit artikel is gezondheidsvoorlichting en leefstijladvies van WiBo Health. Het is geen medische diagnose en vervangt geen advies van je arts. Overleg met je arts voordat je met intermittent fasting of een voedingssupplement begint, vooral als je medicijnen gebruikt of zwanger bent of borstvoeding geeft.',
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Uit het hart: een boodschap voor iedereen die zich moe voelt zonder duidelijke reden</span></h2>
+            <p class="lead">Word je na acht uur slaap wakker alsof je geen minuut hebt geslapen? Wordt je taille langzaam breder en heb je een "harde buik" die niet verdwijnt, hoe weinig je ook eet? Of zei je arts na een routinebloedonderzoek rustig: "Je uitslagen zijn goed, maar er zit wat vet op je lever"? Dan is deze gids speciaal voor jou geschreven.</p>
+            <p>Het eerste wat ik wil dat je weet en ter harte neemt, als een arts die met een vriend praat: <strong>maak je geen zorgen, je staat er niet alleen voor, en bovenal: je lever kan herstellen. In de vroege fase kan het levervet binnen enkele weken tot een paar maanden helemaal verdwijnen.</strong></p>
+            <p>Leververvetting is geen levenslang vonnis, en het viscerale vet dat zich achter je buikspieren verstopt is geen lot. In dit artikel laten we de ingewikkelde medische termen even rusten en praten we in gewone taal: wat gebeurt er stilletjes in je lichaam? Waarom krijgen zelfs slanke mensen het? En welk eenvoudig dagelijks plan vermindert dit vet en geeft je je heldere hoofd, je energie en je lichtheid terug?</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-info"></i> <span>1. Wat zijn leververvetting en visceraal buikvet eigenlijk? (En waarom krijgen ook slanke mensen het?)</span></h2>
+            <p>Stel je je lichaam voor als een goed onderhouden huis, met de lever als "centrale keuken en zuiveringsstation". De belangrijkste taken van de lever zijn voedsel omzetten in energie, een kleine voorraad voedingsstoffen opslaan en je bloed dag en nacht zuiveren.</p>
+            <p>Normaal bevat de lever heel weinig vet (minder dan 5% van zijn gewicht). Komt het opgeslagen vet boven de 5%, dan spreken we van <strong>leververvetting</strong>, en dan vooral de vorm die samenhangt met het metabool syndroom en te veel suiker en zetmeel. De moderne wetenschappelijke naam is <bdi>MASLD</bdi>.</p>
+            <h3>De mythe dat "vet van vet eten komt"</h3>
+            <p>De grootste mythe is dat vet vlees of olie de oorzaak van levervet is. Klinisch gezien is de grootste vijand van een vervette lever <strong>suiker en geraffineerd zetmeel, vooral fructose</strong>.</p>
+            <p>Drink je frisdrank of gezoet sap, of eet je fastfood vol witte bloem, dan neemt je lichaam deze suikers razendsnel op. Je spieren kunnen al die energie niet kwijt, dus moet de lever de overtollige suiker in een snel intern proces omzetten in triglyceriden.</p>
+            <h3>Het raadsel van de "slanke persoon met een vervette lever" (<bdi>TOFI</bdi>)</h3>
+            <p>Veel mensen zeggen: "Dokter, ik weeg 65 kilo en heb geen zichtbaar overgewicht. Hoe kan ik dan een vervette lever hebben?" Hier speelt <strong>visceraal vet</strong> een rol. Het vet in ons lichaam is er in twee soorten:</p>
+            <ul class="check-list">
+                <li><strong>Onderhuids vet (subcutaan vet):</strong> het zachte vet dat je op je buik of dijen kunt vastpakken. Voor de gezondheid is dit de minder schadelijke soort.</li>
+                <li><strong>Diep visceraal vet (de harde buik):</strong> vet diep in de buikholte, rond de lever, de alvleesklier en de darmen. Je kunt het niet vastpakken, en het gedraagt zich als een actieve "hormoonklier" die ontstekingsstoffen en vetzuren via de poortader rechtstreeks naar de lever stuurt.</li>
+            </ul>
+            <p>Je kunt dus slanke armen en benen hebben en toch een vermoeide, vervette lever, door ongezonde eetgewoonten, te weinig beweging en aanhoudende stress.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>2. Hoe vertelt je lichaam het je? De verborgen signalen van levervet</span></h2>
+            <p>De lever is een heel geduldig orgaan: het weefsel zelf heeft geen zenuwen die pijn doorgeven. Daarom noemen artsen leververvetting een "stille ziekte". In het begin schreeuwt de lever het niet uit, maar hij geeft zachte signalen die mensen verwarren met de vermoeidheid van het dagelijks leven:</p>
+            <h3>a) Zware vermoeidheid en een wazig hoofd na de maaltijd</h3>
+            <p>Als je na een lunch met brood of rijst bijna in slaap valt, of je niet kunt concentreren en je denken "mistig" voelt, kan dat een teken zijn van <a href="{site:/insulin-resistance.html}">insulineresistentie</a> en van een lever die moeite heeft met het verwerken van suiker en vet.</p>
+            <h3>b) Een licht zwaar gevoel rechtsboven in de buik</h3>
+            <p>De lever ligt rechts onder de ribben. Zwelt hij op door vet, dan drukt hij op het vlies eromheen (het kapsel van Glisson). Je kunt dan een zwaar gevoel of "licht ongemak" voelen, alsof er een klein kussen tegen je rechterzij drukt, vooral bij bukken of in strakke kleding.</p>
+            <h3>c) Een groeiende taille en een "leverbuik"</h3>
+            <p>Een ophoping van hard buikvet gaat vaak samen met leververvetting. Is je middelomtrek meer dan <strong>94 cm bij mannen of 80 cm bij vrouwen</strong>, dan wijst dat op extra visceraal vet en is een levercontrole de moeite waard. Je kunt ook in een paar seconden je <a href="{site:/whtr-calculator.html}">taille-lengteverhouding</a> berekenen.</p>
+            <h3>d) Huidsignalen en donkere plekken in de nek</h3>
+            <p>Zie je kleine huidaanhangsels rond je nek of onder je oksels, of donkere, fluweelachtige lijnen achter in je nek? Dat is geen vuil en geen oppervlakkig huidprobleem; deze signalen hangen vaak samen met een hoge insulinespiegel en insulineresistentie, een toestand die vaak samengaat met leververvetting.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>3. Onderzoeken: hoe controleer je je lever?</span></h2>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/visceral-fat-liver-anatomy.webp" alt="Anatomische illustratie van onderhuids vet en visceraal vet rond de lever en darmen, met levercellen vol vetdruppels" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>Onderhuids vet tegenover het viscerale vet rond de organen; in de cirkel levercellen vol vetdruppels (steatose).</figcaption>
+            </figure>
+            <p>Je hoeft niet bang te zijn voor de onderzoeken; de lever controleren is tegenwoordig eenvoudig en nauwkeurig:</p>
+            <ul class="check-list">
+                <li><strong>Leverenzymen in het bloed (<bdi>ALAT &amp; ASAT</bdi>):</strong> raken levercellen ontstoken door vet, dan lekken deze enzymen naar het bloed. <bdi>ALAT</bdi> is de meest leverspecifieke waarde; ligt die boven de normaalwaarde, dan is het vet een lichte ontsteking gaan veroorzaken.</li>
+                <li><strong>Echografie:</strong> een pijnloze scan van vijf minuten. Een gezonde lever ziet er donkergrijs uit, een vervette lever helder wit en reflecterend (artsen spreken van een "heldere lever").</li>
+                <li><strong>HbA1c en insulineresistentie (<bdi>HOMA-IR</bdi>):</strong> leververvetting, het metabool syndroom en <a href="/nl/diabetes/prediabetes.html">prediabetes</a> gaan vaak samen. Je HbA1c laat zien of deze vetlast invloed begint te krijgen op hoe je lichaam met glucose omgaat.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-champagne-glasses"></i> <span>4. Het goede nieuws om te vieren: je lever kan herstellen!</span></h2>
+            <p>De lever is het enige orgaan in het menselijk lichaam met een uitzonderlijk vermogen om zijn eigen cellen te vernieuwen: wordt een deel van een gezonde lever operatief verwijderd, dan groeit de rest weer tot bijna de normale grootte.</p>
+            <p>Wat betekent dat voor jou? Zodra je de lever niet langer overspoelt met geraffineerde suiker en transvetten en met een evenwichtig plan begint, gaat de lever zijn opgeslagen vet als brandstof gebruiken.</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">5%</div><h3>5% gewichtsverlies</h3><p>Vermindert de hoeveelheid vet in de lever duidelijk.</p></div>
+                <div class="rule-card"><div class="rule-num">7–10%</div><h3>7 tot 10% gewichtsverlies</h3><p>Laat de vettige ontsteking bij veel patiënten verdwijnen en brengt de leverenzymen meestal weer op een normaal niveau.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 10%</div><h3>10% of meer gewichtsverlies</h3><p>Kan zelfs beginnende leverfibrose terugdraaien.</p></div>
+            </div>
+            <p>Volgens klinische studies en de richtlijnen van de Europese verenigingen voor lever, diabetes en obesitas zie je deze resultaten meestal binnen twee tot drie maanden (12 weken) als je je houdt aan betere voeding en meer beweging.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>5. Wat je wel en niet eet: je keukenplan voor een schonere lever</span></h2>
+            <p>Je echte apotheek staat in je koelkast. Hier is een overzicht van voedingsmiddelen die door onderzoek worden ondersteund:</p>
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 "Levervriendelijke" voeding</div>
+            <ul class="check-list">
+                <li><strong><a href="{food:black-coffee}">Zwarte koffie zonder toevoegingen</a>:</strong> veel observationele studies wijzen erop dat 2 tot 3 koppen per dag (zonder suiker) samenhangen met minder levervet en een lager risico op leverfibrose, dankzij antioxidanten zoals chlorogeenzuur.</li>
+                <li><strong>Koolsoorten (<a href="{food:broccoli}">broccoli</a>, <a href="{food:cauliflower}">bloemkool</a>, kool, <a href="{food:arugula-rocket}">rucola</a>):</strong> rijk aan de zwavelverbinding sulforafaan, die volgens studies de leverenzymen activeert die afvalstoffen opruimen.</li>
+                <li><strong><a href="{food:extra-virgin-olive-oil}">Extra vierge olijfolie</a>:</strong> bevat oliezuur en antioxidanten; studies wijzen erop dat twee eetlepels per dag over de salade, als onderdeel van een mediterraan eetpatroon, de leverenzymen en de insulinegevoeligheid verbeteren.</li>
+                <li><strong>Vette vis (<a href="{food:grilled-salmon}">zalm</a>, <a href="{food:canned-sardines}">sardines</a>, <a href="{food:mackerel}">makreel</a>):</strong> een natuurlijke bron van omega-3 (<bdi>EPA/DHA</bdi>), die bijdraagt tot de handhaving van een normaal triglyceridengehalte in het bloed.</li>
+                <li><strong><a href="{food:artichoke}">Artisjok</a>:</strong> rijk aan cynarine, waarvan men denkt dat het de galafvoer stimuleert en de lever helpt vet af te voeren.</li>
+            </ul>
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 "Leveronvriendelijke" voeding (stop hier nu mee)</div>
+            <ul class="check-list">
+                <li><strong>Frisdrank en kant-en-klare vruchtensappen:</strong> ook als er "100% natuurlijk" op staat, is 30 gram vloeibare fructose zonder vezels als een kogel die rechtstreeks op je levercellen wordt afgevuurd.</li>
+                <li><strong>Transvetten en hergebruikte frituurolie:</strong> geharde margarine en frituurolie die steeds opnieuw wordt gebruikt verhogen de ontsteking en vergroten het viscerale vet.</li>
+                <li><strong>Gebak en zoetigheid van witte bloem:</strong> <a href="{food:white-bread}">witbrood</a> wordt in je bloed sneller suiker dan een lepel suiker zelf.</li>
+                <li><strong>Gefrituurd en ultrabewerkt voedsel:</strong> zoals <a href="{food:french-fries}">patat</a>; het combineert ongezonde vetten, zout en snel opneembaar zetmeel, de mix die de stofwisseling van de lever overbelast.</li>
+            </ul>
+            <h3>📊 Snel vergelijken: kies dit 🟢 in plaats van dit 🔴</h3>
+            <div class="rule-cards">
+                <div class="rule-card"><h3>Dranken</h3><p>🟢 Zwarte koffie, <a href="{food:green-tea}">groene thee</a>, water met citroen<br>🔴 Frisdrank, sappen, energiedrankjes</p></div>
+                <div class="rule-card"><h3>Vetten en oliën</h3><p>🟢 Extra vierge olijfolie, <a href="{food:avocado}">avocado</a>, vette vis<br>🔴 Transvetten, hergebruikte frituurolie, geharde margarine</p></div>
+                <div class="rule-card"><h3>Eiwit</h3><p>🟢 <a href="{food:boiled-egg}">Eieren</a>, zalm, <a href="{food:grilled-chicken-breast}">kipfilet</a>, <a href="{food:lentils}">linzen</a><br>🔴 Bewerkt vlees, hotdogs, gefrituurde burgers</p></div>
+                <div class="rule-card"><h3>Zetmeel</h3><p>🟢 <a href="{food:oatmeal}">Volkoren havermout</a>, <a href="{food:quinoa}">quinoa</a>, linzen, <a href="{food:blueberry}">bessen</a><br>🔴 Witbrood, gebak, koekjes, witte suiker</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-capsules"></i> <span>6. Voedingssupplementen die de levergezondheid ondersteunen (volgens onderzoek)</span></h2>
+            <p>Wil je naast gezond eten een extra stap zetten, dan zijn dit de best onderzochte supplementen. Overleg eerst met je arts of apotheker, vooral als je medicijnen gebruikt:</p>
+            <ul class="check-list">
+                <li><strong><a href="/nl/supplements/milk-thistle.html">Mariadistel</a> (silymarine):</strong> een wilde plant die al eeuwen traditioneel voor de lever wordt gebruikt. De werkzame stof silymarine is een antioxidant, en studies wijzen erop dat ze levercellen beschermt, al is het bewijs bij mensen nog beperkt.</li>
+                <li><strong><a href="/nl/supplements/omega-3-fish-oil.html">Omega-3-vetzuren</a> (<bdi>EPA/DHA</bdi>):</strong> 2 gram EPA en DHA per dag draagt bij tot de handhaving van een normaal triglyceridengehalte in het bloed; uit supplementen niet meer dan 5 gram per dag.</li>
+                <li><strong><a href="/nl/supplements/choline-bitartrate.html">Choline</a>:</strong> zit van nature in eigeel en <a href="{food:beef-liver}">runderlever</a> en draagt bij tot een normaal vetmetabolisme en tot de instandhouding van een normale leverfunctie; het is nodig voor de vettransporteurs (<bdi>VLDL</bdi>) die vet uit de lever afvoeren, en een ernstig tekort hangt samen met vetophoping in de lever.</li>
+                <li><strong><a href="/nl/supplements/magnesium.html">Magnesium</a> (glycinaat / malaat):</strong> draagt bij tot een normaal energieleverend metabolisme, en studies verbinden een laag magnesiumgehalte met insulineresistentie.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-calendar-check"></i> <span>7. Het praktische 12-wekenplan tegen levervet en visceraal buikvet</span></h2>
+            <p>Hoe breng je dit morgenochtend in praktijk? Dit is het eenvoudige plan:</p>
+            <h3>Week 1 tot 4: stop het metabole lek (minder suiker en fructose)</h3>
+            <ol class="steps">
+                <li>Laat alles staan waar toegevoegde suiker of glucose-fructosestroop in zit.</li>
+                <li>Vervang witbrood door volkoren-, gerst- of kikkererwtenbrood.</li>
+                <li>Drink direct na het opstaan twee glazen water, gevolgd door een kop zwarte koffie.</li>
+                <li>Wandel elke dag 20 minuten stevig door; wandelen is een van de grootste vijanden van visceraal vet.</li>
+            </ol>
+            <h3>Week 5 tot 8: rustige <a href="{site:/intermittent-fasting.html}">intermittent fasting</a> (14/10 of 16/8)</h3>
+            <ol class="steps">
+                <li>Eet je laatste maaltijd om 19.00 uur en je eerste maaltijd om 10.00 of 11.00 uur de volgende ochtend.</li>
+                <li>Tijdens de vastenuren raakt de glycogeenvoorraad van de lever op, zodat de lever zijn eigen vet moet verbranden voor energie.</li>
+                <li>Kies maaltijden met veel eiwit en vezels, zodat je verzadigd blijft en plotselinge bloedsuikerdips voorkomt.</li>
+            </ol>
+            <div class="tip"><h3>⚠️ Voordat je gaat vasten</h3><p>Gebruik je diabetesmedicatie (vooral insuline of sulfonylureumderivaten), ben je zwanger of geef je borstvoeding, of heb je een eetstoornis gehad? Begin dan niet met intermittent fasting zonder overleg met je arts; je doseringen moeten misschien worden aangepast om een te lage bloedsuiker te voorkomen.</p></div>
+            <h3>Week 9 tot 12: de vruchten plukken en opnieuw testen</h3>
+            <ol class="steps">
+                <li>Veel mensen zien hun taille 4 tot 8 cm slinken.</li>
+                <li>De vermoeidheid na het eten neemt duidelijk af en je voelt je lichter.</li>
+                <li>Laat je leverenzymen (<bdi>ALAT/ASAT</bdi>) en de echo opnieuw controleren bij je arts; jij en je arts kunnen aangenaam verrast worden door de nieuwe uitslag.</li>
+            </ol>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>8. Hoe gaat de Boodi-app je helpen? (Binnenkort)</h2>
+                    <p>Levervet verminderen vraagt om een nauwkeurig calorietekort (ongeveer 500 kcal per dag) zonder dat je je tekortgedaan voelt of je energie instort. In de Boodi-app bouwden we een evenwichtig dieetprogramma op de erkende <bdi>Mifflin-St Jeor</bdi>-formule, samen met een directe barcodescan:</p>
+                    <ul class="check-list">
+                        <li><strong>Ingrediënten- en voorkeurenscanner:</strong> vertelt je meteen of een product geharde vetten of verborgen suikers bevat.</li>
+                        <li><strong>Alternatievenboom:</strong> houd je van rijst, brood of pasta, dan stelt Boodi alternatieven voor die je bloedsuiker niet snel laten stijgen.</li>
+                        <li><strong>Een open keuken met alle keukens van de wereld:</strong> volg het 12-wekenplan met de gerechten waar je van houdt, zonder dat je een droog westers dieet opgelegd krijgt.</li>
+                    </ul>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Ontdek Boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. De meest gezochte vragen over leververvetting</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Laat appelazijn levervet smelten?</h3><p>Natuurlijke appelazijn (een theelepel verdund in een groot glas water voor de maaltijd) kan de insulinegevoeligheid verbeteren en de scherpe bloedsuikerstijging na het eten afzwakken, wat de lever ontlast. Zonder betere voeding is het op zich geen wondermiddel.</p></div>
+                <div class="faq-item"><h3>Hoe lang duurt het voordat de lever van het vet af is?</h3><p>Het levervet begint binnen ongeveer twee weken na het schrappen van suiker te dalen, en de resultaten bereiken hun hoogtepunt na 8 tot 12 weken met een gedisciplineerd eetpatroon en regelmatige beweging.</p></div>
+                <div class="faq-item"><h3>Is fruit helemaal verboden bij leververvetting?</h3><p>Nee. Heel fruit bevat vezels, vitamines en water die de suikeropname vertragen. Eén tot twee stuks per dag van suikerarm fruit (zoals bessen, <a href="{food:strawberry}">aardbeien</a>, <a href="{food:apple}">groene appels</a> en <a href="{food:kiwi}">kiwi</a>) zijn prima. Vruchtensap kun je beter laten staan, omdat het fruit zijn vezels kwijtraakt en je een geconcentreerde dosis fructose krijgt die rechtstreeks naar de lever gaat.</p></div>
+                <div class="faq-item"><h3>Is leververvetting gevaarlijk, en kan het kanker veroorzaken?</h3><p>In de vroege fase is leververvetting in de meeste gevallen omkeerbaar. Gevaar ontstaat als het jarenlang wordt genegeerd, samen met roken en slecht geregelde diabetes: het kan dan overgaan in een vettige leverontsteking (<bdi>MASH</bdi>, vroeger <bdi>NASH</bdi>), daarna in fibrose en, zelden, in leverkanker. Daarom is het ontdekken vandaag en er nu mee aan de slag gaan het mooiste cadeau dat je je lichaam en je toekomst kunt geven.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Conclusie: begin vandaag, je lever wacht op je eerste stap</span></h2>
+            <p>Je hoeft niet je hele leven in één dag om te gooien. Begin vandaag met één eenvoudige beslissing: ruil de frisdrank in voor een glas koud water met een schijfje citroen, wandel 20 minuten buiten, geniet van je ochtendkoffie zonder suiker, en houd de lancering van de Boodi-app in de gaten, die je binnenkort stap voor stap begeleidt.</p>
+            <p>Je gezondheid is het kostbaarste wat je hebt, en je lever verdient de kans om op adem te komen en weer schoon te worden.</p>'''),
+# Swedish (2026-10-27): ALAT/ASAT, decimal comma, vårdcentral/1177; replaces /sv/articles/fettlever.html (301)
+sv=dict(
+ byline=SV_BYLINE,
+ title='Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide',
+ h1='Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide',
+ crumb='Fettlever och visceralt fett',
+ cat='Lever och metabol hälsa',
+ desc='Symtom på fettlever och de verkliga orsakerna, varför även smala får det, proverna som visar det, mat som levern mår bra och dåligt av, och en praktisk 12-veckorsplan som minskar leverfett och visceralt bukfett.',
+ summary='Varför fett lagras i levern även hos smala, hur prover visar det, och en 12-veckorsplan med mat och rörelse som minskar leverfett och visceralt bukfett.',
+ hero_alt='En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever och visceralt fett',
+ about=['Fatty liver disease', 'MASLD', 'Visceral fat', 'Insulin resistance'],
+ disclaimer=SV_DISCLAIMER,
+ body='''            <h2 class="section-title"><i class="fas fa-heart"></i> <span>Från hjärtat: till dig som känner dig trött utan att förstå varför</span></h2>
+            <p class="lead">Vaknar du efter åtta timmars sömn och känner dig som om du inte har sovit en minut? Har midjemåttet sakta ökat och du har fått en "hård mage" som inte försvinner hur lite du än äter? Eller sa läkaren lugnt efter ett rutinprov: "Dina värden ser bra ut, men du har lite fett på levern"? Då är den här guiden skriven just för dig.</p>
+            <p>Det första jag vill att du vet och tar till dig, som en läkare som pratar med en vän: <strong>oroa dig inte, du är inte ensam, och framför allt kan din lever återhämta sig. I tidiga stadier kan leverfettet försvinna helt inom några veckor till några månader.</strong></p>
+            <p>Fettlever är inget livstidsstraff, och det viscerala fettet som gömmer sig bakom bukmusklerna är inget öde. I den här artikeln lägger vi de krångliga medicinska termerna åt sidan och pratar vardagsspråk: vad händer i det tysta i din kropp? Varför drabbas även smala? Och vilken enkel daglig plan minskar fettet och ger dig tillbaka ett klart huvud, energi och lätthet?</p>
+
+            <h2 class="section-title"><i class="fas fa-circle-info"></i> <span>1. Vad är fettlever och visceralt bukfett? (Och varför drabbas även smala?)</span></h2>
+            <p>Tänk dig att kroppen är ett välskött hus och att levern är dess "centralkök och reningsverk". Leverns viktigaste uppgifter är att omvandla mat till energi, lagra en liten reserv av näringsämnen och rena blodet dygnet runt.</p>
+            <p>Normalt innehåller levern väldigt lite fett (mindre än 5 % av dess vikt). När det lagrade fettet överstiger 5 % kallas det <strong>fettlever</strong>, särskilt den form som hänger ihop med metabolt syndrom och för mycket socker och stärkelse. Det moderna vetenskapliga namnet är <bdi>MASLD</bdi>.</p>
+            <h3>Myten att "fett kommer av att äta fett"</h3>
+            <p>Den största myten är att fett kött eller olja är det som orsakar leverfett. Kliniskt är fettleverns största fiende <strong>socker och raffinerad stärkelse, särskilt fruktos</strong>.</p>
+            <p>När du dricker läsk eller sötad juice, eller äter snabbmat full av vitt mjöl, tar kroppen upp sockret mycket snabbt. Musklerna kan inte ta hand om all den energin, så levern måste omvandla överskottssockret till triglycerider i en snabb inre process.</p>
+            <h3>Gåtan med den "smala personen med fettlever" (<bdi>TOFI</bdi>)</h3>
+            <p>Många säger: "Doktorn, jag väger 65 kilo och har ingen synlig övervikt. Hur kan jag ha fettlever?" Här kommer <strong>det viscerala fettet</strong> in. Fettet i kroppen finns i två former:</p>
+            <ul class="check-list">
+                <li><strong>Underhudsfett (subkutant fett):</strong> det mjuka fettet som du kan nypa tag i på magen eller låren. Hälsomässigt är det den mindre skadliga formen.</li>
+                <li><strong>Djupt visceralt fett (den hårda magen):</strong> fett djupt inne i bukhålan, runt levern, bukspottkörteln och tarmarna. Du kan inte nypa tag i det, och det beter sig som en aktiv "hormonkörtel" som skickar inflammatoriska ämnen och fettsyror direkt till levern via portådern.</li>
+            </ul>
+            <p>Du kan alltså ha smala armar och ben och ändå bära på en trött, fettinlagrad lever på grund av ohälsosamma matvanor, för lite rörelse och ständig stress.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>2. Hur säger kroppen ifrån? De dolda tecknen på leverfett</span></h2>
+            <p>Levern är ett mycket tålmodigt organ: själva levervävnaden saknar nerver som förmedlar smärta, och därför kallar läkare fettlever för en "tyst sjukdom". Den skriker inte i början, men den skickar svaga signaler som många förväxlar med vardagens trötthet:</p>
+            <h3>a) Tung trötthet och hjärndimma efter maten</h3>
+            <p>Om en lunch med bröd eller ris gör dig desperat efter en tupplur, eller om du inte kan koncentrera dig och tankarna känns "dimmiga", kan det vara ett tecken på <a href="{site:/insulin-resistance.html}">insulinresistens</a> och på en lever som har svårt att hantera socker och fett.</p>
+            <h3>b) En lätt tyngdkänsla uppe till höger i magen</h3>
+            <p>Levern sitter under revbenen på höger sida. När den sväller av fett trycker den på hinnan runt den (Glissons kapsel), och du kan känna en tyngd eller ett "lätt obehag", som om en liten kudde tryckte mot höger sida, särskilt när du böjer dig eller har åtsittande kläder.</p>
+            <h3>c) Ett växande midjemått och en "levermage"</h3>
+            <p>En ansamling av hårt bukfett går ofta hand i hand med fettlever. Om ditt midjemått är över <strong>94 cm för män eller 80 cm för kvinnor</strong> tyder det på extra visceralt fett, och då är det värt att kontrollera levern. Du kan också räkna ut din <a href="{site:/whtr-calculator.html}">midja–längdkvot</a> på några sekunder.</p>
+            <h3>d) Hudtecken och mörkare partier på halsen</h3>
+            <p>Har du fått små hudflikar runt halsen eller under armarna, eller mörka, sammetslika linjer i nacken? Det är inte smuts och inget ytligt hudproblem; tecknen hänger ofta ihop med höga insulinnivåer och insulinresistens, ett tillstånd som ofta följer med fettlever.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>3. Prover: hur kontrollerar du din lever?</span></h2>
+            <figure class="article-figure figure-narrow">
+                <img src="/images/visceral-fat-liver-anatomy.webp" alt="Anatomisk illustration av underhudsfett och visceralt fett runt levern och tarmarna, med leverceller fyllda av fettdroppar" width="1024" height="1024" loading="lazy" decoding="async">
+                <figcaption>Underhudsfett jämfört med det viscerala fettet runt organen; i cirkeln leverceller fyllda av fettdroppar (steatos).</figcaption>
+            </figure>
+            <p>Du behöver inte vara rädd för proverna; att kontrollera levern är enkelt och säkert i dag:</p>
+            <ul class="check-list">
+                <li><strong>Levervärden i blodet (<bdi>ALAT och ASAT</bdi>):</strong> när levercellerna blir inflammerade av fett läcker de här enzymerna ut i blodet. <bdi>ALAT</bdi> är det mest leverspecifika värdet; ligger det över referensvärdet har fettet börjat ge en lätt inflammation.</li>
+                <li><strong>Ultraljud:</strong> en smärtfri undersökning på fem minuter. En frisk lever ser mörkgrå ut, medan en fettlever ser ljust vit och reflekterande ut (läkare talar om en "ljus lever").</li>
+                <li><strong>HbA1c och insulinresistens (<bdi>HOMA-IR</bdi>):</strong> fettlever, metabolt syndrom och <a href="/sv/diabetes/prediabetes.html">prediabetes</a> hänger ofta ihop, så ditt HbA1c visar om fettbelastningen har börjat påverka hur kroppen hanterar glukos.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-champagne-glasses"></i> <span>4. Den goda nyheten att fira: din lever kan återhämta sig!</span></h2>
+            <p>Levern är det enda organet i människokroppen med en exceptionell förmåga att förnya sina egna celler: om en del av en frisk lever opereras bort växer resten ut igen till nästan normal storlek.</p>
+            <p>Vad betyder det för dig? Så fort du slutar översvämma levern med raffinerat socker och transfetter och börjar med en balanserad plan börjar levern använda sitt lagrade fett som bränsle.</p>
+            <div class="rule-cards">
+                <div class="rule-card"><div class="rule-num">5 %</div><h3>5 % viktnedgång</h3><p>Minskar mängden fett i levern tydligt.</p></div>
+                <div class="rule-card"><div class="rule-num">7–10 %</div><h3>7–10 % viktnedgång</h3><p>Får den fettrelaterade inflammationen att läka ut hos många patienter och normaliserar oftast levervärdena.</p></div>
+                <div class="rule-card"><div class="rule-num">≥ 10 %</div><h3>10 % viktnedgång eller mer</h3><p>Kan till och med vända tidig leverfibros.</p></div>
+            </div>
+            <p>Enligt kliniska studier och riktlinjerna från de europeiska föreningarna för lever, diabetes och fetma syns resultaten oftast inom två till tre månader (12 veckor) om du håller fast vid bättre mat och mer rörelse.</p>
+
+            <h2 class="section-title"><i class="fas fa-traffic-light"></i> <span>5. Vad du ska äta och undvika: ditt köksschema för en renare lever</span></h2>
+            <p>Ditt verkliga apotek finns i kylskåpet. Här är en karta över livsmedel som har stöd i forskningen:</p>
+            <div class="tier-title tier-gold"><span class="tier-dot"></span> 🟢 Mat som levern mår bra av</div>
+            <ul class="check-list">
+                <li><strong><a href="{food:black-coffee}">Svart kaffe utan tillsatser</a>:</strong> många observationsstudier tyder på att 2–3 koppar om dagen (utan socker) hänger ihop med mindre leverfett och lägre risk för leverfibros, tack vare antioxidanter som klorogensyra.</li>
+                <li><strong>Korsblommiga grönsaker (<a href="{food:broccoli}">broccoli</a>, <a href="{food:cauliflower}">blomkål</a>, vitkål, <a href="{food:arugula-rocket}">ruccola</a>):</strong> rika på svavelföreningen sulforafan, som enligt studier aktiverar de leverenzymer som tar hand om gifter.</li>
+                <li><strong><a href="{food:extra-virgin-olive-oil}">Extra jungfruolivolja</a>:</strong> innehåller oljesyra och antioxidanter; studier tyder på att två matskedar om dagen på salladen, som en del av medelhavskost, förbättrar levervärden och insulinkänslighet.</li>
+                <li><strong>Fet fisk (<a href="{food:grilled-salmon}">lax</a>, <a href="{food:canned-sardines}">sardiner</a>, <a href="{food:mackerel}">makrill</a>):</strong> en naturlig källa till omega-3 (<bdi>EPA/DHA</bdi>), som bidrar till att bibehålla normala triglyceridnivåer i blodet.</li>
+                <li><strong><a href="{food:artichoke}">Kronärtskocka</a>:</strong> rik på cynarin, som anses stimulera gallflödet och hjälpa levern att föra bort fett.</li>
+            </ul>
+            <div class="tier-title tier-avoid"><span class="tier-dot"></span> 🔴 Mat som levern mår dåligt av (sluta med den nu)</div>
+            <ul class="check-list">
+                <li><strong>Läsk och färdiga fruktjuicer:</strong> även när det står "100 % naturlig" är 30 gram flytande fruktos utan fibrer som en kula rakt mot levercellerna.</li>
+                <li><strong>Transfetter och återanvänd frityrolja:</strong> härdat margarin och frityrolja som används om och om igen ökar inflammationen och bidrar till visceralt fett.</li>
+                <li><strong>Bakverk och sötsaker av vitt mjöl:</strong> <a href="{food:white-bread}">vitt bröd</a> blir socker i blodet snabbare än en sked socker.</li>
+                <li><strong>Friterad och ultraprocessad mat:</strong> som <a href="{food:french-fries}">pommes frites</a>; den kombinerar ohälsosamma fetter, salt och snabb stärkelse, den blandning som belastar leverns ämnesomsättning.</li>
+            </ul>
+            <h3>📊 Snabb jämförelse: välj detta 🟢 i stället för detta 🔴</h3>
+            <div class="rule-cards">
+                <div class="rule-card"><h3>Drycker</h3><p>🟢 Svart kaffe, <a href="{food:green-tea}">grönt te</a>, vatten med citron<br>🔴 Läsk, juice, energidrycker</p></div>
+                <div class="rule-card"><h3>Fetter och oljor</h3><p>🟢 Extra jungfruolivolja, <a href="{food:avocado}">avokado</a>, fet fisk<br>🔴 Transfetter, återanvänd frityrolja, härdat margarin</p></div>
+                <div class="rule-card"><h3>Protein</h3><p>🟢 <a href="{food:boiled-egg}">Ägg</a>, lax, <a href="{food:grilled-chicken-breast}">kycklingbröst</a>, <a href="{food:lentils}">linser</a><br>🔴 Charkuterier, varmkorv, friterade hamburgare</p></div>
+                <div class="rule-card"><h3>Stärkelse</h3><p>🟢 <a href="{food:oatmeal}">Fullkornshavre</a>, <a href="{food:quinoa}">quinoa</a>, linser, <a href="{food:blueberry}">bär</a><br>🔴 Vitt bröd, bakverk, kex, vitt socker</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-capsules"></i> <span>6. Kosttillskott som stöder leverns hälsa (enligt forskningen)</span></h2>
+            <p>Vill du ta ett extra steg vid sidan av hälsosam mat är det här de mest studerade tillskotten. Prata först med din läkare eller apotekspersonal, särskilt om du tar läkemedel:</p>
+            <ul class="check-list">
+                <li><strong><a href="/sv/supplements/milk-thistle.html">Mariatistel</a> (silymarin):</strong> en vild växt som traditionellt har använts för levern i århundraden. Den verksamma substansen silymarin är en antioxidant, och studier tyder på att den skyddar levercellerna, även om bevisen hos människor fortfarande är begränsade.</li>
+                <li><strong><a href="/sv/supplements/omega-3-fish-oil.html">Omega-3-fettsyror</a> (<bdi>EPA/DHA</bdi>):</strong> 2 gram EPA och DHA per dag bidrar till att bibehålla normala triglyceridnivåer i blodet; från tillskott högst 5 gram per dag.</li>
+                <li><strong><a href="/sv/supplements/choline-bitartrate.html">Kolin</a>:</strong> finns naturligt i äggula och <a href="{food:beef-liver}">nötlever</a> och bidrar till normal fettomsättning och till att bibehålla normal leverfunktion; kolin behövs för att bilda de fettransportörer (<bdi>VLDL</bdi>) som för ut fett ur levern, och en allvarlig brist hänger ihop med fettinlagring där.</li>
+                <li><strong><a href="/sv/supplements/magnesium.html">Magnesium</a> (glycinat / malat):</strong> bidrar till normal energiomsättning, och studier kopplar låga magnesiumnivåer till insulinresistens.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-calendar-check"></i> <span>7. Den praktiska 12-veckorsplanen mot leverfett och visceralt bukfett</span></h2>
+            <p>Hur omsätter du det här i praktiken i morgon bitti? Här är den enkla planen:</p>
+            <h3>Vecka 1–4: stoppa det metabola läckaget (bort med socker och fruktos)</h3>
+            <ol class="steps">
+                <li>Avstå helt från allt med tillsatt socker eller glukos-fruktossirap.</li>
+                <li>Byt vitt bröd mot fullkorns-, korn- eller kikärtsbröd.</li>
+                <li>Drick två glas vatten direkt när du vaknar, följt av en kopp svart kaffe.</li>
+                <li>Promenera raskt 20 minuter om dagen; promenader är en av det viscerala fettets värsta fiender.</li>
+            </ol>
+            <h3>Vecka 5–8: lugn <a href="{site:/intermittent-fasting.html}">periodisk fasta</a> (14/10 eller 16/8)</h3>
+            <ol class="steps">
+                <li>Ät dagens sista måltid klockan 19 och nästa dags första måltid klockan 10 eller 11.</li>
+                <li>Under de fastande timmarna tar leverns glykogenförråd slut, så levern måste bränna sitt eget fett för energi.</li>
+                <li>Satsa på måltider med mycket protein och fibrer för att hålla dig mätt och undvika plötsliga blodsockerdippar.</li>
+            </ol>
+            <div class="tip"><h3>⚠️ Innan du fastar</h3><p>Om du tar diabetesläkemedel (särskilt insulin eller sulfonylureider), är gravid eller ammar, eller har haft en ätstörning, ska du inte börja med periodisk fasta utan att först prata med din läkare eller vårdcentral; doserna kan behöva justeras för att undvika lågt blodsocker.</p></div>
+            <h3>Vecka 9–12: skörda frukterna och ta nya prover</h3>
+            <ol class="steps">
+                <li>Många märker att midjemåttet minskar med 4–8 cm.</li>
+                <li>Tröttheten efter maten avtar tydligt och du känner dig lättare i kroppen.</li>
+                <li>Ta om levervärdena (<bdi>ALAT/ASAT</bdi>) och ultraljudet hos din läkare; både du och läkaren kan bli positivt överraskade av det nya resultatet.</li>
+            </ol>
+
+            <div class="boodi-card">
+                <div>
+                    <h2>8. Hur kommer boodi-appen att hjälpa dig? (Kommer snart)</h2>
+                    <p>Att minska leverfettet kräver ett exakt kaloriunderskott (omkring 500 kcal om dagen) utan att du känner dig snål mot dig själv eller tappar energin. I boodi-appen har vi byggt ett balanserat kostprogram på den etablerade <bdi>Mifflin-St Jeor</bdi>-formeln, tillsammans med direkt streckkodsskanning:</p>
+                    <ul class="check-list">
+                        <li><strong>Ingrediens- och preferensskanner:</strong> visar direkt om en produkt innehåller härdat fett eller dolt socker.</li>
+                        <li><strong>Alternativträd:</strong> älskar du ris, bröd eller pasta föreslår boodi alternativ som inte höjer blodsockret snabbt.</li>
+                        <li><strong>Ett öppet kök med alla världens kök:</strong> följ 12-veckorsplanen med rätterna du tycker om, utan att få en torr västerländsk kost påtvingad.</li>
+                    </ul>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi</a>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>9. De vanligaste frågorna om fettlever</span></h2>
+            <div class="faq-list">
+                <div class="faq-item"><h3>Smälter äppelcidervinäger bort leverfett?</h3><p>Naturlig äppelcidervinäger (en tesked utspädd i ett stort glas vatten före maten) kan förbättra insulinkänsligheten och dämpa den kraftiga blodsockerhöjningen efter maten, vilket avlastar levern. Utan bättre mat är den i sig ingen mirakellösning.</p></div>
+                <div class="faq-item"><h3>Hur lång tid tar det för levern att bli av med fettet?</h3><p>Leverfettet börjar minska inom ungefär två veckor efter att du slutat med socker, och resultaten når sin topp efter 8–12 veckor med disciplinerad kost och regelbunden fysisk aktivitet.</p></div>
+                <div class="faq-item"><h3>Är frukt helt förbjuden vid fettlever?</h3><p>Nej. Hel frukt innehåller fibrer, vitaminer och vatten som bromsar sockerupptaget. En till två frukter om dagen av sorter med lite socker (som bär, <a href="{food:strawberry}">jordgubbar</a>, <a href="{food:apple}">gröna äpplen</a> och <a href="{food:kiwi}">kiwi</a>) går bra. Det du ska undvika är fruktjuice, eftersom den tar bort fruktens fibrer och ger en koncentrerad dos fruktos som går direkt till levern.</p></div>
+                <div class="faq-item"><h3>Är fettlever farligt, och kan det orsaka cancer?</h3><p>I tidiga stadier går fettlever i de flesta fall att vända. Faran uppstår om den lämnas obehandlad i många år tillsammans med rökning och dåligt kontrollerad diabetes: den kan då gå över i fettrelaterad leverinflammation (<bdi>MASH</bdi>, tidigare <bdi>NASH</bdi>), därefter fibros och i sällsynta fall levercancer. Därför är det den största gåvan du kan ge din kropp och din framtid att upptäcka den i dag och börja ta itu med den nu.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Avslutning: börja i dag – din lever väntar på ditt första steg</span></h2>
+            <p>Du behöver inte ändra hela ditt liv på en dag. Börja i dag med ett enkelt beslut: byt läsken mot ett glas kallt vatten med en citronskiva, promenera 20 minuter utomhus, njut av morgonkaffet utan socker, och håll utkik efter lanseringen av boodi-appen, som snart kan följa dig steg för steg.</p>
+            <p>Din hälsa är det mest värdefulla du har, och din lever förtjänar en chans att andas och bli ren igen.</p>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, FATTY_LIVER_GUIDE, INSULIN_RESISTANCE_SV,
             LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV, MAGNESIUM_SV, BONE_HEALTH_SV, THYROID_SV]

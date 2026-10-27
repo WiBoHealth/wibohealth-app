@@ -7912,6 +7912,50 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/diabetes/gestational-diabetes.html"/>
   </url>
   <url>
+    <loc>https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/en/articles/fatty-liver-and-visceral-fat.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/nl/articles/fatty-liver-and-visceral-fat.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/articles/fatty-liver-and-visceral-fat.html</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://wibohealth.com/en/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fatty-liver-and-visceral-fat.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/articles/fatty-liver-and-visceral-fat.html"/>
+  </url>
+  <url>
     <loc>https://wibohealth.com/insulin-resistance.html</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -7928,24 +7972,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/insulin-resistance.html"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/insulinresistens-hba1c.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/insulin-resistance.html"/>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/fatty-liver.html</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/fatty-liver.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fettlever.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/fatty-liver.html"/>
-  </url>
-  <url>
-    <loc>https://wibohealth.com/sv/articles/fettlever.html</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/fatty-liver.html"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/fettlever.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/fatty-liver.html"/>
   </url>
   <url>
     <loc>https://wibohealth.com/leptin-resistance.html</loc>

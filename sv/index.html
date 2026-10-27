@@ -231,6 +231,12 @@
                 "feat_gest_sum": "Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg",
                 "feat_gest_alt": "Leende gravid kvinna i ett soligt kök med en skål bär och en avokado",
                 "feat_gest_btn": "Läs hela guiden",
+                "feat_liver_href": "/sv/articles/fatty-liver-and-visceral-fat.html",
+                "feat_liver_cat": "🫀 Ny artikel / Lever och metabol hälsa",
+                "feat_liver_title": "Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide",
+                "feat_liver_sum": "Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.",
+                "feat_liver_alt": "En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever",
+                "feat_liver_btn": "Läs artikeln",
                 "pulse_c1_href": "/sv/bmi-calculator.html",
                 "pulse_c2_href": "/sv/tdee-calculator.html",
                 "pulse_c3_href": "/sv/whtr-calculator.html",
@@ -1749,6 +1755,11 @@
         }
         @media (min-width: 1025px) {
             .hero .hero-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .feature-duo.feature-trio.feature-quad { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
+        /* four featured guides: 2 x 2 on tablets */
+        @media (min-width: 640px) and (max-width: 1024px) {
+            .feature-duo.feature-trio.feature-quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
     </style>
 </head>
@@ -1872,7 +1883,7 @@
                         <a href="/sv/water-calculator.html" class="pulse-pill" data-i18n-href="pulse_c4_href"><span class="pulse-ico" aria-hidden="true">💧</span><span data-i18n="pulse_c4">Kalkylator för dagligt vätskebehov (EFSA)</span></a>
                         <a href="/sv/articles/leptinresistens.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a1">Leptingåtan: varför äter jag men blir aldrig mätt?</span></a>
                         <a href="/sv/articles/insulinresistens-hba1c.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a2">HbA1c och insulinresistens</span></a>
-                        <a href="/sv/articles/fettlever.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">Dold fettlever och fruktos</span></a>
+                        <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="pulse-pill" data-i18n-href="feat_liver_href"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a3">Dold fettlever och fruktos</span></a>
                         <a href="/sv/articles/kortisol-och-stress.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a4">Kortisol och stressmage</span></a>
                         <a href="/sv/articles/magnesiumformer.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a5">Magnesiumformer: så väljer du rätt</span></a>
                         <a href="/sv/articles/skeletthalsa-och-mineraler.html" class="pulse-pill"><span class="pulse-ico" aria-hidden="true">📄</span><span data-i18n="pulse_a6">Skeletthälsa: mer än kalcium</span></a>
@@ -2040,8 +2051,21 @@
                 </div>
                 <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs hela guiden</a>
             </div>
-            <!-- 2. Featured row: leptin article (كرت مقال اللبتين), the sugar-free cereals guide and the gestational diabetes guide -->
-            <div class="feature-duo feature-trio">
+            <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide
+                 and the gestational diabetes guide (4 cards: 2x2 below 1025px, one row of 4 above) -->
+            <div class="feature-duo feature-trio feature-quad">
+            <div class="leptin-feature-card">
+                <div class="feature-thumb">
+                    <img src="/images/fatty-liver-guide-thumb.webp" srcset="/images/fatty-liver-guide-thumb.webp 640w, /images/fatty-liver-guide-card.webp 1280w" sizes="(max-width: 640px) 46vw, 300px" alt="En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever" data-i18n-alt="feat_liver_alt" width="640" height="360" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge feature-badge-new" data-i18n="feat_liver_cat">🫀 Ny artikel / Lever och metabol hälsa</span>
+                    <h3 data-i18n="feat_liver_title">Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide</h3>
+                    <p data-i18n="feat_liver_sum">Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.</p>
+                </div>
+                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="leptin-feature-btn" data-i18n-href="feat_liver_href" data-i18n="feat_liver_btn">Läs artikeln</a>
+            </div>
+
             <div class="leptin-feature-card">
                 <div class="feature-thumb">
                     <img src="/images/leptin-hero.jpeg" alt="Varför äter jag men blir aldrig mätt?">
@@ -2112,18 +2136,6 @@
                         <h4 data-i18n="card_title_hba1c">HbA1c och insulinresistens</h4>
                         <p data-i18n="card_desc_hba1c">Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.</p>
                         <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
-                <a href="/sv/articles/fettlever.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_fatty_liver">Medicinsk guide 🩺</div>
-                    <div class="stat-thumb-container">
-                        <img src="/images/fatty-liver-lifestyle.jpeg" alt="Fettlever och fruktos" class="stat-article-img" loading="lazy">
-                    </div>
-                    <div class="stat-article-details">
-                        <h4 data-i18n="card_title_fatty_liver">Fettlever och fruktos</h4>
-                        <p data-i18n="card_desc_fatty_liver">Hur levern omvandlar flytande socker till fett, och vilka levnadsvanor som minskar leverfettet.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_fatty_liver">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
@@ -2282,7 +2294,7 @@
             <div class="home-articles-links">
                 <a href="/sv/articles/periodisk-fasta.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">⏱️</span><span data-i18n="ha_l2">Periodisk fasta och myterna i sociala medier</span></a>
                 <a href="/sv/articles/insulinresistens-hba1c.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🩸</span><span data-i18n="ha_l3">HbA1c och insulinresistens</span></a>
-                <a href="/sv/articles/fettlever.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🫀</span><span data-i18n="ha_l4">Dold fettlever och insulinresistens</span></a>
+                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="home-article-link" data-i18n-href="feat_liver_href"><span class="home-article-icon" aria-hidden="true">🫀</span><span data-i18n="ha_l4">Dold fettlever och insulinresistens</span></a>
                 <a href="/sv/articles/leptinresistens.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🧠</span><span data-i18n="ha_l5">Leptin och mättnad</span></a>
                 <a href="/sv/articles/trog-skoldkortel.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🦋</span><span data-i18n="ha_l6">Trög sköldkörtel och långsam ämnesomsättning</span></a>
                 <a href="/sv/articles/kortisol-och-stress.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">😮‍💨</span><span data-i18n="ha_l7">Kortisol, stresshormonet</span></a>

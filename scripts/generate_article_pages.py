@@ -524,7 +524,8 @@ def build_hub(key, lang):
     sec, t, u = SECTIONS[key], T[lang], ui(lang)
     c = sec['content'][lang]
     urls = {l: hub_url(sec, l) for l in langs_of(sec)}
-    members = [a for a in ARTICLES if a.get('section') == key and lang in a['content']]
+    # its own articles, plus articles from elsewhere that list this hub in `hubs` (e.g. the fatty liver guide in /articles/)
+    members = [a for a in ARTICLES if (a.get('section') == key or key in a.get('hubs', ())) and lang in a['content']]
     cards = '\n'.join(hub_card(a, lang, t) for a in members)
     schema = {
         "@context": "https://schema.org",

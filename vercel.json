@@ -42,6 +42,34 @@
       "permanent": true
     },
     {
+      "source": "/fatty-liver.html",
+      "has": [{ "type": "query", "key": "lang", "value": "en" }],
+      "destination": "/en/articles/fatty-liver-and-visceral-fat.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/fatty-liver.html",
+      "has": [{ "type": "query", "key": "lang", "value": "nl" }],
+      "destination": "/nl/articles/fatty-liver-and-visceral-fat.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/fatty-liver.html",
+      "has": [{ "type": "query", "key": "lang", "value": "sv" }],
+      "destination": "/sv/articles/fatty-liver-and-visceral-fat.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/fatty-liver.html",
+      "destination": "/articles/fatty-liver-and-visceral-fat.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/sv/articles/fettlever.html",
+      "destination": "/sv/articles/fatty-liver-and-visceral-fat.html",
+      "statusCode": 301
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true
