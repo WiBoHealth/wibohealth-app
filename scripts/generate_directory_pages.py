@@ -24,7 +24,7 @@ import supplement_sv as SSV
 from generate_article_pages import link, nav as sv_nav
 from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
-from generate_supplement_pages import GA_TAG, NAME as SUPP_NAME, load_supplements
+from generate_supplement_pages import GA_TAG, NAME as SUPP_NAME, SEARCH_CSS, load_supplements, search_html, search_script
 
 ROOT = Path(__file__).resolve().parent.parent
 UPDATED = '2026-10-22'
@@ -100,7 +100,14 @@ EXTRA_CSS = """
         .supplements-directory .dir-list a:has(.dir-media) { align-items: flex-start; padding: 9px 11px; }
         .supplements-directory .dir-list a > span { margin-inline-start: 0; }
         .supplements-directory .dir-list span.dir-media { width: auto; height: auto; margin: 0 0 1px; background: none; border-radius: 0;
-            font-size: 19px; line-height: 1.15; font-weight: 400; }
+            font-size: 28px; line-height: 1.1; font-weight: 400; }
+        /* the teal cards of the interactive guide, small: icon on top, name, area */
+        .supplements-directory .dir-list a, .supplements-directory .dir-list a:has(.dir-media) {
+            align-items: center; text-align: center; padding: 10px 8px; border: 0; color: #fff;
+            background: linear-gradient(135deg, #10b981, #0ea5e9); box-shadow: 0 4px 12px rgba(14, 165, 233, 0.18); }
+        .supplements-directory .dir-list a:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(14, 165, 233, 0.3); }
+        .supplements-directory .dir-list span { text-align: center; color: rgba(255, 255, 255, 0.88); }
+        .supplements-directory .dir-list a > span:not(.dir-media) { margin-inline: auto; }
         /* back to the interactive guide: the first thing under the heading */
         .supplements-directory .guide-link-hub { display: flex; width: fit-content; max-width: 100%; margin: 4px 0 12px;
             padding: 10px 20px; background: var(--primary); border-color: var(--primary); color: #fff; font-size: 0.95rem;
@@ -116,7 +123,7 @@ EXTRA_CSS = """
             .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
             .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
             .supplements-directory .dir-list span { font-size: 0.68rem; }
-            .supplements-directory .dir-list span.dir-media { font-size: 18px; }
+            .supplements-directory .dir-list span.dir-media { font-size: 26px; }
             .supplements-directory .dir-list a:has(.dir-media) { padding: 8px 9px; }
             .supplements-directory .guide-link-hub { padding: 9px 16px; font-size: 0.88rem; }
         }
@@ -287,7 +294,7 @@ def build(kind, lang, sections):
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){{var t;try{{t=localStorage.getItem('wibo_theme')}}catch(e){{}}if(t!=='dark'&&t!=='light'){{t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{{localStorage.setItem('wibo_theme',t)}}catch(e){{}}}}h.setAttribute('data-theme',t)}})(document.documentElement);</script>
     <link rel="stylesheet" href="/css/food-page.css?v={CSS_VER}">
-    <style>{EXTRA_CSS}    </style>
+    <style>{EXTRA_CSS}{SEARCH_CSS if kind == 'supplements' else ''}    </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>
@@ -318,6 +325,7 @@ def build(kind, lang, sections):
             </nav>
             <h1>{esc(t["h1"])}</h1>
             {f'<a class="guide-link guide-link-hub" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>' if kind == 'supplements' else ''}
+            {search_html(lang) if kind == 'supplements' else ''}
             <p class="lead">{esc(t["intro"])} <strong>{esc(t["count"].format(n=n))}</strong></p>
             {'' if kind == 'supplements' else f'<a class="guide-link" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>'}
             {other_link}
@@ -344,6 +352,7 @@ def build(kind, lang, sections):
         }}
         applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
     </script>
+    {search_script() if kind == 'supplements' else ''}
 </body>
 </html>
 '''

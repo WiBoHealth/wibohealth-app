@@ -114,7 +114,14 @@
         .supplements-directory .dir-list a:has(.dir-media) { align-items: flex-start; padding: 9px 11px; }
         .supplements-directory .dir-list a > span { margin-inline-start: 0; }
         .supplements-directory .dir-list span.dir-media { width: auto; height: auto; margin: 0 0 1px; background: none; border-radius: 0;
-            font-size: 19px; line-height: 1.15; font-weight: 400; }
+            font-size: 28px; line-height: 1.1; font-weight: 400; }
+        /* the teal cards of the interactive guide, small: icon on top, name, area */
+        .supplements-directory .dir-list a, .supplements-directory .dir-list a:has(.dir-media) {
+            align-items: center; text-align: center; padding: 10px 8px; border: 0; color: #fff;
+            background: linear-gradient(135deg, #10b981, #0ea5e9); box-shadow: 0 4px 12px rgba(14, 165, 233, 0.18); }
+        .supplements-directory .dir-list a:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(14, 165, 233, 0.3); }
+        .supplements-directory .dir-list span { text-align: center; color: rgba(255, 255, 255, 0.88); }
+        .supplements-directory .dir-list a > span:not(.dir-media) { margin-inline: auto; }
         /* back to the interactive guide: the first thing under the heading */
         .supplements-directory .guide-link-hub { display: flex; width: fit-content; max-width: 100%; margin: 4px 0 12px;
             padding: 10px 20px; background: var(--primary); border-color: var(--primary); color: #fff; font-size: 0.95rem;
@@ -130,7 +137,7 @@
             .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
             .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
             .supplements-directory .dir-list span { font-size: 0.68rem; }
-            .supplements-directory .dir-list span.dir-media { font-size: 18px; }
+            .supplements-directory .dir-list span.dir-media { font-size: 26px; }
             .supplements-directory .dir-list a:has(.dir-media) { padding: 8px 9px; }
             .supplements-directory .guide-link-hub { padding: 9px 16px; font-size: 0.88rem; }
         }
@@ -174,6 +181,7 @@
                 <a href="/?lang=en">Home</a> › <span>Food index</span>
             </nav>
             <h1>Food index</h1>
+            
             
             <p class="lead">Every page of the food guide in one place, sorted by food group. Each food has its own page with calories, protein and carbohydrates, plus the glycemic index and glycemic load where available. <strong>875 foods</strong></p>
             <a class="guide-link" href="/foods.html?lang=en"><i class="fas fa-magnifying-glass"></i> Open the interactive guide to search and compare</a>
@@ -220,5 +228,6 @@
         }
         applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
     </script>
+    
 </body>
 </html>

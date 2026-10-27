@@ -114,7 +114,14 @@
         .supplements-directory .dir-list a:has(.dir-media) { align-items: flex-start; padding: 9px 11px; }
         .supplements-directory .dir-list a > span { margin-inline-start: 0; }
         .supplements-directory .dir-list span.dir-media { width: auto; height: auto; margin: 0 0 1px; background: none; border-radius: 0;
-            font-size: 19px; line-height: 1.15; font-weight: 400; }
+            font-size: 28px; line-height: 1.1; font-weight: 400; }
+        /* the teal cards of the interactive guide, small: icon on top, name, area */
+        .supplements-directory .dir-list a, .supplements-directory .dir-list a:has(.dir-media) {
+            align-items: center; text-align: center; padding: 10px 8px; border: 0; color: #fff;
+            background: linear-gradient(135deg, #10b981, #0ea5e9); box-shadow: 0 4px 12px rgba(14, 165, 233, 0.18); }
+        .supplements-directory .dir-list a:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px rgba(14, 165, 233, 0.3); }
+        .supplements-directory .dir-list span { text-align: center; color: rgba(255, 255, 255, 0.88); }
+        .supplements-directory .dir-list a > span:not(.dir-media) { margin-inline: auto; }
         /* back to the interactive guide: the first thing under the heading */
         .supplements-directory .guide-link-hub { display: flex; width: fit-content; max-width: 100%; margin: 4px 0 12px;
             padding: 10px 20px; background: var(--primary); border-color: var(--primary); color: #fff; font-size: 0.95rem;
@@ -130,10 +137,23 @@
             .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
             .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
             .supplements-directory .dir-list span { font-size: 0.68rem; }
-            .supplements-directory .dir-list span.dir-media { font-size: 18px; }
+            .supplements-directory .dir-list span.dir-media { font-size: 26px; }
             .supplements-directory .dir-list a:has(.dir-media) { padding: 8px 9px; }
             .supplements-directory .guide-link-hub { padding: 9px 16px; font-size: 0.88rem; }
         }
+
+        .supp-search { position: relative; flex: 1 1 260px; min-width: 0; margin: 0 0 12px; }
+        .supp-search > i { position: absolute; top: 50%; transform: translateY(-50%); inset-inline-start: 14px; color: var(--text-muted); pointer-events: none; }
+        .supp-search input { width: 100%; box-sizing: border-box; padding: 10px 14px; padding-inline-start: 40px; border-radius: 999px;
+            border: 1px solid var(--border-color); background: var(--bg-input); color: var(--text-main); font: inherit; font-size: 0.92rem; }
+        .supp-search input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
+        .supp-search-results { position: absolute; z-index: 20; inset-inline: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none;
+            background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; box-shadow: var(--shadow); max-height: 320px; overflow-y: auto; }
+        .supp-search-results a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; color: var(--text-main);
+            text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        .supp-search-results a:hover, .supp-search-results a:focus { background: var(--primary-glow); }
+        .supp-search-results a span { font-size: 20px; line-height: 1; }
+        .supp-search-results .none { padding: 8px 10px; color: var(--text-muted); font-size: 0.88rem; }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
@@ -175,6 +195,7 @@
             </nav>
             <h1>Kosttillskottsregister</h1>
             <a class="guide-link guide-link-hub" href="/supplements.html?lang=en"><i class="fas fa-magnifying-glass"></i> Öppna den interaktiva kosttillskottsguiden (på engelska)</a>
+            <div class="supp-search" data-lang="sv" data-none="Inget kosttillskott hittades" data-src="/js/supplement-search-data.js?v=91d046d5"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><input type="search" placeholder="Sök kosttillskott: arabiska, engelska, nederländska, svenska" aria-label="Sök kosttillskott: arabiska, engelska, nederländska, svenska" autocomplete="off"><ul class="supp-search-results" hidden></ul></div>
             <p class="lead">Kosttillskottsguidens svenska sidor på ett ställe, i bokstavsordning. Varje kosttillskott har en egen sida med rekommenderad dos, de bästa beredningsformerna, varningar och interaktioner med läkemedel, med publicerade vetenskapliga källor (EFSA / NIH / PubMed). <strong>174 kosttillskott</strong></p>
             
             <a class="guide-link" href="/en/supplements/index.html"><i class="fas fa-list"></i> Hela kosttillskottsregistret på engelska (174 kosttillskott)</a>
@@ -202,5 +223,6 @@
         }
         applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
     </script>
+    <script src="/js/supplement-search.js?v=72fe3d71" defer></script>
 </body>
 </html>

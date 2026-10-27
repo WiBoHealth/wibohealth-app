@@ -15,6 +15,7 @@ scripts/supplement_pages_overrides.json. Only records that carry `references` (t
 Content is attributed to the published sources (EFSA / NIH / PubMed), never to a named reviewer, and uses
 structure/function wording only. Design system, header and footer come from generate_food_pages.py.
 """
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -78,6 +79,55 @@ SUF = {'ar': '', 'en': 'En', 'nl': 'Nl'}
 NAME = {'ar': 'name', 'en': 'englishName', 'nl': 'nameNl'}
 
 
+
+# --- back button and quick search, shared with generate_directory_pages.py ----------------------------------------------
+# where "back" goes when the reader did not come from the guide or an index: the guide in the page language
+# (Swedish has no interactive guide: the Swedish index)
+GUIDE_URL = {'ar': '/supplements.html', 'en': '/supplements.html?lang=en', 'nl': '/supplements.html?lang=nl',
+             SV: '/sv/supplements/index.html'}
+BACK = {'ar': 'العودة لدليل المكملات', 'en': 'Back to supplements', 'nl': 'Terug naar supplementengids',
+        SV: 'Tillbaka till kosttillskottsguiden'}
+SEARCH = {
+    'ar': ('ابحث عن أي مكمل: عربي، English، Nederlands، Svenska', 'لا يوجد مكمل بهذا الاسم'),
+    'en': ('Search any supplement: Arabic, English, Nederlands, Svenska', 'No supplement found'),
+    'nl': ('Zoek een supplement: Arabisch, Engels, Nederlands, Zweeds', 'Geen supplement gevonden'),
+    SV: ('Sök kosttillskott: arabiska, engelska, nederländska, svenska', 'Inget kosttillskott hittades'),
+}
+
+
+def asset_ver(name):
+    return hashlib.sha1((ROOT / 'js' / name).read_bytes()).hexdigest()[:8]
+
+
+def search_html(lang):
+    """Quick search box (js/supplement-search.js); its names load on first use."""
+    ph, none = SEARCH[lang]
+    return (f'<div class="supp-search" data-lang="{lang}" data-none="{esc(none)}" '
+            f'data-src="/js/supplement-search-data.js?v={asset_ver("supplement-search-data.js")}">'
+            f'<i class="fas fa-magnifying-glass" aria-hidden="true"></i>'
+            f'<input type="search" placeholder="{esc(ph)}" aria-label="{esc(ph)}" autocomplete="off">'
+            f'<ul class="supp-search-results" hidden></ul></div>')
+
+
+def search_script():
+    return f'<script src="/js/supplement-search.js?v={asset_ver("supplement-search.js")}" defer></script>'
+
+
+SEARCH_CSS = """
+        .supp-search { position: relative; flex: 1 1 260px; min-width: 0; margin: 0 0 12px; }
+        .supp-search > i { position: absolute; top: 50%; transform: translateY(-50%); inset-inline-start: 14px; color: var(--text-muted); pointer-events: none; }
+        .supp-search input { width: 100%; box-sizing: border-box; padding: 10px 14px; padding-inline-start: 40px; border-radius: 999px;
+            border: 1px solid var(--border-color); background: var(--bg-input); color: var(--text-main); font: inherit; font-size: 0.92rem; }
+        .supp-search input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-glow); }
+        .supp-search-results { position: absolute; z-index: 20; inset-inline: 0; top: calc(100% + 6px); margin: 0; padding: 6px; list-style: none;
+            background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 14px; box-shadow: var(--shadow); max-height: 320px; overflow-y: auto; }
+        .supp-search-results a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; color: var(--text-main);
+            text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+        .supp-search-results a:hover, .supp-search-results a:focus { background: var(--primary-glow); }
+        .supp-search-results a span { font-size: 20px; line-height: 1; }
+        .supp-search-results .none { padding: 8px 10px; color: var(--text-muted); font-size: 0.88rem; }
+"""
+
 def langs_of(slug):
     """Languages a supplement page exists in: ar/en/nl always, sv for the supplements in supplement_sv.PUBLISH."""
     return ALL_LANGS if slug in SSV.PUBLISH else LANGS
@@ -115,6 +165,13 @@ EXTRA_CSS = """
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
+        /* back to the guide and quick search, above the breadcrumb */
+        .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
+        .supp-back { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 12px; padding: 8px 14px; border-radius: 999px;
+            border: 1px solid var(--primary-glow); background: var(--bg-input); color: var(--primary); font-size: 0.9rem; font-weight: 700;
+            text-decoration: none; line-height: 1.3; white-space: nowrap; }
+        .supp-back:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .supp-back:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
 """
 
 # the page styles the supplement markup is built on (not the food page styles, which changed with template v2)
@@ -269,7 +326,7 @@ def build(s, lang, vetted):
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{{transition:none!important;animation-duration:0s!important}}</style>
     <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){{window.__tsw=requestAnimationFrame(function(){{h.classList.remove('theme-transitioning')}})}})}},true);</script>
     <style>
-{BASE_CSS}{SUPP_PAGE_CSS}{EXTRA_CSS}    </style>
+{BASE_CSS}{SUPP_PAGE_CSS}{EXTRA_CSS}{SEARCH_CSS}    </style>
     <link rel="stylesheet" href="/css/unified-header.css">
 </head>
 <body>
@@ -295,6 +352,10 @@ def build(s, lang, vetted):
 
     <main class="page-wrapper food-page supplement-page">
         <article class="about-card">
+            <div class="supp-top">
+                <a class="supp-back" href="{GUIDE_URL[lang]}" data-back><i class="fas {'fa-arrow-right' if lang == 'ar' else 'fa-arrow-left'}" aria-hidden="true"></i> {BACK[lang]}</a>
+                {search_html(lang)}
+            </div>
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('supplements', lang, absolute=False)}">{t["guide"]}</a> › <span>{esc(name)}</span>
             </nav>
@@ -358,7 +419,20 @@ def build(s, lang, vetted):
         }}
         applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
         try {{ localStorage.setItem('preferred_language', '{lang}'); localStorage.setItem('wibo_language', '{lang}'); }} catch (e) {{}}
+        // Back: a reader who came from the guide or a supplement index goes back in history (same place in the list)
+        document.addEventListener('click', function (e) {{
+            var a = e.target.closest && e.target.closest('a[data-back]');
+            if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            var ref = null;
+            try {{ ref = new URL(document.referrer); }} catch (err) {{ return; }}
+            if (ref.origin === location.origin && /^\\/(supplements(\\.html)?|((en|nl|sv)\\/)?supplements\\/index\\.html)$/.test(ref.pathname)
+                    && history.length > 1) {{
+                e.preventDefault();
+                history.back();
+            }}
+        }});
     </script>
+    {search_script()}
 </body>
 </html>
 '''
@@ -366,6 +440,15 @@ def build(s, lang, vetted):
 
 def main():
     vetted = [s for s in load_supplements() if s.get('references')]
+    # names in the four languages for the quick search of the static pages (js/supplement-search.js)
+    (ROOT / 'js' / 'supplement-search-data.js').write_text(
+        '// Generated by scripts/generate_supplement_pages.py - do not edit by hand.\n'
+        '// [slug, Arabic, English, Dutch, Swedish (or null), icon] for js/supplement-search.js.\n'
+        'window.SUPP_SEARCH = ' + json.dumps([[s['slug'], s['name'], s['englishName'], s['nameNl'],
+                                                SSV.NAMES.get(s['slug']) if s['slug'] in SSV.PUBLISH else None, s.get('icon') or '💊']
+                                               for s in vetted], ensure_ascii=False, separators=(',', ':')) + ';\n',
+        encoding='utf-8', newline='\n')
+
     missing = SSV.PUBLISH - {s['slug'] for s in vetted}
     assert not missing, f'supplement_sv.PUBLISH: no vetted record for {missing}'
     written = 0
