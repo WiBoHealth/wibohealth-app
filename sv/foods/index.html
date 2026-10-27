@@ -111,6 +111,15 @@
             height: 100%; box-sizing: border-box; padding: 9px 11px; border-radius: 12px; font-size: 0.86rem; line-height: 1.35;
             overflow-wrap: anywhere; }
         .supplements-directory .dir-list span { text-align: start; font-size: 0.72rem; line-height: 1.35; font-weight: 600; }
+        .supplements-directory .dir-list a:has(.dir-media) { align-items: flex-start; padding: 9px 11px; }
+        .supplements-directory .dir-list a > span { margin-inline-start: 0; }
+        .supplements-directory .dir-list span.dir-media { width: auto; height: auto; margin: 0 0 1px; background: none; border-radius: 0;
+            font-size: 19px; line-height: 1.15; font-weight: 400; }
+        /* back to the interactive guide: the first thing under the heading */
+        .supplements-directory .guide-link-hub { display: flex; width: fit-content; max-width: 100%; margin: 4px 0 12px;
+            padding: 10px 20px; background: var(--primary); border-color: var(--primary); color: #fff; font-size: 0.95rem;
+            box-shadow: 0 6px 16px var(--primary-glow); }
+        .supplements-directory .guide-link-hub:hover { filter: brightness(1.08); background: var(--primary); }
         @media (max-width: 1100px) { .supplements-directory .dir-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
         @media (max-width: 860px) { .supplements-directory .dir-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (max-width: 600px) {
@@ -121,6 +130,9 @@
             .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
             .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
             .supplements-directory .dir-list span { font-size: 0.68rem; }
+            .supplements-directory .dir-list span.dir-media { font-size: 18px; }
+            .supplements-directory .dir-list a:has(.dir-media) { padding: 8px 9px; }
+            .supplements-directory .guide-link-hub { padding: 9px 16px; font-size: 0.88rem; }
         }
     </style>
     <link rel="stylesheet" href="/css/unified-header.css">
@@ -162,6 +174,7 @@
                 <a href="/sv/index.html">Hem</a> › <span>Livsmedelsregister</span>
             </nav>
             <h1>Livsmedelsregister</h1>
+            
             <p class="lead">Livsmedelsguidens svenska sidor på ett ställe, sorterade efter livsmedelsgrupp. Varje livsmedel har en egen sida med kalorier, protein och kolhydrater, och glykemiskt index och glykemisk belastning där de finns. <strong>875 livsmedel</strong></p>
             <a class="guide-link" href="/foods.html?lang=en"><i class="fas fa-magnifying-glass"></i> Öppna den interaktiva guiden (på engelska) för att söka och jämföra</a>
             <a class="guide-link" href="/en/foods/index.html"><i class="fas fa-list"></i> Hela livsmedelsregistret på engelska (875 livsmedel)</a>

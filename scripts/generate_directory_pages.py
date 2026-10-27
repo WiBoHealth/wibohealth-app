@@ -97,6 +97,15 @@ EXTRA_CSS = """
             height: 100%; box-sizing: border-box; padding: 9px 11px; border-radius: 12px; font-size: 0.86rem; line-height: 1.35;
             overflow-wrap: anywhere; }
         .supplements-directory .dir-list span { text-align: start; font-size: 0.72rem; line-height: 1.35; font-weight: 600; }
+        .supplements-directory .dir-list a:has(.dir-media) { align-items: flex-start; padding: 9px 11px; }
+        .supplements-directory .dir-list a > span { margin-inline-start: 0; }
+        .supplements-directory .dir-list span.dir-media { width: auto; height: auto; margin: 0 0 1px; background: none; border-radius: 0;
+            font-size: 19px; line-height: 1.15; font-weight: 400; }
+        /* back to the interactive guide: the first thing under the heading */
+        .supplements-directory .guide-link-hub { display: flex; width: fit-content; max-width: 100%; margin: 4px 0 12px;
+            padding: 10px 20px; background: var(--primary); border-color: var(--primary); color: #fff; font-size: 0.95rem;
+            box-shadow: 0 6px 16px var(--primary-glow); }
+        .supplements-directory .guide-link-hub:hover { filter: brightness(1.08); background: var(--primary); }
         @media (max-width: 1100px) { .supplements-directory .dir-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
         @media (max-width: 860px) { .supplements-directory .dir-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
         @media (max-width: 600px) {
@@ -107,6 +116,9 @@ EXTRA_CSS = """
             .supplements-directory .dir-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
             .supplements-directory .dir-list a { padding: 8px 9px; font-size: 0.8rem; }
             .supplements-directory .dir-list span { font-size: 0.68rem; }
+            .supplements-directory .dir-list span.dir-media { font-size: 18px; }
+            .supplements-directory .dir-list a:has(.dir-media) { padding: 8px 9px; }
+            .supplements-directory .guide-link-hub { padding: 9px 16px; font-size: 0.88rem; }
         }
 """
 
@@ -145,7 +157,7 @@ def food_sections():
 def supplement_sections():
     """One A-Z section: the ~70 area labels hold two or three supplements each, so the area goes beside the name."""
     pages = read_slug_map('supplement-pages.js', 'SUPP_PAGES')
-    items = []
+    items = []                              # (slug, names, areas, thumbnail '', the supplement's own icon)
     for s in load_supplements():
         if not (s.get('references') and s['slug'] in pages):
             continue
@@ -153,7 +165,7 @@ def supplement_sections():
         names[SV] = SSV.NAMES[s['slug']] if s['slug'] in SSV.PUBLISH else ''   # '' = no Swedish page
         areas = dict(s['groupLabel'])
         areas[SV] = SSV.GROUP_LABELS.get(s['groupLabel']['en'], '') if names[SV] else ''
-        items.append((s['slug'], names, areas))
+        items.append((s['slug'], names, areas, '', s.get('icon') or '💊'))
     return [('a-z', {'ar': 'كل المكملات أبجدياً', 'en': 'All supplements A–Z', 'nl': 'Alle supplementen A–Z',
                      SV: 'Alla kosttillskott A–Ö'}, items)]
 
@@ -204,8 +216,6 @@ def build(kind, lang, sections):
                    for anchor, labels, items in sections) if len(sections) > 1 else ''
     shown = [0]                             # the first thumbnails load at once, the rest when scrolled near (lazy)
     def media(item):
-        if len(item) < 5:                   # supplements: no pictures
-            return ''
         shown[0] += 1
         thumb, emoji = item[3], item[4]
         if not thumb:                       # no photo yet: the food's emoji in the same 48 px box
@@ -307,8 +317,9 @@ def build(kind, lang, sections):
                 <a href="{L('/')}">{u["home"]}</a> › <span>{esc(t["h1"])}</span>
             </nav>
             <h1>{esc(t["h1"])}</h1>
+            {f'<a class="guide-link guide-link-hub" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>' if kind == 'supplements' else ''}
             <p class="lead">{esc(t["intro"])} <strong>{esc(t["count"].format(n=n))}</strong></p>
-            <a class="guide-link" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>
+            {'' if kind == 'supplements' else f'<a class="guide-link" href="{hub_href}"><i class="fas fa-magnifying-glass"></i> {esc(t["cta"])}</a>'}
             {other_link}
             {f'<nav class="dir-jump" aria-label="{esc(hub_label)}">{jump}</nav>' if jump else ''}
 {body}
