@@ -25,7 +25,7 @@ from generate_article_pages import link, nav as sv_nav
 from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
                                  load_foods, nav_html, replace_sitemap_block, site_link)
 from generate_supplement_pages import (GA_TAG, NAME as SUPP_NAME, COMPARE_CSS, SEARCH_CSS, compare_hint_html, compare_pick_html,
-                                       compare_shell_html, load_supplements, search_html, search_script)
+                                       compare_shell_html, disclaimer_html, load_supplements, search_html, search_script)
 
 ROOT = Path(__file__).resolve().parent.parent
 UPDATED = '2026-10-22'
@@ -332,6 +332,7 @@ def build(kind, lang, sections):
             {other_link}
             {f'<nav class="dir-jump" aria-label="{esc(hub_label)}">{jump}</nav>' if jump else ''}
 {body}
+            {disclaimer_html(lang) if kind == 'supplements' else ''}
             {compare_shell_html(lang) if kind == 'supplements' else ''}
         </article>
     </main>

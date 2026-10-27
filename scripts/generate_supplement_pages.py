@@ -138,14 +138,49 @@ COMPARE_HINT = {
 }
 COMPARE_UI = {
     'ar': dict(compare='قارن', clear='مسح', close='إغلاق', title='مقارنة المكملات', pick='اختر للمقارنة',
-               hint='اختر مكملاً آخر على الأقل', max='يمكنك مقارنة 5 مكملات كحد أقصى'),
+               hint='اختر مكملاً آخر على الأقل', max='يمكنك مقارنة 5 مكملات كحد أقصى',
+               note='استشر طبيبك أو الصيدلي دائماً قبل الجمع بين عدة مكملات.'),
     'en': dict(compare='Compare', clear='Clear', close='Close', title='Supplement comparison', pick='Select to compare',
-               hint='Select at least one more', max='You can compare up to 5 supplements'),
+               hint='Select at least one more', max='You can compare up to 5 supplements',
+               note='Always consult your doctor or pharmacist before combining several supplements.'),
     'nl': dict(compare='Vergelijk', clear='Wissen', close='Sluiten', title='Supplementen vergelijken', pick='Selecteer om te vergelijken',
-               hint='Selecteer er nog minstens één', max='U kunt maximaal 5 supplementen vergelijken'),
+               hint='Selecteer er nog minstens één', max='U kunt maximaal 5 supplementen vergelijken',
+               note='Overleg altijd met je arts of apotheker voordat je meerdere supplementen combineert.'),
     SV: dict(compare='Jämför', clear='Rensa', close='Stäng', title='Jämförelse av kosttillskott', pick='Välj för att jämföra',
-             hint='Välj minst ett till', max='Du kan jämföra högst 5 kosttillskott'),
+             hint='Välj minst ett till', max='Du kan jämföra högst 5 kosttillskott',
+             note='Rådgör alltid med din läkare eller farmaceut innan du kombinerar flera kosttillskott.'),
 }
+
+
+# medical disclaimer and sources under the supplement indexes (approved texts, 2026-10-27)
+DIR_DISCLAIMER = {
+    'ar': '⚖️ إخلاء مسؤولية طبية: المعلومات الواردة في دليل المكملات مخصصة للتثقيف الصحي والتوجيه الغذائي فقط، ولا تُعد بديلاً '
+          'عن استشارة الطبيب أو الصيدلي المختص. استشر دائماً مقدم الرعاية الصحية قبل استخدام أي مكمل، خاصة أثناء الحمل، الرضاعة، '
+          'أو عند تناول أدوية مزمنة.',
+    'en': '⚖️ Medical Disclaimer: The information in this supplement directory is for educational and nutritional guidance purposes '
+          'only and does not substitute for professional medical advice, diagnosis, or treatment from a physician or pharmacist. '
+          'Always consult a healthcare provider before starting any supplement, especially during pregnancy, nursing, or with '
+          'ongoing medication.',
+    'nl': '⚖️ Medische disclaimer: De informatie in deze gids is uitsluitend bedoeld voor educatieve doeleinden en vervangt geen '
+          'professioneel medisch advies. Raadpleeg altijd een arts of apotheker.',
+    SV: '⚖️ Medicinsk ansvarsfriskrivning: Informationen i kosttillskottsregistret är endast avsedd som allmän hälsoupplysning och '
+        'kostvägledning och ersätter aldrig professionell medicinsk rådgivning eller diagnos från läkare eller farmaceut. Rådgör '
+        'alltid med din vårdgivare innan du använder kosttillskott, särskilt vid graviditet, amning eller samtidig medicinering.',
+}
+DIR_SOURCES = {
+    'ar': '📚 المصادر العلمية المعتمدة: تعتمد المراجعات السريرية للجرعات والتحذيرات على أبحاث منشورة من: هيئة سلامة الغذاء '
+          'الأوروبية (EFSA)، معاهد الصحة الوطنية الأمريكية (NIH)، وقاعدة بيانات الأبحاث الطبية (PubMed).',
+    'en': '📚 Scientific Sources: Clinical guidance on dosage, warnings, and interactions is based on published data from EFSA, NIH, '
+          'and PubMed.',
+    'nl': '📚 Wetenschappelijke bronnen: Gebaseerd op gepubliceerde gegevens van EFSA, NIH en PubMed.',
+    SV: '📚 Vetenskapliga källor: Den kliniska informationen om dosering och varningar baseras på publicerade källor från EFSA, NIH '
+        'och PubMed.',
+}
+
+
+def disclaimer_html(lang):
+    return (f'<aside class="supp-disclaimer"><p>{esc(DIR_DISCLAIMER[lang])}</p>'
+            f'<p>{esc(DIR_SOURCES[lang])}</p></aside>')
 
 
 def compare_hint_html(lang):
@@ -169,7 +204,8 @@ def compare_shell_html(lang):
             f'<div class="supp-compare-modal" role="dialog" aria-modal="true" aria-label="{esc(u["title"])}" hidden>'
             f'<div class="supp-compare-panel"><div class="supp-compare-head"><h2>{esc(u["title"])}</h2>'
             f'<button type="button" class="close" aria-label="{esc(u["close"])}"><i class="fas fa-xmark" aria-hidden="true"></i></button></div>'
-            f'<div class="supp-compare-body"></div></div></div></div>'
+            f'<div class="supp-compare-body"></div>'
+            f'<p class="supp-compare-note"><i class="fas fa-user-doctor" aria-hidden="true"></i> {esc(u["note"])}</p></div></div></div>'
             f'<script src="/js/supplement-compare.js?v={asset_ver("supplement-compare.js")}" defer></script>')
 
 
@@ -218,6 +254,13 @@ COMPARE_CSS = """
         }
         .supp-compare-body ul { margin: 0; padding-inline-start: 18px; }
         .supp-compare-body .loading { padding: 20px; text-align: center; }
+        .supp-compare-note { margin: 0; padding: 12px 16px; font-size: 0.86rem; font-weight: 700; line-height: 1.55; color: var(--text-main);
+            border-top: 1px solid var(--border-color); background: rgba(245, 158, 11, 0.1); }
+        .supp-compare-note i { color: #f59e0b; margin-inline-end: 4px; }
+        .supp-disclaimer { margin: 22px 0 4px; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--border-color);
+            background: var(--bg-input); display: grid; gap: 8px; }
+        .supp-disclaimer p { margin: 0; font-size: 0.86rem; line-height: 1.7; color: var(--text-muted); overflow-wrap: anywhere; }
+        .supp-disclaimer p:first-child { color: var(--text-main); }
         /* solid surfaces: the theme's card colours are see-through in dark mode */
         .supp-compare-panel, .supp-compare-bar { background: #ffffff; }
         .supp-compare-body tbody th { background: #f1f5f9; }
