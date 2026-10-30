@@ -65,10 +65,6 @@ T = {
     'feat_bp_sum': 'Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.',
     'feat_bp_alt': 'Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert',
     'feat_bp_btn': 'Läs artikeln',
-    'card_badge_leptin': 'Medicinsk guide 🧠',
-    'card_title_leptin': 'Varför äter jag men blir aldrig mätt? (Leptingåtan)',
-    'card_desc_leptin': 'Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen.',
-    'card_btn_leptin': 'Läs artikeln <i class="fa-solid fa-arrow-right"></i>',
     'card_badge_magnesium': 'Kosttillskottsguide 💊',
     'card_title_magnesium': 'Magnesiumformer – vilken passar dig?',
     'card_desc_magnesium': 'Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.',
@@ -131,11 +127,11 @@ T = {
     'footer_terms': 'Användarvillkor',
     'footer_calorie_tracker': 'Kalorispårare',
     'trust_title': 'Medicinsk granskning',
-    'trust_text': ('Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare och '
-                   'medicinskt ansvarig för WiBo Health Group, med stöd i dokumenterade kliniska källor som de '
+    'trust_text': ('Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare av '
+                   'WiBo Health, med stöd i dokumenterade kliniska källor som de '
                    'internationella GI-tabellerna och studier om insulinindex.'),
-    'trust_btn': 'Möt vår medicinskt ansvarige',
-    'footer_doctor': 'Medicinskt ansvarig',
+    'trust_btn': 'Möt vår grundare',
+    'footer_doctor': 'Vår grundare',
     'footer_delete_account': 'Radera konto',
     'footer_rights': '© 2026 WiBo Health. Alla rättigheter förbehållna.',
     'pulse_badge': '⚡ Höjdpunkter',
@@ -167,7 +163,7 @@ T = {
     'feat_latest_sum': ('HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en '
                         '12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.'),
     'feat_latest_alt': 'Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health',
-    'feat_latest_btn': 'Läs hela guiden',
+    'feat_latest_btn': 'Läs artikeln',
     'feat_gest_href': '/sv/diabetes/graviditetsdiabetes.html',
     'feat_gest_cat': '🩺 Diabetes och metabol hälsa',
     'feat_gest_title': 'Graviditetsdiabetes: normala blodsockervärden och vad du kan äta',
@@ -217,7 +213,7 @@ ALT = {
     'images/himalayan-salt-bones.jpeg': 'Kalcium och skeletthälsa',
     'images/fasting-hero.jpeg': 'Periodisk fasta och myterna i sociala medier',
     'images/thyroid-hero.jpeg': 'Trög sköldkörtel och långsam ämnesomsättning',
-    'images/dr-wassim.webp': 'Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group',
+    'images/dr-wassim.webp': 'Dr. Wassim Habib – grundare av WiBo Health',
 }
 
 # "Vad blir det till middag?" strip: Nordic dishes that have an English food page (GI bands as on those pages)

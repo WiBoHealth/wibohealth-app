@@ -137,10 +137,6 @@
                 "feat_bp_sum": "Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.",
                 "feat_bp_alt": "Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert",
                 "feat_bp_btn": "Läs artikeln",
-                "card_badge_leptin": "Medicinsk guide 🧠",
-                "card_title_leptin": "Varför äter jag men blir aldrig mätt? (Leptingåtan)",
-                "card_desc_leptin": "Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen.",
-                "card_btn_leptin": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
                 "card_badge_magnesium": "Kosttillskottsguide 💊",
                 "card_title_magnesium": "Magnesiumformer – vilken passar dig?",
                 "card_desc_magnesium": "Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.",
@@ -201,9 +197,9 @@
                 "footer_terms": "Användarvillkor",
                 "footer_calorie_tracker": "Kalorispårare",
                 "trust_title": "Medicinsk granskning",
-                "trust_text": "Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare och medicinskt ansvarig för WiBo Health Group, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.",
-                "trust_btn": "Möt vår medicinskt ansvarige",
-                "footer_doctor": "Medicinskt ansvarig",
+                "trust_text": "Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare av WiBo Health, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.",
+                "trust_btn": "Möt vår grundare",
+                "footer_doctor": "Vår grundare",
                 "footer_delete_account": "Radera konto",
                 "footer_rights": "© 2026 WiBo Health. Alla rättigheter förbehållna.",
                 "pulse_badge": "⚡ Höjdpunkter",
@@ -234,7 +230,7 @@
                 "feat_latest_title": "Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes",
                 "feat_latest_sum": "HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.",
                 "feat_latest_alt": "Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health",
-                "feat_latest_btn": "Läs hela guiden",
+                "feat_latest_btn": "Läs artikeln",
                 "feat_gest_href": "/sv/diabetes/graviditetsdiabetes.html",
                 "feat_gest_cat": "🩺 Diabetes och metabol hälsa",
                 "feat_gest_title": "Graviditetsdiabetes: normala blodsockervärden och vad du kan äta",
@@ -1772,6 +1768,39 @@
             .feature-duo.feature-trio.feature-quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
     </style>
+    <!-- Lead pair (2026-10-30): the prediabetes guide and the newest article as two equal cards with the gold frame and
+         beam; picture beside the text (category, two-line title, two-line summary) and a visible button, on every screen.
+         Two columns from 860px, stacked below; the cards of a row share their height. -->
+    <style id="lead-pair-cards">
+        .hero .feature-lead-pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: stretch;
+            max-width: 1100px; margin: 0 auto 22px; }
+        @media (min-width: 860px) { .hero .feature-lead-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; } }
+        .hero .feature-lead-pair .leptin-feature-card.feature-lead.feature-glow {
+            position: relative; display: grid !important; grid-template-columns: clamp(96px, 36%, 190px) minmax(0, 1fr) !important;
+            grid-template-areas: "thumb content" "thumb btn" !important; align-content: center; align-items: center; gap: 10px 16px !important;
+            width: auto !important; max-width: none !important; height: 100%; min-height: 0; margin: 0 !important; padding: 14px !important;
+            border-radius: 20px; text-align: start !important; box-sizing: border-box; }
+        .hero .feature-lead-pair .feature-lead .feature-thumb { grid-area: thumb; align-self: stretch; width: 100% !important;
+            height: 100% !important; min-height: 120px; aspect-ratio: auto !important; margin: 0 !important; border-radius: 14px; overflow: hidden; }
+        .hero .feature-lead-pair .feature-lead .feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero .feature-lead-pair .feature-lead .leptin-feature-content { grid-area: content; align-self: end; display: flex !important;
+            flex-direction: column; align-items: flex-start !important; min-width: 0; padding: 0 !important; text-align: start !important; }
+        .hero .feature-lead-pair .feature-lead .feature-badge { max-width: 100%; margin: 0 0 6px !important; padding: 1px 10px;
+            font-size: 11px; line-height: 1.6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .hero .feature-lead-pair .feature-lead .leptin-feature-content h3 { margin: 0 !important; font-size: 1.08rem !important;
+            line-height: 1.45 !important; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .hero .feature-lead-pair .feature-lead .leptin-feature-content p { display: -webkit-box !important; -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; overflow: hidden; margin: 4px 0 0 !important; font-size: 0.86rem !important; line-height: 1.55 !important; }
+        .hero .feature-lead-pair .feature-lead .leptin-feature-btn { grid-area: btn; justify-self: start; align-self: start;
+            position: static !important; inset: auto; opacity: 1 !important; z-index: auto; margin: 0 !important; padding: 8px 18px !important;
+            font-size: 14px !important; line-height: 1.4; white-space: nowrap; border-radius: 30px; transform: none; }
+        @media (max-width: 479px) {
+            .hero .feature-lead-pair .leptin-feature-card.feature-lead.feature-glow { gap: 8px 12px !important; padding: 12px !important; }
+            .hero .feature-lead-pair .feature-lead .leptin-feature-content h3 { font-size: 0.98rem !important; }
+            .hero .feature-lead-pair .feature-lead .leptin-feature-content p { font-size: 0.82rem !important; }
+            .hero .feature-lead-pair .feature-lead .leptin-feature-btn { padding: 6px 14px !important; font-size: 13px !important; }
+        }
+    </style>
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
@@ -2048,8 +2077,10 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- 1. Lead article (first and largest card on the page): point the feat_latest_* i18n keys (and the fallback
-                 text/img here) at the next article to rotate it. Add `hidden` to park the card while no article is ready. -->
+            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button.
+                 Point the feat_latest_* / feat_bp_* i18n keys (and the fallback text/img here) at the next article to rotate one.
+                 Add `hidden` to park a card while no article is ready. -->
+            <div class="feature-lead-pair">
             <div class="leptin-feature-card latest-article-card feature-lead feature-glow" id="latestArticleCard">
                 <div class="feature-thumb">
                     <img src="/images/prediabetes-guide-card.webp" alt="Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health" data-i18n-alt="feat_latest_alt" width="1280" height="720" fetchpriority="high" decoding="async">
@@ -2059,15 +2090,11 @@
                     <h3 data-i18n="feat_latest_title">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes</h3>
                     <p data-i18n="feat_latest_sum">HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.</p>
                 </div>
-                <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs hela guiden</a>
+                <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs artikeln</a>
             </div>
-            <!-- 2. Featured row: the high blood pressure and insulin article (2026-10-30), the fatty liver guide (2026-10-27),
-                 the sugar-free cereals guide and the gestational diabetes guide (4 cards: 2x2 below 1025px, one row of 4 above);
-                 the leptin article moved to the first card of the article grid below -->
-            <div class="feature-duo feature-trio feature-quad">
-            <div class="leptin-feature-card">
+            <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
                 <div class="feature-thumb">
-                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 640px) 46vw, 300px" alt="Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert" data-i18n-alt="feat_bp_alt" width="640" height="360" decoding="async">
+                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert" data-i18n-alt="feat_bp_alt" width="640" height="360" decoding="async">
                 </div>
                 <div class="leptin-feature-content">
                     <span class="feature-badge feature-badge-new" data-i18n="feat_bp_cat">🫀 Ny artikel / Hjärta och blodkärl</span>
@@ -2076,7 +2103,10 @@
                 </div>
                 <a href="/sv/articles/hogt-blodtryck-socker-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">Läs artikeln</a>
             </div>
-
+            </div>
+            <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide
+                 and the gestational diabetes guide (4 cards: 2x2 below 1025px, one row of 4 above) -->
+            <div class="feature-duo feature-trio feature-quad">
             <div class="leptin-feature-card">
                 <div class="feature-thumb">
                     <img src="/images/fatty-liver-guide-thumb.webp" srcset="/images/fatty-liver-guide-thumb.webp 640w, /images/fatty-liver-guide-card.webp 1280w" sizes="(max-width: 640px) 46vw, 300px" alt="En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever" data-i18n-alt="feat_liver_alt" width="640" height="360" decoding="async">
@@ -2087,6 +2117,17 @@
                     <p data-i18n="feat_liver_sum">Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.</p>
                 </div>
                 <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="leptin-feature-btn" data-i18n-href="feat_liver_href" data-i18n="feat_liver_btn">Läs artikeln</a>
+            </div>
+
+            <div class="leptin-feature-card">
+                <div class="feature-thumb">
+                    <img src="/images/leptin-hero.jpeg" alt="Varför äter jag men blir aldrig mätt?">
+                </div>
+                <div class="leptin-feature-content">
+                    <h3 data-i18n="leptin_banner_title">🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)</h3>
+                    <p data-i18n="leptin_banner_desc">Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen</p>
+                </div>
+                <a href="/sv/articles/leptinresistens.html" class="leptin-feature-btn" data-i18n="leptin_banner_btn">Läs guiden 🩺</a>
             </div>
 
             <!-- New article card next to the leptin article; links to the reader's language version -->
@@ -2139,18 +2180,6 @@
 
             <!-- 3. النوافذ الطبية والإحصائيات (المقالات السبعة) -->
             <div class="hero-stats">
-                <a href="/sv/articles/leptinresistens.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_leptin">Medicinsk guide 🧠</div>
-                    <div class="stat-thumb-container">
-                        <img src="/images/leptin-hero.jpeg" alt="Varför äter jag men blir aldrig mätt?" class="stat-article-img" loading="lazy">
-                    </div>
-                    <div class="stat-article-details">
-                        <h4 data-i18n="card_title_leptin">Varför äter jag men blir aldrig mätt? (Leptingåtan)</h4>
-                        <p data-i18n="card_desc_leptin">Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_leptin">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </a>
-
                 <a href="/sv/articles/insulinresistens-hba1c.html" class="stat-box article-stat-box">
                     <div class="stat-article-badge" data-i18n="card_badge_hba1c">Ny medicinsk artikel 🩺</div>
                     <div class="stat-thumb-container">
@@ -2302,12 +2331,12 @@
         <!-- Medical oversight (E-E-A-T) -->
         <section style="max-width: 1100px; margin: 40px auto; padding: 0 16px;">
             <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 24px 28px; border-radius: 18px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 182, 212, 0.10)); border: 1px solid rgba(16, 185, 129, 0.35); border-inline-start: 5px solid #10b981;">
-                <a href="/sv/dr-wassim-habib.html" style="flex-shrink: 0; display: block; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.35);"><img src="/images/dr-wassim.webp" alt="Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group" width="72" height="72" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"></a>
+                <a href="/sv/dr-wassim-habib.html" style="flex-shrink: 0; display: block; width: 72px; height: 72px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.35);"><img src="/images/dr-wassim.webp" alt="Dr. Wassim Habib – grundare av WiBo Health" width="72" height="72" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"></a>
                 <div style="flex: 1; min-width: 220px;">
                     <h2 style="margin: 0 0 6px; font-size: 1.3rem;" data-i18n="trust_title">Medicinsk granskning</h2>
-                    <p style="margin: 0; line-height: 1.8; opacity: 0.9;" data-i18n="trust_text">Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare och medicinskt ansvarig för WiBo Health Group, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.</p>
+                    <p style="margin: 0; line-height: 1.8; opacity: 0.9;" data-i18n="trust_text">Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare av WiBo Health, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.</p>
                 </div>
-                <a href="/sv/dr-wassim-habib.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);"><i class="fas fa-stethoscope"></i> <span data-i18n="trust_btn">Möt vår medicinskt ansvarige</span></a>
+                <a href="/sv/dr-wassim-habib.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 30px; background: #10b981; color: #fff; font-weight: 700; text-decoration: none; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);"><i class="fas fa-stethoscope"></i> <span data-i18n="trust_btn">Möt vår grundare</span></a>
             </div>
         </section>
 
@@ -2364,7 +2393,7 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="/calorie-tracker.html?lang=en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_calorie_tracker">Kalorispårare</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/sv/dr-wassim-habib.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">Medicinskt ansvarig</a>
+            <a href="/sv/dr-wassim-habib.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">Vår grundare</a>
         </div>
         <p style="margin: 10px 0; color: #95a5a6; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health. Alla rättigheter förbehållna.</p>
         <p style="margin: 0; color: #7f8c8d; font-size: 0.85em;">💚 Utvecklad med <span style="color: #10b981;">♥</span> för boodi</p>

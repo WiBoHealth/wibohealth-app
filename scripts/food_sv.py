@@ -1006,7 +1006,7 @@ UI = dict(
     disclaimer='Ansvarsfriskrivning: informationen är vägledning för kost och levnadsvanor och är ingen medicinteknisk produkt för '
                'diagnostik enligt EU-förordningen MDR 2017/745. Den ersätter inte råd från hälso- och sjukvården.',
     # one review line for every Swedish food page, as approved (2026-10-24)
-    reviewed='Granskad av <a href="{doctor}">Dr. Wassim Habib</a> | Grundare och Medicinskt Ansvarig, WiBo Health Group · '
+    reviewed='Granskad av <a href="{doctor}">Dr. Wassim Habib</a> | Grundare, WiBo Health · '
              'Senast granskad {date}',
     portion_note='Den vanliga portionen är ungefärlig och avsedd för jämförelse.',
     theme='Byt tema', footer_rights='© 2026 WiBo Health Group. Alla rättigheter förbehållna.',

@@ -633,9 +633,7 @@ def build_site_page(p):
     schema = {
         "@context": "https://schema.org",
         "@type": {'profile': 'ProfilePage', 'about': 'AboutPage', 'contact': 'ContactPage', 'collection': 'CollectionPage'}.get(p['kind'], 'WebPage'),
-        # schema_name / schema_desc: structured-data wording when it must differ from the visible title (e.g. no role title)
-        "@id": url + '#webpage', "url": url, "name": p.get('schema_name', p['title']), "description": p.get('schema_desc', p['desc']),
-        "inLanguage": SV,
+        "@id": url + '#webpage', "url": url, "name": p['title'], "description": p['desc'], "inLanguage": SV,
         "dateModified": p['modified'],
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
         "publisher": ORG,

@@ -3,7 +3,7 @@
 Each page: `slug` (/sv/<slug>.html), `legacy` = the hand-written ?lang page it translates (hreflang ar/sv/x-default,
 SV link and ?lang=sv forwarding are added there), `kind` (structured data), copy and body HTML.
 Decisions (2026-10-23): WiBo Health is an educational platform and app - no diagnosis, treatment, medical
-consultations or prescriptions; the doctor is presented as "Dr. Wassim Habib | Grundare och Medicinskt Ansvarig,
+consultations or prescriptions; the doctor is presented as "Dr. Wassim Habib – Grundare, WiBo Health" (2026-10-30; was "Grundare och Medicinskt Ansvarig,
 WiBo Health Group" with no other titles or registration numbers (Patientsäkerhetslagen: never "läkare");
 the Swedish disclaimer is indexed; Crisp is click-to-load and disclosed.
 """
@@ -17,14 +17,11 @@ CARE = ('Behöver du sjukvårdsrådgivning? Kontakta din vårdcentral eller ring
 SITE_PAGES_SV = [
     dict(
         key='doctor', slug='dr-wassim-habib', legacy='/doctor.html', kind='profile', modified='2026-10-23',
-        title='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+        title='Dr. Wassim Habib – Grundare, WiBo Health',
         h1='Dr. Wassim Habib', crumb='Dr. Wassim Habib',
-        desc='Dr. Wassim Habib är grundare och medicinskt ansvarig för WiBo Health Group och granskar det medicinska innehållet på WiBo Health och i boodi-appen.',
-        # structured data: the same role as on every page (Grundare, WiBo Health; 2026-10-30)
-        schema_name='Dr. Wassim Habib | Grundare, WiBo Health',
-        schema_desc='Dr. Wassim Habib är grundare av WiBo Health och granskar det medicinska innehållet på WiBo Health och i boodi-appen.',
-        image='dr-wassim.webp', image_alt='Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group',
-        body='''            <p class="article-byline"><i class="fas fa-user-doctor"></i> Grundare och Medicinskt Ansvarig, WiBo Health Group</p>
+        desc='Dr. Wassim Habib är grundare av WiBo Health och granskar det medicinska innehållet på WiBo Health och i boodi-appen.',
+        image='dr-wassim.webp', image_alt='Dr. Wassim Habib – grundare av WiBo Health',
+        body='''            <p class="article-byline"><i class="fas fa-user-doctor"></i> Grundare, WiBo Health</p>
 
             <h2 class="section-title"><i class="fas fa-user"></i> <span>Om Dr. Habib</span></h2>
             <p>Dr. Wassim Habib leder WiBo Health, som grundades för att knyta ihop medicinsk forskning med vardagens matval i Nederländerna, övriga Europa och arabvärlden. Arbetet handlar om metabol hälsa: glykemiskt index, kroppens insulinsvar och livsstilen bakom typ 2-diabetes och fettlever. Han granskar det medicinska innehållet på webbplatsen och i boodi-appen.</p>
@@ -75,7 +72,7 @@ SITE_PAGES_SV = [
         body='''            <p class="lead">WiBo Health är en plattform för hälsoinformation och utbildning om metabol hälsa, kunskapsbaserad kost och smarta digitala verktyg för vardagens matval.</p>
 
             <h2 class="section-title"><i class="fas fa-user-doctor"></i> <span>Medicinsk ledning och grundsyn</span></h2>
-            <p>WiBo Health grundades under medicinsk ledning av <a href="/sv/dr-wassim-habib.html">Dr. Wassim Habib</a>, grundare och medicinskt ansvarig för WiBo Health Group. Vi vill knyta ihop forskning om ämnesomsättning med vardagens inköp i Europa och arabvärlden. Vi tror att kalorier inte berättar hela historien: hur maten påverkar blodsocker och insulin spelar också roll för hälsan på lång sikt.</p>
+            <p>WiBo Health grundades under medicinsk ledning av <a href="/sv/dr-wassim-habib.html">Dr. Wassim Habib</a>, grundare av WiBo Health. Vi vill knyta ihop forskning om ämnesomsättning med vardagens inköp i Europa och arabvärlden. Vi tror att kalorier inte berättar hela historien: hur maten påverkar blodsocker och insulin spelar också roll för hälsan på lång sikt.</p>
             <p><strong>Vi är ingen vårdgivare.</strong> Vi ställer inga diagnoser, ger ingen behandling eller individuell medicinsk rådgivning och skriver inte ut läkemedel.</p>
 
             <h2 class="section-title"><i class="fas fa-mobile-screen-button"></i> <span>boodi 💚 – appen</span></h2>

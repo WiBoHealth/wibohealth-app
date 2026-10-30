@@ -491,7 +491,7 @@ nl=dict(
 # claims (oat beta-glucan); no cinnamon/insulin claim; neutral scanner wording; signed by Dr. Wassim Habib.
 sv=dict(
  named_author=True,
- byline='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ byline='Av Dr. Wassim Habib',
  title='Frukostflingor utan socker: de bästa valen i butiken för energi som håller | WiBo Health',
  h1='Frukostflingor utan socker: de bästa valen i butiken för energi som håller',
  crumb='Frukostflingor utan socker',
@@ -964,7 +964,7 @@ nl=dict(
 # Swedish: glucose only in mmol/l; WHO 2013 diagnostic limits as recommended by Socialstyrelsen (2015); targets are set by the
 # maternity team. Food pages are English for now, said once in the text.
 sv=dict(
- byline='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ byline='Av Dr. Wassim Habib',
  title='Graviditetsdiabetes: normala blodsockervärden, vad du kan äta och din dag steg för steg',
  h1='Graviditetsdiabetes: normala blodsockervärden, vad du kan äta och din dag steg för steg',
  crumb='Graviditetsdiabetes',
@@ -1577,7 +1577,7 @@ nl=dict(
 # with the ADA limit named; IGT from the OGTT explained; the HbA1c 39–47 band is presented as international (ADA), not Swedish.
 # The %-based ADA chart image is left out on purpose (the zones below carry the numbers).
 sv=dict(
- byline='Medicinskt granskad av Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
+ byline='Medicinskt granskad av Dr. Wassim Habib',
  title='Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
  h1='Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes',
  crumb='Prediabetes',
@@ -1740,7 +1740,7 @@ sv=dict(
             <h2 class="section-title"><i class="fas fa-heart"></i> <span>Ett varmt budskap till dig som håller dina provsvar i handen i dag</span></h2>
             <p>Se dagen i dag som en vändpunkt i ditt liv: inte dagen då du blev sjuk, utan dagen då du bestämde dig för att lyssna på kroppens ärliga budskap och verkligen börja ta hand om den.</p>
             <p>Tåget har inte blivit diabetes, vägen tillbaka är vidöppen och svaren finns nära: i en färgglad tallrik grönsaker, i en lugn kvarts promenad efter maten och i en vilsam sömn som reparerar dina celler. Börja i dag, med bara din nästa måltid, och se hur kroppen belönar dig med energi och sinnesro.</p>
-            <p class="reviewed">Granskad av Dr. Wassim Habib<br>Grundare och medicinskt ansvarig, WiBo Health Group 🌿</p>'''),
+            <p class="reviewed">Granskad av Dr. Wassim Habib<br>Grundare, WiBo Health 🌿</p>'''),
     ),
 )
 
@@ -1748,9 +1748,9 @@ sv=dict(
 # Swedish versions of the older hand-written articles (decision 2026-10-23). Each has only `sv` content here; `legacy`
 # names the existing ?lang page (AR/EN/NL) it translates, which becomes its hreflang ar / x-default partner.
 # Rules: HbA1c in mmol/mol, glucose in mmol/l; EU 1924/2006 (no cure/reverse/detox wording, authorised claims only);
-# signed "Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group" (byline and schema, 2026-10-23).
+# signed "Av Dr. Wassim Habib" (byline and schema, 2026-10-23; role unified 2026-10-30).
 # --------------------------------------------------------------------------------------------
-SV_BYLINE = 'Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group'
+SV_BYLINE = 'Av Dr. Wassim Habib'
 SV_DISCLAIMER = ('⚖️ Medicinsk ansvarsfriskrivning: innehållet i den här artikeln är allmän hälsoinformation och utbildning från '
                  'WiBo Health. Det är ingen medicinsk diagnos eller personlig behandlingsplan och ersätter inte råd, diagnos eller '
                  'behandling från legitimerad hälso- och sjukvårdspersonal. Prata med din läkare innan du gör större förändringar '
