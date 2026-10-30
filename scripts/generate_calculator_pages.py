@@ -380,8 +380,8 @@ def build(calc, lang):
     nav = site_nav(lang, active='/calculators.html')
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(calc, l, absolute=False)}" '
-        f'hreflang="{l}" lang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+        f'hreflang="{l}" lang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}">{l.upper()}</a>'
+        for l in ('ar', 'nl', 'en', SV) if l in urls)
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
     calc_nav = ''.join(f'<a href="{page_url(o, lang, absolute=False)}"{" class=\"current\" aria-current=\"page\"" if o is calc else ""}>'
                        f'<i class="fas {o["icon"]}" aria-hidden="true"></i> {esc(o["content"][lang]["short"])}</a>' for o in CALCS)

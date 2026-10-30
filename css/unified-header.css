@@ -304,9 +304,10 @@ body > header .lang-switcher-container .lang-btn { height: 28px !important; }
         min-width: 27px !important; padding: 0 5px !important;
     }
 }
-/* segmented switcher (generated pages: flag + code per button) with four languages: flags only at every width
-   (decision 2026-10-23); the language name stays in each link's title / aria-label */
-body > header .lang-switcher-container:has(> .lang-btn ~ .lang-btn ~ .lang-btn ~ .lang-btn) > .lang-btn > span:last-child { display: none; }
+/* language buttons show the language code (AR / EN / NL / SV) as plain text, no flags (decision 2026-10-30); the
+   language name stays in each link's title / aria-label. <button> does not inherit the page font by default, and the
+   wider system font pushed the header past 375px phones. */
+body > header .lang-btn { font-family: inherit; letter-spacing: 0.02em; }
 
 /* one row everywhere: logo | nav | actions (pages whose own CSS stacked or wrapped the header) */
 body > header .header-content,

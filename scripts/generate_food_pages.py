@@ -1907,8 +1907,8 @@ def build(food, lang, ctx):
         nav = nav_html(lang, active=None)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(slug, l, absolute=False)}" '
-        f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+        f'hreflang="{l}" lang="{l}">{l.upper()}</a>'
+        for l in ('ar', 'nl', 'en', SV) if l in urls)
     img_html = (f'<img src="/{food["image"]}" alt="{esc(name)}" width="96" height="96" decoding="async">' if food['image']
                 else f'<div class="food-emoji" aria-hidden="true">{food["icon"] or "🍽️"}</div>')
     tip_icons = ('check', 'utensils', 'warn')

@@ -288,8 +288,8 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
     nav_links = nav(lang, active=active)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{(switch or urls)[l][len(SITE):]}" '
-        f'hreflang="{l}" lang="{l}" title="{name}" aria-label="{name}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag, name in (('ar', '🇪🇬', 'العربية'), ('nl', '🇳🇱', 'Nederlands'), ('en', '🇬🇧', 'English'), (SV, '🇸🇪', 'Svenska'))
+        f'hreflang="{l}" lang="{l}" title="{name}" aria-label="{name}">{l.upper()}</a>'
+        for l, name in (('ar', 'العربية'), ('nl', 'Nederlands'), ('en', 'English'), (SV, 'Svenska'))
         if l in (switch or urls))
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS if l in urls)
     items = [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/#articles', t['footer_articles']),
@@ -599,8 +599,7 @@ def link_legacy_page(legacy_ar, sv):
     t, n1 = re.subn(r'^ *<link rel="canonical"[^>]*>\n', lambda m: m.group(0) + block, t, count=1, flags=re.M)
     def sv_link(m):                                      # same look as the page's own EN button
         inner = m.group(2)
-        label = ('<span>🇸🇪</span> <span>SV</span>' if '<span>' in inner else
-                 '🇸🇪' if re.fullmatch(r'\s*\S{1,4}\s*', inner) else 'Svenska')
+        label = 'SV' if re.fullmatch(r'\s*\S{1,4}\s*', inner) else 'Svenska'   # language codes, no flags (2026-10-30)
         return (m.group(0) + m.group(1) +
                 f'<a class="lang-btn" data-sv-link href="{sv}" hreflang="sv" lang="sv" title="Svenska">{label}</a>\n')
     t, n2 = re.subn(r'^( *)<button\b[^>]*\bclass="lang-btn"[^>]*\bdata-lang(?:-toggle)?="en"[^>]*>(.*?)</button>\n',

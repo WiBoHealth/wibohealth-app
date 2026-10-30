@@ -417,8 +417,8 @@ def build(s, lang, vetted):
         nav = nav_html(lang, active='/supplements.html')
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{page_url(s["slug"], l, absolute=False)}" '
-        f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+        f'hreflang="{l}" lang="{l}">{l.upper()}</a>'
+        for l in ('ar', 'nl', 'en', SV) if l in urls)
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
     warnings_html = ''.join(f'<div class="tip warn"><p>{esc(w)}</p></div>' for w in field(s, 'warnings', lang))
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in s['references'])

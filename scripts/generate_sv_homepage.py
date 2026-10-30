@@ -88,15 +88,15 @@ def language_engine(t):
 
 
 def switcher(t):
-    old = re.search(r'( *)<button class="lang-btn" data-lang-toggle="ar".*?title="Svenska">🇸🇪</a>\n', t, re.S)
+    old = re.search(r'( *)<button class="lang-btn" data-lang-toggle="ar".*?title="Svenska">SV</a>\n', t, re.S)
     if not old:
         sys.exit('generate_sv_homepage: language switcher not found')
     pad = old.group(1)
     new = ''.join(pad + line + '\n' for line in (
-        '<a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">🇪🇬</a>',
-        '<a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">🇬🇧</a>',
-        '<a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">🇳🇱</a>',
-        '<button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">🇸🇪</button>'))
+        '<a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">AR</a>',
+        '<a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">EN</a>',
+        '<a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">NL</a>',
+        '<button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">SV</button>'))
     return t[:old.start()] + new + t[old.end():]
 
 

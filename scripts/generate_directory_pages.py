@@ -241,8 +241,8 @@ def build(kind, lang, sections):
     nav = sv_nav(lang, active=hub) if lang == SV else nav_html(lang, active=hub)
     lang_links = '\n'.join(
         f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{dir_url(kind, l, absolute=False)}" '
-        f'hreflang="{l}" lang="{l}"><span>{flag}</span> <span>{l.upper()}</span></a>'
-        for l, flag in (('ar', '🇪🇬'), ('nl', '🇳🇱'), ('en', '🇬🇧'), (SV, '🇸🇪')) if l in urls)
+        f'hreflang="{l}" lang="{l}">{l.upper()}</a>'
+        for l in ('ar', 'nl', 'en', SV) if l in urls)
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
     if lang == SV:                          # Swedish: both Swedish indexes, and the full English index of this kind
         footer_links = ' <span>•</span> '.join(

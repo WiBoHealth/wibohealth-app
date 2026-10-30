@@ -1142,6 +1142,7 @@
         .lang-btn {
             width: 38px;
             height: 38px;
+            font-family: inherit;   /* language codes (AR/EN/NL/SV) in the page font: <button> would fall back to a wider system font */
             font-size: 15px;
             border-radius: 50%;
             background: #f3f4f6;
@@ -2167,6 +2168,7 @@
             grid-template-areas: "thumb content" "thumb btn" !important; align-content: center; align-items: center; gap: 10px 16px !important;
             width: auto !important; max-width: none !important; height: 100%; min-height: 0; margin: 0 !important; padding: 14px !important;
             border-radius: 20px; text-align: start !important; box-sizing: border-box; }
+        .hero .feature-lead-pair .leptin-feature-card.feature-lead.feature-glow:hover { transform: none !important; }   /* both stay on one line */
         .hero .feature-lead-pair .feature-lead .feature-thumb { grid-area: thumb; align-self: stretch; width: 100% !important;
             height: 100% !important; min-height: 120px; aspect-ratio: auto !important; margin: 0 !important; border-radius: 14px; overflow: hidden; }
         .hero .feature-lead-pair .feature-lead .feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -2256,10 +2258,10 @@
 
                 <!-- Controls & Mobile Toggle -->
                 <div class="header-controls">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">🇪🇬</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">🇬🇧</button>
-                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">🇳🇱</button>
-                    <a class="lang-btn" href="/sv/index.html" hreflang="sv" lang="sv" title="Svenska">🇸🇪</a>
+                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
+                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
+                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
+                    <a class="lang-btn" href="/sv/index.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>
@@ -2507,10 +2509,22 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button.
+            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button;
+                 the newest article first (high blood pressure), then the prediabetes guide.
                  Point the feat_latest_* / feat_bp_* i18n keys (and the fallback text/img here) at the next article to rotate one.
                  Add `hidden` to park a card while no article is ready. -->
             <div class="feature-lead-pair">
+            <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
+                <div class="feature-thumb">
+                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="امرأة قلقة تقيس ضغط دمها بجهاز على الزند، وأمامها مملحة وقهوة محلّاة وحلوى شوكولا" data-i18n-alt="feat_bp_alt" width="640" height="360" fetchpriority="high" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge feature-badge-new" data-i18n="feat_bp_cat">🫀 مقال جديد / القلب والأوعية الدموية</span>
+                    <h3 data-i18n="feat_bp_title">صدّق أو لا تصدّق: السكر عم يرفع ضغطك… مش بس الملح!</h3>
+                    <p data-i18n="feat_bp_sum">ضغطك عالي وما بتاكل ملح؟ فتّش عن السكر: كيف الإنسولين بيرفع الضغط، وكيف تقيسه صح بالبيت، وخطة تحمي شرايينك.</p>
+                </div>
+                <a href="/articles/high-blood-pressure-sugar-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">اقرأ المقال</a>
+            </div>
             <div class="leptin-feature-card latest-article-card feature-lead feature-glow" id="latestArticleCard">
                 <div class="feature-thumb">
                     <img src="/images/prediabetes-guide-card.webp" alt="فطور صحي متوازن لضبط السكر التراكمي ومقاومة الإنسولين - WiBo Health" data-i18n-alt="feat_latest_alt" width="1280" height="720" fetchpriority="high" decoding="async">
@@ -2521,17 +2535,6 @@
                     <p data-i18n="feat_latest_sum">سكرك التراكمي بين 5.7% و6.4%؟ أنت لست مريض سكري. افهم أرقامك، وابدأ خطة 12 أسبوعاً بالغذاء والحركة والنوم لإعادة السكر إلى المنطقة الآمنة.</p>
                 </div>
                 <a href="/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">اقرأ المقال</a>
-            </div>
-            <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
-                <div class="feature-thumb">
-                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="امرأة قلقة تقيس ضغط دمها بجهاز على الزند، وأمامها مملحة وقهوة محلّاة وحلوى شوكولا" data-i18n-alt="feat_bp_alt" width="640" height="360" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge feature-badge-new" data-i18n="feat_bp_cat">🫀 مقال جديد / القلب والأوعية الدموية</span>
-                    <h3 data-i18n="feat_bp_title">صدّق أو لا تصدّق: السكر عم يرفع ضغطك… مش بس الملح!</h3>
-                    <p data-i18n="feat_bp_sum">ضغطك عالي وما بتاكل ملح؟ فتّش عن السكر: كيف الإنسولين بيرفع الضغط، وكيف تقيسه صح بالبيت، وخطة تحمي شرايينك.</p>
-                </div>
-                <a href="/articles/high-blood-pressure-sugar-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">اقرأ المقال</a>
             </div>
             </div>
             <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide

@@ -755,6 +755,7 @@
         .lang-btn {
             width: 38px;
             height: 38px;
+            font-family: inherit;   /* language codes (AR/EN/NL/SV) in the page font: <button> would fall back to a wider system font */
             font-size: 15px;
             border-radius: 50%;
             background: #f3f4f6;
@@ -1780,6 +1781,7 @@
             grid-template-areas: "thumb content" "thumb btn" !important; align-content: center; align-items: center; gap: 10px 16px !important;
             width: auto !important; max-width: none !important; height: 100%; min-height: 0; margin: 0 !important; padding: 14px !important;
             border-radius: 20px; text-align: start !important; box-sizing: border-box; }
+        .hero .feature-lead-pair .leptin-feature-card.feature-lead.feature-glow:hover { transform: none !important; }   /* both stay on one line */
         .hero .feature-lead-pair .feature-lead .feature-thumb { grid-area: thumb; align-self: stretch; width: 100% !important;
             height: 100% !important; min-height: 120px; aspect-ratio: auto !important; margin: 0 !important; border-radius: 14px; overflow: hidden; }
         .hero .feature-lead-pair .feature-lead .feature-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -1869,10 +1871,10 @@
 
                 <!-- Controls & Mobile Toggle -->
                 <div class="header-controls">
-                    <a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">🇪🇬</a>
-                    <a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">🇬🇧</a>
-                    <a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">🇳🇱</a>
-                    <button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">🇸🇪</button>
+                    <a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">AR</a>
+                    <a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">EN</a>
+                    <a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">NL</a>
+                    <button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">SV</button>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="Byt tema">
                         <i class="fas fa-moon"></i>
@@ -2077,10 +2079,22 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button.
+            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button;
+                 the newest article first (high blood pressure), then the prediabetes guide.
                  Point the feat_latest_* / feat_bp_* i18n keys (and the fallback text/img here) at the next article to rotate one.
                  Add `hidden` to park a card while no article is ready. -->
             <div class="feature-lead-pair">
+            <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
+                <div class="feature-thumb">
+                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert" data-i18n-alt="feat_bp_alt" width="640" height="360" fetchpriority="high" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge feature-badge-new" data-i18n="feat_bp_cat">🫀 Ny artikel / Hjärta och blodkärl</span>
+                    <h3 data-i18n="feat_bp_title">Tro det eller ej: sockret höjer ditt blodtryck… inte bara saltet!</h3>
+                    <p data-i18n="feat_bp_sum">Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.</p>
+                </div>
+                <a href="/sv/articles/hogt-blodtryck-socker-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">Läs artikeln</a>
+            </div>
             <div class="leptin-feature-card latest-article-card feature-lead feature-glow" id="latestArticleCard">
                 <div class="feature-thumb">
                     <img src="/images/prediabetes-guide-card.webp" alt="Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health" data-i18n-alt="feat_latest_alt" width="1280" height="720" fetchpriority="high" decoding="async">
@@ -2091,17 +2105,6 @@
                     <p data-i18n="feat_latest_sum">HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.</p>
                 </div>
                 <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs artikeln</a>
-            </div>
-            <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
-                <div class="feature-thumb">
-                    <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert" data-i18n-alt="feat_bp_alt" width="640" height="360" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge feature-badge-new" data-i18n="feat_bp_cat">🫀 Ny artikel / Hjärta och blodkärl</span>
-                    <h3 data-i18n="feat_bp_title">Tro det eller ej: sockret höjer ditt blodtryck… inte bara saltet!</h3>
-                    <p data-i18n="feat_bp_sum">Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.</p>
-                </div>
-                <a href="/sv/articles/hogt-blodtryck-socker-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">Läs artikeln</a>
             </div>
             </div>
             <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide
