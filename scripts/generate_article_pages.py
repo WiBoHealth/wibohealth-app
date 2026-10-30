@@ -29,7 +29,8 @@ from pathlib import Path
 
 from article_content import ARTICLES, SECTIONS
 from site_pages_sv import SITE_PAGES_SV
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block, site_link, sv_slugs
+from generate_food_pages import (BASE_CSS, JOB_TITLE, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block,
+                                 site_link, sv_slugs)
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -415,11 +416,11 @@ def faq_graph(page, body, url):
 
 # Named medical author: only for articles with named_author=True (an explicit, per-article exception to the organisation-only
 # policy, mirrored in validate_schema.py). Same Person node as the food pages.
-DOCTOR = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": "Medical Doctor",
+DOCTOR = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": JOB_TITLE['en'],
           "description": "Founder of WiBo Health", "url": f"{SITE}/doctor.html",
           "worksFor": {"@type": "Organization", "name": "WiBo Health", "url": SITE}}
-# Swedish pages: the role as approved for Sweden (2026-10-23), no job title that reads as a Swedish licence ("läkare")
-DOCTOR_SV = dict(DOCTOR, jobTitle="Grundare och Medicinskt Ansvarig, WiBo Health Group", description="Grundare av WiBo Health")
+# Swedish pages: no job title that reads as a Swedish licence ("läkare"); jobTitle per language from JOB_TITLE (2026-10-30)
+DOCTOR_SV = dict(DOCTOR, jobTitle=JOB_TITLE[SV], description="Grundare av WiBo Health")
 
 
 def build(a, lang):
@@ -432,7 +433,7 @@ def build(a, lang):
     parent_name, parent_href = crumb_parent(a, lang)
     draft = is_draft(a)
     named = c.get('named_author', a.get('named_author'))   # may differ per language (Swedish pages are signed)
-    doctor = DOCTOR_SV if lang == SV else DOCTOR
+    doctor = dict(DOCTOR_SV if lang == SV else DOCTOR, jobTitle=JOB_TITLE[lang])
     references = c.get('references', a['references'])   # a language may list its own sources (Swedish: WHO 2013, Socialstyrelsen)
 
     schema = {
@@ -464,6 +465,18 @@ def build(a, lang):
     schema = {k: v for k, v in schema.items() if v not in (None, [])}
     if a.get('faq_schema'):
         schema = faq_graph(schema, render_body(c['body'], lang), urls[lang])
+    if a.get('article_schema'):                          # an Article node next to the MedicalWebPage (headline, author, date, image)
+        page = schema['@graph'][0] if '@graph' in schema else schema
+        art = {"@type": "Article", "@id": urls[lang] + '#article', "headline": c['h1'][:110], "description": c['desc'],
+               "inLanguage": lang, "image": [hero] if hero else None, "datePublished": a['published'],
+               "dateModified": a['modified'], "author": page['author'], "publisher": page['publisher'],
+               "mainEntityOfPage": {"@id": page['@id']}}
+        art = {k: v for k, v in art.items() if v is not None}
+        if '@graph' in schema:
+            schema['@graph'].append(art)
+        else:
+            ctx = schema.pop('@context')
+            schema = {"@context": ctx, "@graph": [schema, art]}
 
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in references)
     refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
@@ -476,13 +489,14 @@ def build(a, lang):
     byline = (f'''
             <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="{link('/doctor.html', lang)}">{esc(c["byline"])}</a></p>'''
               if named else '')
+    subtitle = f'\n            <p class="article-subtitle">{esc(c["subtitle"])}</p>' if c.get('subtitle') else ''
     published = (t['published_on'] if named else t['published']).format(date=date_text(a['published'], lang))
     main = f'''        <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{link('/', lang)}">{u["home"]}</a> › <a href="{parent_href}">{esc(parent_name)}</a> › <span>{esc(c["crumb"])}</span>
             </nav>
             <span class="group-chip">{esc(c["cat"])}</span>
-            <h1>{esc(c["h1"])}</h1>{byline}
+            <h1>{esc(c["h1"])}</h1>{subtitle}{byline}
             <div class="article-meta"><span><i class="fas fa-calendar"></i> {published}</span>{draft_chip}</div>
 {hero_img}
 {render_body(c["body"], lang)}
@@ -492,6 +506,9 @@ def build(a, lang):
     extra_head = f'\n    <meta property="article:published_time" content="{a["published"]}">'
     if hero:
         extra_head += f'\n    <link rel="preload" as="image" href="/images/{a["hero"]}" fetchpriority="high">'
+        extra_head += f'\n    <meta name="twitter:image" content="{hero}">\n    <meta name="twitter:image:alt" content="{esc(c.get("hero_alt", ""))}">'
+    if a.get('extra_css'):                               # styles only this article uses, kept out of the shared block
+        extra_head += f'\n    <style>{a["extra_css"]}    </style>'
     return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=draft,
                  og_type='article', image=hero, image_alt=c.get('hero_alt', ''), extra_head=extra_head,
                  active=f'/{section_dir(a)}.html' if a.get('section') else '/#articles', switch=switch)
@@ -616,7 +633,9 @@ def build_site_page(p):
     schema = {
         "@context": "https://schema.org",
         "@type": {'profile': 'ProfilePage', 'about': 'AboutPage', 'contact': 'ContactPage', 'collection': 'CollectionPage'}.get(p['kind'], 'WebPage'),
-        "@id": url + '#webpage', "url": url, "name": p['title'], "description": p['desc'], "inLanguage": SV,
+        # schema_name / schema_desc: structured-data wording when it must differ from the visible title (e.g. no role title)
+        "@id": url + '#webpage', "url": url, "name": p.get('schema_name', p['title']), "description": p.get('schema_desc', p['desc']),
+        "inLanguage": SV,
         "dateModified": p['modified'],
         "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
         "publisher": ORG,

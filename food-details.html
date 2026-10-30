@@ -1378,7 +1378,7 @@ if (food.image) {
                 "name": title,
                 "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (clinically reviewed estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal, Protein: ${(food.nutrition?.protein || 0).toFixed(1)} g, Carbohydrates: ${(food.nutrition?.carbs || 0).toFixed(1)} g, Fat: ${fatVal} g per 100 g.`,
                 "about": { "@type": "Thing", "name": food.nameEn || title, "description": category },
-                "author": { "@type": "Person", "@id": "https://wibohealth.com/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": "Medical Doctor", "url": "https://wibohealth.com/doctor.html" },
+                "author": { "@type": "Person", "@id": "https://wibohealth.com/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": ({ ar: "مؤسس WiBo Health", en: "Founder, WiBo Health", nl: "Oprichter, WiBo Health" })[currentLang] || "مؤسس WiBo Health", "url": "https://wibohealth.com/doctor.html" },
                 "publisher": { "@type": "Organization", "name": "WiBo Health", "url": "https://wibohealth.com", "logo": { "@type": "ImageObject", "url": "https://wibohealth.com/images/icon-512.png" } },
                 "isPartOf": { "@type": "WebSite", "name": "WiBo Health", "url": "https://wibohealth.com/" }
             };

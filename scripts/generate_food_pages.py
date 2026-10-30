@@ -47,6 +47,9 @@ TEAM_REVIEWED = '2026-10-13'             # batch 2: reviewed by the WiBo Health 
 TEAM_REVIEWED_TXT = {'ar': '13 أكتوبر 2026', 'en': '13 October 2026', 'nl': '13 oktober 2026'}
 LANGS = ('ar', 'en', 'nl')
 SV = 'sv'
+# Dr. Wassim Habib's jobTitle in every JSON-LD block, by page language (user decision 2026-10-30: the same role everywhere,
+# no "medical director / medicinskt ansvarig" title)
+JOB_TITLE = {'ar': 'مؤسس WiBo Health', 'en': 'Founder, WiBo Health', 'nl': 'Oprichter, WiBo Health', 'sv': 'Grundare, WiBo Health'}
 ALL_LANGS = LANGS + (SV,)        # Swedish is opt-in per food (food_sv.PUBLISH); LANGS stays ar/en/nl for the other generators
 
 # --------------------------------------------------------------------------------------------
@@ -1866,7 +1869,7 @@ def build(food, lang, ctx):
         reviewer = doctor
     else:
         doctor = {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Dr. Wassim Habib",
-                  "jobTitle": "Medical Doctor", "url": f"{SITE}/doctor.html"}
+                  "jobTitle": JOB_TITLE[lang], "url": f"{SITE}/doctor.html"}
         reviewer = ({"@type": "Organization", "name": "WiBo Health medical team", "url": SITE + '/'} if team else
                     {"@type": "Person", "@id": f"{SITE}/doctor.html#wassim-habib", "name": "Wassim Habib",
                      "url": f"{SITE}/doctor.html"})

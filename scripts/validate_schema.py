@@ -28,7 +28,10 @@ NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestati
                       'sv/diabetes/prediabetes.html', 'sv/diabetes/graviditetsdiabetes.html',   # Swedish versions (2026-10-23)
                       # the fatty liver guide (2026-10-27, third exception)
                       'articles/fatty-liver-and-visceral-fat.html', 'en/articles/fatty-liver-and-visceral-fat.html',
-                      'nl/articles/fatty-liver-and-visceral-fat.html'}
+                      'nl/articles/fatty-liver-and-visceral-fat.html',
+                      # the high blood pressure and insulin article (2026-10-30, fourth exception)
+                      'articles/high-blood-pressure-sugar-insulin.html', 'en/articles/high-blood-pressure-sugar-insulin.html',
+                      'nl/articles/hoge-bloeddruk-suiker-insuline.html'}
 # every Swedish article is signed by Dr. Wassim Habib (decision 2026-10-23)
 NAMED_AUTHOR_PAGES |= {f'sv/articles/{p.name}' for p in (ROOT / 'sv' / 'articles').glob('*.html')}
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}

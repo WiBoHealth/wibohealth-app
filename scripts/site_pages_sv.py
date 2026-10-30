@@ -20,6 +20,9 @@ SITE_PAGES_SV = [
         title='Dr. Wassim Habib | Grundare och Medicinskt Ansvarig, WiBo Health Group',
         h1='Dr. Wassim Habib', crumb='Dr. Wassim Habib',
         desc='Dr. Wassim Habib är grundare och medicinskt ansvarig för WiBo Health Group och granskar det medicinska innehållet på WiBo Health och i boodi-appen.',
+        # structured data: the same role as on every page (Grundare, WiBo Health; 2026-10-30)
+        schema_name='Dr. Wassim Habib | Grundare, WiBo Health',
+        schema_desc='Dr. Wassim Habib är grundare av WiBo Health och granskar det medicinska innehållet på WiBo Health och i boodi-appen.',
         image='dr-wassim.webp', image_alt='Dr. Wassim Habib – grundare och medicinskt ansvarig, WiBo Health Group',
         body='''            <p class="article-byline"><i class="fas fa-user-doctor"></i> Grundare och Medicinskt Ansvarig, WiBo Health Group</p>
 

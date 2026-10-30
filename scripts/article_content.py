@@ -2923,5 +2923,922 @@ sv=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, FATTY_LIVER_GUIDE, INSULIN_RESISTANCE_SV,
+# Blood pressure table: a real table on wide screens, one card per row on phones (labels from data-label);
+# the to-do checklist uses real checkboxes. Only this article needs these styles.
+HYPERTENSION_CSS = """
+        .article-subtitle { font-size: 1.12rem; font-weight: 700; color: var(--text-muted); line-height: 1.7; margin: 0 0 12px; }
+        .bp-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 12px 0 6px; font-size: 0.95rem;
+            border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; }
+        .bp-table th, .bp-table td { padding: 12px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--border-color); }
+        .bp-table tbody tr:last-child td { border-bottom: 0; }
+        .bp-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
+        .bp-table td.bp-num { font-weight: 800; white-space: nowrap; }
+        .bp-table td.bp-op { color: var(--text-muted); font-weight: 700; font-size: 0.85rem; padding-top: 14px; }
+        .bp-table td:first-child { font-weight: 800; border-inline-start: 5px solid var(--bp, #10b981); }
+        .bp-table td:last-child { color: var(--text-muted); }
+        .bp-table td:first-child bdi, .bp-table th bdi { font-weight: 600; color: var(--text-muted); font-size: 0.85em; white-space: nowrap; }
+        .article-page h3 bdi { white-space: nowrap; }   /* an English term in brackets never splits across lines */
+        .bp-ok { --bp: #10b981; } .bp-elev { --bp: #f1c40f; } .bp-s1 { --bp: #f39c12; } .bp-s2 { --bp: #e74c3c; }
+        @media (max-width: 680px) {
+            .bp-table, .bp-table tbody, .bp-table tr, .bp-table td { display: block; width: 100%; }
+            .bp-table { border: 0; overflow: visible; }
+            .bp-table thead { display: none; }
+            .bp-table tr { background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 5px solid var(--bp, #10b981);
+                border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 12px; display: grid;
+                grid-template-columns: 1fr auto 1fr; gap: 6px 10px; align-items: center; }
+            .bp-table td { padding: 0; border: 0; }
+            .bp-table td:first-child { grid-column: 1 / -1; border: 0; font-size: 1rem; }
+            .bp-table td:last-child { grid-column: 1 / -1; font-size: 0.92rem; }
+            .bp-table td.bp-num { white-space: normal; }
+            .bp-table td.bp-num::before { content: attr(data-label); display: block; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); }
+            .bp-table td.bp-op { text-align: center; align-self: end; padding: 0 0 3px; }
+        }
+        .danger-box { border: 2px solid #e74c3c; background: rgba(231, 76, 60, 0.08); border-radius: var(--radius-md); padding: 18px 20px; margin: 22px 0; }
+        .danger-box h3 { margin: 0 0 8px; color: var(--text-main); }
+        .danger-box p { margin: 0; }
+        .todo-list { list-style: none; padding: 0; margin: 10px 0 24px; display: grid; gap: 10px; }
+        .todo-list label { display: flex; gap: 12px; align-items: flex-start; background: var(--bg-input); border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm); padding: 12px 16px; cursor: pointer; font-size: 1.04rem; line-height: 1.7; }
+        .todo-list input { width: 20px; height: 20px; margin-top: 4px; flex-shrink: 0; accent-color: var(--primary); cursor: pointer; }
+        .todo-list input:checked + span { text-decoration: line-through; color: var(--text-muted); }
+"""
+
+HYPERTENSION_INSULIN = dict(
+    hubs=['diabetes'],                                   # user decision 2026-10-30: a card on the diabetes hubs too
+    slugs=dict(ar='high-blood-pressure-sugar-insulin', en='high-blood-pressure-sugar-insulin', nl='hoge-bloeddruk-suiker-insuline',
+               sv='hogt-blodtryck-socker-insulin'),
+    hero='high-blood-pressure-sugar-hidden-partner-cover.webp', hero_size=(1376, 768),
+    thumb='high-blood-pressure-sugar-thumb.webp', thumb_size=(640, 360), thumb_2x=('high-blood-pressure-sugar-card.webp', 1280),
+    published='2026-10-30', modified='2026-10-30',
+    references=[
+        'Whelton PK, Carey RM, Aronow WS, et al. 2017 ACC/AHA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults. Hypertension 2018;71(6):e13–e115',
+        'McEvoy JW, McCarthy CP, Bruno RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J 2024;45(38):3912–4018',
+        'Hall JE, do Carmo JM, da Silva AA, Wang Z, Hall ME. Obesity-induced hypertension: interaction of neurohumoral and renal mechanisms. Circ Res 2015;116(6):991–1006',
+        'Sacks FM, Svetkey LP, Vollmer WM, et al. Effects on blood pressure of reduced dietary sodium and the Dietary Approaches to Stop Hypertension (DASH) diet. N Engl J Med 2001;344(1):3–10',
+        'Neter JE, Stam BE, Kok FJ, Grobbee DE, Geleijnse JM. Influence of weight reduction on blood pressure: a meta-analysis of randomized controlled trials. Hypertension 2003;42(5):878–884',
+        'Edwards JJ, Deenmamode AHP, Griffiths M, et al. Exercise training and resting blood pressure: a large-scale pairwise and network meta-analysis of randomised controlled trials. Br J Sports Med 2023;57(20):1317–1326',
+        'World Health Organization. Guideline: Sodium intake for adults and children. Geneva: WHO; 2012',
+        'Serban C, Sahebkar A, Ursoniu S, Andrica F, Banach M. Effect of sour tea (Hibiscus sabdariffa L.) on arterial hypertension: a systematic review and meta-analysis of randomized controlled trials. J Hypertens 2015;33(6):1119–1127',
+        'Sigurjónsdóttir HA, Franzson L, Manhem K, et al. Liquorice-induced rise in blood pressure: a linear dose-response relationship. J Hum Hypertens 2001;15(8):549–552',
+    ],
+    named_author=True,                                   # user decision 2026-10-30: «بقلم د. وسيم حبيب» (byline + schema)
+    article_schema=True,
+    extra_css=HYPERTENSION_CSS,
+    content=dict(
+ar=dict(
+ byline='بقلم د. وسيم حبيب',
+ title='ارتفاع ضغط الدم والسكر: العلاقة الخفية اللي لازم تعرفها',
+ h1='صدّق أو لا تصدّق: السكر عم يرفع ضغطك… مش بس الملح!',
+ subtitle='ارتفاع ضغط الدم، القاتل الصامت: أسبابه، علاقته بالإنسولين، وكيف تحمي شرايينك',
+ crumb='ارتفاع ضغط الدم والسكر',
+ summary='ضغطك عالي وما بتاكل ملح؟ فتّش عن السكر: كيف الإنسولين بيرفع الضغط، وكيف تقيسه صح بالبيت، وخطة أكل ورياضة ونوم تحمي شرايينك.',
+ cat='القلب والأوعية الدموية',
+ desc='ليش الملح مش السبب الوحيد لارتفاع ضغط الدم؟ اكتشف كيف الإنسولين بيرفع ضغطك، وشو تاكل وكيف تحمي شرايينك.',
+ hero_alt='امرأة قلقة تقيس ضغط دمها بجهاز على الزند، وأمامها مملحة وقهوة مثلجة محلّاة وحلوى شوكولا، وخلفها ظل من مكعبات السكر',
+ about=['Hypertension', 'Insulin resistance', 'Blood pressure', 'DASH diet'],
+ disclaimer='⚖️ هذا المقال للتوعية والتثقيف الصحي، ولا يغني عن استشارة الطبيب. لا توقف ولا تعدّل أي دواء بدون الرجوع لطبيبك.',
+ body='''            <p class="lead">هل تساءلت يوماً لماذا يُطلق عليه الطب الحديث لقب «القاتل الصامت»؟ إن كنت لا تعلم، فدعني أخبرك بالسبب الحقيقي: إنه يتسلل بهدوء إلى شرايينك وأنسجة أعضائك الحيوية ويدمرها خطوة بخطوة، دون أن تشعر بأي ألم، حتى يستفحل الأمر.</p>
+            <p>ارتفاع ضغط الدم لا يبدأ كمرض معزول "يتيم الأب والأم"، بل هو في حقيقته انعكاس مباشر لخلل أيضي (<bdi>Metabolic Dysfunction</bdi>) داخل جسمك والتهابات مستمرة في بطانة أوعيتك الدموية.</p>
+            <p>تعالوا معاً في هذا المقال لنفكك هذا اللغز بهدوء ودون أي تعقيدات طبية؛ سنحلل هذه الأرقام، ونشرح كيف ترتبط <a href="{site:/insulin-resistance.html}">مقاومة الإنسولين</a> (<bdi>Insulin Resistance</bdi>) ارتباطاً وثيقاً بارتفاع الضغط، ونضع معاً خطة متكاملة لنعيد المرونة والحيوية لشرايينك... ونحمي قلبك الصغير اللي ما بيتحمّل.</p>
+
+            <h2 class="section-title"><i class="fas fa-heart-pulse"></i> <span>ما هو ضغط الدم؟ وماذا تعني الأرقام؟</span></h2>
+            <p>عندما ينبض قلبك بوم بوم، فهو يضخ الدم عبر شبكة معقدة من الأوعية الدموية. فخذوا هالمعلومة بخط عريييض: <strong>ضغط الدم هو مقياس قوة دفع الدم ضد جدران الشرايين أثناء جريانه</strong>، يعني بالمختصر هو مقاومة الجدران لقوة جريان الدم.</p>
+            <p>هاد الضغط اللي بيصير لحظة ما القلب يضخ، منسميه <strong>الضغط الانقباضي</strong> (<bdi>Systolic Blood Pressure</bdi>). وضحت الفكرة؟ يعني ببساطة هو الرقم الكبير، الرقم اللي فوق. احفظوا اسمه منيح: الضغط الانقباضي.</p>
+            <p>هلّق بعد ما ضخ القلب الدم اللي فيه، صار بدو يرتخي ويرتاح ليرجع يتعبى بالدم، فهون بيجي دور <strong>الضغط الانبساطي</strong> (<bdi>Diastolic Blood Pressure</bdi>). وطبعاً الانبساطي ما إلو علاقة بالبسط والفرح والسرور، الانبساطي يعني التمدد والارتخاء، يعني فترة الراحة للقلب بين النبضة والنبضة. بهالفترة بيتقاس الضغط داخل الشرايين، لحتى يمتلئ القلب من جديد ويعيد الكرّة: بوم... بوم... بوم... بوم. سهلة؟</p>
+            <h3>كيف منعرف إذا الضغط طبيعي أو بلّش يعطينا إنذارات؟</h3>
+            <table class="bp-table">
+                <thead><tr><th>التصنيف</th><th>الانقباضي <bdi>(Systolic)</bdi></th><th></th><th>الانبساطي <bdi>(Diastolic)</bdi></th><th>شو يعني؟</th></tr></thead>
+                <tbody>
+                    <tr class="bp-ok"><td>طبيعي ومثالي <bdi>(Normal)</bdi></td><td class="bp-num" data-label="الانقباضي">أقل من 120</td><td class="bp-op">و</td><td class="bp-num" data-label="الانبساطي">أقل من 80</td><td>أوعية دموية مرنة، وقلب شغّال بأريحية تامة</td></tr>
+                    <tr class="bp-elev"><td>ضغط مرتفع، مرحلة الإنذار المبكر <bdi>(Elevated)</bdi></td><td class="bp-num" data-label="الانقباضي"><bdi>120 - 129</bdi></td><td class="bp-op">و</td><td class="bp-num" data-label="الانبساطي">أقل من 80</td><td>بداية تيبّس الأوعية، ووقت التدخل الفوري بنمط الحياة</td></tr>
+                    <tr class="bp-s1"><td>ارتفاع الضغط، المرحلة الأولى <bdi>(Stage 1 Hypertension)</bdi></td><td class="bp-num" data-label="الانقباضي"><bdi>130 - 139</bdi></td><td class="bp-op">أو</td><td class="bp-num" data-label="الانبساطي"><bdi>80 - 89</bdi></td><td>صار في تشخيص، والطبيب بيقرر حسب باقي المخاطر</td></tr>
+                    <tr class="bp-s2"><td>ارتفاع الضغط، المرحلة الثانية <bdi>(Stage 2 Hypertension)</bdi></td><td class="bp-num" data-label="الانقباضي">140 فأكثر</td><td class="bp-op">أو</td><td class="bp-num" data-label="الانبساطي">90 فأكثر</td><td>بدها متابعة طبية منتظمة وغالباً علاج دوائي</td></tr>
+                </tbody>
+            </table>
+            <p class="table-note">الأرقام كلها بالملّيمتر زئبقي (<bdi>mmHg</bdi>).</p>
+            <div class="danger-box">
+                <h3>🚨 علامات الإنذار الأحمر (طوارئ فورية)</h3>
+                <p>إذا سجّل جهاز القياس قراءة أعلى من <bdi>180 / 120</bdi> ملم زئبق، مترافقة مع صداع شديد ومفاجئ، أو ضبابية بالرؤية، أو ضيق تنفس، أو ألم بالصدر، أو ضعف بطرف من الجسم أو صعوبة بالكلام، فهاي مش حالة منستنى فيها تعديل الأكل. هاي حالة طوارئ طبية (<bdi>Hypertensive Emergency</bdi>) بتستوجب <strong>التوجه الفوري لأقرب مستشفى أو الاتصال بالإسعاف</strong>.</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>القاتل الصامت إلو شريك سرّي… تعرّف عليه قبل ما يتعرّف عليك 😉</span></h2>
+            <p>هون أهم نقطة بموضوعنا اليوم، واللي كتير بتغيب عن البال. ضغطك عالي وما بتاكل ملح؟ فتّش عن السكر! أغلب الناس بتعتقد إنو الضغط بيرتفع بسبب كترة الملح بس. لكن يا أصدقائي، الحقيقة أعمق من هيك بكتير، والمتهم الحقيقي مش اللي بتفكر فيه. خلونا نحكيها عالمكشوف: <strong>السكر بيرفع الإنسولين، والإنسولين هو بطل القصة المخفي.</strong> ويالله، خلّي الإنسولين يكشف المستور:</p>
+            <h3>1. احتباس الصوديوم بالكلى (<bdi>Sodium Retention</bdi>)</h3>
+            <figure class="article-figure">
+                <img src="/images/sodium-water-retention-blood-vessel-hypertension.webp" alt="رسم توضيحي لمقطع في وعاء دموي مليء بكريات الدم الحمراء وأيونات الصوديوم وجزيئات الماء، مع إشارات تصل إلى الكلية لتحبس الصوديوم فيزيد حجم الدم والضغط على جدار الشريان" width="1200" height="896" loading="lazy" decoding="async">
+                <figcaption>الإنسولين المرتفع يأمر الكلية بحبس الصوديوم، والصوديوم يسحب الماء معه إلى الدم، فيرتفع الضغط على جدران الشرايين.</figcaption>
+            </figure>
+            <p>المستويات المرتفعة المزمنة من هرمون الإنسولين بالدم (<bdi>Hyperinsulinemia</bdi>) بتبعت إشارات مباشرة، دايركت، للكليتين لتعيد امتصاص الصوديوم وتمنع خروجه بالبول. والصوديوم وين ما راح بيسحب المي وراه، فبيزيد حجم الدم الكلي داخل الشرايين، وبيزيد الضغط عليها.</p>
+            <h3>2. استثارة الجهاز العصبي الودّي (<bdi>Sympathetic Nervous System</bdi>)</h3>
+            <p>فرط الإنسولين بيخلي الجهاز العصبي السمبثاوي بحالة تأهّب دائم، كأنو في حرامي بالبيت 24 ساعة. والنتيجة؟ انقباض بالأوعية الدموية (<bdi>Vasoconstriction</bdi>) وتسارع بنبضات قلبك الصغرور.</p>
+            <h3>3. بطانة الأوعية بتفقد مرونتها (<bdi>Endothelial Dysfunction</bdi>)</h3>
+            <p>بالحالة الطبيعية، بطانة الشرايين بتفرز غاز صغير وسحري اسمه أكسيد النيتريك (<bdi>Nitric Oxide</bdi>)، وهاد شغلته يوسّع الشرايين ويخليها طرية ومرنة. لما تصير عندك مقاومة إنسولين، إنتاج أكسيد النيتريك بيقلّ، والالتهاب المزمن الخفيف (<bdi>Chronic Low-grade Inflammation</bdi>) بيبلّش ياكل بالبطانة. الشريان اللي كان متل المطاط الطري، بيصير متل خرطوم المي القديم اللي قاعد بالشمس من سنين.</p>
+            <h3>4. نظام الرينين-أنجيوتنسين-ألدوستيرون (<bdi>RAAS</bdi>)</h3>
+            <p>هاد نظام هرموني بيضبط الضغط والسوائل بالجسم. مع مقاومة الإنسولين والدهون الزايدة، هالنظام بيصير شغّال أوفر تايم: الأنجيوتنسين 2 (<bdi>Angiotensin II</bdi>) بيضيّق الشرايين، والألدوستيرون (<bdi>Aldosterone</bdi>) بيحبس صوديوم أكتر. يعني ضربة دبل.</p>
+            <h3>5. الدهون الحشوية (<bdi>Visceral Fat</bdi>): مش مجرد كرش</h3>
+            <p>الدهون اللي حوالين الأحشاء جوّا البطن مش مخزن طاقة ساكت. هاي نسيج نشيط بيفرز مواد التهابية (<bdi>Cytokines</bdi>) وبيفرز كمان المادة الخام للأنجيوتنسين. لهيك محيط الخصر (<bdi>Waist Circumference</bdi>) أحياناً بيحكيلك عن خطر الضغط أكتر من رقم الوزن على الميزان. (اقرأ أكتر عن <a href="/articles/fatty-liver-and-visceral-fat.html">الدهون الحشوية والكبد الدهني</a>.)</p>
+            <h3>طيب، في أسباب تانية؟</h3>
+            <p>أكيد. منها الوراثة والعمر، والحساسية للملح (<bdi>Salt Sensitivity</bdi>) اللي بتختلف من شخص لشخص، وانقطاع النفس أثناء النوم (رح نحكي عنه بعدين)، والتدخين، والكحول، وبعض الأدوية متل مسكنات الالتهاب (<bdi>NSAIDs</bdi>)، وبخاخات الأنف المضادة للاحتقان، وحبوب منع الحمل عند بعض السيدات.</p>
+            <p>وفي نوع اسمه ارتفاع الضغط الثانوي (<bdi>Secondary Hypertension</bdi>)، يعني في سبب واضح وراه متل أمراض الكلى أو الغدة الدرقية أو الكظر. الطبيب بيفكّر فيه خصوصاً إذا ظهر الضغط بعمر صغير، أو كان عالي كتير وما عم يستجيب للعلاج.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>طيب، كيف بحس فيه؟ وهون المفاجأة</span></h2>
+            <p>بأغلب الحالات، ما بتحس بشي أبداً. ولا وجع ولا إشارة. وهون بالضبط سر لقب «القاتل الصامت». في ناس بتعيش سنين وضغطها 150 وهي مفكرة حالها حديد.</p>
+            <p>أحياناً، خصوصاً لما يكون الضغط عالي كتير، ممكن تظهر شغلات متل:</p>
+            <ul class="check-list">
+                <li>صداع الصبح، غالباً بمؤخرة الراس</li>
+                <li>دوخة أو طنين بالأذنين (<bdi>Tinnitus</bdi>)</li>
+                <li>خفقان أو إحساس بنبض القلب</li>
+                <li>تعب عام وصعوبة بالتركيز</li>
+            </ul>
+            <p>بس انتبه، هالأعراض مش مقياس. إذا ما عندك أعراض، هاد ما بيعني إنو ضغطك منيح. والجملة الشعبية «ضغطي عالي لأنو راسي عم يوجعني» كتير مرات بتكون معكوسة: الوجع والتوتر هنن اللي رفعوا الضغط مؤقتاً. <strong>الحَكَم الوحيد هو جهاز القياس.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-house-medical"></i> <span>كيف تقيس ضغطك بالبيت متل الشاطرين</span></h2>
+            <p>قراءة وحدة بالعيادة أحياناً بتكذب. في شي اسمه ارتفاع ضغط المعطف الأبيض (<bdi>White Coat Hypertension</bdi>): بمجرد ما تشوف الدكتور، ضغطك بيطلع. وفي العكس كمان، الضغط المقنّع (<bdi>Masked Hypertension</bdi>): بالعيادة تمام، وبالبيت والشغل عالي. لهيك القياس المنزلي (<bdi>Home Blood Pressure Monitoring</bdi>) ذهب.</p>
+            <h3>كيف بتعملها صح:</h3>
+            <ol class="steps">
+                <li>استعمل جهاز عالزند (<bdi>Upper Arm Cuff</bdi>)، مش عالمعصم، وتأكد إنو الكمّ مناسب لحجم إيدك.</li>
+                <li>لا قهوة ولا دخان ولا رياضة قبل القياس بنص ساعة، وفضّي مثانتك.</li>
+                <li>اقعد على كرسي، ضهرك مسنود، ورجليك عالأرض بدون ما تصلّبهن فوق بعض، وارتاح 5 دقايق.</li>
+                <li>حط إيدك على طاولة بمستوى قلبك، والكم على الجلد مباشرة مش فوق الكنزة.</li>
+                <li>لا تحكي ولا تشوف موبايلك وقت القياس.</li>
+                <li>خود قراءتين بينهن دقيقة، وسجّل المعدّل.</li>
+                <li>كرر الشي الصبح والمسا لمدة أسبوع، وخود الجدول معك للدكتور.</li>
+            </ol>
+            <p>إذا طلع معدّل قراءاتك بالبيت <bdi>130 / 80</bdi> أو أكتر، هاد مؤشر لازم تحكي فيه مع طبيبك. وبالإرشادات الأوروبية (<bdi>ESC 2024</bdi>)، حد القياس بالبيت هو <bdi>135 / 85</bdi>.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>لما تكون على أبواب الضغط: شو منعمل؟</span></h2>
+            <p>إذا قراءاتك صارت بين 120 و139، أو الانبساطي عم يلعب حوالين الـ80، فهاد مش وقت الهلع، بس كمان مش وقت «بكرا منشوف». هاي أحلى مرحلة للتدخل، لأنو الشرايين لسا مرنة والجسم بيستجيب بسرعة.</p>
+            <h3>الخطوة الأولى: اعرف شو عم يصير جوّا</h3>
+            <p>اطلب من طبيبك هالتحاليل، لأنها بتكشف إذا القصة مرتبطة بالإنسولين والأيض:</p>
+            <ul class="check-list">
+                <li>سكر الصيام (<bdi>Fasting Glucose</bdi>) والسكر التراكمي (<bdi>HbA1c</bdi>)</li>
+                <li>إنسولين الصيام (<bdi>Fasting Insulin</bdi>)، ومنه بينحسب مؤشر مقاومة الإنسولين (<bdi>HOMA-IR</bdi>)</li>
+                <li>الدهون بالدم (<bdi>Lipid Profile</bdi>)، وخصوصاً الدهون الثلاثية (<bdi>Triglycerides</bdi>) والكوليسترول الجيد (<bdi>HDL</bdi>)</li>
+                <li>وظائف الكلى (<bdi>Creatinine, eGFR</bdi>) والألبومين بالبول (<bdi>Urine Albumin</bdi>)</li>
+                <li>الصوديوم والبوتاسيوم بالدم، وهرمون الغدة الدرقية (<bdi>TSH</bdi>)</li>
+            </ul>
+            <p>وقيس محيط خصرك عند مستوى السرّة. بشكل عام، أكتر من <strong>94 سم عند الرجال</strong> وأكتر من <strong>80 سم عند السيدات</strong> هي إشارة للدهون الحشوية. وفيك كمان تحسب <a href="{site:/whtr-calculator.html}">نسبة الخصر إلى الطول</a> بثواني. وإذا تحاليل السكر طلعت على الحفة، اقرأ دليلنا عن <a href="/diabetes/prediabetes.html">مرحلة ما قبل السكري</a>.</p>
+            <h3>الخطوة التانية: أعطي نمط حياتك 3 لـ6 أشهر جدية</h3>
+            <p>بمرحلة الإنذار المبكر، وبكتير من حالات المرحلة الأولى إذا ما في مخاطر تانية، الطبيب بيبدأ بتعديل نمط الحياة. ولا تستهين فيه: كل كيلو بتنزلو من الوزن الزايد، بينزل الضغط تقريباً 1 ملم زئبق. والأكل الصحي لحالو ممكن ينزّل الانقباضي 8 لـ11 ملم زئبق عند ناس كتير. يعني أحياناً نفس مفعول حبة دوا.</p>
+            <div class="tip warn"><p><strong>بس انتبه:</strong> إذا الطبيب وصفلك دوا، لا توقفه من راسك لأنو قريت مقال حلو. التغذية والرياضة بيشتغلوا مع الدوا، والطبيب هو اللي بيقرر إذا فيكن تخففوه مع الوقت.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>صحنك هو صيدليتك: التغذية اللي بتساعد</span></h2>
+            <p>في نظامين غذائيين مدروسين منيح للضغط: نظام داش (<bdi>DASH Diet</bdi>)، يعني حرفياً «المقاربات الغذائية لإيقاف ارتفاع الضغط»، والنظام المتوسطي (<bdi>Mediterranean Diet</bdi>). والخبر الحلو؟ هالنظامين مبنيين على أكل بسيط وطبيعي، قريب كتير من أكل جدّاتنا بكل مكان بالعالم، قبل ما تغزينا الوجبات السريعة.</p>
+            <h3>البوتاسيوم (<bdi>Potassium</bdi>): خصم الصوديوم اللدود</h3>
+            <p>البوتاسيوم بيساعد الكلى تطرد الصوديوم، وبيرخي جدران الأوعية. لاقيه بـ:</p>
+            <ul class="check-list">
+                <li><a href="{food:spinach}">السبانخ</a> و<a href="{food:swiss-chard}">السلق</a> و<a href="{food:molokhia}">الملوخية</a> والبقدونس</li>
+                <li><a href="{food:avocado}">الأفوكادو</a> و<a href="{food:banana}">الموز</a> و<a href="{food:dried-apricots}">المشمش المجفف</a></li>
+                <li>البقوليات: <a href="{food:lentils}">العدس</a> و<a href="{food:white-beans}">الفاصولياء</a> و<a href="{food:chickpeas}">الحمص</a></li>
+                <li><a href="{food:sweet-potato}">البطاطا الحلوة</a> و<a href="{food:boiled-potato}">العادية المسلوقة</a> بقشرتها</li>
+                <li>اللبن الرائب و<a href="{food:labneh}">اللبنة</a> قليلة الملح</li>
+            </ul>
+            <div class="tip warn"><p><strong>تنبيه مهم:</strong> إذا عندك مرض كلى، أو عم تاخد أدوية للضغط أو أدوية مدرّة للبول، احكي مع طبيبك قبل ما تكتّر البوتاسيوم أو تستعمل بدائل الملح (<bdi>Salt Substitutes</bdi>).</p></div>
+            <h3>المغنيسيوم (<bdi>Magnesium</bdi>): ملك الاسترخاء</h3>
+            <p>بيساعد العضلات الملساء بجدران الشرايين ترتخي، وفي دراسات بتربط المغنيسيوم بحساسية أفضل للإنسولين. لاقيه ب<a href="{food:pumpkin-seeds}">بذر اليقطين</a>، واللوز و<a href="{food:cashews}">الكاجو</a>، والخضار الورقية، و<a href="{food:dark-chocolate-85}">الشوكولا الغامقة 85%</a> (مربعين مش لوح كامل، اتفقنا؟).</p>
+            <h3>النترات الطبيعية (<bdi>Dietary Nitrates</bdi>): الشمندر والجرجير</h3>
+            <p>هون بترجع قصة أكسيد النيتريك. <a href="{food:beetroot}">الشمندر</a> و<a href="{food:arugula-rocket}">الجرجير</a> والسبانخ غنيين بنترات بيحوّلها الجسم لأكسيد النيتريك، فبتتوسّع الشرايين. كاسة عصير شمندر أو صحن سلطة جرجير يومياً عادة حلوة.</p>
+            <h3>الألياف وقلة السكر: عشان ننزّل الإنسولين</h3>
+            <p>بما إنو الإنسولين هو بطل القصة المخفي، فلازم نهدّيه (وبتلاقي المؤشر الجلايسيمي لكل صنف بـ<a href="{site:/foods.html}">دليل الأطعمة</a>):</p>
+            <ul class="check-list">
+                <li><a href="{food:oatmeal}">الشوفان</a> و<a href="{food:bulgur}">البرغل</a> و<a href="{food:whole-wheat-bread}">الخبز الأسمر الحقيقي</a> بدل الأبيض</li>
+                <li>خضار بكل وجبة، وابدأ أكلك بالسلطة</li>
+                <li>بروتين بكل وجبة: <a href="{food:boiled-egg}">بيض</a>، سمك، <a href="{food:grilled-chicken-breast}">دجاج</a>، بقوليات</li>
+            </ul>
+            <h3>الدهون الصحية</h3>
+            <p><a href="{food:extra-virgin-olive-oil}">زيت الزيتون البكر</a>، والسمك الدهني متل <a href="{food:grilled-salmon}">السلمون</a> و<a href="{food:canned-sardines}">السردين</a> و<a href="{food:mackerel}">الماكريل</a> مرتين بالأسبوع لأوميغا 3 (<bdi>Omega-3</bdi>)، و<a href="{food:walnuts}">الجوز</a>.</p>
+            <h3>شغلات من المطبخ إلها دعم علمي معقول</h3>
+            <ul class="check-list">
+                <li><strong>الكركديه (<bdi>Hibiscus Tea</bdi>):</strong> بعض الدراسات لقت إنو بينزّل الضغط شوي، كاستين أو تلاتة باليوم بدون سكر.</li>
+                <li><strong><a href="{food:garlic}">الثوم</a>:</strong> إلو تأثير بسيط ومفيد.</li>
+            </ul>
+            <p>بس ما في عشبة سحرية بتلغي الدوا أو بتصلّح نمط حياة غلط.</p>
+
+            <h2 class="section-title"><i class="fas fa-ban"></i> <span>الأطعمة اللي لازم نعطيها «بلوك»</span></h2>
+            <h3>الملح المخفي (<bdi>Hidden Sodium</bdi>): العدو اللي ما بتشوفه</h3>
+            <p>طيب، يعني الملح بريء؟ لا أبداً، هو شريك بالجريمة بس مش لحالو. ومنقلكن سر؟ أغلب الملح اللي منآكلو مش من المملحة اللي عالطاولة. أكتر من 70% منو جاي من الأكل الجاهز والمصنّع. الهدف إنو ما تتجاوز <strong>2000 ملغ صوديوم باليوم</strong>، يعني تقريباً معلقة صغيرة ملح (5 غرام) بكل شي.</p>
+            <p>انتبه لهدول:</p>
+            <ul class="check-list">
+                <li>الخبز والمعجنات: ما بتطعم مالح بس فيها كتير</li>
+                <li>الأجبان المالحة: متل <a href="{food:halloumi-cheese}">الحلوم</a> و<a href="{food:greek-feta}">الفيتا</a> والبارميزان</li>
+                <li><a href="{food:pickled-cucumbers-gherkins}">المخللات</a> والزيتون</li>
+                <li>اللحوم المصنّعة: متل السجق والهوت دوغ والبيكون</li>
+                <li>مكعبات المرق (<bdi>Stock Cubes</bdi>) والشوربات الجاهزة</li>
+                <li>الشيبس والمكسرات المملحة والصوصات متل <a href="{food:naturally-brewed-soy-sauce}">الصويا</a> والكاتشب</li>
+                <li>أكل المطاعم والوجبات السريعة</li>
+            </ul>
+            <div class="tip"><p><strong>حيلة صغيرة بقراءة الملصق:</strong> إذا كاتب صوديوم (<bdi>Sodium</bdi>)، اضربو بـ2.5 بيعطيك كمية الملح. يعني 400 ملغ صوديوم = 1 غرام ملح.</p></div>
+            <h3>السكر والنشويات المكررة (<bdi>Refined Carbs</bdi>): الجواب بصحن الحلو، مش بالمملحة</h3>
+            <p>بما إنو الإنسولين هو المفتاح، فالمشروبات الغازية، والعصائر المعلّبة، والحلويات، والخبز الأبيض بكترة، كلها بترفع الإنسولين وبتغذّي القصة اللي حكينا عنها. والفركتوز المضاف (<bdi>High-Fructose Corn Syrup</bdi>) بالذات إلو علاقة بارتفاع حمض البول والضغط.</p>
+            <h3>عرق السوس (<bdi>Licorice</bdi>): بالمشروبات والحلويات والسكاكر</h3>
+            <p>هي معلومة كتير ناس ما بتعرفها. <a href="{food:licorice-drink}">عرق السوس</a> فيه مادة اسمها الغليسيريزين (<bdi>Glycyrrhizin</bdi>)، وهاي بتتصرف متل الألدوستيرون: بتحبس الصوديوم وبتطرد البوتاسيوم، وبترفع الضغط. فإذا ضغطك على الحفة، خفّف مشروبات وسكاكر عرق السوس.</p>
+            <h3>الكحول ومشروبات الطاقة</h3>
+            <p>الكحول حتى بكميات «اجتماعية» بيرفع الضغط مع الوقت. ومشروبات الطاقة (<bdi>Energy Drinks</bdi>) بكميات كافيين وسكر عالية ممكن ترفعه فجأة. أما <a href="{food:black-coffee}">القهوة العادية</a>، كاسة أو تنتين باليوم، فغالباً ما في مشكلة عند أغلب الناس.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>الرياضة: الدوا اللي ببلاش</span></h2>
+            <p>الرياضة بتشتغل على أكتر من جبهة بنفس الوقت: بتحسّن حساسية الإنسولين، وبتهدّي الجهاز السمبثاوي، وبتزيد إفراز أكسيد النيتريك، وبتنزّل الدهون الحشوية. يعني بتضرب القصة من جذورها.</p>
+            <h3>التمارين الهوائية (<bdi>Aerobic Exercise</bdi>)</h3>
+            <p>مشي سريع، سباحة، بسكليت: <strong>150 دقيقة بالأسبوع</strong>، يعني نص ساعة 5 أيام. هالشي لحالو ممكن ينزّل الانقباضي 5 لـ8 ملم زئبق. ونصيحة ذهبية: مشوار 10 لـ15 دقيقة بعد الأكل بينزّل سكر الدم والإنسولين بشكل ممتاز.</p>
+            <h3>تمارين المقاومة (<bdi>Resistance Training</bdi>)</h3>
+            <p>أوزان، أو أشرطة مطاطية، أو وزن الجسم: مرتين لـتلات مرات بالأسبوع. العضلات أكبر مستهلك للسكر بالجسم، وكل ما زادت عضلاتك، قلّت حاجتك للإنسولين.</p>
+            <h3>المفاجأة: التمارين الثابتة (<bdi>Isometric Exercise</bdi>)</h3>
+            <p>تحليل كبير لدراسات نُشر سنة 2023 لقى إنو التمارين الثابتة كانت من أقوى الأنواع لتنزيل الضغط. أشهرها «القعدة عالحيط» (<bdi>Wall Sit</bdi>): بتسند ضهرك عالحيط وبتنزل كأنك قاعد على كرسي وهمي. تقريباً 4 جولات كل وحدة دقيقتين، مع دقيقتين راحة بيناتهن، 3 مرات بالأسبوع. وكمان تمرين الضغط على قبضة اليد (<bdi>Handgrip</bdi>).</p>
+            <div class="tip warn"><p><strong>انتبه:</strong> إذا ضغطك <bdi>180 / 110</bdi> أو أكتر، أو عندك مشكلة بالقلب، احكي مع طبيبك قبل ما تبلش. ووقت التمرين لا تحبس نفسك (<bdi>Valsalva Maneuver</bdi>)، كمّل تنفس طبيعي. وبلّش بشوي، لأنو الاستمرارية أهم من الحماس بأول أسبوع.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>النوم: الورشة الليلية لشرايينك</span></h2>
+            <p>بالليل، وبالحالة الطبيعية، الضغط بينزل تقريباً 10 لـ20% عن النهار. هالشي اسمه الهبوط الليلي (<bdi>Nocturnal Dipping</bdi>)، وهاي فرصة الشرايين لترتاح وتصلّح حالها. لما تنام قليل أو نومك متقطع، هالورشة بتتسكّر، والجهاز السمبثاوي بيضل شغّال طول الليل.</p>
+            <p>الناس اللي بتنام أقل من 6 ساعات بشكل منتظم، خطر الضغط عندها أعلى بشكل واضح. الهدف 7 لـ9 ساعات.</p>
+            <h3>انقطاع النفس الانسدادي أثناء النوم (<bdi>Obstructive Sleep Apnea</bdi>)</h3>
+            <p>هاد من أهم الأسباب المخفية للضغط، وخصوصاً الضغط اللي ما عم يستجيب للأدوية. القصة إنو مجرى التنفس بيتسكّر لثواني كتير مرات بالليل، الأكسجين بينزل، والجسم بيفيق مرعوب وبيضخ أدرينالين. تخيّل هالشي يصير عشرات المرات بالليل.</p>
+            <p>شك فيه إذا:</p>
+            <ul class="check-list">
+                <li>شخيرك عالي، أو حدا قلّك إنك بتوقف تتنفس وانت نايم</li>
+                <li>بتفيق تعبان حتى لو نمت 8 ساعات، وبتغفى بالنهار</li>
+                <li>صداع الصبح وجفاف الحلق</li>
+            </ul>
+            <p>إذا هالكلام بيشبهك، احكي مع طبيبك عن دراسة النوم (<bdi>Sleep Study</bdi>). العلاج بجهاز الضغط الهوائي (<bdi>CPAP</bdi>) ونزول الوزن ممكن يحسّن الضغط بشكل ملحوظ.</p>
+            <h3>نصايح سريعة لنوم أحسن</h3>
+            <ul class="check-list">
+                <li>نام وفيق بنفس الوقت تقريباً كل يوم، حتى بالعطلة</li>
+                <li>لا قهوة بعد الساعة 2 الضهر</li>
+                <li>شاشات أقل بالساعة الأخيرة قبل النوم، والغرفة عتمة وباردة</li>
+                <li>العشا الخفيف وقبل النوم بساعتين لتلاتة</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-spa"></i> <span>الراحة النفسية: لما الأعصاب «تفقع»… الضغط كمان</span></h2>
+            <p>التوتر المزمن (<bdi>Chronic Stress</bdi>) بيخلي الجسم يفرز <a href="{site:/cortisol-stress.html}">الكورتيزول</a> (<bdi>Cortisol</bdi>) والأدرينالين (<bdi>Adrenaline</bdi>) بشكل مستمر. الكورتيزول بيرفع السكر وبيزيد مقاومة الإنسولين، والأدرينالين بيضيّق الشرايين وبيسرّع القلب. يعني رجعنا لنفس الحلقة: الجهاز السمبثاوي بحالة طوارئ دائمة.</p>
+            <p>الحل إنو نشغّل الفرامل. عندك بالجسم جهاز معاكس اسمه الجهاز العصبي اللاودّي (<bdi>Parasympathetic Nervous System</bdi>)، وأهم كابل فيه هو العصب المبهم (<bdi>Vagus Nerve</bdi>). وفي طرق بسيطة كتير بتشغّلو:</p>
+            <h3>التنفس البطيء (<bdi>Slow Breathing</bdi>)</h3>
+            <p>شهيق 5 ثواني من الأنف، وزفير 5 ثواني بهدوء. يعني تقريباً 6 أنفاس بالدقيقة، لمدة 5 لـ10 دقايق، مرة أو مرتين باليوم. جرّبها وقيس ضغطك قبل وبعد، رح تحس بالـ«انبساطي»، بس هالمرة من الفرح 😄</p>
+            <h3>شغلات تانية بتفرق</h3>
+            <ul class="check-list">
+                <li>مشوار بالطبيعة أو قعدة بالشمس الصبح</li>
+                <li>التأمل (<bdi>Meditation</bdi>) أو الصلاة أو أي ممارسة روحية بتريّحك</li>
+                <li>قعدة حلوة مع ناس بتحبهن، لأنو الوحدة لحالها عامل خطر</li>
+                <li>تقليل الأخبار والسوشيال ميديا قبل النوم</li>
+                <li>إذا التوتر أو القلق صار تقيل وما عم تقدر تحملو، الحكي مع مختص نفسي مش ضعف، هاد جزء من علاج الضغط كمان</li>
+            </ul>
+            <h3>والتدخين؟</h3>
+            <p>كل سيجارة بترفع الضغط لمدة تقريباً نص ساعة بعدها، وبتأذي بطانة الشرايين مباشرة. والأركيلة مش أرحم. <strong>إذا بدك تعمل شي واحد بس لشرايينك، وقّف الدخان.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>الخطة باختصار: من بكرا الصبح</span></h2>
+            <ul class="todo-list">
+                <li><label><input type="checkbox"><span>اشتري جهاز ضغط عالزند وقيس صح لمدة أسبوع</span></label></li>
+                <li><label><input type="checkbox"><span>اعمل تحاليل الإنسولين والسكر والدهون والكلى</span></label></li>
+                <li><label><input type="checkbox"><span>قيس محيط خصرك</span></label></li>
+                <li><label><input type="checkbox"><span>نصّ صحنك خضار، وربعه بروتين، وربعه نشويات كاملة</span></label></li>
+                <li><label><input type="checkbox"><span>اقرأ ملصق الصوديوم على كل شي معلّب أو جاهز</span></label></li>
+                <li><label><input type="checkbox"><span>امشي نص ساعة 5 أيام بالأسبوع، وزيد عليها «القعدة عالحيط» 3 مرات</span></label></li>
+                <li><label><input type="checkbox"><span>نام 7 ساعات عالأقل، وانتبه للشخير</span></label></li>
+                <li><label><input type="checkbox"><span>5 دقايق تنفس بطيء كل يوم</span></label></li>
+                <li><label><input type="checkbox"><span>راجع طبيبك بالنتايج بعد 3 أشهر</span></label></li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>وبالأخير…</span></h2>
+            <p>ارتفاع الضغط مش حكم مؤبد، ومش رقم بيطلع فجأة من العدم. هو رسالة من جسمك إنو في شي بالأيض والشرايين بدو انتباه. والحلو بالموضوع إنو كل خطوة صغيرة، كل مشوار وكل صحن سلطة وكل ليلة نوم منيحة، عم تنقصّ من رقم الضغط وتزيد على عمر شرايينك.</p>
+            <p>فما تستنى «القاتل الصامت» يحكي. <strong>إنت احكي أول، وقيس ضغطك اليوم.</strong></p>
+            <p>قلبك الصغير رح يشكرك… بوم… بوم… بوم. بس هالمرة بهدوء.</p>'''),
+en=dict(
+ byline='By Dr. Wassim Habib',
+ title='High Blood Pressure and Sugar: The Hidden Insulin Link',
+ h1='Believe It or Not: Sugar Is Raising Your Blood Pressure… Not Just Salt!',
+ subtitle='High blood pressure, the silent killer: its causes, its link to insulin, and how to protect your arteries',
+ crumb='High blood pressure and sugar',
+ summary='High blood pressure but you hardly eat salt? Look for the sugar: how insulin raises blood pressure, how to measure it at home, and a food, exercise and sleep plan for your arteries.',
+ cat='Heart & blood vessels',
+ desc='Salt isn\'t the only cause of high blood pressure. Learn how insulin resistance pushes it up, what to eat, and how to protect your arteries.',
+ hero_alt='Worried woman checking her blood pressure with an upper-arm monitor, next to a salt shaker, a sweetened iced coffee and a chocolate dessert, with a shadow made of sugar cubes behind her',
+ about=['Hypertension', 'Insulin resistance', 'Blood pressure', 'DASH diet'],
+ disclaimer='⚖️ This article is for health awareness and education and does not replace advice from your doctor. Never stop or change any medication without talking to your doctor first.',
+ body='''            <p class="lead">Ever wondered why modern medicine calls it "the silent killer"? If not, let me tell you the real reason: it creeps quietly into your arteries and the tissues of your vital organs and damages them step by step, without a single twinge of pain, until the problem is well advanced.</p>
+            <p>High blood pressure doesn't start out as some lonely, orphaned disease with no family tree. In reality it is a direct reflection of a metabolic dysfunction inside your body and of ongoing inflammation in the lining of your blood vessels.</p>
+            <p>In this article we'll untangle the mystery calmly and without medical jargon: we'll break down the numbers, explain how <a href="{site:/insulin-resistance.html}">insulin resistance</a> is tightly linked to high blood pressure, and put together a complete plan to bring flexibility and life back to your arteries… and to protect that poor little heart of yours, which really can't take much more.</p>
+
+            <h2 class="section-title"><i class="fas fa-heart-pulse"></i> <span>What is blood pressure, and what do the numbers mean?</span></h2>
+            <p>Every time your heart goes ba-boom, it pumps blood through a complex network of blood vessels. So write this down in biiig bold letters: <strong>blood pressure is the force of the blood pushing against the walls of your arteries as it flows</strong>. In short, it's how hard the walls are pushing back against the stream.</p>
+            <p>The pressure created at the very moment your heart pumps is called the <strong>systolic blood pressure</strong>. Got it? Simply put, it's the big number, the one on top. Remember its name: systolic.</p>
+            <p>Once the heart has pushed its blood out, it needs to relax and rest so it can fill up again. That's where the <strong>diastolic blood pressure</strong> comes in. And no, "diastolic" has nothing to do with being ecstatic: it means relaxing and expanding, the heart's little rest between one beat and the next. During this pause we measure the pressure inside the arteries while the heart refills and then does it all over again: ba-boom… ba-boom… ba-boom… ba-boom. Easy, right?</p>
+            <h3>How do we know whether blood pressure is normal or starting to flash warning lights?</h3>
+            <table class="bp-table">
+                <thead><tr><th>Category</th><th>Systolic</th><th></th><th>Diastolic</th><th>What does it mean?</th></tr></thead>
+                <tbody>
+                    <tr class="bp-ok"><td>Normal and ideal</td><td class="bp-num" data-label="Systolic">below 120</td><td class="bp-op">and</td><td class="bp-num" data-label="Diastolic">below 80</td><td>Flexible blood vessels and a heart working completely at ease</td></tr>
+                    <tr class="bp-elev"><td>Elevated: the early-warning stage</td><td class="bp-num" data-label="Systolic">120–129</td><td class="bp-op">and</td><td class="bp-num" data-label="Diastolic">below 80</td><td>Vessels are starting to stiffen: time to change your lifestyle right away</td></tr>
+                    <tr class="bp-s1"><td>Stage 1 hypertension</td><td class="bp-num" data-label="Systolic">130–139</td><td class="bp-op">or</td><td class="bp-num" data-label="Diastolic">80–89</td><td>This is now a diagnosis; your doctor decides based on your other risk factors</td></tr>
+                    <tr class="bp-s2"><td>Stage 2 hypertension</td><td class="bp-num" data-label="Systolic">140 or higher</td><td class="bp-op">or</td><td class="bp-num" data-label="Diastolic">90 or higher</td><td>Needs regular medical follow-up and often medication</td></tr>
+                </tbody>
+            </table>
+            <p class="table-note">All values in millimetres of mercury (mmHg).</p>
+            <div class="danger-box">
+                <h3>🚨 Red-flag warning signs (an emergency)</h3>
+                <p>If your monitor shows a reading above 180/120 mmHg together with a sudden, severe headache, blurred vision, shortness of breath, chest pain, weakness in an arm or leg, or difficulty speaking, this is not the moment to start tweaking your diet. It is a medical emergency (a hypertensive emergency) and you need to <strong>go to the nearest hospital or call an ambulance immediately</strong>.</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>The silent killer has a secret accomplice… meet it before it meets you 😉</span></h2>
+            <p>This is the most important point of today's topic, and the one people most often miss. High blood pressure, but you hardly touch the salt? Look for the sugar! Most people believe blood pressure goes up only because of too much salt. But, my friends, the truth runs much deeper, and the real culprit isn't who you think it is. Let's put all the cards on the table: <strong>sugar drives up insulin, and insulin is the hidden lead character of this story.</strong> So let's let insulin spill the beans:</p>
+            <h3>1. Sodium retention in the kidneys</h3>
+            <figure class="article-figure">
+                <img src="/images/sodium-water-retention-blood-vessel-hypertension.webp" alt="Illustration of a cross-section of a blood vessel full of red blood cells, sodium ions and water molecules, with signals reaching the kidney to retain sodium, increasing blood volume and pressure on the artery wall" width="1200" height="896" loading="lazy" decoding="async">
+                <figcaption>High insulin tells the kidneys to hold on to sodium; sodium pulls water into the blood with it, so the pressure on the artery walls rises.</figcaption>
+            </figure>
+            <p>Chronically high levels of insulin in the blood (hyperinsulinaemia) send direct signals, straight to the point, telling the kidneys to reabsorb sodium instead of letting it leave in the urine. And wherever sodium goes, water follows. The total volume of blood inside your arteries goes up, and so does the pressure on them.</p>
+            <h3>2. An overstimulated sympathetic nervous system</h3>
+            <p>Excess insulin keeps the sympathetic nervous system on permanent high alert, as if there were a burglar in the house 24/7. The result? Narrowing of the blood vessels (vasoconstriction) and a faster beat from that sweet little heart of yours.</p>
+            <h3>3. The vessel lining loses its flexibility (endothelial dysfunction)</h3>
+            <p>Normally the lining of your arteries releases a tiny, magical gas called nitric oxide, whose job is to widen the arteries and keep them soft and supple. Once insulin resistance sets in, nitric oxide production drops and chronic low-grade inflammation starts eating away at the lining. An artery that used to be like soft rubber becomes like an old garden hose that has been baking in the sun for years.</p>
+            <h3>4. The renin–angiotensin–aldosterone system (RAAS)</h3>
+            <p>This is a hormonal system that regulates blood pressure and fluids in the body. With insulin resistance and excess body fat it starts working overtime: angiotensin II narrows the arteries and aldosterone holds on to even more sodium. A double whammy.</p>
+            <h3>5. Visceral fat: not just a belly</h3>
+            <p>The fat packed around the organs deep inside your abdomen is not a quiet energy store. It is active tissue that releases inflammatory substances (cytokines) and also produces the raw material for angiotensin. That's why your waist circumference can sometimes tell you more about your blood pressure risk than the number on the scale. (Read more about <a href="/en/articles/fatty-liver-and-visceral-fat.html">visceral fat and fatty liver</a>.)</p>
+            <h3>So, are there other causes?</h3>
+            <p>Of course. They include genetics and age, salt sensitivity (which varies from person to person), sleep apnoea (more on that later), smoking, alcohol, and some medicines such as anti-inflammatory painkillers (NSAIDs), decongestant nasal sprays and, in some women, the contraceptive pill.</p>
+            <p>There is also a type called secondary hypertension, where a clear underlying cause is to blame, such as kidney disease or a thyroid or adrenal problem. Doctors think of it especially when high blood pressure appears at a young age, or when it is very high and isn't responding to treatment.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>So how would I feel it? Here comes the surprise</span></h2>
+            <p>In most cases you feel nothing at all. No pain, no warning. And that is exactly where the nickname "silent killer" comes from. Some people live for years with a blood pressure of 150, convinced they're made of steel.</p>
+            <p>Sometimes, especially when blood pressure is very high, you may notice things like:</p>
+            <ul class="check-list">
+                <li>A morning headache, often at the back of the head</li>
+                <li>Dizziness or ringing in the ears (tinnitus)</li>
+                <li>Palpitations or being aware of your heartbeat</li>
+                <li>General tiredness and trouble concentrating</li>
+            </ul>
+            <p>But be careful: these symptoms are not a yardstick. Having no symptoms doesn't mean your blood pressure is fine. And the popular line "my blood pressure is up because my head hurts" is often the other way round: the pain and stress pushed the pressure up temporarily. <strong>The only judge is the blood pressure monitor.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-house-medical"></i> <span>How to measure your blood pressure at home like a pro</span></h2>
+            <p>A single reading at the clinic sometimes lies. There's something called white coat hypertension: the moment you see the doctor, your pressure shoots up. And there's the opposite too, masked hypertension: perfectly fine at the clinic, high at home and at work. That's why home blood pressure monitoring is worth its weight in gold.</p>
+            <h3>How to do it right:</h3>
+            <ol class="steps">
+                <li>Use an upper-arm cuff monitor, not a wrist one, and make sure the cuff is the right size for your arm.</li>
+                <li>No coffee, smoking or exercise for half an hour before measuring, and empty your bladder.</li>
+                <li>Sit on a chair with your back supported and both feet flat on the floor, legs uncrossed, and rest for 5 minutes.</li>
+                <li>Rest your arm on a table at heart level, with the cuff directly on your skin, not over your jumper.</li>
+                <li>Don't talk or look at your phone while measuring.</li>
+                <li>Take two readings one minute apart and write down the average.</li>
+                <li>Repeat this morning and evening for a week, and take the log with you to your doctor.</li>
+            </ol>
+            <p>If your average home reading comes out at 130/80 or higher, that's a sign you should talk to your doctor about it. Under the European guidelines (ESC 2024), the home threshold is 135/85.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>On the edge of high blood pressure: what now?</span></h2>
+            <p>If your readings are now between 120 and 139, or your diastolic is hovering around 80, this is no time to panic, but it's not the time for "we'll see tomorrow" either. This is the best possible stage to step in, because your arteries are still flexible and your body responds quickly.</p>
+            <h3>Step one: find out what's going on inside</h3>
+            <p>Ask your doctor for these tests, because they reveal whether the story is linked to insulin and metabolism:</p>
+            <ul class="check-list">
+                <li>Fasting glucose and HbA1c</li>
+                <li>Fasting insulin, which is used to calculate the insulin resistance index (HOMA-IR)</li>
+                <li>A lipid profile, especially triglycerides and "good" HDL cholesterol</li>
+                <li>Kidney function (creatinine, eGFR) and urine albumin</li>
+                <li>Blood sodium and potassium, and thyroid hormone (TSH)</li>
+            </ul>
+            <p>Also measure your waist at the level of your belly button. As a general rule, more than <strong>94 cm in men</strong> and more than <strong>80 cm in women</strong> points to visceral fat. You can also work out your <a href="{site:/whtr-calculator.html}">waist-to-height ratio</a> in seconds. And if your blood sugar results are borderline, read our guide to <a href="/en/diabetes/prediabetes.html">prediabetes</a>.</p>
+            <h3>Step two: give your lifestyle 3 to 6 months of serious effort</h3>
+            <p>In the early-warning stage, and in many stage 1 cases without other risk factors, doctors start with lifestyle changes. Don't underestimate them: every kilo of excess weight you lose lowers blood pressure by about 1 mmHg. Healthy eating alone can bring systolic pressure down by 8 to 11 mmHg in many people. Sometimes that's as much as a pill.</p>
+            <div class="tip warn"><p><strong>But careful:</strong> if your doctor has prescribed medication, don't stop it on your own because you read a nice article. Nutrition and exercise work alongside the medicine, and it's your doctor who decides whether you can cut it down over time.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>Your plate is your pharmacy: the foods that help</span></h2>
+            <p>Two eating patterns have been well studied for blood pressure: the DASH diet, literally "Dietary Approaches to Stop Hypertension", and the Mediterranean diet. The good news? Both are built on simple, natural food, very close to what our grandmothers cooked all over the world before fast food invaded our lives.</p>
+            <h3>Potassium: sodium's arch-rival</h3>
+            <p>Potassium helps the kidneys get rid of sodium and relaxes the walls of the blood vessels. You'll find it in:</p>
+            <ul class="check-list">
+                <li><a href="{food:spinach}">Spinach</a>, <a href="{food:swiss-chard}">Swiss chard</a>, <a href="{food:molokhia}">molokhia</a> and parsley</li>
+                <li><a href="{food:avocado}">Avocado</a>, <a href="{food:banana}">bananas</a> and <a href="{food:dried-apricots}">dried apricots</a></li>
+                <li>Pulses: <a href="{food:lentils}">lentils</a>, <a href="{food:white-beans}">beans</a> and <a href="{food:chickpeas}">chickpeas</a></li>
+                <li><a href="{food:sweet-potato}">Sweet potatoes</a> and ordinary <a href="{food:boiled-potato}">potatoes boiled</a> in their skins</li>
+                <li>Plain yogurt and low-salt <a href="{food:labneh}">labneh</a></li>
+            </ul>
+            <div class="tip warn"><p><strong>Important:</strong> if you have kidney disease, or you take blood pressure medicines or diuretics, talk to your doctor before you increase your potassium or use salt substitutes.</p></div>
+            <h3>Magnesium: the king of relaxation</h3>
+            <p>It helps the smooth muscle in the artery walls relax, and studies link magnesium to better insulin sensitivity. Find it in <a href="{food:pumpkin-seeds}">pumpkin seeds</a>, almonds and <a href="{food:cashews}">cashews</a>, leafy greens and <a href="{food:dark-chocolate-85}">85% dark chocolate</a> (two squares, not the whole bar, deal?).</p>
+            <h3>Dietary nitrates: beetroot and rocket</h3>
+            <p>Here's where the nitric oxide story comes back. <a href="{food:beetroot}">Beetroot</a>, <a href="{food:arugula-rocket}">rocket</a> and spinach are rich in nitrates, which the body turns into nitric oxide, so the arteries widen. A glass of beetroot juice or a plate of rocket salad a day is a lovely habit.</p>
+            <h3>Fibre and less sugar: to bring insulin down</h3>
+            <p>Since insulin is the hidden lead character of this story, we need to calm it down (you'll find the glycaemic index of every food in our <a href="{site:/foods.html}">food guide</a>):</p>
+            <ul class="check-list">
+                <li><a href="{food:oatmeal}">Oats</a>, <a href="{food:bulgur}">bulgur</a> and <a href="{food:whole-wheat-bread}">real wholemeal bread</a> instead of white</li>
+                <li>Vegetables with every meal, and start your meal with the salad</li>
+                <li>Protein with every meal: <a href="{food:boiled-egg}">eggs</a>, fish, <a href="{food:grilled-chicken-breast}">chicken</a>, pulses</li>
+            </ul>
+            <h3>Healthy fats</h3>
+            <p><a href="{food:extra-virgin-olive-oil}">Extra virgin olive oil</a>, oily fish such as <a href="{food:grilled-salmon}">salmon</a>, <a href="{food:canned-sardines}">sardines</a> and <a href="{food:mackerel}">mackerel</a> twice a week for omega-3, and <a href="{food:walnuts}">walnuts</a>.</p>
+            <h3>Kitchen staples with reasonable scientific support</h3>
+            <ul class="check-list">
+                <li><strong>Hibiscus tea:</strong> some studies found it lowers blood pressure slightly; two or three cups a day, without sugar.</li>
+                <li><strong><a href="{food:garlic}">Garlic</a>:</strong> has a small but useful effect.</li>
+            </ul>
+            <p>But there is no magic herb that replaces your medication or fixes an unhealthy lifestyle.</p>
+
+            <h2 class="section-title"><i class="fas fa-ban"></i> <span>The foods we need to put on "block"</span></h2>
+            <h3>Hidden sodium: the enemy you can't see</h3>
+            <p>So, is salt innocent? Not at all. It's a partner in crime, it just doesn't act alone. Want to know a secret? Most of the salt we eat doesn't come from the salt shaker on the table. More than 70% of it comes from ready-made and processed food. The goal is to stay below <strong>2,000 mg of sodium a day</strong>, roughly one teaspoon of salt (5 grams) from all sources combined.</p>
+            <p>Watch out for:</p>
+            <ul class="check-list">
+                <li>Bread and pastries: they don't taste salty, but they contain plenty</li>
+                <li>Salty cheeses such as <a href="{food:halloumi-cheese}">halloumi</a>, <a href="{food:greek-feta}">feta</a> and parmesan</li>
+                <li><a href="{food:pickled-cucumbers-gherkins}">Pickles</a> and olives</li>
+                <li>Processed meats such as sausages, hot dogs and bacon</li>
+                <li>Stock cubes and ready-made soups</li>
+                <li>Crisps, salted nuts and sauces such as <a href="{food:naturally-brewed-soy-sauce}">soy sauce</a> and ketchup</li>
+                <li>Restaurant food and fast food</li>
+            </ul>
+            <div class="tip"><p><strong>A little label-reading trick:</strong> if the label lists sodium, multiply it by 2.5 to get the amount of salt. So 400 mg of sodium = 1 gram of salt.</p></div>
+            <h3>Sugar and refined carbs: the answer is in the dessert bowl, not the salt shaker</h3>
+            <p>Since insulin is the key, soft drinks, packaged juices, sweets and lots of white bread all push insulin up and feed the story we've just told. Added fructose (high-fructose corn syrup) in particular is linked to higher uric acid and higher blood pressure.</p>
+            <h3>Liquorice: in drinks, desserts and sweets</h3>
+            <p>This is something many people don't know. <a href="{food:licorice-drink}">Liquorice</a> contains a substance called glycyrrhizin, which behaves like aldosterone: it holds on to sodium, flushes out potassium and raises blood pressure. So if your blood pressure is borderline, cut back on liquorice drinks and sweets.</p>
+            <h3>Alcohol and energy drinks</h3>
+            <p>Alcohol, even in "social" amounts, raises blood pressure over time. Energy drinks, with their high doses of caffeine and sugar, can push it up suddenly. As for regular <a href="{food:black-coffee}">coffee</a>, one or two cups a day is usually not a problem for most people.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>Exercise: the medicine that costs nothing</span></h2>
+            <p>Exercise works on several fronts at once: it improves insulin sensitivity, calms the sympathetic nervous system, increases nitric oxide release and reduces visceral fat. In other words, it tackles the story at its roots.</p>
+            <h3>Aerobic exercise</h3>
+            <p>Brisk walking, swimming, cycling: <strong>150 minutes a week</strong>, that is half an hour on 5 days. That alone can lower systolic pressure by 5 to 8 mmHg. And a golden tip: a 10 to 15-minute walk after a meal brings blood sugar and insulin down beautifully.</p>
+            <h3>Resistance training</h3>
+            <p>Weights, resistance bands or your own body weight: two to three times a week. Muscles are the body's biggest consumer of sugar, and the more muscle you have, the less insulin you need.</p>
+            <h3>The surprise: isometric exercise</h3>
+            <p>A large analysis of studies published in 2023 found that isometric (static) exercise was among the most effective types for lowering blood pressure. The best known is the wall sit: lean your back against a wall and slide down as if sitting on an invisible chair. Roughly 4 rounds of 2 minutes each, with two minutes' rest in between, 3 times a week. Handgrip squeezes work too.</p>
+            <div class="tip warn"><p><strong>Careful:</strong> if your blood pressure is 180/110 or higher, or you have a heart condition, talk to your doctor before you start. Don't hold your breath while exercising (the Valsalva manoeuvre); keep breathing normally. And start small, because consistency matters more than enthusiasm in week one.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>Sleep: the night-time repair shop for your arteries</span></h2>
+            <p>At night, under normal circumstances, blood pressure drops by about 10 to 20% compared with the daytime. This is called nocturnal dipping, and it's your arteries' chance to rest and repair themselves. When you sleep too little or your sleep is broken, the repair shop closes and the sympathetic nervous system stays switched on all night.</p>
+            <p>People who regularly sleep less than 6 hours have a clearly higher risk of high blood pressure. The goal is 7 to 9 hours.</p>
+            <h3>Obstructive sleep apnoea</h3>
+            <p>This is one of the most important hidden causes of high blood pressure, especially blood pressure that won't respond to medication. The airway closes for several seconds, many times a night, oxygen levels drop, and the body wakes up in a panic and pumps out adrenaline. Imagine that happening dozens of times every night.</p>
+            <p>Suspect it if:</p>
+            <ul class="check-list">
+                <li>You snore loudly, or someone has told you that you stop breathing in your sleep</li>
+                <li>You wake up tired even after 8 hours of sleep, and nod off during the day</li>
+                <li>You have morning headaches and a dry throat</li>
+            </ul>
+            <p>If this sounds like you, ask your doctor about a sleep study. Treatment with a CPAP machine and weight loss can noticeably improve blood pressure.</p>
+            <h3>Quick tips for better sleep</h3>
+            <ul class="check-list">
+                <li>Go to bed and get up at roughly the same time every day, even at weekends</li>
+                <li>No coffee after 2 pm</li>
+                <li>Less screen time in the last hour before bed, and keep the room dark and cool</li>
+                <li>A light dinner, two to three hours before bedtime</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-spa"></i> <span>Peace of mind: when your nerves snap… so does your blood pressure</span></h2>
+            <p>Chronic stress makes the body release <a href="{site:/cortisol-stress.html}">cortisol</a> and adrenaline non-stop. Cortisol raises blood sugar and increases insulin resistance; adrenaline narrows the arteries and speeds up the heart. So we're back in the same loop: a sympathetic nervous system in a permanent state of emergency.</p>
+            <p>The solution is to hit the brakes. Your body has an opposing system called the parasympathetic nervous system, and its most important cable is the vagus nerve. There are very simple ways to switch it on:</p>
+            <h3>Slow breathing</h3>
+            <p>Breathe in through your nose for 5 seconds and out calmly for 5 seconds. That's about 6 breaths a minute, for 5 to 10 minutes, once or twice a day. Try it and measure your blood pressure before and after: you'll feel truly diastolic, relaxed, and this time a little ecstatic too 😄</p>
+            <h3>Other things that make a difference</h3>
+            <ul class="check-list">
+                <li>A walk in nature or sitting in the morning sun</li>
+                <li>Meditation, prayer or any spiritual practice that brings you peace</li>
+                <li>Quality time with people you love, because loneliness is a risk factor in itself</li>
+                <li>Less news and social media before bed</li>
+                <li>If stress or anxiety has become too heavy to carry, talking to a mental health professional is not a weakness; it's part of treating blood pressure too</li>
+            </ul>
+            <h3>And smoking?</h3>
+            <p>Every cigarette raises blood pressure for about half an hour afterwards and directly damages the lining of the arteries. And shisha is no kinder. <strong>If you do just one thing for your arteries, stop smoking.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>The plan in a nutshell: starting tomorrow morning</span></h2>
+            <ul class="todo-list">
+                <li><label><input type="checkbox"><span>Buy an upper-arm blood pressure monitor and measure correctly for a week</span></label></li>
+                <li><label><input type="checkbox"><span>Get your insulin, blood sugar, lipids and kidney function tested</span></label></li>
+                <li><label><input type="checkbox"><span>Measure your waist</span></label></li>
+                <li><label><input type="checkbox"><span>Fill half your plate with vegetables, a quarter with protein and a quarter with whole-grain carbs</span></label></li>
+                <li><label><input type="checkbox"><span>Read the sodium label on everything canned or ready-made</span></label></li>
+                <li><label><input type="checkbox"><span>Walk for half an hour 5 days a week, and add the wall sit 3 times a week</span></label></li>
+                <li><label><input type="checkbox"><span>Sleep at least 7 hours, and pay attention to snoring</span></label></li>
+                <li><label><input type="checkbox"><span>5 minutes of slow breathing every day</span></label></li>
+                <li><label><input type="checkbox"><span>See your doctor with the results after 3 months</span></label></li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>And finally…</span></h2>
+            <p>High blood pressure is not a life sentence, and it isn't a number that appears out of nowhere. It's a message from your body that something in your metabolism and arteries needs attention. The good news is that every small step, every walk, every plate of salad and every good night's sleep chips away at your blood pressure and adds years to the life of your arteries.</p>
+            <p>So don't wait for the "silent killer" to speak up. <strong>You speak first: measure your blood pressure today.</strong></p>
+            <p>Your little heart will thank you… ba-boom… ba-boom… ba-boom. Only this time, nice and calm.</p>'''),
+nl=dict(
+ byline='Door Dr. Wassim Habib',
+ title='Hoge bloeddruk en suiker: het verborgen verband met insuline',
+ h1='Geloof het of niet: suiker jaagt je bloeddruk omhoog… niet alleen zout!',
+ subtitle='Hoge bloeddruk, de stille moordenaar: de oorzaken, het verband met insuline en hoe je je bloedvaten beschermt',
+ crumb='Hoge bloeddruk en suiker',
+ summary='Hoge bloeddruk terwijl je bijna geen zout eet? Zoek het bij de suiker: hoe insuline je bloeddruk verhoogt, hoe je thuis goed meet en een plan voor eten, bewegen en slapen.',
+ cat='Hart en bloedvaten',
+ desc='Zout is niet de enige oorzaak van hoge bloeddruk. Ontdek hoe insuline je bloeddruk verhoogt, wat je beter kunt eten en hoe je je bloedvaten beschermt.',
+ hero_alt='Bezorgde vrouw meet haar bloeddruk met een bovenarmmeter, naast een zoutvaatje, een gezoete ijskoffie en een chocoladedessert, met achter haar een schaduw van suikerklontjes',
+ about=['Hypertension', 'Insulin resistance', 'Blood pressure', 'DASH diet'],
+ disclaimer='⚖️ Dit artikel is bedoeld als gezondheidsvoorlichting en vervangt geen advies van je arts. Stop nooit met een medicijn en pas het niet aan zonder overleg met je arts.',
+ body='''            <p class="lead">Heb je je ooit afgevraagd waarom de moderne geneeskunde het "de stille moordenaar" noemt? Weet je het niet, dan vertel ik je de echte reden: het sluipt ongemerkt je slagaders en de weefsels van je vitale organen binnen en beschadigt ze stap voor stap, zonder dat je ook maar iets voelt, tot het probleem al flink gevorderd is.</p>
+            <p>Hoge bloeddruk begint niet als een eenzame ziekte zonder vader of moeder. In werkelijkheid is het een directe weerspiegeling van een stofwisselingsstoornis (metabole disfunctie) in je lichaam en van aanhoudende ontsteking in de binnenwand van je bloedvaten.</p>
+            <p>In dit artikel ontrafelen we samen dat raadsel, rustig en zonder medisch jargon: we nemen de getallen onder de loep, leggen uit hoe <a href="{site:/insulin-resistance.html}">insulineresistentie</a> nauw samenhangt met hoge bloeddruk, en maken samen een compleet plan om je slagaders weer soepel en vitaal te maken… en om dat kleine hartje van je te beschermen, dat echt niet veel meer aankan.</p>
+
+            <h2 class="section-title"><i class="fas fa-heart-pulse"></i> <span>Wat is bloeddruk, en wat betekenen de getallen?</span></h2>
+            <p>Elke keer dat je hart boem-boem doet, pompt het bloed door een ingewikkeld netwerk van bloedvaten. Schrijf dit dus in héééle dikke letters op: <strong>bloeddruk is de kracht waarmee het bloed tegen de wanden van je slagaders duwt terwijl het stroomt</strong>. Kort gezegd: hoe hard de wanden tegendruk geven aan de bloedstroom.</p>
+            <p>De druk die ontstaat op het moment dat je hart pompt, noemen we de <strong>systolische bloeddruk</strong>, ook wel de bovendruk. Duidelijk? Simpel gezegd is het het grote getal, het getal bovenaan. Onthoud die naam goed: systolisch.</p>
+            <p>Nadat het hart zijn bloed heeft weggepompt, moet het ontspannen en rusten om zich weer te vullen. Daar komt de <strong>diastolische bloeddruk</strong> (de onderdruk) om de hoek kijken. En nee, diastolisch heeft niets met "fantastisch" te maken: het betekent ontspannen en uitzetten, het rustmomentje van het hart tussen twee slagen. In die pauze meten we de druk in de slagaders, terwijl het hart zich opnieuw vult en alles herhaalt: boem… boem… boem… boem. Makkelijk, toch?</p>
+            <h3>Hoe weet je of je bloeddruk normaal is of al waarschuwingssignalen geeft?</h3>
+            <table class="bp-table">
+                <thead><tr><th>Categorie</th><th>Systolisch (bovendruk)</th><th></th><th>Diastolisch (onderdruk)</th><th>Wat betekent het?</th></tr></thead>
+                <tbody>
+                    <tr class="bp-ok"><td>Normaal en ideaal</td><td class="bp-num" data-label="Systolisch">lager dan 120</td><td class="bp-op">en</td><td class="bp-num" data-label="Diastolisch">lager dan 80</td><td>Soepele bloedvaten en een hart dat helemaal ontspannen werkt</td></tr>
+                    <tr class="bp-elev"><td>Verhoogd: de fase van de vroege waarschuwing</td><td class="bp-num" data-label="Systolisch">120–129</td><td class="bp-op">en</td><td class="bp-num" data-label="Diastolisch">lager dan 80</td><td>De vaten beginnen te verstijven: tijd om je leefstijl meteen aan te pakken</td></tr>
+                    <tr class="bp-s1"><td>Hypertensie, stadium 1</td><td class="bp-num" data-label="Systolisch">130–139</td><td class="bp-op">of</td><td class="bp-num" data-label="Diastolisch">80–89</td><td>Nu is er een diagnose; je arts beslist op basis van je andere risicofactoren</td></tr>
+                    <tr class="bp-s2"><td>Hypertensie, stadium 2</td><td class="bp-num" data-label="Systolisch">140 of hoger</td><td class="bp-op">of</td><td class="bp-num" data-label="Diastolisch">90 of hoger</td><td>Vraagt om regelmatige medische controle en vaak om medicijnen</td></tr>
+                </tbody>
+            </table>
+            <p class="table-note">Alle waarden in millimeter kwik (mmHg).</p>
+            <div class="danger-box">
+                <h3>🚨 Rode vlaggen (direct spoed)</h3>
+                <p>Geeft je meter een waarde boven 180/120 mmHg, samen met plotselinge, hevige hoofdpijn, wazig zien, kortademigheid, pijn op de borst, krachtverlies in een arm of been of moeite met praten? Dan is dit niet het moment om je eten aan te passen. Dit is een medisch spoedgeval (hypertensieve crisis): <strong>ga direct naar de dichtstbijzijnde spoedeisende hulp of bel 112</strong>.</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>De stille moordenaar heeft een geheime handlanger… leer hem kennen voordat hij jou leert kennen 😉</span></h2>
+            <p>Dit is het belangrijkste punt van vandaag, en precies het punt dat vaak over het hoofd wordt gezien. Hoge bloeddruk, terwijl je bijna geen zout eet? Zoek het bij de suiker! De meeste mensen denken dat bloeddruk alleen stijgt door te veel zout. Maar beste vrienden, de waarheid gaat veel dieper, en de echte dader is niet wie je denkt. Laten we open kaart spelen: <strong>suiker drijft je insuline op, en insuline is de verborgen hoofdrolspeler van dit verhaal.</strong> Tijd dus dat insuline eens opbiecht:</p>
+            <h3>1. De nieren houden natrium vast (natriumretentie)</h3>
+            <figure class="article-figure">
+                <img src="/images/sodium-water-retention-blood-vessel-hypertension.webp" alt="Illustratie van een doorsnede van een bloedvat vol rode bloedcellen, natriumionen en watermoleculen, met signalen naar de nier die natrium vasthoudt, waardoor het bloedvolume en de druk op de vaatwand stijgen" width="1200" height="896" loading="lazy" decoding="async">
+                <figcaption>Een hoge insulinespiegel zegt de nieren natrium vast te houden; natrium trekt water mee het bloed in, waardoor de druk op de vaatwanden stijgt.</figcaption>
+            </figure>
+            <p>Een chronisch hoge insulinespiegel in het bloed (hyperinsulinemie) stuurt de nieren rechtstreekse signalen, zonder omwegen, om natrium terug op te nemen in plaats van het via de urine af te voeren. En waar natrium gaat, volgt water. Het totale bloedvolume in je slagaders neemt toe, en daarmee ook de druk erop.</p>
+            <h3>2. Een overprikkeld sympathisch zenuwstelsel</h3>
+            <p>Te veel insuline houdt het sympathische zenuwstelsel continu in de hoogste staat van paraatheid, alsof er 24 uur per dag een inbreker in huis rondloopt. Het resultaat? Vernauwde bloedvaten (vasoconstrictie) en een sneller kloppend hartje.</p>
+            <h3>3. De vaatwand verliest haar soepelheid (endotheeldisfunctie)</h3>
+            <p>Normaal gesproken maakt de binnenwand van je slagaders een klein, magisch gas aan: stikstofmonoxide. Dat zorgt ervoor dat je slagaders wijd, zacht en soepel blijven. Bij insulineresistentie daalt de aanmaak van stikstofmonoxide en begint een sluimerende, chronische ontsteking aan de vaatwand te knagen. Een slagader die ooit als zacht rubber was, wordt als een oude tuinslang die al jaren in de zon ligt.</p>
+            <h3>4. Het renine-angiotensine-aldosteronsysteem (RAAS)</h3>
+            <p>Dit hormoonsysteem regelt de bloeddruk en de vochtbalans in je lichaam. Bij insulineresistentie en overtollig lichaamsvet draait het overuren: angiotensine II vernauwt de slagaders en aldosteron houdt nog meer natrium vast. Een dubbele klap dus.</p>
+            <h3>5. Visceraal vet: meer dan alleen een buikje</h3>
+            <p>Het vet rond de organen diep in je buik is geen stille energievoorraad. Het is actief weefsel dat ontstekingsstoffen (cytokinen) afgeeft en ook de grondstof voor angiotensine aanmaakt. Daarom zegt je buikomvang soms meer over je risico op hoge bloeddruk dan het getal op de weegschaal. (Lees meer over <a href="/nl/articles/fatty-liver-and-visceral-fat.html">visceraal vet en leververvetting</a>.)</p>
+            <h3>Zijn er nog andere oorzaken?</h3>
+            <p>Zeker. Denk aan erfelijkheid en leeftijd, zoutgevoeligheid (die van persoon tot persoon verschilt), slaapapneu (daar komen we later op terug), roken, alcohol en sommige medicijnen, zoals ontstekingsremmende pijnstillers (NSAID's), neusspray tegen verstopping en bij sommige vrouwen de anticonceptiepil.</p>
+            <p>Er bestaat ook secundaire hypertensie: daarbij zit er een duidelijke oorzaak achter, zoals een nierziekte of een probleem met de schildklier of de bijnieren. Artsen denken daar vooral aan als hoge bloeddruk op jonge leeftijd ontstaat, of als de bloeddruk erg hoog is en niet reageert op behandeling.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>Hoe merk ik het dan? En nu komt de verrassing</span></h2>
+            <p>In de meeste gevallen merk je helemaal niets. Geen pijn, geen signaal. En precies daar komt de bijnaam "stille moordenaar" vandaan. Sommige mensen lopen jarenlang rond met een bovendruk van 150, in de overtuiging dat ze van staal zijn.</p>
+            <p>Soms, vooral bij een erg hoge bloeddruk, kun je dingen merken als:</p>
+            <ul class="check-list">
+                <li>Hoofdpijn in de ochtend, vaak achter in het hoofd</li>
+                <li>Duizeligheid of oorsuizen (tinnitus)</li>
+                <li>Hartkloppingen of je hartslag voelen</li>
+                <li>Algemene vermoeidheid en moeite met concentreren</li>
+            </ul>
+            <p>Maar let op: deze klachten zijn geen meetlat. Geen klachten betekent niet dat je bloeddruk in orde is. En het bekende "mijn bloeddruk is hoog, want ik heb hoofdpijn" is vaak precies andersom: de pijn en de stress hebben je bloeddruk tijdelijk opgedreven. <strong>De enige scheidsrechter is de bloeddrukmeter.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-house-medical"></i> <span>Zo meet je je bloeddruk thuis als een pro</span></h2>
+            <p>Eén meting in de spreekkamer liegt soms. Er bestaat zoiets als wittejassenhypertensie: zodra je de dokter ziet, schiet je bloeddruk omhoog. En ook het omgekeerde komt voor, gemaskeerde hypertensie: bij de dokter prima, thuis en op het werk te hoog. Daarom is thuis meten goud waard.</p>
+            <h3>Zo doe je het goed:</h3>
+            <ol class="steps">
+                <li>Gebruik een bovenarmmeter, geen polsmeter, en zorg dat de manchet de juiste maat heeft voor je arm.</li>
+                <li>Geen koffie, sigaret of sport in het halfuur vóór de meting, en ga eerst even plassen.</li>
+                <li>Ga op een stoel zitten met je rug ondersteund en je voeten plat op de grond, benen niet over elkaar, en rust 5 minuten.</li>
+                <li>Leg je arm op tafel ter hoogte van je hart, met de manchet direct op je huid en niet over je trui.</li>
+                <li>Praat niet en kijk niet op je telefoon tijdens het meten.</li>
+                <li>Doe twee metingen met een minuut ertussen en noteer het gemiddelde.</li>
+                <li>Herhaal dit een week lang 's ochtends en 's avonds, en neem het overzicht mee naar je arts.</li>
+            </ol>
+            <p>Komt het gemiddelde van je thuismetingen uit op 130/80 of hoger? Dan is dat een reden om het met je arts te bespreken. Volgens de Europese richtlijnen (ESC 2024) ligt de grens voor thuismetingen op 135/85.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>Op het randje van hoge bloeddruk: wat nu?</span></h2>
+            <p>Zitten je metingen tussen 120 en 139, of schommelt je onderdruk rond de 80? Dan is het geen tijd voor paniek, maar ook niet voor "we zien morgen wel". Dit is juist de mooiste fase om in te grijpen, want je slagaders zijn nog soepel en je lichaam reageert snel.</p>
+            <h3>Stap één: ontdek wat er vanbinnen gebeurt</h3>
+            <p>Vraag je arts om deze bloedtests, want ze laten zien of het verhaal met insuline en je stofwisseling te maken heeft:</p>
+            <ul class="check-list">
+                <li>Nuchtere glucose en HbA1c</li>
+                <li>Nuchtere insuline, waarmee de insulineresistentie-index (HOMA-IR) wordt berekend</li>
+                <li>Een lipidenprofiel, vooral triglyceriden en het "goede" HDL-cholesterol</li>
+                <li>Nierfunctie (creatinine, eGFR) en albumine in de urine</li>
+                <li>Natrium en kalium in het bloed, en het schildklierhormoon TSH</li>
+            </ul>
+            <p>Meet ook je buikomvang ter hoogte van je navel. In het algemeen wijst meer dan <strong>94 cm bij mannen</strong> en meer dan <strong>80 cm bij vrouwen</strong> op visceraal vet. Je kunt ook in een paar seconden je <a href="{site:/whtr-calculator.html}">taille-lengteverhouding</a> berekenen. En zijn je bloedsuikerwaarden grensgevallen, lees dan onze gids over <a href="/nl/diabetes/prediabetes.html">prediabetes</a>.</p>
+            <h3>Stap twee: geef je leefstijl 3 tot 6 maanden serieuze aandacht</h3>
+            <p>In de fase van de vroege waarschuwing, en in veel gevallen van stadium 1 zonder andere risicofactoren, begint de arts met leefstijlaanpassingen. Onderschat ze niet: elke kilo overgewicht die je kwijtraakt, verlaagt je bloeddruk met ongeveer 1 mmHg. Gezond eten alleen kan de bovendruk bij veel mensen al 8 tot 11 mmHg laten zakken. Soms is dat net zoveel als een pil.</p>
+            <div class="tip warn"><p><strong>Maar let op:</strong> heeft je arts je medicijnen voorgeschreven, stop er dan niet op eigen houtje mee omdat je een mooi artikel hebt gelezen. Voeding en beweging werken samen met de medicijnen, en het is je arts die beslist of je ze na verloop van tijd kunt afbouwen.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>Je bord is je apotheek: voeding die helpt</span></h2>
+            <p>Twee eetpatronen zijn goed onderzocht bij hoge bloeddruk: het DASH-dieet, letterlijk "Dietary Approaches to Stop Hypertension" (voedingsaanpak om hoge bloeddruk te stoppen), en het mediterrane dieet. Het goede nieuws? Beide draaien om eenvoudig, natuurlijk eten, heel dicht bij wat onze grootmoeders overal ter wereld kookten voordat fastfood ons leven binnendrong.</p>
+            <h3>Kalium: de aartsrivaal van natrium</h3>
+            <p>Kalium helpt de nieren natrium af te voeren en ontspant de wanden van de bloedvaten. Je vindt het in:</p>
+            <ul class="check-list">
+                <li><a href="{food:spinach}">Spinazie</a>, <a href="{food:swiss-chard}">snijbiet</a>, <a href="{food:molokhia}">molokhia</a> en peterselie</li>
+                <li><a href="{food:avocado}">Avocado</a>, <a href="{food:banana}">banaan</a> en <a href="{food:dried-apricots}">gedroogde abrikozen</a></li>
+                <li>Peulvruchten: <a href="{food:lentils}">linzen</a>, <a href="{food:white-beans}">bonen</a> en <a href="{food:chickpeas}">kikkererwten</a></li>
+                <li><a href="{food:sweet-potato}">Zoete aardappel</a> en gewone <a href="{food:boiled-potato}">aardappel, gekookt</a> in de schil</li>
+                <li>Naturel yoghurt en zoutarme <a href="{food:labneh}">labneh</a></li>
+            </ul>
+            <div class="tip warn"><p><strong>Belangrijk:</strong> heb je een nierziekte, of gebruik je bloeddrukverlagers of plaspillen? Overleg dan met je arts voordat je meer kalium gaat eten of zoutvervangers gebruikt.</p></div>
+            <h3>Magnesium: de koning van de ontspanning</h3>
+            <p>Het helpt de gladde spieren in de vaatwanden te ontspannen, en studies verbinden magnesium met een betere insulinegevoeligheid. Je vindt het in <a href="{food:pumpkin-seeds}">pompoenpitten</a>, amandelen en <a href="{food:cashews}">cashewnoten</a>, bladgroenten en <a href="{food:dark-chocolate-85}">pure chocolade van 85%</a> (twee blokjes, niet de hele reep, afgesproken?).</p>
+            <h3>Natuurlijke nitraten: rode biet en rucola</h3>
+            <p>Hier komt het verhaal van stikstofmonoxide terug. <a href="{food:beetroot}">Rode biet</a>, <a href="{food:arugula-rocket}">rucola</a> en spinazie zitten vol nitraten, die je lichaam omzet in stikstofmonoxide, waardoor de slagaders wijder worden. Elke dag een glas bietensap of een bordje rucolasalade is een fijne gewoonte.</p>
+            <h3>Vezels en minder suiker: om je insuline omlaag te krijgen</h3>
+            <p>Omdat insuline de verborgen hoofdrolspeler is, moeten we die tot rust brengen (de glykemische index van elk product vind je in onze <a href="{site:/foods.html}">voedingsgids</a>):</p>
+            <ul class="check-list">
+                <li><a href="{food:oatmeal}">Havermout</a>, <a href="{food:bulgur}">bulgur</a> en <a href="{food:whole-wheat-bread}">echt volkorenbrood</a> in plaats van wit</li>
+                <li>Groente bij elke maaltijd, en begin je maaltijd met de salade</li>
+                <li>Eiwit bij elke maaltijd: <a href="{food:boiled-egg}">eieren</a>, vis, <a href="{food:grilled-chicken-breast}">kip</a>, peulvruchten</li>
+            </ul>
+            <h3>Gezonde vetten</h3>
+            <p><a href="{food:extra-virgin-olive-oil}">Extra vierge olijfolie</a>, twee keer per week vette vis zoals <a href="{food:grilled-salmon}">zalm</a>, <a href="{food:canned-sardines}">sardines</a> en <a href="{food:mackerel}">makreel</a> voor omega-3, en <a href="{food:walnuts}">walnoten</a>.</p>
+            <h3>Uit de keuken, met redelijk wetenschappelijk bewijs</h3>
+            <ul class="check-list">
+                <li><strong>Hibiscusthee:</strong> sommige studies vonden dat het de bloeddruk licht verlaagt; twee à drie koppen per dag, zonder suiker.</li>
+                <li><strong><a href="{food:garlic}">Knoflook</a>:</strong> heeft een klein maar nuttig effect.</li>
+            </ul>
+            <p>Maar er bestaat geen wonderkruid dat je medicijnen vervangt of een ongezonde leefstijl rechtzet.</p>
+
+            <h2 class="section-title"><i class="fas fa-ban"></i> <span>Voedingsmiddelen die we moeten "blokkeren"</span></h2>
+            <h3>Verborgen zout: de vijand die je niet ziet</h3>
+            <p>Is zout dan onschuldig? Helemaal niet. Het is medeplichtig, alleen niet de enige dader. Zal ik je een geheim verklappen? Het meeste zout dat we binnenkrijgen komt niet uit het zoutvaatje op tafel. Meer dan 70% komt uit kant-en-klaar en bewerkt voedsel. Het doel is onder de <strong>2000 mg natrium per dag</strong> te blijven, ongeveer één theelepel zout (5 gram) uit alles bij elkaar.</p>
+            <p>Let op met:</p>
+            <ul class="check-list">
+                <li>Brood en gebak: smaakt niet zout, maar bevat er veel van</li>
+                <li>Zoute kazen zoals <a href="{food:halloumi-cheese}">halloumi</a>, <a href="{food:greek-feta}">feta</a> en parmezaan</li>
+                <li><a href="{food:pickled-cucumbers-gherkins}">Augurken</a>, zuur en olijven</li>
+                <li>Bewerkt vlees zoals worst, hotdogs en bacon</li>
+                <li>Bouillonblokjes en kant-en-klare soepen</li>
+                <li>Chips, gezouten noten en sauzen zoals <a href="{food:naturally-brewed-soy-sauce}">sojasaus</a> en ketchup</li>
+                <li>Restauranteten en fastfood</li>
+            </ul>
+            <div class="tip"><p><strong>Handig trucje bij het etiket:</strong> staat er natrium (sodium) op, vermenigvuldig dat dan met 2,5 en je weet hoeveel zout het is. Dus 400 mg natrium = 1 gram zout.</p></div>
+            <h3>Suiker en geraffineerde koolhydraten: het antwoord ligt in de dessertschaal, niet in het zoutvaatje</h3>
+            <p>Omdat insuline de sleutel is, jagen frisdrank, pakjessap, snoep en zoetigheid en veel wit brood allemaal je insuline omhoog en voeden ze het verhaal dat we net vertelden. Vooral toegevoegde fructose (glucose-fructosestroop) hangt samen met een hoger urinezuur en een hogere bloeddruk.</p>
+            <h3>Zoethout (drop): in dranken, desserts en snoep</h3>
+            <p>Dit weten veel mensen niet. <a href="{food:licorice-drink}">Zoethout</a>, en dus ook drop, bevat een stof die glycyrrhizine heet. Die gedraagt zich als aldosteron: hij houdt natrium vast, voert kalium af en verhoogt de bloeddruk. Zit je bloeddruk op het randje, beperk dan zoethoutdranken en drop.</p>
+            <h3>Alcohol en energiedrankjes</h3>
+            <p>Alcohol verhoogt de bloeddruk na verloop van tijd, zelfs in "sociale" hoeveelheden. Energiedrankjes met veel cafeïne en suiker kunnen hem plotseling opdrijven. Gewone <a href="{food:black-coffee}">koffie</a>, één of twee koppen per dag, is voor de meeste mensen meestal geen probleem.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>Bewegen: het medicijn dat niets kost</span></h2>
+            <p>Bewegen werkt op meerdere fronten tegelijk: het verbetert de insulinegevoeligheid, kalmeert het sympathische zenuwstelsel, verhoogt de aanmaak van stikstofmonoxide en vermindert visceraal vet. Het pakt het verhaal dus bij de wortel aan.</p>
+            <h3>Duurtraining (aerobe training)</h3>
+            <p>Stevig wandelen, zwemmen, fietsen: <strong>150 minuten per week</strong>, dus een halfuur op 5 dagen. Dat alleen al kan je bovendruk 5 tot 8 mmHg laten dalen. En een gouden tip: een wandeling van 10 tot 15 minuten na het eten verlaagt je bloedsuiker en insuline prima.</p>
+            <h3>Krachttraining</h3>
+            <p>Gewichten, weerstandsbanden of je eigen lichaamsgewicht: twee tot drie keer per week. Spieren zijn de grootste suikerverbruikers van je lichaam, en hoe meer spieren je hebt, hoe minder insuline je nodig hebt.</p>
+            <h3>De verrassing: isometrische oefeningen</h3>
+            <p>Een grote analyse van studies uit 2023 liet zien dat isometrische (statische) oefeningen bij de sterkste vormen hoorden om de bloeddruk te verlagen. De bekendste is de wall sit, oftewel "muurzitten": je leunt met je rug tegen de muur en zakt door alsof je op een onzichtbare stoel zit. Ongeveer 4 rondes van 2 minuten, met telkens twee minuten rust ertussen, 3 keer per week. Ook knijpen in een handknijper (handgrip) werkt.</p>
+            <div class="tip warn"><p><strong>Let op:</strong> is je bloeddruk 180/110 of hoger, of heb je een hartprobleem, overleg dan met je arts voordat je begint. Houd tijdens het oefenen je adem niet in (valsalvamanoeuvre), maar blijf gewoon doorademen. En begin rustig, want volhouden is belangrijker dan enthousiasme in de eerste week.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>Slaap: de nachtelijke werkplaats van je slagaders</span></h2>
+            <p>'s Nachts daalt je bloeddruk normaal gesproken met zo'n 10 tot 20% ten opzichte van overdag. Dat heet nachtelijke dipping, en dat is het moment waarop je slagaders kunnen rusten en zichzelf herstellen. Slaap je te weinig of word je steeds wakker, dan gaat die werkplaats dicht en blijft het sympathische zenuwstelsel de hele nacht aanstaan.</p>
+            <p>Mensen die structureel minder dan 6 uur slapen, hebben een duidelijk hoger risico op hoge bloeddruk. Het doel is 7 tot 9 uur.</p>
+            <h3>Obstructieve slaapapneu</h3>
+            <p>Dit is een van de belangrijkste verborgen oorzaken van hoge bloeddruk, vooral van bloeddruk die niet reageert op medicijnen. Je luchtweg sluit 's nachts vele keren een aantal seconden af, het zuurstofgehalte daalt en je lichaam schrikt wakker en pompt adrenaline rond. Stel je voor dat dat tientallen keren per nacht gebeurt.</p>
+            <p>Denk eraan als:</p>
+            <ul class="check-list">
+                <li>Je hard snurkt, of iemand je heeft verteld dat je in je slaap stopt met ademen</li>
+                <li>Je moe wakker wordt, zelfs na 8 uur slaap, en overdag in slaap sukkelt</li>
+                <li>Je 's ochtends hoofdpijn en een droge keel hebt</li>
+            </ul>
+            <p>Herken je jezelf hierin? Vraag je arts dan naar een slaaponderzoek. Behandeling met een CPAP-apparaat en gewichtsverlies kunnen je bloeddruk merkbaar verbeteren.</p>
+            <h3>Snelle tips voor een betere nachtrust</h3>
+            <ul class="check-list">
+                <li>Ga elke dag rond hetzelfde tijdstip naar bed en sta rond hetzelfde tijdstip op, ook in het weekend</li>
+                <li>Geen koffie na 14.00 uur</li>
+                <li>Minder schermen in het laatste uur voor het slapen, en een donkere, koele slaapkamer</li>
+                <li>Een lichte avondmaaltijd, twee à drie uur voor het slapengaan</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-spa"></i> <span>Innerlijke rust: als je zenuwen knappen… knapt je bloeddruk mee</span></h2>
+            <p>Chronische stress laat je lichaam onophoudelijk <a href="{site:/cortisol-stress.html}">cortisol</a> en adrenaline aanmaken. Cortisol verhoogt je bloedsuiker en versterkt insulineresistentie; adrenaline vernauwt de slagaders en laat je hart sneller kloppen. We zijn dus terug in dezelfde vicieuze cirkel: een sympathisch zenuwstelsel in permanente noodtoestand.</p>
+            <p>De oplossing: op de rem trappen. Je lichaam heeft een tegenhanger, het parasympathische zenuwstelsel, en de belangrijkste kabel daarvan is de nervus vagus. Er zijn heel eenvoudige manieren om die aan te zetten:</p>
+            <h3>Langzaam ademen</h3>
+            <p>Adem 5 seconden in door je neus en 5 seconden rustig uit. Dat zijn ongeveer 6 ademhalingen per minuut, 5 tot 10 minuten lang, een- of tweemaal per dag. Probeer het en meet je bloeddruk ervoor en erna: je voelt je heerlijk diastolisch, ontspannen, en deze keer ook gewoon fantastisch 😄</p>
+            <h3>Andere dingen die het verschil maken</h3>
+            <ul class="check-list">
+                <li>Een wandeling in de natuur of even in de ochtendzon zitten</li>
+                <li>Meditatie, gebed of elke spirituele bezigheid die je rust geeft</li>
+                <li>Gezellige tijd met mensen van wie je houdt, want eenzaamheid is op zichzelf al een risicofactor</li>
+                <li>Minder nieuws en sociale media voor het slapengaan</li>
+                <li>Zijn stress of angst te zwaar geworden om te dragen, dan is praten met een psycholoog geen zwakte; het hoort net zo goed bij de behandeling van hoge bloeddruk</li>
+            </ul>
+            <h3>En roken?</h3>
+            <p>Elke sigaret verhoogt je bloeddruk voor ongeveer een halfuur en beschadigt direct de binnenwand van je slagaders. En een waterpijp is geen haar beter. <strong>Wil je maar één ding doen voor je slagaders? Stop met roken.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>Het plan in het kort: vanaf morgenochtend</span></h2>
+            <ul class="todo-list">
+                <li><label><input type="checkbox"><span>Koop een bovenarmbloeddrukmeter en meet een week lang op de juiste manier</span></label></li>
+                <li><label><input type="checkbox"><span>Laat je insuline, bloedsuiker, bloedvetten en nierfunctie testen</span></label></li>
+                <li><label><input type="checkbox"><span>Meet je buikomvang</span></label></li>
+                <li><label><input type="checkbox"><span>Vul je bord voor de helft met groente, een kwart met eiwit en een kwart met volkoren koolhydraten</span></label></li>
+                <li><label><input type="checkbox"><span>Lees het natriumgehalte op het etiket van alles uit blik of kant-en-klaar</span></label></li>
+                <li><label><input type="checkbox"><span>Wandel 5 dagen per week een halfuur, en doe daarbovenop 3 keer per week de wall sit</span></label></li>
+                <li><label><input type="checkbox"><span>Slaap minstens 7 uur, en let op snurken</span></label></li>
+                <li><label><input type="checkbox"><span>Elke dag 5 minuten langzaam ademen</span></label></li>
+                <li><label><input type="checkbox"><span>Bespreek de resultaten na 3 maanden met je arts</span></label></li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>En tot slot…</span></h2>
+            <p>Hoge bloeddruk is geen levenslange straf, en het is geen getal dat zomaar uit het niets opduikt. Het is een boodschap van je lichaam dat er iets in je stofwisseling en je slagaders aandacht nodig heeft. Het mooie is dat elke kleine stap, elke wandeling, elk bord salade en elke goede nachtrust iets van je bloeddruk afknabbelt en jaren toevoegt aan het leven van je slagaders.</p>
+            <p>Wacht dus niet tot de "stille moordenaar" van zich laat horen. <strong>Jij spreekt als eerste: meet vandaag nog je bloeddruk.</strong></p>
+            <p>Je kleine hart zal je dankbaar zijn… boem… boem… boem. Alleen deze keer lekker rustig.</p>'''),
+sv=dict(
+ byline='Av Dr. Wassim Habib',
+ title='Högt blodtryck och socker: det dolda sambandet med insulin',
+ h1='Tro det eller ej: sockret höjer ditt blodtryck… inte bara saltet!',
+ subtitle='Högt blodtryck, den tysta mördaren: orsakerna, kopplingen till insulin och hur du skyddar dina blodkärl',
+ crumb='Högt blodtryck och socker',
+ summary='Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för mat, motion och sömn.',
+ cat='Hjärta och blodkärl',
+ desc='Salt är inte den enda orsaken till högt blodtryck. Så höjer insulin ditt blodtryck, det här ska du äta och så skyddar du dina blodkärl.',
+ hero_alt='Orolig kvinna mäter sitt blodtryck med en överarmsmätare, bredvid en saltkar, en sötad iskaffe och en chokladdessert, med en skugga av sockerbitar bakom sig',
+ about=['Hypertension', 'Insulin resistance', 'Blood pressure', 'DASH diet'],
+ disclaimer='⚖️ Den här artikeln är till för hälsoinformation och utbildning och ersätter inte råd från din läkare. Sluta aldrig med eller ändra ett läkemedel utan att först prata med din läkare.',
+ body='''            <p class="lead">Har du någon gång undrat varför den moderna medicinen kallar det "den tysta mördaren"? Om inte, ska jag berätta den verkliga anledningen: det smyger sig tyst in i dina artärer och i vävnaderna i dina livsviktiga organ och skadar dem steg för steg, utan att du känner minsta smärta, tills problemet har gått långt.</p>
+            <p>Högt blodtryck börjar inte som en ensam sjukdom utan vare sig mamma eller pappa. I själva verket är det en direkt spegling av en ämnesomsättningsrubbning (metabol dysfunktion) i kroppen och av en pågående inflammation i blodkärlens innerväggar.</p>
+            <p>I den här artikeln reder vi ut gåtan i lugn och ro och utan krånglig medicinsk jargong: vi går igenom siffrorna, förklarar hur <a href="{site:/insulin-resistance.html}">insulinresistens</a> hänger tätt ihop med högt blodtryck och gör tillsammans en komplett plan för att ge dina artärer tillbaka deras smidighet och livskraft… och skydda ditt lilla hjärta, som verkligen inte orkar så mycket mer.</p>
+
+            <h2 class="section-title"><i class="fas fa-heart-pulse"></i> <span>Vad är blodtryck, och vad betyder siffrorna?</span></h2>
+            <p>Varje gång ditt hjärta slår dunk-dunk pumpar det blod genom ett invecklat nätverk av blodkärl. Så skriv det här med riktigt feeeta bokstäver: <strong>blodtrycket är kraften som blodet trycker med mot artärväggarna medan det strömmar</strong>. Kort sagt: hur hårt kärlväggarna tar emot blodflödet.</p>
+            <p>Trycket som uppstår i samma ögonblick som hjärtat pumpar kallas det <strong>systoliska blodtrycket</strong>, eller övertrycket. Hänger du med? Enkelt uttryckt är det den stora siffran, den som står överst. Lägg namnet på minnet: systoliskt.</p>
+            <p>När hjärtat har pumpat ut blodet behöver det slappna av och vila för att fyllas på igen. Det är där det <strong>diastoliska blodtrycket</strong> (undertrycket) kommer in. Och nej, diastoliskt har inget med "fantastiskt" att göra: det betyder att hjärtat slappnar av och vidgas, dess lilla vilopaus mellan två slag. Under den pausen mäts trycket i artärerna, medan hjärtat fylls på nytt och gör om alltihop: dunk… dunk… dunk… dunk. Enkelt, eller hur?</p>
+            <h3>Hur vet man om blodtrycket är normalt eller har börjat blinka varningslampor?</h3>
+            <table class="bp-table">
+                <thead><tr><th>Kategori</th><th>Systoliskt (övertryck)</th><th></th><th>Diastoliskt (undertryck)</th><th>Vad betyder det?</th></tr></thead>
+                <tbody>
+                    <tr class="bp-ok"><td>Normalt och idealiskt</td><td class="bp-num" data-label="Systoliskt">under 120</td><td class="bp-op">och</td><td class="bp-num" data-label="Diastoliskt">under 80</td><td>Smidiga blodkärl och ett hjärta som arbetar helt avslappnat</td></tr>
+                    <tr class="bp-elev"><td>Förhöjt: den tidiga varningsfasen</td><td class="bp-num" data-label="Systoliskt">120–129</td><td class="bp-op">och</td><td class="bp-num" data-label="Diastoliskt">under 80</td><td>Kärlen börjar stelna: dags att ändra levnadsvanorna direkt</td></tr>
+                    <tr class="bp-s1"><td>Högt blodtryck, steg 1</td><td class="bp-num" data-label="Systoliskt">130–139</td><td class="bp-op">eller</td><td class="bp-num" data-label="Diastoliskt">80–89</td><td>Nu finns en diagnos; läkaren avgör utifrån dina övriga riskfaktorer</td></tr>
+                    <tr class="bp-s2"><td>Högt blodtryck, steg 2</td><td class="bp-num" data-label="Systoliskt">140 eller mer</td><td class="bp-op">eller</td><td class="bp-num" data-label="Diastoliskt">90 eller mer</td><td>Kräver regelbunden medicinsk uppföljning och ofta läkemedel</td></tr>
+                </tbody>
+            </table>
+            <p class="table-note">Alla värden anges i millimeter kvicksilver (mmHg).</p>
+            <div class="danger-box">
+                <h3>🚨 Röda varningssignaler (akut)</h3>
+                <p>Visar mätaren ett värde över 180/120 mmHg tillsammans med plötslig, svår huvudvärk, dimsyn, andnöd, bröstsmärta, kraftlöshet i en arm eller ett ben eller svårt att tala? Då är det inte läge att börja justera maten. Det är ett medicinskt akutläge (hypertensiv kris), och du behöver <strong>åka direkt till närmaste akutmottagning eller ringa 112</strong>.</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-user-secret"></i> <span>Den tysta mördaren har en hemlig medbrottsling… lär känna den innan den lär känna dig 😉</span></h2>
+            <p>Här kommer dagens viktigaste poäng, och den som oftast glöms bort. Högt blodtryck fast du knappt rör saltet? Leta efter sockret! De flesta tror att blodtrycket stiger enbart av för mycket salt. Men, kära vänner, sanningen går mycket djupare, och den verkliga boven är inte den du tror. Låt oss lägga korten på bordet: <strong>socker höjer insulinet, och insulinet är berättelsens dolda huvudperson.</strong> Så nu får insulinet bekänna färg:</p>
+            <h3>1. Njurarna håller kvar natrium (natriumretention)</h3>
+            <figure class="article-figure">
+                <img src="/images/sodium-water-retention-blood-vessel-hypertension.webp" alt="Illustration av ett tvärsnitt av ett blodkärl fullt av röda blodkroppar, natriumjoner och vattenmolekyler, med signaler till njuren som håller kvar natrium, så att blodvolymen och trycket mot kärlväggen ökar" width="1200" height="896" loading="lazy" decoding="async">
+                <figcaption>Högt insulin får njurarna att hålla kvar natrium; natriumet drar med sig vatten in i blodet, och trycket mot artärväggarna stiger.</figcaption>
+            </figure>
+            <p>Långvarigt höga nivåer av hormonet insulin i blodet (hyperinsulinemi) skickar direkta signaler, raka rör, till njurarna om att ta tillbaka natrium i stället för att låta det lämna kroppen med urinen. Och vart natriumet än går följer vattnet med. Den totala blodvolymen i artärerna ökar, och därmed också trycket mot dem.</p>
+            <h3>2. Ett överstimulerat sympatiskt nervsystem</h3>
+            <p>För mycket insulin håller det sympatiska nervsystemet i ständig högsta beredskap, som om det fanns en inbrottstjuv i huset dygnet runt. Resultatet? Sammandragna blodkärl (vasokonstriktion) och snabbare slag från ditt lilla hjärta.</p>
+            <h3>3. Kärlväggen förlorar sin smidighet (endoteldysfunktion)</h3>
+            <p>Normalt utsöndrar artärernas innervägg en liten, magisk gas som heter kväveoxid, vars jobb är att vidga artärerna och hålla dem mjuka och smidiga. När insulinresistens uppstår minskar produktionen av kväveoxid, och en kronisk låggradig inflammation börjar nöta på kärlväggen. En artär som förut var som mjukt gummi blir som en gammal trädgårdsslang som legat i solen i åratal.</p>
+            <h3>4. Renin-angiotensin-aldosteronsystemet (RAAS)</h3>
+            <p>Det här hormonsystemet reglerar blodtrycket och vätskebalansen i kroppen. Vid insulinresistens och för mycket kroppsfett går det på övertid: angiotensin II drar ihop artärerna och aldosteron håller kvar ännu mer natrium. En dubbelsmäll, alltså.</p>
+            <h3>5. Visceralt fett: mer än bara en mage</h3>
+            <p>Fettet runt organen djupt inne i buken är inget tyst energiförråd. Det är aktiv vävnad som utsöndrar inflammatoriska ämnen (cytokiner) och dessutom tillverkar råmaterialet till angiotensin. Därför kan ditt midjemått ibland säga mer om din risk för högt blodtryck än siffran på vågen. (Läs mer om <a href="/sv/articles/fatty-liver-and-visceral-fat.html">visceralt fett och fettlever</a>.)</p>
+            <h3>Finns det fler orsaker?</h3>
+            <p>Absolut. Till exempel ärftlighet och ålder, saltkänslighet (som varierar från person till person), sömnapné (mer om det senare), rökning, alkohol och vissa läkemedel som antiinflammatoriska smärtstillande (NSAID), avsvällande nässprayer och, hos en del kvinnor, p-piller.</p>
+            <p>Det finns också sekundär hypertoni, där det finns en tydlig bakomliggande orsak som njursjukdom eller problem med sköldkörteln eller binjurarna. Läkaren tänker särskilt på det om högt blodtryck dyker upp i unga år, eller om trycket är mycket högt och inte svarar på behandling.</p>
+
+            <h2 class="section-title"><i class="fas fa-stethoscope"></i> <span>Hur märker jag det då? Här kommer överraskningen</span></h2>
+            <p>I de flesta fall märker du ingenting alls. Ingen smärta, ingen signal. Och det är precis därför det kallas "den tysta mördaren". En del lever i åratal med ett övertryck på 150 och tror att de är gjorda av stål.</p>
+            <p>Ibland, särskilt när blodtrycket är mycket högt, kan du märka saker som:</p>
+            <ul class="check-list">
+                <li>Huvudvärk på morgonen, ofta i bakhuvudet</li>
+                <li>Yrsel eller öronsus (tinnitus)</li>
+                <li>Hjärtklappning eller att du känner hjärtslagen</li>
+                <li>Allmän trötthet och svårt att koncentrera dig</li>
+            </ul>
+            <p>Men se upp: de här symtomen är ingen måttstock. Att du inte har några symtom betyder inte att blodtrycket är bra. Och den klassiska frasen "mitt blodtryck är högt eftersom jag har ont i huvudet" är ofta tvärtom: smärtan och stressen har tillfälligt drivit upp trycket. <strong>Den enda domaren är blodtrycksmätaren.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-house-medical"></i> <span>Så mäter du blodtrycket hemma som ett proffs</span></h2>
+            <p>En enda mätning på mottagningen kan ibland ljuga. Det finns något som kallas vitrockshypertoni: så fort du ser läkaren rusar trycket i höjden. Och det omvända finns också, maskerad hypertoni: helt fint på mottagningen men högt hemma och på jobbet. Därför är hemmamätning av blodtrycket guld värd.</p>
+            <h3>Så gör du rätt:</h3>
+            <ol class="steps">
+                <li>Använd en mätare med manschett runt överarmen, inte runt handleden, och se till att manschetten har rätt storlek för din arm.</li>
+                <li>Inget kaffe, ingen cigarett och ingen träning en halvtimme före mätningen, och gå på toaletten först.</li>
+                <li>Sitt på en stol med stöd för ryggen och fötterna i golvet, benen okorsade, och vila i 5 minuter.</li>
+                <li>Lägg armen på ett bord i hjärthöjd, med manschetten direkt mot huden och inte utanpå tröjan.</li>
+                <li>Prata inte och titta inte på mobilen medan du mäter.</li>
+                <li>Gör två mätningar med en minuts mellanrum och skriv upp medelvärdet.</li>
+                <li>Upprepa morgon och kväll i en vecka, och ta med tabellen till läkaren.</li>
+            </ol>
+            <p>Hamnar medelvärdet av dina hemmamätningar på 130/80 eller högre är det ett tecken på att du bör prata med din läkare. Enligt de europeiska riktlinjerna (ESC 2024) går gränsen för hemmamätning vid 135/85.</p>
+
+            <h2 class="section-title"><i class="fas fa-vial"></i> <span>På gränsen till högt blodtryck: vad gör vi nu?</span></h2>
+            <p>Ligger dina värden mellan 120 och 139, eller pendlar undertrycket runt 80? Då är det inte läge för panik, men inte heller för "vi får se i morgon". Det här är det bästa läget att agera, eftersom artärerna fortfarande är smidiga och kroppen svarar snabbt.</p>
+            <h3>Steg ett: ta reda på vad som händer på insidan</h3>
+            <p>Be din läkare om de här proverna, eftersom de visar om historien hänger ihop med insulin och ämnesomsättning:</p>
+            <ul class="check-list">
+                <li>Fasteglukos och HbA1c (långtidsblodsocker)</li>
+                <li>Fasteinsulin, som används för att räkna ut insulinresistensindexet HOMA-IR</li>
+                <li>Blodfetter (lipidstatus), särskilt triglycerider och det "goda" HDL-kolesterolet</li>
+                <li>Njurfunktion (kreatinin, eGFR) och albumin i urinen</li>
+                <li>Natrium och kalium i blodet, samt sköldkörtelhormonet TSH</li>
+            </ul>
+            <p>Mät också midjan i höjd med naveln. Generellt pekar mer än <strong>94 cm hos män</strong> och mer än <strong>80 cm hos kvinnor</strong> på visceralt fett. Du kan också räkna ut din <a href="{site:/whtr-calculator.html}">midja-längdkvot</a> på några sekunder. Och om dina blodsockervärden ligger på gränsen, läs vår guide om <a href="/sv/diabetes/prediabetes.html">prediabetes</a>.</p>
+            <h3>Steg två: ge dina levnadsvanor 3 till 6 månader på allvar</h3>
+            <p>I den tidiga varningsfasen, och i många fall av steg 1 utan andra riskfaktorer, börjar läkaren med ändrade levnadsvanor. Underskatta dem inte: varje kilo övervikt du går ner sänker blodtrycket med ungefär 1 mmHg. Bara bra mat kan sänka övertrycket med 8 till 11 mmHg hos många. Ibland lika mycket som en tablett.</p>
+            <div class="tip warn"><p><strong>Men se upp:</strong> har läkaren skrivit ut läkemedel ska du inte sluta på egen hand för att du läst en bra artikel. Kost och motion verkar tillsammans med läkemedlen, och det är läkaren som avgör om ni kan trappa ner dem med tiden.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-utensils"></i> <span>Din tallrik är ditt apotek: maten som hjälper</span></h2>
+            <p>Två kostmönster är väl studerade för blodtrycket: DASH-kosten, ordagrant "Dietary Approaches to Stop Hypertension" (kostråd för att stoppa högt blodtryck), och medelhavskosten. Den goda nyheten? Båda bygger på enkel, naturlig mat, väldigt nära det våra mormödrar och farmödrar lagade över hela världen innan snabbmaten tog över.</p>
+            <h3>Kalium: natriumets ärkerival</h3>
+            <p>Kalium hjälper njurarna att göra sig av med natrium och får kärlväggarna att slappna av. Du hittar det i:</p>
+            <ul class="check-list">
+                <li><a href="{food:spinach}">Spenat</a>, <a href="{food:swiss-chard}">mangold</a>, <a href="{food:molokhia}">molokhia</a> och persilja</li>
+                <li><a href="{food:avocado}">Avokado</a>, <a href="{food:banana}">banan</a> och <a href="{food:dried-apricots}">torkade aprikoser</a></li>
+                <li>Baljväxter: <a href="{food:lentils}">linser</a>, <a href="{food:white-beans}">bönor</a> och <a href="{food:chickpeas}">kikärter</a></li>
+                <li><a href="{food:sweet-potato}">Sötpotatis</a> och vanlig <a href="{food:boiled-potato}">potatis, kokt</a> med skalet på</li>
+                <li>Naturell yoghurt och saltsnål <a href="{food:labneh}">labneh</a></li>
+            </ul>
+            <div class="tip warn"><p><strong>Viktigt:</strong> har du en njursjukdom, eller tar du blodtrycksmediciner eller vätskedrivande läkemedel, prata med din läkare innan du ökar kaliumintaget eller använder saltersättning.</p></div>
+            <h3>Magnesium: avslappningens kung</h3>
+            <p>Det hjälper den glatta muskulaturen i artärväggarna att slappna av, och studier kopplar magnesium till bättre insulinkänslighet. Du hittar det i <a href="{food:pumpkin-seeds}">pumpafrön</a>, mandel och <a href="{food:cashews}">cashewnötter</a>, bladgrönsaker och <a href="{food:dark-chocolate-85}">mörk choklad 85 %</a> (två rutor, inte hela kakan, eller hur?).</p>
+            <h3>Naturliga nitrater: rödbetor och ruccola</h3>
+            <p>Här kommer historien om kväveoxid tillbaka. <a href="{food:beetroot}">Rödbetor</a>, <a href="{food:arugula-rocket}">ruccola</a> och spenat är rika på nitrater som kroppen omvandlar till kväveoxid, så att artärerna vidgas. Ett glas rödbetsjuice eller en tallrik ruccolasallad om dagen är en fin vana.</p>
+            <h3>Fibrer och mindre socker: för att få ner insulinet</h3>
+            <p>Eftersom insulinet är berättelsens dolda huvudperson behöver vi lugna ner det (det glykemiska indexet för varje livsmedel hittar du i vår <a href="/sv/foods/index.html">livsmedelsguide</a>):</p>
+            <ul class="check-list">
+                <li><a href="{food:oatmeal}">Havre</a>, <a href="{food:bulgur}">bulgur</a> och <a href="{food:whole-wheat-bread}">riktigt fullkornsbröd</a> i stället för vitt</li>
+                <li>Grönsaker till varje måltid, och börja måltiden med salladen</li>
+                <li>Protein till varje måltid: <a href="{food:boiled-egg}">ägg</a>, fisk, <a href="{food:grilled-chicken-breast}">kyckling</a>, baljväxter</li>
+            </ul>
+            <h3>Nyttiga fetter</h3>
+            <p><a href="{food:extra-virgin-olive-oil}">Extra jungfruolivolja</a>, fet fisk som <a href="{food:grilled-salmon}">lax</a>, <a href="{food:canned-sardines}">sardiner</a> och <a href="{food:mackerel}">makrill</a> två gånger i veckan för omega-3, och <a href="{food:walnuts}">valnötter</a>.</p>
+            <h3>Från köket, med rimligt vetenskapligt stöd</h3>
+            <ul class="check-list">
+                <li><strong>Hibiskuste:</strong> vissa studier har funnit att det sänker blodtrycket något; två till tre koppar om dagen, utan socker.</li>
+                <li><strong><a href="{food:garlic}">Vitlök</a>:</strong> har en liten men nyttig effekt.</li>
+            </ul>
+            <p>Men det finns ingen magisk ört som ersätter dina läkemedel eller rättar till ohälsosamma levnadsvanor.</p>
+
+            <h2 class="section-title"><i class="fas fa-ban"></i> <span>Maten vi behöver "blockera"</span></h2>
+            <h3>Dolt salt: fienden du inte ser</h3>
+            <p>Är saltet alltså oskyldigt? Inte alls. Det är en medbrottsling, den agerar bara inte ensam. Ska jag avslöja en hemlighet? Det mesta saltet vi äter kommer inte från saltkaret på bordet. Över 70 % kommer från färdigmat och processad mat. Målet är att hålla dig under <strong>2 000 mg natrium per dag</strong>, ungefär en tesked salt (5 gram) från allt sammanlagt.</p>
+            <p>Se upp med:</p>
+            <ul class="check-list">
+                <li>Bröd och bakverk: smakar inte salt men innehåller mycket</li>
+                <li>Salta ostar som <a href="{food:halloumi-cheese}">halloumi</a>, <a href="{food:greek-feta}">fetaost</a> och parmesan</li>
+                <li><a href="{food:pickled-cucumbers-gherkins}">Inlagda grönsaker</a> och oliver</li>
+                <li>Charkuterier som korv, varmkorv och bacon</li>
+                <li>Buljongtärningar och färdiga soppor</li>
+                <li>Chips, saltade nötter och såser som <a href="{food:naturally-brewed-soy-sauce}">soja</a> och ketchup</li>
+                <li>Restaurangmat och snabbmat</li>
+            </ul>
+            <div class="tip"><p><strong>Ett litet knep när du läser etiketten:</strong> står det natrium (sodium), gånga det med 2,5 så får du mängden salt. Alltså 400 mg natrium = 1 gram salt.</p></div>
+            <h3>Socker och raffinerade kolhydrater: svaret finns i efterrättsskålen, inte i saltkaret</h3>
+            <p>Eftersom insulinet är nyckeln höjer läsk, förpackade juicer, sötsaker och mycket vitt bröd allesammans insulinet och göder historien vi just berättat. Särskilt tillsatt fruktos (glukos-fruktossirap) har koppling till höjd urinsyra och högre blodtryck.</p>
+            <h3>Lakrits: i drycker, efterrätter och godis</h3>
+            <p>Det här är något många inte känner till. <a href="{food:licorice-drink}">Lakritsrot</a>, och därmed lakrits, innehåller ett ämne som heter glycyrrhizin. Det beter sig som aldosteron: det håller kvar natrium, driver ut kalium och höjer blodtrycket. Ligger ditt blodtryck på gränsen, dra ner på lakritsdrycker och lakritsgodis.</p>
+            <h3>Alkohol och energidrycker</h3>
+            <p>Alkohol höjer blodtrycket med tiden, även i "sociala" mängder. Energidrycker med höga doser koffein och socker kan driva upp det plötsligt. Vanligt <a href="{food:black-coffee}">kaffe</a>, en eller två koppar om dagen, är däremot oftast inget problem för de flesta.</p>
+
+            <h2 class="section-title"><i class="fas fa-person-walking"></i> <span>Motion: medicinen som är gratis</span></h2>
+            <p>Motion verkar på flera fronter samtidigt: den förbättrar insulinkänsligheten, lugnar det sympatiska nervsystemet, ökar frisättningen av kväveoxid och minskar det viscerala fettet. Den angriper alltså historien vid roten.</p>
+            <h3>Konditionsträning (aerob träning)</h3>
+            <p>Rask promenad, simning, cykling: <strong>150 minuter i veckan</strong>, alltså en halvtimme fem dagar. Bara det kan sänka övertrycket med 5 till 8 mmHg. Och ett guldtips: en promenad på 10 till 15 minuter efter maten sänker blodsockret och insulinet utmärkt.</p>
+            <h3>Styrketräning</h3>
+            <p>Vikter, gummiband eller kroppsvikt: två till tre gånger i veckan. Musklerna är kroppens största sockerförbrukare, och ju mer muskler du har, desto mindre insulin behöver du.</p>
+            <h3>Överraskningen: isometrisk träning</h3>
+            <p>En stor analys av studier som publicerades 2023 fann att isometrisk (statisk) träning hörde till de mest effektiva formerna för att sänka blodtrycket. Den mest kända är väggsittning (wall sit): luta ryggen mot väggen och glid ner som om du satt på en osynlig stol. Ungefär 4 omgångar på 2 minuter vardera, med två minuters vila emellan, 3 gånger i veckan. Handgreppsövningar (handgrip) fungerar också.</p>
+            <div class="tip warn"><p><strong>Se upp:</strong> är ditt blodtryck 180/110 eller högre, eller har du en hjärtsjukdom, prata med din läkare innan du börjar. Håll inte andan när du tränar (valsalvamanöver), utan fortsätt andas normalt. Och börja försiktigt, för uthållighet är viktigare än entusiasm första veckan.</p></div>
+
+            <h2 class="section-title"><i class="fas fa-moon"></i> <span>Sömn: artärernas nattliga verkstad</span></h2>
+            <p>På natten sjunker blodtrycket normalt med ungefär 10 till 20 % jämfört med dagen. Det kallas nattlig dipping, och det är artärernas chans att vila och reparera sig själva. När du sover för lite eller sömnen är avbruten stänger verkstaden, och det sympatiska nervsystemet är igång hela natten.</p>
+            <p>Den som regelbundet sover mindre än 6 timmar har en tydligt högre risk för högt blodtryck. Målet är 7 till 9 timmar.</p>
+            <h3>Obstruktiv sömnapné</h3>
+            <p>Det här är en av de viktigaste dolda orsakerna till högt blodtryck, särskilt blodtryck som inte svarar på läkemedel. Luftvägen stängs i flera sekunder många gånger per natt, syrenivån sjunker och kroppen vaknar i panik och pumpar ut adrenalin. Tänk dig att det händer tiotals gånger varje natt.</p>
+            <p>Misstänk det om:</p>
+            <ul class="check-list">
+                <li>Du snarkar högt, eller någon har sagt att du slutar andas när du sover</li>
+                <li>Du vaknar trött även efter 8 timmars sömn och nickar till under dagen</li>
+                <li>Du har huvudvärk och torr hals på morgonen</li>
+            </ul>
+            <p>Känner du igen dig? Prata med din läkare om en sömnregistrering. Behandling med CPAP och viktnedgång kan förbättra blodtrycket märkbart.</p>
+            <h3>Snabba tips för bättre sömn</h3>
+            <ul class="check-list">
+                <li>Lägg dig och vakna ungefär samma tid varje dag, även på helgen</li>
+                <li>Inget kaffe efter klockan 14</li>
+                <li>Mindre skärmtid den sista timmen före läggdags, och ett mörkt och svalt sovrum</li>
+                <li>En lätt middag, två till tre timmar innan du lägger dig</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-spa"></i> <span>Sinnesro: när nerverna brister… brister blodtrycket också</span></h2>
+            <p>Kronisk stress får kroppen att utsöndra <a href="{site:/cortisol-stress.html}">kortisol</a> och adrenalin hela tiden. Kortisol höjer blodsockret och ökar insulinresistensen; adrenalin drar ihop artärerna och får hjärtat att slå snabbare. Vi är alltså tillbaka i samma ond cirkel: ett sympatiskt nervsystem i ständigt nödläge.</p>
+            <p>Lösningen är att trycka på bromsen. Kroppen har ett motsatt system, det parasympatiska nervsystemet, och dess viktigaste kabel är vagusnerven. Det finns mycket enkla sätt att slå på den:</p>
+            <h3>Långsam andning</h3>
+            <p>Andas in genom näsan i 5 sekunder och ut lugnt i 5 sekunder. Det blir ungefär 6 andetag i minuten, i 5 till 10 minuter, en eller två gånger om dagen. Prova och mät blodtrycket före och efter: du kommer att känna dig riktigt diastolisk, avslappnad, och den här gången helt fantastisk också 😄</p>
+            <h3>Annat som gör skillnad</h3>
+            <ul class="check-list">
+                <li>En promenad i naturen eller en stund i morgonsolen</li>
+                <li>Meditation, bön eller vilken andlig praktik som helst som ger dig ro</li>
+                <li>Mysig tid med människor du tycker om, eftersom ensamhet i sig är en riskfaktor</li>
+                <li>Mindre nyheter och sociala medier före läggdags</li>
+                <li>Har stressen eller oron blivit för tung att bära är det ingen svaghet att prata med en psykolog eller kurator; det är också en del av behandlingen av högt blodtryck</li>
+            </ul>
+            <h3>Och rökning?</h3>
+            <p>Varje cigarett höjer blodtrycket i ungefär en halvtimme efteråt och skadar artärernas innervägg direkt. Och vattenpipa är inte snällare. <strong>Om du bara gör en enda sak för dina artärer: sluta röka.</strong></p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>Planen i korthet: från och med i morgon bitti</span></h2>
+            <ul class="todo-list">
+                <li><label><input type="checkbox"><span>Köp en blodtrycksmätare för överarmen och mät rätt i en vecka</span></label></li>
+                <li><label><input type="checkbox"><span>Ta prover för insulin, blodsocker, blodfetter och njurfunktion</span></label></li>
+                <li><label><input type="checkbox"><span>Mät ditt midjemått</span></label></li>
+                <li><label><input type="checkbox"><span>Fyll halva tallriken med grönsaker, en fjärdedel med protein och en fjärdedel med fullkornskolhydrater</span></label></li>
+                <li><label><input type="checkbox"><span>Läs natriumuppgiften på etiketten på allt konserverat och färdiglagat</span></label></li>
+                <li><label><input type="checkbox"><span>Promenera en halvtimme fem dagar i veckan, och lägg till väggsittning tre gånger i veckan</span></label></li>
+                <li><label><input type="checkbox"><span>Sov minst 7 timmar, och var uppmärksam på snarkning</span></label></li>
+                <li><label><input type="checkbox"><span>5 minuter långsam andning varje dag</span></label></li>
+                <li><label><input type="checkbox"><span>Gå igenom resultaten med din läkare efter 3 månader</span></label></li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Och till sist…</span></h2>
+            <p>Högt blodtryck är inget livstidsstraff, och det är ingen siffra som plötsligt dyker upp ur tomma intet. Det är ett meddelande från kroppen om att något i ämnesomsättningen och artärerna behöver uppmärksamhet. Det fina är att varje litet steg, varje promenad, varje salladstallrik och varje god natts sömn nöter ner blodtrycket och lägger till år på dina artärers liv.</p>
+            <p>Så vänta inte på att "den tysta mördaren" ska säga något. <strong>Säg du något först: mät ditt blodtryck i dag.</strong></p>
+            <p>Ditt lilla hjärta kommer att tacka dig… dunk… dunk… dunk. Fast den här gången i lugn och ro.</p>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, FATTY_LIVER_GUIDE, HYPERTENSION_INSULIN, INSULIN_RESISTANCE_SV,
             LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV, MAGNESIUM_SV, BONE_HEALTH_SV, THYROID_SV]
