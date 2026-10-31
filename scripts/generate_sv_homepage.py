@@ -67,7 +67,6 @@ def head(t):
     for name, key in (('twitter:title', 'twitter_title'), ('twitter:description', 'twitter_description')):
         t = sub(r'<meta name="%s" content="[^"]*">' % name,
                 '<meta name="%s" content="%s">' % (name, attr(META[key])), t, what=name)
-    t = rep('<script src="/js/consent.js?v=1" defer></script>', '<script src="/js/consent.js?v=3" defer></script>', t)
     return t
 
 

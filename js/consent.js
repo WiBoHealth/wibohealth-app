@@ -1,6 +1,8 @@
 /* WiBo Health cookie consent (Google Consent Mode v2).
  * The <head> of every page sets all consent types to 'denied' before gtag.js loads and re-applies a stored 'granted'.
- * This file shows the banner when no choice is stored yet, saves the choice and updates consent.
+ * When no choice is stored yet, this file asks /api/geo for the visitor's country (once per visit): in Europe, or when the
+ * country is unknown, it shows the banner; elsewhere it grants analytics_storage only (ads stay denied) and shows no banner.
+ * It saves the banner choice and updates consent.
  * wiboConsent.open() reopens the banner (privacy page "Cookie settings" button). */
 (function () {
     'use strict';
@@ -113,8 +115,40 @@
 
     window.wiboConsent = { open: open, get: stored };
 
-    if (stored() !== 'granted' && stored() !== 'denied') {
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', open);
-        else open();
+    // Banner region: EU + EEA (IS, LI, NO) + UK + Switzerland, with EU outermost regions, Åland and the UK Crown dependencies
+    var BANNER = ('AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE ' +
+        'IS LI NO GB CH GF GP MQ RE YT MF AX GI IM JE GG EU').split(' ');
+    var GEO_KEY = 'wibo_geo';   // sessionStorage: /api/geo is asked once per visit
+
+    // Outside the banner region: analytics on from the start, ads stay denied, no banner
+    function noBanner() {
+        if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'granted' });
     }
+
+    function decide(country) {
+        if (country && BANNER.indexOf(country) === -1) noBanner();
+        else if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', open);
+        else open();   // banner region, unknown country or failed request
+    }
+
+    function country(done) {
+        // local testing only: ?geo=NL / ?geo=US on localhost, never on the live site
+        var test = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && /[?&]geo=([A-Za-z]{2})\b/.exec(location.search);
+        if (test) return done(test[1].toUpperCase());
+        var cached = null;
+        try { cached = sessionStorage.getItem(GEO_KEY); } catch (e) {}
+        if (cached !== null) return done(cached);
+        if (typeof fetch !== 'function') return done('');
+        fetch('/api/geo', { cache: 'no-store' })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(function (j) {
+                var c = j && typeof j.country === 'string' ? j.country.toUpperCase() : '';
+                try { sessionStorage.setItem(GEO_KEY, c); } catch (e) {}
+                done(c);
+            })
+            .catch(function () { done(''); });   // failed request: treat as banner region, ask again on the next page
+    }
+
+    // a stored choice always wins: 'granted' is re-applied in <head>, 'denied' keeps the head default
+    if (stored() !== 'granted' && stored() !== 'denied') country(decide);
 })();

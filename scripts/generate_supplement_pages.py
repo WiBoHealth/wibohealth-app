@@ -37,7 +37,7 @@ GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays
 
       gtag('config', 'G-WG6S4KXXJS');
     </script>
-    <script src="/js/consent.js?v=1" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
+    <script src="/js/consent.js?v=4" defer></script>"""   # GA4 property of wibohealth.com, first thing in every <head>
 
 
 ROOT = Path(__file__).resolve().parent.parent
