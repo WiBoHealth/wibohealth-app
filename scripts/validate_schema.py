@@ -31,7 +31,10 @@ NAMED_AUTHOR_PAGES = {'diabetes/gestational-diabetes.html', 'en/diabetes/gestati
                       'nl/articles/fatty-liver-and-visceral-fat.html',
                       # the high blood pressure and insulin article (2026-10-30, fourth exception)
                       'articles/high-blood-pressure-sugar-insulin.html', 'en/articles/high-blood-pressure-sugar-insulin.html',
-                      'nl/articles/hoge-bloeddruk-suiker-insuline.html'}
+                      'nl/articles/hoge-bloeddruk-suiker-insuline.html',
+                      # the fructose article (2026-10-31, fifth exception: medical review line by Dr. Wassim Habib)
+                      'articles/fructose-fruit-vs-processed-sugar.html', 'en/articles/fructose-fruit-vs-processed-sugar.html',
+                      'nl/articles/fructose-fruit-vs-bewerkte-suiker.html'}
 # every Swedish article is signed by Dr. Wassim Habib (decision 2026-10-23)
 NAMED_AUTHOR_PAGES |= {f'sv/articles/{p.name}' for p in (ROOT / 'sv' / 'articles').glob('*.html')}
 BANNED_KEYS = {'offers', 'aggregateRating', 'review', 'price', 'priceCurrency'}

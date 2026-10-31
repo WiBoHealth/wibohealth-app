@@ -193,6 +193,8 @@ T = {
     'ha_l7': 'Kortisol, stresshormonet',
     'ha_l8': 'Magnesiumformer: vilken ska du välja?',
     'ha_l9': 'Skeletthälsa och mineraler',
+    'ha_l10': 'Fruktos: en vän i frukten, en fiende i burken',
+    'ha_fructose_href': '/sv/articles/fruktos-frukt-vs-tillsatt-socker.html',
     'ha_1_cat': 'Diabetes',
     'ha_1_title': 'Diabetes och bra mat',
     'ha_1_sum': 'En guide till att hantera diabetes med balanserad kost',

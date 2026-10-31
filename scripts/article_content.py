@@ -3840,5 +3840,594 @@ sv=dict(
     ),
 )
 
-ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, FATTY_LIVER_GUIDE, HYPERTENSION_INSULIN, INSULIN_RESISTANCE_SV,
+FRUCTOSE_CSS = """
+        .refs-fold { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md); margin: 26px 0 14px; }
+        .refs-fold summary { cursor: pointer; padding: 12px 16px; font-weight: 800; color: var(--text-muted); list-style: none; }
+        .refs-fold summary::-webkit-details-marker { display: none; }
+        .refs-fold[open] summary { border-bottom: 1px solid var(--border-color); }
+        .refs-fold .ref-list { padding: 12px 16px 6px; padding-inline-start: 34px; }
+        .food-links { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 18px; }
+        .food-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: 0.88rem; font-weight: 700;
+            background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.35); color: var(--primary); text-decoration: none; }
+        .food-chip::before { content: "🍽️"; font-size: 0.85em; }
+        .food-chip:hover { background: rgba(16, 185, 129, 0.16); }
+        .sugar-table { width: 100%; border-collapse: collapse; margin: 12px 0 10px; font-size: 0.95rem; }
+        .sugar-table th, .sugar-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); text-align: start; vertical-align: top; }
+        .sugar-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
+        .sugar-table td:first-child { font-weight: 800; }
+        .sugar-table td:nth-child(2) { white-space: nowrap; }
+        .boodi-card { margin: 22px 0 26px; }
+"""
+
+# Fifth signed article (31 October 2026): fructose in fruit vs added sugar; copy from fructose-article-ar.md, translated
+# faithfully (the copy's translation notes give the replacements for the jokes; the notes themselves are not shown).
+# Food links follow the copy's [[link: ...]] markers; «شاي الكركديه» links to 297 (iced hibiscus), user decision 2026-10-31.
+FRUCTOSE = dict(
+    slugs=dict(ar='fructose-fruit-vs-processed-sugar', en='fructose-fruit-vs-processed-sugar', nl='fructose-fruit-vs-bewerkte-suiker',
+               sv='fruktos-frukt-vs-tillsatt-socker'),
+    hero='fructose-fruit-vs-processed-sugar-cover.webp', hero_size=(1200, 670),
+    published='2026-10-31', modified='2026-10-31',
+    references=[
+        'World Health Organization. Guideline: Sugars intake for adults and children. Geneva: WHO; 2015.',
+        'Tappy L, Lê KA. Metabolic effects of fructose and the worldwide increase in obesity. Physiol Rev. 2010;90(1):23–46.',
+        'Stanhope KL et al. Consuming fructose-sweetened, not glucose-sweetened, beverages increases visceral adiposity and lipids and decreases insulin sensitivity in overweight/obese humans. J Clin Invest. 2009;119(5):1322–34.',
+        'Jang C et al. The small intestine converts dietary fructose into glucose and organic acids. Cell Metab. 2018;27(2):351–61.',
+        'Muraki I et al. Fruit consumption and risk of type 2 diabetes: results from three prospective longitudinal cohort studies. BMJ. 2013;347:f5001.',
+        'Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care. 2008;31(12):2281–3.',
+        'Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–91.',
+        'EFSA Panel on Food Additives and Flavourings. Re-evaluation of erythritol (E 968) as a food additive. EFSA J. 2023;21(12):e8430.',
+        'Witkowski M et al. The artificial sweetener erythritol and cardiovascular event risk. Nat Med. 2023;29(3):710–8.',
+        'EFSA Panel on Nutrition, Novel Foods and Food Allergens (NDA). Safety of D-allulose as a novel food pursuant to Regulation (EU) 2015/2283. EFSA J. 2025;23(6):e9468.',
+        'Rinella ME et al. A multisociety Delphi consensus statement on new fatty liver disease nomenclature. J Hepatol. 2023;79(6):1542–56.',
+        'World Health Organization. Use of non-sugar sweeteners: WHO guideline. Geneva: WHO; 2023.',
+    ],
+    named_author=True,                                   # medical review line «تمت المراجعة الطبية من قبل د. وسيم حبيب» (Person in schema)
+    article_schema=True,
+    refs_folded=True,
+    extra_css=FRUCTOSE_CSS,
+    content=dict(
+ar=dict(
+ title='الفركتوز: بالفاكهة صديق، وبالعلبة عدو',
+ h1='الفركتوز: بالفاكهة صديق، وبالعلبة عدو… شو القصة؟',
+ crumb='الفركتوز والسكر المصنّع',
+ summary='ليش الفركتوز بالتفاحة ما بيضرك، وبالمشروب الغازي بيروح على كبدك؟ شرح بسيط للسكر المصنّع، والفرق بين البدائل، وكيف تخفف السكر.',
+ cat='التغذية',
+ desc='ليش الفركتوز بالتفاحة ما بيضرك، وبالمشروب الغازي بيروح على كبدك؟ شرح بسيط للسكر المصنّع، والفرق بين البدائل، وكيف تخفف السكر.',
+ hero_alt='شاب وفتاة يختاران بين الفاكهة الطازجة والمشروبات المحلاة والسكر المصنّع',
+ about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
+ refs_label='المصادر ▾',
+ disclaimer='<strong>ملاحظة توعية:</strong> هذا المقال للتوعية العامة بالتغذية ونمط الحياة، ولا يغني عن استشارة الطبيب.',
+ review='تمت المراجعة الطبية من قبل <a href="{doctor}">د. وسيم حبيب</a> · 31 أكتوبر 2026',
+ body='''            <p class="lead"><strong>صدّق أو لا تصدّق:</strong> تفاحة، كاسة عصير تفاح، وعلبة مشروب غازي. التلاتة فيهن فركتوز. بس جسمك بيتعامل مع كل واحد منهن بطريقة مختلفة تماماً… لدرجة إنو واحد منهن صديقك، والتاني ممكن يكون عدوك المخبّى.</p>
+            <p>خلّينا نفهم القصة من أولها، بدون تعقيد، وبدون ما نحرم حالنا من كل شي حلو 😄</p>
+
+            <h2 class="section-title"><i class="fas fa-cubes-stacked"></i> <span>شو يعني "سكر مصنّع"؟</span></h2>
+            <p>لما منحكي عن السكر المصنّع (<bdi>Added Sugar</bdi>)، ما منقصد السكر الموجود طبيعياً جوّا التفاحة أو الحليب. منقصد السكر اللي <strong>انضاف</strong> للأكل، أو انشرب لحالو:</p>
+            <ul class="check-list">
+                <li><strong>السكر الأبيض (<bdi>Sucrose</bdi>):</strong> هو اللي بالسكرية عندك. وكل حبة منه هي جزيئة جلوكوز (<bdi>Glucose</bdi>) ماسكة إيد جزيئة فركتوز (<bdi>Fructose</bdi>). يعني <strong>نصه جلوكوز ونصه فركتوز.</strong></li>
+                <li><strong>شراب الذرة عالي الفركتوز (<bdi>HFCS</bdi>):</strong> مشهور كتير بأمريكا، وبأوروبا بتلاقيه على العبوات باسم <strong><bdi>glucose-fructose syrup</bdi></strong> (وبالهولندي <strong><bdi>glucose-fructosestroop</bdi></strong>). النوع اللي بيستعملوه بالمشروبات فيه حوالي <strong>55% فركتوز.</strong></li>
+                <li><strong>العصير:</strong> حتى العصير الطبيعي 100% بلا سكر مضاف. منظمة الصحة العالمية بتحسب سكره من "السكريات الحرة" (<bdi>Free Sugars</bdi>)، متل السكر المضاف بالظبط. ليش؟ رح نعرف بعد شوي.</li>
+            </ul>
+            <p><strong>والسكر بيحب يتخبّى بأسماء "بريئة":</strong> دكستروز (<bdi>Dextrose</bdi>)، مالتوز (<bdi>Maltose</bdi>)، شراب الجلوكوز، شراب الأرز، مالتوديكسترين (<bdi>Maltodextrin</bdi>)، سكر محوّل (<bdi>Invert Sugar</bdi>)… وكلهن بالآخر سكر. فإذا لقيت تلات أسماء منهن على نفس العبوة، اعرف إنو المنتج مليان سكر، بس موزّع على كذا اسم لحتى ما يطلع أول المكونات 😏</p>
+
+            <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>وين الخطورة؟ بالكمية وبالسرعة</span></h2>
+            <p>ملعقة سكر بالشاي ما بتعمل شي. المشكلة إنو ملعقة السكر بالشاي ما بتضل وحدة: شاي الصبح، وقهوة الضهر، وعلبة مشروب غازي مع الغدا، وقطعة حلو بالمسا…</p>
+            <p>خليني أعطيك رقم بيصدم: <strong>علبة مشروب غازي عادي (330 مل) فيها حوالي 35 غ سكر، يعني حوالي 9 معالق صغيرة.</strong> ومنظمة الصحة العالمية بتنصح إنو السكريات الحرة تكون أقل من 10% من سعراتك اليومية، <strong>والأفضل أقل من 5%، يعني حوالي 25 غ (6 معالق صغيرة) بالنهار كله.</strong> يعني علبة وحدة بتخلّص حصتك ليوم ونص!</p>
+            <p><strong>والسكر السائل هو الأخطر</strong>، لسببين:</p>
+            <ol class="steps">
+                <li><strong>بينشرب بسرعة:</strong> علبة كاملة بدقيقتين، فالسكر كله بيوصل مرة وحدة.</li>
+                <li><strong>ما بيشبّع:</strong> جسمك ما بيحسب سعرات المشروبات متل ما بيحسب سعرات الأكل، فبتاكل وجبتك العادية فوقها.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>قلب القصة: الجلوكوز والفركتوز… أخين، بس كل واحد بطريق</span></h2>
+            <p>بيوصلوا سوا للأمعاء، بس من هونيك كل واحد بياخد طريقه:</p>
+            <p><strong>الجلوكوز</strong> هو "الوقود الرسمي" للجسم. بيفوت عالدم، وكل خلية بجسمك بتعرف تستعمله: العضلات، والدماغ، والقلب. ولما يرتفع بالدم، البنكرياس بيفرز الإنسولين، والإنسولين بيفتح أبواب الخلايا لحتى يدخل.</p>
+            <p><strong>الفركتوز</strong> قصته مختلفة. تقريباً <strong>ما في غير الكبد بيعرف يتعامل معه.</strong> فبيمشي من الأمعاء على الكبد مباشرة، عبر الوريد البابي (<bdi>Portal Vein</bdi>). وهون بتبلش الحكاية.</p>
+            <figure class="article-figure">
+                <img src="/images/glucose-vs-fructose-liver-metabolism-pathway.webp" alt="مسار الجلوكوز إلى خلايا الجسم مقابل مسار الفركتوز إلى الكبد وتحوّل الفائض إلى دهون" width="1376" height="768" loading="lazy" decoding="async">
+                <figcaption>الطريق الأزرق: الجلوكوز رايح لكل خلايا الجسم. الطريق البرتقالي: الفركتوز رايح على الكبد مباشرة، والزيادة بتتحول لدهون.</figcaption>
+            </figure>
+            <h3>خليني إحكيلك القصة بطريقة تانية 🍽️</h3>
+            <p>تخيّل <strong>كبدك مطعم</strong>، والسكر <strong>زباين</strong> جايين ياكلوا.</p>
+            <p><strong>الجلوكوز</strong> أغلبه أصلاً بيروح على "مطاعم تانية" بالجسم: العضلات والدماغ والقلب. واللي بيجي منه على مطعمنا بيفوت من <strong>الباب الرئيسي</strong>، وعليه <strong>بوّاب</strong> (هو إنزيم اسمه <bdi>PFK</bdi>، بس خلّينا نسميه أبو سمير 😄). أبو سمير بيشوف المطعم: إذا في طاولات فاضية، بيفوّت الزبون. وإذا المطعم مليان، بيقلو "استنى برّا شوي".</p>
+            <p><strong>الفركتوز</strong> جاي على مطعمنا بالذات، وما بيفوت من الباب الرئيسي. بيفوت من <strong>باب المطبخ</strong>، وهونيك <strong>ما في بوّاب!</strong> وصاحب المطعم (الكبد) ما بيقدر يرجّع حدا، مجبور يستقبل كل زبون فات.</p>
+            <ul class="check-list">
+                <li><strong>إذا الزباين قلال</strong>، صاحب المطعم بيلاقيلهم طاولات فاضية، وبيمشي الحال. يعني الكبد بيحوّل الفركتوز لجلوكوز، أو بيخزّنه كمخزون سريع (<bdi>Glycogen</bdi>).</li>
+                <li><strong>بس إذا المطعم أصلاً مليان</strong>، يعني الجلوكوز اللي جاي مع الفركتوز عبّى المخازن ورفع الإنسولين، فما في ولا كرسي فاضي، والزباين عم يفوتوا ورا بعض من باب المطبخ. فشو بيعمل صاحب المطعم؟ <strong>بيصفّهم بالزوايا وبالممرات… فوق بعضهم</strong> 😅 وهاد بالظبط اللي بيصير: الكبد بيحوّل الفركتوز الزايد <strong>لدهون</strong>، وهالعملية إلها اسم علمي: تصنيع الدهون من جديد (<bdi>De Novo Lipogenesis</bdi>).</li>
+            </ul>
+            <p>وهون المشكلة الحقيقية: الزباين المكدّسين بالزوايا ما بيطلعوا بسهولة. يعني الدهون اللي بتنصنع بالكبد بتضل متكدّسة فيه، وهيك بيبلش <strong>الكبد الدهني</strong> (<bdi>Fatty Liver</bdi>، واسمه العلمي الجديد <bdi>MASLD</bdi>). وقسم منهم صاحب المطعم بيطلّعهم من الباب الخلفي عالشارع، يعني بيطلعوا عالدم كـ<strong>دهون ثلاثية</strong> (<bdi>Triglycerides</bdi>). وكل هالشي بيمشي إيد بإيد مع <strong>مقاومة الإنسولين</strong> (<bdi>Insulin Resistance</bdi>)، اللي حكينا عنها ب<a href="/articles/high-blood-pressure-sugar-insulin.html">مقال الضغط</a>.</p>
+            <h3>هل في دليل على هالحكي؟</h3>
+            <p>أكيد. بدراسة مشهورة نُشرت سنة 2009، شرب أشخاص عندهم وزن زايد مشروبات محلاة، ربع سعراتهم اليومية منها، لمدة 10 أسابيع. مجموعة شربت مشروبات محلاة <strong>بالفركتوز</strong>، ومجموعة <strong>بالجلوكوز</strong>. والمفاجأة: الاتنين زادوا وزن تقريباً نفس الشي، <strong>بس مجموعة الفركتوز بس</strong> زادت عندها الدهون حوالي الأعضاء بالبطن (<bdi>Visceral Fat</bdi>)، وطلعت الدهون بدمها، ونقصت حساسيتها للإنسولين.</p>
+            <p>يعني <strong>نفس السعرات، بس مش نفس الضرر.</strong></p>
+            <h3>لحظة… الفركتوز ما بيرفع السكر؟!</h3>
+            <p>إيه، وهون في فخ كبير. <strong>المؤشر الجلايسيمي للفركتوز حوالي 15 بس</strong>، بينما الجلوكوز 100 والسكر الأبيض حوالي 65. ليش؟ لأنه الفركتوز ما بيروح عالدم كتير، بيروح عالكبد. فجهاز السكر ما بيشوفه.</p>
+            <p>ولهيك بعض المنتجات المليانة فركتوز، متل <strong>شراب الأغاف (<bdi>Agave</bdi>)</strong>، بتتسوّق إنها "منخفضة المؤشر الجلايسيمي"، وكأنها صحية. بس المؤشر المنخفض هون مش معناه إنو المنتج بريء، معناه إنو الحمل كله رايح عالكبد بدل الدم.</p>
+            <p><strong>الدرس:</strong> المؤشر الجلايسيمي أداة مفيدة، بس <strong>مش كل شي منخفض المؤشر صحي.</strong> (وشفنا نفس الشي باللقيمات، اللي مؤشرها منخفض بسبب الدهون!)</p>
+            <p class="food-links"><a class="food-chip" href="{food:luqaimat}">لقيمات بدبس التمر</a></p>
+
+            <h2 class="section-title"><i class="fas fa-apple-whole"></i> <span>طيب… والفاكهة؟ مش فيها فركتوز كمان؟</span></h2>
+            <p>فيها، وهاد السؤال اللي بيخوّف ناس كتير لدرجة إنهم بطّلوا ياكلوا فاكهة. بس خلّيني طمّنك: <strong>الفاكهة الكاملة صديقتك</strong>، والسبب بـ4 كلمات: <strong>الكمية، والسرعة، والألياف، والمي.</strong></p>
+            <p><strong>1. الكمية صغيرة.</strong> تفاحة متوسطة فيها حوالي 11 غ فركتوز. علبة المشروب الغازي فيها تقريباً 17 لـ19 غ، وبدون أي شي مفيد معها.</p>
+            <p class="food-links"><a class="food-chip" href="{food:apple}">تفاح</a></p>
+            <p><strong>2. الأمعاء بتحمي الكبد.</strong> بتجارب على الفئران سنة 2018، لقى العلماء إنو <strong>الأمعاء الدقيقة نفسها بتعالج الكميات الصغيرة من الفركتوز</strong> وبتحوّلها لجلوكوز قبل ما توصل للكبد. بس لما تجي الكمية كبيرة ودفعة وحدة، الأمعاء ما بتلحّق، <strong>فبيفيض الفركتوز عالكبد.</strong> والباحثين بيرجّحوا إنو نفس الشي بيصير عند الإنسان.</p>
+            <p><strong>3. الألياف بتبطّئ.</strong> الألياف بالتفاحة بتعمل متل الشبكة، وبتخلي السكر يطلع منها على مهلو.</p>
+            <p><strong>4. المي بتعبّي.</strong> جرّب تاكل 4 تفاحات ورا بعض. صعبة، صح؟ بس سكر هالـ4 تفاحات ممكن تشربه بكاسة عصير تفاح بدقيقة!</p>
+            <p><strong>وهون بيجي تشبيه المطعم مرة تانية:</strong> التفاحة متل <strong>زبون واحد</strong> فايت من باب المطبخ على مهلو، وصاحب المطعم بيلاقيله طاولة بسهولة. أما المشروب الغازي، فهو <strong>باص سياح كامل</strong> نزل كله دفعة وحدة على باب المطبخ 🚌 والمطعم أصلاً مليان… فخمّن وين رح يحطّهم؟ بالزوايا، فوق بعضهم!</p>
+            <p><strong>وشو بتقول الدراسات الكبيرة؟</strong> بدراسة ضخمة تابعت أكتر من 180 ألف شخص لسنين طويلة، اللي أكلوا <strong>فاكهة كاملة</strong> أكتر (خصوصاً التوت الأزرق والعنب والتفاح) كان عندهم خطر أقل للإصابة بالسكري من النوع التاني. أما اللي شربوا <strong>عصير</strong> أكتر، فكان خطرهم أعلى.</p>
+            <p>يعني <strong>نفس الفاكهة، بس الشكل بيغيّر كل شي.</strong> ولهيك منظمة الصحة العالمية بتحسب سكر العصير متل السكر المضاف.</p>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>طيب، شو البدائل؟</span></h2>
+            <p>إذا بدك حلاوة بدون الحمل على الكبد، في خيارات كتير. بس كل واحد إلو قصته:</p>
+            <h3>🌿 الستيفيا (<bdi>Stevia</bdi>)</h3>
+            <p>من أوراق نبتة من أمريكا الجنوبية، وأحلى من السكر بحوالي <strong>200 لـ300 مرة.</strong> <strong>بدون سعرات، وما بترفع السكر.</strong> نقطتين بفنجان القهوة بيكفوا. عيبها الوحيد طعمة مُرّة خفيفة إذا زدت الكمية.</p>
+            <p><strong>بأوروبا:</strong> مسموحة، ورمزها <bdi>E960</bdi>.</p>
+            <p class="food-links"><a class="food-chip" href="{food:liquid-stevia-drops}">قطرات الستيفيا السائلة</a></p>
+            <h3>🧊 الإريثريتول (<bdi>Erythritol</bdi>)</h3>
+            <p>من عيلة "الكحوليات السكرية" (<bdi>Sugar Alcohols</bdi>)، وحلاوته حوالي <strong>70% من السكر.</strong> <strong>مؤشره الجلايسيمي صفر، وسعراته صفر تقريباً.</strong> السر إنو الجسم بيمتصه، بس ما بيحرقه، وبيطلعه متل ما هو بالبول. يعني بيمرق بالجسم <strong>متل سايح</strong>: بيتفرّج وبيرجع 😄</p>
+            <p class="food-links"><a class="food-chip" href="{food:erythritol}">الإريثريتول</a></p>
+            <p><strong>بس انتبه لشغلتين:</strong></p>
+            <ul class="check-list">
+                <li>الهيئة الأوروبية لسلامة الغذاء (<bdi>EFSA</bdi>) راجعته سنة 2023، وحطّت إلو <strong>حد يومي: نص غرام لكل كيلو من وزنك</strong> (يعني حوالي 35 غ لشخص وزنه 70 كيلو). والسبب الأساسي إنو الكميات الكبيرة بتعمل <strong>إسهال.</strong></li>
+                <li>دراسة رصدية سنة 2023 لقت إنو اللي عندهم <strong>مستوى إريثريتول عالي بالدم</strong> كان عندهم خطر أعلى لمشاكل القلب. بس انتبه: الجسم نفسه بيصنع إريثريتول، والدراسة ما بتثبت إنو المحلّي هو السبب. فالموضوع لسا قيد البحث، ومنصحك بالاعتدال متل أي شي تاني.</li>
+            </ul>
+            <h3>💧 السكرالوز (<bdi>Sucralose</bdi>)</h3>
+            <p>مصنوع من السكر نفسه بعد تعديل كيميائي، وأحلى منه بحوالي <strong>600 مرة.</strong> <strong>بدون سعرات، وما بيرفع السكر</strong>، وما بيخرب بالحرارة، فبينفع للطبخ والخبز. وبصراحة؟ أنا شخصياً بستعمل نقطتين منه بفنجان القهوة كل يوم ☕</p>
+            <p><strong>بأوروبا:</strong> مسموح، ورمزه <bdi>E955</bdi>.</p>
+            <h3>🌲 الزيليتول (<bdi>Xylitol</bdi>)</h3>
+            <p>كحول سكري تاني، حلاوته قريبة من السكر، <strong>ومؤشره الجلايسيمي حوالي 13.</strong> مشهور بالعلكة لأنه ما بيأذي الأسنان. بس كمان الكميات الكبيرة منه بتعمل إسهال.</p>
+            <p><strong>ومعلومة مهمة جداً:</strong> الزيليتول <strong>سام للكلاب</strong> 🐶 حتى كمية صغيرة منه ممكن تكون خطيرة عليهم. فإذا عندك كلب، خلي علكة الزيليتول بعيدة عنه!</p>
+            <h3>🍈 فاكهة الراهب (<bdi>Monk Fruit</bdi>) والألولوز (<bdi>Allulose</bdi>)</h3>
+            <p>اتنين بتسمع عنهم كتير بالفيديوهات الأمريكية. بس <strong>بأوروبا وضعهم القانوني مختلف:</strong></p>
+            <ul class="check-list">
+                <li><strong>الألولوز:</strong> لسا <strong>مش مسموح</strong> بالاتحاد الأوروبي. الهيئة الأوروبية (<bdi>EFSA</bdi>) قالت سنة 2025 إنو الملف ما فيه دراسات أمان كافية.</li>
+                <li><strong>فاكهة الراهب:</strong> وضعها بأوروبا محدود ومعقّد، فما رح تلاقيها بسهولة متل الستيفيا.</li>
+            </ul>
+            <p>يعني إذا بتعيش بأوروبا، الستيفيا والإريثريتول والسكرالوز هنّي الخيارات العملية.</p>
+            <p><strong>وكلمة حق:</strong> منظمة الصحة العالمية قالت سنة 2023 إنها ما بتنصح بالمحليات بدون سكر كطريقة لتنزيل الوزن، لأنه الدراسات ما بيّنت فايدة واضحة على المدى الطويل. يعني هالمحليات أداة لتخفيف السكر، مش وصفة رجيم. والهدف الحقيقي إنو لسانك يتعوّد شوي شوي على حلاوة أقل 😉</p>
+
+            <h2 class="section-title"><i class="fas fa-jar"></i> <span>"البدائل الطبيعية"… اللي هي بالآخر سكر 🍯</span></h2>
+            <p>هون بدنا نكون صريحين، لأنه في منتجات كتير بتتباع على إنها "صحية":</p>
+            <table class="sugar-table">
+                <thead><tr><th>البديل</th><th>المؤشر الجلايسيمي</th><th>الحقيقة</th></tr></thead>
+                <tbody>
+                    <tr><td>العسل</td><td>حوالي 61</td><td>سكر طبيعي، وحوالي نص سكره فركتوز</td></tr>
+                    <tr><td>سكر جوز الهند</td><td>حوالي 54</td><td>سكر، وسعراته متل السكر الأبيض</td></tr>
+                    <tr><td>دبس التمر</td><td>غير متوفر</td><td>سكر مركّز من التمر</td></tr>
+                    <tr><td>السكر الأبيض</td><td>حوالي 65</td><td>للمقارنة</td></tr>
+                </tbody>
+            </table>
+            <p class="food-links"><a class="food-chip" href="{food:coconut-sugar}">سكر جوز الهند</a> <a class="food-chip" href="{food:fenugreek-tea-with-honey}">مغلي الحلبة بالعسل</a></p>
+            <p><strong>العسل</strong> فيه شوية مركّبات مفيدة، بس الجسم بيتعامل معه كسكر. و<strong>سكر جوز الهند</strong> مكتوب عليه كتير "منخفض المؤشر الجلايسيمي"، بس جامعة سيدني قاسته وطلع حوالي 54، يعني على حافة المنخفض، ومش بعيد كتير عن السكر الأبيض.</p>
+            <p>الخلاصة؟ <strong>سكر "طبيعي"… طبيعي إنو يرفعلك السكر</strong> 😄 الكمية هي اللي بتفرق، مش الاسم اللي على العبوة.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>كيف تخفف السكر بدون ما تحس إنك محروم؟</span></h2>
+            <p>ما حدا بدو يعيش بدون حلو، وما في داعي. هي خطوات عملية فيك تبلش فيها من بكرة:</p>
+            <ol class="steps">
+                <li><strong>ابدأ بالمشروبات.</strong> إذا عم تشرب مشروبات غازية أو عصير كل يوم، هون أكبر ربح. فيك تستبدلها بمي فوّارة مع ليمون، أو شاي بارد بدون سكر، أو كركديه مثلّج. <a class="food-chip" href="{food:hibiscus-iced-tea}">شاي كركديه بارد أحمر</a></li>
+                <li><strong>كول الفاكهة، ما تشربها.</strong> تفاحة بدل كاسة عصير تفاح.</li>
+                <li><strong>خفّف المعالق بالتدريج.</strong> إذا بتحط معلقتين بالشاي، خليها معلقة ونص لأسبوعين، بعدين معلقة. لسانك بيتعوّد أسرع مما بتتوقع.</li>
+                <li><strong>اقرأ العبوة.</strong> دوّر على "منها سكريات" (<bdi>Sugars</bdi>) بجدول القيم الغذائية، وعلى الأسماء المخبّاية اللي حكينا عنها. وإذا ما عندك وقت تقرأ كل عبوة بالسوبرماركت، خليها علينا 👇</li>
+                <li><strong>استعمل المحليات بذكاء.</strong> نقطتين ستيفيا أو سكرالوز بالقهوة والشاي، وإريثريتول للخبز، بس كلهن باعتدال.</li>
+                <li><strong>خلي الحلو بعد الأكل، مش لحالو.</strong> قطعة الحلو بعد وجبة فيها بروتين وألياف أخف على السكر من قطعة على معدة فاضية. <a class="food-chip" href="{food:appeltaart}">كعكة التفاح الهولندية</a></li>
+                <li><strong>اختار فطورك صح.</strong> رقائق الشوفان الكبيرة مع فاكهة، بدل حبوب الفطور المحلاة. <a class="food-chip" href="{food:gluten-free-rolled-oats}">رقائق شوفان خالية من الغلوتين</a></li>
+            </ol>
+            <aside class="boodi-card">
+                <div>
+                    <h2>📱 امسح الباركود مع تطبيق بودي (<bdi>boodi</bdi>)</h2>
+                    <p>بالسوبرماركت، كل منتج بيحكي قصة، بس بخط صغير كتير 😄 تطبيق بودي بيقراها عنك: بتمسح الباركود، وبيطلعلك قديش فيه سكر وكربوهيدرات، ومستوى السكر والمؤشر الجلايسيمي، وبيكشفلك المكونات، وبيقترحلك بدائل أقل سكر من نفس الرف.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> اكتشف تطبيق بودي</a>
+            </aside>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>الخلاصة بسطرين</span></h2>
+            <p><strong>الفركتوز بالفاكهة جاي بكمية صغيرة، ومعه ألياف ومي، والأمعاء بتلحّق عليه، فهو صديقك.</strong> أما الفركتوز بالمشروبات والسكر المصنّع، فجاي بكمية كبيرة ودفعة وحدة، فبيفيض على الكبد، وهون بيتحول لدهون. <strong>فما تخاف من التفاحة… خاف من العلبة!</strong> 🍎🥤</p>'''),
+en=dict(
+ title='Fructose: A Friend in Fruit, a Foe in the Can',
+ h1='Fructose: A Friend in Fruit, a Foe in the Can… What\'s the Story?',
+ crumb='Fructose and added sugar',
+ summary='Why doesn\'t the fructose in an apple hurt you, while the fructose in a soft drink heads for your liver? A simple guide to added sugar, the alternatives, and cutting down.',
+ cat='Nutrition',
+ desc='Why doesn\'t the fructose in an apple hurt you, while in a soft drink it heads for your liver? Added sugar, the alternatives, and how to cut down.',
+ hero_alt='A young man and woman choosing between fresh fruit, sweetened drinks and added sugar',
+ about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
+ refs_label='Sources ▾',
+ disclaimer='<strong>Awareness note:</strong> this article is for general awareness about nutrition and lifestyle and does not replace advice from your doctor.',
+ review='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> | Founder, WiBo Health · 31 October 2026',
+ body='''            <p class="lead"><strong>Believe it or not:</strong> an apple, a glass of apple juice and a can of soft drink. All three contain fructose. But your body handles each of them in a completely different way… so much so that one of them is your friend, and the other may be your hidden enemy.</p>
+            <p>Let's understand the story from the beginning, without complications, and without denying ourselves everything sweet 😄</p>
+
+            <h2 class="section-title"><i class="fas fa-cubes-stacked"></i> <span>What does "added sugar" mean?</span></h2>
+            <p>When we talk about added sugar, we don't mean the sugar that occurs naturally inside an apple or in milk. We mean the sugar that has been <strong>added</strong> to food, or that is drunk on its own:</p>
+            <ul class="check-list">
+                <li><strong>White sugar (sucrose):</strong> the one in your sugar bowl. Every grain of it is a glucose molecule holding hands with a fructose molecule. So it is <strong>half glucose and half fructose.</strong></li>
+                <li><strong>High-fructose corn syrup (HFCS):</strong> very common in America; in Europe you find it on labels as <strong>glucose-fructose syrup</strong> (in Dutch <strong>glucose-fructosestroop</strong>). The type used in drinks contains about <strong>55% fructose.</strong></li>
+                <li><strong>Juice:</strong> even natural 100% juice with no added sugar. The World Health Organization counts its sugar as "free sugars", exactly like added sugar. Why? We'll find out in a moment.</li>
+            </ul>
+            <p><strong>And sugar loves to hide behind "innocent" names:</strong> dextrose, maltose, glucose syrup, rice syrup, maltodextrin, invert sugar… and in the end they are all sugar. So if you find three of these names on the same pack, you know the product is full of sugar, just spread over several names so it doesn't come first in the ingredients 😏</p>
+
+            <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Where is the danger? In the amount and the speed</span></h2>
+            <p>A spoon of sugar in your tea does nothing. The problem is that the spoon of sugar in your tea doesn't stay just one: tea in the morning, coffee at noon, a can of soft drink with lunch, a piece of cake in the evening…</p>
+            <p>Let me give you a shocking number: <strong>a can of regular soft drink (330 ml) contains about 35 g of sugar, which is about 9 teaspoons.</strong> The World Health Organization recommends keeping free sugars below 10% of your daily calories, <strong>and ideally below 5%, which is about 25 g (6 teaspoons) for the whole day.</strong> So one can uses up your allowance for a day and a half!</p>
+            <p><strong>And liquid sugar is the most dangerous</strong>, for two reasons:</p>
+            <ol class="steps">
+                <li><strong>It is drunk fast:</strong> a whole can in two minutes, so all the sugar arrives at once.</li>
+                <li><strong>It doesn't fill you up:</strong> your body doesn't count calories from drinks the way it counts calories from food, so you eat your normal meal on top of it.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>The heart of the story: glucose and fructose… brothers, but each on its own road</span></h2>
+            <p>They reach the gut together, but from there each takes its own road:</p>
+            <p><strong>Glucose</strong> is the body's "official fuel". It enters the blood, and every cell in your body knows how to use it: the muscles, the brain and the heart. When it rises in the blood, the pancreas releases insulin, and insulin opens the doors of the cells so it can get in.</p>
+            <p><strong>Fructose</strong> has a different story. Almost <strong>only the liver knows how to handle it.</strong> So it travels from the gut straight to the liver, through the portal vein. And that's where the story begins.</p>
+            <figure class="article-figure">
+                <img src="/images/glucose-vs-fructose-liver-metabolism-pathway.webp" alt="The path of glucose to the body's cells compared with the path of fructose to the liver, where the excess is turned into fat" width="1376" height="768" loading="lazy" decoding="async">
+                <figcaption>The blue road: glucose heads to all the cells of the body. The orange road: fructose heads straight to the liver, and the excess is turned into fat.</figcaption>
+            </figure>
+            <h3>Let me tell you the story another way 🍽️</h3>
+            <p>Imagine <strong>your liver is a restaurant</strong>, and the sugar is <strong>customers</strong> coming in to eat.</p>
+            <p>Most of the <strong>glucose</strong> goes to "other restaurants" in the body anyway: the muscles, the brain and the heart. Whatever comes to our restaurant enters through the <strong>main door</strong>, which has a <strong>doorman</strong> (an enzyme called PFK, but let's just call him good old Bob 😄). Good old Bob looks around the restaurant: if there are free tables, he lets the customer in. If the restaurant is full, he tells them "wait outside for a bit".</p>
+            <p><strong>Fructose</strong> is coming to our restaurant in particular, and it doesn't come in through the main door. It comes in through the <strong>kitchen door</strong>, and there <strong>there is no doorman!</strong> And the owner of the restaurant (the liver) can't turn anyone away; he has to take in every customer who walks in.</p>
+            <ul class="check-list">
+                <li><strong>If there are only a few customers</strong>, the owner finds them free tables, and everything is fine. That means the liver turns the fructose into glucose, or stores it as a quick reserve (glycogen).</li>
+                <li><strong>But if the restaurant is already full</strong>, meaning the glucose that came with the fructose has filled the stores and raised insulin, there isn't a single free chair, and the customers keep coming in one after another through the kitchen door. So what does the owner do? <strong>He lines them up in the corners and the corridors… piled on top of each other</strong> 😅 And that is exactly what happens: the liver turns the excess fructose <strong>into fat</strong>, and this process has a scientific name: de novo lipogenesis.</li>
+            </ul>
+            <p>And here's the real problem: customers piled up in the corners don't leave easily. That means the fat made in the liver stays piled up inside it, and that is how <strong>fatty liver</strong> begins (its new scientific name is MASLD). Some of them the owner sends out through the back door onto the street, meaning they go out into the blood as <strong>triglycerides</strong>. And all of this goes hand in hand with <strong>insulin resistance</strong>, which we talked about in the <a href="/en/articles/high-blood-pressure-sugar-insulin.html">blood pressure article</a>.</p>
+            <h3>Is there evidence for this?</h3>
+            <p>Definitely. In a well-known study published in 2009, people with excess weight drank sweetened drinks that made up a quarter of their daily calories, for 10 weeks. One group drank drinks sweetened <strong>with fructose</strong>, and another <strong>with glucose</strong>. The surprise: both gained about the same weight, <strong>but only the fructose group</strong> gained fat around the organs in the belly (visceral fat), saw the fats in their blood go up, and became less sensitive to insulin.</p>
+            <p>So <strong>the same calories, but not the same harm.</strong></p>
+            <h3>Wait… fructose doesn't raise blood sugar?!</h3>
+            <p>Yes, and here is a big trap. <strong>The glycemic index of fructose is only about 15</strong>, while glucose is 100 and white sugar about 65. Why? Because fructose doesn't go into the blood much; it goes to the liver. So the blood sugar meter doesn't see it.</p>
+            <p>That's why some products full of fructose, such as <strong>agave syrup</strong>, are marketed as "low glycemic index", as if they were healthy. But a low index here doesn't mean the product is innocent; it means the whole load is going to the liver instead of the blood.</p>
+            <p><strong>The lesson:</strong> the glycemic index is a useful tool, but <strong>not everything with a low index is healthy.</strong> (And we saw the same thing with luqaimat, whose index is low because of the fat!)</p>
+            <p class="food-links"><a class="food-chip" href="{food:luqaimat}">Luqaimat with Date Syrup</a></p>
+
+            <h2 class="section-title"><i class="fas fa-apple-whole"></i> <span>OK… and fruit? Doesn't it contain fructose too?</span></h2>
+            <p>It does, and this is the question that scares so many people that they have stopped eating fruit. But let me reassure you: <strong>whole fruit is your friend</strong>, and the reason comes down to 4 words: <strong>amount, speed, fibre and water.</strong></p>
+            <p><strong>1. The amount is small.</strong> A medium apple contains about 11 g of fructose. A can of soft drink contains roughly 17 to 19 g, with nothing useful alongside it.</p>
+            <p class="food-links"><a class="food-chip" href="{food:apple}">Apple</a></p>
+            <p><strong>2. The gut protects the liver.</strong> In experiments on mice in 2018, scientists found that <strong>the small intestine itself processes small amounts of fructose</strong> and turns them into glucose before they reach the liver. But when a large amount comes all at once, the gut can't keep up, <strong>so the fructose spills over into the liver.</strong> The researchers think the same thing likely happens in humans.</p>
+            <p><strong>3. Fibre slows things down.</strong> The fibre in an apple works like a net and lets the sugar out slowly.</p>
+            <p><strong>4. Water fills you up.</strong> Try eating 4 apples one after another. Hard, right? But you can drink the sugar of those 4 apples in a glass of apple juice in a minute!</p>
+            <p><strong>And here the restaurant comparison comes back:</strong> an apple is like <strong>a single customer</strong> strolling in through the kitchen door, and the owner easily finds him a table. A soft drink, though, is <strong>a whole tour bus</strong> unloading all at once at the kitchen door 🚌 and the restaurant is already full… so guess where he'll put them? In the corners, piled on top of each other!</p>
+            <p><strong>And what do the big studies say?</strong> In a huge study that followed more than 180,000 people for many years, those who ate more <strong>whole fruit</strong> (especially blueberries, grapes and apples) had a lower risk of type 2 diabetes. But those who drank more <strong>juice</strong> had a higher risk.</p>
+            <p>So <strong>the same fruit, but the form changes everything.</strong> That's why the World Health Organization counts the sugar in juice like added sugar.</p>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>OK, so what are the alternatives?</span></h2>
+            <p>If you want sweetness without the load on your liver, there are plenty of options. But each one has its own story:</p>
+            <h3>🌿 Stevia</h3>
+            <p>From the leaves of a plant from South America, and about <strong>200 to 300 times sweeter than sugar.</strong> <strong>No calories, and it doesn't raise blood sugar.</strong> Two drops in a cup of coffee are enough. Its only drawback is a light bitter taste if you use more.</p>
+            <p><strong>In Europe:</strong> permitted, with the code E960.</p>
+            <p class="food-links"><a class="food-chip" href="{food:liquid-stevia-drops}">Liquid Stevia Drops</a></p>
+            <h3>🧊 Erythritol</h3>
+            <p>From the family of "sugar alcohols", with about <strong>70% of the sweetness of sugar.</strong> <strong>Its glycemic index is zero, and its calories are almost zero.</strong> The secret is that the body absorbs it but doesn't burn it, and passes it out unchanged in the urine. So it goes through the body <strong>just passing through like a tourist</strong>: it looks around and goes back home 😄</p>
+            <p class="food-links"><a class="food-chip" href="{food:erythritol}">Erythritol</a></p>
+            <p><strong>But watch out for two things:</strong></p>
+            <ul class="check-list">
+                <li>The European Food Safety Authority (EFSA) reviewed it in 2023 and set <strong>a daily limit: half a gram per kilo of your body weight</strong> (about 35 g for a person weighing 70 kilos). The main reason is that large amounts cause <strong>diarrhoea.</strong></li>
+                <li>An observational study in 2023 found that people with <strong>high levels of erythritol in their blood</strong> had a higher risk of heart problems. But note: the body makes erythritol itself, and the study doesn't prove that the sweetener is the cause. So the subject is still being researched, and we advise moderation, as with anything else.</li>
+            </ul>
+            <h3>💧 Sucralose</h3>
+            <p>Made from sugar itself after a chemical modification, and about <strong>600 times sweeter.</strong> <strong>No calories, and it doesn't raise blood sugar</strong>, and heat doesn't spoil it, so it works for cooking and baking. And honestly? I personally use two drops of it in my coffee every day ☕</p>
+            <p><strong>In Europe:</strong> permitted, with the code E955.</p>
+            <h3>🌲 Xylitol</h3>
+            <p>Another sugar alcohol, with a sweetness close to sugar, <strong>and a glycemic index of about 13.</strong> Well known in chewing gum because it doesn't harm the teeth. But large amounts of it also cause diarrhoea.</p>
+            <p><strong>And a very important fact:</strong> xylitol is <strong>toxic to dogs</strong> 🐶 even a small amount can be dangerous for them. So if you have a dog, keep xylitol gum away from it!</p>
+            <h3>🍈 Monk fruit and allulose</h3>
+            <p>Two you hear about a lot in American videos. But <strong>in Europe their legal status is different:</strong></p>
+            <ul class="check-list">
+                <li><strong>Allulose:</strong> still <strong>not permitted</strong> in the European Union. The European authority (EFSA) said in 2025 that the dossier did not contain enough safety studies.</li>
+                <li><strong>Monk fruit:</strong> its status in Europe is limited and complicated, so you won't find it as easily as stevia.</li>
+            </ul>
+            <p>So if you live in Europe, stevia, erythritol and sucralose are the practical options.</p>
+            <p><strong>And in all fairness:</strong> in 2023 the World Health Organization said it does not recommend non-sugar sweeteners as a way to lose weight, because studies have not shown a clear long-term benefit. So these sweeteners are a tool for cutting down on sugar, not a diet prescription. The real goal is for your tongue to get used, little by little, to less sweetness 😉</p>
+
+            <h2 class="section-title"><i class="fas fa-jar"></i> <span>"Natural alternatives"… that are sugar in the end 🍯</span></h2>
+            <p>Here we need to be honest, because a lot of products are sold as "healthy":</p>
+            <table class="sugar-table">
+                <thead><tr><th>Alternative</th><th>Glycemic index</th><th>The truth</th></tr></thead>
+                <tbody>
+                    <tr><td>Honey</td><td>about 61</td><td>A natural sugar, about half of it fructose</td></tr>
+                    <tr><td>Coconut sugar</td><td>about 54</td><td>Sugar, with the same calories as white sugar</td></tr>
+                    <tr><td>Date syrup</td><td>not available</td><td>Concentrated sugar from dates</td></tr>
+                    <tr><td>White sugar</td><td>about 65</td><td>For comparison</td></tr>
+                </tbody>
+            </table>
+            <p class="food-links"><a class="food-chip" href="{food:coconut-sugar}">Coconut Sugar</a> <a class="food-chip" href="{food:fenugreek-tea-with-honey}">Fenugreek Tea with Honey</a></p>
+            <p><strong>Honey</strong> contains a few useful compounds, but the body handles it as sugar. And <strong>coconut sugar</strong> often says "low glycemic index" on the pack, but the University of Sydney measured it at about 54, right on the edge of low, and not very far from white sugar.</p>
+            <p>The bottom line? <strong>"Natural" sugar… naturally still raises your sugar</strong> 😄 The amount is what makes the difference, not the name on the pack.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>How to cut down on sugar without feeling deprived</span></h2>
+            <p>Nobody wants to live without sweet things, and there's no need to. Here are practical steps you can start tomorrow:</p>
+            <ol class="steps">
+                <li><strong>Start with drinks.</strong> If you drink soft drinks or juice every day, this is the biggest win. You can swap them for sparkling water with lemon, unsweetened iced tea, or iced hibiscus. <a class="food-chip" href="{food:hibiscus-iced-tea}">Hibiscus Iced Tea</a></li>
+                <li><strong>Eat your fruit, don't drink it.</strong> An apple instead of a glass of apple juice.</li>
+                <li><strong>Cut the spoons gradually.</strong> If you put two spoons in your tea, make it one and a half for two weeks, then one. Your tongue gets used to it faster than you think.</li>
+                <li><strong>Read the label.</strong> Look for "of which sugars" in the nutrition table, and for the hidden names we talked about. And if you don't have time to read every pack in the supermarket, leave it to us 👇</li>
+                <li><strong>Use sweeteners smartly.</strong> Two drops of stevia or sucralose in coffee and tea, and erythritol for baking, but all in moderation.</li>
+                <li><strong>Have something sweet after a meal, not on its own.</strong> A sweet after a meal with protein and fibre is gentler on blood sugar than one on an empty stomach. <a class="food-chip" href="{food:appeltaart}">Dutch Apple Pie (Appeltaart)</a></li>
+                <li><strong>Choose your breakfast well.</strong> Large rolled oats with fruit, instead of sweetened breakfast cereal. <a class="food-chip" href="{food:gluten-free-rolled-oats}">Gluten-Free Rolled Oats</a></li>
+            </ol>
+            <aside class="boodi-card">
+                <div>
+                    <h2>📱 Scan the barcode with the boodi app</h2>
+                    <p>In the supermarket, every product tells a story, but in very small print 😄 The boodi app reads it for you: you scan the barcode, and it shows you how much sugar and carbohydrate it contains, its sugar level and glycemic index, reveals the ingredients, and suggests lower-sugar alternatives from the same shelf.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Discover the boodi app</a>
+            </aside>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>The bottom line in two sentences</span></h2>
+            <p><strong>The fructose in fruit comes in a small amount, together with fibre and water, and the gut keeps up with it, so it is your friend.</strong> The fructose in drinks and added sugar, though, comes in a large amount all at once, so it spills over into the liver, and there it turns into fat. <strong>So don't be afraid of the apple… be afraid of the can!</strong> 🍎🥤</p>'''),
+nl=dict(
+ title='Fructose: vriend in fruit, vijand in het blikje',
+ h1='Fructose: vriend in fruit, vijand in het blikje… hoe zit dat?',
+ crumb='Fructose en toegevoegde suiker',
+ summary='Waarom schaadt de fructose in een appel je niet, terwijl die in frisdrank naar je lever gaat? Uitleg over toegevoegde suiker, de alternatieven en minder suiker eten.',
+ cat='Voeding',
+ desc='Waarom schaadt de fructose in een appel je niet, terwijl die in frisdrank naar je lever gaat? Toegevoegde suiker, alternatieven en minder suiker eten.',
+ hero_alt='Een jonge man en vrouw kiezen tussen vers fruit, gezoete dranken en toegevoegde suiker',
+ about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
+ refs_label='Bronnen ▾',
+ disclaimer='<strong>Bewustwording:</strong> dit artikel is bedoeld voor algemene bewustwording over voeding en leefstijl en vervangt geen advies van je arts.',
+ review='Medisch beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> | Oprichter, WiBo Health · 31 oktober 2026',
+ body='''            <p class="lead"><strong>Geloof het of niet:</strong> een appel, een glas appelsap en een blikje frisdrank. Alle drie bevatten fructose. Maar je lichaam gaat met elk ervan op een totaal andere manier om… zo erg zelfs dat de een je vriend is, en de ander misschien je verborgen vijand.</p>
+            <p>Laten we het verhaal vanaf het begin begrijpen, zonder ingewikkeld te doen, en zonder onszelf alles wat zoet is te ontzeggen 😄</p>
+
+            <h2 class="section-title"><i class="fas fa-cubes-stacked"></i> <span>Wat betekent "toegevoegde suiker"?</span></h2>
+            <p>Als we het over toegevoegde suiker hebben, bedoelen we niet de suiker die van nature in een appel of in melk zit. We bedoelen de suiker die aan eten is <strong>toegevoegd</strong>, of die je los drinkt:</p>
+            <ul class="check-list">
+                <li><strong>Witte suiker (sacharose):</strong> die in je suikerpot. Elk korreltje ervan is een glucosemolecuul dat hand in hand gaat met een fructosemolecuul. Het is dus <strong>half glucose en half fructose.</strong></li>
+                <li><strong>Glucose-fructosestroop (HFCS):</strong> heel bekend in Amerika; in Europa vind je het op verpakkingen als <strong>glucose-fructose syrup</strong> (in het Nederlands <strong>glucose-fructosestroop</strong>). Het soort dat in dranken wordt gebruikt, bevat ongeveer <strong>55% fructose.</strong></li>
+                <li><strong>Sap:</strong> zelfs natuurlijk 100% sap zonder toegevoegde suiker. De Wereldgezondheidsorganisatie rekent de suiker erin tot de "vrije suikers", precies zoals toegevoegde suiker. Waarom? Dat lees je zo meteen.</li>
+            </ul>
+            <p><strong>En suiker verstopt zich graag achter "onschuldige" namen:</strong> dextrose, maltose, glucosestroop, rijststroop, maltodextrine, invertsuiker… en uiteindelijk zijn ze allemaal suiker. Vind je dus drie van deze namen op dezelfde verpakking, dan weet je dat het product vol suiker zit, alleen verdeeld over meerdere namen zodat het niet als eerste ingrediënt verschijnt 😏</p>
+
+            <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Waar zit het gevaar? In de hoeveelheid en de snelheid</span></h2>
+            <p>Eén lepel suiker in je thee doet niets. Het probleem is dat het niet bij die ene lepel suiker in je thee blijft: thee 's ochtends, koffie 's middags, een blikje frisdrank bij de lunch, een stuk taart 's avonds…</p>
+            <p>Ik geef je een schokkend getal: <strong>een blikje gewone frisdrank (330 ml) bevat ongeveer 35 g suiker, dat is ongeveer 9 theelepels.</strong> De Wereldgezondheidsorganisatie raadt aan om vrije suikers onder de 10% van je dagelijkse calorieën te houden, <strong>en liefst onder de 5%, dat is ongeveer 25 g (6 theelepels) voor de hele dag.</strong> Eén blikje gebruikt dus je hele portie voor anderhalve dag op!</p>
+            <p><strong>En vloeibare suiker is het gevaarlijkst</strong>, om twee redenen:</p>
+            <ol class="steps">
+                <li><strong>Het is snel op:</strong> een heel blikje in twee minuten, dus alle suiker komt in één keer binnen.</li>
+                <li><strong>Het vult niet:</strong> je lichaam telt calorieën uit dranken niet zoals calorieën uit eten, dus je eet je gewone maaltijd er gewoon bovenop.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>De kern van het verhaal: glucose en fructose… broers, maar elk met een eigen weg</span></h2>
+            <p>Ze komen samen in de darm aan, maar vanaf daar gaat elk zijn eigen weg:</p>
+            <p><strong>Glucose</strong> is de "officiële brandstof" van het lichaam. Het gaat het bloed in, en elke cel in je lichaam weet hoe ze het moet gebruiken: de spieren, de hersenen en het hart. Als het in het bloed stijgt, maakt de alvleesklier insuline aan, en insuline opent de deuren van de cellen zodat het naar binnen kan.</p>
+            <p><strong>Fructose</strong> heeft een ander verhaal. Bijna <strong>alleen de lever weet ermee om te gaan.</strong> Het gaat dus van de darm rechtstreeks naar de lever, via de poortader. En daar begint het verhaal.</p>
+            <figure class="article-figure">
+                <img src="/images/glucose-vs-fructose-liver-metabolism-pathway.webp" alt="De weg van glucose naar de cellen van het lichaam tegenover de weg van fructose naar de lever, waar het overschot in vet wordt omgezet" width="1376" height="768" loading="lazy" decoding="async">
+                <figcaption>De blauwe weg: glucose gaat naar alle cellen van het lichaam. De oranje weg: fructose gaat rechtstreeks naar de lever, en het overschot wordt omgezet in vet.</figcaption>
+            </figure>
+            <h3>Ik vertel je het verhaal nog eens op een andere manier 🍽️</h3>
+            <p>Stel je voor dat <strong>je lever een restaurant is</strong>, en de suiker zijn <strong>gasten</strong> die komen eten.</p>
+            <p>Het meeste <strong>glucose</strong> gaat sowieso naar "andere restaurants" in het lichaam: de spieren, de hersenen en het hart. Wat naar ons restaurant komt, gaat naar binnen via de <strong>hoofdingang</strong>, en daar staat <strong>een portier</strong> (een enzym dat PFK heet, maar laten we hem gewoon de portier noemen 😄). De portier kijkt rond in het restaurant: zijn er tafels vrij, dan laat hij de gast binnen. Zit het restaurant vol, dan zegt hij "wacht even buiten".</p>
+            <p><strong>Fructose</strong> komt juist naar ons restaurant, en komt niet via de hoofdingang binnen. Het komt binnen via de <strong>keukendeur</strong>, en daar <strong>staat geen portier!</strong> En de eigenaar van het restaurant (de lever) kan niemand wegsturen; hij moet elke gast die binnenkomt ontvangen.</p>
+            <ul class="check-list">
+                <li><strong>Als er maar weinig gasten zijn</strong>, vindt de eigenaar vrije tafels voor ze, en gaat alles goed. Dat betekent dat de lever de fructose omzet in glucose, of opslaat als snelle voorraad (glycogeen).</li>
+                <li><strong>Maar als het restaurant al vol zit</strong>, dus als de glucose die met de fructose meekwam de voorraden heeft gevuld en de insuline heeft verhoogd, is er geen enkele stoel meer vrij, en blijven de gasten na elkaar via de keukendeur binnenkomen. Wat doet de eigenaar dan? <strong>Hij zet ze in de hoeken en de gangen… op elkaar gepropt</strong> 😅 En dat is precies wat er gebeurt: de lever zet de overtollige fructose om <strong>in vet</strong>, en dat proces heeft een wetenschappelijke naam: de novo lipogenese.</li>
+            </ul>
+            <p>En hier zit het echte probleem: gasten die in de hoeken op elkaar gepropt zitten, gaan niet makkelijk weg. Dat betekent dat het vet dat in de lever wordt gemaakt daar opgestapeld blijft, en zo begint <strong>leververvetting</strong> (de nieuwe wetenschappelijke naam is MASLD). Een deel van de gasten stuurt de eigenaar via de achterdeur de straat op, dat wil zeggen dat ze als <strong>triglyceriden</strong> in het bloed terechtkomen. En dit alles gaat hand in hand met <strong>insulineresistentie</strong>, waar we het in het <a href="/nl/articles/hoge-bloeddruk-suiker-insuline.html">artikel over bloeddruk</a> over hadden.</p>
+            <h3>Is daar bewijs voor?</h3>
+            <p>Zeker. In een bekende studie die in 2009 werd gepubliceerd, dronken mensen met overgewicht 10 weken lang gezoete dranken die een kwart van hun dagelijkse calorieën leverden. De ene groep dronk dranken gezoet <strong>met fructose</strong>, de andere <strong>met glucose</strong>. De verrassing: beide groepen kwamen ongeveer evenveel aan, <strong>maar alleen de fructosegroep</strong> kreeg meer vet rond de organen in de buik (visceraal vet), zag de vetten in het bloed stijgen, en werd minder gevoelig voor insuline.</p>
+            <p>Dus <strong>dezelfde calorieën, maar niet dezelfde schade.</strong></p>
+            <h3>Wacht even… fructose verhoogt de bloedsuiker niet?!</h3>
+            <p>Klopt, en hier zit een grote valkuil. <strong>De glykemische index van fructose is maar ongeveer 15</strong>, terwijl glucose 100 is en witte suiker ongeveer 65. Waarom? Omdat fructose niet veel in het bloed komt; het gaat naar de lever. De bloedsuikermeter ziet het dus niet.</p>
+            <p>Daarom worden sommige producten vol fructose, zoals <strong>agavesiroop</strong>, verkocht als "lage glykemische index", alsof ze gezond zijn. Maar een lage index betekent hier niet dat het product onschuldig is; het betekent dat de hele last naar de lever gaat in plaats van naar het bloed.</p>
+            <p><strong>De les:</strong> de glykemische index is een handig hulpmiddel, maar <strong>niet alles met een lage index is gezond.</strong> (En dat zagen we ook bij luqaimat, die een lage index hebben door het vet!)</p>
+            <p class="food-links"><a class="food-chip" href="{food:luqaimat}">Luqaimat met dadelstroop</a></p>
+
+            <h2 class="section-title"><i class="fas fa-apple-whole"></i> <span>Oké… en fruit? Daar zit toch ook fructose in?</span></h2>
+            <p>Klopt, en dat is de vraag die zoveel mensen bang maakt dat ze geen fruit meer eten. Maar laat me je geruststellen: <strong>heel fruit is je vriend</strong>, en de reden zit in 4 woorden: <strong>hoeveelheid, snelheid, vezels en water.</strong></p>
+            <p><strong>1. De hoeveelheid is klein.</strong> Een middelgrote appel bevat ongeveer 11 g fructose. Een blikje frisdrank bevat ongeveer 17 tot 19 g, zonder iets nuttigs erbij.</p>
+            <p class="food-links"><a class="food-chip" href="{food:apple}">Appel</a></p>
+            <p><strong>2. De darm beschermt de lever.</strong> In experimenten met muizen in 2018 ontdekten wetenschappers dat <strong>de dunne darm zelf kleine hoeveelheden fructose verwerkt</strong> en omzet in glucose voordat ze de lever bereiken. Maar als er een grote hoeveelheid in één keer komt, kan de darm het niet bijhouden, <strong>en stroomt de fructose door naar de lever.</strong> De onderzoekers denken dat hetzelfde waarschijnlijk bij mensen gebeurt.</p>
+            <p><strong>3. Vezels vertragen.</strong> De vezels in een appel werken als een net en laten de suiker er rustig uit.</p>
+            <p><strong>4. Water vult.</strong> Probeer eens 4 appels na elkaar te eten. Lastig, toch? Maar de suiker van die 4 appels drink je in een glas appelsap in één minuut!</p>
+            <p><strong>En hier komt de vergelijking met het restaurant weer terug:</strong> een appel is als <strong>één gast</strong> die rustig via de keukendeur binnenkomt, en de eigenaar vindt makkelijk een tafel voor hem. Frisdrank daarentegen is <strong>een complete touringbus</strong> die in één keer bij de keukendeur uitstapt 🚌 en het restaurant zit al vol… dus raad eens waar hij ze zet? In de hoeken, op elkaar gepropt!</p>
+            <p><strong>En wat zeggen de grote studies?</strong> In een enorme studie die meer dan 180.000 mensen vele jaren volgde, hadden mensen die meer <strong>heel fruit</strong> aten (vooral blauwe bessen, druiven en appels) een lager risico op diabetes type 2. Maar mensen die meer <strong>sap</strong> dronken, hadden een hoger risico.</p>
+            <p>Dus <strong>hetzelfde fruit, maar de vorm verandert alles.</strong> Daarom rekent de Wereldgezondheidsorganisatie de suiker in sap net als toegevoegde suiker.</p>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>Oké, wat zijn dan de alternatieven?</span></h2>
+            <p>Wil je zoetheid zonder de last voor je lever, dan zijn er veel opties. Maar elk heeft zijn eigen verhaal:</p>
+            <h3>🌿 Stevia</h3>
+            <p>Van de bladeren van een plant uit Zuid-Amerika, en ongeveer <strong>200 tot 300 keer zoeter dan suiker.</strong> <strong>Geen calorieën, en het verhoogt de bloedsuiker niet.</strong> Twee druppels in een kop koffie zijn genoeg. Het enige nadeel is een licht bittere smaak als je meer gebruikt.</p>
+            <p><strong>In Europa:</strong> toegestaan, met de code E960.</p>
+            <p class="food-links"><a class="food-chip" href="{food:liquid-stevia-drops}">Vloeibare steviadruppels</a></p>
+            <h3>🧊 Erythritol</h3>
+            <p>Uit de familie van de "suikeralcoholen", met ongeveer <strong>70% van de zoetkracht van suiker.</strong> <strong>De glykemische index is nul, en de calorieën zijn bijna nul.</strong> Het geheim is dat het lichaam het opneemt, maar niet verbrandt, en onveranderd met de urine uitscheidt. Het gaat dus door het lichaam en <strong>komt alleen even langs, als een toerist</strong>: het kijkt rond en gaat weer naar huis 😄</p>
+            <p class="food-links"><a class="food-chip" href="{food:erythritol}">Erythritol (zoetstof)</a></p>
+            <p><strong>Maar let op twee dingen:</strong></p>
+            <ul class="check-list">
+                <li>De Europese Autoriteit voor Voedselveiligheid (EFSA) heeft het in 2023 opnieuw beoordeeld en <strong>een dagelijkse limiet</strong> vastgesteld: <strong>een halve gram per kilo lichaamsgewicht</strong> (ongeveer 35 g voor iemand van 70 kilo). De belangrijkste reden is dat grote hoeveelheden <strong>diarree</strong> geven.</li>
+                <li>Een observationele studie uit 2023 vond dat mensen met <strong>een hoog erythritolgehalte in het bloed</strong> een hoger risico op hartproblemen hadden. Maar let op: het lichaam maakt zelf erythritol, en de studie bewijst niet dat de zoetstof de oorzaak is. Het onderwerp wordt dus nog onderzocht, en we raden aan om het met mate te gebruiken, zoals alles.</li>
+            </ul>
+            <h3>💧 Sucralose</h3>
+            <p>Gemaakt van suiker zelf na een chemische aanpassing, en ongeveer <strong>600 keer zoeter.</strong> <strong>Geen calorieën, en het verhoogt de bloedsuiker niet</strong>, en het kan tegen hitte, dus het is geschikt om mee te koken en te bakken. En eerlijk gezegd? Ik gebruik zelf elke dag twee druppels ervan in mijn koffie ☕</p>
+            <p><strong>In Europa:</strong> toegestaan, met de code E955.</p>
+            <h3>🌲 Xylitol</h3>
+            <p>Nog een suikeralcohol, met een zoetheid die dicht bij suiker ligt, <strong>en een glykemische index van ongeveer 13.</strong> Bekend van kauwgom omdat het de tanden niet beschadigt. Maar ook hiervan geven grote hoeveelheden diarree.</p>
+            <p><strong>En een heel belangrijk weetje:</strong> xylitol is <strong>giftig voor honden</strong> 🐶 zelfs een kleine hoeveelheid kan gevaarlijk voor ze zijn. Heb je een hond, houd xylitolkauwgom dan uit zijn buurt!</p>
+            <h3>🍈 Monniksvrucht en allulose</h3>
+            <p>Twee waar je veel over hoort in Amerikaanse video's. Maar <strong>in Europa is hun wettelijke status anders:</strong></p>
+            <ul class="check-list">
+                <li><strong>Allulose:</strong> nog <strong>niet toegestaan</strong> in de Europese Unie. De Europese autoriteit (EFSA) zei in 2025 dat het dossier niet genoeg veiligheidsstudies bevatte.</li>
+                <li><strong>Monniksvrucht:</strong> de status in Europa is beperkt en ingewikkeld, dus je vindt het niet zo makkelijk als stevia.</li>
+            </ul>
+            <p>Woon je in Europa, dan zijn stevia, erythritol en sucralose de praktische opties.</p>
+            <p><strong>En eerlijk is eerlijk:</strong> de Wereldgezondheidsorganisatie zei in 2023 dat ze zoetstoffen zonder suiker niet aanraadt als manier om af te vallen, omdat studies geen duidelijk voordeel op lange termijn hebben laten zien. Deze zoetstoffen zijn dus een hulpmiddel om minder suiker te gebruiken, geen dieetrecept. Het echte doel is dat je tong stukje bij beetje went aan minder zoetheid 😉</p>
+
+            <h2 class="section-title"><i class="fas fa-jar"></i> <span>"Natuurlijke alternatieven"… die uiteindelijk gewoon suiker zijn 🍯</span></h2>
+            <p>Hier moeten we eerlijk zijn, want veel producten worden verkocht als "gezond":</p>
+            <table class="sugar-table">
+                <thead><tr><th>Alternatief</th><th>Glykemische index</th><th>De waarheid</th></tr></thead>
+                <tbody>
+                    <tr><td>Honing</td><td>ongeveer 61</td><td>Natuurlijke suiker, ongeveer de helft is fructose</td></tr>
+                    <tr><td>Kokossuiker</td><td>ongeveer 54</td><td>Suiker, met evenveel calorieën als witte suiker</td></tr>
+                    <tr><td>Dadelstroop</td><td>niet beschikbaar</td><td>Geconcentreerde suiker uit dadels</td></tr>
+                    <tr><td>Witte suiker</td><td>ongeveer 65</td><td>Ter vergelijking</td></tr>
+                </tbody>
+            </table>
+            <p class="food-links"><a class="food-chip" href="{food:coconut-sugar}">Kokossuiker</a> <a class="food-chip" href="{food:fenugreek-tea-with-honey}">Fenegriekthee met honing</a></p>
+            <p><strong>Honing</strong> bevat een paar nuttige stoffen, maar het lichaam verwerkt het als suiker. En op <strong>kokossuiker</strong> staat vaak "lage glykemische index", maar de Universiteit van Sydney mat het op ongeveer 54, precies op de grens van laag, en niet ver van witte suiker.</p>
+            <p>De conclusie? <strong>"Natuurlijke" suiker… verhoogt natuurlijk nog steeds je suiker</strong> 😄 De hoeveelheid maakt het verschil, niet de naam op de verpakking.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>Minder suiker zonder je tekort te voelen</span></h2>
+            <p>Niemand wil zonder zoetigheid leven, en dat hoeft ook niet. Hier zijn praktische stappen waar je morgen mee kunt beginnen:</p>
+            <ol class="steps">
+                <li><strong>Begin bij de dranken.</strong> Drink je elke dag frisdrank of sap, dan valt hier de grootste winst te halen. Je kunt ze vervangen door bruisend water met citroen, ijsthee zonder suiker, of ijskoude hibiscusthee. <a class="food-chip" href="{food:hibiscus-iced-tea}">Hibiscusthee koud</a></li>
+                <li><strong>Eet je fruit, drink het niet.</strong> Een appel in plaats van een glas appelsap.</li>
+                <li><strong>Minder de lepels geleidelijk.</strong> Doe je twee lepels in je thee, maak er dan twee weken lang anderhalve lepel van, daarna één. Je tong went er sneller aan dan je denkt.</li>
+                <li><strong>Lees het etiket.</strong> Zoek naar "waarvan suikers" in de voedingswaardetabel, en naar de verborgen namen waar we het over hadden. En heb je geen tijd om elke verpakking in de supermarkt te lezen, laat dat dan aan ons over 👇</li>
+                <li><strong>Gebruik zoetstoffen slim.</strong> Twee druppels stevia of sucralose in koffie en thee, en erythritol om te bakken, maar alles met mate.</li>
+                <li><strong>Eet iets zoets na de maaltijd, niet los.</strong> Iets zoets na een maaltijd met eiwit en vezels is milder voor de bloedsuiker dan op een lege maag. <a class="food-chip" href="{food:appeltaart}">Hollandse appeltaart</a></li>
+                <li><strong>Kies je ontbijt goed.</strong> Grote havervlokken met fruit, in plaats van gezoete ontbijtgranen. <a class="food-chip" href="{food:gluten-free-rolled-oats}">Glutenvrije havervlokken</a></li>
+            </ol>
+            <aside class="boodi-card">
+                <div>
+                    <h2>📱 Scan de barcode met de boodi-app</h2>
+                    <p>In de supermarkt vertelt elk product een verhaal, maar in heel kleine letters 😄 De boodi-app leest het voor je: je scant de barcode, en de app laat zien hoeveel suiker en koolhydraten erin zitten, het suikerniveau en de glykemische index, onthult de ingrediënten, en stelt alternatieven met minder suiker uit hetzelfde schap voor.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Ontdek de boodi-app</a>
+            </aside>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>De conclusie in twee zinnen</span></h2>
+            <p><strong>De fructose in fruit komt in een kleine hoeveelheid, samen met vezels en water, en de darm kan het bijhouden, dus het is je vriend.</strong> De fructose in dranken en toegevoegde suiker komt daarentegen in een grote hoeveelheid in één keer, dus het stroomt door naar de lever, en daar wordt het omgezet in vet. <strong>Wees dus niet bang voor de appel… wees bang voor het blikje!</strong> 🍎🥤</p>'''),
+sv=dict(
+ title='Fruktos: en vän i frukten, en fiende i burken',
+ h1='Fruktos: en vän i frukten, en fiende i burken… vad är grejen?',
+ crumb='Fruktos och tillsatt socker',
+ summary='Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.',
+ cat='Kost',
+ desc='Varför skadar fruktosen i ett äpple dig inte, medan den i läsk går till levern? Tillsatt socker, alternativen och hur du drar ner på sockret.',
+ hero_alt='En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker',
+ about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
+ refs_label='Källor ▾',
+ disclaimer='<strong>Upplysning:</strong> den här artikeln är allmän information om kost och livsstil och ersätter inte råd från din läkare.',
+ review='Medicinskt granskad av <a href="{doctor}">Dr. Wassim Habib</a> | Grundare, WiBo Health · 31 oktober 2026',
+ body='''            <p class="lead"><strong>Tro det eller ej:</strong> ett äpple, ett glas äppeljuice och en burk läsk. Alla tre innehåller fruktos. Men kroppen hanterar var och en av dem på ett helt olika sätt… så mycket att den ena är din vän, och den andra kan vara din dolda fiende.</p>
+            <p>Låt oss förstå historien från början, utan krångel, och utan att förneka oss allt som är sött 😄</p>
+
+            <h2 class="section-title"><i class="fas fa-cubes-stacked"></i> <span>Vad betyder "tillsatt socker"?</span></h2>
+            <p>När vi pratar om tillsatt socker menar vi inte sockret som finns naturligt i ett äpple eller i mjölk. Vi menar sockret som har <strong>tillsatts</strong> i maten, eller som dricks för sig:</p>
+            <ul class="check-list">
+                <li><strong>Vitt socker (sackaros):</strong> det i din sockerskål. Varje korn är en glukosmolekyl som håller en fruktosmolekyl i handen. Det är alltså <strong>hälften glukos och hälften fruktos.</strong></li>
+                <li><strong>Majssirap med hög fruktoshalt (HFCS):</strong> mycket vanlig i USA; i Europa hittar du den på förpackningar som <strong>glucose-fructose syrup</strong> (på nederländska <strong>glucose-fructosestroop</strong>). Den sort som används i drycker innehåller cirka <strong>55 % fruktos.</strong></li>
+                <li><strong>Juice:</strong> även naturlig 100 % juice utan tillsatt socker. Världshälsoorganisationen räknar sockret i den som "fria sockerarter", precis som tillsatt socker. Varför? Det får du veta strax.</li>
+            </ul>
+            <p><strong>Och socker gömmer sig gärna bakom "oskyldiga" namn:</strong> dextros, maltos, glukossirap, rissirap, maltodextrin, invertsocker… och till sist är de alla socker. Hittar du alltså tre av de här namnen på samma förpackning vet du att produkten är full av socker, bara utspritt på flera namn så att det inte hamnar först bland ingredienserna 😏</p>
+
+            <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Var ligger faran? I mängden och hastigheten</span></h2>
+            <p>En sked socker i teet gör ingenting. Problemet är att skeden socker i teet inte stannar vid en: te på morgonen, kaffe vid lunch, en burk läsk till maten, en bit kaka på kvällen…</p>
+            <p>Här är en chockerande siffra: <strong>en burk vanlig läsk (330 ml) innehåller cirka 35 g socker, ungefär 9 teskedar.</strong> Världshälsoorganisationen rekommenderar att fria sockerarter står för mindre än 10 % av dina dagliga kalorier, <strong>och helst mindre än 5 %, alltså cirka 25 g (6 teskedar) för hela dagen.</strong> En enda burk förbrukar alltså din ranson för en och en halv dag!</p>
+            <p><strong>Och flytande socker är farligast</strong>, av två skäl:</p>
+            <ol class="steps">
+                <li><strong>Det dricks snabbt:</strong> en hel burk på två minuter, så allt socker kommer på en gång.</li>
+                <li><strong>Det mättar inte:</strong> kroppen räknar inte kalorier från drycker på samma sätt som kalorier från mat, så du äter din vanliga måltid ovanpå.</li>
+            </ol>
+
+            <h2 class="section-title"><i class="fas fa-route"></i> <span>Kärnan i historien: glukos och fruktos… bröder, men var och en på sin egen väg</span></h2>
+            <p>De kommer till tarmen tillsammans, men därifrån går var och en sin egen väg:</p>
+            <p><strong>Glukos</strong> är kroppens "officiella bränsle". Det går ut i blodet, och varje cell i kroppen vet hur den ska använda det: musklerna, hjärnan och hjärtat. När det stiger i blodet utsöndrar bukspottkörteln insulin, och insulinet öppnar cellernas dörrar så att det kan komma in.</p>
+            <p><strong>Fruktos</strong> har en annan historia. Nästan <strong>bara levern vet hur den ska hanteras.</strong> Den går alltså från tarmen direkt till levern, via portådern. Och där börjar historien.</p>
+            <figure class="article-figure">
+                <img src="/images/glucose-vs-fructose-liver-metabolism-pathway.webp" alt="Glukosens väg till kroppens celler jämfört med fruktosens väg till levern, där överskottet omvandlas till fett" width="1376" height="768" loading="lazy" decoding="async">
+                <figcaption>Den blå vägen: glukos går till alla kroppens celler. Den orange vägen: fruktos går direkt till levern, och överskottet omvandlas till fett.</figcaption>
+            </figure>
+            <h3>Låt mig berätta historien på ett annat sätt 🍽️</h3>
+            <p>Föreställ dig att <strong>din lever är en restaurang</strong>, och sockret är <strong>gäster</strong> som kommer för att äta.</p>
+            <p>Det mesta av <strong>glukosen</strong> går ändå till "andra restauranger" i kroppen: musklerna, hjärnan och hjärtat. Det som kommer till vår restaurang går in genom <strong>huvudingången</strong>, och där står en <strong>dörrvakt</strong> (ett enzym som heter PFK, men vi kallar honom bara dörrvakten 😄). Dörrvakten ser sig om i restaurangen: finns det lediga bord släpper han in gästen. Är restaurangen full säger han "vänta utanför en stund".</p>
+            <p><strong>Fruktosen</strong> kommer just till vår restaurang, och den går inte in genom huvudingången. Den går in genom <strong>köksdörren</strong>, och där <strong>finns ingen dörrvakt!</strong> Och restaurangägaren (levern) kan inte avvisa någon; han måste ta emot varje gäst som kommer in.</p>
+            <ul class="check-list">
+                <li><strong>Om det bara är några få gäster</strong> hittar ägaren lediga bord åt dem, och allt går bra. Det betyder att levern omvandlar fruktosen till glukos, eller lagrar den som ett snabbt förråd (glykogen).</li>
+                <li><strong>Men om restaurangen redan är full</strong>, alltså om glukosen som kom med fruktosen har fyllt förråden och höjt insulinet, finns det inte en enda ledig stol, och gästerna fortsätter att komma in efter varandra genom köksdörren. Vad gör ägaren då? <strong>Han ställer dem i hörnen och korridorerna… staplade på varandra</strong> 😅 Och det är precis det som händer: levern omvandlar överskottet av fruktos <strong>till fett</strong>, och den processen har ett vetenskapligt namn: de novo-lipogenes.</li>
+            </ul>
+            <p>Och här ligger det verkliga problemet: gäster som staplats i hörnen går inte lätt därifrån. Det betyder att fettet som bildas i levern blir kvar och staplas där, och så börjar <strong>fettlever</strong> (det nya vetenskapliga namnet är MASLD). En del av gästerna skickar ägaren ut genom bakdörren på gatan, alltså går de ut i blodet som <strong>triglycerider</strong>. Och allt detta går hand i hand med <strong>insulinresistens</strong>, som vi pratade om i <a href="/sv/articles/hogt-blodtryck-socker-insulin.html">artikeln om blodtryck</a>.</p>
+            <h3>Finns det bevis för det här?</h3>
+            <p>Absolut. I en känd studie som publicerades 2009 drack personer med övervikt sötade drycker som stod för en fjärdedel av deras dagliga kalorier, i 10 veckor. En grupp drack drycker sötade <strong>med fruktos</strong>, och en annan <strong>med glukos</strong>. Överraskningen: båda gick upp ungefär lika mycket i vikt, <strong>men bara fruktosgruppen</strong> fick mer fett runt organen i buken (visceralt fett), fick högre blodfetter och blev mindre känslig för insulin.</p>
+            <p>Alltså <strong>samma kalorier, men inte samma skada.</strong></p>
+            <h3>Vänta… fruktos höjer inte blodsockret?!</h3>
+            <p>Just det, och här finns en stor fälla. <strong>Det glykemiska indexet för fruktos är bara cirka 15</strong>, medan glukos är 100 och vitt socker cirka 65. Varför? För att fruktos inte går ut i blodet särskilt mycket; den går till levern. Blodsockermätaren ser den alltså inte.</p>
+            <p>Därför marknadsförs vissa produkter fulla av fruktos, som <strong>agavesirap</strong>, som "lågt glykemiskt index", som om de vore nyttiga. Men ett lågt index betyder här inte att produkten är oskyldig; det betyder att hela belastningen går till levern i stället för till blodet.</p>
+            <p><strong>Lärdomen:</strong> det glykemiska indexet är ett användbart verktyg, men <strong>allt med lågt index är inte nyttigt.</strong> (Och samma sak såg vi med luqaimat, som har lågt index på grund av fettet!)</p>
+            <p class="food-links"><a class="food-chip" href="{food:luqaimat}">Luqaimat med dadelsirap</a></p>
+
+            <h2 class="section-title"><i class="fas fa-apple-whole"></i> <span>Okej… och frukt? Innehåller den inte också fruktos?</span></h2>
+            <p>Jo, och det är frågan som skrämmer så många att de har slutat äta frukt. Men låt mig lugna dig: <strong>hel frukt är din vän</strong>, och skälet ryms i 4 ord: <strong>mängd, hastighet, fibrer och vatten.</strong></p>
+            <p><strong>1. Mängden är liten.</strong> Ett medelstort äpple innehåller cirka 11 g fruktos. En burk läsk innehåller ungefär 17 till 19 g, och inget nyttigt alls följer med.</p>
+            <p class="food-links"><a class="food-chip" href="{food:apple}">Äpple</a></p>
+            <p><strong>2. Tarmen skyddar levern.</strong> I försök på möss 2018 upptäckte forskare att <strong>tunntarmen själv tar hand om små mängder fruktos</strong> och omvandlar dem till glukos innan de når levern. Men när en stor mängd kommer på en gång hinner tarmen inte med, <strong>så fruktosen svämmar över till levern.</strong> Forskarna tror att samma sak sannolikt sker hos människor.</p>
+            <p><strong>3. Fibrer bromsar.</strong> Fibrerna i ett äpple fungerar som ett nät och släpper ut sockret i lugn takt.</p>
+            <p><strong>4. Vatten mättar.</strong> Försök äta 4 äpplen efter varandra. Svårt, eller hur? Men sockret från de 4 äpplena kan du dricka i ett glas äppeljuice på en minut!</p>
+            <p><strong>Och här kommer restaurangliknelsen tillbaka:</strong> ett äpple är som <strong>en enda gäst</strong> som lugnt kommer in genom köksdörren, och ägaren hittar lätt ett bord åt honom. Läsk däremot är <strong>en hel turistbuss</strong> som släpper av alla på en gång vid köksdörren 🚌 och restaurangen är redan full… så gissa var han ställer dem? I hörnen, staplade på varandra!</p>
+            <p><strong>Och vad säger de stora studierna?</strong> I en jättestudie som följde mer än 180 000 personer i många år hade de som åt mer <strong>hel frukt</strong> (särskilt blåbär, vindruvor och äpplen) lägre risk för typ 2-diabetes. Men de som drack mer <strong>juice</strong> hade högre risk.</p>
+            <p>Alltså <strong>samma frukt, men formen ändrar allt.</strong> Därför räknar Världshälsoorganisationen sockret i juice som tillsatt socker.</p>
+
+            <h2 class="section-title"><i class="fas fa-flask"></i> <span>Okej, vilka är alternativen?</span></h2>
+            <p>Vill du ha sötma utan belastningen på levern finns det många alternativ. Men vart och ett har sin egen historia:</p>
+            <h3>🌿 Stevia</h3>
+            <p>Från bladen av en växt från Sydamerika, och cirka <strong>200 till 300 gånger sötare än socker.</strong> <strong>Inga kalorier, och den höjer inte blodsockret.</strong> Två droppar i en kopp kaffe räcker. Den enda nackdelen är en lätt besk smak om du tar mer.</p>
+            <p><strong>I Europa:</strong> tillåten, med koden E960.</p>
+            <p class="food-links"><a class="food-chip" href="{food:liquid-stevia-drops}">Flytande steviadroppar</a></p>
+            <h3>🧊 Erytritol</h3>
+            <p>Från familjen "sockeralkoholer", med cirka <strong>70 % av sockrets sötma.</strong> <strong>Dess glykemiska index är noll, och kalorierna nästan noll.</strong> Hemligheten är att kroppen tar upp det men inte förbränner det, och utsöndrar det oförändrat med urinen. Det går alltså genom kroppen <strong>bara på genomresa, som en turist</strong>: det tittar sig omkring och åker hem igen 😄</p>
+            <p class="food-links"><a class="food-chip" href="{food:erythritol}">Erytritol (sötningsmedel)</a></p>
+            <p><strong>Men se upp med två saker:</strong></p>
+            <ul class="check-list">
+                <li>Europeiska myndigheten för livsmedelssäkerhet (EFSA) omprövade det 2023 och satte <strong>en daglig gräns: ett halvt gram per kilo kroppsvikt</strong> (cirka 35 g för en person som väger 70 kilo). Huvudskälet är att stora mängder ger <strong>diarré.</strong></li>
+                <li>En observationsstudie från 2023 fann att personer med <strong>höga nivåer av erytritol i blodet</strong> hade högre risk för hjärtproblem. Men observera: kroppen bildar själv erytritol, och studien bevisar inte att sötningsmedlet är orsaken. Frågan forskas det alltså fortfarande på, och vi råder dig till måttlighet, som med allt annat.</li>
+            </ul>
+            <h3>💧 Sukralos</h3>
+            <p>Tillverkat av socker självt efter en kemisk förändring, och cirka <strong>600 gånger sötare.</strong> <strong>Inga kalorier, och det höjer inte blodsockret</strong>, och det tål värme, så det fungerar i matlagning och bakning. Och ärligt talat? Själv använder jag två droppar av det i kaffet varje dag ☕</p>
+            <p><strong>I Europa:</strong> tillåtet, med koden E955.</p>
+            <h3>🌲 Xylitol</h3>
+            <p>En annan sockeralkohol, med en sötma nära sockrets, <strong>och ett glykemiskt index på cirka 13.</strong> Känd från tuggummi eftersom det inte skadar tänderna. Men även här ger stora mängder diarré.</p>
+            <p><strong>Och en mycket viktig upplysning:</strong> xylitol är <strong>giftigt för hundar</strong> 🐶 även en liten mängd kan vara farlig för dem. Har du hund, håll xylitoltuggummit borta från den!</p>
+            <h3>🍈 Munkfrukt och allulos</h3>
+            <p>Två som du hör mycket om i amerikanska videor. Men <strong>i Europa är deras rättsliga status en annan:</strong></p>
+            <ul class="check-list">
+                <li><strong>Allulos:</strong> fortfarande <strong>inte tillåtet</strong> i EU. Den europeiska myndigheten (EFSA) sa 2025 att underlaget inte innehöll tillräckligt med säkerhetsstudier.</li>
+                <li><strong>Munkfrukt:</strong> dess status i Europa är begränsad och komplicerad, så du hittar den inte lika lätt som stevia.</li>
+            </ul>
+            <p>Bor du i Europa är alltså stevia, erytritol och sukralos de praktiska alternativen.</p>
+            <p><strong>Och för att vara rättvis:</strong> Världshälsoorganisationen sa 2023 att den inte rekommenderar sötningsmedel utan socker som ett sätt att gå ner i vikt, eftersom studier inte har visat någon tydlig nytta på lång sikt. Sötningsmedlen är alltså ett verktyg för att dra ner på sockret, inte ett bantningsrecept. Det verkliga målet är att tungan steg för steg vänjer sig vid mindre sötma 😉</p>
+
+            <h2 class="section-title"><i class="fas fa-jar"></i> <span>"Naturliga alternativ"… som till sist är socker 🍯</span></h2>
+            <p>Här måste vi vara ärliga, för många produkter säljs som "nyttiga":</p>
+            <table class="sugar-table">
+                <thead><tr><th>Alternativ</th><th>Glykemiskt index</th><th>Sanningen</th></tr></thead>
+                <tbody>
+                    <tr><td>Honung</td><td>cirka 61</td><td>Naturligt socker, ungefär hälften fruktos</td></tr>
+                    <tr><td>Kokossocker</td><td>cirka 54</td><td>Socker, med lika många kalorier som vitt socker</td></tr>
+                    <tr><td>Dadelsirap</td><td>inte tillgängligt</td><td>Koncentrerat socker från dadlar</td></tr>
+                    <tr><td>Vitt socker</td><td>cirka 65</td><td>Som jämförelse</td></tr>
+                </tbody>
+            </table>
+            <p class="food-links"><a class="food-chip" href="{food:coconut-sugar}">Kokossocker</a> <a class="food-chip" href="{food:fenugreek-tea-with-honey}">Bockhornsklöverte med honung</a></p>
+            <p><strong>Honung</strong> innehåller några nyttiga ämnen, men kroppen hanterar den som socker. Och på <strong>kokossocker</strong> står det ofta "lågt glykemiskt index", men University of Sydney mätte det till cirka 54, precis på gränsen till lågt, och inte så långt från vitt socker.</p>
+            <p>Slutsatsen? <strong>"Naturligt" socker… höjer naturligtvis fortfarande ditt socker</strong> 😄 Det är mängden som gör skillnaden, inte namnet på förpackningen.</p>
+
+            <h2 class="section-title"><i class="fas fa-list-check"></i> <span>Så drar du ner på sockret utan att känna dig snål mot dig själv</span></h2>
+            <p>Ingen vill leva utan sötsaker, och det behövs inte heller. Här är praktiska steg du kan börja med i morgon:</p>
+            <ol class="steps">
+                <li><strong>Börja med dryckerna.</strong> Dricker du läsk eller juice varje dag är det här den största vinsten. Du kan byta ut dem mot kolsyrat vatten med citron, osötat iste eller iskall hibiskus. <a class="food-chip" href="{food:hibiscus-iced-tea}">Hibiskuste, kallt</a></li>
+                <li><strong>Ät frukten, drick den inte.</strong> Ett äpple i stället för ett glas äppeljuice.</li>
+                <li><strong>Minska skedarna gradvis.</strong> Tar du två skedar i teet, gör det till en och en halv i två veckor, sedan en. Tungan vänjer sig snabbare än du tror.</li>
+                <li><strong>Läs etiketten.</strong> Leta efter "varav sockerarter" i näringsvärdestabellen, och efter de dolda namnen vi pratade om. Och har du inte tid att läsa varje förpackning i mataffären, lämna det åt oss 👇</li>
+                <li><strong>Använd sötningsmedel smart.</strong> Två droppar stevia eller sukralos i kaffe och te, och erytritol till bakning, men allt med måtta.</li>
+                <li><strong>Ät sött efter maten, inte för sig.</strong> Något sött efter en måltid med protein och fibrer är snällare mot blodsockret än på fastande mage. <a class="food-chip" href="{food:appeltaart}">Holländsk äppelpaj (appeltaart)</a></li>
+                <li><strong>Välj rätt frukost.</strong> Storgryn med frukt i stället för sötade frukostflingor. <a class="food-chip" href="{food:gluten-free-rolled-oats}">Glutenfria havregryn</a></li>
+            </ol>
+            <aside class="boodi-card">
+                <div>
+                    <h2>📱 Skanna streckkoden med boodi-appen</h2>
+                    <p>I mataffären berättar varje produkt en historia, men med väldigt liten text 😄 boodi-appen läser den åt dig: du skannar streckkoden, och den visar hur mycket socker och kolhydrater produkten innehåller, sockernivån och det glykemiska indexet, avslöjar ingredienserna och föreslår alternativ med mindre socker från samma hylla.</p>
+                </div>
+                <a class="boodi-btn" href="{site:/boodi.html}"><i class="fas fa-barcode"></i> Upptäck boodi-appen</a>
+            </aside>
+
+            <h2 class="section-title"><i class="fas fa-flag-checkered"></i> <span>Slutsatsen på två rader</span></h2>
+            <p><strong>Fruktosen i frukt kommer i en liten mängd, tillsammans med fibrer och vatten, och tarmen hinner med, så den är din vän.</strong> Fruktosen i drycker och tillsatt socker kommer däremot i en stor mängd på en gång, så den svämmar över till levern, och där omvandlas den till fett. <strong>Så var inte rädd för äpplet… var rädd för burken!</strong> 🍎🥤</p>'''),
+    ),
+)
+
+ARTICLES = [SUGAR_FREE_CEREALS, PREDIABETES, GESTATIONAL_DIABETES, FATTY_LIVER_GUIDE, HYPERTENSION_INSULIN, FRUCTOSE, INSULIN_RESISTANCE_SV,
             LEPTIN_SV, CORTISOL_SV, INTERMITTENT_FASTING_SV, MAGNESIUM_SV, BONE_HEALTH_SV, THYROID_SV]

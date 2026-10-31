@@ -479,16 +479,24 @@ def build(a, lang):
             schema = {"@context": ctx, "@graph": [schema, art]}
 
     refs_html = ''.join(f'<li>{esc(r)}</li>' for r in references)
-    refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
+    if a.get('refs_folded') and refs_html:               # a closed grey "Sources" list just above the disclaimer
+        refs = (f'''            <details class="refs-fold"><summary>{c["refs_label"]}</summary>
+            <ol class="ref-list">{refs_html}</ol></details>
+''')
+    else:
+        refs = (f'''            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
             <ol class="ref-list">{refs_html}</ol>
 ''' if refs_html else '')
+    # medical review line under the disclaimer (`review` with {doctor} for the doctor page link)
+    review = (f'\n            <p class="reviewed">{c["review"].format(doctor=link("/doctor.html", lang))}</p>'
+              if c.get('review') else '')
     hero_cls = 'article-hero-img article-hero-portrait' if a.get('hero_portrait') else 'article-hero-img'
     hero_img = (f'''            <img class="{hero_cls}" src="/images/{a['hero']}" alt="{esc(c["hero_alt"])}" width="{a['hero_size'][0]}" height="{a['hero_size'][1]}" fetchpriority="high" decoding="async">
 ''' if hero else '')
     draft_chip = f'<span class="draft-chip">{t["draft"]}</span>' if draft else ''
     byline = (f'''
             <p class="article-byline"><i class="fas fa-user-doctor"></i> <a href="{link('/doctor.html', lang)}">{esc(c["byline"])}</a></p>'''
-              if named else '')
+              if named and c.get('byline') else '')
     subtitle = f'\n            <p class="article-subtitle">{esc(c["subtitle"])}</p>' if c.get('subtitle') else ''
     published = (t['published_on'] if named else t['published']).format(date=date_text(a['published'], lang))
     main = f'''        <article class="about-card">
@@ -501,7 +509,7 @@ def build(a, lang):
 {hero_img}
 {render_body(c["body"], lang)}
 
-{refs}            <p class="disclaimer-box">{c["disclaimer"]}</p>
+{refs}            <p class="disclaimer-box">{c["disclaimer"]}</p>{review}
         </article>'''
     extra_head = f'\n    <meta property="article:published_time" content="{a["published"]}">'
     if hero:
