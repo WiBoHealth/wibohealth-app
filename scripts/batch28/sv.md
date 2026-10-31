@@ -184,14 +184,16 @@ Idén är densamma, men nasi goreng använder söt ketjapsås, så den innehåll
 ## 878
 sugar: inte tillgängligt
 ii: inte testat
-refs: Det glykemiska indexet för det här livsmedlet är beräknat med FAO/WHO:s formel för sammansatta måltider: vitt bröd (75 ± 2, Atkinson 2008) och russin (64 ± 11, Jenkins m.fl.), med russin som ungefär en femtedel av brödets vikt. Eftersom de två ingrediensernas index ligger mellan 64 och 75 hamnar resultatet i det här intervallet oavsett andelen russin. Det är ingen direkt laboratoriemätning. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998.
+title: Krentenbrood kalorier: 285 per 100 g – holländskt russinbröd och blodsockret
+desc: Hur många kalorier har krentenbrood? Två skivor ger cirka 200 kalorier. Läs om effekten på blodsockret (GI 57) och lättare frukostalternativ.
+refs: Det glykemiska indexet för det här livsmedlet är hämtat från genomsnittet av mätningar av 12 sorters fruktbröd i de internationella tabellerna; det är ingen direkt laboratoriemätning av krentenbrood. Atkinson FS et al. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32.
 
 ### Hur många kalorier finns det i krentenbrood?
 Krentenbrood är det älskade holländska frukostbrödet, fullt av russin, som äts med smör eller ost. **Det finns 285 kalorier per 100 g, och två skivor (70 g) innehåller cirka 200 kalorier.**
 
 ### Höjer krentenbrood blodsockret?
-Många tror att russinen gör det "nyttigt", men sanningen är att **basen är vitt mjöl.** Vitt bröd har ett index på cirka 75 och russin cirka 64, så det beräknade indexet för krentenbrood blev cirka 72, alltså högt.
-Och eftersom två skivor innehåller cirka 35 g tillgängliga kolhydrater är den glykemiska belastningen för en portion cirka 25, alltså hög. Två skivor krentenbrood till frukost höjer alltså blodsockret mer än du skulle tro.
+Många tror att russinen gör det "nyttigt", men sanningen är att **basen är vitt mjöl.** De internationella tabellerna ger fruktbröd i allmänhet ett index på cirka **57, alltså medelhögt**. Det är alltså lite snällare än vanligt vitt bröd (cirka 75), men inte lågt.
+Och eftersom två skivor innehåller cirka 35 g tillgängliga kolhydrater är **den glykemiska belastningen för en portion cirka 20, alltså hög.** Två skivor krentenbrood till frukost höjer alltså blodsockret mer än du skulle tro.
 
 ### Så äter du det smart
 - Håll dig till **en skiva** med något som innehåller protein, som ost eller ett ägg.
@@ -200,7 +202,7 @@ Och eftersom två skivor innehåller cirka 35 g tillgängliga kolhydrater är de
 - Gillar du den söta smaken kan du äta flerkornsbröd med några russin vid sidan av.
 
 ### Lättare alternativ
-- **I stället för krentenbrood (72):** särskilt flerkornsbröd med ett index på cirka 53.
+- **I stället för krentenbrood (57):** särskilt flerkornsbröd med ett index på cirka 53.
 - **I stället för två skivor:** en skiva med vit ost och gurka.
 
 ### FAQ
@@ -208,7 +210,7 @@ Och eftersom två skivor innehåller cirka 35 g tillgängliga kolhydrater är de
 285 kalorier per 100 g, och två skivor (70 g) innehåller cirka 200 kalorier.
 
 **Höjer krentenbrood blodsockret?**
-Ja, det beräknade indexet är cirka 72 (högt), eftersom basen är vitt mjöl.
+Indexet är cirka 57 (medelhögt), men belastningen för två skivor är cirka 20 (hög), eftersom basen är vitt mjöl.
 
 **Är krentenbrood bättre än vitt bröd?**
 Det är ungefär samma sak. Russinen ändrar inte mycket; skillnaden kommer från grovt mjöl eller fullkorn.

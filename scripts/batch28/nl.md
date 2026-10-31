@@ -184,14 +184,16 @@ Het idee is hetzelfde, maar nasi goreng gebruikt zoete ketjap, dus er zit vaak m
 ## 878
 sugar: niet beschikbaar
 ii: niet getest
-refs: De glykemische index van dit product is berekend met de FAO/WHO-formule voor samengestelde maaltijden: witbrood (75 ± 2, Atkinson 2008) en rozijnen (64 ± 11, Jenkins et al.), uitgaande van rozijnen als ongeveer een vijfde van het gewicht van het brood. Omdat de indexen van de twee ingrediënten tussen 64 en 75 liggen, blijft de uitkomst in dit bereik, hoe groot het aandeel rozijnen ook is. Het is geen directe laboratoriummeting. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998.
+title: Krentenbrood calorieën: 285 per 100 g – en het effect op je bloedsuiker
+desc: Hoeveel calorieën zitten er in krentenbrood? Twee sneetjes: zo'n 200 calorieën. Lees het effect op je bloedsuiker (GI 57) en lichtere ontbijtopties.
+refs: De glykemische index van dit product is overgenomen van het gemiddelde van metingen van 12 soorten vruchtenbrood in de internationale tabellen; het is geen directe laboratoriummeting van krentenbrood. Atkinson FS et al. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32.
 
 ### Hoeveel calorieën zitten er in krentenbrood?
 Krentenbrood is het geliefde Nederlandse ontbijtbrood, vol rozijnen, gegeten met boter of kaas. **Er zitten 285 calorieën in 100 g, en twee sneetjes (70 g) bevatten ongeveer 200 calorieën.**
 
 ### Verhoogt krentenbrood de bloedsuiker?
-Veel mensen denken dat de rozijnen het "gezond" maken, maar de waarheid is dat **de basis witte bloem is.** Witbrood heeft een index van ongeveer 75 en rozijnen ongeveer 64, dus de berekende index van krentenbrood kwam uit op ongeveer 72, dus hoog.
-En omdat twee sneetjes ongeveer 35 g beschikbare koolhydraten bevatten, is de glykemische lading van een portie ongeveer 25, dus hoog. Twee sneetjes krentenbrood bij het ontbijt verhogen je bloedsuiker dus meer dan je zou verwachten.
+Veel mensen denken dat de rozijnen het "gezond" maken, maar de waarheid is dat **de basis witte bloem is.** De internationale tabellen geven vruchtenbrood in het algemeen een index van ongeveer **57, dus gemiddeld**. Het is dus iets milder dan gewoon witbrood (ongeveer 75), maar niet laag.
+En omdat twee sneetjes ongeveer 35 g beschikbare koolhydraten bevatten, is **de glykemische lading van een portie ongeveer 20, dus hoog.** Twee sneetjes krentenbrood bij het ontbijt verhogen je bloedsuiker dus meer dan je zou verwachten.
 
 ### Zo eet je het slim
 - Houd het bij **één sneetje** met iets waar eiwit in zit, zoals kaas of een ei.
@@ -200,7 +202,7 @@ En omdat twee sneetjes ongeveer 35 g beschikbare koolhydraten bevatten, is de gl
 - Hou je van de zoete smaak, eet dan meergranenbrood met een paar losse rozijnen.
 
 ### Lichtere alternatieven
-- **In plaats van krentenbrood (72):** speciaal meergranenbrood met een index van ongeveer 53.
+- **In plaats van krentenbrood (57):** speciaal meergranenbrood met een index van ongeveer 53.
 - **In plaats van twee sneetjes:** één sneetje met witte kaas en komkommer.
 
 ### FAQ
@@ -208,7 +210,7 @@ En omdat twee sneetjes ongeveer 35 g beschikbare koolhydraten bevatten, is de gl
 285 calorieën per 100 g, en twee sneetjes (70 g) bevatten ongeveer 200 calorieën.
 
 **Verhoogt krentenbrood de bloedsuiker?**
-Ja, de berekende index is ongeveer 72 (hoog), omdat de basis witte bloem is.
+De index is ongeveer 57 (gemiddeld), maar de lading van twee sneetjes is ongeveer 20 (hoog), omdat de basis witte bloem is.
 
 **Is krentenbrood beter dan witbrood?**
 Het is ongeveer hetzelfde. De rozijnen veranderen niet veel; het verschil komt van volkorenmeel of volle granen.

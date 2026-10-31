@@ -184,14 +184,16 @@ The idea is the same, but nasi goreng uses sweet ketjap sauce, so it often conta
 ## 878
 sugar: not available
 ii: not tested
-refs: The glycemic index of this food is calculated with the FAO/WHO formula for mixed meals: white bread (75 ± 2, Atkinson 2008) and raisins (64 ± 11, Jenkins et al.), taking raisins as about one fifth of the bread's weight. Since the two ingredients' indices lie between 64 and 75, the result stays in this range whatever the share of raisins. It is not a direct laboratory measurement. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998.
+title: Krentenbrood Calories: 285 per 100 g – Dutch Raisin Bread and Blood Sugar
+desc: How many calories are in krentenbrood? Two slices have about 200 calories. Learn its effect on blood sugar (GI 57) and lighter breakfast swaps.
+refs: The glycemic index of this food is taken from the average of measurements of 12 kinds of fruit bread in the international tables; it is not a direct laboratory measurement of krentenbrood. Atkinson FS et al. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32.
 
 ### How many calories are in krentenbrood?
 Krentenbrood is the much-loved Dutch breakfast bread, full of raisins, eaten with butter or cheese. **There are 285 calories per 100 g, and two slices (70 g) have about 200 calories.**
 
 ### Does krentenbrood raise blood sugar?
-Many people think the raisins make it "healthy", but the truth is that **its base is white flour.** White bread has an index of about 75 and raisins about 64, so the calculated index for krentenbrood came out at about 72, which means high.
-And since two slices have about 35 g of available carbohydrate, the glycemic load of a portion is about 25, which means high. So two slices of krentenbrood at breakfast raise your blood sugar more than you would expect.
+Many people think the raisins make it "healthy", but the truth is that **its base is white flour.** The international tables give fruit bread in general an index of about **57, which means medium**. So it is a little gentler than ordinary white bread (about 75), but it is not low.
+And since two slices have about 35 g of available carbohydrate, **the glycemic load of a portion is about 20, which means high.** So two slices of krentenbrood at breakfast raise your blood sugar more than you would expect.
 
 ### How to eat it smartly
 - Keep it to **one slice** with something that has protein, such as cheese or an egg.
@@ -200,7 +202,7 @@ And since two slices have about 35 g of available carbohydrate, the glycemic loa
 - If you like the sweet taste, you can eat grain bread with a few raisins on the side.
 
 ### Lighter alternatives
-- **Instead of krentenbrood (72):** specialty grain bread with an index of about 53.
+- **Instead of krentenbrood (57):** specialty grain bread with an index of about 53.
 - **Instead of two slices:** one slice with white cheese and cucumber.
 
 ### FAQ
@@ -208,7 +210,7 @@ And since two slices have about 35 g of available carbohydrate, the glycemic loa
 285 calories per 100 g, and two slices (70 g) have about 200 calories.
 
 **Does krentenbrood raise blood sugar?**
-Yes, its calculated index is about 72 (high), because its base is white flour.
+Its index is about 57 (medium), but the load of two slices is about 20 (high), because its base is white flour.
 
 **Is krentenbrood better than white bread?**
 It is about the same. The raisins do not change much; the difference comes from wholemeal flour or whole grains.

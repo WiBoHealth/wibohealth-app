@@ -293,12 +293,19 @@ PILOT = {
     1025: ('pantry', 4), 1026: ('pantry', 100), 1028: ('pantry', 4), 972: ('dairy_solid', 17), 971: ('dairy_solid', 30),
     922: ('protein', 100), 908: ('asian', 150), 1049: ('sweets', 90), 951: ('arabic', 150),   # 1047 held (calories)
     881: ('sweets', 100), 984: ('pantry', 5),
+    # batch 29 (31 October 2026): 25 more foods from 876-1056, same long-copy template plus approved search titles and
+    # meta descriptions (fields `title`, `desc`); portions from the copy
+    952: ('arabic', 200), 956: ('arabic', 200), 957: ('arabic', 250), 1045: ('arabic', 250), 1048: ('arabic', 144),
+    1050: ('sweets', 86), 1032: ('dairy_solid', 30), 973: ('dairy_solid', 18), 880: ('sweets', 60), 882: ('bakery', 90),
+    907: ('asian', 250), 911: ('fastfood', 100), 916: ('asian', 25), 885: ('sweets', 20), 1009: ('sweets', 100),
+    879: ('bakery', 50), 1013: ('drink', 240), 992: ('drink', 240), 1027: ('pantry', 100), 1029: ('pantry', 4),
+    999: ('pantry', 10), 1030: ('pantry', 10), 935: ('veg', 10), 1053: ('asian', 300), 926: ('protein', 180),
 }
 # batch 28 page variants: drinks measured in ml; GI from a published measurement (label "published value"); GI not
 # available (no published measurement and no comparable food)
-ML_UNIT = {1017, 993, 991, 963}
-PUBLISHED_GI = {1025, 1028, 1049}
-GI_UNAVAILABLE = {989}
+ML_UNIT = {1017, 993, 991, 963, 1013, 992}
+PUBLISHED_GI = {1025, 1028, 1049, 1048, 1050}
+GI_UNAVAILABLE = {989, 957, 911, 885, 1009, 1029, 1030, 926}
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
                64, 65, 67, 73, 75, 76, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 96, 97, 99, 100, 102,
@@ -311,7 +318,9 @@ TEAM_REVIEW |= set(range(207, 826))
 NAMED_REVIEW = {i: '2026-10-20' for i in range(826, 851)}
 NAMED_REVIEW.update({i: '2026-10-21' for i in range(851, 876)})
 NAMED_REVIEW.update({i: '2026-10-31' for i in (1017, 993, 991, 963, 906, 878, 981, 987, 930, 989, 1025, 1026, 1028, 972,
-                                               971, 922, 908, 1049, 951, 881, 984)})
+                                               971, 922, 908, 1049, 951, 881, 984,
+                                               952, 956, 957, 1045, 1048, 1050, 1032, 973, 880, 882, 907, 911, 916, 885,
+                                               1009, 879, 1013, 992, 1027, 1029, 999, 1030, 935, 1053, 926)})
 NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'},
                     '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'},
                     '2026-10-31': {'ar': '31 أكتوبر 2026', 'en': '31 October 2026', 'nl': '31 oktober 2026',
@@ -1034,21 +1043,24 @@ REF_BAO = ('Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insuli
 REFS_UI = {
     'ar': dict(title='المراجع والمصادر العلمية',
                measured='قيمة المؤشر الجلايسيمي مأخوذة من الجداول الدولية: ',
-               reviewed='قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021). تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
+               reviewed='هذه القيمة تقدير، وليست قياساً مخبرياً مباشراً لهذا الصنف. التفاصيل في البند التالي. تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
+               reviewed_nonote='هذه القيمة تقدير، وليست قياساً مخبرياً مباشراً لهذا الصنف. تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
                na='لا ينطبق المؤشر الجلايسيمي لأن الصنف يحتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، واختبار المؤشر يتطلب 25 إلى 50 غ كربوهيدرات متاحة وفق: ',
                iso='تصنيف المؤشر الجلايسيمي وطريقة قياسه: ',
                fao='تعريف الكربوهيدرات المتاحة والحمل الجلايسيمي: ',
                ii='مؤشر الإنسولين: '),
     'en': dict(title='References & Scientific Sources',
                measured='The glycemic index value comes from the international tables: ',
-               reviewed='The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the International GI Tables (Atkinson 2021). GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
+               reviewed='This value is an estimate, not a direct laboratory measurement of this food. Details in the next item. GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
+               reviewed_nonote='This value is an estimate, not a direct laboratory measurement of this food. GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
                na='The glycemic index does not apply because this food has less than 5 g of available carbohydrate per 100 g, and a GI test requires 25 to 50 g of available carbohydrate, per: ',
                iso='GI classification and test method: ',
                fao='Definition of available carbohydrate and glycemic load: ',
                ii='Insulin index: '),
     'nl': dict(title='Wetenschappelijke bronnen & Referenties',
                measured='De waarde van de glykemische index komt uit de internationale tabellen: ',
-               reviewed='De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale GI-tabellen (Atkinson 2021). De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
+               reviewed='Deze waarde is een schatting, geen directe laboratoriummeting van dit product. Details in het volgende punt. De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
+               reviewed_nonote='Deze waarde is een schatting, geen directe laboratoriummeting van dit product. De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
                na='De glykemische index is niet van toepassing, omdat dit product minder dan 5 g beschikbare koolhydraten per 100 g bevat, en een GI-test 25 tot 50 g beschikbare koolhydraten vereist, volgens: ',
                iso='GI-indeling en testmethode: ',
                fao='Definitie van beschikbare koolhydraten en glykemische lading: ',
@@ -1555,16 +1567,27 @@ BODY_UI = {
 BODY_CSS = ('.food-body { margin: 4px 0 22px; } .about-card .food-body h3 { font-size: 1.12em; font-weight: 800; color: var(--text-main); '
             'margin: 20px 0 6px; } .about-card .food-body h3:first-child { margin-top: 6px; } .about-card .food-body p { margin: 0 0 8px; } '
             '.food-body ul, .food-body ol { margin: 0 0 10px; padding-inline-start: 22px; } .food-body li { margin: 0 0 6px; line-height: 1.75; } '
-            '.about-card .food-body .brand-note { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); }')
+            '.about-card .food-body .brand-note { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); } '
+            '.food-body blockquote { margin: 4px 0 10px; padding: 10px 14px; border-inline-start: 4px solid #f59e0b; '
+            'background: rgba(245, 158, 11, 0.1); border-radius: 8px; line-height: 1.7; } '
+            '.food-body .read-also { font-weight: 700; } '
+            '.food-body .read-also a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }')
 
 
-def inline_md(s):
-    """Escape a line of approved copy and turn **bold** into <strong>."""
-    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(s))
+BODY_READ_ALSO = {'ar': 'اقرأ أيضاً:', 'en': 'Read also:', 'nl': 'Lees ook:', SV: 'Läs även:'}
 
 
-def render_body(md):
-    """The approved body copy (### headings, - bullets, 1. numbered steps, one paragraph per line) as HTML."""
+def inline_md(s, link=None):
+    """Escape a line of approved copy and turn **bold** into <strong>; [[id]] / [[id|text]] (batch 29) become a
+    "read also" link to that food's page, in the reader's language, named as in the copy or else as in data.js."""
+    out = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(s))
+    if link:
+        out = re.sub(r'\[\[(\d+)(?:\|([^\]]+))?\]\]', lambda m: link(int(m.group(1)), m.group(2)), out)
+    return out
+
+
+def render_body(md, link=None):
+    """The approved body copy (### headings, - bullets, 1. numbered steps, > quoted text, one paragraph per line) as HTML."""
     out, items, kind = [], [], None
     def flush():
         nonlocal items, kind
@@ -1579,13 +1602,15 @@ def render_body(md):
             if kind != k:
                 flush()
                 kind = k
-            items.append(inline_md(m.group(2)))
+            items.append(inline_md(m.group(2), link))
             continue
         flush()
         if line.startswith('### '):
-            out.append(f'<h3>{inline_md(line[4:])}</h3>')
+            out.append(f'<h3>{inline_md(line[4:], link)}</h3>')
+        elif line.startswith('> '):
+            out.append(f'<blockquote>{inline_md(line[2:], link)}</blockquote>')
         elif line:
-            out.append(f'<p>{inline_md(line)}</p>')
+            out.append(f'<p>{inline_md(line, link)}</p>')
     flush()
     return ''.join(out)
 
@@ -1979,7 +2004,9 @@ def build(food, lang, ctx):
                                        grade=food['gi_grade'] or '-'),
                  r['iso'] + ref_cite(REF_ISO)]
     elif reviewed:
-        items = [(bu['ref_published'] if published else r['reviewed']) + ref_cite(REF_ISO)]
+        # approved 31 October 2026: "details in the next item" only where the page carries its own note
+        line = bu['ref_published'] if published else r['reviewed' if ov.get('refs_extra') else 'reviewed_nonote']
+        items = [line + ref_cite(REF_ISO)]
     elif unavailable:                       # no GI line: the approved note below explains why there is no value
         items = []
     else:                                   # `ref_gi`: approved wording where the "< 5 g" sentence would be false
@@ -2052,7 +2079,12 @@ def build(food, lang, ctx):
     if body_md:                             # the approved sections, open, in place of the lead and the generic tips
         brand = ov.get('brand_note', {}).get(lang)     # brand products: approximate values, no affiliation
         brand_html = f'<p class="brand-note">{esc(brand)}</p>' if brand else ''
-        intro_html = f'<section class="food-body">{render_body(body_md)}{brand_html}</section>'
+        def body_link(fid, text):
+            target = ctx['foods'][fid]
+            label = text or (target[SV] if lang == SV else target[lang])
+            return (f'<span class="read-also">{BODY_READ_ALSO[lang]} '
+                    f'<a href="{food_url(ctx["slug"][fid], fid, lang, absolute=False)}">{esc(label)}</a></span>')
+        intro_html = f'<section class="food-body">{render_body(body_md, body_link)}{brand_html}</section>'
         body_style = f'\n    <style>{BODY_CSS}</style>'
     else:
         intro_html = f'''<div class="lead-fold">

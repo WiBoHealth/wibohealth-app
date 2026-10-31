@@ -1,7 +1,8 @@
-"""Batch 28 (31 October 2026): merge the approved copy in scripts/batch28/{ar,en,nl,sv}.md into the generator inputs.
+"""Batches 28 and 29 (31 October 2026): merge the approved copy in scripts/batch28/ and scripts/batch29/ ({ar,en,nl,sv}.md)
+into the generator inputs (both batches in one run, so rerunning never drops the other batch).
 
 ar/en/nl go to scripts/food_pages_overrides.json; the Swedish names, plural flags and copy go to scripts/food_sv.py.
-Each food: "## <id>", then key lines (slug, portion, sugar, ii, brand, refs [repeatable], ref_gi), then the body
+Each food: "## <id>", then key lines (slug, portion, sugar, ii, brand, title, desc, refs [repeatable], ref_gi), then the body
 (### sections) and, after "### FAQ", the questions as **question** + answer lines. Safe to rerun: the batch's earlier
 entries are removed first. Foods in HELD keep their copy here but get no page (1047: calories to be checked first).
 """
@@ -11,9 +12,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPTS = HERE.parent
+BATCH_DIRS = (HERE, SCRIPTS / 'batch29')
 LANGS = ('ar', 'en', 'nl', 'sv')
 HELD = {1047}
-KEYS = {'sugar': 'sugar', 'ii': 'ii_text', 'portion': 'portion_label', 'ref_gi': 'ref_gi', 'brand': 'brand_note'}
+KEYS = {'sugar': 'sugar', 'ii': 'ii_text', 'portion': 'portion_label', 'ref_gi': 'ref_gi', 'brand': 'brand_note', 'title': 'title', 'desc': 'desc'}
 SV_NAMES = {   # id: (Swedish display name, name inside sentences)
     1017: ('Yerba mate', 'yerba mate'), 993: ('Kanel- och ingefärste', 'kanel- och ingefärsteet'),
     991: ('Bockhornsklöverte med honung', 'bockhornsklöverteet'), 963: ('Benbuljong på nötben', 'benbuljongen'),
@@ -26,14 +28,31 @@ SV_NAMES = {   # id: (Swedish display name, name inside sentences)
     908: ('Kycklingsatay med jordnötssås', 'kycklingsatay'), 1047: ('Machboos med lamm', 'machboos med lamm'),
     1049: ('Luqaimat med dadelsirap', 'luqaimat'), 951: ('Grillade arayes (pitabröd fyllt med köttfärs)', 'arayes'),
     881: ('Holländsk äppelpaj (appeltaart)', 'äppelpajen'), 984: ('Psylliumfröskal', 'psylliumfröskal'),
+    # batch 29
+    952: ('Egyptisk hawawshi med köttfärs', 'hawawshi'), 956: ('Egyptisk mombar med risfyllning', 'mombar'),
+    957: ('Egyptisk kishk med kyckling', 'kishk'), 1045: ('Irakisk grillad masgouf (fisk)', 'masgouf'),
+    1048: ('Balaleet från Gulfen (söt vermicelli med ägg)', 'balaleet'),
+    1050: ('Emiratisk khabeesa med mannagryn och kardemumma', 'khabeesa'), 1032: ('Egyptisk mishost', 'mishost'),
+    973: ('Krämiga ostkuber (Kiri)', 'ostkuber'), 880: ('Holländska oliebollen', 'oliebollen'),
+    882: ('Holländsk saucijzenbroodje (korv i smördeg)', 'saucijzenbroodje'),
+    907: ('Bami goreng (indonesiska stekta nudlar)', 'bami goreng'), 911: ('Holländsk satékroket', 'satékroket'),
+    916: ('Räkchips (kroepoek)', 'kroepoek'), 885: ('Salt lakrits (dubbelzout drop)', 'salt lakrits'),
+    1009: ('Limburgsk körsbärsvlaai', 'körsbärsvlaai'), 879: ('Stollen med mandelmassa (kerststol)', 'stollen'),
+    1013: ('Lindblomste', 'lindblomsteet'), 992: ('Svartkumminte med honung', 'svartkumminteet'),
+    1027: ('Munkfrukt (monk fruit) sötningsmedel', 'munkfrukt'), 1029: ('Allulos (sötningsmedel)', 'allulos'),
+    999: ('Kollagenpeptider från nöt', 'kollagenpeptider'), 1030: ('Johannesbrödpulver (kakaoersättning)', 'johannesbrödpulver'),
+    935: ('Svart sommartryffel', 'svart sommartryffel'), 1053: ('Thailändsk tom kha gai-soppa', 'tom kha gai'),
+    926: ('Cordon bleu på kyckling', 'cordon bleu'),
 }
-SV_PLURAL = {981, 987, 972, 1026, 1049, 951, 984}
-MARK = '    # batch 28 (31 October 2026): translated from the approved Arabic copy'
+SV_PLURAL = {981, 987, 972, 1026, 1049, 951, 984, 973, 880, 916, 999}
+MARK = '    # batch 28 (31 October 2026): translated from the approved Arabic copy'   # also covers batch 29
 
 
 def parse(lang):
     foods = {}
-    for block in re.split(r'^## (?=\d+\s*$)', (HERE / f'{lang}.md').read_text(encoding='utf-8'), flags=re.M)[1:]:
+    blocks = [b for d in BATCH_DIRS for b in
+              re.split(r'^## (?=\d+\s*$)', (d / f'{lang}.md').read_text(encoding='utf-8'), flags=re.M)[1:]]
+    for block in blocks:
         lines = block.split('\n')
         fid, o, i = int(lines[0]), {}, 1
         while i < len(lines) and not lines[i].startswith('### '):
