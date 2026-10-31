@@ -286,7 +286,19 @@ PILOT = {
     864: ('protein', 40), 865: ('condiment', 40), 866: ('home', 250), 867: ('home', 300), 868: ('home', 220),
     869: ('home', 200), 870: ('salad', 200), 871: ('protein', 100), 872: ('home', 250), 873: ('home', 180),
     874: ('sweets', 100), 875: ('sweets', 12),
+    # batch 28 (31 October 2026): 22 foods picked from the unpublished ids 876-1056, long copy with h3 sections
+    # (field `body`), new names without health claims; portions from the copy (drinks in ml, see ML_UNIT)
+    1017: ('drink', 240), 993: ('drink', 240), 991: ('drink', 240), 963: ('home', 240), 906: ('asian', 250),
+    878: ('bakery', 70), 981: ('grain', 40), 987: ('grain', 200), 930: ('veg', 100), 989: ('fruit', 30),
+    1025: ('pantry', 4), 1026: ('pantry', 100), 1028: ('pantry', 4), 972: ('dairy_solid', 17), 971: ('dairy_solid', 30),
+    922: ('protein', 100), 908: ('asian', 150), 1049: ('sweets', 90), 951: ('arabic', 150),   # 1047 held (calories)
+    881: ('sweets', 100), 984: ('pantry', 5),
 }
+# batch 28 page variants: drinks measured in ml; GI from a published measurement (label "published value"); GI not
+# available (no published measurement and no comparable food)
+ML_UNIT = {1017, 993, 991, 963}
+PUBLISHED_GI = {1025, 1028, 1049}
+GI_UNAVAILABLE = {989}
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
                64, 65, 67, 73, 75, 76, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 96, 97, 99, 100, 102,
@@ -298,8 +310,12 @@ TEAM_REVIEW |= set(range(207, 826))
 # foods whose copy Dr. Wassim reviewed and signed himself: the page names him with the date he approved it
 NAMED_REVIEW = {i: '2026-10-20' for i in range(826, 851)}
 NAMED_REVIEW.update({i: '2026-10-21' for i in range(851, 876)})
+NAMED_REVIEW.update({i: '2026-10-31' for i in (1017, 993, 991, 963, 906, 878, 981, 987, 930, 989, 1025, 1026, 1028, 972,
+                                               971, 922, 908, 1049, 951, 881, 984)})
 NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'},
-                    '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'}}
+                    '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'},
+                    '2026-10-31': {'ar': '31 أكتوبر 2026', 'en': '31 October 2026', 'nl': '31 oktober 2026',
+                                   'sv': '31 oktober 2026'}}
 
 
 def review_date(fid):
@@ -1505,6 +1521,73 @@ FP_UI = {
 }
 
 
+# Pages with a long body (override `body`, batch 28 onwards): the h3 sections replace the lead and the generic tips,
+# every section is open (no + / -), and the table gains sugar, GI, GL and insulin index rows (wording approved 31 October 2026)
+BODY_UI = {
+    'ar': dict(review='تمت المراجعة الطبية من قبل <a href="{doctor}">د. وسيم حبيب</a> · {date}', ml='مل', sugar='السكر', gi_unavail='غير متوفر', gi_published='قيمة منشورة', ii_row='مؤشر الإنسولين',
+               ref_published='قيمة المؤشر الجلايسيمي لهذا الصنف مأخوذة من قياس منشور (المصدر في البند التالي). '
+                             'تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
+               desc_published='قيمة منشورة', desc_reviewed='تقدير مراجع سريرياً',
+               desc_na_low='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. المؤشر الجلايسيمي لا ينطبق (كربوهيدرات متاحة قليلة). قيم غذائية كاملة ونصائح وبدائل.',
+               desc_nogi='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. قيم غذائية كاملة ونصائح وبدائل.'),
+    'en': dict(review='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Sugar', gi_unavail='Not available', gi_published='Published value', ii_row='Insulin index',
+               ref_published='The glycemic index of this food comes from a published measurement (source in the next item). '
+                             'GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
+               desc_published='published value', desc_reviewed='clinically reviewed estimate',
+               desc_na_low='{name}: {kcal} kcal and {protein} g protein per 100 g. Glycemic index not applicable (low in available carbohydrate). Full nutrition facts, tips and alternatives.',
+               desc_nogi='{name}: {kcal} kcal and {protein} g protein per 100 g. Full nutrition facts, tips and alternatives.'),
+    'nl': dict(review='Medisch beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Suiker', gi_unavail='Niet beschikbaar', gi_published='Gepubliceerde waarde', ii_row='Insuline-index',
+               ref_published='De glykemische index van dit product komt uit een gepubliceerde meting (bron in het volgende punt). '
+                             'De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
+               desc_published='gepubliceerde waarde', desc_reviewed='klinisch beoordeelde schatting',
+               desc_na_low='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Glykemische index niet van toepassing (weinig beschikbare koolhydraten). Volledige voedingswaarden, tips en alternatieven.',
+               desc_nogi='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Volledige voedingswaarden, tips en alternatieven.'),
+    SV: dict(review='Medicinskt granskad av <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Socker', gi_unavail='Inte tillgängligt', gi_published='Publicerat värde', ii_row='Insulinindex',
+             ref_published='Det glykemiska indexet för det här livsmedlet kommer från en publicerad mätning (källa i nästa punkt). '
+                           'GI-indelningen (lågt ≤ 55 · medelhögt 56–69 · högt ≥ 70) följer: ',
+             desc_published='publicerat värde', desc_reviewed='kliniskt granskad uppskattning',
+             desc_na_low='{name}: {kcal} kcal och {protein} g protein per 100 g. Glykemiskt index är inte tillämpligt (lite tillgängliga kolhydrater). Fullständigt näringsvärde, tips och alternativ.',
+             desc_nogi='{name}: {kcal} kcal och {protein} g protein per 100 g. Fullständigt näringsvärde, tips och alternativ.'),
+}
+BODY_CSS = ('.food-body { margin: 4px 0 22px; } .about-card .food-body h3 { font-size: 1.12em; font-weight: 800; color: var(--text-main); '
+            'margin: 20px 0 6px; } .about-card .food-body h3:first-child { margin-top: 6px; } .about-card .food-body p { margin: 0 0 8px; } '
+            '.food-body ul, .food-body ol { margin: 0 0 10px; padding-inline-start: 22px; } .food-body li { margin: 0 0 6px; line-height: 1.75; } '
+            '.about-card .food-body .brand-note { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); } '
+            '.about-card .acc.static > h3 { padding: 12px 14px 6px; font-size: 1em; font-weight: 800; color: var(--text-main); margin: 0; }')
+
+
+def inline_md(s):
+    """Escape a line of approved copy and turn **bold** into <strong>."""
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(s))
+
+
+def render_body(md):
+    """The approved body copy (### headings, - bullets, 1. numbered steps, one paragraph per line) as HTML."""
+    out, items, kind = [], [], None
+    def flush():
+        nonlocal items, kind
+        if items:
+            out.append(f'<{kind}>' + ''.join(f'<li>{x}</li>' for x in items) + f'</{kind}>')
+        items, kind = [], None
+    for line in md.split('\n'):
+        line = line.strip()
+        m = re.match(r'(-|\d+\.)\s+(.*)', line)
+        if m:
+            k = 'ul' if m.group(1) == '-' else 'ol'
+            if kind != k:
+                flush()
+                kind = k
+            items.append(inline_md(m.group(2)))
+            continue
+        flush()
+        if line.startswith('### '):
+            out.append(f'<h3>{inline_md(line[4:])}</h3>')
+        elif line:
+            out.append(f'<p>{inline_md(line)}</p>')
+    flush()
+    return ''.join(out)
+
+
 def num_attr(x):
     """A per-100 g value for a data-v100 attribute: the same float the page was computed from."""
     return repr(float(x))
@@ -1659,7 +1742,28 @@ def build(food, lang, ctx):
     reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # clinically reviewed estimate
     has_gi = measured or reviewed
     team = food['id'] in TEAM_REVIEW
-    if lang == SV:                          # one approved review line for every Swedish page
+    ov = ctx['overrides'].get(str(food['id']), {})
+    body_md = ov.get('body', {}).get(lang)          # batch 28 onwards: long approved copy with h3 sections
+    bu = BODY_UI[lang]
+    fu = FP_UI[lang]
+    qty = bu['ml'] if food['id'] in ML_UNIT else u['gram']     # unit of the food amount (portion, per-100 column)
+    if food['id'] in ML_UNIT:                       # drinks measured in ml: only the food amount changes unit
+        g_ = u['gram']
+        u = dict(u, **{k: u[k].replace('100 ' + g_, '100 ' + qty).replace('{p} ' + g_, '{p} ' + qty)
+                       for k in ('per100', 'per_portion', 'col100', 'colp', 'desc_na', 'desc_reviewed')})
+        fu = dict(fu, **{k: fu[k].replace('({g} ' + g_ + ')', '({g} ' + qty + ')').replace('100 ' + g_, '100 ' + qty)
+                         for k in ('qa', 'qa_na', 'col', 'g100')})
+    portion_label = ov.get('portion_label', {}).get(lang)     # a portion without a weight (e.g. "a few drops")
+    if portion_label:
+        u = dict(u, colp=re.sub(r'\{p\} \S+?(?=\))', portion_label, u['colp']))
+        fu = dict(fu, qa_na=re.sub(r'\(\{g\} \S+?\)', '(' + portion_label + ')', fu['qa_na']))
+    sv_date = NAMED_REVIEW.get(food['id'], '') if NAMED_REVIEW.get(food['id'], '') > FSV.REVIEWED else ''
+    if body_md:                             # approved line for the batch 28 pages (31 October 2026)
+        reviewed_line = bu['review'].format(doctor=any_link('/doctor.html', lang) if lang == SV else site_link('/doctor.html', lang),
+                                            role=JOB_TITLE[lang], date=NAMED_REVIEW_TXT[NAMED_REVIEW[food['id']]][lang])
+    elif lang == SV and sv_date:              # Swedish pages added after the first Swedish review carry their own date
+        reviewed_line = u['reviewed'].format(doctor=any_link('/doctor.html', lang), date=NAMED_REVIEW_TXT[sv_date][SV])
+    elif lang == SV:                        # one approved review line for every Swedish page
         reviewed_line = u['reviewed'].format(doctor=any_link('/doctor.html', lang), date=FSV.REVIEWED_TXT)
     elif food['id'] in NAMED_REVIEW:
         reviewed_line = u['reviewed_named'].format(doctor=site_link('/doctor.html', lang),
@@ -1673,7 +1777,8 @@ def build(food, lang, ctx):
     section_href = dir_url('foods', lang, absolute=False) + f"#{food['group']}" if section else ''
     L = lambda path: any_link(path, lang)
     p_factor = portion / 100.0
-    tips = list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
+    # (body pages show their own sections instead of tips)
+    tips = [] if body_md else list(ctx['overrides'].get(str(food['id']), {}).get('tips', {}).get(lang) or TIPS[group][li])
     if len(tips) == 2:                      # food-specific consumption + preparation; keep the approved note
         tips.append(TIPS['drink'][li][2] if food['id'] in CAFFEINE else (CARB_NOTE if has_gi else NA_NOTE)[li])
 
@@ -1699,6 +1804,15 @@ def build(food, lang, ctx):
     else:
         lead = u['lead_na'].format(name=sname, kcal=kcal, protein=protein, **g)
         desc = u['desc_na'].format(name=name, kcal=kcal, protein=protein)
+    published = reviewed and food['id'] in PUBLISHED_GI
+    unavailable = food['id'] in GI_UNAVAILABLE
+    if body_md:                             # approved wording for the batch 28 variants (31 October 2026)
+        if published:
+            desc = desc.replace(bu['desc_reviewed'], bu['desc_published'])
+        elif unavailable:
+            desc = bu['desc_nogi'].format(name=name, kcal=kcal, protein=protein)
+        elif not has_gi and food['avail'] >= 5:     # "less than 5 g" would be false
+            desc = bu['desc_na_low'].format(name=name, kcal=kcal, protein=protein)
     # a doctor-approved introduction replaces the computed lead (the numbers stay in the cards and table)
     lead = ctx['overrides'].get(str(food['id']), {}).get('lead', {}).get(lang) or lead
     title = fit_title(name, lang)
@@ -1717,8 +1831,11 @@ def build(food, lang, ctx):
         faq = build_faq(food, lang, sname, portion, False, g=g)
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
-    faq_html = ''.join(f'<details class="acc"{" open" if i == 0 else ""}><summary><h3>{esc(q)}</h3></summary><p>{esc(a)}</p></details>'
-                       for i, (q, a) in enumerate(faq))
+    if body_md:                             # every question open, nothing to fold
+        faq_html = ''.join(f'<div class="acc static"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
+    else:
+        faq_html = ''.join(f'<details class="acc"{" open" if i == 0 else ""}><summary><h3>{esc(q)}</h3></summary><p>{esc(a)}</p></details>'
+                           for i, (q, a) in enumerate(faq))
     read_also = [(READ_ALSO[k][0], *READ_ALSO[k][1][lang])
                  for k in read_also_keys(food, group, food['gi'] if has_gi else None)]
     read_also_html = ''.join(f'<li><a href="{href}">{esc(label)}<span>{READ_ALSO_KIND[kind][lang]}</span></a></li>'
@@ -1770,7 +1887,6 @@ def build(food, lang, ctx):
         alt_html = ''.join(link_item(f, f"{round(f['kcal'])} {u['kcal_unit']}") for f in family[:3])
 
     # -------- quick answer (static: the medium portion = the approved typical portion)
-    fu = FP_UI[lang]
     qa_args = dict(name=sname, g=portion, kcal=round(food['kcal'] * p_factor), net=fmt(food['avail'] * p_factor),
                    protein=fmt(food['protein'] * p_factor), **g)
     quick = (fu['qa'].format(gi=gi, gi_level=lv[lvl], gl=fmt(gl), gl_level=lg[glv], **qa_args) if has_gi
@@ -1782,15 +1898,16 @@ def build(food, lang, ctx):
         v = v100 * p_factor
         return (f'<b data-v100="{num_attr(v100)}"{" data-int" if integer else ""}>'
                 f'{round(v) if integer else fmt(v)}</b>')
-    pills = [f'<label class="pill"><input type="radio" name="serving" value="100" data-label="{fu["g100"]}" data-col="{u["col100"]}">'
+    pills = [f'<label class="pill"><input type="radio" name="serving" value="100" data-label="{fu["g100"]}" data-col="{u["col100"]}"'
+             f'{" checked data-default" if portion_label else ""}>'
              f'<span><span class="pill-name">{fu["g100"]}</span><small>{fu["ref"]}</small></span></label>']
-    for key, factor in SERVING_FACTORS:
+    for key, factor in (() if portion_label else SERVING_FACTORS):     # no weighed portions for "a few drops"
         grams = max(1, int(portion * factor + 0.5))
         label = fu['servings'][key]
-        pills.append(f'<label class="pill"><input type="radio" name="serving" value="{grams}" data-label="{label} · {grams} {u["gram"]}"'
+        pills.append(f'<label class="pill"><input type="radio" name="serving" value="{grams}" data-label="{label} · {grams} {qty}"'
                      f' data-col="{esc(fu["col"].format(label=label, g=grams))}"'
                      f'{" checked data-default" if key == "medium" else ""}><span><span class="pill-name">'
-                     f'{fu["short"].get(key, label)}</span><small>{grams} {u["gram"]}</small></span></label>')
+                     f'{fu["short"].get(key, label)}</span><small>{grams} {qty}</small></span></label>')
     share, ring = energy_ring(food)
     pct = lambda k: fu['pct'].format(v=fmt(share[k]))
     macros = ''.join(
@@ -1798,15 +1915,17 @@ def build(food, lang, ctx):
         f'<span class="m-val">{live(v)} {u["gram"]}</span><span class="m-pct">{pct(k) if k != "fib" else "&nbsp;"}</span></li>'
         for i, (k, v) in enumerate((('c', food['carbs']), ('p', food['protein']), ('f', food['fat']), ('fib', food['fiber']))))
     if has_gi:
+        gi_sub = bu['gi_published'] if published else (u['gi_reviewed'] if reviewed else fu['gi_same'])
         gi_box = (f'<span class="gi-num {LV[lvl]}">{gi}</span><span class="badge {LV[lvl]}">{u["levels"][lvl]}</span>'
-                  f'<span class="gi-sub">{u["gi_reviewed"] if reviewed else fu["gi_same"]}</span>')
+                  f'<span class="gi-sub">{gi_sub}</span>')
         gl_box = (f'<span class="gi-num {LV[glv]}" id="glNum">{fmt(gl)}</span>'
                   f'<span class="badge {LV[glv]}" id="glBadge">{u["levels"][glv]}</span>'
                   f'<span class="gi-sub" id="glSub">{u["per_portion"].format(p=portion)}</span>')
         gi_data = f' data-gi="{gi}" data-avail="{num_attr(food["avail"])}" data-levels="{"|".join(u["levels"])}"' \
                   f' data-gl-tpl="{esc(u["per_portion"])}"'
     else:
-        gi_box = gl_box = f'<span class="gi-num muted">—</span><span class="badge neutral">{u["na"]}</span>'
+        gi_box = gl_box = (f'<span class="gi-num muted">—</span>'
+                           f'<span class="badge neutral">{bu["gi_unavail"] if unavailable else u["na"]}</span>')
         gi_data = ''
     macro_card = f'''<section class="macro-card" id="macroCard" aria-label="{fu["card"]}" data-dec="{DECIMAL}"{gi_data}>
                 <fieldset class="servings">
@@ -1831,11 +1950,24 @@ def build(food, lang, ctx):
     # -------- nutrition table (the portion column follows the pills)
     def row(label, v100, unit):
         return (f'<tr><td>{label}</td><td>{fmt(v100)} {unit}</td><td>{live(v100)} {unit}</td></tr>')
-    rows = ''.join([
-        row(u['rows'][0], food['kcal'], u['kcal_unit']), row(u['rows'][1], food['protein'], u['gram']),
-        row(u['rows'][2], food['carbs'], u['gram']), row(u['rows'][3], food['avail'], u['gram']),
-        row(u['rows'][4], food['fat'], u['gram']), row(u['rows'][5], food['fiber'], u['gram'])])
-    if food['ii'] is not None:
+    if body_md:                             # the approved table: sugar after the available carbs, then GI, GL, insulin index
+        wide = lambda label, text: f'<tr><td>{label}</td><td colspan="2">{esc(text)}</td></tr>'
+        gi_txt = bu['gi_unavail'] if unavailable else u['na']
+        rows = ''.join([
+            row(u['rows'][0], food['kcal'], u['kcal_unit']), row(u['rows'][1], food['protein'], u['gram']),
+            row(u['rows'][2], food['carbs'], u['gram']), row(u['rows'][3], food['avail'], u['gram']),
+            f'<tr><td>{bu["sugar"]}</td><td>{esc(ov["sugar"][lang])}</td><td>—</td></tr>',
+            row(u['rows'][4], food['fat'], u['gram']), row(u['rows'][5], food['fiber'], u['gram']),
+            wide(u['gi'], f'{gi} · {u["levels"][lvl]}') if has_gi else wide(u['gi'], gi_txt),
+            (f'<tr><td>{u["gl"]}</td><td>—</td><td>{live(gi * food["avail"] / 100)}</td></tr>' if has_gi
+             else wide(u['gl'], gi_txt)),
+            wide(bu['ii_row'], ov['ii_text'][lang])])
+    else:
+        rows = ''.join([
+            row(u['rows'][0], food['kcal'], u['kcal_unit']), row(u['rows'][1], food['protein'], u['gram']),
+            row(u['rows'][2], food['carbs'], u['gram']), row(u['rows'][3], food['avail'], u['gram']),
+            row(u['rows'][4], food['fat'], u['gram']), row(u['rows'][5], food['fiber'], u['gram'])])
+    if food['ii'] is not None and not body_md:
         rows += f'<tr><td>{u["ii_row"]}</td><td colspan="2">{int(food["ii"])} · {u["ii_tested"]}</td></tr>'
 
     # -------- sources: "References & scientific sources" section (only what actually backs this page)
@@ -1848,11 +1980,14 @@ def build(food, lang, ctx):
                                        grade=food['gi_grade'] or '-'),
                  r['iso'] + ref_cite(REF_ISO)]
     elif reviewed:
-        items = [r['reviewed'] + ref_cite(REF_ISO)]
-    else:
-        items = [r['na'] + ref_cite(REF_ISO)]
+        items = [(bu['ref_published'] if published else r['reviewed']) + ref_cite(REF_ISO)]
+    elif unavailable:                       # no GI line: the approved note below explains why there is no value
+        items = []
+    else:                                   # `ref_gi`: approved wording where the "< 5 g" sentence would be false
+        items = [(esc(ov['ref_gi'][lang]) if 'ref_gi' in ov else r['na']) + ref_cite(REF_ISO)]
+    items += [esc(x) for x in ov.get('refs_extra', {}).get(lang, [])]     # the copy's own reference notes
     items.append(r['fao'] + ref_cite(REF_FAO))
-    if food['ii'] is not None:
+    if food['ii'] is not None and not body_md:      # body pages cite the insulin index source in their own note
         items.append(r['ii'] + ref_cite(REF_HOLT) + ' • ' + ref_cite(REF_BAO))
     src = (f'<section class="references" aria-labelledby="refs-title">'
            f'<h2 class="section-title" id="refs-title">{icon("book")} <span>{r["title"]}</span></h2>'
@@ -1892,7 +2027,7 @@ def build(food, lang, ctx):
         "publisher": {"@type": "Organization", "name": "WiBo Health", "url": SITE,
                       "logo": {"@type": "ImageObject", "url": f"{SITE}/images/icon-512.png"}},
         "reviewedBy": reviewer,
-        "lastReviewed": FSV.REVIEWED if lang == SV else review_date(food['id']),
+        "lastReviewed": (sv_date or FSV.REVIEWED) if lang == SV else review_date(food['id']),
         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + L('/')},
             {"@type": "ListItem", "position": 2, "name": u['guide'], "item": dir_url('foods', lang)}]
@@ -1914,7 +2049,23 @@ def build(food, lang, ctx):
     tip_icons = ('check', 'utensils', 'warn')
     tips_html = ''.join(
         f'<details class="acc tip{" warn" if i == 2 else ""}"{" open" if i == 0 else ""}><summary>{icon(tip_icons[i])}'
-        f'<h3>{u["tip_titles"][i]}</h3></summary><p>{esc(tips[i])}</p></details>' for i in range(3))
+        f'<h3>{u["tip_titles"][i]}</h3></summary><p>{esc(tips[i])}</p></details>' for i in range(len(tips)))
+    if body_md:                             # the approved sections, open, in place of the lead and the generic tips
+        brand = ov.get('brand_note', {}).get(lang)     # brand products: approximate values, no affiliation
+        brand_html = f'<p class="brand-note">{esc(brand)}</p>' if brand else ''
+        intro_html = f'<section class="food-body">{render_body(body_md)}{brand_html}</section>'
+        body_style = f'\n    <style>{BODY_CSS}</style>'
+    else:
+        intro_html = f'''<div class="lead-fold" id="leadFold">
+                <p class="lead" id="leadText">{esc(lead)}</p>
+                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="{fu["more"]}" data-less="{fu["less"]}" hidden>{fu["more"]}</button>
+            </div>
+
+            <h2 class="section-title"><span>{u["tips"]}</span></h2>
+            <div class="acc-list">{tips_html}</div>'''
+        body_style = ''
+    alt_block = ('' if body_md and not alt_html else
+                 f'\n            <p><strong>{alt_title}</strong></p>\n            <ul class="alt-list">{alt_html}</ul>')
     footer_links = ' <span>•</span> '.join(
         f'<a href="{href}">{label}</a>' for href, label in
         [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), u['nav'][1]),
@@ -1959,7 +2110,7 @@ def build(food, lang, ctx):
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{{transition:none!important;animation-duration:0s!important}}</style>
     <script>document.addEventListener('click',function(e){{var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){{window.__tsw=requestAnimationFrame(function(){{h.classList.remove('theme-transitioning')}})}})}},true);</script>
     <link rel="stylesheet" href="/css/food-page.css?v={ASSET_VER[0]}">
-    <link rel="stylesheet" href="/css/unified-header.css">
+    <link rel="stylesheet" href="/css/unified-header.css">{body_style}
     <script src="/js/food-serving.js?v={ASSET_VER[1]}" defer></script>
 </head>
 <body>
@@ -2005,13 +2156,7 @@ def build(food, lang, ctx):
 
             {macro_card}
 
-            <div class="lead-fold" id="leadFold">
-                <p class="lead" id="leadText">{esc(lead)}</p>
-                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="{fu["more"]}" data-less="{fu["less"]}" hidden>{fu["more"]}</button>
-            </div>
-
-            <h2 class="section-title"><span>{u["tips"]}</span></h2>
-            <div class="acc-list">{tips_html}</div>
+            {intro_html}
 
             <h2 class="section-title">{icon("table")} <span>{u["table"]}</span></h2>
             <table class="nutrition-table">
@@ -2021,9 +2166,7 @@ def build(food, lang, ctx):
             <p class="table-note">{u["portion_note"]}</p>
 
             <h2 class="section-title">{icon("scale")} <span>{u["compare"]}</span></h2>
-            <p>{esc(compare_txt)}</p>
-            <p><strong>{alt_title}</strong></p>
-            <ul class="alt-list">{alt_html}</ul>
+            <p>{esc(compare_txt)}</p>{alt_block}
 
             <h2 class="section-title">{icon("question")} <span>{FAQ[lang]["title"]}</span></h2>
             <div class="acc-list">{faq_html}</div>
@@ -2121,7 +2264,7 @@ def main():
     block = []
     for fid in PILOT:
         for lang in langs_of(fid):
-            lastmod = FSV.REVIEWED if lang == SV else review_date(fid)
+            lastmod = max(FSV.REVIEWED, NAMED_REVIEW.get(fid, '')) if lang == SV else review_date(fid)
             block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in langs_of(fid)]

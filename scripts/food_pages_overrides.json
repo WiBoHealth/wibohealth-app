@@ -38640,6 +38640,1698 @@
           }
         ]
       }
+    },
+    "1017": {
+      "slug": "yerba-mate",
+      "sugar": {
+        "ar": "أقل من 0.5 غ",
+        "en": "less than 0.5 g",
+        "nl": "minder dan 0,5 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في المته؟\nالمته صارت جزء من القعدة بسوريا ولبنان أكتر ما هي بالأرجنتين نفسها 😄 والخبر الحلو: **كاسة المته (240 مل) بدون سكر فيها حوالي 7 سعرات حرارية بس.** يعني فيك تشرب كذا كاسة بالقعدة بدون ما تفكر بالسعرات.\n\n### هل المته ترفع السكر؟\nالمته لحالها **ما بترفع السكر**، لأنه الكربوهيدرات فيها نص غرام بكل 100 مل، فالمؤشر الجلايسيمي ما بينطبق عليها.\nبس متل كل المشروبات، القصة بالسكر اللي بينحط فوقها. وبما إنو المته بتنعبّى أكتر من مرة بنفس الكاسة، معلقة السكر بكل تعبئة بتتجمع بسرعة!\n\n### المته والكافيين\nالمته فيها كافيين، وهاد اللي بيعطيها إحساس النشاط. فإذا بتشربها كتير بالسهرات، ممكن تأثر على نومك. فيك تخلي آخر كاسة قبل النوم بكم ساعة.\n\n### كيف تشربها بذكاء؟\n- فيك تشربها **بدون سكر** من الأول، والطعمة المُرّة الخفيفة بتتعوّد عليها بسرعة.\n- إذا بدك حلاوة، فيك تجرّب نقطة ستيفيا بالكاسة.\n- انتبه للمي الغالية كتير، والأفضل تكون سخنة مش عم تغلي، لأنه هيك الطعمة بتطلع أنعم.\n\n### بدائل أخف\n- **بدل المته بسكر:** مته بدون سكر، أو مع نقطة ستيفيا.\n- **بدل القهوة الحلوة بالسهرة:** كاسة مته خفيفة بدون سكر.",
+        "en": "### How many calories are in yerba mate?\nIn Syria and Lebanon, mate has become part of sitting together with friends even more than in Argentina itself 😄 And the good news: **a cup of mate (240 ml) without sugar has only about 7 calories.** So you can drink several cups while you sit together without thinking about calories.\n\n### Does yerba mate raise blood sugar?\nMate on its own **does not raise blood sugar**, because it has half a gram of carbohydrate per 100 ml, so the glycemic index does not apply to it.\nBut like every drink, the story is the sugar you add on top. And since mate is refilled several times in the same cup, the spoonful of sugar with every refill adds up fast!\n\n### Yerba mate and caffeine\nMate contains caffeine, and that is what gives it its feeling of energy. So if you drink a lot of it in the evenings, it can affect your sleep. You can have your last cup a few hours before bed.\n\n### How to drink it smartly\n- You can drink it **without sugar** from the start; you get used to the light bitter taste quickly.\n- If you want some sweetness, you can try a drop of stevia in the cup.\n- Watch out for water that is too hot: it is best hot but not boiling, because that way the taste comes out smoother.\n\n### Lighter alternatives\n- **Instead of mate with sugar:** mate without sugar, or with a drop of stevia.\n- **Instead of sweet coffee in the evening:** a light cup of mate without sugar.",
+        "nl": "### Hoeveel calorieën zitten er in yerba mate?\nIn Syrië en Libanon hoort mate bij het samenzitten met vrienden, nog meer dan in Argentinië zelf 😄 En het goede nieuws: **een kop mate (240 ml) zonder suiker bevat maar ongeveer 7 calorieën.** Je kunt dus meerdere koppen drinken terwijl je samenzit, zonder aan calorieën te denken.\n\n### Verhoogt yerba mate de bloedsuiker?\nMate op zich **verhoogt de bloedsuiker niet**, omdat er een halve gram koolhydraten per 100 ml in zit, dus de glykemische index is niet van toepassing.\nMaar zoals bij elke drank draait het om de suiker die je erbij doet. En omdat mate meerdere keren in dezelfde kop wordt bijgevuld, telt die lepel suiker bij elke vulling snel op!\n\n### Yerba mate en cafeïne\nMate bevat cafeïne, en dat geeft het gevoel van energie. Drink je er 's avonds veel van, dan kan het je slaap beïnvloeden. Neem je laatste kop een paar uur voor het slapengaan.\n\n### Zo drink je het slim\n- Je kunt het vanaf het begin **zonder suiker** drinken; aan de licht bittere smaak wen je snel.\n- Wil je wat zoetheid, probeer dan een druppel stevia in de kop.\n- Let op water dat te heet is: het best is heet maar niet kokend, want zo wordt de smaak zachter.\n\n### Lichtere alternatieven\n- **In plaats van mate met suiker:** mate zonder suiker, of met een druppel stevia.\n- **In plaats van zoete koffie 's avonds:** een lichte kop mate zonder suiker."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في كاسة المته؟",
+            "a": "حوالي 7 سعرات بالكاسة (240 مل)، إذا بدون سكر."
+          },
+          {
+            "q": "هل المته ترفع السكر؟",
+            "a": "لحالها لأ. السكر اللي بتضيفه بكل تعبئة هو اللي بيعمل الفرق."
+          },
+          {
+            "q": "هل المته فيها كافيين؟",
+            "a": "إيه، ولهيك بتعطي إحساس بالنشاط. خفّفها بالليل إذا بتأثر على نومك."
+          },
+          {
+            "q": "هل المته بتساعد بالرجيم؟",
+            "a": "هي مشروب شبه بدون سعرات، فبتنفع بالرجيم. بس ما في مشروب بيحرق الدهون لحالو."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a cup of yerba mate?",
+            "a": "About 7 calories per cup (240 ml), if it is without sugar."
+          },
+          {
+            "q": "Does yerba mate raise blood sugar?",
+            "a": "On its own, no. The sugar you add with every refill is what makes the difference."
+          },
+          {
+            "q": "Does yerba mate contain caffeine?",
+            "a": "Yes, and that is why it gives a feeling of energy. Cut down in the evening if it affects your sleep."
+          },
+          {
+            "q": "Does yerba mate help with weight loss?",
+            "a": "It is a drink with almost no calories, so it works well on a diet. But no drink burns fat on its own."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een kop yerba mate?",
+            "a": "Ongeveer 7 calorieën per kop (240 ml), als het zonder suiker is."
+          },
+          {
+            "q": "Verhoogt yerba mate de bloedsuiker?",
+            "a": "Op zich niet. De suiker die je bij elke vulling toevoegt, maakt het verschil."
+          },
+          {
+            "q": "Bevat yerba mate cafeïne?",
+            "a": "Ja, en daarom geeft het een gevoel van energie. Drink 's avonds minder als het je slaap beïnvloedt."
+          },
+          {
+            "q": "Helpt yerba mate bij afvallen?",
+            "a": "Het is een drank met bijna geen calorieën, dus het past goed bij een dieet. Maar geen enkele drank verbrandt vet op zichzelf."
+          }
+        ]
+      }
+    },
+    "993": {
+      "slug": "cinnamon-ginger-tea",
+      "sugar": {
+        "ar": "أقل من 2 غ",
+        "en": "less than 2 g",
+        "nl": "minder dan 2 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في مشروب القرفة والزنجبيل؟\nريحة القرفة مع الزنجبيل بتدفّي البيت قبل ما تدفّي المعدة! **بكل 100 مل في 8 سعرات، والكاسة (240 مل) بدون سكر فيها حوالي 19 سعرة حرارية.** فهو من أخف المشروبات السخنة اللي فيك تشربها بالشتي.\n\n### هل القرفة والزنجبيل بيحرقوا الدهون؟\nبما إنو الناس كتير بتدوّر على \"القرفة والزنجبيل لحرق الدهون\" و\"مشروب القرفة للتنحيف\"، خليني كون صريح معك: **ما في مشروب بيحرق الدهون لحالو.**\nبس الحلو فيه إنو بيعطيك طعمة غنية ودافية بدون سكر، وهيك بيساعدك تستغني عن المشروبات المحلاة والحلويات بعد الأكل. وهون الفرق الحقيقي بالرجيم.\n\n### هل مشروب القرفة يرفع السكر؟\nبدون سكر لأ. الكربوهيدرات فيه قليلة كتير (1.8 غ بكل 100 مل، منها نص غرام ألياف)، فالمؤشر الجلايسيمي ما بينطبق عليه.\n\n### كيف تحضّره؟\n- فيك تغلي عود قرفة مع 4 أو 5 شرايح زنجبيل طازج بكاستين مي، 10 دقايق على نار هادية.\n- إذا بدك حلاوة، فيك تحط نقطتين ستيفيا بدل السكر أو العسل.\n- عصرة ليمون بالآخر بتعطيه طعمة منعشة.\n- **قرفة سيلان** طعمتها أنعم من قرفة الكاسيا الشائعة بالسوبرماركت.\n\n### بدائل أخف\n- **بدل كاسة الشاي بمعلقتين سكر (حوالي 32 سعرة):** كاسة قرفة وزنجبيل بدون سكر (19 سعرة).\n- **بدل الحلو بعد العشا:** كاسة سخنة قرفة وزنجبيل.",
+        "en": "### How many calories are in cinnamon and ginger tea?\nThe smell of cinnamon with ginger warms the house before it warms your stomach! **There are 8 calories per 100 ml, and a cup (240 ml) without sugar has about 19 calories.** So it is one of the lightest hot drinks you can have in winter.\n\n### Do cinnamon and ginger burn fat?\nSince people often search for \"cinnamon and ginger for fat burning\" and \"cinnamon drink for weight loss\", let me be honest with you: **no drink burns fat on its own.**\nBut the nice thing about it is that it gives you a rich, warm taste without sugar, and that helps you do without sweetened drinks and desserts after meals. That is where the real difference lies on a diet.\n\n### Does a cinnamon drink raise blood sugar?\nWithout sugar, no. It has very little carbohydrate (1.8 g per 100 ml, half a gram of which is fibre), so the glycemic index does not apply to it.\n\n### How to make it\n- You can simmer a cinnamon stick with 4 or 5 slices of fresh ginger in two cups of water for 10 minutes over low heat.\n- If you want sweetness, you can add two drops of stevia instead of sugar or honey.\n- A squeeze of lemon at the end gives it a refreshing taste.\n- **Ceylon cinnamon** tastes milder than the cassia cinnamon that is common in supermarkets.\n\n### Lighter alternatives\n- **Instead of a cup of tea with two spoons of sugar (about 32 calories):** a cup of cinnamon and ginger without sugar (19 calories).\n- **Instead of something sweet after dinner:** a hot cup of cinnamon and ginger.",
+        "nl": "### Hoeveel calorieën zitten er in kaneel-gemberthee?\nDe geur van kaneel met gember verwarmt het huis nog voordat het je maag verwarmt! **Er zitten 8 calorieën in 100 ml, en een kop (240 ml) zonder suiker bevat ongeveer 19 calorieën.** Het is dus een van de lichtste warme dranken die je in de winter kunt drinken.\n\n### Verbranden kaneel en gember vet?\nOmdat mensen vaak zoeken naar \"kaneel en gember voor vetverbranding\" en \"kaneeldrank om af te vallen\", wil ik eerlijk tegen je zijn: **geen enkele drank verbrandt vet op zichzelf.**\nMaar het mooie eraan is dat het je een rijke, warme smaak geeft zonder suiker, en zo helpt het je om gezoete dranken en zoetigheid na het eten te laten staan. Daar zit het echte verschil bij een dieet.\n\n### Verhoogt een kaneeldrank de bloedsuiker?\nZonder suiker niet. Er zitten heel weinig koolhydraten in (1,8 g per 100 ml, waarvan een halve gram vezels), dus de glykemische index is niet van toepassing.\n\n### Zo maak je het\n- Je kunt een kaneelstokje met 4 of 5 plakjes verse gember in twee koppen water 10 minuten op laag vuur laten trekken.\n- Wil je zoetheid, doe er dan twee druppels stevia in in plaats van suiker of honing.\n- Een scheutje citroen aan het eind geeft een frisse smaak.\n- **Ceylonkaneel** smaakt zachter dan de cassiakaneel die in de supermarkt gebruikelijk is.\n\n### Lichtere alternatieven\n- **In plaats van een kop thee met twee lepels suiker (ongeveer 32 calorieën):** een kop kaneel-gember zonder suiker (19 calorieën).\n- **In plaats van iets zoets na het avondeten:** een warme kop kaneel-gember."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في مشروب القرفة والزنجبيل؟",
+            "a": "بالـ 100 مل 8 سعرات، وبالكاسة حوالي 19 سعرة، بدون سكر."
+          },
+          {
+            "q": "هل القرفة والزنجبيل بيحرقوا الدهون؟",
+            "a": "ما في مشروب بيحرق الدهون لحالو. فايدته إنو بديل دافي وخفيف عن المشروبات المحلاة."
+          },
+          {
+            "q": "هل مشروب القرفة يرفع السكر؟",
+            "a": "بدون سكر لأ، الكربوهيدرات فيه قليلة كتير."
+          },
+          {
+            "q": "إيمتى أحسن وقت لشرب القرفة والزنجبيل؟",
+            "a": "ما في وقت سحري، بس كتير ناس بيحبوه بعد الأكل بدل الحلو، أو بالمسا بدل الشاي والقهوة."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in cinnamon and ginger tea?",
+            "a": "8 calories per 100 ml, and about 19 calories per cup, without sugar."
+          },
+          {
+            "q": "Do cinnamon and ginger burn fat?",
+            "a": "No drink burns fat on its own. Its benefit is that it is a warm, light alternative to sweetened drinks."
+          },
+          {
+            "q": "Does a cinnamon drink raise blood sugar?",
+            "a": "Without sugar, no; it has very little carbohydrate."
+          },
+          {
+            "q": "When is the best time to drink cinnamon and ginger?",
+            "a": "There is no magic time, but many people like it after a meal instead of something sweet, or in the evening instead of tea and coffee."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in kaneel-gemberthee?",
+            "a": "8 calorieën per 100 ml en ongeveer 19 calorieën per kop, zonder suiker."
+          },
+          {
+            "q": "Verbranden kaneel en gember vet?",
+            "a": "Geen enkele drank verbrandt vet op zichzelf. Het voordeel is dat het een warm, licht alternatief is voor gezoete dranken."
+          },
+          {
+            "q": "Verhoogt een kaneeldrank de bloedsuiker?",
+            "a": "Zonder suiker niet; er zitten heel weinig koolhydraten in."
+          },
+          {
+            "q": "Wanneer drink je kaneel en gember het best?",
+            "a": "Er is geen magisch moment, maar veel mensen drinken het graag na het eten in plaats van iets zoets, of 's avonds in plaats van thee en koffie."
+          }
+        ]
+      }
+    },
+    "991": {
+      "slug": "fenugreek-tea-with-honey",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لهذا الصنف مأخوذ من العسل (متوسط 61 ± 3)، لأن معظم الكربوهيدرات في المشروب مصدرها العسل، وليس قياساً مخبرياً مباشراً للمشروب. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3."
+        ],
+        "en": [
+          "The glycemic index of this food is taken from honey (mean 61 ± 3), because most of the carbohydrate in the drink comes from the honey; it is not a direct laboratory measurement of the drink. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3."
+        ],
+        "nl": [
+          "De glykemische index van dit product is overgenomen van honing (gemiddeld 61 ± 3), omdat de meeste koolhydraten in de drank uit de honing komen; het is geen directe laboratoriummeting van de drank. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في الحلبة بالعسل؟\nكاسة الحلبة السخنة من ريحة بيت ستّي 😄 **بكل 100 مل في 35 سعرة، والكاسة (240 مل) المحلاة بالعسل فيها حوالي 84 سعرة حرارية.** والجزء الأكبر من هالسعرات جاي من العسل مش من الحلبة نفسها.\n\n### هل الحلبة بالعسل بترفع السكر؟\nهون لازم نفرّق بين الحلبة والعسل:\n- **الحلبة لحالها** مغلية بدون إضافات سعراتها قليلة كتير.\n- **العسل** هو سكر طبيعي، ومؤشره الجلايسيمي حوالي 61، يعني متوسط وقريب من السكر العادي.\nبس بما إنو الكمية بالكاسة مش كبيرة، **الحمل الجلايسيمي للكاسة حوالي 7**، يعني منخفض. فالكاسة الوحدة تأثيرها خفيف، بس كاستين أو تلاتة بالنهار بتتجمع.\n\n### الحلبة والرضاعة\nالحلبة مشهورة عند الأمهات المرضعات، وكتير بيدوّروا \"هل الحلبة بتدر الحليب\". في دراسات صغيرة عم تدرس الموضوع، بس النتائج مش حاسمة. فإذا عم ترضعي، الأفضل تسألي طبيبك أو استشارية الرضاعة.\n\n### كيف تشربها بذكاء؟\n- فيك **تخفف العسل لنص معلقة**، أو تشربها بدون عسل مع عصرة ليمون.\n- إذا بدك حلاوة بدون سكر، فيك تستعمل نقطتين ستيفيا.\n- خليها مع الأكل مش على معدة فاضية، إذا عم تحليها بالعسل.\n\n### بدائل أخف\n- **بدل الحلبة بمعلقة عسل كاملة:** حلبة بنص معلقة، أو بستيفيا.\n- **بدل كاسة العصير المحلى:** كاسة حلبة خفيفة.",
+        "en": "### How many calories are in fenugreek tea with honey?\nA hot cup of fenugreek smells like grandma's house 😄 **There are 35 calories per 100 ml, and a cup (240 ml) sweetened with honey has about 84 calories.** Most of those calories come from the honey, not from the fenugreek itself.\n\n### Does fenugreek tea with honey raise blood sugar?\nHere we need to separate the fenugreek from the honey:\n- **Fenugreek on its own**, simmered without additions, has very few calories.\n- **Honey** is a natural sugar, and its glycemic index is about 61, which means medium and close to ordinary sugar.\nBut because the amount in a cup is not large, **the glycemic load of a cup is about 7**, which means low. So one cup has a mild effect, but two or three cups a day add up.\n\n### Fenugreek and breastfeeding\nFenugreek is well known among breastfeeding mothers, and many search for \"does fenugreek increase breast milk\". Small studies are looking into it, but the results are not conclusive. So if you are breastfeeding, it is best to ask your doctor or a lactation consultant.\n\n### How to drink it smartly\n- You can **cut the honey down to half a spoon**, or drink it without honey with a squeeze of lemon.\n- If you want sweetness without sugar, you can use two drops of stevia.\n- If you sweeten it with honey, have it with a meal rather than on an empty stomach.\n\n### Lighter alternatives\n- **Instead of fenugreek with a full spoon of honey:** fenugreek with half a spoon, or with stevia.\n- **Instead of a glass of sweetened juice:** a light cup of fenugreek.",
+        "nl": "### Hoeveel calorieën zitten er in fenegriekthee met honing?\nEen warme kop fenegriek ruikt naar het huis van oma 😄 **Er zitten 35 calorieën in 100 ml, en een kop (240 ml) gezoet met honing bevat ongeveer 84 calorieën.** Het grootste deel van die calorieën komt van de honing, niet van de fenegriek zelf.\n\n### Verhoogt fenegriekthee met honing de bloedsuiker?\nHier moeten we de fenegriek en de honing uit elkaar houden:\n- **Fenegriek op zich**, getrokken zonder toevoegingen, bevat heel weinig calorieën.\n- **Honing** is een natuurlijke suiker met een glykemische index van ongeveer 61, dus gemiddeld en dicht bij gewone suiker.\nMaar omdat de hoeveelheid in een kop niet groot is, is **de glykemische lading van een kop ongeveer 7**, dus laag. Eén kop heeft dus een mild effect, maar twee of drie koppen per dag tellen op.\n\n### Fenegriek en borstvoeding\nFenegriek is bekend bij moeders die borstvoeding geven, en velen zoeken naar \"stimuleert fenegriek de melkproductie\". Kleine studies onderzoeken dit, maar de resultaten zijn niet overtuigend. Geef je borstvoeding, vraag het dan het best aan je arts of een lactatiekundige.\n\n### Zo drink je het slim\n- Je kunt **de honing terugbrengen tot een halve lepel**, of het zonder honing drinken met een scheutje citroen.\n- Wil je zoetheid zonder suiker, gebruik dan twee druppels stevia.\n- Zoet je het met honing, drink het dan bij het eten en niet op een lege maag.\n\n### Lichtere alternatieven\n- **In plaats van fenegriek met een volle lepel honing:** fenegriek met een halve lepel, of met stevia.\n- **In plaats van een glas gezoet sap:** een lichte kop fenegriek."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في كاسة الحلبة بالعسل؟",
+            "a": "حوالي 84 سعرة بالكاسة (240 مل). وبدون عسل بتصير أقل بكتير."
+          },
+          {
+            "q": "هل الحلبة بالعسل بترفع السكر؟",
+            "a": "العسل مؤشره متوسط (61)، بس الحمل الجلايسيمي للكاسة حوالي 7، يعني منخفض. الكمية هي اللي بتفرق."
+          },
+          {
+            "q": "هل الحلبة بتدر الحليب؟",
+            "a": "في دراسات صغيرة، بس النتائج مش حاسمة. اسألي طبيبك أو استشارية الرضاعة."
+          },
+          {
+            "q": "هل العسل أحسن من السكر؟",
+            "a": "العسل (61) والسكر الأبيض (حوالي 65) قريبين من بعض، فالجسم بيتعامل مع الاتنين كسكر."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a cup of fenugreek tea with honey?",
+            "a": "About 84 calories per cup (240 ml). Without honey it is much lower."
+          },
+          {
+            "q": "Does fenugreek tea with honey raise blood sugar?",
+            "a": "Honey has a medium glycemic index (61), but the glycemic load of a cup is about 7, which means low. The amount is what makes the difference."
+          },
+          {
+            "q": "Does fenugreek increase breast milk?",
+            "a": "There are small studies, but the results are not conclusive. Ask your doctor or a lactation consultant."
+          },
+          {
+            "q": "Is honey better than sugar?",
+            "a": "Honey (61) and white sugar (about 65) are close to each other, so the body handles both as sugar."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een kop fenegriekthee met honing?",
+            "a": "Ongeveer 84 calorieën per kop (240 ml). Zonder honing is het veel minder."
+          },
+          {
+            "q": "Verhoogt fenegriekthee met honing de bloedsuiker?",
+            "a": "Honing heeft een gemiddelde glykemische index (61), maar de glykemische lading van een kop is ongeveer 7, dus laag. De hoeveelheid maakt het verschil."
+          },
+          {
+            "q": "Stimuleert fenegriek de melkproductie?",
+            "a": "Er zijn kleine studies, maar de resultaten zijn niet overtuigend. Vraag het aan je arts of een lactatiekundige."
+          },
+          {
+            "q": "Is honing beter dan suiker?",
+            "a": "Honing (61) en witte suiker (ongeveer 65) liggen dicht bij elkaar, dus het lichaam verwerkt allebei als suiker."
+          }
+        ]
+      }
+    },
+    "963": {
+      "slug": "beef-bone-broth",
+      "sugar": {
+        "ar": "أقل من 0.5 غ",
+        "en": "less than 0.5 g",
+        "nl": "minder dan 0,5 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في مرق العظام؟\nمرق العظام رجع موضة، بس هو بالأصل أكلة ستّاتنا 😄 **بكل 100 مل في 45 سعرة و9.5 غ بروتين، والكاسة (240 مل) فيها حوالي 108 سعرات و23 غ بروتين.** يعني كاسة مرق فيها بروتين قد صدر جاج صغير تقريباً.\n\n### هل مرق العظام يرفع السكر؟\nلأ. الكربوهيدرات فيه نص غرام بكل 100 مل، فالمؤشر الجلايسيمي ما بينطبق عليه. وبما إنو أغلبه بروتين ومي، بيعطيك إحساس بالشبع بدون ما يحرّك السكر.\n\n### شو قصة الكولاجين؟\nكتير ناس بيدوّروا على \"مرق العظام والكولاجين\". المرق فعلاً فيه جيلاتين جاي من العظام والغضاريف، ولهيك بيصير متل الجيلي لما يبرد. بس الجسم بيهضم الجيلاتين متل أي بروتين تاني، فما في ضمانة إنو \"يروح\" عالمفاصل أو الجلد بالذات.\n\n### كيف تاكله بذكاء؟\n- فيك تشرب كاسة **قبل الأكل**، بتعبّي المعدة وبتخليك تاكل أقل.\n- فيك تستعمله **بدل مكعبات المرقة** بالطبخ، لأنه طبيعي.\n- انتبه للملح، خصوصاً بالمرق الجاهز من السوبرماركت، واقرأ العبوة.\n- بعد ما يبرد، فيك تشيل طبقة الدهن من فوق.\n\n### بدائل أخف\n- **بدل شوربة الكريمة (أغلبها دهون):** كاسة مرق عظام مع خضار.\n- **بدل مكعبات المرقة المالحة:** مرق عظام بيتي بملح قليل.",
+        "en": "### How many calories are in bone broth?\nBone broth is back in fashion, but it was originally our grandmothers' food 😄 **There are 45 calories and 9.5 g of protein per 100 ml, and a cup (240 ml) has about 108 calories and 23 g of protein.** So a cup of broth has roughly as much protein as a small chicken breast.\n\n### Does bone broth raise blood sugar?\nNo. It has half a gram of carbohydrate per 100 ml, so the glycemic index does not apply to it. And since it is mostly protein and water, it gives you a feeling of fullness without moving your blood sugar.\n\n### What about collagen?\nMany people search for \"bone broth and collagen\". The broth really does contain gelatin from the bones and cartilage, which is why it turns jelly-like when it cools. But the body digests gelatin like any other protein, so there is no guarantee that it \"goes\" to the joints or the skin in particular.\n\n### How to have it smartly\n- You can drink a cup **before a meal**; it fills your stomach and makes you eat less.\n- You can use it **instead of stock cubes** in cooking, because it is natural.\n- Watch the salt, especially in ready-made supermarket broth, and read the label.\n- Once it has cooled, you can remove the layer of fat from the top.\n\n### Lighter alternatives\n- **Instead of cream soup (mostly fat):** a cup of bone broth with vegetables.\n- **Instead of salty stock cubes:** homemade bone broth with little salt.",
+        "nl": "### Hoeveel calorieën zitten er in bottenbouillon?\nBottenbouillon is weer helemaal in, maar oorspronkelijk is het het eten van onze oma's 😄 **Er zitten 45 calorieën en 9,5 g eiwit in 100 ml, en een kop (240 ml) bevat ongeveer 108 calorieën en 23 g eiwit.** Een kop bouillon bevat dus ongeveer evenveel eiwit als een kleine kipfilet.\n\n### Verhoogt bottenbouillon de bloedsuiker?\nNee. Er zit een halve gram koolhydraten in per 100 ml, dus de glykemische index is niet van toepassing. En omdat het vooral eiwit en water is, geeft het je een vol gevoel zonder je bloedsuiker te laten bewegen.\n\n### Hoe zit het met collageen?\nVeel mensen zoeken naar \"bottenbouillon en collageen\". De bouillon bevat echt gelatine uit de botten en het kraakbeen, en daarom wordt hij als gelei als hij afkoelt. Maar het lichaam verteert gelatine zoals elk ander eiwit, dus er is geen garantie dat het speciaal naar de gewrichten of de huid \"gaat\".\n\n### Zo eet je het slim\n- Je kunt een kop drinken **voor het eten**; het vult je maag en je eet minder.\n- Je kunt het **in plaats van bouillonblokjes** gebruiken bij het koken, omdat het natuurlijk is.\n- Let op het zout, vooral in kant-en-klare bouillon uit de supermarkt, en lees het etiket.\n- Als het is afgekoeld, kun je de vetlaag bovenop weghalen.\n\n### Lichtere alternatieven\n- **In plaats van roomsoep (vooral vet):** een kop bottenbouillon met groenten.\n- **In plaats van zoute bouillonblokjes:** zelfgemaakte bottenbouillon met weinig zout."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في مرق العظام؟",
+            "a": "بكل 100 مل 45 سعرة، وبالكاسة (240 مل) حوالي 108 سعرات، ومعها حوالي 23 غ بروتين."
+          },
+          {
+            "q": "هل مرق العظام مناسب للرجيم؟",
+            "a": "أكيد، لأنه سعراته قليلة وبروتينه عالي، فبيشبع. كاسة قبل الوجبة بتساعدك تاكل أقل."
+          },
+          {
+            "q": "هل مرق العظام يرفع السكر؟",
+            "a": "لأ، الكربوهيدرات فيه تقريباً معدومة."
+          },
+          {
+            "q": "هل مرق العظام مفيد للمفاصل والبشرة؟",
+            "a": "فيه جيلاتين، بس الجسم بيهضمه متل أي بروتين، فما في ضمانة إنو يروح عالمفاصل أو الجلد بالذات."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in bone broth?",
+            "a": "45 calories per 100 ml, and about 108 calories per cup (240 ml), with about 23 g of protein."
+          },
+          {
+            "q": "Is bone broth suitable for weight loss?",
+            "a": "Definitely, because it is low in calories and high in protein, so it fills you up. A cup before a meal helps you eat less."
+          },
+          {
+            "q": "Does bone broth raise blood sugar?",
+            "a": "No, it has almost no carbohydrate."
+          },
+          {
+            "q": "Is bone broth good for the joints and skin?",
+            "a": "It contains gelatin, but the body digests it like any protein, so there is no guarantee that it goes to the joints or the skin in particular."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in bottenbouillon?",
+            "a": "45 calorieën per 100 ml en ongeveer 108 calorieën per kop (240 ml), met ongeveer 23 g eiwit."
+          },
+          {
+            "q": "Is bottenbouillon geschikt om af te vallen?",
+            "a": "Zeker, omdat het weinig calorieën en veel eiwit bevat, dus het vult. Een kop voor de maaltijd helpt je minder te eten."
+          },
+          {
+            "q": "Verhoogt bottenbouillon de bloedsuiker?",
+            "a": "Nee, er zitten bijna geen koolhydraten in."
+          },
+          {
+            "q": "Is bottenbouillon goed voor de gewrichten en de huid?",
+            "a": "Het bevat gelatine, maar het lichaam verteert dat zoals elk eiwit, dus er is geen garantie dat het speciaal naar de gewrichten of de huid gaat."
+          }
+        ]
+      }
+    },
+    "906": {
+      "slug": "nasi-goreng",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لهذا الصنف محسوب بمعادلة الوجبات المركّبة المعتمدة من FAO/WHO (متوسط مؤشرات المكونات موزوناً بحصة كل مكوّن من الكربوهيدرات المتاحة): الأرز الأبيض المسلوق (73 ± 4، Atkinson 2008) يشكّل معظم الكربوهيدرات، والسكر في صوص الكيتجاب (السكروز، حوالي 65) الجزء الباقي. وليس قياساً مخبرياً مباشراً. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "en": [
+          "The glycemic index of this food is calculated with the FAO/WHO formula for mixed meals (the mean of the ingredients' GI values, weighted by each ingredient's share of the available carbohydrate): boiled white rice (73 ± 4, Atkinson 2008) provides most of the carbohydrate, and the sugar in the ketjap sauce (sucrose, about 65) the rest. It is not a direct laboratory measurement. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "nl": [
+          "De glykemische index van dit product is berekend met de FAO/WHO-formule voor samengestelde maaltijden (het gemiddelde van de GI-waarden van de ingrediënten, gewogen naar het aandeel van elk ingrediënt in de beschikbare koolhydraten): gekookte witte rijst (73 ± 4, Atkinson 2008) levert de meeste koolhydraten, en de suiker in de ketjap (sucrose, ongeveer 65) de rest. Het is geen directe laboratoriummeting. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في الناسي غورينغ؟\nالناسي غورينغ من أشهر أكلات الشارع بهولندا، جاية من إندونيسيا وسورينام. **بكل 100 غ في 175 سعرة، والصحن المتوسط (250 غ) فيه حوالي 438 سعرة حرارية**، ومعه حوالي 14 غ بروتين و12 غ دهون.\n\n### هل الناسي غورينغ بيرفع السكر؟\nهون لازم نكون صريحين: **الأرز الأبيض هو أساس الصحن، ومؤشره الجلايسيمي مرتفع (حوالي 73).** وصوص الكيتجاب الحلو بيزيد عليه شوية سكر، فطلع المؤشر المحسوب للصحن حوالي 72، يعني مرتفع.\nوالأهم إنو الحمل الجلايسيمي للصحن المتوسط حوالي 47، يعني عالي كتير، لأنه الكمية كبيرة. فصحن كامل بيعمل قفزة واضحة بالسكر.\n\n### كيف تاكله بذكاء؟\n- فيك **تقسم الصحن نصين**: نص أرز ونص خضار مقلية، بيصير الحمل أخف بكتير.\n- **زيد البيضة والدجاج**: البروتين بيبطّئ دخول السكر عالدم.\n- خفف صوص الكيتجاب الحلو، واستعمل صويا عادية مع شوية فلفل.\n- الأرز المطبوخ من مبارح وبعدين مقلي غالباً أهدى على السكر من الأرز الطازج، لأنه بيتكون فيه نشا مقاوم (Resistant Starch).\n\n### بدائل أخف\n- **بدل الأرز الأبيض (73):** أرز بني (68)، أو نص أرز ونص قرنبيط مفروم.\n- **بدل صحن كبير:** صحن صغير مع سلطة خيار.",
+        "en": "### How many calories are in nasi goreng?\nNasi goreng is one of the best-known street foods in the Netherlands, coming from Indonesia and Suriname. **There are 175 calories per 100 g, and a medium plate (250 g) has about 438 calories**, with about 14 g of protein and 12 g of fat.\n\n### Does nasi goreng raise blood sugar?\nHere we have to be honest: **white rice is the base of the plate, and its glycemic index is high (about 73).** The sweet ketjap sauce adds a little sugar on top, so the calculated index for the plate came out at about 72, which means high.\nAnd more importantly, the glycemic load of a medium plate is about 47, which is very high, because the amount is large. So a full plate causes a clear spike in blood sugar.\n\n### How to eat it smartly\n- You can **split the plate in two**: half rice and half stir-fried vegetables; the load becomes much lighter.\n- **Add egg and chicken**: protein slows the entry of sugar into the blood.\n- Use less sweet ketjap sauce, and use ordinary soy sauce with a little chilli.\n- Rice cooked the day before and then fried is often gentler on blood sugar than fresh rice, because resistant starch forms in it.\n\n### Lighter alternatives\n- **Instead of white rice (73):** brown rice (68), or half rice and half riced cauliflower.\n- **Instead of a large plate:** a small plate with a cucumber salad.",
+        "nl": "### Hoeveel calorieën zitten er in nasi goreng?\nNasi goreng is een van de bekendste streetfoodgerechten in Nederland, afkomstig uit Indonesië en Suriname. **Er zitten 175 calorieën in 100 g, en een middelgroot bord (250 g) bevat ongeveer 438 calorieën**, met ongeveer 14 g eiwit en 12 g vet.\n\n### Verhoogt nasi goreng de bloedsuiker?\nHier moeten we eerlijk zijn: **witte rijst is de basis van het bord, en de glykemische index daarvan is hoog (ongeveer 73).** De zoete ketjap voegt er nog wat suiker aan toe, dus de berekende index van het bord kwam uit op ongeveer 72, dus hoog.\nEn belangrijker: de glykemische lading van een middelgroot bord is ongeveer 47, dus heel hoog, omdat de hoeveelheid groot is. Een vol bord geeft dus een duidelijke piek in de bloedsuiker.\n\n### Zo eet je het slim\n- Je kunt **het bord in tweeën verdelen**: half rijst en half gewokte groenten; de lading wordt dan veel lichter.\n- **Voeg ei en kip toe**: eiwit vertraagt de opname van suiker in het bloed.\n- Gebruik minder zoete ketjap, en neem gewone sojasaus met wat peper.\n- Rijst die de dag ervoor is gekookt en daarna gebakken, is vaak milder voor de bloedsuiker dan verse rijst, omdat er resistent zetmeel in ontstaat.\n\n### Lichtere alternatieven\n- **In plaats van witte rijst (73):** zilvervliesrijst (68), of half rijst en half bloemkoolrijst.\n- **In plaats van een groot bord:** een klein bord met komkommersalade."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في صحن ناسي غورينغ؟",
+            "a": "بكل 100 غ 175 سعرة، والصحن المتوسط (250 غ) حوالي 438 سعرة."
+          },
+          {
+            "q": "هل الناسي غورينغ بيرفع السكر؟",
+            "a": "إيه، مؤشره المحسوب حوالي 72 (مرتفع)، والحمل للصحن حوالي 47، لأنه أساسه أرز أبيض."
+          },
+          {
+            "q": "هل الناسي غورينغ مناسب للرجيم؟",
+            "a": "ممكن، بس بصحن صغير مع خضار كتير وبروتين، وبصوص أقل."
+          },
+          {
+            "q": "شو الفرق بين الناسي غورينغ والأرز المقلي الصيني؟",
+            "a": "الفكرة نفسها، بس الناسي غورينغ بيستعمل صوص الكيتجاب الحلو، فغالباً فيه سكر أكتر."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a plate of nasi goreng?",
+            "a": "175 calories per 100 g, and a medium plate (250 g) has about 438 calories."
+          },
+          {
+            "q": "Does nasi goreng raise blood sugar?",
+            "a": "Yes, its calculated index is about 72 (high), and the load of a plate is about 47, because its base is white rice."
+          },
+          {
+            "q": "Is nasi goreng suitable for weight loss?",
+            "a": "It can be, but as a small plate with lots of vegetables and protein, and with less sauce."
+          },
+          {
+            "q": "What is the difference between nasi goreng and Chinese fried rice?",
+            "a": "The idea is the same, but nasi goreng uses sweet ketjap sauce, so it often contains more sugar."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een bord nasi goreng?",
+            "a": "175 calorieën per 100 g, en een middelgroot bord (250 g) bevat ongeveer 438 calorieën."
+          },
+          {
+            "q": "Verhoogt nasi goreng de bloedsuiker?",
+            "a": "Ja, de berekende index is ongeveer 72 (hoog), en de lading van een bord ongeveer 47, omdat de basis witte rijst is."
+          },
+          {
+            "q": "Is nasi goreng geschikt om af te vallen?",
+            "a": "Dat kan, maar als klein bord met veel groenten en eiwit, en met minder saus."
+          },
+          {
+            "q": "Wat is het verschil tussen nasi goreng en Chinese gebakken rijst?",
+            "a": "Het idee is hetzelfde, maar nasi goreng gebruikt zoete ketjap, dus er zit vaak meer suiker in."
+          }
+        ]
+      }
+    },
+    "878": {
+      "slug": "krentenbrood",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لهذا الصنف محسوب بمعادلة الوجبات المركّبة المعتمدة من FAO/WHO: الخبز الأبيض (75 ± 2، Atkinson 2008) والزبيب (64 ± 11، Jenkins et al.)، على اعتبار أن الزبيب يشكّل حوالي خُمس وزن الخبز. وبما أن مؤشري المكوّنين بين 64 و75، تبقى النتيجة في هذا المجال مهما تغيّرت نسبة الزبيب. وليس قياساً مخبرياً مباشراً. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "en": [
+          "The glycemic index of this food is calculated with the FAO/WHO formula for mixed meals: white bread (75 ± 2, Atkinson 2008) and raisins (64 ± 11, Jenkins et al.), taking raisins as about one fifth of the bread's weight. Since the two ingredients' indices lie between 64 and 75, the result stays in this range whatever the share of raisins. It is not a direct laboratory measurement. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "nl": [
+          "De glykemische index van dit product is berekend met de FAO/WHO-formule voor samengestelde maaltijden: witbrood (75 ± 2, Atkinson 2008) en rozijnen (64 ± 11, Jenkins et al.), uitgaande van rozijnen als ongeveer een vijfde van het gewicht van het brood. Omdat de indexen van de twee ingrediënten tussen 64 en 75 liggen, blijft de uitkomst in dit bereik, hoe groot het aandeel rozijnen ook is. Het is geen directe laboratoriummeting. FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في الكرنتنبرود؟\nالكرنتنبرود هو خبز الفطور الهولندي المحبوب، مليان زبيب، وبيتاكل مع زبدة أو جبنة. **بكل 100 غ في 285 سعرة، والشريحتين (70 غ) فيهن حوالي 200 سعرة حرارية.**\n\n### هل الكرنتنبرود بيرفع السكر؟\nكتير ناس مفكرين إنو الزبيب بيخليه \"صحي\"، بس الحقيقة إنو **أساسه طحين أبيض.** الخبز الأبيض مؤشره حوالي 75، والزبيب حوالي 64، فطلع المؤشر المحسوب للكرنتنبرود حوالي 72، يعني مرتفع.\nوبما إنو الشريحتين فيهن حوالي 35 غ كربوهيدرات متاحة، الحمل الجلايسيمي للحصة حوالي 25، يعني عالي. فشريحتين كرنتنبرود عالفطور بيرفعوا السكر أكتر مما بتتوقع.\n\n### كيف تاكله بذكاء؟\n- خليها **شريحة وحدة** مع شي فيه بروتين، متل جبنة أو بيضة.\n- **فيك تحمّصه**: كتير ناس بيحبوه محمّص مع شوية زبدة.\n- خليه للفطور أو الضهر، مش سناك بالليل.\n- إذا بتحب الطعمة الحلوة، فيك تاكل خبز حبوب مع شوية زبيب لحالو.\n\n### بدائل أخف\n- **بدل الكرنتنبرود (72):** خبز حبوب خاص (Specialty grain bread) مؤشره حوالي 53.\n- **بدل شريحتين:** شريحة وحدة مع جبنة بيضا وخيار.",
+        "en": "### How many calories are in krentenbrood?\nKrentenbrood is the much-loved Dutch breakfast bread, full of raisins, eaten with butter or cheese. **There are 285 calories per 100 g, and two slices (70 g) have about 200 calories.**\n\n### Does krentenbrood raise blood sugar?\nMany people think the raisins make it \"healthy\", but the truth is that **its base is white flour.** White bread has an index of about 75 and raisins about 64, so the calculated index for krentenbrood came out at about 72, which means high.\nAnd since two slices have about 35 g of available carbohydrate, the glycemic load of a portion is about 25, which means high. So two slices of krentenbrood at breakfast raise your blood sugar more than you would expect.\n\n### How to eat it smartly\n- Keep it to **one slice** with something that has protein, such as cheese or an egg.\n- **You can toast it**: many people like it toasted with a little butter.\n- Keep it for breakfast or lunch, not as a night-time snack.\n- If you like the sweet taste, you can eat grain bread with a few raisins on the side.\n\n### Lighter alternatives\n- **Instead of krentenbrood (72):** specialty grain bread with an index of about 53.\n- **Instead of two slices:** one slice with white cheese and cucumber.",
+        "nl": "### Hoeveel calorieën zitten er in krentenbrood?\nKrentenbrood is het geliefde Nederlandse ontbijtbrood, vol rozijnen, gegeten met boter of kaas. **Er zitten 285 calorieën in 100 g, en twee sneetjes (70 g) bevatten ongeveer 200 calorieën.**\n\n### Verhoogt krentenbrood de bloedsuiker?\nVeel mensen denken dat de rozijnen het \"gezond\" maken, maar de waarheid is dat **de basis witte bloem is.** Witbrood heeft een index van ongeveer 75 en rozijnen ongeveer 64, dus de berekende index van krentenbrood kwam uit op ongeveer 72, dus hoog.\nEn omdat twee sneetjes ongeveer 35 g beschikbare koolhydraten bevatten, is de glykemische lading van een portie ongeveer 25, dus hoog. Twee sneetjes krentenbrood bij het ontbijt verhogen je bloedsuiker dus meer dan je zou verwachten.\n\n### Zo eet je het slim\n- Houd het bij **één sneetje** met iets waar eiwit in zit, zoals kaas of een ei.\n- **Je kunt het roosteren**: veel mensen eten het graag geroosterd met een beetje boter.\n- Bewaar het voor het ontbijt of de lunch, niet als tussendoortje 's avonds.\n- Hou je van de zoete smaak, eet dan meergranenbrood met een paar losse rozijnen.\n\n### Lichtere alternatieven\n- **In plaats van krentenbrood (72):** speciaal meergranenbrood met een index van ongeveer 53.\n- **In plaats van twee sneetjes:** één sneetje met witte kaas en komkommer."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في الكرنتنبرود؟",
+            "a": "بكل 100 غ 285 سعرة، والشريحتين (70 غ) حوالي 200 سعرة."
+          },
+          {
+            "q": "هل الكرنتنبرود بيرفع السكر؟",
+            "a": "إيه، مؤشره المحسوب حوالي 72 (مرتفع)، لأنه أساسه طحين أبيض."
+          },
+          {
+            "q": "هل الكرنتنبرود أحسن من الخبز الأبيض؟",
+            "a": "تقريباً نفس الشي. الزبيب ما بيغيّر كتير، الفرق بيجي من الطحين الأسمر أو الحبوب الكاملة."
+          },
+          {
+            "q": "هل الكرنتنبرود مناسب للرجيم؟",
+            "a": "ممكن بشريحة وحدة مع بروتين. بس شريحتين أو تلاتة بيتجمعوا بسرعة."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in krentenbrood?",
+            "a": "285 calories per 100 g, and two slices (70 g) have about 200 calories."
+          },
+          {
+            "q": "Does krentenbrood raise blood sugar?",
+            "a": "Yes, its calculated index is about 72 (high), because its base is white flour."
+          },
+          {
+            "q": "Is krentenbrood better than white bread?",
+            "a": "It is about the same. The raisins do not change much; the difference comes from wholemeal flour or whole grains."
+          },
+          {
+            "q": "Is krentenbrood suitable for weight loss?",
+            "a": "It can be, as one slice with protein. But two or three slices add up fast."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in krentenbrood?",
+            "a": "285 calorieën per 100 g, en twee sneetjes (70 g) bevatten ongeveer 200 calorieën."
+          },
+          {
+            "q": "Verhoogt krentenbrood de bloedsuiker?",
+            "a": "Ja, de berekende index is ongeveer 72 (hoog), omdat de basis witte bloem is."
+          },
+          {
+            "q": "Is krentenbrood beter dan witbrood?",
+            "a": "Het is ongeveer hetzelfde. De rozijnen veranderen niet veel; het verschil komt van volkorenmeel of volle granen."
+          },
+          {
+            "q": "Is krentenbrood geschikt om af te vallen?",
+            "a": "Dat kan, als één sneetje met eiwit. Maar twee of drie sneetjes tellen snel op."
+          }
+        ]
+      }
+    },
+    "981": {
+      "slug": "gluten-free-rolled-oats",
+      "sugar": {
+        "ar": "حوالي 1 غ",
+        "en": "about 1 g",
+        "nl": "ongeveer 1 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لهذا الصنف مأخوذ من عصيدة رقائق الشوفان العادية (55 ± 2)، لأن الخلو من الغلوتين لا يغيّر نوع الحبة، وليس قياساً مخبرياً مباشراً للمنتج الخالي من الغلوتين. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3.",
+          "قيمة السكر: USDA FoodData Central."
+        ],
+        "en": [
+          "The glycemic index of this food is taken from ordinary rolled oat porridge (55 ± 2), because being gluten-free does not change the type of grain; it is not a direct laboratory measurement of the gluten-free product. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3.",
+          "Sugar value: USDA FoodData Central."
+        ],
+        "nl": [
+          "De glykemische index van dit product is overgenomen van gewone havermoutpap van havervlokken (55 ± 2), omdat glutenvrij zijn het soort graan niet verandert; het is geen directe laboratoriummeting van het glutenvrije product. Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care 2008;31(12):2281–3.",
+          "Suikerwaarde: USDA FoodData Central."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في الشوفان؟\nالشوفان صار ملك الصبحيات، وما في أحلى من صحن سخن بأول النهار. **بكل 100 غرام شوفان ناشف في 370 سعرة حرارية، والحصة المعتادة (40 غ، يعني حوالي نص كاسة) فيها 148 سعرة**، ومعها 5 غ بروتين و4 غ ألياف. يعني صحن متوسط بيشبعك لوقت الضهر.\n\n### هل الشوفان يرفع السكر؟\nهون الشوفان بيرفع راسو 😄 رقائق الشوفان مؤشرها الجلايسيمي (Glycemic Index) 55، يعني منخفض، وحملها الجلايسيمي (Glycemic Load) بالحصة حوالي 11، يعني متوسط. والسر بالألياف الذائبة اللي اسمها بيتا غلوكان (Beta-Glucan): بتعمل متل الجل بالمعدة، وبتبطّئ دخول السكر عالدم.\nبس انتبه، مش كل شوفان متل بعضه. **الشوفان الفوري (Instant) مؤشره 79**، يعني عالي، لأنه مطحون ومطبوخ مسبقاً، فبيتهضم أسرع بكتير.\n\n### شو يعني \"خالي من الغلوتين\"؟\nالشوفان بطبيعته ما فيه غلوتين، بس غالباً بينطحن بنفس المطاحن مع القمح، فبيتلوث فيه. أما \"الخالي من الغلوتين\" فبينزرع وبينطحن بعيد عن القمح، وهاد مهم للي عندهن داء السيلياك (Celiac Disease). والحبة نفسها هي ذاتها، فالسعرات والمؤشر نفسهم.\n\n### هل الشوفان يزيد الوزن؟\nالشوفان لحالو ما بيزيد الوزن، بالعكس، الألياف بتشبعك. اللي بيزيد الوزن هو **الإضافات**: العسل والسكر والشوكولا وزبدة الفستق بكميات كبيرة.\n\n### كيف تاكل الشوفان بذكاء؟\n- فيك تختار **الرقائق الكبيرة** أو **الشوفان المقطّع (Steel-cut)** بدل الفوري.\n- فيك تطبخه بالحليب أو تحط فوقه **لبن يوناني أو مكسرات**. البروتين والدهون الصحية بيهدّوا السكر أكتر.\n- الحلاوة فيك تاخدها من **فراولة أو توت** بدل العسل والسكر.\n- أفضل وقت لأكله؟ الفطور أو بعد الرياضة، بس أي وقت بيمشي.\n\n### بدائل أخف\n- **بدل الشوفان الفوري (79):** رقائق الشوفان الكبيرة (55).\n- **بدل حبوب الفطور المحلاة:** صحن شوفان مع فاكهة، بيكون أشبع وأخف على السكر.\n- **إذا بدك أقل كربوهيدرات:** نص حصة شوفان مع معلقة بذور شيا ولبن يوناني.",
+        "en": "### How many calories are in oats?\nOats have become the king of breakfast, and nothing beats a hot bowl at the start of the day. **There are 370 calories in 100 grams of dry oats, and the usual portion (40 g, about half a cup) has 148 calories**, with 5 g of protein and 4 g of fibre. So a medium bowl keeps you full until lunch.\n\n### Do oats raise blood sugar?\nOats make us proud here 😄 Rolled oats have a glycemic index of 55, which means low, and a glycemic load per portion of about 11, which means medium. The secret is the soluble fibre called beta-glucan: it acts like a gel in the stomach and slows the entry of sugar into the blood.\nBut watch out, not all oats are the same. **Instant oats have an index of 79**, which is high, because they are ground and pre-cooked, so they are digested much faster.\n\n### What does \"gluten-free\" mean?\nOats are naturally gluten-free, but they are often milled in the same mills as wheat, so they get contaminated with it. \"Gluten-free\" oats are grown and milled away from wheat, which matters for people with coeliac disease. The grain itself is the same, so the calories and the index are the same.\n\n### Do oats make you gain weight?\nOats on their own do not make you gain weight; on the contrary, the fibre fills you up. What makes you gain weight is the **toppings**: honey, sugar, chocolate and peanut butter in large amounts.\n\n### How to eat oats smartly\n- You can choose **large flakes** or **steel-cut oats** instead of instant.\n- You can cook them in milk or top them with **Greek yoghurt or nuts**. Protein and healthy fats calm blood sugar even more.\n- You can get sweetness from **strawberries or berries** instead of honey and sugar.\n- The best time to eat them? Breakfast or after exercise, but any time works.\n\n### Lighter alternatives\n- **Instead of instant oats (79):** large rolled oats (55).\n- **Instead of sweetened breakfast cereal:** a bowl of oats with fruit; it is more filling and gentler on blood sugar.\n- **If you want fewer carbohydrates:** half a portion of oats with a spoon of chia seeds and Greek yoghurt.",
+        "nl": "### Hoeveel calorieën zitten er in havermout?\nHavermout is de koning van het ontbijt geworden, en er gaat niets boven een warme kom aan het begin van de dag. **Er zitten 370 calorieën in 100 gram droge havervlokken, en de gangbare portie (40 g, ongeveer een halve kop) bevat 148 calorieën**, met 5 g eiwit en 4 g vezels. Een middelgrote kom houdt je dus vol tot de lunch.\n\n### Verhoogt havermout de bloedsuiker?\nHier maakt havermout ons trots 😄 Havervlokken hebben een glykemische index van 55, dus laag, en een glykemische lading per portie van ongeveer 11, dus gemiddeld. Het geheim zit in de oplosbare vezel bètaglucaan: die werkt als een gel in de maag en vertraagt de opname van suiker in het bloed.\nMaar let op, niet alle havermout is hetzelfde. **Instanthavermout heeft een index van 79**, dus hoog, omdat hij gemalen en voorgekookt is, waardoor hij veel sneller wordt verteerd.\n\n### Wat betekent \"glutenvrij\"?\nHaver bevat van nature geen gluten, maar wordt vaak in dezelfde molens gemalen als tarwe, waardoor hij ermee besmet raakt. \"Glutenvrije\" haver wordt ver van tarwe geteeld en gemalen, en dat is belangrijk voor mensen met coeliakie. Het graan zelf is hetzelfde, dus de calorieën en de index zijn hetzelfde.\n\n### Kom je aan van havermout?\nHavermout op zich laat je niet aankomen; integendeel, de vezels vullen je. Waar je van aankomt, zijn de **toevoegingen**: honing, suiker, chocolade en pindakaas in grote hoeveelheden.\n\n### Zo eet je havermout slim\n- Je kunt kiezen voor **grote vlokken** of **gesneden haver (steel-cut)** in plaats van instant.\n- Je kunt hem in melk koken of er **Griekse yoghurt of noten** op doen. Eiwit en gezonde vetten houden de bloedsuiker nog rustiger.\n- Zoetheid kun je halen uit **aardbeien of bessen** in plaats van honing en suiker.\n- Het beste moment om hem te eten? Bij het ontbijt of na het sporten, maar elk moment is goed.\n\n### Lichtere alternatieven\n- **In plaats van instanthavermout (79):** grote havervlokken (55).\n- **In plaats van gezoete ontbijtgranen:** een kom havermout met fruit; die vult meer en is milder voor de bloedsuiker.\n- **Als je minder koolhydraten wilt:** een halve portie havermout met een lepel chiazaad en Griekse yoghurt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة حرارية في الشوفان؟",
+            "a": "بكل 100 غ ناشفين 370 سعرة، وبالحصة المعتادة (40 غ) 148 سعرة."
+          },
+          {
+            "q": "هل الشوفان يرفع السكر؟",
+            "a": "رقائق الشوفان مؤشرها 55 (منخفض)، وحملها بالحصة حوالي 11 (متوسط). أما الشوفان الفوري (79) فبيرفع السكر أسرع."
+          },
+          {
+            "q": "هل الشوفان مناسب للرجيم والدايت؟",
+            "a": "أكيد. الألياف فيه بتشبعك لوقت أطول، بس الكمية والإضافات هي اللي بتفرق."
+          },
+          {
+            "q": "هل الشوفان الخالي من الغلوتين أفضل من العادي؟",
+            "a": "من ناحية السعرات والسكر هو نفسه. الفرق بس للي عندهن حساسية من الغلوتين أو داء السيلياك."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in oats?",
+            "a": "370 calories per 100 g dry, and 148 calories in the usual portion (40 g)."
+          },
+          {
+            "q": "Do oats raise blood sugar?",
+            "a": "Rolled oats have an index of 55 (low) and a load per portion of about 11 (medium). Instant oats (79), however, raise blood sugar faster."
+          },
+          {
+            "q": "Are oats suitable for weight loss and dieting?",
+            "a": "Definitely. The fibre in them keeps you full for longer, but the amount and the toppings are what make the difference."
+          },
+          {
+            "q": "Are gluten-free oats better than ordinary oats?",
+            "a": "In terms of calories and sugar they are the same. The difference only matters for people with a gluten sensitivity or coeliac disease."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in havermout?",
+            "a": "370 calorieën per 100 g droog, en 148 calorieën in de gangbare portie (40 g)."
+          },
+          {
+            "q": "Verhoogt havermout de bloedsuiker?",
+            "a": "Havervlokken hebben een index van 55 (laag) en een lading per portie van ongeveer 11 (gemiddeld). Instanthavermout (79) verhoogt de bloedsuiker echter sneller."
+          },
+          {
+            "q": "Is havermout geschikt om af te vallen en voor een dieet?",
+            "a": "Zeker. De vezels houden je langer vol, maar de hoeveelheid en de toevoegingen maken het verschil."
+          },
+          {
+            "q": "Is glutenvrije havermout beter dan gewone?",
+            "a": "Qua calorieën en suiker is hij hetzelfde. Het verschil geldt alleen voor mensen met een glutengevoeligheid of coeliakie."
+          }
+        ]
+      }
+    },
+    "987": {
+      "slug": "shirataki-noodles",
+      "sugar": {
+        "ar": "أقل من 0.5 غ",
+        "en": "less than 0.5 g",
+        "nl": "minder dan 0,5 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في الشيراتاكي؟\nالشيراتاكي هي \"معكرونة\" يابانية مصنوعة من جذر نبتة اسمها الكونجاك (Konjac). **بكل 100 غ في 9 سعرات بس، والكيس (200 غ) فيه حوالي 18 سعرة حرارية.** للمقارنة، صحن معكرونة عادية فيه مئات السعرات!\n\n### هل الشيراتاكي بترفع السكر؟\nلأ. أغلبها مي وألياف اسمها غلوكومانان (Glucomannan)، والكربوهيدرات المتاحة فيها تقريباً صفر، فالمؤشر الجلايسيمي ما بينطبق عليها. ولهيك صارت مشهورة بالكيتو والرجيم.\n\n### شو لازم تعرف قبل ما تجرّبها؟\n- **الريحة**: أول ما تفتح الكيس في ريحة \"بحرية\" خفيفة. ما تخاف، بتروح لما تشطفها منيح بالمي.\n- **القوام**: مطاطي شوي، مش متل المعكرونة العادية.\n- **الطعمة**: ما إلها طعمة لحالها، فبتاخد طعمة الصوص اللي بتطبخها فيه.\n- **الشبع**: بتعبّي المعدة، بس ما فيها بروتين، فلازم تضيف دجاج أو بيض أو توفو.\n\n### كيف تطبخها؟\n1. اشطفها منيح تحت المي الجارية دقيقة كاملة.\n2. فيك تسلقها دقيقتين.\n3. الأهم: **حمّصها بمقلاية ناشفة بدون زيت** كم دقيقة لتنشف، هيك بتصير أطيب بكتير.\n4. بعدين حطها مع الصوص والخضار والبروتين.\n\n### بدائل أخف\n- **بدل صحن المعكرونة البيضا:** نص معكرونة ونص شيراتاكي، بتخفف السعرات بدون ما تخسر الطعمة.\n- **بدل نودلز الرامن الجاهزة:** شيراتاكي مع مرق وخضار.",
+        "en": "### How many calories are in shirataki?\nShirataki is a Japanese \"pasta\" made from the root of a plant called konjac. **There are only 9 calories per 100 g, and a bag (200 g) has about 18 calories.** For comparison, a plate of ordinary pasta has hundreds of calories!\n\n### Does shirataki raise blood sugar?\nNo. It is mostly water and a fibre called glucomannan, and it has almost zero available carbohydrate, so the glycemic index does not apply to it. That is why it has become popular on keto and weight-loss diets.\n\n### What to know before you try it\n- **The smell**: when you first open the bag there is a light \"fishy\" smell. Don't worry, it goes away when you rinse it well with water.\n- **The texture**: a bit rubbery, not like ordinary pasta.\n- **The taste**: it has no taste of its own, so it takes on the taste of the sauce you cook it in.\n- **Fullness**: it fills the stomach, but it has no protein, so you need to add chicken, eggs or tofu.\n\n### How to cook it\n1. Rinse it well under running water for a full minute.\n2. You can boil it for two minutes.\n3. Most important: **dry-fry it in a pan without oil** for a few minutes until it dries out; that makes it much tastier.\n4. Then add it to the sauce, vegetables and protein.\n\n### Lighter alternatives\n- **Instead of a plate of white pasta:** half pasta and half shirataki; it cuts the calories without losing the taste.\n- **Instead of instant ramen noodles:** shirataki with broth and vegetables.",
+        "nl": "### Hoeveel calorieën zitten er in shirataki?\nShirataki is Japanse \"pasta\" gemaakt van de wortel van een plant die konjac heet. **Er zitten maar 9 calorieën in 100 g, en een zak (200 g) bevat ongeveer 18 calorieën.** Ter vergelijking: een bord gewone pasta bevat honderden calorieën!\n\n### Verhoogt shirataki de bloedsuiker?\nNee. Het is vooral water en een vezel die glucomannan heet, en er zitten bijna nul beschikbare koolhydraten in, dus de glykemische index is niet van toepassing. Daarom is het populair geworden bij keto en afvallen.\n\n### Wat je moet weten voordat je het probeert\n- **De geur**: als je de zak opent, ruik je een lichte \"visachtige\" geur. Geen zorgen, die verdwijnt als je het goed afspoelt met water.\n- **De structuur**: een beetje rubberachtig, niet zoals gewone pasta.\n- **De smaak**: het heeft zelf geen smaak, dus het neemt de smaak aan van de saus waarin je het kookt.\n- **Verzadiging**: het vult de maag, maar er zit geen eiwit in, dus voeg kip, ei of tofu toe.\n\n### Zo kook je het\n1. Spoel het een volle minuut goed af onder stromend water.\n2. Je kunt het twee minuten koken.\n3. Het belangrijkste: **bak het droog in een pan zonder olie**, een paar minuten tot het droog is; zo wordt het veel lekkerder.\n4. Doe het daarna bij de saus, de groenten en het eiwit.\n\n### Lichtere alternatieven\n- **In plaats van een bord witte pasta:** half pasta en half shirataki; dat scheelt calorieën zonder smaak te verliezen.\n- **In plaats van instant-ramennoedels:** shirataki met bouillon en groenten."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في نودلز الشيراتاكي؟",
+            "a": "بكل 100 غ 9 سعرات، والكيس (200 غ) حوالي 18 سعرة."
+          },
+          {
+            "q": "هل الشيراتاكي بترفع السكر؟",
+            "a": "لأ، الكربوهيدرات المتاحة فيها تقريباً صفر."
+          },
+          {
+            "q": "هل الشيراتاكي مناسبة للكيتو والرجيم؟",
+            "a": "أكيد، لأنها شبه بدون سعرات ولا نشويات. بس لازم تضيف بروتين لحتى تشبع."
+          },
+          {
+            "q": "ليش الشيراتاكي إلها ريحة؟",
+            "a": "من المي اللي بتكون محفوظة فيها. اشطفها منيح وحمّصها بمقلاية ناشفة، وبتروح الريحة."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in shirataki noodles?",
+            "a": "9 calories per 100 g, and a bag (200 g) has about 18 calories."
+          },
+          {
+            "q": "Does shirataki raise blood sugar?",
+            "a": "No, it has almost zero available carbohydrate."
+          },
+          {
+            "q": "Is shirataki suitable for keto and weight loss?",
+            "a": "Definitely, because it has almost no calories and no starch. But you need to add protein to feel full."
+          },
+          {
+            "q": "Why does shirataki smell?",
+            "a": "From the water it is stored in. Rinse it well and dry-fry it in a pan, and the smell goes away."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in shirataki-noedels?",
+            "a": "9 calorieën per 100 g, en een zak (200 g) bevat ongeveer 18 calorieën."
+          },
+          {
+            "q": "Verhoogt shirataki de bloedsuiker?",
+            "a": "Nee, er zitten bijna nul beschikbare koolhydraten in."
+          },
+          {
+            "q": "Is shirataki geschikt voor keto en afvallen?",
+            "a": "Zeker, omdat het bijna geen calorieën en geen zetmeel bevat. Maar voeg eiwit toe om vol te raken."
+          },
+          {
+            "q": "Waarom ruikt shirataki?",
+            "a": "Door het water waarin het bewaard wordt. Spoel het goed af en bak het droog in een pan, dan verdwijnt de geur."
+          }
+        ]
+      }
+    },
+    "930": {
+      "slug": "grilled-portobello-mushroom",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في فطر البورتوبيلو؟\nالبورتوبيلو هو \"الأخ الكبير\" للفطر البني، وحبته بحجم كف الإيد. **بكل 100 غ مشوي في 28 سعرة حرارية بس، والحبة الكبيرة (حوالي 100 غ) فيها نفس الشي تقريباً.** يعني فيك تاكل حبتين وتحس إنك أكلت \"ستيك\" بأقل من 60 سعرة.\n\n### هل الفطر بيرفع السكر؟\nلأ. الكربوهيدرات المتاحة فيه حوالي 2.4 غ بكل 100 غ، فالمؤشر الجلايسيمي ما بينطبق عليه. ولهيك هو صديق الرجيم والكيتو وأي حدا عم يراقب سكره.\n\n### ليش بيسموه \"ستيك الفطر\"؟\nلأنه قوامه لحمي وكثيف، وطعمته فيها نكهة غنية بيسموها \"أومامي\" (Umami)، وهي نفس النكهة اللي بتحسها باللحمة والجبنة. فكتير نباتيين بيستعملوه بدل اللحمة بالبرغر.\nبس انتبه: البروتين فيه قليل (2.5 غ بكل 100 غ)، فهو بديل بالطعمة والقوام، مش بالبروتين.\n\n### كيف تطبخه بذكاء؟\n- فيك تشويه على الغريل أو بالفرن مع **معلقة زيت زيتون** وتوم وزعتر. الفطر بيشرب الزيت متل الإسفنجة، فلا تزيد الكمية.\n- فيك تحشيه بجبنة قريش وبقدونس، وتخبزه بالفرن.\n- استعمله **\"خبزة\" للبرغر** بدل الخبز: حبتين بورتوبيلو وبالنص اللحمة أو الجبنة.\n\n### بدائل أخف\n- **بدل خبز البرغر (حوالي 61):** حبتين بورتوبيلو مشويين.\n- **بدل البطاطا المقلية جنب الأكل:** شرايح بورتوبيلو مشوية.",
+        "en": "### How many calories are in a portobello mushroom?\nPortobello is the \"big brother\" of the brown mushroom, and one is the size of the palm of your hand. **There are only 28 calories per 100 g grilled, and a large mushroom (about 100 g) has about the same.** So you can eat two and feel you have had a \"steak\" for less than 60 calories.\n\n### Do mushrooms raise blood sugar?\nNo. They have about 2.4 g of available carbohydrate per 100 g, so the glycemic index does not apply. That makes them a friend of weight-loss and keto diets and of anyone watching their blood sugar.\n\n### Why is it called a \"mushroom steak\"?\nBecause its texture is meaty and dense, and its taste has a rich flavour called umami, the same flavour you sense in meat and cheese. So many vegetarians use it instead of meat in burgers.\nBut watch out: it has little protein (2.5 g per 100 g), so it replaces meat in taste and texture, not in protein.\n\n### How to cook it smartly\n- You can grill it or bake it in the oven with **a spoon of olive oil**, garlic and thyme. Mushrooms soak up oil like a sponge, so don't add more.\n- You can stuff it with cottage cheese and parsley and bake it in the oven.\n- Use it as a **burger \"bun\"** instead of bread: two portobellos with the meat or cheese in the middle.\n\n### Lighter alternatives\n- **Instead of a burger bun (about 61):** two grilled portobellos.\n- **Instead of fries on the side:** grilled portobello slices.",
+        "nl": "### Hoeveel calorieën zitten er in een portobello?\nDe portobello is de \"grote broer\" van de kastanjechampignon, en één is zo groot als je handpalm. **Er zitten maar 28 calorieën in 100 g gegrilde portobello, en een grote (ongeveer 100 g) bevat ongeveer hetzelfde.** Je kunt er dus twee eten en het gevoel hebben dat je een \"steak\" hebt gegeten voor minder dan 60 calorieën.\n\n### Verhogen paddenstoelen de bloedsuiker?\nNee. Er zit ongeveer 2,4 g beschikbare koolhydraten in per 100 g, dus de glykemische index is niet van toepassing. Daarom zijn ze een vriend van afvallen, keto en iedereen die op zijn bloedsuiker let.\n\n### Waarom heet het een \"paddenstoelensteak\"?\nOmdat de structuur vlezig en stevig is, en de smaak een rijke smaak heeft die umami heet, dezelfde smaak die je proeft in vlees en kaas. Daarom gebruiken veel vegetariërs hem in plaats van vlees in burgers.\nMaar let op: er zit weinig eiwit in (2,5 g per 100 g), dus hij vervangt vlees in smaak en structuur, niet in eiwit.\n\n### Zo bereid je hem slim\n- Je kunt hem grillen of in de oven bereiden met **een lepel olijfolie**, knoflook en tijm. Paddenstoelen zuigen olie op als een spons, dus neem niet meer.\n- Je kunt hem vullen met hüttenkäse en peterselie en in de oven bakken.\n- Gebruik hem als **burger-\"broodje\"** in plaats van brood: twee portobello's met het vlees of de kaas ertussen.\n\n### Lichtere alternatieven\n- **In plaats van een hamburgerbroodje (ongeveer 61):** twee gegrilde portobello's.\n- **In plaats van friet als bijgerecht:** gegrilde plakken portobello."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في فطر البورتوبيلو؟",
+            "a": "بكل 100 غ مشوي حوالي 28 سعرة، والحبة الكبيرة نفس الشي تقريباً."
+          },
+          {
+            "q": "هل الفطر يرفع السكر؟",
+            "a": "لأ، الكربوهيدرات فيه قليلة كتير."
+          },
+          {
+            "q": "هل البورتوبيلو مناسب للكيتو والرجيم؟",
+            "a": "أكيد، سعراته قليلة ونشوياته شبه معدومة. بس انتبه لكمية الزيت بالشوي."
+          },
+          {
+            "q": "هل الفطر بيعوّض عن اللحمة؟",
+            "a": "بالطعمة والقوام إيه، بس بالبروتين لأ. فلازم تضيف مصدر بروتين تاني بالوجبة."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a portobello mushroom?",
+            "a": "About 28 calories per 100 g grilled, and a large mushroom has about the same."
+          },
+          {
+            "q": "Do mushrooms raise blood sugar?",
+            "a": "No, they have very little carbohydrate."
+          },
+          {
+            "q": "Is portobello suitable for keto and weight loss?",
+            "a": "Definitely; it is low in calories and almost free of starch. But watch how much oil you use when grilling."
+          },
+          {
+            "q": "Can mushrooms replace meat?",
+            "a": "In taste and texture yes, but not in protein. So add another protein source to the meal."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een portobello?",
+            "a": "Ongeveer 28 calorieën per 100 g gegrild, en een grote bevat ongeveer hetzelfde."
+          },
+          {
+            "q": "Verhogen paddenstoelen de bloedsuiker?",
+            "a": "Nee, er zitten heel weinig koolhydraten in."
+          },
+          {
+            "q": "Is portobello geschikt voor keto en afvallen?",
+            "a": "Zeker; hij bevat weinig calorieën en bijna geen zetmeel. Maar let op hoeveel olie je bij het grillen gebruikt."
+          },
+          {
+            "q": "Kunnen paddenstoelen vlees vervangen?",
+            "a": "In smaak en structuur wel, maar niet in eiwit. Voeg dus een andere eiwitbron toe aan de maaltijd."
+          }
+        ]
+      }
+    },
+    "989": {
+      "slug": "doum-palm-fruit",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "لا يوجد قياس منشور للمؤشر الجلايسيمي لفاكهة الدوم عند الإنسان، ولا طعام مشابه يمكن الاعتماد عليه للتقدير. الدراسات المنشورة عن الدوم أُجريت على مستخلصات الثمرة عند الحيوانات فقط (مثال: Shady NH et al. Food Funct. 2021;12:11303–18)."
+        ],
+        "en": [
+          "There is no published measurement of the glycemic index of doum fruit in humans, and no similar food that can be relied on for an estimate. The published studies on doum were carried out on fruit extracts in animals only (example: Shady NH et al. Food Funct. 2021;12:11303–18)."
+        ],
+        "nl": [
+          "Er is geen gepubliceerde meting van de glykemische index van doumvrucht bij mensen, en geen vergelijkbaar voedingsmiddel waarop een schatting kan worden gebaseerd. De gepubliceerde studies over doum zijn alleen uitgevoerd met extracten van de vrucht bij dieren (voorbeeld: Shady NH et al. Food Funct. 2021;12:11303–18)."
+        ]
+      },
+      "body": {
+        "ar": "### شو هي فاكهة الدوم؟\nالدوم هو ثمر نخلة بتنمو بصعيد مصر والسودان، لونه بني وقشرته قاسية كتير، وطعمته فيها حلاوة خفيفة بتذكّر بخبز الزنجبيل. وأشهر طريقة لأكله هي **مشروب الدوم**: بيتنقع المسحوق بالمي وبيتشرب بارد.\n\n### كم سعرة في الدوم؟\n**بكل 100 غ دوم في 125 سعرة حرارية، و14 غ ألياف!** وهاد رقم عالي كتير. يعني الدوم من أغنى الفواكه بالألياف. والحصة (30 غ) فيها حوالي 38 سعرة و4 غ ألياف.\n\n### هل الدوم بيرفع السكر؟\nهون لازم نكون صادقين معك: **ما في قياس منشور للمؤشر الجلايسيمي للدوم عند البشر**، ولهيك ما رح نحطلك رقم من عندنا.\nاللي منعرفه إنو الكربوهيدرات المتاحة فيه حوالي 12 غ بكل 100 غ، والألياف العالية غالباً بتبطّئ الامتصاص. وفي دراسات على مستخلصات الدوم عند الحيوانات، بس هاد ما بيعني نفس النتيجة عند الإنسان.\n\n### الدوم والضغط\nكتير ناس بيدوّروا \"هل الدوم بينزّل الضغط\". لهلق ما في دراسات على البشر بتأكد هالشي، فالدوم أكلة شعبية حلوة، مش علاج.\n\n### كيف تاكله بذكاء؟\n- إذا عم تعمل **مشروب دوم**، انتبه للسكر اللي بينحط فوقه، لأنه غالباً بيتحلّى كتير.\n- فيك تشربه بدون سكر أو مع نقطتين ستيفيا.\n- إذا عم تمضغ قطع الدوم الناشفة، انتبه لأسنانك لأنه قاسي كتير!",
+        "en": "### What is doum fruit?\nDoum is the fruit of a palm that grows in Upper Egypt and Sudan. It is brown with a very hard shell, and its taste has a light sweetness reminiscent of gingerbread. The best-known way to have it is **doum drink**: the powder is soaked in water and drunk cold.\n\n### How many calories are in doum?\n**There are 125 calories and 14 g of fibre per 100 g of doum!** That is a very high figure, which makes doum one of the fruits richest in fibre. A portion (30 g) has about 38 calories and 4 g of fibre.\n\n### Does doum raise blood sugar?\nHere we have to be honest with you: **there is no published measurement of the glycemic index of doum in humans**, so we will not give you a number of our own.\nWhat we know is that it has about 12 g of available carbohydrate per 100 g, and the high fibre usually slows absorption. There are studies on doum extracts in animals, but that does not mean the same result in humans.\n\n### Doum and blood pressure\nMany people search for \"does doum lower blood pressure\". So far there are no human studies that confirm this, so doum is a lovely traditional food, not a treatment.\n\n### How to eat it smartly\n- If you are making **doum drink**, watch the sugar added to it, because it is often heavily sweetened.\n- You can drink it without sugar or with two drops of stevia.\n- If you chew dried pieces of doum, watch your teeth, because it is very hard!",
+        "nl": "### Wat is doumvrucht?\nDoum is de vrucht van een palm die groeit in Opper-Egypte en Soedan. Hij is bruin met een heel harde schil, en de smaak heeft een lichte zoetheid die doet denken aan peperkoek. De bekendste manier om hem te nuttigen is **doumdrank**: het poeder wordt in water geweekt en koud gedronken.\n\n### Hoeveel calorieën zitten er in doum?\n**Er zitten 125 calorieën en 14 g vezels in 100 g doum!** Dat is een heel hoog getal, waardoor doum een van de vezelrijkste vruchten is. Een portie (30 g) bevat ongeveer 38 calorieën en 4 g vezels.\n\n### Verhoogt doum de bloedsuiker?\nHier moeten we eerlijk tegen je zijn: **er is geen gepubliceerde meting van de glykemische index van doum bij mensen**, dus we geven je geen getal van onszelf.\nWat we weten is dat er ongeveer 12 g beschikbare koolhydraten in zit per 100 g, en de vele vezels vertragen meestal de opname. Er zijn studies met doumextracten bij dieren, maar dat betekent niet hetzelfde resultaat bij mensen.\n\n### Doum en bloeddruk\nVeel mensen zoeken naar \"verlaagt doum de bloeddruk\". Tot nu toe zijn er geen studies bij mensen die dit bevestigen, dus doum is een heerlijk traditioneel voedingsmiddel, geen behandeling.\n\n### Zo eet je het slim\n- Maak je **doumdrank**, let dan op de suiker die erbij gaat, want die wordt vaak flink gezoet.\n- Je kunt hem zonder suiker drinken of met twee druppels stevia.\n- Kauw je op gedroogde stukjes doum, pas dan op je tanden, want hij is heel hard!"
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في الدوم؟",
+            "a": "بكل 100 غ 125 سعرة، وبالحصة (30 غ) حوالي 38 سعرة."
+          },
+          {
+            "q": "هل الدوم يرفع السكر؟",
+            "a": "ما في قياس منشور لمؤشره الجلايسيمي عند البشر. الألياف العالية فيه غالباً بتبطّئ الامتصاص، بس ما فينا نحكي رقم."
+          },
+          {
+            "q": "هل الدوم ينزّل الضغط؟",
+            "a": "ما في دراسات على البشر بتأكد هالشي لهلق. هو أكلة شعبية، مش علاج."
+          },
+          {
+            "q": "شو فوائد الدوم؟",
+            "a": "أبرز شي فيه إنو غني جداً بالألياف (14 غ بكل 100 غ)."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in doum?",
+            "a": "125 calories per 100 g, and about 38 calories per portion (30 g)."
+          },
+          {
+            "q": "Does doum raise blood sugar?",
+            "a": "There is no published measurement of its glycemic index in humans. Its high fibre usually slows absorption, but we cannot give a number."
+          },
+          {
+            "q": "Does doum lower blood pressure?",
+            "a": "So far there are no human studies that confirm this. It is a traditional food, not a treatment."
+          },
+          {
+            "q": "What are the benefits of doum?",
+            "a": "The most notable thing about it is that it is very rich in fibre (14 g per 100 g)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in doum?",
+            "a": "125 calorieën per 100 g, en ongeveer 38 calorieën per portie (30 g)."
+          },
+          {
+            "q": "Verhoogt doum de bloedsuiker?",
+            "a": "Er is geen gepubliceerde meting van de glykemische index bij mensen. De vele vezels vertragen meestal de opname, maar we kunnen geen getal noemen."
+          },
+          {
+            "q": "Verlaagt doum de bloeddruk?",
+            "a": "Tot nu toe zijn er geen studies bij mensen die dit bevestigen. Het is een traditioneel voedingsmiddel, geen behandeling."
+          },
+          {
+            "q": "Wat zijn de voordelen van doum?",
+            "a": "Het opvallendste is dat hij heel rijk is aan vezels (14 g per 100 g)."
+          }
+        ]
+      }
+    },
+    "1025": {
+      "slug": "erythritol",
+      "sugar": {
+        "ar": "0 غ",
+        "en": "0 g",
+        "nl": "0 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر بطريقة الجدول (انظر المراجع)",
+        "en": "not tested with the table's method (see the references)",
+        "nl": "niet getest met de methode van de tabel (zie de referenties)"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي للإريثريتول (0) ومؤشره الإنسوليني (2) مأخوذان من مراجعة Livesey، وهي محسوبة بطريقة تختلف عن مؤشر الإنسولين المعتمد في جدول الموقع (Holt/Bao). Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–91."
+        ],
+        "en": [
+          "The glycemic index of erythritol (0) and its insulin index (2) are taken from the review by Livesey, which calculates them with a method that differs from the insulin index used in the site's table (Holt/Bao). Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–91."
+        ],
+        "nl": [
+          "De glykemische index van erythritol (0) en de insuline-index (2) zijn overgenomen uit het overzichtsartikel van Livesey, dat ze berekent met een methode die verschilt van de insuline-index in de tabel van de site (Holt/Bao). Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–91."
+        ]
+      },
+      "body": {
+        "ar": "### شو هو الإريثريتول؟\nبدك حلاوة بدون سكر؟ الإريثريتول (Erythritol) من أشهر المحليات اللي بتلاقيها بالسوبرماركت، وغالباً مخلوط مع الستيفيا. هو من عيلة \"الكحوليات السكرية\" (Sugar Alcohols)، وموجود طبيعياً بكميات صغيرة ببعض الفواكه.\n\n### كم سعرة في الإريثريتول؟\n**سعراته صفر تقريباً.** السر إنو الجسم بيمتصه بالأمعاء، بس ما بيحرقه، وبيطلعه متل ما هو. يعني بيمر من الجسم \"سياحة\" وبيرجع 😄\n\n### هل الإريثريتول يرفع السكر؟\nلأ. **مؤشره الجلايسيمي صفر**، والدراسات لقت إنو ما بيرفع السكر ولا الإنسولين تقريباً. ولهيك صار مشهور بالكيتو وعند اللي عم يراقبوا سكرهم.\n\n### طعمته وكيف تستعمله\n- طعمته قريبة من السكر، بس أخف شوي (حوالي 70% من حلاوته)، وبيعطي **إحساس برودة** خفيف عاللسان.\n- فيك تستعمله **بالخبز والطبخ** متل السكر، لأنه ما بيخرب بالحرارة.\n- كتير منتجات بتخلطه مع الستيفيا، لحتى تصير الحلاوة \"1:1\" متل السكر.\n\n### انتبه لشغلة وحدة\n**الكميات الكبيرة** ممكن تعمل نفخة أو إسهال، خصوصاً إذا كان مخلوط مع **السوربيتول**. فاقرأ المكونات على العبوة، وبلّش بكميات صغيرة.\n\n### بدائل وأرقام للمقارنة\n- **الإريثريتول:** مؤشره 0\n- **الزيليتول (Xylitol):** مؤشره 13 (وانتبه، سام للكلاب 🐶)\n- **السوربيتول:** مؤشره 9\n- **السكر الأبيض:** مؤشره حوالي 65",
+        "en": "### What is erythritol?\nWant sweetness without sugar? Erythritol is one of the best-known sweeteners you will find in the supermarket, and it is often mixed with stevia. It belongs to the family of \"sugar alcohols\" and occurs naturally in small amounts in some fruits.\n\n### How many calories are in erythritol?\n**It has almost zero calories.** The secret is that the body absorbs it in the gut but does not burn it, and passes it out unchanged. So it makes a \"sightseeing trip\" through the body and comes back out 😄\n\n### Does erythritol raise blood sugar?\nNo. **Its glycemic index is zero**, and studies have found that it raises neither blood sugar nor insulin to any real extent. That is why it has become popular on keto and among people watching their blood sugar.\n\n### Its taste and how to use it\n- Its taste is close to sugar, but a little lighter (about 70% of its sweetness), and it gives a light **cooling sensation** on the tongue.\n- You can use it **in baking and cooking** like sugar, because heat does not spoil it.\n- Many products mix it with stevia so that the sweetness becomes \"1:1\" like sugar.\n\n### Watch out for one thing\n**Large amounts** can cause bloating or diarrhoea, especially if it is mixed with **sorbitol**. So read the ingredients on the pack and start with small amounts.\n\n### Alternatives and figures for comparison\n- **Erythritol:** index 0\n- **Xylitol:** index 13 (and watch out, it is toxic to dogs 🐶)\n- **Sorbitol:** index 9\n- **White sugar:** index about 65",
+        "nl": "### Wat is erythritol?\nZin in zoet zonder suiker? Erythritol is een van de bekendste zoetstoffen die je in de supermarkt vindt, en het wordt vaak gemengd met stevia. Het hoort bij de familie van de \"suikeralcoholen\" en komt van nature in kleine hoeveelheden voor in sommige vruchten.\n\n### Hoeveel calorieën zitten er in erythritol?\n**Het bevat bijna nul calorieën.** Het geheim is dat het lichaam het in de darm opneemt, maar niet verbrandt, en onveranderd weer uitscheidt. Het maakt dus een \"toeristisch tripje\" door het lichaam en komt er weer uit 😄\n\n### Verhoogt erythritol de bloedsuiker?\nNee. **De glykemische index is nul**, en studies vonden dat het de bloedsuiker en de insuline nauwelijks verhoogt. Daarom is het populair geworden bij keto en bij mensen die op hun bloedsuiker letten.\n\n### De smaak en hoe je het gebruikt\n- De smaak lijkt op suiker, maar is iets lichter (ongeveer 70% van de zoetkracht), en het geeft een licht **verkoelend gevoel** op de tong.\n- Je kunt het **bij het bakken en koken** gebruiken zoals suiker, omdat het niet kapotgaat door hitte.\n- Veel producten mengen het met stevia, zodat de zoetheid \"1:1\" wordt, net als suiker.\n\n### Let op één ding\n**Grote hoeveelheden** kunnen een opgeblazen gevoel of diarree geven, vooral als het gemengd is met **sorbitol**. Lees dus de ingrediënten op de verpakking en begin met kleine hoeveelheden.\n\n### Alternatieven en getallen ter vergelijking\n- **Erythritol:** index 0\n- **Xylitol:** index 13 (en let op, giftig voor honden 🐶)\n- **Sorbitol:** index 9\n- **Witte suiker:** index ongeveer 65"
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الإريثريتول يرفع السكر؟",
+            "a": "لأ. مؤشره الجلايسيمي صفر، والدراسات ما لقت إنو بيرفع السكر أو الإنسولين."
+          },
+          {
+            "q": "كم سعرة في الإريثريتول؟",
+            "a": "تقريباً صفر."
+          },
+          {
+            "q": "شو الفرق بين الإريثريتول والستيفيا؟",
+            "a": "الستيفيا من نبتة، وأحلى من السكر بمئات المرات، فبتحتاج منها نقاط بس. أما الإريثريتول فحلاوته قريبة من السكر، وبتستعمله تقريباً بنفس الكمية."
+          },
+          {
+            "q": "هل الإريثريتول مناسب للكيتو؟",
+            "a": "أكيد، لأنه ما فيه سعرات تقريباً وما بيرفع السكر."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does erythritol raise blood sugar?",
+            "a": "No. Its glycemic index is zero, and studies have not found that it raises blood sugar or insulin."
+          },
+          {
+            "q": "How many calories are in erythritol?",
+            "a": "Almost zero."
+          },
+          {
+            "q": "What is the difference between erythritol and stevia?",
+            "a": "Stevia comes from a plant and is hundreds of times sweeter than sugar, so you only need drops of it. Erythritol's sweetness is close to sugar, and you use it in about the same amount."
+          },
+          {
+            "q": "Is erythritol suitable for keto?",
+            "a": "Definitely, because it has almost no calories and does not raise blood sugar."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt erythritol de bloedsuiker?",
+            "a": "Nee. De glykemische index is nul, en studies vonden niet dat het de bloedsuiker of de insuline verhoogt."
+          },
+          {
+            "q": "Hoeveel calorieën zitten er in erythritol?",
+            "a": "Bijna nul."
+          },
+          {
+            "q": "Wat is het verschil tussen erythritol en stevia?",
+            "a": "Stevia komt van een plant en is honderden keren zoeter dan suiker, dus je hebt er maar druppels van nodig. Erythritol is ongeveer even zoet als suiker, en je gebruikt het in ongeveer dezelfde hoeveelheid."
+          },
+          {
+            "q": "Is erythritol geschikt voor keto?",
+            "a": "Zeker, omdat het bijna geen calorieën bevat en de bloedsuiker niet verhoogt."
+          }
+        ]
+      }
+    },
+    "1026": {
+      "slug": "liquid-stevia-drops",
+      "portion_label": {
+        "ar": "بضع نقاط",
+        "en": "a few drops",
+        "nl": "een paar druppels"
+      },
+      "sugar": {
+        "ar": "0 غ",
+        "en": "0 g",
+        "nl": "0 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### شو هي الستيفيا؟\nنقطتين بفنجان القهوة وخلصت القصة! الستيفيا جاية من أوراق نبتة اسمها Stevia rebaudiana، أصلها من أمريكا الجنوبية. والمادة الحلوة فيها اسمها **غليكوسيدات الستيفيول (Steviol Glycosides)**، وهي أحلى من السكر بحوالي 200 لـ300 مرة.\n\n### كم سعرة في الستيفيا؟\n**صفر.** لأنك عم تستعمل نقاط صغيرة كتير، والمادة نفسها ما بتعطي طاقة.\n\n### هل الستيفيا ترفع السكر؟\nلأ. ما فيها سكر ولا كربوهيدرات، فما بتأثر على سكر الدم، ولهيك المؤشر الجلايسيمي ما بينطبق عليها أصلاً.\n\n### ليش طعمتها مُرّة شوي؟\nهي طبيعة المادة نفسها، وبتبين أكتر لما تزيد الكمية. لهيك:\n- فيك تبلش **بنقطة وحدة** وتزيد عحسب ذوقك.\n- إذا ما حبيت الطعمة، فيك تجرّب منتج **مخلوط مع إريثريتول**، طعمته أقرب للسكر.\n\n### وين بتستعملها؟\n- **القهوة والشاي والمته**: نقطتين بيكفوا الفنجان.\n- **اللبن والشوفان**: بدل العسل.\n- **العصاير البيتية والليموناضة**: بدل السكر.\n- بالخبز بتحتاج تنتبه، لأنه السكر بيعطي حجم وقوام للكيك، والستيفيا ما بتعطي هالشي.\n\n### بدائل وأرقام للمقارنة\n- **معلقة سكر صغيرة (4 غ):** حوالي 16 سعرة.\n- **نقطتين ستيفيا:** 0 سعرات.",
+        "en": "### What is stevia?\nTwo drops in your coffee and that's it! Stevia comes from the leaves of a plant called Stevia rebaudiana, originally from South America. The sweet substance in it is called **steviol glycosides**, and it is about 200 to 300 times sweeter than sugar.\n\n### How many calories are in stevia?\n**Zero.** Because you use very small drops, and the substance itself provides no energy.\n\n### Does stevia raise blood sugar?\nNo. It has no sugar and no carbohydrate, so it does not affect blood sugar, and that is why the glycemic index does not apply to it at all.\n\n### Why does it taste a little bitter?\nThat is the nature of the substance itself, and it shows more when you use more. So:\n- You can start **with one drop** and add more to taste.\n- If you don't like the taste, you can try a product **mixed with erythritol**; its taste is closer to sugar.\n\n### Where to use it\n- **Coffee, tea and mate**: two drops are enough for a cup.\n- **Yoghurt and oats**: instead of honey.\n- **Homemade juices and lemonade**: instead of sugar.\n- In baking you need to be careful, because sugar gives cakes volume and texture, and stevia does not.\n\n### Alternatives and figures for comparison\n- **A teaspoon of sugar (4 g):** about 16 calories.\n- **Two drops of stevia:** 0 calories.",
+        "nl": "### Wat is stevia?\nTwee druppels in je koffie en klaar! Stevia komt van de bladeren van een plant die Stevia rebaudiana heet, oorspronkelijk uit Zuid-Amerika. De zoete stof erin heet **steviolglycosiden**, en die is ongeveer 200 tot 300 keer zoeter dan suiker.\n\n### Hoeveel calorieën zitten er in stevia?\n**Nul.** Omdat je heel kleine druppels gebruikt, en de stof zelf geen energie levert.\n\n### Verhoogt stevia de bloedsuiker?\nNee. Er zit geen suiker en geen koolhydraten in, dus het heeft geen effect op de bloedsuiker, en daarom is de glykemische index helemaal niet van toepassing.\n\n### Waarom smaakt het een beetje bitter?\nDat is de aard van de stof zelf, en het valt meer op als je meer gebruikt. Daarom:\n- Je kunt beginnen **met één druppel** en naar smaak meer toevoegen.\n- Vind je de smaak niet lekker, probeer dan een product **gemengd met erythritol**; de smaak lijkt meer op suiker.\n\n### Waar gebruik je het?\n- **Koffie, thee en mate**: twee druppels zijn genoeg voor een kop.\n- **Yoghurt en havermout**: in plaats van honing.\n- **Zelfgemaakte sappen en limonade**: in plaats van suiker.\n- Bij het bakken moet je opletten, omdat suiker volume en structuur aan cake geeft, en stevia niet.\n\n### Alternatieven en getallen ter vergelijking\n- **Een theelepel suiker (4 g):** ongeveer 16 calorieën.\n- **Twee druppels stevia:** 0 calorieën."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الستيفيا ترفع السكر؟",
+            "a": "لأ، ما فيها سكر ولا كربوهيدرات."
+          },
+          {
+            "q": "كم نقطة ستيفيا بتساوي معلقة سكر؟",
+            "a": "بتختلف من منتج لمنتج، فاقرأ العبوة. وغالباً نقاط قليلة بتكفي فنجان."
+          },
+          {
+            "q": "ليش الستيفيا طعمتها مُرّة؟",
+            "a": "هي طبيعة المادة، وبتبين أكتر مع الكمية الزايدة. خفّف النقاط، أو جرّب منتج مخلوط مع إريثريتول."
+          },
+          {
+            "q": "هل الستيفيا طبيعية؟",
+            "a": "أصلها من نبتة، بس اللي بتشتريه هو مستخلص مُصنّع من الأوراق."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does stevia raise blood sugar?",
+            "a": "No, it has no sugar and no carbohydrate."
+          },
+          {
+            "q": "How many drops of stevia equal a spoon of sugar?",
+            "a": "It varies from product to product, so read the pack. Usually a few drops are enough for a cup."
+          },
+          {
+            "q": "Why does stevia taste bitter?",
+            "a": "That is the nature of the substance, and it shows more with larger amounts. Use fewer drops, or try a product mixed with erythritol."
+          },
+          {
+            "q": "Is stevia natural?",
+            "a": "It comes from a plant, but what you buy is an extract processed from the leaves."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt stevia de bloedsuiker?",
+            "a": "Nee, er zit geen suiker en geen koolhydraten in."
+          },
+          {
+            "q": "Hoeveel druppels stevia staan gelijk aan een lepel suiker?",
+            "a": "Dat verschilt per product, dus lees de verpakking. Meestal zijn een paar druppels genoeg voor een kop."
+          },
+          {
+            "q": "Waarom smaakt stevia bitter?",
+            "a": "Dat is de aard van de stof, en het valt meer op bij grotere hoeveelheden. Gebruik minder druppels, of probeer een product gemengd met erythritol."
+          },
+          {
+            "q": "Is stevia natuurlijk?",
+            "a": "Het komt van een plant, maar wat je koopt is een extract dat uit de bladeren is gemaakt."
+          }
+        ]
+      }
+    },
+    "1028": {
+      "slug": "coconut-sugar",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لسكر جوز الهند (54) مأخوذ من قياس خدمة أبحاث المؤشر الجلايسيمي بجامعة سيدني (SUGiRS). وتوجد قيمة أقل (35 ± 5) منشورة من معهد بحوث الغذاء والتغذية في الفلبين (FNRI)، والفرق قد يعود لطريقة الإنتاج وتوقيت الحصاد."
+        ],
+        "en": [
+          "The glycemic index of coconut sugar (54) is taken from a measurement by the Sydney University Glycemic Index Research Service (SUGiRS). A lower value (35 ± 5) has been published by the Food and Nutrition Research Institute of the Philippines (FNRI); the difference may be due to the production method and the timing of the harvest."
+        ],
+        "nl": [
+          "De glykemische index van kokossuiker (54) is overgenomen van een meting door de Sydney University Glycemic Index Research Service (SUGiRS). Een lagere waarde (35 ± 5) is gepubliceerd door het Food and Nutrition Research Institute van de Filipijnen (FNRI); het verschil kan komen door de productiemethode en het moment van oogsten."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في سكر جوز الهند؟\nسكر جوز الهند بيتعمل من عصارة زهرة نخلة جوز الهند، وبيتغلّى لحتى يصير حبيبات بنية. **بكل 100 غ في 375 سعرة، والملعقة الصغيرة (4 غ) فيها حوالي 15 سعرة**، يعني تقريباً متل السكر الأبيض (16 سعرة بالملعقة).\n\n### هل سكر جوز الهند بيرفع السكر؟\nهون في خبرية لازم نصححها: كتير عبوات مكتوب عليها \"منخفض المؤشر الجلايسيمي\". الحقيقة إنو جامعة سيدني قاسته ولقت **مؤشره 54**، يعني على حافة المنخفض. وفي قياس تاني من الفلبين طلّع 35. والسكر الأبيض حوالي 65.\nيعني هو **أهدى شوي** من السكر الأبيض، بس الفرق مش كبير متل ما بيوحي التسويق. والجسم بالآخر بيتعامل معه كسكر.\n\n### هل هو أصحى من السكر الأبيض؟\nفيه كميات صغيرة من المعادن، بس بالكمية اللي بتستعملها (ملعقة أو اتنين) الفرق ما بيذكر. فإذا عم تختاره \"عشان صحي\"، **الكمية هي اللي بتفرق، مش نوع السكر.**\n\n### كيف تستعمله بذكاء؟\n- فيك تستعمله بالخبز والطبخ بدل السكر البني، طعمته فيها لمسة كراميل حلوة.\n- **خفّف الكمية للنص** بأي وصفة، وغالباً ما رح تحس بالفرق.\n- إذا بدك حلاوة بدون سكر أصلاً، روح عالستيفيا أو الإريثريتول.\n\n### بدائل وأرقام للمقارنة\n- **سكر جوز الهند:** 54\n- **العسل:** 61\n- **السكر الأبيض:** حوالي 65\n- **الإريثريتول:** 0",
+        "en": "### How many calories are in coconut sugar?\nCoconut sugar is made from the sap of the coconut palm's flower, boiled until it becomes brown granules. **There are 375 calories per 100 g, and a teaspoon (4 g) has about 15 calories**, which is about the same as white sugar (16 calories per spoon).\n\n### Does coconut sugar raise blood sugar?\nHere there is a story we need to correct: many packs say \"low glycemic index\". The truth is that the University of Sydney measured it and found **an index of 54**, which is right on the edge of low. Another measurement from the Philippines gave 35. White sugar is about 65.\nSo it is **a little gentler** than white sugar, but the difference is not as big as the marketing suggests. In the end, the body handles it as sugar.\n\n### Is it healthier than white sugar?\nIt contains small amounts of minerals, but in the amount you use (a spoon or two) the difference is negligible. So if you choose it \"because it is healthy\", **the amount is what makes the difference, not the type of sugar.**\n\n### How to use it smartly\n- You can use it in baking and cooking instead of brown sugar; its taste has a nice touch of caramel.\n- **Cut the amount by half** in any recipe, and you probably won't notice the difference.\n- If you want sweetness without any sugar at all, go for stevia or erythritol.\n\n### Alternatives and figures for comparison\n- **Coconut sugar:** 54\n- **Honey:** 61\n- **White sugar:** about 65\n- **Erythritol:** 0",
+        "nl": "### Hoeveel calorieën zitten er in kokossuiker?\nKokossuiker wordt gemaakt van het sap van de bloem van de kokospalm, ingekookt tot bruine korrels. **Er zitten 375 calorieën in 100 g, en een theelepel (4 g) bevat ongeveer 15 calorieën**, ongeveer evenveel als witte suiker (16 calorieën per lepel).\n\n### Verhoogt kokossuiker de bloedsuiker?\nHier is een verhaal dat we moeten rechtzetten: op veel verpakkingen staat \"lage glykemische index\". De waarheid is dat de Universiteit van Sydney het heeft gemeten en **een index van 54** vond, dus precies op de grens van laag. Een andere meting uit de Filipijnen gaf 35. Witte suiker zit op ongeveer 65.\nHet is dus **iets milder** dan witte suiker, maar het verschil is niet zo groot als de marketing doet vermoeden. Uiteindelijk verwerkt het lichaam het als suiker.\n\n### Is het gezonder dan witte suiker?\nHet bevat kleine hoeveelheden mineralen, maar in de hoeveelheid die je gebruikt (een lepel of twee) is het verschil verwaarloosbaar. Kies je het dus \"omdat het gezond is\", dan geldt: **de hoeveelheid maakt het verschil, niet het soort suiker.**\n\n### Zo gebruik je het slim\n- Je kunt het bij het bakken en koken gebruiken in plaats van bruine suiker; de smaak heeft een lekker karameltintje.\n- **Halveer de hoeveelheid** in elk recept, en je merkt het verschil waarschijnlijk niet.\n- Wil je zoetheid zonder enige suiker, kies dan voor stevia of erythritol.\n\n### Alternatieven en getallen ter vergelijking\n- **Kokossuiker:** 54\n- **Honing:** 61\n- **Witte suiker:** ongeveer 65\n- **Erythritol:** 0"
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في سكر جوز الهند؟",
+            "a": "بكل 100 غ 375 سعرة، وبالملعقة الصغيرة حوالي 15 سعرة، تقريباً متل السكر الأبيض."
+          },
+          {
+            "q": "هل سكر جوز الهند يرفع السكر؟",
+            "a": "إيه، بس أهدى شوي من السكر الأبيض. مؤشره 54 حسب جامعة سيدني."
+          },
+          {
+            "q": "هل سكر جوز الهند مناسب لمرضى السكري؟",
+            "a": "هو بالآخر سكر، فبيرفع السكر. الأهم هو الكمية، والمحليات بدون سعرات متل الستيفيا خيار أفضل."
+          },
+          {
+            "q": "هل سكر جوز الهند أصحى من السكر العادي؟",
+            "a": "فيه معادن بكميات صغيرة، بس بالكمية اللي بتاكلها الفرق ما بيذكر."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in coconut sugar?",
+            "a": "375 calories per 100 g, and about 15 calories per teaspoon, about the same as white sugar."
+          },
+          {
+            "q": "Does coconut sugar raise blood sugar?",
+            "a": "Yes, but a little more gently than white sugar. Its index is 54 according to the University of Sydney."
+          },
+          {
+            "q": "Is coconut sugar suitable for people with diabetes?",
+            "a": "In the end it is sugar, so it raises blood sugar. The amount matters most, and calorie-free sweeteners such as stevia are a better choice."
+          },
+          {
+            "q": "Is coconut sugar healthier than ordinary sugar?",
+            "a": "It contains minerals in small amounts, but in the amount you eat the difference is negligible."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in kokossuiker?",
+            "a": "375 calorieën per 100 g, en ongeveer 15 calorieën per theelepel, ongeveer evenveel als witte suiker."
+          },
+          {
+            "q": "Verhoogt kokossuiker de bloedsuiker?",
+            "a": "Ja, maar iets milder dan witte suiker. De index is 54 volgens de Universiteit van Sydney."
+          },
+          {
+            "q": "Is kokossuiker geschikt voor mensen met diabetes?",
+            "a": "Uiteindelijk is het suiker, dus het verhoogt de bloedsuiker. De hoeveelheid is het belangrijkst, en zoetstoffen zonder calorieën zoals stevia zijn een betere keuze."
+          },
+          {
+            "q": "Is kokossuiker gezonder dan gewone suiker?",
+            "a": "Het bevat mineralen in kleine hoeveelheden, maar in de hoeveelheid die je eet is het verschil verwaarloosbaar."
+          }
+        ]
+      }
+    },
+    "972": {
+      "slug": "spreadable-cheese-triangles",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "brand_note": {
+        "ar": "القيم الغذائية تقريبية وقد تختلف بحسب البلد والمنتج، وWiBo Health غير مرتبط بهذه العلامة التجارية.",
+        "en": "Nutrition values are approximate and can vary by country and product; WiBo Health is not affiliated with this brand.",
+        "nl": "Voedingswaarden zijn bij benadering en kunnen per land en product verschillen; WiBo Health is niet verbonden aan dit merk."
+      },
+      "ref_gi": {
+        "ar": "لا ينطبق المؤشر الجلايسيمي لأن الصنف قليل الكربوهيدرات المتاحة (6.5 غ لكل 100 غ، أي حوالي 1.1 غ في الحصة المعتادة)، بينما يتطلب اختبار المؤشر تناول 25 إلى 50 غ من الكربوهيدرات المتاحة، أي ما يقارب 400 إلى 770 غ من هذا الصنف دفعة واحدة، وفق: ",
+        "en": "The glycemic index does not apply because this food is low in available carbohydrate (6.5 g per 100 g, about 1.1 g in the typical portion), whereas a GI test requires eating 25 to 50 g of available carbohydrate, that is, roughly 400 to 770 g of this food in one go, per: ",
+        "nl": "De glykemische index is niet van toepassing, omdat dit product weinig beschikbare koolhydraten bevat (6,5 g per 100 g, ongeveer 1,1 g in de gangbare portie), terwijl je voor een GI-test 25 tot 50 g beschikbare koolhydraten moet eten, dat wil zeggen ongeveer 400 tot 770 g van dit product in één keer, volgens: "
+      },
+      "body": {
+        "ar": "### كم سعرة في جبنة المثلثات؟\nمين ما كبر على سندويشة جبنة المثلثات بالمدرسة؟ 😄 **بكل 100 غ في 230 سعرة، والمثلث الواحد (حوالي 17 غ) فيه حوالي 39 سعرة حرارية**، ومعه حوالي 2 غ بروتين و3 غ دهون.\n\n### هل جبنة المثلثات بترفع السكر؟\nلأ. الكربوهيدرات فيها قليلة (6.5 غ بكل 100 غ)، فالمؤشر الجلايسيمي ما بينطبق عليها. بس انتبه، السندويشة نفسها بالخبز الأبيض هي اللي بترفع السكر، مش الجبنة.\n\n### هل هي مناسبة للرجيم؟\nميزتها الكبيرة إنها **مقسّمة جاهزة**، فبتعرف شو عم تاكل بالظبط. مثلث أو اتنين عالفطور خيار معقول. المشكلة بتصير لما تاكل 4 أو 5 مثلثات ورا بعض.\n\n### شو لازم تنتبه إلو؟\n- هي **جبنة مطبوخة**، يعني فيها أملاح استحلاب (Emulsifying Salts) لحتى تصير ناعمة وقابلة للدهن.\n- فيها ملح، وفي منها أنواع بملح أقل، فاقرأ العبوة إذا عم تراقب الملح.\n- في منها نسخة **\"لايت\"** بدهون أقل.\n\n### كيف تاكلها بذكاء؟\n- فيك تدهنها على **خبز أسمر أو خبز حبوب** بدل الأبيض.\n- فيك تاكلها مع **خيار وبندورة**، بتصير وجبة أخف وأشبع.\n- مع **شرايح تفاح**، طعمة حلوة كسناك.\n\n### بدائل أخف\n- **بدل 3 مثلثات:** مثلث واحد مع كاسة لبن.\n- **إذا بدك بروتين أكتر:** جبنة قريش (Cottage Cheese).",
+        "en": "### How many calories are in cheese triangles?\nWho didn't grow up on a cheese-triangle sandwich at school? 😄 **There are 230 calories per 100 g, and one triangle (about 17 g) has about 39 calories**, with about 2 g of protein and 3 g of fat.\n\n### Do cheese triangles raise blood sugar?\nNo. They have little carbohydrate (6.5 g per 100 g), so the glycemic index does not apply. But watch out: it is the white-bread sandwich itself that raises blood sugar, not the cheese.\n\n### Are they suitable for weight loss?\nTheir big advantage is that they come **ready-portioned**, so you know exactly what you are eating. One or two triangles at breakfast is a reasonable choice. The problem starts when you eat 4 or 5 triangles one after another.\n\n### What to watch out for\n- It is a **processed cheese**, which means it contains emulsifying salts to make it smooth and spreadable.\n- It contains salt, and some types have less salt, so read the pack if you are watching your salt.\n- There is also a **\"light\"** version with less fat.\n\n### How to eat them smartly\n- You can spread it on **brown bread or grain bread** instead of white.\n- You can eat it with **cucumber and tomato**; it becomes a lighter, more filling meal.\n- With **apple slices**, it makes a nice snack.\n\n### Lighter alternatives\n- **Instead of 3 triangles:** one triangle with a cup of yoghurt.\n- **If you want more protein:** cottage cheese.",
+        "nl": "### Hoeveel calorieën zitten er in smeerkaasdriehoekjes?\nWie is er niet opgegroeid met een boterham met smeerkaasdriehoekjes op school? 😄 **Er zitten 230 calorieën in 100 g, en één driehoekje (ongeveer 17 g) bevat ongeveer 39 calorieën**, met ongeveer 2 g eiwit en 3 g vet.\n\n### Verhogen smeerkaasdriehoekjes de bloedsuiker?\nNee. Er zitten weinig koolhydraten in (6,5 g per 100 g), dus de glykemische index is niet van toepassing. Maar let op: het is de boterham van witbrood zelf die de bloedsuiker verhoogt, niet de kaas.\n\n### Zijn ze geschikt om af te vallen?\nHet grote voordeel is dat ze **kant-en-klaar in porties** komen, dus je weet precies wat je eet. Eén of twee driehoekjes bij het ontbijt is een redelijke keuze. Het probleem begint als je er 4 of 5 achter elkaar eet.\n\n### Waar moet je op letten?\n- Het is **smeltkaas**, dus er zitten smeltzouten in om hem glad en smeerbaar te maken.\n- Er zit zout in, en er zijn soorten met minder zout, dus lees de verpakking als je op je zout let.\n- Er is ook een **\"light\"**-versie met minder vet.\n\n### Zo eet je ze slim\n- Je kunt hem smeren op **bruin brood of meergranenbrood** in plaats van wit.\n- Je kunt hem eten met **komkommer en tomaat**; dan wordt het een lichtere, vullendere maaltijd.\n- Met **plakjes appel** is het een lekker tussendoortje.\n\n### Lichtere alternatieven\n- **In plaats van 3 driehoekjes:** één driehoekje met een schaaltje yoghurt.\n- **Als je meer eiwit wilt:** hüttenkäse."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في مثلث جبنة؟",
+            "a": "المثلث الواحد (حوالي 17 غ) فيه حوالي 39 سعرة."
+          },
+          {
+            "q": "هل جبنة المثلثات بترفع السكر؟",
+            "a": "لأ، الكربوهيدرات فيها قليلة. الخبز اللي معها هو اللي بيفرق."
+          },
+          {
+            "q": "هل جبنة المثلثات مناسبة للرجيم؟",
+            "a": "إيه، بكمية معقولة (مثلث أو اتنين)، لأنها مقسّمة وسهل تحسبها."
+          },
+          {
+            "q": "هل جبنة المثلثات صحية للأطفال؟",
+            "a": "فيها بروتين وكالسيوم، بس فيها ملح. فخليها جزء من فطور متنوع، مش كل يوم لحالها."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a cheese triangle?",
+            "a": "One triangle (about 17 g) has about 39 calories."
+          },
+          {
+            "q": "Do cheese triangles raise blood sugar?",
+            "a": "No, they have little carbohydrate. The bread you eat with them is what makes the difference."
+          },
+          {
+            "q": "Are cheese triangles suitable for weight loss?",
+            "a": "Yes, in a reasonable amount (one or two triangles), because they are portioned and easy to count."
+          },
+          {
+            "q": "Are cheese triangles healthy for children?",
+            "a": "They contain protein and calcium, but also salt. So make them part of a varied breakfast, not on their own every day."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een smeerkaasdriehoekje?",
+            "a": "Eén driehoekje (ongeveer 17 g) bevat ongeveer 39 calorieën."
+          },
+          {
+            "q": "Verhogen smeerkaasdriehoekjes de bloedsuiker?",
+            "a": "Nee, er zitten weinig koolhydraten in. Het brood dat je erbij eet, maakt het verschil."
+          },
+          {
+            "q": "Zijn smeerkaasdriehoekjes geschikt om af te vallen?",
+            "a": "Ja, in een redelijke hoeveelheid (één of twee driehoekjes), omdat ze in porties komen en makkelijk te tellen zijn."
+          },
+          {
+            "q": "Zijn smeerkaasdriehoekjes gezond voor kinderen?",
+            "a": "Ze bevatten eiwit en calcium, maar ook zout. Maak ze dus onderdeel van een gevarieerd ontbijt, niet elke dag alleen."
+          }
+        ]
+      }
+    },
+    "971": {
+      "slug": "full-fat-cream-cheese",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "brand_note": {
+        "ar": "القيم الغذائية تقريبية وقد تختلف بحسب البلد والمنتج، وWiBo Health غير مرتبط بهذه العلامة التجارية.",
+        "en": "Nutrition values are approximate and can vary by country and product; WiBo Health is not affiliated with this brand.",
+        "nl": "Voedingswaarden zijn bij benadering en kunnen per land en product verschillen; WiBo Health is niet verbonden aan dit merk."
+      },
+      "body": {
+        "ar": "### كم سعرة في جبنة فيلادلفيا؟\nالجبنة الكريمية هي سر التشيز كيك والبيغل والسندويشات الطرية. **بكل 100 غ في 342 سعرة، والمعلقتين الكبار (30 غ) فيهن حوالي 103 سعرات**، أغلبهن من الدهون (حوالي 10 غ).\n\n### هل الجبنة الكريمية بترفع السكر؟\nلأ. الكربوهيدرات فيها 4.1 غ بكل 100 غ، فالمؤشر الجلايسيمي ما بينطبق عليها. ولهيك هي مشهورة بالكيتو.\n\n### بس هل هي مناسبة للرجيم؟\nهون القصة مختلفة: صحيح ما بترفع السكر، بس **سعراتها عالية** لأنه أغلبها دهون. ومعلقة الجبنة الكريمية بتمرق بسهولة، وغالباً بتحط أكتر من معلقتين.\nوكمان البروتين فيها قليل (6 غ بكل 100 غ) مقارنة بالجبنة البيضا أو القريش، فما بتشبعك كتير.\n\n### كيف تاكلها بذكاء؟\n- **قيس الكمية** بالمعلقة، ما تدهن عالعين.\n- فيك تخلطها نص بنص مع **لبن يوناني**، بتخفف السعرات وبتزيد البروتين.\n- مع خيار أو كرفس كسناك، بدل البسكويت.\n- إذا بتحب الطعمة، في منها نسخة **\"لايت\"** بدهون أقل.\n\n### بدائل أخف\n- **بدل الجبنة الكريمية كاملة الدسم:** النسخة اللايت، أو لبنة.\n- **بدل البيغل بالجبنة الكريمية:** خبز حبوب مع معلقة جبنة كريمية وسلمون.",
+        "en": "### How many calories are in Philadelphia cream cheese?\nCream cheese is the secret of cheesecake, bagels and soft sandwiches. **There are 342 calories per 100 g, and two tablespoons (30 g) have about 103 calories**, most of them from fat (about 10 g).\n\n### Does cream cheese raise blood sugar?\nNo. It has 4.1 g of carbohydrate per 100 g, so the glycemic index does not apply. That is why it is popular on keto.\n\n### But is it suitable for weight loss?\nHere the story is different: it is true that it does not raise blood sugar, but **it is high in calories** because it is mostly fat. And spoonfuls of cream cheese slip by easily; you often use more than two.\nAlso, it has little protein (6 g per 100 g) compared with white cheese or cottage cheese, so it does not fill you up much.\n\n### How to eat it smartly\n- **Measure the amount** with a spoon; don't spread by eye.\n- You can mix it half and half with **Greek yoghurt**; it cuts the calories and adds protein.\n- With cucumber or celery as a snack, instead of crackers.\n- If you like the taste, there is also a **\"light\"** version with less fat.\n\n### Lighter alternatives\n- **Instead of full-fat cream cheese:** the light version, or labneh.\n- **Instead of a bagel with cream cheese:** grain bread with a spoon of cream cheese and salmon.",
+        "nl": "### Hoeveel calorieën zitten er in Philadelphia-roomkaas?\nRoomkaas is het geheim van cheesecake, bagels en zachte broodjes. **Er zitten 342 calorieën in 100 g, en twee eetlepels (30 g) bevatten ongeveer 103 calorieën**, de meeste uit vet (ongeveer 10 g).\n\n### Verhoogt roomkaas de bloedsuiker?\nNee. Er zit 4,1 g koolhydraten in per 100 g, dus de glykemische index is niet van toepassing. Daarom is hij populair bij keto.\n\n### Maar is hij geschikt om af te vallen?\nHier ligt het anders: het klopt dat hij de bloedsuiker niet verhoogt, maar **hij bevat veel calorieën**, omdat hij vooral uit vet bestaat. En lepels roomkaas glippen er makkelijk door; vaak gebruik je er meer dan twee.\nOok bevat hij weinig eiwit (6 g per 100 g) vergeleken met witte kaas of hüttenkäse, dus hij vult niet erg.\n\n### Zo eet je hem slim\n- **Meet de hoeveelheid af** met een lepel; smeer niet op het oog.\n- Je kunt hem half om half mengen met **Griekse yoghurt**; dat scheelt calorieën en levert meer eiwit.\n- Met komkommer of bleekselderij als tussendoortje, in plaats van crackers.\n- Hou je van de smaak, er is ook een **\"light\"**-versie met minder vet.\n\n### Lichtere alternatieven\n- **In plaats van volvette roomkaas:** de light-versie, of labneh.\n- **In plaats van een bagel met roomkaas:** meergranenbrood met een lepel roomkaas en zalm."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في جبنة فيلادلفيا؟",
+            "a": "بكل 100 غ 342 سعرة، والمعلقتين الكبار (30 غ) حوالي 103 سعرات."
+          },
+          {
+            "q": "هل الجبنة الكريمية بترفع السكر؟",
+            "a": "لأ، الكربوهيدرات فيها قليلة."
+          },
+          {
+            "q": "هل الجبنة الكريمية مناسبة للكيتو؟",
+            "a": "إيه، لأنها قليلة الكربوهيدرات. بس سعراتها عالية، فالكمية مهمة."
+          },
+          {
+            "q": "شو الفرق بين الجبنة الكريمية واللبنة؟",
+            "a": "اللبنة غالباً سعراتها أقل وبروتينها أعلى، والجبنة الكريمية أدسم وأنعم."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in Philadelphia cream cheese?",
+            "a": "342 calories per 100 g, and two tablespoons (30 g) have about 103 calories."
+          },
+          {
+            "q": "Does cream cheese raise blood sugar?",
+            "a": "No, it has little carbohydrate."
+          },
+          {
+            "q": "Is cream cheese suitable for keto?",
+            "a": "Yes, because it is low in carbohydrate. But it is high in calories, so the amount matters."
+          },
+          {
+            "q": "What is the difference between cream cheese and labneh?",
+            "a": "Labneh usually has fewer calories and more protein, while cream cheese is richer and smoother."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in Philadelphia-roomkaas?",
+            "a": "342 calorieën per 100 g, en twee eetlepels (30 g) bevatten ongeveer 103 calorieën."
+          },
+          {
+            "q": "Verhoogt roomkaas de bloedsuiker?",
+            "a": "Nee, er zitten weinig koolhydraten in."
+          },
+          {
+            "q": "Is roomkaas geschikt voor keto?",
+            "a": "Ja, omdat hij weinig koolhydraten bevat. Maar hij bevat veel calorieën, dus de hoeveelheid is belangrijk."
+          },
+          {
+            "q": "Wat is het verschil tussen roomkaas en labneh?",
+            "a": "Labneh bevat meestal minder calorieën en meer eiwit, terwijl roomkaas romiger en gladder is."
+          }
+        ]
+      }
+    },
+    "922": {
+      "slug": "roasted-turkey-breast",
+      "sugar": {
+        "ar": "0 غ",
+        "en": "0 g",
+        "nl": "0 g"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### كم سعرة في صدر الديك الرومي؟\nصدر الديك الرومي هو \"بطل البروتين\" الهادي. **بكل 100 غ مشوي في 135 سعرة حرارية و29 غ بروتين، ودهون أقل من 2 غ.** يعني تقريباً كل سعراته جاية من البروتين، وهاد نادر كتير.\n\n### هل الديك الرومي بيرفع السكر؟\nلأ. ما فيه كربوهيدرات أبداً، فالمؤشر الجلايسيمي ما بينطبق عليه. وبما إنو كله بروتين، بيشبعك لوقت طويل.\n\n### ديك رومي ولا صدر جاج؟\nالسؤال الكلاسيكي! الاتنين قريبين كتير من بعض: سعرات قليلة وبروتين عالي ودهون قليلة. فاختار اللي بتحبه أكتر، أو نوّع بيناتهم لحتى ما تملّ.\n\n### انتبه لـ\"لحمة الديك الرومي\" الجاهزة\nشرايح الديك الرومي المعلّبة بالسوبرماركت (متل المرتديلا والسندويشات) **غالباً فيها ملح ومواد حافظة أكتر**. فالأفضل تشوي الصدر بالبيت، أو تقرأ العبوة منيح.\n\n### كيف تطبخه بذكاء؟\n- فيك **تتبّله بالليمون والتوم والزعتر**، وتشويه بالفرن.\n- **ما تطوّل الشوي**، لأنه صدر الديك الرومي بينشف بسرعة.\n- فيك تقطعه شرايح للسلطة أو الساندويش أو مع الأرز البني.\n\n### بدائل وأرقام للمقارنة\n- **بدل النقانق واللحوم المصنّعة:** شرايح صدر ديك رومي مشوي بالبيت.\n- **بدل اللحمة الحمرا الدسمة:** صدر ديك رومي، بنفس البروتين ودهون أقل بكتير.",
+        "en": "### How many calories are in turkey breast?\nTurkey breast is the quiet \"protein champion\". **There are 135 calories, 29 g of protein and less than 2 g of fat per 100 g roasted.** So almost all of its calories come from protein, which is very rare.\n\n### Does turkey raise blood sugar?\nNo. It has no carbohydrate at all, so the glycemic index does not apply. And since it is all protein, it keeps you full for a long time.\n\n### Turkey or chicken breast?\nThe classic question! The two are very close to each other: few calories, lots of protein and little fat. So choose the one you like more, or alternate between them so you don't get bored.\n\n### Watch out for ready-made \"turkey meat\"\nPackaged turkey slices in the supermarket (like mortadella and sandwich slices) **often contain more salt and preservatives**. So it is better to roast the breast at home, or read the label carefully.\n\n### How to cook it smartly\n- You can **season it with lemon, garlic and thyme** and roast it in the oven.\n- **Don't roast it too long**, because turkey breast dries out quickly.\n- You can slice it for a salad or a sandwich, or serve it with brown rice.\n\n### Alternatives and figures for comparison\n- **Instead of sausages and processed meats:** slices of turkey breast roasted at home.\n- **Instead of fatty red meat:** turkey breast, with the same protein and much less fat.",
+        "nl": "### Hoeveel calorieën zitten er in kalkoenfilet?\nKalkoenfilet is de stille \"eiwitkampioen\". **Er zitten 135 calorieën, 29 g eiwit en minder dan 2 g vet in 100 g geroosterde kalkoenfilet.** Bijna al zijn calorieën komen dus uit eiwit, en dat is heel zeldzaam.\n\n### Verhoogt kalkoen de bloedsuiker?\nNee. Er zitten helemaal geen koolhydraten in, dus de glykemische index is niet van toepassing. En omdat het allemaal eiwit is, blijf je er lang vol van.\n\n### Kalkoen of kipfilet?\nDe klassieke vraag! De twee liggen heel dicht bij elkaar: weinig calorieën, veel eiwit en weinig vet. Kies dus degene die je het lekkerst vindt, of wissel ze af zodat je er niet op uitgekeken raakt.\n\n### Let op kant-en-klaar \"kalkoenvlees\"\nVerpakte plakjes kalkoen in de supermarkt (zoals mortadella en broodbeleg) **bevatten vaak meer zout en conserveermiddelen**. Rooster de filet dus liever thuis, of lees het etiket goed.\n\n### Zo bereid je hem slim\n- Je kunt hem **kruiden met citroen, knoflook en tijm** en in de oven roosteren.\n- **Rooster hem niet te lang**, want kalkoenfilet droogt snel uit.\n- Je kunt hem in plakken snijden voor een salade of een broodje, of eten met zilvervliesrijst.\n\n### Alternatieven en getallen ter vergelijking\n- **In plaats van worst en bewerkt vlees:** plakken thuis geroosterde kalkoenfilet.\n- **In plaats van vet rood vlees:** kalkoenfilet, met evenveel eiwit en veel minder vet."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في صدر الديك الرومي؟",
+            "a": "بكل 100 غ مشوي 135 سعرة، ومعهن 29 غ بروتين."
+          },
+          {
+            "q": "هل الديك الرومي مناسب للرجيم؟",
+            "a": "من أفضل الخيارات، لأنه بروتين عالي ودهون قليلة."
+          },
+          {
+            "q": "أيهما أفضل: الديك الرومي ولا صدر الجاج؟",
+            "a": "قريبين كتير من بعض بالسعرات والبروتين. نوّع بيناتهم."
+          },
+          {
+            "q": "هل الديك الرومي يرفع السكر؟",
+            "a": "لأ، ما فيه كربوهيدرات أبداً."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in turkey breast?",
+            "a": "135 calories per 100 g roasted, with 29 g of protein."
+          },
+          {
+            "q": "Is turkey suitable for weight loss?",
+            "a": "It is one of the best choices, because it is high in protein and low in fat."
+          },
+          {
+            "q": "Which is better: turkey or chicken breast?",
+            "a": "They are very close in calories and protein. Alternate between them."
+          },
+          {
+            "q": "Does turkey raise blood sugar?",
+            "a": "No, it has no carbohydrate at all."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in kalkoenfilet?",
+            "a": "135 calorieën per 100 g geroosterd, met 29 g eiwit."
+          },
+          {
+            "q": "Is kalkoen geschikt om af te vallen?",
+            "a": "Het is een van de beste keuzes, omdat het veel eiwit en weinig vet bevat."
+          },
+          {
+            "q": "Wat is beter: kalkoen of kipfilet?",
+            "a": "Ze liggen heel dicht bij elkaar in calorieën en eiwit. Wissel ze af."
+          },
+          {
+            "q": "Verhoogt kalkoen de bloedsuiker?",
+            "a": "Nee, er zitten helemaal geen koolhydraten in."
+          }
+        ]
+      }
+    },
+    "908": {
+      "slug": "chicken-satay",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "ref_gi": {
+        "ar": "لا ينطبق المؤشر الجلايسيمي لأن الصنف قليل الكربوهيدرات المتاحة (6.5 غ لكل 100 غ، أي حوالي 9.8 غ في الحصة المعتادة)، بينما يتطلب اختبار المؤشر تناول 25 إلى 50 غ من الكربوهيدرات المتاحة، أي ما يقارب 400 إلى 770 غ من هذا الصنف دفعة واحدة، وفق: ",
+        "en": "The glycemic index does not apply because this food is low in available carbohydrate (6.5 g per 100 g, about 9.8 g in the typical portion), whereas a GI test requires eating 25 to 50 g of available carbohydrate, that is, roughly 400 to 770 g of this food in one go, per: ",
+        "nl": "De glykemische index is niet van toepassing, omdat dit product weinig beschikbare koolhydraten bevat (6,5 g per 100 g, ongeveer 9,8 g in de gangbare portie), terwijl je voor een GI-test 25 tot 50 g beschikbare koolhydraten moet eten, dat wil zeggen ongeveer 400 tot 770 g van dit product in één keer, volgens: "
+      },
+      "body": {
+        "ar": "### كم سعرة في ساتيه الدجاج؟\nأسياخ الساتيه المشوية مع صلصة الفول السوداني من أطيب الأكلات الإندونيسية، ومنتشرة كتير بهولندا. **بكل 100 غ في 230 سعرة، والحصة (حوالي 4 أسياخ مع الصلصة، 150 غ) فيها حوالي 345 سعرة حرارية و36 غ بروتين.**\n\n### هل الساتيه بيرفع السكر؟\nالساتيه لحالو **ما بيرفع السكر كتير**، لأنه أغلبه دجاج، والكربوهيدرات فيه قليلة (6.5 غ متاحة بكل 100 غ)، وجاية بالأساس من صلصة الفول السوداني اللي غالباً فيها شوية سكر. ولهيك المؤشر الجلايسيمي ما بينطبق عليه.\nبس انتبه، الساتيه غالباً بيجي مع **أرز أبيض**، وهاد هو اللي بيرفع السكر.\n\n### وين \"المخبّى\" بالساتيه؟\n**صلصة الفول السوداني!** هي طيبة كتير، بس فيها دهون وسعرات عالية، وغالباً فيها سكر. الدجاج نفسه خفيف، والصلصة هي اللي بتزيد السعرات.\n\n### كيف تاكله بذكاء؟\n- **حط الصلصة على جنب** وغمّس فيها، بدل ما تسكبها فوق الأسياخ.\n- فيك تاكله مع **سلطة خيار وملفوف** بدل الأرز الأبيض، أو مع نص صحن أرز بس.\n- بالبيت، فيك تعمل الصلصة بزبدة فستق طبيعية بدون سكر.\n\n### بدائل أخف\n- **بدل الساتيه مع صحن أرز أبيض كامل:** ساتيه مع سلطة، أو مع نص صحن أرز بني.\n- **بدل الصلصة الكتيرة:** معلقتين صلصة جنب الصحن.",
+        "en": "### How many calories are in chicken satay?\nGrilled satay skewers with peanut sauce are one of the tastiest Indonesian dishes, and very popular in the Netherlands. **There are 230 calories per 100 g, and a portion (about 4 skewers with sauce, 150 g) has about 345 calories and 36 g of protein.**\n\n### Does satay raise blood sugar?\nSatay on its own **does not raise blood sugar much**, because it is mostly chicken and has little carbohydrate (6.5 g available per 100 g), which comes mainly from the peanut sauce, which often contains a little sugar. That is why the glycemic index does not apply to it.\nBut watch out: satay usually comes with **white rice**, and that is what raises blood sugar.\n\n### Where is the \"hidden\" part of satay?\n**The peanut sauce!** It is delicious, but it is high in fat and calories, and it often contains sugar. The chicken itself is light; the sauce is what adds the calories.\n\n### How to eat it smartly\n- **Keep the sauce on the side** and dip into it, instead of pouring it over the skewers.\n- You can eat it with **cucumber and cabbage salad** instead of white rice, or with just half a plate of rice.\n- At home, you can make the sauce with natural peanut butter without sugar.\n\n### Lighter alternatives\n- **Instead of satay with a full plate of white rice:** satay with salad, or with half a plate of brown rice.\n- **Instead of lots of sauce:** two spoons of sauce on the side of the plate.",
+        "nl": "### Hoeveel calorieën zitten er in kipsaté?\nGegrilde satéstokjes met pindasaus zijn een van de lekkerste Indonesische gerechten, en heel populair in Nederland. **Er zitten 230 calorieën in 100 g, en een portie (ongeveer 4 stokjes met saus, 150 g) bevat ongeveer 345 calorieën en 36 g eiwit.**\n\n### Verhoogt saté de bloedsuiker?\nSaté op zich **verhoogt de bloedsuiker niet veel**, omdat het vooral kip is en weinig koolhydraten bevat (6,5 g beschikbaar per 100 g), die vooral uit de pindasaus komen, waar vaak wat suiker in zit. Daarom is de glykemische index niet van toepassing.\nMaar let op: saté wordt meestal geserveerd met **witte rijst**, en die verhoogt de bloedsuiker.\n\n### Waar zit het \"verborgen\" deel van saté?\n**De pindasaus!** Die is heel lekker, maar bevat veel vet en calorieën, en vaak ook suiker. De kip zelf is licht; de saus zorgt voor de extra calorieën.\n\n### Zo eet je het slim\n- **Zet de saus apart** en dip erin, in plaats van hem over de stokjes te gieten.\n- Je kunt het eten met **komkommer-koolsalade** in plaats van witte rijst, of met maar een half bord rijst.\n- Thuis kun je de saus maken met natuurlijke pindakaas zonder suiker.\n\n### Lichtere alternatieven\n- **In plaats van saté met een vol bord witte rijst:** saté met salade, of met een half bord zilvervliesrijst.\n- **In plaats van veel saus:** twee lepels saus naast het bord."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في ساتيه الدجاج؟",
+            "a": "بكل 100 غ 230 سعرة، والحصة (4 أسياخ مع الصلصة) حوالي 345 سعرة."
+          },
+          {
+            "q": "هل الساتيه بيرفع السكر؟",
+            "a": "لحالو تأثيره خفيف، لأنه أغلبه دجاج. الأرز الأبيض اللي معه هو اللي بيرفع السكر."
+          },
+          {
+            "q": "هل ساتيه الدجاج مناسب للرجيم؟",
+            "a": "إيه، إذا خففت الصلصة وأكلته مع سلطة بدل الأرز. فيه بروتين عالي بيشبع."
+          },
+          {
+            "q": "كم سعرة في صلصة الساتيه؟",
+            "a": "بتختلف حسب الوصفة، بس هي الجزء الأدسم بالصحن، لأنها من الفول السوداني."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in chicken satay?",
+            "a": "230 calories per 100 g, and a portion (4 skewers with sauce) has about 345 calories."
+          },
+          {
+            "q": "Does satay raise blood sugar?",
+            "a": "On its own its effect is mild, because it is mostly chicken. The white rice served with it is what raises blood sugar."
+          },
+          {
+            "q": "Is chicken satay suitable for weight loss?",
+            "a": "Yes, if you use less sauce and eat it with salad instead of rice. It is high in protein, which fills you up."
+          },
+          {
+            "q": "How many calories are in satay sauce?",
+            "a": "It depends on the recipe, but it is the richest part of the plate, because it is made from peanuts."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in kipsaté?",
+            "a": "230 calorieën per 100 g, en een portie (4 stokjes met saus) bevat ongeveer 345 calorieën."
+          },
+          {
+            "q": "Verhoogt saté de bloedsuiker?",
+            "a": "Op zich is het effect mild, omdat het vooral kip is. De witte rijst erbij verhoogt de bloedsuiker."
+          },
+          {
+            "q": "Is kipsaté geschikt om af te vallen?",
+            "a": "Ja, als je minder saus gebruikt en het met salade eet in plaats van rijst. Het bevat veel eiwit, en dat vult."
+          },
+          {
+            "q": "Hoeveel calorieën zitten er in satésaus?",
+            "a": "Dat hangt af van het recept, maar het is het vetste deel van het bord, omdat het van pinda's is gemaakt."
+          }
+        ]
+      }
+    },
+    "1049": {
+      "slug": "luqaimat",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي للقيمات (44 ± 4) مقاس مخبرياً على 15 متطوعاً سليماً في دراسة إماراتية، مع العلم أن الوصفة المقاسة قد تختلف قليلاً في نوع الشراب المستعمل. Al Dhaheri AS et al. Glycaemic index and glycaemic load values of commonly consumed foods in the United Arab Emirates. Br J Nutr. 2017;117:1110–7."
+        ],
+        "en": [
+          "The glycemic index of luqaimat (44 ± 4) was measured in a laboratory in 15 healthy volunteers in an Emirati study; note that the measured recipe may differ slightly in the type of syrup used. Al Dhaheri AS et al. Glycaemic index and glycaemic load values of commonly consumed foods in the United Arab Emirates. Br J Nutr. 2017;117:1110–7."
+        ],
+        "nl": [
+          "De glykemische index van luqaimat (44 ± 4) is in een laboratorium gemeten bij 15 gezonde vrijwilligers in een Emiraatse studie; het gemeten recept kan iets verschillen in het soort siroop dat is gebruikt. Al Dhaheri AS et al. Glycaemic index and glycaemic load values of commonly consumed foods in the United Arab Emirates. Br J Nutr. 2017;117:1110–7."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في اللقيمات؟\nاللقيمات هي نجمة رمضان والعزايم: كرات عجين مقلية مقرمشة من برّا وطرية من جوّا، مغموسة بدبس التمر أو الشيرة. **حسب بيانات الصفحة، بكل 100 غ في 310 سعرات، والحصة (90 غ، حوالي 6 حبات) فيها حوالي 279 سعرة حرارية.** ومين بيوقف عند 6 حبات؟ 😄\n\n### هل اللقيمات بترفع السكر؟\nهون في مفاجأة: دراسة إماراتية قاست اللقيمات فعلاً، وطلع **مؤشرها الجلايسيمي 44، يعني منخفض!**\nبس قبل ما تفرح: الباحثين نفسهم قالوا إنو السبب الأرجح هو **الدهون العالية من القلي**، لأنها بتبطّئ الهضم. يعني المؤشر المنخفض هون مش شهادة صحية، لأنه جاي مع دهون مشبعة وسعرات عالية.\nوبالكمية، **الحمل الجلايسيمي للحصة حوالي 21، يعني مرتفع.** فالحصة الكاملة بتأثر على السكر بشكل واضح.\n\n### الدرس من اللقيمات\nاللقيمات بتعلّمنا إنو **المؤشر الجلايسيمي لحالو ما بيكفي.** في أكلات مؤشرها منخفض بس لأنها مليانة دهن، فلازم دايماً تشوف السعرات والكمية مع المؤشر.\n\n### كيف تاكلها بذكاء؟\n- خليها **3 حبات بصحن صغير**، بدل ما تاكل من الصينية الكبيرة مباشرة.\n- **خفف الشيرة أو الدبس** فوقها.\n- فيك تاكلها **بعد الأكل** مش عمعدة فاضية، ومع فنجان قهوة عربي بدون سكر.\n- بالبيت، فيك تجرّب تعملها بالـ**Air Fryer** بدل القلي العميق.\n\n### بدائل أخف\n- **بدل صحن لقيمات كامل:** 3 حبات مع حبة تمر.\n- **بدل الحلو المقلي:** تمرتين مع كاسة لبن. التمر مؤشره بين 46 و55 حسب النوع.",
+        "en": "### How many calories are in luqaimat?\nLuqaimat are the star of Ramadan and feasts: fried dough balls, crispy outside and soft inside, dipped in date syrup or sugar syrup. **According to the page's data, there are 310 calories per 100 g, and a portion (90 g, about 6 pieces) has about 279 calories.** And who stops at 6 pieces? 😄\n\n### Do luqaimat raise blood sugar?\nHere is a surprise: an Emirati study actually measured luqaimat, and **their glycemic index came out at 44, which means low!**\nBut before you celebrate: the researchers themselves said the most likely reason is **the high fat from frying**, because it slows digestion. So the low index here is not a health certificate, because it comes with saturated fat and lots of calories.\nAnd in terms of amount, **the glycemic load of a portion is about 21, which means high.** So a full portion has a clear effect on blood sugar.\n\n### The lesson from luqaimat\nLuqaimat teach us that **the glycemic index alone is not enough.** Some foods have a low index only because they are full of fat, so always look at the calories and the amount along with the index.\n\n### How to eat them smartly\n- Keep it to **3 pieces on a small plate**, instead of eating straight from the big tray.\n- **Use less syrup or date syrup** on top.\n- You can eat them **after a meal**, not on an empty stomach, with a cup of Arabic coffee without sugar.\n- At home, you can try making them in an **air fryer** instead of deep-frying.\n\n### Lighter alternatives\n- **Instead of a full plate of luqaimat:** 3 pieces with one date.\n- **Instead of fried sweets:** two dates with a cup of yoghurt. Dates have an index between 46 and 55 depending on the variety.",
+        "nl": "### Hoeveel calorieën zitten er in luqaimat?\nLuqaimat zijn de ster van de ramadan en van feesten: gefrituurde deegbolletjes, knapperig van buiten en zacht van binnen, gedoopt in dadelstroop of suikersiroop. **Volgens de gegevens op deze pagina zitten er 310 calorieën in 100 g, en een portie (90 g, ongeveer 6 stuks) bevat ongeveer 279 calorieën.** En wie stopt er nou bij 6 stuks? 😄\n\n### Verhogen luqaimat de bloedsuiker?\nHier komt een verrassing: een Emiraatse studie heeft luqaimat echt gemeten, en **de glykemische index kwam uit op 44, dus laag!**\nMaar voordat je gaat juichen: de onderzoekers zeiden zelf dat de meest waarschijnlijke reden **het vele vet van het frituren** is, omdat dat de vertering vertraagt. De lage index is hier dus geen gezondheidscertificaat, want hij komt met verzadigd vet en veel calorieën.\nEn qua hoeveelheid is **de glykemische lading van een portie ongeveer 21, dus hoog.** Een volle portie heeft dus een duidelijk effect op de bloedsuiker.\n\n### De les van luqaimat\nLuqaimat leren ons dat **de glykemische index alleen niet genoeg is.** Sommige voedingsmiddelen hebben alleen een lage index omdat ze vol vet zitten, dus kijk altijd naar de calorieën en de hoeveelheid naast de index.\n\n### Zo eet je ze slim\n- Houd het bij **3 stuks op een klein bordje**, in plaats van direct van de grote schaal te eten.\n- **Gebruik minder siroop of dadelstroop** erop.\n- Je kunt ze **na het eten** eten, niet op een lege maag, met een kopje Arabische koffie zonder suiker.\n- Thuis kun je proberen ze in een **airfryer** te maken in plaats van te frituren.\n\n### Lichtere alternatieven\n- **In plaats van een vol bord luqaimat:** 3 stuks met één dadel.\n- **In plaats van gefrituurde zoetigheid:** twee dadels met een schaaltje yoghurt. Dadels hebben een index tussen 46 en 55, afhankelijk van de soort."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في اللقيمات؟",
+            "a": "حسب بيانات الصفحة، بكل 100 غ 310 سعرات، والحصة (90 غ، حوالي 6 حبات) حوالي 279 سعرة."
+          },
+          {
+            "q": "هل اللقيمات بترفع السكر؟",
+            "a": "مؤشرها المقاس منخفض (44) بسبب الدهون، بس الحمل للحصة مرتفع (حوالي 21). يعني الكمية بتفرق كتير."
+          },
+          {
+            "q": "هل اللقيمات مناسبة للرجيم؟",
+            "a": "بكمية صغيرة (2 أو 3 حبات) كتصبيرة بالمناسبات، مش كل يوم."
+          },
+          {
+            "q": "هل اللقيمات بالدبس أحسن من الشيرة؟",
+            "a": "دبس التمر والشيرة الاتنين سكر، والفرق بينهن بالكمية اللي بتحطها أهم من النوع."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in luqaimat?",
+            "a": "According to the page's data, 310 calories per 100 g, and a portion (90 g, about 6 pieces) has about 279 calories."
+          },
+          {
+            "q": "Do luqaimat raise blood sugar?",
+            "a": "Their measured index is low (44) because of the fat, but the load of a portion is high (about 21). So the amount makes a big difference."
+          },
+          {
+            "q": "Are luqaimat suitable for weight loss?",
+            "a": "In a small amount (2 or 3 pieces) as a treat on special occasions, not every day."
+          },
+          {
+            "q": "Are luqaimat with date syrup better than with sugar syrup?",
+            "a": "Date syrup and sugar syrup are both sugar, and the amount you pour matters more than the type."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in luqaimat?",
+            "a": "Volgens de gegevens op deze pagina 310 calorieën per 100 g, en een portie (90 g, ongeveer 6 stuks) bevat ongeveer 279 calorieën."
+          },
+          {
+            "q": "Verhogen luqaimat de bloedsuiker?",
+            "a": "De gemeten index is laag (44) door het vet, maar de lading van een portie is hoog (ongeveer 21). De hoeveelheid maakt dus veel uit."
+          },
+          {
+            "q": "Zijn luqaimat geschikt om af te vallen?",
+            "a": "In een kleine hoeveelheid (2 of 3 stuks) als traktatie bij bijzondere gelegenheden, niet elke dag."
+          },
+          {
+            "q": "Zijn luqaimat met dadelstroop beter dan met suikersiroop?",
+            "a": "Dadelstroop en suikersiroop zijn allebei suiker, en de hoeveelheid die je erop doet is belangrijker dan het soort."
+          }
+        ]
+      }
+    },
+    "951": {
+      "slug": "arayes",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لهذا الصنف محسوب بمعادلة الوجبات المركّبة المعتمدة من FAO/WHO: كل الكربوهيدرات المتاحة في العرايس مصدرها الخبز العربي (67 ± 5)، واللحم لا يحتوي على كربوهيدرات، فيساوي مؤشر الطبق مؤشر الخبز. وليس قياساً مخبرياً مباشراً للعرايس. Al Dhaheri AS et al. Br J Nutr. 2017;117:1110–7 · FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "en": [
+          "The glycemic index of this food is calculated with the FAO/WHO formula for mixed meals: all the available carbohydrate in arayes comes from Arabic bread (67 ± 5), and meat contains no carbohydrate, so the dish's index equals the bread's index. It is not a direct laboratory measurement of arayes. Al Dhaheri AS et al. Br J Nutr. 2017;117:1110–7 · FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ],
+        "nl": [
+          "De glykemische index van dit product is berekend met de FAO/WHO-formule voor samengestelde maaltijden: alle beschikbare koolhydraten in arayes komen uit het Arabische brood (67 ± 5), en vlees bevat geen koolhydraten, dus de index van het gerecht is gelijk aan die van het brood. Het is geen directe laboratoriummeting van arayes. Al Dhaheri AS et al. Br J Nutr. 2017;117:1110–7 · FAO/WHO. Carbohydrates in human nutrition. FAO Food and Nutrition Paper 66. Rome; 1998."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في العرايس؟\nالعرايس هي الساندويشة اللي ما حدا بيقلّها لأ: خبز عربي محشي لحمة مفرومة بالبصل والبقدونس والبهارات، ومشوي على الفحم لحتى يقرمش. **بكل 100 غ في 310 سعرات، والرغيفين المحشيين (حوالي 150 غ) فيهن حوالي 465 سعرة حرارية**، ومعهن حوالي 24 غ بروتين و21 غ دهون.\n\n### هل العرايس بترفع السكر؟\nاللحمة ما فيها كربوهيدرات، فكل الشغل هون على **الخبز العربي**. والخبز العربي الأبيض انقاس بدراسة إماراتية وطلع **مؤشره 67، يعني متوسط**، فاعتمدنا نفس الرقم للعرايس.\nوبالكمية، **الحمل الجلايسيمي للرغيفين حوالي 30، يعني مرتفع.** والخبر الحلو إنو الدهون والبروتين باللحمة غالباً بيهدّوا الامتصاص شوي.\n\n### وين السعرات المخبّاية؟\n- **دهن اللحمة**: اللحمة المفرومة الدسمة بتزيد السعرات كتير.\n- **الزيت فوق الخبز** قبل الشوي.\n- **الصلصات**: الطحينة والتوم بيزيدوا عشرات السعرات بكل معلقة.\n\n### كيف تاكلها بذكاء؟\n- اطلب أو اعمل العرايس بـ**لحمة قليلة الدهن**.\n- **خبز أسمر أو خبز حبوب** بدل الأبيض.\n- فيك تاكلها مع **سلطة كبيرة** (فتوش بلا خبز مقلي، أو تبولة) بدل البطاطا المقلية.\n- خليها **رغيف واحد** مع السلطة، وبيكفي.\n\n### بدائل أخف\n- **بدل الخبز العربي الأبيض (67):** خبز حبوب، أو خبز الخمير الإماراتي (47 بنفس الدراسة).\n- **بدل رغيفين مع بطاطا:** رغيف مع سلطة كبيرة ولبن.",
+        "en": "### How many calories are in arayes?\nArayes is the sandwich nobody says no to: Arabic bread stuffed with minced meat with onion, parsley and spices, grilled over charcoal until crisp. **There are 310 calories per 100 g, and two stuffed loaves (about 150 g) have about 465 calories**, with about 24 g of protein and 21 g of fat.\n\n### Does arayes raise blood sugar?\nMeat has no carbohydrate, so all the work here falls on **the Arabic bread**. White Arabic bread was measured in an Emirati study and came out with **an index of 67, which means medium**, so we used the same figure for arayes.\nIn terms of amount, **the glycemic load of two loaves is about 30, which means high.** The good news is that the fat and protein in the meat usually slow absorption a little.\n\n### Where are the hidden calories?\n- **The fat in the meat**: fatty minced meat adds a lot of calories.\n- **The oil on the bread** before grilling.\n- **The sauces**: tahini and garlic sauce add dozens of calories per spoon.\n\n### How to eat them smartly\n- Order or make arayes with **lean meat**.\n- **Brown bread or grain bread** instead of white.\n- You can eat them with **a big salad** (fattoush without fried bread, or tabbouleh) instead of fries.\n- Keep it to **one loaf** with the salad, and that is enough.\n\n### Lighter alternatives\n- **Instead of white Arabic bread (67):** grain bread, or Emirati khameer bread (47 in the same study).\n- **Instead of two loaves with fries:** one loaf with a big salad and yoghurt.",
+        "nl": "### Hoeveel calorieën zitten er in arayes?\nArayes is het broodje waar niemand nee tegen zegt: Arabisch brood gevuld met gehakt met ui, peterselie en specerijen, gegrild boven houtskool tot het knapperig is. **Er zitten 310 calorieën in 100 g, en twee gevulde broden (ongeveer 150 g) bevatten ongeveer 465 calorieën**, met ongeveer 24 g eiwit en 21 g vet.\n\n### Verhoogt arayes de bloedsuiker?\nVlees bevat geen koolhydraten, dus al het werk komt hier van **het Arabische brood**. Wit Arabisch brood is gemeten in een Emiraatse studie en kwam uit op **een index van 67, dus gemiddeld**, en daarom hebben we hetzelfde getal gebruikt voor arayes.\nQua hoeveelheid is **de glykemische lading van twee broden ongeveer 30, dus hoog.** Het goede nieuws is dat het vet en eiwit in het vlees de opname meestal een beetje vertragen.\n\n### Waar zitten de verborgen calorieën?\n- **Het vet in het vlees**: vet gehakt voegt veel calorieën toe.\n- **De olie op het brood** voor het grillen.\n- **De sauzen**: tahin en knoflooksaus voegen tientallen calorieën per lepel toe.\n\n### Zo eet je ze slim\n- Bestel of maak arayes met **mager vlees**.\n- **Bruin brood of meergranenbrood** in plaats van wit.\n- Je kunt ze eten met **een grote salade** (fattoush zonder gefrituurd brood, of tabouleh) in plaats van friet.\n- Houd het bij **één brood** met de salade, en dat is genoeg.\n\n### Lichtere alternatieven\n- **In plaats van wit Arabisch brood (67):** meergranenbrood, of Emiraats khameer-brood (47 in dezelfde studie).\n- **In plaats van twee broden met friet:** één brood met een grote salade en yoghurt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في العرايس؟",
+            "a": "بكل 100 غ 310 سعرات، والرغيفين المحشيين (حوالي 150 غ) حوالي 465 سعرة."
+          },
+          {
+            "q": "هل العرايس بترفع السكر؟",
+            "a": "مؤشرها متوسط (حوالي 67، من الخبز العربي)، بس الحمل للرغيفين مرتفع (حوالي 30)."
+          },
+          {
+            "q": "هل العرايس مناسبة للرجيم؟",
+            "a": "ممكن برغيف واحد بلحمة قليلة الدهن، ومع سلطة كبيرة."
+          },
+          {
+            "q": "كيف بخفف سعرات العرايس؟",
+            "a": "لحمة قليلة الدهن، زيت أقل فوق الخبز، وخبز أسمر."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in arayes?",
+            "a": "310 calories per 100 g, and two stuffed loaves (about 150 g) have about 465 calories."
+          },
+          {
+            "q": "Does arayes raise blood sugar?",
+            "a": "Its index is medium (about 67, from the Arabic bread), but the load of two loaves is high (about 30)."
+          },
+          {
+            "q": "Is arayes suitable for weight loss?",
+            "a": "It can be, as one loaf with lean meat and a big salad."
+          },
+          {
+            "q": "How do I cut the calories in arayes?",
+            "a": "Lean meat, less oil on the bread, and brown bread."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in arayes?",
+            "a": "310 calorieën per 100 g, en twee gevulde broden (ongeveer 150 g) bevatten ongeveer 465 calorieën."
+          },
+          {
+            "q": "Verhoogt arayes de bloedsuiker?",
+            "a": "De index is gemiddeld (ongeveer 67, van het Arabische brood), maar de lading van twee broden is hoog (ongeveer 30)."
+          },
+          {
+            "q": "Is arayes geschikt om af te vallen?",
+            "a": "Dat kan, als één brood met mager vlees en een grote salade."
+          },
+          {
+            "q": "Hoe verminder ik de calorieën in arayes?",
+            "a": "Mager vlees, minder olie op het brood, en bruin brood."
+          }
+        ]
+      }
+    },
+    "881": {
+      "slug": "appeltaart",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "47",
+        "en": "47",
+        "nl": "47"
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (41) ومؤشر الإنسولين (47) مأخوذان من قياس فطيرة تفاح مخبوزة (أقرب صنف مقاس للأبلتارت الهولندية)، وليس قياساً مخبرياً مباشراً لهذا الصنف. Bao J, Atkinson F, Petocz P, Willett WC, Brand-Miller JC. Prediction of postprandial glycemia and insulinemia in lean, young, healthy adults: glycemic load compared with carbohydrate content alone. Am J Clin Nutr. 2011;93(5):984–96."
+        ],
+        "en": [
+          "The glycemic index (41) and the insulin index (47) are taken from a measurement of baked apple pie (the closest measured food to Dutch appeltaart); they are not a direct laboratory measurement of this food. Bao J, Atkinson F, Petocz P, Willett WC, Brand-Miller JC. Prediction of postprandial glycemia and insulinemia in lean, young, healthy adults: glycemic load compared with carbohydrate content alone. Am J Clin Nutr. 2011;93(5):984–96."
+        ],
+        "nl": [
+          "De glykemische index (41) en de insuline-index (47) zijn overgenomen van een meting van gebakken appeltaart (het meest vergelijkbare gemeten product met Hollandse appeltaart); ze zijn geen directe laboratoriummeting van dit product. Bao J, Atkinson F, Petocz P, Willett WC, Brand-Miller JC. Prediction of postprandial glycemia and insulinemia in lean, young, healthy adults: glycemic load compared with carbohydrate content alone. Am J Clin Nutr. 2011;93(5):984–96."
+        ]
+      },
+      "body": {
+        "ar": "### كم سعرة في كعكة التفاح؟\nالأبلتارت هي فخر المقاهي الهولندية، وما في زيارة لهولندا بدون قطعة مع كريمة! **بكل 100 غ في 285 سعرة، والقطعة (حوالي 100 غ) فيها نفس الشي تقريباً**، ومعها حوالي 10 غ دهون. وإذا حطيت كريمة مخفوقة فوقها، زيد عليها كمان.\n\n### هل كعكة التفاح بترفع السكر؟\nهون مفاجأة صغيرة: فطيرة التفاح المخبوزة انقاست بدراسة أسترالية، وطلع **مؤشرها الجلايسيمي 41، يعني منخفض.** والسبب إنو التفاح نفسه مؤشره منخفض (36)، والدهون بالعجينة بتبطّئ الهضم.\nبس متل اللقيمات، **المؤشر المنخفض مش كل القصة.** الحمل الجلايسيمي للقطعة حوالي 17، يعني متوسط، والسعرات عالية. ومؤشر الإنسولين إلها 47، يعني بتحرّك الإنسولين بشكل متوسط.\n\n### كيف تاكلها بذكاء؟\n- **قطعة وحدة** مع فنجان قهوة، وبتكفي.\n- اطلبها **بدون كريمة**، أو بمعلقة صغيرة بس.\n- فيك تاكلها بعد الأكل، مش كوجبة لحالها.\n- بالبيت، فيك تخفف السكر بالوصفة لـ**الثلث**، وتزيد التفاح والقرفة. الطعمة بتضل حلوة.\n\n### بدائل أخف\n- **بدل قطعة أبلتارت مع كريمة:** قطعة بدون كريمة، أو نص قطعة.\n- **بدل الكعكة كلها:** تفاحة مشوية بالفرن مع قرفة ومعلقة لبن يوناني.",
+        "en": "### How many calories are in apple pie?\nAppeltaart is the pride of Dutch cafés, and no visit to the Netherlands is complete without a slice with cream! **There are 285 calories per 100 g, and a slice (about 100 g) has about the same**, with about 10 g of fat. And if you put whipped cream on top, add even more.\n\n### Does apple pie raise blood sugar?\nHere is a small surprise: baked apple pie was measured in an Australian study, and **its glycemic index came out at 41, which means low.** The reason is that apples themselves have a low index (36), and the fat in the pastry slows digestion.\nBut as with luqaimat, **a low index is not the whole story.** The glycemic load of a slice is about 17, which means medium, and the calories are high. Its insulin index is 47, which means it stimulates insulin moderately.\n\n### How to eat it smartly\n- **One slice** with a cup of coffee is enough.\n- Order it **without cream**, or with just a small spoonful.\n- You can eat it after a meal, not as a meal on its own.\n- At home, you can cut the sugar in the recipe **by a third** and add more apple and cinnamon. The taste stays sweet.\n\n### Lighter alternatives\n- **Instead of a slice of appeltaart with cream:** a slice without cream, or half a slice.\n- **Instead of the whole pie:** an oven-baked apple with cinnamon and a spoon of Greek yoghurt.",
+        "nl": "### Hoeveel calorieën zitten er in appeltaart?\nAppeltaart is de trots van de Nederlandse cafés, en geen bezoek aan Nederland is compleet zonder een punt met slagroom! **Er zitten 285 calorieën in 100 g, en een punt (ongeveer 100 g) bevat ongeveer hetzelfde**, met ongeveer 10 g vet. En doe je er slagroom op, tel er dan nog meer bij.\n\n### Verhoogt appeltaart de bloedsuiker?\nHier komt een kleine verrassing: gebakken appeltaart is gemeten in een Australische studie, en **de glykemische index kwam uit op 41, dus laag.** De reden is dat appels zelf een lage index hebben (36), en het vet in het deeg de vertering vertraagt.\nMaar net als bij luqaimat is **een lage index niet het hele verhaal.** De glykemische lading van een punt is ongeveer 17, dus gemiddeld, en de calorieën zijn hoog. De insuline-index is 47, dus de taart stimuleert de insuline gemiddeld.\n\n### Zo eet je het slim\n- **Eén punt** met een kop koffie is genoeg.\n- Bestel hem **zonder slagroom**, of met maar een klein lepeltje.\n- Je kunt hem na het eten nemen, niet als maaltijd op zich.\n- Thuis kun je de suiker in het recept **met een derde** verminderen en meer appel en kaneel toevoegen. De smaak blijft zoet.\n\n### Lichtere alternatieven\n- **In plaats van een punt appeltaart met slagroom:** een punt zonder slagroom, of een halve punt.\n- **In plaats van de hele taart:** een in de oven gebakken appel met kaneel en een lepel Griekse yoghurt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في قطعة أبلتارت؟",
+            "a": "بكل 100 غ 285 سعرة، والقطعة (حوالي 100 غ) نفس الشي تقريباً، بدون الكريمة."
+          },
+          {
+            "q": "هل كعكة التفاح بترفع السكر؟",
+            "a": "مؤشرها منخفض (41)، بس الحمل للقطعة متوسط (حوالي 17)، والسعرات عالية."
+          },
+          {
+            "q": "هل كعكة التفاح مناسبة للرجيم؟",
+            "a": "كتصبيرة بقطعة صغيرة بدون كريمة، مش كل يوم."
+          },
+          {
+            "q": "ليش مؤشر كعكة التفاح منخفض؟",
+            "a": "لأنه التفاح نفسه مؤشره منخفض (36)، والدهون بالعجينة بتبطّئ الهضم."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in a slice of appeltaart?",
+            "a": "285 calories per 100 g, and a slice (about 100 g) has about the same, without the cream."
+          },
+          {
+            "q": "Does apple pie raise blood sugar?",
+            "a": "Its index is low (41), but the load of a slice is medium (about 17), and the calories are high."
+          },
+          {
+            "q": "Is apple pie suitable for weight loss?",
+            "a": "As a treat, in a small slice without cream, not every day."
+          },
+          {
+            "q": "Why is the index of apple pie low?",
+            "a": "Because apples themselves have a low index (36), and the fat in the pastry slows digestion."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in een punt appeltaart?",
+            "a": "285 calorieën per 100 g, en een punt (ongeveer 100 g) bevat ongeveer hetzelfde, zonder de slagroom."
+          },
+          {
+            "q": "Verhoogt appeltaart de bloedsuiker?",
+            "a": "De index is laag (41), maar de lading van een punt is gemiddeld (ongeveer 17), en de calorieën zijn hoog."
+          },
+          {
+            "q": "Is appeltaart geschikt om af te vallen?",
+            "a": "Als traktatie, in een klein punt zonder slagroom, niet elke dag."
+          },
+          {
+            "q": "Waarom is de index van appeltaart laag?",
+            "a": "Omdat appels zelf een lage index hebben (36), en het vet in het deeg de vertering vertraagt."
+          }
+        ]
+      }
+    },
+    "984": {
+      "slug": "psyllium-husk",
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "body": {
+        "ar": "### شو هو السيليوم؟\nالسيليوم، أو \"القطونة\" متل ما بيسموه بالعربي، هو قشر بذور نبتة اسمها Plantago ovata. وهو **تقريباً ألياف صافية**: بكل 100 غ في 85 غ ألياف!\n\n### كم سعرة في السيليوم؟\n**بكل 100 غ في 190 سعرة، بس المعلقة الكبيرة (5 غ) فيها حوالي 10 سعرات و4 غ ألياف.** يعني معلقة وحدة بتعطيك ألياف أكتر من حبة تفاح كاملة.\n\n### هل السيليوم بيرفع السكر؟\nلأ. الكربوهيدرات المتاحة فيه تقريباً صفر، لأنه أغلبه ألياف ما بتتهضم، فالمؤشر الجلايسيمي ما بينطبق عليه.\n\n### كيف بيشتغل؟\nالسيليوم بيمتص المي وبيصير متل **الجل**. وهاد الجل بيمشي بالأمعاء وبيعطي حجم وطراوة. ولهيك كتير ناس بيستعملوه للإمساك، وكمان لأنه بيعطي إحساس بالشبع.\n\n### انتبه لهالشغلات\n- **لازم تشربه مع مي كتير**، كاسة كاملة عالأقل، وإلا ممكن يعلق أو يعمل انسداد.\n- **بلّش بكمية صغيرة** (نص معلقة)، وزيدها بالتدريج، لأنه ممكن يعمل نفخة بالأول.\n- إذا عندك أي حالة صحية، اسأل طبيبك قبل ما تبلش فيه.\n\n### كيف تستعمله؟\n- معلقة **بكاسة مي أو عصير**، واشربها بسرعة قبل ما تتجمد.\n- فيك تحطه **بالشوفان أو اللبن**.\n- بالخبز الخالي من الغلوتين، بيستعملوه لحتى يربط العجينة.",
+        "en": "### What is psyllium?\nPsyllium, or \"qatouna\" as it is called in Arabic, is the husk of the seeds of a plant called Plantago ovata. It is **almost pure fibre**: there are 85 g of fibre per 100 g!\n\n### How many calories are in psyllium?\n**There are 190 calories per 100 g, but a tablespoon (5 g) has about 10 calories and 4 g of fibre.** So one spoon gives you more fibre than a whole apple.\n\n### Does psyllium raise blood sugar?\nNo. It has almost zero available carbohydrate, because it is mostly fibre that is not digested, so the glycemic index does not apply to it.\n\n### How does it work?\nPsyllium absorbs water and becomes like a **gel**. This gel moves through the gut and adds bulk and softness. That is why many people use it for constipation, and also because it gives a feeling of fullness.\n\n### Watch out for these things\n- **You must take it with plenty of water**, at least a full glass, otherwise it can get stuck or cause a blockage.\n- **Start with a small amount** (half a spoon) and increase gradually, because it can cause bloating at first.\n- If you have any health condition, ask your doctor before you start taking it.\n\n### How to use it\n- A spoon **in a glass of water or juice**, and drink it quickly before it sets.\n- You can add it **to oats or yoghurt**.\n- In gluten-free baking, it is used to bind the dough.",
+        "nl": "### Wat is psyllium?\nPsyllium, of \"qatouna\" zoals het in het Arabisch heet, is de schil van de zaden van een plant die Plantago ovata heet. Het is **bijna pure vezel**: er zit 85 g vezels in 100 g!\n\n### Hoeveel calorieën zitten er in psyllium?\n**Er zitten 190 calorieën in 100 g, maar een eetlepel (5 g) bevat ongeveer 10 calorieën en 4 g vezels.** Eén lepel geeft je dus meer vezels dan een hele appel.\n\n### Verhoogt psyllium de bloedsuiker?\nNee. Er zitten bijna nul beschikbare koolhydraten in, omdat het vooral vezels zijn die niet worden verteerd, dus de glykemische index is niet van toepassing.\n\n### Hoe werkt het?\nPsyllium neemt water op en wordt als een **gel**. Die gel gaat door de darm en geeft volume en zachtheid. Daarom gebruiken veel mensen het bij verstopping, en ook omdat het een vol gevoel geeft.\n\n### Let op deze dingen\n- **Neem het altijd met veel water**, minstens een vol glas, anders kan het blijven steken of een verstopping veroorzaken.\n- **Begin met een kleine hoeveelheid** (een halve lepel) en bouw het geleidelijk op, omdat het in het begin een opgeblazen gevoel kan geven.\n- Heb je een aandoening, vraag het dan je arts voordat je ermee begint.\n\n### Zo gebruik je het\n- Een lepel **in een glas water of sap**, en drink het snel op voordat het opstijft.\n- Je kunt het **door havermout of yoghurt** doen.\n- Bij glutenvrij bakken wordt het gebruikt om het deeg te binden."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كم سعرة في السيليوم؟",
+            "a": "المعلقة الكبيرة (5 غ) فيها حوالي 10 سعرات و4 غ ألياف."
+          },
+          {
+            "q": "هل السيليوم بيرفع السكر؟",
+            "a": "لأ، أغلبه ألياف ما بتتهضم."
+          },
+          {
+            "q": "كيف بشرب السيليوم؟",
+            "a": "معلقة بكاسة مي كاملة عالأقل، وابدأ بنص معلقة."
+          },
+          {
+            "q": "هل السيليوم بيساعد بالرجيم؟",
+            "a": "بيعطي إحساس بالشبع لأنه بيصير جل بالمعدة، بس ما بينزّل الوزن لحالو."
+          }
+        ],
+        "en": [
+          {
+            "q": "How many calories are in psyllium?",
+            "a": "A tablespoon (5 g) has about 10 calories and 4 g of fibre."
+          },
+          {
+            "q": "Does psyllium raise blood sugar?",
+            "a": "No, it is mostly fibre that is not digested."
+          },
+          {
+            "q": "How do I take psyllium?",
+            "a": "A spoon in at least a full glass of water, and start with half a spoon."
+          },
+          {
+            "q": "Does psyllium help with weight loss?",
+            "a": "It gives a feeling of fullness because it becomes a gel in the stomach, but it does not make you lose weight on its own."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoeveel calorieën zitten er in psyllium?",
+            "a": "Een eetlepel (5 g) bevat ongeveer 10 calorieën en 4 g vezels."
+          },
+          {
+            "q": "Verhoogt psyllium de bloedsuiker?",
+            "a": "Nee, het zijn vooral vezels die niet worden verteerd."
+          },
+          {
+            "q": "Hoe neem ik psyllium in?",
+            "a": "Een lepel in minstens een vol glas water, en begin met een halve lepel."
+          },
+          {
+            "q": "Helpt psyllium bij afvallen?",
+            "a": "Het geeft een vol gevoel omdat het een gel wordt in de maag, maar je valt er op zichzelf niet van af."
+          }
+        ]
+      }
     }
   }
 }
