@@ -161,7 +161,7 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <link rel="stylesheet" href="/css/food-page.css?v=261e93fa">
+    <link rel="stylesheet" href="/css/food-page.css?v=78fb590b">
     <link rel="stylesheet" href="/css/unified-header.css">
     <script src="/js/food-serving.js?v=3abbeb27" defer></script>
 </head>
@@ -236,13 +236,12 @@
                 </div>
             </section>
 
-            <div class="lead-fold" id="leadFold">
-                <p class="lead" id="leadText">Turkisk shish kebab av lamm (kuzu şiş) är en pärla i den anatoliska grillkonsten: möra tärningar av lammkött marinerade i paprikasås, olivolja och lök och grillade över kol. Det glykemiska indexet är inte tillämpligt eftersom rätten saknar kolhydrater, och den är en proteinrik måltid som mättar väl utan att påverka blodsockret.</p>
-                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="Läs mer" data-less="Visa mindre" hidden>Läs mer</button>
+            <div class="lead-fold">
+                <p class="lead">Turkisk shish kebab av lamm (kuzu şiş) är en pärla i den anatoliska grillkonsten: möra tärningar av lammkött marinerade i paprikasås, olivolja och lök och grillade över kol. Det glykemiska indexet är inte tillämpligt eftersom rätten saknar kolhydrater, och den är en proteinrik måltid som mättar väl utan att påverka blodsockret.</p>
             </div>
 
             <h2 class="section-title"><span>💡 Smarta kostråd</span></h2>
-            <div class="acc-list"><details class="acc tip" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg><h3>Råd om konsumtion</h3></summary><p>Ät spetten med gaffel tillsammans med lök kryddad med sumak och en sallad av grillade grönsaker, och undvik att rulla in dem i vitt bröd.</p></details><details class="acc tip"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg><h3>Bästa tillagningssätt</h3></summary><p>En marinad av lökjuice, olivolja och yoghurt med pul biber räcker för att möra köttet; grilla det på låg värme så att det förblir saftigt utan att ytan bränns.</p></details><details class="acc tip warn"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg><h3>Viktig kostnotering</h3></summary><p>Lammkött innehåller hemjärn, B12-vitamin och zink; zink och B12-vitamin bidrar till immunsystemets normala funktion. Den som har hjärtsjukdom bör vara måttlig med svansfettet.</p></details></div>
+            <div class="acc-list"><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg>Råd om konsumtion</h3><p>Ät spetten med gaffel tillsammans med lök kryddad med sumak och en sallad av grillade grönsaker, och undvik att rulla in dem i vitt bröd.</p></div><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg>Bästa tillagningssätt</h3><p>En marinad av lökjuice, olivolja och yoghurt med pul biber räcker för att möra köttet; grilla det på låg värme så att det förblir saftigt utan att ytan bränns.</p></div><div class="acc tip static warn"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg>Viktig kostnotering</h3><p>Lammkött innehåller hemjärn, B12-vitamin och zink; zink och B12-vitamin bidrar till immunsystemets normala funktion. Den som har hjärtsjukdom bör vara måttlig med svansfettet.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 9.5V20"/></svg> <span>Näringsvärde</span></h2>
             <table class="nutrition-table">
@@ -257,7 +256,7 @@
             <ul class="alt-list"></ul>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.1"/></svg> <span>Vanliga frågor</span></h2>
-            <div class="acc-list"><details class="acc" open><summary><h3>Höjer turkisk shish kebab blodsockret?</h3></summary><p>Nej; det är grillat kött utan stärkelse, och det ger ingen blodsockerstegring.</p></details><details class="acc"><summary><h3>Hur många kalorier och hur mycket protein finns i 150 g lammshishkebab?</h3></summary><p>Portionen ger cirka 295 kcal, 28 g protein och 18 g naturligt fett, med nästan inga kolhydrater.</p></details><details class="acc"><summary><h3>Passar shish kebab vid keto och viktnedgång?</h3></summary><p>Ja, den är en typisk ketorätt som mättar i många timmar.</p></details></div>
+            <div class="acc-list"><div class="acc static"><h3>Höjer turkisk shish kebab blodsockret?</h3><p>Nej; det är grillat kött utan stärkelse, och det ger ingen blodsockerstegring.</p></div><div class="acc static"><h3>Hur många kalorier och hur mycket protein finns i 150 g lammshishkebab?</h3><p>Portionen ger cirka 295 kcal, 28 g protein och 18 g naturligt fett, med nästan inga kolhydrater.</p></div><div class="acc static"><h3>Passar shish kebab vid keto och viktnedgång?</h3><p>Ja, den är en typisk ketorätt som mättar i många timmar.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/></svg> <span>Läs även</span></h2>
             <ul class="alt-list read-also"><li><a href="/sv/diabetes/prediabetes.html">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c<span>Guide</span></a></li></ul>

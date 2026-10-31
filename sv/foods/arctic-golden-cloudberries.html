@@ -161,7 +161,7 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <link rel="stylesheet" href="/css/food-page.css?v=261e93fa">
+    <link rel="stylesheet" href="/css/food-page.css?v=78fb590b">
     <link rel="stylesheet" href="/css/unified-header.css">
     <script src="/js/food-serving.js?v=3abbeb27" defer></script>
 </head>
@@ -236,13 +236,12 @@
                 </div>
             </section>
 
-            <div class="lead-fold" id="leadFold">
-                <p class="lead" id="leadText">Hjortron är Arktis sällsynta guld och de orörda skandinaviska skogarnas frukt: glittrande bärnstensfärgade bär som liknar hallon men har en varm gyllene färg och en syrlig smak som blandar aprikos och honung; de växer var för sig på kalla myrar och är en dyr delikatess. Det glykemiska indexet är inte tillämpligt eftersom nettokolhydraterna är få.</p>
-                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="Läs mer" data-less="Visa mindre" hidden>Läs mer</button>
+            <div class="lead-fold">
+                <p class="lead">Hjortron är Arktis sällsynta guld och de orörda skandinaviska skogarnas frukt: glittrande bärnstensfärgade bär som liknar hallon men har en varm gyllene färg och en syrlig smak som blandar aprikos och honung; de växer var för sig på kalla myrar och är en dyr delikatess. Det glykemiska indexet är inte tillämpligt eftersom nettokolhydraterna är få.</p>
             </div>
 
             <h2 class="section-title"><span>💡 Smarta kostråd</span></h2>
-            <div class="acc-list"><details class="acc tip" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg><h3>Råd om konsumtion</h3></summary><p>Njut av dem färska eller med yoghurt och nötter, eller som en varm sås utan socker över grillad ost som man gör i Lappland.</p></details><details class="acc tip"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg><h3>Bästa tillagningssätt</h3></summary><p>Ät dem helst färska eller frysta utan lång kokning, så att ellagsyran och det värmekänsliga C-vitaminet bevaras.</p></details><details class="acc tip warn"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg><h3>Viktig kostnotering</h3></summary><p>Nettokolhydraterna är högst 2,7 g per 100 g, så det glykemiska indexet är inte tillämpligt och den glykemiska belastningen försumbar; bären innehåller ellagsyra och polyfenoler.</p></details></div>
+            <div class="acc-list"><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg>Råd om konsumtion</h3><p>Njut av dem färska eller med yoghurt och nötter, eller som en varm sås utan socker över grillad ost som man gör i Lappland.</p></div><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg>Bästa tillagningssätt</h3><p>Ät dem helst färska eller frysta utan lång kokning, så att ellagsyran och det värmekänsliga C-vitaminet bevaras.</p></div><div class="acc tip static warn"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg>Viktig kostnotering</h3><p>Nettokolhydraterna är högst 2,7 g per 100 g, så det glykemiska indexet är inte tillämpligt och den glykemiska belastningen försumbar; bären innehåller ellagsyra och polyfenoler.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 9.5V20"/></svg> <span>Näringsvärde</span></h2>
             <table class="nutrition-table">
@@ -257,7 +256,7 @@
             <ul class="alt-list"></ul>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.1"/></svg> <span>Vanliga frågor</span></h2>
-            <div class="acc-list"><details class="acc" open><summary><h3>Varför kallas hjortron för Arktis guld?</h3></summary><p>Därför att de inte odlas kommersiellt utan plockas för hand med stor möda på kalla arktiska myrar, och varje planta ger bara ett enda bär.</p></details><details class="acc"><summary><h3>Vad innehåller hjortron?</h3></summary><p>De innehåller mycket polyfenoler och naturlig bensoesyra.</p></details><details class="acc"><summary><h3>Vad är näringsvärdet i 100 g hjortron?</h3></summary><p>De innehåller 51 kcal, 1,3 g protein, hela 6,3 g fibrer och bara 2,7 g nettokolhydrater.</p></details></div>
+            <div class="acc-list"><div class="acc static"><h3>Varför kallas hjortron för Arktis guld?</h3><p>Därför att de inte odlas kommersiellt utan plockas för hand med stor möda på kalla arktiska myrar, och varje planta ger bara ett enda bär.</p></div><div class="acc static"><h3>Vad innehåller hjortron?</h3><p>De innehåller mycket polyfenoler och naturlig bensoesyra.</p></div><div class="acc static"><h3>Vad är näringsvärdet i 100 g hjortron?</h3><p>De innehåller 51 kcal, 1,3 g protein, hela 6,3 g fibrer och bara 2,7 g nettokolhydrater.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/></svg> <span>Läs även</span></h2>
             <ul class="alt-list read-also"><li><a href="/sv/diabetes/prediabetes.html">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c<span>Guide</span></a></li></ul>

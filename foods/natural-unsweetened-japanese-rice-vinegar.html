@@ -159,7 +159,7 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <link rel="stylesheet" href="/css/food-page.css?v=261e93fa">
+    <link rel="stylesheet" href="/css/food-page.css?v=78fb590b">
     <link rel="stylesheet" href="/css/unified-header.css">
     <script src="/js/food-serving.js?v=3abbeb27" defer></script>
 </head>
@@ -234,13 +234,12 @@
                 </div>
             </section>
 
-            <div class="lead-fold" id="leadFold">
-                <p class="lead" id="leadText">ألطف وأهدأ أنواع الخل الآسيوي؛ مخمر طبيعياً من الأرز والماء؛ يتميز بحموضة ناعمة غير حارقة وخلوه التام من السكر المضاف والسعرات (3 سعرات للحصة) وبدون مؤشر جلايسيمي.</p>
-                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="اقرأ المزيد" data-less="عرض أقل" hidden>اقرأ المزيد</button>
+            <div class="lead-fold">
+                <p class="lead">ألطف وأهدأ أنواع الخل الآسيوي؛ مخمر طبيعياً من الأرز والماء؛ يتميز بحموضة ناعمة غير حارقة وخلوه التام من السكر المضاف والسعرات (3 سعرات للحصة) وبدون مؤشر جلايسيمي.</p>
             </div>
 
             <h2 class="section-title"><span>💡 الإرشاد الغذائي الذكي</span></h2>
-            <div class="acc-list"><details class="acc tip" open><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg><h3>توصيات الاستهلاك</h3></summary><p>قد يكون ألطف على من يتضايقون من الخل الأبيض الحاد، إذ تبلغ حموضته نحو 4-5%.</p></details><details class="acc tip"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg><h3>أفضل طرق التحضير</h3></summary><p>تأكد من اختيار النوع غير المحلى (Unsweetened) وتجنب &quot;خل تتبيل السوشي الجاهز&quot; المضاف إليه السكر المكرر.</p></details><details class="acc tip warn"><summary><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg><h3>ملاحظة غذائية هامة</h3></summary><p>لا يحتاج هذا الصنف إلى مؤشر جلايسيمي، لكن الأطعمة المرافقة له في الوجبة هي التي تحدد أثرها على سكر الدم.</p></details></div>
+            <div class="acc-list"><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.6L16 9.5"/></svg>توصيات الاستهلاك</h3><p>قد يكون ألطف على من يتضايقون من الخل الأبيض الحاد، إذ تبلغ حموضته نحو 4-5%.</p></div><div class="acc tip static"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3v7a2 2 0 0 0 4 0V3M8 3v18M17 21V3c-2.2 0-3.5 2.6-3.5 6.5S14.8 14 17 14"/></svg>أفضل طرق التحضير</h3><p>تأكد من اختيار النوع غير المحلى (Unsweetened) وتجنب &quot;خل تتبيل السوشي الجاهز&quot; المضاف إليه السكر المكرر.</p></div><div class="acc tip static warn"><h3><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.4v.1"/></svg>ملاحظة غذائية هامة</h3><p>لا يحتاج هذا الصنف إلى مؤشر جلايسيمي، لكن الأطعمة المرافقة له في الوجبة هي التي تحدد أثرها على سكر الدم.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 15h18M9 9.5V20"/></svg> <span>القيم الغذائية</span></h2>
             <table class="nutrition-table">
@@ -255,7 +254,7 @@
             <ul class="alt-list"></ul>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.4c-.6.3-1 .8-1 1.5v.6M12 16.8v.1"/></svg> <span>أسئلة شائعة</span></h2>
-            <div class="acc-list"><details class="acc" open><summary><h3>هل يناسب خل الأرز الياباني الطبيعي غير المحلى الدايت وإنقاص الوزن؟</h3></summary><p>نعم، فسعرات خل الأرز الياباني الطبيعي غير المحلى منخفضة جداً (18 سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.</p></details><details class="acc"><summary><h3>كيف يؤثر خل الأرز الياباني الطبيعي غير المحلى على سكر الدم؟</h3></summary><p>لا يحتوي خل الأرز الياباني الطبيعي غير المحلى تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي، وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.</p></details><details class="acc"><summary><h3>ما القيمة الغذائية لحصة معتادة من خل الأرز الياباني الطبيعي غير المحلى؟</h3></summary><p>حصة معتادة من 15 غ من خل الأرز الياباني الطبيعي غير المحلى تحتوي تقريباً على 3 سعرة، و0 غ بروتين، و0.1 غ كربوهيدرات، و0 غ دهون، و0 غ ألياف.</p></details></div>
+            <div class="acc-list"><div class="acc static"><h3>هل يناسب خل الأرز الياباني الطبيعي غير المحلى الدايت وإنقاص الوزن؟</h3><p>نعم، فسعرات خل الأرز الياباني الطبيعي غير المحلى منخفضة جداً (18 سعرة لكل 100 غ)، ويمكن تناول كمية جيدة منه لزيادة حجم الوجبة والشعور بالشبع دون سعرات كثيرة.</p></div><div class="acc static"><h3>كيف يؤثر خل الأرز الياباني الطبيعي غير المحلى على سكر الدم؟</h3><p>لا يحتوي خل الأرز الياباني الطبيعي غير المحلى تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق عليه المؤشر الجلايسيمي، وأثره المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة له كالخبز والأرز والصلصات المحلاة.</p></div><div class="acc static"><h3>ما القيمة الغذائية لحصة معتادة من خل الأرز الياباني الطبيعي غير المحلى؟</h3><p>حصة معتادة من 15 غ من خل الأرز الياباني الطبيعي غير المحلى تحتوي تقريباً على 3 سعرة، و0 غ بروتين، و0.1 غ كربوهيدرات، و0 غ دهون، و0 غ ألياف.</p></div></div>
 
             <h2 class="section-title"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M12 7v6M9 10h6"/></svg> <span>اقرأ أيضاً</span></h2>
             <ul class="alt-list read-also"><li><a href="/diabetes/prediabetes.html">مرحلة ما قبل السكري: كيف توقف القطار وتنزّل التراكمي قبل ما يتحول لسكري؟<span>دليل</span></a></li></ul>

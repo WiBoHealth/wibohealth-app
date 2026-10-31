@@ -1394,6 +1394,9 @@ PAGE_CSS = """
         .acc summary h3 { font-size: inherit; font-weight: inherit; margin: 0; }
         .acc.tip summary .ico { color: var(--primary); } .acc.tip.warn summary .ico { color: #f39c12; }
         .about-card .acc p { margin: 0; padding: 0 14px 12px; color: var(--text-muted); }
+        /* every section open, no + / - (user decision 2026-10-31: batch 28 first, then all food pages) */
+        .about-card .acc.static > h3 { display: flex; align-items: center; gap: 8px; padding: 12px 14px 6px; font-size: 1em; font-weight: 800; color: var(--text-main); margin: 0; }
+        .acc.tip.static > h3 .ico { color: var(--primary); } .acc.tip.warn.static > h3 .ico { color: #f39c12; }
         .section-title .ico { width: 0.95em; height: 0.95em; }
         .boodi-btn .ico { width: 18px; height: 18px; }
         .nutrition-table td b { font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -1552,8 +1555,7 @@ BODY_UI = {
 BODY_CSS = ('.food-body { margin: 4px 0 22px; } .about-card .food-body h3 { font-size: 1.12em; font-weight: 800; color: var(--text-main); '
             'margin: 20px 0 6px; } .about-card .food-body h3:first-child { margin-top: 6px; } .about-card .food-body p { margin: 0 0 8px; } '
             '.food-body ul, .food-body ol { margin: 0 0 10px; padding-inline-start: 22px; } .food-body li { margin: 0 0 6px; line-height: 1.75; } '
-            '.about-card .food-body .brand-note { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); } '
-            '.about-card .acc.static > h3 { padding: 12px 14px 6px; font-size: 1em; font-weight: 800; color: var(--text-main); margin: 0; }')
+            '.about-card .food-body .brand-note { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); }')
 
 
 def inline_md(s):
@@ -1831,11 +1833,8 @@ def build(food, lang, ctx):
         faq = build_faq(food, lang, sname, portion, False, g=g)
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
-    if body_md:                             # every question open, nothing to fold
-        faq_html = ''.join(f'<div class="acc static"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
-    else:
-        faq_html = ''.join(f'<details class="acc"{" open" if i == 0 else ""}><summary><h3>{esc(q)}</h3></summary><p>{esc(a)}</p></details>'
-                           for i, (q, a) in enumerate(faq))
+    # every question open, nothing to fold (all food pages, 2026-10-31)
+    faq_html = ''.join(f'<div class="acc static"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
     read_also = [(READ_ALSO[k][0], *READ_ALSO[k][1][lang])
                  for k in read_also_keys(food, group, food['gi'] if has_gi else None)]
     read_also_html = ''.join(f'<li><a href="{href}">{esc(label)}<span>{READ_ALSO_KIND[kind][lang]}</span></a></li>'
@@ -2048,17 +2047,16 @@ def build(food, lang, ctx):
                 else f'<div class="food-emoji" aria-hidden="true">{food["icon"] or "🍽️"}</div>')
     tip_icons = ('check', 'utensils', 'warn')
     tips_html = ''.join(
-        f'<details class="acc tip{" warn" if i == 2 else ""}"{" open" if i == 0 else ""}><summary>{icon(tip_icons[i])}'
-        f'<h3>{u["tip_titles"][i]}</h3></summary><p>{esc(tips[i])}</p></details>' for i in range(len(tips)))
+        f'<div class="acc tip static{" warn" if i == 2 else ""}"><h3>{icon(tip_icons[i])}{u["tip_titles"][i]}</h3>'
+        f'<p>{esc(tips[i])}</p></div>' for i in range(len(tips)))
     if body_md:                             # the approved sections, open, in place of the lead and the generic tips
         brand = ov.get('brand_note', {}).get(lang)     # brand products: approximate values, no affiliation
         brand_html = f'<p class="brand-note">{esc(brand)}</p>' if brand else ''
         intro_html = f'<section class="food-body">{render_body(body_md)}{brand_html}</section>'
         body_style = f'\n    <style>{BODY_CSS}</style>'
     else:
-        intro_html = f'''<div class="lead-fold" id="leadFold">
-                <p class="lead" id="leadText">{esc(lead)}</p>
-                <button type="button" class="more-btn" aria-expanded="false" aria-controls="leadText" data-more="{fu["more"]}" data-less="{fu["less"]}" hidden>{fu["more"]}</button>
+        intro_html = f'''<div class="lead-fold">
+                <p class="lead">{esc(lead)}</p>
             </div>
 
             <h2 class="section-title"><span>{u["tips"]}</span></h2>

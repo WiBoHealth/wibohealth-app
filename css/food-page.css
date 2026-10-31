@@ -653,6 +653,9 @@ html[data-theme="dark"] .gi-num.high { color: #fca5a5; }
 .acc summary h3 { font-size: inherit; font-weight: inherit; margin: 0; }
 .acc.tip summary .ico { color: var(--primary); } .acc.tip.warn summary .ico { color: #f39c12; }
 .about-card .acc p { margin: 0; padding: 0 14px 12px; color: var(--text-muted); }
+/* every section open, no + / - (user decision 2026-10-31: batch 28 first, then all food pages) */
+.about-card .acc.static > h3 { display: flex; align-items: center; gap: 8px; padding: 12px 14px 6px; font-size: 1em; font-weight: 800; color: var(--text-main); margin: 0; }
+.acc.tip.static > h3 .ico { color: var(--primary); } .acc.tip.warn.static > h3 .ico { color: #f39c12; }
 .section-title .ico { width: 0.95em; height: 0.95em; }
 .boodi-btn .ico { width: 18px; height: 18px; }
 .nutrition-table td b { font-weight: 700; font-variant-numeric: tabular-nums; }
