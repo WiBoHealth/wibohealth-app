@@ -3863,6 +3863,8 @@ FRUCTOSE_CSS = """
 # faithfully (the copy's translation notes give the replacements for the jokes; the notes themselves are not shown).
 # Food links follow the copy's [[link: ...]] markers; «شاي الكركديه» links to 297 (iced hibiscus), user decision 2026-10-31.
 FRUCTOSE = dict(
+    hubs=['diabetes'],                                   # user decision 2026-10-31: listed first on the diabetes hubs
+    thumb='fructose-fruit-vs-sugar-thumb.webp', thumb_size=(640, 360), thumb_2x=('fructose-fruit-vs-sugar-card.webp', 1191),
     slugs=dict(ar='fructose-fruit-vs-processed-sugar', en='fructose-fruit-vs-processed-sugar', nl='fructose-fruit-vs-bewerkte-suiker',
                sv='fruktos-frukt-vs-tillsatt-socker'),
     hero='fructose-fruit-vs-processed-sugar-cover.webp', hero_size=(1200, 670),
@@ -3891,7 +3893,7 @@ ar=dict(
  h1='الفركتوز: بالفاكهة صديق، وبالعلبة عدو… شو القصة؟',
  crumb='الفركتوز والسكر المصنّع',
  summary='ليش الفركتوز بالتفاحة ما بيضرك، وبالمشروب الغازي بيروح على كبدك؟ شرح بسيط للسكر المصنّع، والفرق بين البدائل، وكيف تخفف السكر.',
- cat='التغذية',
+ cat='السكري ومتلازمة الأيض',
  desc='ليش الفركتوز بالتفاحة ما بيضرك، وبالمشروب الغازي بيروح على كبدك؟ شرح بسيط للسكر المصنّع، والفرق بين البدائل، وكيف تخفف السكر.',
  hero_alt='شاب وفتاة يختاران بين الفاكهة الطازجة والمشروبات المحلاة والسكر المصنّع',
  about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
@@ -4026,7 +4028,7 @@ en=dict(
  h1='Fructose: A Friend in Fruit, a Foe in the Can… What\'s the Story?',
  crumb='Fructose and added sugar',
  summary='Why doesn\'t the fructose in an apple hurt you, while the fructose in a soft drink heads for your liver? A simple guide to added sugar, the alternatives, and cutting down.',
- cat='Nutrition',
+ cat='Diabetes & Metabolic Health',
  desc='Why doesn\'t the fructose in an apple hurt you, while in a soft drink it heads for your liver? Added sugar, the alternatives, and how to cut down.',
  hero_alt='A young man and woman choosing between fresh fruit, sweetened drinks and added sugar',
  about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
@@ -4161,7 +4163,7 @@ nl=dict(
  h1='Fructose: vriend in fruit, vijand in het blikje… hoe zit dat?',
  crumb='Fructose en toegevoegde suiker',
  summary='Waarom schaadt de fructose in een appel je niet, terwijl die in frisdrank naar je lever gaat? Uitleg over toegevoegde suiker, de alternatieven en minder suiker eten.',
- cat='Voeding',
+ cat='Diabetes & metabole gezondheid',
  desc='Waarom schaadt de fructose in een appel je niet, terwijl die in frisdrank naar je lever gaat? Toegevoegde suiker, alternatieven en minder suiker eten.',
  hero_alt='Een jonge man en vrouw kiezen tussen vers fruit, gezoete dranken en toegevoegde suiker',
  about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],
@@ -4296,7 +4298,7 @@ sv=dict(
  h1='Fruktos: en vän i frukten, en fiende i burken… vad är grejen?',
  crumb='Fruktos och tillsatt socker',
  summary='Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.',
- cat='Kost',
+ cat='Diabetes och metabol hälsa',
  desc='Varför skadar fruktosen i ett äpple dig inte, medan den i läsk går till levern? Tillsatt socker, alternativen och hur du drar ner på sockret.',
  hero_alt='En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker',
  about=['Fructose', 'Added sugar', 'Fatty liver disease', 'Sweeteners'],

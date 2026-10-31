@@ -220,7 +220,7 @@
                 "meals_search_btn": "Sök 🔍",
                 "tip_label": "Dagens tips",
                 "home_articles_title": "📚 Hälsoartiklar",
-                "home_articles_sub": "Artiklar och medicinska guider som granskas av WiBo Healths medicinska team",
+                "home_articles_sub": "Hälsoartiklar, medicinskt granskade av Dr. Wassim Habib",
                 "home_articles_guides": "Grundläggande kostguider",
                 "home_articles_read": "Läs artikeln",
                 "home_articles_ar_only": "(artikeltexten är på arabiska)",
@@ -262,6 +262,18 @@
                 "ha_l9": "Skeletthälsa och mineraler",
                 "ha_l10": "Fruktos: en vän i frukten, en fiende i burken",
                 "ha_fructose_href": "/sv/articles/fruktos-frukt-vs-tillsatt-socker.html",
+                "feat_fructose_cat": "🍎 Ny artikel / Diabetes och metabol hälsa",
+                "feat_fructose_title": "Fruktos: en vän i frukten, en fiende i burken… vad är grejen?",
+                "feat_fructose_sum": "Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.",
+                "feat_fructose_alt": "En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker",
+                "card_badge_prediabetes": "Diabetes och metabol hälsa 🩺",
+                "card_badge_liver": "Lever och metabol hälsa 🫀",
+                "card_badge_cereal": "Kostguide 🌾",
+                "card_badge_leptin": "Mättnadshormoner 🧠",
+                "ha_bp": "Högt blodtryck och socker: det dolda sambandet",
+                "ha_prediabetes": "Prediabetes: så stoppar du tåget",
+                "ha_gest": "Den kompletta guiden om graviditetsdiabetes",
+                "ha_cereal": "Frukostflingor utan socker",
                 "ha_1_cat": "Diabetes",
                 "ha_1_title": "Diabetes och bra mat",
                 "ha_1_sum": "En guide till att hantera diabetes med balanserad kost",
@@ -1359,6 +1371,14 @@
         .home-article-link { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 14px; background: #f8f9fa; color: var(--text-dark); text-decoration: none; font-weight: 700; border: 1px solid rgba(16, 185, 129,0.18); transition: border-color 0.2s ease, transform 0.2s ease; }
         .home-article-link:hover { border-color: #10b981; transform: translateY(-2px); }
         .home-article-icon { font-size: 1.5rem; line-height: 1; }
+        /* #articles as small cover cards (2026-10-31): 2 per row on phones, 4 from 860px */
+        .home-articles-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        @media (min-width: 860px) { .home-articles-cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+        .home-article-card { display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; background: #f8f9fa; color: var(--text-dark);
+            text-decoration: none; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.18); transition: border-color 0.2s ease, transform 0.2s ease; }
+        .home-article-card:hover { border-color: #10b981; transform: translateY(-2px); }
+        .home-article-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: rgba(16, 185, 129, 0.08); }
+        .home-article-card span { padding: 10px 12px 12px; font-size: 0.92rem; line-height: 1.5; }
         .home-articles-h3 { color: var(--text-dark); font-size: 1.5rem; margin: 40px 0 16px; }
         .home-articles-long { display: grid; gap: 16px; }
         .home-article { border-radius: 16px; background: #f8f9fa; border: 1px solid rgba(16, 185, 129,0.18); overflow: hidden; }
@@ -1516,6 +1536,7 @@
         html[data-theme="dark"] .stat-thumb-container { background: #10140d; }
         html[data-theme="dark"] .info-box,
         html[data-theme="dark"] .home-article-link,
+        html[data-theme="dark"] .home-article-card,
         html[data-theme="dark"] .home-article { background: var(--wb-soft); border-color: var(--wb-border); }
         html[data-theme="dark"] .pulse-ticker,
         html[data-theme="dark"] .meals-ticker,
@@ -2081,11 +2102,22 @@
     <div class="container">
         <!-- Hero Section -->
         <section class="hero">
-            <!-- 1. Lead articles (2026-10-30): two equal cards side by side (stacked below 860px), same frame, beam and button;
-                 the newest article first (high blood pressure), then the prediabetes guide.
-                 Point the feat_latest_* / feat_bp_* i18n keys (and the fallback text/img here) at the next article to rotate one.
-                 Add `hidden` to park a card while no article is ready. -->
+            <!-- 1. Lead articles: two equal cards side by side (stacked below 860px), same frame, beam and button.
+                 RULE (user, 2026-10-31): a new article always takes the FIRST card; the two cards are always the two latest
+                 articles. The previous first card moves to second, the old second card moves down to the hero-stats grid.
+                 Now: fructose (2026-10-31), then high blood pressure (2026-10-30). Add `hidden` to park a card. -->
             <div class="feature-lead-pair">
+            <div class="leptin-feature-card latest-article-card feature-lead feature-glow" id="latestArticleCard">
+                <div class="feature-thumb">
+                    <img src="/images/fructose-fruit-vs-sugar-thumb.webp" srcset="/images/fructose-fruit-vs-sugar-thumb.webp 640w, /images/fructose-fruit-vs-sugar-card.webp 1191w" sizes="(max-width: 859px) 36vw, 200px" alt="En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker" data-i18n-alt="feat_fructose_alt" width="640" height="360" fetchpriority="high" decoding="async">
+                </div>
+                <div class="leptin-feature-content">
+                    <span class="feature-badge feature-badge-new" data-i18n="feat_fructose_cat">🍎 Ny artikel / Diabetes och metabol hälsa</span>
+                    <h3 data-i18n="feat_fructose_title">Fruktos: en vän i frukten, en fiende i burken… vad är grejen?</h3>
+                    <p data-i18n="feat_fructose_sum">Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.</p>
+                </div>
+                <a href="/sv/articles/fruktos-frukt-vs-tillsatt-socker.html" class="leptin-feature-btn" data-i18n-href="ha_fructose_href" data-i18n="feat_bp_btn">Läs artikeln</a>
+            </div>
             <div class="leptin-feature-card latest-article-card feature-lead feature-glow">
                 <div class="feature-thumb">
                     <img src="/images/high-blood-pressure-sugar-thumb.webp" srcset="/images/high-blood-pressure-sugar-thumb.webp 640w, /images/high-blood-pressure-sugar-card.webp 1280w" sizes="(max-width: 859px) 36vw, 200px" alt="Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert" data-i18n-alt="feat_bp_alt" width="640" height="360" fetchpriority="high" decoding="async">
@@ -2097,71 +2129,7 @@
                 </div>
                 <a href="/sv/articles/hogt-blodtryck-socker-insulin.html" class="leptin-feature-btn" data-i18n-href="feat_bp_href" data-i18n="feat_bp_btn">Läs artikeln</a>
             </div>
-            <div class="leptin-feature-card latest-article-card feature-lead feature-glow" id="latestArticleCard">
-                <div class="feature-thumb">
-                    <img src="/images/prediabetes-guide-card.webp" alt="Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health" data-i18n-alt="feat_latest_alt" width="1280" height="720" fetchpriority="high" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge feature-badge-new" data-i18n="feat_latest_cat">🆕 Ny guide / Diabetes och metabol hälsa</span>
-                    <h3 data-i18n="feat_latest_title">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes</h3>
-                    <p data-i18n="feat_latest_sum">HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.</p>
-                </div>
-                <a href="/sv/diabetes/prediabetes.html" class="leptin-feature-btn" data-i18n-href="feat_latest_href" data-i18n="feat_latest_btn">Läs artikeln</a>
             </div>
-            </div>
-            <!-- 2. Featured row: the fatty liver guide (2026-10-27), leptin article (كرت مقال اللبتين), the sugar-free cereals guide
-                 and the gestational diabetes guide (4 cards: 2x2 below 1025px, one row of 4 above) -->
-            <div class="feature-duo feature-trio feature-quad">
-            <div class="leptin-feature-card">
-                <div class="feature-thumb">
-                    <img src="/images/fatty-liver-guide-thumb.webp" srcset="/images/fatty-liver-guide-thumb.webp 640w, /images/fatty-liver-guide-card.webp 1280w" sizes="(max-width: 640px) 46vw, 300px" alt="En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever" data-i18n-alt="feat_liver_alt" width="640" height="360" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge feature-badge-new" data-i18n="feat_liver_cat">🫀 Ny artikel / Lever och metabol hälsa</span>
-                    <h3 data-i18n="feat_liver_title">Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide</h3>
-                    <p data-i18n="feat_liver_sum">Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.</p>
-                </div>
-                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="leptin-feature-btn" data-i18n-href="feat_liver_href" data-i18n="feat_liver_btn">Läs artikeln</a>
-            </div>
-
-            <div class="leptin-feature-card">
-                <div class="feature-thumb">
-                    <img src="/images/leptin-hero.jpeg" alt="Varför äter jag men blir aldrig mätt?">
-                </div>
-                <div class="leptin-feature-content">
-                    <h3 data-i18n="leptin_banner_title">🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)</h3>
-                    <p data-i18n="leptin_banner_desc">Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen</p>
-                </div>
-                <a href="/sv/articles/leptinresistens.html" class="leptin-feature-btn" data-i18n="leptin_banner_btn">Läs guiden 🩺</a>
-            </div>
-
-            <!-- New article card next to the leptin article; links to the reader's language version -->
-            <div class="leptin-feature-card cereal-feature-card">
-                <div class="feature-thumb">
-                    <img src="/images/healthy-sugar-free-breakfast-cereal-hero.webp" alt="Kvinna som äter en skål fullkornshavre med bär" data-i18n-alt="feat_cereal_alt" width="1400" height="781" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge" data-i18n="feat_cereal_cat">🌾 Ny artikel / Exklusiv guide</span>
-                    <h3 data-i18n="feat_cereal_title">Frukostflingor utan socker: din guide till en pigg start på dagen</h3>
-                    <p data-i18n="feat_cereal_sum">Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller</p>
-                </div>
-                <a href="/sv/articles/frukostflingor-utan-socker.html" class="leptin-feature-btn cereal-feature-btn" data-i18n-href="feat_cereal_href" data-i18n="feat_cereal_btn">Läs hela guiden</a>
-            </div>
-
-            <!-- Gestational diabetes guide (the lead card until the prediabetes guide, 2026-10-22) -->
-            <div class="leptin-feature-card">
-                <div class="feature-thumb">
-                    <img src="/images/gestational-diabetes-guide-thumb.webp" alt="Leende gravid kvinna i ett soligt kök med en skål bär och en avokado" data-i18n-alt="feat_gest_alt" width="640" height="357" loading="lazy" decoding="async">
-                </div>
-                <div class="leptin-feature-content">
-                    <span class="feature-badge" data-i18n="feat_gest_cat">🩺 Diabetes och metabol hälsa</span>
-                    <h3 data-i18n="feat_gest_title">Graviditetsdiabetes: normala blodsockervärden och vad du kan äta</h3>
-                    <p data-i18n="feat_gest_sum">Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg</p>
-                </div>
-                <a href="/sv/diabetes/graviditetsdiabetes.html" class="leptin-feature-btn" data-i18n-href="feat_gest_href" data-i18n="feat_gest_btn">Läs hela guiden</a>
-            </div>
-            </div>
-
             <script>
                 // A click anywhere on a featured card follows its button, whose href is already in the visitor's language
                 document.querySelectorAll('.feature-duo .leptin-feature-card, .latest-article-card').forEach(function (card) {
@@ -2183,60 +2151,85 @@
                 <a href="/supplements.html?v=6.0&lang=en" class="compare-feature-btn" data-i18n="compare_btn">Testa nu</a>
             </div>
 
-            <!-- 3. النوافذ الطبية والإحصائيات (المقالات السبعة) -->
+            <!-- 3. Article grid: ALWAYS 8 cards = the 8 latest articles after the two lead cards, newest first
+                 (user rule, 2026-10-31). A new article pushes the oldest card out (it stays in the #articles list). -->
             <div class="hero-stats">
-                <a href="/sv/articles/insulinresistens-hba1c.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_hba1c">Ny medicinsk artikel 🩺</div>
+                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="stat-box article-stat-box" data-i18n-href="feat_liver_href">
+                    <div class="stat-article-badge" data-i18n="card_badge_liver">Lever och metabol hälsa 🫀</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/exercise-insulin.jpg" alt="HbA1c och insulinresistens" class="stat-article-img" loading="lazy">
+                        <img src="/images/fatty-liver-guide-thumb.webp" alt="En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever" data-i18n-alt="feat_liver_alt" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
-                        <h4 data-i18n="card_title_hba1c">HbA1c och insulinresistens</h4>
-                        <p data-i18n="card_desc_hba1c">Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.</p>
+                        <h4 data-i18n="feat_liver_title">Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide</h4>
+                        <p data-i18n="feat_liver_sum">Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.</p>
                         <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <a href="/sv/articles/kortisol-och-stress.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_cortisol">Hormonguide 🩺</div>
+                                <a href="/sv/diabetes/prediabetes.html" class="stat-box article-stat-box" data-i18n-href="feat_latest_href">
+                    <div class="stat-article-badge" data-i18n="card_badge_prediabetes">Diabetes och metabol hälsa 🩺</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/cortisol-lifestyle.jpeg" alt="Kortisol och stressmage" class="stat-article-img" loading="lazy">
+                        <img src="/images/prediabetes-guide-thumb.webp" alt="Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health" data-i18n-alt="feat_latest_alt" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
-                        <h4 data-i18n="card_title_cortisol">Kortisol och stressmage</h4>
-                        <p data-i18n="card_desc_cortisol">Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_cortisol">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                        <h4 data-i18n="feat_latest_title">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes</h4>
+                        <p data-i18n="feat_latest_sum">HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.</p>
+                        <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <a href="/sv/articles/magnesiumformer.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_magnesium">Kosttillskottsguide 💊</div>
+                <a href="/sv/diabetes/graviditetsdiabetes.html" class="stat-box article-stat-box" data-i18n-href="feat_gest_href">
+                    <div class="stat-article-badge" data-i18n="card_badge_prediabetes">Diabetes och metabol hälsa 🩺</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/magnesium-lifestyle.jpeg" alt="Guide till magnesiumformer" class="stat-article-img" loading="lazy">
+                        <img src="/images/gestational-diabetes-guide-thumb.webp" alt="Leende gravid kvinna i ett soligt kök med en skål bär och en avokado" data-i18n-alt="feat_gest_alt" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
-                        <h4 data-i18n="card_title_magnesium">Magnesiumformer – vilken passar dig?</h4>
-                        <p data-i18n="card_desc_magnesium">Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_magnesium">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                        <h4 data-i18n="feat_gest_title">Graviditetsdiabetes: normala blodsockervärden och vad du kan äta</h4>
+                        <p data-i18n="feat_gest_sum">Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg</p>
+                        <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <a href="/sv/articles/skeletthalsa-och-mineraler.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_bones">Skeletthälsa 🦴</div>
+                <a href="/sv/articles/frukostflingor-utan-socker.html" class="stat-box article-stat-box" data-i18n-href="feat_cereal_href">
+                    <div class="stat-article-badge" data-i18n="card_badge_cereal">Kostguide 🌾</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/himalayan-salt-bones.jpeg" alt="Kalcium och skeletthälsa" class="stat-article-img" loading="lazy">
+                        <img src="/images/card-sugar-free-cereals.webp" alt="Kvinna som äter en skål fullkornshavre med bär" data-i18n-alt="feat_cereal_alt" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
-                        <h4 data-i18n="card_title_bones">Skeletthälsa: mer än kalcium</h4>
-                        <p data-i18n="card_desc_bones">Skelettet behöver mer än kalcium: om D-vitamin, protein, rörelse och balansträning, och när du ska utredas för benskörhet.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_bones">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                        <h4 data-i18n="feat_cereal_title">Frukostflingor utan socker: din guide till en pigg start på dagen</h4>
+                        <p data-i18n="feat_cereal_sum">Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller</p>
+                        <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/sv/articles/trog-skoldkortel.html" class="stat-box article-stat-box">
+                    <div class="stat-article-badge" data-i18n="card_badge_thyroid">Medicinsk guide 🦋</div>
+                    <div class="stat-thumb-container">
+                        <img src="/images/card-thyroid-health.webp" alt="Trög sköldkörtel och långsam ämnesomsättning" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
+                    </div>
+                    <div class="stat-article-details">
+                        <h4 data-i18n="card_title_thyroid">Trög sköldkörtel och långsam ämnesomsättning</h4>
+                        <p data-i18n="card_desc_thyroid">Vad TSH, T4 och T3 betyder, de vanliga tecknen på underfunktion och jod och selen i maten.</p>
+                        <span class="stat-read-more" data-i18n="card_btn_thyroid">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="/sv/articles/leptinresistens.html" class="stat-box article-stat-box">
+                    <div class="stat-article-badge" data-i18n="card_badge_leptin">Mättnadshormoner 🧠</div>
+                    <div class="stat-thumb-container">
+                        <img src="/images/card-leptin-resistance.webp" alt="Varför äter jag men blir aldrig mätt?" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
+                    </div>
+                    <div class="stat-article-details">
+                        <h4 data-i18n="ha_l5">Leptin och mättnad</h4>
+                        <p data-i18n="leptin_banner_desc">Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen</p>
+                        <span class="stat-read-more" data-i18n="card_btn_hba1c">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
 
                 <a href="/sv/articles/periodisk-fasta.html" class="stat-box article-stat-box">
                     <div class="stat-article-badge" data-i18n="card_badge_fasting">Medicinsk guide 🔥</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/fasting-hero.jpeg" alt="Periodisk fasta och myterna i sociala medier" class="stat-article-img" loading="lazy">
+                        <img src="/images/card-intermittent-fasting.webp" alt="Periodisk fasta och myterna i sociala medier" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
                         <h4 data-i18n="card_title_fasting">Periodisk fasta och myterna i sociala medier</h4>
@@ -2245,15 +2238,15 @@
                     </div>
                 </a>
 
-                <a href="/sv/articles/trog-skoldkortel.html" class="stat-box article-stat-box">
-                    <div class="stat-article-badge" data-i18n="card_badge_thyroid">Medicinsk guide 🦋</div>
+                <a href="/sv/articles/skeletthalsa-och-mineraler.html" class="stat-box article-stat-box">
+                    <div class="stat-article-badge" data-i18n="card_badge_bones">Skeletthälsa 🦴</div>
                     <div class="stat-thumb-container">
-                        <img src="/images/thyroid-hero.jpeg" alt="Trög sköldkörtel och långsam ämnesomsättning" class="stat-article-img" loading="lazy">
+                        <img src="/images/card-bone-health.webp" alt="Kalcium och skeletthälsa" class="stat-article-img" width="640" height="360" loading="lazy" decoding="async">
                     </div>
                     <div class="stat-article-details">
-                        <h4 data-i18n="card_title_thyroid">Trög sköldkörtel och långsam ämnesomsättning</h4>
-                        <p data-i18n="card_desc_thyroid">Vad TSH, T4 och T3 betyder, de vanliga tecknen på underfunktion och jod och selen i maten.</p>
-                        <span class="stat-read-more" data-i18n="card_btn_thyroid">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
+                        <h4 data-i18n="card_title_bones">Skeletthälsa: mer än kalcium</h4>
+                        <p data-i18n="card_desc_bones">Skelettet behöver mer än kalcium: om D-vitamin, protein, rörelse och balansträning, och när du ska utredas för benskörhet.</p>
+                        <span class="stat-read-more" data-i18n="card_btn_bones">Läs artikeln <i class="fa-solid fa-arrow-right"></i></span>
                     </div>
                 </a>
             </div>
@@ -2348,17 +2341,22 @@
         <!-- Health articles (moved here from articles.html, which now 308-redirects to /#articles) -->
         <section class="home-articles" id="articles">
             <h2 data-i18n="home_articles_title">📚 Hälsoartiklar</h2>
-            <p class="home-articles-sub" data-i18n="home_articles_sub">Artiklar och medicinska guider som granskas av WiBo Healths medicinska team</p>
-            <div class="home-articles-links">
-                <a href="/sv/articles/fruktos-frukt-vs-tillsatt-socker.html" class="home-article-link" data-i18n-href="ha_fructose_href"><span class="home-article-icon" aria-hidden="true">🍎</span><span data-i18n="ha_l10">Fruktos: en vän i frukten, en fiende i burken</span></a>
-                <a href="/sv/articles/periodisk-fasta.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">⏱️</span><span data-i18n="ha_l2">Periodisk fasta och myterna i sociala medier</span></a>
-                <a href="/sv/articles/insulinresistens-hba1c.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🩸</span><span data-i18n="ha_l3">HbA1c och insulinresistens</span></a>
-                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="home-article-link" data-i18n-href="feat_liver_href"><span class="home-article-icon" aria-hidden="true">🫀</span><span data-i18n="ha_l4">Dold fettlever och insulinresistens</span></a>
-                <a href="/sv/articles/leptinresistens.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🧠</span><span data-i18n="ha_l5">Leptin och mättnad</span></a>
-                <a href="/sv/articles/trog-skoldkortel.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🦋</span><span data-i18n="ha_l6">Trög sköldkörtel och långsam ämnesomsättning</span></a>
-                <a href="/sv/articles/kortisol-och-stress.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">😮‍💨</span><span data-i18n="ha_l7">Kortisol, stresshormonet</span></a>
-                <a href="/sv/articles/magnesiumformer.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">💊</span><span data-i18n="ha_l8">Magnesiumformer: vilken ska du välja?</span></a>
-                <a href="/sv/articles/skeletthalsa-och-mineraler.html" class="home-article-link"><span class="home-article-icon" aria-hidden="true">🦴</span><span data-i18n="ha_l9">Skeletthälsa och mineraler</span></a>
+            <p class="home-articles-sub" data-i18n="home_articles_sub">Hälsoartiklar, medicinskt granskade av Dr. Wassim Habib</p>
+            <!-- every article as a small cover card, newest first (rule 2026-10-31); a new article goes at the top -->
+            <div class="home-articles-links home-articles-cards">
+                <a href="/sv/articles/fruktos-frukt-vs-tillsatt-socker.html" class="home-article-card" data-i18n-href="ha_fructose_href"><img alt="" src="/images/fructose-fruit-vs-sugar-thumb.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l10">Fruktos: en vän i frukten, en fiende i burken</span></a>
+                <a href="/sv/articles/hogt-blodtryck-socker-insulin.html" class="home-article-card" data-i18n-href="feat_bp_href"><img alt="" src="/images/high-blood-pressure-sugar-thumb.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_bp">Högt blodtryck och socker: det dolda sambandet</span></a>
+                <a href="/sv/articles/fatty-liver-and-visceral-fat.html" class="home-article-card" data-i18n-href="feat_liver_href"><img alt="" src="/images/fatty-liver-guide-thumb.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l4">Dold fettlever och insulinresistens</span></a>
+                <a href="/sv/diabetes/prediabetes.html" class="home-article-card" data-i18n-href="feat_latest_href"><img alt="" src="/images/prediabetes-guide-thumb.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_prediabetes">Prediabetes: så stoppar du tåget</span></a>
+                <a href="/sv/diabetes/graviditetsdiabetes.html" class="home-article-card" data-i18n-href="feat_gest_href"><img alt="" src="/images/gestational-diabetes-guide-thumb.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_gest">Den kompletta guiden om graviditetsdiabetes</span></a>
+                <a href="/sv/articles/frukostflingor-utan-socker.html" class="home-article-card" data-i18n-href="feat_cereal_href"><img alt="" src="/images/card-sugar-free-cereals.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_cereal">Frukostflingor utan socker</span></a>
+                <a href="/sv/articles/trog-skoldkortel.html" class="home-article-card"><img alt="" src="/images/card-thyroid-health.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l6">Trög sköldkörtel och långsam ämnesomsättning</span></a>
+                <a href="/sv/articles/leptinresistens.html" class="home-article-card"><img alt="" src="/images/card-leptin-resistance.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l5">Leptin och mättnad</span></a>
+                <a href="/sv/articles/periodisk-fasta.html" class="home-article-card"><img alt="" src="/images/card-intermittent-fasting.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l2">Periodisk fasta och myterna i sociala medier</span></a>
+                <a href="/sv/articles/skeletthalsa-och-mineraler.html" class="home-article-card"><img alt="" src="/images/card-bone-health.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l9">Skeletthälsa och mineraler</span></a>
+                <a href="/sv/articles/magnesiumformer.html" class="home-article-card"><img alt="" src="/images/card-magnesium-types.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l8">Magnesiumformer: vilken ska du välja?</span></a>
+                <a href="/sv/articles/kortisol-och-stress.html" class="home-article-card"><img alt="" src="/images/card-cortisol-stress.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l7">Kortisol, stresshormonet</span></a>
+                <a href="/sv/articles/insulinresistens-hba1c.html" class="home-article-card"><img alt="" src="/images/card-insulin-resistance.webp" width="640" height="360" loading="lazy" decoding="async"><span data-i18n="ha_l3">HbA1c och insulinresistens</span></a>
             </div>
         </section>
 

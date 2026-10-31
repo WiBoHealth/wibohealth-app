@@ -551,6 +551,7 @@ def build_hub(key, lang):
     urls = {l: hub_url(sec, l) for l in langs_of(sec)}
     # its own articles, plus articles from elsewhere that list this hub in `hubs` (e.g. the fatty liver guide in /articles/)
     members = [a for a in ARTICLES if (a.get('section') == key or key in a.get('hubs', ())) and lang in a['content']]
+    members.sort(key=lambda a: a['published'], reverse=True)    # newest first (user rule, 2026-10-31)
     cards = '\n'.join(hub_card(a, lang, t) for a in members)
     schema = {
         "@context": "https://schema.org",
