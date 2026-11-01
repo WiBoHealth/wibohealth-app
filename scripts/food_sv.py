@@ -3300,7 +3300,7 @@ OVERRIDES = {
                     'dagen.',
                     'Låt pulver av lakritsrot dra med en nypa natriumbikarbonat i rent vatten och sila genom ren gasväv, '
                     'och tillsätt inget vitt socker; den naturliga sötman är cirka 50 gånger starkare än socker.',
-                    '⚠️ Mycket viktig klinisk varning: glycyrrhizin hämmar ett enzym i njurarna och ger kraftig ansamling '
+                    '⚠️ Viktig varning: glycyrrhizin hämmar ett enzym i njurarna och ger kraftig ansamling '
                     'av natrium och vatten och förlust av kalium; drycken får inte drickas av personer med högt blodtryck, '
                     'hjärtsjukdom eller njursvikt eller av gravida, eftersom blodtrycket kan stiga farligt.')),
     297: dict(lead='Ett naturligt, svalkande rubinrött te: torkade röda hibiskusblad som dragit, med en härligt syrlig '
@@ -3515,7 +3515,7 @@ OVERRIDES = {
                     'senap; korven ger en omedelbar proteinrik mättnad.',
                     'Köp den mycket färsk från en pålitlig slaktare (keurslager), förvara den i kylskåp och ät den inom '
                     'högst två dagar, och låt den inte stå i rumstemperatur.',
-                    '⚠️ Viktig klinisk varning: ossenworst är helt rått nötkött; den får inte ätas av gravida, små barn '
+                    '⚠️ Viktig varning: ossenworst är helt rått nötkött; den får inte ätas av gravida, små barn '
                     'eller personer med nedsatt immunförsvar på grund av risken för E. coli och toxoplasma.')),
     321: dict(lead='Det mest efterfrågade pålägget på holländska frukost- och lunchbord: mycket finmald rå nötfärs blandad '
                    'med majonnäs, senap och paprikapulver. Kolhydraterna är nästan obefintliga (cirka 2 g) och det '
@@ -3524,7 +3524,7 @@ OVERRIDES = {
                     'mättande lunch.',
                     'Förvara förpackningen i kylskåp vid 4 °C och ät den direkt efter öppning, och välj varianter utan '
                     'tillsatt socker eller kemiska smakförstärkare.',
-                    '⚠️ Strikt klinisk varning: filet americain är 100 % rått nötkött; det får inte ätas av gravida, '
+                    '⚠️ Viktig varning: filet americain är 100 % rått nötkött; det får inte ätas av gravida, '
                     'ammande eller personer som får immunhämmande behandling, för att undvika risken för allvarliga '
                     'bakterie- och parasitinfektioner.')),
     322: dict(lead='Den berömda runda osten med blankt rött vaxhölje från staden Edam, med mild smak och mjuk, halvfast '
@@ -4135,7 +4135,7 @@ OVERRIDES = {
               tips=('En halv stor grapefrukt på morgonen som äts med sked ger vätska och mättar väl.',
                     'Dela frukten på mitten och ät klyftorna med sked tillsammans med de tunna hinnorna för fibrernas '
                     'skull, och undvik att pressa den så att fibrerna inte silas bort.',
-                    '⚠️ Avgörande klinisk och läkemedelsvarning: grapefrukt innehåller furanokumariner som hämmar '
+                    '⚠️ Viktig varning om läkemedel: grapefrukt innehåller furanokumariner som hämmar '
                     'leverenzymet CYP3A4, vilket kan leda till farligt höga halter av vissa läkemedel i blodet (till '
                     'exempel kolesterolsänkande statiner, blodtrycksläkemedel och immunhämmande läkemedel). Den som tar '
                     'sådana läkemedel bör rådfråga sin läkare och undvika grapefrukt.')),
@@ -4212,7 +4212,7 @@ OVERRIDES = {
               tips=('En till högst två nötter om dagen; de mättar direkt och kan täcka dagsbehovet av selen.',
                     'Ät dem råa och krispiga som de är på morgonen med ett glas vatten, och undvik kraftig rostning för '
                     'att bevara de fina fettsyrorna och mineralerna.',
-                    '⚠️ Avgörande klinisk varning om mängden: paranötter innehåller mycket höga halter av selen; ät inte '
+                    '⚠️ Viktig varning om mängden: paranötter innehåller mycket höga halter av selen; ät inte '
                     'för många, håll dig till en eller två om dagen och ät aldrig mer än 3–4 om dagen, för att undvika '
                     'selenförgiftning (selenos).')),
     400: dict(lead='Ett komplett vegetabiliskt protein (hemp hearts): små mjuka frön med god nötig smak som påminner om '
@@ -4453,7 +4453,7 @@ OVERRIDES = {
                     'utan bröd.',
                     'Välj alltid skivor av hel bröstmuskel (whole muscle) och undvik malda och omformade charkuterier '
                     'fulla av stärkelse och soja.',
-                    'Viktig klinisk varning vid högt blodtryck och njursjukdom: rökt kött innehåller nitrit och relativt '
+                    'Viktig varning vid högt blodtryck och njursjukdom: rökt kött innehåller nitrit och relativt '
                     'mycket salt, så var måttlig och välj varianter med reducerad salthalt.'),
               faq=[dict(q='Är rökt kalkon tillåtet vid keto och bantning?',
                         a='Ja, men läs förpackningen för att se att det inte tillsatts karamelliserat socker eller '
@@ -4736,7 +4736,7 @@ OVERRIDES = {
                    dict(q='Hur många kalorier och hur mycket protein finns i en vanlig tallrik bissara (150 g)?',
                         a='Tallriken innehåller nästan 175 kcal, 13 g vegetabiliskt protein och cirka 9 g fibrer.'),
                    dict(q='Får personer med favism (G6PD-brist) äta bissara?',
-                        a='Avgörande klinisk varning: om bissaran är gjord på bondbönor får personer med favism '
+                        a='Viktig varning: om bissaran är gjord på bondbönor får personer med favism '
                           '(G6PD-brist) inte äta den alls; de kan bara äta bissara gjord på ärter.')]),
     432: dict(lead='Krossade gula ärter är de klassiska baljväxternas gula guld; de löses snabbt upp och ger soppor en '
                    'sammetslen, fyllig konsistens utan grädde eller raffinerad stärkelse. Det glykemiska indexet är lågt '
@@ -5021,7 +5021,7 @@ OVERRIDES = {
                     'och en grön sallad för att dämpa den kraftiga glukostoppen.',
                     'Skär potatisen, förkoka den och rosta den sedan i airfryer eller ugn med lite olja och rökt '
                     'paprikapulver och en naturlig tomat- och vitlökssås, utan fritering.',
-                    'Klinisk varning vid diabetes och hjärtsjukdom: kombinationen av snabbt upptagen stärkelse och '
+                    'Viktig varning vid diabetes och hjärtsjukdom: kombinationen av snabbt upptagen stärkelse och '
                     'vegetabilisk olja som hettats upp kraftigt är ett dåligt val.'),
               faq=[dict(q='Varför är det glykemiska indexet för patatas bravas högt?',
                         a='Därför att potatisen skärs i små tärningar och friteras, vilket bryter ned stärkelsen så att '
@@ -5355,7 +5355,7 @@ OVERRIDES = {
                     'mesta av saltet, och ät den med keso eller kokt ägg för att bromsa stärkelseupptaget.',
                     'Degen doppas före gräddningen i en särskild alkalisk lösning som ger den brun färg; för en bättre '
                     'variant hemma kan du använda fullkornsmjöl och mindre salt på ytan.',
-                    'Dubbel klinisk varning: snabb stärkelse som höjer blodsockret mycket snabbt (cirka 78) och mycket '
+                    'Viktig dubbel varning: snabb stärkelse som höjer blodsockret mycket snabbt (cirka 78) och mycket '
                     'natrium på ytan som kan höja blodtrycket.'),
               faq=[dict(q='Varför är det glykemiska indexet för pretzel högt?',
                         a='Därför att den görs av fint raffinerat vitt mjöl som gräddas i hög värme, vilket gör att den '
@@ -5573,7 +5573,7 @@ OVERRIDES = {
                     'och vitlök och grovt bröd eller grönsaker.',
                     'Blötlägg den i kallt vatten med vinäger för att få bort blodkärlen, och låt den sjuda varsamt i några '
                     'minuter med citronsaft och lagerblad så att den behåller sin krämiga fasthet.',
-                    'Viktig klinisk varning: hjärna har den högsta kolesterolhalten av alla animaliska livsmedel (mer än 2 '
+                    'Viktig varning: hjärna har den högsta kolesterolhalten av alla animaliska livsmedel (mer än 2 '
                     '000 mg/100 g) och ska därför undvikas vid familjär hyperkolesterolemi och åderförkalkning.'),
               faq=[dict(q='Höjer lammhjärna blodsockret?',
                         a='Nej, den höjer inte blodsockret eftersom den saknar kolhydrater; risken ligger i fetthalten och '
@@ -5899,7 +5899,7 @@ OVERRIDES = {
                     'sockermängden i schack.',
                     'För en hemgjord variant: koka de rullade skalen flera gånger för att få bort överflödig beska, och '
                     'använd hälften av den vanliga sockermängden eller naturligt sötningsmedel av stevia.',
-                    'Viktig klinisk varning: pomeransskal (bitter apelsin) innehåller det stimulerande ämnet synefrin; den '
+                    'Viktig varning: pomeransskal (bitter apelsin) innehåller det stimulerande ämnet synefrin; den '
                     'som har hjärtklappning eller högt blodtryck bör vara försiktig och undvika marmeladen tillsammans med '
                     'känsliga blodtrycksläkemedel.'),
               faq=[dict(q='Passar pomeransmarmelad vid diabetes?',
@@ -6109,7 +6109,7 @@ OVERRIDES = {
                     'tillfällen.',
                     'Välj alltid lokum fylld med hela nötter som pistage eller valnötter; nötternas fett bromsar '
                     'sockerupptaget något.',
-                    'Sträng klinisk varning: en snabbt upptagen sötsak som höjer blodsockret mycket snabbt; den som har '
+                    'Viktig varning: en snabbt upptagen sötsak som höjer blodsockret mycket snabbt; den som har '
                     'diabetes eller insulinresistens bör undvika den till vardags.'),
               faq=[dict(q='Varför är det glykemiska indexet för turkisk lokum högt?',
                         a='Därför att den görs av vitt socker, glukossirap och raffinerad majsstärkelse, som snabbt blir '
@@ -6360,7 +6360,7 @@ OVERRIDES = {
                     'komplett proteinrik måltid, och den bör inte ätas dagligen.',
                     'För en bättre hemgjord variant: grädda chebakian i ugnen i stället för att fritera den, och pensla '
                     'med lite honung och sesam i stället för att doppa den djupt.',
-                    'Sträng klinisk varning: kombinationen av fritering i olja, koncentrerad honung och vitt mjöl höjer '
+                    'Viktig varning: kombinationen av fritering i olja, koncentrerad honung och vitt mjöl höjer '
                     'blodsockret och blodfetterna (triglyceriderna) mycket snabbt.'),
               faq=[dict(q='Kan den som har diabetes äta chebakia vid festliga tillfällen?',
                         a='Det rekommenderas att avstå; om du vill smaka, nöj dig med en halv mycket liten bit efter '
@@ -6683,7 +6683,7 @@ OVERRIDES = {
                     'du äter den, och ät den aldrig på fastande mage.',
                     'Bollarna kan gräddas i airfryer och läggas i en lätt lag sötad med steviaextrakt, rosenvatten och '
                     'saffran för att minska den kraftiga effekten på blodsockret.',
-                    'Sträng klinisk varning: en snabbt upptagen sötsak som förenar fritering i ghee med full indränkning i '
+                    'Viktig varning: en snabbt upptagen sötsak som förenar fritering i ghee med full indränkning i '
                     'sockerlag; den höjer blodsockret och insulinet mycket snabbt.'),
               faq=[dict(q='Är gulab jamun förbjudet vid diabetes?',
                         a='Det rekommenderas att helt avstå; om du vill smaka, nöj dig med en halv liten boll efter en '

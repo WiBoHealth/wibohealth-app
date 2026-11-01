@@ -463,7 +463,7 @@ COPY.update({
                     frequency='En gång per dag'),
         warnings=['Kan ge illamående eller lätta magbesvär',
                   'Inte för gravida, ammande eller personer som tar Parkinsonläkemedel (karbidopa)'],
-        interactions='Viktig klinisk varning: ta det aldrig tillsammans med antidepressiva läkemedel (SSRI, SNRI, MAO-hämmare) '
+        interactions='Viktig varning: ta det aldrig tillsammans med antidepressiva läkemedel (SSRI, SNRI, MAO-hämmare) '
                      'eller johannesört, för att undvika serotonergt syndrom, som kan vara livshotande.',
         naturalSources='Fröna av växten Griffonia simplicifolia.'),
     'caffeine': dict(

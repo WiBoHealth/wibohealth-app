@@ -654,9 +654,9 @@ def build_site_page(p):
     elif p['kind'] == 'about':
         schema['about'] = ORG
     elif p['kind'] == 'contact':
-        schema['mainEntity'] = dict(ORG, email='support@wibohealth.com', telephone='+31645844585', contactPoint=[{
+        schema['mainEntity'] = dict(ORG, email='support@wibohealth.com', contactPoint=[{     # e-mail only (2026-11-01)
             "@type": "ContactPoint", "contactType": "customer support", "email": "support@wibohealth.com",
-            "telephone": "+31645844585", "availableLanguage": ["Arabic", "Dutch", "English"]}])
+            "availableLanguage": ["Arabic", "Dutch", "English"]}])
     img = (f'''            <img class="article-hero-img article-hero-portrait" src="/images/{p['image']}" alt="{esc(p['image_alt'])}" width="500" height="500" style="max-width:260px;border-radius:50%" decoding="async">
 ''' if image else '')
     note = f'            <p class="disclaimer-box">{p["footer_note"]}</p>\n' if p.get('footer_note') else ''

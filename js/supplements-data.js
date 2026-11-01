@@ -1126,9 +1126,9 @@ const supplementsData = [
             "May cause nausea or mild digestive discomfort",
             "Not for pregnant or breastfeeding women or people taking Parkinson’s medication (carbidopa)"
         ],
-        interactions: "تحذير سريري حرج: يُمنع منعاً باتاً تناوله بالتزامن مع مضادات الاكتئاب (SSRIs وSNRIs وMAOIs) أو نبتة سانت جون لتجنب حدوث متلازمة السيروتونين الخطيرة التي قد تهدد الحياة.",
-        interactionsNl: "Kritische klinische waarschuwing: neem het nooit samen met antidepressiva (SSRI’s, SNRI’s, MAO-remmers) of sint-janskruid, om het serotoninesyndroom te voorkomen, dat levensbedreigend kan zijn.",
-        interactionsEn: "Critical clinical warning: never take it together with antidepressants (SSRIs, SNRIs, MAOIs) or St John’s wort, to avoid serotonin syndrome, which can be life-threatening.",
+        interactions: "تحذير مهم: يُمنع منعاً باتاً تناوله بالتزامن مع مضادات الاكتئاب (SSRIs وSNRIs وMAOIs) أو نبتة سانت جون لتجنب حدوث متلازمة السيروتونين الخطيرة التي قد تهدد الحياة.",
+        interactionsNl: "Belangrijke waarschuwing: neem het nooit samen met antidepressiva (SSRI’s, SNRI’s, MAO-remmers) of sint-janskruid, om het serotoninesyndroom te voorkomen, dat levensbedreigend kan zijn.",
+        interactionsEn: "Important warning: never take it together with antidepressants (SSRIs, SNRIs, MAOIs) or St John’s wort, to avoid serotonin syndrome, which can be life-threatening.",
         naturalSources: "يُنتج من بذور نبات Griffonia simplicifolia الأفريقي",
         naturalSourcesNl: "Zaden van de West-Afrikaanse plant Griffonia simplicifolia.",
         naturalSourcesEn: "Seeds of the Griffonia simplicifolia plant.",

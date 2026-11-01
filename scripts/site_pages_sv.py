@@ -9,7 +9,6 @@ the Swedish disclaimer is indexed; Crisp is click-to-load and disclosed.
 """
 
 SUPPORT_EMAIL = 'support@wibohealth.com'
-WHATSAPP = 'https://wa.me/31645844585?text=Hej%21%20Jag%20har%20en%20fr%C3%A5ga%20om%20WiBo%20Health%20%2F%20boodi-appen'
 UPDATED = 'Senast uppdaterad: oktober 2026'
 CARE = ('Behöver du sjukvårdsrådgivning? Kontakta din vårdcentral eller ring <strong>1177</strong> (1177 Vårdguiden). '
         'Vid akut fara – ring <strong>112</strong>.')
@@ -253,8 +252,7 @@ SITE_PAGES_SV = [
 
             <h2 class="section-title"><i class="fas fa-envelope"></i> <span>10. Kontakt</span></h2>
             <ul class="check-list">
-                <li><strong>E-post:</strong> <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a> eller <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a></li>
-                <li><strong>WhatsApp för allmänna frågor och support:</strong> <a href="{WHATSAPP}" rel="noopener">+31 6 45 84 45 85</a></li>
+                <li><strong>E-post:</strong> <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a></li>
             </ul>
             <p>Den här svenska versionen är en översättning; vid skillnader gäller den engelska versionen av villkoren.</p>
 ''',
@@ -332,8 +330,7 @@ SITE_PAGES_SV = [
 
             <div class="hub-cards">
                 <div class="hub-card"><h3><i class="fas fa-mobile-screen-button"></i> Support för boodi-appen</h3><p>Frågor om streckkodsskannern, skanningssaldo, köp i Google Play och förslag på rättelser av produkter.</p><a class="card-link" href="mailto:{SUPPORT_EMAIL}?subject=boodi-support">{SUPPORT_EMAIL}</a></div>
-                <div class="hub-card"><h3><i class="fab fa-whatsapp"></i> Allmänna frågor via WhatsApp</h3><p>För allmänna frågor om plattformen och boodi-appen. Skicka inga hälsouppgifter.</p><a class="card-link" href="{WHATSAPP}" rel="noopener">+31 6 45 84 45 85</a></div>
-                <div class="hub-card"><h3><i class="fas fa-envelope"></i> Samarbeten och officiella ärenden</h3><p>Samarbeten, forskning, press och övriga ärenden till WiBo Health Group.</p><a class="card-link" href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a> <a class="card-link" href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a></div>
+                <div class="hub-card"><h3><i class="fas fa-envelope"></i> Samarbeten och officiella ärenden</h3><p>Samarbeten, forskning, press och övriga ärenden till WiBo Health Group.</p><a class="card-link" href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a></div>
             </div>
 
             <h2 class="section-title"><i class="fas fa-clock"></i> <span>Öppettider och svarstid</span></h2>

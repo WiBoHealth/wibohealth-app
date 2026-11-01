@@ -1,213 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - WiBo Health</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#667eea">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="stylesheet" href="css/mobile-menu.css">
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            font-family: 'Cairo', sans-serif;
-        }
-        .privacy-container {
-            max-width: 900px;
-            margin: 50px auto 50px;
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        h1 {
-            color: #2ecc71;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .last-update {
-            text-align: center;
-            color: #7f8c8d;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #667eea;
-            font-size: 1.6em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p, li {
-            color: #2c3e50;
-            font-size: 1.05em;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        ul {
-            margin-right: 30px;
-        }
-        .back-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #2ecc71;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        .back-btn:hover {
-            background: #27ae60;
-            transform: translateY(-3px);
-        }
-    </style>
-</head>
-<body>
-    <div style="background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
-        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
-            <a href="index.html" style="text-decoration: none; color: #2ecc71; font-size: 24px; font-weight: bold;">💚 WiBo Health</a>
-            <div class="hamburger-menu" onclick="toggleMobileMenu()" style="display: flex; flex-direction: column; cursor: pointer; padding: 10px;">
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-                <span style="width: 30px; height: 3px; background: #2c3e50; margin: 3px 0; border-radius: 3px;"></span>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
-    <nav class="mobile-nav-menu" id="mobileNav">
-        <button class="mobile-nav-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
-        <a href="index.html" class="mobile-nav-link"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
-        <a href="foods.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> دليل الأطعمة</a>
-        <a href="calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> الحاسبات الصحية</a>
-        <a href="privacy.html" class="mobile-nav-link"><i class="fas fa-shield-alt"></i> سياسة الخصوصية</a>
-        <a href="terms.html" class="mobile-nav-link"><i class="fas fa-file-contract"></i> الشروط والأحكام</a>
-    </nav>
-    <div class="privacy-container">
-        <h1>🔒 سياسة الخصوصية</h1>
-        <p class="last-update">آخر تحديث: 24 نوفمبر 2025</p>
-        
-        <p>
-            في <strong>WiBo Health</strong>، نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية. 
-            توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك.
-        </p>
-
-        <h2>1. المعلومات التي نجمعها</h2>
-        <p>نحن نجمع المعلومات التالية:</p>
-        <ul>
-            <li><strong>معلومات الاستخدام:</strong> الصفحات التي تزورها، الوقت المستغرق، نوع المتصفح</li>
-            <li><strong>معلومات الجهاز:</strong> نوع الجهاز، نظام التشغيل، عنوان IP</li>
-            <li><strong>معلومات الاتصال:</strong> البريد الإلكتروني أو رقم الهاتف (عند التواصل معنا فقط)</li>
-        </ul>
-
-        <h2>2. كيف نستخدم المعلومات</h2>
-        <p>نستخدم المعلومات المجمعة لـ:</p>
-        <ul>
-            <li>تحسين تجربة المستخدم وتطوير الموقع</li>
-            <li>تحليل استخدام الموقع وفهم احتياجات الزوار</li>
-            <li>الرد على استفساراتكم وتقديم الدعم</li>
-            <li>إرسال تحديثات ونصائح صحية (بموافقتكم فقط)</li>
-        </ul>
-
-        <h2>3. ملفات الكوكيز (Cookies)</h2>
-        <p>
-            نستخدم ملفات الكوكيز لتحسين تجربتك على الموقع. يمكنك تعطيل الكوكيز من إعدادات متصفحك، 
-            لكن هذا قد يؤثر على بعض وظائف الموقع.
-        </p>
-
-        <h2>4. مشاركة المعلومات</h2>
-        <p>
-            نحن <strong>لا نبيع أو نشارك</strong> معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
-        </p>
-        <ul>
-            <li>بموافقتك الصريحة</li>
-            <li>لتقديم خدمات أساسية (مثل خدمات الاستضافة)</li>
-            <li>عند الطلب القانوني من الجهات المختصة</li>
-        </ul>
-
-        <h2>5. أدوات التحليل والإعلانات</h2>
-        <p>
-            نستخدم خدمات مثل <strong>Google Analytics</strong> و <strong>Google AdSense</strong> 
-            لتحليل الزيارات وعرض إعلانات ملائمة. هذه الخدمات قد تجمع معلومات مجهولة عن استخدامك للموقع.
-        </p>
-
-        <h2>6. حماية البيانات</h2>
-        <p>
-            نتخذ إجراءات أمنية مناسبة لحماية معلوماتك من الوصول غير المصرح به، بما في ذلك:
-        </p>
-        <ul>
-            <li>استخدام بروتوكول HTTPS لتشفير البيانات</li>
-            <li>تخزين البيانات على خوادم آمنة</li>
-            <li>مراجعة دورية للإجراءات الأمنية</li>
-        </ul>
-
-        <h2>7. حقوقك</h2>
-        <p>لديك الحق في:</p>
-        <ul>
-            <li>الوصول إلى بياناتك الشخصية</li>
-            <li>طلب تصحيح أو حذف بياناتك</li>
-            <li>إلغاء الاشتراك في النشرات البريدية في أي وقت</li>
-            <li>الاعتراض على معالجة بياناتك</li>
-        </ul>
-
-        <h2>8. روابط المواقع الأخرى</h2>
-        <p>
-            قد يحتوي موقعنا على روابط لمواقع خارجية. نحن غير مسؤولين عن سياسات الخصوصية 
-            الخاصة بهذه المواقع.
-        </p>
-
-        <h2>9. التغييرات على سياسة الخصوصية</h2>
-        <p>
-            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنقوم بإعلامك بأي تغييرات جوهرية 
-            عبر نشر النسخة المحدثة على هذه الصفحة.
-        </p>
-
-        <h2>10. تواصل معنا</h2>
-        <p>
-            إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا عبر:
-        </p>
-        <ul>
-            <li>البريد الإلكتروني: info@wibo-health.com</li>
-            <li>واتساب: <a href="https://wa.me/31645844585" target="_blank" style="color: #2ecc71;">اضغط هنا</a></li>
-        </ul>
-
-        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
-            <p style="color: #7f8c8d;">
-                بمواصلة استخدام موقع WiBo Health، فإنك توافق على سياسة الخصوصية هذه.
-            </p>
-            <a href="index.html" class="back-btn">
-                <i class="fas fa-home"></i> العودة للرئيسية
-            </a>
-        </div>
-    </div>
-    
-    <script>
-        // Auto-hide Header on Scroll
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        const scrollThreshold = 150;
-
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-                header.classList.add('hide-nav');
-            } else if (currentScroll < lastScrollTop) {
-                header.classList.remove('hide-nav');
-            }
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('hide-nav');
-            }
-            
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        }, false);
-    </script>
-    <script src="js/mobile-menu.js"></script>
-</body>
-</html>
