@@ -200,8 +200,7 @@ SITE_PAGES_SV = [
 
             <h2 class="section-title"><i class="fas fa-envelope"></i> <span>13. Kontakt</span></h2>
             <ul class="check-list">
-                <li><strong>E-post:</strong> <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a> eller <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a></li>
-                <li><strong>WhatsApp för allmänna frågor och support:</strong> <a href="{WHATSAPP}" rel="noopener">+31 6 45 84 45 85</a></li>
+                <li><strong>E-post:</strong> <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a></li>
             </ul>
             <p>Den här svenska versionen är en översättning; vid skillnader gäller den engelska versionen av policyn.</p>
 ''',

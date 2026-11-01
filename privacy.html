@@ -602,6 +602,11 @@
             box-shadow: 0 10px 25px rgba(16, 185, 129, 0.5);
         }
 
+        /* bottom buttons: white text on a darker green (contrast > 4.5:1), stronger than the page link colour */
+        .bottom-actions a.btn-action-boodi, .bottom-actions a.btn-action-primary,
+        .bottom-actions a.btn-action-boodi *, .bottom-actions a.btn-action-primary * { color: #fff !important; }
+        .bottom-actions a.btn-action-boodi, .bottom-actions a.btn-action-primary { background: linear-gradient(135deg, #047857, #065f46); }
+
         /* Footer */
         footer {
             background: #2c3e50;
@@ -902,18 +907,14 @@
                 </ul>
 
                 <!-- Section 10 -->
-                <h2 data-i18n="privacy_section10_title">10. تواصل معنا ومسؤول حماية البيانات (DPO)</h2>
+                <h2 data-i18n="privacy_section10_title">10. تواصل معنا</h2>
                 <p data-i18n="privacy_section10_intro">
                     لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:
                 </p>
                 <ul>
                     <li>
                         <span data-i18n="privacy_email">البريد الإلكتروني المعتمد للدعم والتصحيح:</span> 
-                        <a href="mailto:support@wibohealth.com">support@wibohealth.com</a> / <a href="mailto:wibohealth@gmail.com">wibohealth@gmail.com</a>
-                    </li>
-                    <li>
-                        <span data-i18n="privacy_whatsapp">واتساب للأسئلة العامة والدعم:</span>
-                        <a href="https://wa.me/31645844585" target="_blank" data-i18n="privacy_whatsapp_link">+31 6 45844585</a>
+                        <a href="mailto:support@wibohealth.com">support@wibohealth.com</a>
                     </li>
                 </ul>
 
@@ -1024,11 +1025,9 @@
                 privacy_section8_text: "قد يحتوي موقعنا وتطبيقنا على روابط لمواقع أو مصادر خارجية موثوقة (مثل مراجع USDA أو Voedingscentrum). نحن غير مسؤولين عن ممارسات وسياسات الخصوصية الخاصة بتلك المواقع الخارجية.",
                 privacy_section9_title: "9. التحديثات والتعديلات",
                 privacy_section9_text: "قد نقوم بتحديث هذه السياسة من وقت لآخر لتعكس التطورات التنظيمية والتقنية. يُعلن عن أي تعديل جوهري بنشر التاريخ المحدث على هذه الصفحة.",
-                privacy_section10_title: "10. تواصل معنا ومسؤول حماية البيانات (DPO)",
+                privacy_section10_title: "10. تواصل معنا",
                 privacy_section10_intro: "لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:",
                 privacy_email: "البريد الإلكتروني المعتمد للدعم والتصحيح:",
-                privacy_whatsapp: "واتساب للأسئلة العامة والدعم:",
-                privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi 💚، فإنك تقر بعلمك وموافقتك الكاملة على بنود سياسة الخصوصية هذه.",
                 privacy_back_home: "العودة للرئيسية",
                 btn_explore_boodi: "اكتشف تطبيق بودي 💚",
@@ -1129,11 +1128,9 @@
                 privacy_section8_text: "Our website may reference reputable external resources (such as USDA or Dutch Voedingscentrum databases). We are not responsible for the privacy practices of external websites.",
                 privacy_section9_title: "9. Policy Updates",
                 privacy_section9_text: "We may update this policy periodically to reflect evolving legal and technological requirements. Significant updates will be notified via this page.",
-                privacy_section10_title: "10. Contact Us & Data Protection",
+                privacy_section10_title: "10. Contact Us",
                 privacy_section10_intro: "To exercise your legal data rights or submit privacy-related inquiries, please contact our support team via:",
                 privacy_email: "Certified Support & Rectification Email:",
-                privacy_whatsapp: "WhatsApp for general questions and support:",
-                privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "By continuing to use WiBo Health and boodi 💚 app, you acknowledge and agree to this Privacy Policy.",
                 privacy_back_home: "Back to Home",
                 btn_explore_boodi: "Discover Boodi App 💚",
@@ -1234,11 +1231,9 @@
                 privacy_section8_text: "Onze website kan links bevatten naar externe, betrouwbare bronnen (zoals het Voedingscentrum of USDA). Wij zijn niet verantwoordelijk voor het privacybeleid van deze externe websites.",
                 privacy_section9_title: "9. Wijzigingen in dit Beleid",
                 privacy_section9_text: "Wij kunnen dit privacybeleid periodiek bijwerken om te voldoen aan veranderende wetgeving en technologie. Wijzigingen treden in werking op het moment van publicatie op deze pagina.",
-                privacy_section10_title: "10. Contact & Functionaris voor Gegevensbescherming",
+                privacy_section10_title: "10. Contact",
                 privacy_section10_intro: "Voor het uitoefenen van jouw AVG-rechten of vragen over gegevensbescherming kun je contact opnemen met ons juridisch en technisch team:",
                 privacy_email: "Officieel e-mailadres voor support en rectificatie:",
-                privacy_whatsapp: "WhatsApp voor algemene vragen en ondersteuning:",
-                privacy_whatsapp_link: "+31 6 45844585",
                 privacy_footer_agreement: "Door het gebruik van WiBo Health en de boodi 💚 app voort te zetten, ga je akkoord met de voorwaarden van dit privacybeleid.",
                 privacy_back_home: "Terug naar Home",
                 btn_explore_boodi: "Ontdek Boodi App 💚",
