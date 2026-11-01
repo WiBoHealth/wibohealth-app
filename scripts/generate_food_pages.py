@@ -1539,28 +1539,28 @@ FP_UI = {
 # Pages with a long body (override `body`, batch 28 onwards): the h3 sections replace the lead and the generic tips,
 # every section is open (no + / -), and the table gains sugar, GI, GL and insulin index rows (wording approved 31 October 2026)
 BODY_UI = {
-    'ar': dict(review='تمت المراجعة الطبية من قبل <a href="{doctor}">د. وسيم حبيب</a> · {date}', ml='مل', sugar='السكر', gi_unavail='غير متوفر', gi_published='قيمة منشورة', ii_row='مؤشر الإنسولين',
+    'ar': dict(review='تمت المراجعة الطبية من قبل <a href="{doctor}">د. وسيم حبيب</a> · {date}', ml='مل', sugar='السكر', gi_unavail='غير متوفر', gi_published='قيمة جلايسيمية منشورة', ii_row='مؤشر الإنسولين',
                ref_published='قيمة المؤشر الجلايسيمي لهذا الصنف مأخوذة من قياس منشور (المصدر في البند التالي). '
                              'تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
-               desc_published='قيمة منشورة', desc_reviewed='تقدير مراجع سريرياً',
+               desc_published='قيمة جلايسيمية منشورة', desc_reviewed='تقدير مراجع سريرياً',
                desc_na_low='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. المؤشر الجلايسيمي لا ينطبق (كربوهيدرات متاحة قليلة). قيم غذائية كاملة ونصائح وبدائل.',
                desc_nogi='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. قيم غذائية كاملة ونصائح وبدائل.'),
-    'en': dict(review='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Sugar', gi_unavail='Not available', gi_published='Published value', ii_row='Insulin index',
+    'en': dict(review='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Sugar', gi_unavail='Not available', gi_published='Published glycemic value', ii_row='Insulin index',
                ref_published='The glycemic index of this food comes from a published measurement (source in the next item). '
                              'GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
-               desc_published='published value', desc_reviewed='clinically reviewed estimate',
+               desc_published='published glycemic value', desc_reviewed='clinically reviewed estimate',
                desc_na_low='{name}: {kcal} kcal and {protein} g protein per 100 g. Glycemic index not applicable (low in available carbohydrate). Full nutrition facts, tips and alternatives.',
                desc_nogi='{name}: {kcal} kcal and {protein} g protein per 100 g. Full nutrition facts, tips and alternatives.'),
-    'nl': dict(review='Medisch beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Suiker', gi_unavail='Niet beschikbaar', gi_published='Gepubliceerde waarde', ii_row='Insuline-index',
+    'nl': dict(review='Medisch beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Suiker', gi_unavail='Niet beschikbaar', gi_published='Gepubliceerde glykemische waarde', ii_row='Insuline-index',
                ref_published='De glykemische index van dit product komt uit een gepubliceerde meting (bron in het volgende punt). '
                              'De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
-               desc_published='gepubliceerde waarde', desc_reviewed='klinisch beoordeelde schatting',
+               desc_published='gepubliceerde glykemische waarde', desc_reviewed='klinisch beoordeelde schatting',
                desc_na_low='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Glykemische index niet van toepassing (weinig beschikbare koolhydraten). Volledige voedingswaarden, tips en alternatieven.',
                desc_nogi='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Volledige voedingswaarden, tips en alternatieven.'),
-    SV: dict(review='Medicinskt granskad av <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Socker', gi_unavail='Inte tillgängligt', gi_published='Publicerat värde', ii_row='Insulinindex',
+    SV: dict(review='Medicinskt granskad av <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Socker', gi_unavail='Inte tillgängligt', gi_published='Publicerat glykemiskt värde', ii_row='Insulinindex',
              ref_published='Det glykemiska indexet för det här livsmedlet kommer från en publicerad mätning (källa i nästa punkt). '
                            'GI-indelningen (lågt ≤ 55 · medelhögt 56–69 · högt ≥ 70) följer: ',
-             desc_published='publicerat värde', desc_reviewed='kliniskt granskad uppskattning',
+             desc_published='publicerat glykemiskt värde', desc_reviewed='kliniskt granskad uppskattning',
              desc_na_low='{name}: {kcal} kcal och {protein} g protein per 100 g. Glykemiskt index är inte tillämpligt (lite tillgängliga kolhydrater). Fullständigt näringsvärde, tips och alternativ.',
              desc_nogi='{name}: {kcal} kcal och {protein} g protein per 100 g. Fullständigt näringsvärde, tips och alternativ.'),
 }
@@ -1939,7 +1939,8 @@ def build(food, lang, ctx):
         f'<span class="m-val">{live(v)} {u["gram"]}</span><span class="m-pct">{pct(k) if k != "fib" else "&nbsp;"}</span></li>'
         for i, (k, v) in enumerate((('c', food['carbs']), ('p', food['protein']), ('f', food['fat']), ('fib', food['fiber']))))
     if has_gi:
-        gi_sub = bu['gi_published'] if published else (u['gi_reviewed'] if reviewed else fu['gi_same'])
+        # measured (Atkinson tables) and published values share one label (user decision 2026-11-01)
+        gi_sub = bu['gi_published'] if (published or not reviewed) else u['gi_reviewed']
         gi_box = (f'<span class="gi-num {LV[lvl]}">{gi}</span><span class="badge {LV[lvl]}">{u["levels"][lvl]}</span>'
                   f'<span class="gi-sub">{gi_sub}</span>')
         gl_box = (f'<span class="gi-num {LV[glv]}" id="glNum">{fmt(gl)}</span>'
