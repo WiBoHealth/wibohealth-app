@@ -70,12 +70,6 @@
   </url>
 
   <!-- الصفحات التعريفية والقانونية -->
-  <url>
-    <loc>https://wibohealth.com/methodology.html</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
   <!-- SUPPLEMENT-PAGES:START -->
   <url>
     <loc>https://wibohealth.com/supplements/whey-protein.html</loc>
@@ -8319,6 +8313,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/boodi.html"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/boodi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/boodi.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/methodology.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/methodology.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/metodik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/methodology.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/metodik.html</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/methodology.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/metodik.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/methodology.html"/>
   </url>
   <!-- ARTICLE-PAGES:END -->
   <!-- FOOD-PAGES:START -->

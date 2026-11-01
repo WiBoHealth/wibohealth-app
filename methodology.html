@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/metodik.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -53,6 +54,11 @@
     <title data-i18n="page_title">منهجية الحساب والمراجع العلمية | WiBo Health</title>
     <meta name="description" id="seo_desc" content="كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة &quot;لا ينطبق&quot;، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.">
     <link rel="canonical" href="https://wibohealth.com/methodology.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/methodology.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/metodik.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/methodology.html">
+    <!-- SV-ALTERNATES:END -->
 
     <!-- Hreflang Tags for SEO -->
 
@@ -740,6 +746,7 @@
                     <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
                         EN
                     </button>
+                    <a class="lang-btn" data-sv-link href="/sv/metodik.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
                 </div>
             </div>
         </div>
@@ -753,7 +760,7 @@
                     <span data-i18n="m_badge">الشفافية العلمية</span>
                 </div>
                 <h1 class="about-title" data-i18n="m_title">منهجية الحساب والمراجع العلمية</h1>
-                <p class="about-subtitle" data-i18n="m_intro">كل رقم للمؤشر الجلايسيمي في WiBo Health إما مُقاس مخبرياً ومأخوذ من مرجع دولي محكَّم، أو تقدير مراجع سريرياً موسوم بذلك بوضوح، أو يُعلَن أنه لا ينطبق أو غير متوفر. لا ننشر أرقاماً تقديرية على أنها قياسات.</p>
+                <p class="about-subtitle" data-i18n="m_intro">كل رقم للمؤشر الجلايسيمي في WiBo Health إما مُقاس مخبرياً ومأخوذ من مرجع دولي محكَّم، أو تقدير موسوم بذلك بوضوح، أو يُعلَن أنه لا ينطبق أو غير متوفر. لا ننشر أرقاماً تقديرية على أنها قياسات.</p>
             </div>
 
             <h2 class="section-title">
@@ -783,26 +790,30 @@
                 <li data-i18n="m4">درجة الثقة: A = ثلاث دراسات أو أكثر من الجدول 1 · B = دراسة أو دراستان من الجدول 1 (معززة بالجدول 2 إن وُجد) · C = الجدول 2 فقط.</li>
             </ul>
 
-            <h2 class="section-title">
+            <h2 class="section-title" id="labels" style="scroll-margin-top:90px">
                 <i class="fas fa-tags"></i>
                 <span data-i18n="s3_title">ماذا تعني كل حالة</span>
             </h2>
             <div class="pillars-list">
                 <div class="pillar-item">
                     <div class="pillar-title"><span class="status-dot measured"></span><span data-i18n="st1_title">قيمة جلايسيمية منشورة</span></div>
-                    <div class="pillar-desc" data-i18n="st1_desc">رقم من جداول Atkinson 2021 مع شارة ملونة: منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70.</div>
+                    <div class="pillar-desc" data-i18n="st1_desc">رقم منشور من جداول Atkinson أو من دراسة محكّمة مذكورة في صفحة الصنف، مع شارة ملونة: منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70.</div>
                 </div>
                 <div class="pillar-item">
                     <div class="pillar-title"><span class="status-dot na"></span><span data-i18n="st2_title">لا ينطبق</span></div>
-                    <div class="pillar-desc" data-i18n="st2_desc">الأطعمة التي تقل كربوهيدراتها المتاحة (الكربوهيدرات ناقص الألياف) عن 5 غ لكل 100 غ، كاللحوم والأسماك والزيوت والأجبان ومعظم الخضار الورقية. لا يمكن قياس مؤشرها لأن الاختبار يتطلب 25–50 غ كربوهيدرات. نستثني الألبان السائلة (الحليب والكفير واللبن) لأنها تُشرب بحصص كبيرة ولها قياسات منشورة.</div>
+                    <div class="pillar-desc" data-i18n="st2_desc">الصنف قليل الكربوهيدرات المتاحة لدرجة أن اختبار المؤشر (25 إلى 50 غ كربوهيدرات متاحة وفق ISO 26642) يتطلب تناول كمية كبيرة جداً منه دفعة واحدة.</div>
                 </div>
                 <div class="pillar-item">
                     <div class="pillar-title"><span class="status-dot nav"></span><span data-i18n="st3_title">غير متوفر</span></div>
                     <div class="pillar-desc" data-i18n="st3_desc">لا يوجد قياس مخبري منشور لهذا الصنف بعد، كمعظم الأطباق المركّبة والحلويات العربية. نفضّل عدم عرض رقم على عرض تقدير غير موثّق.</div>
                 </div>
                 <div class="pillar-item">
-                    <div class="pillar-title"><span class="status-dot reviewed"></span><span data-i18n="st4_title">تقدير مراجع سريرياً</span></div>
-                    <div class="pillar-desc" data-i18n="st4_desc">لصنف لم نجد له قياساً مخبرياً مناسباً في الجداول الدولية، يعرض فريق ويبو هيلث الطبي تقديراً للمؤشر بعد مراجعته سريرياً، ويُوسم دائماً بعبارة «تقدير مراجع سريرياً» دون نسبته إلى Atkinson 2021 أو ذكر عدد دراسات أو درجة ثقة. يُحسب الحمل الجلايسيمي منه بالطريقة نفسها، ونستبدله بالقيمة المقاسة متى توفرت.</div>
+                    <div class="pillar-title"><span class="status-dot reviewed"></span><span data-i18n="st4_title">تقدير من طعام مشابه</span></div>
+                    <div class="pillar-desc" data-i18n="st4_desc">لصنف لم نجد له قياساً مخبرياً مناسباً في الجداول الدولية، يعرض فريق ويبو هيلث الطبي تقديراً للمؤشر بعد مراجعته سريرياً، ويُوسم دائماً بعبارة «تقدير من طعام مشابه» دون نسبته إلى Atkinson 2021 أو ذكر عدد دراسات أو درجة ثقة. يُحسب الحمل الجلايسيمي منه بالطريقة نفسها، ونستبدله بالقيمة المقاسة متى توفرت.</div>
+                </div>
+                <div class="pillar-item">
+                    <div class="pillar-title"><span class="status-dot reviewed"></span><span data-i18n="st5_title">تقدير محسوب</span></div>
+                    <div class="pillar-desc" data-i18n="st5_desc">لصنف لم نجد له قياساً مخبرياً مناسباً في الجداول الدولية، يعرض فريق ويبو هيلث الطبي تقديراً للمؤشر بعد مراجعته سريرياً، ويُوسم دائماً بعبارة «تقدير محسوب» دون نسبته إلى Atkinson 2021 أو ذكر عدد دراسات أو درجة ثقة. يُحسب الحمل الجلايسيمي منه بالطريقة نفسها، ونستبدله بالقيمة المقاسة متى توفرت.</div>
                 </div>
             </div>
 
@@ -820,7 +831,7 @@
             </h2>
             <p data-i18n="mix_text">لتقدير مؤشر طبق من مكوناته نعتمد طريقة المتوسط الموزون التي أوصت بها مشاورة FAO/WHO عام 1998، بشرط أن يكون لكل مكوّن نشوي قيمة مُقاسة:</p>
             <div class="formula-box">GI<sub>dish</sub> = Σ ( GI<sub>i</sub> × available carb<sub>i</sub> ) ÷ Σ available carb<sub>i</sub></div>
-            <p class="note-line" data-i18n="mix_note">هذه الطريقة لا تحتسب أثر الدهون والبروتين في إبطاء الامتصاص، فقد تعطي قيمة أعلى من القياس الفعلي. لذلك ستُعرض هذه القيم بعلامة ≈ وتُوسم بأنها محسوبة لا مُقاسة.</p>
+            <p class="note-line" data-i18n="mix_note">هذه الطريقة لا تحتسب أثر الدهون والبروتين في إبطاء الامتصاص، فقد تعطي قيمة أعلى من القياس الفعلي.</p>
 
             <h2 class="section-title">
                 <i class="fas fa-syringe"></i>
@@ -832,7 +843,7 @@
                 <i class="fas fa-user-doctor"></i>
                 <span data-i18n="s7_title">المراجعة والإشراف</span>
             </h2>
-            <p data-i18n="review_text">تتم مراجعة المنهجية وكل القيم المعتمدة تحت إشراف د. وسيم حبيب، مؤسس WiBo Health. آخر مراجعة: 12 أكتوبر 2026.</p>
+            <p data-i18n="review_text">تمت المراجعة الطبية من قبل د. وسيم حبيب | مؤسس WiBo Health · 1 نوفمبر 2026</p>
             <div class="back-home-box" style="margin-top: 16px;">
                 <a href="doctor.html" class="back-home-btn">
                     <i class="fas fa-stethoscope"></i>
@@ -846,11 +857,16 @@
             </h2>
             <ol class="ref-list">
                 <li>Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632. <a href="https://doi.org/10.1093/ajcn/nqab233" rel="noopener" target="_blank">https://doi.org/10.1093/ajcn/nqab233</a></li>
+                <li>Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care. 2008;31(12):2281–2283. <a href="https://doi.org/10.2337/dc08-1239" rel="noopener" target="_blank">https://doi.org/10.2337/dc08-1239</a></li>
                 <li>ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010.</li>
                 <li>FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998.</li>
+                <li>Al Dhaheri AS, Henry CJK, Mohamad MN, Ohuma EO, Ismail LC, Al Meqbaali FT, Jarrar AH. Glycaemic index and glycaemic load values of commonly consumed foods in the United Arab Emirates. Br J Nutr. 2017;117(8):1110–1117. <a href="https://doi.org/10.1017/S0007114517001027" rel="noopener" target="_blank">https://doi.org/10.1017/S0007114517001027</a></li>
+                <li>Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–191. <a href="https://doi.org/10.1079/NRR200371" rel="noopener" target="_blank">https://doi.org/10.1079/NRR200371</a></li>
                 <li>Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. Am J Clin Nutr. 1997;66(5):1264–1276. <a href="https://doi.org/10.1093/ajcn/66.5.1264" rel="noopener" target="_blank">https://doi.org/10.1093/ajcn/66.5.1264</a></li>
                 <li>Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992. <a href="https://doi.org/10.3945/ajcn.2009.27720" rel="noopener" target="_blank">https://doi.org/10.3945/ajcn.2009.27720</a></li>
+                <li>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central. <a href="https://fdc.nal.usda.gov/" rel="noopener" target="_blank">https://fdc.nal.usda.gov/</a></li>
             </ol>
+            <p class="note-line" data-i18n="data_note">بيانات القيم الغذائية مصدرها قاعدة بيانات WiBo Health، مع USDA FoodData Central للقيم الناقصة.</p>
 
             <p class="medical-note" data-i18n="m_note">تنبيه: هذه المعلومات تثقيفية ولا تُعد جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك قبل أي تعديل على نظامك العلاجي.</p>
 
@@ -916,7 +932,7 @@
                 seo_desc: "كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة \"لا ينطبق\"، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.",
                 m_badge: "الشفافية العلمية",
                 m_title: "منهجية الحساب والمراجع العلمية",
-                m_intro: "كل رقم للمؤشر الجلايسيمي في WiBo Health إما مُقاس مخبرياً ومأخوذ من مرجع دولي محكَّم، أو تقدير مراجع سريرياً موسوم بذلك بوضوح، أو يُعلَن أنه لا ينطبق أو غير متوفر. لا ننشر أرقاماً تقديرية على أنها قياسات.",
+                m_intro: "كل رقم للمؤشر الجلايسيمي في WiBo Health إما مُقاس مخبرياً ومأخوذ من مرجع دولي محكَّم، أو تقدير موسوم بذلك بوضوح، أو يُعلَن أنه لا ينطبق أو غير متوفر. لا ننشر أرقاماً تقديرية على أنها قياسات.",
                 s1_title: "المصدر الأساسي: الجداول الدولية Atkinson 2021",
                 s1_text: "نعتمد الجداول الدولية للمؤشر الجلايسيمي والحمل الجلايسيمي (Atkinson وآخرون، 2021)، وهي مراجعة منهجية تضم أكثر من 4,000 مدخل من مختبرات حول العالم، موزعة على جدولين:",
                 t1_title: "الجدول 1: وفق معيار ISO 26642:2010",
@@ -930,25 +946,28 @@
                 m4: "درجة الثقة: A = ثلاث دراسات أو أكثر من الجدول 1 · B = دراسة أو دراستان من الجدول 1 (معززة بالجدول 2 إن وُجد) · C = الجدول 2 فقط.",
                 s3_title: "ماذا تعني كل حالة",
                 st1_title: "قيمة جلايسيمية منشورة",
-                st1_desc: "رقم من جداول Atkinson 2021 مع شارة ملونة: منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70.",
+                st1_desc: "رقم منشور من جداول Atkinson أو من دراسة محكّمة مذكورة في صفحة الصنف، مع شارة ملونة: منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70.",
                 st2_title: "لا ينطبق",
-                st2_desc: "الأطعمة التي تقل كربوهيدراتها المتاحة (الكربوهيدرات ناقص الألياف) عن 5 غ لكل 100 غ، كاللحوم والأسماك والزيوت والأجبان ومعظم الخضار الورقية. لا يمكن قياس مؤشرها لأن الاختبار يتطلب 25–50 غ كربوهيدرات. نستثني الألبان السائلة (الحليب والكفير واللبن) لأنها تُشرب بحصص كبيرة ولها قياسات منشورة.",
+                st2_desc: "الصنف قليل الكربوهيدرات المتاحة لدرجة أن اختبار المؤشر (25 إلى 50 غ كربوهيدرات متاحة وفق ISO 26642) يتطلب تناول كمية كبيرة جداً منه دفعة واحدة.",
                 st3_title: "غير متوفر",
                 st3_desc: "لا يوجد قياس مخبري منشور لهذا الصنف بعد، كمعظم الأطباق المركّبة والحلويات العربية. نفضّل عدم عرض رقم على عرض تقدير غير موثّق.",
-                st4_title: "تقدير مراجع سريرياً",
-                st4_desc: "لصنف لم نجد له قياساً مخبرياً مناسباً في الجداول الدولية، يعرض فريق ويبو هيلث الطبي تقديراً للمؤشر بعد مراجعته سريرياً، ويُوسم دائماً بعبارة «تقدير مراجع سريرياً» دون نسبته إلى Atkinson 2021 أو ذكر عدد دراسات أو درجة ثقة. يُحسب الحمل الجلايسيمي منه بالطريقة نفسها، ونستبدله بالقيمة المقاسة متى توفرت.",
+                st4_title: "تقدير من طعام مشابه",
+                st4_desc: "القيمة مأخوذة من أقرب طعام مقاس مخبرياً، والطعام ومرجعه مذكوران في قسم المراجع بصفحة الصنف.",
+                st5_title: "تقدير محسوب",
+                st5_desc: "القيمة محسوبة بمعادلة الوجبات المركّبة (FAO/WHO 1998).",
                 s4_title: "الحمل الجلايسيمي (GL)",
                 gl_text: "المؤشر الجلايسيمي يصف سرعة رفع الكربوهيدرات لسكر الدم، أما الحمل الجلايسيمي فيأخذ كمية الحصة في الحسبان:",
                 gl_note: "الكربوهيدرات المتاحة = الكربوهيدرات الكلية − الألياف. التصنيف: منخفض ≤ 10 · متوسط 11–19 · مرتفع ≥ 20.",
                 s5_title: "الأطباق المركّبة",
                 mix_text: "لتقدير مؤشر طبق من مكوناته نعتمد طريقة المتوسط الموزون التي أوصت بها مشاورة FAO/WHO عام 1998، بشرط أن يكون لكل مكوّن نشوي قيمة مُقاسة:",
-                mix_note: "هذه الطريقة لا تحتسب أثر الدهون والبروتين في إبطاء الامتصاص، فقد تعطي قيمة أعلى من القياس الفعلي. لذلك ستُعرض هذه القيم بعلامة ≈ وتُوسم بأنها محسوبة لا مُقاسة.",
+                mix_note: "هذه الطريقة لا تحتسب أثر الدهون والبروتين في إبطاء الامتصاص، فقد تعطي قيمة أعلى من القياس الفعلي.",
                 s6_title: "مؤشر الإنسولين",
                 ii_text: "نعرض مؤشر الإنسولين فقط للأطعمة التي اختُبرت فعلاً في دراستي Holt (1997) وBao (2009)، ونكتب \"غير مختبر سريرياً\" لما سواها. التصنيف: منخفض أقل من 40 · معتدل 40–69 · مرتفع ≥ 70.",
                 s7_title: "المراجعة والإشراف",
-                review_text: "تتم مراجعة المنهجية وكل القيم المعتمدة تحت إشراف د. وسيم حبيب، مؤسس WiBo Health. آخر مراجعة: 12 أكتوبر 2026.",
+                review_text: "تمت المراجعة الطبية من قبل د. وسيم حبيب | مؤسس WiBo Health · 1 نوفمبر 2026",
                 review_btn: "تعرّف على د. وسيم حبيب",
                 s8_title: "المراجع العلمية",
+                data_note: "بيانات القيم الغذائية مصدرها قاعدة بيانات WiBo Health، مع USDA FoodData Central للقيم الناقصة.",
                 m_note: "تنبيه: هذه المعلومات تثقيفية ولا تُعد جهازاً طبياً تشخيصياً وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك قبل أي تعديل على نظامك العلاجي.",
                 about_back_home: "العودة للصفحة الرئيسية",
                 nav_home: "الرئيسية",
@@ -967,7 +986,7 @@
                 seo_desc: "How WiBo Health determines glycemic and insulin index values: the Atkinson 2021 International Tables (ISO 26642), the \"not applicable\" rule, the glycemic load formula and the full scientific references.",
                 m_badge: "Scientific transparency",
                 m_title: "Methodology & Scientific References",
-                m_intro: "Every glycemic index value on WiBo Health is either a laboratory measurement taken from a peer-reviewed international reference, a clinically reviewed estimate clearly labelled as such, or is marked as not applicable or not available. We never publish estimates as measurements.",
+                m_intro: "Every glycemic index value on WiBo Health is either a laboratory measurement taken from a peer-reviewed international reference, an estimate clearly labelled as such, or is marked as not applicable or not available. We never publish estimates as measurements.",
                 s1_title: "Primary source: the International Tables 2021",
                 s1_text: "We use the International Tables of Glycemic Index and Glycemic Load Values (Atkinson et al., 2021), a systematic review of more than 4,000 entries from laboratories worldwide, published in two tables:",
                 t1_title: "Table 1: ISO 26642:2010 compliant",
@@ -981,25 +1000,28 @@
                 m4: "Confidence grade: A = three or more Table 1 studies · B = one or two Table 1 studies (reinforced with Table 2 where available) · C = Table 2 only.",
                 s3_title: "What each status means",
                 st1_title: "Published glycemic value",
-                st1_desc: "A value from the Atkinson 2021 tables with a colour badge: low ≤ 55 · medium 56–69 · high ≥ 70.",
+                st1_desc: "A published value from the Atkinson tables or from a peer-reviewed study named on the food’s page, with a colour badge: low ≤ 55 · medium 56–69 · high ≥ 70.",
                 st2_title: "Not applicable",
-                st2_desc: "Foods with less than 5 g of available carbohydrate (carbohydrate minus fibre) per 100 g, such as meat, fish, oils, cheese and most leafy vegetables. Their GI cannot be measured, because a test requires 25–50 g of carbohydrate. Liquid dairy (milk, kefir, laban) is an exception: it is consumed in large portions and has published measurements.",
+                st2_desc: "The food contains so little available carbohydrate that a GI test (25 to 50 g of available carbohydrate, per ISO 26642) would require eating a very large amount of it in one sitting.",
                 st3_title: "Not available",
                 st3_desc: "No published laboratory measurement exists for this food yet, as with most composite dishes and Arabic sweets. We prefer showing no number over showing an undocumented estimate.",
-                st4_title: "Clinically reviewed estimate",
-                st4_desc: "For a food with no suitable laboratory measurement in the international tables, the WiBo Health medical team shows a clinically reviewed estimate of its GI. It is always labelled “clinically reviewed estimate” and is never attributed to Atkinson 2021 or given a study count or confidence grade. The glycemic load is calculated from it in the same way, and we replace it with a measured value as soon as one is available.",
+                st4_title: "Estimate from a similar food",
+                st4_desc: "The value is taken from the closest laboratory-measured food; that food and its reference are named in the references section of the food’s page.",
+                st5_title: "Calculated estimate",
+                st5_desc: "The value is calculated with the mixed-meal formula (FAO/WHO 1998).",
                 s4_title: "Glycemic load (GL)",
                 gl_text: "The glycemic index describes how fast a food’s carbohydrate raises blood sugar; the glycemic load also accounts for the portion eaten:",
                 gl_note: "Available carbohydrate = total carbohydrate − fibre. Classification: low ≤ 10 · medium 11–19 · high ≥ 20.",
                 s5_title: "Composite dishes",
                 mix_text: "To estimate a dish’s GI from its ingredients we use the weighted-average method recommended by the 1998 FAO/WHO expert consultation, provided every starchy ingredient has a measured value:",
-                mix_note: "This method ignores how fat and protein slow absorption, so it may overestimate the measured value. Such values will therefore be shown with ≈ and labelled as calculated, not measured.",
+                mix_note: "This method ignores how fat and protein slow absorption, so it may overestimate the measured value.",
                 s6_title: "Insulin index",
                 ii_text: "We show the insulin index only for foods actually tested by Holt (1997) and Bao (2009); all other foods are marked \"not clinically tested\". Classification: low below 40 · moderate 40–69 · high ≥ 70.",
                 s7_title: "Review and oversight",
-                review_text: "The methodology and every approved value are reviewed under the supervision of Dr. Wassim Habib, founder of WiBo Health. Last reviewed: 12 October 2026.",
+                review_text: "Medically reviewed by Dr. Wassim Habib | Founder, WiBo Health · 1 November 2026",
                 review_btn: "Meet Dr. Wassim Habib",
                 s8_title: "Scientific references",
+                data_note: "Nutrition data come from the WiBo Health database, with USDA FoodData Central for missing values.",
                 m_note: "Note: this information is educational and is not a diagnostic medical device under EU MDR 2017/745. Consult your doctor before changing any treatment.",
                 about_back_home: "Back to Home",
                 nav_home: "Home",
@@ -1018,7 +1040,7 @@
                 seo_desc: "Hoe WiBo Health glykemische en insuline-indexwaarden bepaalt: de Atkinson 2021 International Tables (ISO 26642), de regel \"niet van toepassing\", de formule voor glykemische lading en alle wetenschappelijke bronnen.",
                 m_badge: "Wetenschappelijke transparantie",
                 m_title: "Methodologie & wetenschappelijke bronnen",
-                m_intro: "Elke glykemische-indexwaarde op WiBo Health is ofwel een laboratoriummeting uit een internationaal, peer-reviewed naslagwerk, ofwel een duidelijk als zodanig gemarkeerde klinisch beoordeelde schatting, ofwel gemarkeerd als niet van toepassing of niet beschikbaar. Schattingen publiceren we nooit als metingen.",
+                m_intro: "Elke glykemische-indexwaarde op WiBo Health is ofwel een laboratoriummeting uit een internationaal, peer-reviewed naslagwerk, ofwel een duidelijk als zodanig gemarkeerde schatting, ofwel gemarkeerd als niet van toepassing of niet beschikbaar. Schattingen publiceren we nooit als metingen.",
                 s1_title: "Primaire bron: de International Tables 2021",
                 s1_text: "Wij gebruiken de International Tables of Glycemic Index and Glycemic Load Values (Atkinson e.a., 2021), een systematische review van meer dan 4.000 metingen uit laboratoria wereldwijd, verdeeld over twee tabellen:",
                 t1_title: "Tabel 1: conform ISO 26642:2010",
@@ -1032,25 +1054,28 @@
                 m4: "Betrouwbaarheidsgraad: A = drie of meer studies uit Tabel 1 · B = één of twee studies uit Tabel 1 (versterkt met Tabel 2 indien beschikbaar) · C = alleen Tabel 2.",
                 s3_title: "Wat elke status betekent",
                 st1_title: "Gepubliceerde glykemische waarde",
-                st1_desc: "Een waarde uit de Atkinson 2021-tabellen met een kleurlabel: laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70.",
+                st1_desc: "Een gepubliceerde waarde uit de tabellen van Atkinson of uit een peer-reviewed studie die op de productpagina wordt genoemd, met een kleurlabel: laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70.",
                 st2_title: "Niet van toepassing",
-                st2_desc: "Voedingsmiddelen met minder dan 5 g beschikbare koolhydraten (koolhydraten min vezels) per 100 g, zoals vlees, vis, oliën, kaas en de meeste bladgroenten. Hun GI is niet te meten, omdat een test 25–50 g koolhydraten vereist. Vloeibare zuivel (melk, kefir, karnemelk) is een uitzondering: die wordt in grote porties gedronken en er zijn metingen van gepubliceerd.",
+                st2_desc: "Het product bevat zo weinig beschikbare koolhydraten dat een GI-test (25 tot 50 g beschikbare koolhydraten volgens ISO 26642) zou vereisen dat je er in één keer een zeer grote hoeveelheid van eet.",
                 st3_title: "Niet beschikbaar",
                 st3_desc: "Er bestaat nog geen gepubliceerde laboratoriummeting voor dit product, zoals bij de meeste samengestelde gerechten en Arabische zoetigheden. Liever geen getal dan een niet-onderbouwde schatting.",
-                st4_title: "Klinisch beoordeelde schatting",
-                st4_desc: "Voor een product zonder geschikte laboratoriummeting in de internationale tabellen toont het medisch team van WiBo Health een klinisch beoordeelde schatting van de GI. Deze is altijd gemarkeerd als “klinisch beoordeelde schatting” en wordt nooit toegeschreven aan Atkinson 2021, zonder aantal studies of betrouwbaarheidsgraad. De glykemische lading wordt er op dezelfde manier mee berekend, en we vervangen de schatting door een gemeten waarde zodra die beschikbaar is.",
+                st4_title: "Schatting op basis van een vergelijkbaar product",
+                st4_desc: "De waarde is overgenomen van het meest vergelijkbare product dat in een laboratorium is gemeten; dat product en de bron ervan staan in het bronnengedeelte van de productpagina.",
+                st5_title: "Berekende schatting",
+                st5_desc: "De waarde is berekend met de formule voor samengestelde maaltijden (FAO/WHO 1998).",
                 s4_title: "Glykemische lading (GL)",
                 gl_text: "De glykemische index beschrijft hoe snel de koolhydraten de bloedsuiker verhogen; de glykemische lading houdt ook rekening met de portie:",
                 gl_note: "Beschikbare koolhydraten = totale koolhydraten − vezels. Indeling: laag ≤ 10 · gemiddeld 11–19 · hoog ≥ 20.",
                 s5_title: "Samengestelde gerechten",
                 mix_text: "Om de GI van een gerecht uit de ingrediënten te schatten, gebruiken we de gewogen-gemiddeldemethode van de FAO/WHO-expertconsultatie (1998), mits elk zetmeelrijk ingrediënt een gemeten waarde heeft:",
-                mix_note: "Deze methode houdt geen rekening met de vertragende werking van vet en eiwit en kan de gemeten waarde dus overschatten. Zulke waarden tonen we daarom met ≈ en als berekend, niet gemeten.",
+                mix_note: "Deze methode houdt geen rekening met de vertragende werking van vet en eiwit en kan de gemeten waarde dus overschatten.",
                 s6_title: "Insuline-index",
                 ii_text: "We tonen de insuline-index alleen voor voedingsmiddelen die echt getest zijn door Holt (1997) en Bao (2009); de rest is gemarkeerd als \"niet klinisch getest\". Indeling: laag onder 40 · matig 40–69 · hoog ≥ 70.",
                 s7_title: "Controle en toezicht",
-                review_text: "De methodologie en alle goedgekeurde waarden worden gecontroleerd onder toezicht van dr. Wassim Habib, oprichter van WiBo Health. Laatst gecontroleerd: 12 oktober 2026.",
+                review_text: "Medisch beoordeeld door Dr. Wassim Habib | Oprichter, WiBo Health · 1 november 2026",
                 review_btn: "Maak kennis met dr. Wassim Habib",
                 s8_title: "Wetenschappelijke bronnen",
+                data_note: "De voedingswaarden komen uit de database van WiBo Health, aangevuld met USDA FoodData Central voor ontbrekende waarden.",
                 m_note: "Let op: deze informatie is educatief en geen diagnostisch medisch hulpmiddel volgens EU MDR 2017/745. Overleg met uw arts voordat u uw behandeling aanpast.",
                 about_back_home: "Terug naar Home",
                 nav_home: "Home",

@@ -446,4 +446,70 @@ SITE_PAGES_SV = [
             </ul>
 ''',
     ),
+    # translation of /methodology.html (approved Arabic, 2026-11-01); the food pages link here, "uppskattning" -> #labels
+    dict(
+        key='methodology', slug='metodik', legacy='/methodology.html', kind='webpage', modified='2026-11-01',
+        title='Metod och vetenskapliga källor | WiBo Health',
+        h1='Metod och vetenskapliga källor', crumb='Metod',
+        desc='Så tar WiBo Health fram glykemiskt index och glykemisk belastning: internationella GI-tabeller, publicerade '
+             'studier, vad varje beteckning betyder, formlerna och de vetenskapliga källorna.',
+        body='''            <p class="lead">Varje värde för glykemiskt index på WiBo Health är antingen uppmätt i laboratorium och hämtat från en granskad internationell källa, en <a href="#labels">uppskattning</a> som tydligt är märkt som sådan, eller anges som ej tillämpligt eller inte tillgängligt. Vi publicerar aldrig uppskattningar som om de vore mätningar.</p>
+
+            <h2 class="section-title"><i class="fas fa-book-open"></i> <span>Huvudkällan: de internationella tabellerna Atkinson 2021</span></h2>
+            <p>Vi utgår från de internationella tabellerna för glykemiskt index och glykemisk belastning (Atkinson m.fl., 2021), en systematisk översikt med över 4 000 poster från laboratorier över hela världen, fördelade på två tabeller:</p>
+            <ul class="check-list">
+                <li><strong>Tabell 1: enligt standarden ISO 26642:2010.</strong> Mätningar på minst 10 friska personer, med en portion som innehåller 25 eller 50 g tillgängliga kolhydrater, jämfört med glukos och med blodprov vid standardiserade tidpunkter under två timmar. Det här är vår första källa.</li>
+                <li><strong>Tabell 2: metoder som avviker från standarden.</strong> Värden som har mätts med metoder som avviker från standarden eller som visade stor spridning. Vi använder dem bara för att stärka ett livsmedel som har en enda studie i tabell 1, eller när livsmedlet saknas i tabell 1, och då med lägre tillförlitlighetsgrad.</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-filter"></i> <span>Så väljer vi det publicerade värdet</span></h2>
+            <ul class="check-list">
+                <li>Vi matchar livsmedlet mot poster för samma livsmedel i rätt avsnitt av tabellerna (frukt, baljväxter, spannmål …) och utesluter industriprodukter, experimentella måltider och extrema hybridsorter.</li>
+                <li>Vi räknar först ut medelvärdet för varje studie och sedan medelvärdet mellan studierna, så att en enskild studie som har testat många sorter inte dominerar resultatet.</li>
+                <li>För varje värde sparar vi intervallet (lägst–högst), antalet studier och postnumren i Atkinsons tabeller, så att värdet går att kontrollera.</li>
+                <li>Tillförlitlighetsgrad: A = tre eller fler studier från tabell 1 · B = en eller två studier från tabell 1 (förstärkta med tabell 2 om sådana finns) · C = endast tabell 2.</li>
+            </ul>
+
+            <h2 class="section-title" id="labels" style="scroll-margin-top:90px"><i class="fas fa-tags"></i> <span>Vad varje beteckning betyder</span></h2>
+            <ul class="check-list">
+                <li><strong>Publicerat glykemiskt värde:</strong> ett publicerat värde från Atkinsons tabeller eller från en vetenskapligt granskad studie som anges på livsmedlets sida, med färgmärkning: lågt ≤ 55 · medelhögt 56–69 · högt ≥ 70.</li>
+                <li><strong>Ej tillämpligt:</strong> livsmedlet innehåller så lite tillgängliga kolhydrater att ett GI-test (25 till 50 g tillgängliga kolhydrater enligt ISO 26642) skulle kräva att man äter en mycket stor mängd av det på en gång.</li>
+                <li><strong>Inte tillgängligt:</strong> det finns ännu ingen publicerad laboratoriemätning för livsmedlet, som för de flesta sammansatta rätter och arabiska sötsaker. Vi visar hellre inget värde än en uppskattning utan underlag.</li>
+                <li><strong>Uppskattning från ett liknande livsmedel:</strong> värdet är hämtat från det närmaste livsmedel som har mätts i laboratorium; det livsmedlet och källan anges i referensavsnittet på livsmedlets sida.</li>
+                <li><strong>Beräknad uppskattning:</strong> värdet är beräknat med formeln för sammansatta måltider (FAO/WHO 1998).</li>
+            </ul>
+
+            <h2 class="section-title"><i class="fas fa-scale-balanced"></i> <span>Glykemisk belastning (GL)</span></h2>
+            <p>Det glykemiska indexet beskriver hur snabbt kolhydraterna i ett livsmedel höjer blodsockret, medan den glykemiska belastningen även tar hänsyn till portionens storlek:</p>
+            <p dir="ltr" style="font-family:ui-monospace,Consolas,monospace;background:var(--bg-input);border:1px solid var(--border-color);border-radius:10px;padding:12px 14px;overflow-x:auto;text-align:center">GL = GI × available carbohydrate per portion (g) ÷ 100</p>
+            <p>Tillgängliga kolhydrater = totala kolhydrater − fibrer. Indelning: låg ≤ 10 · medelhög 11–19 · hög ≥ 20.</p>
+
+            <h2 class="section-title"><i class="fas fa-bowl-food"></i> <span>Sammansatta rätter</span></h2>
+            <p>För att uppskatta en rätts GI utifrån ingredienserna använder vi metoden med viktat medelvärde som FAO/WHO:s expertkonsultation rekommenderade 1998, under förutsättning att varje stärkelserik ingrediens har ett uppmätt värde:</p>
+            <p dir="ltr" style="font-family:ui-monospace,Consolas,monospace;background:var(--bg-input);border:1px solid var(--border-color);border-radius:10px;padding:12px 14px;overflow-x:auto;text-align:center">GI<sub>dish</sub> = Σ ( GI<sub>i</sub> × available carb<sub>i</sub> ) ÷ Σ available carb<sub>i</sub></p>
+            <p>Metoden tar inte hänsyn till att fett och protein bromsar upptaget och kan därför ge ett högre värde än en faktisk mätning.</p>
+
+            <h2 class="section-title"><i class="fas fa-syringe"></i> <span>Insulinindex</span></h2>
+            <p>Vi visar insulinindex bara för livsmedel som faktiskt har testats i studierna av Holt (1997) och Bao (2009), och skriver ”inte kliniskt testat” för övriga. Indelning: lågt under 40 · måttligt 40–69 · högt ≥ 70.</p>
+
+            <h2 class="section-title"><i class="fas fa-user-doctor"></i> <span>Granskning</span></h2>
+            <p>Medicinskt granskad av <a href="/sv/dr-wassim-habib.html">Dr. Wassim Habib</a> | Grundare, WiBo Health · 1 november 2026</p>
+
+            <h2 class="section-title"><i class="fas fa-list-ol"></i> <span>Vetenskapliga källor</span></h2>
+            <ol class="ref-list">
+                <li>Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632. <a href="https://doi.org/10.1093/ajcn/nqab233" rel="noopener">https://doi.org/10.1093/ajcn/nqab233</a></li>
+                <li>Atkinson FS, Foster-Powell K, Brand-Miller JC. International tables of glycemic index and glycemic load values: 2008. Diabetes Care. 2008;31(12):2281–2283. <a href="https://doi.org/10.2337/dc08-1239" rel="noopener">https://doi.org/10.2337/dc08-1239</a></li>
+                <li>ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010.</li>
+                <li>FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998.</li>
+                <li>Al Dhaheri AS, Henry CJK, Mohamad MN, Ohuma EO, Ismail LC, Al Meqbaali FT, Jarrar AH. Glycaemic index and glycaemic load values of commonly consumed foods in the United Arab Emirates. Br J Nutr. 2017;117(8):1110–1117. <a href="https://doi.org/10.1017/S0007114517001027" rel="noopener">https://doi.org/10.1017/S0007114517001027</a></li>
+                <li>Livesey G. Health potential of polyols as sugar replacers, with emphasis on low glycaemic properties. Nutr Res Rev. 2003;16(2):163–191. <a href="https://doi.org/10.1079/NRR200371" rel="noopener">https://doi.org/10.1079/NRR200371</a></li>
+                <li>Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. Am J Clin Nutr. 1997;66(5):1264–1276. <a href="https://doi.org/10.1093/ajcn/66.5.1264" rel="noopener">https://doi.org/10.1093/ajcn/66.5.1264</a></li>
+                <li>Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992. <a href="https://doi.org/10.3945/ajcn.2009.27720" rel="noopener">https://doi.org/10.3945/ajcn.2009.27720</a></li>
+                <li>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central. <a href="https://fdc.nal.usda.gov/" rel="noopener">https://fdc.nal.usda.gov/</a></li>
+            </ol>
+            <p>Näringsvärdena kommer från WiBo Healths databas, med <a href="https://fdc.nal.usda.gov/" rel="noopener">USDA FoodData Central</a> för värden som saknas.</p>
+
+            <p class="disclaimer-box">Observera: informationen är avsedd som utbildning och är ingen medicinteknisk produkt för diagnostik enligt EU:s förordning 2017/745 (MDR). Prata med vården innan du ändrar din behandling.</p>
+''',
+    ),
 ]

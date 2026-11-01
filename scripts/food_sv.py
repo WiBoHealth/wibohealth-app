@@ -1010,7 +1010,7 @@ UI = dict(
     dir='ltr', title='{name}: kalorier, glykemiskt index och näringsvärde | WiBo Health',
     desc_measured='{name}: {kcal} kcal per 100 g, glykemiskt index {gi} ({level}) enligt Atkinson 2021 och glykemisk belastning '
                   '{gl} per portion om {p} g. Fullständigt näringsvärde, tips och alternativ.',
-    desc_reviewed='{name}: {kcal} kcal per 100 g, glykemiskt index {gi} ({level}, kliniskt granskad uppskattning) och glykemisk '
+    desc_reviewed='{name}: {kcal} kcal per 100 g, glykemiskt index {gi} ({level}, uppskattning) och glykemisk '
                   'belastning {gl} per portion om {p} g. Fullständigt näringsvärde, tips och alternativ.',
     desc_na='{name}: {kcal} kcal och {protein} g protein per 100 g. Glykemiskt index är inte tillämpligt (under 5 g tillgängliga '
             'kolhydrater). Fullständigt näringsvärde, tips och alternativ.',
@@ -1034,11 +1034,11 @@ UI = dict(
                   '({level}), medelvärdet av {studies} i de internationella GI-tabellerna (Atkinson 2021). En vanlig portion om '
                   '{p} g har en glykemisk belastning på {gl} ({gl_level}).',
     lead_reviewed='100 g {name} innehåller {kcal} kcal och {avail} g tillgängliga kolhydrater. Det glykemiska indexet är {gi} '
-                  '({level}), en kliniskt granskad uppskattning och ingen laboratoriemätning. En vanlig portion om {p} g har en '
+                  '({level}), en uppskattning och ingen laboratoriemätning. En vanlig portion om {p} g har en '
                   'glykemisk belastning på {gl} ({gl_level}).',
-    gi_reviewed='Kliniskt granskad uppskattning',
+    gi_reviewed='Uppskattning',
     rank_reviewed='Bland livsmedlen i gruppen {group} som har ett glykemiskt index ({m}) hamnar {det} på plats {rank} (lägst först).',
-    src_reviewed='📚 Det glykemiska indexet för det här livsmedlet är en kliniskt granskad uppskattning från WiBo Healths medicinska '
+    src_reviewed='📚 Det glykemiska indexet för det här livsmedlet är en uppskattning från WiBo Healths medicinska '
                  'team, ingen laboratoriemätning från de internationella GI-tabellerna (Atkinson 2021).',
     reviewed_team='Granskad av WiBo Healths medicinska team · Senast granskad {date}',
     lead_na='100 g {name} innehåller {kcal} kcal och {protein} g protein. Eftersom {det} innehåller mindre än 5 g tillgängliga '
@@ -1075,7 +1075,7 @@ FAQ = dict(
               'är ditt totala dagliga intag och resten av måltiden.',
     s_measured='Det glykemiska indexet är {gi} ({level}) enligt Atkinson 2021. En vanlig portion om {p} g har en glykemisk '
                'belastning på {gl} ({gl_level}){advice}',
-    s_reviewed='Det glykemiska indexet är {gi} ({level}), en kliniskt granskad uppskattning och ingen laboratoriemätning. En vanlig '
+    s_reviewed='Det glykemiska indexet är {gi} ({level}), en uppskattning och ingen laboratoriemätning. En vanlig '
                'portion om {p} g har en glykemisk belastning på {gl} ({gl_level}){advice}',
     s_advice=(', så den här portionens effekt på blodsockret är begränsad.',
               ', så det är bäst att kombinera {dem} med protein eller fiberrika grönsaker.',
@@ -4629,8 +4629,8 @@ OVERRIDES = {
                         a='Ja, om det inte är ordentligt tillagat, så koka det tills det är helt mört för att det täta '
                           'kollagenrika köttet ska bli lättare att smälta.')]),
     425: dict(lead='Svarta belugalinser kallas baljväxternas kaviar för sin eleganta runda form, blanka svarta färg och '
-                   'lyxiga konsistens som inte faller sönder vid kokning. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 28) och den glykemiska belastningen är låg, vilket gör dem till ett utmärkt val '
+                   'lyxiga konsistens som inte faller sönder vid kokning. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 28) och den glykemiska belastningen är låg, vilket gör dem till ett utmärkt val '
                    'vid diabetes.',
               tips=('Lägg kokta linser i en medelhavssallad med vit ost, olivolja och citronsaft; de lösliga fibrerna '
                     'bromsar blodsockerstegringen.',
@@ -4648,7 +4648,7 @@ OVERRIDES = {
                           'skön tuggighet.')]),
     426: dict(lead='Krossade röda linser (som blir gula vid kokning) är grunden i den värmande vintersoppan i varje '
                    'arabiskt hem och en snabb och omtyckt växtkälla till protein och fibrer. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 26) och den glykemiska belastningen låg.',
+                   'lågt (en uppskattning, 26) och den glykemiska belastningen låg.',
               tips=('Ät linssoppan med en halv färskpressad citron och en nypa spiskummin; C-vitamin ökar järnupptaget.',
                     'Koka linserna med morot, lök och vitlöksklyftor utan att tillsätta vermicelli eller friterade bitar '
                     'av vitt bröd, så förblir det glykemiska indexet lågt.',
@@ -4662,7 +4662,7 @@ OVERRIDES = {
                    dict(q='Passar röda linser när man bantar?',
                         a='Ja, mycket bra; de mättar i många timmar och kan minska suget efter stärkelse på kvällen.')]),
     427: dict(lead='Mungbönor hör till de äldsta baljväxterna i asiatisk folkmat. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 25).',
+                   'uppskattning, 25).',
               tips=('Ät dem kokta i soppa eller i gröna sallader, eller groddade (mungbönsgroddar).',
                     'Blötlägg mungbönorna i ljummet vatten i 6–8 timmar före tillagningen och koka dem sedan med lite '
                     'ingefära och gurkmeja, så blir de lättare att smälta och mängden fytinsyra minskar.',
@@ -4675,7 +4675,7 @@ OVERRIDES = {
                         a='Mungbönor hör till de baljväxter som är lättast att smälta och ger minst gaser, och de blir '
                           'ännu lättare att smälta när de blötläggs eller groddas.')]),
     428: dict(lead='Svarta bönor är den lysande stjärnan i det latinamerikanska köket; den mörka färgen kommer från en hög '
-                   'halt av antocyaniner. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30), och de '
+                   'halt av antocyaniner. Det glykemiska indexet är lågt (en uppskattning, 30), och de '
                    'ger en jämn blodsockerkurva utan plötsliga toppar.',
               tips=('Blanda dem med söt majs, färgglad paprika, avokado och limesaft till en tacosallad med protein och '
                     'omättat fett.',
@@ -4691,7 +4691,7 @@ OVERRIDES = {
                         a='De innehåller naturligt kalium, magnesium och kalcium; kalium bidrar till att bibehålla ett '
                           'normalt blodtryck.')]),
     429: dict(lead='Italienska vita cannellinibönor är kända för sin smöriga, krämiga konsistens och milda nötaktiga smak. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 31) och den glykemiska belastningen '
+                   'Det glykemiska indexet är lågt (en uppskattning, 31) och den glykemiska belastningen '
                    'låg, vilket gör dem till hemligheten bakom mättnad och elegans i medelhavsrätter.',
               tips=('Mosa dem lätt med extra jungfruolivolja, vitlök, rosmarin och citronsaft till en mycket god dipp som '
                     'ersätter majonnäs och färdiga såser.',
@@ -4706,7 +4706,7 @@ OVERRIDES = {
                         a='Ja, de ger samma mättande konsistens men med betydligt lägre glykemiskt index och dubbelt så '
                           'mycket protein och fibrer.')]),
     430: dict(lead='Borlottibönor (de romerska prickiga bönorna) har ett vackert rosa mönster och en fyllig smak som '
-                   'påminner om kokta kastanjer. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 28), '
+                   'påminner om kokta kastanjer. Det glykemiska indexet är lågt (en uppskattning, 28), '
                    'och de ger måltiderna djup och vintrig konsistens i stället för enkel stärkelse.',
               tips=('En härlig traditionell rätt är att koka dem med naturlig tomat, vitlök och olivolja och äta dem med '
                     'sked tillsammans med en färsk ruccolasallad.',
@@ -4723,7 +4723,7 @@ OVERRIDES = {
                           'inte näringsvärdet.')]),
     431: dict(lead='Bissara är en traditionell varm rätt på bordet i Egypten och Maghreb, gjord av skalade bondbönor eller '
                    'krossade ärter med gröna örter som dill och koriander och olivolja. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 32), och den är en äkta folkrätt som förenar näringsvärde och låg '
+                   'uppskattning, 32), och den är en äkta folkrätt som förenar näringsvärde och låg '
                    'kostnad.',
               tips=('Ät den varm med sked och ringla en sked extra jungfruolivolja, en nypa spiskummin och paprikapulver '
                     'över, och ät salladslök och krispig gurka till i stället för vitt bröd.',
@@ -4740,7 +4740,7 @@ OVERRIDES = {
                           '(G6PD-brist) inte äta den alls; de kan bara äta bissara gjord på ärter.')]),
     432: dict(lead='Krossade gula ärter är de klassiska baljväxternas gula guld; de löses snabbt upp och ger soppor en '
                    'sammetslen, fyllig konsistens utan grädde eller raffinerad stärkelse. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 25).',
+                   '(en uppskattning, 25).',
               tips=('Gör en varm soppa av dem med lök, selleri och citronsaft och servera den som en mättande måltid som '
                     'håller hungern borta kalla vinterdagar.',
                     'Låt dem sjuda på låg värme och skumma bort det vita skummet som bildas de första minuterna, så '
@@ -4755,7 +4755,7 @@ OVERRIDES = {
                         a='Det behövs inte på samma sätt som för hela baljväxter, men två timmars blötläggning förkortar '
                           'koktiden och gör dem lättare att smälta.')]),
     433: dict(lead='Konserverad söt majs ger färg och en omtyckt krispighet åt moderna sallader och grytor med sin '
-                   'naturliga, behagliga sötma. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 46), '
+                   'naturliga, behagliga sötma. Det glykemiska indexet är lågt (en uppskattning, 46), '
                    'och majsen bör räknas som komplex stärkelse och inte som en bladgrönsak som kan ätas fritt.',
               tips=('Ät den som en avvägd del av salladen (två till tre matskedar) med sallad och protein, så dämpas '
                     'effekten av det naturliga sockret på blodsockret.',
@@ -4832,8 +4832,8 @@ OVERRIDES = {
                         a='Varning: färska bambuskott får aldrig ätas råa, eftersom de innehåller naturliga cyanogena '
                           'ämnen som försvinner helt vid kokning och konservering.')]),
     438: dict(lead='Vattenkastanj är en krispig vattengrönsak som är mycket omtyckt i kinesisk mat och behåller sin '
-                   'härliga vattniga krispighet även efter lång tillagning. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 50) och den glykemiska belastningen låg, vilket gör den till ett glatt inslag '
+                   'härliga vattniga krispighet även efter lång tillagning. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 50) och den glykemiska belastningen låg, vilket gör den till ett glatt inslag '
                    'som bryter enformigheten i bantningskosten.',
               tips=('Skär dem i skivor och lägg dem i ugnsrostade grönsaker eller nudelrätter; krispigheten ger en '
                     'mättande känsla som ersätter industriella snacks.',
@@ -4929,7 +4929,7 @@ OVERRIDES = {
                         a='Ja, inlagd kapris innehåller mycket salt, så skölj den väl och använd den sparsamt som '
                           'smaksättning.')]),
     444: dict(lead='Spansk paella är folkrätternas drottning i Valencia och förenar saffranskryddat ris med ett lyxigt '
-                   'urval av skaldjur eller fågel och grönsaker. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'urval av skaldjur eller fågel och grönsaker. Det glykemiska indexet är medelhögt (en '
                    'uppskattning, 58) och den glykemiska belastningen tenderar att vara hög på grund av riset, så '
                    'hemligheten är att hålla portionen i schack och fokusera på proteinet.',
               tips=('Börja måltiden med en grön sallad med olivolja, ät först skaldjuren, proteinbitarna och grönsakerna i '
@@ -4948,7 +4948,7 @@ OVERRIDES = {
                           'inte bränns, eftersom det kan bilda oönskad akrylamid.')]),
     445: dict(lead='Spansk tortilla (den traditionella omeletten med potatis och ägg) är en ikon bland tapas som inte '
                    'saknas på något bord i Spanien, med sammetslen konsistens och värmande, mättande smak. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 48), eftersom fettet och proteinet i äggen och '
+                   'indexet är lågt (en uppskattning, 48), eftersom fettet och proteinet i äggen och '
                    'olivoljan bromsar potatisstärkelsen.',
               tips=('Ät en skiva stor som en handflata med en sallad av ruccola och körsbärstomater till en komplett '
                     'medelhavsfrukost eller lunch.',
@@ -4981,7 +4981,7 @@ OVERRIDES = {
                    dict(q='Höjer gazpacho blodsockret vid diabetes?',
                         a='Nej, den påverkar inte blodsockret nämnvärt.')]),
     447: dict(lead='Salmorejo från Córdoba är gazpachons tjockare och sammetslenare kusin, med en lyxig krämig konsistens '
-                   'som serveras kall. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35) tack vare '
+                   'som serveras kall. Det glykemiska indexet är lågt (en uppskattning, 35) tack vare '
                    'den rikliga extra jungfruolivoljan som bromsar upptaget av den lilla mängd kolhydrater som tillsätts.',
               tips=('Den toppas traditionellt med hackat kokt ägg och skivor lufttorkat kött (jamón eller bresaola); med '
                     'dessa proteiner blir den en komplett och näringsrik lunch.',
@@ -5014,8 +5014,8 @@ OVERRIDES = {
                         a="De flesta är helt milda och aromatiska; det kända spanska ordspråket säger 'unos pican y otros "
                           "no' (vissa är starka, andra inte), vilket gör dem roliga att äta.")]),
     449: dict(lead='Patatas bravas är krispiga friterade potatistärningar med stark sås och vitlökssås (aioli), den mest '
-                   'beställda rätten i Madrids gränder och i hela Spanien. Det glykemiska indexet är högt (en kliniskt '
-                   'granskad uppskattning, 70) på grund av friteringen och den snabba stärkelsen, så de kräver stor '
+                   'beställda rätten i Madrids gränder och i hela Spanien. Det glykemiska indexet är högt (en '
+                   'uppskattning, 70) på grund av friteringen och den snabba stärkelsen, så de kräver stor '
                    'försiktighet och måtta vid diabetes och insulinresistens.',
               tips=('Om du vill smaka, nöj dig med några små bitar (3–4 tärningar) och ät dem efter en proteinrik måltid '
                     'och en grön sallad för att dämpa den kraftiga glukostoppen.',
@@ -5052,7 +5052,7 @@ OVERRIDES = {
                           'olivolja och inte friteras i billiga industrioljor.')]),
     451: dict(lead='Spanska grönsakskroketter (croquetas de verduras) hör till de mest kända tapasrätterna: krispiga '
                    'utanpå och sidenlena inuti tack vare fyllningen av béchamelsås och karamelliserade grönsaker. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 53), eftersom fettet i olivoljan '
+                   'glykemiska indexet är lågt (en uppskattning, 53), eftersom fettet i olivoljan '
                    'bromsar upptaget av mjölet i béchamelsåsen, men de förblir en festlig rätt där portionen behöver '
                    'hållas i schack.',
               tips=('Ät bara två stycken som en smakbit tillsammans med en grön sallad med rikligt med vinäger och '
@@ -5072,7 +5072,7 @@ OVERRIDES = {
                           'airfryer.')]),
     452: dict(lead='Pastel de nata (den kända portugisiska vaniljtarteletten) är ett mästerverk bland Lissabons bakverk, '
                    'med krispigt smördegsskal och varm, karamelliserad vaniljkräm. Det glykemiska indexet är medelhögt (en '
-                   'kliniskt granskad uppskattning, 62), och den är en lyxig sötsak för festliga tillfällen, där '
+                   'uppskattning, 62), och den är en lyxig sötsak för festliga tillfällen, där '
                    'stärkelsen behöver vägas upp under resten av dagen.',
               tips=('Njut av en liten tartelett som efterrätt direkt efter en lunch rik på fibrer och protein, så undviker '
                     'du en kraftig blodsockertopp.',
@@ -5089,7 +5089,7 @@ OVERRIDES = {
                           'rena sockerrika sötsaker.')]),
     453: dict(lead='Pan con tomate (katalanskt tomatbröd) är grunden i den spanska frukosten: en krispig skiva lantbröd '
                    'som gnids med färsk tomat och en vitlöksklyfta och ringlas med jungfruolivolja. Det glykemiska indexet '
-                   'är lågt (en kliniskt granskad uppskattning, 54), och rätten visar medelhavskostens enkelhet.',
+                   'är lågt (en uppskattning, 54), och rätten visar medelhavskostens enkelhet.',
               tips=('Ät en skiva med två skivor keso eller ett kokt ägg för mer protein och en mättnad som håller till '
                     'lunch.',
                     'Använd surdegsbröd eller fullkornsbröd för lägre glykemiskt index och mer fibrer.',
@@ -5103,7 +5103,7 @@ OVERRIDES = {
                         a='Det glykemiska indexet är lågt (cirka 54), och jungfruolivoljan och tomatens fibrer bromsar '
                           'tydligt nedbrytningen av brödets stärkelse.')]),
     454: dict(lead="Klassisk fransk löksoppa (soupe à l'oignon) smeker sinnena med långsamt karamelliserad lök, djup smak "
-                   'av köttbuljong och ett lager smält ost. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'av köttbuljong och ett lager smält ost. Det glykemiska indexet är lågt (en '
                    'uppskattning, 35), och soppan är ett varmt och ombonat vinterval.',
               tips=('Njut av den varma soppan med sked och en enda liten skiva baguette, och undvik att doppa stora '
                     'mängder vitt bröd i skålen.',
@@ -5122,7 +5122,7 @@ OVERRIDES = {
                           'och den smälta gruyèren.')]),
     455: dict(lead='Ratatouille är en ikon från den franska landsbygden och Provence: en harmoni av aubergine, zucchini, '
                    'paprika och tomat som tillagas i olivolja med aromatiska örter. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 25), och rätten är rik på vätska och fibrer.',
+                   'uppskattning, 25), och rätten är rik på vätska och fibrer.',
               tips=('En komplett rätt där portionen kan vara generös; ät den som ett mättande tillbehör till grillat '
                     'kycklingbröst eller en fiskfilé för mer protein.',
                     'Lägg de runda grönsaksskivorna omväxlande i en form och grädda dem med olivolja, rosmarin, timjan och '
@@ -5139,7 +5139,7 @@ OVERRIDES = {
                         a='Ja, i Provence äts den varm som huvudrätt eller kall dagen efter med några droppar citron, och '
                           'den smakar lika gott.')]),
     456: dict(lead='Quiche med grönsaker och ost är en elegant fransk paj som förenar en ugnsbakad äggstanning med grädde '
-                   'och ett rikt urval av spenat, svamp och ost. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'och ett rikt urval av spenat, svamp och ost. Det glykemiska indexet är lågt (en '
                    'uppskattning, 45), eftersom fettet i äggen och osten bromsar upptaget av degens stärkelse.',
               tips=('Ät en medelstor triangelformad bit med en sallad av ruccola och tomat, så bryts ostens fyllighet och '
                     'du får mer lösliga fibrer.',
@@ -5193,8 +5193,8 @@ OVERRIDES = {
                         a='Den som har gikt bör äta den med stor måtta och undvika den koncentrerade buljongen, eftersom '
                           'långkokt nötkött innehåller mycket puriner.')]),
     459: dict(lead='Salade niçoise är ett mästerverk från Franska rivieran som förenar tonfisk, kokt ägg, haricots verts, '
-                   'oliver och tomat med en dressing av olivolja och senap. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 20), och salladen är ett typiskt exempel på en komplett och mättande måltid.',
+                   'oliver och tomat med en dressing av olivolja och senap. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 20), och salladen är ett typiskt exempel på en komplett och mättande måltid.',
               tips=('En lunch i sig själv; proteinet i tonfisken och äggen och grönsakernas fibrer ger en jämn '
                     'blodsockerkurva under eftermiddagen.',
                     'Förväll haricots verts så att de förblir krispiga och gröna, och använd tonfisk i olivolja eller '
@@ -5211,7 +5211,7 @@ OVERRIDES = {
                           'och tonfisken håller det samlade glykemiska indexet lågt.')]),
     460: dict(lead='Gratin dauphinois (fransk potatisgratäng med grädde och ost) är en av de godaste festrätterna på '
                    'vintern, med potatisskivor i vitlök och grädde som gräddas i ugnen. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 65), och portionen behöver styras noga vid diabetes.',
+                   'medelhögt (en uppskattning, 65), och portionen behöver styras noga vid diabetes.',
               tips=('Nöj dig med två till tre matskedar som tillbehör till en bit kött eller kyckling och en stor grön '
                     'sallad, så dämpas stärkelseupptaget.',
                     'Du kan blanda blomkåls- eller zucchiniskivor med potatisskivorna till hälften, så halveras stärkelsen '
@@ -5243,7 +5243,7 @@ OVERRIDES = {
                         a='Den är en klassisk och utmärkt ketorätt som förenar ägg och franska ostar utan tillsatt '
                           'stärkelse.')]),
     462: dict(lead='Bovetegalett (galette de sarrasin) är Bretagnes stolthet: en tunn, mörk crêpe med krispiga kanter som '
-                   'traditionellt görs av bovetemjöl. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   'traditionellt görs av bovetemjöl. Det glykemiska indexet är lågt (en uppskattning, '
                    '45), och den är ett bättre alternativ till vanliga crêpes av vitt mjöl.',
               tips=('Fyll den med stekt ägg, ost och spenat eller stekt svamp (den kompletta bretonska varianten), så får '
                     'du en mättande och komplett frukost eller middag.',
@@ -5260,7 +5260,7 @@ OVERRIDES = {
                         a='Bovetets fibrer och det låga glykemiska indexet (cirka 45) dämpar en kraftig '
                           'blodsockerstegring, och galetten mättar mer än en vanlig crêpe.')]),
     463: dict(lead='Tarte tatin är Frankrikes kända upp-och-nedvända äppelpaj: tjocka äppelskivor som karamelliserats i '
-                   'smör och gräddats under ett lock av mör deg. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'smör och gräddats under ett lock av mör deg. Det glykemiska indexet är medelhögt (en '
                    'uppskattning, 58), och äpplets naturliga pektin dämpar sockrets effekt något.',
               tips=('Nöj dig med en tunn skiva och ät den ljummen efter en proteinrik lunch, och undvik att lägga söt '
                     'vaniljglass ovanpå.',
@@ -5279,7 +5279,7 @@ OVERRIDES = {
                         a='I tarte tatin karamelliseras äpplena direkt i botten av pannan, degen läggs ovanpå och pajen '
                           'vänds efter gräddningen; den innehåller också mindre deg än den klassiska pajen.')]),
     464: dict(lead='Wienerschnitzel är en tunn skiva magert kalvkött som bankats noggrant och täckts med ett gyllene, '
-                   'krispigt lager av ströbröd och ägg. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   'krispigt lager av ströbröd och ägg. Det glykemiska indexet är lågt (en uppskattning, '
                    '35), eftersom ströbrödslagret är en begränsad mängd stärkelse tillsammans med köttets rena protein.',
               tips=('Pressa en färsk citronklyfta över den och ät den med en fräsch grön sallad i stället för de vanliga '
                     'pommes frites, så håller du kalorierna i schack.',
@@ -5298,7 +5298,7 @@ OVERRIDES = {
                           'världen görs av kyckling- eller kalkonbröst.')]),
     465: dict(lead='Spätzle är de traditionella lantliga äggnudlarna från södra Tyskland och Österrike: färska, '
                    'oregelbundna bitar med en omtyckt seg konsistens och varm smak. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 52), eftersom den rikliga äggulan bromsar stärkelsen.',
+                   'uppskattning, 52), eftersom den rikliga äggulan bromsar stärkelsen.',
               tips=('Använd dem som tillbehör i en avvägd portion (en halv kopp) till kött och stekta grönsaker, så håller '
                     'du måltidens samlade kolhydrater i schack.',
                     'Koka dem snabbt i kokande vatten och fräs dem sedan i en panna med lite olivolja, en nypa muskot och '
@@ -5315,7 +5315,7 @@ OVERRIDES = {
                           'nötig smak.')]),
     466: dict(lead='Den ljumma tyska potatissalladen (Kartoffelsalat) skiljer sig från klassiska sallader genom sin lätta '
                    'dressing av vinäger, buljong och senap i stället för fet majonnäs. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 52), tack vare vinägerns ättiksyra och att stärkelsen svalnar.',
+                   'uppskattning, 52), tack vare vinägerns ättiksyra och att stärkelsen svalnar.',
               tips=('Ät en portion stor som en knytnäve med en bit protein och en grön sallad; vinägerns syra hjälper till '
                     'att bromsa nedbrytningen av hela måltiden.',
                     'Koka potatisen med skalet, skär den och låt den svalna något innan du blandar den med vinäger och '
@@ -5331,8 +5331,8 @@ OVERRIDES = {
                         a='Den traditionella sydtyska varianten bygger helt på buljong, vinäger, senap och lite olja och '
                           'innehåller ingen majonnäs.')]),
     467: dict(lead='Tysk linsgryta (Linseneintopf) är en varm, lantlig vinterrätt som förenar bruna linser med morot, '
-                   'selleri och purjolök och en karaktäristisk skvätt vinäger. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 35), och grytan ger mycket mättnad och fibrer.',
+                   'selleri och purjolök och en karaktäristisk skvätt vinäger. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 35), och grytan ger mycket mättnad och fibrer.',
               tips=('En stor och komplett rätt som inte behöver något bröd till; linsernas fibrer och vegetabiliska '
                     'protein mättar i flera timmar.',
                     'Tillsätt en tesked äppelcidervinäger den sista minuten av tillagningen; vinägern är den traditionella '
@@ -5349,7 +5349,7 @@ OVERRIDES = {
                         a='Långsam tillagning av linserna med aromatiska grönsaker som selleri, spiskummin och vinäger '
                           'bryter ned de komplexa sockerarterna och minskar uppblåstheten till ett minimum.')]),
     468: dict(lead='Bayersk pretzel är det kända bakverket med blank brun yta, grovt salt och den ikoniska knutformen från '
-                   'Tyskland. Det glykemiska indexet är högt (en kliniskt granskad uppskattning, 78) på grund av det vita '
+                   'Tyskland. Det glykemiska indexet är högt (en uppskattning, 78) på grund av det vita '
                    'mjölet och den snabba nedbrytningen, vilket kräver stor försiktighet och måtta vid diabetes.',
               tips=('Om du vill äta en, dela den stora pretzeln och ät bara en fjärdedel efter att ha skrapat bort det '
                     'mesta av saltet, och ät den med keso eller kokt ägg för att bromsa stärkelseupptaget.',
@@ -5366,8 +5366,8 @@ OVERRIDES = {
                         a='Nöj dig med en fjärdedel vid festliga tillfällen, bred på en ost med mycket protein och låt bli '
                           'att äta de grova saltkornen.')]),
     469: dict(lead='Österrikisk äppelstrudel (Apfelstrudel) är den kejserliga bakverksrullen fylld med äpplen kryddade med '
-                   'kanel, russin, kokos och nötter i en mycket tunn deg. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 55), och fibrerna i äpplena och nötterna ger den en bättre näringsbalans.',
+                   'kanel, russin, kokos och nötter i en mycket tunn deg. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 55), och fibrerna i äpplena och nötterna ger den en bättre näringsbalans.',
               tips=('Njut av en liten bit som festlig efterrätt efter en proteinrik lunch, och strö äkta kanel över i '
                     'stället för florsocker.',
                     'Hemligheten bakom en bättre strudel är att fylla rullen med rikligt med äpplen och valnötter och att '
@@ -5385,7 +5385,7 @@ OVERRIDES = {
                           'indexet kraftigt; det är bättre att hoppa över den och äta strudeln som den är.')]),
     470: dict(lead='Kaiserschmarrn (den österrikiska kejsarpannkakan i bitar) är Alpernas älskade efterrätt: en tjock och '
                    'luftig pannkaka som slits i bitar i pannan, karamelliseras med smör och russin och serveras med '
-                   'plommonkompott. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 64), och den '
+                   'plommonkompott. Det glykemiska indexet är medelhögt (en uppskattning, 64), och den '
                    'är en mäktig söt rätt som är gjord för att delas.',
               tips=('En stor och lockande rätt; dela den alltid med två eller tre personer efter en promenad eller '
                     'skidtur, och ät den inte som en ensam måltid.',
@@ -5403,7 +5403,7 @@ OVERRIDES = {
                           'sockeralkohol), och båda bromsar upptaget.')]),
     471: dict(lead='Grekisk kycklinggyros i pitabröd är en känd och modern gatumat: skivor av kyckling kryddad med örter '
                    'och citron, rullade i pitabröd med tomat, lök och tzatziki. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 54), eftersom kycklingens protein och yoghurtens fett bromsar brödets '
+                   'uppskattning, 54), eftersom kycklingens protein och yoghurtens fett bromsar brödets '
                    'stärkelse.',
               tips=('Beställ gyros utan pommes frites i rullen, och be om mer tzatziki och tomat- och gurksallad.',
                     'Grilla kycklingskivor kryddade med timjan, vitlök och citron hemma och rulla in dem i '
@@ -5451,7 +5451,7 @@ OVERRIDES = {
                         a='Silad grekisk yoghurt innehåller mycket mindre laktos än vanlig mjölk, och de flesta med '
                           'lindrig intolerans tål den.')]),
     474: dict(lead='Spanakopita är den kända grekiska pajen med spenat och fetaost, med protein och förtrollande örtsmak '
-                   'under tunna, krispiga lager av filodeg. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'under tunna, krispiga lager av filodeg. Det glykemiska indexet är lågt (en '
                    'uppskattning, 48), eftersom spenatens fibrer och fetaostens fett bromsar stärkelseupptaget.',
               tips=('Ät en medelstor fyrkantig bit stor som en handflata som lunch eller lätt middag med en färsk sallad '
                     'av tomat och gurka.',
@@ -5468,7 +5468,7 @@ OVERRIDES = {
                         a='Äkta grekisk fetaost görs av får- och getmjölk, och många upplever den som lättare att smälta '
                           'än industriella ostar av komjölk.')]),
     475: dict(lead='Tiropita är den gyllene grekiska ostpajen som doftar av fetaost, ricotta och ägg som gräddats i spröda '
-                   'filodegsark. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50), och pajen ger '
+                   'filodegsark. Det glykemiska indexet är lågt (en uppskattning, 50), och pajen ger '
                    'proteinrik mättnad med en varm medelhavssmak.',
               tips=('En triangelformad bit räcker helt till frukost; ät den med en kopp örtte och en sallad av gurka och '
                     'sallat för att få de fibrer som pajen saknar.',
@@ -5486,7 +5486,7 @@ OVERRIDES = {
                           'fett.')]),
     476: dict(lead='Briam är den grekiska sommarformen med ugnsrostade grönsaker: skivor av potatis, zucchini, aubergine '
                    'och tomat kryddade med jungfruolivolja, vitlök och persilja. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 30), och rätten är en grönsakssymfoni rik på fibrer och mineraler.',
+                   'uppskattning, 30), och rätten är en grönsakssymfoni rik på fibrer och mineraler.',
               tips=('Ät en generös portion med en bit fetaost eller en grillad fiskfilé; en typisk medelhavsmåltid.',
                     'Grädda formen täckt med bakplåtspapper de första 40 minuterna och ta sedan bort papperet så att '
                     'grönsakerna får färg, kanterna karamelliseras och den naturliga tomatsåsen tjocknar.',
@@ -5501,7 +5501,7 @@ OVERRIDES = {
                         a='Den långsamma rostningen i riklig jungfruolivolja med vitlök och persilja, som ger grönsakerna '
                           'en söt och smörig konsistens utan att vatten tillsätts.')]),
     477: dict(lead='Fasolada är Greklands nationalsoppa: den traditionella soppan på vita bönor som tillagas med riklig '
-                   'olivolja, tomat, selleri och morot. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   'olivolja, tomat, selleri och morot. Det glykemiska indexet är lågt (en uppskattning, '
                    '35), och soppan är en del av den traditionella kosten på de grekiska öarna, som Ikaria.',
               tips=('Ät en varm skål med sked tillsammans med svarta oliver och ruccola som en mättande vegetarisk lunch '
                     'som inte behöver något bröd till.',
@@ -5518,7 +5518,7 @@ OVERRIDES = {
                         a='Därför att den historiskt var vanligt folks mat och förenade högt näringsvärde med låg kostnad.')]),
     478: dict(lead='Gemista hör till de godaste grekiska sommarrätterna: tomater, paprikor och zucchini fyllda med ris '
                    'kryddat med örter som dill och mynta, tomatkött och olivolja. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 50), och rätten ger en varm och aptitlig grönsaksmåltid.',
+                   'uppskattning, 50), och rätten ger en varm och aptitlig grönsaksmåltid.',
               tips=('Ät två fyllda grönsaker med en bit vit fetaost eller ett grillat kycklingbröst, så balanseras '
                     'proteinet med risets stärkelse.',
                     'Blanda riset med rikligt med hackade grönsaker och örter, och grädda formen med potatisskivor runt '
@@ -5586,7 +5586,7 @@ OVERRIDES = {
                           'membran.')]),
     482: dict(lead='Sitti zbaqi är en av de äldsta traditionella vinterrätterna i det levantinska köket, känd för sin '
                    'harmoniska blandning av bruna linser och färska mangoldblad med citronsaft, vitlök, koriander och '
-                   'degbitar. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 40), och rätten är en '
+                   'degbitar. Det glykemiska indexet är lågt (en uppskattning, 40), och rätten är en '
                    'varm och mättande måltid med järn.',
               tips=('Ät en varm skål med sked och en extra skvätt citron; mangoldens och linsernas fibrer mättar länge '
                     'utan att du behöver något bröd.',
@@ -5605,7 +5605,7 @@ OVERRIDES = {
                           'lagas och läggs upp; den bygger främst på linser, mangold och citron.')]),
     483: dict(lead='Haraq osbao från Damaskus är det äkta levantinska kökets stolthet: en mosaik av bruna linser och '
                    'degremsor som tillagas i en syrlig sås av tamarind och granatäppelsirap och garneras med krispigt '
-                   'bröd, karamelliserad lök och granatäpplekärnor. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'bröd, karamelliserad lök och granatäpplekärnor. Det glykemiska indexet är lågt (en '
                    'uppskattning, 45) tack vare de rikliga linserna och tamarindens syra.',
               tips=('Ät den som huvudrätt med sked; fokus på de färska granatäpplekärnorna och koriandern, och undvik att '
                     'ta mycket av de friterade brödbitarna ovanpå.',
@@ -5624,7 +5624,7 @@ OVERRIDES = {
                           'bränner fingret".')]),
     484: dict(lead='Kibbeh i form (levantinsk ugnskibbeh) är ett bättre val för den som älskar kibbeh: två lager av magert '
                    'kött och bulgur som omsluter en fyllning av kryddad köttfärs och pinjenötter och gräddas i ugnen. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50), och rätten är ett bättre '
+                   'glykemiska indexet är lågt (en uppskattning, 50), och rätten är ett bättre '
                    'alternativ till kibbeh friterad i olja.',
               tips=('Ät en medelstor bit stor som en handflata med en gurksallad med yoghurt eller en grön sallad, så blir '
                     'måltiden balanserad.',
@@ -5643,7 +5643,7 @@ OVERRIDES = {
                           'bibehålla muskelmassa.')]),
     485: dict(lead='Kibbeh labanieh är en av kungarna på det aleppiska och levantinska bordet: fyllda kibbehbollar som '
                    'tillagas i en sidenlen yoghurtsås kryddad med vitlök och torkad mynta. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 45), och rätten förenar god smak med mild yoghurt.',
+                   '(en uppskattning, 45), och rätten förenar god smak med mild yoghurt.',
               tips=('Ät två till tre kibbehbollar med en generös slev varm yoghurtsås, och ät dem med sked utan att behöva '
                     'ris till.',
                     'Koka kibbehbollarna i kokande vatten i tre minuter innan du lägger dem i den kokta yoghurten, så '
@@ -5659,7 +5659,7 @@ OVERRIDES = {
                         a='Värmen dödar de levande bakterierna, men yoghurten behåller allt sitt protein och kalcium.')]),
     486: dict(lead='Aleppisk kibbeh grillad på spett (över kol) är ett mästerverk i det aleppiska köket: en blandning av '
                    'magert nöt- och lammkött med fin bulgur, valnötter och aleppiska kryddor som formas på spett och '
-                   'grillas över kol. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 42), och den har '
+                   'grillas över kol. Det glykemiska indexet är lågt (en uppskattning, 42), och den har '
                    'en oemotståndlig rökig grillsmak.',
               tips=('Ät spettet med en piyazsallad (persilja, lök och sumak), en skvätt citron och grillade grönsaker som '
                     'lök och tomat.',
@@ -5678,7 +5678,7 @@ OVERRIDES = {
                           'industriella vegetabiliska oljor används.')]),
     487: dict(lead='Kibbeh safarjalieh är en pärla i det anrika aleppiska köket som förenar kibbehbollar och köttbitar med '
                    'kvittentärningar som tillagas i en buljong av granatäpple, granatäppelsirap, vitlök och mynta. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45), och rätten har en unik smak som '
+                   'glykemiska indexet är lågt (en uppskattning, 45), och rätten har en unik smak som '
                    'förenar sött och syrligt.',
               tips=('Njut av rätten varm med sked; kvittentärningarna innehåller mycket fibrer och ersätter ris eller vitt '
                     'bröd.',
@@ -5695,7 +5695,7 @@ OVERRIDES = {
                           'frukterna för magen.')]),
     488: dict(lead='Levantinsk yabraq (vinblad fyllda med kött och ris och tillagade med vitlök och citron) är sultanen '
                    'bland festrätterna i Damaskus: mjuka vinbladsrullar som smälter i munnen i en god, syrlig buljong. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), eftersom vinbladens fibrer och '
+                   'glykemiska indexet är lågt (en uppskattning, 35), eftersom vinbladens fibrer och '
                    'köttets fett bromsar upptaget av riset.',
               tips=('Ät 6 till 8 rullar med de kokta vitlöksklyftorna och en bit av lammrevbenen som tillagats med dem, så '
                     'får du en proteinrik mättnad som håller länge.',
@@ -5731,7 +5731,7 @@ OVERRIDES = {
                         a='Den är en klassisk levantinsk ketorätt som mättar väl med mycket få kolhydrater.')]),
     490: dict(lead='Levantinsk manzaleh (aubergine med köttfärs) är en känd hemlagad ugnsrätt som förenar lager av grillad '
                    'aubergine och kryddad köttfärs med naturlig tomatsås och pinjenötter. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 32), och rätten är en varm och mättande måltid.',
+                   '(en uppskattning, 32), och rätten är en varm och mättande måltid.',
               tips=('Ät den med gaffel som huvudrätt till lunch med en grön sallad, och undvik att doppa vitt bröd i den, '
                     'så hålls blodsockret i schack.',
                     'Grilla auberginskivorna i ugnen eller i airfryer efter att ha penslat dem med lite olivolja i stället '
@@ -5748,7 +5748,7 @@ OVERRIDES = {
                           'medan moussakan skärs i tärningar och innehåller paprika och ibland kikärter.')]),
     491: dict(lead='Halabessa (egyptiska varma kikärter) är den mest kända heta vinterdrycken längs Nilens strandpromenad: '
                    'kokta kikärter i en frisk röd buljong av tomat, vitlök, spiskummin, chili och citron. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 25), och den förenar en god dryck med värdet av en '
+                   'indexet är lågt (en uppskattning, 25), och den förenar en god dryck med värdet av en '
                    'mättande måltid.',
               tips=('Drick den varma buljongen och ät kikärterna med sked ur koppen; en varm kvällsmåltid som håller '
                     'vinterhungern borta nästan utan fett och utan socker.',
@@ -5765,7 +5765,7 @@ OVERRIDES = {
                           'spiskummin, citron och tomat.')]),
     492: dict(lead='Marockansk bissara med mynta och spiskummin är en varm folksoppa från Maghreb som görs av krossade '
                    'torkade bondbönor med jungfruolivolja, vitlök, torkad mynta och spiskummin. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 35), och soppan är den traditionella vintermaten för arbetare '
+                   'lågt (en uppskattning, 35), och soppan är den traditionella vintermaten för arbetare '
                    'och bönder i Atlasbergen.',
               tips=('Ät den varm med sked och ringla en tunn stråle jungfruolivolja och en nypa spiskummin och '
                     'paprikapulver över, som en komplett frukost eller lunch utan bröd.',
@@ -5785,7 +5785,7 @@ OVERRIDES = {
                           'olivoljan.')]),
     493: dict(lead='Jemenitisk mutabbaq (med ägg, kött och purjolök) är en av de mest kända folkliga frukost- och '
                    'kvällsrätterna i Jemen och på Arabiska halvön: en tunn deg fylld med köttfärs, ägg och purjolök som '
-                   'gräddas på en het plåt (saj). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 55), '
+                   'gräddas på en het plåt (saj). Det glykemiska indexet är lågt (en uppskattning, 55), '
                    'eftersom fyllningen av ägg och kött bromsar degens stärkelse.',
               tips=('Pressa en färsk citronklyfta över och ät bara två till tre bitar som huvudrätt med en grön sallad, så '
                     'hålls kalorierna nere.',
@@ -5803,7 +5803,7 @@ OVERRIDES = {
                           'vegetabiliskt fett.')]),
     494: dict(lead='Tamees från Hijaz är det stora tandoorbrödet av afghanskt och jemenitiskt ursprung, med krispiga '
                    'kanter och luftig inkråm, omtyckt till rätter av bondbönor och qallaba i den folkliga frukosten. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 68) på grund av storleken, det '
+                   'glykemiska indexet är medelhögt (en uppskattning, 68) på grund av storleken, det '
                    'vita mjölet och den snabba nedbrytningen.',
               tips=('Nöj dig med en fjärdedel av brödet och doppa den i bondbönor kryddade med olivolja och spiskummin och '
                     'ett kokt ägg; proteinet och fibrerna dämpar brödets blodsockertopp.',
@@ -5822,7 +5822,7 @@ OVERRIDES = {
                           'det är fortfarande stärkelse där portionen behöver begränsas till en fjärdedel av brödet.')]),
     495: dict(lead='Balila från Levanten och Hijaz är en av de godaste folkrätterna i de gamla kvarteren: mjuka kokta '
                    'kikärter kryddade med spiskummin, olivolja, citron, vinäger och inlagda grönsaker. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 28), och den är ett mättande mellanmål.',
+                   'indexet är lågt (en uppskattning, 28), och den är ett mättande mellanmål.',
               tips=('Ät en varm skål balila med sked som snabb frukost eller mättande eftermiddagsmål; citronens och '
                     'vinägerns syra med spiskumminen ger en härlig mättnadskänsla.',
                     'Koka kikärterna tills de är helt mjuka, och strö över nymalen spiskummin, jungfruolivolja och en sked '
@@ -5837,7 +5837,7 @@ OVERRIDES = {
                         a='Att blötlägga kikärterna i 16 timmar, koka dem väl och tillsätta spiskummin och citron minskar '
                           'uppblåstheten tydligt.')]),
     496: dict(lead='Moutabal på rostad pumpa är en nyskapande levantinsk höstdipp som förenar den rostade pumpans sötma '
-                   'med den fylliga sesamtahinin, vitlök och citron. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'med den fylliga sesamtahinin, vitlök och citron. Det glykemiska indexet är lågt (en '
                    'uppskattning, 35), eftersom tahinins fett och protein uppväger pumpans höga glykemiska index när den '
                    'äts ensam.',
               tips=('Njut av den som dipp med selleri- och gurkstavar eller rostat fullkornsbröd till grillat och '
@@ -5856,7 +5856,7 @@ OVERRIDES = {
                           'lite.')]),
     497: dict(lead='Grillad halloumi med vattenmelon är medelhavets mest uppfriskande och glada sommarduo: den varma, '
                    'salta halloumin möter den kalla, krispiga och söta vattenmelonen och myntabladen. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 45), eftersom ostens fett och protein bromsar '
+                   'indexet är lågt (en uppskattning, 45), eftersom ostens fett och protein bromsar '
                    'upptaget av vattenmelonens snabba socker.',
               tips=('Ät två skivor grillad halloumi med en kopp kall vattenmelon i tärningar och lite färsk mynta som en '
                     'lätt och fräsch sommarmiddag.',
@@ -5893,7 +5893,7 @@ OVERRIDES = {
                           'veckor, som bildar kortkedjiga fettsyror.')]),
     499: dict(lead='Pomeransmarmelad (marmelad på bitter apelsin) är en pärla bland de levantinska och medelhavsländernas '
                    'marmelader, med aromatiska skal och en smak i balans mellan behaglig beska och orientalisk sötma. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52) tack vare det rikliga pektinet i '
+                   'glykemiska indexet är lågt (en uppskattning, 52) tack vare det rikliga pektinet i '
                    'skalen.',
               tips=('Ät bara en liten struken matsked (15 g) på en bit vit ost eller keso med fullkornsbröd, så hålls '
                     'sockermängden i schack.',
@@ -5912,7 +5912,7 @@ OVERRIDES = {
                         a='De innehåller flavonoider, limonen, flyktiga oljor och pektin.')]),
     500: dict(lead='Naturlig johannesbrödsirap är ett traditionellt bergsarv i Libanon och Levanten: ett extrakt av '
                    'johannesbrödsfrukter som kokas långsamt, med en mörk smak som påminner om karamell och mörk choklad. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 40), och sirapen är ett naturligt '
+                   'Det glykemiska indexet är lågt (en uppskattning, 40), och sirapen är ett naturligt '
                    'sötningsalternativ som innehåller mineraler.',
               tips=('Blanda en tesked johannesbrödsirap med en sked ren sesamtahini som ett naturligt alternativ till '
                     'halva eller nougatkräm.',
@@ -5946,7 +5946,7 @@ OVERRIDES = {
                         a='Ja, den är en typisk ketorätt som mättar i många timmar.')]),
     502: dict(lead='Iskender kebab (İskender kebap) är staden Bursas stolthet: tunna skivor av kebabkött över bitar av '
                    'pidebröd som dränkts i fyllig tomatsås och smält smör och serveras med yoghurt. Det glykemiska indexet '
-                   'är lågt (en kliniskt granskad uppskattning, 45), eftersom fettet i köttet och yoghurten bromsar '
+                   'är lågt (en uppskattning, 45), eftersom fettet i köttet och yoghurten bromsar '
                    'upptaget av brödets stärkelse.',
               tips=('Börja med köttskivorna och yoghurten, och nöj dig med några små bitar av det såsindränkta brödet i '
                     'botten av tallriken för att hålla kolhydraterna i schack.',
@@ -5982,7 +5982,7 @@ OVERRIDES = {
                           'passar en känslig mage.')]),
     504: dict(lead='Turkisk manti (Kayseri mantısı) är mycket små degknyten fyllda med köttfärs som kokas i vatten och '
                    'toppas med vitlöksyoghurt och brynt smör med sumak och mynta. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 53) tack vare den rikliga yoghurten och köttfyllningen som bromsar '
+                   'uppskattning, 53) tack vare den rikliga yoghurten och köttfyllningen som bromsar '
                    'degens stärkelse.',
               tips=('Var generös med vitlöksyoghurten över tallriken; proteinet och yoghurtens syra dämpar '
                     'blodsockertoppen från knytenas stärkelse.',
@@ -6000,7 +6000,7 @@ OVERRIDES = {
                           'som ett tecken på noggrannhet och fin deg!')]),
     505: dict(lead='Turkisk pide med ost och ägg (peynirli yumurtalı pide) är den traditionella anatoliska båten av deg '
                    'som gräddas på sten och fylls med turkisk kaşarost och flytande äggula. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 60), och den är en anrik turkisk frukost som mättar väl.',
+                   'medelhögt (en uppskattning, 60), och den är en anrik turkisk frukost som mättar väl.',
               tips=('Dela båten med någon och ät bara hälften tillsammans med en riklig turkisk grönsakstallrik med tomat, '
                     'gurka, oliver och ruccola.',
                     'Gör degen med fullkornsvetemjöl eller urspannmål för mer fibrer, och lägg ägget den sista minuten av '
@@ -6017,7 +6017,7 @@ OVERRIDES = {
                         a='Ja, med lorost med låg fetthalt, en mycket tunn degbotten och fyllning av spenat och ägg.')]),
     506: dict(lead='Turkisk spenatbörek (ıspanaklı börek) hör till de mest kända bakverken av spröd yufkadeg, med en '
                    'fyllig fyllning av färska spenatblad, lorost eller fetaost och rostad lök som gräddas gyllene och '
-                   'krispig. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52) tack vare den rikliga '
+                   'krispig. Det glykemiska indexet är lågt (en uppskattning, 52) tack vare den rikliga '
                    'spenaten och proteinet i fyllningen.',
               tips=('Ät en rektangulär bit stor som en handflata med en kopp osötat turkiskt te och en grön sallad; ett '
                     'lätt mellanmål till frukost eller arbetspausen.',
@@ -6036,7 +6036,7 @@ OVERRIDES = {
                           'fyller den.')]),
     507: dict(lead='İmam bayıldı är en pärla i det osmanska vegetariska köket med olivolja (zeytinyağlılar): mjuka '
                    'auberginer fyllda med karamelliserad lök, tomat, vitlök och persilja som tillagas långsamt i '
-                   'jungfruolivolja. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'jungfruolivolja. Det glykemiska indexet är lågt (en uppskattning, 25).',
               tips=('Den serveras traditionellt kall eller rumstempererad; ät den med gaffel som en lätt vegetarisk middag '
                     'utan bröd och njut av den söta olivoljesaften.',
                     'Rosta auberginen i ugnen efter att ha snittat den på längden i stället för att fritera den i mycket '
@@ -6069,8 +6069,8 @@ OVERRIDES = {
                         a='Grillning över eld låter överflödigt fett droppa av och undviker att köttet suger upp härdade '
                           'vegetabiliska oljor.')]),
     509: dict(lead='Turkisk yaylasoppa (yayla çorbası, ängssoppan) är en varm soppa på yoghurt och ris med doft av torkad '
-                   'mynta och olivolja och en traditionell rätt i Anatolien. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 40), och soppan är mild för magen.',
+                   'mynta och olivolja och en traditionell rätt i Anatolien. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 40), och soppan är mild för magen.',
               tips=('Drick en varm skål i början av måltiden eller som lätt middag; yoghurten och myntan ger en lugn '
                     'mättnad före sänggåendet.',
                     'Använd en avvägd mängd basmatiris eller bulgur (två matskedar per kastrull), och red soppan med '
@@ -6085,7 +6085,7 @@ OVERRIDES = {
                         a='Den förenar yoghurt med mjölksyrabakterier och mynta.')]),
     510: dict(lead='Vegansk çiğ köfte (etsiz çiğ köfte) är det populäraste gatusnacket i Turkiet: en slät massa av '
                    'handknådad fin bulgur med paprikapasta, tomat, valnötter, granatäppelsirap och kryddor. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 45), och den äts inrullad i färska salladsblad.',
+                   'indexet är lågt (en uppskattning, 45), och den äts inrullad i färska salladsblad.',
               tips=('Lägg köftestavarna i ett stort romansalladsblad och pressa över rikligt med citronsaft; salladen ger '
                     'vätska och fibrer som mättar direkt.',
                     'Ingredienserna knådas kraftigt länge tills bulguren mjuknar av knådningens värme och syran i tomaten '
@@ -6103,7 +6103,7 @@ OVERRIDES = {
                           'kommersiellt, och alla butiker säljer den veganska varianten med bulgur och nötter.')]),
     511: dict(lead='Turkisk lokum är sultanernas historiska konfekt med mjuk, seg geléartad konsistens och smak av '
                    'rosenvatten och mastix, täckt med stärkelse och pistagenötter. Det glykemiska indexet är högt (en '
-                   'kliniskt granskad uppskattning, 75), eftersom den består av rent socker och raffinerad stärkelse, '
+                   'uppskattning, 75), eftersom den består av rent socker och raffinerad stärkelse, '
                    'vilket kräver största försiktighet vid diabetes.',
               tips=('Nöj dig med en mycket liten bit (15–20 g) till en kopp osötat turkiskt kaffe, och bara vid festliga '
                     'tillfällen.',
@@ -6122,7 +6122,7 @@ OVERRIDES = {
                           'belastningen jämfört med naturell lokum av bara socker och stärkelse.')]),
     512: dict(lead='Turkiskt äppelte (elma çayı) är den aromatiska välkomstdrycken i Istanbuls basarer: torkade '
                    'äppelskivor med kanelstänger och kryddnejlika som dras i kokande vatten. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 30), och teet är ett varmt alternativ utan koffein och utan '
+                   'lågt (en uppskattning, 30), och teet är ett varmt alternativ utan koffein och utan '
                    'industriellt socker.',
               tips=('Drick det varmt i klassiska turkiska teglas efter måltiden eller på kvällen.',
                     'Koka naturliga äppelskivor och kanelstänger i en tekanna utan att tillsätta socker, och se upp med '
@@ -6139,7 +6139,7 @@ OVERRIDES = {
                           'cirka 5 g naturligt fruktsocker.')]),
     513: dict(lead='Lammtagine med honungsglaserade katrinplommon och aprikoser är den lyxiga marockanska festrätten: '
                    'lammkött som tillagas långsamt i lerkruka med saffran och ingefära och garneras med katrinplommon och '
-                   'krispig mandel. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45) tack vare det '
+                   'krispig mandel. Det glykemiska indexet är lågt (en uppskattning, 45) tack vare det '
                    'rikliga köttproteinet och de torkade fruktens fibrer.',
               tips=('Fokusera på de möra köttbitarna med gaffel tillsammans med ett katrinplommon och rostad mandel, och '
                     'undvik att doppa mycket vitt bröd i såsen.',
@@ -6194,7 +6194,7 @@ OVERRIDES = {
                           'härdat fett.')]),
     516: dict(lead='Kycklingpastilla från Fès är höjdpunkten i det anrika marockanska köket och förenar salt och sött: '
                    'tunna, krispiga lager av warqadeg runt en fyllning av kyckling och ägg som karamelliserats med mandel, '
-                   'kanel och lite socker. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58), '
+                   'kanel och lite socker. Det glykemiska indexet är medelhögt (en uppskattning, 58), '
                    'och rätten är ett mästerverk för förnäma fester.',
               tips=('En medelstor triangel räcker för att njuta av smaken; ät den efter en grön sallad för att minska '
                     'upptaget av sockret på ytan och degens stärkelse.',
@@ -6213,7 +6213,7 @@ OVERRIDES = {
                           'festliga tillfällen.')]),
     517: dict(lead='Stark skaldjurspastilla (pastilla aux fruits de mer) är pastillans friska och heta havsversion: en '
                    'lyxig fyllning av bläckfisk, räkor, vit fisk, glasnudlar, sojasås och harissa i filodeg. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52), med syrlig och kryddig smak.',
+                   'glykemiska indexet är lågt (en uppskattning, 52), med syrlig och kryddig smak.',
               tips=('Ät en medelstor bit med en skvätt färsk citron; proteinet från skaldjuren utgör den största delen av '
                     'fyllningen och mättar länge.',
                     'Minska andelen glasnudlar och dubbla mängden skaldjur och grönsaker som svamp och paprika, och grädda '
@@ -6231,7 +6231,7 @@ OVERRIDES = {
                           'att inte ta för mycket fett på degen.')]),
     518: dict(lead='Marockansk harira är drottningen bland soppor i Maghreb: en fyllig och sammetslen soppa med kikärter, '
                    'linser, kött, färska tomatbitar, selleri och koriander, redd med lite mjöl. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 38), och soppan är en komplett måltid.',
+                   'lågt (en uppskattning, 38), och soppan är en komplett måltid.',
               tips=('Ät en skål varm harira med ett kokt ägg och en dadel; baljväxterna och fibrerna fyller magen och '
                     'dämpar suget efter sötsaker efter måltiden.',
                     'Red soppan med lite fullkornsmjöl eller havremjöl, eller mosa en del av kikärterna och linserna för '
@@ -6249,7 +6249,7 @@ OVERRIDES = {
                           'gasbildningen.')]),
     519: dict(lead='Marockansk couscous med sju grönsaker är en traditionell familjerätt i Maghreb: ångkokta mannagryn som '
                    'dränks i aromatisk grönsaksbuljong med pumpa, morot, rova, zucchini, kål, kikärter och kött. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58), och rätten visar '
+                   'glykemiska indexet är medelhögt (en uppskattning, 58), och rätten visar '
                    'medelhavsodlingens rikedom.',
               tips=('Fyll halva tallriken med de olika grönsakerna, köttet och kikärterna, och nöj dig med en halv kopp '
                     'couscous med het buljong över, så sänks den samlade glykemiska belastningen.',
@@ -6301,7 +6301,7 @@ OVERRIDES = {
                           'aubergine.')]),
     522: dict(lead='Marockansk batbout (litet matloubröd som gräddas i stekpanna) är ett runt, luftigt bröd som är ihåligt '
                    'inuti som en ficka och mycket omtyckt till smörgåsar vid frukost. Det glykemiska indexet är medelhögt '
-                   '(en kliniskt granskad uppskattning, 65), och portionen behöver hållas måttlig vid diabetes.',
+                   '(en uppskattning, 65), och portionen behöver hållas måttlig vid diabetes.',
               tips=('Ät ett litet bröd (stort som en handflata) fyllt med tonfisk eller kokt ägg med sallat och tomat; '
                     'proteinet och fibrerna bromsar upptaget av brödets stärkelse.',
                     'Gör batbout med 50 % fullkornsdurumvete eller kornmjöl blandat med vetemjöl för mer fibrer och '
@@ -6318,7 +6318,7 @@ OVERRIDES = {
                           'mättar flera timmar längre.')]),
     523: dict(lead='Marockanska baghrir (pannkakorna med tusen hål) är de kända pannkakorna från Maghreb med täta, '
                    'förtrollande hål som suger upp honung och smält smör; de görs av fina mannagryn och jäst och gräddas '
-                   'bara på ena sidan. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65), och de '
+                   'bara på ena sidan. Det glykemiska indexet är medelhögt (en uppskattning, 65), och de '
                    'pryder de traditionella frukostborden.',
               tips=('Ät en medelstor pannkaka med lite olivolja eller naturlig honung, tillsammans med ett kokt ägg och en '
                     'kopp te utan socker.',
@@ -6337,7 +6337,7 @@ OVERRIDES = {
                           'att luftbubblorna spricker uppåt och bildar de kända hålen.')]),
     524: dict(lead='Marockansk harcha är det gyllene stekpannebrödet av mannagryn, smör och olivolja, krispigt utanpå och '
                    'mjukt inuti, och en följeslagare till eftermiddagsfikat på marockanska kaféer. Det glykemiska indexet '
-                   'är medelhögt (en kliniskt granskad uppskattning, 68), och brödet ger varm och koncentrerad energi.',
+                   'är medelhögt (en uppskattning, 68), och brödet ger varm och koncentrerad energi.',
               tips=('Nöj dig med en liten triangel (stor som en handflata) och bred på vit färskost eller olivolja i '
                     'stället för söt marmelad, så vägs mannagrynens stärkelse upp.',
                     'Gör harcha med jungfruolivolja och fullkornsmannagryn i stället för industriellt smör och raffinerade '
@@ -6354,7 +6354,7 @@ OVERRIDES = {
                           'lägre glykemiskt index vid diabetes.')]),
     525: dict(lead='Marockansk chebakia (mkharqa) är en anrik festlig sötsak: ett invecklat flätat bakverk som friteras i '
                    'olja och doppas i naturlig honung kryddad med apelsinblomsvatten, saffran och kanel och garneras med '
-                   'rostade sesamfrön. Det glykemiska indexet är högt (en kliniskt granskad uppskattning, 72), och den är '
+                   'rostade sesamfrön. Det glykemiska indexet är högt (en uppskattning, 72), och den är '
                    'en energi- och sockerbomb som kräver stor försiktighet.',
               tips=('En liten bit räcker helt för att smaka den traditionella smaken vid festliga tillfällen efter en '
                     'komplett proteinrik måltid, och den bör inte ätas dagligen.',
@@ -6372,7 +6372,7 @@ OVERRIDES = {
                           'och friteringen väger tyngre.')]),
     526: dict(lead='Marockansk sellou (sfouf, tqawt) är en traditionell, energität blandning som förr gjordes efter '
                    'förlossning och till högtider: rostat mjöl, rostad mandel, malda sesamfrön, anis och kanel med '
-                   'olivolja eller honung. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50) tack '
+                   'olivolja eller honung. Det glykemiska indexet är lågt (en uppskattning, 50) tack '
                    'vare de rikliga nötterna och fettet.',
               tips=('Ät bara två matskedar (30 g) som förmiddagsmål; fettet i mandeln och sesamen ger ett långvarigt '
                     'mellanmål.',
@@ -6500,7 +6500,7 @@ OVERRIDES = {
                           'marinerat i vinäger och vitlök.')]),
     533: dict(lead='Dal makhani är en pärla bland rätterna från Punjab i Indien: hela svarta linser (urad dal) och '
                    'kidneybönor som tillagas långsamt i många timmar på låg värme med tomat, smör, ingefära och lite '
-                   'grädde. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 38), och rätten är en '
+                   'grädde. Det glykemiska indexet är lågt (en uppskattning, 38), och rätten är en '
                    'mättande och mycket len vegetarisk måltid.',
               tips=('Ät en varm skål med sked som huvudrätt eller doppa en roti av fullkornsvete i den; proteinet och de '
                     'lösliga fibrerna mättar i flera timmar.',
@@ -6518,7 +6518,7 @@ OVERRIDES = {
                           'och har en tung, sammetslen konsistens och djup kryddig smak.')]),
     534: dict(lead='Chana masala är den kända, kryddiga kikärtsrätten från norra Indien: kokta kikärter som drar åt sig en '
                    'sås av tomat, lök, ingefära, garam masala och torkat mangopulver (amchur). Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 32), och rätten är en vegetarisk måltid rik på järn.',
+                   'lågt (en uppskattning, 32), och rätten är en vegetarisk måltid rik på järn.',
               tips=('Ät den med sked tillsammans med en grönsakssallad, lite färsk koriander och en skvätt citron; '
                     'C-vitamin ökar järnupptaget.',
                     'Blötlägg kikärterna över natten, och använd amchurpulver (omogen mango) eller citronsaft för den äkta '
@@ -6536,7 +6536,7 @@ OVERRIDES = {
                           'receptet minskar gasbildningen och gör dem lättare att smälta.')]),
     535: dict(lead='Aloo gobi är den klassiska indiska hemrätten med potatis och blomkål: krispiga blomkålsbuketter och '
                    'stekta potatistärningar med gurkmeja, ingefära, spiskummin och koriander. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 48), eftersom blomkålens fibrer uppväger potatisens höga '
+                   'lågt (en uppskattning, 48), eftersom blomkålens fibrer uppväger potatisens höga '
                    'glykemiska index.',
               tips=('Se till att portionen innehåller mer blomkål än potatis, och ät den med gaffel tillsammans med en bit '
                     'grillat protein eller en grön sallad.',
@@ -6554,7 +6554,7 @@ OVERRIDES = {
                           'masala).')]),
     536: dict(lead='Bhindi masala är den indiska rätten med krispig stekt okra: skivade okraskidor som steks på hög värme '
                    'med lök, tomat, spiskummin, mangopulver och varma kryddor helt utan slemmighet. Det glykemiska indexet '
-                   'är lågt (en kliniskt granskad uppskattning, 25), och rätten är ett bra val vid diabetes.',
+                   'är lågt (en uppskattning, 25), och rätten är ett bra val vid diabetes.',
               tips=('Ät den med gaffel som huvudsakligt grönsakstillbehör; den krispiga konsistensen och den syrliga '
                     'smaken ger stor njutning.',
                     'Hemligheten är att torka okran helt efter sköljningen innan den skärs, och att steka den på hög värme '
@@ -6587,7 +6587,7 @@ OVERRIDES = {
                           'protein bidrar till att öka muskelmassan.')]),
     538: dict(lead='Indisk grönsakssamosa är den mest kända krispiga gatuförrätten i Indien med sin karaktäristiska '
                    'pyramidform: en krispig deg fylld med kryddad potatis, ärter, koriander och rostade spiskumminfrön. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 54), och den är en god förrätt där '
+                   'Det glykemiska indexet är lågt (en uppskattning, 54), och den är en god förrätt där '
                    'portionen behöver styras.',
               tips=('Nöj dig med en medelstor samosa med mynta- och korianderchutney, och undvik att doppa den i söt '
                     'kommersiell tamarindsås.',
@@ -6603,7 +6603,7 @@ OVERRIDES = {
                    dict(q='Vilken chutney passar bäst till samosa?',
                         a='Chutney på mynta och koriander med citron och grön chili, eftersom den saknar socker.')]),
     539: dict(lead='Indisk roti (chapati) är det dagliga osyrade brödet av fullkornsvete som gräddas på en het torr plåt '
-                   'utan en droppe olja. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52), och '
+                   'utan en droppe olja. Det glykemiska indexet är lågt (en uppskattning, 52), och '
                    'brödet är ett indiskt vardagsval som passar vid diabetes och bantning.',
               tips=('Ät ett eller två bröd stora som en handflata till dal, stekta grönsaker och protein, utan att pensla '
                     'dem med mycket ghee.',
@@ -6622,7 +6622,7 @@ OVERRIDES = {
                           'eller olja och innehåller mer kalorier och fett.')]),
     540: dict(lead='Indisk paratha är det flagiga och krispiga frukostbrödet: vetedeg som kavlas ut och viks i lager med '
                    'ghee eller olja och steks på plåten tills den får gyllene färg och spröd konsistens. Det glykemiska '
-                   'indexet är medelhögt (en kliniskt granskad uppskattning, 62), och brödet ger mättande vinterenergi som '
+                   'indexet är medelhögt (en uppskattning, 62), och brödet ger mättande vinterenergi som '
                    'kräver måtta.',
               tips=('Nöj dig med ett medelstort bröd och ät det med grekisk yoghurt eller kokt ägg och färska grönsaker, '
                     'och undvik paratha fylld med dubbelstekt potatis.',
@@ -6640,7 +6640,7 @@ OVERRIDES = {
                           'kan innehålla mer än 380 kcal.')]),
     541: dict(lead='Mangolassi är världens mest kända indiska sommardryck: en sammetslen och svalkande blandning av mogen '
                    'tropisk mango, yoghurt och filmjölk med en nypa kardemumma och saffran. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 48) tack vare det rikliga proteinet och fettet i yoghurten.',
+                   '(en uppskattning, 48) tack vare det rikliga proteinet och fettet i yoghurten.',
               tips=('Drick ett litet kallt glas som svalkande efterrätt efter en stark måltid; mjölkproteinet kasein '
                     'släcker hettan från de brännande kryddorna i munnen direkt.',
                     'Mixa färsk naturlig mango med grekisk yoghurt med låg fetthalt, isbitar och en nypa kardemumma utan '
@@ -6658,7 +6658,7 @@ OVERRIDES = {
                           'som fastnar på tungans värmereceptorer, till skillnad från vatten som sprider dem.')]),
     542: dict(lead='Indisk masala chai med mjölk och kryddor är den mest kända varma gatudrycken i Indien: starkt svart te '
                    'som kokas med mjölk och en förtrollande blandning av färsk ingefära, kardemumma, kanel, kryddnejlika '
-                   'och svartpeppar. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45) tack vare '
+                   'och svartpeppar. Det glykemiska indexet är lågt (en uppskattning, 45) tack vare '
                    'mjölkfettet.',
               tips=('Drick det varmt som en härlig morgondryck som värmer kroppen, och drick det utan vitt socker så att '
                     'du njuter av kryddornas naturliga sötma.',
@@ -6677,7 +6677,7 @@ OVERRIDES = {
                           'kondenserad mjölk, kardemumma och saffran.')]),
     543: dict(lead='Gulab jamun är den obestridda kungen bland indiska och pakistanska sötsaker: mjuka gyllene bollar av '
                    'torkade mjölkfasta ämnen (khoya) som friteras varsamt och dränks i en aromatisk sockerlag kryddad med '
-                   'kardemumma, rosenvatten och saffran. Det glykemiska indexet är högt (en kliniskt granskad '
+                   'kardemumma, rosenvatten och saffran. Det glykemiska indexet är högt (en '
                    'uppskattning, 78), eftersom de är en socker- och sirapsbomb som kräver stor försiktighet.',
               tips=('Nöj dig med en mycket liten boll vid stora festliga tillfällen, pressa ur överflödig sockerlag innan '
                     'du äter den, och ät den aldrig på fastande mage.',
@@ -6697,7 +6697,7 @@ OVERRIDES = {
     544: dict(lead='Indisk kheer är den äldsta traditionella risgrynspuddingen på den indiska subkontinenten: basmatiris '
                    'som tillagas mycket långsamt i standardmjölk tills det löses upp till en krämig och aromatisk '
                    'konsistens kryddad med kardemumma och saffran och garnerad med pistage och mandel. Det glykemiska '
-                   'indexet är medelhögt (en kliniskt granskad uppskattning, 60), och den är en varm festlig efterrätt.',
+                   'indexet är medelhögt (en uppskattning, 60), och den är en varm festlig efterrätt.',
               tips=('Ät en liten kall skål som efterrätt efter en proteinrik lunch; nötterna och kanelen hjälper till att '
                     'bromsa sockerupptaget.',
                     'Koka riset i lättmjölk på mycket låg värme, och använd malda dadlar eller naturliga sötningsmedel i '
@@ -6714,7 +6714,7 @@ OVERRIDES = {
                           'skonsammare för blodsockret.')]),
     545: dict(lead='Vietnamesisk pho (phở bò) är Vietnams mest kända nationalsoppa: en klar nötköttsbuljong som sjuder på '
                    'låg värme i 12 timmar med stjärnanis, kanel och ingefära och hälls över risnudlar, tunna köttskivor '
-                   'och färska örter. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50), eftersom '
+                   'och färska örter. Det glykemiska indexet är lågt (en uppskattning, 50), eftersom '
                    'buljongen och proteinet dominerar över stärkelsen.',
               tips=('Börja med att dricka den aromatiska buljongen och äta köttskivorna, och fyll skålen med en stor näve '
                     'böngroddar, basilika, mynta och lime med mindre nudlar.',
@@ -6734,7 +6734,7 @@ OVERRIDES = {
                           'kött som inte är genomstekt; be då om genomkokt kött.')]),
     546: dict(lead='Färska vietnamesiska vårrullar (gỏi cuốn, summer rolls) är rullar fulla av fräschhet: kokta räkor och '
                    'färska örter som mynta och koriander, sallat och gurka rullade i tunt, genomskinligt rispapper. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och de är ett omtyckt val för den '
+                   'glykemiska indexet är lågt (en uppskattning, 35), och de är ett omtyckt val för den '
                    'som vill äta enkel och ren mat.',
               tips=('Ät två till tre rullar och doppa dem i naturlig jordnötssås eller en sås av lime och chili; en lätt '
                     'och fräsch måltid.',
@@ -6769,7 +6769,7 @@ OVERRIDES = {
                           'mjölk och chilipasta och innehåller mer kalorier och fett.')]),
     548: dict(lead='Grön thaicurry (gaeng kiew wan) är kungen bland curryrätterna i Bangkok: kycklingbitar och runda '
                    'thailändska auberginer som tillagas i kokosmjölk med stark grön chilipasta, thaibasilika och '
-                   'kaffirlimeblad. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och rätten '
+                   'kaffirlimeblad. Det glykemiska indexet är lågt (en uppskattning, 35), och rätten '
                    'förenar chilins hetta med kokosens krämiga sötma.',
               tips=('Ät kyckling- och auberginebitarna med den aromatiska kokossåsen med sked, och nöj dig med två till '
                     'tre matskedar basmati- eller jasminris.',
@@ -6787,7 +6787,7 @@ OVERRIDES = {
                           'skarp jämfört med torkad röd chili.')]),
     549: dict(lead='Röd thaicurry (gaeng phed) är en varm thailändsk rätt med djup smak: kyckling- eller räkbitar som '
                    'tillagas i kokosmjölk kryddad med torkad röd thailändsk chilipasta, citrongräs, vitlök, bambuskott och '
-                   'basilika. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35), och rätten ger en '
+                   'basilika. Det glykemiska indexet är lågt (en uppskattning, 35), och rätten ger en '
                    'lyxig asiatisk smakbalans.',
               tips=('Njut av rätten med gaffel och sked tillsammans med bambuskotten och köttet, och ät en grön sallad '
                     'till för att minska behovet av stärkelse vid sidan av.',
@@ -6805,7 +6805,7 @@ OVERRIDES = {
                           'mättar länge.')]),
     550: dict(lead='Thailändsk grön papayasallad (som tam) är Asiens mest kända och fräschaste sallad: tunna, krispiga '
                    'strimlor av omogen grön papaya som stöts i mortel med chili, vitlök, lime, fisksås, tomat och '
-                   'jordnötter. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+                   'jordnötter. Det glykemiska indexet är lågt (en uppskattning, 30).',
               tips=('Ät den som en fräsch förrätt före huvudrätten; fibrerna fyller en stor del av magen.',
                     'Ingredienserna stöts i en mortel av trä så att smakerna blandas och papayastrimlorna mjuknar; be om '
                     'en halv tesked palmsocker eller inget alls, så hålls blodsockret i schack.',
@@ -6926,7 +6926,7 @@ OVERRIDES = {
                         a='Det innehåller 74 kcal, 6,4 g protein, 5,1 g fett och 0,6 g kolhydrater.')]),
     557: dict(lead='Kristallklara glasnudlar av ren mungbönsstärkelse har en hal, elastisk och mycket behaglig konsistens '
                    'att tugga, och de suger upp soppor och såser utan att förlora formen. De är naturligt glutenfria, och '
-                   'det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 39).',
+                   'det glykemiska indexet är lågt (en uppskattning, 39).',
               tips=('Ät dem inte ensamma som en ren nudelrätt; tillsätt rikligt med bladgrönsaker, kycklingskivor eller '
                     'räkor för att sänka hela måltidens glykemiska belastning.',
                     'Blötlägg dem i hett vatten i bara några minuter i stället för att koka dem länge; lång kokning '
@@ -6943,7 +6943,7 @@ OVERRIDES = {
                         a='Mungbönsnudlar ger ett betydligt långsammare sockerupptag än nudlar av vitt ris, som har ett '
                           'tydligt högre glykemiskt index.')]),
     558: dict(lead='Japanska sobanudlar är mörkbruna nudlar med jordig, nötaktig smak som traditionellt görs av '
-                   'fullkornsbovetemjöl utan vete. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 46), '
+                   'fullkornsbovetemjöl utan vete. Det glykemiska indexet är lågt (en uppskattning, 46), '
                    'och de är en förfinad japansk rätt som serveras kall med tsuyusås på sommaren eller varm på vintern.',
               tips=('Kall soba med noriremsor, salladslök och lite wasabi är en utmärkt lunch.',
                     'Koka dem i bara 5 minuter och skölj dem genast i iskallt rinnande vatten; sköljningen tar bort '
@@ -6961,7 +6961,7 @@ OVERRIDES = {
                           '4 g fibrer.')]),
     559: dict(lead='Den som älskar nudlar vet vilken trygghet en skål udonsoppa ger: breda, tjocka och mjuka nudlar med '
                    'stor elasticitet och sidenlen mjukhet som stillar suget efter god pasta i varm buljong. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+                   'indexet är lågt (en uppskattning, 55).',
               tips=('Udon görs av vetemjöl, så låt dem inte vara den enda ingrediensen i skålen; fyll den med '
                     'dashibuljong, kokt ägg, spenat och shiitakesvamp för en balanserad måltid.',
                     'Ät udon al dente och koka dem inte för länge, så att glutenbindningarna inte bryts ned och stärkelsen '
@@ -6979,7 +6979,7 @@ OVERRIDES = {
                         a='Den ger 260 kcal, 8 g protein, 1 g fett och 51,6 g nettokolhydrater.')]),
     560: dict(lead='Ett färgglatt konstverk i en het lerskål: en av de mest kända rätterna i det koreanska köket, som '
                    'förenar ris med kryddade grönsaker (morot, spenat, zucchini och böngroddar), kalvkött, ett stekt ägg i '
-                   'mitten och den goda starka gochujangsåsen. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'mitten och den goda starka gochujangsåsen. Det glykemiska indexet är lågt (en '
                    'uppskattning, 52).',
               tips=('Blanda alla ingredienser snabbt innan du äter så att köttsaften förenas med äggets värme och såsen; '
                     'den stora färgvariationen ger många olika vitaminer och mineraler.',
@@ -6997,7 +6997,7 @@ OVERRIDES = {
                         a='De fermenterade grönsakerna innehåller mjölksyrabakterier och fibrer.')]),
     561: dict(lead='Bulgogi är världens mest kända koreanska grillrätt: tunna, möra skivor av kalvkött som smälter i '
                    'munnen, marinerade i en förtrollande blandning av mosat asiatiskt päron, sesamolja, soja och vitlök. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25), och rätten mättar ordentligt.',
+                   'Det glykemiska indexet är lågt (en uppskattning, 25), och rätten mättar ordentligt.',
               tips=('Rulla in de grillade köttskivorna i stora salladsblad med en skiva färsk vitlök och en tesked kimchi; '
                     'det traditionella koreanska sättet minskar behovet av bröd och ger fräsch krispighet.',
                     'Låt päronmosets naturliga sötma möra köttet och undvik raffinerat vitt socker i marinaden, och grilla '
@@ -7015,7 +7015,7 @@ OVERRIDES = {
                           'sesamfettet dämpar blodsockerstegringen.')]),
     562: dict(lead='Den omtyckta japanska förrätten förenar två härliga motsatser: en gyllene, mycket krispig botten och '
                    'en mjuk, ångkokt ovansida som omsluter en fyllig fyllning av kycklingfärs med purjolök och frisk '
-                   'ingefära. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+                   'ingefära. Det glykemiska indexet är lågt (en uppskattning, 48).',
               tips=('Ät högst 4 till 6 stycken som en del av en komplett måltid med en grön sallad eller varm misosoppa, '
                     'så undviker du att äta för mycket deg.',
                     'Använd tekniken att först steka snabbt i en sked olja och sedan ångkoka, undvik fritering, och byt ut '
@@ -7033,7 +7033,7 @@ OVERRIDES = {
                         a='De innehåller 315 kcal, 13,5 g protein, 12,8 g fett och 33,8 g nettokolhydrater.')]),
     563: dict(lead='Havets gröna gåva: ett havsgrönsak som växer i rent vatten och sväller när den blötläggs till mjuka, '
                    'smaragdgröna remsor med lätt jodsmak och naturligt fräsch sälta, och som är stjärnan i japansk '
-                   'misosoppa. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'misosoppa. Det glykemiska indexet är lågt (en uppskattning, 15).',
               tips=('Lägg en matsked blötlagd wakame i den dagliga salladen eller soppan; fibrerna suger upp vatten och '
                     'fyller magen.',
                     'Blötlägg den i ljummet vatten i bara 5 minuter och låt den rinna av; koka den inte länge, så att '
@@ -7067,7 +7067,7 @@ OVERRIDES = {
                         a='Det innehåller cirka 10 kcal, cirka 1,2 g protein och ingen nettostärkelse.')]),
     565: dict(lead='Shiitake är kejsarnas svamp i det gamla asiatiska köket: tjocka bruna hattar med köttig konsistens och '
                    'träaktig umamismak som ger soppor och grytor ett fantastiskt djup. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 15).',
+                   'uppskattning, 15).',
               tips=('Ett mycket bra sätt att ersätta kött i rätter vid diabetes och övervikt; svampen ger samma tuggkänsla '
                     'som kött med en fjärdedel av kalorierna och utan kolesterol.',
                     'Snabb stekning med lite olivolja och krossad vitlök, eller tillagning i soppor, frigör lentinan och '
@@ -7100,7 +7100,7 @@ OVERRIDES = {
                         a='Portionen ger 30 kcal, 2,2 g protein, 2,2 g fibrer och 4 g nettokolhydrater.')]),
     567: dict(lead='Små gyllene och orange kulor som arbetsbina samlar från blommornas nektar och pollen; bipollen '
                    'innehåller enzymer, vitaminer och alla essentiella aminosyror. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 30).',
+                   'uppskattning, 30).',
               tips=('Börja med en fjärdedels tesked per dag och öka gradvis till en matsked (10 g); strö den över grekisk '
                     'yoghurt eller havregryn till frukost.',
                     'Blanda den aldrig med kokande eller heta drycker, så att de värmekänsliga B-vitaminerna och enzymerna '
@@ -7115,7 +7115,7 @@ OVERRIDES = {
                         a='Den innehåller 31 kcal, 2,4 g fullvärdigt protein och 3,4 g naturliga kolhydrater.')]),
     568: dict(lead='Manukahonung kommer från Nya Zeelands orörda skogar: en tjock, mörk honung som bina samlar från '
                    'manukabuskens blommor, känd i hela världen för sitt innehåll av metylglyoxal (MGO). Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+                   'indexet är lågt (en uppskattning, 55).',
               tips=('Ät en tesked till en matsked (10–20 g), eller lös upp den i ljummet (inte kokande) vatten.',
                     'Använd en träsked eller plastsked och kontrollera att förpackningen anger en verifierad MGO-halt. '
                     'Barn under ett år ska inte äta honung (Livsmedelsverket).',
@@ -7131,7 +7131,7 @@ OVERRIDES = {
                         a='Den ger 62 kcal och 16 g nettokolhydrater från naturligt socker.')]),
     569: dict(lead='Vetegräspulver är koncentrerat klorofyll: små gröna skott som skördas innan kornen bildas och '
                    'frystorkas till ett mycket grönt pulver som samlar bladgrönsakernas näring i en tesked. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'indexet är lågt (en uppskattning, 15).',
               tips=('Blanda en tesked (5 g) med ett glas kallt vatten och en skvätt citron på morgonen.',
                     'Blanda det inte med heta drycker, och använd en handmixer så att pulvret löses upp utan klumpar, '
                     'gärna med lite grön äppeljuice för att mildra den gräsiga smaken.',
@@ -7147,7 +7147,7 @@ OVERRIDES = {
                           'C-vitamin.')]),
     570: dict(lead='Macapulver kommer från de peruanska Anderna: en rotknöl som växer under mycket hårda förhållanden högt '
                    'upp i bergen och mals till ett jordfärgat pulver med nötig karamellsmak. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 25).',
+                   'lågt (en uppskattning, 25).',
               tips=('Tillsätt en tesked (5–10 g) i varm kakao eller morgonens smoothie.',
                     'Välj gelatiniserad maca om din mage är känslig, eftersom den tunga stärkelsen har brutits ned så att '
                     'den blir lättare att smälta.',
@@ -7244,7 +7244,7 @@ OVERRIDES = {
                           '(ALA), och 2,7 g fibrer med 0,2 g nettokolhydrater.')]),
     576: dict(lead='Ett naturligt alternativ till jordnötssmör för den som är allergisk mot nötter: en krämig, slät pasta '
                    'med fyllig och rostad smak som görs av 100 % solrosfrön utan tillsatt olja eller raffinerat socker. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'Det glykemiska indexet är lågt (en uppskattning, 25).',
               tips=('Bred en matsked (16 g) på äppelskivor eller fullkornsrostat bröd, eller tillsätt den i morgonens '
                     'smoothie; den mättar gott och ger E-vitamin.',
                     "Välj sorter vars ingrediensförteckning bara anger 'rostade solrosfrön och en nypa havssalt', och "
@@ -7259,7 +7259,7 @@ OVERRIDES = {
                    dict(q='Vad är näringsvärdet i en matsked (16 g)?',
                         a='Den ger 99 kcal, 2,7 g protein, 8,9 g omättat fett och 1,8 g nettokolhydrater.')]),
     577: dict(lead='Smaragdgrönt smör med zink och magnesium: en mörk pasta med unik grön färg och djup jordig smak som '
-                   'görs av råa pumpafrön. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 20).',
+                   'görs av råa pumpafrön. Det glykemiska indexet är lågt (en uppskattning, 20).',
               tips=('En matsked före sänggåendet med en bit keso; pumpafrösmöret innehåller tryptofan och magnesium, och '
                     'magnesium bidrar till normal muskelfunktion.',
                     'Välj kallpressat och rått smör (inte hårt rostat) så att fettet och klorofyllet skyddas mot '
@@ -7360,7 +7360,7 @@ OVERRIDES = {
                    dict(q='Vad är näringsvärdet i 50 g?',
                         a='Portionen ger 41 kcal, 2,6 g vegetabiliskt fett och bara cirka 0,8 g nettokolhydrater.')]),
     583: dict(lead='Fläderbär är glänsande svarta bär som växer i hängande klasar och som i europeisk folktradition är '
-                   'kända som en vintersaft. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+                   'kända som en vintersaft. Det glykemiska indexet är lågt (en uppskattning, 30).',
               tips=('Ät dem alltid som kokt och silad saft, eller som hemgjord sylt med ett sötningsmedel; en matsked om '
                     'dagen under vintern.',
                     'Viktig klinisk varning: fläderbär får aldrig ätas råa; råa bär, blad och stjälkar innehåller '
@@ -7377,7 +7377,7 @@ OVERRIDES = {
                         a='Portionen ger 36 kcal, 3,5 g fibrer och bara 5,7 g nettokolhydrater.')]),
     584: dict(lead='Kvitten är höstens doftande gyllene frukt med anrikt damascenskt och turkiskt ursprung: en hård frukt '
                    'som vid varsam pochering blir mjuka bärnstens- och rosafärgade bitar med doft av kryddnejlika och '
-                   'kanelens värme, till en mild vinterdessert. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'kanelens värme, till en mild vinterdessert. Det glykemiska indexet är lågt (en '
                    'uppskattning, 35).',
               tips=('Ett bra alternativ till mäktiga orientaliska sötsaker; ät det varmt efter lunch eller med en sked '
                     'grädde eller grekisk yoghurt och krossade valnötter.',
@@ -7394,7 +7394,7 @@ OVERRIDES = {
                         a='Portionen ger 85 kcal, 2,9 g fibrer och 20 g naturliga kolhydrater som smälts långsamt.')]),
     585: dict(lead='Mörka bergsaprikoser som torkats i ren sol: naturligt torkade utan tillsatt svaveldioxid, så att de '
                    'behåller sin mörkt jordbruna färg och äkta karamell- och honungssmak med mycket kalium. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 30).',
+                   'indexet är lågt (en uppskattning, 30).',
               tips=('Ät 3 till 4 aprikoser (40 g) före träning eller med valnötter som ett mellanmål.',
                     'Välj bruna torkade aprikoser och undvik de starkt orange; den orange färgen visar att svavel '
                     '(sulfiter) har använts, som kan ge allergi och astmaanfall hos känsliga personer.',
@@ -7408,7 +7408,7 @@ OVERRIDES = {
                    dict(q='Vad är näringsvärdet i 40 g (cirka 4 aprikoser)?',
                         a='Portionen ger 96 kcal, 1,4 g protein, 2,9 g fibrer och 22,3 g naturliga kolhydrater.')]),
     586: dict(lead='Svarta mullbär är Levantens lyxiga sommarfrukt: mörka bär fulla av förtrollande karmosinröd saft som '
-                   'blandar sötma med frisk syra. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'blandar sötma med frisk syra. Det glykemiska indexet är lågt (en uppskattning, 25).',
               tips=('Ät dem färska under säsongen som ett fräscht mellanmål ensamma eller med yoghurt och nötter; den '
                     'djupröda färgen som fastnar på fingrarna kommer från antocyaninerna.',
                     'Skölj dem mycket varsamt i kallt vatten och ät dem färska direkt; koka dem inte och tillsätt inget '
@@ -7424,7 +7424,7 @@ OVERRIDES = {
                         a='Portionen ger 43 kcal, 1,4 g protein, 1,7 g fibrer och bara 8,1 g nettokolhydrater.')]),
     587: dict(lead='Naturens krispiga godis och ett alternativ till russin och sötsaker: vita mullbär som torkats '
                    'naturligt till en ljus bärnstensfärg, med smak av karamell och honung och lätt krispighet. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35).',
+                   'glykemiska indexet är lågt (en uppskattning, 35).',
               tips=('En liten näve (30 g) till kaffet eller teet i stället för sötsaker, eller blandade med råa nötter och '
                     'havregryn.',
                     'Välj naturligt torkade bär utan tillsatt sockerlag eller svavel; konsistensen ska vara elastisk och '
@@ -7441,7 +7441,7 @@ OVERRIDES = {
                           'nettokolhydrater.')]),
     588: dict(lead='Vinterns doft och de kalla kvällarnas värme: sötkastanjer skiljer sig helt från andra nötter, med en '
                    'stärkelserik, krämig konsistens som påminner om sötpotatis och en karamelliserad smak från kolelden. '
-                   'Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 60).',
+                   'Det glykemiska indexet är medelhögt (en uppskattning, 60).',
               tips=('Ät en portion med cirka 8 varma rostade kastanjer (80 g) som eftermiddagsmål eller före träning; de '
                     'mättar länge.',
                     'Skär ett kryss i skalet före rostningen så att de inte spricker, och rosta dem i ugn eller airfryer '
@@ -7460,7 +7460,7 @@ OVERRIDES = {
                           'fibrer.')]),
     589: dict(lead='Pinjenötter är aristokraten på det levantinska bordet: små elfenbensvita frön som med möda samlas från '
                    'pinjeträdens kottar, med smörig, fet smak och en konsistens som smälter i munnen. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'indexet är lågt (en uppskattning, 15).',
               tips=('Strö en matsked (15 g) råa eller lätt rostade pinjenötter över fatteh, hummus eller ruccolasallad, '
                     'eller använd dem som huvudingrediens i italiensk pesto.',
                     'Rosta dem på mycket låg värme utan olja i bara två minuter; pinjenötternas egen olja räcker för att '
@@ -7475,7 +7475,7 @@ OVERRIDES = {
                         a='Den ger 101 kcal, 2 g protein, 10,2 g fett och bara 1,4 g nettokolhydrater.')]),
     590: dict(lead='Svarta sesamfrön är små koksvarta, oskalade frön som innehåller mer polyfenoler och mineraler än '
                    'skalade vita sesamfrön och ger rätter och bröd en ren, rostad och nötig smak. Det glykemiska indexet '
-                   'är lågt (en kliniskt granskad uppskattning, 25).',
+                   'är lågt (en uppskattning, 25).',
               tips=('Strö en matsked (10 g) över sallader, nudlar, ägg eller havregryn; tugga dem väl eller krossa dem '
                     'lätt så att kalciumet och mineralerna i skalet frigörs.',
                     'Lätt rostning i en torr panna i en minut väcker de aromatiska oljorna och sesaminet och gör fröna '
@@ -7605,7 +7605,7 @@ OVERRIDES = {
                         a='Cirka 12 kcal och cirka 2,3 g nettokolhydrater, mest inulin.')]),
     598: dict(lead='Gurkmejamjölk (golden milk) är den kända varma ayurvediska drycken: varm mjölk i solens färg med ren '
                    'gurkmeja, en nypa svartpeppar, ingefära och kanel som värmer kroppen. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 30).',
+                   '(en uppskattning, 30).',
               tips=('Ett varmt glas en halvtimme före sänggåendet.',
                     'Den gyllene regeln: drick aldrig gurkmeja utan en nypa svartpeppar och några droppar fett (som '
                     'kokosolja); piperinet i pepparn ökar upptaget av kurkumin kraftigt (upp till 2 000 %).',
@@ -7717,7 +7717,7 @@ OVERRIDES = {
                    'utanpå och mjuk inuti; pajen vilar på en mördegsbotten (shortcrust) med tjock citronkräm och toppas '
                    'med äggvita som vispats med socker. Citronens naturliga syra kännetecknar den, och vissa studier tyder '
                    'på att sura livsmedel kan bromsa magsäckstömningen, vilket kan förklara att det glykemiska indexet är '
-                   'lägre än för många liknande sötsaker. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'lägre än för många liknande sötsaker. Det glykemiska indexet är lågt (en '
                    'uppskattning, 55).',
               tips=('Marängen består av äggvita och koncentrerat socker; njut av citronkrämen med botten och ät bara en '
                     'mycket liten del av marängtoppen, så minskar sockret i portionen tydligt.',
@@ -7885,7 +7885,7 @@ OVERRIDES = {
     613: dict(lead='Den kungliga piemontesiska efterrätten vars namn betyder ”kokt grädde”: färsk grädde och mjölk kokas '
                    'med äkta vaniljstänger och kyls sedan till en sammetslen konsistens som darrar lätt och elegant, och '
                    'garneras med en frisk syrlig hallonpuré. Mjölkens naturliga fett och bärens fibrer ger efterrätten ett '
-                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 55), vilket gör den till ett av de mildare '
+                   'lågt glykemiskt index (en uppskattning, 55), vilket gör den till ett av de mildare '
                    'efterrättsvalen.',
               tips=('Ett utmärkt val efter fisk eller lätta kötträtter, och den glykemiska belastningen (11,6) är en av de '
                     'bästa bland lyxiga västerländska efterrätter.',
@@ -7907,7 +7907,7 @@ OVERRIDES = {
                    'och charlotte. Kexen har en mycket lätt och porös struktur som suger upp kaffe och smaker mästerligt. '
                    'De gräddas av vispade äggvitor och äggulor med mjöl och lite socker på ytan som ger en mjuk '
                    'krispighet. Eftersom de innehåller lite fett och mycket snabbt nedbruten stärkelse räknas de till '
-                   'livsmedel med högt glykemiskt index (en kliniskt granskad uppskattning, 70).',
+                   'livsmedel med högt glykemiskt index (en uppskattning, 70).',
               tips=('Undvik att äta dem torra och ensamma som mellanmål; det är bättre att använda dem i klassisk '
                     'tiramisu, där mascarponens fett och protein dämpar blodsockertoppen från kexen.',
                     'Doppa dem i espresso utan att tillsätta socker i doppvätskan.',
@@ -7925,7 +7925,7 @@ OVERRIDES = {
                    '(biscotti) för den omtyckta hårdheten som mjuknar förtrollande när de doppas i kaffe eller te. Kexen '
                    'är fulla av hela rostade mandlar som utgör en stor del av vikten, vilket ger enkelomättat fett, '
                    'magnesium, fibrer och protein som bromsar blodsockerstegringen jämfört med vanliga kex. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+                   'indexet är lågt (en uppskattning, 55).',
               tips=('En eller två till en kopp svart kaffe är ett mycket gott mellanmål; de kräver ordentlig tuggning.',
                     'Andelen oskalad mandel kan ökas till 35 % av receptets vikt och fullkornsvetemjöl användas för en '
                     'bättre sockerbelastning och mer fibrer.',
@@ -8146,7 +8146,7 @@ OVERRIDES = {
                           'levertran är ett rent fettextrakt.')]),
     627: dict(lead='Traditionella italienska pastaknyten med len fyllning; degen av durumvetegryn förenas med en fyllning '
                    'av ricotta och gröna spenatblad. Ricottans protein bromsar nedbrytningen av stärkelsen, vilket ger ett '
-                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 50). Värdena på den här sidan gäller kokta '
+                   'lågt glykemiskt index (en uppskattning, 50). Värdena på den här sidan gäller kokta '
                    'tortellini.',
               tips=('Servera dem med en lätt sås av färsk tomat (marinara) i stället för tunga gräddsåser, så hålls de '
                     'totala kalorierna i schack.',
@@ -8155,7 +8155,7 @@ OVERRIDES = {
               desc='En portion kokta tortellini (150 g) innehåller 255 kcal och 10 g protein, med ett lågt glykemiskt '
                    'index (50). Läs hur ostfyllningen påverkar mättnad och blodsocker.'),
     628: dict(lead='Italienska raviolikuddar fulla av smak av vild svamp och lagrad parmesan. Svampen ger fibrer och '
-                   'fyllig smak som mättar, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50). '
+                   'fyllig smak som mättar, och det glykemiska indexet är lågt (en uppskattning, 50). '
                    'Värdena på den här sidan gäller kokta ravioli.',
               tips=('Att koka pastan al dente håller ihop stärkelsen och bromsar nedbrytningen i tarmen.',
                     'Lite extra jungfruolivolja och salviablad räcker för att lyfta fram svampsmaken utan industriellt '
@@ -8165,7 +8165,7 @@ OVERRIDES = {
                    'index (50). Läs om den vilda svampen och ravioli vid bantning.'),
     629: dict(lead='Breda gyllene pastaband gjorda av durumvetemjöl och färsk äggula; ägget ger en mjuk konsistens och en '
                    'högre andel protein som mättar och bromsar stärkelseupptaget. Värdena på den här sidan gäller kokt '
-                   'tagliatelle. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'tagliatelle. Det glykemiska indexet är lågt (en uppskattning, 50).',
               tips=('Att tillsätta protein som kycklingbröst eller grillade räkor gör måltiden komplett och dämpar '
                     'blodsockerresponsen.',
                     'En måttlig portion (140 g kokt) räcker som huvudrätt, särskilt med grönsaker och protein.'),
@@ -8173,7 +8173,7 @@ OVERRIDES = {
               desc='En portion kokt äggtagliatelle (140 g) innehåller 203 kcal och 7,8 g protein, med ett lågt glykemiskt '
                    'index (50). Läs om skillnaden mellan äggpasta och vanlig pasta.'),
     630: dict(lead='Den omtyckta räfflade rörpastan av naturliga durumvetegryn; den suger upp vatten och ger en mättande '
-                   'volym med bara 203 kcal per portion och ett lågt glykemiskt index (en kliniskt granskad uppskattning, '
+                   'volym med bara 203 kcal per portion och ett lågt glykemiskt index (en uppskattning, '
                    '45).',
               tips=('Att koka den al dente (9–10 minuter) bromsar nedbrytningen av stärkelsen och sänker det glykemiska '
                     'indexet jämfört med att koka den för länge.',
@@ -8182,14 +8182,14 @@ OVERRIDES = {
               desc='En skål kokt penne rigate (150 g) innehåller bara 203 kcal, med ett lågt glykemiskt index (45). Läs '
                    'varför al dente-kokning hjälper till att hålla blodsockret i schack.'),
     631: dict(lead='Gyllene spiraler rika på kli och grodd från fullkornsvete; de innehåller mycket fibrer (6 g per '
-                   'portion) som mättar länge, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 42).',
+                   'portion) som mättar länge, och det glykemiska indexet är lågt (en uppskattning, 42).',
               tips=('Ett bra val vid diabetes och insulinresistens i stället för traditionell vit pasta.',
                     'Spiralformen håller kvar grönsakssåser och olivolja utan att tungt fett behöver tillsättas.'),
               title='Hur många kalorier har fullkornsfusilli? GI | WiBo Health',
               desc='En portion kokt fullkornsfusilli (150 g) innehåller 192 kcal och 6 g fibrer, med ett lågt glykemiskt '
                    'index (42). Ett klokt val vid diabetes och bantning.'),
     632: dict(lead='Breda plattor av oraffinerat fullkornsvetemjöl; de ger en stadig och fiberrik grund för en bättre '
-                   'lasagne, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48). Värdena på den '
+                   'lasagne, och det glykemiska indexet är lågt (en uppskattning, 48). Värdena på den '
                    'här sidan gäller torra plattor före tillagning.',
               tips=('Bygg lasagnen i lager med skivor av zucchini och aubergine och en sås av mager köttfärs, så minskar '
                     'mängden plattor och fibrerna ökar.',
@@ -8207,7 +8207,7 @@ OVERRIDES = {
               desc='Två matskedar italiensk basilikapesto (30 g) ger 131 kcal och omättat fett och påverkar blodsockret '
                    'mycket lite. Läs om lämplig portion per dag.'),
     634: dict(lead='Den röda kustversionen av italiensk pesto; den blandar sötman i soltorkade tomater med rostad mandel '
-                   'och olivolja. Den innehåller lykopen, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'och olivolja. Den innehåller lykopen, och det glykemiska indexet är lågt (en '
                    'uppskattning, 25).',
               tips=('Använd den som ett lätt bredbart pålägg på smörgåsar i stället för industriell majonnäs.',
                     'Förvara burken i kylskåpet och täck ytan med en sked olivolja så att de naturliga ingredienserna inte '
@@ -8216,7 +8216,7 @@ OVERRIDES = {
               desc='Två matskedar röd pesto (30 g) innehåller 114 kcal, fett och lykopen, med ett lågt glykemiskt index '
                    '(25). Ett italienskt val till sallader.'),
     635: dict(lead='Koncentrerade tomater som torkats i medelhavssolen och lagts i extra jungfruolivolja; en källa till '
-                   'fibrer och lykopen med varm smak, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'fibrer och lykopen med varm smak, och det glykemiska indexet är lågt (en '
                    'uppskattning, 35).',
               tips=('Att låta bitarna rinna av försiktigt på hushållspapper minskar kalorierna märkbart utan att påverka '
                     'den fylliga smaken.',
@@ -8227,7 +8227,7 @@ OVERRIDES = {
                    'lågt glykemiskt index (35). Läs om dem vid diabetes och bantning.'),
     636: dict(lead='Små, krispiga pärlvita silverlökar som lagts in i en blandning av vinäger och kryddor; ett mycket lätt '
                    'val som ger kraftig smak och frisk krispighet med bara cirka 11 kcal per portion. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'indexet är lågt (en uppskattning, 25).',
               tips=('Ett utmärkt tillbehör till kallskuret och grillat för att bryta fylligheten utan att tillföra fett.',
                     'Att skölja lökarna i vatten före ätandet minskar natriumet och det lilla sockret i lagen för den som '
                     'håller koll på saltet.'),
@@ -8244,7 +8244,7 @@ OVERRIDES = {
                    'blodsockret mycket lite. En fräsch förrätt vid viktnedgång.'),
     638: dict(lead='Burger Kings ikoniska flamgrillade hamburgare med nötkött, tomat, sallat och majonnäs; en mättande '
                    'snabbmåltid med mycket protein, men den kräver medvetenhet om de många kalorierna och det höga '
-                   'fettinnehållet. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 66).',
+                   'fettinnehållet. Det glykemiska indexet är medelhögt (en uppskattning, 66).',
               tips=('Att beställa hamburgaren ”utan majonnäs” tar bort cirka 150 kcal och 16 g fett.',
                     'Att hoppa över halva det övre brödet minskar de snabba kolhydraterna med nästan 40 %.',
                     'Näringsvärdena för snabbmat är ungefärliga och kan variera mellan länder, restauranger och lokala '
@@ -8254,7 +8254,7 @@ OVERRIDES = {
                    '30,7. Läs om smarta sätt att tydligt minska kalorierna och fettet.'),
     639: dict(lead='Burger Kings avlånga smörgås med krispig kycklingfilé, sallat och majonnäs; den ger en omtyckt '
                    'krispighet och bra kycklingprotein, men friteringen och ströbrödspaneringen ökar både stärkelsen och '
-                   'fettet. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+                   'fettet. Det glykemiska indexet är medelhögt (en uppskattning, 62).',
               tips=('Att byta vanlig majonnäs mot senap ger kraftig smak utan extra kalorier från fett.',
                     'Undvik att kombinera den med pommes frites och söta läskedrycker, så överskrider du inte den dagliga '
                     'energibudgeten.',
@@ -8265,7 +8265,7 @@ OVERRIDES = {
                    'fettet och hur den blir lättare för magen och blodsockret.'),
     640: dict(lead="McDonald's mest populära glassdessert, som förenar den mjuka glassens konsistens med smulor av Oreokex "
                    'med kakao. En sötsak rik på enkla sockerarter som kräver försiktighet och bör ätas sällan. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+                   'glykemiska indexet är medelhögt (en uppskattning, 62).',
               tips=('Att dela bägaren med någon annan är det snabbaste sättet att minska kolhydraterna (cirka 26 g i '
                     'stället för 52 g).',
                     'Ät den som efterrätt efter en balanserad proteinrik huvudmåltid, inte ensam på fastande mage.',
@@ -8276,7 +8276,7 @@ OVERRIDES = {
                    'Läs om effekten på blodsockret och lättare efterrättsval.'),
     641: dict(lead='Den klassiska krispiga pajen fylld med varma äppelbitar och aromatisk kanelsås; den ger en trivsam och '
                    'omtyckt smak, men mängden socker och fettet i den flagiga degen behöver beaktas. Det glykemiska '
-                   'indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+                   'indexet är medelhögt (en uppskattning, 65).',
               tips=('Den innehåller mindre fett och färre kalorier än munkar och stora feta glassdesserter, men den är '
                     'fortfarande rik på enkla sockerarter.',
                     'En kopp svart kaffe eller te utan socker är en balanserad följeslagare som minskar lusten att '
@@ -8287,8 +8287,8 @@ OVERRIDES = {
               desc="En varm äppelpaj från McDonald's innehåller 250 kcal och 32 g tillgängliga kolhydrater, med en "
                    'glykemisk belastning på 21. Läs om näringsvärdet jämfört med andra sötsaker.'),
     642: dict(lead='Smältande ostpinnar täckta med ett gyllene krispigt ströbrödshölje och doppade i tomatsås; '
-                   'mozzarellans höga protein bromsar kolhydratupptaget, så det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 52).',
+                   'mozzarellans höga protein bromsar kolhydratupptaget, så det glykemiska indexet är lågt (en '
+                   'uppskattning, 52).',
               tips=('Att tillaga dem i airfryer ger en liknande krispighet och minskar fettet med cirka en tredjedel '
                     'jämfört med fritering.',
                     'Det räcker med 2 till 3 pinnar för att bli nöjd tack vare ostens fett och protein.'),
@@ -8297,7 +8297,7 @@ OVERRIDES = {
                    'glykemiskt index (52). Läs tips för mindre fett och fritering.'),
     643: dict(lead='Lökringar som doppats i smet och friterats gyllene; trots lökens egna näringsämnen suger det yttre '
                    'höljet upp stora mängder frityrolja, vilket höjer kalorierna och den glykemiska belastningen. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 68).',
+                   'glykemiska indexet är medelhögt (en uppskattning, 68).',
               tips=('Att grädda lökringarna i ugnen med lite olja i stället för att fritera dem minskar kalorierna '
                     'kraftigt.',
                     'Undvik att doppa dem i söta såser som kommersiell barbecuesås.'),
@@ -8315,7 +8315,7 @@ OVERRIDES = {
                    'det glykemiska indexet är inte tillämpligt. Ett val vid keto.'),
     645: dict(lead='Kryddat och krispigt kycklingbröst i ett mjukt hamburgerbröd med majonnäs och sallat; en snabb lunch '
                    'som ger 23 g protein som mättar, men mängden stärkelse och fett i den friterade paneringen behöver '
-                   'beaktas. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+                   'beaktas. Det glykemiska indexet är medelhögt (en uppskattning, 58).',
               tips=('Att välja grillad kyckling (grilled chicken) i stället för krispig sparar cirka 140 kcal och halverar '
                     'ungefär fettet.',
                     'Be om extra sallat och hoppa över skeden majonnäs för att minska de onödiga kalorierna.'),
@@ -8324,7 +8324,7 @@ OVERRIDES = {
                    'tips för färre kalorier och ett bättre alternativ.'),
     646: dict(lead='Tunna, varma skivor rostbiff täckta med smält cheddar i rostat bröd; en snabbmåltid med hög andel '
                    'protein och relativt lite stärkelse jämfört med friterade kycklingburgare. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 52).',
+                   'lågt (en uppskattning, 52).',
               tips=('Den höga proteinandelen (28 g) gör den till ett av de bättre valen på snabbmatsrestauranger; protein '
                     'bidrar till att bibehålla muskelmassa.',
                     'Välj fullkornsbröd om det finns, och undvik tillsatta söta såser.'),
@@ -8332,7 +8332,7 @@ OVERRIDES = {
               desc='En rostbiffsmacka med smält cheddar (180 g) ger 410 kcal och 28 g protein, med ett lågt glykemiskt '
                    'index (52). Ett bra val för den som vill ha protein och mättnad.'),
     647: dict(lead='Krispiga friterade potatisspiraler kryddade med paprika och vitlökspulver; de är mycket populära tack '
-                   'vare den kraftiga smaken, men det höga glykemiska indexet (en kliniskt granskad uppskattning, 72) '
+                   'vare den kraftiga smaken, men det höga glykemiska indexet (en uppskattning, 72) '
                    'kräver att portionen styrs.',
               tips=('Portionens storlek är det viktigaste; dela förpackningen med sällskapet och undvik att äta den stora '
                     'storleken ensam.',
@@ -8342,7 +8342,7 @@ OVERRIDES = {
                    'index (72). Läs hur friteringen och kryddorna påverkar blodsockret.'),
     648: dict(lead='Naturliga potatisklyftor som ugnsbakats med det fiberrika skalet och smaksatts med rosmarin och '
                    'olivolja; ett betydligt bättre alternativ till pommes frites med mycket mindre fett och måttligt antal '
-                   'kalorier. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+                   'kalorier. Det glykemiska indexet är medelhögt (en uppskattning, 65).',
               tips=('Att behålla potatisskalet bevarar fibrerna och kaliumet och bromsar stärkelseupptaget.',
                     'Att krydda dem med rosmarin och paprika ger en härlig smak utan feta såser.'),
               title='Hur många kalorier har ugnsbakad klyftpotatis? GI | WiBo Health',
@@ -8350,15 +8350,15 @@ OVERRIDES = {
                    'bästa alternativet till friterad potatis.'),
     649: dict(lead='Den legendariska amerikanska smörgåsen från Philadelphia: skivor av ribeye som tillagas på plåt med '
                    'karamelliserad lök och täcks med smält ost; den ger en stor portion protein (32 g). Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 55).',
+                   'indexet är lågt (en uppskattning, 55).',
               tips=('Att be om mer lök och grillad grön paprika ger måltiden mer volym och utmärkta fibrer.',
                     'Den enkla storleken är mycket mättande och räcker som komplett huvudrätt utan tillbehör.'),
               title='Hur många kalorier har philly cheesesteak? GI | WiBo Health',
               desc='En philly cheesesteak (280 g) ger 520 kcal och 32 g protein, med ett lågt glykemiskt index (55). Läs '
                    'om näringsvärdet och hur du håller fettet i schack.'),
     650: dict(lead='Grillade kycklingvingar glaserade med rökig barbecuesås med en touch av naturlig honung; en '
-                   'oemotståndlig blandning av rök och sötma med mycket protein och ett lågt glykemiskt index (en kliniskt '
-                   'granskad uppskattning, 35).',
+                   'oemotståndlig blandning av rök och sötma med mycket protein och ett lågt glykemiskt index (en '
+                   'uppskattning, 35).',
               tips=('Att välja ugnsgrillade vingar i stället för friterade minskar kalorierna och det totala fettet '
                     'tydligt.',
                     'Honungs-BBQ-såsen tillför socker, så håll koll på de tillgängliga kolhydraterna om du följer en '
@@ -8367,8 +8367,8 @@ OVERRIDES = {
               desc='Fyra kycklingvingar med honungs-BBQ (85 g kött) ger 234 kcal och 18 g protein, med ett lågt glykemiskt '
                    'index (35). Läs hur honungs- och BBQ-glazen påverkar bantningen.'),
     651: dict(lead='Folkliga argentinska piroger som gräddas i ugnen med en fyllning av köttfärs kryddad med spiskummin '
-                   'och paprika, oliver och kokt ägg; de ger bra protein och ett lågt glykemiskt index (en kliniskt '
-                   'granskad uppskattning, 54).',
+                   'och paprika, oliver och kokt ägg; de ger bra protein och ett lågt glykemiskt index (en '
+                   'uppskattning, 54).',
               tips=('Att grädda empanadas i ugnen i stället för att fritera dem sparar ungefär en tredjedel av fettet och '
                     'kalorierna.',
                     'En empanada med en sallad av tomat och sallat är en komplett och mättande latinamerikansk lunch.'),
@@ -8388,7 +8388,7 @@ OVERRIDES = {
               desc='En tallrik peruansk ceviche (150 g) ger 24 g protein och bara 143 kcal och påverkar inte blodsockret. '
                    'Ett fräscht val vid viktnedgång eller insulinresistens.'),
     653: dict(lead='Grillade colombianska plättar av vitt majsbröd fyllda med smält ost; de är naturligt glutenfria, '
-                   'krispiga utanpå och mjuka inuti, och det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'krispiga utanpå och mjuka inuti, och det glykemiska indexet är medelhögt (en '
                    'uppskattning, 65).',
               tips=('Att grilla arepas på en torr plåt i stället för att steka dem i olja minskar kalorierna och fettet '
                     'märkbart.',
@@ -8399,7 +8399,7 @@ OVERRIDES = {
                    'belastning på 24,3. Läs om näringsvärdet och hur du styr portionen.'),
     654: dict(lead='Skivor av grön, omogen mjölbanan som friteras, plattas till och steks igen tills de blir krispiga och '
                    'gyllene; de innehåller mycket resistent stärkelse som bromsar matsmältningen, och det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'indexet är lågt (en uppskattning, 50).',
               tips=('Att tillaga dem i airfryer med lite olivolja ger utmärkt krispighet med hälften av fettet.',
                     'Ett bra alternativ till vanliga potatischips, med betydligt färre kalorier och mindre fett per 100 g.'),
               title='Hur många kalorier har tostones? GI | WiBo Health',
@@ -8407,7 +8407,7 @@ OVERRIDES = {
                    '(50) tack vare den resistenta stärkelsen. Läs om skillnaden mot vanlig banan.'),
     655: dict(lead='Skivor av mogen mjölbanan med svart skal som gräddas långsamt i ugnen; under mognaden omvandlas '
                    'stärkelsen till naturligt socker som karamelliseras av värmen, vilket ger en koncentrerad sötma och '
-                   'ett medelhögt glykemiskt index (en kliniskt granskad uppskattning, 62).',
+                   'ett medelhögt glykemiskt index (en uppskattning, 62).',
               tips=('Ugnsgräddning utan tillsatt socker lyfter fram den naturliga sötman och sparar mycket fett jämfört '
                     'med latinamerikansk fritering i mycket olja.',
                     'Ät dem med en proteinkälla som svarta bönor för att dämpa upptaget av det naturliga sockret i blodet.'),
@@ -8416,7 +8416,7 @@ OVERRIDES = {
                    'glykemiskt index (62). Läs om alternativ till traditionell fritering.'),
     656: dict(lead='En av de äldsta traditionella rätterna i Mesoamerika: majsdeg som behandlats genom nixtamalisering, '
                    'fylld med bitar av kycklingbröst och chilisås och inlindad i majsblad för att ångkokas mjukt; det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52).',
+                   'glykemiska indexet är lågt (en uppskattning, 52).',
               tips=('Den traditionella behandlingen av majsen med kalk (nixtamalisering) ökar biotillgängligheten av '
                     'niacin och förbättrar degens näringsvärde.',
                     'En tamal räcker gott som mättande lunch tack vare fibrerna och kycklingproteinet.'),
@@ -8425,7 +8425,7 @@ OVERRIDES = {
                    'index (52). Läs om ångkokningen och blodsockret.'),
     657: dict(lead='Den lyxiga brasilianska nationalrätten: en gryta av svarta bönor som tillagas långsamt med bitar av '
                    'nötkött, vitlök och lagerblad; rik på fibrer (15 g per portion) och protein, och det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 35). Traditionell feijoada görs oftast på '
+                   'indexet är lågt (en uppskattning, 35). Traditionell feijoada görs oftast på '
                    'fläskkött och fläskprodukter; värdena och beskrivningen här gäller varianten med nötkött.',
               tips=('De svarta bönornas rikliga fibrer bromsar sockerupptaget.',
                     'Nöj dig med grytan och en grön sallad och minska mängden vitt ris till, så förblir sockerbelastningen '
@@ -8435,7 +8435,7 @@ OVERRIDES = {
                    '(35) och en glykemisk belastning på 8,8. En mättande rätt.'),
     658: dict(lead='De kända gyllene brasilianska brödbollarna med seg och smältande ostig konsistens; de görs av naturlig '
                    'tapiokastärkelse och Minasost, är naturligt glutenfria och kräver att portionen styrs eftersom '
-                   'tapiokastärkelsen bryts ned snabbt. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'tapiokastärkelsen bryts ned snabbt. Det glykemiska indexet är medelhögt (en '
                    'uppskattning, 68).',
               tips=('Ett bra val för den som undviker gluten, men tapiokastärkelsen tas upp snabbt; nöj dig därför med två '
                     'bollar som mellanmål.',
@@ -8445,7 +8445,7 @@ OVERRIDES = {
                    'belastning på 23. Läs om den sega konsistensen och portionen.'),
     659: dict(lead='En gyllene tortilla som rostats på plåt och fyllts med stekt vild svamp och smält monterey jack; '
                    'ostens protein och svampens fibrer väger upp tortillastärkelsens snabba upptag, så det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 45).',
+                   'indexet är lågt (en uppskattning, 45).',
               tips=('Att använda fullkornstortilla och dubbla mängden svamp ger mer fibrer och färre totala kalorier.',
                     'Använd färsk salsa av tomat och koriander i stället för gräddfil.'),
               title='Hur många kalorier har quesadilla med svamp? GI | WiBo Health',
@@ -8453,7 +8453,7 @@ OVERRIDES = {
                    'index (45). Läs om bättre sätt att laga den med måttligt fett.'),
     660: dict(lead='Den mexikanska burriton som friteras i het olja tills den blir krispig och fylls med kyckling, ris och '
                    'ost; en måltid med mycket energi och fett, nära 1 000 kcal, som kräver full försiktighet i en '
-                   'balanserad kost. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+                   'balanserad kost. Det glykemiska indexet är medelhögt (en uppskattning, 58).',
               tips=('Energivarning: en chimichanga motsvarar nästan halva dagens kaloribehov och mer än två tredjedelar av '
                     'den dagliga fettgränsen; därför är det bättre att dela den med någon annan.',
                     'Att byta fritering mot ugnsgräddning eller airfryer sparar direkt cirka 300 kcal.'),
@@ -8463,7 +8463,7 @@ OVERRIDES = {
     661: dict(lead='Det skandinaviska kökets favorit: köttbullar av nötkött milt kryddade med muskot och kryddpeppar i en '
                    'fyllig svensk gräddsås med protein och lite stärkelse. Värdena här gäller köttbullar av enbart '
                    'nötkött; tänk på att det traditionella svenska receptet på restauranger och i butiker ofta görs på en '
-                   'blandning av nöt- och fläskfärs. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   'blandning av nöt- och fläskfärs. Det glykemiska indexet är lågt (en uppskattning, '
                    '25).',
               tips=('Det glykemiska indexet och den glykemiska belastningen är låga eftersom kött och sås innehåller lite '
                     'kolhydrater.',
@@ -8473,8 +8473,8 @@ OVERRIDES = {
               desc='Köttbullar med gräddsås (150 g) ger 24 g protein med en mycket låg glykemisk belastning (2,9). Läs om '
                    'balansen mellan fett och lite stärkelse vid bantning.'),
     662: dict(lead='Sylt av de små röda vilda bären som växer i de svenska skogarna; den har en syrlig och söt smak och '
-                   'innehåller mycket polyfenoler och naturlig bensoesyra. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 45).',
+                   'innehåller mycket polyfenoler och naturlig bensoesyra. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 45).',
               tips=('Sorter med lite tillsatt socker lyfter fram bärens vilda syrliga smak och sänker sockerbelastningen '
                     'till bara 3,5 per portion.',
                     'En tesked till köttet, på skandinaviskt vis, ger en balanserad smak utan att höja sockret nämnvärt.'),
@@ -8482,7 +8482,7 @@ OVERRIDES = {
               desc='En sked lingonsylt med lite socker (20 g) innehåller 35 kcal och polyfenoler, med ett lågt glykemiskt '
                    'index (45). En utmärkt följeslagare till nordiska rätter.'),
     663: dict(lead='Traditionellt svenskt knäckebröd gjort av 100 % fullkornsråg, vatten och salt; mycket fiberrikt (16 g '
-                   'per 100 g), med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 48) och en mättnad som '
+                   'per 100 g), med ett lågt glykemiskt index (en uppskattning, 48) och en mättnad som '
                    'håller länge.',
               tips=('Ett utmärkt alternativ till vitt bröd till frukost och middag; rågens fibrer bromsar matsmältningen.',
                     'Bred på ricotta eller lägg på avokadoskivor och kokt ägg för en komplett måltid med låg glykemisk '
@@ -8504,7 +8504,7 @@ OVERRIDES = {
               desc='En portion skandinavisk gravad lax (60 g) innehåller 111 kcal, 13 g protein och omega-3-fett, utan '
                    'kolhydrater, och det glykemiska indexet är inte tillämpligt.'),
     665: dict(lead='Den kända danska öppna smörgåsen på kompakt rågbröd med sillfiléer, skivor av kokt ägg, rödlök och '
-                   'dill; en måltid rik på fibrer och omega-3, med ett lågt glykemiskt index (en kliniskt granskad '
+                   'dill; en måltid rik på fibrer och omega-3, med ett lågt glykemiskt index (en '
                    'uppskattning, 48).',
               tips=('Botten av fullkornsrågbröd mättar mycket och bromsar nedbrytningen av stärkelsen jämfört med vitt '
                     'rostat bröd.',
@@ -8514,7 +8514,7 @@ OVERRIDES = {
                    'index (48). En komplett skandinavisk lunch.'),
     666: dict(lead='Kungen av den svenska fikan: rullar av deg kryddad med mald kardemumma, fyllda med smör och kanel och '
                    'toppade med krispigt pärlsocker; en varm sötsak som kräver måtta på grund av den höga '
-                   'sockerbelastningen. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+                   'sockerbelastningen. Det glykemiska indexet är medelhögt (en uppskattning, 65).',
               tips=('Kanel och kardemumma ger en fyllig smak, men mängden i en bulle är liten och väger inte upp effekten '
                     'av sockret och det vita mjölet i degen; håll därför koll på portionen.',
                     'Njut av den med en kopp svart kaffe utan socker för att balansera sötman, och undvik söta drycker '
@@ -8524,7 +8524,7 @@ OVERRIDES = {
                    '(30,1). Läs om fikan och hur du njuter av den med måtta.'),
     667: dict(lead='En skapelse från den historiska restaurangen Hasselbacken i Stockholm: potatisar som skivats tunt men '
                    'hänger ihop som ett dragspel och rostas i ugnen med smör och rosmarin; krispiga utanpå och mjuka '
-                   'inuti, med ett högt glykemiskt index (en kliniskt granskad uppskattning, 72).',
+                   'inuti, med ett högt glykemiskt index (en uppskattning, 72).',
               tips=('Att behålla skalet ger fibrer, och att låta den kokta potatisen kallna i kylskåpet i några timmar och '
                     'sedan värma den igen ökar den resistenta stärkelsen och dämpar blodsockerstegringen.',
                     'Använd olivolja i stället för smält smör för en högre andel omättat fett.'),
@@ -8533,14 +8533,14 @@ OVERRIDES = {
                    'Läs om hur tillagningen påverkar blodsockret.'),
     668: dict(lead='En pärla i det ukrainska matarvet med internationellt erkännande: en karmosinröd rödbetssoppa med '
                    'vitkål, morot och bitar av nötkött och lite gräddfil; den innehåller naturliga nitrater, och det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 38).',
+                   'glykemiska indexet är lågt (en uppskattning, 38).',
               tips=('Rödbetor innehåller betalainer och naturliga nitrater.',
                     'En mättande soppa som är en utmärkt middag för lång mättnad.'),
               title='Hur många kalorier har ukrainsk borsjtj? GI | WiBo Health',
               desc='En skål ukrainsk borsjtj (300 g) ger 19,5 g protein och 8,4 g fibrer, med ett lågt glykemiskt index '
                    '(38). En soppa med naturliga nitrater.'),
     669: dict(lead='Klassiska polska degknyten som kokas i vatten och fylls med potatismos, färsk keso och karamelliserad '
-                   'lök; de ger värme och mättnad med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 55), '
+                   'lök; de ger värme och mättnad med ett lågt glykemiskt index (en uppskattning, 55), '
                    'men en hel portion har en hög glykemisk belastning.',
               tips=('Ät dem kokta och undvik att steka dem i smör eller baconfett, så minskar kalorierna och det mättade '
                     'fettet.',
@@ -8550,7 +8550,7 @@ OVERRIDES = {
                    '(55). Läs om skillnaden mellan kokta och stekta vid diabetes.'),
     670: dict(lead='Det anrika ungerska kökets stolthet: bitar av nötkött som tillagas långsamt i timmar med rikligt med '
                    'söt ungersk paprika, lök och paprika; en måltid med mycket protein (60 g per portion) och ett lågt '
-                   'glykemiskt index (en kliniskt granskad uppskattning, 30).',
+                   'glykemiskt index (en uppskattning, 30).',
               tips=('En utmärkt proteinkälla som är rik på järn; protein bidrar till att öka muskelmassan. Kolhydraterna '
                     'är få och kommer från de tillagade grönsakerna och paprikan.',
                     'Ät den gärna på egen hand eller med stekta grönsaker och undvik tung pasta till om du följer en '
@@ -8560,7 +8560,7 @@ OVERRIDES = {
                    'klassisk vinterrätt med järn och paprika.'),
     671: dict(lead='Mjuka kålbladsrullar fyllda med en blandning av köttfärs och ris som tillagas i en aromatisk sås av '
                    'tomat och morot; en balanserad måltid som ger protein och kålens fibrer, med ett lågt glykemiskt index '
-                   '(en kliniskt granskad uppskattning, 45).',
+                   '(en uppskattning, 45).',
               tips=('Kålbladens fibrer bromsar upptaget av risstärkelsen i fyllningen, vilket ger en måttlig '
                     'blodsockerrespons.',
                     'Att använda mager köttfärs minskar de totala kalorierna.'),
@@ -8568,7 +8568,7 @@ OVERRIDES = {
               desc='Två golubtsy (250 g) innehåller 388 kcal, 27,5 g protein och 7 g fibrer, med ett lågt glykemiskt index '
                    '(45). En balanserad hemlagad måltid vid diabetes.'),
     672: dict(lead='Den mest kända festsalladen i Östeuropa: tärningar av kall kokt potatis, morot, ärter, saltgurka och '
-                   'ägg med majonnäs; det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52) tack vare den '
+                   'ägg med majonnäs; det glykemiska indexet är lågt (en uppskattning, 52) tack vare den '
                    'resistenta stärkelse som bildas när potatisen kyls.',
               tips=('Hemligheten bakom det låga indexet (52): när kokt potatis kyls omorganiseras stärkelsemolekylerna så '
                     'att stärkelsen smälts långsamt.',
@@ -8578,7 +8578,7 @@ OVERRIDES = {
               desc='En portion oliviersallad med potatis, ärter och ägg (150 g) innehåller 263 kcal, med ett lågt '
                    'glykemiskt index (52) tack vare resistent stärkelse. Läs om lättare dressing.'),
     673: dict(lead='Små, luftiga ryska pannkakor gjorda av bovetemjöl; de har en mild jordig smak och innehåller rutin och '
-                   'fibrer, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50). Värdena på den här '
+                   'fibrer, och det glykemiska indexet är lågt (en uppskattning, 50). Värdena på den här '
                    'sidan gäller naturella blinier utan tillbehör.',
               tips=('Bovetemjöl är naturligt glutenfritt, men många recept på blinier blandar det med vetemjöl; '
                     'kontrollera därför ingredienserna om du undviker gluten.',
@@ -8588,7 +8588,7 @@ OVERRIDES = {
                    '(50). Ett fint alternativ till vita pannkakor.'),
     674: dict(lead='Ren vit stärkelse som utvinns ur roten från den tropiska kassavaplantan (maniok); ett utmärkt '
                    'förtjockningsmedel för soppor, såser och glutenfria bakverk, som kräver måtta eftersom den rena '
-                   'stärkelsen tas upp snabbt (glykemiskt index högt, en kliniskt granskad uppskattning, 70).',
+                   'stärkelsen tas upp snabbt (glykemiskt index högt, en uppskattning, 70).',
               tips=('Den äts inte ensam utan används för att binda och reda; en sked räcker för att ge en hel kastrull '
                     'soppa fast konsistens.',
                     'Vid diabetes: se upp med för mycket bakverk som helt bygger på tapioka, eftersom de höjer blodsockret '
@@ -8597,7 +8597,7 @@ OVERRIDES = {
               desc='En matsked tapiokastärkelse (20 g) innehåller 72 kcal ren stärkelse, med ett högt glykemiskt index '
                    '(70). Läs om hur den redar soppor och om alternativ.'),
     675: dict(lead='Ren stärkelse som utvinns ur naturlig potatis; den har stor förmåga att reda vid lägre temperatur än '
-                   'majsstärkelse och ger såser glans och klarhet, med ett högt glykemiskt index (en kliniskt granskad '
+                   'majsstärkelse och ger såser glans och klarhet, med ett högt glykemiskt index (en '
                    'uppskattning, 75).',
               tips=('Förtjockningsförmågan är dubbelt så stor; använd därför hälften av den mängd vetemjöl du brukar '
                     'använda, så sparar du kolhydrater.',
@@ -8607,7 +8607,7 @@ OVERRIDES = {
               desc='En matsked potatismjöl (20 g) ger 68 kcal för att reda såser, med ett högt glykemiskt index (75). Läs '
                    'om effekten på blodsockret och stärkelsesnåla alternativ.'),
     676: dict(lead='Näringsrikt mjöl malet av hela bruna riskorn med skal och kli; ett naturligt och glutenfritt val som '
-                   'ger B-vitaminer, med ett medelhögt glykemiskt index (en kliniskt granskad uppskattning, 62).',
+                   'ger B-vitaminer, med ett medelhögt glykemiskt index (en uppskattning, 62).',
               tips=('Blanda det med havre- eller mandelmjöl för att sänka bakverkens samlade glykemiska belastning och öka '
                     'andelen protein.',
                     'Ett bra val vid glutenintolerans och veteallergi, men räkna noga med kolhydraterna i portionen.',
@@ -8617,7 +8617,7 @@ OVERRIDES = {
               desc='En portion mjöl av brunt ris (30 g) ger 109 kcal och naturliga fibrer, med ett medelhögt glykemiskt '
                    'index (62). Ett näringsrikt glutenfritt alternativ i bakning.'),
     677: dict(lead='Mjöl av hela havrekorn med lösliga betaglukanfibrer och vegetabiliskt protein; det har en fin '
-                   'konsistens och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 52) och mättar länge.',
+                   'konsistens och ett lågt glykemiskt index (en uppskattning, 52) och mättar länge.',
               tips=('Ett utmärkt val för pannkakor och bakverk vid diabetes och för den som tränar.',
                     'Havrens betaglukan bidrar till att bibehålla normala kolesterolnivåer i blodet; den gynnsamma '
                     'effekten uppnås vid ett dagligt intag på 3 g betaglukan från havre.'),
@@ -8625,7 +8625,7 @@ OVERRIDES = {
               desc='En portion havremjöl (30 g) innehåller 113 kcal och 3 g fibrer med betaglukan, med ett lågt glykemiskt '
                    'index (52). Ett klokt alternativ till vetemjöl i pannkakor och bröd.'),
     678: dict(lead='Det gyllene yttre lagret på det bruna riskornet; mycket fiberrikt (21 g per 100 g) med B-vitaminer, '
-                   'magnesium och fett, och med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 30).',
+                   'magnesium och fett, och med ett lågt glykemiskt index (en uppskattning, 30).',
               tips=('Tillsätt en sked i yoghurten eller morgonens havregryn för att fördubbla fibrerna och sänka måltidens '
                     'samlade sockerbelastning.',
                     'Förvara det i kylskåp i en tättslutande burk så att fettet skyddas mot oxidation.',
@@ -8635,7 +8635,7 @@ OVERRIDES = {
               desc='En sked riskli (15 g) ger 47 kcal och 3,2 g fibrer, med ett lågt glykemiskt index (30). Läs om '
                    'mättnaden och om råd för säker konsumtion.'),
     679: dict(lead='Gryn av durumvete med en god halt protein och sammanhållande gluten; grundingrediensen i pasta och fin '
-                   'couscous, med en tät stärkelsestruktur som ger ett medelhögt glykemiskt index (en kliniskt granskad '
+                   'couscous, med en tät stärkelsestruktur som ger ett medelhögt glykemiskt index (en '
                    'uppskattning, 60). Värdena på den här sidan gäller torra gryn före tillagning.',
               tips=('Att koka dem al dente håller ihop stärkelsemolekylerna i proteinnätverket och bromsar matsmältningen.',
                     'Det slutliga glykemiska indexet beror på tillagningen; det är lägre i ångkokt couscous och pasta än i '
@@ -8644,7 +8644,7 @@ OVERRIDES = {
               desc='En portion grova durumvetegryn (40 g torra) ger 144 kcal och 5 g protein, med ett medelhögt glykemiskt '
                    'index (60). Ett utmärkt val för fast pasta och couscous.'),
     680: dict(lead='Kokta röda quinoafrön från Anderna; de behåller en mild krispighet och innehåller alla nio essentiella '
-                   'aminosyror (fullvärdigt protein), med fibrer och ett lågt glykemiskt index (en kliniskt granskad '
+                   'aminosyror (fullvärdigt protein), med fibrer och ett lågt glykemiskt index (en '
                    'uppskattning, 50).',
               tips=('Ett utmärkt alternativ till vitt ris i lunchrätter; quinoan mättar längre och ger en mer balanserad '
                     'blodsockerrespons.',
@@ -8654,7 +8654,7 @@ OVERRIDES = {
               desc='En skål kokt röd quinoa (150 g) innehåller 180 kcal och 6,6 g fullvärdigt protein, med ett lågt '
                    'glykemiskt index (50). Ett utmärkt alternativ till vitt ris i sallader.'),
     681: dict(lead='Den mest sällsynta och särpräglade quinoan med kolsvart färg och jordig, hasselnötsliknande smak; den '
-                   'innehåller antocyaninpigment och fibrer, och det glykemiska indexet är lågt (en kliniskt granskad '
+                   'innehåller antocyaninpigment och fibrer, och det glykemiska indexet är lågt (en '
                    'uppskattning, 48).',
               tips=('Det hårda yttre skalet håller ihop fröna vid kokningen och ger mer olösliga fibrer.',
                     'Blanda den med vit och röd quinoa till en färgglad och näringsrik sallad.'),
@@ -8663,7 +8663,7 @@ OVERRIDES = {
                    '(48). Sällsynta frön med antocyaninpigment.'),
     682: dict(lead='Aztekernas legendariska mycket små frön med en mild geléartad konsistens; amarant är naturligt '
                    'glutenfri och ger kalcium, magnesium och vegetabiliskt protein, med ett lågt glykemiskt index (en '
-                   'kliniskt granskad uppskattning, 50).',
+                   'uppskattning, 50).',
               tips=('Konsistensen liknar en len gröt; ett utmärkt varmt alternativ till havregrynsgröt till frukost med '
                     'lite nötter.',
                     'Att koka 1 kopp amarant med 2,5 koppar vatten ger den bästa krämiga och jämna konsistensen.'),
@@ -8672,14 +8672,14 @@ OVERRIDES = {
                    '(50). Ett gammalt, glutenfritt spannmål.'),
     683: dict(lead='Glutenfritt mjöl malet av hela amarantfrön; det överträffar traditionellt spannmålsmjöl genom att '
                    'innehålla mycket av aminosyran lysin, som de flesta spannmål saknar, och fibrer, med ett lågt '
-                   'glykemiskt index (en kliniskt granskad uppskattning, 55).',
+                   'glykemiskt index (en uppskattning, 55).',
               tips=('Blanda 20–30 % amarantmjöl i glutenfria mjölblandningar för bättre proteinkvalitet och näringsvärde.',
                     'Det ger bakverken en varm nötig smak och en saftig och sammanhållen konsistens.'),
               title='Hur många kalorier har amarantmjöl? Lysin och GI | WiBo Health',
               desc='En portion amarantmjöl (30 g) innehåller 111 kcal och mycket av aminosyran lysin, med ett lågt '
                    'glykemiskt index (55). Ett näringsrikt glutenfritt alternativ i bakning.'),
     684: dict(lead='Det gamla ”kejsarriset”, känt för sin mörklila färg och fasta konsistens; det innehåller mycket '
-                   'antocyaniner och fibrer, och det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45), '
+                   'antocyaniner och fibrer, och det glykemiska indexet är lågt (en uppskattning, 45), '
                    'vilket gör det till ett betydligt bättre val än vitt ris.',
               tips=('Den naturliga lila färgen kommer från antocyaniner.',
                     'Det behöver längre koktid (cirka 30 minuter eller mer) på grund av kliet, och blötläggning i förväg '
@@ -8689,7 +8689,7 @@ OVERRIDES = {
                    'index (45). Ett bättre val än vitt ris.'),
     685: dict(lead='Det eleganta bergsriset som odlas på sluttningarna i Himalaya och Bhutan; det behåller sitt röda kli '
                    'som innehåller mineraler och flavonoider och har en karaktäristisk nötig smak, med ett lågt glykemiskt '
-                   'index (en kliniskt granskad uppskattning, 52).',
+                   'index (en uppskattning, 52).',
               tips=('Att blötlägga riset i 20 minuter före kokningen förkortar tillagningstiden och ger en mjuk och '
                     'lättsmält konsistens.',
                     'Utmärkt till grillat och grönsaker eftersom kolhydraterna bryts ned långsamt.'),
@@ -8697,7 +8697,7 @@ OVERRIDES = {
               desc='En portion kokt rött ris från Bhutan (150 g) ger 188 kcal och helt kli, med ett lågt glykemiskt index '
                    '(52). Ett balanserat asiatiskt alternativ till vitt ris.'),
     686: dict(lead='Asiatiska nudelband av mjöl från brunt fullkornsris och vatten; de är glutenfria och ger mer fibrer än '
-                   'nudlar av vitt ris, med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 53). Värdena på '
+                   'nudlar av vitt ris, med ett lågt glykemiskt index (en uppskattning, 53). Värdena på '
                    'den här sidan gäller kokta nudlar.',
               tips=('Skölj nudlarna i kallt vatten direkt efter kokningen för att få bort ytstärkelsen och behålla '
                     'fastheten.',
@@ -8708,7 +8708,7 @@ OVERRIDES = {
                    'glykemiskt index (53). Ett bättre alternativ till vita risnudlar.'),
     687: dict(lead='En pärla bland de traditionella egyptiska festrätterna: mört duvkött, som innehåller järn, fyllt med '
                    'grön rostad freekeh kryddad med kryddor och naturlig ghee; en mättande proteinrik måltid med freekehns '
-                   'utmärkta fibrer och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 40).',
+                   'utmärkta fibrer och ett lågt glykemiskt index (en uppskattning, 40).',
               tips=('Den gröna freekehn innehåller betydligt mer fibrer än ris och ger måltiden en måttlig glykemisk '
                     'belastning.',
                     'Att bryna duvan i ugnen i stället för att steka den i mycket ghee minskar fettet och kalorierna '
@@ -8718,7 +8718,7 @@ OVERRIDES = {
                    'index (40). Läs om freekeh och mättnad.'),
     688: dict(lead='Den mest kända rätten från den anrika egyptiska staden Damietta: ugnsstekt anka fylld med ”morta”, '
                    'finhackad lök som gnidits med spiskummin, kardemumma och svartpeppar; rent protein med hög fetthalt '
-                   'och ett lågt glykemiskt index (en kliniskt granskad uppskattning, 25).',
+                   'och ett lågt glykemiskt index (en uppskattning, 25).',
               tips=('Det glykemiska indexet är mycket lågt eftersom rätten saknar egentlig stärkelse; de få kolhydraterna '
                     'kommer bara från den kryddade löken.',
                     'Att ta bort ankskinnet före ätandet halverar det mättade fettet och kalorierna för den som håller '
@@ -8731,7 +8731,7 @@ OVERRIDES = {
                    '(2,8). Läs om lökfyllningen med spiskummin vid bantning.'),
     689: dict(lead='Den varma, gröna egyptiska vintersoppan: tärningar av taro som tillagas i köttbuljong med en sås av '
                    'grön mangold och koriander fräst med vitlök (taqleya); rik på fibrer och resistent stärkelse, med ett '
-                   'lågt glykemiskt index (en kliniskt granskad uppskattning, 55).',
+                   'lågt glykemiskt index (en uppskattning, 55).',
               tips=('Taro innehåller fibrer och resistent stärkelse som bidrar till mättnad.',
                     'Begränsa mängden ris till, eftersom taro i sig är en viktig stärkelsekälla med hög glykemisk '
                     'belastning (24,8).',
@@ -8764,7 +8764,7 @@ OVERRIDES = {
                    'kolhydrater; det glykemiska indexet är inte tillämpligt. En ketofrukost.'),
     692: dict(lead='Kronan bland de damascenska ugnsrätterna: lager av grillad köttfärskebab kryddad med sju kryddor, '
                    'varvad med skivor av karamelliserad aubergine och tomat; mycket protein (50 g) och mycket låg '
-                   'glykemisk belastning (4,3). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+                   'glykemisk belastning (4,3). Det glykemiska indexet är lågt (en uppskattning, 30).',
               tips=('Att grilla auberginen i ugnen i stället för att fritera den i olja minskar det totala fettet kraftigt '
                     'utan att påverka den rökiga smaken.',
                     'Auberginens fibrer bromsar matsmältningen och mättar, och skalet innehåller nasunin.'),
@@ -8773,7 +8773,7 @@ OVERRIDES = {
                    'glykemisk belastning (4,3). En lyxig lunch vid bantning.'),
     693: dict(lead='Mästaren bland de lyxiga arabiska festrätterna: mört killingkött som rostas långsamt och fylls med ris '
                    'kryddat med kanel och kardemumma och rostade nötter; en festmåltid med mycket protein (78 g) och många '
-                   'kalorier och mycket stärkelse. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+                   'kalorier och mycket stärkelse. Det glykemiska indexet är lågt (en uppskattning, 48).',
               tips=('Fokusera på killingköttet med gröna sallader och minska portionen ris för att sänka den höga '
                     'glykemiska belastningen (38,2).',
                     'Killingkött innehåller naturligt mindre mättat fett än lammkött, vilket gör det till ett bra '
@@ -8785,7 +8785,7 @@ OVERRIDES = {
                    'belastning (38,2). Läs tips för att hantera festmåltider klokt.'),
     694: dict(lead='Långsam ugnstillagning när den är som bäst: lammbog som smälter i munnen, stekt med hela '
                    'vitlöksklyftor, rosmarinkvistar och potatistärningar som sugit upp saften; mycket protein (62,5 g) och '
-                   'en fyllighet som kräver koll på kalorierna. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'en fyllighet som kräver koll på kalorierna. Det glykemiska indexet är lågt (en '
                    'uppskattning, 45).',
               tips=('Lammfettet fördröjer magsäckstömningen och bromsar upptaget av potatisstärkelsen, vilket ger ett lågt '
                     'index (45).',
@@ -8809,7 +8809,7 @@ OVERRIDES = {
                    'är inte tillämpligt. Ett proteinrikt val vid keto.'),
     696: dict(lead='Den mest kända folkliga pannrätten på den jordanska landsbygden: lokala tomater som får fräsa med '
                    'köttfärs, extra jungfruolivolja, stark chili och vitlök; en måltid med lykopen och mycket låg '
-                   'sockerbelastning (2,7). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'sockerbelastning (2,7). Det glykemiska indexet är lågt (en uppskattning, 25).',
               tips=('Att tillaga tomaterna med olivolja ökar upptaget av lykopen tydligt.',
                     'Ät den med sked eller med fullkornsbröd i stället för vitt bröd för att inte höja måltidens '
                     'sockerbelastning.'),
@@ -8827,7 +8827,7 @@ OVERRIDES = {
                    'klassisk saudisk frukost- och kvällsrätt rik på järn.'),
     698: dict(lead='Den ikoniska jemenitiska nationalrätten som serveras kokande i en stengryta (madra): köttbuljong och '
                    'grönsaker som täcks med ett skum av vispad bockhornsklöver (hilba) och en stark sås (sahawiq); lågt '
-                   'glykemiskt index (en kliniskt granskad uppskattning, 35) och rikligt med fibrer.',
+                   'glykemiskt index (en uppskattning, 35) och rikligt med fibrer.',
               tips=('Bockhornsklöver innehåller mycket lösliga fibrer och har studerats som kosttillskott i betydligt '
                     'högre doser än i rätten; skummet är därför ingen behandling för blodsockret, men det tillför fibrer '
                     'och en karaktäristisk smak.',
@@ -8848,7 +8848,7 @@ OVERRIDES = {
     700: dict(lead='Det kända flagiga jemenitiska brödet som gräddas i tandoor och penslas med lager av naturlig ghee och '
                    'svartkummin; det har en krispig, flagig konsistens som liknar feteer meshaltet, och den höga '
                    'glykemiska belastningen (37,1) kräver att portionen styrs. Det glykemiska indexet är medelhögt (en '
-                   'kliniskt granskad uppskattning, 68).',
+                   'uppskattning, 68).',
               tips=('Ett bröd innehåller cirka 55 g nettokolhydrater; att dela brödet och ta en fjärdedel till hälften är '
                     'det klokaste valet vid diabetes.',
                     'Svartkumminet på ytan ger en karaktäristisk smak.'),
@@ -8888,7 +8888,7 @@ OVERRIDES = {
                    'kolhydrater och inget tillsatt socker eller härdat fett.'),
     704: dict(lead='En av de mest kända klassiska amerikanska salladsdressingarna: en len, krämig blandning av kärnmjölk, '
                    'majonnäs, vitlök, dill och salladslök; kolhydraterna är mycket få och energin kommer främst från fett. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'Det glykemiska indexet är lågt (en uppskattning, 15).',
               tips=('Att doppa gaffelspetsen i dressingen i stället för att hälla den över hela salladen halverar '
                     'kalorierna med samma smak.',
                     'Fettet i dressingen hjälper kroppen att ta upp de fettlösliga vitaminerna (A, D, E och K) i '
@@ -8934,7 +8934,7 @@ OVERRIDES = {
                    'kolhydrater. Den kungliga såsen till biff.'),
     708: dict(lead='En grillsås inspirerad av traditionerna i Carolina; den bygger på en varm, syrlig bas av naturlig '
                    'äppelcidervinäger, tomat och rök med betydligt mindre socker än tjocka kommersiella barbecuesåser. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45).',
+                   'glykemiska indexet är lågt (en uppskattning, 45).',
               tips=('Den naturliga äppelcidervinägern bryter sötman och kan bromsa matsmältningen, med ett lågt glykemiskt '
                     'index (45).',
                     'Den innehåller cirka 36 kcal per portion jämfört med cirka 50–60 kcal i kommersiella såser rika på '
@@ -8944,7 +8944,7 @@ OVERRIDES = {
                    'ett lågt glykemiskt index (45). Ett lättare alternativ till kommersiell barbecuesås.'),
     709: dict(lead='Den blanka, omtyckta asiatiska såsen med sin harmoni av hetta och sötma; den görs av röda '
                    'chiliflingor, vitlök, vinäger och sockerlag; mycket god, men den kräver medvetenhet om den höga halten '
-                   'tillsatt socker. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+                   'tillsatt socker. Det glykemiska indexet är medelhögt (en uppskattning, 65).',
               tips=('En sked ger tillräckligt med smak till en tallrik vårrullar eller grillad kyckling; undvik att hälla '
                     'rikligt eftersom den innehåller mycket socker och har ett medelhögt glykemiskt index (65).',
                     'Chilin ger capsaicin, som står för hettan, och vitlöken ger smak.'),
@@ -8952,7 +8952,7 @@ OVERRIDES = {
               desc='En matsked thailändsk sweet chilisås (20 g) innehåller 37 kcal och 9 g socker, med ett medelhögt '
                    'glykemiskt index (65). Läs tips för att styra mängden vid bantning.'),
     710: dict(lead='Den anrika japanska glaceringssåsen (teri = glans, yaki = grillning): en blandning av fermenterad '
-                   'sojasås, ingefära och vitlök med en avvägd sötma; det glykemiska indexet är lågt (en kliniskt granskad '
+                   'sojasås, ingefära och vitlök med en avvägd sötma; det glykemiska indexet är lågt (en '
                    'uppskattning, 30) och den glykemiska belastningen mycket låg.',
               tips=('Att pensla laxskivor eller kyckling med en sked ger karamellisering och fyllig asiatisk smak med bara '
                     '17 kcal.',
@@ -8966,7 +8966,7 @@ OVERRIDES = {
                    'glykemisk belastning (0,8). Läs tips om marinering och ingredienserna.'),
     711: dict(lead='Den fräscha, syrliga japanska dressingen; den blandar fermenterad sojasås med saft av yuzu eller '
                    'japansk citron, dashibuljong och vinäger, och ger en frisk, syrlig och salt smak med bara 10 kcal per '
-                   'portion. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 20).',
+                   'portion. Det glykemiska indexet är lågt (en uppskattning, 20).',
               tips=('Ett bra alternativ till tunga oljiga salladsdressingar; den ger sallader och grillad fisk en förfinad '
                     'smak utan fett.',
                     'Syran i yuzu och citron ger fräschhet som gör att du inte behöver extra salt, men tänk på sojasåsens '
@@ -8977,8 +8977,8 @@ OVERRIDES = {
               desc='En matsked japansk ponzusås (15 g) innehåller bara 10 kcal, med nästan ingen glykemisk belastning '
                    '(0,3). Den lättaste syrliga dressingen till fisk och sashimi.'),
     712: dict(lead='Naturligt osötat och silat fruktkött från tropiska tamarindfrukter för matlagning; det har en skarp '
-                   'fruktig syra från naturlig vinsyra och innehåller kalium, med ett lågt glykemiskt index (en kliniskt '
-                   'granskad uppskattning, 30).',
+                   'fruktig syra från naturlig vinsyra och innehåller kalium, med ett lågt glykemiskt index (en '
+                   'uppskattning, 30).',
               tips=('Avsett för att ge syra åt grytor, tom yum-soppa och curry utan salt eller socker.',
                     'Den skiljer sig helt från tamarinddryck sötad med raffinerat socker; den här produkten är ren och '
                     'innehåller inget tillsatt socker.'),
@@ -8999,7 +8999,7 @@ OVERRIDES = {
                    'indexet är inte tillämpligt. Läs om natriumet vid högt blodtryck.'),
     714: dict(lead='En pasta av sojabönor och ris som fermenterats en kort tid med naturlig kojisvamp; den har en krämig, '
                    'lätt söt smak och ljust gyllene färg, och opastöriserad miso kan innehålla levande bakterier från '
-                   'fermenteringen. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 30).',
+                   'fermenteringen. Det glykemiska indexet är lågt (en uppskattning, 30).',
               tips=('Koka aldrig miso på hög värme; lös upp den i den varma buljongen när plattan är avstängd, så bevaras '
                     'eventuella levande bakterier och enzymer.',
                     'Miso innehåller mycket salt; en sked räcker till en hel skål soppa, och tänk på det vid högt '
@@ -9012,7 +9012,7 @@ OVERRIDES = {
                    'index (30). Grunden i varm japansk misosoppa.'),
     715: dict(lead='Sojapasta som fermenterats länge, upp till ett helt år; den får sin mörkt rödbruna färg och kraftiga, '
                    'salta smak genom naturliga reaktioner som bildar melanoidiner, och det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 28).',
+                   'uppskattning, 28).',
               tips=('Den långa lagringen ger melanoidiner, som har studerats i laboratorieförsök.',
                     'Smaken är saltare och kraftigare än i vit miso; därför räcker en halv sked för att smaksätta en hel '
                     'rätt.',
@@ -9023,7 +9023,7 @@ OVERRIDES = {
                    '(28). Djup umamismak till vintergrytor.'),
     716: dict(lead='Den traditionella koreanska röda chilipastan som fermenteras i lerkrukor; den förenar chilipulvrets '
                    'hetta med sötman från fermenterat klibbris och sojabönor och ger en rökig och stark smak, med ett lågt '
-                   'glykemiskt index (en kliniskt granskad uppskattning, 48).',
+                   'glykemiskt index (en uppskattning, 48).',
               tips=('Trots sötman är portionen liten, så den glykemiska belastningen förblir låg (3,9); många kommersiella '
                     'produkter innehåller dock tillsatt rissirap eller socker.',
                     'Capsaicin ger pastan dess hetta.',
@@ -9054,7 +9054,7 @@ OVERRIDES = {
               desc='En portion guacamole (50 g) ger 78 kcal, 3,4 g fibrer och enkelomättat fett och påverkar inte '
                    'blodsockret. Den mexikanska dippen vid diabetes och bantning.'),
     719: dict(lead='Den goda harmonin mellan senapens skärpa och den naturliga honungens sötma i en len emulsion med olja '
-                   'och vinäger; den ger en söt och skarp smak med ett lågt glykemiskt index (en kliniskt granskad '
+                   'och vinäger; den ger en söt och skarp smak med ett lågt glykemiskt index (en '
                    'uppskattning, 45) och en liten sockerbelastning i en måttlig portion.',
               tips=('Oljans fett och senapens fibrer bromsar upptaget av fruktosen i honungen, vilket ger en måttlig '
                     'blodsockerrespons.',
@@ -9064,7 +9064,7 @@ OVERRIDES = {
                    'glykemisk belastning (3,0). Läs om balansen mellan honung och fett.'),
     720: dict(lead='Den traditionella följeslagaren till fisk och skaldjur: en blandning av krämig majonnäs med krispiga '
                    'bitar av saltgurka, citronsaft, grön dill och kapris; stärkelsen är mycket låg och det glykemiska '
-                   'indexet lågt (en kliniskt granskad uppskattning, 15).',
+                   'indexet lågt (en uppskattning, 15).',
               tips=('Gurkbitarna och citronens syra bryter grillad fisks fyllighet och ger en frisk smak med en '
                     'sockerbelastning på högst 0,3.',
                     'Att göra den med hälften majonnäs och hälften grekisk yoghurt minskar fettet och kalorierna tydligt '
@@ -9074,7 +9074,7 @@ OVERRIDES = {
                    'belastning (0,3). Den klassiska följeslagaren till fisk och skaldjur.'),
     721: dict(lead='”Det svarta guldet” från provinsen Modena i Italien: koncentrerad must av trebbianodruvor som kokas '
                    'långsamt och lagras i flera träfat i följd i flera år; den ger en sammetslen söt syra och ett lågt '
-                   'glykemiskt index (en kliniskt granskad uppskattning, 25).',
+                   'glykemiskt index (en uppskattning, 25).',
               tips=('Den naturliga ättiksyran i vinägern kan bidra till att bromsa magsäckstömningen och dämpa en kraftig '
                     'blodsockerstegring efter måltider.',
                     'Lite (en matsked) över en grön sallad eller tomat med mozzarella räcker för en aristokratisk smak med '
@@ -9275,7 +9275,7 @@ OVERRIDES = {
                                 'grädde utan fermentering.')]),
     738: dict(lead='Ett mästerverk i det traditionella levantinska skafferiet: små lokala auberginer som kokas och silas '
                    'noggrant och fylls med valnötter, röd paprika och vitlök och läggs helt i extra jungfruolivolja. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'glykemiska indexet är lågt (en uppskattning, 15).',
               tips=('En komplett måltid som förenar auberginens fibrer med olivoljans fett och smaken av vitlök och '
                     'paprika.',
                     'Låt lite av den överflödiga oljan rinna av innan du lägger upp den, så har du koll på kalorierna om '
@@ -9289,7 +9289,7 @@ OVERRIDES = {
                                 'saltet.')]),
     739: dict(lead='Fullmogna svarta oliver som torkas genom pressning och grovt salt så att de förlorar beskan och '
                    'vattnet; de har en skrynklig, sidenlen konsistens och en fyllig, koncentrerad oljig smak. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'glykemiska indexet är lågt (en uppskattning, 15).',
               tips=('Utmärkta till frukost med vit ost eller lite za’atar och olja, och de kan blötläggas några minuter i '
                     'ljummet vatten för att bli mindre salta.',
                     'Efter beredningen förvaras de täckta med olivolja och citronskivor så att de förblir mjuka och friska '
@@ -9302,7 +9302,7 @@ OVERRIDES = {
                                 'vatten och ätas i begränsade mängder vid högt blodtryck.')]),
     740: dict(lead='Urkärnade gröna oliver fyllda med bitar av krispig morot, röd paprika och citronörter; en härlig '
                    'balans mellan olivernas sälta och grönsakernas naturliga sötma. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 15).',
+                   'uppskattning, 15).',
               tips=('En smart förrätt som ger mättnadskänsla före huvudmåltiden tack vare grönsakernas fibrer och det '
                     'enkelomättade fettet.',
                     'Att skölja dem under rinnande vatten före serveringen minskar natriumintaget märkbart utan att '
@@ -9315,7 +9315,7 @@ OVERRIDES = {
                                 'konstgjorda färgämnen.')]),
     741: dict(lead='Stjärnan bland de levantinska inläggningarna med sin förtrollande karmosinröda färg från '
                    'rödbetsskivor; krispiga stavar av lokal rova som läggs in i vatten, salt och vinäger och ger en frisk '
-                   'syra åt borden med falafel och shawarma. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'syra åt borden med falafel och shawarma. Det glykemiska indexet är lågt (en '
                    'uppskattning, 15).',
               tips=('Kalorierna är mycket få (cirka 7 kcal per portion), vilket gör dem till ett krispigt tillskott som '
                     'bryter enformigheten i kalorisnål kost.',
@@ -9328,7 +9328,7 @@ OVERRIDES = {
                                 'färgämnen.')]),
     742: dict(lead='Liten lokal armenisk gurka från Levanten som läggs in noggrant med vitlöksklyftor och lagerblad; den '
                    'behåller en exceptionell krispighet och en frisk grönsakssmak som överträffar vanlig inlagd gurka. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 15).',
+                   'glykemiska indexet är lågt (en uppskattning, 15).',
               tips=('Den väcker aptiten och ger fräschhet till risrätter och grytor.',
                     'Använd alltid en torr och ren sked när du tar upp gurkan ur burken och förvara den i kylskåp, så '
                     'förblir den krispig länge.'),
@@ -9339,7 +9339,7 @@ OVERRIDES = {
                               a='Ja; kolhydraterna är mycket få (mindre än 1 g per portion) och påverkar inte ketosen.')]),
     743: dict(lead='Lokala gröna och gula chilifrukter som läggs in i vinäger och saltlake smaksatt med korianderfrön; en '
                    'stickande hetta som väcker aptiten och en rik källa till ämnet capsaicin. Det glykemiska indexet är '
-                   'lågt (en kliniskt granskad uppskattning, 15).',
+                   'lågt (en uppskattning, 15).',
               tips=('Den kraftiga smaken minskar behovet av extra salt och fett.',
                     'Undvik att äta den på fastande mage, och avstå helt vid magsår eller aktiv sur reflux.'),
               title='Hur många kalorier har inlagd stark chili? | WiBo Health',
@@ -9362,8 +9362,8 @@ OVERRIDES = {
                               a='Äkta qashta görs helt av naturligt mjölkfett utan tillsatser, medan gräddimitation görs '
                                 'av härdade vegetabiliska oljor och industriella emulgeringsmedel.')]),
     745: dict(lead='Det lyxiga bärnstensfärgade guldet från nektarn i den vilda sidrbuskens blommor; den har en tjock '
-                   'konsistens, varm aromatisk smak och naturliga enzymer. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 53).',
+                   'konsistens, varm aromatisk smak och naturliga enzymer. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 53).',
               tips=('Ett alternativ till raffinerat vitt socker för att söta drycker och morgonens havregryn, men den är '
                     'fortfarande socker som ska räknas in i kolhydraterna.',
                     'Förvara den i rumstemperatur och lägg den inte direkt i kokande te eller vatten, så bevaras de '
@@ -9378,7 +9378,7 @@ OVERRIDES = {
                                 'räknas noga in i dagens kolhydrater.')]),
     746: dict(lead='Koncentrerad levantinsk druvmust som kokas långsamt över ved efter att ha klarats med traditionell vit '
                    'lera (hawara); en sidenlen mörk vätska rik på naturligt fruktsocker, som innehåller lite järn och '
-                   'andra mineraler. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 65).',
+                   'andra mineraler. Det glykemiska indexet är medelhögt (en uppskattning, 65).',
               tips=('Blandad med naturell tahini blir den en god traditionell frukost med energi, fett och mineraler.',
                     'Ett bra val för den som tränar före långa pass eller i kallt väder, som en snabbt upptagen '
                     'kolhydratkälla.'),
@@ -9391,7 +9391,7 @@ OVERRIDES = {
                                 'blodbrist och ersätter inte den behandling som läkaren ordinerar.')]),
     747: dict(lead='Den klassiska levantinska sommarmarmeladen gjord på mogna svarta och gröna fikon med sesamfrön, '
                    'valnötter och mastix; en konsistens som naturligt stelnar av fikonens pektin och en varm, solig smak. '
-                   'Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+                   'Det glykemiska indexet är medelhögt (en uppskattning, 62).',
               tips=('Blanda den med hackade valnötter eller lägg den på en skiva keso för att bromsa sockerupptaget och få '
                     'mer protein.',
                     'Gör den gärna med en måttlig mängd socker, så bevaras fikonens näringsvärde.'),
@@ -9403,7 +9403,7 @@ OVERRIDES = {
                                 'fett, fibrer eller protein för att dämpa blodsockerstegringen.')]),
     748: dict(lead='Ett under bland de damascenska sylterna: pumpatärningar som blötlagts i kalkvatten så att de får ett '
                    'glasartat krispigt skal som omsluter en klar geléartad kärna doftande av apelsinblomsvatten och kanel. '
-                   'Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 64).',
+                   'Det glykemiska indexet är medelhögt (en uppskattning, 64).',
               tips=('Den serveras som en förfinad sötsak till gäster med lokala valnötter, som balanserar sötman med fett.',
                     'Skölj bitarna snabbt i vatten om du vill minska sockerlagen på ytan och få i dig färre kalorier.'),
               title='Hur många kalorier har krispig pumpasylt? | WiBo Health',
@@ -9414,7 +9414,7 @@ OVERRIDES = {
                                 'kokningen, en traditionell teknik som inte lämnar skadliga rester.')]),
     749: dict(lead='Den lyxiga sylten av doftande kronblad från damascenerrosen; en förtrollande blommig smak och en '
                    'naturlig rubinröd färg som kommer från antocyaninerna i kronbladen. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 60).',
+                   'medelhögt (en uppskattning, 60).',
               tips=('Utmärkt på lokal labneh eller färsk grädde och ger frukosten en sällsynt blommig touch.',
                     'Rosor tillskrivs traditionellt en lugnande effekt på matsmältningen och ett bättre humör, men detta '
                     'har ännu inte bekräftats i studier, och sylten innehåller fortfarande mycket socker.'),
@@ -9426,7 +9426,7 @@ OVERRIDES = {
                                 'med kronbladens färgämnen, utan konstgjorda färgämnen.')]),
     750: dict(lead='Kronan bland sötsakerna från Homs i Levanten: mjuka, sidenlena rullar av akkawiost och fina mannagryn, '
                    'fyllda med lyxig lokal grädde och garnerade med pistage och rosenblad. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 58).',
+                   'medelhögt (en uppskattning, 58).',
               tips=('Nöj dig med lite sockerlag i stället för att dränka dem i extra sirap, så hålls kalorierna nere.',
                     'Grunden är naturlig ost och grädde i stället för friterad deg, så de innehåller en del protein och '
                     'kalcium, men de är fortfarande en sötsak med mycket socker och fett.'),
@@ -9439,7 +9439,7 @@ OVERRIDES = {
     751: dict(lead='En ikon bland de festliga sötsakerna i Levanten: elfenbensvita kakor som gräddas på mycket låg värme '
                    'av bara tre äkta ingredienser (vitt mjöl, florsocker och fin lokal ghee) och garneras med en grön '
                    'pistagenöt. De har en mjuk konsistens som smulas sönder och smälter så fort de når tungan. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+                   'glykemiska indexet är medelhögt (en uppskattning, 58).',
               tips=('Fettet i gheen bromsar upptaget av mjölets socker något, men kakan innehåller mycket energi, så en '
                     'kaka med svart kaffe är den bästa portionen.',
                     'Undvik helst kommersiella sorter som bygger på härdat vegetabiliskt fett, så undviker du transfett.'),
@@ -9453,7 +9453,7 @@ OVERRIDES = {
     752: dict(lead='En pärla på det levantinska välkomstbordet som formas i traditionella träformar: en omsorgsfullt gjord '
                    'deg av mannagryn och lokal ghee doftande av mahlab, som omsluter en fyllig fyllning av lokala '
                    'valnötter kryddade med kanel och apelsinblomsvatten, och som förenar nötternas fyllighet med '
-                   'kryddornas äkthet. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 52).',
+                   'kryddornas äkthet. Det glykemiska indexet är lågt (en uppskattning, 52).',
               tips=('De lokala valnötterna ger mer omättat fett och fibrer, vilket sänker kakans glykemiska index (52) '
                     'jämfört med sötsaker fyllda med grädde eller socker.',
                     'En kaka med grönt te eller svart kaffe mättar bra och minskar lusten att äta fler sötsaker.'),
@@ -9466,7 +9466,7 @@ OVERRIDES = {
     753: dict(lead='Höjden av lyx bland de damascenska sötsakerna: en noggrant mönstrad konformad kaka som rymmer en '
                    'smaragdgrön kärna av krossad pistage doftande av destillerat apelsinblomsvatten. Den har en unik '
                    'balans mellan fyllningens naturliga sötma och smaken av mannagryn rostade i ghee. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'indexet är lågt (en uppskattning, 50).',
               tips=('Pistagen innehåller lutein och enkelomättat fett som bromsar glukosstegringen, och därför har den det '
                     'lägsta glykemiska indexet bland de festliga sötsakerna i den här gruppen (50).',
                     'Njut gärna av maamoul utan extra florsocker på ytan, så minskar kalorierna och pistagens äkta smak '
@@ -9480,7 +9480,7 @@ OVERRIDES = {
     754: dict(lead='De mest kända krispiga kakorna från gamla Damaskus och det anrika Midan-kvarteret: tunna, krispiga '
                    'kakor som på ena sidan är täckta med gyllene rostad sesam blandad med lite sockerlag och på den andra '
                    'med pistagebitar. En krispighet som fyller sinnena och en oförglömlig rostad smak. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 54).',
+                   'indexet är lågt (en uppskattning, 54).',
               tips=('Sesamhöljet tillför lite kalcium, magnesium och omättat fett som delvis balanserar degens socker.',
                     'Tack vare den torra och krispiga konsistensen räcker två kakor till morgontekoppen som en lätt '
                     'sötsak.'),
@@ -9492,7 +9492,7 @@ OVERRIDES = {
                                 'huvudsakliga och mest framträdande ingrediensen.')]),
     755: dict(lead='Fina tekakor med franska rötter som blivit en del av arabisk gästfrihet: små kakor bakade med fint '
                    'smör, ägg och vanilj, sammanfogade med ett tunt lager aprikossylt och med kanterna doppade i mörk '
-                   'choklad eller färgglada strössel. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'choklad eller färgglada strössel. Det glykemiska indexet är medelhögt (en '
                    'uppskattning, 62).',
               tips=('Den lilla storleken kan locka till att äta flera utan att tänka på det; lägg en eller två på ditt '
                     'eget fat så undviker du för många kalorier.',
@@ -9505,7 +9505,7 @@ OVERRIDES = {
                               a='En medelstor bit (18 g) innehåller cirka 83 kcal och cirka 11 g tillgängliga kolhydrater.')]),
     756: dict(lead='Kakor för minnen och högtider: ringar som gräddas gyllene och krispiga, med en förtrollande blandning '
                    'av traditionell kaakkrydda (anis, fänkål, mahlab och svartkummin) knådad med olivolja och ghee, som '
-                   'fyller hemmet med en doftande festkänsla. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'fyller hemmet med en doftande festkänsla. Det glykemiska indexet är lågt (en '
                    'uppskattning, 55).',
               tips=('Anis och fänkål läggs traditionellt i kaakdegen för sin smak.',
                     'Ett bra alternativ till sötsaker fulla av sockerlag och flytande socker; en kaka på morgonen med te '
@@ -9519,7 +9519,7 @@ OVERRIDES = {
     757: dict(lead='Atay, den äkta amazighiska och marockanska välkomstdrycken: grönt gunpowderte som kokas över glöd med '
                    'buntar av färsk mynta och traditionellt toppsocker och hälls från en hög silverkanna så att det bildas '
                    'det kända skummet ”rezza”, som bevarar teets värme och smak. Det glykemiska indexet är medelhögt (en '
-                   'kliniskt granskad uppskattning, 65).',
+                   'uppskattning, 65).',
               tips=('Grönt te innehåller katekiner, och myntan ger en frisk känsla efter mäktiga måltider.',
                     'För att hålla blodsockret i schack kan du gradvis minska det tillsatta sockret eller byta det mot '
                     'stevia och njuta av det gröna teet utan socker.',
@@ -9533,7 +9533,7 @@ OVERRIDES = {
                                 'cirka 48 kcal.')]),
     758: dict(lead='Den varma vinterdrycken som efterfrågas mest när kylan biter: skivor av stark färsk ingefära som kokas '
                    'noggrant och blandas med citronsaft och en tesked ren naturlig honung, som ger en omedelbar värme i '
-                   'halsen och friskar upp. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 55).',
+                   'halsen och friskar upp. Det glykemiska indexet är lågt (en uppskattning, 55).',
               tips=('Ingefäran innehåller gingerol och ger en känsla av värme.',
                     'Tillsätt honungen och citronsaften när ingefärsvattnet har slutat koka, så skyddas C-vitaminet från '
                     'den höga värmen.'),
@@ -9647,7 +9647,7 @@ OVERRIDES = {
                                 'den tar inte kroppen ur ketos och höjer knappt blodsockret.')]),
     767: dict(lead='Den mest uppfriskande sommardrycken: mosad lime med färska myntablad i kolsyrat mineralvatten och '
                    'krossad is med lite naturligt rörsocker, som ger en bubblande känsla som släcker törsten och väcker '
-                   'sinnena. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 60).',
+                   'sinnena. Det glykemiska indexet är medelhögt (en uppskattning, 60).',
               tips=('Ett bättre alternativ än kommersiella läskedrycker, eftersom den bygger på färsk frukt och riktiga '
                     'myntablad utan konstgjorda färgämnen.',
                     'Rörsockret kan bytas mot erytritol eller stevia, så blir drycken nästan kalorifri och passar vid '
@@ -9660,7 +9660,7 @@ OVERRIDES = {
                                 'och sötad med socker.')]),
     768: dict(lead='De tropiska öarnas njutning i ett krämigt glas: färsk gyllene ananasjuice blandad med kokosmjölk och '
                    'krossad is. En sammetslen, fyllig konsistens som förenar ananasens friska syra med kokosens sötma, '
-                   'helt utan alkohol. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 58).',
+                   'helt utan alkohol. Det glykemiska indexet är medelhögt (en uppskattning, 58).',
               tips=('Färsk ananas innehåller enzymet bromelain, som bryter ned protein, men mängden i juicen är begränsad.',
                     'Kokosmjölk innehåller mycket mättat fett och många kalorier, så se glaset som en flytande efterrätt '
                     'och inte som en vardagsdryck.'),
@@ -9672,7 +9672,7 @@ OVERRIDES = {
                                 'kokosmjölken.')]),
     769: dict(lead='Den kända spanska sommardrinken i en alkoholfri version: en bas av ren ojäst röd druvjuice som får dra '
                    'i timmar med tärningar av äpple, apelsin, citron och kanelstänger så att den tar upp fruktsmakerna och '
-                   'får en festlig smak. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+                   'får en festlig smak. Det glykemiska indexet är medelhögt (en uppskattning, 62).',
               tips=('Röd druvjuice innehåller polyfenoler och små mängder resveratrol, men den innehåller fortfarande '
                     'mycket fruktsocker.',
                     'Att äta fruktbitarna i botten av glaset ger lite fibrer och pektin från äpplet.'),
@@ -9684,7 +9684,7 @@ OVERRIDES = {
                                 'direkt utan någon jäsning.')]),
     770: dict(lead='En karmosinröd dryck för den aktiva: en kallpressad blandning av rödbeta, färsk apelsin rik på '
                    'C-vitamin och en värmande touch av ingefära. En söt, jordig och balanserad smak. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 54).',
+                   'indexet är lågt (en uppskattning, 54).',
               tips=('Rödbetor innehåller naturliga nitrater.',
                     'Kallpressning minskar uppvärmningen och oxidationen vid tillagningen, och juicen bör helst drickas '
                     'färsk inom några timmar.'),
@@ -9708,7 +9708,7 @@ OVERRIDES = {
                                 'på egen hand, men den är en vätskegivande dryck som innehåller kalium.')]),
     772: dict(lead='En gyllene solstråle i ett glas: en blandning av söt morot rik på betakaroten, färsk gurkmejarot med '
                    'kurkumin och en frisk stickning av ingefära. En vacker balans mellan morotens sötma och rotkryddornas '
-                   'djup. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+                   'djup. Det glykemiska indexet är lågt (en uppskattning, 48).',
               tips=('Betakaroten omvandlas i kroppen till A-vitamin, som bidrar till att bibehålla normal syn och normal '
                     'hud och till immunsystemets normala funktion.',
                     'Att äta några mandlar eller ett mellanmål med fett till juicen ökar upptaget av det fettlösliga '
@@ -9721,8 +9721,8 @@ OVERRIDES = {
                                 'nöj dig helst med ett glas och drick det till en måltid.')]),
     773: dict(lead='Den renaste och minst bearbetade formen av havre: hela skalade havrekorn som skurits med stålblad i '
                    'grova bitar utan valsning eller förkokning. Tillagningen ger en krämig frukostgröt med kornig '
-                   'konsistens och nötig smak som mättar i flera timmar. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 52).',
+                   'konsistens och nötig smak som mättar i flera timmar. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 52).',
               tips=('Steel cut-havre behåller kornets struktur och betaglukanfibrerna, vilket bromsar nedbrytningen av '
                     'stärkelsen och ger ett lågt glykemiskt index (52) jämfört med snabbhavre.',
                     'Den kokas med 1 del havre och 3 delar vatten på låg värme i 20 minuter och kan blötläggas över natten '
@@ -9736,7 +9736,7 @@ OVERRIDES = {
     774: dict(lead='Ett pseudospannmål med högt näringsvärde: platta flingor av hela, trekantiga bovetefrön med kli. De '
                    'har en varm jordig smak och krispig konsistens, och bovete är frön från en blommande växt som inte har '
                    'något med vete att göra, vilket gör flingorna till ett naturligt val vid veteallergi och '
-                   'glutenintolerans. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'glutenintolerans. Det glykemiska indexet är lågt (en uppskattning, 50).',
               tips=('Flingorna innehåller flavonoiden rutin; vid celiaki, välj produkter märkta ”glutenfri” för att '
                     'undvika kontaminering med vete.',
                     'Utmärkta till snabba frukostar, blötlagda i varm mjölk eller i grekisk yoghurt med bär för en '
@@ -9749,7 +9749,7 @@ OVERRIDES = {
                                 'som är släkt med rabarber, och det är naturligt glutenfritt.')]),
     775: dict(lead='Ett traditionellt spannmål med ett av de lägsta glykemiska indexen: lätt skalade kornflingor som '
                    'pressats med kliet, rikt på lösliga betaglukanfibrer. En fast konsistens och mättande krispighet som '
-                   'gör dem till ett utmärkt val på frukostbordet. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'gör dem till ett utmärkt val på frukostbordet. Det glykemiska indexet är lågt (en '
                    'uppskattning, 28).',
               tips=('Fullkornskorn har ett av de lägsta glykemiska indexen bland spannmål (28), vilket gör det till ett '
                     'utmärkt val vid diabetes och för den som vill ha lång mättnad.',
@@ -9766,7 +9766,7 @@ OVERRIDES = {
                    'fibrer som arabinoxylan och betaglukan. Rågen utmärks av sin stora förmåga att suga upp vätska i '
                    'matsmältningskanalen och bilda en tjock gel som bromsar magsäckstömningen, så att du känner dig mätt i '
                    'timmar och kolhydraterna når blodet långsamt och gradvis i stället för i kraftiga glukostoppar. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45).',
+                   'glykemiska indexet är lågt (en uppskattning, 45).',
               tips=('En lämplig portion för vuxna är 40–50 g. Inför dem gradvis om du inte är van vid fiberrika spannmål, '
                     'och drick rikligt med vatten under dagen så att fibrerna gör sitt jobb smidigt.',
                     'Eftersom rågkornen är kompakta behöver de koka varsamt i 8 till 10 minuter med mjölk eller vatten, '
@@ -9785,7 +9785,7 @@ OVERRIDES = {
                    'essentiella aminosyror, cirka 14 g per 100 g. Men puffningen med hög värme och tryck förändrar kornets '
                    'fysiska struktur; stärkelsen blir öppen och lättsmält så snart den möter matsmältningsenzymerna, och '
                    'därför når sockret blodet tydligt snabbare än från kokt quinoa. Det glykemiska indexet är medelhögt '
-                   '(en kliniskt granskad uppskattning, 65).',
+                   '(en uppskattning, 65).',
               tips=('En portion på 30 g ger en stor volym på tallriken och är ett bra alternativ för barn till sötade '
                     'cornflakes, och den passar den som tränar och behöver lättsmälta kolhydrater före passet.',
                     'För att bromsa sockerupptaget efter puffningen, ät den inte ensam med en lätt vegetabilisk dryck; '
@@ -9805,7 +9805,7 @@ OVERRIDES = {
                    'och fettet nästan obefintligt. Men värmen vid extrudering och puffning omvandlar det bruna risets '
                    'stärkelse till en form som bryts ned snabbt; kroppen smälter den mycket snabbt och glukosen når blodet '
                    'på kort tid, vilket kan leda till energidipp och sötsug en stund senare om måltiden inte är '
-                   'balanserad. Det glykemiska indexet är högt (en kliniskt granskad uppskattning, 80).',
+                   'balanserad. Det glykemiska indexet är högt (en uppskattning, 80).',
               tips=('Lita inte på dem som en ensam måltid för att stilla hungern; håll portionen måttlig (25–30 g) och se '
                     'dem som en krispig bas för proteinrika livsmedel som kokt ägg, avokado eller vit ost.',
                     'Undvik sorter med tillsatt socker eller karamellsmak och välj naturella flingor gjorda bara av brunt '
@@ -9843,7 +9843,7 @@ OVERRIDES = {
                    'starch) jämfört med kokt havre. Stärkelsen bryts inte ned i tunntarmen utan når tjocktarmen, där '
                    'bakterierna omvandlar den till kortkedjiga fettsyror som butyrat. Den tjocka grekiska yoghurten '
                    'tillför kasein och vassleprotein, och nötterna ger god krispighet och enkelomättat fett. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45).',
+                   'glykemiska indexet är lågt (en uppskattning, 45).',
               tips=('En komplett måltid som förenar komplexa kolhydrater, protein och fett. En portion på 200 g mättar '
                     'ända till lunch.',
                     'Använd hela havregryn (grova eller skurna) i stället för snabbhavre, naturell grekisk yoghurt utan '
@@ -9932,7 +9932,7 @@ OVERRIDES = {
                    'trådar och en stark doft som påminner om lagrad ost. Bakom den kraftiga smaken döljer sig en av '
                    'hemligheterna i det japanska köket: natto är en av de rikaste livsmedelskällorna till K2-vitamin (den '
                    'långverkande formen MK-7). K-vitamin bidrar till att bibehålla normal benstomme och till normal '
-                   'blodkoagulering. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 25).',
+                   'blodkoagulering. Det glykemiska indexet är lågt (en uppskattning, 25).',
               tips=('En förpackning på 45 till 50 g två till tre gånger i veckan ger rikligt med K2-vitamin och levande '
                     'bakterier från fermenteringen.',
                     'Natto äts traditionellt utan tillagning; rör bönorna med ätpinnar i snabba cirklar 50 till 100 gånger '
@@ -9991,7 +9991,7 @@ OVERRIDES = {
                    'smak. Det viktiga är att fermenteringen bryter ned en stor del av de komplexa sockerarterna '
                    '(oligosackarider) som ger gaser i tjocktarmen och minskar fytinsyran som hämmar upptaget av mineraler, '
                    'och tempeh ger 21 g protein per 100 g med fibrer, järn och magnesium. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 20).',
+                   '(en uppskattning, 20).',
               tips=('En portion på 100 g är en lätt och mättande huvudrätt, och den passar den som vill hålla vikten och '
                     'aptiten i schack tack vare kombinationen av protein och fibrer.',
                     'Skär tempeh i små tärningar och ångkoka dem i 5 minuter först för att ta bort beskan, och fräs dem '
@@ -10016,7 +10016,7 @@ OVERRIDES = {
                    'ett anrikt havslivsmedel i det japanska köket. Den görs av en pasta av vit fisk utan ben och skinn '
                    '(surimi) som kryddas lätt, formas på träbrädor och sedan ångkokas utan fritering. Den ger 12,5 g '
                    'protein per 100 g med nästan inget fett (1,2 g) och måttligt antal kalorier (98 kcal), vilket gör den '
-                   'till ett lätt proteintillskott i dina rätter. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'till ett lätt proteintillskott i dina rätter. Det glykemiska indexet är lågt (en '
                    'uppskattning, 45).',
               tips=('En portion på 60 g (4 till 5 skivor) ger cirka 7,5 g protein med bara 59 kcal; ett lämpligt mellanmål '
                     'för barn eller ett tillskott som höjer näringsvärdet i soppor och nudlar.',
@@ -10046,7 +10046,7 @@ OVERRIDES = {
                    'och minskar hur mycket olja som tränger in. Räkor ger protein av hög kvalitet från havet och '
                    'innehåller färgämnet astaxantin, som ger dem den rosa färgen; ändå är tempura friterad mat med '
                    'stärkelsehölje, vilket höjer kalorierna och gör den till en måltid som behöver balanseras medvetet. '
-                   'Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'Det glykemiska indexet är lågt (en uppskattning, 50).',
               tips=('En balanserad portion är 3 till 4 bitar (cirka 100 till 120 g); ät dem med en stor tallrik ångkokta '
                     'grönsaker och wakamesallad så blir du mätt utan att beställa mer friterat.',
                     'Ät dem direkt efter friteringen när de har runnit av på galler eller hushållspapper, och doppa dem '
@@ -10072,7 +10072,7 @@ OVERRIDES = {
                    'skydda en del av de värmekänsliga vitaminerna, men grönsaksskivornas stora yta gör att de suger upp '
                    'mer olja än räkor eller fisk. Resultatet är en god grönsaksrätt som är lätt att servera för barn och '
                    'för den som inte tycker om kokta grönsaker, men som ger extra kalorier som kräver medvetenhet om '
-                   'mängden. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 50).',
+                   'mängden. Det glykemiska indexet är lågt (en uppskattning, 50).',
               tips=('100 till 120 g passar som en gemensam förrätt vid sidan av som ger variation av grönsaker utan för '
                     'mycket fett.',
                     'Om du gör den hemma kan du använda airfryer efter att ha sprayat lite olivolja, så får du en liknande '
@@ -10097,8 +10097,8 @@ OVERRIDES = {
                    'Hiroshima. Den bygger på en stor mängd finstrimlad vitkål som binds samman av en lätt smet av mjöl, '
                    'ägg och bergsyams, och den ger fibrer och de glukosinolater som kålfamiljen är känd för. Den är en '
                    'komplett måltid med fibrer, protein och stärkelse, men näringsvärdet påverkas mycket av tillbehören, '
-                   'den bruna såsen och den japanska majonnäsen på ytan. Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 50).',
+                   'den bruna såsen och den japanska majonnäsen på ytan. Det glykemiska indexet är lågt (en '
+                   'uppskattning, 50).',
               tips=('En halv medelstor pannkaka (cirka 180 g) är en komplett och mättande lunch tack vare den stora '
                     'mängden kål som fyller magen.',
                     'För ett högre näringsvärde, öka mängden kål och minska mjölet i smeten, och använd okonomiyakisås och '
@@ -10123,7 +10123,7 @@ OVERRIDES = {
                    'döljer en bit bläckfisk med inlagd röd ingefära (beni shoga) och salladslök. Bläckfiskköttet är i sig '
                    'ett magert protein från havet med mycket B12-vitamin och järn och innehåller taurin, även om mängden i '
                    'varje boll är liten. Ingefäran tillför gingerol, som ger den skarpa smaken. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 60).',
+                   'medelhögt (en uppskattning, 60).',
               tips=('En portion på 4 till 5 bollar (120 g) är ett lagom mellanmål mellan huvudmåltiderna.',
                     'De tillagas i särskilda järnformar med lite olja; undvik för mycket majonnäs, och strö över flingor '
                     'av torkad bonito (katsuobushi) för mer smak och protein.',
@@ -10203,7 +10203,7 @@ OVERRIDES = {
                    'fermenterats med stammar av mjölksyrabakterier. Den milda syran ger en frisk smak. Men för '
                    'tydlighetens skull: tillsatt frukt eller koncentrerad juice höjer sockret till cirka 7 g per 100 ml; '
                    'den är alltså inte en sockerfri dryck och ska räknas in i dagens kolhydrater. Det glykemiska indexet '
-                   'är lågt (en kliniskt granskad uppskattning, 40).',
+                   'är lågt (en uppskattning, 40).',
               tips=('Ett glas (200 ml) är ett bättre alternativ än läsk och industriella juicer och ger 6 g protein och '
                     'god vätska.',
                     'Den dricks kall efter att ha skakats väl för att blanda fruktbottensatsen, och du kan späda den med '
@@ -10230,7 +10230,7 @@ OVERRIDES = {
                    'livsmedel som ger 26 g vegetabiliskt protein per 100 g, med oljesyra (samma enkelomättade fett som i '
                    'olivolja), E-vitamin och magnesium. Nyckeln är att hålla koll på energitätheten; det höga naturliga '
                    'fettet höjer kalorierna till cirka 595 kcal per 100 g, så en sked räcker för koncentrerad energi och '
-                   'god mättnad. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 14).',
+                   'god mättnad. Det glykemiska indexet är lågt (en uppskattning, 14).',
               tips=('En lämplig portion är en struken till en rågad matsked (20 till 30 g), som ger cirka 5 till 8 g '
                     'protein utan att rubba den dagliga kaloribudgeten.',
                     'Bred det på färska äppelskivor eller selleristavar i stället för vitt bröd; kombinationen av fruktens '
@@ -10257,7 +10257,7 @@ OVERRIDES = {
                    'havremjöl och fullkorn ger faktiskt ett bättre näringsvärde än kex av raffinerat vitt mjöl, med 6,5 g '
                    'fibrer per 100 g. Men för tydlighetens skull: kexen kan inte räknas som ett livsmedel för '
                    'matsmältningen; de är fortfarande ett bakverk med tillsatt fett och socker som ger sprödhet och '
-                   'krispighet, vilket placerar det glykemiska indexet i det medelhöga intervallet (en kliniskt granskad '
+                   'krispighet, vilket placerar det glykemiska indexet i det medelhöga intervallet (en '
                    'uppskattning, 59).',
               tips=('En rimlig portion är ett till två kex (cirka 30 g) med en kopp te eller kaffe utan socker, inte som '
                     'ersättning för en komplett frukost.',
@@ -10282,7 +10282,7 @@ OVERRIDES = {
                    'utan gräddas med stora mängder linfrön, solrosfrön, pumpafrön och sesam. Det ger 14 g fibrer och 14 g '
                    'protein per 100 g, med omättat fett, bland annat vegetabiliskt omega-3 från linfröna. Den kraftiga '
                    'krispigheten kräver långsammare tuggning, vilket kan bidra till att man känner sig mätt innan man äter '
-                   'för mycket. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 48).',
+                   'för mycket. Det glykemiska indexet är lågt (en uppskattning, 48).',
               tips=('Två stora skivor (cirka 35 g) är ett lämpligt alternativ till bröd till frukost och middag och mättar '
                     'väl tack vare fibrerna och proteinet.',
                     'Bred på labneh eller getost och lägg på gurkskivor, olivolja och lite za’atar, så får du en komplett '
@@ -10364,7 +10364,7 @@ OVERRIDES = {
                    'kanter med en mjuk mandelkärna. Men näringsmässigt är den en festlig sötsak med många kalorier och '
                    'mycket stärkelse; en hel kaka (cirka 100 g) ger nästan 440 kcal och 30 g socker, så den förtjänar att '
                    'avnjutas medvetet i en avvägd portion för att undvika blodsockertoppar. Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 68).',
+                   'medelhögt (en uppskattning, 68).',
               tips=('En rimlig portion är en halv kaka (cirka 50 g) som äts långsamt med en kopp svart kaffe eller osötat '
                     'grönt te.',
                     'Undvik att äta den på fastande mage på morgonen; att äta den som efterrätt efter en lunch rik på '
@@ -10394,7 +10394,7 @@ OVERRIDES = {
                    'kombinationen av snabb stärkelse, mycket fett och salt; blandningen aktiverar hjärnans '
                    'belöningscentrum och förklarar varför det är svårt att sluta efter första näven. Chips ger 535 kcal '
                    'och 33 g fett per 100 g, så de är ett nöjeslivsmedel som kräver medvetenhet om portionen. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 54).',
+                   'glykemiska indexet är lågt (en uppskattning, 54).',
               tips=('En rimlig portion är en liten påse på 25 g (cirka 134 kcal); undvik att äta direkt ur familjepåsen '
                     '(200 g) och lägg din portion i en liten skål så att du ser mängden.',
                     'Lägg gurk- och morotsskivor bredvid chipsen och ät dem med en dipp av grekisk yoghurt med örter; det '
@@ -10423,7 +10423,7 @@ OVERRIDES = {
                    'vitlökspulver och en lätt rökig ton. Näringsmässigt ligger de nära saltchips med cirka 530 kcal per '
                    '100 g, men kryddblandningen innehåller ofta vassle, jästextrakt och lite socker, vilket höjer '
                    'kolhydraterna något till 51 g och ger en intensiv umamismak som väcker aptiten. Det glykemiska indexet '
-                   'är medelhögt (en kliniskt granskad uppskattning, 56).',
+                   'är medelhögt (en uppskattning, 56).',
               tips=('En avvägd portion är 25 g som ett nöjesmellanmål ibland; undvik att äta dem framför tv:n eller '
                     'datorn, eftersom distraktion kan fördubbla mängden du äter utan att du märker det.',
                     'Drick ett stort glas vatten eller örtte till för att fukta munnen och minska suget efter mer på grund '
@@ -10449,7 +10449,7 @@ OVERRIDES = {
                    'hackad rå lök. Kombinationen förenar fettets fyllighet, ketchupens sötma, curryns hetta och lökens '
                    'skärpa. Men kalorimässigt är det en mycket tung måltid; en medelstor portion (220 g) ger cirka 715 '
                    'kcal och mer än 46 g fett, med en hög glykemisk belastning (41,8). Det glykemiska indexet är medelhögt '
-                   '(en kliniskt granskad uppskattning, 65).',
+                   '(en uppskattning, 65).',
               tips=('Beställ den lilla storleken (kleine friet) eller dela portionen med någon, och räkna den som en '
                     'komplett huvudmåltid och inte som ett lätt tillbehör.',
                     'Be om såserna vid sidan av (apart) om det går, så doppar du pommes fritesen medvetet i stället för '
@@ -10476,7 +10476,7 @@ OVERRIDES = {
                    'rikligt med rå lök. Frikandelns kött görs oftast av en blandning av mekaniskt separerat kött kryddat '
                    'med varma kryddor som muskot. Trots ryktet som gatumat är kolhydraterna relativt få jämfört med pommes '
                    'frites (8,6 g per 100 g), och den ger cirka 10 g protein per styck; men den är processad mat med '
-                   'mycket salt och mättat fett som kräver måtta. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'mycket salt och mättat fett som kräver måtta. Det glykemiska indexet är lågt (en '
                    'uppskattning, 40).',
               tips=('En färdig frikandel (110 g, cirka 286 kcal) räcker för att stilla suget; undvik att kombinera en stor '
                     'portion pommes frites och frikandel speciaal i samma måltid, så fördubblar du inte det mättade '
@@ -10506,7 +10506,7 @@ OVERRIDES = {
                    'omsluter en tät fyllning av nederländsk ost. När den friteras blåser degen upp och fyllningen blir het '
                    'smält ost. Men näringsmässigt förenar den raffinerad stärkelse (25 g kolhydrater) med ostens mättade '
                    'fett (16,5 g fett) och ger 290 kcal per 100 g (cirka 203 kcal per styck). Det glykemiska indexet är '
-                   'medelhögt (en kliniskt granskad uppskattning, 60).',
+                   'medelhögt (en uppskattning, 60).',
               tips=('En bit på 70 g räcker som snack eller tillbehör; den är ett köttfritt val men ingen kalorisnål '
                     'bantningsmat.',
                     'Bit inte i kaassoufflén direkt efter friteringen; osten inuti förblir mycket het och kan bränna '
@@ -10533,7 +10533,7 @@ OVERRIDES = {
                    'kryddad kycklingfärs med ett yttre hölje av krossade cornflakes i stället för vanligt ströbröd. Höljet '
                    'ger en grov, karaktäristisk krispighet medan kycklingen förblir mör inuti. Den hör till friteriernas '
                    'snacks med mest protein, 11 g per 100 g (cirka 8,3 g per styck), med 270 kcal, och därför väljer många '
-                   'barn och unga den på snabbmatsrestauranger. Det glykemiska indexet är medelhögt (en kliniskt granskad '
+                   'barn och unga den på snabbmatsrestauranger. Det glykemiska indexet är medelhögt (en '
                    'uppskattning, 60).',
               tips=('En kipcorn (75 g, cirka 203 kcal) räcker som alternativ till nuggets; ät den med en färsk grön sallad '
                     'för högre näringsvärde.',
@@ -10559,7 +10559,7 @@ OVERRIDES = {
                    'gatusnack. Blandningen av nudlar och grönsaker pressas till en tjock kaka som paneras och friteras '
                    'tills den blir gyllene och krispig utanpå och mjuk och kryddig inuti. Kakan ger tydlig kolhydratenergi '
                    '(27 g kolhydrater per 100 g) och cirka 265 kcal, så den är ett utpräglat stärkelsesnack. Det '
-                   'glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 62).',
+                   'glykemiska indexet är medelhögt (en uppskattning, 62).',
               tips=('En kaka på 85 g (cirka 225 kcal) räcker som ett lätt kolhydratmål; den bör inte kombineras med pommes '
                     'frites, så fördubblas inte den raffinerade stärkelsen i samma måltid.',
                     'Den serveras traditionellt med lite satésås (jordnötssås) eller söt chilisås (chilisaus) för den '
@@ -10585,7 +10585,7 @@ OVERRIDES = {
                    'gurkmeja och chili. Den är en varm och komplett måltid med 11 g protein per 100 g tack vare '
                    'skaldjuren, men kokosmjölken och risnudlarna ger en hel skål (400 g) cirka 780 kcal; den är därför en '
                    'mättande huvudrätt som behöver vägas upp vid kaloriunderskott. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 50).',
+                   'uppskattning, 50).',
               tips=('En skål är en komplett lunch; den passar den som tränar och behöver återhämtning, medan den som '
                     'minskar kalorierna behöver en mindre portion eller färre nudlar.',
                     'För tydligt färre kalorier, be om att få halva risnudlarna utbytta mot böngroddar (bean sprouts) '
@@ -10612,7 +10612,7 @@ OVERRIDES = {
                    '”pepparvatten”. Soppan bygger på gula eller bruna linser som kokas med äpple, morot, selleri och en '
                    'blandning av varma kryddor (gurkmeja, spiskummin, koriander, ingefära och kanel). Den är en utmärkt '
                    'måltid i vegetarisk kost och ger 4,5 g fibrer och 6,2 g protein per 100 g med måttligt antal kalorier '
-                   '(115 kcal). Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 38).',
+                   '(115 kcal). Det glykemiska indexet är lågt (en uppskattning, 38).',
               tips=('En tallrik på 300 g (cirka 345 kcal) är en mättande lunch som passar mycket bra för den som äter med '
                     'kaloriunderskott och vill gå ned i vikt utan att svälta.',
                     'Mixa halva soppan och låt resten vara hela linser, så får du en sammetslen konsistens utan '
@@ -10638,7 +10638,7 @@ OVERRIDES = {
                    'frisk syra och örtsmak. Den görs av vit sötvattensfisk med tamarind, ananas, tomat, okra och '
                    'böngroddar. Den är ett utmärkt val vid viktnedgång och ger 10 g protein med bara 85 kcal per 100 g och '
                    'mycket lite fett (1,8 g). Syran från tamarinden och ananasen ger en kraftig smak som minskar behovet '
-                   'av salt när den lagas hemma. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, 35).',
+                   'av salt när den lagas hemma. Det glykemiska indexet är lågt (en uppskattning, 35).',
               tips=('En stor skål (300 g) ger cirka 255 kcal och 30 g protein; den passar vid deffning och för den som '
                     'vill ha en stor måltid med måttligt antal kalorier.',
                     'Koka inte fiskbitarna länge så att de inte förlorar sin mörhet, och tillsätt de vietnamesiska örterna '
@@ -10664,7 +10664,7 @@ OVERRIDES = {
                    'Sydamerika och har en vit, tät stärkelserik kärna. Den är en bra kolhydratkälla för den som tränar och '
                    'laddar kolhydrater (carb-loading) eller bygger muskler; den ger 38 g kolhydrater och cirka 160 kcal '
                    'per 100 g med nästan inget fett. Den är naturligt glutenfri, vilket gör den till ett lämpligt '
-                   'alternativ till vete vid celiaki. Det glykemiska indexet är lågt (en kliniskt granskad uppskattning, '
+                   'alternativ till vete vid celiaki. Det glykemiska indexet är lågt (en uppskattning, '
                    '55).',
               tips=('En kokt bit på 150 g ger cirka 240 kcal; den passar som energi två timmar före hårda träningspass och '
                     'vid kost utan spannmål (grain-free).',
@@ -10692,7 +10692,7 @@ OVERRIDES = {
                    'innehåller långsamt nedbruten stärkelse med 4,1 g fibrer per 100 g och är en bra källa till kalium och '
                    'B6-vitamin. Den innehåller också växtämnet diosgenin, som industriellt används för att framställa '
                    'vissa hormonläkemedel, men kroppen omvandlar det inte till hormoner när man äter jams. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 51).',
+                   'indexet är lågt (en uppskattning, 51).',
               tips=('En portion på 150 g ger cirka 177 kcal; den är ett bra kolhydratval till lunch som räcker för fysisk '
                     'aktivitet utan den tyngd som vitt bröd ger.',
                     'Skala den och koka den i lätt saltat vatten tills den är mjuk som potatis, och mosa den sedan med en '
@@ -10744,7 +10744,7 @@ OVERRIDES = {
                    'vetenskaplig anledning: medan potatisen lagrar energi som snabbsmält stärkelse lagrar jordärtskockan '
                    'en stor del som inulin, ett komplext fruktossocker som människan inte bryter ned i tunntarmen och som '
                    'inte når blodet som glukos. Därför har den en söt, jordig smak som påminner om kronärtskockshjärtan, '
-                   'ett lågt glykemiskt index (en kliniskt granskad uppskattning, 15) och måttligt antal kalorier (73 kcal '
+                   'ett lågt glykemiskt index (en uppskattning, 15) och måttligt antal kalorier (73 kcal '
                    'per 100 g). Näringstabeller räknar inte alltid inulin som fibrer, så den redovisade fiberhalten är '
                    'låg.',
               tips=('100 g är ett klokt alternativ till potatis och bröd vid insulinresistens eller typ 2-diabetes.',
@@ -10769,7 +10769,7 @@ OVERRIDES = {
                    'och sockerrör blev vanliga. Den liknar en morot i formen men har krämvit färg och en jordig söt smak '
                    'med en touch av varma kryddor. Den ger 4,9 g fibrer per 100 g med C-vitamin och folat. Men '
                    'ugnsrostning koncentrerar det naturliga sockret och höjer det glykemiska indexet till det medelhöga '
-                   'intervallet (en kliniskt granskad uppskattning, 65) jämfört med bladgrönsaker, så den som vill hålla '
+                   'intervallet (en uppskattning, 65) jämfört med bladgrönsaker, så den som vill hålla '
                    'blodsockret i schack behöver tänka på portionen.',
               tips=('En portion på 150 g (cirka 112 kcal) är en varm hösträtt som stillar suget efter kolhydrater utan '
                     'bakverk eller industriellt socker.',
@@ -10794,7 +10794,7 @@ OVERRIDES = {
     816: dict(lead='Svartrot (i Nederländerna schorseneren, även kallad ”vinterns sparris” eller ”de fattigas sparris”) är '
                    'en vinterrot med svart, grovt skal som döljer vitt, mjukt kött som avger en mjölkig saft när den '
                    'skalas. Smaken är mild och påminner om sparris med en nötig ton. Den innehåller lösliga inulinfibrer '
-                   'och kalium och påverkar blodsockret lugnt; det glykemiska indexet är lågt (en kliniskt granskad '
+                   'och kalium och påverkar blodsockret lugnt; det glykemiska indexet är lågt (en '
                    'uppskattning, 25) med 82 kcal per 100 g, vilket gör den till en vintergrönsak som passar vid diabetes.',
               tips=('En portion på 150 g är en måltid rik på fibrer och mineraler och passar medelhavskost och kost vid '
                     'insulinresistens.',
@@ -10820,7 +10820,7 @@ OVERRIDES = {
                    'och rova och ska inte förväxlas med kålrabbi. Den är omtyckt av den som bantar i norra Europa för sitt '
                    'orangegula kött och sin söta, jordiga smak, som påminner om potatis när den kokas och mosas, med bara '
                    '37 kcal per 100 g (mindre än hälften av potatisens kalorier). Det glykemiska indexet är högt (en '
-                   'kliniskt granskad uppskattning, 72), men kolhydraterna är mycket få, så portionens glykemiska '
+                   'uppskattning, 72), men kolhydraterna är mycket få, så portionens glykemiska '
                    'belastning förblir låg (6,8), vilket gör den till ett tryggt och gott alternativ vid viktnedgång och '
                    'insulinresistens.',
               tips=('En portion på 150 g mättar bra med bara cirka 56 kcal; ett utmärkt val för den som vill ha en varm '
@@ -10918,7 +10918,7 @@ OVERRIDES = {
                    'japanska köket och är känd för sina runda skivor fulla av symmetriska hålrum. Den har en krispig '
                    'konsistens och mild, söt smak som påminner om vattenkastanj. Den är en källa till fibrer, C-vitamin '
                    'och koppar och ger 3,1 g fibrer och cirka 74 kcal per 100 g, och den är ett särpräglat krispigt '
-                   'tillskott för den som äter enkel och ren mat. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'tillskott för den som äter enkel och ren mat. Det glykemiska indexet är lågt (en '
                    'uppskattning, 35).',
               tips=('En portion på 100 g ger måttligt med kolhydrater (17 g) som mättar och passar kaloriunderskott tack '
                     'vare fibrerna.',
@@ -10942,7 +10942,7 @@ OVERRIDES = {
                    'tunna rötterna med brunt skal och fast, fibrigt kött har en karaktäristisk jordig, nötig smak. De '
                    'innehåller inulinfibrer, klorogensyra och polyfenoler, med 3,3 g fibrer och cirka 72 kcal per 100 g, '
                    'vilket gör dem till ett bra val när blodsockret ska hållas i schack. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 30).',
+                   '(en uppskattning, 30).',
               tips=('En portion på 100 g är ett utmärkt varmt tillbehör två gånger i veckan och passar vid '
                     'insulinresistens och typ 2-diabetes.',
                     'Skrapa skalet med knivens baksida utan att ta bort allt (de flesta polyfenolerna sitter precis '
@@ -11021,7 +11021,7 @@ OVERRIDES = {
                    'ananas, mango och jordgubbe. Den ger 3 g fibrer per 100 g med 75 kcal och är en källa till C-vitamin, '
                    'B6-vitamin och kalium. Den är en lyxig naturlig efterrätt i en balanserad kost, men sötman betyder att '
                    'den innehåller fruktsocker, så den som har diabetes bör njuta av den i en avvägd portion. Det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 40).',
+                   'glykemiska indexet är lågt (en uppskattning, 40).',
               tips=('En rimlig portion är en halv medelstor frukt (cirka 150 g, ungefär 112 kcal); ät den som kall '
                     'efterrätt efter en proteinrik lunch, så får du dessertens njutning utan industriellt socker.',
                     'Dela den mogna frukten (som ger efter för ett lätt tryck som en avokado) på mitten, pressa över några '
@@ -11047,7 +11047,7 @@ OVERRIDES = {
                    'len konsistens som påminner om pudding eller naturlig glass, med en förtrollande smak som förenar '
                    'jordgubbens sötma, ananasens fräschhet och en lätt syrlig ton. Och det goda beskedet för den som '
                    'håller koll på blodsockret eller vill gå ned i vikt: trots den fylliga tropiska smaken är det '
-                   'glykemiska indexet lågt (en kliniskt granskad uppskattning, 35) och den glykemiska belastningen per '
+                   'glykemiska indexet lågt (en uppskattning, 35) och den glykemiska belastningen per '
                    'portion mycket lätt (cirka 4,7). Förklaringen är de naturliga fibrerna (3,3 g per 100 g), som bromsar '
                    'sockerupptaget i tarmen, och frukten ger en lyxig tropisk efterrätt med bara 66 kcal per 100 g.',
               tips=('Den bästa portionen är 100 g (ungefär en halv kopp rent vitt fruktkött). Ät den helst som en lätt och '
@@ -11080,7 +11080,7 @@ OVERRIDES = {
                    'fruktkött med en len, sandig konsistens som smälter i munnen som päron doppat i farinsocker och '
                    'honung. Och den glada överraskningen för den som håller koll på blodsockret: den naturliga sötman är '
                    'inbäddad i fibrer (5,3 g per 100 g), så sockret når blodet långsammare än man tror; det glykemiska '
-                   'indexet är därför lågt (en kliniskt granskad uppskattning, 45) och den glykemiska belastningen per '
+                   'indexet är därför lågt (en uppskattning, 45) och den glykemiska belastningen per '
                    'frukt 6,6 (låg), vilket ger en kunglig känsla av sötma utan dåligt samvete.',
               tips=('Den gyllene portionen är en medelstor frukt (cirka 100 g). Ät den som efterrätt efter en lunch med '
                     'grönsaker och protein, eller som eftermiddagsmål som tar udden av suget efter industriella sötsaker.',
@@ -11105,7 +11105,7 @@ OVERRIDES = {
     828: dict(lead='En liten oval grön frukt som får dig att känna dig som i en sval tropisk trädgård så fort du känner '
                    'doften! Feijoa förenar doften av guava, ananasens sötma och en lätt mintton som friskar upp '
                    'andedräkten. Den stora hemligheten är att den är en dold fiberskatt: 100 g innehåller 6,4 g fibrer mot '
-                   'bara 55 kcal! Med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 35) och en mycket '
+                   'bara 55 kcal! Med ett lågt glykemiskt index (en uppskattning, 35) och en mycket '
                    'liten glykemisk belastning (2,3 per portion) blir den en nära vän för den som söker mättnad med nästan '
                    'inget fett.',
               tips=('Två till tre frukter om dagen (cirka 100 till 120 g). Ett utmärkt mellanmål mellan huvudmåltiderna '
@@ -11178,7 +11178,7 @@ OVERRIDES = {
                    'fjäll som liknar ormskinn, vilket gör att många tvekar att röra den! Men när du trycker på toppen och '
                    'skalar den lätt kommer elfenbensvita, krispiga klyftor fram som påminner om färskt äpple, med en unik '
                    'smak som förenar ananasens sötma, bananens mildhet och en lätt syra. Det glykemiska indexet är lågt '
-                   '(en kliniskt granskad uppskattning, 45) och den glykemiska belastningen per portion 8,1 (låg), och den '
+                   '(en uppskattning, 45) och den glykemiska belastningen per portion 8,1 (låg), och den '
                    'kompakta konsistensen kräver ordentlig tuggning.',
               tips=('Två medelstora skalade frukter (cirka 100 g) räcker gott som ett rikt mellanmål mellan måltiderna.',
                     'När det fjälliga skalet är borta finns en tunn genomskinlig hinna runt de vita klyftorna; ta inte '
@@ -11202,7 +11202,7 @@ OVERRIDES = {
     832: dict(lead='Asiaterna kallar den ”drakens öga”, eftersom det genomskinliga fruktköttet syns som en pupill runt en '
                    'blank svart kärna när du skalar bort det släta, träiga skalet. Den liknar den kända litchin, men '
                    'smaken är varmare och djupare med en honungslik, myskaktig ton och en mild blomdoft. Det glykemiska '
-                   'indexet är lågt (en kliniskt granskad uppskattning, 50) och den glykemiska belastningen per portion 7 '
+                   'indexet är lågt (en uppskattning, 50) och den glykemiska belastningen per portion 7 '
                    '(låg), förutsatt att du äter den färsk och håller koll på antalet.',
               tips=('Den avvägda dagliga portionen är 8 till 10 skalade frukter (cirka 80 till 100 g). Utmärkt som '
                     'sommarefterrätt efter en balanserad lunch.',
@@ -11230,7 +11230,7 @@ OVERRIDES = {
                    'sammandragande i halsen, men låter du den ligga i veckor på en sval plats tills den blir brun och helt '
                    'mjuk (ett stadium som engelsmännen kallar bletting) sker undret! Fruktköttet blir en varm sammetslen '
                    'massa som påminner om äppelmos kryddat med kanel och muskot. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 40) och den glykemiska belastningen för två frukter bara 2,1, så den '
+                   'uppskattning, 40) och den glykemiska belastningen för två frukter bara 2,1, så den '
                    'ger värme och lugn mättnad utan tillsatt socker.',
               tips=('Två helt mogna frukter (cirka 80 g). Ett underbart vinterval som varm efterrätt med en kopp grönt te '
                     'eller kanel på eftermiddagen.',
@@ -11256,7 +11256,7 @@ OVERRIDES = {
     834: dict(lead='Många tror att vilda blåbär bara är vanliga odlade blåbär, men skillnaden är stor! Blåbär växer vilt i '
                    'skogarna i norra Europa och Skandinavien, och när du delar bäret finns inget vitt fruktkött som hos '
                    'odlade amerikanska blåbär, utan ett mörklila fruktkött som genast färgar fingrarna. Den koncentrerade '
-                   'färgen är ett tecken på mycket antocyaniner. Med ett lågt glykemiskt index (en kliniskt granskad '
+                   'färgen är ett tecken på mycket antocyaniner. Med ett lågt glykemiskt index (en '
                    'uppskattning, 25) och en glykemisk belastning per portion på bara 2,2 är de ett utmärkt val för den '
                    'som håller koll på blodsockret.',
               tips=('En fylld handflata färska eller frysta bär (100 g) om dagen.',
@@ -11283,7 +11283,7 @@ OVERRIDES = {
     835: dict(lead='Har du någonsin föreställt dig en frukt som förenar björnbärets sötma, hallonets doft och loganbärets '
                    'fräschhet? Det är precis vad boysenbär är! Ett stort, mörkt rubinrött bär med saftigt fruktkött som '
                    'exploderar i munnen med fyllig smak. Och fördelen som gör det omtyckt av nutritionister är att en kopp '
-                   '(125 g) ger cirka 6,6 g fibrer mot bara 62 kcal, med ett lågt glykemiskt index (en kliniskt granskad '
+                   '(125 g) ger cirka 6,6 g fibrer mot bara 62 kcal, med ett lågt glykemiskt index (en '
                    'uppskattning, 25) och en glykemisk belastning per kopp på bara 2,2.',
               tips=('En medelstor kopp (cirka 125 g). Utmärkt till en lätt frukost med keso eller som förfinad efterrätt '
                     'efter middagen.',
@@ -11309,7 +11309,7 @@ OVERRIDES = {
                    'kallar det ”björnbärens "cabernet"” som jämförelse med de finaste druvorna; förklaringen är den '
                    'komplexa smaken som förenar vilda björnbärs sötma med lätt jordiga toner och avvägd syra. Bären är '
                    'långa och glänsande och fruktköttet smälter mjukt, och en kopp (125 g) ger cirka 6,4 g fibrer och bara '
-                   '60 kcal, med ett lågt glykemiskt index (en kliniskt granskad uppskattning, 25) och en glykemisk '
+                   '60 kcal, med ett lågt glykemiskt index (en uppskattning, 25) och en glykemisk '
                    'belastning på 2,1.',
               tips=('En fylld kopp (125 g). Ett härligt mellanmål mitt på dagen.',
                     'Blanda dem med en liten näve råa valnötter eller lite hampafrön; fettet och proteinet gör måltiden '
@@ -11331,8 +11331,8 @@ OVERRIDES = {
                                 'ätandet.')]),
     837: dict(lead='Hemligheten i det svenska och finska köket som ingen där vill vara utan! Vilda, rubinröda bär stora '
                    'som pärlor, med en frisk, syrlig och behagligt skarp smak. Skandinaver serverar dem till feta kött- '
-                   'och fiskrätter. Och det viktigaste för blodsockret: det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 25) och den glykemiska belastningen per portion bara 1,1.',
+                   'och fiskrätter. Och det viktigaste för blodsockret: det glykemiska indexet är lågt (en '
+                   'uppskattning, 25) och den glykemiska belastningen per portion bara 1,1.',
               tips=('En halv liten kopp (cirka 50 g). Två matskedar till en mäktig lunch ger fräschhet och balans åt '
                     'måltiden.',
                     'Se upp med kommersiella sylter i butiken; många innehåller ungefär halva vikten i tillsatt socker! '
@@ -11357,7 +11357,7 @@ OVERRIDES = {
                    'är en annan historia: krispigheten hos rostade jordnötter med cashewnötternas smöriga sötma och en '
                    'lätt kakaoton i bakgrunden. Den innehåller cirka 24 % protein, något färre kalorier än mandel och '
                    'cirka 20 % färre än valnötter, med mycket fibrer (14 g per 100 g). Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 15) och den glykemiska belastningen per portion 0,6, så effekten på '
+                   'uppskattning, 15) och den glykemiska belastningen per portion 0,6, så effekten på '
                    'blodsockret är mycket liten.',
               tips=('En liten näve (cirka 30 g, 20 till 22 nötter). Ett utmärkt energimellanmål en timme före träning '
                     'eller ett mättande kvällsmål.',
@@ -11383,7 +11383,7 @@ OVERRIDES = {
                    'jorden och som har varit kända sedan faraonernas tid! Skrynkliga knölar i jordfärg som vid tuggning '
                    'frigör en söt nötig smak som påminner om mandeldryck och vanilj. Den stora fördelen är att de '
                    'innehåller mycket fibrer (cirka 10 g i en portion på 30 g), bland annat resistent stärkelse som '
-                   'passerar magen osmält och når tjocktarmen. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'passerar magen osmält och når tjocktarmen. Det glykemiska indexet är lågt (en '
                    'uppskattning, 35) och den glykemiska belastningen per portion bara 1,1.',
               tips=('En liten näve (30 g, ungefär två rågade matskedar).',
                     'Torra jordmandlar kan vara hårda för tänderna; hemligheten är att blötlägga dem i kallt vatten i '
@@ -11409,7 +11409,7 @@ OVERRIDES = {
     840: dict(lead='Vi är alla vana vid att spotta ut vattenmelonkärnorna och bara njuta av det röda fruktköttet, men om '
                    'du visste vad de små kärnorna döljer skulle du inte slänga en enda! När de torkas, skalas och rostas '
                    'hör de till de vegetabiliska livsmedel som innehåller mest protein och magnesium: cirka 28 % av vikten '
-                   'är protein, med omättat fett och få kolhydrater. Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'är protein, med omättat fett och få kolhydrater. Det glykemiska indexet är lågt (en '
                    'uppskattning, 15) och den glykemiska belastningen per portion 0,5, alltså mycket liten effekt på '
                    'blodsockret.',
               tips=('Två rågade matskedar (30 g, cirka 167 kcal). Ett smart kvällsmål.',
@@ -11434,7 +11434,7 @@ OVERRIDES = {
                    'till inkakulturens matarv! De liknar rostade jordnötter men har mörkare färg och en djup, jordig '
                    'nötsmak. De är världskända för att höra till de vegetabiliska livsmedel som innehåller mest omega-3 '
                    '(alfa-linolensyra), i nivå med linfrön, med cirka 30 % protein. Det glykemiska indexet är lågt (en '
-                   'kliniskt granskad uppskattning, 15) och den glykemiska belastningen per portion 0,2, så de påverkar '
+                   'uppskattning, 15) och den glykemiska belastningen per portion 0,2, så de påverkar '
                    'knappast blodsockret.',
               tips=('En liten näve (cirka 25 till 30 g). Ett mättande mellanmål mellan måltiderna med protein och fett.',
                     'De äts rostade och lätt saltade eller strös över sallad och yoghurt. Eftersom det omättade fettet är '
@@ -11487,7 +11487,7 @@ OVERRIDES = {
                    'dammar och sötvattenträsk i Sydostasien. Det inre köttet är snövitt, krispigt och saftigt precis som '
                    'en skiva kallt grönt äpple, med en lätt nötig smak. Fördelen som kockar älskar är att de behåller '
                    'krispigheten även efter tillagning i soppor och varma rätter. Kalorierna är måttliga (97 kcal per 100 '
-                   'g), det glykemiska indexet lågt (en kliniskt granskad uppskattning, 45) och den glykemiska '
+                   'g), det glykemiska indexet lågt (en uppskattning, 45) och den glykemiska '
                    'belastningen per portion 9,4 (låg).',
               tips=('En liten kopp skalade färska skivor (100 g, cirka 97 kcal).',
                     'Skala bort det mörkbruna skalet och skär dem i tunna skivor; ät dem råa i gröna sallader, eller lägg '
@@ -11750,8 +11750,8 @@ OVERRIDES = {
     853: dict(lead='Se upp här, det här är ingen vanlig ost! Brunost görs inte av ostmassa utan genom att vassle kokas med '
                    'mjölk eller grädde i många timmar tills mjölksockret (laktosen) karamelliseras naturligt, så att osten '
                    'blir brun och smakar som kola och karamell. Därför innehåller den mycket mer kolhydrater än någon '
-                   'annan ost (cirka 38 g per 100 g, mest mjölksocker). Det glykemiska indexet är lågt (en kliniskt '
-                   'granskad uppskattning, 35) tack vare fettet och proteinet, men stora portioner höjer den glykemiska '
+                   'annan ost (cirka 38 g per 100 g, mest mjölksocker). Det glykemiska indexet är lågt (en '
+                   'uppskattning, 35) tack vare fettet och proteinet, men stora portioner höjer den glykemiska '
                    'belastningen. Den är koncentrerad energi som passar idrottare, men vid diabetes och insulinresistens '
                    'bör du behandla den som en sötsak: mycket tunna skivor med osthyvel, och högst en skiva på 20 g.',
               tips=('En tunn skiva (20 g, cirka 88 kcal och 7,6 g kolhydrater).',
@@ -12090,7 +12090,7 @@ OVERRIDES = {
                    'tjocknar med en fyllig brun smak. Det möra köttet är rikt på protein (cirka 18 g per 100 g), och den '
                    'långa tillagningen förvandlar bindväven till gelatin som gör såsen len. Kolhydraterna är relativt få '
                    '(cirka 6 g tillgängliga per 100 g) och kommer från den karamelliserade löken och lite bröd, och det '
-                   'glykemiska indexet är lågt (en kliniskt granskad uppskattning, 45), så länge grytan inte serveras på '
+                   'glykemiska indexet är lågt (en uppskattning, 45), så länge grytan inte serveras på '
                    'en hög pommes frites som på belgiska restauranger.',
               tips=('En medelstor tallrik (250 g, cirka 388 kcal).',
                     'Servera med kokta grönsaker eller grönsallad, eller med två matskedar kokt potatis med skal, i '
@@ -12118,7 +12118,7 @@ OVERRIDES = {
                    'kalla vinterdagar. Benfria kycklingbitar tillagas med purjolök, selleri och morötter i en fyllig '
                    'buljong, och sedan reds buljongen med lite färsk grädde och äggula så att den får en gyllene, '
                    'sammetslen färg. Den innehåller inget mjöl, cirka 12 g protein per 100 g, och få tillgängliga '
-                   'kolhydrater (cirka 3,6 g per 100 g). Det glykemiska indexet är lågt (en kliniskt granskad '
+                   'kolhydrater (cirka 3,6 g per 100 g). Det glykemiska indexet är lågt (en '
                    'uppskattning, 35), så soppan passar den som har diabetes eller insulinresistens, och den är lätt för '
                    'en känslig mage.',
               tips=('En stor tallrik (300 g, cirka 345 kcal och 36 g protein).',
@@ -12248,7 +12248,7 @@ OVERRIDES = {
     872: dict(lead='Kaninkött hör till de lättaste vita köttslagen: det innehåller ungefär lika mycket protein som '
                    'kyckling och lite fett (cirka 4 g per 100 g i den här rätten). I det flamländska köket tillagas det '
                    'långsamt med katrinplommon och lök, så att köttet tar upp plommonens milda sötma. Det glykemiska '
-                   'indexet för rätten är lågt (en kliniskt granskad uppskattning, 40), och de tillgängliga kolhydraterna '
+                   'indexet för rätten är lågt (en uppskattning, 40), och de tillgängliga kolhydraterna '
                    'är cirka 6,5 g per 100 g och kommer från katrinplommonen; en balanserad portion är en bit kanin med '
                    'två eller tre katrinplommon och en fyllig buljong med grönsaker.',
               tips=('En medelstor tallrik (250 g, cirka 363 kcal) med två till tre katrinplommon.',
@@ -12272,7 +12272,7 @@ OVERRIDES = {
     873: dict(lead='Stoemp är den folkliga trösträtten i Bryssel och Belgien: potatismos blandat med en stor mängd kokta '
                    'grönsaker och smör, särskilt purjolök, morötter och kål. Den är smartare än vanligt potatismos, '
                    'eftersom grönsakerna minskar stärkelsetätheten i varje tugga och tillför fibrer, och smöret bromsar '
-                   'matsmältningen något. Det glykemiska indexet är medelhögt (en kliniskt granskad uppskattning, 60), '
+                   'matsmältningen något. Det glykemiska indexet är medelhögt (en uppskattning, 60), '
                    'jämfört med ett högt index för vanligt potatismos. Men en stor portion höjer den glykemiska '
                    'belastningen (16,2 för en portion på 180 g, det vill säga medelhög), så ät den bredvid en bit grillat '
                    'kött eller fisk och en sallad, och gör den inte till huvudrätten.',
@@ -12299,7 +12299,7 @@ OVERRIDES = {
                    'sockerkorn som kallas ”pärlsocker”, som smälter och karamelliseras på det heta järnet till ett '
                    'krispigt, glasartat lager. En våffla (100 g) innehåller cirka 420 kcal, lika mycket som en hel måltid, '
                    'och mer än 50 g tillgängliga kolhydrater, varav mycket socker. Det glykemiska indexet är högt (en '
-                   'kliniskt granskad uppskattning, 75) och den glykemiska belastningen mycket hög, så den höjer '
+                   'uppskattning, 75) och den glykemiska belastningen mycket hög, så den höjer '
                    'blodsockret snabbt. Det smarta knepet: du behöver inte avstå från den på ett besök i Belgien, men dela '
                    'den med någon, ät den efter en måltid rik på protein och sallad och inte på fastande mage, och '
                    'promenera 15 till 20 minuter efteråt så att musklerna hjälper till att använda glukosen.',
@@ -12323,8 +12323,8 @@ OVERRIDES = {
                                 'och ett enklare mellanmål är bättre.')]),
     875: dict(lead='Den mest kända souveniren från diamant- och hamnstaden Antwerpen i Belgien: krispiga kex formade som '
                    'en liten hand och täckta med mandelflarn. Smaken bygger på smör, vetemjöl och ägg, och kexen är rika '
-                   'på socker och fett (cirka 480 kcal per 100 g). Det glykemiska indexet är medelhögt (en kliniskt '
-                   'granskad uppskattning, 65), men den lilla storleken (bara 12 g) gör kexet lämpligt som en avvägd '
+                   'på socker och fett (cirka 480 kcal per 100 g). Det glykemiska indexet är medelhögt (en '
+                   'uppskattning, 65), men den lilla storleken (bara 12 g) gör kexet lämpligt som en avvägd '
                    'sötsak: ett kex med en kopp kaffe utan socker ger 58 kcal och cirka 7 g kolhydrater, och den '
                    'glykemiska belastningen är låg (4,7), så du stillar suget efter kex utan att överskrida portionen.',
               tips=('Ett kex (12 g, cirka 58 kcal).',

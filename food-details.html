@@ -946,9 +946,9 @@
                 kcal_per_100g: "سعرة لكل 100 غ",
                 methodology_line: "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
                 methodology_link: "المنهجية والمراجع العلمية",
-                gi_reviewed_badge: "تقدير مراجع سريرياً",
+                gi_reviewed_badge: "تقدير",
                 chart_label_gi_reviewed: "المؤشر الجلايسيمي (تقدير)",
-                gi_sources_reviewed: "📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية.",
+                gi_sources_reviewed: "📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية.",
                 reviewed_team: "تمت مراجعته من قبل فريق ويبو هيلث الطبي",
                 sources_more: "المنهجية والتفاصيل ←",
                 ii_not_tested: "غير مختبر سريرياً",
@@ -1010,9 +1010,9 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Values are measured or calculated using a documented methodology",
                 methodology_link: "Methodology & scientific references",
-                gi_reviewed_badge: "Clinically reviewed estimate",
+                gi_reviewed_badge: "Estimate",
                 chart_label_gi_reviewed: "Glycemic Index (estimate)",
-                gi_sources_reviewed: "📚 The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the international tables.",
+                gi_sources_reviewed: "📚 The glycemic index of this food is an estimate by the WiBo Health medical team, not a laboratory measurement from the international tables.",
                 reviewed_team: "Reviewed by the WiBo Health medical team",
                 sources_more: "Methodology & details →",
                 ii_not_tested: "Not clinically tested",
@@ -1074,9 +1074,9 @@
                 kcal_per_100g: "kcal per 100 g",
                 methodology_line: "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
                 methodology_link: "Methodologie & wetenschappelijke bronnen",
-                gi_reviewed_badge: "Klinisch beoordeelde schatting",
+                gi_reviewed_badge: "Schatting",
                 chart_label_gi_reviewed: "Glykemische Index (schatting)",
-                gi_sources_reviewed: "📚 De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale tabellen.",
+                gi_sources_reviewed: "📚 De glykemische index van dit product is een schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale tabellen.",
                 reviewed_team: "Gecontroleerd door het medisch team van WiBo Health",
                 sources_more: "Methodologie & details →",
                 ii_not_tested: "Niet klinisch getest",
@@ -1317,7 +1317,7 @@ if (food.image) {
             return food.gi_status === 'measured' && typeof food.gi === 'number';
         }
 
-        // Clinically reviewed estimate: shown with its own badge, never attributed to Atkinson
+        // Estimate: shown with its own badge, never attributed to Atkinson
         function hasReviewedGI(food) {
             return food.gi_status === 'reviewed' && typeof food.gi === 'number';
         }
@@ -1376,7 +1376,7 @@ if (food.image) {
                 "@type": "MedicalWebPage",
                 "url": pageUrl,
                 "name": title,
-                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (clinically reviewed estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal, Protein: ${(food.nutrition?.protein || 0).toFixed(1)} g, Carbohydrates: ${(food.nutrition?.carbs || 0).toFixed(1)} g, Fat: ${fatVal} g per 100 g.`,
+                "description": `${title}${hasMeasuredGI(food) ? ` Glycemic Index: ${food.gi} (Atkinson 2021)` : (hasReviewedGI(food) ? ` Glycemic Index: ${food.gi} (estimate)` : (food.gi_status === 'not_applicable' ? ' Glycemic Index: not applicable' : ''))}${hasTestedII(food) ? `, Insulin Index: ${food.ii}` : ''}, Calories: ${Math.round(food.nutrition?.calories || 0)} kcal, Protein: ${(food.nutrition?.protein || 0).toFixed(1)} g, Carbohydrates: ${(food.nutrition?.carbs || 0).toFixed(1)} g, Fat: ${fatVal} g per 100 g.`,
                 "about": { "@type": "Thing", "name": food.nameEn || title, "description": category },
                 "author": { "@type": "Person", "@id": "https://wibohealth.com/doctor.html#wassim-habib", "name": "Dr. Wassim Habib", "jobTitle": ({ ar: "مؤسس WiBo Health", en: "Founder, WiBo Health", nl: "Oprichter, WiBo Health" })[currentLang] || "مؤسس WiBo Health", "url": "https://wibohealth.com/doctor.html" },
                 "publisher": { "@type": "Organization", "name": "WiBo Health", "url": "https://wibohealth.com", "logo": { "@type": "ImageObject", "url": "https://wibohealth.com/images/icon-512.png" } },

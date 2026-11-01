@@ -71,7 +71,7 @@ PILOT = {
     74: ('dairy_solid', 30), 77: ('dairy_solid', 30), 30: ('veg', 120), 31: ('veg', 100), 32: ('veg', 120),
     35: ('veg', 90), 36: ('veg', 100), 37: ('veg', 80), 38: ('veg', 100), 39: ('veg', 100), 40: ('veg', 70),
     132: ('drink', 240), 133: ('drink', 240),
-    # batch 2: GI is a clinically reviewed estimate (gi_status 'reviewed', not Atkinson-measured) or not applicable
+    # batch 2: GI is an estimate (gi_status 'reviewed', not Atkinson-measured) or not applicable
     6: ('grain', 150), 12: ('grain', 50), 13: ('grain', 50), 15: ('grain', 150), 16: ('grain', 150),
     20: ('legume', 150), 21: ('legume', 150), 23: ('legume', 150), 24: ('legume', 100), 25: ('legume', 50),
     28: ('tuber', 100), 33: ('veg', 100), 34: ('veg', 80), 41: ('veg', 120), 42: ('veg', 90), 43: ('veg', 80),
@@ -489,7 +489,7 @@ UI = {
     'ar': dict(
         dir='rtl', title='{name}: السعرات والمؤشر الجلايسيمي والقيم الغذائية | WiBo Health',
         desc_measured='{name}: {kcal} سعرة لكل 100 غ، المؤشر الجلايسيمي {gi} ({level}) وفق Atkinson 2021، والحمل الجلايسيمي {gl} لحصة {p} غ. قيم غذائية كاملة ونصائح وبدائل.',
-        desc_reviewed='{name}: {kcal} سعرة لكل 100 غ، المؤشر الجلايسيمي {gi} ({level}، تقدير مراجع سريرياً)، والحمل الجلايسيمي {gl} لحصة {p} غ. قيم غذائية كاملة ونصائح وبدائل.',
+        desc_reviewed='{name}: {kcal} سعرة لكل 100 غ، المؤشر الجلايسيمي {gi} ({level}، تقدير)، والحمل الجلايسيمي {gl} لحصة {p} غ. قيم غذائية كاملة ونصائح وبدائل.',
         desc_na='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. المؤشر الجلايسيمي لا ينطبق (أقل من 5 غ كربوهيدرات متاحة). قيم غذائية كاملة ونصائح وبدائل.',
         home='الرئيسية', guide='دليل الأطعمة', gi='المؤشر الجلايسيمي', gl='الحمل الجلايسيمي', kcal='السعرات الحرارية',
         protein='البروتين', per100='لكل 100 غ', per_portion='لحصة {p} غ', na='لا ينطبق',
@@ -505,10 +505,10 @@ UI = {
         rank_protein='{ya}وفر {v} غ بروتين لكل 100 سعرة، في المرتبة {rank} من {m} في فئة {group} (الأعلى أولاً).',
         rank_kcal='{ya}حتوي على {v} سعرة لكل 100 غ، في المرتبة {rank} من {m} في فئة {group} (الأقل أولاً).',
         lead_measured='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو متوسط {studies} في الجداول الدولية (Atkinson 2021). وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
-        lead_reviewed='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير مراجع سريرياً وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
-        gi_reviewed='تقدير مراجع سريرياً',
+        lead_reviewed='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{avail} غ كربوهيدرات متاحة. مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}).',
+        gi_reviewed='تقدير',
         rank_reviewed='{ya}أتي في المرتبة {rank} بين أصناف فئة {group} التي لها مؤشر جلايسيمي (وعددها {m})، من الأقل إلى الأعلى.',
-        src_reviewed='📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير مراجع سريرياً من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021).',
+        src_reviewed='📚 قيمة المؤشر الجلايسيمي لهذا الصنف تقدير من فريق ويبو هيلث الطبي، وليست قياساً مخبرياً من الجداول الدولية (Atkinson 2021).',
         reviewed_team='تمت مراجعته من قبل فريق ويبو هيلث الطبي · آخر مراجعة {date}',
         lead_na='كل 100 غ من {name} تحتوي على {kcal} سعرة حرارية و{protein} غ بروتين. ولأن{h} {ya}حتوي على أقل من 5 غ كربوهيدرات متاحة لكل 100 غ، فلا ينطبق علي{h} المؤشر الجلايسيمي، ويكون أثر{h} المباشر على سكر الدم ضئيلاً.',
         boodi_title='امسح الباركود في السوبرماركت مع تطبيق بودي 💚',
@@ -528,7 +528,7 @@ UI = {
     'en': dict(
         dir='ltr', title='{name}: Calories, Glycemic Index & Nutrition Facts | WiBo Health',
         desc_measured='{name}: {kcal} kcal per 100 g, glycemic index {gi} ({level}) from Atkinson 2021, glycemic load {gl} per {p} g portion. Full nutrition facts, tips and alternatives.',
-        desc_reviewed='{name}: {kcal} kcal per 100 g, glycemic index {gi} ({level}, clinically reviewed estimate), glycemic load {gl} per {p} g portion. Full nutrition facts, tips and alternatives.',
+        desc_reviewed='{name}: {kcal} kcal per 100 g, glycemic index {gi} ({level}, estimate), glycemic load {gl} per {p} g portion. Full nutrition facts, tips and alternatives.',
         desc_na='{name}: {kcal} kcal and {protein} g protein per 100 g. Glycemic index not applicable (under 5 g available carbohydrate). Full nutrition facts, tips and alternatives.',
         home='Home', guide='Food guide', gi='Glycemic index', gl='Glycemic load', kcal='Calories', protein='Protein',
         per100='per 100 g', per_portion='per {p} g portion', na='Not applicable', levels=('Low', 'Medium', 'High'),
@@ -544,10 +544,10 @@ UI = {
         rank_protein='It provides {v} g of protein per 100 kcal, ranking {rank} of {m} in {group} (highest first).',
         rank_kcal='It has {v} kcal per 100 g, ranking {rank} of {m} in {group} (lowest first).',
         lead_measured='Every 100 g of {name} contains {kcal} kcal and {avail} g of available carbohydrate. Its glycemic index is {gi} ({level}), the average of {studies} in the International GI Tables (Atkinson 2021). A typical {p} g portion has a glycemic load of {gl} ({gl_level}).',
-        lead_reviewed='Every 100 g of {name} contains {kcal} kcal and {avail} g of available carbohydrate. Its glycemic index is {gi} ({level}), a clinically reviewed estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}).',
-        gi_reviewed='Clinically reviewed estimate',
+        lead_reviewed='Every 100 g of {name} contains {kcal} kcal and {avail} g of available carbohydrate. Its glycemic index is {gi} ({level}), an estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}).',
+        gi_reviewed='Estimate',
         rank_reviewed='Among the foods in {group} with a glycemic index ({m}), it ranks {rank} (lowest first).',
-        src_reviewed='📚 The glycemic index of this food is a clinically reviewed estimate by the WiBo Health medical team, not a laboratory measurement from the International GI Tables (Atkinson 2021).',
+        src_reviewed='📚 The glycemic index of this food is an estimate by the WiBo Health medical team, not a laboratory measurement from the International GI Tables (Atkinson 2021).',
         reviewed_team='Reviewed by the WiBo Health medical team · Last reviewed {date}',
         lead_na='Every 100 g of {name} contains {kcal} kcal and {protein} g of protein. Because it has less than 5 g of available carbohydrate per 100 g, the glycemic index does not apply and its direct effect on blood sugar is minimal.',
         boodi_title='Scan supermarket barcodes with the boodi app 💚',
@@ -567,7 +567,7 @@ UI = {
     'nl': dict(
         dir='ltr', title='{name}: calorieën, glykemische index & voedingswaarde | WiBo Health',
         desc_measured='{name}: {kcal} kcal per 100 g, glykemische index {gi} ({level}) volgens Atkinson 2021, glykemische lading {gl} per portie van {p} g. Volledige voedingswaarden, tips en alternatieven.',
-        desc_reviewed='{name}: {kcal} kcal per 100 g, glykemische index {gi} ({level}, klinisch beoordeelde schatting), glykemische lading {gl} per portie van {p} g. Volledige voedingswaarden, tips en alternatieven.',
+        desc_reviewed='{name}: {kcal} kcal per 100 g, glykemische index {gi} ({level}, schatting), glykemische lading {gl} per portie van {p} g. Volledige voedingswaarden, tips en alternatieven.',
         desc_na='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Glykemische index niet van toepassing (minder dan 5 g beschikbare koolhydraten). Volledige voedingswaarden, tips en alternatieven.',
         home='Home', guide='Voedingswijzer', gi='Glykemische index', gl='Glykemische lading', kcal='Calorieën', protein='Eiwit',
         per100='per 100 g', per_portion='per portie van {p} g', na='Niet van toepassing', levels=('Laag', 'Gemiddeld', 'Hoog'),
@@ -582,10 +582,10 @@ UI = {
         rank_protein='Het levert {v} g eiwit per 100 kcal en staat op plaats {rank} van {m} in {group} (hoogste eerst).',
         rank_kcal='Het bevat {v} kcal per 100 g en staat op plaats {rank} van {m} in {group} (laagste eerst).',
         lead_measured='Elke 100 g {name} bevat {kcal} kcal en {avail} g beschikbare koolhydraten. De glykemische index is {gi} ({level}), het gemiddelde van {studies} in de internationale GI-tabellen (Atkinson 2021). Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}).',
-        lead_reviewed='Elke 100 g {name} bevat {kcal} kcal en {avail} g beschikbare koolhydraten. De glykemische index is {gi} ({level}), een klinisch beoordeelde schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}).',
-        gi_reviewed='Klinisch beoordeelde schatting',
+        lead_reviewed='Elke 100 g {name} bevat {kcal} kcal en {avail} g beschikbare koolhydraten. De glykemische index is {gi} ({level}), een schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}).',
+        gi_reviewed='Schatting',
         rank_reviewed='Van de producten in {group} met een glykemische index ({m}) staat het op plaats {rank} (laagste eerst).',
-        src_reviewed='📚 De glykemische index van dit product is een klinisch beoordeelde schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale GI-tabellen (Atkinson 2021).',
+        src_reviewed='📚 De glykemische index van dit product is een schatting van het medisch team van WiBo Health, geen laboratoriummeting uit de internationale GI-tabellen (Atkinson 2021).',
         reviewed_team='Gecontroleerd door het medisch team van WiBo Health · Laatst gecontroleerd {date}',
         lead_na='Elke 100 g {name} bevat {kcal} kcal en {protein} g eiwit. Omdat het minder dan 5 g beschikbare koolhydraten per 100 g bevat, is de glykemische index niet van toepassing en is het directe effect op de bloedsuiker minimaal.',
         boodi_title='Scan barcodes in de supermarkt met de boodi-app 💚',
@@ -615,7 +615,7 @@ FAQ = {
         w_fiber='يمكن إدخال{h} باعتدال، ف{huwa} {ya}حتوي على {fiber} غ ألياف لكل 100 غ تساعد على الشبع، وحصة {p} غ تعطي {kcal_p} سعرة.',
         w_general='يمكن إدخال{h} ضمن نظام متوازن مع التحكم بالحصة: حصة {p} غ تعطي {kcal_p} سعرة، والمهم هو مجموع سعرات اليوم ونوعية بقية الوجبة.',
         s_measured='مؤشر{h} الجلايسيمي {gi} ({level}) وفق Atkinson 2021. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
-        s_reviewed='مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير مراجع سريرياً وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
+        s_reviewed='مؤشر{h} الجلايسيمي {gi} ({level})، وهو تقدير وليس قياساً مخبرياً. وفي حصة معتادة من {p} غ يبلغ حمل{h} الجلايسيمي {gl} ({gl_level}){advice}',
         s_advice=('، لذلك يكون تأثير هذه الحصة على سكر الدم محدوداً.', '، لذلك يُفضّل تناول{h} مع بروتين أو خضار غنية بالألياف.',
                   '، لذلك يُفضّل تقليل الحصة أو تقسيمها وتناول{h} مع البروتين والألياف.'),
         s_na_zero='لا يحتوي {name} تقريباً على كربوهيدرات متاحة، لذلك لا ينطبق علي{h} المؤشر الجلايسيمي، وأثر{h} المباشر على سكر الدم ضئيل. أما أثر الوجبة فتحدده الأطعمة المرافقة ل{h} كالخبز والأرز والصلصات المحلاة.',
@@ -630,7 +630,7 @@ FAQ = {
         w_fiber='It can be included in moderation: it contains {fiber} g of fibre per 100 g, which supports fullness, and a {p} g portion gives {kcal_p} kcal.',
         w_general='It can fit a balanced plan with portion control: a {p} g portion gives {kcal_p} kcal, and what matters most is your total daily intake and the rest of the meal.',
         s_measured='Its glycemic index is {gi} ({level}) according to Atkinson 2021. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
-        s_reviewed='Its glycemic index is {gi} ({level}), a clinically reviewed estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
+        s_reviewed='Its glycemic index is {gi} ({level}), an estimate rather than a laboratory measurement. A typical {p} g portion has a glycemic load of {gl} ({gl_level}){advice}',
         s_advice=(', so the effect of this portion on blood sugar is limited.', ', so it is best combined with protein or fibre-rich vegetables.',
                   ', so it is best to reduce or split the portion and combine it with protein and fibre.'),
         s_na='{name} {contains} only {avail} g of available carbohydrate per 100 g, so the glycemic index does not apply and its direct effect on blood sugar is minimal. The meal’s effect depends on what you eat with it, such as bread, rice or sweetened sauces.',
@@ -645,7 +645,7 @@ FAQ = {
         w_fiber='Het past met mate: het bevat {fiber} g vezels per 100 g, wat de verzadiging ondersteunt, en een portie van {p} g geeft {kcal_p} kcal.',
         w_general='Het past in een evenwichtig eetpatroon met aandacht voor de portie: een portie van {p} g geeft {kcal_p} kcal, en het gaat vooral om je totale dagelijkse inname en de rest van de maaltijd.',
         s_measured='De glykemische index is {gi} ({level}) volgens Atkinson 2021. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
-        s_reviewed='De glykemische index is {gi} ({level}), een klinisch beoordeelde schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
+        s_reviewed='De glykemische index is {gi} ({level}), een schatting en geen laboratoriummeting. Een gangbare portie van {p} g heeft een glykemische lading van {gl} ({gl_level}){advice}',
         s_advice=(', dus het effect van deze portie op de bloedsuiker is beperkt.', ', dus combineer het bij voorkeur met eiwit of vezelrijke groenten.',
                   ', dus verklein of verdeel de portie bij voorkeur en combineer haar met eiwit en vezels.'),
         s_na='{name} {bevat} slechts {avail} g beschikbare koolhydraten per 100 g, dus de glykemische index is niet van toepassing en het directe effect op de bloedsuiker is minimaal. Het effect van de maaltijd hangt af van wat je erbij eet, zoals brood, rijst of gezoete sauzen.',
@@ -1542,25 +1542,25 @@ BODY_UI = {
     'ar': dict(review='تمت المراجعة الطبية من قبل <a href="{doctor}">د. وسيم حبيب</a> · {date}', ml='مل', sugar='السكر', gi_unavail='غير متوفر', gi_published='قيمة جلايسيمية منشورة', ii_row='مؤشر الإنسولين',
                ref_published='قيمة المؤشر الجلايسيمي لهذا الصنف مأخوذة من قياس منشور (المصدر في البند التالي). '
                              'تصنيف المؤشر (منخفض ≤ 55 · متوسط 56–69 · مرتفع ≥ 70) وفق: ',
-               desc_published='قيمة جلايسيمية منشورة', desc_reviewed='تقدير مراجع سريرياً',
+               desc_published='قيمة جلايسيمية منشورة', desc_reviewed='تقدير',
                desc_na_low='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. المؤشر الجلايسيمي لا ينطبق (كربوهيدرات متاحة قليلة). قيم غذائية كاملة ونصائح وبدائل.',
                desc_nogi='{name}: {kcal} سعرة و{protein} غ بروتين لكل 100 غ. قيم غذائية كاملة ونصائح وبدائل.'),
     'en': dict(review='Medically reviewed by <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Sugar', gi_unavail='Not available', gi_published='Published glycemic value', ii_row='Insulin index',
                ref_published='The glycemic index of this food comes from a published measurement (source in the next item). '
                              'GI bands (low ≤ 55 · medium 56–69 · high ≥ 70) follow: ',
-               desc_published='published glycemic value', desc_reviewed='clinically reviewed estimate',
+               desc_published='published glycemic value', desc_reviewed='estimate',
                desc_na_low='{name}: {kcal} kcal and {protein} g protein per 100 g. Glycemic index not applicable (low in available carbohydrate). Full nutrition facts, tips and alternatives.',
                desc_nogi='{name}: {kcal} kcal and {protein} g protein per 100 g. Full nutrition facts, tips and alternatives.'),
     'nl': dict(review='Medisch beoordeeld door <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Suiker', gi_unavail='Niet beschikbaar', gi_published='Gepubliceerde glykemische waarde', ii_row='Insuline-index',
                ref_published='De glykemische index van dit product komt uit een gepubliceerde meting (bron in het volgende punt). '
                              'De GI-indeling (laag ≤ 55 · gemiddeld 56–69 · hoog ≥ 70) volgt: ',
-               desc_published='gepubliceerde glykemische waarde', desc_reviewed='klinisch beoordeelde schatting',
+               desc_published='gepubliceerde glykemische waarde', desc_reviewed='schatting',
                desc_na_low='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Glykemische index niet van toepassing (weinig beschikbare koolhydraten). Volledige voedingswaarden, tips en alternatieven.',
                desc_nogi='{name}: {kcal} kcal en {protein} g eiwit per 100 g. Volledige voedingswaarden, tips en alternatieven.'),
     SV: dict(review='Medicinskt granskad av <a href="{doctor}">Dr. Wassim Habib</a> | {role} · {date}', ml='ml', sugar='Socker', gi_unavail='Inte tillgängligt', gi_published='Publicerat glykemiskt värde', ii_row='Insulinindex',
              ref_published='Det glykemiska indexet för det här livsmedlet kommer från en publicerad mätning (källa i nästa punkt). '
                            'GI-indelningen (lågt ≤ 55 · medelhögt 56–69 · högt ≥ 70) följer: ',
-             desc_published='publicerat glykemiskt värde', desc_reviewed='kliniskt granskad uppskattning',
+             desc_published='publicerat glykemiskt värde', desc_reviewed='uppskattning',
              desc_na_low='{name}: {kcal} kcal och {protein} g protein per 100 g. Glykemiskt index är inte tillämpligt (lite tillgängliga kolhydrater). Fullständigt näringsvärde, tips och alternativ.',
              desc_nogi='{name}: {kcal} kcal och {protein} g protein per 100 g. Fullständigt näringsvärde, tips och alternativ.'),
 }
@@ -1766,7 +1766,7 @@ def build(food, lang, ctx):
     group_name = GROUPS[group][li]
     group_txt = group_name.lower() if lang == SV else group_name      # "i gruppen spannmål och stärkelse"
     measured = food['gi_status'] == 'measured' and food['gi'] is not None      # Atkinson 2021
-    reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # clinically reviewed estimate
+    reviewed = food['gi_status'] == 'reviewed' and food['gi'] is not None      # estimate
     has_gi = measured or reviewed
     team = food['id'] in TEAM_REVIEW
     ov = ctx['overrides'].get(str(food['id']), {})
@@ -1940,7 +1940,8 @@ def build(food, lang, ctx):
         for i, (k, v) in enumerate((('c', food['carbs']), ('p', food['protein']), ('f', food['fat']), ('fib', food['fiber']))))
     if has_gi:
         # measured (Atkinson tables) and published values share one label (user decision 2026-11-01)
-        gi_sub = bu['gi_published'] if (published or not reviewed) else u['gi_reviewed']
+        gi_sub = (bu['gi_published'] if (published or not reviewed)
+                  else f'<a href="{L("/methodology.html#labels")}">{u["gi_reviewed"]}</a>')   # 2026-11-01
         gi_box = (f'<span class="gi-num {LV[lvl]}">{gi}</span><span class="badge {LV[lvl]}">{u["levels"][lvl]}</span>'
                   f'<span class="gi-sub">{gi_sub}</span>')
         gl_box = (f'<span class="gi-num {LV[glv]}" id="glNum">{fmt(gl)}</span>'
@@ -2007,6 +2008,9 @@ def build(food, lang, ctx):
     elif reviewed:
         # approved 31 October 2026: "details in the next item" only where the page carries its own note
         line = bu['ref_published'] if published else r['reviewed' if ov.get('refs_extra') else 'reviewed_nonote']
+        if not published:                   # "this value is an estimate…" -> what each label means (2026-11-01)
+            cut = line.index('.') + 1
+            line = f'<a href="{L("/methodology.html#labels")}">{line[:cut]}</a>{line[cut:]}'
         items = [line + ref_cite(REF_ISO)]
     elif unavailable:                       # no GI line: the approved note below explains why there is no value
         items = []
