@@ -665,8 +665,9 @@ def build_site_page(p):
                 <a href="{link('/', SV)}">{UI_SV["home"]}</a> › <span>{esc(p["crumb"])}</span>
             </nav>
             <h1>{esc(p["h1"])}</h1>
-{img}{p["body"]}{note}        </article>'''
+{p.get("top", "")}{img}{p["body"]}{note}        </article>'''
     return shell(SV, title=p['title'], desc=p['desc'], urls=urls, schema=schema, main=main, draft=False,
+                 extra_head=p.get('extra_head', ''),
                  og_type='profile' if p['kind'] == 'profile' else 'website', image=image,
                  image_alt=p.get('image_alt', ''), active=None, switch=switch)
 

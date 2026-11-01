@@ -1,0 +1,76 @@
+/* boodi app waitlist card (boodi.html + sv/boodi.html) */
+.boodi-waitlist {
+    margin: 0;
+    padding: 16px;
+    border-radius: 18px;
+    background: var(--wb-soft, rgba(16, 185, 129, 0.08));
+    border: 1px solid var(--wb-border, rgba(16, 185, 129, 0.35));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
+    max-width: 560px;
+}
+.boodi-waitlist .waitlist-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.boodi-waitlist input[type="email"] {
+    flex: 1 1 220px;
+    min-width: 0;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid var(--wb-border, #cbd5e1);
+    background: var(--wb-card, #fff);
+    color: var(--wb-text, #0f172a);
+    font: inherit;
+    font-size: 16px;            /* no zoom on iOS */
+}
+.boodi-waitlist input[type="email"]:focus { outline: 2px solid #10b981; outline-offset: 1px; }
+.boodi-waitlist button[type="submit"] {
+    flex: 0 0 auto;
+    height: 48px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 12px;
+    background: #059669;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.boodi-waitlist button[type="submit"]:hover:not(:disabled) { background: #047857; }
+.boodi-waitlist button[type="submit"]:disabled { opacity: 0.45; cursor: not-allowed; }
+.boodi-waitlist .waitlist-consent {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--wb-muted, #475569);
+    cursor: pointer;
+}
+.boodi-waitlist .waitlist-consent input { width: 18px; height: 18px; margin: 2px 0 0; flex: 0 0 18px; accent-color: #059669; }
+.boodi-waitlist .waitlist-consent a { color: #059669; text-decoration: underline; }
+[data-theme="dark"] .boodi-waitlist .waitlist-consent a { color: #6ee7b7; }
+.boodi-waitlist .waitlist-msg { margin: 0; font-size: 14px; font-weight: 600; min-height: 0; }
+.boodi-waitlist .waitlist-msg:empty { display: none; }
+.boodi-waitlist .waitlist-msg.ok { color: #059669; }
+.boodi-waitlist .waitlist-msg.err { color: #dc2626; }
+[data-theme="dark"] .boodi-waitlist .waitlist-msg.ok { color: #6ee7b7; }
+[data-theme="dark"] .boodi-waitlist .waitlist-msg.err { color: #fca5a5; }
+.boodi-waitlist.is-done .waitlist-row,
+.boodi-waitlist.is-done .waitlist-consent { display: none; }
+.boodi-waitlist { position: relative; }
+.boodi-waitlist .waitlist-trap { position: absolute !important; top: 0; inset-inline-start: 0; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; opacity: 0; pointer-events: none; }  /* no left:-9999px: that scrolls sideways in RTL */
+.boodi-waitlist .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+@media (max-width: 480px) {
+    .boodi-waitlist { padding: 12px; }
+    .boodi-waitlist button[type="submit"] { flex: 1 1 100%; }
+}
+/* the Play badge right under the card (sv page: plain <p>) */
+.boodi-waitlist + p, .about-card .boodi-waitlist + p { margin-top: 14px !important; }
+/* boodi.html first section on phones: a little less air so title, card and Play badge fit the first screen */
+@media (max-width: 600px) {
+    .hero-showcase { margin-top: 16px; }
+    .hero-showcase > .hero-content { gap: 14px; }
+    .hero-showcase .app-main-title { font-size: 1.9rem; }
+}

@@ -101,12 +101,12 @@ SITE_PAGES_SV = [
         key='privacy', slug='integritetspolicy', legacy='/privacy.html', kind='webpage', modified='2026-10-23',
         title='Integritetspolicy | WiBo Health och boodi',
         h1='🔒 Integritetspolicy', crumb='Integritetspolicy',
-        desc='Hur WiBo Health och boodi-appen behandlar personuppgifter enligt GDPR: vilka uppgifter, varför, cookies och samtycke, mottagare, lagringstid, dina rättigheter och rätten att klaga till IMY.',
+        desc='Hur WiBo Health och boodi-appen behandlar personuppgifter enligt GDPR: vilka uppgifter, varför, cookies och samtycke, mottagare, lagringstid, dina rättigheter och rätten att klaga.',
         body=f'''            <p class="article-meta"><span><i class="fas fa-calendar"></i> {UPDATED}</span></p>
             <p class="lead">Vi på WiBo Health och boodi 💚 är måna om din integritet. Här beskriver vi hur vi samlar in, använder och skyddar dina personuppgifter enligt EU:s dataskyddsförordning (GDPR).</p>
 
             <h2 class="section-title"><i class="fas fa-building"></i> <span>1. Personuppgiftsansvarig</span></h2>
-            <p>Personuppgiftsansvarig är <strong>WiBo Health Group</strong> i Nederländerna, som driver webbplatsen wibohealth.com och boodi-appen. Kontakt i alla frågor om personuppgifter: <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a>.</p>
+            <p>Personuppgiftsansvarig är <strong>Dr. Wassim Habib (WiBo Health)</strong>, Nederländerna, som driver webbplatsen wibohealth.com och boodi-appen. Kontakt i alla frågor om personuppgifter: <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a>.</p>
 
             <h2 class="section-title"><i class="fas fa-database"></i> <span>2. Vilka uppgifter vi samlar in</span></h2>
             <ul class="check-list">
@@ -167,7 +167,7 @@ SITE_PAGES_SV = [
                 <li>begränsa behandlingen, invända mot den och få ut dina uppgifter i ett överförbart format (dataportabilitet),</li>
                 <li>när som helst återkalla ett samtycke, utan att det påverkar behandlingen innan återkallelsen.</li>
             </ul>
-            <p>Kontakta oss på <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a> för att använda dina rättigheter. Är du missnöjd med hur vi behandlar dina uppgifter har du rätt att klaga hos <strong>Integritetsskyddsmyndigheten (IMY)</strong>, <a href="https://www.imy.se" rel="noopener">imy.se</a>, eller hos tillsynsmyndigheten i det EU-land där du bor eller arbetar.</p>
+            <p>Kontakta oss på <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a> för att använda dina rättigheter. Du har rätt att lämna in ett klagomål till dataskyddsmyndigheten i ditt land.</p>
 
             <h2 class="section-title"><i class="fas fa-mobile-screen-button"></i> <span>9. boodi 💚-appen</span></h2>
             <p><strong>Ingen medicinteknisk produkt:</strong> boodi (com.wibohealth.boodi) är ett verktyg för kost- och livsstilsinformation och ingen medicinteknisk produkt enligt EU:s förordning 2017/745 (MDR). Appen ställer inga diagnoser, räknar inte ut insulin- eller läkemedelsdoser och ersätter inte vården. Personer med diabetes eller svåra allergier ska alltid kontrollera förpackningen och följa råd från sin vårdgivare.</p>
@@ -177,6 +177,16 @@ SITE_PAGES_SV = [
                 <li><strong>Analys av matfoton (Google Gemini):</strong> om du väljer att fotografera en måltid skickas bara den bilden till Google Gemini för en uppskattning av näringsinnehållet. Bilden kopplas aldrig till ditt namn, din e-post eller din hälsohistorik och sparas inte på våra servrar.</li>
                 <li><strong>Köp och annonser:</strong> köp och prenumerationer hanteras av Google Play Billing och RevenueCat utan att vi lagrar kortuppgifter. Annonser i appen visas via Google AdMob.</li>
                 <li><strong>Radera konto:</strong> du kan när som helst radera ditt konto och alla uppgifter på Supabase i appen eller via sidan <a href="/sv/radera-konto.html">Radera konto</a>.</li>
+            </ul>
+            <h3 id="boodi-waitlist" style="scroll-margin-top:90px">Väntelista för boodi-appen</h3>
+            <p>Om du anmäler din e-postadress på boodi-appens sida för att få veta när appen lanseras sparar vi bara: din e-postadress, webbplatsens språk och datumet för anmälan.</p>
+            <ul class="check-list">
+                <li><strong>Personuppgiftsansvarig:</strong> Dr. Wassim Habib (WiBo Health), Nederländerna.</li>
+                <li><strong>Ändamål:</strong> att skicka ett enda meddelande när appen lanseras, och inget annat. Vi skickar inga nyhetsbrev eller annonser, och vi säljer inte din e-postadress och delar den inte med någon.</li>
+                <li><strong>Rättslig grund:</strong> ditt samtycke (artikel 6.1 a i EU:s dataskyddsförordning, GDPR), som du kan återkalla när som helst.</li>
+                <li><strong>Var uppgifterna lagras:</strong> på Supabases servrar i Frankfurt, inom Europeiska unionen.</li>
+                <li><strong>Lagringstid:</strong> vi raderar e-postadressen inom 30 dagar efter att lanseringsmeddelandet har skickats. Om appen inte har lanserats inom 12 månader från din anmälan raderar vi den också.</li>
+                <li><strong>Dina rättigheter:</strong> du kan när som helst begära att få se eller radera dina uppgifter via <a href="mailto:{SUPPORT_EMAIL}">{SUPPORT_EMAIL}</a>, eller via avregistreringslänken i lanseringsmeddelandet.</li>
             </ul>
 
             <h2 class="section-title"><i class="fas fa-child"></i> <span>10. Barn</span></h2>
@@ -386,9 +396,26 @@ SITE_PAGES_SV = [
         title='boodi 💚 – appen som skannar streckkoder, ingredienser och glykemiskt index | WiBo Health',
         h1='Möt boodi 💚 – din smarta hjälp i butiken', crumb='boodi-appen',
         desc='boodi skannar streckkoder och visar näringsvärden, glykemiskt index, ingredienser och tillsatser, och föreslår hälsosammare alternativ från samma hylla. Med ett kostprogram för en hälsosam livsstil.',
+        # waitlist above the logo so it shows without scrolling (2026-11-01); js/boodi-waitlist.js + css/boodi-waitlist.css
+        extra_head=('\n    <link rel="stylesheet" href="/css/boodi-waitlist.css?v=1">'
+                    '\n    <script src="/js/boodi-waitlist.js?v=1" defer></script>'),
+        top='''            <form class="boodi-waitlist" id="boodi-waitlist" data-lang="sv" novalidate>
+                <div class="waitlist-row">
+                    <label class="sr-only" for="waitlistEmail">E-postadress</label>
+                    <input type="email" id="waitlistEmail" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="Din e-postadress">
+                    <button type="submit" disabled>Meddela mig vid lanseringen</button>
+                </div>
+                <div class="waitlist-trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                <label class="waitlist-consent">
+                    <input type="checkbox" name="consent" value="yes">
+                    <span>Jag godkänner att min e-postadress sparas så att jag får ett enda meddelande när appen lanseras. Jag kan när som helst begära att den raderas. <a href="/sv/integritetspolicy.html#boodi-waitlist">Integritetspolicy</a></span>
+                </label>
+                <p class="waitlist-msg" role="status" aria-live="polite"></p>
+            </form>
+            <p><span class="boodi-btn" aria-disabled="true" style="cursor:default;opacity:.9;white-space:normal;text-align:center"><i class="fab fa-google-play"></i> 🚀 Kommer snart på Google Play</span></p>
+''',
         image='boodi-app-logo.jpeg', image_alt='boodi-appens logotyp',
         body='''            <p class="lead">Slut på velandet i butiken! Skanna en streckkod och boodi visar näringsvärden, hur snabbt maten påverkar blodsockret, ingredienser och tillsatser – och föreslår hälsosammare alternativ från samma hylla.</p>
-            <p><span class="boodi-btn" aria-disabled="true" style="cursor:default;opacity:.9;white-space:normal;text-align:center"><i class="fab fa-google-play"></i> 🚀 Kommer snart på Google Play</span></p>
 
             <h2 class="section-title"><i class="fas fa-star"></i> <span>Vad gör boodi?</span></h2>
             <div class="hub-cards">

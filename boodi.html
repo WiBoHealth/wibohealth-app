@@ -694,6 +694,7 @@
         }
     </style>
     <style>.hero-showcase>.hero-content{order:1}.hero-showcase>.hero-poster-box{order:2}@media(min-width:901px){.hero-showcase>.hero-content{text-align:start}}.app-main-title,.section-header h2{color:var(--wb-text)}.app-description,.section-header p{color:var(--wb-muted)}.btn-direct-apk{background:var(--wb-soft);color:var(--wb-text);border-color:var(--wb-border)}</style>
+    <link rel="stylesheet" href="/css/boodi-waitlist.css?v=1">
 </head>
 <body>
     <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
@@ -744,9 +745,19 @@
                     رفيقك الصحي للتسوق الذكي
                 </h1>
 
-                <p class="app-description" data-i18n="hero_desc">
-                    ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص المكونات ومناسبتها لدايتك بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.
-                </p>
+                <form class="boodi-waitlist" id="boodi-waitlist" novalidate>
+                    <div class="waitlist-row">
+                        <label class="sr-only" for="waitlistEmail" data-i18n="wl_label">البريد الإلكتروني</label>
+                        <input type="email" id="waitlistEmail" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="بريدك الإلكتروني" data-i18n-ph="wl_ph" dir="ltr">
+                        <button type="submit" disabled data-i18n="wl_btn">أعلمني عند الإطلاق</button>
+                    </div>
+                    <div class="waitlist-trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                    <label class="waitlist-consent">
+                        <input type="checkbox" name="consent" value="yes">
+                        <span data-i18n="wl_consent">أوافق على حفظ بريدي الإلكتروني لإعلامي برسالة واحدة عند إطلاق التطبيق. يمكنني طلب حذفه في أي وقت. <a href="privacy.html#boodi-waitlist">سياسة الخصوصية</a></span>
+                    </label>
+                    <p class="waitlist-msg" role="status" aria-live="polite"></p>
+                </form>
 
                 <div class="cta-download-box">
                     <span class="btn-google-play play-soon" aria-disabled="true">
@@ -758,6 +769,10 @@
                         <span data-i18n="btn_privacy_badge">أمان وخصوصية أوروبية 100%</span>
                     </a>
                 </div>
+
+                <p class="app-description" data-i18n="hero_desc">
+                    ودّع الحيرة في السوبرماركت! امسح باركود أي منتج فوراً ليكشف لك تطبيق بودي حقيقة مكوناته، المؤشر الجلايسيمي وسرعة رفع السكر، وتأثيره على الإنسولين، وفحص المكونات ومناسبتها لدايتك بدقة متناهية، مع اقتراح بدائل صحية ذكية من نفس الصنف.
+                </p>
             </div>
         </section>
 
@@ -952,6 +967,10 @@
                 'diet_p6_title': 'الماسح متصل بخطتك',
                 'diet_p6_desc': 'امسح أي منتج في السوبرماركت ليخبرك بودي فوراً: ✅ يناسب خطتك، 🟡 باعتدال، أو ⚠️ يحتوي صنفاً استبعدته.',
                 'play_soon': '🚀 قريباً على Google Play',
+                'wl_label': 'البريد الإلكتروني',
+                'wl_ph': 'بريدك الإلكتروني',
+                'wl_btn': 'أعلمني عند الإطلاق',
+                'wl_consent': 'أوافق على حفظ بريدي الإلكتروني لإعلامي برسالة واحدة عند إطلاق التطبيق. يمكنني طلب حذفه في أي وقت. <a href="privacy.html#boodi-waitlist">سياسة الخصوصية</a>',
                 'footer_made_for': '💚 مُطور بـ <span style="color: #10b981;">♥</span> من أجل بودي',
                 'diet_cta_note': 'كل تفاصيل البرنامج والاشتراك تجدها داخل التطبيق.',
                 'diet_disclaimer': 'البرنامج دليل إرشادي لنمط حياة صحي وتغذية متوازنة، وليس خدمة طبية ولا يغني عن استشارة الطبيب. إذا كنت حاملاً أو مرضعاً أو تتناول أدوية لحالة مزمنة، استشر طبيبك قبل البدء.',
@@ -998,6 +1017,10 @@
                 'diet_p6_title': 'De scanner kent je plan',
                 'diet_p6_desc': 'Scan een product in de supermarkt en boodi vertelt je direct: ✅ past in je plan, 🟡 met mate, of ⚠️ bevat iets dat je hebt uitgesloten.',
                 'play_soon': '🚀 Binnenkort op Google Play',
+                'wl_label': 'E-mailadres',
+                'wl_ph': 'Je e-mailadres',
+                'wl_btn': 'Laat het me weten bij de lancering',
+                'wl_consent': 'Ik ga ermee akkoord dat mijn e-mailadres wordt bewaard, zodat ik één bericht krijg wanneer de app wordt gelanceerd. Ik kan op elk moment vragen om het te verwijderen. <a href="privacy.html#boodi-waitlist">Privacybeleid</a>',
                 'footer_made_for': '💚 Gemaakt met <span style="color: #10b981;">♥</span> voor boodi',
                 'diet_cta_note': 'Alle details over het programma en het abonnement vind je in de app.',
                 'diet_disclaimer': 'Dit programma is een leefstijlgids voor gezonde, gebalanceerde voeding. Het is geen behandeling van een ziekte en vervangt geen advies van je arts. Ben je zwanger, geef je borstvoeding of gebruik je medicijnen voor een chronische aandoening? Overleg dan eerst met je arts.',
@@ -1044,6 +1067,10 @@
                 'diet_p6_title': 'The scanner knows your plan',
                 'diet_p6_desc': 'Scan any product in the supermarket and boodi tells you instantly: ✅ fits your plan, 🟡 in moderation, or ⚠️ contains something you chose to exclude.',
                 'play_soon': '🚀 Coming Soon on Google Play',
+                'wl_label': 'Email address',
+                'wl_ph': 'Your email',
+                'wl_btn': 'Notify me at launch',
+                'wl_consent': 'I agree to my email address being stored so I can be notified with a single message when the app launches. I can ask for it to be deleted at any time. <a href="privacy.html#boodi-waitlist">Privacy policy</a>',
                 'footer_made_for': '💚 Made with <span style="color: #10b981;">♥</span> for boodi',
                 'diet_cta_note': 'All programme and subscription details are inside the app.',
                 'diet_disclaimer': 'This programme is a lifestyle guide to healthy, balanced eating. It is not a treatment for any disease and does not replace advice from your doctor. If you are pregnant, breastfeeding or take medication for a chronic condition, talk to your doctor before you start.',
@@ -1120,6 +1147,10 @@
                     el.innerHTML = translations[currentLang][key];
                 }
             });
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (translations[currentLang] && translations[currentLang][key]) el.placeholder = translations[currentLang][key];
+            });
 
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
                 document.title = translations[currentLang]['meta_title'];
@@ -1171,5 +1202,6 @@
             }
         }
     </script>
+    <script src="/js/boodi-waitlist.js?v=1" defer></script>
 </body>
 </html>

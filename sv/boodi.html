@@ -30,6 +30,8 @@
     <meta property="og:image" content="https://wibohealth.com/images/boodi-app-logo.jpeg">
     <meta property="og:image:alt" content="boodi-appens logotyp">
     <meta property="og:locale" content="sv_SE">
+    <link rel="stylesheet" href="/css/boodi-waitlist.css?v=1">
+    <script src="/js/boodi-waitlist.js?v=1" defer></script>
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
 {
@@ -867,9 +869,22 @@
                 <a href="/sv/index.html">Hem</a> › <span>boodi-appen</span>
             </nav>
             <h1>Möt boodi 💚 – din smarta hjälp i butiken</h1>
+            <form class="boodi-waitlist" id="boodi-waitlist" data-lang="sv" novalidate>
+                <div class="waitlist-row">
+                    <label class="sr-only" for="waitlistEmail">E-postadress</label>
+                    <input type="email" id="waitlistEmail" name="email" required maxlength="254" autocomplete="email" inputmode="email" placeholder="Din e-postadress">
+                    <button type="submit" disabled>Meddela mig vid lanseringen</button>
+                </div>
+                <div class="waitlist-trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                <label class="waitlist-consent">
+                    <input type="checkbox" name="consent" value="yes">
+                    <span>Jag godkänner att min e-postadress sparas så att jag får ett enda meddelande när appen lanseras. Jag kan när som helst begära att den raderas. <a href="/sv/integritetspolicy.html#boodi-waitlist">Integritetspolicy</a></span>
+                </label>
+                <p class="waitlist-msg" role="status" aria-live="polite"></p>
+            </form>
+            <p><span class="boodi-btn" aria-disabled="true" style="cursor:default;opacity:.9;white-space:normal;text-align:center"><i class="fab fa-google-play"></i> 🚀 Kommer snart på Google Play</span></p>
             <img class="article-hero-img article-hero-portrait" src="/images/boodi-app-logo.jpeg" alt="boodi-appens logotyp" width="500" height="500" style="max-width:260px;border-radius:50%" decoding="async">
             <p class="lead">Slut på velandet i butiken! Skanna en streckkod och boodi visar näringsvärden, hur snabbt maten påverkar blodsockret, ingredienser och tillsatser – och föreslår hälsosammare alternativ från samma hylla.</p>
-            <p><span class="boodi-btn" aria-disabled="true" style="cursor:default;opacity:.9;white-space:normal;text-align:center"><i class="fab fa-google-play"></i> 🚀 Kommer snart på Google Play</span></p>
 
             <h2 class="section-title"><i class="fas fa-star"></i> <span>Vad gör boodi?</span></h2>
             <div class="hub-cards">
