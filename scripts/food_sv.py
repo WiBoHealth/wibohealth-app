@@ -2723,8 +2723,8 @@ OVERRIDES = {
                     'De lösliga fibrerna och pektinet i kaktusfikon bidrar till en jämnare blodsockerkurva; drick '
                     'tillräckligt med vatten och var måttlig med antalet, så mår magen bra.')),
     232: dict(lead='Gyllene torkade aprikoser är ett av de godaste naturliga mellanmålen med fibrer och mineraler. Många '
-                   'blir förvånade över att torkade aprikoser har ett lågt glykemiskt index (30) enligt den kliniska '
-                   'granskningen; de lösliga fibrerna (pektin) bromsar nedbrytningen av det naturliga sockret.',
+                   'blir förvånade över att torkade aprikoser har ett lågt glykemiskt index (30)'
+                   '; de lösliga fibrerna (pektin) bromsar nedbrytningen av det naturliga sockret.',
               tips=('Håll portionen till 3–4 aprikoser som mellanmål efter träning eller mellan måltiderna, och kombinera '
                     'dem med några råa mandlar eller valnötter för att bli mättare och bromsa upptaget ytterligare.',
                     'Välj bruna, soltorkade aprikoser utan tillsatt svaveldioxid, och skölj och blötlägg dem en stund i '
@@ -2732,7 +2732,7 @@ OVERRIDES = {
                     'Torkning koncentrerar sockret och kalorierna i en mindre volym, så att räkna portionen i antal och '
                     'inte äta fritt ur påsen är det säkraste sättet att hålla blodsockret jämnt.')),
     233: dict(lead='Den traditionella frukten full av krispiga små frön, som innehåller kalcium, kalium och järn. Torkade '
-                   'fikon har ett medelhögt glykemiskt index (61) enligt den kliniska granskningen, eftersom det naturliga '
+                   'fikon har ett medelhögt glykemiskt index (61), eftersom det naturliga '
                    'sockret koncentreras när vattnet avdunstar, så de bör ätas medvetet och med tanke på portionen.',
               tips=('Nöj dig med en eller två fikon som en naturlig efterrätt till en kopp svart kaffe eller grönt te, och '
                     'undvik att äta fritt av dem på tom mage, så slipper du en snabb glukosstegring.',
@@ -2740,8 +2740,8 @@ OVERRIDES = {
                     'yoghurtens protein och fett bromsar upptaget av fikonens socker.',
                     'För dig som håller koll på vikten och blodsockret ger ett enda fikon all smak och njutning utan någon '
                     'extra kolhydratbelastning.')),
-    234: dict(lead='Mörka katrinplommon med en söt och fyllig smak. De har ett lågt glykemiskt index (29) enligt den '
-                   'kliniska granskningen, och hemligheten är det naturliga sockeralkoholen sorbitol, som tas upp '
+    234: dict(lead='Mörka katrinplommon med en söt och fyllig smak. De har ett lågt glykemiskt index (29)'
+                   ', och hemligheten är det naturliga sockeralkoholen sorbitol, som tas upp '
                    'långsamt, och de rikliga lösliga fibrerna.',
               tips=('Ät två till tre katrinplommon om dagen på morgonen med ett glas ljummet vatten; de mättar väl.',
                     'Du kan lägga katrinplommonen i vatten över natten, dricka blötläggningsvattnet och äta frukterna på '
@@ -2919,7 +2919,7 @@ OVERRIDES = {
                     'och fibrer utan oro för blodsockret.',
                     'Skölj frukten och skär den direkt i tunna stjärnor med det tunna skalet kvar, och strö över lite '
                     'färsk mynta för extra fräschör.',
-                    '⚠️ Mycket viktig klinisk varning: stjärnfrukt innehåller nervgiftet karamboxin och mycket oxalat; den '
+                    '⚠️ Viktig anmärkning: stjärnfrukt innehåller nervgiftet karamboxin och mycket oxalat; den '
                     'får inte ätas av personer med njursvikt eller i dialys, eftersom sjuka njurar inte kan utsöndra '
                     'ämnet. För friska personer är den säker.')),
     255: dict(lead='Världens största trädfrukt: en jättelik tropisk frukt med mjuka gula klyftor och en doft som påminner '
@@ -3042,7 +3042,7 @@ OVERRIDES = {
                     'pumpa och varma mjölkdrycker.',
                     'Riv den hårda kärnan färsk med ett fint rivjärn direkt över den varma rätten före servering; de '
                     'aromatiska oljorna avdunstar snabbt om den mals och förvaras länge.',
-                    '⚠️ Viktig klinisk varning: muskotnöt är en utmärkt krydda i små mängder (en lätt nypa), men den får '
+                    '⚠️ Viktig anmärkning: muskotnöt är en utmärkt krydda i små mängder (en lätt nypa), men den får '
                     'inte användas i stora mängder (gram), eftersom den innehåller myristicin som i höga doser kan ge '
                     'förgiftning och nervpåverkan.')),
     269: dict(lead='Naturens tidlösa aromatiska barr i det italienska och medelhavsinspirerade köket: torkade rosmarinblad '
@@ -3119,7 +3119,7 @@ OVERRIDES = {
                     'ett kokt ägg i stället för på vitt, raffinerat bröd.',
                     'Ät den kyld direkt med skedar av pärlemor eller ben och undvik metallskedar, som kan påverka den äkta '
                     'havssmaken, och utsätt den aldrig för värme.',
-                    '⚠️ Viktig klinisk varning: kaviar innehåller mycket salt och bör ätas med måtta vid högt blodtryck, '
+                    '⚠️ Viktig anmärkning: kaviar innehåller mycket salt och bör ätas med måtta vid högt blodtryck, '
                     'och gravida rekommenderas att undvika rå eller opastöriserad kaviar på grund av risken för listeria.')),
     278: dict(lead='Små, silverglänsande fiskar med koncentrerad smak; grunden i caesardressing och napolitansk pizza. '
                    'Sardeller är rent havsprotein utan stärkelse, det glykemiska indexet är inte tillämpligt, och de '
@@ -3128,7 +3128,7 @@ OVERRIDES = {
                     'behöva industriella smakförstärkare.',
                     'Lägg sardellfiléerna i kallt vatten eller olivolja några minuter före användning för att få bort '
                     'överflödigt salt, och njut av dem finhackade.',
-                    '⚠️ Klinisk varning om salt: konserverade sardeller är mycket salta, så personer med högt blodtryck '
+                    '⚠️ Viktig anmärkning om salt: konserverade sardeller är mycket salta, så personer med högt blodtryck '
                     'eller njursjukdom bör äta dem med stor försiktighet och i mycket små mängder.')),
     279: dict(lead='Den egyptiska gatans stolthet och det mest kända leverreceptet i arabvärlden: tunna skivor kalvlever '
                    'som steks snabbt med vitlöksklyftor, chili, spiskummin, koriander och citronsaft. Levern innehåller '
@@ -3138,7 +3138,7 @@ OVERRIDES = {
                     'bröd i stället för flera vita, raffinerade bröd.',
                     'Fräs levern på mycket hög värme i bara några minuter så att den förblir mör och saftig, och avsluta '
                     'med att pressa över en hel citron, eftersom C-vitamin ökar järnupptaget.',
-                    '⚠️ Viktig närings- och klinisk upplysning: järn bidrar till normal bildning av röda blodkroppar och '
+                    '⚠️ Viktig anmärkning: järn bidrar till normal bildning av röda blodkroppar och '
                     'hemoglobin, men gravida rekommenderas att inte äta för mycket lever eftersom den innehåller mycket '
                     'stora mängder naturligt A-vitamin.')),
     280: dict(lead='Drottningen bland de levantinska fattehrätterna och en klassisk rätt från Damaskus: små auberginer '
@@ -3279,7 +3279,7 @@ OVERRIDES = {
                     'fettförbränningen och belastar levern.',
                     'Om du dricker öl, drick det aldrig på tom mage och drick dubbelt så mycket vatten för att minska '
                     'uttorkningen.',
-                    '⚠️ Viktig klinisk varning: alkohol hämmar leverns nybildning av glukos (glukoneogenes), vilket '
+                    '⚠️ Viktig anmärkning: alkohol hämmar leverns nybildning av glukos (glukoneogenes), vilket '
                     'utsätter personer med diabetes som tar insulin eller sulfonylureider för risk för plötsligt och '
                     'kraftigt blodsockerfall flera timmar efter att de druckit.')),
     295: dict(lead='Drycken som jäses av röd druvsaft och som i forskningen är känd för att innehålla resveratrol och '
@@ -3290,7 +3290,7 @@ OVERRIDES = {
                     'resveratrol, som också finns i druvor och bär.',
                     'Polyfenolerna i vin finns också i färska röda druvor med skal, och du kan dricka hibiskuste eller äta '
                     'tranbär helt utan alkohol.',
-                    '⚠️ Läkemedels- och klinisk varning: alkohol belastar leverns enzymer och samverkar farligt med '
+                    '⚠️ Viktig anmärkning om läkemedel: alkohol belastar leverns enzymer och samverkar farligt med '
                     'läkemedel mot högt blodtryck, diabetes och smärta; gravida, ammande och personer med fettlever ska '
                     'inte dricka alkohol.')),
     296: dict(lead='Den svarta folkliga drycken med lång tradition i Egypten och Levanten: ett extrakt av naturlig '
@@ -3393,7 +3393,7 @@ OVERRIDES = {
                     '(broodje haring), så slipper du raffinerad stärkelse.',
                     'Välj färsk sill under säsongen (juni och juli) och väl kyld; den hackade löken balanserar fiskens '
                     'fetma och ger fräschör.',
-                    '⚠️ Säkerhetsvarning: sillen är rå och bara lätt saltad; den ska inte ätas rå av gravida, barn eller '
+                    '⚠️ Viktig anmärkning om säkerhet: sillen är rå och bara lätt saltad; den ska inte ätas rå av gravida, barn eller '
                     'personer med nedsatt immunförsvar på grund av risken för listeria och parasiter, och tänk på '
                     'salthalten om du har högt blodtryck.')),
     308: dict(lead='Den traditionella holländska vintersoppan som smälter frosten: en mycket tjock soppa på torkade gröna '
@@ -3840,7 +3840,7 @@ OVERRIDES = {
                     'portion med protein nyckeln till att njuta av den.')),
     356: dict(lead='Världens mest spridda frukostflingor: rostade majsflingor utan tillsatt socker. Trots att de saknar '
                    'socker gör värmebehandlingen och valsningen att stärkelsen bryts ned och tas upp mycket snabbt, med '
-                   'ett högt glykemiskt index (79) enligt den kliniska granskningen.',
+                   'ett högt glykemiskt index (79).',
               tips=('Undvik att äta en stor skål med bara mjölk på morgonen; blanda en liten näve med grekisk yoghurt, '
                     'chiafrön och nötter för att bromsa den kraftiga glukostoppen.',
                     'Välj alltid naturella varianter helt utan fruktosrik majssirap eller tillsatt socker, och ät dem '
@@ -4602,7 +4602,7 @@ OVERRIDES = {
               tips=('Ät den med en grön sallad med mycket tomat och paprika; C-vitamin ökar järnupptaget.',
                     'Fräs den snabbt på hög värme med vitlök, olivolja, osötad granatäpplesirap och en nypa spiskummin; '
                     'för lång tillagning gör den seg och torr.',
-                    'Viktig klinisk varning för gravida: kycklinglever innehåller mycket stora mängder animaliskt '
+                    'Viktig anmärkning för gravida: kycklinglever innehåller mycket stora mängder animaliskt '
                     'A-vitamin (retinol), och man bör undvika att äta mycket av den, särskilt under graviditetens första '
                     'trimester.'),
               faq=[dict(q='Höjer kycklinglever blodsockret?',
@@ -5771,7 +5771,7 @@ OVERRIDES = {
                     'paprikapulver över, som en komplett frukost eller lunch utan bröd.',
                     'Koka de krossade bondbönorna med vitlöksklyftor tills de lösts upp helt, mixa dem fint och tillsätt '
                     'den torkade myntan, olivoljan och spiskumminen de sista minuterna.',
-                    'Myntan och spiskumminen kan minska uppblåsthet från bondbönorna. Sträng klinisk varning: personer med '
+                    'Myntan och spiskumminen kan minska uppblåsthet från bondbönorna. Viktig anmärkning: personer med '
                     'favism (G6PD-brist) får inte äta den alls.'),
               faq=[dict(q='Vad är skillnaden mellan marockansk och egyptisk bissara?',
                         a='Egyptisk bissara är grön, äts kall, tillagas med dill, jutemalva (molokhia) och koriander och '
@@ -7363,7 +7363,7 @@ OVERRIDES = {
                    'kända som en vintersaft. Det glykemiska indexet är lågt (en uppskattning, 30).',
               tips=('Ät dem alltid som kokt och silad saft, eller som hemgjord sylt med ett sötningsmedel; en matsked om '
                     'dagen under vintern.',
-                    'Viktig klinisk varning: fläderbär får aldrig ätas råa; råa bär, blad och stjälkar innehåller '
+                    'Viktig anmärkning: fläderbär får aldrig ätas råa; råa bär, blad och stjälkar innehåller '
                     'cyanogena glykosider som ger illamående, kräkningar och förgiftning, och ordentlig upphettning bryter '
                     'ned ämnena och gör bären säkra.',
                     'Det glykemiska indexet är lågt (30) och den glykemiska belastningen för 50 g bara 1,7; bären '
@@ -8133,7 +8133,7 @@ OVERRIDES = {
                     'naturliga fettet.',
                     'Nöj dig med en liten portion i veckan (en halv burk) för att få nyttan utan för mycket av de '
                     'fettlösliga vitaminerna.',
-                    'Klinisk varning till gravida: eftersom den innehåller mycket stora mängder animaliskt A-vitamin '
+                    'Viktig anmärkning för gravida: eftersom den innehåller mycket stora mängder animaliskt A-vitamin '
                     '(retinol) rekommenderas att den undviks under graviditeten för att förebygga för högt intag av '
                     'A-vitamin.'),
               title='Hur många kalorier har rökt torsklever? Råd och portioner | WiBo Health',
