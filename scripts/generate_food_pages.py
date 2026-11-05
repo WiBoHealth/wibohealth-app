@@ -1845,7 +1845,11 @@ def build(food, lang, ctx):
     title = fit_title(name, lang)
     # search-tuned <title> and meta description for high-traffic foods (also used for og: and JSON-LD)
     title_override = ctx['overrides'].get(str(food['id']), {}).get('title', {}).get(lang)
-    title = fit_override_title(title_override) if title_override else title
+    # "title_full": true keeps a long, keyword-rich approved title exactly as written, brand included (CTR pilot 2026-11-05)
+    if title_override and ctx['overrides'].get(str(food['id']), {}).get('title_full'):
+        title = title_override
+    else:
+        title = fit_override_title(title_override) if title_override else title
     desc = ctx['overrides'].get(str(food['id']), {}).get('desc', {}).get(lang) or desc
 
     # -------- FAQ (answers computed from the numbers, unless doctor-approved questions are given)

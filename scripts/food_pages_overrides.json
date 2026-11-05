@@ -3498,11 +3498,12 @@
         ]
       },
       "title": {
-        "en": "Rice Pudding Calories: 200 kcal per 150 g Bowl | WiBo Health"
+        "en": "Rice Pudding Calories per Bowl: Carbs, Glycemic Index & Lighter Homemade Tips | WiBo Health"
       },
       "desc": {
-        "en": "A 150 g bowl of rice pudding has about 200 kcal and 34 g net carbs, with a medium estimated GI of 65. Its effect on blood sugar and a lighter homemade version."
-      }
+        "en": "How many calories and carbs are in a bowl of rice pudding, and how does it affect blood sugar? See the full breakdown and a lighter homemade version."
+      },
+      "title_full": true
     },
     "155": {
       "lead": {
@@ -4131,11 +4132,12 @@
         ]
       },
       "title": {
-        "en": "Pad Thai Calories: 495 kcal per 300 g Serving | WiBo Health"
+        "en": "Pad Thai Calories per Serving: Carbs, Glycemic Index & How to Order Lighter | WiBo Health"
       },
       "desc": {
-        "en": "A 300 g plate of pad thai has about 495 kcal and 53 g net carbs. Its effect on blood sugar, plus simple ways to order or make a lighter, more balanced plate."
-      }
+        "en": "How many calories are in a plate of pad thai, and what do the rice noodles do to blood sugar? See the serving breakdown and easy swaps for a lighter plate."
+      },
+      "title_full": true
     },
     "181": {
       "lead": {
@@ -5313,11 +5315,12 @@
         ]
       },
       "title": {
-        "en": "Lychee Calories: 40 kcal per 60 g Serving, Low GI | WiBo Health"
+        "en": "Lychee Calories per Serving: Carbs, Glycemic Index & How Many to Eat | WiBo Health"
       },
       "desc": {
-        "en": "A 60 g serving of lychee (5 to 6 fresh fruits) has about 40 kcal and 9 g net carbs, with an estimated low GI of 50. Its effect on blood sugar and portion tips."
-      }
+        "en": "How many calories are in a serving of lychee, and how many can you eat without a sugar spike? See the carbs, glycemic index and simple portion tips."
+      },
+      "title_full": true
     },
     "231": {
       "lead": {
@@ -8143,11 +8146,12 @@
         ]
       },
       "title": {
-        "en": "Focaccia Calories: 160 kcal per 60 g Piece | WiBo Health"
+        "en": "Focaccia Bread Calories per Slice: Carbs, Glycemic Index & Lower-GI Swaps | WiBo Health"
       },
       "desc": {
-        "en": "A 60 g piece of focaccia has about 160 kcal and 25 g net carbs, with a high estimated GI of 71. Its effect on blood sugar and lower-GI bread alternatives."
-      }
+        "en": "How many calories and carbs are in a piece of focaccia, and why does it raise blood sugar so fast? See the full breakdown and smarter ways to enjoy it."
+      },
+      "title_full": true
     },
     "347": {
       "slug": "tiger-bread",
@@ -8394,11 +8398,12 @@
         ]
       },
       "title": {
-        "en": "Is Polenta Healthy? Calories, Carbs & Blood Sugar | WiBo Health"
+        "en": "Is Polenta Healthy? Calories per Serving, Carbs, Glycemic Index & Blood Sugar | WiBo Health"
       },
       "desc": {
-        "en": "Cooked polenta has just 70 kcal per 100 g (84 kcal per 120 g serving) but a medium estimated GI of 68. A sensible portion and what to pair it with."
-      }
+        "en": "Is polenta a healthy choice, or does its corn starch spike blood sugar? See the calories per serving, carbs, glycemic index and what to pair it with."
+      },
+      "title_full": true
     },
     "356": {
       "slug": "unsweetened-corn-flakes",
@@ -8725,11 +8730,12 @@
         ]
       },
       "title": {
-        "en": "Bok Choy Calories: Only 13 kcal per 100 g | WiBo Health"
+        "en": "Bok Choy Calories per Serving: Carbs, Glycemic Index & Easy Ways to Cook It | WiBo Health"
       },
       "desc": {
-        "en": "Bok choy has only 13 kcal, 1.5 g protein and 1 g fibre per 100 g, and too little carbohydrate to have a glycemic index. Nutrients and easy ways to cook it."
-      }
+        "en": "How many calories does bok choy really have, and does it affect blood sugar at all? See the full nutrients per serving and quick ways to cook it."
+      },
+      "title_full": true
     },
     "369": {
       "slug": "spring-onions",
@@ -9218,11 +9224,12 @@
         ]
       },
       "title": {
-        "en": "Nectarine Calories: 62 kcal per 140 g, Low GI | WiBo Health"
+        "en": "Nectarine Calories per Fruit: Carbs, Glycemic Index & Blood Sugar Effect | WiBo Health"
       },
       "desc": {
-        "en": "A medium 140 g nectarine has about 62 kcal and an estimated low GI of 43. Carbs, fibre, its effect on blood sugar and the best way to eat it."
-      }
+        "en": "How many calories are in one medium nectarine, and is it a good fruit for steady blood sugar? See the serving breakdown, glycemic index and best way to eat it."
+      },
+      "title_full": true
     },
     "388": {
       "slug": "fresh-apricot",
@@ -12599,11 +12606,12 @@
         ]
       },
       "title": {
-        "en": "Paella Calories: 538 kcal per 250 g Serving | WiBo Health"
+        "en": "Paella Calories per Serving: Carbs, Glycemic Index & Lighter Plate Tips | WiBo Health"
       },
       "desc": {
-        "en": "A typical 250 g plate of seafood paella has about 538 kcal, 65 g net carbs and 30 g protein. How it affects blood sugar and how to serve a lighter plate."
-      }
+        "en": "How many calories and carbs are in a typical plate of seafood paella, and how hard does it hit blood sugar? See the full serving breakdown and lighter tips."
+      },
+      "title_full": true
     },
     "445": {
       "slug": "spanish-tortilla",
