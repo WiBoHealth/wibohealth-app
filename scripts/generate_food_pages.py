@@ -3,8 +3,8 @@
     python scripts/generate_food_pages.py
 
 Output (re-running rebuilds everything, nothing is appended twice):
-    foods/<slug>.html            Arabic (x-default)
-    en/foods/<slug>.html         English
+    foods/<slug>.html            Arabic
+    en/foods/<slug>.html         English (x-default)
     nl/foods/<slug>.html         Dutch
     sv/foods/<slug>.html         Swedish, only for the foods in food_sv.PUBLISH (copy and names in scripts/food_sv.py;
                                  links to pages without a Swedish version open in English)
@@ -2119,7 +2119,7 @@ def build(food, lang, ctx):
     <meta name="description" content="{esc(desc)}">
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
+    <link rel="alternate" hreflang="x-default" href="{urls['en']}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(desc)}">
@@ -2303,7 +2303,7 @@ def main():
             block += ['  <url>', f'    <loc>{page_url(slugs[fid], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.7</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(slugs[fid], l)}"/>' for l in langs_of(fid)]
-            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "ar")}"/>', '  </url>']
+            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(slugs[fid], "en")}"/>', '  </url>']
     replace_sitemap_block('FOOD-PAGES', block)
 
     print(f'pages written: {written} ({len(PILOT)} foods x {len(LANGS)} languages, {len(FSV.PUBLISH)} also in Swedish)')
