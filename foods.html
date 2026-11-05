@@ -511,6 +511,23 @@
             flex-wrap: wrap;
         }
 
+        /* Calm palette for this page: neutral surfaces, dark emerald only for the selected state;
+           the GI pills on the food cards are the only signal colours (green / amber / red) */
+        :root {
+            --fd-accent: #047857;
+            --fd-accent-soft: rgba(4, 120, 87, 0.08);
+            --fd-line: rgba(15, 23, 42, 0.10);
+            --fd-chip: #f1f5f9;
+            --fd-chip-text: #475569;
+        }
+        html[data-theme="dark"] {
+            --fd-accent: #5fbf98;
+            --fd-accent-soft: rgba(95, 191, 152, 0.10);
+            --fd-line: rgba(205, 214, 192, 0.14);
+            --fd-chip: rgba(205, 214, 192, 0.07);
+            --fd-chip-text: #c3c9b9;
+        }
+
         .tab-btn {
             background: var(--card-bg);
             color: var(--text-dark);
@@ -531,10 +548,11 @@
         .tab-btn:hover { transform: translateY(-2px); }
 
         .tab-btn.active {
-            background: var(--primary-color);
+            background: var(--fd-accent);
             color: white;
-            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 4px 12px var(--shadow);
         }
+        html[data-theme="dark"] .tab-btn.active { color: #0f100f; }
 
         .tab-count {
             background: rgba(0,0,0,0.08);
@@ -558,19 +576,16 @@
         }
         .cat-head h2 { font-size: 1.55rem; font-weight: 900; color: var(--text-dark); margin: 0 0 2px; line-height: 1.3; }
         .cat-sub { margin: 0; color: var(--text-light); font-size: 0.92rem; font-weight: 600; }
-        .cat-sub #totalCount { color: var(--primary-color); font-weight: 900; }
+        .cat-sub #totalCount { color: var(--fd-accent); font-weight: 900; }
         .cat-quick { display: flex; gap: 8px; flex-wrap: wrap; }
         .cat-quick .tab-btn { padding: 8px 16px; font-size: 13px; white-space: nowrap; }
-        .cat-quick .tab-btn:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 2px; }
-        .cat-quick .fav-chip.active {
-            background: #ef4444;
-            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.35);
-        }
-        .cat-quick .fav-chip.active i { color: white !important; }
+        .cat-quick .tab-btn:focus-visible { outline: 3px solid var(--fd-accent); outline-offset: 2px; }
+        .cat-quick .fav-chip i { color: var(--fd-accent); }
+        .cat-quick .fav-chip.active i { color: inherit; }
 
         .cat-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
         .group-card {
-            --accent: #10b981;
+            --accent: var(--fd-accent);
             position: relative;
             display: flex;
             flex-direction: column;
@@ -581,9 +596,9 @@
             padding: 16px 10px 14px;
             background: var(--card-bg);
             color: var(--text-dark);
-            border: 2px solid transparent;
+            border: 1.5px solid var(--fd-line);
             border-radius: 20px;
-            box-shadow: 0 4px 15px var(--shadow);
+            box-shadow: 0 2px 10px var(--shadow);
             font-family: inherit;
             text-align: center;
             cursor: pointer;
@@ -591,8 +606,8 @@
         }
         .group-card:hover {
             transform: translateY(-4px);
-            border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-            box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 22%, transparent);
+            border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+            box-shadow: 0 8px 20px var(--shadow);
         }
         .group-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
         .gc-icon {
@@ -604,18 +619,17 @@
             justify-content: center;
             font-size: 30px;
             line-height: 1;
-            background: color-mix(in srgb, var(--accent) 15%, transparent);
+            background: var(--fd-chip);
             transition: transform 0.22s ease;
         }
-        .group-card:hover .gc-icon { transform: scale(1.08) rotate(-4deg); }
+        .group-card:hover .gc-icon { transform: scale(1.05); }
         /* photo thumbnail (images/categories/<group>.webp); without .gc-photo the box shows the emoji fallback */
         .gc-icon.gc-photo {
             width: 66px;
             height: 66px;
             overflow: hidden;
-            background: color-mix(in srgb, var(--accent) 12%, var(--card-bg));
-            border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
-            box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 22%, transparent);
+            background: var(--fd-chip);
+            border: 1px solid var(--fd-line);
         }
         .gc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .group-card.active .gc-icon.gc-photo { border-color: var(--accent); }
@@ -623,16 +637,17 @@
         .gc-count {
             font-size: 0.74rem;
             font-weight: 800;
-            color: var(--accent);
-            background: color-mix(in srgb, var(--accent) 12%, transparent);
+            color: var(--fd-chip-text);
+            background: var(--fd-chip);
             padding: 2px 10px;
             border-radius: 999px;
         }
         .group-card.active {
             border-color: var(--accent);
-            background: color-mix(in srgb, var(--accent) 10%, var(--card-bg));
-            box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 30%, transparent);
+            background: color-mix(in srgb, var(--accent) 7%, var(--card-bg));
+            box-shadow: inset 0 0 0 1px var(--accent), 0 2px 10px var(--shadow);
         }
+        .group-card.active .gc-count { color: var(--accent); background: var(--fd-accent-soft); }
         .group-card.active::after {
             content: '✓';
             position: absolute;
@@ -720,23 +735,23 @@
             margin: 0 4px 14px;
         }
         .results-heading { margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--text-dark); }
-        .results-heading b { color: var(--primary-color); }
+        .results-heading b { color: var(--fd-accent); }
         .results-clear {
             display: inline-flex;
             align-items: center;
             gap: 6px;
             padding: 6px 14px;
             border-radius: 999px;
-            border: 1.5px solid rgba(16, 185, 129, 0.45);
+            border: 1.5px solid color-mix(in srgb, var(--fd-accent) 45%, transparent);
             background: transparent;
-            color: var(--primary-color);
+            color: var(--fd-accent);
             font: inherit;
             font-size: 0.85rem;
             font-weight: 800;
             cursor: pointer;
             transition: background-color 0.2s ease;
         }
-        .results-clear:hover, .results-clear:focus-visible { background: rgba(16, 185, 129, 0.12); outline: none; }
+        .results-clear:hover, .results-clear:focus-visible { background: var(--fd-accent-soft); outline: none; }
         .results-clear[hidden] { display: none; }
 
         .food-grid > .diet-teaser { grid-column: 1 / -1; margin: 0; }
@@ -752,7 +767,7 @@
             border-radius: 20px;
             box-shadow: 0 4px 15px var(--shadow);
         }
-        .results-empty i { font-size: 34px; margin-bottom: 12px; color: #f87171; display: block; }
+        .results-empty i { font-size: 34px; margin-bottom: 12px; color: var(--text-light); display: block; }
 
         .search-input {
             width: 100%;
@@ -807,13 +822,6 @@
             max-width: 100%;
         }
 
-        .food-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 5px;
-            background: linear-gradient(90deg, var(--primary-color), #3498db);
-        }
-
         .food-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 25px var(--shadow-hover);
@@ -847,9 +855,9 @@
 
         .favorite-btn:hover { transform: scale(1.12); }
         .favorite-btn.active {
-            color: #ef4444 !important;
-            background: #fee2e2;
-            border-color: #fca5a5;
+            color: var(--fd-accent) !important;
+            background: var(--fd-accent-soft);
+            border-color: color-mix(in srgb, var(--fd-accent) 40%, transparent);
         }
 
         .food-icon { font-size: 42px; text-align: center; margin-bottom: 10px; }
@@ -864,11 +872,11 @@
 
         .food-category {
             display: inline-block;
-            background: rgba(16, 185, 129, 0.12);
+            background: var(--fd-chip);
             padding: 3px 12px;
             border-radius: 12px;
             font-size: 12px;
-            color: var(--primary-color);
+            color: var(--fd-chip-text);
             margin-bottom: 12px;
             font-weight: 700;
             text-align: center;
@@ -890,7 +898,7 @@
 
         body.dark-mode .stat-item { background: var(--wb-soft); }
         .stat-label { font-size: 11px; color: var(--text-light); margin-bottom: 2px; font-weight: 600; }
-        .stat-value { font-size: 16px; font-weight: 800; color: var(--primary-color); }
+        .stat-value { font-size: 16px; font-weight: 800; color: var(--text-dark); }
 
         #scrollSentinel {
             grid-column: 1 / -1;
@@ -904,8 +912,9 @@
         }
 
         .boodi-food-banner {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.1) 100%);
-            border: 2px solid var(--primary-color);
+            background: var(--card-bg);
+            border: 1.5px solid var(--fd-line);
+            border-inline-start: 4px solid var(--fd-accent);
             border-radius: 20px;
             padding: 24px;
             margin: 35px 0;
@@ -948,7 +957,7 @@
             align-items: center;
             gap: 16px;
             background: var(--card-bg);
-            border: 1.5px solid rgba(245, 158, 11, 0.5);
+            border: 1.5px solid var(--fd-line);
             border-radius: 18px;
             padding: 16px 20px;
             margin: 0 0 22px;
@@ -960,15 +969,15 @@
             content: '';
             position: absolute;
             inset: 0 auto 0 0;
-            width: 5px;
-            background: linear-gradient(180deg, #f59e0b, #10b981);
+            width: 4px;
+            background: var(--fd-accent);
         }
         [dir="rtl"] .diet-teaser::before { inset: 0 0 0 auto; }
         .diet-teaser-icon {
             flex: 0 0 48px;
             height: 48px;
             border-radius: 14px;
-            background: rgba(245, 158, 11, 0.14);
+            background: var(--fd-accent-soft);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -981,10 +990,10 @@
         /* المراجع السريرية للمؤشر الجلايسيمي (نفس شريط food-details.html) */
         .gi-sources-box {
             background: var(--card-bg);
-            border: 1px solid rgba(16, 185, 129, 0.35);
-            border-inline-start: 4px solid var(--primary-color);
+            border: 1px solid var(--fd-line);
+            border-inline-start: 4px solid var(--fd-accent);
             border-radius: 14px;
-            box-shadow: 0 0 14px rgba(16, 185, 129, 0.15), 0 5px 20px var(--shadow);
+            box-shadow: 0 2px 10px var(--shadow);
             padding: 12px 16px;
             margin-top: 25px;
             color: var(--text-light);
@@ -995,9 +1004,9 @@
             overflow-wrap: anywhere;
         }
         body.dark-mode .gi-sources-box {
-            border-color: rgba(16, 185, 129, 0.45);
-            border-inline-start-color: var(--primary-color);
-            box-shadow: 0 0 18px rgba(16, 185, 129, 0.25), 0 5px 20px var(--shadow);
+            border-color: var(--fd-line);
+            border-inline-start-color: var(--fd-accent);
+            box-shadow: 0 2px 10px var(--shadow);
             color: #cbd5e1;
         }
 
@@ -1371,7 +1380,7 @@
                 "ii_low": "منخفض 🟢",
                 "ii_medium": "معتدل 🟡",
                 "ii_high": "مرتفع 🔴",
-                "ii_tested_badge": "مختبر سريرياً (Holt / Bao) ✅",
+                "ii_tested_badge": "مرجع موثق (Holt / Bao) ✅",
                 "ii_not_tested": "غير مختبر سريرياً",
                 "modal_per_100g": "القيم الغذائية لكل 100 جرام",
                 "modal_full_details": "فتح الصفحة المستقلة للصنف",
@@ -1451,7 +1460,7 @@
                 "ii_low": "Low 🟢",
                 "ii_medium": "Moderate 🟡",
                 "ii_high": "High 🔴",
-                "ii_tested_badge": "Clinically tested (Holt / Bao) ✅",
+                "ii_tested_badge": "Documented reference (Holt / Bao) ✅",
                 "ii_not_tested": "Not clinically tested",
                 "modal_per_100g": "Nutritional values per 100 g",
                 "modal_full_details": "Open the standalone food page",
@@ -1531,7 +1540,7 @@
                 "ii_low": "Laag 🟢",
                 "ii_medium": "Matig 🟡",
                 "ii_high": "Hoog 🔴",
-                "ii_tested_badge": "Klinisch getest (Holt / Bao) ✅",
+                "ii_tested_badge": "Gedocumenteerde referentie (Holt / Bao) ✅",
                 "ii_not_tested": "Niet klinisch getest",
                 "modal_per_100g": "Voedingswaarden per 100 g",
                 "modal_full_details": "Open de losse pagina van dit voedingsmiddel",
@@ -1611,7 +1620,7 @@
                 "ii_low": "Lågt 🟢",
                 "ii_medium": "Måttligt 🟡",
                 "ii_high": "Högt 🔴",
-                "ii_tested_badge": "Kliniskt testat (Holt / Bao) ✅",
+                "ii_tested_badge": "Dokumenterad referens (Holt / Bao) ✅",
                 "ii_not_tested": "Inte kliniskt testat",
                 "modal_per_100g": "Näringsvärde per 100 g",
                 "modal_full_details": "Öppna livsmedlets egen sida",
@@ -1797,10 +1806,10 @@
                     <i class="fas fa-utensils"></i><span>${t('tab_all')}</span><span class="tab-count">${allFoods.length}</span>
                 </button>
                 <button class="tab-btn fav-chip${showFavorites ? ' active' : ''}" type="button" data-fav="1" aria-pressed="${showFavorites}">
-                    <i class="fas fa-heart" style="color: #ef4444;"></i><span>${t('tab_fav')}</span><span class="tab-count" id="favFoodsTabCount">${favorites.length}</span>
+                    <i class="fas fa-heart"></i><span>${t('tab_fav')}</span><span class="tab-count" id="favFoodsTabCount">${favorites.length}</span>
                 </button>`;
             grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
-                <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}" style="--accent: ${g.color}">
+                <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}">
                     <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
                         onerror="if (retryImageOnce(this)) return; const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
                     <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
@@ -2025,7 +2034,7 @@
                             <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
                         </button>
                        ${food.image ? `
-    <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.12); border: 2px solid rgba(16, 185, 129, 0.25);">
+    <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px var(--shadow); border: 1px solid var(--fd-line);">
         <img src="${food.image}" alt="${foodTitle}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="if (retryImageOnce(this)) return; this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
     </div>
     <div class="food-icon" style="display: none;">${food.icon || '🍽️'}</div>
