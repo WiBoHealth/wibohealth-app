@@ -1023,7 +1023,7 @@ UI = dict(
     tip_titles=('Råd om konsumtion', 'Bästa tillagningssätt', 'Viktig kostnotering'),
     table='Näringsvärde', nutrient='Näringsämne', col100='Per 100 g', colp='Per vanlig portion ({p} g)',
     rows=('Kalorier', 'Protein', 'Kolhydrater', 'Tillgängliga kolhydrater', 'Fett', 'Kostfiber'),
-    ii_row='Insulinindex', ii_tested='kliniskt testat (Holt / Bao)',
+    ii_row='Insulinindex', ii_tested='dokumenterad referens (Holt / Bao)',
     compare='Jämförelse och smarta alternativ', alt_lower='Alternativ med lägre GI:', alt_same='Närliggande livsmedel i samma familj:',
     alt_family='Smarta alternativ i samma familj:',
     lowest_note='Det här är ett av livsmedlen med lägst GI i sin grupp.',
