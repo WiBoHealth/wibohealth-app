@@ -22,7 +22,7 @@ from pathlib import Path
 
 from calculator_content import CALCS, T
 from generate_article_pages import EXTRA_CSS as ARTICLE_CSS, SV, UI_SV, link, nav as site_nav
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, sv_slugs
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, mark_english_links, sv_slugs
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -522,7 +522,7 @@ def main():
         out_dir.mkdir(parents=True, exist_ok=True)
         for calc in CALCS:
             if lang in langs_of(calc):
-                (out_dir / f'{calc["slug"]}.html').write_text(build(calc, lang), encoding='utf-8', newline='\n')
+                (out_dir / f'{calc["slug"]}.html').write_text(mark_english_links(build(calc, lang), lang), encoding='utf-8', newline='\n')
 
     sm_path = ROOT / 'sitemap.xml'
     sm = sm_path.read_text(encoding='utf-8')

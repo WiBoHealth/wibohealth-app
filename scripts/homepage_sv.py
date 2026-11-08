@@ -227,16 +227,16 @@ ALT = {
     'images/dr-wassim.webp': 'Dr. Wassim Habib – grundare av WiBo Health',
 }
 
-# "Vad blir det till middag?" strip: Nordic dishes that have an English food page (GI bands as on those pages)
+# "Vad blir det till middag?" strip: Nordic dishes, each linked to its Swedish food page (GI bands as on those pages)
 MEALS = [
-    ('/en/foods/swedish-meatballs-kottbullar-with-cream-gravy.html', '🧆', 'Köttbullar med gräddsås', 'GI lågt', 25),
-    ('/en/foods/swedish-whole-rye-crispbread-knackebrod.html', '🌾', 'Fullkornsknäckebröd av råg', 'GI lågt', 48),
-    ('/en/foods/nordic-gravlax-cured-salmon-with-fresh-dill.html', '🐟', 'Gravad lax med dill', 'GI ej tillämpligt', None),
+    ('/sv/foods/swedish-meatballs-kottbullar-with-cream-gravy.html', '🧆', 'Köttbullar med gräddsås', 'GI lågt', 25),
+    ('/sv/foods/swedish-whole-rye-crispbread-knackebrod.html', '🌾', 'Fullkornsknäckebröd av råg', 'GI lågt', 48),
+    ('/sv/foods/nordic-gravlax-cured-salmon-with-fresh-dill.html', '🐟', 'Gravad lax med dill', 'GI ej tillämpligt', None),
     ('/sv/foods/oatmeal.html', '🥣', 'Havregrynsgröt', 'GI lågt', 55),
-    ('/en/foods/lentil-soup.html', '🍲', 'Linssoppa', 'GI lågt', 30),
-    ('/en/foods/wild-swedish-lingonberry-jam-low-sugar.html', '🫐', 'Lingonsylt med mindre socker', 'GI lågt', 45),
-    ('/en/foods/swedish-cardamom-cinnamon-bun-kanelbulle.html', '🥐', 'Kanelbulle', 'GI medel', 65),
-    ('/en/foods/swedish-hasselback-accordion-roasted-potatoes.html', '🥔', 'Hasselbackspotatis', 'GI högt', 72),
+    ('/sv/foods/lentil-soup.html', '🍲', 'Linssoppa', 'GI lågt', 30),
+    ('/sv/foods/wild-swedish-lingonberry-jam-low-sugar.html', '🫐', 'Lingonsylt med mindre socker', 'GI lågt', 45),
+    ('/sv/foods/swedish-cardamom-cinnamon-bun-kanelbulle.html', '🥐', 'Kanelbulle', 'GI medel', 65),
+    ('/sv/foods/swedish-hasselback-accordion-roasted-potatoes.html', '🥔', 'Hasselbackspotatis', 'GI högt', 72),
 ]
 
 TIPS = [

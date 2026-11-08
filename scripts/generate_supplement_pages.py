@@ -21,7 +21,7 @@ import re
 from pathlib import Path
 
 from generate_food_pages import (BASE_CSS, LOGO_SVG, SITE, LANGS, ALL_LANGS, SV, UI, any_link, dir_url, esc, nav_html,
-                                 replace_sitemap_block, site_link)
+                                 mark_english_links, replace_sitemap_block, site_link)
 import supplement_sv as SSV
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -373,7 +373,8 @@ def build(s, lang, vetted):
     title = snip.get('title', {}).get(lang) or title
     meta_desc = snip.get('desc', {}).get(lang) or meta_desc
     urls = {l: page_url(s['slug'], l) for l in langs_of(s['slug'])}
-    guide_href = L('/supplements.html') + '#' + s['slug']
+    # Swedish has no interactive guide: the Swedish index (no English hop)
+    guide_href = GUIDE_URL[SV] if lang == SV else L('/supplements.html') + '#' + s['slug']
 
     schema = {
         "@context": "https://schema.org",
@@ -614,7 +615,7 @@ def main():
             if old.name not in keep:
                 old.unlink()
         for s in pages:
-            (out_dir / f'{s["slug"]}.html').write_text(build(s, lang, vetted), encoding='utf-8', newline='\n')
+            (out_dir / f'{s["slug"]}.html').write_text(mark_english_links(build(s, lang, vetted), lang), encoding='utf-8', newline='\n')
             written += 1
 
     (ROOT / 'js' / 'supplement-pages.js').write_text(

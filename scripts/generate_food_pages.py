@@ -1190,7 +1190,7 @@ def fit_title(name, lang):
 READ_ALSO_TITLE = {'ar': 'اقرأ أيضاً', 'en': 'Read also', 'nl': 'Lees ook', 'sv': 'Läs även'}
 READ_ALSO_KIND = {'guide': {'ar': 'دليل', 'en': 'Guide', 'nl': 'Gids', 'sv': 'Guide'},
                   'article': {'ar': 'مقال', 'en': 'Article', 'nl': 'Artikel', 'sv': 'Artikel'},
-                  'supplement': {'ar': 'مكمل', 'en': 'Supplement', 'nl': 'Supplement', 'sv': 'Kosttillskott (engelska)'}}
+                  'supplement': {'ar': 'مكمل', 'en': 'Supplement', 'nl': 'Supplement', 'sv': 'Kosttillskott'}}
 READ_ALSO = {
     'insulin': ('article', {
         'ar': ('/insulin-resistance.html', 'السكر التراكمي ومقاومة الإنسولين: الدليل الشامل'),
@@ -1216,12 +1216,12 @@ READ_ALSO = {
         'ar': ('/supplements/selenium.html', 'السيلينيوم (سيلينوميثيونين)'),
         'en': ('/en/supplements/selenium.html', 'Selenium (L-Selenomethionine)'),
         'nl': ('/nl/supplements/selenium.html', 'Selenium (L-Selenomethionine)'),
-        'sv': ('/en/supplements/selenium.html', 'Selen (L-selenometionin)')}),
+        'sv': ('/sv/supplements/selenium.html', 'Selen (L-selenometionin)')}),
     'fatty_liver': ('article', {
-        'ar': ('/fatty-liver.html', 'الكبد الدهني الخفي: دليلك السريري'),
-        'en': ('/fatty-liver.html?lang=en', 'Silent Fatty Liver (MASLD/NAFLD): Clinical Guide'),
-        'nl': ('/fatty-liver.html?lang=nl', 'Stille Leververvetting (MASLD/NAFLD): Klinische Gids'),
-        'sv': ('/sv/articles/fettlever.html', 'Fettlever (MASLD): så uppstår den tyst och vad du kan göra')}),
+        'ar': ('/articles/fatty-liver-and-visceral-fat.html', 'الكبد الدهني الخفي: دليلك السريري'),
+        'en': ('/en/articles/fatty-liver-and-visceral-fat.html', 'Silent Fatty Liver (MASLD/NAFLD): Clinical Guide'),
+        'nl': ('/nl/articles/fatty-liver-and-visceral-fat.html', 'Stille Leververvetting (MASLD/NAFLD): Klinische Gids'),
+        'sv': ('/sv/articles/fatty-liver-and-visceral-fat.html', 'Fettlever (MASLD): så uppstår den tyst och vad du kan göra')}),
 }
 STARCH_GROUPS = {'grain', 'tuber', 'bakery', 'sweets', 'fastfood', 'sandwich', 'dried'}
 SELENIUM_FOODS = {399}            # the selenium supplement page is linked from Brazil nuts only (approved 2026-10-24)
@@ -1719,6 +1719,14 @@ def site_link(path, lang):
         return path
     path, hash_, frag = path.partition('#')  # the query must sit before an #anchor
     return f"{path}{'&' if '?' in path else '?'}lang={lang}{hash_}{frag}"
+
+
+def mark_english_links(html, lang):
+    """Swedish pages: a link to a page without a Swedish version (Partnerships, the interactive supplements guide, ...)
+    opens it in English (?lang=en) and says so with hreflang="en"."""
+    if lang != SV:
+        return html
+    return re.sub(r'(<a\b[^>]*?\shref="/[^"]*[?&]lang=en(?:[&#][^"]*)?")(?![^>]*\bhreflang=)', r'\1 hreflang="en"', html)
 
 
 def dir_url(kind, lang, absolute=True):
@@ -2286,7 +2294,7 @@ def main():
         for lang in langs_of(fid):
             out = ROOT / (f'foods/{slugs[fid]}.html' if lang == 'ar' else f'{lang}/foods/{slugs[fid]}.html')
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text(build(foods[fid], lang, ctx), encoding='utf-8', newline='\n')
+            out.write_text(mark_english_links(build(foods[fid], lang, ctx), lang), encoding='utf-8', newline='\n')
             written += 1
     if only:
         print(f'pages written: {written} ({len(only)} foods, --only)')

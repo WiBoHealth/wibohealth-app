@@ -657,6 +657,7 @@
         .fp-hero-text { min-width: 0; }
         .fp-hero-text h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.25; margin: 0 0 4px; overflow-wrap: anywhere; }
         .fp-sub { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; color: var(--text-muted); font-weight: 600; font-size: 0.88rem; }
+        .fp-sub .sep-dot { white-space: pre; opacity: 0.6; margin: 0 -10px; }   /* text separator: name • group (no run-together in snippets) */
         .group-chip {
             display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.76rem;
             font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
@@ -922,7 +923,7 @@
                 <a href="/sv/index.html#articles" class="nav-link">Artiklar</a>
                 <a href="/sv/diabetes.html" class="nav-link nav-diabetes">Diabetes</a>
                 <a href="/sv/boodi.html" class="nav-link">boodi-appen 💚</a>
-                <a href="/partners.html?lang=en" class="nav-link nav-partners">Samarbeten</a>
+                <a href="/partners.html?lang=en" hreflang="en" class="nav-link nav-partners">Samarbeten</a>
             </nav>
             <div class="header-actions">
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" title="Byt tema" aria-label="Byt tema">
@@ -1005,7 +1006,7 @@
     </main>
 
     <footer>
-        <div class="footer-links"><a href="/sv/index.html">Hem</a> <span>•</span> <a href="/sv/index.html#articles">Artiklar</a> <span>•</span> <a href="/sv/om-oss.html">Om oss</a> <span>•</span> <a href="/sv/kontakt.html">Kontakt</a> <span>•</span> <a href="/sv/integritetspolicy.html">Integritetspolicy</a> <span>•</span> <a href="/sv/anvandarvillkor.html">Användarvillkor</a> <span>•</span> <a href="/sv/medicinsk-ansvarsfriskrivning.html">Medicinsk ansvarsfriskrivning</a> <span>•</span> <a href="/partners.html?lang=en">Samarbeten</a></div>
+        <div class="footer-links"><a href="/sv/index.html">Hem</a> <span>•</span> <a href="/sv/index.html#articles">Artiklar</a> <span>•</span> <a href="/sv/om-oss.html">Om oss</a> <span>•</span> <a href="/sv/kontakt.html">Kontakt</a> <span>•</span> <a href="/sv/integritetspolicy.html">Integritetspolicy</a> <span>•</span> <a href="/sv/anvandarvillkor.html">Användarvillkor</a> <span>•</span> <a href="/sv/medicinsk-ansvarsfriskrivning.html">Medicinsk ansvarsfriskrivning</a> <span>•</span> <a href="/partners.html?lang=en" hreflang="en">Samarbeten</a></div>
         <p>© 2026 WiBo Health Group. Alla rättigheter förbehållna.</p>
     </footer>
 

@@ -30,7 +30,7 @@ from pathlib import Path
 from article_content import ARTICLES, SECTIONS
 from site_pages_sv import SITE_PAGES_SV
 from generate_food_pages import (BASE_CSS, JOB_TITLE, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, nav_html, replace_sitemap_block,
-                                 site_link, sv_slugs)
+                                 mark_english_links, site_link, sv_slugs)
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -91,9 +91,24 @@ def sv_page_of(path):
     return None
 
 
+# root pages that have a static page per language (no ?lang hop, no 301): the calculators, the fatty liver guide
+# (/fatty-liver.html is a 301 to it), and for Swedish the food guide's Swedish view and the Swedish supplement index
+STATIC_PAGES = {f'/{c}-calculator.html': {l: f'/{l}/{c}-calculator.html' for l in ('en', 'nl', SV)}
+                for c in ('bmi', 'tdee', 'water', 'whtr')}
+STATIC_PAGES['/fatty-liver.html'] = {'ar': '/articles/fatty-liver-and-visceral-fat.html',
+                                     **{l: f'/{l}/articles/fatty-liver-and-visceral-fat.html' for l in ('en', 'nl', SV)}}
+STATIC_PAGES['/foods.html'] = {SV: '/foods.html?lang=sv'}
+STATIC_PAGES['/supplements.html'] = {SV: '/sv/supplements/index.html'}
+
+
 def link(path, lang):
     """site_link() for every language: the Swedish homepage is static, pages with a Swedish version open in Swedish,
     the rest in English."""
+    bare, _, frag = path.partition('#')
+    if bare in STATIC_PAGES:                 # pages with a static version per language: the clean path, no ?lang
+        out = STATIC_PAGES[bare].get(lang)
+        if out:
+            return out + ('#' + frag if frag else '')
     if lang != SV:
         return site_link(path, lang)
     if path in ('/', '/#articles'):
@@ -690,16 +705,16 @@ def main():
                 if old.name not in keep:
                     old.unlink()
         for a in mine:
-            (lang_dir(lang, section_dir(a)) / f'{a["slugs"][lang]}.html').write_text(build(a, lang), encoding='utf-8', newline='\n')
+            (lang_dir(lang, section_dir(a)) / f'{a["slugs"][lang]}.html').write_text(mark_english_links(build(a, lang), lang), encoding='utf-8', newline='\n')
         for key, sec in SECTIONS.items():               # a hub sits next to its folder: diabetes.html + diabetes/
             if lang in langs_of(sec):
-                (lang_dir(lang) / f'{sec["dir"]}.html').write_text(build_hub(key, lang), encoding='utf-8', newline='\n')
+                (lang_dir(lang) / f'{sec["dir"]}.html').write_text(mark_english_links(build_hub(key, lang), lang), encoding='utf-8', newline='\n')
 
     for a in ARTICLES:
         if a.get('legacy') and SV in a['content'] and not is_draft(a):
             link_legacy_page(a['legacy']['ar'], page_url(a, SV, absolute=False))
     for p in SITE_PAGES_SV:                              # Swedish doctor, about, legal and contact pages
-        (ROOT / 'sv' / f'{p["slug"]}.html').write_text(build_site_page(p), encoding='utf-8', newline='\n')
+        (ROOT / 'sv' / f'{p["slug"]}.html').write_text(mark_english_links(build_site_page(p), SV), encoding='utf-8', newline='\n')
         if p['legacy']:
             link_legacy_page(p['legacy'], site_page_url(p, absolute=False))
 

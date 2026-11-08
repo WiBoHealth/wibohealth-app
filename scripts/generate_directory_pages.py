@@ -23,7 +23,7 @@ import food_sv as FSV
 import supplement_sv as SSV
 from generate_article_pages import link, nav as sv_nav
 from generate_food_pages import (FOOD_GROUP_LABELS, LANGS, LOGO_SVG, SITE, SV, UI, dir_url, esc,
-                                 load_foods, nav_html, replace_sitemap_block, site_link)
+                                 load_foods, mark_english_links, nav_html, replace_sitemap_block, site_link)
 from generate_supplement_pages import (GA_TAG, NAME as SUPP_NAME, COMPARE_CSS, SEARCH_CSS, compare_hint_html, compare_pick_html,
                                        compare_shell_html, disclaimer_html, load_supplements, search_html, search_script)
 
@@ -47,8 +47,7 @@ T = {
         SV: dict(title='Livsmedelsregister: {n} livsmedel med kalorier och glykemiskt index | WiBo Health', h1='Livsmedelsregister',
                  desc='Livsmedelsguidens svenska sidor på ett ställe ({n} livsmedel), sorterade efter livsmedelsgrupp: kalorier, protein, kolhydrater och glykemiskt index.',
                  intro='Livsmedelsguidens svenska sidor på ett ställe, sorterade efter livsmedelsgrupp. Varje livsmedel har en egen sida med kalorier, protein och kolhydrater, och glykemiskt index och glykemisk belastning där de finns.',
-                 cta='Öppna den interaktiva guiden (på engelska) för att söka och jämföra', count='{n} livsmedel',
-                 full='Hela livsmedelsregistret på engelska ({n} livsmedel)'),
+                 cta='Öppna den interaktiva guiden för att söka och jämföra', count='{n} livsmedel'),
     },
     'supplements': {
         'ar': dict(title='فهرس المكملات الغذائية: {n} مكملاً بالجرعات والتداخلات الدوائية | WiBo Health', h1='فهرس المكملات الغذائية',
@@ -67,8 +66,7 @@ T = {
                  h1='Kosttillskottsregister',
                  desc='Kosttillskottsguidens svenska sidor på ett ställe ({n} kosttillskott), i bokstavsordning: rekommenderad dos, varningar och interaktioner med läkemedel enligt EFSA och NIH.',
                  intro='Kosttillskottsguidens svenska sidor på ett ställe, i bokstavsordning. Varje kosttillskott har en egen sida med rekommenderad dos, de bästa beredningsformerna, varningar och interaktioner med läkemedel, med publicerade vetenskapliga källor (EFSA / NIH / PubMed).',
-                 cta='Öppna den interaktiva kosttillskottsguiden (på engelska)', count='{n} kosttillskott', guide='Kosttillskottsguide',
-                 full='Hela kosttillskottsregistret på engelska ({n} kosttillskott)'),
+                 cta='Öppna den interaktiva kosttillskottsguiden (på engelska)', count='{n} kosttillskott', guide='Kosttillskottsguide'),
     },
 }
 
@@ -244,15 +242,15 @@ def build(kind, lang, sections):
         f'hreflang="{l}" lang="{l}">{l.upper()}</a>'
         for l in ('ar', 'nl', 'en', SV) if l in urls)
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
-    if lang == SV:                          # Swedish: both Swedish indexes, and the full English index of this kind
+    if lang == SV:                          # Swedish: both Swedish indexes (each one lists every Swedish page)
         footer_links = ' <span>•</span> '.join(
             f'<a href="{href}">{label}</a>' for href, label in
             [(L('/'), u['nav'][0]), (dir_url('foods', lang, absolute=False), T['foods'][SV]['h1']),
              (dir_url('supplements', lang, absolute=False), T['supplements'][SV]['h1']),
              (L('/methodology.html'), u['methodology']), (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
-        other_link = (f'<a class="guide-link" href="{dir_url(kind, "en", absolute=False)}"><i class="fas fa-list"></i> '
-                      f'{esc(t["full"].format(n=total))}</a>')
-        hub_href = site_link(hub, 'en')
+        other_link = (f'<a class="guide-link" href="{dir_url(other, lang, absolute=False)}"><i class="fas fa-list"></i> '
+                      f'{esc(T[other][lang]["h1"])}</a>')
+        hub_href = site_link(hub, SV if kind == 'foods' else 'en')   # foods.html has a Swedish view; supplements.html has not
     else:
         footer_links = ' <span>•</span> '.join(
             f'<a href="{href}">{label}</a>' for href, label in
@@ -368,7 +366,7 @@ def main():
         for lang in dir_langs(kind):
             out = ROOT / dir_url(kind, lang, absolute=False).lstrip('/')
             out.parent.mkdir(parents=True, exist_ok=True)
-            out.write_text(build(kind, lang, sections), encoding='utf-8', newline='\n')
+            out.write_text(mark_english_links(build(kind, lang, sections), lang), encoding='utf-8', newline='\n')
             lastmod = (FSV.REVIEWED if kind == 'foods' else SSV.REVIEWED) if lang == SV else UPDATED
             lines += ['  <url>', f'    <loc>{dir_url(kind, lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>weekly</changefreq>', '    <priority>0.8</priority>']
