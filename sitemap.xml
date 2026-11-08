@@ -25,13 +25,7 @@
 
   <!-- الصفحة الرسمية لتطبيق بودي -->
 
-  <!-- صفحة الشراكات والرعاية -->
-  <url>
-    <loc>https://wibohealth.com/partners.html</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+  <!-- صفحة الشراكات والرعاية: ar + sv in the ARTICLE-PAGES block (scripts/site_pages_sv.py) -->
 
   <!-- المقالات السريرية الحديثة (Content Pillars) -->
 
@@ -8331,6 +8325,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/methodology.html"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/metodik.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/methodology.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/partners.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/partners.html"/>
+  </url>
+  <url>
+    <loc>https://wibohealth.com/sv/partners.html</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://wibohealth.com/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/partners.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://wibohealth.com/partners.html"/>
   </url>
   <!-- ARTICLE-PAGES:END -->
   <!-- FOOD-PAGES:START -->

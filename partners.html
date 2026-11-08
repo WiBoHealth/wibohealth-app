@@ -23,6 +23,7 @@
             try {
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
+                if (q === 'sv') { location.replace('/sv/partners.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
                 var n = (navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
@@ -50,14 +51,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title data-i18n="meta_title">الشراكات والرعاية التجارية | Partner with WiBo Health</title>
-    <meta name="description" id="metaDescription" content="شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 650 صنفاً غذائياً و1,950 صفحة بثلاث لغات. أرسل مقترحك.">
+    <meta name="description" id="metaDescription" content="شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 900 صنف غذائي بأربع لغات و174 مكملاً غذائياً. أرسل مقترحك.">
     <meta name="author" content="WiBo Health Group">
     <link rel="canonical" href="https://wibohealth.com/partners.html">
+    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/partners.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/partners.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/partners.html">
+    <!-- SV-ALTERNATES:END -->
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/partners.html">
     <meta property="og:title" content="Partner with WiBo Health | Partnerships & Sponsorships">
-    <meta property="og:description" content="Partner with WiBo Health and the Boodi app: 650+ verified foods, 1,950 pages in Arabic, English and Dutch, GI, GL and insulin index data, and a dedicated supplements guide.">
+    <meta property="og:description" content="Partner with WiBo Health and the Boodi app: 900+ foods in Arabic, English, Dutch and Swedish, GI, GL and insulin index data, and a guide to 174 supplements.">
     <meta property="og:image" content="https://wibohealth.com/images/boodi-app-poster.jpeg">
 
     <script type="application/ld+json">
@@ -66,7 +72,7 @@
       "@type": "WebPage",
       "name": "Partner with WiBo Health",
       "url": "https://wibohealth.com/partners.html",
-      "inLanguage": ["ar", "en", "nl"],
+      "inLanguage": ["ar", "en", "nl", "sv"],
       "about": "Partnerships and sponsorships",
       "publisher": {
         "@type": "Organization",
@@ -227,6 +233,7 @@
                 <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
                 <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
                 <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
+                <a class="lang-btn" data-sv-link href="/sv/partners.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -259,10 +266,10 @@
         <div class="wrap">
             <!-- Stats -->
             <div class="stats">
-                <div class="stat"><div class="stat-num">650+</div><div class="stat-label" data-i18n="stat_foods">صنفاً غذائياً مدققاً</div></div>
-                <div class="stat"><div class="stat-num">1,950</div><div class="stat-label" data-i18n="stat_pages">صفحة غذائية متخصصة</div></div>
+                <div class="stat"><div class="stat-num">900+</div><div class="stat-label" data-i18n="stat_foods">صنفاً غذائياً مدققاً</div></div>
+                <div class="stat"><div class="stat-num">3,700+</div><div class="stat-label" data-i18n="stat_pages">صفحة غذائية متخصصة</div></div>
                 <div class="stat"><div class="stat-num">174</div><div class="stat-label" data-i18n="stat_supps">مكملاً غذائياً موثقاً</div></div>
-                <div class="stat"><div class="stat-num">3</div><div class="stat-label" data-i18n="stat_langs">لغات: العربية، الإنجليزية، الهولندية</div></div>
+                <div class="stat"><div class="stat-num">4</div><div class="stat-label" data-i18n="stat_langs">لغات: العربية، الإنجليزية، الهولندية، السويدية</div></div>
             </div>
 
             <!-- Audience & reach -->
@@ -275,7 +282,7 @@
                     <div class="card">
                         <div class="card-icon"><i class="fa-solid fa-database"></i></div>
                         <h3 data-i18n="reach_1_title">قاعدة بيانات شاملة ومدققة</h3>
-                        <p data-i18n="reach_1_desc">أكثر من 650 صنفاً غذائياً مدققاً و1,950 صفحة متخصصة بثلاث لغات (العربية، الإنجليزية، الهولندية)، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.</p>
+                        <p data-i18n="reach_1_desc">أكثر من 900 صنف غذائي مدقق بأربع لغات (العربية والإنجليزية والهولندية والسويدية) في أكثر من 3,700 صفحة متخصصة، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
@@ -320,7 +327,7 @@
                             <span class="pill" data-i18n="pill_asia">🍜 آسيوي</span>
                             <span class="pill" data-i18n="pill_fast">🍔 وجبات سريعة</span>
                         </div>
-                        <p data-i18n="edge_2_desc">تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بثلاث لغات.</p>
+                        <p data-i18n="edge_2_desc">تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بأربع لغات.</p>
                     </div>
                 </div>
             </section>
@@ -342,13 +349,13 @@
                         <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                         <h3 data-i18n="opp_2_title">حملات تطبيق Boodi</h3>
                         <span class="card-tag">Boodi App Campaigns</span>
-                        <p data-i18n="opp_2_desc">رعاية نتائج المسح وإبراز علامتك التجارية لمستخدمي تطبيق Boodi في هولندا وأوروبا، مع فرصة الانضمام كشريك مؤسس مع إطلاق التطبيق.</p>
+                        <p data-i18n="opp_2_desc">تطبيق بودي: قائمة الانتظار مفتوحة الآن، مع فرصة حصرية للانضمام كشريك مؤسس عند الإطلاق التجاري. وبعد الإطلاق يمكن للعلامات الشريكة رعاية نتائج المسح والوصول إلى مستخدمي التطبيق في هولندا وأوروبا.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                         <h3 data-i18n="opp_3_title">المراجعات والتدقيق الغذائي المستقل</h3>
                         <span class="card-tag">Verified Product Audits</span>
-                        <p data-i18n="opp_3_desc">إدراج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال (مشتقات الخنزير، الجيلاتين، الكحول، الإضافات E).</p>
+                        <p data-i18n="opp_3_desc">بعد إطلاق تطبيق بودي، تُدرج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال، وهي معايير مكونات محددة وقابلة للتحقق: خلو المنتج من مشتقات الخنزير والجيلاتين الحيواني والكحول، ومراجعة الإضافات (E). فحص معايير الحلال في تطبيق بودي ميزة اختيارية بالكامل يتيحها التطبيق عبر زر تبديل (Toggle Switch) لمن يرغب في تفعيلها، مما يمنح الشركاء وصولاً دقيقاً للمستهلكين المهتمين بهذا التصنيف.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
@@ -360,7 +367,7 @@
                         <div class="card-icon"><i class="fa-solid fa-capsules"></i></div>
                         <h3 data-i18n="opp_5_title">المكملات الغذائية والأغذية الوظيفية</h3>
                         <span class="card-tag">Nutraceuticals &amp; Dietary Supplements</span>
-                        <p data-i18n="opp_5_desc">قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و522 صفحة بثلاث لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.</p>
+                        <p data-i18n="opp_5_desc">قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و696 صفحة بأربع لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.</p>
                     </div>
                 </div>
 
@@ -408,7 +415,7 @@
         const translations = {
             ar: {
                 'meta_title': 'الشراكات والرعاية التجارية | Partner with WiBo Health',
-                'meta_desc': 'شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 650 صنفاً غذائياً و1,950 صفحة بثلاث لغات. أرسل مقترحك.',
+                'meta_desc': 'شراكات ورعاية مع WiBo Health وتطبيق Boodi: جمهور مهتم بالسكري والوزن والمنتجات الحلال، أكثر من 900 صنف غذائي بأربع لغات و174 مكملاً غذائياً. أرسل مقترحك.',
                 'nav_back_home': 'العودة للرئيسية',
                 'hero_badge': 'الشراكات والرعاية',
                 'hero_title': 'الشراكات والرعاية التجارية<span>Partner with WiBo Health</span>',
@@ -418,11 +425,11 @@
                 'stat_foods': 'صنفاً غذائياً مدققاً',
                 'stat_pages': 'صفحة غذائية متخصصة',
                 'stat_supps': 'مكملاً غذائياً موثقاً',
-                'stat_langs': 'لغات: العربية، الإنجليزية، الهولندية',
+                'stat_langs': 'لغات: العربية، الإنجليزية، الهولندية، السويدية',
                 'reach_eyebrow': 'جمهورنا وانتشارنا',
                 'reach_heading': 'لماذا تشارك مع WiBo Health وتطبيق Boodi؟',
                 'reach_1_title': 'قاعدة بيانات شاملة ومدققة',
-                'reach_1_desc': 'أكثر من 650 صنفاً غذائياً مدققاً و1,950 صفحة متخصصة بثلاث لغات (العربية، الإنجليزية، الهولندية)، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.',
+                'reach_1_desc': 'أكثر من 900 صنف غذائي مدقق بأربع لغات (العربية والإنجليزية والهولندية والسويدية) في أكثر من 3,700 صفحة متخصصة، إلى جانب دليل مستقل يضم 174 مكملاً غذائياً.',
                 'reach_2_title': 'جمهور نوعي بنية شراء عالية',
                 'reach_2_desc': 'زوار يبحثون عن حلول عملية: مرضى السكري ومقاومة الإنسولين، الساعون إلى إنقاص الوزن، والباحثون عن منتجات حلال موثوقة في أوروبا والشرق الأوسط.',
                 'reach_3_title': 'نمو عضوي متسارع في Google',
@@ -442,18 +449,18 @@
                 'pill_arab': '🥙 عربي',
                 'pill_asia': '🍜 آسيوي',
                 'pill_fast': '🍔 وجبات سريعة',
-                'edge_2_desc': 'تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بثلاث لغات.',
+                'edge_2_desc': 'تغطي قاعدة بياناتنا مختلف المطابخ العالمية، الأوروبية والأمريكية والمتوسطية والعربية والآسيوية وغيرها، إضافة إلى الوجبات السريعة، بمقارنات دقيقة محسوبة لكل 100 غرام ولكل حصة. كما يضم الموقع قسماً رئيسياً ومستقلاً للمكملات الغذائية والأغذية الوظيفية (Nutraceuticals &amp; Dietary Supplements) يغطي 174 مكملاً بأربع لغات.',
                 'opp_heading': 'مجالات وفرص الرعاية',
                 'opp_1_title': 'رعاية البدائل الذكية الموصى بها',
                 'opp_1_desc': 'إبراز منتج شركتك كبديل صحي في صفحات الأطعمة ذات الصلة، بعد مراجعة قيمه الغذائية من فريقنا الطبي.',
                 'opp_2_title': 'حملات تطبيق Boodi',
-                'opp_2_desc': 'رعاية نتائج المسح وإبراز علامتك التجارية لمستخدمي تطبيق Boodi في هولندا وأوروبا، مع فرصة الانضمام كشريك مؤسس مع إطلاق التطبيق.',
+                'opp_2_desc': 'تطبيق بودي: قائمة الانتظار مفتوحة الآن، مع فرصة حصرية للانضمام كشريك مؤسس عند الإطلاق التجاري. وبعد الإطلاق يمكن للعلامات الشريكة رعاية نتائج المسح والوصول إلى مستخدمي التطبيق في هولندا وأوروبا.',
                 'opp_3_title': 'المراجعات والتدقيق الغذائي المستقل',
-                'opp_3_desc': 'إدراج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال (مشتقات الخنزير، الجيلاتين، الكحول، الإضافات E).',
+                'opp_3_desc': 'بعد إطلاق تطبيق بودي، تُدرج منتجاتك في محرك الفحص بعد مطابقتها للمعايير السريرية (المؤشر الجلايسيمي، السكريات، المكونات) ومعايير الحلال، وهي معايير مكونات محددة وقابلة للتحقق: خلو المنتج من مشتقات الخنزير والجيلاتين الحيواني والكحول، ومراجعة الإضافات (E). فحص معايير الحلال في تطبيق بودي ميزة اختيارية بالكامل يتيحها التطبيق عبر زر تبديل (Toggle Switch) لمن يرغب في تفعيلها، مما يمنح الشركاء وصولاً دقيقاً للمستهلكين المهتمين بهذا التصنيف.',
                 'opp_4_title': 'برامج الصحة المؤسسية والتعاون البحثي',
                 'opp_4_desc': 'برامج توعية غذائية للموظفين، وتعاون مع الجامعات ومراكز الأبحاث في مجالات التغذية والتمثيل الغذائي.',
                 'opp_5_title': 'المكملات الغذائية والأغذية الوظيفية',
-                'opp_5_desc': 'قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و522 صفحة بثلاث لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.',
+                'opp_5_desc': 'قسم شراكات رئيسي ومستقل لشركات المكملات والفيتامينات: رعاية أقسام دليل المكملات (174 مكملاً و696 صفحة بأربع لغات)، وإدراج منتجاتكم الموثوقة كخيارات معتمدة للجمهور بعد التحقق من مكوناتها وجرعاتها وفق مراجع EFSA.',
                 'trust_title': 'الشفافية والاستقلالية التحريرية',
                 'trust_desc': 'يُوسَم كل محتوى أو منتج مموَّل بوضوح بعبارة «برعاية»، ولا يُدرج أي منتج إلا بعد مراجعة فريقنا الطبي. القيم الغذائية والتوصيات الطبية في الموقع ليست للبيع، ولا ننشر ادعاءات صحية غير مصرّح بها وفق اللائحة الأوروبية (EC) رقم 1924/2006.',
                 'cta_title': 'لنبنِ شراكة تُحدث فرقاً',
@@ -470,7 +477,7 @@
             },
             en: {
                 'meta_title': 'Partnerships & Sponsorships | Partner with WiBo Health',
-                'meta_desc': 'Partner with WiBo Health and the Boodi app: an audience focused on diabetes, weight loss and halal products, 650+ verified foods and 1,950 pages in three languages.',
+                'meta_desc': 'Partner with WiBo Health and the Boodi app: an audience focused on diabetes, weight loss and halal products, 900+ foods in four languages and 174 supplements.',
                 'nav_back_home': 'Back to Home',
                 'hero_badge': 'Partnerships & Sponsorships',
                 'hero_title': 'Partnerships &amp; Sponsorships<span>Partner with WiBo Health</span>',
@@ -480,11 +487,11 @@
                 'stat_foods': 'verified foods',
                 'stat_pages': 'dedicated food pages',
                 'stat_supps': 'documented supplements',
-                'stat_langs': 'languages: Arabic, English, Dutch',
+                'stat_langs': 'languages: Arabic, English, Dutch, Swedish',
                 'reach_eyebrow': 'Our Audience & Reach',
                 'reach_heading': 'Why partner with WiBo Health and the Boodi app?',
                 'reach_1_title': 'A comprehensive, verified database',
-                'reach_1_desc': 'More than 650 verified foods and 1,950 dedicated pages in three languages (Arabic, English and Dutch), plus a separate guide covering 174 dietary supplements.',
+                'reach_1_desc': 'More than 900 verified foods in four languages (Arabic, English, Dutch and Swedish) across more than 3,700 dedicated pages, plus a separate guide covering 174 dietary supplements.',
                 'reach_2_title': 'A high-intent, niche audience',
                 'reach_2_desc': 'Visitors looking for practical answers: people with diabetes or insulin resistance, people working on weight loss, and shoppers seeking trustworthy halal products in Europe and the Middle East.',
                 'reach_3_title': 'Fast-growing organic reach on Google',
@@ -504,18 +511,18 @@
                 'pill_arab': '🥙 Arabic',
                 'pill_asia': '🍜 Asian',
                 'pill_fast': '🍔 Fast food',
-                'edge_2_desc': 'Our database covers cuisines from around the world, including European, American, Mediterranean, Arabic and Asian dishes, as well as fast food, with accurate comparisons per 100 grams and per serving. The site also has a main, stand-alone section for Nutraceuticals &amp; Dietary Supplements covering 174 supplements in three languages.',
+                'edge_2_desc': 'Our database covers cuisines from around the world, including European, American, Mediterranean, Arabic and Asian dishes, as well as fast food, with accurate comparisons per 100 grams and per serving. The site also has a main, stand-alone section for Nutraceuticals &amp; Dietary Supplements covering 174 supplements in four languages.',
                 'opp_heading': 'Sponsorship Opportunities',
                 'opp_1_title': 'Featured Smart Alternatives',
                 'opp_1_desc': 'Feature your product as a healthier alternative on relevant food pages, after our medical team has reviewed its nutritional values.',
                 'opp_2_title': 'Boodi App Campaigns',
-                'opp_2_desc': 'Sponsor scan results and showcase your brand to Boodi app users in the Netherlands and across Europe, with the chance to join as a founding partner at launch.',
+                'opp_2_desc': 'The Boodi app: the waitlist is open now, with an exclusive chance to join as a founding partner at the commercial launch. After launch, partner brands can sponsor scan results and reach app users in the Netherlands and across Europe.',
                 'opp_3_title': 'Verified Product Audits',
-                'opp_3_desc': 'List your products in our scanning engine once they meet our clinical criteria (glycemic index, sugars, ingredients) and halal criteria (pork derivatives, gelatin, alcohol, E-number additives).',
+                'opp_3_desc': 'Once the Boodi app launches, your products can be listed in our scanning engine after they meet our clinical criteria (glycemic index, sugars, ingredients) and halal criteria, which are specific, verifiable ingredient criteria: no pork derivatives, no animal gelatin and no alcohol, with E-number additives reviewed. The halal check in the Boodi app is a fully optional feature that users can switch on with a toggle, giving partners precise access to consumers interested in this category.',
                 'opp_4_title': 'Corporate & Research Programs',
                 'opp_4_desc': 'Nutrition awareness programmes for employees, and collaboration with universities and research centres in nutrition and metabolism.',
                 'opp_5_title': 'Nutraceuticals & Dietary Supplements',
-                'opp_5_desc': 'A main, stand-alone partnership track for supplement and vitamin companies: sponsor sections of our supplements guide (174 supplements, 522 pages in three languages) and list your trusted products as approved options for our audience, after their ingredients and doses are checked against EFSA references.',
+                'opp_5_desc': 'A main, stand-alone partnership track for supplement and vitamin companies: sponsor sections of our supplements guide (174 supplements, 696 pages in four languages) and list your trusted products as approved options for our audience, after their ingredients and doses are checked against EFSA references.',
                 'trust_title': 'Transparency and editorial independence',
                 'trust_desc': 'All sponsored content and products are clearly labelled "Sponsored", and no product is listed without review by our medical team. Nutritional values and medical guidance on this site are not for sale, and we do not publish health claims that are not authorised under EU Regulation (EC) No 1924/2006.',
                 'cta_title': 'Let\'s build a partnership that makes a difference',
@@ -532,7 +539,7 @@
             },
             nl: {
                 'meta_title': 'Partnerships & sponsoring | Partner with WiBo Health',
-                'meta_desc': 'Word partner van WiBo Health en de Boodi-app: een publiek gericht op diabetes, afvallen en halal producten, 650+ gecontroleerde voedingsmiddelen en 1.950 pagina\'s in drie talen.',
+                'meta_desc': 'Word partner van WiBo Health en de Boodi-app: een publiek gericht op diabetes, afvallen en halal producten, 900+ voedingsmiddelen in vier talen en 174 supplementen.',
                 'nav_back_home': 'Terug naar Home',
                 'hero_badge': 'Partnerships & sponsoring',
                 'hero_title': 'Partnerships &amp; sponsoring<span>Partner with WiBo Health</span>',
@@ -542,11 +549,11 @@
                 'stat_foods': 'gecontroleerde voedingsmiddelen',
                 'stat_pages': 'gespecialiseerde voedingspagina\'s',
                 'stat_supps': 'gedocumenteerde supplementen',
-                'stat_langs': 'talen: Arabisch, Engels, Nederlands',
+                'stat_langs': 'talen: Arabisch, Engels, Nederlands, Zweeds',
                 'reach_eyebrow': 'Ons publiek & bereik',
                 'reach_heading': 'Waarom samenwerken met WiBo Health en de Boodi-app?',
                 'reach_1_title': 'Een uitgebreide, gecontroleerde database',
-                'reach_1_desc': 'Meer dan 650 gecontroleerde voedingsmiddelen en 1.950 gespecialiseerde pagina\'s in drie talen (Arabisch, Engels en Nederlands), plus een aparte gids met 174 voedingssupplementen.',
+                'reach_1_desc': 'Meer dan 900 gecontroleerde voedingsmiddelen in vier talen (Arabisch, Engels, Nederlands en Zweeds) op meer dan 3.700 gespecialiseerde pagina\'s, plus een aparte gids met 174 voedingssupplementen.',
                 'reach_2_title': 'Een gericht publiek met hoge koopintentie',
                 'reach_2_desc': 'Bezoekers die praktische antwoorden zoeken: mensen met diabetes of insulineresistentie, mensen die willen afvallen, en consumenten die betrouwbare halal producten zoeken in Europa en het Midden-Oosten.',
                 'reach_3_title': 'Snel groeiend organisch bereik in Google',
@@ -566,18 +573,18 @@
                 'pill_arab': '🥙 Arabisch',
                 'pill_asia': '🍜 Aziatisch',
                 'pill_fast': '🍔 Fastfood',
-                'edge_2_desc': 'Onze database omvat keukens van over de hele wereld, waaronder Europese, Amerikaanse, mediterrane, Arabische en Aziatische gerechten, plus fastfood, met nauwkeurige vergelijkingen per 100 gram en per portie. De site heeft daarnaast een hoofdsectie voor Nutraceuticals &amp; Dietary Supplements met 174 supplementen in drie talen.',
+                'edge_2_desc': 'Onze database omvat keukens van over de hele wereld, waaronder Europese, Amerikaanse, mediterrane, Arabische en Aziatische gerechten, plus fastfood, met nauwkeurige vergelijkingen per 100 gram en per portie. De site heeft daarnaast een hoofdsectie voor Nutraceuticals &amp; Dietary Supplements met 174 supplementen in vier talen.',
                 'opp_heading': 'Sponsormogelijkheden',
                 'opp_1_title': 'Uitgelichte slimme alternatieven',
                 'opp_1_desc': 'Laat uw product zien als gezonder alternatief op relevante voedingspagina\'s, nadat ons medisch team de voedingswaarden heeft beoordeeld.',
                 'opp_2_title': 'Campagnes in de Boodi-app',
-                'opp_2_desc': 'Sponsor scanresultaten en breng uw merk onder de aandacht van Boodi-gebruikers in Nederland en Europa, met de kans om bij de lancering founding partner te worden.',
+                'opp_2_desc': 'De Boodi-app: de wachtlijst is nu open, met een exclusieve kans om bij de commerciële lancering founding partner te worden. Na de lancering kunnen partnermerken scanresultaten sponsoren en Boodi-gebruikers in Nederland en Europa bereiken.',
                 'opp_3_title': 'Onafhankelijke productcontroles',
-                'opp_3_desc': 'Neem uw producten op in onze scanengine zodra ze voldoen aan onze klinische criteria (glykemische index, suikers, ingrediënten) en halalcriteria (varkensderivaten, gelatine, alcohol, E-nummers).',
+                'opp_3_desc': 'Na de lancering van de Boodi-app kunnen uw producten in onze scanengine worden opgenomen zodra ze voldoen aan onze klinische criteria (glykemische index, suikers, ingrediënten) en halalcriteria: concrete, controleerbare ingrediëntcriteria, namelijk geen varkensderivaten, geen dierlijke gelatine en geen alcohol, met beoordeling van E-nummers. De halalcontrole in de Boodi-app is een volledig optionele functie die gebruikers met een schakelaar (toggle) kunnen aanzetten, zodat partners consumenten met interesse in deze categorie gericht bereiken.',
                 'opp_4_title': 'Bedrijfsgezondheid & onderzoek',
                 'opp_4_desc': 'Voedingsvoorlichting voor medewerkers en samenwerking met universiteiten en onderzoekscentra op het gebied van voeding en stofwisseling.',
                 'opp_5_title': 'Nutraceuticals & voedingssupplementen',
-                'opp_5_desc': 'Een eigen hoofdspoor voor supplement- en vitaminebedrijven: sponsor onderdelen van onze supplementengids (174 supplementen, 522 pagina\'s in drie talen) en neem uw betrouwbare producten op als goedgekeurde opties voor ons publiek, nadat ingrediënten en doseringen zijn getoetst aan EFSA-referenties.',
+                'opp_5_desc': 'Een eigen hoofdspoor voor supplement- en vitaminebedrijven: sponsor onderdelen van onze supplementengids (174 supplementen, 696 pagina\'s in vier talen) en neem uw betrouwbare producten op als goedgekeurde opties voor ons publiek, nadat ingrediënten en doseringen zijn getoetst aan EFSA-referenties.',
                 'trust_title': 'Transparantie en redactionele onafhankelijkheid',
                 'trust_desc': 'Alle gesponsorde content en producten krijgen duidelijk het label "Gesponsord", en geen enkel product wordt opgenomen zonder beoordeling door ons medisch team. Voedingswaarden en medische adviezen op deze site zijn niet te koop, en we publiceren geen gezondheidsclaims die niet zijn toegestaan onder EU-verordening (EG) nr. 1924/2006.',
                 'cta_title': 'Laten we samen iets betekenen',

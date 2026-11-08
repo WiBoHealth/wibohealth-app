@@ -508,4 +508,53 @@ SITE_PAGES_SV = [
             <p class="disclaimer-box">Observera: informationen är avsedd som utbildning och är ingen medicinteknisk produkt för diagnostik enligt EU:s förordning 2017/745 (MDR). Prata med vården innan du ändrar din behandling.</p>
 ''',
     ),
+    dict(
+        # partners.html in Swedish (2026-11-08, approved by Dr. Wassim Habib): real figures, Boodi as a partner waitlist;
+        # "halal" kept on this page only as a commercial exception, tied to ingredient criteria and the opt-in toggle
+        key='partners', slug='partners', legacy='/partners.html', kind='webpage', modified='2026-11-08',
+        title='Samarbeten och sponsring | Partner with WiBo Health',
+        h1='Samarbeten och sponsring', crumb='Samarbeten',
+        desc='Samarbeta med WiBo Health och boodi-appen: en publik med fokus på diabetes, vikt och halalprodukter, fler än 900 livsmedel på fyra språk och 174 kosttillskott.',
+        body='''            <p class="lead">En plattform för smart kost och uppföljning av glykemisk belastning, byggd på dokumenterade vetenskapliga källor: USDA FoodData Central för livsmedel och riktlinjer från Europeiska myndigheten för livsmedelssäkerhet (Efsa) för kosttillskott.</p>
+            <p><a class="boodi-btn" href="mailto:support@wibohealth.com?subject=Partnership%20Inquiry%20-%20WiBo%20Health"><i class="fas fa-paper-plane"></i> Kontakta oss om ett samarbete</a></p>
+
+            <div class="hub-cards">
+                <div class="hub-card"><h3>900+</h3><p>granskade livsmedel</p></div>
+                <div class="hub-card"><h3>3 700+</h3><p>specialiserade livsmedelssidor</p></div>
+                <div class="hub-card"><h3>174</h3><p>dokumenterade kosttillskott</p></div>
+                <div class="hub-card"><h3>4</h3><p>språk: arabiska, engelska, nederländska, svenska</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-users"></i> <span>Varför samarbeta med WiBo Health och boodi-appen?</span></h2>
+            <div class="hub-cards">
+                <div class="hub-card"><h3><i class="fas fa-database"></i> En omfattande, granskad databas</h3><p>Fler än 900 granskade livsmedel på fyra språk (arabiska, engelska, nederländska och svenska) på fler än 3 700 specialiserade sidor, plus en separat guide med 174 kosttillskott.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-bullseye"></i> En målgrupp med hög köpavsikt</h3><p>Besökare som söker praktiska svar: personer med diabetes eller insulinresistens, personer som vill gå ner i vikt och konsumenter som letar efter pålitliga halalprodukter i Europa och Mellanöstern.</p></div>
+                <div class="hub-card"><h3><i class="fab fa-google"></i> Snabbt växande organisk räckvidd i Google</h3><p>Våra sidor syns i Googles sökresultat för efterfrågade kostfrågor, med fler än 5 700 visningar per dag och en organisk söktillväxt på mer än +44 000 %.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-star"></i> <span>Våra styrkor</span></h2>
+            <p>Det här skiljer WiBo Health från vanliga näringsdatabaser.</p>
+            <div class="hub-cards">
+                <div class="hub-card"><h3><i class="fas fa-chart-line"></i> Ledande inom heltäckande metabola mått</h3><p>Vi stannar inte vid glykemiskt index (GI) och glykemisk belastning (GL), utan lägger till insulinindex för livsmedel (Food Insulin Index, II). Det visar kroppens verkliga hormonsvar på protein, mejeriprodukter och andra livsmedel som kan frisätta insulin även när deras glykemiska index är lågt. Det gör oss till den självklara partnern för företag inom klinisk nutrition, diabetesvård och metabol hälsa.</p><p>Värdena för insulinindex kommer från publicerade kliniska studier (Holt 1997, Bao 2009) och visas för livsmedel med dokumenterade mätningar.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-earth-europe"></i> Global bredd och en egen avdelning för kosttillskott</h3><p>Vår databas täcker kök från hela världen, bland annat europeiska, amerikanska, medelhavs-, arabiska och asiatiska rätter samt snabbmat, med noggranna jämförelser per 100 gram och per portion. Webbplatsen har också en egen huvudavdelning för funktionella livsmedel och kosttillskott (Nutraceuticals &amp; Dietary Supplements) med 174 kosttillskott på fyra språk.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-handshake"></i> <span>Möjligheter till sponsring</span></h2>
+            <div class="hub-cards">
+                <div class="hub-card"><h3><i class="fas fa-arrows-split-up-and-left"></i> Utvalda smarta alternativ</h3><p>Lyft fram din produkt som ett hälsosammare alternativ på relevanta livsmedelssidor, efter att vårt medicinska team har granskat näringsvärdena.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-mobile-screen-button"></i> Kampanjer i boodi-appen</h3><p>boodi-appen: väntelistan är öppen nu, med en exklusiv möjlighet att gå med som grundande partner vid den kommersiella lanseringen. Efter lanseringen kan partnervarumärken sponsra skanningsresultat och nå appens användare i Nederländerna och resten av Europa.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-clipboard-check"></i> Oberoende produktgranskning</h3><p>När boodi-appen har lanserats kan dina produkter tas med i vår skanningsmotor när de uppfyller våra kliniska kriterier (glykemiskt index, socker, ingredienser) och halalkriterier: konkreta, kontrollerbara ingredienskriterier, det vill säga inga derivat från gris, inget animaliskt gelatin och ingen alkohol, och granskade E-nummer. Halalkontrollen i boodi-appen är en helt valfri funktion som användaren slår på med ett reglage (toggle), vilket ger partner exakt räckvidd till konsumenter som är intresserade av den här kategorin.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-building-columns"></i> Företagshälsa och forskningssamarbete</h3><p>Kostutbildning för anställda och samarbete med universitet och forskningscentrum inom nutrition och ämnesomsättning.</p></div>
+                <div class="hub-card"><h3><i class="fas fa-capsules"></i> Funktionella livsmedel och kosttillskott</h3><p>Ett eget huvudspår för tillskotts- och vitaminföretag: sponsra delar av vår guide till kosttillskott (174 kosttillskott och 696 sidor på fyra språk) och lista era pålitliga produkter som godkända alternativ för vår publik, efter att ingredienser och doser har kontrollerats mot Efsas referenser.</p></div>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-scale-balanced"></i> <span>Öppenhet och redaktionellt oberoende</span></h2>
+            <p>Allt sponsrat innehåll och alla sponsrade produkter märks tydligt med "Sponsrat", och ingen produkt tas med utan granskning av vårt medicinska team. Näringsvärden och medicinska råd på webbplatsen är inte till salu, och vi publicerar inga hälsopåståenden som inte är godkända enligt EU-förordning (EG) nr 1924/2006.</p>
+
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> <span>Låt oss bygga ett samarbete som gör skillnad</span></h2>
+            <p>Skicka ditt förslag till vårt partnerteam. Vi granskar varje förslag och svarar inom 24–48 arbetstimmar.</p>
+            <p><a class="boodi-btn" href="mailto:support@wibohealth.com?subject=Partnership%20Inquiry%20-%20WiBo%20Health"><i class="fas fa-paper-plane"></i> Skicka ett samarbetsförslag</a></p>
+            <p>E-post: <a href="mailto:support@wibohealth.com">support@wibohealth.com</a>. Ange gärna företagets namn, produkten eller tjänsten och er målmarknad.</p>
+''',
+    ),
 ]
