@@ -163,7 +163,7 @@
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
-    <link rel="stylesheet" href="/css/food-page.css?v=78fb590b">
+    <link rel="stylesheet" href="/css/food-page.css?v=015942a4">
     <link rel="stylesheet" href="/css/unified-header.css">
     <script src="/js/food-serving.js?v=3abbeb27" defer></script>
 </head>
@@ -209,7 +209,7 @@
                 <img src="/images/foods/natural-peanut-butter.webp" alt="Jordnötssmör, 100 % jordnötter" width="96" height="96" decoding="async">
                 <div class="fp-hero-text">
                     <h1>Jordnötssmör, 100 % jordnötter</h1>
-                    <div class="fp-sub"><span class="food-subtitle">Natural Peanut Butter</span><span class="group-chip">Nötter och frön</span></div>
+                    <div class="fp-sub"><span class="food-subtitle">Natural Peanut Butter</span><span class="sep-dot"> • </span><span class="group-chip">Nötter och frön</span></div>
                 </div>
             </div>
 
@@ -239,7 +239,7 @@
             </section>
 
             <div class="lead-fold">
-                <p class="lead">Jordnötssmör kombinerar krämig konsistens med protein och fett och har ett mycket lågt glykemiskt index (14).</p>
+                <p class="lead">Ett snabbt val för energi och mättnad: krämig konsistens med protein och fett, och ett mycket lågt glykemiskt index (14) som effektivt bromsar hur snabbt sockret tas upp.</p>
             </div>
 
             <h2 class="section-title"><span>💡 Smarta kostråd</span></h2>

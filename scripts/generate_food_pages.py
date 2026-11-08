@@ -1324,6 +1324,7 @@ PAGE_CSS = """
         .fp-hero-text { min-width: 0; }
         .fp-hero-text h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.25; margin: 0 0 4px; overflow-wrap: anywhere; }
         .fp-sub { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; color: var(--text-muted); font-weight: 600; font-size: 0.88rem; }
+        .fp-sub .sep-dot { white-space: pre; opacity: 0.6; margin: 0 -10px; }   /* text separator: name • group (no run-together in snippets) */
         .group-chip {
             display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.76rem;
             font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
@@ -1760,7 +1761,8 @@ def build(food, lang, ctx):
         g = {'Name': sname[:1].upper() + sname[1:], 'det': det, 'Det': det.capitalize(), 'dem': 'dem' if plural else 'det'}
     else:
         g = {}
-    subtitle = {'ar': food['en'], 'en': food['nl'], 'nl': food['en'], SV: food['en']}[lang]
+    # secondary name under the heading: the English name on ar/nl/sv pages; none on English pages (no Dutch leak)
+    subtitle = {'ar': food['en'], 'en': '', 'nl': food['en'], SV: food['en']}[lang]
     if subtitle == name:
         subtitle = ''
     group_name = GROUPS[group][li]
@@ -2184,7 +2186,7 @@ def build(food, lang, ctx):
                 {img_html}
                 <div class="fp-hero-text">
                     <h1{' class="long"' if len(name) > 30 else ''}>{esc(name)}</h1>
-                    <div class="fp-sub">{f'<span class="food-subtitle">{esc(subtitle)}</span>' if subtitle else ''}<span class="group-chip">{group_name}</span></div>
+                    <div class="fp-sub">{f'<span class="food-subtitle">{esc(subtitle)}</span><span class="sep-dot"> • </span>' if subtitle else ''}<span class="group-chip">{group_name}</span></div>
                 </div>
             </div>
 
