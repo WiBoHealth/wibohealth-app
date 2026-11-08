@@ -307,6 +307,12 @@ PILOT = {
     892: ('home', 350), 893: ('bakery', 40), 894: ('bakery', 60), 895: ('home', 350), 896: ('salad', 250),
     897: ('bakery', 100), 898: ('protein', 150), 899: ('condiment', 30), 900: ('condiment', 30), 901: ('home', 350),
     902: ('bakery', 80), 903: ('veg', 150), 904: ('home', 200), 905: ('fastfood', 75), 909: ('asian', 180),
+    # batch 31 (8 November 2026): 910-940, same format as batch 30; portions from the copy
+    910: ('salad', 250), 912: ('fastfood', 175), 913: ('asian', 180), 914: ('condiment', 15), 915: ('sweets', 40),
+    917: ('condiment', 50), 918: ('nuts', 20), 919: ('italian', 150), 920: ('italian', 120), 921: ('french', 150),
+    923: ('italian', 180), 924: ('italian', 250), 925: ('italian', 180), 927: ('protein', 160), 928: ('veg', 100),
+    929: ('veg', 80), 931: ('veg', 120), 932: ('veg', 80), 933: ('veg', 100), 934: ('veg', 120), 936: ('veg', 10),
+    937: ('greek', 150), 938: ('greek', 50), 939: ('greek', 40), 940: ('greek', 80),
 }
 # batch 28 page variants: drinks measured in ml; GI from a published measurement (label "published value"); GI not
 # available (no published measurement and no comparable food)
@@ -328,7 +334,9 @@ NAMED_REVIEW.update({i: '2026-10-31' for i in (1017, 993, 991, 963, 906, 878, 98
                                                971, 922, 908, 1049, 951, 881, 984,
                                                952, 956, 957, 1045, 1048, 1050, 1032, 973, 880, 882, 907, 911, 916, 885,
                                                1009, 879, 1013, 992, 1027, 1029, 999, 1030, 935, 1053, 926)})
-NAMED_REVIEW.update({i: '2026-11-08' for i in (*range(876, 878), *range(883, 885), *range(886, 906), 909)})
+NAMED_REVIEW.update({i: '2026-11-08' for i in (*range(876, 878), *range(883, 885), *range(886, 906), 909,   # batch 30
+                                               910, *range(912, 916), *range(917, 922), *range(923, 926), *range(927, 930),
+                                               *range(931, 935), *range(936, 941))})                         # batch 31
 NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'},
                     '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'},
                     '2026-10-31': {'ar': '31 أكتوبر 2026', 'en': '31 October 2026', 'nl': '31 oktober 2026',

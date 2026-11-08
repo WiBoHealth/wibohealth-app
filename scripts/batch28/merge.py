@@ -13,8 +13,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPTS = HERE.parent
-BATCH_DIRS = (HERE, SCRIPTS / 'batch29', SCRIPTS / 'batch30')
-TITLE_FULL = {int(i) for i in re.findall(r'(?m)^## (\d+)\s*$', (SCRIPTS / 'batch30' / 'ar.md').read_text(encoding='utf-8'))}
+BATCH_DIRS = (HERE, SCRIPTS / 'batch29', SCRIPTS / 'batch30', SCRIPTS / 'batch31')
+TITLE_FULL = {int(i) for d in ('batch30', 'batch31')   # 3 FAQs + long approved titles kept whole
+              for i in re.findall(r'(?m)^## (\d+)\s*$', (SCRIPTS / d / 'ar.md').read_text(encoding='utf-8'))}
 LANGS = ('ar', 'en', 'nl', 'sv')
 HELD = {1047}
 KEYS = {'sugar': 'sugar', 'ii': 'ii_text', 'portion': 'portion_label', 'ref_gi': 'ref_gi', 'brand': 'brand_note', 'title': 'title', 'desc': 'desc'}
@@ -71,9 +72,35 @@ SV_NAMES = {   # id: (Swedish display name, name inside sentences)
     904: ('Surinamesisk pom med kyckling (pomtajer)', 'pom'),
     905: ('Surinamesiska friterade barakakor med kryddor', 'barakakorna'),
     909: ('Äkta indonesisk rendang på nötkött med kokosmjölk', 'rendang'),
+    # batch 31
+    910: ('Gado gado, indonesisk grönsakssallad med jordnötssås', 'gado gado'),
+    912: ('Loempia speciaal (stor holländsk-indonesisk vårrulle med kyckling)', 'loempian'),
+    913: ('Ajam ketjap, indonesisk kyckling i söt sojasås', 'ajam ketjap'),
+    914: ('Sambal oelek, indonesisk chilipasta', 'sambal oelek'),
+    915: ('Spekkoek, indonesisk kryddig lagerkaka', 'spekkoek'),
+    917: ('Atjar tjampoer, indonesiska inlagda grönsaker med gurkmeja', 'atjar tjampoer'),
+    918: ('Serundeng, rostad kokos med jordnötter och kryddor', 'serundeng'),
+    919: ('Vitello tonnato, kall kalv med tonfisksås', 'vitello tonnato'),
+    920: ('Oxcarpaccio med tryffelmajonnäs, parmesan och pinjenötter', 'carpaccion'),
+    921: ('Råbiff (steak tartare) med äggula, senap och kapris', 'råbiffen'),
+    923: ('Kalvscaloppine med citron och smör', 'kalvscaloppinen'),
+    924: ('Ossobuco alla milanese (kalvlägg med märg och gremolata)', 'ossobuco'),
+    925: ('Kyckling piccata med citron och kapris', 'kyckling piccata'),
+    927: ('Kyckling Kiev med vitlöks- och örtsmör', 'kyckling Kiev'),
+    928: ('Vilda kantareller', 'kantarellerna'),
+    929: ('Torkad karljohansvamp (porcini), blötlagd', 'karljohansvampen'),
+    931: ('Ångade ostronskivlingar', 'ostronskivlingarna'),
+    932: ('Svart trumpetsvamp, torkad och blötlagd', 'trumpetsvampen'),
+    933: ('Vilda murklor (toppmurklor)', 'murklorna'),
+    934: ('Kastanjechampinjoner (cremini)', 'kastanjechampinjonerna'),
+    936: ('Vit tryffel från Alba', 'den vita tryffeln'),
+    937: ('Friterad zucchini med skordalia (grekisk vitlöksdipp)', 'den friterade zucchinin'),
+    938: ('Skordalia, grekisk vitlöks- och potatisdipp', 'skordalia'),
+    939: ('Taramosalata, grekisk dipp på fiskrom', 'taramosalata'),
+    940: ('Saganaki, stekt grekisk ost med citron', 'saganaki'),
 }
 SV_PLURAL = {981, 987, 972, 1026, 1049, 951, 984, 973, 880, 916, 999,
-             884, 894, 898, 903, 905}
+             884, 894, 898, 903, 905, 928, 931, 933, 934}
 MARK = '    # batch 28 (31 October 2026): translated from the approved Arabic copy'   # also covers batch 29
 
 
