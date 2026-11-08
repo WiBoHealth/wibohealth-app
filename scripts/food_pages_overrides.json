@@ -42695,6 +42695,2056 @@
           }
         ]
       }
+    },
+    "876": {
+      "slug": "liege-syrup",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "دبس فواكه لييج البلجيكي بدون سكر مضاف: كم سعرة فيه وما مؤشره الجلايسيمي؟ | WiBo Health",
+        "en": "Liège Syrup with No Added Sugar: Calories, Glycemic Index and Diabetes Tips | WiBo Health",
+        "nl": "Luikse siroop zonder toegevoegde suiker: calorieën, glykemische index en diabetes | WiBo Health"
+      },
+      "desc": {
+        "ar": "هل دبس الفواكه بدون سكر مضاف يرفع سكر الدم؟ اكتشف سعرات دبس لييج وحمله الجلايسيمي، وأفضل طريقة لتناوله مع الجبن لتجنب ارتفاع السكر المفاجئ.",
+        "en": "Does fruit syrup with no added sugar raise blood sugar? Discover the calories and glycemic load of Liège syrup, and the best way to enjoy it with cheese.",
+        "nl": "Verhoogt fruitsiroop zonder toegevoegde suiker je bloedsuiker? Ontdek de calorieën en glykemische lading van Luikse siroop en hoe je hem het best met kaas eet."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (55) تقدير، بسبب غنى التفاح والكمثرى بالبكتين والفركتوز الطبيعي."
+        ],
+        "en": [
+          "The glycemic index (55) is an estimate, based on the pectin and natural fructose in apples and pears."
+        ],
+        "nl": [
+          "De glykemische index (55) is een schatting, gebaseerd op de pectine en natuurlijke fructose in appels en peren."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nالحصة الآمنة هي ملعقة طعام صغيرة (15-20 غ) ممسوحة؛ امزجه مع جبنة معتقة أو زبادي يوناني كامل الدسم، فالدهون والبروتين يبطئان امتصاص سكر الفركتوز في الدم.\n\n### أفضل طرق التحضير\nلا تدهنه منفرداً على خبز أبيض فارغ؛ استخدمه كدهان خفيف جداً فوق شريحة خبز حبة كاملة عالية الألياف مع رشة جوز مفروم.\n\n### ملاحظة غذائية هامة ⚠️\nلمرضى الكبد الدهني ومقاومة الإنسولين، الفركتوز يُستقلَب أساساً في الكبد، والإكثار منه يرتبط بتراكم الدهون فيه؛ راعِ الحمل الجلايسيمي ولا تتجاوز حصة واحدة يومياً.",
+        "en": "### Serving advice\nA sensible portion is one small, level tablespoon (15-20 g). Pair it with aged cheese or full-fat Greek yogurt: fat and protein slow down how fast the fructose reaches your blood.\n\n### Best ways to prepare it\nDon't spread it on its own on plain white bread. Use it as a very thin layer on a slice of high-fibre wholegrain bread with a sprinkle of chopped walnuts.\n\n### Important nutrition note ⚠️\nFor people with fatty liver or insulin resistance: fructose is processed mainly in the liver, and eating a lot of it is linked to fat building up there. Keep an eye on the glycemic load and stick to one portion a day.",
+        "nl": "### Advies bij het eten\nEen verstandige portie is één kleine, afgestreken eetlepel (15-20 g). Combineer hem met belegen kaas of volle Griekse yoghurt: vet en eiwit vertragen hoe snel de fructose in je bloed komt.\n\n### Zo bereid je het het best\nSmeer hem niet alleen op een kaal wit boterhammetje. Gebruik hem als een heel dun laagje op een snee volkoren brood met veel vezels en wat gehakte walnoten.\n\n### Belangrijke voedingsnotitie ⚠️\nVoor mensen met een vervette lever of insulineresistentie: fructose wordt vooral in de lever verwerkt, en veel ervan eten hangt samen met vetophoping in de lever. Let op de glykemische lading en houd het bij één portie per dag."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل دبس لييج 'بدون سكر مضاف' آمن لمرضى السكري والدايت؟",
+            "a": "آمن بشرط الالتزام بحصة ملعقة واحدة (20 غ تعطي حمل جلايسيمي منخفض 5.9). كلمة \"بدون سكر مضاف\" لا تعني خالياً من السكر، فنحو 53% من وزنه سكريات فاكهة مركّزة (فركتوز وجلوكوز وسكروز طبيعية) ترفع السكر إن زادت الكمية."
+          },
+          {
+            "q": "كم ملعقة أستطيع تناولها يومياً أثناء إنقاص الوزن دون أن يعيق إنقاص الوزن؟",
+            "a": "ملعقة طعام واحدة (49 سعرة) كافية لإرضاء اشتهاء الحلاوة اليومي. تناولها بعد وجبة الغداء أو الفطور مباشرة كتحلية ذكية، ويُفضّل أن تكون مع وجبة فيها بروتين أو دهون بدل تناولها منفردة بين الوجبات."
+          },
+          {
+            "q": "شو البديل الأفضل في السوبرماركت إذا بدي حلاوة بنفس الطعم وسكر أقل؟",
+            "a": "البديل الذكي هو هريس التفاح والكمثرى الطازج المسلوق بالقشور مع رشة قرفة دون تركيز. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is \"no added sugar\" Liège syrup safe for people with diabetes or on a diet?",
+            "a": "Yes, as long as you keep to one spoonful (20 g gives a low glycemic load of 5.9). \"No added sugar\" doesn't mean sugar-free: about 53% of its weight is concentrated fruit sugars (natural fructose, glucose and sucrose), which raise blood sugar if you eat more."
+          },
+          {
+            "q": "How many spoonfuls a day can I have without getting in the way of weight loss?",
+            "a": "One tablespoon (49 calories) is enough to satisfy a daily sweet craving. Have it right after lunch or breakfast as a smart dessert; it is best eaten with a meal that contains protein or fat rather than on its own between meals."
+          },
+          {
+            "q": "What is the best supermarket alternative if I want the same sweet taste with less sugar?",
+            "a": "The smart alternative is fresh apple and pear purée, cooked with the skins and a pinch of cinnamon, without boiling it down. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is Luikse siroop \"zonder toegevoegde suiker\" veilig bij diabetes of een dieet?",
+            "a": "Ja, zolang je je houdt aan één lepel (20 g geeft een lage glykemische lading van 5,9). \"Zonder toegevoegde suiker\" betekent niet suikervrij: ongeveer 53% van het gewicht bestaat uit geconcentreerde vruchtensuikers (natuurlijke fructose, glucose en sucrose), die je bloedsuiker verhogen als je meer neemt."
+          },
+          {
+            "q": "Hoeveel lepels per dag kan ik nemen zonder dat het afvallen in de weg zit?",
+            "a": "Eén eetlepel (49 calorieën) is genoeg om je dagelijkse trek in zoet te stillen. Neem hem direct na de lunch of het ontbijt als slim toetje; het liefst bij een maaltijd met eiwit of vet, en niet los tussen de maaltijden door."
+          },
+          {
+            "q": "Wat is het beste alternatief in de supermarkt als ik dezelfde zoete smaak wil met minder suiker?",
+            "a": "Het slimme alternatief is verse appel- en perenmoes, met schil gekookt en met een snufje kaneel, zonder in te koken. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "877": {
+      "slug": "honingkoek",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "كعك الإفطار الهولندي بالعسل والزنجبيل (هونينغ كوك): سعراته وتأثيره على سكر الصباح | WiBo Health",
+        "en": "Dutch Honingkoek Breakfast Cake: Calories and Its Effect on Morning Blood Sugar | WiBo Health",
+        "nl": "Honingkoek: calorieën en het effect van ontbijtkoek op je ochtendbloedsuiker | WiBo Health"
+      },
+      "desc": {
+        "ar": "هل شريحة الهونينغ كوك الهولندية فطور صحي؟ اعرف حقيقة سكرها ومؤشرها الجلايسيمي المتوسط، وسر تناولها مع الزبدة والبروتين لصباح أكثر توازناً.",
+        "en": "Is a slice of Dutch honingkoek a healthy breakfast? Learn the truth about its sugar and medium glycemic index, and why butter and protein make a calmer morning.",
+        "nl": "Is een plak honingkoek een gezond ontbijt? Lees hoe het zit met de suiker en de gemiddelde glykemische index, en waarom boter en eiwit je ochtend rustiger maken."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (68) تقدير، لا يوجد قياس منشور لهذا الصنف، والقيمة مبنية على كعك الإفطار المشابه بالجاودار والشراب."
+        ],
+        "en": [
+          "The glycemic index (68) is an estimate: there is no published measurement for this food, and the value is based on similar rye and syrup breakfast cakes."
+        ],
+        "nl": [
+          "De glykemische index (68) is een schatting: er is geen gepubliceerde meting voor dit product, en de waarde is gebaseerd op vergelijkbare ontbijtkoek met rogge en stroop."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nاكتفِ بشريحة واحدة بسماكة إصبع (30-35 غ)؛ لا تعتبره وجبة إفطار قائمة بذاتها لأنه يفتقر للبروتين، بل اعتبره قطعة حلوى بجانب قهوة الصباح غير المحلاة.\n\n### أفضل طرق التحضير\nالتقليد الهولندي بمسح طبقة رقيقة من الزبدة الطبيعية فوقه عادة ذكية؛ الدهون تبطئ تفريغ المعدة فيرتفع السكر بشكل أهدأ.\n\n### ملاحظة غذائية هامة ⚠️\nلمرضى متلازمة الأيض وتراكم دهون البطن، كعك الهونينغ كوك قد يرفع السكر والإنسولين بسرعة إذا أُكل وحده، وقد يعقبه جوع مبكر؛ راقب الحمل الجلايسيمي بحذر.",
+        "en": "### Serving advice\nKeep to one finger-thick slice (30-35 g). Don't treat it as a breakfast in itself, because it lacks protein; think of it as a sweet treat next to your unsweetened morning coffee.\n\n### Best ways to prepare it\nThe Dutch habit of spreading a thin layer of real butter on top is a smart one: fat slows down stomach emptying, so blood sugar rises more gently.\n\n### Important nutrition note ⚠️\nFor people with metabolic syndrome or belly fat: honingkoek can raise blood sugar and insulin quickly when eaten on its own, and hunger may come back early. Watch the glycemic load carefully.",
+        "nl": "### Advies bij het eten\nHoud het bij één plak van een vinger dik (30-35 g). Zie hem niet als een volledig ontbijt, want er zit weinig eiwit in; zie hem als iets zoets naast je ongezoete ochtendkoffie.\n\n### Zo bereid je het het best\nDe Nederlandse gewoonte om er een dun laagje echte roomboter op te smeren is slim: vet vertraagt het legen van de maag, zodat je bloedsuiker rustiger stijgt.\n\n### Belangrijke voedingsnotitie ⚠️\nVoor mensen met het metabool syndroom of buikvet: honingkoek kan bloedsuiker en insuline snel laten stijgen als je hem los eet, en daarna kan de honger snel terugkomen. Let goed op de glykemische lading."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل الهونينغ كوك صحي لمرضى السكري كونه يحتوي ألياف الجاودار؟",
+            "a": "لا يعتبر خياراً يومياً حراً لمريض السكر؛ فرغم وجود 1.3 غ ألياف بالشريحة، إلا أن حملها الجلايسيمي 16 (متوسط)، واحتوائها على 23.5 غ كارب سريع يجعلها ترفع قراءة السكر بسرعة."
+          },
+          {
+            "q": "كيف أتناول شريحة الهونينغ كوك بدون ما أشعر بالخمول أو الجوع بعد ساعة؟",
+            "a": "القاعدة الذهبية: لا تأكلها على معدة فارغة. تناول قبلها بيضتين مسلوقتين أو صحن لبن رائب، وادهن فوقها القليل من زبدة الفول السوداني الطبيعية لدمج الألياف بالبروتين."
+          },
+          {
+            "q": "شو الفرق بين كعك الإفطار بالعسل (Honingkoek) والنسخة العادية (Ontbijtkoek)؟",
+            "a": "العسل يعطي نكهة زكية لكنه يبقى سكراً بسيطاً (مؤشر العسل نحو 58)، فوجوده لا يجعل الكعك صحياً. اختر النسخ المصنوعة من دقيق الجاودار الكامل وبدون سكر مضاف (zonder toegevoegde suiker). [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is honingkoek healthy for people with diabetes because it contains rye fibre?",
+            "a": "It isn't a free everyday choice for people with diabetes. Although a slice has 1.3 g of fibre, its glycemic load is 16 (medium), and its 23.5 g of fast carbohydrate makes blood sugar readings rise quickly."
+          },
+          {
+            "q": "How can I eat a slice of honingkoek without feeling sluggish or hungry an hour later?",
+            "a": "The golden rule: don't eat it on an empty stomach. Have two boiled eggs or a bowl of yogurt first, and spread a little natural peanut butter on top to combine the fibre with protein."
+          },
+          {
+            "q": "What is the difference between honey breakfast cake (honingkoek) and the regular kind (ontbijtkoek)?",
+            "a": "Honey adds a lovely flavour, but it is still a simple sugar (honey's glycemic index is about 58), so it doesn't make the cake healthy. Choose versions made with wholegrain rye flour and no added sugar (zonder toegevoegde suiker). [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is honingkoek gezond bij diabetes omdat er roggevezels in zitten?",
+            "a": "Het is geen vrije, dagelijkse keuze bij diabetes. Een plak bevat weliswaar 1,3 g vezels, maar de glykemische lading is 16 (gemiddeld), en de 23,5 g snelle koolhydraten laten je bloedsuiker snel stijgen."
+          },
+          {
+            "q": "Hoe eet ik een plak honingkoek zonder me een uur later suf of hongerig te voelen?",
+            "a": "De gouden regel: niet op een lege maag. Eet eerst twee gekookte eieren of een schaaltje yoghurt, en smeer er een beetje natuurlijke pindakaas op om de vezels met eiwit te combineren."
+          },
+          {
+            "q": "Wat is het verschil tussen honingkoek en gewone ontbijtkoek?",
+            "a": "Honing geeft een heerlijke smaak, maar blijft een enkelvoudige suiker (de glykemische index van honing is ongeveer 58), dus de koek wordt er niet gezond van. Kies versies van volkoren roggemeel en zonder toegevoegde suiker. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "883": {
+      "slug": "soto-ayam",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "شوربة سوتو آيام الإندونيسية بالدجاج والكركم: كم سعرة فيها وما كمية البروتين؟ | WiBo Health",
+        "en": "Indonesian Soto Ayam Chicken Soup: Calories, Protein and a Balanced Bowl | WiBo Health",
+        "nl": "Soto ayam, Indonesische kippensoep met kurkuma: calorieën en hoeveel eiwit | WiBo Health"
+      },
+      "desc": {
+        "ar": "شوربة الدجاج الذهبية بالكركم والزنجبيل؛ تعرّف على سعرات السوتو آيام وبروتينها العالي، وكيف تجعلها وجبة متوازنة لمريض السكري ومقاومة الإنسولين.",
+        "en": "The golden chicken soup with turmeric and ginger. Learn the calories and protein of soto ayam, and how to make it a balanced meal with diabetes.",
+        "nl": "De gouden kippensoep met kurkuma en gember. Lees de calorieën en het eiwit van soto ayam, en hoe je er een evenwichtige maaltijd van maakt bij diabetes."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (45) تقدير لمزيج مرق الدجاج بالشعيرية مع الخضار والبيض."
+        ],
+        "en": [
+          "The glycemic index (45) is an estimate for a chicken broth with noodles, vegetables and egg."
+        ],
+        "nl": [
+          "De glykemische index (45) is een schatting voor kippenbouillon met mie, groenten en ei."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nزبدية واحدة تعتبر وجبة غداء أو عشاء متكاملة ومثالية؛ احرص على تقليل كمية شعيرية الأرز (البيغون) وزيادة براعم الفاصوليا (التوجيه) والملفوف لخفض الكارب للنصف.\n\n### أفضل طرق التحضير\nاعصر نصف ليمونة خضراء فوق المرق الساخن ورشة سامبال حار طازج؛ الحمضيات والشطة الطبيعية تضيف نكهة منعشة تغنيك عن الإكثار من الملح.\n\n### ملاحظة غذائية هامة ⚠️\nالكركم هو ما يعطي المرق لونه الذهبي، بفضل صبغة الكركومين الطبيعية؛ فقط انتبه لمستوى الملح إذا كنت تعاني من ارتفاع ضغط الدم.",
+        "en": "### Serving advice\nOne bowl is a complete lunch or dinner. Use less rice vermicelli (bihun) and more bean sprouts (taugé) and cabbage to cut the carbs by half.\n\n### Best ways to prepare it\nSqueeze half a lime over the hot broth and add a dash of fresh hot sambal: citrus and chilli add a fresh flavour, so you need less salt.\n\n### Important nutrition note ⚠️\nTurmeric is what gives the broth its golden colour, thanks to its natural pigment curcumin. Just watch the salt level if you have high blood pressure.",
+        "nl": "### Advies bij het eten\nEén kom is een complete lunch of avondmaaltijd. Gebruik minder rijstvermicelli (bihun) en meer taugé en kool om de koolhydraten te halveren.\n\n### Zo bereid je het het best\nKnijp een halve limoen uit boven de hete bouillon en voeg een beetje verse sambal toe: citrus en peper geven een frisse smaak, zodat je minder zout nodig hebt.\n\n### Belangrijke voedingsnotitie ⚠️\nKurkuma geeft de bouillon zijn gouden kleur, dankzij de natuurlijke kleurstof curcumine. Let alleen op het zout als je een hoge bloeddruk hebt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل شوربة سوتو آيام ممتازة للدايت وبناء العضلات؟",
+            "a": "نعم وبجدارة؛ الزبدية تمنحك 42 غ بروتين صافٍ عالي القيمة الحيوية مع دهون معتدلة (أقل من 10 غ)، والبروتين يساهم في نمو الكتلة العضلية والحفاظ عليها، ويمنحك شبعاً طويلاً دون سعرات فارغة."
+          },
+          {
+            "q": "كيف أخفض الحمل الجلايسيمي لشربة السوتو إذا كان عندي سكري؟",
+            "a": "السر في الشعيرية والأرز: استبدل نودلز الأرز بشيراتاكي (كونجاك) أو ضاعف حصة الملفوف وبراعم الصويا المقرمشة؛ سينخفض الحمل الجلايسيمي للزبدية بوضوح."
+          },
+          {
+            "q": "كيف أختار المكونات الصحية للسوتو الجاهز من متاجر التوكو (Toko)؟",
+            "a": "تجنب معجون التوابل الجاهز الغني بالملح والسكر المضاف، واختر معجوناً بمكونات بسيطة. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is soto ayam soup great for dieting and building muscle?",
+            "a": "Yes, very much so: a bowl gives you 42 g of high-quality protein with moderate fat (under 10 g). Protein contributes to the growth and maintenance of muscle mass, and it keeps you full for a long time without empty calories."
+          },
+          {
+            "q": "How can I lower the glycemic load of soto if I have diabetes?",
+            "a": "The key is the noodles and rice: swap the rice noodles for shirataki (konjac) or double the cabbage and crunchy bean sprouts, and the glycemic load of the bowl drops clearly."
+          },
+          {
+            "q": "How do I choose healthy ingredients for ready-made soto from a toko?",
+            "a": "Avoid ready-made spice pastes high in salt and added sugar, and choose a paste with simple ingredients. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is soto ayam goed om af te vallen en spieren op te bouwen?",
+            "a": "Ja, zeker: een kom geeft je 42 g hoogwaardig eiwit met matig vet (minder dan 10 g). Eiwitten dragen bij tot de groei en het behoud van spiermassa, en ze houden je lang verzadigd zonder lege calorieën."
+          },
+          {
+            "q": "Hoe verlaag ik de glykemische lading van soto als ik diabetes heb?",
+            "a": "Het zit in de mie en de rijst: vervang de rijstnoedels door shirataki (konjac) of neem dubbel zoveel kool en knapperige taugé, dan daalt de glykemische lading van de kom duidelijk."
+          },
+          {
+            "q": "Hoe kies ik gezonde ingrediënten voor kant-en-klare soto uit de toko?",
+            "a": "Vermijd kant-en-klare kruidenpasta's met veel zout en toegevoegde suiker, en kies een pasta met eenvoudige ingrediënten. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "884": {
+      "slug": "wilhelmina-peppermints",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "أقراص نعناع فيلهلمينا الهولندية: كم سعرة وسكر في الحبة وهل تكسر الصيام المتقطع؟ | WiBo Health",
+        "en": "Wilhelmina Peppermints: Calories and Sugar per Mint, and Do They Break a Fast? | WiBo Health",
+        "nl": "Wilhelmina pepermunt: calorieën en suiker per stuk, en verbreekt het je vasten? | WiBo Health"
+      },
+      "desc": {
+        "ar": "أقراص النعناع الهولندية فيلهلمينا؛ اكتشف كمية السكر في كل حبة ومؤشرها الجلايسيمي، ولماذا يجب الحذر منها في الصيام المتقطع ونظام الكيتو.",
+        "en": "The classic Dutch Wilhelmina mints. Find out how much sugar each mint has, its glycemic index, and why to be careful during fasting or keto.",
+        "nl": "De klassieke Wilhelmina pepermunt. Ontdek hoeveel suiker er in elk pepermuntje zit, de glykemische index, en waarom je oppast tijdens vasten of keto."
+      },
+      "brand_note": {
+        "ar": "Wilhelmina علامة تجارية مسجّلة لمالكها، وWiBo Health غير مرتبطة بها. القيم تقريبية لأقراص النعناع السكرية من هذا النوع.",
+        "en": "Wilhelmina is a registered trademark of its owner, and WiBo Health is not affiliated with it. The values are approximate for sugar peppermints of this kind.",
+        "nl": "Wilhelmina is een geregistreerd merk van de eigenaar, en WiBo Health is er niet aan verbonden. De waarden zijn bij benadering voor suikerhoudende pepermunt van dit type."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (70) تقدير لسكر السكروز النقي السريع الامتصاص."
+        ],
+        "en": [
+          "The glycemic index (70) is an estimate for pure, quickly absorbed sucrose."
+        ],
+        "nl": [
+          "De glykemische index (70) is een schatting voor zuivere, snel opgenomen sucrose."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nلا تتناول أكثر من قرص واحد عند الضرورة القصوى لانتعاش الفم؛ لا تجعلها عادة متكررة طوال ساعات العمل لأن مصّ السكر المستمر يبقي الإنسولين مرتفعاً.\n\n### أفضل طرق التحضير\nاستبدلها بكوب من شاي النعناع البلدي الطازج والمغلي بدون سكر، أو أوراق نعناع خضراء تمضغها لتحصل على الزيوت العطرية ومضادات الأكسدة بدون سكر.\n\n### ملاحظة غذائية هامة ⚠️\nتكسر الصيام المتقطع فوراً لأنها تستفز إفراز الإنسولين؛ كما أن مصها المتكرر يشكل خطراً كبيراً على مينا الأسنان ويغذي بكتيريا الفم المسببة للتسوس.",
+        "en": "### Serving advice\nDon't have more than one mint, and only when you really need fresh breath. Don't make it a habit throughout the working day, because constantly sucking on sugar keeps insulin raised.\n\n### Best ways to prepare it\nSwap them for a cup of fresh mint tea, brewed without sugar, or chew a few green mint leaves for the aromatic oils and antioxidants without the sugar.\n\n### Important nutrition note ⚠️\nThey break an intermittent fast straight away because they trigger insulin release. Sucking them often is also a real risk to tooth enamel and feeds the mouth bacteria that cause cavities.",
+        "nl": "### Advies bij het eten\nNeem niet meer dan één pepermuntje, en alleen als je echt een frisse adem nodig hebt. Maak er geen gewoonte van tijdens de werkdag, want steeds op suiker zuigen houdt je insuline hoog.\n\n### Zo bereid je het het best\nVervang ze door een kop verse muntthee zonder suiker, of kauw op een paar groene muntblaadjes voor de aromatische oliën en antioxidanten, zonder suiker.\n\n### Belangrijke voedingsnotitie ⚠️\nZe verbreken intermittent fasting meteen, omdat ze de afgifte van insuline uitlokken. Er vaak op zuigen is bovendien een echt risico voor het tandglazuur en voedt de mondbacteriën die gaatjes veroorzaken."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل حبة نعناع فيلهلمينا ترفع السكر لمرضى السكري؟",
+            "a": "نعم، فالحبة الواحدة عبارة عن 3 غرامات من السكروز النقي بمؤشر جلايسيمي مرتفع (70)؛ حبة واحدة لن تسبب صدمة كبرى ولكن 3 أو 4 حبات متتالية سترفع قراءة سكر الدم سريعاً."
+          },
+          {
+            "q": "هل تناسب أقراص النعناع حمية الكيتو أو الصيام المتقطع؟",
+            "a": "لا تناسب الكيتو ولا فترة الصيام؛ فهي سكر صافٍ قد يُخرج الجسم من الحالة الكيتونية."
+          },
+          {
+            "q": "شو البديل الخالي من السكر المتوفر في المتاجر الهولندية والأوروبية؟",
+            "a": "ابحث عن النسخ الخالية من السكر المحلاة بالزيليتول (Xylitol) أو الستيفيا، واقرأ المكونات للتأكد من خلوها من شراب الجلوكوز. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does a Wilhelmina mint raise blood sugar in people with diabetes?",
+            "a": "Yes. Each mint is 3 grams of pure sucrose with a high glycemic index (70). One mint won't cause a big shock, but 3 or 4 in a row will push your blood sugar reading up quickly."
+          },
+          {
+            "q": "Do peppermints fit keto or intermittent fasting?",
+            "a": "They suit neither keto nor the fasting window: they are pure sugar and can take the body out of ketosis."
+          },
+          {
+            "q": "What sugar-free alternative is available in Dutch and European shops?",
+            "a": "Look for sugar-free versions sweetened with xylitol or stevia, and read the ingredients to make sure they contain no glucose syrup. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt een Wilhelmina pepermuntje de bloedsuiker bij diabetes?",
+            "a": "Ja. Elk pepermuntje is 3 gram zuivere sucrose met een hoge glykemische index (70). Eén pepermuntje geeft geen grote schok, maar 3 of 4 achter elkaar laten je bloedsuiker snel stijgen."
+          },
+          {
+            "q": "Passen pepermuntjes bij keto of intermittent fasting?",
+            "a": "Ze passen niet bij keto en niet in het vastenvenster: het is pure suiker die het lichaam uit ketose kan halen."
+          },
+          {
+            "q": "Welk suikervrij alternatief is er in Nederlandse en Europese winkels?",
+            "a": "Zoek naar suikervrije versies, gezoet met xylitol of stevia, en lees de ingrediënten om te zien dat er geen glucosestroop in zit. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "886": {
+      "slug": "honingdrop",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "حلوى الدروب الهولندية بالعسل وعرق السوس: سعراتها وتأثير عرق السوس على ضغط الدم | WiBo Health",
+        "en": "Dutch Honingdrop Liquorice: Calories and How Liquorice Affects Blood Pressure | WiBo Health",
+        "nl": "Zachte honingdrop met zoethout: calorieën en het effect van drop op je bloeddruk | WiBo Health"
+      },
+      "desc": {
+        "ar": "الحلوى الهولندية السوداء بطعم العسل؛ اكتشف القيمة الغذائية لـ Honingdrop، وتحذير عرق السوس لمرضى ضغط الدم، وحساب الكربوهيدرات الدقيق للحصة.",
+        "en": "The black Dutch honey sweet. Discover the nutritional value of honingdrop, the liquorice warning for high blood pressure, and the carbs per portion.",
+        "nl": "De zwarte Nederlandse drop met honingsmaak. Ontdek de voedingswaarde van honingdrop, de dropwaarschuwing bij hoge bloeddruk en de koolhydraten per portie."
+      },
+      "refs_extra": {
+        "ar": [
+          "لا يوجد قياس منشور معتمد للمؤشر الجلايسيمي لهذا الصنف، فلا نضع رقماً تقديرياً. وتحذير عرق السوس وضغط الدم هو صيغة التحذير الإلزامية في الاتحاد الأوروبي على الحلويات التي تحتوي على حمض الغليسيريزين: Regulation (EU) No 1169/2011, Annex III."
+        ],
+        "en": [
+          "There is no approved published measurement of the glycemic index for this food, so we give no estimated figure. The liquorice and blood pressure warning is the mandatory EU warning wording for confectionery containing glycyrrhizinic acid: Regulation (EU) No 1169/2011, Annex III."
+        ],
+        "nl": [
+          "Er is geen goedgekeurde gepubliceerde meting van de glykemische index voor dit product, dus geven we geen geschat getal. De waarschuwing over zoethout en bloeddruk is de verplichte EU-waarschuwingstekst voor snoep met glycyrrhizinezuur: Regulation (EU) No 1169/2011, Annex III."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nالحصة الصارمة هي 3 إلى 4 حبات فقط (20-25 غ) كحد أقصى؛ لا تتناول كيس الدّروب كاملاً في جلسة واحدة لأن السكر وعرق السوس يتراكمان بسرعة.\n\n### أفضل طرق التحضير\nإذا كنت تشتهي نكهة السوس، جرّب شاي اليانسون أو الشمر بدون سكر؛ نكهتهما قريبة من السوس وخاليان من الجليسيريزين، ودون سعرات الحلويات.\n\n### ملاحظة غذائية هامة ⚠️\nفي أوروبا، الحلويات التي فيها عرق السوس يجب أن يُكتب عليها:\n> **\"يحتوي على عرقسوس – يجب على الأشخاص الذين يعانون من ارتفاع ضغط الدم تجنّب الإفراط في تناوله.\"**\nوننصح الحوامل ومرضى الكلى بتجنّب الإكثار منه لأنه قد يخفض البوتاسيوم.",
+        "en": "### Serving advice\nThe strict portion is 3 to 4 drops at most (20-25 g). Don't finish a whole bag in one sitting, because the sugar and the liquorice add up quickly.\n\n### Best ways to prepare it\nIf you crave the liquorice taste, try aniseed or fennel tea without sugar: their flavour is close to liquorice, they contain no glycyrrhizin, and they come without the calories of sweets.\n\n### Important nutrition note ⚠️\nIn Europe, sweets that contain liquorice must carry this text:\n> **\"Contains liquorice – people suffering from hypertension should avoid excessive consumption.\"**\nWe also advise pregnant women and people with kidney disease not to eat much of it, because it can lower potassium.",
+        "nl": "### Advies bij het eten\nDe strikte portie is maximaal 3 tot 4 dropjes (20-25 g). Eet geen hele zak in één keer leeg, want de suiker en het zoethout tellen snel op.\n\n### Zo bereid je het het best\nHeb je zin in dropsmaak? Probeer anijs- of venkelthee zonder suiker: de smaak lijkt op drop, er zit geen glycyrrhizine in, en je hebt niet de calorieën van snoep.\n\n### Belangrijke voedingsnotitie ⚠️\nIn Europa moet op snoep met zoethout deze tekst staan:\n> **\"Bevat zoethout – personen die aan hypertensie lijden, dienen overmatige consumptie te vermijden.\"**\nOok raden we zwangere vrouwen en mensen met een nierziekte aan er niet veel van te eten, omdat het kalium kan verlagen."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل حلوى الدروب بالعسل ترفع ضغط الدم فعلاً أم مجرد إشاعة؟",
+            "a": "حقيقة علمية موثقة؛ مركب الجليسيريزين الموجود في عرق السوس يثبط إنزيم تكسير الكورتيزول في الكلى، مما يسبب حبس الماء والصوديوم ورفع الضغط حتى لدى الأصحاء عند الإفراط."
+          },
+          {
+            "q": "كم غرام سكر يوجد في حفنة من حلوى الـ Honingdrop؟",
+            "a": "في حفنة صغيرة بوزن 25 غراماً، تستهلك حوالي 18.5 غرام كارب وسكر، وهو ما يعادل 4 ملاعق صغيرة من السكر السريع الذي يرفع سكر الدم."
+          },
+          {
+            "q": "هل توجد أنواع من الدّروب آمنة لمرضى السكر والضغط في هولندا؟",
+            "a": "نعم، توجد أصناف Suikervrij (خالية من السكر ومحلاة بالستيفيا أو المالتيتول)، ولكن انتبه: خلوها من السكر لا يحميك من تأثير عرق السوس على الضغط؛ اقرأ التحذير على العبوة قبل الشراء. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Do honey liquorice drops really raise blood pressure, or is that a myth?",
+            "a": "It is a documented scientific fact: the glycyrrhizin in liquorice blocks an enzyme in the kidneys that breaks down cortisol, which leads to water and sodium retention and raises blood pressure, even in healthy people, when eaten in excess."
+          },
+          {
+            "q": "How many grams of sugar are in a handful of honingdrop?",
+            "a": "A small handful of 25 grams gives you about 18.5 grams of carbs and sugar, the same as 4 teaspoons of fast sugar that raises blood sugar."
+          },
+          {
+            "q": "Are there kinds of drop in the Netherlands that are safe for people with diabetes or high blood pressure?",
+            "a": "Yes, there are suikervrij (sugar-free) kinds sweetened with stevia or maltitol. But note: being sugar-free does not protect you from the effect of liquorice on blood pressure, so read the warning on the pack before you buy. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt honingdrop echt de bloeddruk, of is dat een fabeltje?",
+            "a": "Het is een gedocumenteerd wetenschappelijk feit: de glycyrrhizine in zoethout remt een enzym in de nieren dat cortisol afbreekt. Daardoor houdt het lichaam water en natrium vast en stijgt de bloeddruk, ook bij gezonde mensen, als je er te veel van eet."
+          },
+          {
+            "q": "Hoeveel gram suiker zit er in een handje honingdrop?",
+            "a": "Een klein handje van 25 gram geeft je ongeveer 18,5 gram koolhydraten en suiker, evenveel als 4 theelepels snelle suiker die je bloedsuiker laat stijgen."
+          },
+          {
+            "q": "Is er drop in Nederland die veilig is bij diabetes of hoge bloeddruk?",
+            "a": "Ja, er is suikervrije drop, gezoet met stevia of maltitol. Maar let op: suikervrij beschermt je niet tegen het effect van zoethout op de bloeddruk, dus lees de waarschuwing op de verpakking voordat je koopt. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "887": {
+      "slug": "buckwheat-kasha",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "كاشا الحنطة السوداء: هل هي بديل الرز المثالي لمرضى السكر ومقاومة الإنسولين؟ | WiBo Health",
+        "en": "Buckwheat Kasha: A Better Rice Alternative for Diabetes and Insulin Resistance? | WiBo Health",
+        "nl": "Boekweitkasha: beter dan rijst bij diabetes en insulineresistentie? | WiBo Health"
+      },
+      "desc": {
+        "ar": "اكتشف كاشا الحنطة السوداء الروسية الخالية طبيعياً من الجلوتين، ومؤشرها الجلايسيمي المنخفض، وحيل طهيها بالزبدة لسكر دم أكثر ثباتاً بعد الوجبة.",
+        "en": "Discover Russian buckwheat kasha: naturally gluten-free, with a low glycemic index, plus cooking tips with butter for steadier blood sugar after your meal.",
+        "nl": "Ontdek Russische boekweitkasha: van nature glutenvrij, met een lage glykemische index, plus kooktips met boter voor een stabielere bloedsuiker na het eten."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (49) تقدير مبني على القيم المنشورة للحنطة السوداء المسلوقة."
+        ],
+        "en": [
+          "The glycemic index (49) is an estimate based on the published values for boiled buckwheat."
+        ],
+        "nl": [
+          "De glykemische index (49) is een schatting op basis van de gepubliceerde waarden voor gekookte boekweit."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nزبدية متوسطة (150-200 غ) ممتازة كبديل ذكي للأرز الأبيض أو البطاطا المهروسة؛ شبعها جيد بفضل 5.6 غ ألياف (معظمها غير ذائبة) تبطئ الهضم.\n\n### أفضل طرق التحضير\nحمّص حبوب الكاشا الجافة في المقلاة لثوانٍ قبل إضافة الماء الساخن حتى تتماسك الحبات ولا تصبح طرية جداً؛ إضافة ملعقة صغيرة من زيت الزيتون أو الزبدة الطبيعية يبطئ امتصاص النشا.\n\n### ملاحظة غذائية هامة ⚠️\nالحنطة السوداء غنية جداً بمركب 'الروتين' (Rutin)، أحد الفلافونويدات الطبيعية؛ مؤشرها منخفض لكن حجم الحصة يحكم الحمل الجلايسيمي لمريض السكر.",
+        "en": "### Serving advice\nA medium bowl (150-200 g) is an excellent, smart alternative to white rice or mashed potatoes. It fills you up well thanks to 5.6 g of fibre (mostly insoluble), which slows digestion.\n\n### Best ways to prepare it\nToast the dry kasha grains in a pan for a few seconds before adding hot water, so the grains hold together and don't turn too soft. Adding a teaspoon of olive oil or real butter slows down starch absorption.\n\n### Important nutrition note ⚠️\nBuckwheat is very rich in rutin, one of the natural flavonoids. Its glycemic index is low, but for people with diabetes the portion size decides the glycemic load.",
+        "nl": "### Advies bij het eten\nEen middelgrote kom (150-200 g) is een uitstekend en slim alternatief voor witte rijst of aardappelpuree. Hij vult goed dankzij 5,6 g vezels (vooral onoplosbare), die de vertering vertragen.\n\n### Zo bereid je het het best\nRooster de droge kashakorrels een paar seconden in de pan voordat je heet water toevoegt, zodat de korrels heel blijven en niet te zacht worden. Een theelepel olijfolie of echte boter vertraagt de opname van het zetmeel.\n\n### Belangrijke voedingsnotitie ⚠️\nBoekweit is heel rijk aan rutine, een van de natuurlijke flavonoïden. De glykemische index is laag, maar bij diabetes bepaalt de portiegrootte de glykemische lading."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل كاشا الحنطة السوداء أفضل من الرز والشوفان لمرضى مقاومة الإنسولين؟",
+            "a": "غالباً نعم؛ مؤشرها الجلايسيمي (49) أقل من الأرز الأبيض (73) ومن الشوفان السريع، ولا تسبب قفزات حادة في سكر الدم بفضل بطء تحلل أليافها في الأمعاء."
+          },
+          {
+            "q": "هل الحنطة السوداء آمنة لمرضى حساسية القمح والسيلياك؟",
+            "a": "الحنطة السوداء ليست من فصيلة الحبوب النجيلية، بل هي بذرة قريبة لعائلة الراوند، وخالية طبيعياً من الجلوتين؛ لكن اختر عبوات مكتوب عليها \"خالٍ من الجلوتين\" لتجنب تلوثها بالقمح أثناء التصنيع."
+          },
+          {
+            "q": "كيف أستبدل أطباق الغداء المليئة بالنشويات بالكاشا؟",
+            "a": "قارن الكاشا بالأرز الأبيض والبرغل في دليل الأطعمة على WiBo Health من حيث السعرات والمؤشر الجلايسيمي. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is buckwheat kasha better than rice and oats for people with insulin resistance?",
+            "a": "Usually yes: its glycemic index (49) is lower than white rice (73) and instant oats, and it doesn't cause sharp blood sugar spikes because its fibre breaks down slowly in the gut."
+          },
+          {
+            "q": "Is buckwheat safe for people with wheat allergy or coeliac disease?",
+            "a": "Buckwheat is not a cereal grass at all; it is a seed related to the rhubarb family and is naturally gluten-free. But choose packs labelled \"gluten-free\" to avoid cross-contamination with wheat during processing."
+          },
+          {
+            "q": "How can I replace starchy lunch dishes with kasha?",
+            "a": "Compare kasha with white rice and bulgur in the WiBo Health food guide for calories and glycemic index. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is boekweitkasha beter dan rijst en havermout bij insulineresistentie?",
+            "a": "Meestal wel: de glykemische index (49) is lager dan die van witte rijst (73) en instant havermout, en hij geeft geen scherpe bloedsuikerpieken omdat de vezels langzaam worden afgebroken in de darm."
+          },
+          {
+            "q": "Is boekweit veilig bij een tarweallergie of coeliakie?",
+            "a": "Boekweit is helemaal geen graansoort; het is een zaad dat verwant is aan de rabarberfamilie en van nature glutenvrij. Kies wel verpakkingen met \"glutenvrij\" erop, om besmetting met tarwe tijdens de verwerking te vermijden."
+          },
+          {
+            "q": "Hoe vervang ik zetmeelrijke lunchgerechten door kasha?",
+            "a": "Vergelijk kasha met witte rijst en bulgur in de voedingsgids van WiBo Health, op calorieën en glykemische index. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "888": {
+      "slug": "rassolnik",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "شوربة راسولنيك الروسية بالمخلل والشعير: كم سعرة فيها وكيف تؤثر على سكر الدم؟ | WiBo Health",
+        "en": "Russian Rassolnik Soup with Pickles and Barley: Calories and Blood Sugar Effect | WiBo Health",
+        "nl": "Russische rassolnik met augurk en gerst: calorieën en effect op je bloedsuiker | WiBo Health"
+      },
+      "desc": {
+        "ar": "حساء الشتاء الروسي الحامض؛ كيف يساعد الخيار المخلل وحبوب الشعير على إبطاء ارتفاع السكر؟ اكتشف القيمة الغذائية للراسولنيك ودور ألياف الشعير لصحة الأمعاء.",
+        "en": "The sour Russian winter soup. How do pickles and barley slow the rise in blood sugar? Discover rassolnik and the role of barley fibre for your gut.",
+        "nl": "De zure Russische wintersoep: hoe helpen augurk en gerst de stijging van je bloedsuiker te vertragen? Ontdek rassolnik en de rol van gerstvezels voor je darmen."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (38) تقدير لمزيج الشعير الكامل والخيار المخلل."
+        ],
+        "en": [
+          "The glycemic index (38) is an estimate for a mix of whole barley and pickled cucumber."
+        ],
+        "nl": [
+          "De glykemische index (38) is een schatting voor een mix van volkoren gerst en zure augurk."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nزبدية واحدة كافية تماماً كوجبة غذاء مشبعة؛ شرب سوائلها الدافئة يملأ المعدة بالألياف الذائبة ويعطي شعوراً بالامتلاء يدوم لساعات.\n\n### أفضل طرق التحضير\nاستخدم خياراً مخللاً بالتخمير الطبيعي (الملح والماء فقط دون خل صناعي وسكر مضاف) لنكهة أنقى دون سكر مضاف (والغليان يقتل البكتيريا الحية في المخلل؛ فإن أردتها فتناول قطعة مخلل طبيعي نيئة بجانب الشوربة)، وضع ملعقة صغيرة من القشطة الرائبة (Smethana) لتهدئة الحموضة.\n\n### ملاحظة غذائية هامة ⚠️\nبما أن الشوربة تعتمد على ماء المخلل، فإن نسبة الصوديوم فيها مرتفعة نسبياً؛ لذلك قلّل الملح المضاف إن كنت تعاني من ارتفاع ضغط الدم، ومرضى قصور القلب يراجعون طبيبهم بشأن الملح والسوائل.",
+        "en": "### Serving advice\nOne bowl is plenty for a filling lunch. Drinking the warm broth fills the stomach with soluble fibre and gives a feeling of fullness that lasts for hours.\n\n### Best ways to prepare it\nUse naturally fermented pickles (just salt and water, without industrial vinegar or added sugar) for a purer flavour without added sugar (boiling kills the live bacteria in pickles, so if you want them, eat a piece of raw natural pickle next to the soup), and add a teaspoon of soured cream (smetana) to soften the sourness.\n\n### Important nutrition note ⚠️\nBecause the soup is made with pickle brine, its sodium content is fairly high. So add less salt if you have high blood pressure, and people with heart failure should check with their doctor about salt and fluids.",
+        "nl": "### Advies bij het eten\nEén kom is genoeg voor een verzadigende lunch. De warme bouillon vult je maag met oplosbare vezels en geeft een vol gevoel dat urenlang aanhoudt.\n\n### Zo bereid je het het best\nGebruik natuurlijk gefermenteerde augurken (alleen zout en water, zonder industriële azijn of toegevoegde suiker) voor een zuiverdere smaak zonder toegevoegde suiker (koken doodt de levende bacteriën in augurken, dus wil je die, eet dan een stukje rauwe natuurlijke augurk naast de soep), en voeg een theelepel zure room (smetana) toe om het zuur te verzachten.\n\n### Belangrijke voedingsnotitie ⚠️\nOmdat de soep met pekelvocht wordt gemaakt, is het natriumgehalte vrij hoog. Voeg dus minder zout toe als je een hoge bloeddruk hebt, en mensen met hartfalen overleggen met hun arts over zout en vocht."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "كيف تساعد شوربة الراسولنيك في ضبط سكر الدم بعد الوجبة؟",
+            "a": "الشعير الكامل يمتلك أدنى مؤشر جلايسيمي بين الحبوب (حوالي 28-35)، وحمض التخليل يبطئ إفراغ المعدة؛ هذا المزيج يجعل امتصاص النشويات بطيئاً جداً ومثبت لنسبة السكر بالدم."
+          },
+          {
+            "q": "هل تفيد شوربة الراسولنيك بكتيريا الأمعاء النافعة (الميكروبيوم)؟",
+            "a": "نعم، فألياف الشعير (بيتا جلوكان) تعمل كـ 'بريبايوتك' (غذاء للبكتيريا النافعة)؛ أما البكتيريا الحية في ماء المخلل فلا تبقى بعد الغليان."
+          },
+          {
+            "q": "كيف أوازن نسبة الأملاح في شوربة الراسولنيك؟",
+            "a": "اختر مخللاً بالماء والملح فقط، واقرأ نسبة الصوديوم على العبوة. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "How does rassolnik soup help control blood sugar after a meal?",
+            "a": "Whole barley has the lowest glycemic index of the grains (about 28-35), and the pickling acid slows stomach emptying. Together they make starch absorption very slow and keep blood sugar steady."
+          },
+          {
+            "q": "Is rassolnik soup good for the beneficial gut bacteria (the microbiome)?",
+            "a": "Yes: barley fibre (beta-glucan) works as a prebiotic (food for the good bacteria). The live bacteria in the pickle brine, however, don't survive the boiling."
+          },
+          {
+            "q": "How can I balance the salt in rassolnik soup?",
+            "a": "Choose pickles made with just water and salt, and read the sodium content on the pack. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Hoe helpt rassolnik de bloedsuiker na de maaltijd onder controle te houden?",
+            "a": "Volkoren gerst heeft de laagste glykemische index van de granen (ongeveer 28-35), en het zuur uit de pekel vertraagt het legen van de maag. Samen maken ze de opname van zetmeel heel langzaam en houden ze je bloedsuiker stabiel."
+          },
+          {
+            "q": "Is rassolnik goed voor de nuttige darmbacteriën (het microbioom)?",
+            "a": "Ja: gerstvezels (bètaglucaan) werken als prebioticum (voeding voor de goede bacteriën). De levende bacteriën in het pekelvocht overleven het koken echter niet."
+          },
+          {
+            "q": "Hoe houd ik het zout in rassolnik in balans?",
+            "a": "Kies augurken die alleen met water en zout zijn gemaakt, en lees het natriumgehalte op de verpakking. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "889": {
+      "slug": "polish-mushroom-soup",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "شوربة الفطر البري البولندية بالكريمة: كم سعرة فيها وهل تناسب مريض السكري والدايت؟ | WiBo Health",
+        "en": "Polish Wild Mushroom Soup: Calories, Glycemic Load and Is It Good for Diabetes? | WiBo Health",
+        "nl": "Poolse romige bospaddenstoelensoep: calorieën en is ze geschikt bij diabetes? | WiBo Health"
+      },
+      "desc": {
+        "ar": "شوربة الغابات البولندية الكلاسيكية؛ اكتشف سعرات Zupa Grzybowa وحملها الجلايسيمي المنخفض، ودور الفطر المجفف وأليافه في الإحساس بالشبع.",
+        "en": "The classic Polish forest soup. Discover the calories and low glycemic load of zupa grzybowa, and how dried mushrooms and their fibre help you feel full.",
+        "nl": "De klassieke Poolse bossoep. Ontdek de calorieën en lage glykemische lading van zupa grzybowa, en hoe gedroogde paddenstoelen en hun vezels je verzadigen."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (35) تقدير للفطر البري مع مرق الخضار والدهن الطبيعي."
+        ],
+        "en": [
+          "The glycemic index (35) is an estimate for wild mushrooms with vegetable broth and natural fat."
+        ],
+        "nl": [
+          "De glykemische index (35) is een schatting voor wilde paddenstoelen met groentebouillon en natuurlijk vet."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nابدأ وجبة الغداء أو العشاء بزبدية من هذه الشوربة؛ ألياف الفطر وكثافته تملأ حيزاً واسعاً من المعدة فتأكل كمية أقل من النشويات في الطبق الرئيسي.\n\n### أفضل طرق التحضير\nتجنب تثخين الشوربة بالطحين الأبيض أو النشا؛ اعتمد على هرس جزء من الفطر والخضار المسلوقة للحصول على القوام الكريمي الطبيعي بدون نشويات مضافة.\n\n### ملاحظة غذائية هامة ⚠️\nيحتوي الفطر طبيعياً على ألياف من نوع البيتا جلوكان؛ فقط انتبه لكمية الكريمة المضافة حتى لا ترتفع السعرات الإجمالية.",
+        "en": "### Serving advice\nStart your lunch or dinner with a bowl of this soup: the fibre and bulk of the mushrooms take up a lot of room in your stomach, so you eat less starch in the main course.\n\n### Best ways to prepare it\nDon't thicken the soup with white flour or starch. Blend part of the cooked mushrooms and vegetables instead, for a naturally creamy texture without added starch.\n\n### Important nutrition note ⚠️\nMushrooms naturally contain a type of fibre called beta-glucan. Just watch how much cream you add, so the total calories don't climb.",
+        "nl": "### Advies bij het eten\nBegin je lunch of avondeten met een kom van deze soep: de vezels en het volume van de paddenstoelen nemen veel ruimte in je maag in, zodat je minder zetmeel eet bij het hoofdgerecht.\n\n### Zo bereid je het het best\nBind de soep niet met witte bloem of zetmeel. Pureer liever een deel van de gekookte paddenstoelen en groenten, voor een natuurlijk romige structuur zonder toegevoegd zetmeel.\n\n### Belangrijke voedingsnotitie ⚠️\nPaddenstoelen bevatten van nature een soort vezel die bètaglucaan heet. Let alleen op hoeveel room je toevoegt, zodat het totaal aantal calorieën niet oploopt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل شوربة الفطر البولندية مناسبة لمرضى الكيتو ومقاومة الإنسولين؟",
+            "a": "مناسبة لأنظمة الكارب المنخفض ومقاومة الإنسولين؛ فالكربوهيدرات الصافية فيها لا تتعدى 7.5 غ لكل 100 غ، وحملها الجلايسيمي لا يتجاوز 6.6، مما يعني تأثيراً محدوداً على سكر الدم. لكن الزبدية فيها نحو 19 غ كارب صافٍ، فاحسبها ضمن يومك إن كنت تتبع الكيتو."
+          },
+          {
+            "q": "كيف أستمتع بشوربة الفطر الكريمية دون زيادة الوزن؟",
+            "a": "الحيلة تكمن في استبدال كريمة الطبخ الثقيلة (Slagroom) بالزبادي اليوناني أو الحليب كامل الدسم، وتكثيف الشوربة بمرق الفطر نفسه مع الشبت، لتقلل السعرات بوضوح وتحافظ على القوام الرائع (أضف الزبادي بعد رفع القدر عن النار حتى لا يتكتل)."
+          },
+          {
+            "q": "كيف أتحقق من محتويات شوربة الفطر الجاهزة والمعلبة؟",
+            "a": "كثير من الشوربات الجاهزة فيها نشا مضاف وملح عالٍ؛ اقرأ المكونات قبل الشراء. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is Polish mushroom soup suitable for keto and insulin resistance?",
+            "a": "It suits low-carb diets and insulin resistance: it has no more than 7.5 g of net carbs per 100 g and a glycemic load of no more than 6.6, which means a limited effect on blood sugar. But a bowl has about 19 g of net carbs, so count it in your day if you follow keto."
+          },
+          {
+            "q": "How can I enjoy creamy mushroom soup without gaining weight?",
+            "a": "The trick is to swap heavy cooking cream (slagroom) for Greek yogurt or full-fat milk, and to thicken the soup with the mushroom stock itself and dill. That clearly lowers the calories and keeps the lovely texture (stir in the yogurt after taking the pan off the heat, so it doesn't curdle)."
+          },
+          {
+            "q": "How can I check what is in ready-made or canned mushroom soup?",
+            "a": "Many ready-made soups contain added starch and a lot of salt, so read the ingredients before you buy. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is Poolse paddenstoelensoep geschikt bij keto en insulineresistentie?",
+            "a": "Ze past bij koolhydraatarme voeding en insulineresistentie: er zit niet meer dan 7,5 g netto koolhydraten in per 100 g en de glykemische lading is niet hoger dan 6,6, dus het effect op je bloedsuiker is beperkt. Maar een kom bevat ongeveer 19 g netto koolhydraten, dus tel die mee als je keto eet."
+          },
+          {
+            "q": "Hoe geniet ik van romige paddenstoelensoep zonder aan te komen?",
+            "a": "De truc is om zware kookroom (slagroom) te vervangen door Griekse yoghurt of volle melk, en de soep te binden met de paddenstoelenbouillon zelf en dille. Zo verlaag je de calorieën duidelijk en blijft de structuur heerlijk (roer de yoghurt erdoor nadat je de pan van het vuur hebt gehaald, zodat hij niet schift)."
+          },
+          {
+            "q": "Hoe controleer ik wat er in kant-en-klare paddenstoelensoep of soep uit blik zit?",
+            "a": "Veel kant-en-klare soepen bevatten toegevoegd zetmeel en veel zout, dus lees de ingrediënten voordat je koopt. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "890": {
+      "slug": "bigos",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "يخنة بيغوس البولندية بالكرنب المخمر واللحم: طبق غني بالبروتين وقليل الكربوهيدرات | WiBo Health",
+        "en": "Polish Bigos with Sauerkraut and Meat: A High-Protein, Low-Carb Hunter's Stew | WiBo Health",
+        "nl": "Poolse bigos met zuurkool en vlees: eiwitrijke, koolhydraatarme stoofpot | WiBo Health"
+      },
+      "desc": {
+        "ar": "الطبق البولندي الوطني؛ اكتشف بيغوس الصيادين (Bigos)، وكيف تغذي ألياف الكرنب المخمر بكتيريا أمعائك، ولماذا يناسب أنظمة الكارب المنخفض وثبات سكر الدم.",
+        "en": "Poland's national dish. Discover hunter's stew (bigos), how fermented cabbage fibre feeds your gut bacteria, and why it suits low-carb diets and steady blood sugar.",
+        "nl": "Het nationale gerecht van Polen. Ontdek de jagersstoofpot bigos, hoe vezels uit zuurkool je darmbacteriën voeden, en waarom hij past bij koolhydraatarm eten."
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nصحن واحد (250-300 غ) يشكل وجبة غداء شتوية كاملة ومثالية؛ لا تحتاج لإضافة خبز أو بطاطا بجانبها، فالألياف الكثيفة والبروتين سيشعرانك بالشبع لساعات.\n\n### أفضل طرق التحضير\nاختر قطع لحم هبرة متوسطة الدهن، وقلّل اللحوم المصنعة كالنقانق المدخنة؛ اترك اليخنة تتسبك على نار هادئة حتى تلين ألياف الساوركراوت وتسهل هضمها.\n\n### ملاحظة غذائية هامة ⚠️\nألياف الكرنب جزء مهم من نظام غذائي متوازن؛ لكن انتبه لكمية الملح في الساوركراوت الجاهز، واشطفه سريعاً بالماء قبل الطهي إذا كنت تعاني من احتباس السوائل أو الضغط.",
+        "en": "### Serving advice\nOne plate (250-300 g) makes a complete winter lunch. You don't need bread or potatoes with it: the generous fibre and protein will keep you full for hours.\n\n### Best ways to prepare it\nChoose lean or medium-fat cuts of meat and use less processed meat such as smoked sausage. Let the stew simmer gently until the sauerkraut fibres soften and become easier to digest.\n\n### Important nutrition note ⚠️\nCabbage fibre is an important part of a balanced diet. But watch the salt in ready-made sauerkraut, and rinse it briefly with water before cooking if you have fluid retention or high blood pressure.",
+        "nl": "### Advies bij het eten\nEén bord (250-300 g) is een complete winterlunch. Je hebt er geen brood of aardappelen bij nodig: de vele vezels en het eiwit houden je urenlang verzadigd.\n\n### Zo bereid je het het best\nKies mager of halfvet vlees en gebruik minder bewerkt vlees zoals rookworst. Laat de stoofpot zachtjes pruttelen tot de vezels van de zuurkool zacht en beter verteerbaar zijn.\n\n### Belangrijke voedingsnotitie ⚠️\nKoolvezels zijn een belangrijk onderdeel van een evenwichtig voedingspatroon. Let wel op het zout in kant-en-klare zuurkool, en spoel die kort af met water voor het koken als je vocht vasthoudt of een hoge bloeddruk hebt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل طبق البيغوس مناسب تماماً لنظام الكيتو دايت والصيام المتقطع؟",
+            "a": "يناسب أنظمة الكارب المنخفض والكيتو؛ فكل 100 غرام منه فيها 3 غرامات كارب صافية فقط، مع بروتين جيد ودهون طبيعية."
+          },
+          {
+            "q": "هل يؤثر طبق البيغوس على قراءة سكر الدم بعد الأكل؟",
+            "a": "تأثيره على سكر الدم ضعيف جداً لأن الكارب الصافي قليل (9 غ بالحصة)، والألياف (11.4 غ بالحصة) والبروتين يبطئان الامتصاص."
+          },
+          {
+            "q": "هل يفيد طبق البيغوس بكتيريا الأمعاء؟",
+            "a": "نعم من خلال الألياف: تتخمر ألياف الكرنب في القولون وتنتج أحماضاً دهنية قصيرة السلسلة (SCFAs). أما البكتيريا الحية فتحتاج كرنباً مخمراً غير مطبوخ، كملعقة ساوركراوت نيء بجانب الطبق. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is bigos fully suitable for keto and intermittent fasting?",
+            "a": "It suits low-carb and keto diets: every 100 grams has only 3 grams of net carbs, with good protein and natural fats."
+          },
+          {
+            "q": "Does bigos affect my blood sugar reading after eating?",
+            "a": "Its effect on blood sugar is very small, because the net carbs are low (9 g per portion), and the fibre (11.4 g per portion) and protein slow down absorption."
+          },
+          {
+            "q": "Is bigos good for the gut bacteria?",
+            "a": "Yes, through its fibre: cabbage fibre ferments in the colon and produces short-chain fatty acids (SCFAs). Live bacteria, however, need fermented cabbage that hasn't been cooked, such as a spoonful of raw sauerkraut next to the dish. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Past bigos helemaal bij keto en intermittent fasting?",
+            "a": "Hij past bij koolhydraatarme voeding en keto: elke 100 gram bevat maar 3 gram netto koolhydraten, met goed eiwit en natuurlijke vetten."
+          },
+          {
+            "q": "Heeft bigos invloed op mijn bloedsuikerwaarde na het eten?",
+            "a": "Het effect op je bloedsuiker is heel klein, omdat er weinig netto koolhydraten in zitten (9 g per portie), en de vezels (11,4 g per portie) en het eiwit de opname vertragen."
+          },
+          {
+            "q": "Is bigos goed voor de darmbacteriën?",
+            "a": "Ja, via de vezels: koolvezels fermenteren in de dikke darm en maken korteketenvetzuren (SCFA's). Levende bacteriën vragen echter om ongekookte gefermenteerde kool, zoals een lepel rauwe zuurkool naast het gerecht. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "891": {
+      "slug": "herring-beetroot-salad",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "سلطة الرنجة والشمندر الإسكندنافية: كم سعرة فيها وما فائدة دهون الرنجة لصحة القلب؟ | WiBo Health",
+        "en": "Herring and Beetroot Salad: Calories and Why Herring Fat Matters for the Heart | WiBo Health",
+        "nl": "Haringsalade met rode biet: calorieën en waarom haringvet goed is voor je hart | WiBo Health"
+      },
+      "desc": {
+        "ar": "طبق الأعياد الإسكندنافي؛ اكتشف سلطة Sillsallad بالرنجة والشمندر وقيمتها الغذائية، وكيف يساهم الحمضان الدهنيان EPA وDHA في عمل القلب الطبيعي.",
+        "en": "The Scandinavian holiday dish. Discover sillsallad with herring and beetroot, its nutrition, and how EPA and DHA contribute to normal heart function.",
+        "nl": "Het Scandinavische feestgerecht. Ontdek sillsallad met haring en rode biet, de voedingswaarde, en hoe EPA en DHA bijdragen tot de normale werking van het hart."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (42) تقدير لخلطة الشمندر المسلوق مع السمك الدسم والأحماض."
+        ],
+        "en": [
+          "The glycemic index (42) is an estimate for cooked beetroot mixed with oily fish and acids."
+        ],
+        "nl": [
+          "De glykemische index (42) is een schatting voor gekookte rode biet gemengd met vette vis en zuren."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nحصة بوزن 150 غ تعتبر مقبلاً رائعاً أو عشاءً بروتينياً خفيفاً؛ دهون الرنجة الصحية تعزز الشعور بالامتلاء.\n\n### أفضل طرق التحضير\nاختر رنجة مخللة قليلة السكر، أو رنجة ماتيس (Matjes) المملّحة خفيفاً، واشطفها جيداً؛ امزجها بالشمندر المسلوق الطازج بدلاً من الشمندر المعلب بالقطر والسكريات المضافة.\n\n### ملاحظة غذائية هامة ⚠️\nتحتوي الرنجة طبيعياً على فيتامين D والسيلينيوم وأوميغا-3؛ فقط راعِ نسبة الملح المتبقية في السمك.",
+        "en": "### Serving advice\nA 150 g portion makes a lovely starter or a light, protein-rich dinner. The healthy fats in herring help you feel full.\n\n### Best ways to prepare it\nChoose pickled herring that is low in sugar, or lightly salted matjes herring, and rinse it well. Mix it with freshly cooked beetroot rather than canned beetroot in syrup with added sugars.\n\n### Important nutrition note ⚠️\nHerring naturally contains vitamin D, selenium and omega-3. Just keep an eye on the salt left in the fish.",
+        "nl": "### Advies bij het eten\nEen portie van 150 g is een heerlijk voorgerecht of een licht, eiwitrijk avondmaal. De gezonde vetten in haring helpen je een vol gevoel te krijgen.\n\n### Zo bereid je het het best\nKies zure haring met weinig suiker, of licht gezouten maatjesharing, en spoel die goed af. Meng hem met vers gekookte rode biet in plaats van biet uit pot op siroop met toegevoegde suikers.\n\n### Belangrijke voedingsnotitie ⚠️\nHaring bevat van nature vitamine D, selenium en omega-3. Let alleen op het zout dat in de vis is achtergebleven."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل سلطة الشمندر والرنجة ترفع دهون الدم والكوليسترول؟",
+            "a": "بالعكس تماماً؛ دهون الرنجة هي أحماض أوميغا-3 الدهنية المفيدة (EPA & DHA) وهي تساهم في عمل القلب الطبيعي عند تناول 250 ملغ يومياً. انتبه فقط لكمية المايونيز أو القشطة."
+          },
+          {
+            "q": "هل الشمندر في هذه السلطة يرفع سكر الدم بسرعة لمرضى السكري؟",
+            "a": "لا؛ فرغم أن الشمندر يحتوي سكريات طبيعية، إلا أن وجود دهون وبروتينات سمك الرنجة يبطئ امتصاص السكر، مما يجعل الحمل الجلايسيمي منخفضاً جداً (6.2 فقط بالحصة)."
+          },
+          {
+            "q": "كيف أختار رنجة هولندية أو سويدية صحية خالية من السكر الخفي؟",
+            "a": "بعض أصناف الرنجة الإسكندنافية تخلل بمحاليل سكرية مركزة؛ اختر الرنجة المخللة بالخل والأعشاب بدون سكر مضاف (zonder toegevoegde suiker). [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does beetroot and herring salad raise blood fats and cholesterol?",
+            "a": "Quite the opposite: herring fats are the beneficial omega-3 fatty acids (EPA and DHA), and they contribute to the normal function of the heart with a daily intake of 250 mg. Just watch the amount of mayonnaise or cream."
+          },
+          {
+            "q": "Does the beetroot in this salad raise blood sugar quickly in people with diabetes?",
+            "a": "No. Although beetroot contains natural sugars, the fat and protein of the herring slow down sugar absorption, which keeps the glycemic load very low (only 6.2 per portion)."
+          },
+          {
+            "q": "How do I choose a healthy Dutch or Swedish herring without hidden sugar?",
+            "a": "Some Scandinavian herring is pickled in concentrated sugar brines. Choose herring pickled in vinegar and herbs with no added sugar (zonder toegevoegde suiker). [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt haringsalade met rode biet de bloedvetten en het cholesterol?",
+            "a": "Juist niet: haringvet bestaat uit de nuttige omega-3-vetzuren (EPA en DHA), en die dragen bij tot de normale werking van het hart bij een dagelijkse inname van 250 mg. Let alleen op de hoeveelheid mayonaise of room."
+          },
+          {
+            "q": "Laat de rode biet in deze salade de bloedsuiker snel stijgen bij diabetes?",
+            "a": "Nee. Rode biet bevat wel natuurlijke suikers, maar het vet en eiwit van de haring vertragen de opname van suiker, waardoor de glykemische lading heel laag blijft (maar 6,2 per portie)."
+          },
+          {
+            "q": "Hoe kies ik gezonde Nederlandse of Zweedse haring zonder verborgen suiker?",
+            "a": "Sommige Scandinavische haring wordt ingelegd in geconcentreerde suikeroplossingen. Kies haring die is ingelegd in azijn en kruiden, zonder toegevoegde suiker. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "892": {
+      "slug": "lohikeitto",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "حساء السلمون الفنلندي لوهيكيتو: كم سعرة وبروتين وهل يناسب مريض السكر؟ | WiBo Health",
+        "en": "Finnish Lohikeitto Salmon Soup: Calories, Protein and Does It Suit Diabetes? | WiBo Health",
+        "nl": "Finse zalmsoep lohikeitto: calorieën, eiwit en is ze geschikt bij diabetes? | WiBo Health"
+      },
+      "desc": {
+        "ar": "حساء الشتاء الإسكندنافي الفاخر؛ اكتشف القيمة الغذائية لشوربة Lohikeitto الفنلندية، بروتينها الضخم، ودور دهون السلمون في إبطاء امتصاص نشا البطاطا.",
+        "en": "The rich Nordic winter soup. Discover the nutrition of Finnish lohikeitto, its generous protein, and how salmon fat slows the absorption of potato starch.",
+        "nl": "De rijke Scandinavische wintersoep. Ontdek de voedingswaarde van Finse lohikeitto, het royale eiwit, en hoe zalmvet de opname van aardappelzetmeel vertraagt."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (48) تقدير لمزيج السلمون الدهني ومكعبات البطاطا مع الكريمة والشبت."
+        ],
+        "en": [
+          "The glycemic index (48) is an estimate for a mix of oily salmon and potato cubes with cream and dill."
+        ],
+        "nl": [
+          "De glykemische index (48) is een schatting voor een mix van vette zalm en aardappelblokjes met room en dille."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nزبدية واحدة تعتبر وجبة غداء رئيسية كاملة ومكتفية بذاتها؛ لا تأكل معها خبزاً أبيض، فالبروتين والألياف والدهون ستشعرك بالشبع لساعات طويلة.\n\n### أفضل طرق التحضير\nاستبدل نصف كمية مكعبات البطاطا بقطع القرنبيط أو الكراث المسلوق؛ ستحصل على قوام كريمي قريب مع كربوهيدرات أقل بوضوح.\n\n### ملاحظة غذائية هامة ⚠️\nيحتوي السلمون على الحمضين الدهنيين EPA وDHA اللذين يساهمان في عمل القلب الطبيعي (عند تناول 250 ملغ يومياً)؛ فقط راقب كمية الكريمة المضافة لضبط السعرات الكلية إذا كنت تتبع عجزاً حرارياً لإنقاص الوزن.",
+        "en": "### Serving advice\nOne bowl is a complete main lunch on its own. Don't eat white bread with it: the protein, fibre and fat will keep you full for hours.\n\n### Best ways to prepare it\nReplace half the potato cubes with cauliflower or boiled leek. You'll get a similarly creamy texture with clearly fewer carbohydrates.\n\n### Important nutrition note ⚠️\nSalmon contains the fatty acids EPA and DHA, which contribute to the normal function of the heart (with a daily intake of 250 mg). Just watch the amount of cream you add to keep the total calories in check if you are eating in a calorie deficit to lose weight.",
+        "nl": "### Advies bij het eten\nEén kom is op zichzelf een complete hoofdmaaltijd voor de lunch. Eet er geen wit brood bij: het eiwit, de vezels en het vet houden je urenlang verzadigd.\n\n### Zo bereid je het het best\nVervang de helft van de aardappelblokjes door bloemkool of gekookte prei. Je krijgt een vergelijkbaar romige structuur met duidelijk minder koolhydraten.\n\n### Belangrijke voedingsnotitie ⚠️\nZalm bevat de vetzuren EPA en DHA, die bijdragen tot de normale werking van het hart (bij een dagelijkse inname van 250 mg). Let alleen op de hoeveelheid room die je toevoegt, zodat de calorieën binnen de perken blijven als je een calorietekort aanhoudt om af te vallen."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل حساء السلمون لوهيكيتو يرفع سكر الدم بسرعة لاحتوائه على البطاطا؟",
+            "a": "غالباً لا؛ فرغم وجود البطاطا، تبطئ وفرة البروتين (45 غ) ودهون السلمون والكريمة تفريغ المعدة وامتصاص النشا، فتكون استجابة سكر الدم أهدأ، مع حمل جلايسيمي متوسط (16) للزبدية الكاملة."
+          },
+          {
+            "q": "هل تناسب شوربة السلمون الفنلندية حمية الكيتو أو منخفضة الكارب؟",
+            "a": "تناسبها جداً عند إجراء تعديل بسيط: اطلبها أو اطبخها بدون بطاطا واعتمد على السلمون والكريمة والشبت والكراث؛ لتصبح وجبة مناسبة للكيتو، غنية بالبروتين وقليلة الكربوهيدرات."
+          },
+          {
+            "q": "كيف أختار مرق السمك والسلمون الأنقى في السوبرماركت الأوروبي؟",
+            "a": "تجنب مكعبات المرق الجاهزة الغنية بالملح، واختر مرقاً بمكونات بسيطة بدون سكر أو نشا مضاف. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does lohikeitto salmon soup raise blood sugar quickly because it contains potatoes?",
+            "a": "Usually not. Despite the potatoes, the generous protein (45 g) and the fat of the salmon and cream slow stomach emptying and starch absorption, so the blood sugar response is calmer, with a medium glycemic load (16) for the full bowl."
+          },
+          {
+            "q": "Does Finnish salmon soup suit keto or a low-carb diet?",
+            "a": "Very well, with one simple change: order or cook it without potatoes and rely on salmon, cream, dill and leek. That makes it a keto-friendly meal, rich in protein and low in carbohydrates."
+          },
+          {
+            "q": "How do I choose the purest fish and salmon stock in a European supermarket?",
+            "a": "Avoid ready-made stock cubes high in salt, and choose a stock with simple ingredients and no added sugar or starch. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Laat lohikeitto de bloedsuiker snel stijgen omdat er aardappel in zit?",
+            "a": "Meestal niet. Ondanks de aardappel vertragen het vele eiwit (45 g) en het vet van de zalm en de room het legen van de maag en de opname van zetmeel. Je bloedsuiker reageert daardoor rustiger, met een gemiddelde glykemische lading (16) voor de hele kom."
+          },
+          {
+            "q": "Past Finse zalmsoep bij keto of koolhydraatarm eten?",
+            "a": "Heel goed, met één eenvoudige aanpassing: bestel of kook hem zonder aardappel en kies voor zalm, room, dille en prei. Zo wordt het een keto-vriendelijke maaltijd, rijk aan eiwit en arm aan koolhydraten."
+          },
+          {
+            "q": "Hoe kies ik de zuiverste vis- en zalmbouillon in een Europese supermarkt?",
+            "a": "Vermijd bouillonblokjes met veel zout, en kies een bouillon met eenvoudige ingrediënten, zonder toegevoegde suiker of zetmeel. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "893": {
+      "slug": "ruisleipa",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "خبز الجاودار الفنلندي رويسليبا: المؤشر الجلايسيمي وبديل الخبز الأبيض للسكري | WiBo Health",
+        "en": "Finnish Ruisleipä Rye Bread: Glycemic Index and a White Bread Swap for Diabetes | WiBo Health",
+        "nl": "Fins roggebrood ruisleipä: glykemische index en een alternatief voor wit brood | WiBo Health"
+      },
+      "desc": {
+        "ar": "خبز الشمال الأسمر؛ اكتشف فوائد خبز Ruisleipä المصنوع من الجاودار الكامل، غناه بالألياف، ولماذا يمنح شبعاً أطول وارتفاعاً أهدأ لسكر الدم.",
+        "en": "The dark bread of the North. Discover ruisleipä made from whole rye, its high fibre, and why it keeps you full longer with a calmer rise in blood sugar.",
+        "nl": "Het donkere brood van het noorden. Ontdek ruisleipä van volkoren rogge, het hoge vezelgehalte, en waarom het langer verzadigt met een rustigere bloedsuiker."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي لخبز الجاودار الفنلندي الكامل المخمر (58) قيمة منشورة: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32."
+        ],
+        "en": [
+          "The glycemic index of fermented Finnish wholegrain rye bread (58) is a published value: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32."
+        ],
+        "nl": [
+          "De glykemische index van gefermenteerd Fins volkoren roggebrood (58) is een gepubliceerde waarde: Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–32."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nشريحة إلى شريحتين (40-80 غ) كافية تماماً لإفطار مشبع؛ ألياف الجاودار تمتص الماء في الأمعاء وتتوسع لتعطي إشارة امتلاء مبكرة للمخ.\n\n### أفضل طرق التحضير\nحمّصه في الحماصة لتبرز نكهته الحامضة الجوزية، وتناوله على الطريقة الفنلندية مع شريحة سمك سلمون مدخن أو بيضة مسلوقة ومسحة زبدة طازجة.\n\n### ملاحظة غذائية هامة ⚠️\nخبز الجاودار يحتوي بروتين الجلوتين (بكمية أقل من القمح)، لذا فهو غير مناسب للمصابين بمرض السيلياك؛ لكنه خيار ممتاز لمن يعانون من مقاومة الإنسولين، وألياف الجاودار تساهم في الوظيفة الطبيعية للأمعاء.",
+        "en": "### Serving advice\nOne to two slices (40-80 g) are plenty for a filling breakfast. Rye fibre absorbs water in the gut and swells, sending an early fullness signal to the brain.\n\n### Best ways to prepare it\nToast it to bring out its sour, nutty flavour, and eat it the Finnish way with a slice of smoked salmon or a boiled egg and a thin layer of fresh butter.\n\n### Important nutrition note ⚠️\nRye bread contains gluten (less than wheat), so it is not suitable for people with coeliac disease. But it is an excellent choice for people with insulin resistance, and rye fibre contributes to normal bowel function.",
+        "nl": "### Advies bij het eten\nEén tot twee sneetjes (40-80 g) zijn ruim genoeg voor een verzadigend ontbijt. Roggevezels nemen in de darm water op en zwellen, waardoor je hersenen vroeg een verzadigingssignaal krijgen.\n\n### Zo bereid je het het best\nRooster het in de broodrooster om de zure, nootachtige smaak naar boven te halen, en eet het op z'n Fins met een plakje gerookte zalm of een gekookt ei en een dun laagje verse boter.\n\n### Belangrijke voedingsnotitie ⚠️\nRoggebrood bevat gluten (minder dan tarwe), dus het is niet geschikt bij coeliakie. Maar het is een uitstekende keuze bij insulineresistentie, en roggevezels dragen bij tot een normale darmwerking."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل خبز الجاودار رويسليبا يرفع السكر مثل الخبز الأبيض والتوست؟",
+            "a": "لا؛ فمؤشره الجلايسيمي معتدل (58) وحمله للشريحة منخفض جداً (6.7)، ويتميز بما يسمى ظاهرة 'تأثير الوجبة الثانية' إذ قد يساعد بفضل أليافه الكثيفة على ارتفاع أهدأ للسكر في الوجبة التالية أيضاً."
+          },
+          {
+            "q": "هل يساعد خبز الرويسليبا على انتظام حركة الأمعاء وتغذية بكتيريا الأمعاء؟",
+            "a": "نعم؛ فالشريحة الواحدة تمدك بنحو 5 غرامات من ألياف الجاودار، وهي تساهم في الوظيفة الطبيعية للأمعاء، كما تتخمر في القولون فتتغذى عليها البكتيريا النافعة."
+          },
+          {
+            "q": "كيف أتأكد أن خبز الجاودار في السوبرماركت أصلي وليس مخلوطاً بطحين أبيض؟",
+            "a": "ابحث عن عبارة (100% ruis / 100% fullkornsråg) وتأكد من خلوه من شراب السكر المكرر. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does ruisleipä rye bread raise blood sugar like white bread and toast?",
+            "a": "No. Its glycemic index is moderate (58) and the glycemic load per slice is very low (6.7). It is also known for the so-called \"second-meal effect\": thanks to its dense fibre, it may help blood sugar rise more gently at the next meal too."
+          },
+          {
+            "q": "Does ruisleipä help keep the bowels regular and feed the gut bacteria?",
+            "a": "Yes. One slice gives you about 5 grams of rye fibre, which contributes to normal bowel function, and it also ferments in the colon, where the good bacteria feed on it."
+          },
+          {
+            "q": "How can I be sure the rye bread in the supermarket is genuine and not mixed with white flour?",
+            "a": "Look for the words \"100% ruis\" or \"100% fullkornsråg\" and make sure it contains no refined sugar syrup. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Laat roggebrood ruisleipä de bloedsuiker stijgen zoals wit brood en toast?",
+            "a": "Nee. De glykemische index is gemiddeld (58) en de glykemische lading per sneetje is heel laag (6,7). Het staat ook bekend om het zogenoemde \"tweede-maaltijdeffect\": dankzij de vele vezels kan het helpen om de bloedsuiker ook bij de volgende maaltijd rustiger te laten stijgen."
+          },
+          {
+            "q": "Helpt ruisleipä bij een regelmatige stoelgang en voedt het de darmbacteriën?",
+            "a": "Ja. Eén sneetje geeft je ongeveer 5 gram roggevezels, die bijdragen tot een normale darmwerking, en die vezels fermenteren ook in de dikke darm, waar de goede bacteriën ervan leven."
+          },
+          {
+            "q": "Hoe weet ik zeker dat roggebrood in de supermarkt echt is en niet gemengd met witte bloem?",
+            "a": "Zoek naar \"100% ruis\" of \"100% fullkornsråg\" (100% volkoren rogge) en controleer dat er geen geraffineerde suikerstroop in zit. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "894": {
+      "slug": "karjalanpiirakka",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "فطائر كاريليا الفنلندية بالأرز: كم سعرة وكيف تتناولها بذكاء مع البيض؟ | WiBo Health",
+        "en": "Karelian Rice Pasties: Calories and How to Eat Them Smartly with Egg Butter | WiBo Health",
+        "nl": "Karelische rijstpasteitjes: calorieën en hoe je ze slim eet met eiboter | WiBo Health"
+      },
+      "desc": {
+        "ar": "أيقونة المخابز الفنلندية Karjalanpiirakka؛ تعرف على سعرات فطيرة كاريليا، حملها الجلايسيمي، والسر في تناولها مع دهان بيض المونافوي لوجبة أكثر توازناً.",
+        "en": "An icon of Finnish bakeries: learn the calories and glycemic load of Karjalanpiirakka, and why eating it with munavoi egg butter makes a more balanced snack.",
+        "nl": "Een icoon van de Finse bakkerij: lees de calorieën en glykemische lading van karjalanpiirakka, en waarom eiboter (munavoi) er een evenwichtiger tussendoortje van maakt."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (68) تقدير لحشوة بودينغ الأرز بالحليب داخل غلاف الجاودار الرقيق."
+        ],
+        "en": [
+          "The glycemic index (68) is an estimate for a milk rice pudding filling in a thin rye crust."
+        ],
+        "nl": [
+          "De glykemische index (68) is een schatting voor een vulling van rijstebrij in een dunne roggekorst."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nاكتفِ بقطعة واحدة (60 غ) كسناك صباحي؛ لا تتناولها كوجبة غداء رئيسية لأن قلبها نشوي يعتمد على الأرز المطبوخ.\n\n### أفضل طرق التحضير\nالتزم بالتقليد الفنلندي بدهنها ببيضة مسلوقة مهروسة مع مسحة زبدة؛ بروتين البيض ودهن الزبدة قد يبطئان امتصاص نشا الأرز فيرتفع السكر بشكل أهدأ.\n\n### ملاحظة غذائية هامة ⚠️\nلمرضى السكري والوزن الزائد، الحشوة الداخلية مصنوعة من الأرز الأبيض المطهو بالحليب، مما يجعل مؤشرها الجلايسيمي مائلاً للارتفاع؛ راقب إجمالي الكربوهيدرات اليومية.",
+        "en": "### Serving advice\nKeep to one piece (60 g) as a morning snack. Don't eat them as a main lunch, because the starchy heart is made of cooked rice.\n\n### Best ways to prepare it\nFollow the Finnish tradition and top it with mashed boiled egg and a little butter: the egg protein and the butterfat may slow down the absorption of the rice starch, so blood sugar rises more gently.\n\n### Important nutrition note ⚠️\nFor people with diabetes or overweight: the filling is made of white rice cooked in milk, which makes its glycemic index lean towards high. Keep an eye on your total carbohydrates for the day.",
+        "nl": "### Advies bij het eten\nHoud het bij één stuk (60 g) als ochtendsnack. Eet ze niet als hoofdmaaltijd bij de lunch, want het zetmeelrijke hart bestaat uit gekookte rijst.\n\n### Zo bereid je het het best\nVolg de Finse traditie en beleg het met geprakt gekookt ei en een beetje boter: het eiwit van het ei en het botervet kunnen de opname van het rijstzetmeel vertragen, zodat je bloedsuiker rustiger stijgt.\n\n### Belangrijke voedingsnotitie ⚠️\nBij diabetes of overgewicht: de vulling is gemaakt van witte rijst gekookt in melk, waardoor de glykemische index naar hoog neigt. Houd je totale koolhydraten van de dag in de gaten."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل تناسب فطائر كاريليا مريض السكري ومقاومة الإنسولين؟",
+            "a": "تؤكل بحذر وبكمية محددة (قطعة واحدة فقط بحمل جلايسيمي 12)؛ فرغم أن القشرة الخارجية من الجاودار الصحي، إلا أن قلب الفطيرة غني بنشا الأرز سريع الهضم."
+          },
+          {
+            "q": "كم سعرة حرارية في فطيرة كاريليا مع خلطة الزبدة والبيض التقليدية؟",
+            "a": "الفطيرة وحدها تحتوي نحو 114 سعرة حرارية، ومع إضافة ملعقة من معجون البيض والزبدة الفنلندي ترتفع إلى حوالي 180-200 سعرة، مما يجعلها وجبة سناك متكاملة الطاقة."
+          },
+          {
+            "q": "هل توجد فطائر كاريليا بحشوة غير الأرز؟",
+            "a": "نعم، توجد نسخ بحشوة البطاطا المهروسة أو الجزر؛ قارن الكربوهيدرات على الملصق، فالبطاطا ليست دائماً أقل كارباً من الأرز. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are Karelian pasties suitable for people with diabetes or insulin resistance?",
+            "a": "Eat them with care and in a set amount (just one piece, with a glycemic load of 12). Although the outer crust is made of wholesome rye, the heart of the pasty is rich in fast-digesting rice starch."
+          },
+          {
+            "q": "How many calories are in a Karelian pasty with the traditional egg butter?",
+            "a": "The pasty alone has about 114 calories, and with a spoonful of Finnish egg butter it rises to about 180-200 calories, which makes it a complete energy snack."
+          },
+          {
+            "q": "Are there Karelian pasties with a filling other than rice?",
+            "a": "Yes, there are versions filled with mashed potato or carrot. Compare the carbs on the label, because potato is not always lower in carbs than rice. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn Karelische pasteitjes geschikt bij diabetes of insulineresistentie?",
+            "a": "Eet ze met mate en in een vaste hoeveelheid (maar één stuk, met een glykemische lading van 12). De buitenkorst is van gezonde rogge, maar het hart van het pasteitje zit vol snel verteerbaar rijstzetmeel."
+          },
+          {
+            "q": "Hoeveel calorieën zitten er in een Karelisch pasteitje met de traditionele eiboter?",
+            "a": "Het pasteitje alleen heeft ongeveer 114 calorieën, en met een lepel Finse eiboter wordt dat ongeveer 180-200 calorieën, een compleet tussendoortje qua energie."
+          },
+          {
+            "q": "Bestaan er Karelische pasteitjes met een andere vulling dan rijst?",
+            "a": "Ja, er zijn versies met aardappelpuree of wortel. Vergelijk de koolhydraten op het etiket, want aardappel is niet altijd koolhydraatarmer dan rijst. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "895": {
+      "slug": "babgulyas",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "غولاش الفاصوليا المجري باب غولياش: سعراته وقوته في الشبع وضبط سكر الدم | WiBo Health",
+        "en": "Hungarian Bean Goulash (Babgulyás): Calories, Fullness and Steady Blood Sugar | WiBo Health",
+        "nl": "Hongaarse bonengoulash (babgulyás): calorieën, verzadiging en bloedsuiker | WiBo Health"
+      },
+      "desc": {
+        "ar": "حساء الرعاة المجري التاريخي؛ اكتشف وجبة Babgulyás الغنية بالبروتين وألياف الفاصوليا، مؤشرها الجلايسيمي المنخفض، وكيف تدعم شبعك واستقرار طاقتك.",
+        "en": "The historic Hungarian herdsman's soup. Discover babgulyás, rich in protein and bean fibre, its low glycemic index, and how it supports fullness and steady energy.",
+        "nl": "De historische Hongaarse herderssoep. Ontdek babgulyás, rijk aan eiwit en bonenvezels, met een lage glykemische index, en hoe hij je verzadiging en energie steunt."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (42) تقدير مبني على القيم المنشورة للفاصوليا المطبوخة مع اللحم المطهو ببطء."
+        ],
+        "en": [
+          "The glycemic index (42) is an estimate based on the published values for cooked beans with slow-cooked meat."
+        ],
+        "nl": [
+          "De glykemische index (42) is een schatting op basis van de gepubliceerde waarden voor gekookte bonen met langzaam gegaard vlees."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nزبدية واحدة تكفيك كوجبة غداء جبارة؛ لا داعي نهائياً لتناول الأرز أو الخبز أو المعكرونة معها، فالفاصوليا هي المصدر النشوي الطبيعي الأكثر ذكاءً.\n\n### أفضل طرق التحضير\nانقع حبوب الفاصوليا لـ 12 ساعة واطبخها ببطء على نار هادئة؛ فالنقع يقلل السكريات المسببة للغازات (الرافينوز)، والغلي الجيد يعطّل مركبات اللكتين. وضع ملعقة صغيرة من بذور الكراوية أو الكمون كما جرت العادة لتسهيل الهضم.\n\n### ملاحظة غذائية هامة ⚠️\nتحتوي على الحديد والزنك والمغنيسيوم من الفاصوليا واللحم؛ لكن بسبب كمية الألياف والبروتين الكبيرة، يُنصح بتناولها بتمهل وشرب كميات كافية من الماء لمساعدة الجهاز الهضمي.",
+        "en": "### Serving advice\nOne bowl is enough for a powerful lunch. There is no need for rice, bread or pasta with it: beans are the smartest natural source of starch.\n\n### Best ways to prepare it\nSoak the beans for 12 hours and cook them slowly over a low heat: soaking reduces the sugars that cause gas (raffinose), and thorough boiling deactivates the lectins. Add a teaspoon of caraway or cumin seeds, as tradition has it, to ease digestion.\n\n### Important nutrition note ⚠️\nIt contains iron, zinc and magnesium from the beans and the meat. But because of the large amount of fibre and protein, eat it slowly and drink enough water to help your digestion.",
+        "nl": "### Advies bij het eten\nEén kom is genoeg voor een krachtige lunch. Rijst, brood of pasta erbij is echt niet nodig: bonen zijn de slimste natuurlijke bron van zetmeel.\n\n### Zo bereid je het het best\nWeek de bonen 12 uur en kook ze langzaam op laag vuur: weken vermindert de suikers die gasvorming geven (raffinose), en goed doorkoken maakt de lectines onwerkzaam. Voeg zoals de traditie het wil een theelepel karwij- of komijnzaad toe voor een makkelijkere vertering.\n\n### Belangrijke voedingsnotitie ⚠️\nHij bevat ijzer, zink en magnesium uit de bonen en het vlees. Maar door de grote hoeveelheid vezels en eiwit eet je hem het best rustig en drink je genoeg water om je spijsvertering te helpen."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل غولاش الفاصوليا المجري مناسب لمرضى السكري؟",
+            "a": "نعم، يعتبر من أفضل الخيارات؛ فالفاصوليا تصنف ضمن النشويات ذات المؤشر الجلايسيمي المنخفض (42، تقدير) بفضل غناها بالنشا المقاوم والألياف، مما يساعد على تجنب القفزات الحادة في سكر الدم."
+          },
+          {
+            "q": "هل يسبب طبق الباب غولياش النفخة وعسر الهضم، وكيف نتفاداها؟",
+            "a": "قد يسبب بعض الغازات لمن لم يعتادوا الألياف العالية؛ لتفادي ذلك، اطبخ الفاصوليا مع الكراوية وورق الغار، وتناول حصة معتدلة."
+          },
+          {
+            "q": "كيف أوازن بين السعرات الكلية وقيمة البروتين في الغولاش؟",
+            "a": "اعتمد على قطع اللحم الهبرة الخالية من الشحوم. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is Hungarian bean goulash suitable for people with diabetes?",
+            "a": "Yes, it is one of the best choices: beans are among the starchy foods with a low glycemic index (42, estimate) thanks to their resistant starch and fibre, which helps avoid sharp spikes in blood sugar."
+          },
+          {
+            "q": "Does babgulyás cause bloating or indigestion, and how can we avoid it?",
+            "a": "It may cause some gas in people who aren't used to a lot of fibre. To avoid this, cook the beans with caraway and bay leaves, and eat a moderate portion."
+          },
+          {
+            "q": "How do I balance total calories against protein in goulash?",
+            "a": "Use lean cuts of meat without visible fat. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is Hongaarse bonengoulash geschikt bij diabetes?",
+            "a": "Ja, het is een van de beste keuzes: bonen horen bij de zetmeelrijke voedingsmiddelen met een lage glykemische index (42, schatting) dankzij hun resistente zetmeel en vezels, wat helpt scherpe bloedsuikerpieken te voorkomen."
+          },
+          {
+            "q": "Geeft babgulyás een opgeblazen gevoel of indigestie, en hoe voorkom je dat?",
+            "a": "Het kan wat gasvorming geven bij mensen die niet gewend zijn aan veel vezels. Kook de bonen daarom met karwij en laurierblad, en eet een gematigde portie."
+          },
+          {
+            "q": "Hoe houd ik calorieën en eiwit in goulash in balans?",
+            "a": "Gebruik magere stukken vlees zonder zichtbaar vet. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "896": {
+      "slug": "shopska-salad",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "سلطة شوبسكا البلغارية: كم سعرة فيها وهل تناسب مريض السكري ومقاومة الإنسولين؟ | WiBo Health",
+        "en": "Bulgarian Shopska Salad: Calories and Is It Good for Diabetes and Keto Diets? | WiBo Health",
+        "nl": "Bulgaarse shopska salade: calorieën en is ze geschikt bij diabetes en keto? | WiBo Health"
+      },
+      "desc": {
+        "ar": "تاج المطبخ البلقاني؛ اكتشف مكونات Shopska Salata من الخضار الطازجة والفلفل المشوي وجبن السيريني الأبيض، قيمتها الغذائية، وأثرها المحدود جداً على سكر الدم.",
+        "en": "The crown of Balkan cuisine. Discover shopska salad with fresh vegetables, roasted pepper and sirene cheese, and its very limited effect on blood sugar.",
+        "nl": "De kroon van de Balkankeuken. Ontdek shopska salade met verse groenten, geroosterde paprika en witte sirene-kaas, en het zeer beperkte effect op je bloedsuiker."
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nصحن كبير قبل الوجبة الرئيسية هو استراتيجية ذكية لملء المعدة بالألياف والماء والدهون الصحية، مما يخفف شهيتك ويمنع الإفراط في الطبق التالي.\n\n### أفضل طرق التحضير\nالتزم بزيت الزيتون البكر وعصير الليمون أو خل التفاح الطبيعي كدريسنج، وتجنب الصلصات الصناعية الجاهزة التي تخفي سكراً ودهوناً مهدرجة.\n\n### ملاحظة غذائية هامة ⚠️\nجبن السيريني الأبيض التقليدي غني بالكالسيوم والبروتين ولكنه يحتوي نسبة صوديوم عالية ناتجة عن التخليل في الماء المالح؛ إذا كنت تعاني من ارتفاع ضغط الدم، انقع الجبن في ماء دافئ لدقائق لتخفيف ملوحته.",
+        "en": "### Serving advice\nA large plate before your main meal is a smart way to fill your stomach with fibre, water and healthy fats, which takes the edge off your appetite and stops you overeating in the next course.\n\n### Best ways to prepare it\nStick to virgin olive oil and lemon juice or natural apple cider vinegar as the dressing, and avoid ready-made industrial dressings that hide sugar and hydrogenated fats.\n\n### Important nutrition note ⚠️\nTraditional white sirene cheese is rich in calcium and protein, but it is high in sodium from being brined in salt water. If you have high blood pressure, soak the cheese in warm water for a few minutes to make it less salty.",
+        "nl": "### Advies bij het eten\nEen groot bord vóór je hoofdmaaltijd is een slimme manier om je maag te vullen met vezels, water en gezonde vetten. Zo neem je de scherpe kantjes van je eetlust en eet je bij de volgende gang niet te veel.\n\n### Zo bereid je het het best\nGebruik als dressing olijfolie van eerste persing met citroensap of natuurlijke appelazijn, en vermijd kant-en-klare industriële dressings met verborgen suiker en geharde vetten.\n\n### Belangrijke voedingsnotitie ⚠️\nTraditionele witte sirene-kaas is rijk aan calcium en eiwit, maar bevat veel natrium doordat hij in pekel wordt bewaard. Heb je een hoge bloeddruk, week de kaas dan een paar minuten in lauw water om hem minder zout te maken."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل سلطة شوبسكا مناسبة لحمية الكيتو ومقاومة الإنسولين؟",
+            "a": "نعم، خيار مثالي للكيتو ومقاومة الإنسولين؛ فصافي الكارب فيها منخفض جداً (حوالي 4.4 غ لكل 100 غ)، ودهون زيت الزيتون والجبن تمنح شبعاً هادئاً دون إفراز إنسولين مفاجئ."
+          },
+          {
+            "q": "كيف تساهم سلطة الشوبسكا في ترطيب الجسم وصحة القلب؟",
+            "a": "الخيار والطماطم يمدان الجسم بنسبة سوائل تفوق 90% مع البوتاسيوم ومضاد الأكسدة الليكوبين، واستبدال الدهون المشبعة بدهون غير مشبعة مثل زيت الزيتون يساهم في الحفاظ على مستويات الكوليسترول الطبيعية في الدم."
+          },
+          {
+            "q": "كيف أختار الجبن الأبيض البلغاري قليل الملح والمناسب لأهدافي؟",
+            "a": "توجد في المتاجر أصناف جبن ماعز وبقر بدرجات ملوحة ودهون متفاوتة؛ قارن نسبة الملح على الملصق. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is shopska salad suitable for keto and insulin resistance?",
+            "a": "Yes, an ideal choice for keto and insulin resistance: its net carbs are very low (about 4.4 g per 100 g), and the fats of the olive oil and cheese give calm fullness without a sudden release of insulin."
+          },
+          {
+            "q": "How does shopska salad contribute to hydration and heart health?",
+            "a": "Cucumber and tomato provide more than 90% fluid, along with potassium and the antioxidant lycopene, and replacing saturated fats with unsaturated fats such as olive oil contributes to the maintenance of normal blood cholesterol levels."
+          },
+          {
+            "q": "How do I choose a low-salt Bulgarian white cheese that suits my goals?",
+            "a": "Shops sell goat's and cow's milk cheeses with different levels of salt and fat; compare the salt content on the label. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is shopska salade geschikt bij keto en insulineresistentie?",
+            "a": "Ja, een ideale keuze voor keto en insulineresistentie: de netto koolhydraten zijn heel laag (ongeveer 4,4 g per 100 g), en de vetten van de olijfolie en de kaas geven een rustige verzadiging zonder plotselinge insulineafgifte."
+          },
+          {
+            "q": "Hoe draagt shopska salade bij aan vochtbalans en een gezond hart?",
+            "a": "Komkommer en tomaat bestaan voor meer dan 90% uit vocht en leveren kalium en de antioxidant lycopeen, en het vervangen van verzadigde vetten door onverzadigde vetten zoals olijfolie draagt bij tot het behoud van een normaal cholesterolgehalte in het bloed."
+          },
+          {
+            "q": "Hoe kies ik een Bulgaarse witte kaas met weinig zout die bij mijn doelen past?",
+            "a": "In de winkel liggen geiten- en koemelkkazen met verschillende zout- en vetgehaltes; vergelijk het zoutgehalte op het etiket. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "897": {
+      "slug": "banitsa",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "فطيرة بانيتسا البلغارية بالجبن والبيض: كم سعرة وكيف تتناولها باعتدال؟ | WiBo Health",
+        "en": "Bulgarian Banitsa with Cheese and Egg: Calories and How to Enjoy It in Moderation | WiBo Health",
+        "nl": "Bulgaarse banitsa met kaas en ei: calorieën en hoe je er met mate van geniet | WiBo Health"
+      },
+      "desc": {
+        "ar": "سر المخبوزات البلقانية المقرمشة؛ اكتشف مكونات فطيرة Banitsa، توازن البروتين مع رقائق العجين، والسر في تناولها مع اللبن الرائب لوجبة أكثر توازناً.",
+        "en": "The secret of crispy Balkan pastries. Discover what goes into banitsa, how protein balances the pastry sheets, and why eating it with yogurt makes a more balanced meal.",
+        "nl": "Het geheim van knapperig Balkangebak. Ontdek wat er in banitsa zit, hoe eiwit het deeg in balans houdt, en waarom yoghurt erbij een evenwichtiger maaltijd geeft."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (62) تقدير لرقائق الفيلو مع الجبن والبيض والزبدة."
+        ],
+        "en": [
+          "The glycemic index (62) is an estimate for filo pastry with cheese, egg and butter."
+        ],
+        "nl": [
+          "De glykemische index (62) is een schatting voor filodeeg met kaas, ei en boter."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nاكتفِ بقطعة واحدة متوسطة (80-100 غ) كوجبة إفطار مع صحن سلطة خضراء؛ تجنب تناول قطعتين لأن السعرات والدهون تتضاعف سريعاً.\n\n### أفضل طرق التحضير\nأضف السبانخ أو السلق الأخضر المفروم إلى حشوة الجبن وقلّل عدد طبقات الفيلو؛ تزيد الألياف ويقل الكارب.\n\n### ملاحظة غذائية هامة ⚠️\nتحتوي على الكالسيوم والبروتين من الجبن والبيض، لكنها تحتوي نسبة ملح ودهون مشبعة ملحوظة ناتجة عن الجبن والزبدة؛ راقب حصتك اليومية إذا كنت تتبع حمية لضبط ضغط الدم أو الوزن.",
+        "en": "### Serving advice\nKeep to one medium piece (80-100 g) for breakfast, with a plate of green salad. Avoid a second piece, because the calories and fat double quickly.\n\n### Best ways to prepare it\nAdd chopped spinach or chard to the cheese filling and use fewer filo layers: you get more fibre and fewer carbs.\n\n### Important nutrition note ⚠️\nIt contains calcium and protein from the cheese and egg, but also a fair amount of salt and saturated fat from the cheese and butter. Watch your daily portion if you are following a diet for blood pressure or weight.",
+        "nl": "### Advies bij het eten\nHoud het bij één middelgroot stuk (80-100 g) als ontbijt, met een bord groene salade. Neem geen tweede stuk, want de calorieën en het vet verdubbelen snel.\n\n### Zo bereid je het het best\nVoeg gehakte spinazie of snijbiet toe aan de kaasvulling en gebruik minder lagen filodeeg: zo krijg je meer vezels en minder koolhydraten.\n\n### Belangrijke voedingsnotitie ⚠️\nBanitsa bevat calcium en eiwit uit de kaas en het ei, maar ook een flinke hoeveelheid zout en verzadigd vet uit de kaas en de boter. Let op je dagelijkse portie als je een dieet volgt voor je bloeddruk of je gewicht."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل تناسب فطيرة البانيتسا مريض السكري ومقاومة الإنسولين؟",
+            "a": "تؤكل بحذر شديد وبحصة محددة (قطعة واحدة فقط بحمل جلايسيمي 16)؛ فالنشا السريع في رقائق الفيلو يرفع السكر إن لم يُحاط ببروتين وخضار كافية."
+          },
+          {
+            "q": "ما هي أفضل طريقة لتناول البانيتسا دون أن تسبب الخمول الصباحي؟",
+            "a": "تناولها مع كوب من اللبن الزبادي التقليدي غير المحلى، واحرص على البدء بتناول الخضار الورقية؛ هذا الترتيب يبطئ تفريغ المعدة ويساعد على الحد من الارتفاع المفاجئ للسكر."
+          },
+          {
+            "q": "كيف أتعرف على المعجنات ذات القيمة الغذائية الأنقى؟",
+            "a": "معجنات المخابز المجمدة قد تحتوي على المارغرين أو زيت النخيل بدل الزبدة؛ اقرأ قائمة المكونات. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is banitsa suitable for people with diabetes or insulin resistance?",
+            "a": "Eat it with great care and in a set portion (just one piece, with a glycemic load of 16): the fast starch in the filo sheets raises blood sugar if it isn't surrounded by enough protein and vegetables."
+          },
+          {
+            "q": "What is the best way to eat banitsa without feeling sluggish in the morning?",
+            "a": "Have it with a glass of traditional unsweetened yogurt, and start with the leafy greens: this order slows stomach emptying and helps limit a sudden rise in blood sugar."
+          },
+          {
+            "q": "How do I recognise pastries with the purest nutritional value?",
+            "a": "Frozen bakery pastries may contain margarine or palm oil instead of butter, so read the ingredients list. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is banitsa geschikt bij diabetes of insulineresistentie?",
+            "a": "Eet het heel voorzichtig en in een vaste portie (maar één stuk, met een glykemische lading van 16): het snelle zetmeel in het filodeeg laat je bloedsuiker stijgen als er niet genoeg eiwit en groente omheen zit."
+          },
+          {
+            "q": "Hoe eet ik banitsa het best zonder me 's ochtends suf te voelen?",
+            "a": "Eet het met een glas traditionele ongezoete yoghurt, en begin met de bladgroenten: die volgorde vertraagt het legen van de maag en helpt een plotselinge stijging van je bloedsuiker te beperken."
+          },
+          {
+            "q": "Hoe herken ik gebak met de zuiverste voedingswaarde?",
+            "a": "Diepvriesgebak kan margarine of palmolie bevatten in plaats van boter, dus lees de ingrediëntenlijst. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "898": {
+      "slug": "cevapi",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "كباب تشيفابيتشي البلقاني المشوي: كم سعرة وبروتين وهل يناسب الكيتو والسكري؟ | WiBo Health",
+        "en": "Grilled Balkan Ćevapi: Calories, Protein and Do They Suit Keto and Diabetes? | WiBo Health",
+        "nl": "Gegrilde Balkan ćevapi: calorieën, eiwit en passen ze bij keto en diabetes? | WiBo Health"
+      },
+      "desc": {
+        "ar": "أشهر كباب في البلقان؛ اكتشف القيمة الغذائية لأصابع Cevapi المشوية، غناها بالبروتين الصافي، ولماذا يكاد أثرها على سكر الدم ينعدم.",
+        "en": "The most famous kebab in the Balkans. Discover the nutritional value of grilled ćevapi, their rich protein content, and why their effect on blood sugar is almost nil.",
+        "nl": "De bekendste kebab van de Balkan. Ontdek de voedingswaarde van gegrilde ćevapi, het vele eiwit, en waarom het effect op je bloedsuiker bijna nihil is."
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\n4 إلى 5 أصابع كباب (120-150 غ) تعتبر وجبة بروتينية ممتازة للغداء أو العشاء؛ استمتع بها مع صلصة الأيفار أو البصل الأبيض المفروم بدلاً من الخبز السميك.\n\n### أفضل طرق التحضير\nاشوها على الشواية أو المقلاة المضلعة لتقليل الدهون السطحية المتبقية؛ وتجنب خلط اللحم بالبقسماط أو الطحين الأبيض للحفاظ على صفاء الكارب.\n\n### ملاحظة غذائية هامة ⚠️\nالبروتين يساهم في نمو الكتلة العضلية والحفاظ عليها؛ لكن نظراً لاحتواء اللحم المفروم على دهون مشبعة طبيعية، وازن وجبتك بصحن سلطة غنية بالبوتاسيوم ومضادات الأكسدة.",
+        "en": "### Serving advice\n4 to 5 ćevapi (120-150 g) make an excellent protein meal for lunch or dinner. Enjoy them with ajvar or chopped white onion instead of thick bread.\n\n### Best ways to prepare it\nGrill them on a barbecue or a ridged grill pan to reduce the fat left on the surface, and don't mix breadcrumbs or white flour into the meat, to keep the carbs out.\n\n### Important nutrition note ⚠️\nProtein contributes to the growth and maintenance of muscle mass. But because minced meat naturally contains saturated fat, balance your meal with a salad rich in potassium and antioxidants.",
+        "nl": "### Advies bij het eten\n4 tot 5 ćevapi (120-150 g) zijn een uitstekende eiwitmaaltijd voor de lunch of het avondeten. Eet ze met ajvar of fijngehakte witte ui in plaats van met dik brood.\n\n### Zo bereid je het het best\nGril ze op de barbecue of in een grillpan met ribbels om het vet aan de buitenkant te verminderen, en meng geen paneermeel of witte bloem door het vlees, zodat er geen koolhydraten bij komen.\n\n### Belangrijke voedingsnotitie ⚠️\nEiwitten dragen bij tot de groei en het behoud van spiermassa. Maar omdat gehakt van nature verzadigd vet bevat, maak je je maaltijd compleet met een salade vol kalium en antioxidanten."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل يناسب كباب التشيفابيتشي حمية الكيتو والصيام المتقطع؟",
+            "a": "هو خيار كيتوني مثالي بامتياز؛ فنسبة الكربوهيدرات فيه تقارب الصفر، بينما البروتين والدهون الطبيعية تجعله مناسباً لنمط الكيتو دون أثر يُذكر على سكر الدم."
+          },
+          {
+            "q": "هل يرفع التشيفابيتشي سكر الدم بعد تناوله؟",
+            "a": "تأثيره على سكر الدم مسطح تماماً، فحمله الجلايسيمي يقارب الصفر؛ القفزة الوحيدة التي قد تحدث تكون بسبب خبز الصمون (السومون) الذي يقدم معه عادة، لذا تناوله مع الخضار المشوية."
+          },
+          {
+            "q": "كيف أتحقق من جودة أصابع التشيفابيتشي الجاهزة في السوبرماركت؟",
+            "a": "بعض المصانع تضيف بروتين الصويا أو النشا أو سكريات مثل الدكستروز؛ اقرأ قائمة المكونات. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Do ćevapi suit keto and intermittent fasting?",
+            "a": "They are an ideal keto choice: their carbohydrate content is close to zero, while the protein and natural fats make them suit a keto pattern with hardly any effect on blood sugar."
+          },
+          {
+            "q": "Do ćevapi raise blood sugar after eating?",
+            "a": "Their effect on blood sugar is completely flat, with a glycemic load close to zero. The only rise that can happen comes from the somun bread they are usually served with, so eat them with grilled vegetables instead."
+          },
+          {
+            "q": "How do I check the quality of ready-made ćevapi in the supermarket?",
+            "a": "Some manufacturers add soy protein, starch or sugars such as dextrose, so read the ingredients list. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Passen ćevapi bij keto en intermittent fasting?",
+            "a": "Ze zijn een ideale keto-keuze: er zitten bijna geen koolhydraten in, en het eiwit en de natuurlijke vetten passen bij een keto-patroon, met nauwelijks effect op je bloedsuiker."
+          },
+          {
+            "q": "Laten ćevapi de bloedsuiker stijgen na het eten?",
+            "a": "Het effect op je bloedsuiker is helemaal vlak, met een glykemische lading van bijna nul. De enige stijging komt van het somun-brood dat er meestal bij wordt geserveerd, dus eet ze liever met gegrilde groenten."
+          },
+          {
+            "q": "Hoe controleer ik de kwaliteit van kant-en-klare ćevapi in de supermarkt?",
+            "a": "Sommige fabrikanten voegen sojaeiwit, zetmeel of suikers zoals dextrose toe, dus lees de ingrediëntenlijst. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "899": {
+      "slug": "ajvar",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "صلصة أيفار البلقانية بالفلفل المشوي: كم سعرة وهل تعتبر بديلاً صحياً للكاتشب؟ | WiBo Health",
+        "en": "Balkan Ajvar Roasted Pepper Relish: Calories and Is It a Healthy Ketchup Swap? | WiBo Health",
+        "nl": "Balkan ajvar van geroosterde paprika: calorieën en gezonder dan ketchup? | WiBo Health"
+      },
+      "desc": {
+        "ar": "كافيار البلقان النباتي الشهير؛ اكتشف فوائد صلصة Ajvar المحضرة من الفلفل والباذنجان المشوي، مؤشرها الجلايسيمي المنخفض، والسر في استبدال الصلصات السكرية بها.",
+        "en": "The vegetable caviar of the Balkans. Discover ajvar made from roasted pepper and aubergine, its low glycemic index, and why it beats sugary sauces.",
+        "nl": "De groentekaviaar van de Balkan. Ontdek ajvar van geroosterde paprika en aubergine, de lage glykemische index, en waarom het slimmer is dan zoete sauzen."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (32) تقدير للفلفل المشوي المهروس والباذنجان وزيت دوار الشمس."
+        ],
+        "en": [
+          "The glycemic index (32) is an estimate for puréed roasted pepper, aubergine and sunflower oil."
+        ],
+        "nl": [
+          "De glykemische index (32) is een schatting voor gepureerde geroosterde paprika, aubergine en zonnebloemolie."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nملعقتان إلى ثلاث ملاعق طعام تضفي نكهة فاخرة على أطباق اللحوم أو البيض؛ بديل عبقري للكاتشب والمايونيز والصلصات التجارية المحلاة.\n\n### أفضل طرق التحضير\nاختر النسخة التقليدية (Traditional / Domaći) المكونة من الفلفل المشوي والباذنجان والزيت فقط؛ تجنب الأصناف الرخيصة التي يضاف لها نشا لتكثيف القوام.\n\n### ملاحظة غذائية هامة ⚠️\nيحتوي الفلفل الأحمر المشوي على الكاروتينات وفيتامين C؛ سعرات الحصة قليلة (نحو 22 سعرة لملعقتين) وتأثيره على سكر الدم محدود جداً.",
+        "en": "### Serving advice\nTwo to three tablespoons give meat or egg dishes a luxurious flavour: a brilliant alternative to ketchup, mayonnaise and sweetened commercial sauces.\n\n### Best ways to prepare it\nChoose the traditional version (traditional / domaći) made only of roasted pepper, aubergine and oil. Avoid the cheap kinds with added starch to thicken them.\n\n### Important nutrition note ⚠️\nRoasted red pepper contains carotenoids and vitamin C. A portion has few calories (about 22 for two spoonfuls), and its effect on blood sugar is very limited.",
+        "nl": "### Advies bij het eten\nTwee tot drie eetlepels geven vlees- of eiergerechten een luxe smaak: een briljant alternatief voor ketchup, mayonaise en gezoete sauzen uit de winkel.\n\n### Zo bereid je het het best\nKies de traditionele versie (traditional / domaći) van alleen geroosterde paprika, aubergine en olie. Vermijd de goedkope soorten waaraan zetmeel is toegevoegd om ze dikker te maken.\n\n### Belangrijke voedingsnotitie ⚠️\nGeroosterde rode paprika bevat carotenoïden en vitamine C. Een portie heeft weinig calorieën (ongeveer 22 voor twee lepels), en het effect op je bloedsuiker is zeer beperkt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل صلصة الأيفار ترفع سكر الدم لمرضى السكري؟",
+            "a": "تأثيرها محدود جداً؛ فمؤشرها الجلايسيمي منخفض (32، تقدير) وحمل الحصة أقل من 1، مما يجعلها خياراً مثالياً لإضفاء نكهة قوية دون خوف من صعود الجلوكوز."
+          },
+          {
+            "q": "هل تناسب صلصة الأيفار حمية الكيتو وإنقاص الوزن؟",
+            "a": "تناسب الكيتو والدايت بجدارة؛ فالحصة المعتادة تمنحك أقل من 2 غرام كارب صافي مع 22 سعرة حرارية فقط، مما يساعدك على الاستمتاع بوجباتك أثناء عجز السعرات."
+          },
+          {
+            "q": "كيف أفرق بين الأيفار الأصلي والأنواع المضاف إليها سكر؟",
+            "a": "بعض المصانع تضيف سكراً لتعديل الحموضة؛ اقرأ قائمة المكونات: الأصلي فلفل وباذنجان وزيت وملح فقط. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does ajvar raise blood sugar in people with diabetes?",
+            "a": "Its effect is very limited: its glycemic index is low (32, estimate) and the load per portion is under 1, which makes it an ideal way to add strong flavour without worrying about glucose rising."
+          },
+          {
+            "q": "Does ajvar suit keto and weight loss?",
+            "a": "It suits keto and dieting very well: the usual portion gives you less than 2 grams of net carbs and only 22 calories, which helps you enjoy your meals while eating in a calorie deficit."
+          },
+          {
+            "q": "How can I tell real ajvar from kinds with added sugar?",
+            "a": "Some manufacturers add sugar to balance the acidity. Read the ingredients list: the real thing is just pepper, aubergine, oil and salt. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt ajvar de bloedsuiker bij diabetes?",
+            "a": "Het effect is zeer beperkt: de glykemische index is laag (32, schatting) en de lading per portie ligt onder 1. Zo is het een ideale manier om veel smaak toe te voegen zonder je zorgen te maken over stijgende glucose."
+          },
+          {
+            "q": "Past ajvar bij keto en afvallen?",
+            "a": "Het past uitstekend bij keto en een dieet: de gebruikelijke portie geeft je minder dan 2 gram netto koolhydraten en maar 22 calorieën, zodat je van je maaltijden kunt genieten terwijl je een calorietekort aanhoudt."
+          },
+          {
+            "q": "Hoe herken ik echte ajvar en soorten met toegevoegde suiker?",
+            "a": "Sommige fabrikanten voegen suiker toe om het zuur in balans te brengen. Lees de ingrediëntenlijst: echte ajvar is alleen paprika, aubergine, olie en zout. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "900": {
+      "slug": "pindjur",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "صلصة بينجور البلقانية بالفلفل والطماطم: كم سعرة وهل تفيد مرضى مقاومة الإنسولين؟ | WiBo Health",
+        "en": "Balkan Pindjur Pepper and Tomato Dip: Calories and Is It Good for Diabetes? | WiBo Health",
+        "nl": "Balkan pindjur van paprika en tomaat: calorieën en is het goed bij diabetes? | WiBo Health"
+      },
+      "desc": {
+        "ar": "الشقيقة الأكثر انتعاشاً للأيفار؛ اكتشف صلصة Pindjur المحضرة من الطماطم المشوية والثوم، سعرات حصتها القليلة، وكيف تمنح وجباتك نكهة غنية دون سكر مضاف.",
+        "en": "The fresher sister of ajvar. Discover pindjur with roasted tomato and garlic, the few calories per portion, and rich flavour without added sugar.",
+        "nl": "De frissere zus van ajvar. Ontdek pindjur van geroosterde tomaat en knoflook, de weinige calorieën per portie, en veel smaak zonder toegevoegde suiker."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (30) تقدير لمزيج الطماطم المشوية والفلفل والثوم."
+        ],
+        "en": [
+          "The glycemic index (30) is an estimate for a mix of roasted tomatoes, pepper and garlic."
+        ],
+        "nl": [
+          "De glykemische index (30) is een schatting voor een mix van geroosterde tomaat, paprika en knoflook."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nممتازة كغموس مع الخضار الطازجة (كشرائح الخيار والكرفس والجزر) أو كصلصة فوق صدر الدجاج المشوي والأسماك.\n\n### أفضل طرق التحضير\nطهي الطماطم مع قليل من زيت الزيتون في صلصة البينجور يساعد في زيادة امتصاص الجسم لمادة الليكوبين؛ اختر الأصناف المجهزة بزيت الزيتون البكر.\n\n### ملاحظة غذائية هامة ⚠️\nخيار طبيعي ممتاز للابتعاد عن الصلصات المصنعة؛ فقط انتبه لمحتوى الملح إذا كنت تشتري مرطبانات تجارية مسبقة التعبئة.",
+        "en": "### Serving advice\nExcellent as a dip with fresh vegetables (such as cucumber, celery and carrot sticks) or as a sauce over grilled chicken breast and fish.\n\n### Best ways to prepare it\nCooking the tomatoes with a little olive oil in pindjur helps the body absorb more lycopene. Choose versions made with virgin olive oil.\n\n### Important nutrition note ⚠️\nAn excellent natural choice to move away from processed sauces. Just watch the salt content if you buy ready-made jars.",
+        "nl": "### Advies bij het eten\nUitstekend als dip bij verse groenten (zoals reepjes komkommer, bleekselderij en wortel) of als saus over gegrilde kipfilet en vis.\n\n### Zo bereid je het het best\nDoor de tomaten in pindjur met een beetje olijfolie te koken, neemt het lichaam meer lycopeen op. Kies versies die met olijfolie van eerste persing zijn gemaakt.\n\n### Belangrijke voedingsnotitie ⚠️\nEen uitstekende natuurlijke keuze om bewerkte sauzen te laten staan. Let alleen op het zoutgehalte als je kant-en-klare potten koopt."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "ما هو الفرق بين صلصة الأيفار وصلصة البينجور من الناحية الغذائية؟",
+            "a": "البينجور تحتوي على الطماطم والثوم بنسبة واضحة مما يجعلها أعلى بالسوائل ومضاد الأكسدة الليكوبين وأقل قليلاً في السعرات مقارنة بالأيفار الكثيف."
+          },
+          {
+            "q": "هل تناسب صلصة البينجور مريض السكري الذي يتبع نظام الكارب المنخفض؟",
+            "a": "نعم، ملعقتان من البينجور تحتويان على أقل من 1.7 غرام كارب صافي وحمل جلايسيمي يقارب الصفر، فلا تسبب أي ارتباك في سكر الدم."
+          },
+          {
+            "q": "كيف أستكشف بدائل التغميس الصحية والمماثلة؟",
+            "a": "قارن الصلصات الطبيعية كالصلصة الحارة ومتبل الباذنجان في [دليل الأغذية](/foods.html) من حيث السكر والملح. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "What is the nutritional difference between ajvar and pindjur?",
+            "a": "Pindjur contains a clear share of tomato and garlic, which gives it more fluid and more of the antioxidant lycopene, and slightly fewer calories than the denser ajvar."
+          },
+          {
+            "q": "Does pindjur suit a person with diabetes on a low-carb diet?",
+            "a": "Yes: two spoonfuls of pindjur contain less than 1.7 grams of net carbs and a glycemic load close to zero, so they don't upset blood sugar at all."
+          },
+          {
+            "q": "How can I explore similar healthy dips?",
+            "a": "Compare natural sauces such as hot salsa and baba ganoush in the [food guide](/foods.html) for sugar and salt. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Wat is het voedingsverschil tussen ajvar en pindjur?",
+            "a": "Pindjur bevat duidelijk meer tomaat en knoflook, waardoor er meer vocht en meer van de antioxidant lycopeen in zit, en iets minder calorieën dan in de compactere ajvar."
+          },
+          {
+            "q": "Past pindjur bij iemand met diabetes die koolhydraatarm eet?",
+            "a": "Ja: twee lepels pindjur bevatten minder dan 1,7 gram netto koolhydraten en een glykemische lading van bijna nul, dus ze brengen je bloedsuiker niet van slag."
+          },
+          {
+            "q": "Hoe ontdek ik vergelijkbare gezonde dips?",
+            "a": "Vergelijk natuurlijke sauzen zoals pittige salsa en baba ganoush in de [voedingsgids](/foods.html) op suiker en zout. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "901": {
+      "slug": "roti-kip",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "روتي سورينامي بالدجاج والبطاطا: كم سعرة وكيف تتناوله بأقل أثر على سكر الدم؟ | WiBo Health",
+        "en": "Surinamese Roti with Chicken and Potato: Calories and a Gentler Sugar Effect | WiBo Health",
+        "nl": "Surinaamse roti met kip en aardappel: calorieën en minder effect op je suiker | WiBo Health"
+      },
+      "desc": {
+        "ar": "من أشهر الأطباق الشعبية في هولندا وسورينام؛ اكتشف ماكروز طبق Roti Kip، بروتينه، والسر في موازنة البطاطا مع خبز الروتي لتخفيف الحمل الجلايسيمي.",
+        "en": "A favourite in the Netherlands and Suriname. Discover the macros of roti kip, its protein, and how to balance potato and roti for a lower glycemic load.",
+        "nl": "Geliefd in Nederland en Suriname. Ontdek de macro's van roti kip, het eiwit, en hoe je aardappel en roti in balans brengt voor een lagere glykemische lading."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (52) تقدير لمزيج الدجاج والماسالا والبطاطا المطهوة وفاصوليا الكوسبانبانغ مع خبز الروتي."
+        ],
+        "en": [
+          "The glycemic index (52) is an estimate for a mix of masala chicken, cooked potato and kousenband beans with roti bread."
+        ],
+        "nl": [
+          "De glykemische index (52) is een schatting voor een mix van masalakip, gekookte aardappel en kousenband met rotiplaat."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nنصيحة عملية: اكتفِ بربع رغيف روتي، وضاعف كمية فاصوليا الكوسبانبانغ والدجاج، واكتفِ بمكعب بطاطا واحد؛ سينخفض الحمل الجلايسيمي بوضوح.\n\n### أفضل طرق التحضير\nاطبخ الدجاج بدون جلد لتخفيف الدهون المشبعة، واحرص على عدم طهي الخضار حتى تذوب تماماً، فالقوام المقرمش للخضار يحافظ على أليافها ويبطئ الامتصاص.\n\n### ملاحظة غذائية هامة ⚠️\nلمرضى السكري والبدانة، اجتماع خبز الروتي مع البطاطا في وجبة واحدة يرفع الحمل الجلايسيمي الإجمالي؛ راقب حجم الحصة بوعي.",
+        "en": "### Serving advice\nA practical tip: keep to a quarter of a roti, double the kousenband and chicken, and have just one piece of potato. The glycemic load will drop clearly.\n\n### Best ways to prepare it\nCook the chicken without the skin to cut saturated fat, and don't cook the vegetables until they fall apart: a crisp texture keeps their fibre and slows absorption.\n\n### Important nutrition note ⚠️\nFor people with diabetes or obesity, eating roti bread and potatoes in the same meal raises the total glycemic load. Watch your portion size mindfully.",
+        "nl": "### Advies bij het eten\nEen praktische tip: neem maar een kwart rotiplaat, neem dubbel zoveel kousenband en kip, en houd het bij één stukje aardappel. De glykemische lading daalt dan duidelijk.\n\n### Zo bereid je het het best\nBereid de kip zonder vel om verzadigd vet te beperken, en kook de groenten niet tot ze uit elkaar vallen: een knapperige structuur behoudt de vezels en vertraagt de opname.\n\n### Belangrijke voedingsnotitie ⚠️\nBij diabetes of obesitas verhoogt de combinatie van rotiplaat en aardappel in één maaltijd de totale glykemische lading. Let bewust op de grootte van je portie."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل طبق الروتي السورينامي يرفع سكر الدم بسرعة؟",
+            "a": "نعم إذا أُكلت الحصة كما تُقدَّم (نصف رغيف مع البطاطا) حيث يصل حمله الجلايسيمي إلى 27؛ لكن إذا أكلت الدجاج والفاصوليا مع ربع رغيف فقط، يصبح تأثيره معتدلاً ومناسباً لثبات الطاقة."
+          },
+          {
+            "q": "كم غرام بروتين يوفر طبق روتي الدجاج الكامل؟",
+            "a": "يوفر الطبق المتكامل قرابة 38 غراماً من البروتين عالي الجودة من الدجاج والبيض وحبوب البازلاء الصفراء داخل الخبز، مما يمنح شبعاً طويلاً."
+          },
+          {
+            "q": "كيف أختار مطاعم ووجبات الروتي ذات التحضير الأنقى؟",
+            "a": "اسأل عن كمية الزيت في المرق، واطلب خضاراً أكثر وخبزاً أقل. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does Surinamese roti raise blood sugar quickly?",
+            "a": "Yes, if you eat the portion as it is served (half a roti with the potatoes), its glycemic load reaches 27. But if you eat the chicken and beans with just a quarter of a roti, its effect becomes moderate and good for steady energy."
+          },
+          {
+            "q": "How many grams of protein does a full roti kip meal provide?",
+            "a": "The complete plate provides about 38 grams of high-quality protein from the chicken, the egg and the yellow split peas inside the bread, which keeps you full for a long time."
+          },
+          {
+            "q": "How do I choose roti restaurants and meals with the purest preparation?",
+            "a": "Ask how much oil goes into the sauce, and ask for more vegetables and less bread. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Laat Surinaamse roti de bloedsuiker snel stijgen?",
+            "a": "Ja, als je de portie eet zoals hij wordt geserveerd (een halve rotiplaat met de aardappel), dan komt de glykemische lading op 27. Maar eet je de kip en de kousenband met maar een kwart rotiplaat, dan wordt het effect gematigd en goed voor stabiele energie."
+          },
+          {
+            "q": "Hoeveel gram eiwit geeft een complete roti kip?",
+            "a": "Het volledige bord geeft ongeveer 38 gram hoogwaardig eiwit uit de kip, het ei en de gele spliterwten in de rotiplaat, waardoor je lang verzadigd blijft."
+          },
+          {
+            "q": "Hoe kies ik rotizaken en rotimaaltijden met de zuiverste bereiding?",
+            "a": "Vraag hoeveel olie er in de saus gaat, en vraag om meer groente en minder rotiplaat. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "902": {
+      "slug": "dhalpuri",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "خبز الروتي السورينامي دالبوري: كم سعرة وهل يختلف عن الخبز الأبيض العادي؟ | WiBo Health",
+        "en": "Surinamese Dhalpuri Roti: Calories and How It Differs from Regular White Bread | WiBo Health",
+        "nl": "Surinaamse rotiplaat dhalpuri: calorieën en is hij anders dan gewoon wit brood? | WiBo Health"
+      },
+      "desc": {
+        "ar": "رغيف الروتي الذهبي المحشو بالبازلاء؛ اكتشف سعرات Rotiplaat، حمله الجلايسيمي، والسر في حشوة الدال الصفراء التي تمنحه أليافاً وبروتيناً نباتياً.",
+        "en": "The golden roti filled with split peas. Discover the calories and glycemic load of a rotiplaat, and how the yellow dhal filling adds fibre and plant protein.",
+        "nl": "De gouden rotiplaat gevuld met spliterwten. Ontdek de calorieën en glykemische lading van een rotiplaat, en hoe de gele dhalvulling vezels en plantaardig eiwit toevoegt."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (62) تقدير لعجين طحين القمح المحشو بمسحوق البازلاء الصفراء والكمون."
+        ],
+        "en": [
+          "The glycemic index (62) is an estimate for wheat flour dough filled with ground yellow split peas and cumin."
+        ],
+        "nl": [
+          "De glykemische index (62) is een schatting voor deeg van tarwebloem gevuld met gemalen gele spliterwten en komijn."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nنصف رغيف (حوالي 80 غ) كافٍ جداً للوجبة؛ تناوله كأداة لتغميس الخضار والبروتين وليس كعنصر رئيسي يملأ المعدة.\n\n### أفضل طرق التحضير\nعند شرائه مجمداً أو جاهزاً، سخنه في مقلاة جافة بدون إضافة أي دهون أو زيوت إضافية؛ واحرص على تناوله مع وجبة غنية بالألياف الورقية لإبطاء هضمه.\n\n### ملاحظة غذائية هامة ⚠️\nلمرضى مقاومة الإنسولين، رغيف الروتي كامل الحجم يحتوي على طاقة نشوية مكثفة تتطلب مراقبة واعية للحصة الإجمالية لتفادي قفزات السكر المرتفعة.",
+        "en": "### Serving advice\nHalf a roti (about 80 g) is plenty for a meal. Use it to scoop up vegetables and protein, not as the main part of the meal that fills your stomach.\n\n### Best ways to prepare it\nIf you buy it frozen or ready-made, warm it in a dry pan without adding any fat or oil, and eat it with a meal rich in leafy greens to slow its digestion.\n\n### Important nutrition note ⚠️\nFor people with insulin resistance, a full-size roti contains a concentrated load of starchy energy, so watch the total portion mindfully to avoid high blood sugar spikes.",
+        "nl": "### Advies bij het eten\nEen halve rotiplaat (ongeveer 80 g) is ruim genoeg voor een maaltijd. Gebruik hem om groente en eiwit mee op te scheppen, niet als het hoofdbestanddeel dat je maag vult.\n\n### Zo bereid je het het best\nKoop je hem diepgevroren of kant-en-klaar, verwarm hem dan in een droge pan zonder extra vet of olie, en eet hem bij een maaltijd met veel bladgroente om de vertering te vertragen.\n\n### Belangrijke voedingsnotitie ⚠️\nBij insulineresistentie bevat een rotiplaat op volle grootte een geconcentreerde hoeveelheid zetmeelenergie, dus let bewust op je totale portie om hoge bloedsuikerpieken te vermijden."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل خبز الروتي بالبازلاء الصفراء أفضل لمريض السكر من الخبز العادي؟",
+            "a": "نعم قليلاً، لأن حشوة البازلاء ترفع محتوى البروتين والألياف، لكنه يظل مصنوعاً من الطحين الأبيض؛ لذلك يجب الاكتفاء بنصف رغيف فقط لتجنب صعود السكر السريع."
+          },
+          {
+            "q": "كم سعرة حرارية في رغيف الروتي السورينامي كامل الحجم؟",
+            "a": "الرغيف الكامل (حوالي 160 غ) يحتوي نحو 415 سعرة حرارية و66 غراماً من الكارب الصافي؛ لذا فإن تقسيمه ومشاركته هو الخيار الذكي لتخفيف السعرات."
+          },
+          {
+            "q": "كيف أتعرف على أنواع خبز الروتي المصنوعة من الحبة الكاملة؟",
+            "a": "قد تجد أصناف Rotiplaat من طحين القمح الكامل (volkoren)؛ قارن الألياف على الملصق. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is roti with yellow split peas better for people with diabetes than ordinary bread?",
+            "a": "Slightly, yes, because the pea filling raises the protein and fibre content. But it is still made with white flour, so keep to half a roti to avoid a fast rise in blood sugar."
+          },
+          {
+            "q": "How many calories are in a full-size Surinamese roti?",
+            "a": "A whole roti (about 160 g) contains about 415 calories and 66 grams of net carbs, so splitting and sharing it is the smart way to cut calories."
+          },
+          {
+            "q": "How can I recognise roti breads made with wholegrain flour?",
+            "a": "You may find rotiplaat made with wholewheat flour (volkoren); compare the fibre on the label. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is roti met gele spliterwten beter bij diabetes dan gewoon brood?",
+            "a": "Een beetje, omdat de erwtenvulling het eiwit- en vezelgehalte verhoogt. Maar hij is nog steeds gemaakt van witte bloem, dus houd het bij een halve rotiplaat om een snelle stijging van je bloedsuiker te voorkomen."
+          },
+          {
+            "q": "Hoeveel calorieën zitten er in een volledige Surinaamse rotiplaat?",
+            "a": "Een hele rotiplaat (ongeveer 160 g) bevat ongeveer 415 calorieën en 66 gram netto koolhydraten, dus delen is de slimme manier om calorieën te besparen."
+          },
+          {
+            "q": "Hoe herken ik rotiplaten van volkorenmeel?",
+            "a": "Je kunt rotiplaten van volkoren tarwemeel vinden; vergelijk de vezels op het etiket. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "903": {
+      "slug": "kousenband",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "فاصوليا كوسبانبانغ السورينامية: كم سعرة فيها وهل تناسب مريض السكري والكيتو؟ | WiBo Health",
+        "en": "Surinamese Kousenband Beans: Calories and Do They Suit Diabetes and Keto Diets? | WiBo Health",
+        "nl": "Surinaamse kousenband met knoflook: calorieën en past hij bij diabetes en keto? | WiBo Health"
+      },
+      "desc": {
+        "ar": "خضار سورينامي طويل ومقرمش؛ اكتشف فوائد فاصوليا Kousenband وأليافها، وكيف تمنحك شبعاً مع أثر ضئيل على سكر الدم لمرضى السكري.",
+        "en": "A long, crunchy Surinamese vegetable. Discover kousenband beans and their fibre, and how they fill you up with a minimal effect on blood sugar.",
+        "nl": "Een lange, knapperige Surinaamse groente. Ontdek kousenband en de vezels, en hoe hij je vult met een minimaal effect op je bloedsuiker bij diabetes."
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nخضار حر ومفتوح؛ املأ نصف صحنك بهذه الفاصوليا في أي وجبة غداء لتأمين الشبع الميكانيكي في المعدة وإبطاء هضم باقي الوجبة.\n\n### أفضل طرق التحضير\nشوّحها على نار عالية لثوانٍ معدودة لتحتفظ بلونها الأخضر الزاهي وقرمشتها الحية؛ تجنب سلقها الطويل في الماء حتى لا تفقد فيتامين C ومضادات الأكسدة.\n\n### ملاحظة غذائية هامة ⚠️\nخيار ممتاز لمريض السكري ومقاومة الإنسولين؛ أليافها تبطئ امتصاص كربوهيدرات الوجبة.",
+        "en": "### Serving advice\nA free vegetable: fill half your plate with these beans at any lunch to fill your stomach and slow the digestion of the rest of the meal.\n\n### Best ways to prepare it\nStir-fry them over a high heat for just a few seconds so they keep their bright green colour and lively crunch. Avoid boiling them for a long time in water, so they don't lose their vitamin C and antioxidants.\n\n### Important nutrition note ⚠️\nAn excellent choice for people with diabetes or insulin resistance: their fibre slows down the absorption of the meal's carbohydrates.",
+        "nl": "### Advies bij het eten\nEen vrije groente: vul bij elke lunch de helft van je bord met deze bonen, om je maag te vullen en de vertering van de rest van de maaltijd te vertragen.\n\n### Zo bereid je het het best\nRoerbak ze een paar seconden op hoog vuur, zodat ze hun felgroene kleur en levendige beet houden. Kook ze niet lang in water, zodat ze hun vitamine C en antioxidanten niet verliezen.\n\n### Belangrijke voedingsnotitie ⚠️\nEen uitstekende keuze bij diabetes of insulineresistentie: de vezels vertragen de opname van de koolhydraten uit de maaltijd."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل فاصوليا الكوسبانبانغ مناسبة لحمية الكيتو وإنقاص الوزن؟",
+            "a": "هي واحدة من أفضل خضروات الكيتو على الإطلاق؛ فالصحن الكبير يمنحك نحو 7 غرامات كارب صافي فقط مع ألياف وفيرة تشعرك بالشبع دون أثر يُذكر على سكر الدم."
+          },
+          {
+            "q": "ما هو الفرق بين الكوسبانبانغ والفاصوليا الخضراء العادية (Sperziebonen)؟",
+            "a": "الكوسبانبانغ أطول وأكثر قرمشة وقدرة على امتصاص نكهات التوابل والثوم دون أن تصبح طرية أو لزجة، وتوفر نسبة ألياف ممتازة تفيد صحة بكتيريا الأمعاء."
+          },
+          {
+            "q": "كيف أستخدم الكوسبانبانغ بديلاً جزئياً للنشويات؟",
+            "a": "قطّعها طويلة وشوّحها مع الروبيان أو التوفو بدل جزء من المعكرونة أو الأرز. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are kousenband beans suitable for keto and weight loss?",
+            "a": "They are one of the best keto vegetables of all: a large plate gives you only about 7 grams of net carbs with plenty of fibre that keeps you full, with hardly any effect on blood sugar."
+          },
+          {
+            "q": "What is the difference between kousenband and ordinary green beans (sperziebonen)?",
+            "a": "Kousenband are longer and crunchier, and better at soaking up the flavours of spices and garlic without turning soft or slimy. They also provide a good amount of fibre, which benefits the gut bacteria."
+          },
+          {
+            "q": "How can I use kousenband as a partial replacement for starchy foods?",
+            "a": "Cut them into long pieces and stir-fry them with prawns or tofu in place of part of the pasta or rice. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is kousenband geschikt bij keto en afvallen?",
+            "a": "Het is een van de beste keto-groenten die er zijn: een groot bord geeft je maar ongeveer 7 gram netto koolhydraten, met veel vezels die je verzadigen, en nauwelijks effect op je bloedsuiker."
+          },
+          {
+            "q": "Wat is het verschil tussen kousenband en gewone sperziebonen?",
+            "a": "Kousenband is langer en knapperiger, en neemt de smaak van kruiden en knoflook beter op zonder zacht of slijmerig te worden. Hij levert ook een flinke hoeveelheid vezels, wat goed is voor de darmbacteriën."
+          },
+          {
+            "q": "Hoe gebruik ik kousenband als gedeeltelijke vervanging van zetmeel?",
+            "a": "Snijd hem in lange stukken en roerbak hem met garnalen of tofu, in plaats van een deel van de pasta of rijst. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "904": {
+      "slug": "pom",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "طاجن البوم السورينامي بالدجاج: كم سعرة وما هو جذر التايير وهل يناسب السكري؟ | WiBo Health",
+        "en": "Surinamese Pom with Chicken: Calories, Pomtajer Root and Does It Suit Diabetes? | WiBo Health",
+        "nl": "Surinaamse pom met kip: calorieën, wat is pomtajer en past pom bij diabetes? | WiBo Health"
+      },
+      "desc": {
+        "ar": "أشهر الأطباق الاحتفالية في سورينام؛ اكتشف أسرار طاجن Pom المخبوز بجذر التايير والدجاج، توازنه الغذائي، وكيف تتناوله بذكاء لتفادي قفزات السكر.",
+        "en": "Suriname's best-known festive dish. Discover oven-baked pom with pomtajer root and chicken, its balance, and how to eat it smartly to avoid sugar spikes.",
+        "nl": "Het bekendste feestgerecht van Suriname. Ontdek ovenpom met pomtajer en kip, de voedingsbalans, en hoe je pom slim eet om suikerpieken te voorkomen."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (55) تقدير لجذر البومتايير المبشور والمخبوز مع الدجاج وعصير البرتقال المر."
+        ],
+        "en": [
+          "The glycemic index (55) is an estimate for grated pomtajer root baked with chicken and bitter orange juice."
+        ],
+        "nl": [
+          "De glykemische index (55) is een schatting voor geraspte pomtajer, gebakken met kip en zuur sinaasappelsap."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nقطعة متوسطة الحجم (150-200 غ) تشكل وجبة غداء فاخرة وغنية؛ تجنب حشوها داخل رغيف خبز صمون أبيض (Broodje Pom) لأن اجتماع الخبز مع التايير يرفع الكارب بشدة.\n\n### أفضل طرق التحضير\nاخبزها باستخدام قطع صدور الدجاج بدون شحوم، وتجنب إضافة السكر المكرر للمرق للاعتماد على الحلاوة الطبيعية لجذر التايير والبرتقال.\n\n### ملاحظة غذائية هامة ⚠️\nجذر التايير مصدر للنشا ويحتوي على المعادن؛ لكن طريقة التحضير التقليدية قد تفرط في إضافة الملح والصلصات السكرية، فاحرص على الاعتدال.",
+        "en": "### Serving advice\nA medium piece (150-200 g) makes a rich, generous lunch. Avoid stuffing it into a white bread roll (broodje pom), because bread plus tayer root pushes the carbs up sharply.\n\n### Best ways to prepare it\nBake it with skinless chicken breast pieces, and don't add refined sugar to the stock: rely on the natural sweetness of the tayer root and the orange.\n\n### Important nutrition note ⚠️\nTayer root is a source of starch and contains minerals. But the traditional recipe can go heavy on salt and sweet sauces, so keep it moderate.",
+        "nl": "### Advies bij het eten\nEen middelgroot stuk (150-200 g) is een rijke, royale lunch. Stop het liever niet in een wit broodje (broodje pom), want brood plus pomtajer laat de koolhydraten flink oplopen.\n\n### Zo bereid je het het best\nMaak pom met stukjes kipfilet zonder vel, en voeg geen geraffineerde suiker toe aan de bouillon: vertrouw op de natuurlijke zoetheid van de pomtajer en de sinaasappel.\n\n### Belangrijke voedingsnotitie ⚠️\nPomtajer is een bron van zetmeel en bevat mineralen. Maar het traditionele recept kan veel zout en zoete sauzen bevatten, dus houd het gematigd."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل طاجن البوم السورينامي مناسب لمرضى السكري؟",
+            "a": "مناسب بكمية معتدلة (حصة 150-200 غ بحمل جلايسيمي متوسط 14.5) مع صحن سلطة خضراء؛ والسر الحاسم هو عدم تناوله كساندويتش داخل الخبز لتفادي مضاعفة النشويات."
+          },
+          {
+            "q": "ما هو نبات التايير (Pomtajer) المستخدم في هذا الطاجن؟",
+            "a": "هو درنة جذرية استوائية شبيهة بالقلقاس، تحتوي على النشا والألياف والمعادن، وتتميز بقوامها المخملي الذي يمتص عصارة الدجاج والتوابل بشكل فريد."
+          },
+          {
+            "q": "كيف أختار ساندويتش البوم (Broodje Pom) بطريقة أخف؟",
+            "a": "اطلب دائماً إضافة خيار مخلل إضافي واطلب الخبز الأسمر الكامل إن وُجد. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Is Surinamese pom suitable for people with diabetes?",
+            "a": "Yes, in a moderate amount (a 150-200 g portion with a medium glycemic load of 14.5) with a plate of green salad. The key is not to eat it as a sandwich in bread, so you don't double the starch."
+          },
+          {
+            "q": "What is the tayer plant (pomtajer) used in this dish?",
+            "a": "It is a tropical root tuber similar to taro. It contains starch, fibre and minerals, and has a velvety texture that soaks up the juices of the chicken and spices in a unique way."
+          },
+          {
+            "q": "How can I choose a lighter broodje pom?",
+            "a": "Always ask for extra pickles and ask for wholemeal bread if they have it. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Is Surinaamse pom geschikt bij diabetes?",
+            "a": "Ja, in een gematigde hoeveelheid (een portie van 150-200 g met een gemiddelde glykemische lading van 14,5), met een bord groene salade. Het belangrijkste is dat je hem niet als broodje eet, zodat je het zetmeel niet verdubbelt."
+          },
+          {
+            "q": "Wat is de tajerplant (pomtajer) in dit gerecht?",
+            "a": "Het is een tropische wortelknol die lijkt op taro. Hij bevat zetmeel, vezels en mineralen, en heeft een fluweelzachte structuur die de sappen van de kip en de kruiden op een unieke manier opneemt."
+          },
+          {
+            "q": "Hoe kies ik een lichter broodje pom?",
+            "a": "Vraag altijd om extra zuur en om een volkoren broodje als dat er is. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "905": {
+      "slug": "bara",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "فطائر البارا السورينامية المقلية: كم سعرة وكيف تتناولها بذكاء مع الصلصة؟ | WiBo Health",
+        "en": "Surinamese Bara Fritters: Calories and How to Enjoy Them Smartly with Chutney | WiBo Health",
+        "nl": "Surinaamse gefrituurde bara: calorieën en hoe je ze slim eet met chutney | WiBo Health"
+      },
+      "desc": {
+        "ar": "من أشهر الوجبات السريعة في سورينام وهولندا؛ اكتشف مكونات أقراص Bara من دال البقوليات والسبانخ، دهونها، والسر في استهلاكها باعتدال لضبط الوزن.",
+        "en": "A favourite fast food in Suriname and the Netherlands. Discover what bara are made of, from urad dhal to spinach, their fat, and why moderation helps.",
+        "nl": "Een van de populairste snacks van Suriname en Nederland. Ontdek waar bara van gemaakt zijn, van oerdidhal tot spinazie, het vet, en waarom matigen helpt."
+      },
+      "refs_extra": {
+        "ar": [
+          "المؤشر الجلايسيمي (58) تقدير لطحين دال أوراد الهندي وأوراق السبانخ المقلية في الزيت."
+        ],
+        "en": [
+          "The glycemic index (58) is an estimate for Indian urad dhal flour and spinach leaves fried in oil."
+        ],
+        "nl": [
+          "De glykemische index (58) is een schatting voor meel van Indiase oerdidhal en spinazieblad, gefrituurd in olie."
+        ]
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nحبة واحدة (75 غ) كافية تماماً كمتعة أسبوعية في عطلة نهاية الأسبوع؛ لا تجعلها وجبة يومية لأن عملية القلي العميق تجعلها غنية بالدهون والسعرات.\n\n### أفضل طرق التحضير\nإذا صنعتها بالمنزل، يمكنك خبزها في المقلاة الهوائية (Air Fryer) مع رشّة زيت خفيفة بدلاً من القلي الغزير؛ ستحصل على قرمشة قريبة مع دهون أقل بكثير.\n\n### ملاحظة غذائية هامة ⚠️\nرغم احتوائها على ألياف وبروتين البقوليات، إلا أن الزيت الممتص يرفع سعراتها الحرارية؛ تناولها بوعي واعتدال إذا كنت تعمل على خسارة الوزن.",
+        "en": "### Serving advice\nOne bara (75 g) is plenty as a weekly weekend treat. Don't make it a daily food, because deep-frying makes it high in fat and calories.\n\n### Best ways to prepare it\nIf you make them at home, you can bake them in an air fryer with a light spray of oil instead of deep-frying: you'll get a similar crunch with much less fat.\n\n### Important nutrition note ⚠️\nAlthough they contain fibre and protein from the pulses, the oil they absorb raises their calories. Eat them mindfully and in moderation if you are working on losing weight.",
+        "nl": "### Advies bij het eten\nEén bara (75 g) is ruim genoeg als wekelijkse traktatie in het weekend. Maak er geen dagelijkse snack van, want frituren maakt ze rijk aan vet en calorieën.\n\n### Zo bereid je het het best\nMaak je ze zelf, dan kun je ze in een airfryer bakken met een licht laagje olie in plaats van te frituren: je krijgt een vergelijkbare krokantheid met veel minder vet.\n\n### Belangrijke voedingsnotitie ⚠️\nOok al bevatten ze vezels en eiwit uit de peulvruchten, de opgenomen olie verhoogt de calorieën. Eet ze bewust en met mate als je wilt afvallen."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل البارا السورينامية مصنوعة من طحين أبيض فقط؟",
+            "a": "لا؛ الأساس فيها هو طحين بقوليات عدس الأوراد الهندي الممزوج بالخضار الورقية، مما يمنحها مؤشراً جلايسيمياً معتدلاً (58، تقدير) أفضل من معجنات الطحين الأبيض العادية."
+          },
+          {
+            "q": "كم سعرة حرارية في قرص البارا الواحد مع صلصة الشاتني؟",
+            "a": "القرص الواحد المعتدل يوفر حوالي 206 سعرات حرارية، ومع ملعقة من صلصة المانجو الحارة تصل إلى حوالي 240 سعرة؛ لذا احسبها ضمن ميزانيتك اليومية من السعرات."
+          },
+          {
+            "q": "كيف أوازن يومي بعد تناول وجبة خفيفة مقلية؟",
+            "a": "اجعل الوجبة التالية خفيفة ومعتمدة على الخضار الخضراء والبروتين الخالي من الدهون. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Are Surinamese bara made only from white flour?",
+            "a": "No. Their base is flour from urad dhal, an Indian pulse, mixed with leafy greens, which gives them a moderate glycemic index (58, estimate), better than ordinary white flour pastries."
+          },
+          {
+            "q": "How many calories are in one bara with chutney?",
+            "a": "One moderate bara provides about 206 calories, and with a spoonful of spicy mango chutney it comes to about 240 calories, so count it in your daily calorie budget."
+          },
+          {
+            "q": "How do I balance my day after a fried snack?",
+            "a": "Make your next meal light, based on green vegetables and lean protein. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Zijn Surinaamse bara alleen van witte bloem gemaakt?",
+            "a": "Nee. De basis is meel van oerdidhal, een Indiase peulvrucht, gemengd met bladgroenten, wat ze een gematigde glykemische index geeft (58, schatting), beter dan gewoon gebak van witte bloem."
+          },
+          {
+            "q": "Hoeveel calorieën zitten er in één bara met chutney?",
+            "a": "Eén gemiddelde bara geeft ongeveer 206 calorieën, en met een lepel pittige mangochutney komt dat op ongeveer 240 calorieën, dus tel hem mee in je dagelijkse caloriebudget."
+          },
+          {
+            "q": "Hoe breng ik mijn dag in balans na een gefrituurde snack?",
+            "a": "Maak je volgende maaltijd licht, met groene groenten en mager eiwit. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
+    },
+    "909": {
+      "slug": "beef-rendang",
+      "title_full": true,
+      "sugar": {
+        "ar": "غير متوفر",
+        "en": "not available",
+        "nl": "niet beschikbaar"
+      },
+      "ii_text": {
+        "ar": "غير مختبر",
+        "en": "not tested",
+        "nl": "niet getest"
+      },
+      "title": {
+        "ar": "ريندانغ اللحم الإندونيسي: كم سعرة وبروتين وهل يناسب الكيتو ومريض السكري؟ | WiBo Health",
+        "en": "Indonesian Beef Rendang: Calories, Protein and Does It Suit Keto and Diabetes? | WiBo Health",
+        "nl": "Indonesische rendang van rundvlees: calorieën, eiwit, keto en diabetes | WiBo Health"
+      },
+      "desc": {
+        "ar": "من أشهر أطباق العالم؛ اكتشف القيمة الغذائية لـ Beef Rendang المطهو بحليب جوز الهند وعشبة الليمون، غناه بالبروتين، ولماذا لا يكاد يرفع سكر الدم.",
+        "en": "One of the world's most famous dishes. Discover beef rendang slow-cooked in coconut milk and lemongrass, its rich protein, and why it barely raises blood sugar.",
+        "nl": "Een van de bekendste gerechten ter wereld. Ontdek rendang, langzaam gegaard in kokosmelk en citroengras, het vele eiwit, en waarom hij je bloedsuiker nauwelijks verhoogt."
+      },
+      "body": {
+        "ar": "### توصيات الاستهلاك\nحصة 150-180 غ ممتازة كوجبة بروتينية كيتونية رئيسية؛ تناولها مع صحن خضار مسلوقة أو فاصوليا خضراء مشوحة بدلاً من جبل الأرز الأبيض.\n\n### أفضل طرق التحضير\nاختر قطع لحم بقري قليلة الدهن الظاهري واعتمد على دهن حليب جوز الهند الطبيعي في الطهي البطيء؛ ستحصل على نفس النعومة الفائقة بتوازن حراري أفضل.\n\n### ملاحظة غذائية هامة ⚠️\nالبروتين يساهم في الحفاظ على الكتلة العضلية؛ لكن دهون جوز الهند واللحم غنية بالأحماض الدهنية المشبعة، فإذا كنت تعاني من ارتفاع الكوليسترول، اضبط حجم الحصة باعتدال.",
+        "en": "### Serving advice\nA 150-180 g portion is excellent as a keto-friendly protein main course. Eat it with a plate of boiled vegetables or stir-fried green beans instead of a mountain of white rice.\n\n### Best ways to prepare it\nChoose cuts of beef with little visible fat and rely on the natural fat of the coconut milk during slow cooking: you'll get the same melting tenderness with a better calorie balance.\n\n### Important nutrition note ⚠️\nProtein contributes to the maintenance of muscle mass. But coconut and beef fats are high in saturated fatty acids, so if you have high cholesterol, keep your portion moderate.",
+        "nl": "### Advies bij het eten\nEen portie van 150-180 g is uitstekend als keto-vriendelijke eiwitrijke hoofdmaaltijd. Eet hem met een bord gekookte groenten of geroerbakte sperziebonen in plaats van een berg witte rijst.\n\n### Zo bereid je het het best\nKies stukken rundvlees met weinig zichtbaar vet en vertrouw op het natuurlijke vet van de kokosmelk tijdens het langzaam garen: je krijgt dezelfde smeltende malsheid met een betere caloriebalans.\n\n### Belangrijke voedingsnotitie ⚠️\nEiwitten dragen bij tot het behoud van spiermassa. Maar het vet van kokos en rundvlees bevat veel verzadigde vetzuren, dus heb je een hoog cholesterol, houd je portie dan gematigd."
+      },
+      "faq": {
+        "ar": [
+          {
+            "q": "هل طبق ريندانغ اللحم يرفع سكر الدم لمرضى السكري؟",
+            "a": "تأثيره على سكر الدم مسطح ومنعدم تقريباً (حمل جلايسيمي يقارب الصفر)؛ والسبب الأكبر لارتفاع السكر في الوجبة هو الأرز الأبيض الذي يؤكل معه عادة، لذا استبدله بأرز القرنبيط."
+          },
+          {
+            "q": "هل يناسب الريندانغ حمية الكيتو دايت والصيام المتقطع؟",
+            "a": "من أنسب الأطباق لحمية الكيتو؛ فالكربوهيدرات الصافية فيه أقل من 5 غرامات للحصة المشبعة، ونسبة الدهون والبروتين المرتفعة تناسب نمط الكيتو."
+          },
+          {
+            "q": "كيف أختار معجون الريندانغ الجاهز الأكثر نقاءً في السوبرماركت؟",
+            "a": "بعض معاجين الريندانغ التجارية تضاف لها سكريات ونشا ومواد حافظة؛ اقرأ المكونات واختر معجوناً بلا سكر أو نشا مضاف. [جرّب تطبيق بودي 💚 لفحص مكونات المنتج واكتشاف البدائل الأقل سكراً](/boodi.html)."
+          }
+        ],
+        "en": [
+          {
+            "q": "Does beef rendang raise blood sugar in people with diabetes?",
+            "a": "Its effect on blood sugar is flat and close to none (a glycemic load near zero). The main reason blood sugar rises at this meal is the white rice it is usually eaten with, so swap it for cauliflower rice."
+          },
+          {
+            "q": "Does rendang suit keto and intermittent fasting?",
+            "a": "It is one of the most keto-friendly dishes: it has under 5 grams of net carbs per generous portion, and its high fat and protein suit a keto pattern."
+          },
+          {
+            "q": "How do I choose the purest ready-made rendang paste in the supermarket?",
+            "a": "Some commercial rendang pastes contain added sugars, starch and preservatives. Read the ingredients and choose a paste without added sugar or starch. [Try the Boodi app 💚 to check a product's ingredients and find lower-sugar alternatives](/boodi.html)."
+          }
+        ],
+        "nl": [
+          {
+            "q": "Verhoogt rendang de bloedsuiker bij diabetes?",
+            "a": "Het effect op je bloedsuiker is vlak en bijna nihil (een glykemische lading van bijna nul). De belangrijkste reden dat je bloedsuiker bij deze maaltijd stijgt, is de witte rijst die er meestal bij wordt gegeten, dus vervang die door bloemkoolrijst."
+          },
+          {
+            "q": "Past rendang bij keto en intermittent fasting?",
+            "a": "Het is een van de meest keto-vriendelijke gerechten: er zit minder dan 5 gram netto koolhydraten in per royale portie, en het hoge vet- en eiwitgehalte past bij een keto-patroon."
+          },
+          {
+            "q": "Hoe kies ik de zuiverste kant-en-klare rendangpasta in de supermarkt?",
+            "a": "Sommige rendangpasta's uit de winkel bevatten toegevoegde suikers, zetmeel en conserveermiddelen. Lees de ingrediënten en kies een pasta zonder toegevoegde suiker of zetmeel. [Probeer de Boodi-app 💚 om de ingrediënten van een product te checken en alternatieven met minder suiker te vinden](/boodi.html)."
+          }
+        ]
+      }
     }
   }
 }

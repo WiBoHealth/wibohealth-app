@@ -300,12 +300,19 @@ PILOT = {
     907: ('asian', 250), 911: ('fastfood', 100), 916: ('asian', 25), 885: ('sweets', 20), 1009: ('sweets', 100),
     879: ('bakery', 50), 1013: ('drink', 240), 992: ('drink', 240), 1027: ('pantry', 100), 1029: ('pantry', 4),
     999: ('pantry', 10), 1030: ('pantry', 10), 935: ('veg', 10), 1053: ('asian', 300), 926: ('protein', 180),
+    # batch 30 (8 November 2026): 876-905 + 909, copy = pulse + 3 tips + 3 FAQs (as h3 body), search titles 80-95 chars
+    # (title_full); portions from the copy
+    876: ('pantry', 20), 877: ('bakery', 35), 883: ('asian', 350), 884: ('sweets', 6), 886: ('sweets', 25),
+    887: ('grain', 200), 888: ('home', 300), 889: ('home', 250), 890: ('home', 300), 891: ('salad', 150),
+    892: ('home', 350), 893: ('bakery', 40), 894: ('bakery', 60), 895: ('home', 350), 896: ('salad', 250),
+    897: ('bakery', 100), 898: ('protein', 150), 899: ('condiment', 30), 900: ('condiment', 30), 901: ('home', 350),
+    902: ('bakery', 80), 903: ('veg', 150), 904: ('home', 200), 905: ('fastfood', 75), 909: ('asian', 180),
 }
 # batch 28 page variants: drinks measured in ml; GI from a published measurement (label "published value"); GI not
 # available (no published measurement and no comparable food)
 ML_UNIT = {1017, 993, 991, 963, 1013, 992}
-PUBLISHED_GI = {1025, 1028, 1049, 1048, 1050}
-GI_UNAVAILABLE = {989, 957, 911, 885, 1009, 1029, 1030, 926}
+PUBLISHED_GI = {1025, 1028, 1049, 1048, 1050, 893}
+GI_UNAVAILABLE = {989, 957, 911, 885, 1009, 1029, 1030, 926, 886}
 # foods whose page is signed by the medical team instead of a named reviewer
 TEAM_REVIEW = {6, 12, 13, 15, 16, 20, 21, 23, 24, 25, 28, 33, 34, 41, 42, 43, 44, 45, 46, 47, 52, 56, 57, 58, 60, 61,
                64, 65, 67, 73, 75, 76, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 95, 96, 97, 99, 100, 102,
@@ -321,10 +328,13 @@ NAMED_REVIEW.update({i: '2026-10-31' for i in (1017, 993, 991, 963, 906, 878, 98
                                                971, 922, 908, 1049, 951, 881, 984,
                                                952, 956, 957, 1045, 1048, 1050, 1032, 973, 880, 882, 907, 911, 916, 885,
                                                1009, 879, 1013, 992, 1027, 1029, 999, 1030, 935, 1053, 926)})
+NAMED_REVIEW.update({i: '2026-11-08' for i in (*range(876, 878), *range(883, 885), *range(886, 906), 909)})
 NAMED_REVIEW_TXT = {'2026-10-20': {'ar': '20 أكتوبر 2026', 'en': '20 October 2026', 'nl': '20 oktober 2026'},
                     '2026-10-21': {'ar': '21 أكتوبر 2026', 'en': '21 October 2026', 'nl': '21 oktober 2026'},
                     '2026-10-31': {'ar': '31 أكتوبر 2026', 'en': '31 October 2026', 'nl': '31 oktober 2026',
-                                   'sv': '31 oktober 2026'}}
+                                   'sv': '31 oktober 2026'},
+                    '2026-11-08': {'ar': '8 نوفمبر 2026', 'en': '8 November 2026', 'nl': '8 november 2026',
+                                   'sv': '8 november 2026'}}
 
 
 def review_date(fid):
@@ -1578,16 +1588,22 @@ BODY_CSS = ('.food-body { margin: 4px 0 22px; } .about-card .food-body h3 { font
 BODY_READ_ALSO = {'ar': 'اقرأ أيضاً:', 'en': 'Read also:', 'nl': 'Lees ook:', SV: 'Läs även:'}
 
 
-def inline_md(s, link=None):
+MD_LINK = re.compile(r'\[([^\]]+)\]\((/[^)\s]*)\)')
+
+
+def inline_md(s, link=None, lang=None):
     """Escape a line of approved copy and turn **bold** into <strong>; [[id]] / [[id|text]] (batch 29) become a
-    "read also" link to that food's page, in the reader's language, named as in the copy or else as in data.js."""
+    "read also" link to that food's page, in the reader's language, named as in the copy or else as in data.js;
+    [text](/page.html) (batch 30, the Boodi call to action) links a site page in the reader's language."""
     out = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', esc(s))
+    if lang:
+        out = MD_LINK.sub(lambda m: f'<a href="{any_link(m.group(2), lang)}">{m.group(1)}</a>', out)
     if link:
         out = re.sub(r'\[\[(\d+)(?:\|([^\]]+))?\]\]', lambda m: link(int(m.group(1)), m.group(2)), out)
     return out
 
 
-def render_body(md, link=None):
+def render_body(md, link=None, lang=None):
     """The approved body copy (### headings, - bullets, 1. numbered steps, > quoted text, one paragraph per line) as HTML."""
     out, items, kind = [], [], None
     def flush():
@@ -1603,15 +1619,15 @@ def render_body(md, link=None):
             if kind != k:
                 flush()
                 kind = k
-            items.append(inline_md(m.group(2), link))
+            items.append(inline_md(m.group(2), link, lang))
             continue
         flush()
         if line.startswith('### '):
-            out.append(f'<h3>{inline_md(line[4:], link)}</h3>')
+            out.append(f'<h3>{inline_md(line[4:], link, lang)}</h3>')
         elif line.startswith('> '):
-            out.append(f'<blockquote>{inline_md(line[2:], link)}</blockquote>')
+            out.append(f'<blockquote>{inline_md(line[2:], link, lang)}</blockquote>')
         elif line:
-            out.append(f'<p>{inline_md(line, link)}</p>')
+            out.append(f'<p>{inline_md(line, link, lang)}</p>')
     flush()
     return ''.join(out)
 
@@ -1873,7 +1889,9 @@ def build(food, lang, ctx):
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
     # every question open, nothing to fold (all food pages, 2026-10-31)
-    faq_html = ''.join(f'<div class="acc static"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>' for q, a in faq)
+    faq_html = ''.join(f'<div class="acc static"><h3>{esc(q)}</h3>'
+                       f'<p>{inline_md(a, lang=lang) if "](" in a else esc(a)}</p></div>' for q, a in faq)
+    faq = [(q, MD_LINK.sub(r'\1', a)) for q, a in faq]     # JSON-LD answers: plain text
     read_also = [(READ_ALSO[k][0], *READ_ALSO[k][1][lang])
                  for k in read_also_keys(food, group, food['gi'] if has_gi else None)]
     read_also_html = ''.join(f'<li><a href="{href}">{esc(label)}<span>{READ_ALSO_KIND[kind][lang]}</span></a></li>'
@@ -2103,7 +2121,7 @@ def build(food, lang, ctx):
             label = text or (target[SV] if lang == SV else target[lang])
             return (f'<span class="read-also">{BODY_READ_ALSO[lang]} '
                     f'<a href="{food_url(ctx["slug"][fid], fid, lang, absolute=False)}">{esc(label)}</a></span>')
-        intro_html = f'<section class="food-body">{render_body(body_md, body_link)}{brand_html}</section>'
+        intro_html = f'<section class="food-body">{render_body(body_md, body_link, lang)}{brand_html}</section>'
         body_style = f'\n    <style>{BODY_CSS}</style>'
     else:
         intro_html = f'''<div class="lead-fold">
