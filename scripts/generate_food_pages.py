@@ -1821,7 +1821,7 @@ def build(food, lang, ctx):
     sv_date = NAMED_REVIEW.get(food['id'], '') if NAMED_REVIEW.get(food['id'], '') > FSV.REVIEWED else ''
     if body_md:                             # approved line for the batch 28 pages (31 October 2026)
         reviewed_line = bu['review'].format(doctor=any_link('/doctor.html', lang) if lang == SV else site_link('/doctor.html', lang),
-                                            role=JOB_TITLE[lang], date=NAMED_REVIEW_TXT[NAMED_REVIEW[food['id']]][lang])
+                                            role=JOB_TITLE[lang], date=NAMED_REVIEW_TXT[max(NAMED_REVIEW[food['id']], FSV.REVIEWED) if lang == SV else NAMED_REVIEW[food['id']]][lang])
     elif lang == SV and sv_date:              # Swedish pages added after the first Swedish review carry their own date
         reviewed_line = u['reviewed'].format(doctor=any_link('/doctor.html', lang), date=NAMED_REVIEW_TXT[sv_date][SV])
     elif lang == SV:                        # one approved review line for every Swedish page

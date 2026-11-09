@@ -9,8 +9,8 @@ PUBLISH lists the foods that get a Swedish page (all of NAMES).
 """
 
 # the Swedish copy as approved for publication; also the "Senast granskad" date and the sitemap lastmod
-REVIEWED = '2026-10-24'
-REVIEWED_TXT = '24 oktober 2026'
+REVIEWED = '2026-11-08'
+REVIEWED_TXT = '8 november 2026'
 
 # foods with a Swedish page: 1-875 (1-50 samples approved 2026-10-24); set below NAMES
 
