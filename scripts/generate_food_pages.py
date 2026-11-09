@@ -1515,7 +1515,7 @@ FP_UI = {
         short=dict(small='صغيرة', medium='متوسطة', large='كبيرة'),
         col='{label} ({g} غ)', macros=('كربوهيدرات', 'بروتين', 'دهون', 'ألياف'), pct='{v}%',
         energy_note='النسب المئوية من إجمالي الطاقة (السعرات)', energy_aria='توزيع الطاقة: كربوهيدرات {c}، بروتين {p}، دهون {f}',
-        gi_same='ثابت لكل الحصص', more='اقرأ المزيد', less='عرض أقل', back='العودة لدليل الأطعمة'),
+        gi_same='ثابت لكل الحصص', more='اقرأ المزيد', less='عرض أقل', back='افتح محرك البحث التفاعلي للأطعمة'),
     'en': dict(
         qa_title='Quick answer',
         qa='A medium portion of {name} ({g} g) contains {kcal} kcal, with {net} g of net carbohydrates and {protein} g of protein. '
@@ -1527,7 +1527,7 @@ FP_UI = {
         short=dict(small='Small', medium='Medium', large='Large'),
         col='{label} ({g} g)', macros=('Carbs', 'Protein', 'Fat', 'Fibre'), pct='{v}%',
         energy_note='Percentages of total energy (calories)', energy_aria='Energy split: carbohydrates {c}, protein {p}, fat {f}',
-        gi_same='Same for every portion', more='Read more', less='Show less', back='Back to foods'),
+        gi_same='Same for every portion', more='Read more', less='Show less', back='Open Interactive Food Search'),
     'nl': dict(
         qa_title='Snel antwoord',
         qa='Een middelgrote portie {name} ({g} g) bevat {kcal} kcal, met {net} g netto koolhydraten en {protein} g eiwit. '
@@ -1539,7 +1539,7 @@ FP_UI = {
         short=dict(small='Klein', medium='Middel', large='Groot'),
         col='{label} ({g} g)', macros=('Koolhydraten', 'Eiwit', 'Vet', 'Vezels'), pct='{v}%',
         energy_note='Percentages van de totale energie (calorieën)', energy_aria='Energieverdeling: koolhydraten {c}, eiwit {p}, vet {f}',
-        gi_same='Gelijk voor elke portie', more='Lees meer', less='Toon minder', back='Terug naar voedingsmiddelen'),
+        gi_same='Gelijk voor elke portie', more='Lees meer', less='Toon minder', back='Open Interactieve Voedingszoeker'),
     SV: dict(
         qa_title='Snabbt svar',
         qa='En medelstor portion {name} ({g} g) innehåller {kcal} kcal, med {net} g nettokolhydrater och {protein} g protein. '
@@ -1551,7 +1551,7 @@ FP_UI = {
         short=dict(small='Liten', medium='Medel', large='Stor'),
         col='{label} ({g} g)', macros=('Kolhydrater', 'Protein', 'Fett', 'Fiber'), pct='{v} %',
         energy_note='Andel av den totala energin (kalorier)', energy_aria='Energifördelning: kolhydrater {c}, protein {p}, fett {f}',
-        gi_same='Samma för alla portioner', more='Läs mer', less='Visa mindre', back='Tillbaka till livsmedel'),
+        gi_same='Samma för alla portioner', more='Läs mer', less='Visa mindre', back='Öppna interaktiv matsökning'),
 }
 
 
@@ -2211,7 +2211,7 @@ def build(food, lang, ctx):
 
     <main class="page-wrapper food-page fp">
         <article class="about-card">
-            <a class="fp-back" href="/foods.html?lang={lang}" data-back>{icon('back')}<span>{fu['back']}</span></a>
+            <a class="fp-back" href="{'/foods.html' if lang == 'ar' else f'/foods.html?lang={lang}'}" data-back><span aria-hidden="true">🔍</span><span>{fu['back']}</span></a>
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>
