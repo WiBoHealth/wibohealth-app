@@ -342,6 +342,7 @@ SITE_PAGES_SV = [
     ),
     dict(
         key='delete', slug='radera-konto', legacy='/delete-account.html', kind='webpage', modified='2026-10-23',
+        noindex=True,                       # service page: reachable (Google Play), not indexed, not in the sitemap (2026-11-09)
         title='Radera konto och data i boodi | WiBo Health',
         h1='Radera ditt boodi-konto och dina uppgifter', crumb='Radera konto',
         desc='Så raderar du ditt konto i boodi-appen och alla uppgifter på våra servrar, i appen eller via e-post, enligt GDPR och Google Plays regler.',

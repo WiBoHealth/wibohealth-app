@@ -681,7 +681,7 @@ def build_site_page(p):
             </nav>
             <h1>{esc(p["h1"])}</h1>
 {p.get("top", "")}{img}{p["body"]}{note}        </article>'''
-    return shell(SV, title=p['title'], desc=p['desc'], urls=urls, schema=schema, main=main, draft=False,
+    return shell(SV, title=p['title'], desc=p['desc'], urls=urls, schema=schema, main=main, draft=p.get('noindex', False),
                  extra_head=p.get('extra_head', ''),
                  og_type='profile' if p['kind'] == 'profile' else 'website', image=image,
                  image_alt=p.get('image_alt', ''), active=None, switch=switch)
@@ -723,7 +723,7 @@ def main():
                 langs_of(sec)) for k, sec in SECTIONS.items() if not sec.get('draft')]
     entries += [(lambda l, a=a: page_url(a, l), a['modified'], a.get('hero'), alt_langs(a)) for a in ARTICLES if not is_draft(a)]
     entries += [(lambda l, p=p: SITE + p['legacy'] if l == 'ar' else site_page_url(p), p['modified'], None,
-                 ('ar', SV) if p['legacy'] else (SV,)) for p in SITE_PAGES_SV]
+                 ('ar', SV) if p['legacy'] else (SV,)) for p in SITE_PAGES_SV if not p.get('noindex')]
 
     image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
     block = []
