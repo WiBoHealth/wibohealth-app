@@ -25,7 +25,7 @@
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
                 if (q === 'sv') { location.replace('/sv/anvandarvillkor.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (navigator.language || '').toLowerCase();
+                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
                 h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
                 if (l === 'ar') return;
@@ -1075,7 +1075,7 @@
                 return saved;
             }
 
-            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const browserLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
             if (browserLang.startsWith('ar')) return 'ar';
             if (browserLang.startsWith('nl')) return 'nl';
             return 'en';

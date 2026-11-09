@@ -25,7 +25,7 @@
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
                 if (q === 'sv') { location.replace('/sv/articles/leptinresistens.html'); return; }   // sv-forward
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (navigator.language || '').toLowerCase();
+                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
                 h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
                 if (l === 'ar') return;
@@ -641,7 +641,7 @@
         function detectInitialLang() {
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) return saved;
-            const phoneLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
             if (phoneLang.startsWith('ar')) return 'ar';
             if (phoneLang.startsWith('nl')) return 'nl';
             return 'en';

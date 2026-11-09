@@ -38,7 +38,7 @@
                 var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
                 var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
                 try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (navigator.language || '').toLowerCase();
+                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
                 var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
                 h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
                 if (l === 'ar') return;
@@ -71,7 +71,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const queryLang = urlParams.get('lang')?.toLowerCase();
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            const phone = (navigator.language || '').toLowerCase();
+            const phone = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
             const lang = (queryLang === 'ar' || queryLang === 'en' || queryLang === 'nl') ? queryLang : 
                          ((saved === 'ar' || saved === 'en' || saved === 'nl') ? saved : 
                          (phone.startsWith('ar') ? 'ar' : (phone.startsWith('nl') ? 'nl' : 'en')));
@@ -1127,7 +1127,7 @@
             const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
             if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) return saved;
             
-            const phone = (navigator.language || '').toLowerCase();
+            const phone = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
             if (phone.startsWith('nl')) return 'nl';
             if (phone.startsWith('ar')) return 'ar';
             return 'en';
