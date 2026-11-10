@@ -41,6 +41,10 @@ GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = 'https://wibohealth.com'
+# licence of the food photos added after the 2026-11-09 photo review (scripts/apply_food_images.py);
+# CC BY / CC BY-SA photos are credited on /image-credits.html, linked from the page footer
+PHOTO_CREDITS = json.loads((ROOT / 'data' / 'food_image_credits.json').read_text(encoding='utf-8'))     if (ROOT / 'data' / 'food_image_credits.json').exists() else {}
+PHOTO_LABEL = {'ar': 'مصادر الصور', 'en': 'Image credits', 'nl': 'Fotobronnen', 'sv': 'Bildkällor'}
 REVIEWED = '2026-10-12'
 REVIEWED_TXT = {'ar': '12 أكتوبر 2026', 'en': '12 October 2026', 'nl': '12 oktober 2026'}
 TEAM_REVIEWED = '2026-10-13'             # batch 2: reviewed by the WiBo Health medical team
@@ -1775,6 +1779,14 @@ def replace_sitemap_block(name, lines):
 # --------------------------------------------------------------------------------------------
 # Page builder
 # --------------------------------------------------------------------------------------------
+def needs_credit(food):
+    """True when the page's photo is CC BY / CC BY-SA: its author and licence are listed on /image-credits.html
+    (scripts/generate_image_credits.py), linked from the footer; public-domain and CC0 photos need no credit."""
+    c = PHOTO_CREDITS.get(str(food['id']))
+    return bool(c and food['image'] and c.get('file') == food['image']
+                and not re.match(r'(CC0|Public domain)', c.get('license') or '', re.I))
+
+
 def build(food, lang, ctx):
     global DECIMAL
     DECIMAL = ',' if lang in (SV, 'nl') else '.'
@@ -2147,7 +2159,8 @@ def build(food, lang, ctx):
          (dir_url('supplements', lang, absolute=False), u['nav'][3]),
          (L('/methodology.html'), u['methodology']),
          (L('/doctor.html'), 'Dr. Wassim Habib' if lang != 'ar' else 'د. وسيم حبيب'),
-         (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
+         (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])]
+        + ([(f"/image-credits.html#f{food['id']}", PHOTO_LABEL[lang])] if needs_credit(food) else []))
 
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{u["dir"]}" data-theme="dark">

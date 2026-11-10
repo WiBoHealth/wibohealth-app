@@ -6,3 +6,6 @@ __pycache__/
 images/foods/temp_*
 js/data_backup_gi.js
 js/data.backup.js
+
+# local photo review page (not deployed)
+review/
