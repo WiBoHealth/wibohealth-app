@@ -366,29 +366,7 @@ SITE_PAGES_SV = [
             <p>Läs mer i vår <a href="/sv/integritetspolicy.html">integritetspolicy</a>.</p>
 ''',
     ),
-    dict(
-        key='calculators', slug='calculators', legacy='/calculators.html', kind='collection', modified='2026-10-23',
-        title='Hälsokalkylatorer: BMI, kaloribehov, vätskebehov och midja-längd-kvot | WiBo Health',
-        h1='Hälsokalkylatorer', crumb='Hälsokalkylatorer',
-        desc='Gratis hälsokalkylatorer byggda på riktlinjer från WHO, EFSA och NICE: BMI, dagligt kaloribehov (TDEE), vätskebehov och midja-längd-kvot.',
-        body='''            <p class="lead">Verktyg för vardagen, byggda på riktlinjer från Världshälsoorganisationen (WHO), Europeiska livsmedelssäkerhetsmyndigheten (EFSA) och brittiska NICE. Varje kalkylator har en utförlig guide om vad resultatet betyder och vad du kan göra.</p>
-            <div class="hub-cards">
-                <a class="hub-card" href="/sv/bmi-calculator.html"><h3><i class="fas fa-weight-scale"></i> Kroppsmasseindex (BMI)</h3><p>Klassa din vikt och se det hälsosamma viktintervallet för din längd.</p><span class="card-link">Öppna kalkylatorn →</span></a>
-                <a class="hub-card" href="/sv/tdee-calculator.html"><h3><i class="fas fa-fire-flame-curved"></i> Dagligt kaloribehov (TDEE)</h3><p>Basalomsättning, kalorier för att behålla vikten, gå ner i fett eller bygga muskler, och fördelning av protein, fett och kolhydrater.</p><span class="card-link">Öppna kalkylatorn →</span></a>
-                <a class="hub-card" href="/sv/water-calculator.html"><h3><i class="fas fa-droplet"></i> Dagligt vätskebehov</h3><p>Rätt mängd vätska för din vikt och aktivitet, jämfört med EFSA:s referensvärden.</p><span class="card-link">Öppna kalkylatorn →</span></a>
-                <a class="hub-card" href="/sv/whtr-calculator.html"><h3><i class="fas fa-ruler-combined"></i> Midja-längd-kvot (WHtR)</h3><p>Ett enkelt mått på bukfett och metabol risk: håll midjan under halva din längd.</p><span class="card-link">Öppna kalkylatorn →</span></a>
-            </div>
-
-            <div class="boodi-card">
-                <div>
-                    <h2>boodi 💚 – streckkodsskanner och glykemiskt index</h2>
-                    <p>Kalorier berättar inte hela historien: hur maten påverkar blodsocker och insulin spelar också roll. Skanna streckkoder i butiken och se ingredienser, tillsatser och hälsosammare alternativ på några sekunder.</p>
-                </div>
-                <a class="boodi-btn" href="/sv/boodi.html"><i class="fas fa-barcode"></i> Upptäck boodi</a>
-            </div>
-''',
-        footer_note='Kalkylatorerna är utbildande verktyg för vuxna och ställer inga diagnoser. ' + CARE,
-    ),
+    # 'calculators' (/sv/calculators.html) is now the generated hub: scripts/generate_calculator_pages.py (2026-11-23)
     dict(
         key='boodi', slug='boodi', legacy='/boodi.html', kind='webpage', modified='2026-10-23',
         title='boodi 💚 – appen som skannar streckkoder, ingredienser och glykemiskt index | WiBo Health',

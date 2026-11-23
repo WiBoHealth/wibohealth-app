@@ -566,7 +566,7 @@ def vercel():
     Hand-written rules for other paths are kept as they are."""
     path = ROOT / 'vercel.json'
     cfg = json.loads(path.read_text(encoding='utf-8'))
-    masters = set(site_urls.ROOT_PAGES)
+    masters = set(site_urls.ROOT_PAGES) | set(site_urls.LEGACY_LANG_QUERY)
     def generated(r):
         src = r.get('source', '')
         if any(h.get('key') == 'lang' for h in r.get('has', [])) and src in masters:
@@ -576,7 +576,7 @@ def vercel():
         return bool(re.match(r'^/(en|nl|sv)/:path', src))       # old catch-alls (soft 404s)
     keep = [r for r in cfg['redirects'] if not generated(r)]
     rules = []
-    for master in site_urls.ROOT_PAGES:
+    for master in list(site_urls.ROOT_PAGES) + list(site_urls.LEGACY_LANG_QUERY):
         for lang in ('en', 'nl', 'sv'):
             dest = site_urls.url_in(master, lang)
             if dest == master:

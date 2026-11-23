@@ -70,14 +70,6 @@ SEO = {
                'De officiële boodi-app van WiBo Health, binnenkort: scan barcodes, check ingrediënten voor je dieet, '
                'zie de glykemische index en vind minder suiker.'),
     }),
-    '/calculators.html': dict(kind='collection', meta={
-        'en': ('Health Calculators: BMI, Calories, Water & Waist Ratio',
-               'Free calculators based on WHO and EFSA reference values: body mass index (BMI), calories and macros '
-               '(TDEE), waist-to-height ratio and daily water needs.'),
-        'nl': ('Gezondheidscalculators: BMI, calorieën, water en taille',
-               "Gratis calculators op basis van WHO- en EFSA-referentiewaarden: body mass index (BMI), calorieën en "
-               "macro's (TDEE), taille-lengteverhouding en vochtbehoefte."),
-    }),
     '/recipes.html': dict(kind='collection', meta={
         'en': ('Healthy Low-GI Recipes for Diabetes and Weight Control',
                'Healthy recipes with glycemic and insulin index values: fresh salads, nourishing soups, main dishes and '

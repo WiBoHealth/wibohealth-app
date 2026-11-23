@@ -34,7 +34,6 @@ ROOT_PAGES = {
     '/foods.html': _mirror('/foods.html', '/sv/foods.html', langs=('en', 'nl', 'sv')),
     '/supplements.html': _mirror('/supplements.html'),
     '/boodi.html': _mirror('/boodi.html', '/sv/boodi.html'),
-    '/calculators.html': _mirror('/calculators.html', '/sv/calculators.html'),
     '/recipes.html': _mirror('/recipes.html', langs=('en',)),
     '/partners.html': _mirror('/partners.html', '/sv/partners.html'),
     '/contact.html': _mirror('/contact.html', '/sv/kontakt.html'),
@@ -57,6 +56,7 @@ OTHER_PAGES = {
     '/fatty-liver.html': {'ar': '/articles/fatty-liver-and-visceral-fat.html',
                           **{l: f'/{l}/articles/fatty-liver-and-visceral-fat.html' for l in ('en', 'nl', 'sv')}},
     '/diabetes.html': {'ar': '/diabetes.html', **{l: f'/{l}/diabetes.html' for l in ('en', 'nl', 'sv')}},
+    '/calculators.html': {'ar': '/calculators.html', **{l: f'/{l}/calculators.html' for l in ('en', 'nl', 'sv')}},   # hub, generate_calculator_pages.py
     '/supplements/index.html': {'ar': '/supplements/index.html', **{l: f'/{l}/supplements/index.html' for l in ('en', 'nl', 'sv')}},
     '/foods/index.html': {'ar': '/foods/index.html', **{l: f'/{l}/foods/index.html' for l in ('en', 'nl', 'sv')}},
 }
@@ -64,6 +64,9 @@ OTHER_PAGES = {
 # pages that exist in Arabic only and are kept out of the index (noindex): links in other languages open the Arabic page
 ARABIC_ONLY = {'/diet-plan.html', '/calorie-tracker.html', '/delete-account.html', '/disclaimer.html', '/image-credits.html'}
 
+
+# former ?lang= pages now written by other generators: vercel.json keeps their ?lang=xx -> static page 301s
+LEGACY_LANG_QUERY = ('/calculators.html',)
 
 # links only (not hreflang alternates): the closest page for a language that has no version of the page itself
 LINK_ONLY = {

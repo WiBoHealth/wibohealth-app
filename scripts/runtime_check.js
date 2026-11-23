@@ -59,11 +59,16 @@ const HOME = [
     ['copy pre-rendered', `(() => { const h = document.querySelector('[data-i18n]'); if (!h || !h.textContent.trim()) throw new Error('empty'); return h.textContent.trim().slice(0, 30); })()`],
     ['tip of the day', `(() => { const b = document.getElementById('homeTipNext'); if (b) b.click(); return 'ok'; })()`],
 ];
+const HUB = [
+    ['tool cards link their pages', `(() => { const a = [...document.querySelectorAll('a.hub-card')].map(x => x.getAttribute('href')); if (a.length < 4) throw new Error(a.length); return a.join(' '); })()`],
+    ['section tabs', `(() => { const t = document.querySelectorAll('.hub-tabs a').length; if (!t) throw new Error('no tabs'); return t + ' tab(s)'; })()`],
+];
 const PAGES = [
+    ['/calculators.html', HUB], ['/en/calculators.html', HUB], ['/nl/calculators.html', HUB], ['/sv/calculators.html', HUB],
     ['/foods.html', FOODS], ['/en/foods.html', FOODS], ['/nl/foods.html', FOODS], ['/sv/foods.html', FOODS],
     ['/supplements.html', SUPPS], ['/en/supplements.html', SUPPS], ['/nl/supplements.html', SUPPS],
     ['/', HOME], ['/en/index.html', HOME], ['/nl/index.html', HOME], ['/sv/index.html', HOME],
-    ['/about.html', []], ['/en/about.html', []], ['/nl/doctor.html', []], ['/en/methodology.html', []], ['/en/calculators.html', []],
+    ['/about.html', []], ['/en/about.html', []], ['/nl/doctor.html', []], ['/en/methodology.html', []], 
     ['/en/contact.html', []], ['/nl/privacy.html', []], ['/en/terms.html', []], ['/en/partners.html', []], ['/en/boodi.html', []],
     ['/en/recipes.html', []], ['/en/insulin-resistance.html', []], ['/nl/thyroid-health.html', []],
     ['/en/foods/apple.html', []], ['/food-details.html?id=1000', [['charts drawn', waitFor("document.querySelectorAll('canvas').length && [...document.querySelectorAll('canvas')].every(c => c.width > 0) && document.querySelectorAll('canvas').length")]]], ['/sv/foods/apple.html', []], ['/nl/supplements/5-htp.html', []], ['/en/articles/fructose-fruit-vs-processed-sugar.html', []],

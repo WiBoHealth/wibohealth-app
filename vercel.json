@@ -259,42 +259,6 @@
       "statusCode": 301
     },
     {
-      "source": "/calculators.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "lang",
-          "value": "en"
-        }
-      ],
-      "destination": "/en/calculators.html",
-      "statusCode": 301
-    },
-    {
-      "source": "/calculators.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "lang",
-          "value": "nl"
-        }
-      ],
-      "destination": "/nl/calculators.html",
-      "statusCode": 301
-    },
-    {
-      "source": "/calculators.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "lang",
-          "value": "sv"
-        }
-      ],
-      "destination": "/sv/calculators.html",
-      "statusCode": 301
-    },
-    {
       "source": "/recipes.html",
       "has": [
         {
@@ -724,6 +688,42 @@
         }
       ],
       "destination": "/sv/articles/trog-skoldkortel.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/calculators.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/calculators.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/calculators.html",
       "statusCode": 301
     },
     {

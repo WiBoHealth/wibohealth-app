@@ -21,6 +21,7 @@ import re
 from pathlib import Path
 
 from calculator_content import CALCS, T
+from calculator_hub import CATEGORIES, HUB, HUB_CSS
 from generate_article_pages import EXTRA_CSS as ARTICLE_CSS, SV, UI_SV, link, nav as site_nav
 from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, mark_english_links, replace_sitemap_block, sv_slugs
 
@@ -54,6 +55,8 @@ def ui(lang):
     return UI_SV if lang == SV else UI[lang]
 
 CALC_CSS = """
+        .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
+            color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
         .calc-page .lead { font-size: 1.12rem; }
         .calc-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
@@ -400,6 +403,46 @@ def build(calc, lang):
                  ('/terms.html', 'Användarvillkor'), ('/sv/medicinsk-ansvarsfriskrivning.html', 'Medicinsk ansvarsfriskrivning')]
     footer_links = ' <span>•</span> '.join(f'<a href="{link(p, lang)}">{label}</a>' for p, label in items)
 
+    main = f'''    <main class="page-wrapper food-page article-page calc-page">
+        <article class="about-card">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <a href="{link('/', lang)}">{u["home"]}</a> › <a href="{hub}">{t["hub"]}</a> › <span>{esc(c["crumb"])}</span>
+            </nav>
+            <span class="group-chip">{esc(c["cat"])}</span>
+            <h1>{esc(c["h1"])}</h1>
+            <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> {t["reviewed"]}</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> {esc(calc["badge"])}</span></div>
+            <p class="lead">{c["lead"]}</p>
+            <nav class="calc-nav" aria-label="{esc(t["hub"])}">{calc_nav}</nav>
+
+            {widget(calc, lang)}
+
+{render_body(c["body"], lang)}
+
+            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>{t["faq"]}</span></h2>
+            <div class="faq-list">{render_body(faq_html, lang)}</div>
+
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>{t["related"]}</span></h2>
+            <div class="related-grid">{related}</div>
+
+            <section class="boodi-funnel-card">
+                <div><h2>{t["boodi_title"]}</h2><p>{t["boodi_text"]}</p></div>
+                <a href="{link('/boodi.html', lang)}" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> {t["boodi_cta"]}</a>
+            </section>
+
+            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
+            <ol class="ref-list">{refs_html}</ol>
+            <p class="disclaimer-box">{c["disclaimer"]}</p>
+        </article>
+    </main>
+'''
+    return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, nav=nav, lang_links=lang_links,
+                 hreflang=hreflang, footer_links=footer_links, main=main, scripts=script(calc, lang))
+
+
+def shell(lang, *, title, desc, urls, schema, nav, lang_links, hreflang, footer_links, main, scripts=''):
+    """The page around `main`: head (SEO, schema, styles), header, footer; shared by the calculators and the hub."""
+    t, u = T[lang], ui(lang)
+    c = dict(title=title, desc=desc)
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}" data-theme="dark">
 <head>
@@ -459,44 +502,13 @@ def build(calc, lang):
         </div>
     </header>
 
-    <main class="page-wrapper food-page article-page calc-page">
-        <article class="about-card">
-            <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="{link('/', lang)}">{u["home"]}</a> › <a href="{hub}">{t["hub"]}</a> › <span>{esc(c["crumb"])}</span>
-            </nav>
-            <span class="group-chip">{esc(c["cat"])}</span>
-            <h1>{esc(c["h1"])}</h1>
-            <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> {t["reviewed"]}</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> {esc(calc["badge"])}</span></div>
-            <p class="lead">{c["lead"]}</p>
-            <nav class="calc-nav" aria-label="{esc(t["hub"])}">{calc_nav}</nav>
-
-            {widget(calc, lang)}
-
-{render_body(c["body"], lang)}
-
-            <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>{t["faq"]}</span></h2>
-            <div class="faq-list">{render_body(faq_html, lang)}</div>
-
-            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>{t["related"]}</span></h2>
-            <div class="related-grid">{related}</div>
-
-            <section class="boodi-funnel-card">
-                <div><h2>{t["boodi_title"]}</h2><p>{t["boodi_text"]}</p></div>
-                <a href="{link('/boodi.html', lang)}" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> {t["boodi_cta"]}</a>
-            </section>
-
-            <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>{t["refs"]}</span></h2>
-            <ol class="ref-list">{refs_html}</ol>
-            <p class="disclaimer-box">{c["disclaimer"]}</p>
-        </article>
-    </main>
-
+{main}
     <footer>
         <div class="footer-links">{footer_links}</div>
         <p>{u["footer_rights"]}</p>
     </footer>
 
-{script(calc, lang)}
+{scripts}
     <script>
         function applyTheme(theme) {{
             document.documentElement.setAttribute('data-theme', theme);
@@ -516,7 +528,79 @@ def build(calc, lang):
 '''
 
 
+HUB_MODIFIED = '2026-11-23'   # last change to the hub page
+
+
+def hub_url(lang, absolute=True):
+    path = '/calculators.html' if lang == 'ar' else f'/{lang}/calculators.html'
+    return SITE + path if absolute else path
+
+
+def build_hub(lang):
+    """calculators.html in `lang`: the tools grouped in sections (scripts/calculator_hub.py); each card links its page."""
+    t, u, h = T[lang], ui(lang), HUB[lang]
+    urls = {l: hub_url(l) for l in ALL_LANGS}
+    tools = [c for c in CALCS if lang in langs_of(c)]
+    sections = [(cat, [c for c in tools if c.get('category', 'body') == cat]) for cat in CATEGORIES]
+    sections = [(cat, items) for cat, items in sections if items]
+    tabs = ''.join(f'<a href="#cat-{cat}">{esc(h["tabs"][cat])}</a>' for cat, _ in sections)
+    body = ''
+    for cat, items in sections:
+        cards = ''.join(
+            f'<a class="hub-card" href="{page_url(c, lang, absolute=False)}"><i class="fas {c["icon"]}" aria-hidden="true"></i>'
+            f'<strong>{esc(c["content"][lang]["short"])}</strong><span>{esc(c["content"][lang]["blurb"])}</span>'
+            f'<em>{esc(h["open"])} →</em></a>' for c in items)
+        body += (f'<section class="hub-section" id="cat-{cat}"><h2 class="section-title">{esc(h["tabs"][cat])}</h2>'
+                 f'<div class="hub-grid">{cards}</div></section>\n')
+    related = ''.join(f'<a class="related-card" href="{link(p, lang)}"><i class="fas fa-link" aria-hidden="true"></i>'
+                      f'<strong>{esc(n)}</strong><span>{esc(d)}</span></a>' for p, n, d in h['links'])
+    schema = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": urls[lang] + '#webpage', "url": urls[lang], "name": h['title'],
+         "description": h['desc'], "inLanguage": lang, "isPartOf": {"@type": "WebSite", "name": "WiBo Health", "url": SITE + '/'},
+         "mainEntity": {"@type": "ItemList", "itemListElement": [
+             {"@type": "ListItem", "position": i + 1, "url": page_url(c, lang), "name": c['content'][lang]['short']}
+             for i, c in enumerate([c for _, items in sections for c in items])]},
+         "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+             {"@type": "ListItem", "position": 1, "name": u['home'], "item": SITE + link('/', lang)},
+             {"@type": "ListItem", "position": 2, "name": h['h1'], "item": urls[lang]}]}}]}
+    lang_links = '\n'.join(
+        f'                    <a class="lang-btn{" active" if l == lang else ""}" href="{hub_url(l, absolute=False)}" '
+        f'hreflang="{l}" lang="{l}" title="{NAMES[l]}" aria-label="{NAMES[l]}">{l.upper()}</a>' for l in ('ar', 'nl', 'en', SV))
+    hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in ALL_LANGS)
+    main = f'''    <main class="page-wrapper food-page article-page calc-page calc-hub">
+        <article class="about-card">
+            <nav class="breadcrumb" aria-label="breadcrumb"><a href="{link('/', lang)}">{u["home"]}</a> › <span>{esc(h["h1"])}</span></nav>
+            <h1>{esc(h["h1"])}</h1>
+            <p class="lead">{esc(h["intro"])}</p>
+            <nav class="hub-tabs" aria-label="{esc(h["h1"])}">{tabs}</nav>
+{body}
+            <h2 class="section-title"><i class="fas fa-link"></i> <span>{esc(h["related"])}</span></h2>
+            <div class="related-grid">{related}</div>
+            <p class="small-print">{esc(h["note"])}</p>
+        </article>
+    </main>
+'''
+    page = shell(lang, title=h['title'], desc=h['desc'], urls=urls, schema=schema, nav=site_nav(lang, active='/calculators.html'),
+                 lang_links=lang_links, hreflang=hreflang, footer_links=footer_links_of(lang), main=main)
+    return page.replace('    </style>\n    <link rel="stylesheet" href="/css/unified-header.css">',
+                        HUB_CSS + '    </style>\n    <link rel="stylesheet" href="/css/unified-header.css">', 1)
+
+
+def footer_links_of(lang):
+    t, u = T[lang], ui(lang)
+    items = [('/', u['nav'][0]), ('/foods.html', u['nav'][1]), ('/calculators.html', t['hub']), ('/#articles', t['footer_articles']),
+             ('/methodology.html', u['methodology']), ('/partners.html', u['partners']), ('/privacy.html', u['privacy'])]
+    if lang == SV:
+        items = [('/', u['nav'][0]), ('/calculators.html', t['hub']), ('/#articles', t['footer_articles']),
+                 ('/about.html', 'Om oss'), ('/contact.html', 'Kontakt'), ('/privacy.html', 'Integritetspolicy'),
+                 ('/terms.html', 'Användarvillkor'), ('/sv/medicinsk-ansvarsfriskrivning.html', 'Medicinsk ansvarsfriskrivning')]
+    return ' <span>•</span> '.join(f'<a href="{link(p, lang)}">{label}</a>' for p, label in items)
+
+
 def main():
+    for lang in ALL_LANGS:                               # the hub (calculators.html) in every language
+        out = (ROOT if lang == 'ar' else ROOT / lang) / 'calculators.html'
+        out.write_text(mark_english_links(build_hub(lang), lang), encoding='utf-8', newline='\n')
     for lang in ALL_LANGS:
         out_dir = ROOT if lang == 'ar' else ROOT / lang
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -525,6 +609,10 @@ def main():
                 (out_dir / f'{calc["slug"]}.html').write_text(mark_english_links(build(calc, lang), lang), encoding='utf-8', newline='\n')
 
     block = []
+    for lang in ALL_LANGS:                               # the hub
+        block += ['  <url>', f'    <loc>{hub_url(lang)}</loc>', f'    <lastmod>{HUB_MODIFIED}</lastmod>', '    <priority>0.9</priority>']
+        block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{hub_url(l)}"/>' for l in ALL_LANGS]
+        block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{hub_url("en")}"/>', '  </url>']
     for calc in CALCS:
         for lang in langs_of(calc):
             block += ['  <url>', f'    <loc>{page_url(calc, lang)}</loc>', f'    <lastmod>{calc["modified"]}</lastmod>',
