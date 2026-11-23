@@ -78,7 +78,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-10",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/sv/foods.html#breadcrumb"
             }
@@ -109,7 +109,7 @@
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "WiBo Health",
+                    "name": "Livsmedelsguide: glykemiskt index, insulinindex och kalorier",
                     "item": "https://wibohealth.com/sv/foods.html"
                 }
             ]
@@ -195,10 +195,11 @@
     </script>
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+    <!-- AdSense (Auto ads): loaded after the page has finished loading, so it never delays the first paint (LCP) -->
+    <script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.crossOrigin='anonymous';s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349';document.head.appendChild(s);},2000);});</script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -328,7 +329,7 @@
             filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 19px;
             background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
@@ -525,7 +526,7 @@
         /* حماية الشاشات الصغيرة جداً (< 380px) من انقطاع الشعار */
         @media (max-width: 400px) {
             .header-content { padding: 0 8px; gap: 4px; }
-            .logo-text h1 { font-size: 16px; }
+            .logo-text .brand-name { font-size: 16px; }
             .logo-icon { width: 28px; height: 28px; }
             .logo-icon svg { width: 28px; height: 28px; }
             .lang-btn, .favorites-btn, .theme-toggle { width: 28px; height: 28px; font-size: 12px; }
@@ -1151,7 +1152,7 @@
                     <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                 </div>
                 <div class="logo-text">
-                    <h1>WiBo Health</h1>
+                    <span class="brand-name">WiBo Health</span>
                 </div>
             </a>
 
@@ -1211,6 +1212,9 @@
 
     <!-- Main Content -->
     <main class="container">
+        <!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->
+        <section class="hub-static" aria-labelledby="hubStaticTitle"><h1 id="hubStaticTitle">Livsmedelsguide: glykemiskt index, insulinindex och kalorier</h1><p>Sök bland 970+ livsmedel efter glykemiskt index, glykemisk belastning, insulinindex, kalorier, protein, kolhydrater, fett och fibrer. Varje livsmedel har en egen sida med värden per 100 g och per portion, och källan till varje värde (publicerat eller uppskattning).</p><h2>Livsmedelsgrupper</h2><ul class="hub-links"><li><a href="/sv/foods/index.html#fruits">Frukt och bär</a></li><li><a href="/sv/foods/index.html#vegetables">Grönsaker och sallader</a></li><li><a href="/sv/foods/index.html#grains_bakery">Bröd, spannmål och alternativ</a></li><li><a href="/sv/foods/index.html#proteins_legumes">Protein, kött och baljväxter</a></li><li><a href="/sv/foods/index.html#dairy_alternatives">Mejeri, ost och alternativ</a></li><li><a href="/sv/foods/index.html#fats_nuts">Fetter, nötter och oljor</a></li><li><a href="/sv/foods/index.html#meals_cuisines">Rätter, maträtter och soppor</a></li><li><a href="/sv/foods/index.html#snacks_desserts">Snacks, desserter och sötningsmedel</a></li><li><a href="/sv/foods/index.html#beverages">Drycker</a></li><li><a href="/sv/foods/index.html#pantry_spices">Kryddor, såser och skafferi</a></li></ul><h2>Populära livsmedel</h2><ul class="hub-links"><li><a href="/sv/foods/white-rice.html">Vitt ris, kokt</a></li><li><a href="/sv/foods/brown-rice.html">Fullkornsris, kokt</a></li><li><a href="/sv/foods/white-bread.html">Vitt bröd</a></li><li><a href="/sv/foods/whole-wheat-bread.html">Fullkornsbröd av vete</a></li><li><a href="/sv/foods/white-pasta.html">Pasta, vit, kokt</a></li><li><a href="/sv/foods/whole-wheat-pasta.html">Fullkornspasta, kokt</a></li><li><a href="/sv/foods/oatmeal.html">Havregrynsgröt</a></li><li><a href="/sv/foods/quinoa.html">Quinoa, kokt</a></li><li><a href="/sv/foods/bulgur.html">Bulgur, kokt</a></li><li><a href="/sv/foods/couscous.html">Couscous, kokt</a></li><li><a href="/sv/foods/boiled-corn.html">Majs, kokt</a></li><li><a href="/sv/foods/barley-bread.html">Kornbröd</a></li><li><a href="/sv/foods/oat-bread.html">Havrebröd</a></li><li><a href="/sv/foods/basmati-rice.html">Basmatiris, kokt</a></li><li><a href="/sv/foods/freekeh.html">Freekeh (grönskördat vete)</a></li><li><a href="/sv/foods/millet.html">Hirs, kokt</a></li><li><a href="/sv/foods/oat-bran.html">Havrekli</a></li><li><a href="/sv/foods/lentils.html">Linser, bruna/gröna, kokta</a></li><li><a href="/sv/foods/chickpeas.html">Kikärter, kokta</a></li><li><a href="/sv/foods/fava-beans.html">Bondbönor, kokta</a></li><li><a href="/sv/foods/white-beans.html">Vita bönor, kokta</a></li><li><a href="/sv/foods/red-kidney-beans.html">Kidneybönor, kokta</a></li><li><a href="/sv/foods/black-eyed-peas.html">Svartögda bönor, kokta</a></li><li><a href="/sv/foods/edamame.html">Edamamebönor, kokta</a></li><li><a href="/sv/foods/lupini-beans.html">Lupinbönor, kokta</a></li><li><a href="/sv/foods/boiled-potato.html">Potatis, kokt</a></li><li><a href="/sv/foods/sweet-potato.html">Sötpotatis, ugnsbakad</a></li><li><a href="/sv/foods/french-fries.html">Pommes frites</a></li><li><a href="/sv/foods/mashed-potato.html">Potatismos</a></li><li><a href="/sv/foods/tomato.html">Tomat, färsk</a></li><li><a href="/sv/foods/cucumber.html">Gurka</a></li><li><a href="/sv/foods/zucchini.html">Zucchini (squash)</a></li><li><a href="/sv/foods/grilled-eggplant.html">Aubergine, grillad</a></li><li><a href="/sv/foods/carrot.html">Morot</a></li><li><a href="/sv/foods/broccoli.html">Broccoli, ångkokt</a></li><li><a href="/sv/foods/cauliflower.html">Blomkål</a></li><li><a href="/sv/foods/spinach.html">Spenat, färsk</a></li><li><a href="/sv/foods/molokhia.html">Jutemalva (molokhia)</a></li><li><a href="/sv/foods/okra.html">Okra</a></li><li><a href="/sv/foods/mushroom.html">Champinjoner</a></li></ul><p><a class="hub-all" href="/sv/foods/index.html">Alla livsmedel A–Ö →</a></p></section>
+        <!-- HUB-LINKS:END -->
         <!-- Browse by section: "All" + favourites pills and the 10 master groups (js/food-categories.js); filled by renderCategoryBar() -->
         <section class="cat-section" id="categoryBar" aria-labelledby="catTitle">
             <div class="cat-head">

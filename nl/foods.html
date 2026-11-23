@@ -78,7 +78,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-10",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/nl/foods.html#breadcrumb"
             }
@@ -109,7 +109,7 @@
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "WiBo Health",
+                    "name": "Voedingswijzer: glykemische index, insuline-index en calorieën",
                     "item": "https://wibohealth.com/nl/foods.html"
                 }
             ]
@@ -195,10 +195,11 @@
     </script>
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+    <!-- AdSense (Auto ads): loaded after the page has finished loading, so it never delays the first paint (LCP) -->
+    <script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.crossOrigin='anonymous';s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349';document.head.appendChild(s);},2000);});</script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -328,7 +329,7 @@
             filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 19px;
             background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
@@ -525,7 +526,7 @@
         /* حماية الشاشات الصغيرة جداً (< 380px) من انقطاع الشعار */
         @media (max-width: 400px) {
             .header-content { padding: 0 8px; gap: 4px; }
-            .logo-text h1 { font-size: 16px; }
+            .logo-text .brand-name { font-size: 16px; }
             .logo-icon { width: 28px; height: 28px; }
             .logo-icon svg { width: 28px; height: 28px; }
             .lang-btn, .favorites-btn, .theme-toggle { width: 28px; height: 28px; font-size: 12px; }
@@ -1151,7 +1152,7 @@
                     <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                 </div>
                 <div class="logo-text">
-                    <h1>WiBo Health</h1>
+                    <span class="brand-name">WiBo Health</span>
                 </div>
             </a>
 
@@ -1211,6 +1212,9 @@
 
     <!-- Main Content -->
     <main class="container">
+        <!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->
+        <section class="hub-static" aria-labelledby="hubStaticTitle"><h1 id="hubStaticTitle">Voedingswijzer: glykemische index, insuline-index en calorieën</h1><p>Zoek in 970+ voedingsmiddelen op glykemische index, glykemische lading, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Elk product heeft een eigen pagina met waarden per 100 g en per portie, en de bron van elke waarde (gepubliceerd of schatting).</p><h2>Productgroepen</h2><ul class="hub-links"><li><a href="/nl/foods/index.html#fruits">Fruit &amp; Bessen</a></li><li><a href="/nl/foods/index.html#vegetables">Groenten &amp; Salades</a></li><li><a href="/nl/foods/index.html#grains_bakery">Bakkerij &amp; Granen</a></li><li><a href="/nl/foods/index.html#proteins_legumes">Eiwitten &amp; Peulvruchten</a></li><li><a href="/nl/foods/index.html#dairy_alternatives">Zuivel &amp; Plantaardig</a></li><li><a href="/nl/foods/index.html#fats_nuts">Gezonde Vetten &amp; Noten</a></li><li><a href="/nl/foods/index.html#meals_cuisines">Maaltijden &amp; Soepen</a></li><li><a href="/nl/foods/index.html#snacks_desserts">Snacks &amp; Desserts</a></li><li><a href="/nl/foods/index.html#beverages">Dranken &amp; Thee</a></li><li><a href="/nl/foods/index.html#pantry_spices">Sauzen &amp; Specerijen</a></li></ul><h2>Populaire producten</h2><ul class="hub-links"><li><a href="/nl/foods/white-rice.html">Witte rijst (gekookt)</a></li><li><a href="/nl/foods/brown-rice.html">Zilvervliesrijst (gekookt)</a></li><li><a href="/nl/foods/white-bread.html">Witbrood</a></li><li><a href="/nl/foods/whole-wheat-bread.html">Volkorenbrood</a></li><li><a href="/nl/foods/white-pasta.html">Witte pasta</a></li><li><a href="/nl/foods/whole-wheat-pasta.html">Volkoren pasta</a></li><li><a href="/nl/foods/oatmeal.html">Bereide havermout</a></li><li><a href="/nl/foods/quinoa.html">Gekookte quinoa</a></li><li><a href="/nl/foods/bulgur.html">Gekookte bulgur</a></li><li><a href="/nl/foods/couscous.html">Gekookte couscous</a></li><li><a href="/nl/foods/boiled-corn.html">Gekookte maïs</a></li><li><a href="/nl/foods/barley-bread.html">Gerstebrood</a></li><li><a href="/nl/foods/oat-bread.html">Haverbrood</a></li><li><a href="/nl/foods/basmati-rice.html">Basmatirijst</a></li><li><a href="/nl/foods/freekeh.html">Freekeh</a></li><li><a href="/nl/foods/millet.html">Gierst</a></li><li><a href="/nl/foods/oat-bran.html">Haverzemelen</a></li><li><a href="/nl/foods/lentils.html">Gekookte linzen</a></li><li><a href="/nl/foods/chickpeas.html">Gekookte kikkererwten</a></li><li><a href="/nl/foods/fava-beans.html">Tuinbonen</a></li><li><a href="/nl/foods/white-beans.html">Witte bonen</a></li><li><a href="/nl/foods/red-kidney-beans.html">Rode kidneybonen</a></li><li><a href="/nl/foods/black-eyed-peas.html">Zwarte-ogenbonen</a></li><li><a href="/nl/foods/edamame.html">Edamame boontjes</a></li><li><a href="/nl/foods/lupini-beans.html">Lupinebonen</a></li><li><a href="/nl/foods/boiled-potato.html">Gekookte aardappel</a></li><li><a href="/nl/foods/sweet-potato.html">Zoete aardappel</a></li><li><a href="/nl/foods/french-fries.html">Frietjes</a></li><li><a href="/nl/foods/mashed-potato.html">Aardappelpuree</a></li><li><a href="/nl/foods/tomato.html">Verse tomaat</a></li><li><a href="/nl/foods/cucumber.html">Komkommer</a></li><li><a href="/nl/foods/zucchini.html">Courgette</a></li><li><a href="/nl/foods/grilled-eggplant.html">Gegrilde aubergine</a></li><li><a href="/nl/foods/carrot.html">Wortel</a></li><li><a href="/nl/foods/broccoli.html">Gestoomde broccoli</a></li><li><a href="/nl/foods/cauliflower.html">Bloemkool</a></li><li><a href="/nl/foods/spinach.html">Verse spinazie</a></li><li><a href="/nl/foods/molokhia.html">Jutemelk (Molokhia)</a></li><li><a href="/nl/foods/okra.html">Okra</a></li><li><a href="/nl/foods/mushroom.html">Champignons</a></li></ul><p><a class="hub-all" href="/nl/foods/index.html">Alle producten van A tot Z →</a></p></section>
+        <!-- HUB-LINKS:END -->
         <!-- Browse by section: "All" + favourites pills and the 10 master groups (js/food-categories.js); filled by renderCategoryBar() -->
         <section class="cat-section" id="categoryBar" aria-labelledby="catTitle">
             <div class="cat-head">

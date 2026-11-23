@@ -57,7 +57,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-09",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/sv/index.html#breadcrumb"
             }
@@ -135,7 +135,8 @@
     <meta name="google-site-verification" content="MQd6BB5wsUN99944QBMWkBlroNdCuMdtdVGmRZkiXhKU" />
     
     <!-- Google AdSense Official Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+    <!-- AdSense (Auto ads): loaded after the page has finished loading, so it never delays the first paint (LCP) -->
+    <script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.crossOrigin='anonymous';s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349';document.head.appendChild(s);},2000);});</script>
 
     
     <!-- Third-party CSS: open the connections early; Font Awesome (icons only) loads without blocking the first paint -->
@@ -143,7 +144,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript></noscript>
 
     <!-- Google Fonts (Cairo, font-display: swap) -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">

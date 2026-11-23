@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Betain-HCl (med pepsin): dosering, nytta och interaktioner med läkemedel | WiBo Health</title>
-    <meta name="description" content="Betain-HCl (med pepsin): En källa till saltsyra som tillfälligt höjer surheten i magen; en studie på friska frivilliga tyder på att det snabbt gjorde magen sur igen efter läkemedelsorsakad låg magsyra. Rekommenderad dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <title>Betain-HCl (med pepsin): dosering, effekt och biverkningar</title>
+    <meta name="description" content="Betain-HCl (med pepsin): En källa till saltsyra som… Dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner (EFSA, NIH).">
     <link rel="canonical" href="https://wibohealth.com/sv/supplements/betaine-hcl.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/betaine-hcl.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/betaine-hcl.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/betaine-hcl.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/betaine-hcl.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Betain-HCl (med pepsin): dosering, nytta och interaktioner med läkemedel | WiBo Health">
-    <meta property="og:description" content="Betain-HCl (med pepsin): En källa till saltsyra som tillfälligt höjer surheten i magen; en studie på friska frivilliga tyder på att det snabbt gjorde magen sur igen efter läkemedelsorsakad låg magsyra. Rekommenderad dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <meta property="og:title" content="Betain-HCl (med pepsin): dosering, effekt och biverkningar">
+    <meta property="og:description" content="Betain-HCl (med pepsin): En källa till saltsyra som… Dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner (EFSA, NIH).">
     <meta property="og:url" content="https://wibohealth.com/sv/supplements/betaine-hcl.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/sv/supplements/betaine-hcl.html#webpage",
     "url": "https://wibohealth.com/sv/supplements/betaine-hcl.html",
-    "name": "Betain-HCl (med pepsin): dosering, nytta och interaktioner med läkemedel | WiBo Health",
-    "description": "Betain-HCl (med pepsin): En källa till saltsyra som tillfälligt höjer surheten i magen; en studie på friska frivilliga tyder på att det snabbt gjorde magen sur igen efter läkemedelsorsakad låg magsyra. Rekommenderad dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner med läkemedel enligt EFSA och NIH.",
+    "name": "Betain-HCl (med pepsin): dosering, effekt och biverkningar",
+    "description": "Betain-HCl (med pepsin): En källa till saltsyra som… Dos: 350–650 mg (en kapsel) till en proteinrik måltid. Varningar och interaktioner (EFSA, NIH).",
     "inLanguage": "sv",
     "about": {
         "@type": "DietarySupplement",
@@ -108,7 +108,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -782,6 +782,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -868,6 +874,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering jämfört med liknande kosttillskott</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Kosttillskott</th><th scope="col">Rekommenderad dos</th><th scope="col">När</th><th scope="col">Hur ofta</th></tr></thead><tbody><tr class="is-this"><th scope="row">Betain-HCl (med pepsin) <span>(denna sida)</span></th><td>350–650 mg (en kapsel) till en proteinrik måltid</td><td>Mitt i måltiden med klunkar av vatten; öppna eller tugga inte kapseln</td><td>Endast till proteinrika måltider</td></tr><tr><th scope="row"><a href="/sv/supplements/ginger.html">Ingefära (rotextrakt)</a></th><td>500–1 500 mg standardiserat extrakt per dag</td><td>Till måltider, eller en halvtimme före resa</td><td>Fördelat på 1–3 doser</td></tr><tr><th scope="row"><a href="/sv/supplements/dandelion-root.html">Maskrosrot (Taraxacum officinale)</a></th><td>500–1 000 mg rotpulver (eller 250–500 mg koncentrerat extrakt)</td><td>15 minuter före måltiderna med en kopp varmt vatten</td><td>1–2 gånger per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/burdock-root.html">Kardborrerot (Arctium lappa)</a></th><td>400–800 mg per dag</td><td>Till lunch med rikligt med vatten</td><td>En gång per dag</td></tr></tbody></table></div><p class="table-note">Från doseringsavsnittet på varje sida; följ förpackningen och din läkare eller farmaceut.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Bästa beredningsformer</span></h2><div class="tip-list"><div class="tip"><p>Kapslar med betain-HCl, ofta med enzymet pepsin.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Naturliga källor i maten</span></h2><div class="tip-list"><div class="tip"><p>Betain finns i rödbetor, spenat och fullkornsvete; hydrokloridformen finns endast som tillskott.</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Varningar och försiktighet</span></h2>

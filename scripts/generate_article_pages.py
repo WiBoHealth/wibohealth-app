@@ -13,7 +13,7 @@ Output (re-running rebuilds everything, nothing is appended twice):
     legacy=dict(ar='/x.html')  an article that only has Swedish copy here and is the sv version of an older hand-written
                                root page; its ar/en/nl versions come from scripts/site_urls.py (the en/nl pages are written
                                by scripts/generate_root_pages.py, which also lists the whole cluster in the sitemap)
-    sitemap.xml                block between <!-- ARTICLE-PAGES:START --> and <!-- ARTICLE-PAGES:END -->
+    sitemap-articles.xml       block between <!-- ARTICLE-PAGES:START --> and <!-- ARTICLE-PAGES:END -->
 
 An article with section='diabetes' is written under that section's folder and its breadcrumb runs through the hub.
 draft=True (article or section) writes the page with noindex and keeps it out of the sitemap, so a placeholder can
@@ -322,7 +322,7 @@ def shell(lang, *, title, desc, urls, schema, main, draft, og_type='website', im
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -674,7 +674,7 @@ def main():
     entries += [(lambda l, p=p: site_page_url(p), p['modified'], None, (SV,)) for p in SITE_PAGES_SV
                 if not p.get('noindex') and not p['legacy']]
 
-    image_ns = 'xmlns:image' in (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+    image_ns = True                                      # every section sitemap declares the image namespace
     block = []
     for url_of, modified, hero, langs in entries:
         for lang in langs:

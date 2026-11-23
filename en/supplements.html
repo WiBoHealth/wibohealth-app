@@ -52,7 +52,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-09",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/en/supplements.html#breadcrumb"
             }
@@ -83,7 +83,7 @@
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "WiBo Health",
+                    "name": "💊 Dietary Supplements Guide",
                     "item": "https://wibohealth.com/en/supplements.html"
                 }
             ]
@@ -101,7 +101,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
@@ -199,7 +199,7 @@
             filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 22px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -392,7 +392,7 @@
             text-align: center;
         }
 
-        .hero h2 {
+        .hero h1, .hero h2 {
             font-size: 38px;
             font-weight: 900;
             margin-bottom: 12px;
@@ -984,7 +984,7 @@
         @media (max-width: 992px) {
             .nav-menu { display: none; }
             .hamburger-menu { display: flex; }
-            .hero h2 { font-size: 28px; }
+            .hero h1, .hero h2 { font-size: 28px; }
             .supplements-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -995,7 +995,7 @@
          cards in 2 columns on phones -->
     <style id="compact-supplements">
         .hero { padding: 20px 16px 6px; }
-        .hero h2 { font-size: 30px; margin-bottom: 6px; }
+        .hero h1, .hero h2 { font-size: 30px; margin-bottom: 6px; }
         .hero p { font-size: 14.5px; line-height: 1.6; margin: 0 auto 14px; }
         .hero-stats { gap: 10px; }
         /* stat boxes as one slim row of pills: icon, number, label */
@@ -1034,7 +1034,7 @@
             .supplements-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
         }
         @media (max-width: 600px) {
-            .hero h2 { font-size: 22px; }
+            .hero h1, .hero h2 { font-size: 22px; }
             .hero p { font-size: 13px; }
             .hero-stats { flex-wrap: nowrap; gap: 5px; }
             .stat-card { flex: 1; justify-content: center; gap: 4px; padding: 5px 4px; }
@@ -1070,7 +1070,7 @@
                         <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                     </div>
                     <div class="logo-text">
-                        <h1>WiBo Health</h1>
+                        <span class="brand-name">WiBo Health</span>
                     </div>
                 </a>
 
@@ -1128,7 +1128,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2 id="heroTitle" data-i18n="hero_title">💊 Dietary Supplements Guide</h2>
+            <h1 id="heroTitle" data-i18n="hero_title">💊 Dietary Supplements Guide</h1>
             <p id="heroDesc" data-i18n="hero_desc">Your comprehensive clinical guide to dietary supplements - explore benefits, optimal dosages, timing, and important warnings.</p>
             
             <div class="hero-stats">
@@ -1150,6 +1150,10 @@
             </div>
         </div>
     </section>
+
+    <!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->
+    <section class="hub-static" aria-labelledby="hubStaticTitle"><h2 id="hubStaticTitle">Popular supplements</h2><ul class="hub-links"><li><a href="/en/supplements/whey-protein.html">Whey Protein</a></li><li><a href="/en/supplements/casein-protein.html">Casein Protein</a></li><li><a href="/en/supplements/creatine-monohydrate.html">Creatine Monohydrate</a></li><li><a href="/en/supplements/bcaa.html">BCAA (Branched-Chain Amino Acids)</a></li><li><a href="/en/supplements/beta-alanine.html">Beta-Alanine</a></li><li><a href="/en/supplements/multivitamins.html">Daily Multivitamins</a></li><li><a href="/en/supplements/omega-3-fish-oil.html">Omega-3 Fish Oil</a></li><li><a href="/en/supplements/vitamin-d3.html">Vitamin D3 (Cholecalciferol)</a></li><li><a href="/en/supplements/magnesium.html">Magnesium (Glycinate/Citrate)</a></li><li><a href="/en/supplements/zinc.html">Zinc (Chelated/Picolinate)</a></li><li><a href="/en/supplements/green-tea-extract.html">Green Tea Extract (EGCG)</a></li><li><a href="/en/supplements/cla.html">CLA (Conjugated Linoleic Acid)</a></li><li><a href="/en/supplements/l-carnitine.html">L-Carnitine (L-Tartrate/ALCAR)</a></li><li><a href="/en/supplements/melatonin.html">Melatonin</a></li><li><a href="/en/supplements/ashwagandha.html">Ashwagandha Root (KSM-66)</a></li><li><a href="/en/supplements/5-htp.html">5-HTP (5-Hydroxytryptophan)</a></li><li><a href="/en/supplements/caffeine.html">Caffeine Anhydrous</a></li><li><a href="/en/supplements/pre-workout.html">Pre-Workout Formula</a></li><li><a href="/en/supplements/glucosamine-chondroitin.html">Glucosamine &amp; Chondroitin Complex</a></li><li><a href="/en/supplements/collagen-peptides.html">Hydrolyzed Collagen Peptides</a></li><li><a href="/en/supplements/l-citrulline.html">L-Citrulline (Malate 2:1)</a></li><li><a href="/en/supplements/taurine.html">Pure Taurine</a></li><li><a href="/en/supplements/coenzyme-q10.html">Coenzyme Q10 (Ubiquinol/Ubiquinone)</a></li><li><a href="/en/supplements/l-theanine.html">L-Theanine</a></li><li><a href="/en/supplements/rhodiola-rosea.html">Rhodiola Rosea Extract (Golden Root)</a></li><li><a href="/en/supplements/ginkgo-biloba.html">Ginkgo Biloba Standardized Extract</a></li><li><a href="/en/supplements/lions-mane.html">Lion&#x27;s Mane Mushroom (Hericium erinaceus)</a></li><li><a href="/en/supplements/hmb.html">HMB (β-Hydroxy β-Methylbutyrate)</a></li><li><a href="/en/supplements/l-glutamine.html">L-Glutamine</a></li><li><a href="/en/supplements/l-arginine.html">L-Arginine (Free Form / AAKG)</a></li><li><a href="/en/supplements/vitamin-c.html">Vitamin C (Ascorbic Acid / Liposomal)</a></li><li><a href="/en/supplements/vitamin-b-complex.html">Vitamin B-Complex (Active Methylated)</a></li><li><a href="/en/supplements/iron.html">Iron Bisglycinate (Gentle Iron)</a></li><li><a href="/en/supplements/calcium.html">Calcium (Citrate / Carbonate)</a></li><li><a href="/en/supplements/probiotics.html">Multi-Strain Live Probiotics</a></li><li><a href="/en/supplements/turmeric-curcumin.html">Curcumin 95% with Piperine</a></li><li><a href="/en/supplements/ginger.html">Standardized Ginger Root Extract</a></li><li><a href="/en/supplements/spirulina.html">Organic Spirulina (Arthrospira platensis)</a></li><li><a href="/en/supplements/garcinia-cambogia.html">Garcinia Cambogia (HCA Extract)</a></li><li><a href="/en/supplements/forskolin.html">Forskolin (Coleus forskohlii Extract)</a></li></ul><p><a class="hub-all" href="/en/supplements/index.html">All 174 supplements A–Z →</a></p></section>
+    <!-- HUB-LINKS:END -->
 
     <!-- Search Section -->
     <section class="search-section">

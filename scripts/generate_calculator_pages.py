@@ -8,7 +8,7 @@ Output (re-running rebuilds everything):
     nl/<slug>.html     Dutch
     sv/<slug>.html     Swedish (copy in calc_sv.py; links use generate_article_pages.link, so pages without a Swedish
                        version open in English)
-    sitemap.xml        block between <!-- CALCULATOR-PAGES:START --> and <!-- CALCULATOR-PAGES:END -->
+    sitemap-pages.xml  block between <!-- CALCULATOR-PAGES:START --> and <!-- CALCULATOR-PAGES:END -->
 
 Source: scripts/calculator_content.py. Each page = a working calculator + a long-form clinical guide + FAQ.
 Editorial policy as for the articles: author and publisher are the WiBo Health organisation, never a named person.
@@ -22,7 +22,7 @@ from pathlib import Path
 
 from calculator_content import CALCS, T
 from generate_article_pages import EXTRA_CSS as ARTICLE_CSS, SV, UI_SV, link, nav as site_nav
-from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, mark_english_links, sv_slugs
+from generate_food_pages import BASE_CSS, LOGO_SVG, PAGE_CSS, SITE, LANGS, UI, esc, mark_english_links, replace_sitemap_block, sv_slugs
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -422,7 +422,7 @@ def build(calc, lang):
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -524,20 +524,14 @@ def main():
             if lang in langs_of(calc):
                 (out_dir / f'{calc["slug"]}.html').write_text(mark_english_links(build(calc, lang), lang), encoding='utf-8', newline='\n')
 
-    sm_path = ROOT / 'sitemap.xml'
-    sm = sm_path.read_text(encoding='utf-8')
-    eol = '\r\n' if '\r\n' in sm else '\n'
-    sm = re.sub(r'\s*<!-- CALCULATOR-PAGES:START -->.*?<!-- CALCULATOR-PAGES:END -->', '', sm, flags=re.S)
-    block = ['  <!-- CALCULATOR-PAGES:START -->']
+    block = []
     for calc in CALCS:
         for lang in langs_of(calc):
             block += ['  <url>', f'    <loc>{page_url(calc, lang)}</loc>', f'    <lastmod>{calc["modified"]}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.9</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(calc, l)}"/>' for l in langs_of(calc)]
             block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(calc, "en")}"/>', '  </url>']
-    block.append('  <!-- CALCULATOR-PAGES:END -->')
-    sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
-    sm_path.write_text(sm, encoding='utf-8', newline='')
+    replace_sitemap_block('CALCULATOR-PAGES', block)
     print(f'calculator pages written: {sum(len(langs_of(c)) for c in CALCS)} ({len(CALCS)} calculators, '
           f'{sum(SV in langs_of(c) for c in CALCS)} with Swedish)')
 

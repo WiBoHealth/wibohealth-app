@@ -15,6 +15,7 @@ scripts/supplement_pages_overrides.json. Only records that carry `references` (t
 Content is attributed to the published sources (EFSA / NIH / PubMed), never to a named reviewer, and uses
 structure/function wording only. Design system, header and footer come from generate_food_pages.py.
 """
+import supplement_meta
 import hashlib
 import json
 import re
@@ -83,6 +84,7 @@ NAME = {'ar': 'name', 'en': 'englishName', 'nl': 'nameNl'}
 # --- back button and quick search, shared with generate_directory_pages.py ----------------------------------------------
 # where "back" goes when the reader did not come from the guide or an index: the guide in the page language
 # (Swedish has no interactive guide: the Swedish index)
+PAGE_CONTENT_CHANGED = '2026-11-23'   # last change to the text of every supplement page
 GUIDE_URL = {'ar': '/supplements.html', 'en': '/en/supplements.html', 'nl': '/nl/supplements.html',
              SV: '/sv/supplements/index.html'}
 BACK = {'ar': 'العودة لدليل المكملات', 'en': 'Back to supplements', 'nl': 'Terug naar supplementengids',
@@ -305,6 +307,12 @@ EXTRA_CSS = """
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -366,12 +374,10 @@ def build(s, lang, vetted):
     subtitle = s['englishName'] if lang != 'en' and s['englishName'] != name else ''
     desc_txt = field(s, 'summary', lang)
     dose = field(s, 'dosage', lang)
-    title = t['title'].format(name=name)
-    meta_desc = t['desc'].format(name=name, desc=clip_sentence(desc_txt, 110), dose=dose['recommended'])
-    meta_desc = clip_sentence(meta_desc, 400, longest=400)     # whole sentences only: a long dose line drops the closing ones
-    snip = SNIPPETS.get(s['slug'], {})
-    title = snip.get('title', {}).get(lang) or title
-    meta_desc = snip.get('desc', {}).get(lang) or meta_desc
+    # <title> 48-58 characters, description 125-155 (rule of 2026-11-23, scripts/supplement_meta.py); the older
+    # per-supplement title/desc snippets are no longer used
+    title = supplement_meta.title(lang, name)
+    meta_desc = supplement_meta.desc(lang, name, desc_txt, dose['recommended'])
     urls = {l: page_url(s['slug'], l) for l in langs_of(s['slug'])}
     # Swedish has no interactive guide: the Swedish index (no English hop)
     guide_href = GUIDE_URL[SV] if lang == SV else L('/supplements.html') + '#' + s['slug']
@@ -410,6 +416,11 @@ def build(s, lang, vetted):
     related_html = ''.join(
         f'<li><a href="{page_url(r["slug"], rel_lang(r), absolute=False)}">{esc(supp_name(r, rel_lang(r)))}'
         f'<span>{esc(group_label(r, rel_lang(r)))}</span></a></li>' for r in related[:4])
+    # dose next to up to three related supplements (same group first), each linked
+    dose_compare = supplement_meta.compare_html(
+        lang, name, dose, [(supp_name(r, rel_lang(r)), page_url(r['slug'], rel_lang(r), absolute=False),
+                            field(r, 'dosage', rel_lang(r))) for r in related[:3]],
+        '<i class="fas fa-scale-balanced"></i>') if related else ''
 
     if lang == SV:
         from generate_article_pages import nav as sv_nav
@@ -457,7 +468,7 @@ def build(s, lang, vetted):
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -525,6 +536,7 @@ def build(s, lang, vetted):
                 </tbody>
             </table>
 
+            {dose_compare}
             {forms_html}
             {natural_html}
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>{t["warnings"]}</span></h2>
@@ -637,6 +649,7 @@ def main():
     for s in vetted:
         for lang in langs_of(s['slug']):
             lastmod = SSV.REVIEWED if lang == SV else s.get("reviewed", "2026-10-17")
+            lastmod = max(lastmod, PAGE_CONTENT_CHANGED)   # titles, descriptions and the dose comparison (2026-11-23)
             block += ['  <url>', f'    <loc>{page_url(s["slug"], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.6</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(s["slug"], l)}"/>' for l in langs_of(s['slug'])]

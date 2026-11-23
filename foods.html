@@ -78,7 +78,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-10",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/foods.html#breadcrumb"
             }
@@ -109,7 +109,7 @@
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "WiBo Health",
+                    "name": "دليل الأطعمة: المؤشر الجلايسيمي ومؤشر الإنسولين والسعرات",
                     "item": "https://wibohealth.com/foods.html"
                 }
             ]
@@ -198,10 +198,11 @@
     </script>
     
     <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+    <!-- AdSense (Auto ads): loaded after the page has finished loading, so it never delays the first paint (LCP) -->
+    <script>window.addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=true;s.crossOrigin='anonymous';s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349';document.head.appendChild(s);},2000);});</script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -331,7 +332,7 @@
             filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 19px;
             background: linear-gradient(135deg, var(--primary-color), #3498db);
             -webkit-background-clip: text;
@@ -528,7 +529,7 @@
         /* حماية الشاشات الصغيرة جداً (< 380px) من انقطاع الشعار */
         @media (max-width: 400px) {
             .header-content { padding: 0 8px; gap: 4px; }
-            .logo-text h1 { font-size: 16px; }
+            .logo-text .brand-name { font-size: 16px; }
             .logo-icon { width: 28px; height: 28px; }
             .logo-icon svg { width: 28px; height: 28px; }
             .lang-btn, .favorites-btn, .theme-toggle { width: 28px; height: 28px; font-size: 12px; }
@@ -1154,7 +1155,7 @@
                     <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                 </div>
                 <div class="logo-text">
-                    <h1>WiBo Health</h1>
+                    <span class="brand-name">WiBo Health</span>
                 </div>
             </a>
 
@@ -1214,6 +1215,9 @@
 
     <!-- Main Content -->
     <main class="container">
+        <!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->
+        <section class="hub-static" aria-labelledby="hubStaticTitle"><h1 id="hubStaticTitle">دليل الأطعمة: المؤشر الجلايسيمي ومؤشر الإنسولين والسعرات</h1><p>ابحث في أكثر من 970 طعاماً حسب المؤشر الجلايسيمي والحمل الجلايسيمي ومؤشر الإنسولين والسعرات والبروتين والكربوهيدرات والدهون والألياف. لكل طعام صفحة مستقلة بالقيم لكل 100 غ وللحصة، مع مصدر كل قيمة (منشورة أو تقدير).</p><h2>أقسام دليل الأطعمة</h2><ul class="hub-links"><li><a href="/foods/index.html#fruits">الفواكه والتوتيات</a></li><li><a href="/foods/index.html#vegetables">الخضروات والسلطات</a></li><li><a href="/foods/index.html#grains_bakery">المخبوزات والحبوب والبدائل</a></li><li><a href="/foods/index.html#proteins_legumes">البروتينات واللحوم والبقوليات</a></li><li><a href="/foods/index.html#dairy_alternatives">الألبان والأجبان والبدائل</a></li><li><a href="/foods/index.html#fats_nuts">الدهون الصحية والمكسرات والزيوت</a></li><li><a href="/foods/index.html#meals_cuisines">الأطباق والشوربات والوجبات</a></li><li><a href="/foods/index.html#snacks_desserts">السناكات والحلويات والمحليات</a></li><li><a href="/foods/index.html#beverages">المشروبات الصحية والشاي والقهوة</a></li><li><a href="/foods/index.html#pantry_spices">البهارات والصلصات ومكونات الطهي</a></li></ul><h2>أطعمة شائعة</h2><ul class="hub-links"><li><a href="/foods/white-rice.html">أرز أبيض مطبوخ</a></li><li><a href="/foods/brown-rice.html">أرز بني مطبوخ</a></li><li><a href="/foods/white-bread.html">خبز أبيض</a></li><li><a href="/foods/whole-wheat-bread.html">خبز قمح كامل (أسمر)</a></li><li><a href="/foods/white-pasta.html">معكرونة بيضاء</a></li><li><a href="/foods/whole-wheat-pasta.html">معكرونة القمح الكامل</a></li><li><a href="/foods/oatmeal.html">شوفان مطبوخ</a></li><li><a href="/foods/quinoa.html">كينوا مطبوخة</a></li><li><a href="/foods/bulgur.html">برغل مطبوخ</a></li><li><a href="/foods/couscous.html">كسكسي مطبوخ</a></li><li><a href="/foods/boiled-corn.html">ذرة مسلوقة</a></li><li><a href="/foods/barley-bread.html">خبز الشعير</a></li><li><a href="/foods/oat-bread.html">خبز الشوفان</a></li><li><a href="/foods/basmati-rice.html">أرز بسمتي مطبوخ</a></li><li><a href="/foods/freekeh.html">فريكة خضراء</a></li><li><a href="/foods/millet.html">دخن مسلوق</a></li><li><a href="/foods/oat-bran.html">نخالة الشوفان</a></li><li><a href="/foods/lentils.html">عدس بني/أخضر مطبوخ</a></li><li><a href="/foods/chickpeas.html">حمص مسلوق</a></li><li><a href="/foods/fava-beans.html">فول عريض مطبوخ</a></li><li><a href="/foods/white-beans.html">فاصوليا بيضاء مطبوخة</a></li><li><a href="/foods/red-kidney-beans.html">فاصوليا حمراء مطبوخة</a></li><li><a href="/foods/black-eyed-peas.html">لوبيا ذات العين السوداء</a></li><li><a href="/foods/edamame.html">فول الصويا المسلوق (إداماميه)</a></li><li><a href="/foods/lupini-beans.html">ترمس حلو مسلوق</a></li><li><a href="/foods/boiled-potato.html">بطاطا مسلوقة</a></li><li><a href="/foods/sweet-potato.html">بطاطا حلوة مشوية</a></li><li><a href="/foods/french-fries.html">بطاطا مقلية (فرايز)</a></li><li><a href="/foods/mashed-potato.html">بطاطا مهروسة (بيوريه)</a></li><li><a href="/foods/tomato.html">بندورة طازجة</a></li><li><a href="/foods/cucumber.html">خيار طازج</a></li><li><a href="/foods/zucchini.html">كوسا طازجة</a></li><li><a href="/foods/grilled-eggplant.html">باذنجان مشوي</a></li><li><a href="/foods/carrot.html">جزر طازج</a></li><li><a href="/foods/broccoli.html">بروكلي مطبوخ على البخار</a></li><li><a href="/foods/cauliflower.html">قرنبيط (زهرة)</a></li><li><a href="/foods/spinach.html">سبانخ طازجة</a></li><li><a href="/foods/molokhia.html">ملوخية ورق خضراء</a></li><li><a href="/foods/okra.html">بامية خضراء</a></li><li><a href="/foods/mushroom.html">فطر أبيض (مشروم)</a></li></ul><p><a class="hub-all" href="/foods/index.html">كل الأطعمة من الألف إلى الياء →</a></p></section>
+        <!-- HUB-LINKS:END -->
         <!-- Browse by section: "All" + favourites pills and the 10 master groups (js/food-categories.js); filled by renderCategoryBar() -->
         <section class="cat-section" id="categoryBar" aria-labelledby="catTitle">
             <div class="cat-head">

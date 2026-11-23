@@ -726,3 +726,13 @@ html[data-theme="light"] .disclaimer-box { background: #f1f5f9; border-color: rg
     .donut figcaption b { font-size: 1.3rem; }
     .pill-name { font-size: 0.68rem; }
 }
+
+/* key numbers block (scripts/food_meta.py, 2026-11-23) */
+.facts-block .facts-sub { font-size: 1rem; font-weight: 800; margin: 18px 0 8px; }
+.facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.facts-table th { width: 46%; font-weight: 600; }
+.facts-compare { min-width: 420px; }
+.facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+.facts-compare th a:hover { text-decoration: underline; }
+.facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+.facts-compare td { text-align: center; white-space: nowrap; }

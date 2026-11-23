@@ -344,6 +344,77 @@ def recipes_english(page):
 
 DIABETES_LABEL = {'en': 'Diabetes', 'nl': 'Diabetes', 'sv': 'Diabetes'}
 
+# ----------------------------------------------------------------------------------------------------------------------
+# Static, crawlable links on the two JavaScript guides (foods.html, supplements.html): the guides draw their cards
+# from js/data.js / js/supplements-data.js, so without this block their HTML held no links to the item pages.
+# ----------------------------------------------------------------------------------------------------------------------
+HUB_TEXT = {
+    '/foods.html': {
+        'ar': dict(h1='دليل الأطعمة: المؤشر الجلايسيمي ومؤشر الإنسولين والسعرات',
+                   intro='ابحث في أكثر من 970 طعاماً حسب المؤشر الجلايسيمي والحمل الجلايسيمي ومؤشر الإنسولين والسعرات والبروتين والكربوهيدرات والدهون والألياف. لكل طعام صفحة مستقلة بالقيم لكل 100 غ وللحصة، مع مصدر كل قيمة (منشورة أو تقدير).',
+                   groups='أقسام دليل الأطعمة', items='أطعمة شائعة', all='كل الأطعمة من الألف إلى الياء'),
+        'en': dict(h1='Food guide: glycemic index, insulin index and calories',
+                   intro='Search 970+ foods by glycemic index, glycemic load, insulin index, calories, protein, carbohydrates, fat and fibre. Every food has its own page with values per 100 g and per portion, and the source of each value (published or estimate).',
+                   groups='Food groups', items='Popular foods', all='All foods A–Z'),
+        'nl': dict(h1='Voedingswijzer: glykemische index, insuline-index en calorieën',
+                   intro='Zoek in 970+ voedingsmiddelen op glykemische index, glykemische lading, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Elk product heeft een eigen pagina met waarden per 100 g en per portie, en de bron van elke waarde (gepubliceerd of schatting).',
+                   groups='Productgroepen', items='Populaire producten', all='Alle producten van A tot Z'),
+        'sv': dict(h1='Livsmedelsguide: glykemiskt index, insulinindex och kalorier',
+                   intro='Sök bland 970+ livsmedel efter glykemiskt index, glykemisk belastning, insulinindex, kalorier, protein, kolhydrater, fett och fibrer. Varje livsmedel har en egen sida med värden per 100 g och per portion, och källan till varje värde (publicerat eller uppskattning).',
+                   groups='Livsmedelsgrupper', items='Populära livsmedel', all='Alla livsmedel A–Ö'),
+    },
+    '/supplements.html': {
+        'ar': dict(items='مكملات شائعة', all='كل المكملات (174) من الألف إلى الياء'),
+        'en': dict(items='Popular supplements', all='All 174 supplements A–Z'),
+        'nl': dict(items='Populaire supplementen', all='Alle 174 supplementen van A tot Z'),
+    },
+}
+HUB_ITEMS = 40
+
+
+def hub_block(master, lang):
+    """The HUB-LINKS block of foods.html / supplements.html in `lang` (pre-rendered here, no JavaScript)."""
+    from generate_food_pages import FOOD_GROUP_LABELS, PILOT, food_url, load_foods, dir_url
+    t = HUB_TEXT[master][lang]
+    e = htmllib.escape
+    out = ['<section class="hub-static" aria-labelledby="hubStaticTitle">']
+    if master == '/foods.html':
+        foods = load_foods()
+        import food_sv as FSV
+        from generate_food_pages import page_url as food_page_url
+        slugs = json.loads(re.search(r'window\.FOOD_PAGES = (\{.*\});', (ROOT / 'js' / 'food-pages.js').read_text(encoding='utf-8')).group(1))
+        out.append(f'<h1 id="hubStaticTitle">{e(t["h1"])}</h1><p>{e(t["intro"])}</p>')
+        groups = ''.join(f'<li><a href="{dir_url("foods", lang, absolute=False)}#{g}">{e(lbl[lang])}</a></li>'
+                         for g, lbl in FOOD_GROUP_LABELS.items())
+        out.append(f'<h2>{e(t["groups"])}</h2><ul class="hub-links">{groups}</ul>')
+        ids = sorted(PILOT)[:HUB_ITEMS]
+        def nm(fid):
+            if lang == 'sv':
+                return FSV.NAMES[fid][0] if fid in FSV.NAMES else foods[fid]['en']
+            return foods[fid][lang] or foods[fid]['en']
+        items = ''.join(f'<li><a href="{food_page_url(slugs[str(fid)], lang, absolute=False)}">{e(nm(fid))}</a></li>' for fid in ids)
+        out.append(f'<h2>{e(t["items"])}</h2><ul class="hub-links">{items}</ul>')
+        out.append(f'<p><a class="hub-all" href="{dir_url("foods", lang, absolute=False)}">{e(t["all"])} →</a></p>')
+    else:
+        from generate_supplement_pages import load_supplements, page_url as supp_url, supp_name
+        supps = sorted(load_supplements(), key=lambda s: s['id'])[:HUB_ITEMS]
+        items = ''.join(f'<li><a href="{supp_url(s["slug"], lang, absolute=False)}">{e(supp_name(s, lang))}</a></li>' for s in supps)
+        out.append(f'<h2 id="hubStaticTitle">{e(t["items"])}</h2><ul class="hub-links">{items}</ul>')
+        out.append(f'<p><a class="hub-all" href="{dir_url("supplements", lang, absolute=False)}">{e(t["all"])} →</a></p>')
+    out.append('</section>')
+    return ''.join(out)
+
+
+def fill_hub(page, master, lang):
+    if master not in HUB_TEXT:
+        return page
+    m = re.search(r'([ \t]*)<!-- HUB-LINKS:START[^>]*-->.*?<!-- HUB-LINKS:END -->', page, re.S)
+    if not m:
+        sys.exit(f'generate_root_pages: {master}: HUB-LINKS markers not found')
+    ind = m.group(1)
+    block = f'{ind}<!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->\n{ind}{hub_block(master, lang)}\n{ind}<!-- HUB-LINKS:END -->'
+    return page[:m.start()] + block + page[m.end():]
+
 
 def drop_twins(page, lang):
     """Copy that the master shows per language with CSS or a script (one twin per language) keeps only `lang`;
@@ -384,6 +455,7 @@ def localise(master, lang, src):
     for key, value in (('twitter:title', title), ('twitter:description', desc), ('twitter:url', abs_url(page_path(master, lang)))):
         page = set_meta(page, 'name', key, value)
     page = translate_extra(page, master, lang)
+    page = fill_hub(page, master, lang)
     page = rewrite_links(page, lang)
     page = fix_js_urls(page, master, lang)
     page = rewrite_switcher(page, master, lang)
@@ -398,6 +470,7 @@ def update_master(master, src):
     d = re.search(r'<meta\s+name="description"[^>]*content="([^"]*)"', src)
     desc = htmllib.unescape(d.group(1)) if d else title
     page = rewrite_switcher(src, master, 'ar')
+    page = fill_hub(page, master, 'ar')
     return rewrite_head(page, master, 'ar', title, desc, h1_text(page))
 
 
@@ -463,18 +536,13 @@ def sitemap():
             lines += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{abs_url(c[l])}"/>' for l in site_urls.LANGS if l in c]
             lines += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{abs_url(c.get(site_urls.X_DEFAULT) or c["ar"])}"/>',
                       '  </url>']
+    for path in ARABIC_ONLY_INDEXED:                   # indexable pages that exist in Arabic only (no alternates)
+        lines += ['  <url>', f'    <loc>{abs_url(path)}</loc>', f'    <lastmod>{git_date(path.lstrip("/"))}</lastmod>',
+                  '    <priority>0.5</priority>', '  </url>']
     replace_sitemap_block('ROOT-PAGES', lines)
-    # hand-written entries of these URLs (from before the generator) must not stay next to the block
-    sm_path = ROOT / 'sitemap.xml'
-    if sm_path.exists():
-        sm = sm_path.read_text(encoding='utf-8')
-        block = re.search(r'<!-- ROOT-PAGES:START -->.*?<!-- ROOT-PAGES:END -->', sm, re.S)
-        locs = set(re.findall(r'<loc>([^<]+)</loc>', block.group(0)))
-        def drop(m):
-            loc = re.search(r'<loc>([^<]+)</loc>', m.group(0))
-            return '' if loc and loc.group(1) in locs and m.start() < block.start() else m.group(0)
-        sm = re.sub(r'\n?[ \t]*<url>.*?</url>', lambda m: drop(m) if m.start() < block.start() or m.start() > block.end() else m.group(0), sm, flags=re.S)
-        sm_path.write_text(sm, encoding='utf-8', newline='')
+
+
+ARABIC_ONLY_INDEXED = ['/diet-plan.html']
 
 
 SECURITY_HEADERS = [   # moved from the Cloudflare-only _headers file (Vercel ignores it)

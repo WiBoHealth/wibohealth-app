@@ -562,3 +562,14 @@ html[data-theme="dark"] .calc-submit-btn:hover { background: #065f46; }
 /* header wordmark is a <span class="brand-name"> (one <h1> per page = the page title); language links are <a class="lang-btn"> */
 body > header .brand-name { font-weight: 900; }
 a.lang-btn { text-decoration: none; }
+
+/* static links on the food and supplement guides (scripts/generate_root_pages.py, HUB-LINKS block) */
+.hub-static { max-width: 1200px; margin: 18px auto 10px; padding: 0 16px; }
+.hub-static h1 { font-size: 1.55rem; font-weight: 900; line-height: 1.3; margin: 0 0 8px; }
+.hub-static h2 { font-size: 1.05rem; font-weight: 800; margin: 16px 0 8px; }
+.hub-static p { line-height: 1.7; margin: 0 0 6px; opacity: 0.9; }
+.hub-static .hub-links { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.hub-static .hub-links a, .hub-static .hub-all { display: inline-block; padding: 6px 12px; border-radius: 999px; font-size: 0.86rem;
+    font-weight: 700; text-decoration: none; color: #059669; border: 1px solid rgba(16, 185, 129, 0.35); background: rgba(16, 185, 129, 0.06); }
+html[data-theme="dark"] .hub-static .hub-links a, html[data-theme="dark"] .hub-static .hub-all { color: #34d399; }
+.hub-static .hub-links a:hover, .hub-static .hub-all:hover { border-color: #10b981; }

@@ -8,7 +8,7 @@ Output:
     foods/index.html, en/foods/index.html, nl/foods/index.html                    every food page, grouped by food group
     supplements/index.html, en/supplements/index.html, nl/supplements/index.html  every supplement page, grouped by area
     sv/foods/index.html   the foods with a Swedish page (food_sv.PUBLISH), with links to the full English index and guide
-    sitemap.xml   block between <!-- DIRECTORY-PAGES:START --> and <!-- DIRECTORY-PAGES:END -->
+    sitemap-pages.xml  block between <!-- DIRECTORY-PAGES:START --> and <!-- DIRECTORY-PAGES:END -->
 
 foods.html and supplements.html build their cards in JavaScript, and /en/*.html and /nl/*.html hubs redirect to /,
 so without these pages the 3,000+ static pages are only reachable through the sitemap and each other.
@@ -284,7 +284,7 @@ def build(kind, lang, sections):
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">

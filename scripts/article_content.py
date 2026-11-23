@@ -1882,7 +1882,7 @@ sv=dict(
             <h2 class="section-title"><i class="fas fa-ear-deaf"></i> <span>2. När hjärnan slutar lyssna: leptinresistens</span></h2>
             <p>Vid övervikt är problemet sällan för lite leptin. Tvärtom finns det ofta gott om leptin i blodet, men hjärnan svarar sämre på signalen. Det kallas <strong>leptinresistens</strong>.</p>
             <figure class="article-figure">
-                <img src="/images/leptin-brain.jpeg" alt="Illustration av hur leptin når hypotalamus och hur signalen kan blockeras" width="1376" height="768" loading="lazy" decoding="async">
+                <img src="/images/leptin-brain.webp" alt="Illustration av hur leptin når hypotalamus och hur signalen kan blockeras" width="1200" height="670" loading="lazy" decoding="async">
                 <figcaption>Leptinsignalen till hjärnans hypotalamus (bildtexter på engelska).</figcaption>
             </figure>
             <p>Forskningen pekar på flera bidragande faktorer. Djurstudier tyder på att höga blodfetter (triglycerider), som bland annat ökar av mycket socker i flytande form, kan försämra leptinets transport in i hjärnan. Även långvarig låggradig inflammation och för lite sömn verkar försämra signalen.</p>
@@ -1954,7 +1954,7 @@ sv=dict(
             <p>Vid stress aktiverar hjärnan den så kallade HPA-axeln (hypotalamus–hypofys–binjure), och binjurarna frisätter kortisol. Kortisolets uppgift är att snabbt göra energi tillgänglig, bland annat genom att höja blodsockret.</p>
             <p>I dag är stressen oftast psykisk och långvarig, utan den fysiska ansträngning som skulle använda energin. Blodsockret förblir högre, insulinet stiger, och kombinationen av mycket kortisol och mycket insulin gynnar fettinlagring runt magen och de inre organen. Studier har sett att personer med mer bukfett ofta reagerar med högre kortisol vid stress.</p>
             <figure class="article-figure figure-narrow">
-                <img src="/images/cortisol-adrenal-chart.jpeg" alt="Illustration av binjurarna ovanpå njurarna, där kortisol bildas" width="1024" height="1024" loading="lazy" decoding="async">
+                <img src="/images/cortisol-adrenal-chart.webp" alt="Illustration av binjurarna ovanpå njurarna, där kortisol bildas" width="1024" height="1024" loading="lazy" decoding="async">
                 <figcaption>Binjurarna sitter ovanpå njurarna och bildar kortisol (bildtexter på engelska).</figcaption>
             </figure>
 

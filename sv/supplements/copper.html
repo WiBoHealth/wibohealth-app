@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koppar (glukonat/bisglycinat): dosering, nytta och interaktioner med läkemedel | WiBo Health</title>
-    <meta name="description" content="Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i kroppen, till normal pigmentering av hår och hud, till att bibehålla normal bindväv. Rekommenderad dos: 1–2 mg per dag (referensintaget är 1 mg och EFSA:s adekvata intag är 1,3–1,6 mg för vuxna). Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <title>Koppar (glukonat/bisglycinat): dosering och biverkningar</title>
+    <meta name="description" content="Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i… Dos: 1–2 mg per dag. Varningar och interaktioner (EFSA, NIH).">
     <link rel="canonical" href="https://wibohealth.com/sv/supplements/copper.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/copper.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/copper.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/copper.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/copper.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Koppar (glukonat/bisglycinat): dosering, nytta och interaktioner med läkemedel | WiBo Health">
-    <meta property="og:description" content="Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i kroppen, till normal pigmentering av hår och hud, till att bibehålla normal bindväv. Rekommenderad dos: 1–2 mg per dag (referensintaget är 1 mg och EFSA:s adekvata intag är 1,3–1,6 mg för vuxna). Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <meta property="og:title" content="Koppar (glukonat/bisglycinat): dosering och biverkningar">
+    <meta property="og:description" content="Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i… Dos: 1–2 mg per dag. Varningar och interaktioner (EFSA, NIH).">
     <meta property="og:url" content="https://wibohealth.com/sv/supplements/copper.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/sv/supplements/copper.html#webpage",
     "url": "https://wibohealth.com/sv/supplements/copper.html",
-    "name": "Koppar (glukonat/bisglycinat): dosering, nytta och interaktioner med läkemedel | WiBo Health",
-    "description": "Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i kroppen, till normal pigmentering av hår och hud, till att bibehålla normal bindväv. Rekommenderad dos: 1–2 mg per dag (referensintaget är 1 mg och EFSA:s adekvata intag är 1,3–1,6 mg för vuxna). Varningar och interaktioner med läkemedel enligt EFSA och NIH.",
+    "name": "Koppar (glukonat/bisglycinat): dosering och biverkningar",
+    "description": "Koppar (glukonat/bisglycinat): Ett spårämne som bidrar till normal transport av järn i… Dos: 1–2 mg per dag. Varningar och interaktioner (EFSA, NIH).",
     "inLanguage": "sv",
     "about": {
         "@type": "DietarySupplement",
@@ -116,7 +116,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -790,6 +790,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -876,6 +882,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering jämfört med liknande kosttillskott</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Kosttillskott</th><th scope="col">Rekommenderad dos</th><th scope="col">När</th><th scope="col">Hur ofta</th></tr></thead><tbody><tr class="is-this"><th scope="row">Koppar (glukonat/bisglycinat) <span>(denna sida)</span></th><td>1–2 mg per dag (referensintaget är 1 mg och EFSA:s adekvata intag är 1,3–1,6 mg för vuxna)</td><td>Till lunch</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/molybdenum.html">Molybden (glycinat)</a></th><td>50–100 µg per dag (vuxnas behov är 65 µg enligt EFSA; finns i de flesta multivitaminer)</td><td>Till en måltid</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/manganese.html">Mangan (bisglycinat)</a></th><td>2–4 mg per dag (referensintaget är 2 mg och EFSA:s adekvata intag är 3 mg)</td><td>Till lunch</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/potassium-citrate.html">Kaliumcitrat</a></th><td>200–400 mg elementärt kalium (det totala dagliga behovet enligt EFSA är cirka 3 500 mg, främst från maten)</td><td>Till en hel måltid med ett stort glas vatten</td><td>1–2 gånger per dag</td></tr></tbody></table></div><p class="table-note">Från doseringsavsnittet på varje sida; följ förpackningen och din läkare eller farmaceut.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Bästa beredningsformer</span></h2><div class="tip-list"><div class="tip"><p>Kopparglukonat eller kopparbisglycinatkelat.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Naturliga källor i maten</span></h2><div class="tip-list"><div class="tip"><p>Lever, ostron, cashewnötter och andra nötter, sesamfrön, mörk choklad och baljväxter.</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Varningar och försiktighet</span></h2>

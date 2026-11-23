@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echinacea (Rode Zonnehoed): dosering, voordelen en interacties | WiBo Health</title>
-    <meta name="description" content="Echinacea (Rode Zonnehoed): Een traditioneel kruid dat kortdurend wordt gebruikt ter ondersteuning van de natuurlijke afweer in het koude seizoen. Aanbevolen dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen van verkoudheid, 5–7 dagen lang, daarna stoppen. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.">
+    <title>Echinacea (Rode Zonnehoed): dosering en bijwerkingen</title>
+    <meta name="description" content="Echinacea (Rode Zonnehoed): Dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen…. Waarschuwingen en interacties (EFSA, NIH).">
     <link rel="canonical" href="https://wibohealth.com/nl/supplements/echinacea.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/echinacea.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/echinacea.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/echinacea.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/echinacea.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Echinacea (Rode Zonnehoed): dosering, voordelen en interacties | WiBo Health">
-    <meta property="og:description" content="Echinacea (Rode Zonnehoed): Een traditioneel kruid dat kortdurend wordt gebruikt ter ondersteuning van de natuurlijke afweer in het koude seizoen. Aanbevolen dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen van verkoudheid, 5–7 dagen lang, daarna stoppen. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.">
+    <meta property="og:title" content="Echinacea (Rode Zonnehoed): dosering en bijwerkingen">
+    <meta property="og:description" content="Echinacea (Rode Zonnehoed): Dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen…. Waarschuwingen en interacties (EFSA, NIH).">
     <meta property="og:url" content="https://wibohealth.com/nl/supplements/echinacea.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/nl/supplements/echinacea.html#webpage",
     "url": "https://wibohealth.com/nl/supplements/echinacea.html",
-    "name": "Echinacea (Rode Zonnehoed): dosering, voordelen en interacties | WiBo Health",
-    "description": "Echinacea (Rode Zonnehoed): Een traditioneel kruid dat kortdurend wordt gebruikt ter ondersteuning van de natuurlijke afweer in het koude seizoen. Aanbevolen dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen van verkoudheid, 5–7 dagen lang, daarna stoppen. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.",
+    "name": "Echinacea (Rode Zonnehoed): dosering en bijwerkingen",
+    "description": "Echinacea (Rode Zonnehoed): Dosis: 300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen…. Waarschuwingen en interacties (EFSA, NIH).",
     "inLanguage": "nl",
     "about": {
         "@type": "DietarySupplement",
@@ -112,7 +112,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -786,6 +786,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -872,6 +878,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering vergeleken met verwante supplementen</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Supplement</th><th scope="col">Aanbevolen dosis</th><th scope="col">Wanneer</th><th scope="col">Hoe vaak</th></tr></thead><tbody><tr class="is-this"><th scope="row">Echinacea (Rode Zonnehoed) <span>(deze pagina)</span></th><td>300–500 mg gestandaardiseerd extract 3 keer per dag bij de eerste tekenen van verkoudheid, 5–7 dagen lang, daarna stoppen</td><td>Bij de maaltijden</td><td>3 keer per dag</td></tr><tr><th scope="row"><a href="/nl/supplements/black-seed-oil.html">Zwarte Komijnzaadolie</a></th><td>1000–2000 mg olie (of 5 ml vloeibare olie)</td><td>Bij het ontbijt</td><td>1 keer per dag</td></tr><tr><th scope="row"><a href="/nl/supplements/black-elderberry.html">Vlierbessenextract (Sambucus nigra)</a></th><td>300–500 mg gestandaardiseerd extract per dag als preventieve steun, en tot 1000 mg verdeeld over de dag gedurende 3–5 dagen bij de eerste tekenen van verkoudheid</td><td>Direct na het eten</td><td>1–3 keer per dag</td></tr><tr><th scope="row"><a href="/nl/supplements/beta-glucan.html">Bèta-glucaan (Gist &amp; Haver)</a></th><td>Weerstand: 250 mg gistbètaglucaan. Cholesterol: 3 g haverbètaglucaan verdeeld over de maaltijden</td><td>&#x27;s Ochtends met een glas water, of bij de maaltijden voor haver</td><td>Dagelijks</td></tr></tbody></table></div><p class="table-note">Uit de doseringsrubriek van elke pagina; volg het etiket en je arts of apotheker.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Beste vormen om te kiezen</span></h2><div class="tip-list"><div class="tip"><p>Gestandaardiseerd sap of extract van de bovengrondse delen van Echinacea purpurea, in capsules of druppels.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Natuurlijke voedingsbronnen</span></h2><div class="tip-list"><div class="tip"><p>Komt niet voor in voeding; gebruikt als kruidenthee of extract</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Belangrijke waarschuwingen</span></h2>

@@ -52,7 +52,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/dr-wassim.webp"
             },
-            "dateModified": "2026-11-09",
+            "dateModified": "2026-11-23",
             "mainEntity": {
                 "@id": "https://wibohealth.com/doctor.html#wassim-habib"
             },
@@ -121,7 +121,7 @@
     <!-- Structured data: physician / author profile -->
 
     <!-- Icons & Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -1051,7 +1051,6 @@
                 }
             });
 
-            if (i18nDictionary[lang]?.page_title) /* <title> is static per language URL */
 
             const seoDesc = document.getElementById('seo_desc');
             if (seoDesc && i18nDictionary[lang]?.seo_desc) {

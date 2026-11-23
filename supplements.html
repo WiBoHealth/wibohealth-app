@@ -53,7 +53,7 @@
                 "@type": "ImageObject",
                 "url": "https://wibohealth.com/images/og-wibo-health.jpg"
             },
-            "dateModified": "2026-11-09",
+            "dateModified": "2026-11-23",
             "breadcrumb": {
                 "@id": "https://wibohealth.com/supplements.html#breadcrumb"
             }
@@ -84,7 +84,7 @@
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "WiBo Health",
+                    "name": "💊 دليل المكملات الغذائية",
                     "item": "https://wibohealth.com/supplements.html"
                 }
             ]
@@ -102,7 +102,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- PWA -->
     <link rel="manifest" href="manifest.json">
@@ -200,7 +200,7 @@
             filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 22px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -393,7 +393,7 @@
             text-align: center;
         }
 
-        .hero h2 {
+        .hero h1, .hero h2 {
             font-size: 38px;
             font-weight: 900;
             margin-bottom: 12px;
@@ -985,7 +985,7 @@
         @media (max-width: 992px) {
             .nav-menu { display: none; }
             .hamburger-menu { display: flex; }
-            .hero h2 { font-size: 28px; }
+            .hero h1, .hero h2 { font-size: 28px; }
             .supplements-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -996,7 +996,7 @@
          cards in 2 columns on phones -->
     <style id="compact-supplements">
         .hero { padding: 20px 16px 6px; }
-        .hero h2 { font-size: 30px; margin-bottom: 6px; }
+        .hero h1, .hero h2 { font-size: 30px; margin-bottom: 6px; }
         .hero p { font-size: 14.5px; line-height: 1.6; margin: 0 auto 14px; }
         .hero-stats { gap: 10px; }
         /* stat boxes as one slim row of pills: icon, number, label */
@@ -1035,7 +1035,7 @@
             .supplements-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
         }
         @media (max-width: 600px) {
-            .hero h2 { font-size: 22px; }
+            .hero h1, .hero h2 { font-size: 22px; }
             .hero p { font-size: 13px; }
             .hero-stats { flex-wrap: nowrap; gap: 5px; }
             .stat-card { flex: 1; justify-content: center; gap: 4px; padding: 5px 4px; }
@@ -1071,7 +1071,7 @@
                         <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                     </div>
                     <div class="logo-text">
-                        <h1>WiBo Health</h1>
+                        <span class="brand-name">WiBo Health</span>
                     </div>
                 </a>
 
@@ -1129,7 +1129,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h2 id="heroTitle" data-i18n="hero_title">💊 دليل المكملات الغذائية</h2>
+            <h1 id="heroTitle" data-i18n="hero_title">💊 دليل المكملات الغذائية</h1>
             <p id="heroDesc" data-i18n="hero_desc">دليلك الشامل والموثوق لعالم المكملات الغذائية - اكتشف الفوائد، الجرعات المناسبة، أفضل أوقات الاستخدام، والتحذيرات المهمة لكل مكمل</p>
             
             <div class="hero-stats">
@@ -1151,6 +1151,10 @@
             </div>
         </div>
     </section>
+
+    <!-- HUB-LINKS:START (scripts/generate_root_pages.py) -->
+    <section class="hub-static" aria-labelledby="hubStaticTitle"><h2 id="hubStaticTitle">مكملات شائعة</h2><ul class="hub-links"><li><a href="/supplements/whey-protein.html">واي بروتين (بروتين مصل اللبن)</a></li><li><a href="/supplements/casein-protein.html">كازين بروتين (بروتين الحليب بطيء الامتصاص)</a></li><li><a href="/supplements/creatine-monohydrate.html">كرياتين مونوهيدرات النقي</a></li><li><a href="/supplements/bcaa.html">أحماض بي سي إيه إيه (BCAA)</a></li><li><a href="/supplements/beta-alanine.html">بيتا ألانين لمقاومة الإجهاد</a></li><li><a href="/supplements/multivitamins.html">الفيتامينات المتعددة اليومية</a></li><li><a href="/supplements/omega-3-fish-oil.html">أوميغا 3 النقي (زيت السمك)</a></li><li><a href="/supplements/vitamin-d3.html">فيتامين د3 عالي النقاوة</a></li><li><a href="/supplements/magnesium.html">المغنيسيوم المخلبي عالي الامتصاص</a></li><li><a href="/supplements/zinc.html">الزنك العنصري عالي الامتصاص</a></li><li><a href="/supplements/green-tea-extract.html">مستخلص الشاي الأخضر المركز (EGCG)</a></li><li><a href="/supplements/cla.html">سي إل إيه (حمض اللينوليك المقترن)</a></li><li><a href="/supplements/l-carnitine.html">إل-كارنتين لإنتاج الطاقة</a></li><li><a href="/supplements/melatonin.html">الميلاتونين لتنظيم النوم</a></li><li><a href="/supplements/ashwagandha.html">خلاصة جذور الأشواغاندا القياسية</a></li><li><a href="/supplements/5-htp.html">5-هيدروكسي تريبتوفان (5-HTP)</a></li><li><a href="/supplements/caffeine.html">كافيين نقي لليقظة والتركيز</a></li><li><a href="/supplements/pre-workout.html">مسحوق ما قبل التمرين (بري-ورك أوت)</a></li><li><a href="/supplements/glucosamine-chondroitin.html">غلوكوزامين وكوندرويتين للمفاصل</a></li><li><a href="/supplements/collagen-peptides.html">ببتيدات الكولاجين البحري/البقري</a></li><li><a href="/supplements/l-citrulline.html">إل-سيترولين مالات لتدفق الدم</a></li><li><a href="/supplements/taurine.html">حمض التورين الأميني</a></li><li><a href="/supplements/coenzyme-q10.html">الإنزيم المساعد Q10 (يوبيكينول)</a></li><li><a href="/supplements/l-theanine.html">إل-ثيانين للاسترخاء والتركيز</a></li><li><a href="/supplements/rhodiola-rosea.html">عشبة الروديولا الوردية القياسية</a></li><li><a href="/supplements/ginkgo-biloba.html">خلاصة أوراق الجنكة بيلوبا القياسية</a></li><li><a href="/supplements/lions-mane.html">فطر عرف الأسد المركز لدعم الأعصاب</a></li><li><a href="/supplements/hmb.html">مركب إتش إم بي لحماية العضلات</a></li><li><a href="/supplements/l-glutamine.html">إل-غلوتامين لصحة الأمعاء والتعافي</a></li><li><a href="/supplements/l-arginine.html">إل-أرجينين لتعزيز ضخ الدم</a></li><li><a href="/supplements/vitamin-c.html">فيتامين سي عالي الامتصاص (حمض الأسكوربيك)</a></li><li><a href="/supplements/vitamin-b-complex.html">مجموعة فيتامينات ب المركبة النشطة</a></li><li><a href="/supplements/iron.html">الحديد المخلبي اللطيف على المعدة</a></li><li><a href="/supplements/calcium.html">الكالسيوم (سيترات وكربونات) لصحة العظام</a></li><li><a href="/supplements/probiotics.html">مكمل البروبيوتيك متعدد السلالات الحية</a></li><li><a href="/supplements/turmeric-curcumin.html">الكركمين المركز عالي الامتصاص مع الفلفل الأسود</a></li><li><a href="/supplements/ginger.html">خلاصة جذور الزنجبيل المركزة</a></li><li><a href="/supplements/spirulina.html">طحالب السبيرولينا الخضراء المزرقة العضوية</a></li><li><a href="/supplements/garcinia-cambogia.html">خلاصة ثمار الغارسينيا كامبوجيا</a></li><li><a href="/supplements/forskolin.html">خلاصة جذور الكوليوس المعيارية (فورسكولين)</a></li></ul><p><a class="hub-all" href="/supplements/index.html">كل المكملات (174) من الألف إلى الياء →</a></p></section>
+    <!-- HUB-LINKS:END -->
 
     <!-- Search Section -->
     <section class="search-section">

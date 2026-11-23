@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heemstwortel (Althaea officinalis): dosering, voordelen en interacties | WiBo Health</title>
-    <meta name="description" content="Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels die een beschermend laagje over de slijmvliezen vormen; ze worden van oudsher gebruikt om geïrriteerde mond en keel en droge hoest te verzachten. Aanbevolen dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.">
+    <title>Heemstwortel (Althaea officinalis): dosering en werking</title>
+    <meta name="description" content="Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels… Dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties (EFSA, NIH).">
     <link rel="canonical" href="https://wibohealth.com/nl/supplements/marshmallow-root.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/marshmallow-root.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/marshmallow-root.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/marshmallow-root.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/marshmallow-root.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Heemstwortel (Althaea officinalis): dosering, voordelen en interacties | WiBo Health">
-    <meta property="og:description" content="Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels die een beschermend laagje over de slijmvliezen vormen; ze worden van oudsher gebruikt om geïrriteerde mond en keel en droge hoest te verzachten. Aanbevolen dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.">
+    <meta property="og:title" content="Heemstwortel (Althaea officinalis): dosering en werking">
+    <meta property="og:description" content="Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels… Dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties (EFSA, NIH).">
     <meta property="og:url" content="https://wibohealth.com/nl/supplements/marshmallow-root.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/nl/supplements/marshmallow-root.html#webpage",
     "url": "https://wibohealth.com/nl/supplements/marshmallow-root.html",
-    "name": "Heemstwortel (Althaea officinalis): dosering, voordelen en interacties | WiBo Health",
-    "description": "Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels die een beschermend laagje over de slijmvliezen vormen; ze worden van oudsher gebruikt om geïrriteerde mond en keel en droge hoest te verzachten. Aanbevolen dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties met medicijnen volgens EFSA en NIH.",
+    "name": "Heemstwortel (Althaea officinalis): dosering en werking",
+    "description": "Heemstwortel (Althaea officinalis): Wortels rijk aan slijmvezels… Dosis: 400–1000 mg extract of poeder per dag. Waarschuwingen en interacties (EFSA, NIH).",
     "inLanguage": "nl",
     "about": {
         "@type": "DietarySupplement",
@@ -108,7 +108,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -782,6 +782,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -868,6 +874,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering vergeleken met verwante supplementen</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Supplement</th><th scope="col">Aanbevolen dosis</th><th scope="col">Wanneer</th><th scope="col">Hoe vaak</th></tr></thead><tbody><tr class="is-this"><th scope="row">Heemstwortel (Althaea officinalis) <span>(deze pagina)</span></th><td>400–1000 mg extract of poeder per dag</td><td>Tussen de maaltijden met veel water</td><td>1–3 keer per dag</td></tr><tr><th scope="row"><a href="/nl/supplements/ginger.html">Gemberwortel Extract</a></th><td>500–1500 mg gestandaardiseerd extract per dag</td><td>Bij de maaltijd, of een half uur voor vertrek op reis</td><td>Verdeeld over 1–3 doses</td></tr><tr><th scope="row"><a href="/nl/supplements/dandelion-root.html">Paardenbloemwortel (Taraxacum officinale)</a></th><td>500–1000 mg wortelpoeder (of 250–500 mg geconcentreerd extract)</td><td>15 minuten voor de maaltijd met een kop warm water</td><td>1–2 keer per dag</td></tr><tr><th scope="row"><a href="/nl/supplements/burdock-root.html">Klissenwortel (Arctium lappa)</a></th><td>400–800 mg per dag</td><td>Bij de lunch met voldoende water</td><td>1 keer per dag</td></tr></tbody></table></div><p class="table-note">Uit de doseringsrubriek van elke pagina; volg het etiket en je arts of apotheker.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Beste vormen om te kiezen</span></h2><div class="tip-list"><div class="tip"><p>Heemstwortelpoeder of -extract, een koud aftreksel van de wortel, of siroop.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Natuurlijke voedingsbronnen</span></h2><div class="tip-list"><div class="tip"><p>Geen onderdeel van gewone voeding; de wortels worden als aftreksel of siroop gebruikt</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Belangrijke waarschuwingen</span></h2>

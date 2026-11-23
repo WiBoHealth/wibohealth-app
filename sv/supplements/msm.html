@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSM (metylsulfonylmetan): dosering, nytta och interaktioner med läkemedel | WiBo Health</title>
-    <meta name="description" content="MSM (metylsulfonylmetan): En organisk svavelförening som ger det svavel som behövs för disulfidbindningar i kollagen- och keratinfibrer och stödjer bindväven i brosk och leder. Rekommenderad dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <title>MSM (metylsulfonylmetan): dosering och biverkningar</title>
+    <meta name="description" content="MSM (metylsulfonylmetan): En organisk svavelförening som… Dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner.">
     <link rel="canonical" href="https://wibohealth.com/sv/supplements/msm.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/msm.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/msm.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/msm.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/msm.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="MSM (metylsulfonylmetan): dosering, nytta och interaktioner med läkemedel | WiBo Health">
-    <meta property="og:description" content="MSM (metylsulfonylmetan): En organisk svavelförening som ger det svavel som behövs för disulfidbindningar i kollagen- och keratinfibrer och stödjer bindväven i brosk och leder. Rekommenderad dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <meta property="og:title" content="MSM (metylsulfonylmetan): dosering och biverkningar">
+    <meta property="og:description" content="MSM (metylsulfonylmetan): En organisk svavelförening som… Dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner.">
     <meta property="og:url" content="https://wibohealth.com/sv/supplements/msm.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/sv/supplements/msm.html#webpage",
     "url": "https://wibohealth.com/sv/supplements/msm.html",
-    "name": "MSM (metylsulfonylmetan): dosering, nytta och interaktioner med läkemedel | WiBo Health",
-    "description": "MSM (metylsulfonylmetan): En organisk svavelförening som ger det svavel som behövs för disulfidbindningar i kollagen- och keratinfibrer och stödjer bindväven i brosk och leder. Rekommenderad dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner med läkemedel enligt EFSA och NIH.",
+    "name": "MSM (metylsulfonylmetan): dosering och biverkningar",
+    "description": "MSM (metylsulfonylmetan): En organisk svavelförening som… Dos: 1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis. Varningar och interaktioner.",
     "inLanguage": "sv",
     "about": {
         "@type": "DietarySupplement",
@@ -108,7 +108,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -782,6 +782,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -868,6 +874,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering jämfört med liknande kosttillskott</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Kosttillskott</th><th scope="col">Rekommenderad dos</th><th scope="col">När</th><th scope="col">Hur ofta</th></tr></thead><tbody><tr class="is-this"><th scope="row">MSM (metylsulfonylmetan) <span>(denna sida)</span></th><td>1 500–3 000 mg per dag; börja med 1 000 mg och öka gradvis</td><td>Till frukost och lunch med ett helt glas vatten</td><td>Fördelat på två doser</td></tr><tr><th scope="row"><a href="/sv/supplements/glucosamine-chondroitin.html">Glukosamin och kondroitin</a></th><td>1 500 mg glukosaminsulfat + 1 200 mg kondroitin per dag</td><td>Till måltider (resultat märks efter 2–4 månader)</td><td>1–2 gånger per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/collagen-peptides.html">Kollagenpeptider (hydrolyserat kollagen)</a></th><td>10–15 g per dag</td><td>Upplöst i morgonkaffet eller i vatten, gärna tillsammans med en källa till C-vitamin</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/calcium.html">Kalcium (citrat/karbonat)</a></th><td>500–800 mg elementärt kalcium per dag</td><td>Till måltider (karbonat endast till en måltid); kroppen tar inte upp mer än 500 mg per dos</td><td>Fördelat på två doser</td></tr></tbody></table></div><p class="table-note">Från doseringsavsnittet på varje sida; följ förpackningen och din läkare eller farmaceut.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Bästa beredningsformer</span></h2><div class="tip-list"><div class="tip"><p>MSM-pulver eller kapslar destillerat i flera steg (som OptiMSM®) för garanterad renhet och frihet från tungmetaller.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Naturliga källor i maten</span></h2><div class="tip-list"><div class="tip"><p>Små mängder i mjölk, kaffe, tomater och bladgrönsaker.</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Varningar och försiktighet</span></h2>

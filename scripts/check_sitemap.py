@@ -28,6 +28,8 @@ def vercel_redirects():
     """vercel.json sources as regexes (path-to-regexp subset used in this repo)."""
     rules = []
     for r in json.loads((ROOT / 'vercel.json').read_text(encoding='utf-8')).get('redirects', []):
+        if r.get('has'):                     # conditional rules (e.g. ?lang=en) never catch the plain URL
+            continue
         src = r['source']
         # :name(regex) -> (regex), :name* -> .*, :name+ -> .+, :name -> [^/]+
         src = re.sub(r':\w+\(((?:[^()]|\([^()]*\))*)\)', r'(\1)', src)
@@ -46,9 +48,12 @@ def local_file(path):
 
 def main():
     live = '--live' in sys.argv
-    tree = ET.parse(ROOT / 'sitemap.xml')
+    index = ET.parse(ROOT / 'sitemap.xml').getroot()
+    # sitemap.xml is an index of section files (sitemap-pages/articles/foods/supplements.xml) since 2026-11-23
+    files = [ROOT / s.find('s:loc', NS).text.strip().rsplit('/', 1)[-1] for s in index.findall('s:sitemap', NS)] or [ROOT / 'sitemap.xml']
+    urls = [u for f in files for u in ET.parse(f).getroot().findall('s:url', NS)]
     locs, alternates, alt_of = [], set(), {}
-    for url in tree.getroot().findall('s:url', NS):
+    for url in urls:
         loc = url.find('s:loc', NS).text.strip()
         locs.append(loc)
         alt_of[loc] = {(alt.get('hreflang'), alt.get('href').strip()) for alt in url.findall('x:link', NS)}

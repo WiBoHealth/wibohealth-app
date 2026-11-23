@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrolytes (Sodium, Potassium, Magnesium): Dosage, Benefits &amp; Drug Interactions | WiBo Health</title>
-    <meta name="description" content="Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium, magnesium and chloride; magnesium contributes to electrolyte balance and potassium to normal muscle function (EFSA-authorised claims). Recommended dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings and drug interactions based on EFSA and NIH.">
+    <title>Electrolytes (Sodium, Potassium, Magnesium): Dosage</title>
+    <meta name="description" content="Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium… Dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings inside.">
     <link rel="canonical" href="https://wibohealth.com/en/supplements/electrolytes-mix.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/electrolytes-mix.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/electrolytes-mix.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/electrolytes-mix.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/electrolytes-mix.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Electrolytes (Sodium, Potassium, Magnesium): Dosage, Benefits &amp; Drug Interactions | WiBo Health">
-    <meta property="og:description" content="Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium, magnesium and chloride; magnesium contributes to electrolyte balance and potassium to normal muscle function (EFSA-authorised claims). Recommended dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings and drug interactions based on EFSA and NIH.">
+    <meta property="og:title" content="Electrolytes (Sodium, Potassium, Magnesium): Dosage">
+    <meta property="og:description" content="Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium… Dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings inside.">
     <meta property="og:url" content="https://wibohealth.com/en/supplements/electrolytes-mix.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/en/supplements/electrolytes-mix.html#webpage",
     "url": "https://wibohealth.com/en/supplements/electrolytes-mix.html",
-    "name": "Electrolytes (Sodium, Potassium, Magnesium): Dosage, Benefits & Drug Interactions | WiBo Health",
-    "description": "Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium, magnesium and chloride; magnesium contributes to electrolyte balance and potassium to normal muscle function (EFSA-authorised claims). Recommended dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings and drug interactions based on EFSA and NIH.",
+    "name": "Electrolytes (Sodium, Potassium, Magnesium): Dosage",
+    "description": "Electrolytes (Sodium, Potassium, Magnesium): A mix of sodium, potassium… Dose: One sachet or scoop dissolved in 500–750 ml of water. Warnings inside.",
     "inLanguage": "en",
     "about": {
         "@type": "DietarySupplement",
@@ -112,7 +112,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -786,6 +786,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -872,6 +878,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dose compared with related supplements</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Supplement</th><th scope="col">Recommended dose</th><th scope="col">When</th><th scope="col">How often</th></tr></thead><tbody><tr class="is-this"><th scope="row">Electrolytes (Sodium, Potassium, Magnesium) <span>(this page)</span></th><td>One sachet or scoop dissolved in 500–750 ml of water</td><td>During long fasts, or during and after training with heavy sweating</td><td>1–2 times daily as needed</td></tr><tr><th scope="row"><a href="/en/supplements/l-citrulline.html">L-Citrulline (Malate 2:1)</a></th><td>6–8 g citrulline malate (or 3–5 g pure citrulline)</td><td>45–60 minutes before training</td><td>On training days</td></tr><tr><th scope="row"><a href="/en/supplements/cluster-dextrin.html">Cluster Dextrin (Highly Branched Cyclic Dextrin)</a></th><td>25–50 g dissolved in 500–750 ml of water</td><td>Sipped during or right after training</td><td>On days of long or hard training</td></tr><tr><th scope="row"><a href="/en/supplements/multivitamins.html">Daily Multivitamins</a></th><td>One tablet or capsule a day</td><td>With breakfast or lunch</td><td>Once daily</td></tr></tbody></table></div><p class="table-note">From the dosage sections of each page; follow the label and your doctor or pharmacist.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Best forms to choose</span></h2><div class="tip-list"><div class="tip"><p>Sugar-free electrolyte sachets, effervescent tablets or powder.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Natural food sources</span></h2><div class="tip-list"><div class="tip"><p>Salted vegetable broth, coconut water, bananas, leafy greens, nuts</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Important warnings</span></h2>

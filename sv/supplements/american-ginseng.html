@@ -17,8 +17,8 @@
     <script src="/js/consent.js?v=4" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amerikansk ginseng (Panax quinquefolius): dosering, nytta och interaktioner med läkemedel | WiBo Health</title>
-    <meta name="description" content="Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses lugnare än asiatisk ginseng; en randomiserad studie tyder på att den stödjer arbetsminnet och den mentala prestationen. Rekommenderad dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <title>Amerikansk ginseng (Panax quinquefolius): dosering</title>
+    <meta name="description" content="Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses… Dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner.">
     <link rel="canonical" href="https://wibohealth.com/sv/supplements/american-ginseng.html">
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/supplements/american-ginseng.html">
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/supplements/american-ginseng.html">
@@ -26,8 +26,8 @@
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/supplements/american-ginseng.html">
     <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/supplements/american-ginseng.html">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Amerikansk ginseng (Panax quinquefolius): dosering, nytta och interaktioner med läkemedel | WiBo Health">
-    <meta property="og:description" content="Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses lugnare än asiatisk ginseng; en randomiserad studie tyder på att den stödjer arbetsminnet och den mentala prestationen. Rekommenderad dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner med läkemedel enligt EFSA och NIH.">
+    <meta property="og:title" content="Amerikansk ginseng (Panax quinquefolius): dosering">
+    <meta property="og:description" content="Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses… Dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner.">
     <meta property="og:url" content="https://wibohealth.com/sv/supplements/american-ginseng.html">
     <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     <meta property="og:image:width" content="1200">
@@ -39,8 +39,8 @@
     "@type": "MedicalWebPage",
     "@id": "https://wibohealth.com/sv/supplements/american-ginseng.html#webpage",
     "url": "https://wibohealth.com/sv/supplements/american-ginseng.html",
-    "name": "Amerikansk ginseng (Panax quinquefolius): dosering, nytta och interaktioner med läkemedel | WiBo Health",
-    "description": "Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses lugnare än asiatisk ginseng; en randomiserad studie tyder på att den stödjer arbetsminnet och den mentala prestationen. Rekommenderad dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner med läkemedel enligt EFSA och NIH.",
+    "name": "Amerikansk ginseng (Panax quinquefolius): dosering",
+    "description": "Amerikansk ginseng (Panax quinquefolius): En typ av ginseng som anses… Dos: 200–1 000 mg standardiserat extrakt per dag. Varningar och interaktioner.",
     "inLanguage": "sv",
     "about": {
         "@type": "DietarySupplement",
@@ -112,7 +112,7 @@
     }
 }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -786,6 +786,12 @@
         .food-hero-text h1 { overflow-wrap: anywhere; }
         .dose-table { table-layout: fixed; }
         .dose-table td { overflow-wrap: anywhere; }
+        .facts-block .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .facts-compare { table-layout: auto; min-width: 520px; }
+        .facts-compare th { text-align: start; font-size: 0.9rem; }
+        .facts-compare th a { color: var(--primary); text-decoration: none; font-weight: 700; }
+        .facts-compare .is-this th span { font-weight: 400; color: var(--text-muted); }
+        .facts-compare td:first-child { color: inherit; font-weight: 400; width: auto; }
         .tip p, .lead { overflow-wrap: anywhere; hyphens: auto; }      /* long Dutch and Swedish compound words */
         /* back to the guide and quick search, above the breadcrumb */
         .supp-top { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 12px; }
@@ -872,6 +878,7 @@
                 </tbody>
             </table>
 
+            <section class="facts-block" aria-labelledby="dose-compare-title"><h2 class="section-title" id="dose-compare-title"><i class="fas fa-scale-balanced"></i> <span>Dosering jämfört med liknande kosttillskott</span></h2><div class="table-scroll"><table class="nutrition-table dose-table facts-compare"><thead><tr><th scope="col">Kosttillskott</th><th scope="col">Rekommenderad dos</th><th scope="col">När</th><th scope="col">Hur ofta</th></tr></thead><tbody><tr class="is-this"><th scope="row">Amerikansk ginseng (Panax quinquefolius) <span>(denna sida)</span></th><td>200–1 000 mg standardiserat extrakt per dag</td><td>På morgonen till frukost</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/maca-root-extract.html">Maca (rotextrakt 4:1)</a></th><td>1 500–3 000 mg per dag</td><td>På morgonen till frukost (undvik det på kvällen)</td><td>En gång per dag</td></tr><tr><th scope="row"><a href="/sv/supplements/panax-ginseng.html">Röd koreansk ginseng (Panax ginseng)</a></th><td>200–400 mg standardiserat extrakt (4–7 % ginsenosider)</td><td>På morgonen till frukost (undvik den efter lunch för att förebygga sömnsvårigheter)</td><td>En gång per dag, högst 3 månader i följd</td></tr><tr><th scope="row"><a href="/sv/supplements/shilajit.html">Shilajit (renad, mumijo)</a></th><td>250–500 mg per dag</td><td>På morgonen till frukost, eller upplöst i varmt vatten</td><td>1–2 gånger per dag</td></tr></tbody></table></div><p class="table-note">Från doseringsavsnittet på varje sida; följ förpackningen och din läkare eller farmaceut.</p></section>
             <h2 class="section-title"><i class="fas fa-capsules"></i> <span>Bästa beredningsformer</span></h2><div class="tip-list"><div class="tip"><p>Extrakt av amerikansk ginsengrot standardiserat för ginsenosider.</p></div></div>
             <h2 class="section-title"><i class="fas fa-seedling"></i> <span>Naturliga källor i maten</span></h2><div class="tip-list"><div class="tip"><p>Ingår inte i vanlig mat; roten används som te eller extrakt.</p></div></div>
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Varningar och försiktighet</span></h2>
