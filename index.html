@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -20,21 +20,6 @@
     <style>html{background-color:#f8fafc;color-scheme:light}html[data-theme="dark"]{background-color:#0f172a;color-scheme:dark}</style>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/index.html'); return; }   // Swedish has its own static homepage
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                window.wiboLangReady = function () {};   // kept for page scripts that still call it
-            } catch (e) {}
-        })(document);
-    </script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -43,28 +28,98 @@
 
     <!-- Primary Meta Tags -->
     <title>موقع ويبو هيلث | WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/index.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/index.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/index.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/#webpage",
+            "url": "https://wibohealth.com/",
+            "name": "موقع ويبو هيلث | WiBo Health - دليلك الصحي مع المؤشر الجلايسيمي ومؤشر الأنسولين",
+            "description": "موقعك الصحي الفريد: ماسح الباركود وفاحص المكونات الذكي، المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي - دليلك الشامل للتغذية الصحية والدايت",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://wibohealth.com/#website",
+            "url": "https://wibohealth.com/",
+            "name": "WiBo Health",
+            "inLanguage": [
+                "ar",
+                "en",
+                "nl",
+                "sv"
+            ],
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="title" content="موقع ويبو هيلث | WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
     <meta name="description" content="موقعك الصحي الفريد: ماسح الباركود وفاحص المكونات الذكي، المؤشر الجلايسيمي ومؤشر الأنسولين لكل طعام، دليل المكملات الغذائية، وصفات صحية، حاسبات مجانية، متتبع سعرات احترافي - دليلك الشامل للتغذية الصحية والدايت">
     <meta name="keywords" content="ماسح باركود, فاحص المكونات, تغذية صحية, دايت, رجيم, مؤشر جلايسيمي, مؤشر الأنسولين, سعرات حرارية, حاسبة BMI, حاسبة السعرات, وصفات صحية, مقالات تغذية, صحة">
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wibohealth.com/">
-    <!-- EN/NL are served on this same URL via ?lang (no hreflang for them); Swedish has its own static page -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/">
     <!-- Site name for search results (one WebSite entity for the whole site: ar, en, nl and sv) -->
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@type": "WebSite", "name": "WiBo Health", "url": "https://wibohealth.com/",
-     "inLanguage": ["ar", "en", "nl", "sv"]}
-    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/">
     <meta property="og:title" content="WiBo Health - دليلك الصحي الشامل للتغذية والصحة">
     <meta property="og:description" content="دليل شامل للتغذية الصحية: أطعمة، مكملات، وصفات، حاسبات صحية، ماسح الباركود ومقالات تغذوية احترافية">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ar_AR">
     <meta property="og:site_name" content="WiBo Health">
     
@@ -73,7 +128,7 @@
     <meta name="twitter:url" content="https://wibohealth.com/">
     <meta name="twitter:title" content="WiBo Health - دليلك الصحي الشامل">
     <meta name="twitter:description" content="دليلك الشامل للتغذية: أطعمة، مكملات، حاسبات، وصفات ومقالات صحية">
-    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="MQd6BB5wsUN99944QBMWkBlroNdCuMdtdVGmRZkiXhKU" />
@@ -698,16 +753,7 @@
         };
 
         function detectInitialLang() {
-            const urlLang = new URLSearchParams(window.location.search).get('lang');
-            if (['ar', 'en', 'nl'].includes(urlLang)) return urlLang;
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) {
-                return saved;
-            }
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('ar')) return 'ar';
-            if (phoneLang.startsWith('nl')) return 'nl';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -2314,10 +2360,10 @@
 
                 <!-- Controls & Mobile Toggle -->
                 <div class="header-controls">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
-                    <a class="lang-btn" href="/sv/index.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                    <a class="lang-btn active" href="/" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/index.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/index.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/index.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>

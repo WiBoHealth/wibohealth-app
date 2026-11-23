@@ -48,7 +48,7 @@ SITE_PAGES_SV = [
                 <li><a href="/sv/diabetes/prediabetes.html">Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c</a></li>
                 <li><a href="/sv/diabetes/graviditetsdiabetes.html">Graviditetsdiabetes: normala blodsockervärden och vad du kan äta</a></li>
                 <li><a href="/sv/articles/insulinresistens-hba1c.html">HbA1c och insulinresistens</a></li>
-                <li><a href="/sv/articles/fettlever.html">Fettlever (MASLD)</a></li>
+                <li><a href="/sv/articles/fatty-liver-and-visceral-fat.html">Fettlever (MASLD)</a></li>
                 <li><a href="/sv/articles/leptinresistens.html">Leptin och mättnad</a></li>
                 <li><a href="/sv/articles/kortisol-och-stress.html">Kortisol och stress</a></li>
                 <li><a href="/sv/articles/periodisk-fasta.html">Periodisk fasta</a></li>
@@ -260,6 +260,7 @@ SITE_PAGES_SV = [
     dict(
         # the Arabic disclaimer is noindex: linked from the language switcher only, not as an hreflang alternate
         key='disclaimer', slug='medicinsk-ansvarsfriskrivning', legacy=None, switch_ar='/disclaimer.html', kind='webpage',
+        noindex=True,                       # same policy as the Arabic disclaimer: reachable and linked, not indexed (2026-11-23)
         modified='2026-10-23',
         title='Medicinsk ansvarsfriskrivning | WiBo Health',
         h1='⚖️ Medicinsk ansvarsfriskrivning', crumb='Medicinsk ansvarsfriskrivning',

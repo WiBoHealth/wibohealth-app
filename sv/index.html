@@ -21,7 +21,6 @@
     <style>html{background-color:#f8fafc;color-scheme:light}html[data-theme="dark"]{background-color:#0f172a;color-scheme:dark}</style>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
-    <script>document.documentElement.lang = 'sv'; document.documentElement.dir = 'ltr'; window.wiboLangReady = function () {};</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
     <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
     <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
@@ -30,27 +29,98 @@
 
     <!-- Primary Meta Tags -->
     <title>WiBo Health – din guide till blodsocker, glykemiskt index och sund mat</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/sv/index.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/index.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/index.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/index.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/sv/index.html#webpage",
+            "url": "https://wibohealth.com/sv/index.html",
+            "name": "WiBo Health – din guide till blodsocker, glykemiskt index och sund mat",
+            "description": "Glykemiskt index och insulinindex för hundratals livsmedel, kalkylatorer för BMI, kaloribehov och vätskebehov, guider om prediabetes och graviditetsdiabetes samt boodi, appen som skannar streckkoder och ingredienser. Medicinskt granskat innehåll.",
+            "inLanguage": "sv",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/sv/index.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://wibohealth.com/#website",
+            "url": "https://wibohealth.com/",
+            "name": "WiBo Health",
+            "inLanguage": [
+                "ar",
+                "en",
+                "nl",
+                "sv"
+            ],
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/sv/index.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Hem",
+                    "item": "https://wibohealth.com/sv/index.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="title" content="WiBo Health – din guide till blodsocker, glykemiskt index och sund mat">
     <meta name="description" content="Glykemiskt index och insulinindex för hundratals livsmedel, kalkylatorer för BMI, kaloribehov och vätskebehov, guider om prediabetes och graviditetsdiabetes samt boodi, appen som skannar streckkoder och ingredienser. Medicinskt granskat innehåll.">
     <meta name="keywords" content="glykemiskt index, GI-värde, insulinindex, blodsocker, prediabetes, HbA1c mmol/mol, graviditetsdiabetes, BMI-kalkylator, kaloribehov, kostråd, hälsosam mat">
     <meta name="author" content="WiBo Health">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wibohealth.com/sv/index.html">
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/">
     <!-- Site name for search results (one WebSite entity for the whole site: ar, en, nl and sv) -->
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@type": "WebSite", "name": "WiBo Health", "url": "https://wibohealth.com/",
-     "inLanguage": ["ar", "en", "nl", "sv"]}
-    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/sv/index.html">
     <meta property="og:title" content="WiBo Health – din guide till blodsocker och sund mat">
     <meta property="og:description" content="Glykemiskt index och insulinindex för hundratals livsmedel, hälsokalkylatorer och medicinskt granskade guider om prediabetes och graviditetsdiabetes.">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="sv_SE">
     <meta property="og:site_name" content="WiBo Health">
     
@@ -59,7 +129,7 @@
     <meta name="twitter:url" content="https://wibohealth.com/sv/index.html">
     <meta name="twitter:title" content="WiBo Health – din guide till blodsocker och sund mat">
     <meta name="twitter:description" content="GI-värden, hälsokalkylatorer och medicinskt granskade guider om blodsocker.">
-    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="MQd6BB5wsUN99944QBMWkBlroNdCuMdtdVGmRZkiXhKU" />
@@ -302,7 +372,7 @@
         }
 
         function changeLanguage(lang) {
-            if (lang !== 'sv') { location.href = '/?lang=' + lang; return; }
+            if (lang !== 'sv') { location.href = {"ar": "/", "en": "/en/index.html", "nl": "/nl/index.html"}[lang] || '/'; return; }
             currentLang = lang;
             document.documentElement.lang = lang;
             document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
@@ -1899,10 +1969,10 @@
 
                 <!-- Controls & Mobile Toggle -->
                 <div class="header-controls">
-                    <a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">AR</a>
-                    <a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">EN</a>
-                    <a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">NL</a>
-                    <button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">SV</button>
+                    <a class="lang-btn" href="/" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية">AR</a>
+                    <a class="lang-btn" href="/en/index.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/index.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn active" href="/sv/index.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska" aria-current="page">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="Byt tema">
                         <i class="fas fa-moon"></i>
@@ -1928,13 +1998,13 @@
         <a href="/sv/boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-barcode"></i> <span data-i18n="nav_scanner">📷 Streckkodsskanner</span></a>
         <a href="/sv/foods/index.html" class="mobile-nav-link"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">Livsmedelsguide</span></a>
         <a href="/sv/calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">Kalkylatorer</span></a>
-        <a href="/recipes.html?lang=en" hreflang="en" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">Recept</span></a>
+        <a href="/en/recipes.html" hreflang="en" class="mobile-nav-link"><i class="fas fa-book-open"></i> <span data-i18n="nav_recipes">Recept</span></a>
         <a href="#articles" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artiklar</span></a>
         <a href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
         <a href="/sv/supplements/index.html" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Kosttillskott</span></a>
         <a href="/sv/om-oss.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">Om oss</span></a>
         <a href="/sv/boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi-appen 💚</span></a>
-        <a href="/diet-plan.html?lang=en" hreflang="en" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">Gratis kostplan 🎁</span></a>
+        <a href="/diet-plan.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-leaf"></i> <span data-i18n="nav_free_diet">Gratis kostplan 🎁</span></a>
         <a href="/sv/kontakt.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">Kontakt</span></a>
         <a href="/sv/partners.html" class="mobile-nav-link"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">Samarbeten</span></a>
     </nav>
@@ -2051,8 +2121,7 @@
 
 
     <!-- What did you cook today? - search; submits to /foods.html?search=VALUE -->
-    <form class="meals-search" action="/foods.html" method="get" role="search">
-        <input type="hidden" name="lang" value="en">
+    <form class="meals-search" action="/sv/foods.html" method="get" role="search">
         <span class="meals-search-ico" aria-hidden="true">🔍</span>
         <input type="search" name="search" class="meals-search-input" required maxlength="80" autocomplete="off" enterkeyhint="search"
                data-i18n-placeholder="meals_search_ph" placeholder="Sök din maträtt… (t.ex. köttbullar, knäckebröd, salmon, oatmeal)" aria-label="Sök din maträtt… (t.ex. köttbullar, knäckebröd, salmon, oatmeal)">
@@ -2269,7 +2338,7 @@
             <div class="cta-buttons">
                 <a href="/sv/boodi.html" class="cta-btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi-appen 💚</span></a>
                 <a href="/sv/foods/index.html" class="cta-btn" data-i18n="browse_foods">Utforska livsmedel</a>
-                <a href="/diet-plan.html?lang=en" hreflang="en" class="cta-btn" data-i18n="get_free_diet">Få en gratis kostplan</a>
+                <a href="/diet-plan.html" class="cta-btn" data-i18n="get_free_diet">Få en gratis kostplan</a>
             </div>
 
             <button id="install-button" class="pwa-install-btn" data-i18n="install_app">Installera appen på din telefon</button>
@@ -2371,10 +2440,10 @@
             <p style="font-size: 1.2rem; margin-top: 15px;" data-i18n="cta_subtitle">Se hälsomåtten för dina favoritlivsmedel</p>
             
             <div class="cta-buttons">
-                <a href="/diet-plan.html?lang=en" hreflang="en" class="cta-btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.1em; padding: 15px 30px; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);" data-i18n="cta_btn1">Få en gratis kostplan för en vecka! 🎁</a>
+                <a href="/diet-plan.html" class="cta-btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 1.1em; padding: 15px 30px; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);" data-i18n="cta_btn1">Få en gratis kostplan för en vecka! 🎁</a>
                 <a href="/sv/foods/index.html" class="cta-btn" data-i18n="cta_btn2">Utforska livsmedel</a>
                 <a href="/sv/calculators.html" class="cta-btn" data-i18n="cta_btn3">Räkna ut ditt dagliga behov</a>
-                <a href="/recipes.html?lang=en" hreflang="en" class="cta-btn" data-i18n="cta_btn4">Hälsosamma recept</a>
+                <a href="/en/recipes.html" hreflang="en" class="cta-btn" data-i18n="cta_btn4">Hälsosamma recept</a>
                 <a href="#articles" class="cta-btn" data-i18n="cta_btn5">Hälsoartiklar</a>
                 <a href="/sv/om-oss.html" class="cta-btn" data-i18n="cta_btn6">Om WiBo Healths medicinska team</a>
             </div>
@@ -2398,9 +2467,9 @@
             <span style="color: #7f8c8d;">|</span>
             <a href="/sv/anvandarvillkor.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_terms">Användarvillkor</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/sv/radera-konto.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_delete_account">Radera konto</a>
+            <a href="/delete-account.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_delete_account">Radera konto</a>
             <span style="color: #7f8c8d;">|</span>
-            <a href="/calorie-tracker.html?lang=en" hreflang="en" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_calorie_tracker">Kalorispårare</a>
+            <a href="/calorie-tracker.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_calorie_tracker">Kalorispårare</a>
             <span style="color: #7f8c8d;">|</span>
             <a href="/sv/dr-wassim-habib.html" style="color: #ecf0f1; margin: 0 10px; text-decoration: none;" data-i18n="footer_doctor">Vår grundare</a>
         </div>

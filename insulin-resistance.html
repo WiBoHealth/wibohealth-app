@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/articles/insulinresistens-hba1c.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -53,19 +25,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO & Indexing Tags -->
-    <title data-i18n="meta_title">السكر التراكمي ومقاومة الإنسولين: الدليل الشامل | WiBo Health</title>
+    <title>السكر التراكمي ومقاومة الإنسولين: الدليل الشامل | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/insulin-resistance.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/insulin-resistance.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/insulin-resistance.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/insulin-resistance.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/insulinresistens-hba1c.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/insulin-resistance.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MedicalWebPage",
+            "@id": "https://wibohealth.com/insulin-resistance.html#webpage",
+            "url": "https://wibohealth.com/insulin-resistance.html",
+            "name": "السكر التراكمي ومقاومة الإنسولين: الدليل الشامل | WiBo Health",
+            "description": "دليل سريري شامل لفهم السكر التراكمي HbA1c، أعراض مقاومة الإنسولين الخفية، والخطة الغذائية والتمارين لخفض السكر وتحسين حساسية الخلايا. بقلم فريق ويبو هيلث الطبي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/card-insulin-resistance.webp"
+            },
+            "dateModified": "2026-11-09",
+            "reviewedBy": {
+                "@id": "https://wibohealth.com/doctor.html#wassim-habib"
+            },
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/insulin-resistance.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+            "name": "Dr. Wassim Habib",
+            "jobTitle": "مؤسس WiBo Health",
+            "url": "https://wibohealth.com/doctor.html",
+            "worksFor": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "Article",
+            "@id": "https://wibohealth.com/insulin-resistance.html#article",
+            "headline": "السكر التراكمي ومقاومة الإنسولين: الدليل الشامل للفهم، العلاج، والوقاية الغذائية",
+            "description": "دليل سريري شامل لفهم السكر التراكمي HbA1c، أعراض مقاومة الإنسولين الخفية، والخطة الغذائية والتمارين لخفض السكر وتحسين حساسية الخلايا. بقلم فريق ويبو هيلث الطبي.",
+            "inLanguage": "ar",
+            "image": "https://wibohealth.com/images/card-insulin-resistance.webp",
+            "mainEntityOfPage": {
+                "@id": "https://wibohealth.com/insulin-resistance.html#webpage"
+            },
+            "dateModified": "2026-11-09",
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "author": {
+                "@id": "https://wibohealth.com/doctor.html#wassim-habib"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/insulin-resistance.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "السكر التراكمي ومقاومة الإنسولين: الدليل الشامل للفهم، العلاج، والوقاية الغذائية",
+                    "item": "https://wibohealth.com/insulin-resistance.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="metaDescription" content="دليل سريري شامل لفهم السكر التراكمي HbA1c، أعراض مقاومة الإنسولين الخفية، والخطة الغذائية والتمارين لخفض السكر وتحسين حساسية الخلايا. بقلم فريق ويبو هيلث الطبي.">
     <meta name="keywords" content="السكر التراكمي, مقاومة الإنسولين, دكتور وسيم حبيب, ويبو هيلث, WiBo Health, HbA1c, أعراض مقاومة الإنسولين, خفض السكر, insulineresistentie, glykemische index">
     <meta name="author" content="د. وسيم حبيب | فريق ويبو هيلث الطبي">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     
     <!-- Self-Referencing Canonical Tag (Fixed) -->
-    <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/insulin-resistance.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/insulin-resistance.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/insulinresistens-hba1c.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/insulin-resistance.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Alternate Language Tags for Google Crawlers (Hreflang) -->
 
@@ -74,43 +139,9 @@
     <meta property="og:title" content="السكر التراكمي ومقاومة الإنسولين: الدليل الشامل | WiBo Health">
     <meta property="og:description" content="دليل طبي وسريري شامل لفهم وعكس مقاومة الإنسولين وخفض قراءات السكر التراكمي بطرق طبيعية ومثبتة علمياً.">
     <meta property="og:url" content="https://wibohealth.com/insulin-resistance.html">
-    <meta property="og:image" content="https://wibohealth.com/images/hba1c-chart.jpg">
+    <meta property="og:image" content="https://wibohealth.com/images/card-insulin-resistance.webp">
 
     <!-- Google Structured Data (Schema.org MedicalWebPage) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "السكر التراكمي ومقاومة الإنسولين: الدليل الشامل",
-      "headline": "HbA1c & Insulin Resistance: Comprehensive Clinical Protocol",
-      "description": "Evidence-based clinical guide on Hemoglobin A1c (HbA1c), cellular insulin resistance, and dietary food sequencing protocols.",
-      "url": "https://wibohealth.com/insulin-resistance.html",
-      "author": {
-        "@type": "Person",
-        "name": "Dr. Wassim Habib",
-        "jobTitle": "مؤسس WiBo Health",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "WiBo Health Group"
-        }
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://wibohealth.com/images/icon-192.png"
-        }
-      },
-      "about": [
-        {"@type": "MedicalCondition", "name": "Insulin Resistance"},
-        {"@type": "MedicalCondition", "name": "Prediabetes"},
-        {"@type": "MedicalTest", "name": "HbA1c Test"}
-      ],
-      "inLanguage": ["ar", "nl", "en"]
-    }
-    </script>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -196,7 +227,7 @@
             text-decoration: none;
         }
 
-        .brand-logo h1 {
+        .brand-logo .brand-name {
             font-size: 20px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -596,13 +627,13 @@
         <div class="header-container">
             <a href="/" class="brand-logo">
                 <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
-                <h1>WiBo Health</h1>
+                <span class="brand-name">WiBo Health</span>
             </a>
             <div class="header-controls">
-                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
-                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                <a class="lang-btn" data-sv-link href="/sv/articles/insulinresistens-hba1c.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                <a class="lang-btn active" href="/insulin-resistance.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                <a class="lang-btn" href="/en/insulin-resistance.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn" href="/nl/insulin-resistance.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                <a class="lang-btn" href="/sv/articles/insulinresistens-hba1c.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -629,7 +660,7 @@
                 </div>
                 <div>
                     <strong data-i18n="author_name">بقلم: فريق ويبو هيلث الطبي</strong>
-                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة سريرية معتمدة</div>
+                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة طبية</div>
                 </div>
             </div>
         </article>
@@ -822,7 +853,7 @@
                 'badge_specialized': '<i class="fa-solid fa-notes-medical"></i> مقال سريري متخصص',
                 'article_main_title': 'السكر التراكمي ومقاومة الإنسولين: الدليل الشامل للفهم، العلاج، والوقاية الغذائية',
                 'author_name': ' فريق ويبو هيلث الطبي',
-                'author_subtitle': 'دليل طبي شامل ومحدث | مراجعة سريرية معتمدة',
+                'author_subtitle': 'دليل طبي شامل ومحدث | مراجعة طبية',
                 'intro_p1': 'يعيش الملايين حول العالم على حافة الإصابة بمرض السكري من النوع الثاني دون أن يدركوا ذلك، حيث يتطور المرض في صمت تام لسنوات. وغالباً ما يكون الجاني الخفي وراء هذا التطور الصامت هو <strong>"مقاومة الإنسولين"</strong>.',
                 'intro_p2': 'إن إهمال إجراء الفحوصات الدورية، وتحديداً فحص السكر التراكمي، قد يؤدي إلى مضاعفات خطيرة تؤثر على الأوعية الدموية، الأعصاب، الكلى، والقلب. في هذا الدليل السريري الشامل، سنقوم بتفكيك العلاقة المعقدة بين السكر التراكمي ومقاومة الإنسولين، ونقدم خارطة طريق علمية وعملية لاستعادة حساسية الخلايا وتصحيح المسار الأيضي.',
                 'h2_what_is_hba1c': 'ما هو السكر التراكمي (HbA1c) ولماذا لا يمكن تجاهله؟',
@@ -885,7 +916,7 @@
                 'badge_specialized': '<i class="fa-solid fa-notes-medical"></i> Gespecialiseerd Klinisch Artikel',
                 'article_main_title': 'HbA1c en Insulineresistentie: De Complete Gids voor Begrip, Omkering en Voeding',
                 'author_name': 'Door: Medisch Team WiBo Health',
-                'author_subtitle': 'Evidence-based Medische Gids | Klinisch Gevalideerd',
+                'author_subtitle': 'Evidence-based Medische Gids | Medisch beoordeeld',
                 'intro_p1': 'Miljoenen mensen wereldwijd leven op de rand van diabetes type 2 zonder het te weten, doordat de aandoening zich jarenlang geruisloos ontwikkelt. De verborgen boosdoener achter deze sluipende progressie is vrijwel altijd <strong>"insulineresistentie"</strong>.',
                 'intro_p2': 'Het uitstellen van routinematig bloedonderzoek—met name de HbA1c-bepaling—kan leiden tot ernstige schade aan bloedvaten, zenuwen, nieren en het hart. In deze klinische gids ontrafelen we de complexe relatie tussen HbA1c en insulineresistentie, en bieden we een wetenschappelijk onderbouwde routekaart om de cellulaire gevoeligheid te herstellen.',
                 'h2_what_is_hba1c': 'Wat is HbA1c (geglyceerd hemoglobine) en waarom is het cruciaal?',
@@ -977,7 +1008,7 @@
                 'boodi_box_title': '📱 Scan Supermarket Foods Instantly with boodi App 💚',
                 'boodi_box_desc': 'Scan barcodes in the grocery aisle to instantly assess glycemic speed, detect hidden sugars, and discover lower-sugar alternatives from the exact same shelf!',
                 'boodi_box_btn': 'Explore boodi App',
-                'h2_lifestyle': 'Dietary & Lifestyle Protocol to Reverse Resistance and Lower HbA1c',
+                'h2_lifestyle': 'Diet & Lifestyle Plan to Improve Insulin Sensitivity and Lower HbA1c',
                 'desc_lifestyle_intro': 'The encouraging clinical reality is that insulin resistance and prediabetes are completely reversible through targeted lifestyle interventions. The clinical objective is not starvation, but deliberate management of postprandial insulin surges.',
                 'h3_gi': '1. The Glycemic Index (GI) Strategy',
                 'desc_gi_intro': 'The Glycemic Index categorizes carbohydrate foods by the speed at which they raise systemic blood glucose:',
@@ -1009,27 +1040,7 @@
 
         // الكشف الذكي الشامل عن لغة الزائر أو عناكب البحث (Googlebot URL query parameter)
         function detectInitialLang() {
-            // 1. قراءة معلم الرابط المباشر لجوجل (مثل ?lang=nl)
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) {
-                return queryLang;
-            }
-
-            // 2. قراءة تفضيل الذاكرة المشتركة للموقع
-            const saved = localStorage.getItem('preferred_language') || 
-                          localStorage.getItem('wibo_language') || 
-                          localStorage.getItem('selected_language');
-
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) {
-                return saved;
-            }
-
-            // 3. لغة جهاز أو متصفح الزائر
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('nl')) return 'nl';
-            if (phoneLang.startsWith('ar')) return 'ar';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1071,24 +1082,19 @@
             });
 
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
-                document.title = translations[currentLang]['meta_title'];
+                /* <title> is static per language URL */
             }
 
             const metaDescEl = document.getElementById('metaDescription');
             if (metaDescEl && translations[currentLang] && translations[currentLang]['intro_p1']) {
                 // توليد وصف مختصر لمحركات البحث باللغة النشطة
                 const cleanDesc = translations[currentLang]['intro_p1'].replace(/<[^>]*>?/gm, '');
-                metaDescEl.setAttribute('content', cleanDesc);
+                /* meta description is static per language URL */
             }
         }
 
         /* مزامنة الثيم واللغة عبر التبويبات */
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en')) {
-                    changeLanguage(e.newValue);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue === 'dark') {
                     document.body.classList.add('dark-mode');

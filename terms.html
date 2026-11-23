@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/anvandarvillkor.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -54,17 +26,79 @@
 
     <!-- Primary Meta Tags & SEO -->
     <title id="pageTitle">شروط الاستخدام والاتفاقية القانونية | WiBo Health & Boodi App</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/terms.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/terms.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/terms.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/anvandarvillkor.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/terms.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/terms.html#webpage",
+            "url": "https://wibohealth.com/terms.html",
+            "name": "شروط الاستخدام والاتفاقية القانونية | WiBo Health & Boodi App",
+            "description": "شروط وأحكام استخدام موقع WiBo Health وتطبيق بودي الذكي - الأطر القانونية الأوروبية، إخلاء المسؤولية السريرية، وضوابط الاستخدام في هولندا والاتحاد الأوروبي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/terms.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/terms.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "📜 شروط الاستخدام والاتفاقية القانونية",
+                    "item": "https://wibohealth.com/terms.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="title" content="شروط الاستخدام والاتفاقية القانونية | WiBo Health & Boodi App">
     <meta name="description" id="pageDescription" content="شروط وأحكام استخدام موقع WiBo Health وتطبيق بودي الذكي - الأطر القانونية الأوروبية، إخلاء المسؤولية السريرية، وضوابط الاستخدام في هولندا والاتحاد الأوروبي.">
     <meta name="keywords" content="شروط الاستخدام, WiBo Health, تطبيق بودي, إخلاء مسؤولية طبي, شروط الخدمة, Algemene Voorwaarden, Boodi App, Burgerlijk Wetboek, EU MDR">
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://wibohealth.com/terms.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/terms.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/anvandarvillkor.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/terms.html">
-    <!-- SV-ALTERNATES:END -->
     
     <!-- Multilingual Hreflang Tags for SEO & Accelerated Google Indexing -->
     
@@ -73,7 +107,9 @@
     <meta property="og:url" content="https://wibohealth.com/terms.html">
     <meta property="og:title" id="ogTitle" content="شروط الاستخدام | WiBo Health & Boodi App">
     <meta property="og:description" id="ogDescription" content="الضوابط القانونية والسريرية المعتمدة لمنظومة WiBo Health وتطبيق بودي.">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="WiBo Health">
 
     <!-- Twitter -->
@@ -81,24 +117,9 @@
     <meta name="twitter:url" content="https://wibohealth.com/terms.html">
     <meta name="twitter:title" id="twTitle" content="Terms of Service | WiBo Health & Boodi App">
     <meta name="twitter:description" id="twDescription" content="Official Terms of Use and EU Legal Framework for WiBo Health and Boodi App.">
-    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
 
     <!-- Structured Data (JSON-LD Schema) for Google Search Rich Results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "WiBo Health & Boodi App Terms of Service",
-      "url": "https://wibohealth.com/terms.html",
-      "description": "Terms of service, legal compliance, medical disclaimers, and Dutch civil law framework for WiBo Health Group and Boodi App.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com",
-        "logo": "https://wibohealth.com/images/logo.png"
-      }
-    }
-    </script>
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -211,7 +232,7 @@
             filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 22px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -682,7 +703,7 @@
                         <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                     </div>
                     <div class="logo-text">
-                        <h1>WiBo Health</h1>
+                        <span class="brand-name">WiBo Health</span>
                     </div>
                 </a>
 
@@ -700,10 +721,10 @@
 
                 <!-- Controls & Language Selector -->
                 <div class="header-controls">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                    <a class="lang-btn" data-sv-link href="/sv/anvandarvillkor.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
-                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
+                    <a class="lang-btn active" href="/terms.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/terms.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/terms.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/anvandarvillkor.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>
@@ -781,7 +802,7 @@
                 <!-- Section 4: Boodi App Specific Terms -->
                 <h2 data-i18n="terms_section4_title">4. شروط وأحكام تطبيق بودي الذكي (boodi App)</h2>
                 <div class="boodi-terms-card">
-                    <h4 data-i18n="terms_boodi_h">📱 ضوابط فحص الباركود، الحلال، والاشتراكات السحابية</h4>
+                    <h4 data-i18n="terms_boodi_h">📱 ضوابط فحص الباركود والمكونات والاشتراكات</h4>
                     <p data-i18n="terms_boodi_p">
                         يعتمد تطبيق boodi 💚 في تحليله للمكونات على قواعد البيانات المفتوحة وتقنيات الذكاء الاصطناعي (Gemini). إن نتائج فحص "الحلال" ومطابقة المكونات هي نتائج خوارزمية بيانية استرشادية مبنية على المكونات المعلنة من المصنّع، ولا تُعد فتوى دينية شرعية قطعية. كما تخضع الاشتراكات (VIP & Scans) لسياسات متجر Google Play الرسمية وشروط منصة RevenueCat للفوترة السحابية الآمنة، مع حفظ البيانات محلياً على جهاز المستخدم (Local-First Architecture).
                     </p>
@@ -826,7 +847,7 @@
                 <p data-i18n="terms_section10_intro">لأي استفسارات قانونية أو فنية تتعلق بشروط الاستخدام، يُرجى التواصل معنا عبر القنوات الرسمية:</p>
                 <ul>
                     <li>
-                        <span data-i18n="terms_email_title">البريد الإلكتروني المعتمد للدعم:</span> 
+                        <span data-i18n="terms_email_title">البريد الإلكتروني الرسمي للدعم:</span> 
                         <a href="mailto:support@wibohealth.com">support@wibohealth.com</a>
                     </li>
                 </ul>
@@ -906,8 +927,8 @@
                 terms_medical_h: "⚠️ تنبيه سريري ملزم وإخلاء مسؤولية قانونية",
                 terms_medical_p: "كافة المعلومات والأدوات والحاسبات المنشورة على موقع WiBo Health وتطبيق boodi هي أدوات توجيهية وتعليمية استرشادية، وليست جهازاً طبياً تشخيصياً أو برمجية سريرية معتمدة بموجب اللائحة الأوروبية للأجهزة الطبية (EU MDR 2017/745). لا تشكل مخرجات المنصة تشخيصاً طبياً، ولا تُعد بديلاً عن الفحص السريري المباشر، ولا يجوز الاعتماد عليها لتعديل جرعات الأنسولين أو الأدوية الحيوية. يجب على المرضى، لاسيما مرضى السكري، وأمراض الكلى، والحساسيات الغذائية المفرطة، استشارة أطبائهم والتحقق دائماً من بطاقة البيان المطبوعة على عبوة المنتج الأصلية.",
                 terms_section4_title: "4. شروط وأحكام تطبيق بودي الذكي (boodi App)",
-                terms_boodi_h: "📱 ضوابط فحص الباركود، الحلال، والاشتراكات السحابية",
-                terms_boodi_p: "يعتمد تطبيق boodi 💚 في تحليله للمكونات على قواعد البيانات المفتوحة وتقنيات الذكاء الاصطناعي (Gemini). إن نتائج فحص 'الحلال' ومطابقة المكونات هي نتائج خوارزمية بيانية استرشادية مبنية على المكونات المعلنة من المصنّع، ولا تُعد فتوى دينية شرعية قطعية. كما تخضع الاشتراكات (VIP & Scans) لسياسات متجر Google Play الرسمية وشروط منصة RevenueCat للفوترة السحابية الآمنة، مع حفظ البيانات محلياً على جهاز المستخدم (Local-First Architecture).",
+                terms_boodi_h: "📱 ضوابط فحص الباركود والمكونات والاشتراكات",
+                terms_boodi_p: "يعتمد تطبيق boodi 💚 في تحليله للمكونات على قواعد البيانات المفتوحة وتقنيات الذكاء الاصطناعي (Gemini). إن نتائج فحص المكونات والتفضيلات الغذائية هي نتائج خوارزمية استرشادية مبنية على المكونات المعلنة من المصنّع. كما تخضع الاشتراكات (VIP & Scans) لسياسات متجر Google Play الرسمية وشروط منصة RevenueCat للفوترة السحابية الآمنة، مع حفظ البيانات محلياً على جهاز المستخدم (Local-First Architecture).",
                 terms_section5_title: "5. الاستخدام المحظور والمسؤولية التقنية",
                 terms_section5_intro: "يحظر على المستخدم تماماً القيام بأي من الأفعال التالية:",
                 terms_section5_item1: "نسخ أو تفريغ قواعد البيانات السريرية (Web Scraping / Data Mining) أو إعادة نشر المحتوى دون إذن كتابي رسمي.",
@@ -924,7 +945,7 @@
                 terms_section9_text: "تخضع هذه الاتفاقية وتُفسر حصرياً وفقاً لقوانين مملكة هولندا (Nederlands recht) وقوانين الاتحاد الأوروبي السارية. ويخضع أي نزاع ينشأ عن هذه الشروط للاختصاص القضائي الحصري للمحاكم المختصة في هولندا.",
                 terms_section10_title: "10. قنوات الدعم والتواصل الرسمي",
                 terms_section10_intro: "لأي استفسارات قانونية أو فنية تتعلق بشروط الاستخدام، يُرجى التواصل معنا عبر القنوات الرسمية:",
-                terms_email_title: "البريد الإلكتروني المعتمد للدعم:",
+                terms_email_title: "البريد الإلكتروني الرسمي للدعم:",
                 terms_footer_text: "شكراً لثقتكم بمنظومة WiBo Health وتطبيق boodi 💚. نتمنى لكم رحلة صحية سريرية آمنة وموفقة!",
                 terms_back_home: "العودة للرئيسية",
                 btn_explore_boodi: "اكتشف تطبيق بودي 💚",
@@ -961,14 +982,14 @@
                 terms_section2_intro: "Our platform provides informational and educational nutritional resources. You are authorized to use the platform solely for personal, non-commercial purposes:",
                 terms_section2_item1: "Consulting Glycemic Index, Insulin Index, and comprehensive macro/micronutrient databases.",
                 terms_section2_item2: "Utilizing free clinical calculators (BMR, TDEE, BMI, WHtR) to estimate individual nutritional requirements.",
-                terms_section2_item3: "Reading certified supplement guides, scientific articles, and nutritional recipes.",
+                terms_section2_item3: "Reading supplement guides, scientific articles, and nutritional recipes.",
                 terms_section2_item4: "Scanning barcode items via the boodi app to inspect ingredients and view generic healthy alternatives.",
                 terms_section3_title: "3. Strict Clinical Medical Disclaimer (EU MDR 2017/745)",
                 terms_medical_h: "⚠️ Binding Clinical Disclaimer & Limitation of Liability",
                 terms_medical_p: "All data, calculators, and informational features on WiBo Health and boodi app are purely educational tools and DO NOT constitute a medical device (Not SaMD under EU MDR 2017/745). The platform does not provide diagnostic conclusions, clinical prescriptions, or medication dosing advice. Patients (especially those with diabetes, kidney disease, or severe allergies) must consult their medical practitioner and verify physical product packaging.",
                 terms_section4_title: "4. boodi Mobile App Specific Terms",
-                terms_boodi_h: "📱 Barcode Scanner, Halal Verification & Cloud Billing",
-                terms_boodi_p: "The boodi 💚 app utilizes open public databases and Google Gemini AI models. All 'Halal' and ingredient analyses represent algorithmic estimations based on manufacturer labels and do not constitute binding religious fatwas. Subscriptions and scan bundles are securely managed through Google Play Billing and RevenueCat under a privacy-first Local Storage architecture.",
+                terms_boodi_h: "📱 Barcode Scanner, Ingredient Checks & Billing",
+                terms_boodi_p: "The boodi 💚 app utilizes open public databases and Google Gemini AI models. All ingredient and dietary-preference analyses are algorithmic estimates based on manufacturer labels. Subscriptions and scan bundles are securely managed through Google Play Billing and RevenueCat under a privacy-first Local Storage architecture.",
                 terms_section5_title: "5. Prohibited Use & System Security",
                 terms_section5_intro: "Users are strictly prohibited from engaging in any of the following activities:",
                 terms_section5_item1: "Automated scraping, harvesting, or bulk duplication of clinical datasets without written authorization.",
@@ -978,14 +999,14 @@
                 terms_section6_title: "6. Intellectual Property & Trademarks",
                 terms_section6_text: "All intellectual property rights, trademarks, algorithmic designs, medical compilations, and interface code belong exclusively to WiBo Health Group and are protected under Dutch copyright law and European treaties.",
                 terms_section7_title: "7. Data Sources & Manufacturer Notice & Action",
-                terms_section7_text: "Nutrition and supplement data originate from validated sources (USDA, Dutch Voedingscentrum, and Open Food Facts). Under the EU Digital Services Act (DSA), manufacturers can submit product data corrections directly to support@wibohealth.com.",
+                terms_section7_text: "Nutrition and supplement data originate from recognised sources (USDA, Dutch Voedingscentrum, and Open Food Facts). Under the EU Digital Services Act (DSA), manufacturers can submit product data corrections directly to support@wibohealth.com.",
                 terms_section8_title: "8. Limitation of Liability (Dutch Civil Code BW Art. 6:162)",
                 terms_section8_text: "To the maximum extent permitted by Dutch law, WiBo Health Group and its medical team bear no liability for indirect or consequential damages arising from the use of platform data without professional medical consultation.",
                 terms_section9_title: "9. Governing Law & Jurisdiction",
                 terms_section9_text: "These terms are exclusively governed by and construed in accordance with the laws of the Netherlands. Any legal disputes shall be submitted exclusively to the competent courts in the Netherlands.",
                 terms_section10_title: "10. Official Support Channels",
                 terms_section10_intro: "For legal or technical questions about these Terms of Service, contact us via:",
-                terms_email_title: "Certified Support Email:",
+                terms_email_title: "Official Support Email:",
                 terms_footer_text: "Thank you for trusting WiBo Health and boodi 💚 app. We wish you an empowering and healthy journey!",
                 terms_back_home: "Back to Home",
                 btn_explore_boodi: "Discover Boodi App 💚",
@@ -1028,8 +1049,8 @@
                 terms_medical_h: "⚠️ Bindende Medische Disclaimer & Aansprakelijkheidsbeperking",
                 terms_medical_p: "Alle informatie, calculaties en softwarefuncties op WiBo Health en de boodi app zijn uitsluitend bedoeld als educatief hulpmiddel en vormen NADRUKKELIJK GEEN medisch hulpmiddel (Geen SaMD onder EU MDR 2017/745). De uitkomsten vervangen nooit een consultatie bij een arts of diëtist en mogen niet worden gebruikt om medicatie- of insulinedoseringen aan te passen. Gebruikers (vooral diabetici en mensen met allergieën) dienen altijd hun behandelend arts te raadplegen en de verpakking te controleren.",
                 terms_section4_title: "4. Bepalingen Betreffende de boodi App",
-                terms_boodi_h: "📱 Barcodescanner, Halal-verificatie & Facturering",
-                terms_boodi_p: "De boodi 💚 app gebruikt openbare databases en Google Gemini AI-technologie. Uitkomsten van 'Halal'-checks zijn puur indicatief op basis van ingrediëntendeclaraties van fabrikanten en vormen geen bindend religieus oordeel. Abonnementen en scanbundels worden veilig verwerkt via Google Play Billing en RevenueCat met strikte lokale gegevensopslag (Local-First).",
+                terms_boodi_h: "📱 Barcodescanner, ingrediëntencontrole & facturering",
+                terms_boodi_p: "De boodi 💚 app gebruikt openbare databases en Google Gemini AI-technologie. Uitkomsten van ingrediënten- en voorkeurchecks zijn puur indicatief en gebaseerd op de ingrediëntendeclaraties van fabrikanten. Abonnementen en scanbundels worden veilig verwerkt via Google Play Billing en RevenueCat met strikte lokale gegevensopslag (Local-First).",
                 terms_section5_title: "5. Verboden Gebruik & Systeembeveiliging",
                 terms_section5_intro: "Het is strikt verboden om de volgende handelingen uit te voeren:",
                 terms_section5_item1: "Het geautomatiseerd scrapen, kopiëren of minen van klinische data zonder voorafgaande schriftelijke toestemming.",
@@ -1064,21 +1085,7 @@
 
         // Determine Initial Language
         function detectInitialLang() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang && ['ar', 'en', 'nl'].includes(urlLang)) {
-                return urlLang;
-            }
-
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && ['ar', 'en', 'nl'].includes(saved)) {
-                return saved;
-            }
-
-            const browserLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (browserLang.startsWith('ar')) return 'ar';
-            if (browserLang.startsWith('nl')) return 'nl';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1096,9 +1103,9 @@
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
             
             // Update Page Meta for Googlebot & SEO
-            document.title = t('page_title');
+            /* <title> is static per language URL */
             const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.setAttribute('content', t('page_desc'));
+            if (metaDesc) /* meta description is static per language URL */
 
             // Update UI Elements
             document.querySelectorAll('[data-i18n]').forEach(el => {

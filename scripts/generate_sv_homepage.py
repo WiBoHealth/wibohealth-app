@@ -17,7 +17,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from homepage_sv import ALT, FOOTER_SOURCES, MEALS, META, T, TIPS  # noqa: E402
-from generate_article_pages import sv_page_of  # noqa: E402  (legacy article -> its Swedish page)
+from generate_root_pages import (SWITCH_RUN, head_block as root_head_block, map_url as root_map_url,  # noqa: E402
+                                 switcher as root_switcher)
+from site_urls import ROOT_PAGES  # noqa: E402
 from generate_food_pages import mark_english_links  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -48,17 +50,14 @@ def attr(value):
 
 def head(t):
     t = rep('<html lang="ar" dir="rtl">', '<html lang="sv" dir="ltr">', t)
-    # language boot: this page is always Swedish
-    t = sub(r'<script>\s*\(function \(d\) \{\s*var h = d\.documentElement;.*?\}\)\(document\);\s*</script>',
-            '<script>document.documentElement.lang = \'sv\'; document.documentElement.dir = \'ltr\'; '
-            'window.wiboLangReady = function () {};</script>', t, flags=re.S, what='language boot script')
     t = sub(r'<title>.*?</title>', '<title>%s</title>' % html.escape(META['title']), t, what='title')
     for name in ('title', 'description', 'keywords'):
         t = sub(r'<meta name="%s" content="[^"]*">' % name,
                 '<meta name="%s" content="%s">' % (name, attr(META[name])), t, what='meta ' + name)
-    t = rep('<link rel="canonical" href="https://wibohealth.com/">', '<link rel="canonical" href="%s">' % URL, t)
-    t = rep('    <!-- EN/NL are served on this same URL via ?lang (no hreflang for them); Swedish has its own static page -->\n',
-            '', t)
+    # canonical, hreflang (ar/en/nl/sv + x-default) and JSON-LD: the shared root-page head block, in Swedish
+    h1 = re.sub(r'<[^>]+>', '', T.get('hero_title', META['og_title']))
+    t = sub(r'    <!-- ROOT-HEAD:START.*?<!-- ROOT-HEAD:END -->',
+            lambda _: root_head_block('/', 'sv', META['title'], META['description'], h1), t, flags=re.S, what='root head block')
     t = rep('<meta property="og:url" content="https://wibohealth.com/">', '<meta property="og:url" content="%s">' % URL, t)
     t = rep('<meta name="twitter:url" content="https://wibohealth.com/">', '<meta name="twitter:url" content="%s">' % URL, t)
     t = rep('<meta property="og:locale" content="ar_AR">', '<meta property="og:locale" content="sv_SE">', t)
@@ -81,23 +80,19 @@ def language_engine(t):
             t, flags=re.S, what='translations dictionary')
     t = sub(r'function detectInitialLang\(\) \{.*?\n        \}\n', "function detectInitialLang() {\n            return 'sv';\n        }\n",
             t, flags=re.S, what='detectInitialLang')
-    # the other languages live on the root homepage; the choice is stored there as usual
+    # the other languages have their own static homepages (/, /en/index.html, /nl/index.html)
     t = rep("        function changeLanguage(lang) {\n            currentLang = lang;\n            localStorage.setItem('preferred_language', lang);\n            localStorage.setItem('wibo_language', lang);\n",
-            "        function changeLanguage(lang) {\n            if (lang !== 'sv') { location.href = '/?lang=' + lang; return; }\n            currentLang = lang;\n", t)
+            "        function changeLanguage(lang) {\n            if (lang !== 'sv') { location.href = %s[lang] || '/'; return; }\n            currentLang = lang;\n"
+            % json.dumps({l: p for l, p in ROOT_PAGES['/'].items() if l != 'sv'}), t)
     return t
 
 
 def switcher(t):
-    old = re.search(r'( *)<button class="lang-btn" data-lang-toggle="ar".*?title="Svenska">SV</a>\n', t, re.S)
+    old = SWITCH_RUN.search(t)
     if not old:
         sys.exit('generate_sv_homepage: language switcher not found')
-    pad = old.group(1)
-    new = ''.join(pad + line + '\n' for line in (
-        '<a class="lang-btn" href="/?lang=ar" hreflang="ar" lang="ar" title="العربية">AR</a>',
-        '<a class="lang-btn" href="/?lang=en" hreflang="en" lang="en" title="English">EN</a>',
-        '<a class="lang-btn" href="/?lang=nl" hreflang="nl" lang="nl" title="Nederlands">NL</a>',
-        '<button class="lang-btn active" data-lang-toggle="sv" aria-current="true" title="Svenska">SV</button>'))
-    return t[:old.start()] + new + t[old.end():]
+    pad = re.match(r'[ \t]*', old.group(0)).group(0)
+    return t[:old.start()] + root_switcher('/', 'sv', pad) + t[old.end():]
 
 
 def prerender(t):
@@ -126,7 +121,7 @@ def prerender(t):
 
 def links(t):
     """The page lives in /sv/: absolute URLs everywhere, and pages without a Swedish version open in English."""
-    # CSS selector on the doctor link (its href gains ?lang=en below)
+    # CSS selector on the doctor link (its href becomes the Swedish doctor page below)
     t = rep('html[data-theme="dark"] a[href="doctor.html"]', 'html[data-theme="dark"] a[href="/sv/dr-wassim-habib.html"]', t)
     body = t.index('<body>')
 
@@ -143,11 +138,9 @@ def links(t):
             return '%s="/sv/foods/index.html"' % name
         if name == 'href' and m.start() > body and path in ('/supplements.html', '/supplements/index.html'):   # Swedish supplement index (has compare)
             return '%s="/sv/supplements/index.html"' % name
-        if name == 'href' and m.start() > body and sv_page_of(path):     # older article with a Swedish version
-            return '%s="%s"' % (name, sv_page_of(path))
         if name == 'href' and path.endswith('.html') and m.start() > body:
-            url = re.sub(r'^([^#]*?)(\?[^#]*)?(#.*)?$',
-                         lambda p: p.group(1) + (p.group(2) + '&' if p.group(2) else '?') + 'lang=en' + (p.group(3) or ''), url)
+            # the Swedish page where there is one, else the static English page (scripts/site_urls.py)
+            return '%s="%s"' % (name, root_map_url(url, 'sv'))
         return '%s="%s"' % (name, url)
     t = re.sub(r'(?<![-\w])(href|src|srcset)="([^"]+)"', lambda m: fix(m) if ' ' not in m.group(2) else m.group(0), t)
     t = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="%s"' % ', '.join(
@@ -155,10 +148,9 @@ def links(t):
     # the static directory pages: Swedish readers get the Swedish food index and the English supplement index
     t = rep("a.href = (l === 'en' || l === 'nl' ? '/' + l : '') + '/'",
             "a.href = (l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? '/sv' : '') + '/'", t)
-    # the food search matches English (and Arabic/Dutch) names: open the guide in English
+    # the food search opens the Swedish view of the food guide (it matches Swedish, English, Arabic and Dutch names)
     t = rep('<form class="meals-search" action="/foods.html" method="get" role="search">',
-            '<form class="meals-search" action="/foods.html" method="get" role="search">\n'
-            '        <input type="hidden" name="lang" value="en">', t)
+            '<form class="meals-search" action="/sv/foods.html" method="get" role="search">', t)
     return t
 
 
@@ -192,8 +184,6 @@ def localise_rest(t):
     t = rep('id="homeTipNext" aria-label="النصيحة التالية"', 'id="homeTipNext" aria-label="Nästa tips"', t)
     t = rep('title="المظهر"', 'title="Byt tema"', t)
     # diabetes capsule (js/nav-diabetes.js sets the same at runtime)
-    t = rep('href="/diabetes.html?lang=en" class="nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="nav-link nav-diabetes"', t)
-    t = rep('href="/diabetes.html?lang=en" class="mobile-nav-link nav-diabetes"', 'href="/sv/diabetes.html" class="mobile-nav-link nav-diabetes"', t)
     t = rep('<span class="nav-diabetes-label">السكري ومتلازمة الأيض</span>', '<span class="nav-diabetes-label">Diabetes</span>', t, count=2)
     # Arabic image alts without an i18n key
     for src, alt in ALT.items():
@@ -226,9 +216,9 @@ def main():
     t = SRC.read_text(encoding='utf-8-sig')
     t = head(t)
     t = language_engine(t)
-    t = switcher(t)
     t = prerender(t)
     t = links(t)
+    t = switcher(t)          # after links(): the switcher's own URLs are final
     t = localise_rest(t)
     check(t)
     OUT.parent.mkdir(exist_ok=True)

@@ -38,16 +38,14 @@
             reject: 'Neka'
         }
     };
-    // privacy page per language (Swedish has its own static page)
-    var PRIVACY = { ar: '/privacy.html', en: '/privacy.html?lang=en', nl: '/privacy.html?lang=nl', sv: '/sv/integritetspolicy.html' };
+    // privacy page per language (each language has its own static page; the page language comes from <html lang>)
+    var PRIVACY = { ar: '/privacy.html', en: '/en/privacy.html', nl: '/nl/privacy.html', sv: '/sv/integritetspolicy.html' };
 
     function stored() {
         try { return localStorage.getItem(KEY); } catch (e) { return null; }
     }
 
     function lang() {
-        var q = /[?&]lang=(ar|en|nl|sv)\b/.exec(location.search);
-        if (q) return q[1];
         var l = (document.documentElement.getAttribute('lang') || 'ar').slice(0, 2).toLowerCase();
         return TEXT[l] ? l : 'ar';
     }

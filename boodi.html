@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/boodi.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -53,45 +25,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO & App Discovery Tags -->
-    <title data-i18n="meta_title">تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health</title>
+    <title>تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/boodi.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/boodi.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/boodi.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/boodi.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/boodi.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/boodi.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/boodi.html#webpage",
+            "url": "https://wibohealth.com/boodi.html",
+            "name": "تطبيق بودي (boodi) | رفيقك الصحي الذكي لفحص الأطعمة والبدائل | WiBo Health",
+            "description": "حمّل تطبيق بودي boodi الرسمي من WiBo Health Group: ماسح الباركود السريري الذكي: فاحص المكونات الذكي ومناسبته لدايتك، المؤشر الجلايسيمي، واكتشاف البدائل الصحية الأقل سكراً من نفس المتجر.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/boodi-app-poster.webp"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/boodi.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "MobileApplication",
+            "name": "boodi",
+            "applicationCategory": "HealthApplication",
+            "operatingSystem": "Android, iOS",
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "url": "https://wibohealth.com/boodi.html"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/boodi.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "تطبيق بودي 💚 (boodi) رفيقك الصحي للتسوق الذكي",
+                    "item": "https://wibohealth.com/boodi.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="metaDescription" content="حمّل تطبيق بودي boodi الرسمي من WiBo Health Group: ماسح الباركود السريري الذكي: فاحص المكونات الذكي ومناسبته لدايتك، المؤشر الجلايسيمي، واكتشاف البدائل الصحية الأقل سكراً من نفس المتجر.">
     <meta name="keywords" content="تطبيق بودي, boodi, boodi app, ماسح باركود, فاحص المكونات, المؤشر الجلايسيمي, ويبو هيلث, WiBo Health, بدائل صحية, دايت, سكري, barcodescanner, ingredient scanner, glykemische index">
     <meta name="author" content="WiBo Health Group">
-    <link rel="canonical" href="https://wibohealth.com/boodi.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/boodi.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/boodi.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/boodi.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wibohealth.com/boodi.html">
     <meta property="og:title" content="boodi App 💚 | WiBo Health">
     <meta property="og:description" content="Slimme ingrediënten- en dieetscanner met glykemische index en gezonde alternatieven.">
-    <meta property="og:image" content="https://wibohealth.com/images/boodi-app-poster.jpeg">
+    <meta property="og:image" content="https://wibohealth.com/images/boodi-app-poster.webp">
 
     <!-- Google Structured Data (SoftwareApplication Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "boodi",
-      "operatingSystem": "Android",
-      "applicationCategory": "HealthApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com"
-      },
-      "description": "Slimme ingrediënten- en dieetscanner voor glykemische impact en gezondere alternatieven in Europese supermarkten."
-    }
-    </script>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,7 +195,7 @@
             text-decoration: none;
         }
 
-        .brand-logo h1 {
+        .brand-logo .brand-name {
             font-size: 20px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -276,6 +300,7 @@
 
         .hero-poster-img {
             width: 100%;
+            height: auto;
             max-width: 420px;
             border-radius: 24px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(16, 185, 129, 0.2);
@@ -690,7 +715,7 @@
             .smart-banner-text { min-width: 0; flex-basis: 100%; }
         }
         @media (max-width: 360px) {
-            body > header .brand-logo h1 { display: none !important; }
+            body > header .brand-logo .brand-name { display: none !important; }
         }
     </style>
     <style>.hero-showcase>.hero-content{order:1}.hero-showcase>.hero-poster-box{order:2}@media(min-width:901px){.hero-showcase>.hero-content{text-align:start}}.app-main-title,.section-header h2{color:var(--wb-text)}.app-description,.section-header p{color:var(--wb-muted)}.btn-direct-apk{background:var(--wb-soft);color:var(--wb-text);border-color:var(--wb-border)}</style>
@@ -705,13 +730,13 @@
         <div class="header-container">
             <a href="/" class="brand-logo">
                 <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
-                <h1>WiBo Health</h1>
+                <span class="brand-name">WiBo Health</span>
             </a>
             <div class="header-controls">
-                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
-                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                <a class="lang-btn" data-sv-link href="/sv/boodi.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                <a class="lang-btn active" href="/boodi.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                <a class="lang-btn" href="/en/boodi.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn" href="/nl/boodi.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                <a class="lang-btn" href="/sv/boodi.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -730,7 +755,7 @@
         <section class="hero-showcase">
             <!-- Left: Poster Display -->
             <div class="hero-poster-box">
-                <img src="images/boodi-app-poster.jpeg" alt="تطبيق بودي الرسمي - WiBo Health Group" class="hero-poster-img" loading="lazy">
+                <img src="/images/boodi-app-poster.webp" alt="تطبيق بودي الرسمي - WiBo Health Group" class="hero-poster-img" width="640" height="1147" fetchpriority="high" decoding="async">
             </div>
 
             <!-- Right: App Introduction & CTAs -->
@@ -1085,28 +1110,7 @@
 
         // الكشف الذكي الشامل عن لغة الزائر عبر جميع مفاتيح الموقع المعتمدة
         function detectInitialLang() {
-            // 1. فحص معلم الرابط المباشر (مثل boodi.html?lang=nl)
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) {
-                return queryLang;
-            }
-
-            // 2. فحص ذاكرة الموقع الموحدة عبر كافة المفاتيح المحتملة من الصفحة الرئيسية
-            const saved = localStorage.getItem('preferred_language') || 
-                          localStorage.getItem('wibo_language') || 
-                          localStorage.getItem('selected_language') || 
-                          localStorage.getItem('lang');
-
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) {
-                return saved;
-            }
-
-            // 3. التعرف التلقائي على لغة متصفح أو هاتف الزائر
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('nl')) return 'nl';
-            if (phoneLang.startsWith('ar')) return 'ar';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1153,22 +1157,17 @@
             });
 
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
-                document.title = translations[currentLang]['meta_title'];
+                /* <title> is static per language URL */
             }
 
             const metaDescEl = document.getElementById('metaDescription');
             if (metaDescEl && translations[currentLang] && translations[currentLang]['meta_desc']) {
-                metaDescEl.setAttribute('content', translations[currentLang]['meta_desc']);
+                /* meta description is static per language URL */
             }
         }
 
         // الاستماع لأي تغيير في اللغة يتم في تبويب أو نافذة أخرى لحظياً
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en')) {
-                    changeLanguage(e.newValue);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue === 'dark') {
                     document.body.classList.add('dark-mode');

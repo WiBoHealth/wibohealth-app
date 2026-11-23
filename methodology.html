@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/metodik.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -51,14 +23,76 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">منهجية الحساب والمراجع العلمية | WiBo Health</title>
-    <meta name="description" id="seo_desc" content="كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة &quot;لا ينطبق&quot;، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.">
+    <title>منهجية الحساب والمراجع العلمية | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
     <link rel="canonical" href="https://wibohealth.com/methodology.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/methodology.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/methodology.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/methodology.html">
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/metodik.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/methodology.html">
-    <!-- SV-ALTERNATES:END -->
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/methodology.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/methodology.html#webpage",
+            "url": "https://wibohealth.com/methodology.html",
+            "name": "منهجية الحساب والمراجع العلمية | WiBo Health",
+            "description": "كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة \"لا ينطبق\"، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/methodology.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/methodology.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "منهجية الحساب والمراجع العلمية",
+                    "item": "https://wibohealth.com/methodology.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
+    <meta name="description" id="seo_desc" content="كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة &quot;لا ينطبق&quot;، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.">
 
     <!-- Hreflang Tags for SEO -->
 
@@ -67,39 +101,10 @@
     <meta property="og:title" content="منهجية الحساب والمراجع العلمية | WiBo Health">
     <meta property="og:description" content="كيف تحسب WiBo Health المؤشر الجلايسيمي ومؤشر الإنسولين: الجداول الدولية Atkinson 2021 وفق معيار ISO 26642، قاعدة &quot;لا ينطبق&quot;، معادلة الحمل الجلايسيمي، والمراجع العلمية الكاملة.">
     <meta property="og:url" content="https://wibohealth.com/methodology.html">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Methodology & Scientific References",
-    "url": "https://wibohealth.com/methodology.html",
-    "inLanguage": [
-        "ar",
-        "nl",
-        "en"
-    ],
-    "isPartOf": {
-        "@type": "WebSite",
-        "name": "WiBo Health",
-        "url": "https://wibohealth.com/"
-    },
-    "reviewedBy": {
-        "@type": "Person",
-        "@id": "https://wibohealth.com/doctor.html#wassim-habib",
-        "name": "Wassim Habib"
-    },
-    "lastReviewed": "2026-10-12",
-    "citation": [
-        "Atkinson FS, Brand-Miller JC, Foster-Powell K, Buyken AE, Goletzke J. International tables of glycemic index and glycemic load values 2021: a systematic review. Am J Clin Nutr. 2021;114(5):1625–1632.",
-        "ISO 26642:2010. Food products — Determination of the glycaemic index (GI) and recommendation for food classification. International Organization for Standardization; 2010.",
-        "FAO/WHO. Carbohydrates in human nutrition: report of a joint FAO/WHO expert consultation. FAO Food and Nutrition Paper 66. Rome; 1998.",
-        "Holt SH, Miller JC, Petocz P. An insulin index of foods: the insulin demand generated by 1000-kJ portions of common foods. Am J Clin Nutr. 1997;66(5):1264–1276.",
-        "Bao J, de Jong V, Atkinson F, Petocz P, Brand-Miller JC. Food insulin index: physiologic basis for predicting insulin demand evoked by composite meals. Am J Clin Nutr. 2009;90(4):986–992."
-    ]
-}
-    </script>
 
     <!-- Icons & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -737,16 +742,10 @@
                 </button>
 
                 <div class="lang-switcher-container">
-                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
-                        AR
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
-                        NL
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
-                        EN
-                    </button>
-                    <a class="lang-btn" data-sv-link href="/sv/metodik.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                    <a class="lang-btn active" href="/methodology.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/methodology.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/methodology.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/metodik.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
                 </div>
             </div>
         </div>
@@ -1016,7 +1015,7 @@
                 mix_text: "To estimate a dish’s GI from its ingredients we use the weighted-average method recommended by the 1998 FAO/WHO expert consultation, provided every starchy ingredient has a measured value:",
                 mix_note: "This method ignores how fat and protein slow absorption, so it may overestimate the measured value.",
                 s6_title: "Insulin index",
-                ii_text: "We show the insulin index only for foods actually tested by Holt (1997) and Bao (2009); all other foods are marked \"not clinically tested\". Classification: low below 40 · moderate 40–69 · high ≥ 70.",
+                ii_text: "We show the insulin index only for foods actually tested by Holt (1997) and Bao (2009); all other foods are marked \"not tested\". Classification: low below 40 · moderate 40–69 · high ≥ 70.",
                 s7_title: "Review and oversight",
                 review_text: "Medically reviewed by Dr. Wassim Habib | Founder, WiBo Health · 1 November 2026",
                 review_btn: "Meet Dr. Wassim Habib",
@@ -1095,9 +1094,7 @@
         let currentLocale = 'ar';
 
         function initLocalization() {
-            const urlLang = new URLSearchParams(window.location.search).get('lang');
-            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
-            setLocale(saved, false);
+            setLocale(document.documentElement.lang || 'ar', false);   // the page language is fixed by its URL
         }
 
         function setLocale(lang, saveToStorage = true) {
@@ -1137,21 +1134,16 @@
                 }
             });
 
-            if (i18nDictionary[lang]?.page_title) document.title = i18nDictionary[lang].page_title;
+            if (i18nDictionary[lang]?.page_title) /* <title> is static per language URL */
 
             const seoDesc = document.getElementById('seo_desc');
             if (seoDesc && i18nDictionary[lang]?.seo_desc) {
-                seoDesc.setAttribute('content', i18nDictionary[lang].seo_desc);
+                /* meta description is static per language URL */
             }
         }
 
         // Listen for storage changes across browser tabs
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
-                    setLocale(e.newValue, false);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue) applyTheme(e.newValue);
             }

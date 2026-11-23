@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/articles/periodisk-fasta.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -53,19 +25,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO & Google Indexing Tags -->
-    <title data-i18n="meta_title">الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health</title>
+    <title>الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/intermittent-fasting.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/intermittent-fasting.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/intermittent-fasting.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/intermittent-fasting.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/periodisk-fasta.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/intermittent-fasting.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MedicalWebPage",
+            "@id": "https://wibohealth.com/intermittent-fasting.html#webpage",
+            "url": "https://wibohealth.com/intermittent-fasting.html",
+            "name": "الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health",
+            "description": "دليل طبي شامل لتفكيك خرافات الصيام المتقطع، وفهم آليات الأنسولين وهرمون النمو والالتهام الذاتي، مع تصحيح أخطاء كسر الصيام ونصائح خاصة للسيدات. بقلم فريق WiBo Health الطبي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/card-intermittent-fasting.webp"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/intermittent-fasting.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "Article",
+            "@id": "https://wibohealth.com/intermittent-fasting.html#article",
+            "headline": "الصيام المتقطع وخرافات السوشيال ميديا.. تعوا لأصدمكن شوي! 🩺🔥",
+            "description": "دليل طبي شامل لتفكيك خرافات الصيام المتقطع، وفهم آليات الأنسولين وهرمون النمو والالتهام الذاتي، مع تصحيح أخطاء كسر الصيام ونصائح خاصة للسيدات. بقلم فريق WiBo Health الطبي.",
+            "inLanguage": "ar",
+            "image": "https://wibohealth.com/images/card-intermittent-fasting.webp",
+            "mainEntityOfPage": {
+                "@id": "https://wibohealth.com/intermittent-fasting.html#webpage"
+            },
+            "dateModified": "2026-11-09",
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "author": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/intermittent-fasting.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "الصيام المتقطع وخرافات السوشيال ميديا.. تعوا لأصدمكن شوي! 🩺🔥",
+                    "item": "https://wibohealth.com/intermittent-fasting.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="metaDescription" content="دليل طبي شامل لتفكيك خرافات الصيام المتقطع، وفهم آليات الأنسولين وهرمون النمو والالتهام الذاتي، مع تصحيح أخطاء كسر الصيام ونصائح خاصة للسيدات. بقلم فريق WiBo Health الطبي.">
     <meta name="keywords" content="الصيام المتقطع, خرافات الصيام, ويبو هيلث, WiBo Health, الالتهام الذاتي, هرمون النمو, مقاومة الانسولين, كسر الصيام, intermittent fasting, autofagie">
     <meta name="author" content="فريق WiBo Health الطبي">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- Self-Referencing Canonical Tag -->
-    <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/intermittent-fasting.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/intermittent-fasting.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/periodisk-fasta.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/intermittent-fasting.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Alternate Language Tags for Googlebot (Hreflang) -->
 
@@ -74,44 +126,9 @@
     <meta property="og:title" content="الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل | WiBo Health">
     <meta property="og:description" content="دليل سريري لتفكيك خرافات الصيام المتقطع وفهم آليات الأنسولين وهرمون النمو والالتهام الذاتي، مع بروتوكول كسر الصيام الصحيح.">
     <meta property="og:url" content="https://wibohealth.com/intermittent-fasting.html">
-    <meta property="og:image" content="https://wibohealth.com/images/fasting-hero.jpeg">
+    <meta property="og:image" content="https://wibohealth.com/images/card-intermittent-fasting.webp">
 
     <!-- Google Structured Data (Schema.org MedicalWebPage for Instant Indexing) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "الصيام المتقطع وخرافات السوشيال ميديا: الدليل السريري الشامل",
-      "headline": "Intermittent Fasting & Social Media Myths: Complete Evidence-Based Clinical Protocol",
-      "description": "Comprehensive clinical endocrinology and metabolic guide deconstructing intermittent fasting myths, autophagy mechanisms, and safe fast-breaking protocols.",
-      "url": "https://wibohealth.com/intermittent-fasting.html",
-      "author": {
-        "@type": "Organization",
-        "name": "WiBo Health Medical Team",
-        "url": "https://wibohealth.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://wibohealth.com/images/icon-192.png"
-        }
-      },
-      "about": [
-        {
-          "@type": "MedicalCondition",
-          "name": "Insulin Resistance"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Intermittent Fasting"
-        }
-      ],
-      "inLanguage": ["ar", "nl", "en"]
-    }
-    </script>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,7 +214,7 @@
             text-decoration: none;
         }
 
-        .brand-logo h1 {
+        .brand-logo .brand-name {
             font-size: 20px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -609,13 +626,13 @@
         <div class="header-container">
             <a href="/" class="brand-logo">
                 <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
-                <h1>WiBo Health</h1>
+                <span class="brand-name">WiBo Health</span>
             </a>
             <div class="header-controls">
-                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
-                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                <a class="lang-btn" data-sv-link href="/sv/articles/periodisk-fasta.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                <a class="lang-btn active" href="/intermittent-fasting.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                <a class="lang-btn" href="/en/intermittent-fasting.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn" href="/nl/intermittent-fasting.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                <a class="lang-btn" href="/sv/articles/periodisk-fasta.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -642,7 +659,7 @@
                 </div>
                 <div>
                     <strong data-i18n="author_name">إعداد: فريق WiBo Health الطبي</strong>
-                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة سريرية معتمدة</div>
+                    <div style="font-size: 12px; margin-top: 2px;" data-i18n="author_subtitle">دليل طبي شامل ومحدث | مراجعة طبية</div>
                 </div>
             </div>
         </article>
@@ -837,7 +854,7 @@
                 "badge_specialized": "<i class=\"fa-solid fa-notes-medical\"></i> مقال سريري متخصص",
                 "article_main_title": "الصيام المتقطع وخرافات السوشيال ميديا.. تعوا لأصدمكن شوي! 🩺🔥",
                 "author_name": "إعداد: فريق WiBo Health الطبي",
-                "author_subtitle": "دليل طبي شامل ومحدث | مراجعة سريرية معتمدة",
+                "author_subtitle": "دليل طبي شامل ومحدث | مراجعة طبية",
                 "intro_p1": "«جوعانين؟ خايفين يوقف الحرق؟ خايفين تدوب عضلاتكن؟ .. يالله ركض عالبراد، ولازم تاكلو كل ساعتين مشان يضل الأيض شغال، وأوعكن تفوتو وجبة الفطور ترى هي أهم وجبة بالكون!!»",
                 "intro_p2": "لحظة استنوا شوي.. تعوا لأصدمكن صدمة تانية: <strong>كل هالحكي تخريف وهبل ومجرد تسويق تجاري بحت!</strong> 😁",
                 "intro_p3": "لما حدا يوقف قدامكن ويقلكن: <em>\"إذا ما فطرت الصبح رح يوقف حرق جسمك وتهدم عضلاتك\"</em>، اعطوه كف بقفا إيدكن فوراً! لانو علمياً وفيزيولوجياً ما في أي ترابط بين إراحة الجسم لساعات وبين هبوط الحرق أو ضياع العضلات.",
@@ -897,7 +914,7 @@
                 "badge_specialized": "<i class=\"fa-solid fa-notes-medical\"></i> Gespecialiseerd Klinisch Artikel",
                 "article_main_title": "Periodiek Vasten en Social Media Mythen: Tijd voor een Klinische Realitycheck! 🩺🔥",
                 "author_name": "Door: Medisch Team WiBo Health",
-                "author_subtitle": "Evidence-based Medische Review | Klinisch Gevalideerd",
+                "author_subtitle": "Evidence-based Medische Review | Medisch beoordeeld",
                 "intro_p1": "\"Hongerig? Bang dat uw verbranding stilvalt? Bang dat uw spieren wegsmelten? .. Ren snel naar de koelkast, eet elke twee uur om de stofwisseling op gang te houden, en sla nooit het ontbijt over want dat is de belangrijkste maaltijd van de dag!\"",
                 "intro_p2": "Wacht eens even.. Laat ons u een klinische realitycheck geven: <strong>al deze beweringen zijn pure mythes, marketing en biologische nonsens!</strong> 😁",
                 "intro_p3": "Wanneer iemand beweert dat het overslaan van het ontbijt uw stofwisseling vertraagt of spieren afbreekt, geloof het niet! Fysiologisch gezien is er geen enkel wetenschappelijk bewijs dat aantoont dat het lichaam tijdelijk rust gunnen leidt tot spierafbraak of een haperend metabolisme.",
@@ -1014,24 +1031,7 @@
         };
 
         function detectInitialLang() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) {
-                return queryLang;
-            }
-
-            const saved = localStorage.getItem('preferred_language') || 
-                          localStorage.getItem('wibo_language') || 
-                          localStorage.getItem('selected_language');
-
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) {
-                return saved;
-            }
-
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('nl')) return 'nl';
-            if (phoneLang.startsWith('ar')) return 'ar';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1072,22 +1072,17 @@
             });
 
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
-                document.title = translations[currentLang]['meta_title'];
+                /* <title> is static per language URL */
             }
 
             const metaDescEl = document.getElementById('metaDescription');
             if (metaDescEl && translations[currentLang] && translations[currentLang]['intro_p1']) {
                 const cleanDesc = translations[currentLang]['intro_p1'].replace(/<[^>]*>?/gm, '');
-                metaDescEl.setAttribute('content', cleanDesc);
+                /* meta description is static per language URL */
             }
         }
 
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en')) {
-                    changeLanguage(e.newValue);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue === 'dark') {
                     document.body.classList.add('dark-mode');

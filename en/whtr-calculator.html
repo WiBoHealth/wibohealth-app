@@ -24,7 +24,7 @@
     <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/whtr-calculator.html">
     <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/whtr-calculator.html">
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/whtr-calculator.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/whtr-calculator.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/whtr-calculator.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WiBo Health">
     <meta property="og:title" content="Waist-to-Height Ratio Calculator (WHtR) | WiBo Health">
@@ -115,13 +115,13 @@
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://wibohealth.com/?lang=en"
+                        "item": "https://wibohealth.com/en/index.html"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Health calculators",
-                        "item": "https://wibohealth.com/calculators.html?lang=en"
+                        "item": "https://wibohealth.com/en/calculators.html"
                     },
                     {
                         "@type": "ListItem",
@@ -750,35 +750,93 @@
         a.lang-btn { text-decoration: none; }
         .food-page h1, .food-page h3, .food-page td, .boodi-card h2, .food-page strong { color: var(--text-main); }
         .food-page { max-width: 980px; }
-        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 18px; }
+        .ico { width: 1.1em; height: 1.1em; flex-shrink: 0; vertical-align: -0.18em; fill: none; stroke: currentColor;
+            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .theme-toggle-btn .ico { width: 16px; height: 16px; }
+        .theme-toggle-btn .ti-moon, html[data-theme="light"] .theme-toggle-btn .ti-sun { display: none; }
+        html[data-theme="light"] .theme-toggle-btn .ti-moon { display: inline-block; }
+        .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        /* back to the food guide (js/food-serving.js returns to the same place in the list when the reader came from it) */
+        .fp-back { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 12px; padding: 7px 14px 7px 12px;
+            border-radius: 999px; border: 1px solid var(--primary-glow); background: var(--bg-input); color: var(--primary);
+            font-size: 0.9rem; font-weight: 700; text-decoration: none; line-height: 1.3; }
+        .fp-back:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .fp-back:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+        [dir="rtl"] .fp-back { padding: 7px 12px 7px 14px; }
+        [dir="rtl"] .fp-back .ico { transform: scaleX(-1); }
+        .breadcrumb { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .breadcrumb a { color: var(--text-muted); text-decoration: none; }
         .breadcrumb a:hover { color: var(--primary); }
-        .food-hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
-        .food-hero img, .food-hero .food-emoji {
-            width: 150px; height: 150px; border-radius: 22px; object-fit: cover; flex-shrink: 0;
-            border: 3px solid var(--primary-glow); box-shadow: var(--shadow); background: var(--bg-input);
-        }
-        .food-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-        .food-hero-text { flex: 1; min-width: 220px; }
-        .food-hero-text h1 { font-size: 2rem; font-weight: 900; line-height: 1.3; margin-bottom: 4px; }
-        .food-subtitle { color: var(--text-muted); font-weight: 600; }
+        /* compact hero: thumbnail beside the name */
+        .fp-hero { display: flex; gap: 14px; align-items: center; margin-bottom: 14px; }
+        .fp-hero img, .fp-hero .food-emoji { width: 96px; height: 96px; border-radius: 18px; object-fit: cover; flex-shrink: 0;
+            border: 2px solid var(--primary-glow); background: var(--bg-input); }
+        .fp-hero .food-emoji { display: flex; align-items: center; justify-content: center; font-size: 2.6rem; }
+        .fp-hero-text { min-width: 0; }
+        .fp-hero-text h1 { font-size: 1.9rem; font-weight: 900; line-height: 1.25; margin: 0 0 4px; overflow-wrap: anywhere; }
+        .fp-sub { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; color: var(--text-muted); font-weight: 600; font-size: 0.88rem; }
+        .fp-sub .sep-dot { white-space: pre; opacity: 0.6; margin: 0 -10px; }   /* text separator: name • group (no run-together in snippets) */
         .group-chip {
-            display: inline-block; margin-top: 10px; padding: 4px 14px; border-radius: 999px; font-size: 0.82rem;
+            display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.76rem;
             font-weight: 700; color: var(--primary); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25);
         }
-        .lead { font-size: 1.04rem; margin: 6px 0 22px; }
+        /* quick answer (static, the medium portion) */
+        .quick-answer { background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3);
+            border-inline-start: 4px solid var(--primary); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 14px; }
+        .quick-answer h2 { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 800; color: var(--primary); margin: 0 0 4px; }
+        .about-card .quick-answer p { margin: 0; font-size: 0.95rem; line-height: 1.75; color: var(--text-main); }
+        /* macro card: portion pills, energy ring, 2x2 macros, GI / GL */
+        .fp { --c-carb: #38bdf8; --c-prot: #a78bfa; --c-fat: #fb7185; --c-fib: #34d399; }
+        html[data-theme="light"] .fp { --c-carb: #0284c7; --c-prot: #7c3aed; --c-fat: #e11d48; --c-fib: #059669; }
+        .macro-card { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px; margin-bottom: 16px; }
+        .servings { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; border: 0; padding: 0; margin: 0 0 12px; min-width: 0; }
+        .pill { position: relative; cursor: pointer; }
+        .pill input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+        .pill > span { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 48px;
+            padding: 4px 2px; border-radius: 12px; border: 1px solid var(--border-color); background: var(--bg-card);
+            text-align: center; line-height: 1.2; transition: background .15s, border-color .15s, color .15s; }
+        .pill-name { white-space: nowrap; font-size: 0.74rem; font-weight: 800; color: var(--text-main); }
+        .pill small { font-size: 0.7rem; font-weight: 700; color: var(--text-muted); font-variant-numeric: tabular-nums; }
+        .pill input:checked + span { background: var(--primary); border-color: var(--primary); }
+        .pill input:checked + span .pill-name, .pill input:checked + span small { color: #ffffff; }
+        html[data-theme="dark"] .pill input:checked + span { background: #047857; border-color: #047857; }
+        .pill input:focus-visible + span { outline: 2px solid var(--primary); outline-offset: 2px; }
+        .macro-body { display: flex; align-items: center; gap: 14px; }
+        .donut { position: relative; width: 116px; height: 116px; flex-shrink: 0; margin: 0; }
+        .donut svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        html[dir="rtl"] .donut svg { transform: rotate(-90deg) scaleY(-1); }   /* clockwise from the top in RTL too */
+        .donut circle { fill: none; stroke-width: 5.2; }
+        .donut .track { stroke: var(--border-color); }
+        .donut .seg-c { stroke: var(--c-carb); } .donut .seg-p { stroke: var(--c-prot); } .donut .seg-f { stroke: var(--c-fat); }
+        .donut figcaption { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; }
+        .donut figcaption b { font-size: 1.55rem; font-weight: 900; color: var(--text-main); font-variant-numeric: tabular-nums; }
+        .donut figcaption span { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+        .macro-legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 8px; flex: 1; min-width: 0; }
+        .macro-legend li { display: grid; grid-template-columns: 10px minmax(0, 1fr); column-gap: 6px; align-items: center; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .dot-c { background: var(--c-carb); } .dot-p { background: var(--c-prot); } .dot-f { background: var(--c-fat); } .dot-fib { background: var(--c-fib); }
+        .m-name { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .m-val { grid-column: 2; font-size: 1.05rem; font-weight: 900; color: var(--text-main); font-variant-numeric: tabular-nums; white-space: nowrap; }
+        .m-pct { grid-column: 2; white-space: nowrap; font-size: 0.7rem; font-weight: 600; color: var(--text-muted); }
+        .about-card .macro-note { margin: 8px 0 0; font-size: 0.68rem; font-weight: 600; color: var(--text-muted); text-align: center; }
+        .gi-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+        .gi-box { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "label label" "num badge" "sub sub";
+            align-items: center; column-gap: 8px; background: var(--bg-card); border: 1px solid var(--border-color);
+            border-radius: 12px; padding: 8px 10px; }
+        .gi-label { grid-area: label; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+        .gi-num { grid-area: num; font-size: 1.45rem; font-weight: 900; line-height: 1.2; font-variant-numeric: tabular-nums; min-width: 2.4ch; }
+        .gi-num.low { color: #10b981; } .gi-num.medium { color: #f39c12; } .gi-num.high { color: #e74c3c; } .gi-num.muted { color: var(--text-muted); }
+        html[data-theme="dark"] .gi-num.low { color: #6ee7b7; } html[data-theme="dark"] .gi-num.medium { color: #fcd34d; }
+        html[data-theme="dark"] .gi-num.high { color: #fca5a5; }
+        .gi-box .badge { grid-area: badge; justify-self: start; margin: 0; max-width: 100%; text-align: center; }
+        .gi-sub { grid-area: sub; font-size: 0.68rem; font-weight: 600; color: var(--text-muted); }
+        /* introduction: two lines until "read more" (the class is set by js/food-serving.js) */
+        .lead-fold { margin-bottom: 6px; }
+        .about-card .lead-fold .lead { margin: 0; font-size: 0.95rem; }
+        .lead-fold.clamped .lead { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .more-btn { background: none; border: 0; padding: 4px 0; color: var(--primary); font: inherit; font-size: 0.85rem; font-weight: 800; cursor: pointer; }
         .reviewed { font-size: 0.85rem; color: var(--text-muted); margin: 12px 0 0; }
         .reviewed a { color: var(--primary); text-decoration: none; font-weight: 700; }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 26px; }
-        .stat-box {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-md);
-            padding: 16px 12px; text-align: center;
-        }
-        .stat-box h2 { font-size: 0.82rem; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
-        .stat-num { font-size: 2rem; font-weight: 900; line-height: 1.2; }
-        .stat-num.low { color: #10b981; } .stat-num.medium { color: #f39c12; } .stat-num.high { color: #e74c3c; }
-        .stat-num.muted { color: var(--text-muted); } .stat-num.kcal { color: #3498db; } .stat-num.protein { color: #9b59b6; }
-        .stat-sub { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; }
         .badge {
             display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem;
             font-weight: 700; border: 1px solid transparent;
@@ -787,14 +845,25 @@
         .badge.medium { background: rgba(243, 156, 18, 0.12); border-color: rgba(243, 156, 18, 0.45); color: #f39c12; }
         .badge.high { background: rgba(231, 76, 60, 0.12); border-color: rgba(231, 76, 60, 0.45); color: #e74c3c; }
         .badge.neutral { background: rgba(148, 163, 184, 0.14); border-color: rgba(148, 163, 184, 0.45); color: var(--text-muted); }
-        .tip-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .tip {
-            background: var(--bg-input); border: 1px solid var(--border-color); border-inline-start: 4px solid var(--primary);
-            border-radius: var(--radius-sm); padding: 14px 18px;
-        }
-        .tip h3 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; display: flex; gap: 8px; align-items: center; }
-        .tip.warn { border-inline-start-color: #f39c12; }
-        .tip p { color: var(--text-muted); margin: 0; }
+        /* tips and FAQ: accordions, the first one open */
+        .acc-list { display: grid; gap: 8px; margin: 8px 0 22px; }
+        .acc { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); }
+        .acc.tip { border-inline-start: 4px solid var(--primary); }
+        .acc.tip.warn { border-inline-start-color: #f39c12; }
+        .acc summary { list-style: none; cursor: pointer; padding: 12px 14px; font-weight: 800; color: var(--text-main);
+            display: flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .acc summary::-webkit-details-marker { display: none; }
+        .acc summary::after { content: "+"; margin-inline-start: auto; padding-inline-start: 8px; font-weight: 900; color: var(--primary); font-size: 1.1rem; }
+        .acc[open] summary::after { content: "\2212"; }
+        .acc summary h3 { font-size: inherit; font-weight: inherit; margin: 0; }
+        .acc.tip summary .ico { color: var(--primary); } .acc.tip.warn summary .ico { color: #f39c12; }
+        .about-card .acc p { margin: 0; padding: 0 14px 12px; color: var(--text-muted); }
+        /* every section open, no + / - (user decision 2026-10-31: batch 28 first, then all food pages) */
+        .about-card .acc.static > h3 { display: flex; align-items: center; gap: 8px; padding: 12px 14px 6px; font-size: 1em; font-weight: 800; color: var(--text-main); margin: 0; }
+        .acc.tip.static > h3 .ico { color: var(--primary); } .acc.tip.warn.static > h3 .ico { color: #f39c12; }
+        .section-title .ico { width: 0.95em; height: 0.95em; }
+        .boodi-btn .ico { width: 18px; height: 18px; }
+        .nutrition-table td b { font-weight: 700; font-variant-numeric: tabular-nums; }
         .nutrition-table { width: 100%; border-collapse: collapse; margin: 10px 0 6px; font-size: 0.95rem; }
         .nutrition-table th, .nutrition-table td { padding: 11px 12px; border-bottom: 1px solid var(--border-color); text-align: start; }
         .nutrition-table th { color: var(--primary); font-weight: 800; background: rgba(16, 185, 129, 0.06); }
@@ -808,10 +877,6 @@
         .alt-list a:hover { border-color: var(--primary); color: var(--primary); }
         .alt-list span { color: var(--text-muted); font-weight: 600; white-space: nowrap; }
         .read-also a { overflow-wrap: anywhere; }      /* long names such as (L-Selenomethionine) on 320 px */
-        .faq-list { display: grid; gap: 12px; margin: 10px 0 26px; }
-        .faq-item { background: var(--bg-input); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px 18px; }
-        .faq-item h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
-        .faq-item p { color: var(--text-muted); margin: 0; }
         .boodi-card {
             display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap;
             padding: 22px 24px; border-radius: var(--radius-md); margin-bottom: 26px;
@@ -845,10 +910,25 @@
             border: 1px solid rgba(226, 232, 240, 0.22); color: #e2e8f0; font-size: 0.85rem; text-align: center;
         }
         html[data-theme="light"] .disclaimer-box { background: #f1f5f9; border-color: rgba(15, 23, 42, 0.12); color: #334155; }
+        @media (min-width: 761px) {
+            .donut { width: 150px; height: 150px; }
+            .macro-legend { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        }
         @media (max-width: 760px) {
-            .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .food-hero { flex-direction: column; text-align: center; }
-            .food-hero-text h1 { font-size: 1.6rem; }
+            .food-page.page-wrapper { margin: 12px auto 50px; padding: 0 10px; }
+            .food-page .about-card { padding: 16px 14px; }
+            .food-page .section-title { font-size: 1.15rem; margin: 22px 0 10px; }
+            .fp-hero img, .fp-hero .food-emoji { width: 72px; height: 72px; border-radius: 16px; }
+            .fp-hero .food-emoji { font-size: 2rem; }
+            .fp-hero-text h1 { font-size: 1.45rem; }
+            .fp-hero-text h1.long { font-size: 1.2rem; }
+            .donut { width: 104px; height: 104px; }
+            .macro-body { gap: 10px; }
+        }
+        @media (max-width: 360px) {
+            .donut { width: 92px; height: 92px; }
+            .donut figcaption b { font-size: 1.3rem; }
+            .pill-name { font-size: 0.68rem; }
         }
 
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
@@ -1046,19 +1126,19 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="/?lang=en" class="brand-link">
+            <a href="/en/index.html" class="brand-link">
                 <img class="brand-logo-svg" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                 <span class="brand-title">WiBo Health</span>
             </a>
             <nav class="nav-links-bar">
-                <a href="/?lang=en" class="nav-link">Home</a>
-                <a href="/foods.html?lang=en" class="nav-link">Food Guide</a>
-                <a href="/calculators.html?lang=en" class="nav-link active">Calculators</a>
-                <a href="/supplements.html?lang=en" class="nav-link">Supplements</a>
-                <a href="/?lang=en#articles" class="nav-link">Articles</a>
+                <a href="/en/index.html" class="nav-link">Home</a>
+                <a href="/en/foods.html" class="nav-link">Food Guide</a>
+                <a href="/en/calculators.html" class="nav-link active">Calculators</a>
+                <a href="/en/supplements.html" class="nav-link">Supplements</a>
+                <a href="/en/index.html#articles" class="nav-link">Articles</a>
                 <a href="/en/diabetes.html" class="nav-link nav-diabetes">Diabetes</a>
-                <a href="/boodi.html?lang=en" class="nav-link">boodi App 💚</a>
-                <a href="/partners.html?lang=en" class="nav-link nav-partners">Partnerships</a>
+                <a href="/en/boodi.html" class="nav-link">boodi App 💚</a>
+                <a href="/en/partners.html" class="nav-link nav-partners">Partnerships</a>
             </nav>
             <div class="header-actions">
                 <button type="button" class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
@@ -1077,7 +1157,7 @@
     <main class="page-wrapper food-page article-page calc-page">
         <article class="about-card">
             <nav class="breadcrumb" aria-label="breadcrumb">
-                <a href="/?lang=en">Home</a> › <a href="/calculators.html?lang=en">Health calculators</a> › <span>Waist-to-height calculator</span>
+                <a href="/en/index.html">Home</a> › <a href="/en/calculators.html">Health calculators</a> › <span>Waist-to-height calculator</span>
             </nav>
             <span class="group-chip">Medical calculator · Belly fat</span>
             <h1>Waist-to-Height Ratio Calculator (WHtR): Is Your Belly Fat in the Safe Range?</h1>
@@ -1165,18 +1245,18 @@
                 <a href="/en/foods/grilled-salmon.html">Grilled salmon</a><a href="/en/foods/walnuts.html">Walnuts</a><a href="/en/foods/apple.html">Apple</a>
                 <a href="/en/foods/pear.html">Pear</a><a href="/en/foods/bulgur.html">Bulgur</a><a href="/en/foods/broccoli.html">Broccoli</a>
             </div>
-            <p>Stay well hydrated with the <a href="/en/water-calculator.html">daily water calculator</a>, and browse the <a href="/foods.html?lang=en">food guide</a> for low-GI swaps.</p>
+            <p>Stay well hydrated with the <a href="/en/water-calculator.html">daily water calculator</a>, and browse the <a href="/en/foods.html">food guide</a> for low-GI swaps.</p>
 
 
             <h2 class="section-title"><i class="fas fa-circle-question"></i> <span>Frequently asked questions</span></h2>
             <div class="faq-list"><details><summary>What is a healthy waist-to-height ratio?</summary><p>0.4 to 0.49 for adults, meaning your waist is less than half your height. 0.5 to 0.59 means increased health risk, and 0.6 or more means further increased risk according to NICE 2022.</p></details><details><summary>Where exactly should I measure my waist?</summary><p>Halfway between the bottom of your lowest rib and the top of your hip bone, with the tape horizontal on bare skin, at the end of a normal out-breath. Measuring at the navel is a practical alternative if you use it consistently.</p></details><details><summary>Is waist-to-height ratio better than BMI?</summary><p>For flagging diabetes and heart-disease risk, yes in many studies, because it captures belly fat. Using both together, as NICE recommends, is best.</p></details><details><summary>What is the difference between WHtR and WHR?</summary><p>WHtR divides your waist by your height and has a healthy boundary of about 0.5 for everyone. WHR divides your waist by your hip circumference, needs two measurements and has different cut-offs for men and women.</p></details><details><summary>Do sit-ups reduce belly fat?</summary><p>They strengthen your abdominal muscles but do not burn fat specifically from your belly. Belly fat goes down with a calorie deficit, aerobic activity, resistance training, better sleep and a better diet.</p></details><details><summary>Can children use this calculator?</summary><p>The boundaries shown here are for adults under NICE guidance. Children’s weight and waist are assessed with their doctor using age-appropriate standards.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Related calculators and tools</span></h2>
-            <div class="related-grid"><a class="related-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span></a><a class="related-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span></a><a class="related-card" href="/en/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Daily water intake</strong><span>The right amount of fluid for your weight and activity.</span></a><a class="related-card" href="/foods.html?lang=en"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Food guide</strong><span>Glycaemic index and calories for more than 700 foods.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span></a><a class="related-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span></a><a class="related-card" href="/en/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Daily water intake</strong><span>The right amount of fluid for your weight and activity.</span></a><a class="related-card" href="/en/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Food guide</strong><span>Glycaemic index and calories for more than 700 foods.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>The Boodi app: check your food before you eat it 💚</h2><p>Numbers alone are not enough: what you eat drives your insulin and blood-sugar response. Scan supermarket barcodes to see a product’s glycaemic index, ingredients and healthier alternatives.</p></div>
-                <a href="/boodi.html?lang=en" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> Discover the Boodi app</a>
+                <a href="/en/boodi.html" class="funnel-btn"><i class="fas fa-barcode" aria-hidden="true"></i> Discover the Boodi app</a>
             </section>
 
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>Scientific sources</span></h2>
@@ -1186,7 +1266,7 @@
     </main>
 
     <footer>
-        <div class="footer-links"><a href="/?lang=en">Home</a> <span>•</span> <a href="/foods.html?lang=en">Food Guide</a> <span>•</span> <a href="/calculators.html?lang=en">Health calculators</a> <span>•</span> <a href="/?lang=en#articles">Articles</a> <span>•</span> <a href="/methodology.html?lang=en">Methodology & scientific references</a> <span>•</span> <a href="/partners.html?lang=en">Partnerships</a> <span>•</span> <a href="/privacy.html?lang=en">Privacy</a></div>
+        <div class="footer-links"><a href="/en/index.html">Home</a> <span>•</span> <a href="/en/foods.html">Food Guide</a> <span>•</span> <a href="/en/calculators.html">Health calculators</a> <span>•</span> <a href="/en/index.html#articles">Articles</a> <span>•</span> <a href="/en/methodology.html">Methodology & scientific references</a> <span>•</span> <a href="/en/partners.html">Partnerships</a> <span>•</span> <a href="/en/privacy.html">Privacy</a></div>
         <p>© 2026 WiBo Health Group. All rights reserved.</p>
     </footer>
 

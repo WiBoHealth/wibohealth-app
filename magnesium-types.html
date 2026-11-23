@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/articles/magnesiumformer.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -53,19 +25,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO & Google Indexing Tags -->
-    <title data-i18n="meta_title">أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟ | WiBo Health</title>
+    <title>أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟ | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/magnesium-types.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/magnesium-types.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/magnesium-types.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/magnesium-types.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/magnesiumformer.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/magnesium-types.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MedicalWebPage",
+            "@id": "https://wibohealth.com/magnesium-types.html#webpage",
+            "url": "https://wibohealth.com/magnesium-types.html",
+            "name": "أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟ | WiBo Health",
+            "description": "دليل طبي سريري شامل يوضح الفرق بين أنواع المغنيسيوم: الجلايسينات، السترات، والمالات. كيف تختار النوع المناسب لاحتياجك وتتجنب الأنواع التجارية الرديئة.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/card-magnesium-types.webp"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/magnesium-types.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "Article",
+            "@id": "https://wibohealth.com/magnesium-types.html#article",
+            "headline": "أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟",
+            "description": "دليل طبي سريري شامل يوضح الفرق بين أنواع المغنيسيوم: الجلايسينات، السترات، والمالات. كيف تختار النوع المناسب لاحتياجك وتتجنب الأنواع التجارية الرديئة.",
+            "inLanguage": "ar",
+            "image": "https://wibohealth.com/images/card-magnesium-types.webp",
+            "mainEntityOfPage": {
+                "@id": "https://wibohealth.com/magnesium-types.html#webpage"
+            },
+            "dateModified": "2026-11-09",
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "author": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/magnesium-types.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟",
+                    "item": "https://wibohealth.com/magnesium-types.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="metaDescription" content="دليل طبي سريري شامل يوضح الفرق بين أنواع المغنيسيوم: الجلايسينات، السترات، والمالات. كيف تختار النوع المناسب لاحتياجك وتتجنب الأنواع التجارية الرديئة.">
     <meta name="keywords" content="انواع المغنيسيوم, افضل نوع مغنيسيوم, مغنيسيوم للنوم, مغنيسيوم للعضلات, مغنيسيوم جلايسينات, مغنيسيوم سترات, مغنيسيوم مالات, ويبو هيلث, WiBo Health, magnesium">
     <meta name="author" content="فريق WiBo Health الطبي">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- Self-Referencing Canonical Tag -->
-    <link rel="canonical" id="canonicalTag" href="https://wibohealth.com/magnesium-types.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/magnesium-types.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/magnesiumformer.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/magnesium-types.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Alternate Language Tags for Googlebot (Hreflang) -->
 
@@ -74,44 +126,9 @@
     <meta property="og:title" content="أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟ | WiBo Health">
     <meta property="og:description" content="دليل سريري شامل يفكك الفروق الدوائية والامتصاصية بين أشكال المغنيسيوم المختلفة وكيفية اختيار النوع العلاجي المناسب.">
     <meta property="og:url" content="https://wibohealth.com/magnesium-types.html">
-    <meta property="og:image" content="https://wibohealth.com/images/magnesium-lifestyle.jpeg">
+    <meta property="og:image" content="https://wibohealth.com/images/card-magnesium-types.webp">
 
     <!-- Google Structured Data (Schema.org MedicalWebPage for Instant Indexing) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "أنواع المغنيسيوم: محتار أي مغنيسيوم تشتري؟ للنوم، للعضلات، أم للتوتر؟",
-      "headline": "Magnesium Types: Which Form Should You Buy? For Sleep, Muscles, or Anxiety?",
-      "description": "Comprehensive evidence-based clinical guide breaking down bioavailability, chelation forms, and targeted therapeutic protocols for magnesium supplementation.",
-      "url": "https://wibohealth.com/magnesium-types.html",
-      "author": {
-        "@type": "Organization",
-        "name": "WiBo Health Medical Team",
-        "url": "https://wibohealth.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://wibohealth.com/images/icon-192.png"
-        }
-      },
-      "about": [
-        {
-          "@type": "MedicalCondition",
-          "name": "Magnesium Deficiency"
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Magnesium Supplementation"
-        }
-      ],
-      "inLanguage": ["ar", "nl", "en"]
-    }
-    </script>
 
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,7 +214,7 @@
             text-decoration: none;
         }
 
-        .brand-logo h1 {
+        .brand-logo .brand-name {
             font-size: 20px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -615,13 +632,13 @@
         <div class="header-container">
             <a href="/" class="brand-logo">
                 <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
-                <h1>WiBo Health</h1>
+                <span class="brand-name">WiBo Health</span>
             </a>
             <div class="header-controls">
-                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
-                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                <a class="lang-btn" data-sv-link href="/sv/articles/magnesiumformer.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                <a class="lang-btn active" href="/magnesium-types.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                <a class="lang-btn" href="/en/magnesium-types.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn" href="/nl/magnesium-types.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                <a class="lang-btn" href="/sv/articles/magnesiumformer.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -933,7 +950,7 @@
                 "desc_rule3": "Neem magnesium nooit gelijktijdig in met hoge doseringen <strong>calcium, ijzer of schildkliermedicatie (levothyroxine)</strong>, omdat ze dezelfde opnamekanalen in de darm delen. Houd minimaal 2 uur afstand.",
                 "h2_faq": "Veelgestelde klinische vragen beantwoord door het medisch team",
                 "faq_q1": "Toont een standaard bloedtest magnesiumtekort aan?",
-                "faq_a1": "Nee. Ongeveer 99% van al het magnesium bevindt zich in botten en cellen en slechts 1% in het serum. De gevalideerde klinische diagnostiek is erytrocyten-magnesium (RBC-magnesium).",
+                "faq_a1": "Nee. Ongeveer 99% van al het magnesium bevindt zich in botten en cellen en slechts 1% in het serum. Een informatievere test is erytrocyten-magnesium (RBC-magnesium).",
                 "faq_q2": "Mag magnesium dagelijks langdurig worden ingenomen?",
                 "faq_a2": "Ja. Bij een normale nierfunctie scheiden de nieren een eventueel fysiologisch overschot veilig uit. Langdurige inname binnen therapeutische richtlijnen (200-400 mg) is veilig.",
                 "disclaimer_title": "Medische Disclaimer & Richtlijn:",
@@ -991,7 +1008,7 @@
                 "desc_rule3": "Never ingest magnesium simultaneously with high-dose <strong>Calcium, Iron, or Thyroid Hormone Replacement (Levothyroxine)</strong>; these agents competitively saturate shared intestinal transport proteins. Space intake by a minimum of 2 hours.",
                 "h2_faq": "Clinical Questions Answered by WiBo Health Team",
                 "faq_q1": "Does a standard serum blood test accurately assess magnesium deficiency?",
-                "faq_a1": "No. Approximately 99% of bodily magnesium is sequestered within bone matrix and intracellular tissue; only 1% circulates in serum. Homeostatic mechanisms tightly buffer serum levels even amidst severe tissue depletion. The validated clinical diagnostic is Red Blood Cell (RBC) Magnesium.",
+                "faq_a1": "No. Approximately 99% of bodily magnesium is sequestered within bone matrix and intracellular tissue; only 1% circulates in serum. Homeostatic mechanisms tightly buffer serum levels even amidst severe tissue depletion. A more informative test is Red Blood Cell (RBC) Magnesium.",
                 "faq_q2": "Is daily long-term magnesium supplementation safe?",
                 "faq_a2": "Yes. In the absence of severe renal insufficiency (eGFR < 30), the renal system efficiently filters any minor physiological excess. Long-term supplementation within therapeutic parameters (200-400 mg) is safe and well-tolerated.",
                 "disclaimer_title": "Clinical Notice & Medical Disclaimer:",
@@ -1006,24 +1023,7 @@
         };
 
         function detectInitialLang() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) {
-                return queryLang;
-            }
-
-            const saved = localStorage.getItem('preferred_language') || 
-                          localStorage.getItem('wibo_language') || 
-                          localStorage.getItem('selected_language');
-
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) {
-                return saved;
-            }
-
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('nl')) return 'nl';
-            if (phoneLang.startsWith('ar')) return 'ar';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1064,22 +1064,17 @@
             });
 
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
-                document.title = translations[currentLang]['meta_title'];
+                /* <title> is static per language URL */
             }
 
             const metaDescEl = document.getElementById('metaDescription');
             if (metaDescEl && translations[currentLang] && translations[currentLang]['intro_p1']) {
                 const cleanDesc = translations[currentLang]['intro_p1'].replace(/<[^>]*>?/gm, '');
-                metaDescEl.setAttribute('content', cleanDesc);
+                /* meta description is static per language URL */
             }
         }
 
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && (e.newValue === 'ar' || e.newValue === 'nl' || e.newValue === 'en')) {
-                    changeLanguage(e.newValue);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue === 'dark') {
                     document.body.classList.add('dark-mode');

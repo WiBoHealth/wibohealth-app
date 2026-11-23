@@ -22,6 +22,7 @@ import sys
 from pathlib import Path
 
 import food_sv as FSV
+import site_urls
 
 GA_TAG = """    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
     <script>
@@ -1216,8 +1217,8 @@ READ_ALSO_KIND = {'guide': {'ar': 'دليل', 'en': 'Guide', 'nl': 'Gids', 'sv':
 READ_ALSO = {
     'insulin': ('article', {
         'ar': ('/insulin-resistance.html', 'السكر التراكمي ومقاومة الإنسولين: الدليل الشامل'),
-        'en': ('/insulin-resistance.html?lang=en', 'HbA1c & Insulin Resistance: Comprehensive Clinical Guide'),
-        'nl': ('/insulin-resistance.html?lang=nl', 'HbA1c & Insulineresistentie: De Complete Klinische Gids'),
+        'en': ('/en/insulin-resistance.html', 'HbA1c & Insulin Resistance: Comprehensive Clinical Guide'),
+        'nl': ('/nl/insulin-resistance.html', 'HbA1c & Insulineresistentie: De Complete Klinische Gids'),
         'sv': ('/sv/articles/insulinresistens-hba1c.html', 'HbA1c och insulinresistens: så förstår du dina värden')}),
     'prediabetes': ('guide', {
         'ar': ('/diabetes/prediabetes.html', 'مرحلة ما قبل السكري: كيف توقف القطار وتنزّل التراكمي قبل ما يتحول لسكري؟'),
@@ -1231,8 +1232,8 @@ READ_ALSO = {
         'sv': ('/sv/diabetes/graviditetsdiabetes.html', 'Graviditetsdiabetes: normala blodsockervärden och vad du kan äta')}),
     'thyroid': ('article', {
         'ar': ('/thyroid-health.html', 'لغز خمول الغدة الدرقية وبطء الحرق'),
-        'en': ('/thyroid-health.html?lang=en', 'The Hidden Thyroid Sluggishness'),
-        'nl': ('/thyroid-health.html?lang=nl', 'De verborgen trage schildklier'),
+        'en': ('/en/thyroid-health.html', 'The Hidden Thyroid Sluggishness'),
+        'nl': ('/nl/thyroid-health.html', 'De verborgen trage schildklier'),
         'sv': ('/sv/articles/trog-skoldkortel.html', 'Trög sköldkörtel: TSH, T4 och T3 i klartext')}),
     'selenium': ('supplement', {
         'ar': ('/supplements/selenium.html', 'السيلينيوم (سيلينوميثيونين)'),
@@ -1709,8 +1710,7 @@ def nav_html(lang, active=None):
     items += [('/diabetes.html', u['diabetes'])] + list(zip(['/boodi.html'], u['nav'][5:])) + [('/partners.html', u['partners'])]
     out = []
     for path, label in items:
-        # the Diabetes hub is a static page per language (/en/diabetes.html), not a ?lang= page
-        href = (path if lang == 'ar' else f'/{lang}{path}') if path == '/diabetes.html' else site_link(path, lang)
+        href = site_link(path, lang)
         cls = 'nav-link' + {'/partners.html': ' nav-partners', '/diabetes.html': ' nav-diabetes'}.get(path, '') + (' active' if path == active else '')
         out.append(f'                <a href="{href}" class="{cls}">{label}</a>')
     return '\n'.join(out)
@@ -1732,29 +1732,21 @@ def food_url(slug, fid, lang, absolute=True):
     return page_url(slug, lang if lang in langs_of(fid) else 'en', absolute)
 
 
-def any_link(path, lang):
-    """site_link() for every language; Swedish uses the article generator's map of /sv/ pages (imported here, because
-    generate_article_pages imports this module)."""
-    if lang != SV:
-        return site_link(path, lang)
-    from generate_article_pages import link
-    return link(path, lang)
-
-
 def site_link(path, lang):
-    """Link to a regular site page in the reader's language."""
-    if lang == 'ar':
-        return path
-    path, hash_, frag = path.partition('#')  # the query must sit before an #anchor
-    return f"{path}{'&' if '?' in path else '?'}lang={lang}{hash_}{frag}"
+    """Link to a regular site page in the reader's language: its static page (/, /en/, /nl/, /sv/) from the URL registry
+    in scripts/site_urls.py; a page without a version in that language opens in English. Never a ?lang= URL."""
+    return site_urls.url_in(path, lang)
+
+
+any_link = site_link   # same thing; kept for the generators that import it
 
 
 def mark_english_links(html, lang):
-    """Swedish pages: a link to a page without a Swedish version (Partnerships, the interactive supplements guide, ...)
-    opens it in English (?lang=en) and says so with hreflang="en"."""
-    if lang != SV:
+    """Dutch/Swedish pages: a link to a page that exists only in English (e.g. the recipes, the interactive supplements
+    guide in Swedish) says so with hreflang="en"."""
+    if lang not in (SV, 'nl'):
         return html
-    return re.sub(r'(<a\b[^>]*?\shref="/[^"]*[?&]lang=en(?:[&#][^"]*)?")(?![^>]*\bhreflang=)', r'\1 hreflang="en"', html)
+    return re.sub(r'(<a\b[^>]*?\shref="/en/[^"]*")(?![^>]*\bhreflang=)', r'\1 hreflang="en"', html)
 
 
 def dir_url(kind, lang, absolute=True):
@@ -2079,7 +2071,7 @@ def build(food, lang, ctx):
 
     # -------- head: SEO
     urls = {l: page_url(slug, l) for l in langs_of(food['id'])}
-    image_abs = f'{SITE}/{food["image"]}' if food['image'] else f'{SITE}/images/logo.png'
+    image_abs = f'{SITE}/{food["image"]}' if food['image'] else f'{SITE}/images/og-wibo-health.jpg'
     hreflang = '\n'.join(f'    <link rel="alternate" hreflang="{l}" href="{urls[l]}">' for l in urls)
     if lang == SV:                           # the Swedish role (no title that reads as a Swedish licence)
         from generate_article_pages import DOCTOR_SV
@@ -2172,7 +2164,7 @@ def build(food, lang, ctx):
     <meta name="description" content="{esc(desc)}">
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['en']}">
+    <link rel="alternate" hreflang="x-default" href="{urls[site_urls.X_DEFAULT]}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(desc)}">
@@ -2224,7 +2216,7 @@ def build(food, lang, ctx):
 
     <main class="page-wrapper food-page fp">
         <article class="about-card">
-            <a class="fp-back" href="{'/foods.html' if lang == 'ar' else f'/foods.html?lang={lang}'}" data-back><span aria-hidden="true">🔍</span><span>{fu['back']}</span></a>
+            <a class="fp-back" href="{site_link('/foods.html', lang)}" data-back><span aria-hidden="true">🔍</span><span>{fu['back']}</span></a>
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <a href="{L('/')}">{u["home"]}</a> › <a href="{dir_url('foods', lang, absolute=False)}">{u["guide"]}</a> › {f'<a href="{section_href}">{esc(section[lang])}</a> › ' if section else ''}<span>{esc(name)}</span>
             </nav>

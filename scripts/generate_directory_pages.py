@@ -196,7 +196,7 @@ def build(kind, lang, sections):
     title, desc = t['title'].format(n=n), t['desc'].format(n=n)
     urls = {l: dir_url(kind, l) for l in dir_langs(kind)}
     hub = '/foods.html' if kind == 'foods' else '/supplements.html'
-    L = (lambda path: link(path, lang)) if lang == SV else (lambda path: site_link(path, lang))
+    L = lambda path: site_link(path, lang)
     hub_label = u['guide'] if kind == 'foods' else t['guide']
     other = 'supplements' if kind == 'foods' else 'foods'
 
@@ -250,7 +250,7 @@ def build(kind, lang, sections):
              (L('/methodology.html'), u['methodology']), (L('/partners.html'), u['partners']), (L('/privacy.html'), u['privacy'])])
         other_link = (f'<a class="guide-link" href="{dir_url(other, lang, absolute=False)}"><i class="fas fa-list"></i> '
                       f'{esc(T[other][lang]["h1"])}</a>')
-        hub_href = site_link(hub, SV if kind == 'foods' else 'en')   # foods.html has a Swedish view; supplements.html has not
+        hub_href = site_link(hub, SV)   # foods.html has a Swedish view; supplements.html has not (the registry gives English)
     else:
         footer_links = ' <span>•</span> '.join(
             f'<a href="{href}">{label}</a>' for href, label in
@@ -272,12 +272,14 @@ def build(kind, lang, sections):
     <meta name="description" content="{esc(desc)}">
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
+    <link rel="alternate" hreflang="x-default" href="{urls['en']}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(desc)}">
     <meta property="og:url" content="{urls[lang]}">
-    <meta property="og:image" content="{SITE}/images/logo.png">
+    <meta property="og:image" content="{SITE}/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
@@ -371,7 +373,7 @@ def main():
             lines += ['  <url>', f'    <loc>{dir_url(kind, lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>weekly</changefreq>', '    <priority>0.8</priority>']
             lines += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{dir_url(kind, l)}"/>' for l in dir_langs(kind)]
-            lines += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{dir_url(kind, "ar")}"/>', '  </url>']
+            lines += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{dir_url(kind, "en")}"/>', '  </url>']
         print(f'{kind}: {sum(len(i) for _, _, i in sections)} links in {len(sections)} sections x {len(LANGS)} languages'
               + f', Swedish index: {len(FSV.PUBLISH if kind == "foods" else SSV.PUBLISH)} {kind}')
     replace_sitemap_block('DIRECTORY-PAGES', lines)

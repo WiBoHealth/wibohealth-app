@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/om-oss.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -51,14 +23,76 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title_about">من نحن | WiBo Health Group & تطبيق بودي (boodi)</title>
-    <meta name="description" id="seo_desc" content="تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.">
+    <title>من نحن | WiBo Health Group & تطبيق بودي (boodi)</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
     <link rel="canonical" href="https://wibohealth.com/about.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/about.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/about.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/about.html">
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/om-oss.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/about.html">
-    <!-- SV-ALTERNATES:END -->
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/about.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "AboutPage",
+            "@id": "https://wibohealth.com/about.html#webpage",
+            "url": "https://wibohealth.com/about.html",
+            "name": "من نحن | WiBo Health Group & تطبيق بودي (boodi)",
+            "description": "تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/about.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/about.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "من نحن - WiBo Health Group",
+                    "item": "https://wibohealth.com/about.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
+    <meta name="description" id="seo_desc" content="تعرف على WiBo Health Group بقيادة د. وسيم حبيب: المنظومة السريرية الأوروبية المتخصصة في المؤشر الجلايسيمي، واستقرار الإنسولين، وتطبيق بودي الذكي الرسمي التابع لها.">
     
     <!-- Hreflang Tags for SEO -->
     
@@ -551,16 +585,10 @@
                 </button>
 
                 <div class="lang-switcher-container">
-                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
-                        AR
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
-                        NL
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
-                        EN
-                    </button>
-                    <a class="lang-btn" data-sv-link href="/sv/om-oss.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                    <a class="lang-btn active" href="/about.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/about.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/about.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/om-oss.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
                 </div>
             </div>
         </div>
@@ -571,7 +599,7 @@
             <div class="about-header">
                 <div class="about-badge">
                     <i class="fas fa-shield-heart"></i>
-                    <span data-i18n="about_badge">المنظومة السريرية والرقمية المعتمدة</span>
+                    <span data-i18n="about_badge">منظومة صحية ورقمية قائمة على الأدلة</span>
                 </div>
                 <h1 class="about-title" data-i18n="about_title">من نحن - WiBo Health Group</h1>
                 <p class="about-subtitle" data-i18n="about_intro">المنصة الطبية والسريرية الرائدة المتخصصة في الاستقرار الأيضي، علوم التغذية القائمة على الأدلة، والحلول الرقمية الذكية.</p>
@@ -592,7 +620,7 @@
                     <span class="boodi-tag-official" data-i18n="boodi_tag">التطبيق الرسمي المعتمد</span>
                     <h3 data-i18n="about_boodi_banner_title">تطبيق بودي الذكي (boodi 💚 App)</h3>
                     <p data-i18n="about_boodi_banner_desc">
-                        تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة <strong>WiBo Health Group</strong>؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص الحلال والمشتقات المحرمة، وكشف البدائل الصحية الأقل سكراً من نفس الرف.
+                        تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة <strong>WiBo Health Group</strong>؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص المكونات والتفضيلات الغذائية، وكشف البدائل الصحية الأقل سكراً من نفس الرف.
                     </p>
                 </div>
                 <a href="boodi.html" class="boodi-cta-btn">
@@ -631,15 +659,15 @@
                 </div>
                 <div class="pillar-item">
                     <div class="pillar-title"><i class="fas fa-capsules"></i> <span data-i18n="serv_2_title">موسوعة المكملات الكبرى</span></div>
-                    <div class="pillar-desc" data-i18n="serv_2_desc">453 مكملاً غذائياً موثقاً بـ 3 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.</div>
+                    <div class="pillar-desc" data-i18n="serv_2_desc">174 مكملاً غذائياً موثقاً بـ 4 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.</div>
                 </div>
                 <div class="pillar-item">
-                    <div class="pillar-title"><i class="fas fa-calculator"></i> <span data-i18n="serv_3_title">الحاسبات الأيضية المعتمدة</span></div>
+                    <div class="pillar-title"><i class="fas fa-calculator"></i> <span data-i18n="serv_3_title">الحاسبات الأيضية</span></div>
                     <div class="pillar-desc" data-i18n="serv_3_desc">معادلات سريرية دقيقة للـ BMI، واحتياج السعرات والماكروز (Mifflin-St Jeor)، ونسبة الخصر (WHtR).</div>
                 </div>
                 <div class="pillar-item">
                     <div class="pillar-title"><i class="fas fa-barcode"></i> <span data-i18n="serv_4_title">تطبيق بودي الذكي (Boodi App)</span></div>
-                    <div class="pillar-desc" data-i18n="serv_4_desc">ماسح الباركود الأوروبي لرصد الحلال، بدائل السوبرماركت، والتحليل الكيميائي الفوري.</div>
+                    <div class="pillar-desc" data-i18n="serv_4_desc">ماسح الباركود الأوروبي لفحص المكونات، بدائل السوبرماركت، والتحليل الفوري للمكونات.</div>
                 </div>
             </div>
 
@@ -732,14 +760,14 @@
                 footer_partners: "الشراكات",
                 footer_privacy: "الخصوصية والامتثال السريري",
                 footer_disclaimer: "جميع الحقوق محفوظة لمنظومة WiBo Health Group وتطبيق بودي الرسمي (boodi App 💚).",
-                about_badge: "المنظومة السريرية والرقمية المعتمدة",
+                about_badge: "منظومة صحية ورقمية قائمة على الأدلة",
                 about_title: "من نحن - WiBo Health Group",
                 about_intro: "المنصة الطبية والسريرية الرائدة المتخصصة في الاستقرار الأيضي، علوم التغذية القائمة على الأدلة، والحلول الرقمية الذكية.",
                 about_leadership_title: "القيادة الطبية والرسالة السريرية",
                 about_leadership_text: "تأسست المنصة تحت إشراف وقيادة د. وسيم حبيب (Dr. Wassim Habib)، بهدف سد الفجوة بين الأبحاث السريرية المتقدمة واختيارات المستهلك اليومية في العالم العربي وأوروبا (هولندا). نؤمن بأن الأرقام المجردة لا تكفي؛ بل إن كيمياء الطعام واستجابة هرمون الإنسولين هي العامل الحاسم في الوقاية من السكري، وحماية الكبد، وإطالة العمر الصحي.",
                 boodi_tag: "التطبيق الرسمي التابع للمنظومة",
                 about_boodi_banner_title: "تطبيق بودي الذكي (boodi 💚 App)",
-                about_boodi_banner_desc: "تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة WiBo Health Group؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص الحلال والمشتقات المحرمة، وكشف البدائل الصحية الأقل سكراً من نفس الرف.",
+                about_boodi_banner_desc: "تطبيق بودي هو التطبيق الرسمي التابع والمملوك بالكامل لمجموعة WiBo Health Group؛ صُمم كذراع رقمي سريري فوري لمسح باركود الأطعمة بالسوبرماركت، فحص المكونات والتفضيلات الغذائية، وكشف البدائل الصحية الأقل سكراً من نفس الرف.",
                 about_boodi_btn: "اكتشف تطبيق بودي",
                 about_vision_title: "رؤيتنا",
                 about_vision_text: "أن نكون المرجع الطبي والأيضي الأكثر موثوقية وابتكاراً في أوروبا والشرق الأوسط لكل ما يتعلق بالمؤشر الجلايسيمي، والتحكم في إفراز الإنسولين، وضمان سلامة الغذاء الاستهلاكي بأعلى معايير الشفافية العلمية.",
@@ -749,11 +777,11 @@
                 serv_1_title: "دليل الأغذية والمؤشر الجلايسيمي",
                 serv_1_desc: "تحليل دقيق لسرعة تحول الأطعمة إلى سكر وتأثيرها على استقرار البنكرياس.",
                 serv_2_title: "موسوعة المكملات الكبرى",
-                serv_2_desc: "453 مكملاً غذائياً موثقاً بـ 3 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.",
-                serv_3_title: "الحاسبات الأيضية المعتمدة",
+                serv_2_desc: "174 مكملاً غذائياً موثقاً بـ 4 لغات مع الجرعات والتفاعلات الدوائية والتحذيرات السريرية.",
+                serv_3_title: "الحاسبات الأيضية",
                 serv_3_desc: "معادلات سريرية دقيقة للـ BMI، واحتياج السعرات والماكروز (Mifflin-St Jeor)، ونسبة الخصر (WHtR).",
                 serv_4_title: "تطبيق بودي الذكي (boodi App)",
-                serv_4_desc: "ماسح الباركود الأوروبي لرصد الحلال، بدائل السوبرماركت، والتحليل الكيميائي الفوري.",
+                serv_4_desc: "ماسح الباركود الأوروبي لفحص المكونات، بدائل السوبرماركت، والتحليل الفوري للمكونات.",
                 about_contact_title: "الدعم والتواصل المؤسسي",
                 about_contact_text: "فريقنا متاح للإجابة عن أسئلتكم العامة حول المنصة، واقتراحات التعاون، والدعم الفني الخاص بتطبيق بودي عبر قناتنا الرسمية:",
                 support_label: "بريد الدعم والتواصل الرسمي:",
@@ -773,28 +801,28 @@
                 footer_partners: "Partners",
                 footer_privacy: "Privacy & Klinische Conformiteit",
                 footer_disclaimer: "Alle rechten voorbehouden aan WiBo Health Group en de officiële boodi app (boodi App 💚).",
-                about_badge: "Gevalideerd Klinisch & Digitaal Systeem",
+                about_badge: "Evidence-based gezondheids- en digitaal platform",
                 about_title: "Over Ons - WiBo Health Group",
                 about_intro: "Het toonaangevende medische en klinische platform gespecialiseerd in metabole stabiliteit, evidence-based voedingsleer en slimme digitale gezondheidsoplossingen.",
                 about_leadership_title: "Medisch Leiderschap & Klinische Missie",
                 about_leadership_text: "Het platform is opgericht onder directe supervisie en leiding van dr. Wassim Habib (Dr. Wassim Habib), met als doel de kloof te overbruggen tussen geavanceerd klinisch onderzoek en dagelijkse voedingskeuzes in Nederland en Europa. Wij geloven dat geïsoleerde cijfers niet volstaan; de biochemie van voeding en de insulinerespons zijn bepalend voor preventie en een langdurig vitaal leven.",
                 boodi_tag: "Officieel Onderdeel van de Groep",
                 about_boodi_banner_title: "boodi App 💚 (Officiële Mobiele Applicatie)",
-                about_boodi_banner_desc: "De boodi app is de officiële mobiele applicatie van WiBo Health Group. Ontwikkeld als directe klinische assistent in uw broekzak om barcodes in de supermarkt te scannen, halal- en additievenstatus te verifiëren en gezondere alternatieven uit hetzelfde schap aan te bevelen.",
+                about_boodi_banner_desc: "De boodi app is de officiële mobiele applicatie van WiBo Health Group. Ontwikkeld als directe klinische assistent in uw broekzak om barcodes in de supermarkt te scannen, ingrediënten, E-nummers en voedingsvoorkeuren te controleren en gezondere alternatieven uit hetzelfde schap aan te bevelen.",
                 about_boodi_btn: "Ontdek boodi App",
                 about_vision_title: "Onze Visie",
                 about_vision_text: "De meest betrouwbare en innovatieve metabole referentie zijn in Europa en de Arabische wereld voor glykemische index, insulinebeheersing en gegarandeerde voedseltransparantie.",
                 about_mission_title: "Onze Missie",
-                about_mission_text: "Gezinnen in staat stellen bewuste voedingskeuzes te maken die hun metabole gezondheid beschermen, door middel van gevalideerde rekentools, onafhankelijke supplementengidsen en intelligente mobiele scanners.",
+                about_mission_text: "Gezinnen in staat stellen bewuste voedingskeuzes te maken die hun metabole gezondheid beschermen, door middel van betrouwbare rekentools, onafhankelijke supplementengidsen en intelligente mobiele scanners.",
                 about_services_title: "Pijlers van ons Klinisch Platform",
                 serv_1_title: "Voedingsgids & Glykemische Index",
                 serv_1_desc: "Nauwkeurige analyse van hoe snel voedingsmiddelen bloedsuikerpieken en insulineproductie beïnvloeden.",
                 serv_2_title: "Grote Voedingssupplementengids",
-                serv_2_desc: "453 geverifieerde supplementen in 3 talen met doseringen, interacties en klinische waarschuwingen.",
-                serv_3_title: "Gevalideerde Gezondheidscalculators",
+                serv_2_desc: "174 geverifieerde supplementen in 4 talen met doseringen, interacties en klinische waarschuwingen.",
+                serv_3_title: "Gezondheidscalculators",
                 serv_3_desc: "Klinische formules voor BMI, energie- en macrobehoefte (Mifflin-St Jeor) en taille-lengteverhouding (WHtR).",
                 serv_4_title: "boodi App Voedingsscanner",
-                serv_4_desc: "Europese barcodescanner voor halal-monitoring, E-nummers en directe supermarkt-alternatieven.",
+                serv_4_desc: "Europese barcodescanner voor ingrediënten, E-nummers en directe supermarkt-alternatieven.",
                 about_contact_title: "Ondersteuning & Contact",
                 about_contact_text: "Ons team staat klaar voor algemene vragen over het platform, samenwerkingsvoorstellen en ondersteuning voor de boodi-app via ons officiële kanaal:",
                 support_label: "Officieel Support- en Contactadres:",
@@ -814,28 +842,28 @@
                 footer_partners: "Partnerships",
                 footer_privacy: "Privacy & Clinical Compliance",
                 footer_disclaimer: "All rights reserved to WiBo Health Group and the official boodi app (boodi App 💚).",
-                about_badge: "Validated Clinical & Digital Health Ecosystem",
+                about_badge: "Evidence-Based Health & Digital Platform",
                 about_title: "About Us - WiBo Health Group",
                 about_intro: "The premier clinical medical platform dedicated to metabolic equilibrium, evidence-based nutritional science, and intelligent digital health tools.",
                 about_leadership_title: "Clinical Leadership & Medical Philosophy",
                 about_leadership_text: "Founded under the medical leadership of Dr. Wassim Habib, WiBo Health bridges advanced clinical endocrinology and everyday grocery decisions across Europe (Netherlands) and the Arab world. We believe that calories alone do not tell the story; food biochemistry and insulin responses dictate long-term metabolic health.",
                 boodi_tag: "Official Flagship Application",
                 about_boodi_banner_title: "boodi 💚 Smart Mobile App",
-                about_boodi_banner_desc: "boodi is the official flagship application owned and operated by WiBo Health Group. Engineered as an instant clinical supermarket assistant for barcode scanning, Halal & additive screening, and same-shelf healthier alternatives.",
+                about_boodi_banner_desc: "boodi is the official flagship application owned and operated by WiBo Health Group. Built as an instant supermarket assistant for barcode scanning, ingredient and dietary-preference checks, and same-shelf healthier alternatives.",
                 about_boodi_btn: "Explore boodi App",
                 about_vision_title: "Our Vision",
                 about_vision_text: "To serve as the most trusted and innovative metabolic authority in Europe and the Middle East for glycemic index metrics, insulin optimization, and consumer food transparency.",
                 about_mission_title: "Our Mission",
-                about_mission_text: "Empowering individuals and families to make informed dietary choices through precise clinical calculators, unbiased supplement reviews, and smart supermarket AI applications.",
+                about_mission_text: "Empowering individuals and families to make informed dietary choices through precise clinical calculators, unbiased supplement reviews, and a smart supermarket scanner app.",
                 about_services_title: "Core Clinical Pillars",
                 serv_1_title: "Glycemic & Food Index Guide",
                 serv_1_desc: "Precise physiological tracking of blood sugar spikes and pancreatic insulin demands.",
                 serv_2_title: "Comprehensive Supplements Guide",
-                serv_2_desc: "453 evidence-based dietary supplements documented in 3 languages with dosages and clinical warnings.",
-                serv_3_title: "Validated Health Calculators",
-                serv_3_desc: "Clinically rigorous formulas for BMI, TDEE/Macros (Mifflin-St Jeor), and Waist-to-Height Ratio (WHtR).",
+                serv_2_desc: "174 evidence-based dietary supplements documented in 4 languages with dosages and clinical warnings.",
+                serv_3_title: "Health Calculators",
+                serv_3_desc: "Standard formulas for BMI, TDEE/Macros (Mifflin-St Jeor), and Waist-to-Height Ratio (WHtR).",
                 serv_4_title: "boodi Smart Food Scanner",
-                serv_4_desc: "Real-time European barcode scanning, Halal integrity, and healthy supermarket substitution.",
+                serv_4_desc: "Real-time European barcode scanning, ingredient checks and healthier supermarket swaps.",
                 about_contact_title: "Support & Institutional Contact",
                 about_contact_text: "Our team is available for general questions about the platform, collaboration proposals and boodi app support via our verified channel:",
                 support_label: "Official Support & Inquiries Channel:",
@@ -848,9 +876,7 @@
         let currentLocale = 'ar';
 
         function initLocalization() {
-            const urlLang = new URLSearchParams(window.location.search).get('lang');
-            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
-            setLocale(saved, false);
+            setLocale(document.documentElement.lang || 'ar', false);   // the page language is fixed by its URL
         }
 
         function setLocale(lang, saveToStorage = true) {
@@ -892,17 +918,12 @@
 
             const seoDesc = document.getElementById('seo_desc');
             if (seoDesc && i18nDictionary[lang]?.seo_desc) {
-                seoDesc.setAttribute('content', i18nDictionary[lang].seo_desc);
+                /* meta description is static per language URL */
             }
         }
 
         // Listen for storage changes across browser tabs
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
-                    setLocale(e.newValue, false);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue) applyTheme(e.newValue);
             }

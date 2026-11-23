@@ -7,6 +7,741 @@
   },
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/about.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/about.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/about.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/about.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/about.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/om-oss.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/doctor.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/doctor.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/doctor.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/doctor.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/doctor.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/dr-wassim-habib.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/methodology.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/methodology.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/methodology.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/methodology.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/methodology.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/metodik.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/foods.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/foods.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/foods.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/foods.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/foods.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/foods.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/supplements.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/supplements.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/supplements.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/supplements.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/supplements.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/supplements/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/boodi.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/boodi.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/boodi.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/boodi.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/boodi.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/boodi.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/calculators.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/calculators.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/calculators.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/calculators.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/recipes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/recipes.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/recipes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/en/recipes.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/recipes.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/en/recipes.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/partners.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/partners.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/partners.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/partners.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/partners.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/partners.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/contact.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/contact.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/kontakt.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/privacy.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/privacy.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/integritetspolicy.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/terms.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/terms.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/anvandarvillkor.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/insulin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/insulin-resistance.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/insulin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/insulin-resistance.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/insulin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/insulinresistens-hba1c.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/leptin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/leptin-resistance.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/leptin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/leptin-resistance.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/leptin-resistance.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/leptinresistens.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/cortisol-stress.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/cortisol-stress.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/cortisol-stress.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/cortisol-stress.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/cortisol-stress.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/kortisol-och-stress.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/intermittent-fasting.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/intermittent-fasting.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/intermittent-fasting.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/intermittent-fasting.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/intermittent-fasting.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/periodisk-fasta.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/magnesium-types.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/magnesium-types.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/magnesium-types.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/magnesium-types.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/magnesium-types.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/magnesiumformer.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/bone-health-minerals.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/bone-health-minerals.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/bone-health-minerals.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/bone-health-minerals.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/bone-health-minerals.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/skeletthalsa-och-mineraler.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/thyroid-health.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "destination": "/en/thyroid-health.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/thyroid-health.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
+      "destination": "/nl/thyroid-health.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/thyroid-health.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
+      "destination": "/sv/articles/trog-skoldkortel.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/en",
+      "destination": "/en/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/nl",
+      "destination": "/nl/index.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/sv",
+      "destination": "/sv/index.html",
+      "statusCode": 301
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
@@ -43,19 +778,37 @@
     },
     {
       "source": "/fatty-liver.html",
-      "has": [{ "type": "query", "key": "lang", "value": "en" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
       "destination": "/en/articles/fatty-liver-and-visceral-fat.html",
       "statusCode": 301
     },
     {
       "source": "/fatty-liver.html",
-      "has": [{ "type": "query", "key": "lang", "value": "nl" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "nl"
+        }
+      ],
       "destination": "/nl/articles/fatty-liver-and-visceral-fat.html",
       "statusCode": 301
     },
     {
       "source": "/fatty-liver.html",
-      "has": [{ "type": "query", "key": "lang", "value": "sv" }],
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "sv"
+        }
+      ],
       "destination": "/sv/articles/fatty-liver-and-visceral-fat.html",
       "statusCode": 301
     },
@@ -70,36 +823,6 @@
       "statusCode": 301
     },
     {
-      "source": "/en",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/en/:path((?!foods/|supplements/|articles/|diabetes|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/nl",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/nl/:path((?!foods/|supplements/|articles/|diabetes|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/sv",
-      "destination": "/sv/index.html",
-      "permanent": true
-    },
-    {
-      "source": "/sv/:path((?!index\\.html$|diabetes|articles/|foods/|supplements/|dr-wassim-habib\\.html$|om-oss\\.html$|integritetspolicy\\.html$|anvandarvillkor\\.html$|medicinsk-ansvarsfriskrivning\\.html$|kontakt\\.html$|radera-konto\\.html$|calculators\\.html$|boodi\\.html$|metodik\\.html$|partners\\.html$|bmi-calculator|tdee-calculator|water-calculator|whtr-calculator).*)",
-      "destination": "/sv/index.html",
-      "permanent": false
-    },
-    {
       "source": "/:proto(https?)\\:/:host(wibohealth\\.com|www\\.wibohealth\\.com)/:path+",
       "destination": "/:path+",
       "permanent": true
@@ -111,6 +834,23 @@
     }
   ],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
     {
       "source": "/service-worker.js",
       "headers": [

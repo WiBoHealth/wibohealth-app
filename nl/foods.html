@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied', 'analytics_storage': 'denied', 'wait_for_update': 500});
+      try { if (localStorage.getItem('wibo_consent') === 'granted') gtag('consent', 'update', {'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted', 'analytics_storage': 'granted'}); } catch (e) {}
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WG6S4KXXJS"></script>
+    <script>
+      gtag('js', new Date());
+
+      gtag('config', 'G-WG6S4KXXJS');
+    </script>
+    <script src="/js/consent.js?v=4" defer></script>
+    <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
+    <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
+    <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
+    <style>html.theme-transitioning,html.theme-transitioning *,html.theme-transitioning *::before,html.theme-transitioning *::after{transition:none!important;animation-duration:0s!important}</style>
+    <script>document.addEventListener('click',function(e){var t=e.target&&e.target.closest&&e.target.closest('.theme-toggle,.theme-toggle-btn,#themeToggle,#themeToggleBtn,#darkModeToggle,[onclick*="toggleTheme"]');if(!t)return;var h=document.documentElement;h.classList.add('theme-transitioning');cancelAnimationFrame(window.__tsw);window.__tsw=requestAnimationFrame(function(){window.__tsw=requestAnimationFrame(function(){h.classList.remove('theme-transitioning')})})},true);</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- Zero-Shift RTL Reset: the page language is fixed by its URL (/, /en/, /nl/, /sv/) through <html lang> -->
+    <script>
+        (function() {
+            const lang = document.documentElement.lang || 'ar';
+            // Swedish food names (js/food-names-sv.js) are downloaded only for the Swedish view
+            let svNames = null;
+            window.loadSvNames = function () {
+                if (!svNames) svNames = new Promise(resolve => {
+                    const sc = document.createElement('script');
+                    sc.src = '/js/food-names-sv.js?v=c23278a5';
+                    sc.async = true;
+                    sc.onload = sc.onerror = () => resolve();
+                    document.head.appendChild(sc);
+                });
+                return svNames;
+            };
+            if (lang === 'sv') window.loadSvNames();
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            if (window.scrollTo) {
+                window.scrollTo(0, 0);
+            }
+        })();
+    </script>
+
+    <!-- Primary SEO & Indexing Tags -->
+    <title>Voedingswijzer: glykemische index, insuline en calorieën</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/nl/foods.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/foods.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/foods.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/foods.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/foods.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/foods.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "CollectionPage",
+            "@id": "https://wibohealth.com/nl/foods.html#webpage",
+            "url": "https://wibohealth.com/nl/foods.html",
+            "name": "Voedingswijzer: glykemische index, insuline en calorieën",
+            "description": "Zoek in 970+ voedingsmiddelen op glykemische index, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Informatief, voor diabetes en gewicht.",
+            "inLanguage": "nl",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-10",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/nl/foods.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/nl/foods.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://wibohealth.com/nl/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "WiBo Health",
+                    "item": "https://wibohealth.com/nl/foods.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
+    <meta name="description" id="metaDescription" content="Zoek in 970+ voedingsmiddelen op glykemische index, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Informatief, voor diabetes en gewicht.">
+    <meta name="author" content="WiBo Health">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Self-Referencing Canonical Tag -->
+
+    <!-- Alternate Language Tags for Googlebot (Hreflang) -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wibohealth.com/nl/foods.html">
+    <meta property="og:title" content="Voedingswijzer: glykemische index, insuline en calorieën">
+    <meta property="og:description" content="Zoek in 970+ voedingsmiddelen op glykemische index, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Informatief, voor diabetes en gewicht.">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="WiBo Health">
+    <meta property="og:locale" content="nl_NL">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wibohealth.com/nl/foods.html">
+    <meta name="twitter:title" content="Voedingswijzer: glykemische index, insuline en calorieën">
+    <meta name="twitter:description" content="Zoek in 970+ voedingsmiddelen op glykemische index, insuline-index, calorieën, eiwit, koolhydraten, vet en vezels. Informatief, voor diabetes en gewicht.">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+
+    <!-- Google Structured Data (Schema.org) -->
+    <script type="application/ld+json" id="mainSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "WiBo Health Comprehensive Food & Glycemic Index Database",
+      "url": "https://wibohealth.com/foods.html",
+      "description": "Nutritional database analyzing Glycemic Index (GI), Insulin Index (II), and macronutrients for diabetes management and metabolic health.",
+      "aspect": "Overview",
+      "author": {
+        "@type": "Person",
+        "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+        "name": "Dr. Wassim Habib",
+        "jobTitle": "مؤسس WiBo Health",
+        "url": "https://wibohealth.com/doctor.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "WiBo Health",
+        "url": "https://wibohealth.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wibohealth.com/images/icon-512.png"
+        }
+      },
+      "inLanguage": ["ar", "nl", "en"],
+      "disclaimer": "Nutritional lifestyle reference tool. Not a medical diagnostic device under EU MDR 2017/745."
+    }
+    </script>
+    <script type="application/ld+json" id="breadcrumbSchema">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "WiBo Health",
+          "item": "https://wibohealth.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Food Database",
+          "item": "https://wibohealth.com/foods.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7916621264532349" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- PWA Icons -->
+    <meta name="theme-color" content="#10b981">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+
+    <style>
+        /* ==========================================================================
+           1. الدرع العالمي لمنع التمرير الأفقي وانزلاق الشاشة (Zero Horizontal Drift)
+           ========================================================================== */
+        html, body {
+            max-width: 100% !important;
+            width: 100% !important;
+            overflow-x: clip !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-gradient-1: #10b981;
+            --bg-gradient-2: #0ea5e9;
+            --primary-color: #10b981;
+            --secondary-color: #059669;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.08);
+            --shadow-hover: rgba(0,0,0,0.18);
+            --border-color: rgba(0,0,0,0.06);
+        }
+
+        body {
+            font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.8;
+            transition: background 0.3s ease;
+        }
+
+        html[lang="en"] body, html[lang="nl"] body {
+            font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+        }
+
+        body.dark-mode {
+            --bg-gradient-1: #1a1a2e;
+            --bg-gradient-2: #16213e;
+            --card-bg: #0f3460;
+            --text-dark: #ffffff;
+            --text-light: #cbd5e1;
+            --shadow: rgba(0,0,0,0.3);
+            --shadow-hover: rgba(0,0,0,0.4);
+            --border-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .container {
+            max-width: 1250px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+
+        /* ==========================================================================
+           2. الهيدر النحيف الموحد المتجاوب (Slim Header 2.0 Responsive Shield)
+           ========================================================================== */
+        header {
+            background: var(--card-bg);
+            height: 60px;
+            box-shadow: 0 4px 20px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            flex-shrink: 0;
+            min-width: 0;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .logo-icon svg {
+            width: 34px;
+            height: 34px;
+            filter: drop-shadow(0 2px 6px rgba(16, 185, 129, 0.4));
+        }
+
+        .logo-text h1 {
+            font-size: 19px;
+            background: linear-gradient(135deg, var(--primary-color), #3498db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .nav-link {
+            padding: 7px 14px;
+            background: #f3f4f6;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        body.dark-mode .nav-link {
+            background: rgba(255,255,255,0.08);
+            color: white;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-link.boodi-link {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white !important;
+            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+        }
+
+        .header-actions {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+            min-width: 0;
+        }
+
+        .lang-btn, .favorites-btn, .theme-toggle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f3f4f6;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            color: var(--text-dark);
+            flex-shrink: 0;
+            padding: 0;
+        }
+
+        body.dark-mode .lang-btn,
+        body.dark-mode .favorites-btn,
+        body.dark-mode .theme-toggle {
+            background: rgba(255,255,255,0.08);
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+        }
+
+        .favorites-btn { position: relative; }
+
+        .favorites-count {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: #ef4444;
+            color: white;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 800;
+            border: 2px solid white;
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 4px;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+
+        .hamburger-menu span {
+            width: 22px;
+            height: 2.5px;
+            background: var(--text-dark);
+            border-radius: 3px;
+        }
+
+        body.dark-mode .hamburger-menu span { background: white; }
+
+        @media (min-width: 993px) {
+            .mobile-nav-overlay, .mobile-nav-menu {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu { display: none !important; }
+            .hamburger-menu { display: flex !important; }
+            
+            .mobile-nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.6);
+                z-index: 9998;
+            }
+            .mobile-nav-overlay.active { display: block; }
+
+            .mobile-nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100%;
+                background: var(--card-bg);
+                box-shadow: -5px 0 20px rgba(0,0,0,0.4);
+                z-index: 9999;
+                padding: 70px 20px 20px;
+                transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease, top 0.3s ease, right 0.3s ease, bottom 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+                overflow-y: auto;
+            }
+            [dir="ltr"] .mobile-nav-menu { right: auto; left: -100%; }
+            .mobile-nav-menu.active { right: 0; }
+            [dir="ltr"] .mobile-nav-menu.active { left: 0; right: auto; }
+
+            .mobile-nav-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 26px;
+                color: var(--text-dark);
+                cursor: pointer;
+            }
+            [dir="ltr"] .mobile-nav-close { right: auto; left: 20px; }
+
+            .mobile-nav-link {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px 16px;
+                color: var(--text-dark);
+                text-decoration: none;
+                border-radius: 12px;
+                margin-bottom: 8px;
+                font-weight: 700;
+                font-size: 14px;
+                background: #f8f9fa;
+            }
+            body.dark-mode .mobile-nav-link {
+                background: rgba(255,255,255,0.05);
+                color: white;
+            }
+        }
+
+        /* حماية الشاشات الصغيرة جداً (< 380px) من انقطاع الشعار */
+        @media (max-width: 400px) {
+            .header-content { padding: 0 8px; gap: 4px; }
+            .logo-text h1 { font-size: 16px; }
+            .logo-icon { width: 28px; height: 28px; }
+            .logo-icon svg { width: 28px; height: 28px; }
+            .lang-btn, .favorites-btn, .theme-toggle { width: 28px; height: 28px; font-size: 12px; }
+            .header-actions { gap: 3px; }
+        }
+
+        /* ==========================================================================
+           3. المحتوى العام وبطاقات الأطعمة
+           ========================================================================== */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            flex-wrap: wrap;
+        }
+
+        /* Calm palette for this page: neutral surfaces, dark emerald only for the selected state;
+           the GI pills on the food cards are the only signal colours (green / amber / red) */
+        :root {
+            --fd-accent: #047857;
+            --fd-accent-soft: rgba(4, 120, 87, 0.08);
+            --fd-line: rgba(15, 23, 42, 0.10);
+            --fd-chip: #f1f5f9;
+            --fd-chip-text: #475569;
+        }
+        html[data-theme="dark"] {
+            --fd-accent: #5fbf98;
+            --fd-accent-soft: rgba(95, 191, 152, 0.10);
+            --fd-line: rgba(205, 214, 192, 0.14);
+            --fd-chip: rgba(205, 214, 192, 0.07);
+            --fd-chip-text: #c3c9b9;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            color: var(--text-dark);
+            border: 2px solid transparent;
+            padding: 9px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tab-btn:hover { transform: translateY(-2px); }
+
+        .tab-btn.active {
+            background: var(--fd-accent);
+            color: white;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        html[data-theme="dark"] .tab-btn.active { color: #0f100f; }
+
+        .tab-count {
+            background: rgba(0,0,0,0.08);
+            padding: 2px 7px;
+            border-radius: 12px;
+            font-size: 11px;
+        }
+
+        .tab-btn.active .tab-count { background: rgba(255,255,255,0.22); }
+
+        /* Browse by section: heading + "All"/favourites pills, then a grid of the 10 master groups
+           (cards on wide screens, a compact two-column grid of all 10 on phones and tablets) */
+        .cat-section { max-width: 1100px; margin: 4px auto 22px; }
+        .cat-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin-bottom: 14px;
+        }
+        .cat-head h2 { font-size: 1.55rem; font-weight: 900; color: var(--text-dark); margin: 0 0 2px; line-height: 1.3; }
+        .cat-sub { margin: 0; color: var(--text-light); font-size: 0.92rem; font-weight: 600; }
+        .cat-sub #totalCount { color: var(--fd-accent); font-weight: 900; }
+        .cat-quick { display: flex; gap: 8px; flex-wrap: wrap; }
+        .cat-quick .tab-btn { padding: 8px 16px; font-size: 13px; white-space: nowrap; }
+        .cat-quick .tab-btn:focus-visible { outline: 3px solid var(--fd-accent); outline-offset: 2px; }
+        .cat-quick .fav-chip i { color: var(--fd-accent); }
+        .cat-quick .fav-chip.active i { color: inherit; }
+
+        .cat-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+        .group-card {
+            --accent: var(--fd-accent);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 132px;
+            padding: 16px 10px 14px;
+            background: var(--card-bg);
+            color: var(--text-dark);
+            border: 1.5px solid var(--fd-line);
+            border-radius: 20px;
+            box-shadow: 0 2px 10px var(--shadow);
+            font-family: inherit;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+        }
+        .group-card:hover {
+            transform: translateY(-4px);
+            border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+        .group-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+        .gc-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            line-height: 1;
+            background: var(--fd-chip);
+            transition: transform 0.22s ease;
+        }
+        .group-card:hover .gc-icon { transform: scale(1.05); }
+        /* photo thumbnail (images/categories/<group>.webp); without .gc-photo the box shows the emoji fallback */
+        .gc-icon.gc-photo {
+            width: 66px;
+            height: 66px;
+            overflow: hidden;
+            background: var(--fd-chip);
+            border: 1px solid var(--fd-line);
+        }
+        .gc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .group-card.active .gc-icon.gc-photo { border-color: var(--accent); }
+        .gc-label { font-size: 0.86rem; font-weight: 800; line-height: 1.35; }
+        .gc-count {
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--fd-chip-text);
+            background: var(--fd-chip);
+            padding: 2px 10px;
+            border-radius: 999px;
+        }
+        .group-card.active {
+            border-color: var(--accent);
+            background: color-mix(in srgb, var(--accent) 7%, var(--card-bg));
+            box-shadow: inset 0 0 0 1px var(--accent), 0 2px 10px var(--shadow);
+        }
+        .group-card.active .gc-count { color: var(--accent); background: var(--fd-accent-soft); }
+        .group-card.active::after {
+            content: '✓';
+            position: absolute;
+            top: 8px;
+            inset-inline-end: 10px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            /* all 10 sections visible at once: two columns, five rows, no sideways scrolling */
+            .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+            /* compact horizontal cards: photo beside label and count */
+            .group-card {
+                display: grid;
+                grid-template-columns: 38px minmax(0, 1fr);
+                grid-template-rows: auto auto;
+                column-gap: 9px;
+                row-gap: 3px;
+                align-items: center;
+                justify-items: start;
+                align-content: center;
+                min-height: 60px;
+                padding: 8px 10px;
+                border-radius: 14px;
+                box-shadow: none;
+                text-align: start;
+            }
+            .group-card:hover { transform: none; }
+            .gc-icon { grid-row: 1 / span 2; width: 38px; height: 38px; border-radius: 10px; font-size: 20px; }
+            .gc-icon.gc-photo { width: 38px; height: 38px; border-radius: 10px; }
+            .group-card:hover .gc-icon { transform: none; }
+            .gc-label {
+                font-size: 0.78rem;
+                line-height: 1.3;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .gc-count { font-size: 0.68rem; padding: 0 8px; }
+            /* check mark sits on the photo corner so it never covers the label */
+            .group-card.active::after { top: 4px; inset-inline-end: auto; inset-inline-start: 4px; width: 16px; height: 16px; font-size: 9px; }
+            .cat-head { margin-bottom: 10px; }
+        }
+
+        .tab-btn.active .tab-count {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .search-box {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px var(--shadow);
+            margin-bottom: 14px;
+            width: 100%;
+            scroll-margin-top: 76px; /* clears the sticky header when a section card scrolls here */
+        }
+
+        .results-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            margin: 0 4px 14px;
+        }
+        .results-heading { margin: 0; font-size: 1.02rem; font-weight: 800; color: var(--text-dark); }
+        .results-heading b { color: var(--fd-accent); }
+        .results-clear {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1.5px solid color-mix(in srgb, var(--fd-accent) 45%, transparent);
+            background: transparent;
+            color: var(--fd-accent);
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .results-clear:hover, .results-clear:focus-visible { background: var(--fd-accent-soft); outline: none; }
+        .results-clear[hidden] { display: none; }
+
+        .food-grid > .diet-teaser { grid-column: 1 / -1; margin: 0; }
+
+        .results-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 48px 20px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-light);
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+        .results-empty i { font-size: 34px; margin-bottom: 12px; color: var(--text-light); display: block; }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 18px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: background-color 0.25s, color 0.25s, border-color 0.25s, opacity 0.25s, transform 0.25s, top 0.25s, right 0.25s, bottom 0.25s, left 0.25s, width 0.25s, height 0.25s, max-height 0.25s, visibility 0.25s;
+            background: var(--card-bg);
+            color: var(--text-dark);
+        }
+
+        body.dark-mode .search-input { border-color: rgba(255,255,255,0.15); }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+        }
+
+        .search-helper {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85em;
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .food-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border: 1px solid var(--border-color);
+            content-visibility: auto;
+            contain-intrinsic-size: 260px 320px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .food-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px var(--shadow-hover);
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 34px;
+            height: 34px;
+            background: rgba(255,255,255,0.95);
+            border: 1px solid #e2e8f0;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #94a3b8;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, top 0.2s ease, right 0.2s ease, bottom 0.2s ease, left 0.2s ease, width 0.2s ease, height 0.2s ease, max-height 0.2s ease, visibility 0.2s ease;
+            z-index: 10;
+        }
+
+        [dir="ltr"] .favorite-btn { right: auto; left: 12px; }
+
+        body.dark-mode .favorite-btn {
+            background: rgba(15, 23, 42, 0.85);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        .favorite-btn:hover { transform: scale(1.12); }
+        .favorite-btn.active {
+            color: var(--fd-accent) !important;
+            background: var(--fd-accent-soft);
+            border-color: color-mix(in srgb, var(--fd-accent) 40%, transparent);
+        }
+
+        .food-icon { font-size: 42px; text-align: center; margin-bottom: 10px; }
+
+        .food-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .food-category {
+            display: inline-block;
+            background: var(--fd-chip);
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--fd-chip-text);
+            margin-bottom: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .food-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px;
+            margin-top: 10px;
+        }
+
+        .stat-item {
+            background: rgba(0,0,0,0.04);
+            padding: 7px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        body.dark-mode .stat-item { background: var(--wb-soft); }
+        .stat-label { font-size: 11px; color: var(--text-light); margin-bottom: 2px; font-weight: 600; }
+        .stat-value { font-size: 16px; font-weight: 800; color: var(--text-dark); }
+
+        #scrollSentinel {
+            grid-column: 1 / -1;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .boodi-food-banner {
+            background: var(--card-bg);
+            border: 1.5px solid var(--fd-line);
+            border-inline-start: 4px solid var(--fd-accent);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .boodi-banner-text { flex: 2; min-width: 0; width: 100%; }
+        .boodi-banner-text h3 { font-size: 1.25rem; font-weight: 900; color: var(--text-dark); margin-bottom: 6px; }
+        .boodi-banner-text p { font-size: 0.92rem; color: var(--text-light); line-height: 1.6; margin: 0; }
+
+        .boodi-banner-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease, top 0.25s ease, right 0.25s ease, bottom 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease, max-height 0.25s ease, visibility 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .boodi-banner-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Teaser above the food grid for the diet programme in the boodi app (no prices on the site) */
+        .diet-teaser {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--card-bg);
+            border: 1.5px solid var(--fd-line);
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin: 0 0 22px;
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .diet-teaser::before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 4px;
+            background: var(--fd-accent);
+        }
+        [dir="rtl"] .diet-teaser::before { inset: 0 0 0 auto; }
+        .diet-teaser-icon {
+            flex: 0 0 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: var(--fd-accent-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .diet-teaser-text { flex: 1; min-width: 0; }
+        .diet-teaser-text strong { display: block; font-size: 1.02rem; font-weight: 900; color: var(--text-dark); margin-bottom: 2px; }
+        .diet-teaser-text span { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+        /* المراجع السريرية للمؤشر الجلايسيمي (نفس شريط food-details.html) */
+        .gi-sources-box {
+            background: var(--card-bg);
+            border: 1px solid var(--fd-line);
+            border-inline-start: 4px solid var(--fd-accent);
+            border-radius: 14px;
+            box-shadow: 0 2px 10px var(--shadow);
+            padding: 12px 16px;
+            margin-top: 25px;
+            color: var(--text-light);
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.7;
+            width: 100%;
+            overflow-wrap: anywhere;
+        }
+        body.dark-mode .gi-sources-box {
+            border-color: var(--fd-line);
+            border-inline-start-color: var(--fd-accent);
+            box-shadow: 0 2px 10px var(--shadow);
+            color: #cbd5e1;
+        }
+
+        /* Disclaimer & Legal Note (EU MDR 2017/745 & BW 6:162) */
+        .clinical-disclaimer-box {
+            /* Readable on every page gradient (light and dark): dark glass panel + light text, WCAG AA */
+            background: rgba(15, 23, 42, 0.62);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(226, 232, 240, 0.22);
+            border-radius: 12px;
+            padding: 14px 18px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #e2e8f0;
+            text-align: center;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+        /* One-line pointer to the methodology page (readable on every page gradient) */
+        .methodology-line {
+            margin: 14px auto 0;
+            padding: 9px 16px;
+            width: fit-content;
+            max-width: 100%;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.55);
+            -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(226, 232, 240, 0.2);
+            color: #e2e8f0;
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .methodology-line a { color: #6ee7a8; font-weight: 700; text-decoration: none; }
+        .calc-strip { margin: 26px 0 8px; }
+        .calc-strip h2 { font-size: 1.1rem; font-weight: 800; margin: 0 0 12px; color: var(--text-dark); }
+        .calc-strip-links { display: flex; flex-wrap: wrap; gap: 10px; }
+        .calc-strip-links a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; font-weight: 700;
+            font-size: 0.9rem; text-decoration: none; color: var(--text-dark); background: var(--card-bg); border: 1px solid rgba(16, 185, 129, 0.35); }
+        .calc-strip-links a:hover { border-color: #10b981; }
+        .calc-strip-links i { color: #10b981; }
+        html[data-theme="dark"] .calc-strip-links i { color: #6ee7b7; }
+        .methodology-line a:hover { text-decoration: underline; }
+
+        body.dark-mode .clinical-disclaimer-box {
+            background: rgba(15, 23, 42, 0.7);
+            border-color: rgba(226, 232, 240, 0.18);
+            color: #e2e8f0;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 35px 16px;
+            margin-top: 50px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            width: 100%;
+        }
+
+        footer a { color: #94a3b8; text-decoration: none; margin: 0 8px; transition: color 0.2s; }
+        footer a:hover { color: #10b981; }
+
+        @media (max-width: 600px) {
+            .food-grid { grid-template-columns: 1fr; }
+            .cat-head h2 { font-size: 1.3rem; }
+            .boodi-food-banner { text-align: center; justify-content: center; }
+            .boodi-banner-btn { width: 100%; justify-content: center; }
+            .diet-teaser { flex-wrap: wrap; padding: 16px; }
+            .diet-teaser-text { flex-basis: calc(100% - 64px); }
+        }
+
+        /* GI pill on the food cards */
+        .card-gi { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 6px 0 2px; font-size: 0.78rem; font-weight: 800; }
+        .card-gi .gi-num { padding: 2px 10px; border-radius: 999px; }
+        .card-gi .gi-num.low { background: rgba(16, 185, 129, 0.14); color: #059669; }
+        .card-gi .gi-num.medium { background: rgba(245, 158, 11, 0.16); color: #b45309; }
+        .card-gi .gi-num.high { background: rgba(239, 68, 68, 0.14); color: #dc2626; }
+        body.dark-mode .card-gi .gi-num.low { color: #34d399; }
+        body.dark-mode .card-gi .gi-num.medium { color: #fbbf24; }
+        body.dark-mode .card-gi .gi-num.high { color: #f87171; }
+        .card-gi .gi-est { font-size: 0.68rem; font-weight: 700; color: #64748b; }
+        body.dark-mode .card-gi .gi-est { color: #94a3b8; }
+    </style>
+    <link rel="stylesheet" href="/css/unified-header.css">
+    <!-- Header menu on one row (desktop): the shared safety net lets the capsules wrap, and from 1321px the English and
+         Dutch capsules (with icons and full padding) wrapped inside the 60px header: links pushed to the top edge and
+         Partnerships on a second row. Same slim capsules as Arabic at that width, and no wrapping. -->
+    <style>
+        @media (min-width: 993px) {
+            body > header .nav-menu { flex-wrap: nowrap !important; align-items: center; }
+            body > header .nav-menu .nav-link { white-space: nowrap; }
+            body > header .nav-menu .nav-link.active:not(:hover) { transform: none; }   /* on the centre line with the rest */
+        }
+        @media (min-width: 1321px) {
+            body > header .nav-menu .nav-link > i { display: none !important; }
+            body > header .nav-menu { gap: 4px !important; }
+            body > header .nav-link { padding: 0 10px !important; }
+        }
+        /* Phones: four language buttons + favourites, theme and menu take 234px, so up to 420px the header shows the logo
+           without the wordmark (the shared stylesheet does this up to 360px) and nothing runs off the screen edge. */
+        @media (max-width: 420px) {
+            body > header .logo-text { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme sync: apply the booted theme to body.dark-mode at once, and mirror later toggles back to html[data-theme] -->
+    <script>(function(h,b){if(h.getAttribute('data-theme')==='dark')b.classList.add('dark-mode');new MutationObserver(function(){var d=b.classList.contains('dark-mode')?'dark':'light';if(h.getAttribute('data-theme')!==d){h.setAttribute('data-theme',d);try{localStorage.setItem('wibo_theme',d)}catch(e){}}}).observe(b,{attributes:true,attributeFilter:['class']})})(document.documentElement,document.body);</script>
+
+    <!-- Unified Slim Header 2.0 (Zero-Overflow Protected) -->
+    <header>
+        <div class="header-content">
+            <a href="/nl/index.html" class="logo">
+                <div class="logo-icon">
+                    <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
+                </div>
+                <div class="logo-text">
+                    <h1>WiBo Health</h1>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="nav-menu">
+                <a data-sv-href="/sv/" href="/nl/index.html" class="nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">Home</span></a>
+                <a href="/nl/foods.html" class="nav-link active"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">Voedingswijzer</span></a>
+                <a data-sv-href="/sv/calculators.html" href="/nl/calculators.html" class="nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">Calculators</span></a>
+                <a href="/nl/supplements.html" class="nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Supplementen</span></a>
+                <a data-sv-href="/sv/#articles" href="/nl/index.html#articles" class="nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artikelen</span></a>
+                <a href="/nl/diabetes.html" class="nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
+                <a data-sv-href="/sv/boodi.html" href="/nl/boodi.html" class="nav-link boodi-link"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi App 💚</span></a>
+                <a data-sv-href="/sv/om-oss.html" href="/nl/about.html" class="nav-link"><i class="fas fa-user-md"></i> <span data-i18n="nav_doctor">Over Ons</span></a>
+                <a href="/nl/partners.html" class="nav-link nav-partners"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">Partners</span></a>
+            </nav>
+
+            <!-- Header Controls -->
+            <div class="header-actions">
+                <a class="lang-btn" href="/foods.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية">AR</a>
+                <a class="lang-btn" href="/en/foods.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn active" href="/nl/foods.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands" aria-current="page">NL</a>
+                <a class="lang-btn" href="/sv/foods.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
+                
+                <button class="favorites-btn" onclick="toggleFavoritesView()" title="Favorieten">
+                    <i class="fas fa-heart" style="color: #ef4444;"></i>
+                    <span class="favorites-count" id="favCount">0</span>
+                </button>
+                
+                <button class="theme-toggle" onclick="toggleTheme()" title="Thema wisselen">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <div class="hamburger-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-overlay" onclick="toggleMobileMenu()"></div>
+    <nav class="mobile-nav-menu" id="mobileNav">
+        <button class="mobile-nav-close" onclick="toggleMobileMenu()">&times;</button>
+        <a href="/nl/index.html" class="mobile-nav-link"><i class="fas fa-home"></i> <span data-i18n="nav_home">Home</span></a>
+        <a href="/nl/foods.html" class="mobile-nav-link active"><i class="fas fa-utensils"></i> <span data-i18n="nav_foods">Voedingswijzer</span></a>
+        <a href="/nl/calculators.html" class="mobile-nav-link"><i class="fas fa-calculator"></i> <span data-i18n="nav_calculators">Calculators</span></a>
+        <a href="/nl/supplements.html" class="mobile-nav-link"><i class="fas fa-capsules"></i> <span data-i18n="nav_supplements">Supplementen</span></a>
+        <a href="/nl/index.html#articles" class="mobile-nav-link"><i class="fas fa-book-medical"></i> <span data-i18n="nav_articles">Artikelen</span></a>
+        <a href="/nl/diabetes.html" class="mobile-nav-link nav-diabetes"><i class="fas fa-droplet"></i> <span class="nav-diabetes-label">Diabetes</span></a>
+        <a href="/nl/boodi.html" class="mobile-nav-link" style="background: linear-gradient(135deg, #10b981, #059669); color: white; font-weight: 800;"><i class="fas fa-mobile-screen-button"></i> <span data-i18n="nav_boodi_app">boodi App 💚</span></a>
+        <a href="/nl/about.html" class="mobile-nav-link"><i class="fas fa-info-circle"></i> <span data-i18n="footer_about">Over Ons</span></a>
+        <a href="/nl/contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> <span data-i18n="footer_contact">Contact</span></a>
+        <a href="/nl/partners.html" class="mobile-nav-link"><i class="fas fa-handshake"></i> <span data-i18n="nav_partners">Partners</span></a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Browse by section: "All" + favourites pills and the 10 master groups (js/food-categories.js); filled by renderCategoryBar() -->
+        <section class="cat-section" id="categoryBar" aria-labelledby="catTitle">
+            <div class="cat-head">
+                <div>
+                    <h2 id="catTitle" data-i18n="cat_title">Voeding per categorie</h2>
+                    <p class="cat-sub"><span id="totalCount">1056</span> <span data-i18n="cat_sub">voedingsmiddelen met volledige voedingswaarden in 10 categorieën</span></p>
+                </div>
+                <div class="cat-quick" id="categoryQuick" role="group"></div>
+            </div>
+            <div class="cat-grid" id="categoryGrid" role="group"></div>
+        </section>
+
+        <!-- Search Box (also the scroll target after a section is picked) -->
+        <div class="search-box" id="searchBox">
+            <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="search_placeholder" placeholder="🔍 Zoek een voedingsmiddel of categorie..." oninput="onSearchInput()">
+            <p class="search-helper">
+                <i class="fas fa-info-circle" style="color: #10b981;"></i>
+                <span data-i18n="search_helper">Zoek op naam of categorie (Nederlands / EN / AR)</span>
+            </p>
+        </div>
+
+        <!-- What the grid shows right now (section, favourites, search), with a reset button -->
+        <div class="results-bar">
+            <p class="results-heading" id="resultsHeading" aria-live="polite"></p>
+            <button type="button" class="results-clear" id="resultsClear" hidden>
+                <i class="fas fa-xmark" aria-hidden="true"></i> <span data-i18n="results_clear">Filter wissen</span>
+            </button>
+        </div>
+
+        <!-- Food Grid (the boodi diet teaser is placed inside it, after the first six foods) -->
+        <div class="food-grid" id="foodGrid"></div>
+
+        <!-- Scroll Sentinel for Infinite Scrolling -->
+        <div id="scrollSentinel">
+            <span id="sentinelText"></span>
+        </div>
+
+        <!-- GI Clinical Sources -->
+        <div class="gi-sources-box" data-i18n="gi_sources">📚 Gemeten GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing; waarden gemarkeerd als “schatting” zijn schattingen beoordeeld door het medisch team van WiBo Health.</div>
+
+        <!-- Clinical Disclaimer Note (EU MDR 2017/745 Compliance) -->
+        <div class="clinical-disclaimer-box" data-i18n="clinical_disclaimer">Algemene disclaimer: Deze voedingswijzer en de boodi-app zijn leefstijl- en educatieve hulpmiddelen en vormen geen medisch hulpmiddel volgens EU MDR 2017/745.</div>
+        <p class="methodology-line"><span data-i18n="methodology_line">Waarden zijn gemeten of berekend volgens een gedocumenteerde methode</span> · <a href="/nl/methodology.html" data-i18n="methodology_link">Methodologie &amp; wetenschappelijke bronnen</a></p>
+
+        <!-- Health calculators: pair the food data with your own numbers -->
+        <section class="calc-strip" aria-labelledby="calcStripTitle">
+            <h2 id="calcStripTitle" data-i18n="calc_strip_title">Bereken je behoefte en kies dan je eten</h2>
+            <div class="calc-strip-links">
+                <a href="/nl/bmi-calculator.html" data-calc-page="bmi-calculator"><i class="fas fa-weight-scale" aria-hidden="true"></i> <span data-i18n="calc_strip_bmi">BMI berekenen</span></a>
+                <a href="/nl/tdee-calculator.html" data-calc-page="tdee-calculator"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> <span data-i18n="calc_strip_tdee">Calorieën berekenen (TDEE)</span></a>
+                <a href="/nl/water-calculator.html" data-calc-page="water-calculator"><i class="fas fa-droplet" aria-hidden="true"></i> <span data-i18n="calc_strip_water">Waterbehoefte berekenen</span></a>
+                <a href="/nl/whtr-calculator.html" data-calc-page="whtr-calculator"><i class="fas fa-ruler-combined" aria-hidden="true"></i> <span data-i18n="calc_strip_whtr">Taille-lengteratio</span></a>
+            </div>
+        </section>
+
+        <!-- Conversion Card -->
+        <div class="boodi-food-banner">
+            <div class="boodi-banner-text">
+                <h3 data-i18n="boodi_banner_title">📱 Scan supermarktvoeding live met de boodi app 💚</h3>
+                <p data-i18n="boodi_banner_desc">Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert voedingsvoorkeuren en verborgen ingrediënten en tipt gezondere alternatieven direct uit hetzelfde schap.</p>
+            </div>
+            <a href="/nl/boodi.html" class="boodi-banner-btn">
+                <i class="fas fa-barcode"></i>
+                <span data-i18n="boodi_banner_btn">Ontdek boodi App Gratis</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="/nl/about.html" data-i18n="footer_about">Over Ons</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/contact.html" data-i18n="footer_contact">Contact</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/partners.html" data-i18n="footer_partners">Partners</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/foods/index.html" data-dir-index="foods" data-i18n="footer_food_index">Voedingsindex</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/supplements/index.html" data-dir-index="supplements" data-i18n="footer_supp_index">Supplementenindex</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/privacy.html" data-i18n="footer_privacy">Privacybeleid</a>
+            <span style="color: #7f8c8d;">|</span>
+            <a href="/nl/terms.html" data-i18n="footer_terms">Algemene Voorwaarden</a>
+        </div>
+        <p style="margin: 10px 0; color: #94a3b8; font-size: 0.9em;" data-i18n="footer_rights">© 2026 WiBo Health Group. Alle rechten voorbehouden | Medisch Team WiBo Health</p>
+        <p style="margin: 0; color: #64748b; font-size: 0.85em;">💚 <span data-i18n="footer_dev_a">Ontwikkeld met</span> <span style="color: #10b981;">♥</span> <span data-i18n="footer_dev_b">voor boodi</span></p>
+    </footer>
+
+
+    <!-- Load Food Database -->
+    <script src="/js/data.js?v=026523c2"></script>
+    <script src="/js/food-categories.js?v=1b314b6e"></script>
+    <script src="/js/food-pages.js?v=6220c1fd"></script>
+    <!-- Old shared links (foods.html#brown-rice, #food-612) go straight to the food's own page in the reader's language -->
+    <script>
+        (function () {
+            var key = '';
+            try { key = decodeURIComponent(location.hash.replace(/^#/, '')); } catch (e) { return; }
+            if (!key) return;
+            var map = window.FOOD_PAGES || {}, byId = /^food-(\d+)$/.exec(key), id = byId ? byId[1] : null, slug = null;
+            if (id) slug = map[id] || null;
+            else for (var k in map) if (map[k] === key) { slug = key; break; }
+            if (!slug && !id) return;
+            var l = document.documentElement.lang;   // fixed by the page URL (/foods.html, /en/, /nl/, /sv/foods.html)
+            var prefix = (l === 'en' || l === 'nl' || l === 'sv') ? '/' + l : '';
+            location.replace(slug ? prefix + '/foods/' + slug + '.html' : '/food-details.html?id=' + encodeURIComponent(id));
+        })();
+    </script>
+
+    <!-- High-Performance Lazy Rendering, SEO & Zero-Shift Engine -->
+    <script>
+        window.allFoods = [];
+        let favorites = JSON.parse(localStorage.getItem('wibo_favorites') || '[]').map(String);
+        // Filters combine: master group (?group=KEY), favourites toggle and the free-text search
+        let selectedGroup = 'all';
+        let showFavorites = false;
+        const groupKeys = (window.FOOD_GROUPS || []).map(g => g.key);
+
+        const CHUNK_SIZE = 36;
+        let visibleCount = CHUNK_SIZE;
+        let currentFilteredList = [];
+        let searchDebounceTimer = null;
+        let scrollObserver = null;
+
+        // Fine category label on cards and in the modal (all three fields are set for every record in js/data.js)
+        function getSafeCategoryName(food, lang) {
+            if (!food) return '';
+            if (lang === 'nl') return food.categoryNl || food.categoryEn || food.category || '';
+            if (lang === 'en') return food.categoryEn || food.categoryNl || food.category || '';
+            if (lang === 'sv') return getCategoryLabel(food.group, 'sv') || food.categoryEn || '';
+            return food.category || '';
+        }
+
+        // Food name in the reader's language (Swedish: the approved names of scripts/food_sv.py, else English)
+        function foodName(food, lang) {
+            if (lang === 'en') return food.nameEn || food.name;
+            if (lang === 'nl') return food.nameNl || food.nameEn || food.name;
+            if (lang === 'sv') return (window.FOOD_NAMES_SV || {})[String(food.id)] || food.nameEn || food.name;
+            return food.name;
+        }
+
+        const foodsTranslations = {
+            ar: {
+                "calc_strip_title": "احسب احتياجك ثم اختر طعامك",
+                "calc_strip_bmi": "حاسبة مؤشر كتلة الجسم BMI",
+                "calc_strip_tdee": "حاسبة السعرات TDEE",
+                "calc_strip_water": "حاسبة الماء اليومي",
+                "calc_strip_whtr": "نسبة الخصر إلى الطول",
+                "meta_title": "دليل الأطعمة الشامل - المؤشر الجلايسيمي، الأنسولين، السعرات | WiBo Health",
+                "meta_desc": "دليلك الغذائي الشامل للأطعمة مع المؤشر الجلايسيمي (GI) ومؤشر الأنسولين (II): سعرات حرارية، بروتين، كربوهيدرات، دهون، ألياف - قاعدة بيانات غذائية استرشادية لمرضى السكري والدايت يراجعها فريق ويبو هيلث.",
+                "nav_home": "الرئيسية",
+                "nav_foods": "دليل الأطعمة",
+                "nav_calculators": "الحاسبات",
+                "nav_supplements": "المكملات",
+                "nav_articles": "المقالات",
+                "nav_boodi_app": "بودي 💚",
+                "nav_doctor": "من نحن",
+                "cat_title": "تصفح الأطعمة حسب القسم",
+                "cat_sub": "صنفاً بقيم غذائية كاملة في 10 أقسام",
+                "tab_all": "الكل",
+                "tab_fav": "أطعمتي المفضلة",
+                "category_bar_label": "تصنيفات الأطعمة",
+                "search_placeholder": "🔍 ابحث عن أي طعام أو تصنيف...",
+                "search_helper": "يمكنك البحث في اسم الطعام أو التصنيف (عربي / English / Nederlands)",
+                "no_results": "لم يتم العثور على أي طعام يطابق بحثك",
+                "results_clear": "إلغاء التصفية",
+                "res_all": "عرض جميع الأصناف ({n})",
+                "res_group": "عرض {n} في قسم {g}",
+                "res_fav": "عرض {n} من أطعمتك المفضلة",
+                "res_fav_group": "عرض {n} من أطعمتك المفضلة في قسم {g}",
+                "res_search": " تطابق «{q}»",
+                "res_none": "لا توجد نتائج لهذا الاختيار",
+                "no_favorites": "لم تضف أي أطعمة إلى المفضلة بعد. اضغط على أيقونة القلب على أي طعام لإضافته هنا!",
+                "calories": "سعرات",
+                "protein": "بروتين",
+                "carbs": "كربوهيدرات",
+                "fats": "دهون",
+                "loading_more": "جاري تحميل المزيد من الأطعمة...",
+                "modal_close": "إغلاق",
+                "modal_gi": "المؤشر الجلايسيمي (GI)",
+                "modal_ii": "مؤشر الإنسولين (II)",
+                "modal_calories": "السعرات الحرارية",
+                "modal_kcal": "سعرة",
+                "gi_low": "منخفض 🟢",
+                "gi_medium": "متوسط 🟡",
+                "gi_high": "مرتفع 🔴",
+                "ii_low": "منخفض 🟢",
+                "ii_medium": "معتدل 🟡",
+                "ii_high": "مرتفع 🔴",
+                "ii_tested_badge": "مرجع موثق (Holt / Bao) ✅",
+                "ii_not_tested": "غير مختبر سريرياً",
+                "modal_per_100g": "القيم الغذائية لكل 100 جرام",
+                "modal_full_details": "فتح الصفحة المستقلة للصنف",
+                "modal_copy_link": "نسخ رابط الصنف المباشر",
+                "modal_link_copied": "تم نسخ الرابط",
+                "modal_loading": "جاري تحميل التفاصيل الكاملة",
+                "modal_load_error": "تعذّر تحميل التفاصيل الكاملة الآن. يمكنك فتح صفحة الصنف من الزر أدناه.",
+                "gi_not_applicable": "لا ينطبق",
+                "gi_not_available": "غير متوفر",
+                "gi_reviewed_badge": "تقدير",
+                "methodology_line": "القيم مقاسة أو محسوبة وفق منهجية موثّقة",
+                "methodology_link": "المنهجية والمراجع العلمية",
+                "gi_sources": "📚 قيم المؤشر الجلايسيمي (GI) المقاسة مستندة إلى الجداول الدولية المعتمدة (Atkinson et al., Am J Clin Nutr 2021) وأبحاث كلية الطب بجامعة هارفارد، أما القيم الموسومة «تقدير» فهي تقديرات راجعها فريق ويبو هيلث الطبي.",
+                "clinical_disclaimer": "إخلاء مسؤولية: دليل الأطعمة وتطبيق بودي أدوات استرشادية لنمط الحياة الأيضي وليست أجهزة تشخيصية أو علاجية طبية وفق اللائحة الأوروبية EU MDR 2017/745. استشر طبيبك دائماً قبل تغيير خطتك العلاجية.",
+                "boodi_banner_title": "📱 امسح طعام السوبرماركت مباشرة مع تطبيق بودي 💚",
+                "boodi_banner_desc": "قراءة الأرقام ممتازة، ولكن فحص الباركود في المتجر أسرع! تطبيق بودي يحلل لك المؤشر الجلايسيمي، يفحص الحلال والتفضيلات الغذائية، ويقترح بدائل صحية أقل سكراً فوراً من نفس الرف.",
+                "boodi_banner_btn": "اكتشف تطبيق بودي مجاناً",
+                "diet_teaser_title": "جديد في تطبيق بودي: برنامج دايت مخصص لنمط حياتك",
+                "diet_teaser_desc": "محتار كيف تنظم هذه الأطعمة في يومك؟ يبني لك بودي خطة وجبات متوازنة لـ 12 أسبوعاً من مطبخك وأطعمتك المفضلة، من إعداد فريق التغذية ونمط الحياة في WiBo Health.",
+                "diet_teaser_btn": "اكتشف البرنامج",
+                "footer_about": "من نحن",
+                "footer_contact": "اتصل بنا",
+                "nav_partners": "الشراكات",
+                "footer_partners": "الشراكات",
+                "footer_food_index": "فهرس الأطعمة",
+                "footer_supp_index": "فهرس المكملات",
+                "footer_privacy": "سياسة الخصوصية",
+                "footer_terms": "شروط الاستخدام",
+                "footer_dev_a": "مُطور بـ",
+                "footer_dev_b": "من أجل بودي",
+                "footer_rights": "© 2026 WiBo Health Group. جميع الحقوق محفوظة | إعداد فريق ويبو هيلث الطبي"
+            },
+            en: {
+                "calc_strip_title": "Work out your needs, then choose your food",
+                "calc_strip_bmi": "BMI calculator",
+                "calc_strip_tdee": "TDEE calorie calculator",
+                "calc_strip_water": "Daily water calculator",
+                "calc_strip_whtr": "Waist-to-height ratio",
+                "meta_title": "Comprehensive Food Guide - Glycemic Index, Insulin & Calories | WiBo Health",
+                "meta_desc": "Nutritional food guide with Glycemic Index (GI), Insulin Index (II), calories, protein, carbs, fats, and fiber for metabolic health and diabetes. WiBo Health Medical Team.",
+                "nav_home": "Home",
+                "nav_foods": "Food Guide",
+                "nav_calculators": "Calculators",
+                "nav_supplements": "Supplements",
+                "nav_articles": "Articles",
+                "nav_boodi_app": "boodi App 💚",
+                "nav_doctor": "About Us",
+                "cat_title": "Browse foods by section",
+                "cat_sub": "foods with full nutrition facts in 10 sections",
+                "tab_all": "All",
+                "tab_fav": "My Favorites",
+                "category_bar_label": "Food categories",
+                "search_placeholder": "🔍 Search any food or category...",
+                "search_helper": "Search by food name or category (EN / NL / AR)",
+                "no_results": "No food found matching your search query",
+                "results_clear": "Clear filter",
+                "res_all": "Showing all foods ({n})",
+                "res_group": "Showing {n} in {g}",
+                "res_fav": "Showing {n} from your favourites",
+                "res_fav_group": "Showing {n} from your favourites in {g}",
+                "res_search": " matching \"{q}\"",
+                "res_none": "No results for this selection",
+                "no_favorites": "No favorite foods saved yet. Click the heart icon on any card to save it here!",
+                "calories": "Calories",
+                "protein": "Protein",
+                "carbs": "Carbs",
+                "fats": "Fat",
+                "loading_more": "Loading more foods...",
+                "modal_close": "Close",
+                "modal_gi": "Glycemic Index (GI)",
+                "modal_ii": "Insulin Index (II)",
+                "modal_calories": "Calories",
+                "modal_kcal": "kcal",
+                "gi_low": "Low 🟢",
+                "gi_medium": "Medium 🟡",
+                "gi_high": "High 🔴",
+                "ii_low": "Low 🟢",
+                "ii_medium": "Moderate 🟡",
+                "ii_high": "High 🔴",
+                "ii_tested_badge": "Documented reference (Holt / Bao) ✅",
+                "ii_not_tested": "Not tested",
+                "modal_per_100g": "Nutritional values per 100 g",
+                "modal_full_details": "Open the standalone food page",
+                "modal_copy_link": "Copy direct link to this food",
+                "modal_link_copied": "Link copied",
+                "modal_loading": "Loading full details",
+                "modal_load_error": "The full details could not be loaded right now. You can open the food page with the button below.",
+                "gi_not_applicable": "Not applicable",
+                "gi_not_available": "Not available",
+                "gi_reviewed_badge": "Estimate",
+                "methodology_line": "Values are measured or calculated using a documented methodology",
+                "methodology_link": "Methodology & scientific references",
+                "gi_sources": "📚 Measured Glycemic Index (GI) values are referenced from the International Tables (Atkinson et al., Am J Clin Nutr 2021) and Harvard Health Publishing; values labelled “estimate” are estimates reviewed by the WiBo Health medical team.",
+                "clinical_disclaimer": "Disclaimer: The WiBo Health food database and boodi app are informational lifestyle guidance tools and do not constitute diagnostic medical devices under EU MDR 2017/745.",
+                "boodi_banner_title": "📱 Scan Grocery Foods Live with boodi App 💚",
+                "boodi_banner_desc": "Checking charts is great, but scanning in the supermarket aisle is faster! boodi deconstructs Glycemic Index, screens dietary preferences & hidden ingredients, and discovers healthier alternatives on the spot.",
+                "boodi_banner_btn": "Discover boodi App Free",
+                "diet_teaser_title": "New in the boodi app: a diet programme built around your lifestyle",
+                "diet_teaser_desc": "Not sure how to fit these foods into your day? boodi builds you a balanced 12-week meal plan from your favourite cuisine and foods, created by the WiBo Health nutrition and lifestyle team.",
+                "diet_teaser_btn": "Explore the programme",
+                "footer_about": "About Us",
+                "footer_contact": "Contact Us",
+                "nav_partners": "Partnerships",
+                "footer_partners": "Partnerships",
+                "footer_food_index": "Food index",
+                "footer_supp_index": "Supplement index",
+                "footer_privacy": "Privacy Policy",
+                "footer_terms": "Terms of Use",
+                "footer_dev_a": "Developed with",
+                "footer_dev_b": "for boodi",
+                "footer_rights": "© 2026 WiBo Health Group. All rights reserved | WiBo Health Medical Team"
+            },
+            nl: {
+                "calc_strip_title": "Bereken je behoefte en kies dan je eten",
+                "calc_strip_bmi": "BMI berekenen",
+                "calc_strip_tdee": "Calorieën berekenen (TDEE)",
+                "calc_strip_water": "Waterbehoefte berekenen",
+                "calc_strip_whtr": "Taille-lengteratio",
+                "meta_title": "Uitgebreide Voedingswijzer - Glykemische Index, Insuline & Calorieën | WiBo Health",
+                "meta_desc": "Wetenschappelijke voedingswijzer met Glykemische Index (GI), Insuline Index (II), calorieën, eiwitten, koolhydraten en vetten voor diabetes en metabole gezondheid. Medisch Team WiBo Health.",
+                "nav_home": "Home",
+                "nav_foods": "Voedingswijzer",
+                "nav_calculators": "Calculators",
+                "nav_supplements": "Supplementen",
+                "nav_articles": "Artikelen",
+                "nav_boodi_app": "boodi App 💚",
+                "nav_doctor": "Over Ons",
+                "cat_title": "Voeding per categorie",
+                "cat_sub": "voedingsmiddelen met volledige voedingswaarden in 10 categorieën",
+                "tab_all": "Alles",
+                "tab_fav": "Mijn Favorieten",
+                "category_bar_label": "Voedselcategorieën",
+                "search_placeholder": "🔍 Zoek een voedingsmiddel of categorie...",
+                "search_helper": "Zoek op naam of categorie (Nederlands / EN / AR)",
+                "no_results": "Geen voedingsmiddel gevonden dat aan je zoekopdracht voldoet",
+                "results_clear": "Filter wissen",
+                "res_all": "Alle producten ({n})",
+                "res_group": "{n} in {g}",
+                "res_fav": "{n} uit je favorieten",
+                "res_fav_group": "{n} uit je favorieten in {g}",
+                "res_search": " voor \"{q}\"",
+                "res_none": "Geen resultaten voor deze keuze",
+                "no_favorites": "Nog geen favorieten opgeslagen. Klik op het hartje bij een product om het hier te bewaren!",
+                "calories": "Calorieën",
+                "protein": "Eiwit",
+                "carbs": "Koolhydraten",
+                "fats": "Vetten",
+                "loading_more": "Meer voedingsmiddelen laden...",
+                "modal_close": "Sluiten",
+                "modal_gi": "Glykemische Index (GI)",
+                "modal_ii": "Insuline-index (II)",
+                "modal_calories": "Calorieën",
+                "modal_kcal": "kcal",
+                "gi_low": "Laag 🟢",
+                "gi_medium": "Gemiddeld 🟡",
+                "gi_high": "Hoog 🔴",
+                "ii_low": "Laag 🟢",
+                "ii_medium": "Matig 🟡",
+                "ii_high": "Hoog 🔴",
+                "ii_tested_badge": "Gedocumenteerde referentie (Holt / Bao) ✅",
+                "ii_not_tested": "Niet klinisch getest",
+                "modal_per_100g": "Voedingswaarden per 100 g",
+                "modal_full_details": "Open de losse pagina van dit voedingsmiddel",
+                "modal_copy_link": "Directe link naar dit voedingsmiddel kopiëren",
+                "modal_link_copied": "Link gekopieerd",
+                "modal_loading": "Volledige details laden",
+                "modal_load_error": "De volledige details konden nu niet worden geladen. Open de pagina via de knop hieronder.",
+                "gi_not_applicable": "Niet van toepassing",
+                "gi_not_available": "Niet beschikbaar",
+                "gi_reviewed_badge": "Schatting",
+                "methodology_line": "Waarden zijn gemeten of berekend volgens een gedocumenteerde methode",
+                "methodology_link": "Methodologie & wetenschappelijke bronnen",
+                "gi_sources": "📚 Gemeten GI-waarden zijn gebaseerd op officiële internationale tabellen (Atkinson et al., Am J Clin Nutr 2021) en Harvard Health Publishing; waarden gemarkeerd als “schatting” zijn schattingen beoordeeld door het medisch team van WiBo Health.",
+                "clinical_disclaimer": "Algemene disclaimer: Deze voedingswijzer en de boodi-app zijn leefstijl- en educatieve hulpmiddelen en vormen geen medisch hulpmiddel volgens EU MDR 2017/745.",
+                "boodi_banner_title": "📱 Scan supermarktvoeding live met de boodi app 💚",
+                "boodi_banner_desc": "Tabellen lezen is handig, maar barcodes scannen in het gangpad is sneller! boodi analyseert de glykemische index, controleert voedingsvoorkeuren en verborgen ingrediënten en tipt gezondere alternatieven direct uit hetzelfde schap.",
+                "boodi_banner_btn": "Ontdek boodi App Gratis",
+                "diet_teaser_title": "Nieuw in de boodi app: een dieetprogramma dat bij jouw leefstijl past",
+                "diet_teaser_desc": "Twijfel je hoe je deze voeding in je dag past? boodi stelt een uitgebalanceerd maaltijdplan van 12 weken voor je samen op basis van je favoriete keuken en gerechten, gemaakt door het voedings- en leefstijlteam van WiBo Health.",
+                "diet_teaser_btn": "Ontdek het programma",
+                "footer_about": "Over Ons",
+                "footer_contact": "Contact",
+                "nav_partners": "Partners",
+                "footer_partners": "Partners",
+                "footer_food_index": "Voedingsindex",
+                "footer_supp_index": "Supplementenindex",
+                "footer_privacy": "Privacybeleid",
+                "footer_terms": "Algemene Voorwaarden",
+                "footer_dev_a": "Ontwikkeld met",
+                "footer_dev_b": "voor boodi",
+                "footer_rights": "© 2026 WiBo Health Group. Alle rechten voorbehouden | Medisch Team WiBo Health"
+            },
+            sv: {
+                "calc_strip_title": "Räkna ut ditt behov och välj sedan din mat",
+                "calc_strip_bmi": "Kroppsmasseindex (BMI)",
+                "calc_strip_tdee": "Dagligt kaloribehov (TDEE)",
+                "calc_strip_water": "Dagligt vätskebehov",
+                "calc_strip_whtr": "Midja-längd-kvot (WHtR)",
+                "meta_title": "Livsmedelsguide: glykemiskt index, insulinindex och kalorier | WiBo Health",
+                "meta_desc": "Livsmedelsguide med glykemiskt index (GI), insulinindex (II), kalorier, protein, kolhydrater, fett och kostfiber för metabol hälsa och diabetes. WiBo Healths medicinska team.",
+                "nav_home": "Hem",
+                "nav_foods": "Livsmedelsguide",
+                "nav_calculators": "Kalkylatorer",
+                "nav_supplements": "Kosttillskott",
+                "nav_articles": "Artiklar",
+                "nav_boodi_app": "boodi-appen 💚",
+                "nav_doctor": "Om oss",
+                "cat_title": "Bläddra bland livsmedel efter grupp",
+                "cat_sub": "livsmedel med fullständigt näringsvärde i 10 grupper",
+                "tab_all": "Alla",
+                "tab_fav": "Mina favoriter",
+                "category_bar_label": "Livsmedelsgrupper",
+                "search_placeholder": "🔍 Sök efter livsmedel eller grupp...",
+                "search_helper": "Sök på livsmedlets namn eller grupp (SV / EN / NL / AR)",
+                "no_results": "Inget livsmedel matchar din sökning",
+                "results_clear": "Rensa filter",
+                "res_all": "Visar alla livsmedel ({n})",
+                "res_group": "Visar {n} i {g}",
+                "res_fav": "Visar {n} bland dina favoriter",
+                "res_fav_group": "Visar {n} bland dina favoriter i {g}",
+                "res_search": " som matchar ”{q}”",
+                "res_none": "Inga resultat för det här urvalet",
+                "no_favorites": "Du har inga sparade favoriter ännu. Klicka på hjärtat på ett kort för att spara det här!",
+                "calories": "Kalorier",
+                "protein": "Protein",
+                "carbs": "Kolhydrater",
+                "fats": "Fett",
+                "loading_more": "Laddar fler livsmedel...",
+                "modal_close": "Stäng",
+                "modal_gi": "Glykemiskt index (GI)",
+                "modal_ii": "Insulinindex (II)",
+                "modal_calories": "Kalorier",
+                "modal_kcal": "kcal",
+                "gi_low": "Lågt 🟢",
+                "gi_medium": "Medelhögt 🟡",
+                "gi_high": "Högt 🔴",
+                "ii_low": "Lågt 🟢",
+                "ii_medium": "Måttligt 🟡",
+                "ii_high": "Högt 🔴",
+                "ii_tested_badge": "Dokumenterad referens (Holt / Bao) ✅",
+                "ii_not_tested": "Inte kliniskt testat",
+                "modal_per_100g": "Näringsvärde per 100 g",
+                "modal_full_details": "Öppna livsmedlets egen sida",
+                "modal_copy_link": "Kopiera direktlänk till livsmedlet",
+                "modal_link_copied": "Länken har kopierats",
+                "modal_loading": "Laddar fullständiga detaljer",
+                "modal_load_error": "De fullständiga detaljerna kunde inte laddas just nu. Du kan öppna livsmedlets sida med knappen nedan.",
+                "gi_not_applicable": "Ej tillämpligt",
+                "gi_not_available": "Saknas",
+                "gi_reviewed_badge": "Uppskattning",
+                "methodology_line": "Värdena är uppmätta eller beräknade enligt en dokumenterad metod",
+                "methodology_link": "Metod och vetenskapliga källor",
+                "gi_sources": "📚 Uppmätta värden för glykemiskt index (GI) kommer från de internationella GI-tabellerna (Atkinson et al., Am J Clin Nutr 2021) och Harvard Health Publishing; värden märkta ”uppskattning” är uppskattningar som granskats av WiBo Healths medicinska team.",
+                "clinical_disclaimer": "Ansvarsfriskrivning: WiBo Healths livsmedelsdatabas och boodi-appen är informativa verktyg för vägledning om levnadsvanor och är ingen medicinteknisk produkt för diagnostik enligt EU-förordningen MDR 2017/745.",
+                "boodi_banner_title": "📱 Skanna streckkoder i butiken med boodi-appen 💚",
+                "boodi_banner_desc": "boodi analyserar förpackade produkter direkt, granskar ingredienserna och föreslår alternativ med mindre socker från samma hylla.",
+                "boodi_banner_btn": "Upptäck boodi-appen",
+                "diet_teaser_title": "Nytt i boodi-appen: ett kostprogram för din livsstil",
+                "diet_teaser_desc": "Osäker på hur du får in de här livsmedlen i vardagen? boodi tar fram en balanserad kostplan på 12 veckor utifrån det kök och den mat du tycker om, framtagen av WiBo Healths team för kost och livsstil.",
+                "diet_teaser_btn": "Utforska programmet",
+                "footer_about": "Om oss",
+                "footer_contact": "Kontakta oss",
+                "nav_partners": "Samarbeten",
+                "footer_partners": "Samarbeten",
+                "footer_food_index": "Livsmedelsregister",
+                "footer_supp_index": "Kosttillskottsregister (på engelska)",
+                "footer_privacy": "Integritetspolicy",
+                "footer_terms": "Användarvillkor",
+                "footer_dev_a": "Utvecklad med",
+                "footer_dev_b": "för boodi",
+                "footer_rights": "© 2026 WiBo Health Group. Alla rättigheter förbehållna."
+            }
+        };
+
+        function getInitialLanguage() {
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
+        }
+
+        let currentLang = getInitialLanguage();
+
+        function t(key) {
+            return (foodsTranslations[currentLang] && foodsTranslations[currentLang][key]) || key;
+        }
+
+        function changeLanguage(lang) {
+            // Swedish: render once the names have arrived (a failed download falls back to the English names)
+            if (lang === 'sv' && !window.FOOD_NAMES_SV && !window.svNamesTried) {
+                window.loadSvNames().then(() => { window.svNamesTried = true; changeLanguage('sv'); });
+                return;
+            }
+            currentLang = lang;
+            localStorage.setItem('preferred_language', lang);
+            localStorage.setItem('wibo_language', lang);
+            
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            // الدرع البرمجي الحاسم: تصفير أي انحراف أفقي في ثانية التبديل
+            window.scrollTo({
+                left: 0,
+                top: window.scrollY,
+                behavior: 'instant'
+            });
+            document.documentElement.scrollLeft = 0;
+            document.body.scrollLeft = 0;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const k = el.getAttribute('data-i18n');
+                if (foodsTranslations[lang] && foodsTranslations[lang][k]) {
+                    el.textContent = foodsTranslations[lang][k];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const k = el.getAttribute('data-i18n-placeholder');
+                if (foodsTranslations[lang] && foodsTranslations[lang][k]) {
+                    el.placeholder = foodsTranslations[lang][k];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang-toggle') === lang);
+            });
+
+            // header links that have a Swedish page switch to it in Swedish
+            document.querySelectorAll('[data-sv-href]').forEach(a => {
+                if (!a.dataset.baseHref) a.dataset.baseHref = a.getAttribute('href');
+                a.setAttribute('href', lang === 'sv' ? a.dataset.svHref : a.dataset.baseHref);
+            });
+
+            // calculator pages exist per language: /bmi-calculator.html, /en/..., /nl/..., /sv/...
+            document.querySelectorAll('[data-calc-page]').forEach(a => {
+                a.href = (lang === 'ar' ? '/' : '/' + lang + '/') + a.getAttribute('data-calc-page') + '.html';
+            });
+
+            if (foodsTranslations[lang] && foodsTranslations[lang]['meta_title']) {
+                /* <title> is static per language URL */
+            }
+            const descMeta = document.getElementById('metaDescription');
+            if (descMeta && foodsTranslations[lang] && foodsTranslations[lang]['meta_desc']) {
+                /* meta description is static per language URL */
+            }
+
+            // the section cards keep their photos: only labels and counts change with the language
+            if (!relabelCategoryBar()) renderCategoryBar();
+            visibleCount = CHUNK_SIZE;
+            filterFoods();
+            updateStructuredDataForSEO();
+            restoreListPosition();
+        }
+
+        function toggleFavorite(event, foodId) {
+            if (event) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+            foodId = String(foodId);
+            const index = favorites.indexOf(foodId);
+
+            if (index > -1) {
+                favorites.splice(index, 1);
+            } else {
+                favorites.push(foodId);
+            }
+
+            localStorage.setItem('wibo_favorites', JSON.stringify(favorites));
+            updateFavCount();
+
+            if (showFavorites) {
+                visibleCount = CHUNK_SIZE;
+                filterFoods();
+            } else {
+                const btn = document.querySelector(`[data-food-id="${foodId}"]`);
+                if (btn) {
+                    const isFav = favorites.includes(foodId);
+                    btn.classList.toggle('active', isFav);
+                    btn.innerHTML = `<i class="${isFav ? 'fas' : 'far'} fa-heart"></i>`;
+                }
+            }
+        }
+
+        function updateFavCount() {
+            const count = favorites.length;
+            const hCount = document.getElementById('favCount');
+            const tabCount = document.getElementById('favFoodsTabCount');
+            if (hCount) hCount.textContent = count;
+            if (tabCount) tabCount.textContent = count;
+        }
+
+        // A photo that fails to load (a passing network hiccup) is not given up at once: it is asked for again after a
+        // moment, and only a second failure shows the emoji (section cards and food cards). Returns true while retrying.
+        function retryImageOnce(img) {
+            if (img.dataset.retry) return false;
+            img.dataset.retry = '1';
+            setTimeout(() => { img.src = img.src.split('?')[0] + '?retry=1'; }, 1500);
+            return true;
+        }
+
+        // Chips: "All" + one per master group (count = foods in that group) + the favourites toggle
+        // "All" and favourites as pills; the 10 master groups as cards (icon, label, item count, accent colour)
+        function renderCategoryBar() {
+            const quick = document.getElementById('categoryQuick');
+            const grid = document.getElementById('categoryGrid');
+            if (!quick || !grid) return;
+            const counts = {};
+            allFoods.forEach(f => { counts[f.group] = (counts[f.group] || 0) + 1; });
+
+            quick.setAttribute('aria-label', t('category_bar_label'));
+            grid.setAttribute('aria-label', t('category_bar_label'));
+            quick.innerHTML = `
+                <button class="tab-btn${selectedGroup === 'all' ? ' active' : ''}" type="button" data-group="all" aria-pressed="${selectedGroup === 'all'}">
+                    <i class="fas fa-utensils"></i><span>${t('tab_all')}</span><span class="tab-count">${allFoods.length}</span>
+                </button>
+                <button class="tab-btn fav-chip${showFavorites ? ' active' : ''}" type="button" data-fav="1" aria-pressed="${showFavorites}">
+                    <i class="fas fa-heart"></i><span>${t('tab_fav')}</span><span class="tab-count" id="favFoodsTabCount">${favorites.length}</span>
+                </button>`;
+            grid.innerHTML = (window.FOOD_GROUPS || []).map(g => `
+                <button class="group-card${selectedGroup === g.key ? ' active' : ''}" type="button" data-group="${g.key}" aria-pressed="${selectedGroup === g.key}">
+                    <span class="gc-icon gc-photo" aria-hidden="true"><img src="/images/categories/${g.key}.webp" alt="" width="66" height="66" loading="lazy" decoding="async"
+                        onerror="if (retryImageOnce(this)) return; const box=this.parentNode; box.classList.remove('gc-photo'); box.textContent='${g.icon}';"></span>
+                    <span class="gc-label">${getCategoryLabel(g.key, currentLang)}</span>
+                    <span class="gc-count">${countLabel(counts[g.key] || 0)}</span>
+                </button>`).join('');
+        }
+
+        // Language switch: new labels and counts on the cards already on screen; their <img> elements are left alone.
+        // Returns false while the bar has not been built yet.
+        function relabelCategoryBar() {
+            const quick = document.getElementById('categoryQuick');
+            const grid = document.getElementById('categoryGrid');
+            if (!quick || !grid || !grid.querySelector('.group-card')) return false;
+            const counts = {};
+            allFoods.forEach(f => { counts[f.group] = (counts[f.group] || 0) + 1; });
+            quick.setAttribute('aria-label', t('category_bar_label'));
+            grid.setAttribute('aria-label', t('category_bar_label'));
+            const allLabel = quick.querySelector('[data-group="all"] > span:not(.tab-count)');
+            if (allLabel) allLabel.textContent = t('tab_all');
+            const favLabel = quick.querySelector('[data-fav] > span:not(.tab-count)');
+            if (favLabel) favLabel.textContent = t('tab_fav');
+            grid.querySelectorAll('.group-card').forEach(card => {
+                const key = card.getAttribute('data-group');
+                card.querySelector('.gc-label').textContent = getCategoryLabel(key, currentLang);
+                card.querySelector('.gc-count').textContent = countLabel(counts[key] || 0);
+            });
+            return true;
+        }
+
+        function updateCategoryBarState() {
+            document.querySelectorAll('#categoryBar [data-group]').forEach(btn => {
+                const on = btn.getAttribute('data-group') === selectedGroup;
+                btn.classList.toggle('active', on);
+                btn.setAttribute('aria-pressed', on);
+            });
+            const favBtn = document.querySelector('#categoryBar [data-fav]');
+            if (favBtn) {
+                favBtn.classList.toggle('active', showFavorites);
+                favBtn.setAttribute('aria-pressed', showFavorites);
+            }
+        }
+
+        function groupFromUrl() {
+            const g = new URLSearchParams(window.location.search).get('group');
+            return groupKeys.includes(g) ? g : 'all';
+        }
+
+        // Changes the group; pushState keeps ?lang, ?search and the #food hash, so modal links still work
+        function selectGroup(group, updateUrl = true) {
+            selectedGroup = groupKeys.includes(group) ? group : 'all';
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                if (selectedGroup === 'all') url.searchParams.delete('group');
+                else url.searchParams.set('group', selectedGroup);
+                if (url.href !== window.location.href) history.pushState({ group: selectedGroup }, '', url);
+            }
+            updateCategoryBarState();
+            visibleCount = CHUNK_SIZE;
+            filterFoods();
+        }
+
+        function toggleFavoritesView() {
+            showFavorites = !showFavorites;
+            updateCategoryBarState();
+            visibleCount = CHUNK_SIZE;
+            filterFoods();
+        }
+
+        // After a section is picked, bring the search box and the first results into view
+        function scrollToResults() {
+            const target = document.getElementById('searchBox');
+            if (!target) return;
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+        }
+
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest && e.target.closest('#categoryBar [data-group], #categoryBar [data-fav]');
+            if (!btn) return;
+            if (btn.hasAttribute('data-fav')) toggleFavoritesView();
+            else selectGroup(btn.getAttribute('data-group'));
+            scrollToResults();
+        });
+
+        // "Clear filter": back to all foods, no favourites filter, empty search
+        document.getElementById('resultsClear').addEventListener('click', function() {
+            document.getElementById('searchInput').value = '';
+            showFavorites = false;
+            selectGroup('all');
+        });
+
+        // Arabic count noun agreement follows the last two digits: 1 صنف واحد, 2 صنفان, 3-10 أصناف (also 103-110),
+        // 11-99 صنفاً (also 111-199...), and 100, 101, 102, 200... صنف
+        function countLabel(n) {
+            if (currentLang === 'ar') {
+                if (n === 1) return 'صنف واحد';
+                if (n === 2) return 'صنفان';
+                const r = n % 100;
+                if (r >= 3 && r <= 10) return `${n} أصناف`;
+                if (r <= 2) return `${n} صنف`;
+                return `${n} صنفاً`;
+            }
+            if (currentLang === 'nl') return `${n} ${n === 1 ? 'product' : 'producten'}`;
+            if (currentLang === 'sv') return `${n} livsmedel`;
+            return `${n} ${n === 1 ? 'food' : 'foods'}`;
+        }
+
+        // The line above the grid: what is shown (section / favourites / search) and how many
+        function updateResultsHeading(term) {
+            const heading = document.getElementById('resultsHeading');
+            const clear = document.getElementById('resultsClear');
+            if (!heading) return;
+            const n = currentFilteredList.length;
+            const group = selectedGroup !== 'all' ? getCategoryLabel(selectedGroup, currentLang) : '';
+            let text;
+            if (!n) text = t('res_none');
+            else if (showFavorites) text = (group ? t('res_fav_group') : t('res_fav')).replace('{n}', countLabel(n)).replace('{g}', group);
+            else if (group) text = t('res_group').replace('{n}', countLabel(n)).replace('{g}', group);
+            else text = t('res_all').replace('{n}', n);
+            if (n && term) text += t('res_search').replace('{q}', term);
+            heading.textContent = text;
+            if (clear) clear.hidden = !(selectedGroup !== 'all' || showFavorites || term);
+        }
+
+        // boodi diet programme teaser, shown inside the grid after the first six foods
+        function dietTeaserHtml() {
+            return `
+                <aside class="diet-teaser" aria-labelledby="dietTeaserTitle">
+                    <div class="diet-teaser-icon" aria-hidden="true">👑</div>
+                    <div class="diet-teaser-text">
+                        <strong id="dietTeaserTitle">${t('diet_teaser_title')}</strong>
+                        <span>${t('diet_teaser_desc')}</span>
+                    </div>
+                    <a href="/nl/boodi.html#diet-program" class="boodi-banner-btn">
+                        <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
+                        <span>${t('diet_teaser_btn')}</span>
+                    </a>
+                </aside>`;
+        }
+
+        window.addEventListener('popstate', function() {
+            if (groupFromUrl() !== selectedGroup) selectGroup(groupFromUrl(), false);
+        });
+
+        function onSearchInput() {
+            clearTimeout(searchDebounceTimer);
+            searchDebounceTimer = setTimeout(() => {
+                visibleCount = CHUNK_SIZE;
+                filterFoods();
+            }, 120);
+        }
+
+        function filterFoods() {
+            const term = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+            
+            let baseList = allFoods;
+            if (selectedGroup !== 'all') {
+                baseList = baseList.filter(f => f.group === selectedGroup);
+            }
+            if (showFavorites) {
+                baseList = baseList.filter(f => favorites.includes(String(f.id)));
+            }
+
+            if (!term) {
+                currentFilteredList = baseList;
+            } else {
+                const has = v => !!v && v.toLowerCase().includes(term);
+                currentFilteredList = baseList.filter(f =>
+                    has(f.name) || has(f.nameEn) || has(f.nameNl) || has((window.FOOD_NAMES_SV || {})[String(f.id)]) ||
+                    has(f.category) || has(f.categoryEn) || has(f.categoryNl) || has(f.cuisine)
+                );
+            }
+
+            updateResultsHeading(document.getElementById('searchInput').value.trim());
+            renderFoodsIncremental();
+        }
+
+        // Static, crawlable page for pilot foods (generated by scripts/generate_food_pages.py),
+        // otherwise the dynamic details page.
+        function foodPageHref(foodId) {
+            const slug = (window.FOOD_PAGES || {})[String(foodId)];
+            if (!slug) return `/food-details.html?id=${encodeURIComponent(foodId)}`;
+            return currentLang === 'ar' ? `/foods/${slug}.html` : `/${currentLang}/foods/${slug}.html`;
+        }
+
+        function renderFoodsIncremental() {
+            const grid = document.getElementById('foodGrid');
+            const sentinelText = document.getElementById('sentinelText');
+            if (!grid) return;
+
+            if (!currentFilteredList || currentFilteredList.length === 0) {
+                const msg = showFavorites && favorites.length === 0 ? t('no_favorites') : t('no_results');
+                grid.innerHTML = `<div class="results-empty"><i class="fas fa-heart-broken" aria-hidden="true"></i>${msg}</div>`;
+                if (sentinelText) sentinelText.textContent = '';
+                return;
+            }
+
+            const foodsToShow = currentFilteredList.slice(0, visibleCount);
+            const unitGram = currentLang === 'ar' ? 'جم' : 'g';
+
+            const cardsHtml = foodsToShow.map(food => {
+                const isFav = favorites.includes(String(food.id));
+                
+                const foodTitle = foodName(food, currentLang);
+
+                const catTitle = getSafeCategoryName(food, currentLang);
+                const calVal = Math.round(food.nutrition?.calories || 0);
+                const protVal = (food.nutrition?.protein || 0).toFixed(1);
+                const carbVal = (food.nutrition?.carbs || 0).toFixed(1);
+                const fatVal = ((food.nutrition?.fat !== undefined) ? food.nutrition.fat : (food.nutrition?.fats || 0)).toFixed(1);
+                const cardGI = getKnownGI(food);
+                const cardGIHtml = cardGI === null ? '' : `
+                        <div class="card-gi"><span class="gi-num ${getGILevel(cardGI)}">GI ${cardGI}</span>${food.gi_status === 'reviewed' ? `<span class="gi-est">${t('gi_reviewed_badge')}</span>` : ''}</div>`;
+
+                return `
+                    <a href="${foodPageHref(food.id)}" class="food-card" data-card-id="${food.id}">
+                        <button class="favorite-btn ${isFav ? 'active' : ''}" 
+                                data-food-id="${food.id}" 
+                                onclick="toggleFavorite(event, '${food.id}')"
+                                title="${t('tab_fav')}"
+                                type="button">
+                            <i class="${isFav ? 'fas' : 'far'} fa-heart"></i>
+                        </button>
+                       ${food.image ? `
+    <div style="width: 76px; height: 76px; margin: 0 auto 10px auto; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 8px var(--shadow); border: 1px solid var(--fd-line);">
+        <img src="${food.image}" alt="${foodTitle}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="if (retryImageOnce(this)) return; this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='block';">
+    </div>
+    <div class="food-icon" style="display: none;">${food.icon || '🍽️'}</div>
+` : `
+    <div class="food-icon">${food.icon || '🍽️'}</div>
+`}
+                        <h3 class="food-name">${foodTitle}</h3>
+                        <div style="text-align: center;"><span class="food-category">${catTitle}</span></div>${cardGIHtml}
+                        <div class="food-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">${t('calories')}</div>
+                                <div class="stat-value">${calVal}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">${t('protein')}</div>
+                                <div class="stat-value">${protVal}${unitGram}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">${t('carbs')}</div>
+                                <div class="stat-value">${carbVal}${unitGram}</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">${t('fats')}</div>
+                                <div class="stat-value">${fatVal}${unitGram}</div>
+                            </div>
+                        </div>
+                    </a>
+                `;
+            });
+            // the diet teaser follows the first six foods (or the last one, if there are fewer)
+            cardsHtml.splice(Math.min(6, cardsHtml.length), 0, dietTeaserHtml());
+            grid.innerHTML = cardsHtml.join('');
+
+            if (sentinelText) {
+                if (visibleCount < currentFilteredList.length) {
+                    sentinelText.textContent = t('loading_more');
+                } else {
+                    sentinelText.textContent = '';
+                }
+            }
+        }
+
+        // Food cards and old shared links (foods.html#brown-rice, #food-612): every food opens its own static page
+        let slugToFoodId = null;
+
+        // GI is shown when measured (Atkinson 2021) or an estimate (labelled as such)
+        function getKnownGI(food) {
+            const gi = Number(food.gi);
+            if ((food.gi_status === 'measured' || food.gi_status === 'reviewed') && food.gi !== null && food.gi !== undefined && !isNaN(gi)) return gi;
+            return null;
+        }
+
+        // GI: <=55 low | 56-69 medium | >=70 high (International GI Tables)
+        function getGILevel(value) {
+            if (value >= 70) return 'high';
+            if (value > 55) return 'medium';
+            return 'low';
+        }
+
+        // '#brown-rice' or '#food-612' -> food
+        function foodFromHash(hash) {
+            let key = '';
+            try { key = decodeURIComponent(String(hash || '').replace(/^#/, '')); } catch (e) { return null; }
+            if (!key) return null;
+            const byId = /^food-(\d+)$/.exec(key);
+            let id = byId ? byId[1] : null;
+            if (!id) {
+                if (!slugToFoodId) {
+                    slugToFoodId = {};
+                    Object.entries(window.FOOD_PAGES || {}).forEach(([fid, slug]) => { slugToFoodId[slug] = fid; });
+                }
+                id = slugToFoodId[key];
+            }
+            return id ? (allFoods.find(f => String(f.id) === String(id)) || null) : null;
+        }
+
+        // Back from a food page: the list returns to the same place. A card click saves the scroll position, the food and
+        // the list state (section, favourites, search, cards shown); the next load of this page that is a step back in
+        // history (browser back or the page's back button), or that comes from that food's page, restores them once.
+        document.getElementById('foodGrid').addEventListener('click', function(e) {
+            const card = e.target.closest('a.food-card');
+            if (!card || e.target.closest('.favorite-btn')) return;
+            const id = card.getAttribute('data-card-id');
+            try {
+                sessionStorage.setItem('foods_scroll_pos', String(Math.round(window.scrollY)));
+                sessionStorage.setItem('foods_last_food', (window.FOOD_PAGES || {})[id] || `food-${id}`);
+                sessionStorage.setItem('foods_list_state', JSON.stringify({
+                    id, group: selectedGroup, fav: showFavorites, visible: visibleCount,
+                    search: document.getElementById('searchInput').value
+                }));
+            } catch (err) {}
+        });
+
+        function takeSavedListPosition() {
+            let pos = null, slug = null, state = null;
+            try {
+                pos = sessionStorage.getItem('foods_scroll_pos');
+                slug = sessionStorage.getItem('foods_last_food');
+                state = JSON.parse(sessionStorage.getItem('foods_list_state') || 'null');
+                ['foods_scroll_pos', 'foods_last_food', 'foods_list_state'].forEach(k => sessionStorage.removeItem(k));
+            } catch (err) { return null; }
+            if (pos === null || !slug || !state) return null;
+            const nav = (performance.getEntriesByType && performance.getEntriesByType('navigation')[0]) || {};
+            let fromFood = false;
+            try { fromFood = new URL(document.referrer).pathname.endsWith('/foods/' + slug + '.html'); } catch (err) {}
+            if (nav.type !== 'back_forward' && !fromFood) return null;
+            return { pos: Number(pos) || 0, state };
+        }
+
+        let pendingListRestore = null;
+
+        // Runs after the cards of the restored list are on screen (end of changeLanguage)
+        function restoreListPosition() {
+            const saved = pendingListRestore;
+            pendingListRestore = null;
+            if (!saved) return;
+            if (saved.state.visible > visibleCount) {
+                visibleCount = saved.state.visible;
+                renderFoodsIncremental();
+            }
+            const anchor = () => {
+                const card = document.querySelector(`#foodGrid a.food-card[data-card-id="${CSS.escape(String(saved.state.id))}"]`);
+                if (card) card.scrollIntoView({ block: 'center', behavior: 'instant' });
+                else window.scrollTo({ top: saved.pos, behavior: 'instant' });
+            };
+            anchor();
+            // Web fonts and images that finish after this change the card heights above: anchor again on the card,
+            // unless the reader has started scrolling
+            let moved = false;
+            const stop = () => { moved = true; };
+            ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, stop, { once: true, passive: true }));
+            const again = () => { if (!moved) anchor(); };
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(again);
+            if (document.readyState !== 'complete') window.addEventListener('load', again, { once: true });
+        }
+
+        // A page kept whole by the browser (back/forward cache) is already in place: drop the saved position
+        window.addEventListener('pageshow', function(e) {
+            if (e.persisted) try { ['foods_scroll_pos', 'foods_last_food', 'foods_list_state'].forEach(k => sessionStorage.removeItem(k)); } catch (err) {}
+        });
+
+        // A #slug typed or pasted later goes to the food's page as well
+        window.addEventListener('hashchange', function() {
+            const food = foodFromHash(location.hash);
+            if (food) location.replace(foodPageHref(food.id));
+        });
+
+        function setupInfiniteScroll() {
+            const sentinel = document.getElementById('scrollSentinel');
+            if (!sentinel) return;
+
+            if (scrollObserver) scrollObserver.disconnect();
+
+            scrollObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    if (visibleCount < currentFilteredList.length) {
+                        visibleCount += CHUNK_SIZE;
+                        renderFoodsIncremental();
+                    }
+                }
+            }, {
+                root: null,
+                rootMargin: '400px',
+                threshold: 0.1
+            });
+
+            scrollObserver.observe(sentinel);
+        }
+
+        function updateStructuredDataForSEO() {
+            if (!allFoods || allFoods.length === 0) return;
+            // Created here, not in the markup: an empty JSON-LD tag is invalid for crawlers that skip JS
+            let schemaEl = document.getElementById('foodsItemListSchema');
+            if (!schemaEl) {
+                schemaEl = document.createElement('script');
+                schemaEl.type = 'application/ld+json';
+                schemaEl.id = 'foodsItemListSchema';
+                document.head.appendChild(schemaEl);
+            }
+
+            // Summary list of the indexable food pages. Never Product: Google requires
+            // offers/review/aggregateRating on it, which an information site cannot give.
+            const itemsToSchema = allFoods.filter(f => (window.FOOD_PAGES || {})[String(f.id)]).slice(0, 100).map((f, index) => {
+                const name = foodName(f, currentLang);
+                return {
+                    "@type": "ListItem",
+                    "position": index + 1,
+                    "name": name,
+                    "url": 'https://wibohealth.com' + foodPageHref(f.id)
+                };
+            });
+
+            schemaEl.textContent = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "numberOfItems": itemsToSchema.length,
+                "itemListElement": itemsToSchema
+            });
+        }
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'wibo_theme') {
+                if (e.newValue === 'dark') {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('wibo_theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                const tIcon = document.querySelector('.theme-toggle i');
+                if (tIcon) tIcon.className = 'fas fa-sun';
+            }
+
+            const dbCandidates = (typeof foodsDatabase !== 'undefined') ? foodsDatabase :
+                                 (typeof window.foodsDatabase !== 'undefined') ? window.foodsDatabase : [];
+
+            if (dbCandidates.length > 0) {
+                allFoods = dbCandidates;
+                const totalCountEl = document.getElementById('totalCount');
+                if (totalCountEl) totalCountEl.textContent = allFoods.length;
+            }
+
+            // ?search=VALUE (e.g. from the home page "What did you cook today?" bar) pre-filters the list
+            const searchParam = (new URLSearchParams(window.location.search).get('search') || '').trim().slice(0, 80);
+            const searchBox = document.getElementById('searchInput');
+            if (searchParam && searchBox) searchBox.value = searchParam;
+
+            // ?group=KEY (e.g. foods.html?group=fruits) opens with that category selected
+            selectedGroup = groupFromUrl();
+
+            // Back from a food page: the same section, favourites view and search as when the card was followed
+            pendingListRestore = takeSavedListPosition();
+            if (pendingListRestore) {
+                const st = pendingListRestore.state;
+                selectedGroup = groupKeys.includes(st.group) ? st.group : 'all';
+                showFavorites = !!st.fav;
+                if (searchBox) searchBox.value = String(st.search || '').slice(0, 80);
+                history.scrollRestoration = 'manual';
+            }
+
+            changeLanguage(currentLang);
+            updateFavCount();
+            setupInfiniteScroll();
+
+            const linkedFood = foodFromHash(location.hash);
+            if (linkedFood) location.replace(foodPageHref(linkedFood.id));   // normally done by the early redirect
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.theme-toggle i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.className = 'fas fa-sun';
+                localStorage.setItem('wibo_theme', 'dark');
+            } else {
+                icon.className = 'fas fa-moon';
+                localStorage.setItem('wibo_theme', 'light');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            if (mobileNav && overlay) {
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            }
+        }
+    </script>
+    <script src="/js/nav-diabetes.js"></script>
+    <script>
+        // Footer links to the static index pages (every food / supplement page) in the reader's language
+        (function () {
+            function sync() {
+                var l = document.documentElement.lang;
+                document.querySelectorAll('a[data-dir-index]').forEach(function (a) {
+                    var d = a.getAttribute('data-dir-index');
+                    // Swedish: the Swedish food index; the supplement index has no Swedish version (English one)
+                    var p = l === 'en' || l === 'nl' ? '/' + l : l === 'sv' ? (d === 'foods' ? '/sv' : '/en') : '';
+                    a.href = p + '/' + d + '/index.html';
+                });
+            }
+            sync();
+            new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+        })();
+    </script>
+</body>
+</html>

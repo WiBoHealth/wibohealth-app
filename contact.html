@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/kontakt.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -54,17 +26,79 @@
 
     <!-- Primary Meta Tags & SEO -->
     <title id="pageTitle">اتصل بنا والدعم | WiBo Health & Boodi App</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/contact.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/contact.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/contact.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/contact.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/kontakt.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/contact.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "ContactPage",
+            "@id": "https://wibohealth.com/contact.html#webpage",
+            "url": "https://wibohealth.com/contact.html",
+            "name": "اتصل بنا والدعم | WiBo Health & Boodi App",
+            "description": "تواصل مع فريق ويبو هيلث ودعم تطبيق بودي الذكي (Boodi App) - أسئلة عامة عن المنصة، فاحص المكونات الذكي، والدعم الفني في هولندا والاتحاد الأوروبي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/contact.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/contact.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "اتصل بنا والدعم",
+                    "item": "https://wibohealth.com/contact.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="title" content="اتصل بنا والدعم الطبي | WiBo Health & Boodi App">
     <meta name="description" id="pageDescription" content="تواصل مع فريق ويبو هيلث ودعم تطبيق بودي الذكي (Boodi App) - أسئلة عامة عن المنصة، فاحص المكونات الذكي، والدعم الفني في هولندا والاتحاد الأوروبي.">
     <meta name="keywords" content="اتصل بنا, WiBo Health, Boodi App, فريق ويبو هيلث, دعم المنصة, تطبيق بودي, فاحص المكونات, Contact WiBo, Boodi Klantenservice, WiBo Medisch Team">
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://wibohealth.com/contact.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/contact.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/kontakt.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/contact.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Multilingual Hreflang Tags for Accelerated Google Indexing -->
 
@@ -73,7 +107,9 @@
     <meta property="og:url" content="https://wibohealth.com/contact.html">
     <meta property="og:title" id="ogTitle" content="اتصل بنا | فريق ويبو هيلث الطبي وتطبيق بودي">
     <meta property="og:description" id="ogDescription" content="قنوات الاتصال المعتمدة للأسئلة العامة والدعم التقني لمنصة WiBo Health وتطبيق بودي الذكي.">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="WiBo Health">
 
     <!-- Twitter -->
@@ -81,35 +117,9 @@
     <meta name="twitter:url" content="https://wibohealth.com/contact.html">
     <meta name="twitter:title" id="twTitle" content="WiBo Health Medical Team & Boodi App - Contact">
     <meta name="twitter:description" id="twDescription" content="Officiële contact- en medische advieslijnen voor WiBo Health en Boodi App.">
-    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
 
     <!-- Structured Data (JSON-LD Schema) for Googlebot -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "WiBo Health & Boodi App Contact Center",
-      "url": "https://wibohealth.com/contact.html",
-      "description": "Official contact page for general questions and support for the WiBo Health platform and the Boodi app.",
-      "mainEntity": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "email": "support@wibohealth.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "NL"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "email": "support@wibohealth.com",
-            "contactType": "customer and technical support",
-            "availableLanguage": ["Arabic", "Dutch", "English"]
-          }
-        ]
-      }
-    }
-    </script>
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -220,7 +230,7 @@
             filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 22px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -802,7 +812,7 @@
                         <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                     </div>
                     <div class="logo-text">
-                        <h1>WiBo Health</h1>
+                        <span class="brand-name">WiBo Health</span>
                     </div>
                 </a>
 
@@ -820,10 +830,10 @@
 
                 <!-- Controls & Language Selector -->
                 <div class="header-controls">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                    <a class="lang-btn" data-sv-link href="/sv/kontakt.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
-                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
+                    <a class="lang-btn active" href="/contact.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/contact.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/contact.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/kontakt.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>
@@ -873,7 +883,7 @@
                 <div class="official-badge-bar">
                     <i class="fas fa-certificate"></i>
                     <div>
-                        <strong data-i18n="badge_title">المقر الرسمي والدعم المعتمد (هولندا والاتحاد الأوروبي):</strong><br>
+                        <strong data-i18n="badge_title">المقر الرسمي والدعم (هولندا والاتحاد الأوروبي):</strong><br>
                         <span data-i18n="badge_desc">تُدار المنصة التثقيفية والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الأوروبية (AVG/GDPR).</span>
                     </div>
                 </div>
@@ -993,7 +1003,7 @@
                 nav_contact: "اتصل بنا",
                 contact_title: "اتصل بنا والدعم",
                 contact_intro: "نحن هنا للإجابة عن أسئلتكم العامة حول المنصة، ودعم حساباتكم في تطبيق بودي. المنصة تثقيفية ولا تقدم تشخيصاً أو علاجاً أو استشارات طبية.",
-                badge_title: "المقر الرسمي والدعم المعتمد (هولندا والاتحاد الأوروبي):",
+                badge_title: "المقر الرسمي والدعم (هولندا والاتحاد الأوروبي):",
                 badge_desc: "تُدار المنصة التثقيفية والمنظومة التقنية رسمياً من قبل WiBo Health Group ومقرها هولندا، وفق أعلى معايير الجودة والخصوصية الأوروبية (AVG/GDPR).",
                 boodi_support_title: "دعم تطبيق بودي الذكي (Boodi App)",
                 boodi_support_desc: "استفسارات ماسح الباركود، رصيد المسحات، مشتريات Google Play، واقتراحات تدقيق المنتجات بالسوبرماركت.",
@@ -1028,7 +1038,7 @@
                 nav_contact: "Contact Us",
                 contact_title: "Contact Us & Support",
                 contact_intro: "We are here to answer your general questions about the platform and help with your boodi app account. The platform is educational and does not provide diagnosis, treatment or medical consultations.",
-                badge_title: "Official Headquarters & Certified Support (Netherlands & EU):",
+                badge_title: "Official Headquarters & Official Support (Netherlands & EU):",
                 badge_desc: "The educational platform and tech operations are managed by WiBo Health Group based in the Netherlands, in full compliance with EU GDPR/AVG standards.",
                 boodi_support_title: "Boodi App Dedicated Support",
                 boodi_support_desc: "Inquiries regarding the barcode scanner, scan credits, Google Play subscriptions, and supermarket product verification requests.",
@@ -1063,7 +1073,7 @@
                 nav_contact: "Contact",
                 contact_title: "Contact & Klantenservice",
                 contact_intro: "Wij beantwoorden graag je algemene vragen over het platform en helpen je met je boodi-account. Het platform is educatief en biedt geen diagnose, behandeling of medisch consult.",
-                badge_title: "Officieel Hoofdkantoor & Gecertificeerde Ondersteuning (Nederland & EU):",
+                badge_title: "Officieel Hoofdkantoor & Officiële ondersteuning (Nederland & EU):",
                 badge_desc: "Het educatieve platform en de technologische systemen worden officieel beheerd door WiBo Health Group in Nederland, volledig conform de Europese AVG/GDPR-richtlijnen.",
                 boodi_support_title: "Boodi App Klantenservice & Technische Support",
                 boodi_support_desc: "Vragen over de barcodescanner, scansaldo, Google Play abonnementen en verificatie van supermarktproducten in Albert Heijn, Jumbo en Lidl.",
@@ -1088,21 +1098,7 @@
 
         // Determine Initial Language
         function detectInitialLang() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang && ['ar', 'en', 'nl'].includes(urlLang)) {
-                return urlLang;
-            }
-
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && ['ar', 'en', 'nl'].includes(saved)) {
-                return saved;
-            }
-
-            const browserLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (browserLang.startsWith('ar')) return 'ar';
-            if (browserLang.startsWith('nl')) return 'nl';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1120,9 +1116,9 @@
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
             
             // Update Page Meta for Googlebot
-            document.title = t('page_title');
+            /* <title> is static per language URL */
             const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.setAttribute('content', t('page_desc'));
+            if (metaDesc) /* meta description is static per language URL */
 
             // Update UI Elements
             document.querySelectorAll('[data-i18n]').forEach(el => {

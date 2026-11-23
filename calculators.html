@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl" data-theme="dark">
 <head>
     <!-- Google tag (gtag.js) with Consent Mode v2: everything stays denied until the visitor accepts (js/consent.js) -->
@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/calculators.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -53,37 +25,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title id="seo_title" data-i18n="seo_title">حاسبات صحية وسريرية معتمدة - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health</title>
+    <title id="seo_title">حاسبات صحية - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/calculators.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/calculators.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/calculators.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/calculators.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/calculators.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "CollectionPage",
+            "@id": "https://wibohealth.com/calculators.html#webpage",
+            "url": "https://wibohealth.com/calculators.html",
+            "name": "حاسبات صحية - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health",
+            "description": "حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/calculators.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/calculators.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "الحاسبات الأيضية والصحية الذكية",
+                    "item": "https://wibohealth.com/calculators.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="seo_desc" content="حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.">
     <meta name="keywords" content="حاسبة BMI, حاسبة السعرات الحرارية, حاسبة الماكروز, حاسبة BMR, حاسبة الماء, نسبة الخصر للطول, WHtR, مقاومة الإنسولين, WiBo Health">
     <meta name="author" content="WiBo Health Group">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://wibohealth.com/calculators.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/calculators.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/calculators.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/calculators.html">
-    <!-- SV-ALTERNATES:END -->
     
     <!-- Alternate Language Links -->
 
     <!-- Google Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "WiBo Health Clinical Calculators",
-      "url": "https://wibohealth.com/calculators.html",
-      "description": "Evidence-based metabolic and clinical health calculators (BMI, BMR/TDEE with Macro breakdown, WHtR, Water Intake).",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      }
-    }
-    </script>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -736,16 +754,10 @@
                 </button>
 
                 <div class="lang-switcher-container">
-                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
-                        AR
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
-                        NL
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
-                        EN
-                    </button>
-                    <a class="lang-btn" data-sv-link href="/sv/calculators.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                    <a class="lang-btn active" href="/calculators.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/calculators.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/calculators.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/calculators.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
                 </div>
             </div>
         </div>
@@ -757,7 +769,7 @@
         <section class="hero-section">
             <div class="hero-badge">
                 <i class="fas fa-stethoscope"></i>
-                <span data-i18n="hero_badge">منظومة الحسابات السريرية المعتمدة</span>
+                <span data-i18n="hero_badge">منظومة الحسابات الصحية</span>
             </div>
             <h1 class="hero-title" data-i18n="hero_title">الحاسبات الأيضية والصحية الذكية</h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">أدوات تحليل استرشادية مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية لسلامة الأغذية (EFSA) وإرشادات المعهد الوطني للصحة والرعاية (NICE).</p>
@@ -1067,7 +1079,7 @@
         <section class="boodi-funnel-card">
             <div class="funnel-info">
                 <h3 data-i18n="funnel_title">تطبيق بودي 💚 فاحص الباركود والمؤشر الجلايسيمي</h3>
-                <p data-i18n="funnel_desc">الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت واكشف الحلال والبدائل الصحية بنقرة واحدة عبر هاتفك.</p>
+                <p data-i18n="funnel_desc">الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت وافحص المكونات واكتشف البدائل الصحية بنقرة واحدة عبر هاتفك.</p>
             </div>
             <a href="boodi.html" class="funnel-btn">
                 <i class="fas fa-barcode"></i>
@@ -1134,7 +1146,7 @@
                 guide_water_d: "احتياجك حسب الوزن والنشاط مقارنة بقيم EFSA وعلامات الجفاف.",
                 guide_whtr_t: "حاسبة نسبة الخصر إلى الطول",
                 guide_whtr_d: "خطر دهون البطن الحشوية، طريقة القياس الصحيحة، ونصائح عملية.",
-                seo_title: "حاسبات صحية وسريرية معتمدة - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health",
+                seo_title: "حاسبات صحية - BMI، السعرات، الماكروز، الماء، ومحيط الخصر | WiBo Health",
                 seo_desc: "حاسبات سريرية دقيقة مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية (EFSA): مؤشر كتلة الجسم (BMI)، السعرات والماكروز (TDEE)، نسبة الخصر للطول (WHtR)، واحتياج الماء اليومي.",
                 nav_home: "الرئيسية",
                 nav_foods: "دليل الأطعمة",
@@ -1147,7 +1159,7 @@
                 footer_partners: "الشراكات",
                 footer_privacy: "الخصوصية والامتثال السريري",
                 footer_clinical_disclaimer: "هذه الحاسبات الطبية والغذائية أدوات تحليل استرشادية مبنية على مؤشرات سريرية عامة، ولا تُغني عن الاستشارة الطبية الفردية أو الفحوصات المخبرية.",
-                hero_badge: "منظومة الحسابات السريرية المعتمدة",
+                hero_badge: "منظومة الحسابات الصحية",
                 hero_title: "الحاسبات الأيضية والصحية الذكية",
                 hero_subtitle: "أدوات تحليل استرشادية مبنية على معايير منظمة الصحة العالمية (WHO) والهيئة الأوروبية لسلامة الأغذية (EFSA) وإرشادات المعهد الوطني للصحة والرعاية (NICE).",
                 tab_bmi: "كتلة الجسم (BMI)",
@@ -1218,7 +1230,7 @@
                 whtr_tip_increased: "نسبتك بين 0.50 و 0.59؛ تشير الإرشادات السريرية إلى بدء تراكم دهون البطن وخطر متزايد لمقاومة الإنسولين.",
                 whtr_tip_high: "نسبتك 0.60 فما فوق؛ تدل على سمنة حشوية ملحوظة تستدعي اعتماد حمية منخفضة المؤشر الجلايسيمي فوراً.",
                 funnel_title: "تطبيق بودي 💚 فاحص الباركود والمؤشر الجلايسيمي",
-                funnel_desc: "الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت واكشف الحلال والبدائل الصحية بنقرة واحدة عبر هاتفك.",
+                funnel_desc: "الأرقام وحدها لا تكفي؛ ما تأكله يحدد هرموناتك واستجابة الإنسولين في دمك. امسح طعام السوبرماركت وافحص المكونات واكتشف البدائل الصحية بنقرة واحدة عبر هاتفك.",
                 funnel_cta: "اكتشف تطبيق بودي",
                 ph_weight: "مثال: 78",
                 ph_height: "مثال: 175",
@@ -1241,7 +1253,7 @@
                 guide_whtr_t: "Taille-lengteratio berekenen",
                 guide_whtr_d: "Risico van buikvet, zo meet je je buikomvang en praktische tips.",
                 seo_title: "Klinische Gezondheidscalculators - BMI, Calorieën, Macro's, Water & WHtR | WiBo Health",
-                seo_desc: "Klinisch gevalideerde rekentools conform WHO-, EFSA- en Gezondheidsraad-richtlijnen: Body Mass Index (BMI), Energie- en Macroverdeling (BMR/TDEE), Taille-lengteverhouding en Vochtbehoefte.",
+                seo_desc: "Rekentools op basis van WHO-, EFSA- en Gezondheidsraad-richtlijnen: Body Mass Index (BMI), Energie- en Macroverdeling (BMR/TDEE), Taille-lengteverhouding en Vochtbehoefte.",
                 nav_home: "Home",
                 nav_foods: "Voedingsgids",
                 nav_calculators: "Calculators",
@@ -1253,7 +1265,7 @@
                 footer_partners: "Partners",
                 footer_privacy: "Privacy & Klinische Richtlijnen",
                 footer_clinical_disclaimer: "Deze medische en voedingscalculatoren zijn uitsluitend bedoeld als informatieve indicatoren en vervangen geen professioneel medisch consult of laboratoriumonderzoek.",
-                hero_badge: "Gevalideerd Klinisch Rekensysteem",
+                hero_badge: "Gezondheidsrekensysteem",
                 hero_title: "Klinische & Metabole Gezondheidscalculators",
                 hero_subtitle: "Wetenschappelijk onderbouwde analysetools gebaseerd op standaarden van de WHO, de Europese Voedselveiligheidsautoriteit (EFSA) en NICE-richtlijnen.",
                 tab_bmi: "BMI (Body Mass)",
@@ -1292,7 +1304,7 @@
                 bmi_tip_over: "Uw BMI ligt tussen 25 en 29.9; vermindering van geraffineerde suikers ondersteunt het metabolisme.",
                 bmi_tip_obese: "Uw BMI is 30 of hoger; controleer uw nuchtere glucose en kies voor een lage glykemische index.",
                 cal_title: "Calorieën, Stofwisseling & Macro's (BMR/TDEE)",
-                cal_sub: "Klinisch gevalideerde Mifflin-St Jeor formule met macroverdeling",
+                cal_sub: "De Mifflin-St Jeor-formule met macroverdeling",
                 btn_calc_cal: "Analyseer Energie- en Macrobehoefte",
                 res_tdee_heading: "Totale Dagelijkse Energiebehoefte (TDEE)",
                 kcal_day: "kcal / dag voor gewichtsbehoud",
@@ -1359,7 +1371,7 @@
                 footer_partners: "Partnerships",
                 footer_privacy: "Privacy & Clinical Compliance",
                 footer_clinical_disclaimer: "These clinical and nutritional calculators are informational assessment tools and do not substitute for personalized medical advice or laboratory testing.",
-                hero_badge: "Validated Clinical Calculator Suite",
+                hero_badge: "Health Calculator Suite",
                 hero_title: "Smart Metabolic & Health Calculators",
                 hero_subtitle: "Guidance tools built strictly on WHO, European Food Safety Authority (EFSA), and NICE clinical guidelines.",
                 tab_bmi: "BMI (Body Mass)",
@@ -1398,7 +1410,7 @@
                 bmi_tip_over: "Your BMI is between 25 and 29.9; reducing refined starches and sugar helps mitigate metabolic risk.",
                 bmi_tip_obese: "Your BMI is 30 or above; clinical guidelines advise monitoring fasting insulin and glycemic index.",
                 cal_title: "Calories, Metabolism & Macros (BMR/TDEE)",
-                cal_sub: "Clinically validated Mifflin-St Jeor equation with macronutrient split",
+                cal_sub: "The Mifflin-St Jeor equation with a macronutrient split",
                 btn_calc_cal: "Analyze Energy & Macronutrient Needs",
                 res_tdee_heading: "Total Daily Energy Expenditure (TDEE)",
                 kcal_day: "kcal / day for weight maintenance",
@@ -1430,7 +1442,7 @@
                 whtr_tip_increased: "Your ratio is between 0.50 and 0.59; clinical evidence indicates abdominal fat accumulation.",
                 whtr_tip_high: "Your ratio is 0.60 or higher; signifies central visceral obesity warranting a low glycemic lifestyle.",
                 funnel_title: "Boodi App 💚 Barcode Scanner & Glycemic Index",
-                funnel_desc: "Calories don't tell the full metabolic story; hormones and insulin spikes dictate fat storage. Scan food barcodes and detect Halal status and clean alternatives instantly.",
+                funnel_desc: "Calories don't tell the full metabolic story; hormones and insulin spikes dictate fat storage. Scan food barcodes and check ingredients and find healthier alternatives instantly.",
                 funnel_cta: "Discover Boodi App",
                 ph_weight: "e.g. 78",
                 ph_height: "e.g. 175",
@@ -1447,9 +1459,7 @@
         let currentLocale = 'ar';
 
         function initLocalization() {
-            const urlLang = new URLSearchParams(window.location.search).get('lang');
-            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
-            setLocale(saved, false);
+            setLocale(document.documentElement.lang || 'ar', false);   // the page language is fixed by its URL
         }
 
         function setLocale(lang, saveToStorage = true) {
@@ -1746,11 +1756,6 @@
 
         // Listen for storage changes across browser tabs
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
-                    setLocale(e.newValue, false);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue) applyTheme(e.newValue);
             }

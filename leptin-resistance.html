@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/articles/leptinresistens.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -51,13 +23,93 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
     <link rel="canonical" href="https://wibohealth.com/leptin-resistance.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
     <link rel="alternate" hreflang="ar" href="https://wibohealth.com/leptin-resistance.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/leptin-resistance.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/leptin-resistance.html">
     <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/articles/leptinresistens.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/leptin-resistance.html">
-    <!-- SV-ALTERNATES:END -->
-    <title data-i18n="meta_title">ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health</title>
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/leptin-resistance.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "MedicalWebPage",
+            "@id": "https://wibohealth.com/leptin-resistance.html#webpage",
+            "url": "https://wibohealth.com/leptin-resistance.html",
+            "name": "ليش عم آكل وما عم أشبع؟ لغز هرمون اللبتين والدماغ الأطرش | WiBo Health",
+            "description": "دليل سريري شامل لكشف لغز الجوع المستمر ومقاومة هرمون اللبتين، والفرق بين سكر الفواكه الطبيعي والفركتوز السائل، مع خطة إعادة حساسية مستقبلات الشبع. بقلم فريق ويبو هيلث الطبي.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/card-leptin-resistance.webp"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/leptin-resistance.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "Article",
+            "@id": "https://wibohealth.com/leptin-resistance.html#article",
+            "headline": "ليش عم آكل وما عم أشبع؟! لغز هرمون اللبتين والدماغ الأطرش! 🩺🧠",
+            "description": "دليل سريري شامل لكشف لغز الجوع المستمر ومقاومة هرمون اللبتين، والفرق بين سكر الفواكه الطبيعي والفركتوز السائل، مع خطة إعادة حساسية مستقبلات الشبع. بقلم فريق ويبو هيلث الطبي.",
+            "inLanguage": "ar",
+            "image": "https://wibohealth.com/images/card-leptin-resistance.webp",
+            "mainEntityOfPage": {
+                "@id": "https://wibohealth.com/leptin-resistance.html#webpage"
+            },
+            "dateModified": "2026-11-09",
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "author": {
+                "@id": "https://wibohealth.com/#organization"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/leptin-resistance.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "ليش عم آكل وما عم أشبع؟! لغز هرمون اللبتين والدماغ الأطرش! 🩺🧠",
+                    "item": "https://wibohealth.com/leptin-resistance.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" content="دليل سريري شامل لكشف لغز الجوع المستمر ومقاومة هرمون اللبتين، والفرق بين سكر الفواكه الطبيعي والفركتوز السائل، مع خطة إعادة حساسية مستقبلات الشبع. بقلم فريق ويبو هيلث الطبي.">
     <meta name="keywords" content="مقاومة اللبتين, هرمون الشبع, الجوع المستمر, سكر الفركتوز, ويبو هيلث, دكتور وسيم حبيب, WiBo Health, leptin resistance">
     <meta name="author" content="فريق ويبو هيلث الطبي | WiBo Health">
@@ -118,7 +170,7 @@
             gap: 10px;
             text-decoration: none;
         }
-        .brand-logo h1 {
+        .brand-logo .brand-name {
             font-size: 24px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -344,13 +396,13 @@
         <div class="header-container">
             <a href="/" class="brand-logo">
                 <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
-                <h1>WiBo Health</h1>
+                <span class="brand-name">WiBo Health</span>
             </a>
             <div class="header-controls">
-                <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                <a class="lang-btn" data-sv-link href="/sv/articles/leptinresistens.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
-                <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
+                <a class="lang-btn active" href="/leptin-resistance.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                <a class="lang-btn" href="/en/leptin-resistance.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                <a class="lang-btn" href="/nl/leptin-resistance.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                <a class="lang-btn" href="/sv/articles/leptinresistens.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                 <button class="theme-toggle" onclick="toggleTheme()" title="تغيير المظهر">
                     <i class="fas fa-moon"></i>
@@ -639,12 +691,7 @@
         };
 
         function detectInitialLang() {
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && (saved === 'ar' || saved === 'en' || saved === 'nl')) return saved;
-            const phoneLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (phoneLang.startsWith('ar')) return 'ar';
-            if (phoneLang.startsWith('nl')) return 'nl';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -678,7 +725,7 @@
                 }
             });
             if (translations[currentLang] && translations[currentLang]['meta_title']) {
-                document.title = translations[currentLang]['meta_title'];
+                /* <title> is static per language URL */
             }
         }
 

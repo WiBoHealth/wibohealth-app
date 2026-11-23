@@ -18,32 +18,6 @@
     <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
     <style>html.lang-loading body{visibility:hidden}    body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(225deg, rgba(74, 96, 40, 0.25) 0%, transparent 45%), radial-gradient(130% 110% at 100% 0%, #435a26 0%, #2f4220 18%, #18200f 38%, #0d100a 60%, #070806 85%); }
   </style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/radera-konto.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -317,20 +291,10 @@
     } catch (e) {}
   }
 
-  // اللغة: ?lang= ثم اللغة المحفوظة في الموقع ثم لغة المتصفح
+  // اللغة: من وسم <html lang> للصفحة
   function detectInitialLang() {
-    const supported = ['ar', 'nl', 'en'];
-    const param = new URLSearchParams(window.location.search).get('lang');
-    if (supported.includes(param)) return param;
-    try {
-      const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-      if (supported.includes(saved)) return saved;
-    } catch (e) {}
-    const browserLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-    if (browserLang.startsWith('ar')) return 'ar';
-    if (browserLang.startsWith('nl')) return 'nl';
-    return 'en';
-  }
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
+        }
 
   setLang(detectInitialLang());
 </script>

@@ -410,7 +410,7 @@ def build(calc, lang):
     <meta name="description" content="{esc(c["desc"])}">
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
+    <link rel="alternate" hreflang="x-default" href="{urls['en']}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="WiBo Health">
     <meta property="og:title" content="{esc(c["title"])}">
@@ -534,7 +534,7 @@ def main():
             block += ['  <url>', f'    <loc>{page_url(calc, lang)}</loc>', f'    <lastmod>{calc["modified"]}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.9</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(calc, l)}"/>' for l in langs_of(calc)]
-            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(calc, "ar")}"/>', '  </url>']
+            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(calc, "en")}"/>', '  </url>']
     block.append('  <!-- CALCULATOR-PAGES:END -->')
     sm = sm.replace('</urlset>', eol.join(block) + eol + '</urlset>', 1)
     sm_path.write_text(sm, encoding='utf-8', newline='')

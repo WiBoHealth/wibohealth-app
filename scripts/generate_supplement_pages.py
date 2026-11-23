@@ -83,7 +83,7 @@ NAME = {'ar': 'name', 'en': 'englishName', 'nl': 'nameNl'}
 # --- back button and quick search, shared with generate_directory_pages.py ----------------------------------------------
 # where "back" goes when the reader did not come from the guide or an index: the guide in the page language
 # (Swedish has no interactive guide: the Swedish index)
-GUIDE_URL = {'ar': '/supplements.html', 'en': '/supplements.html?lang=en', 'nl': '/supplements.html?lang=nl',
+GUIDE_URL = {'ar': '/supplements.html', 'en': '/en/supplements.html', 'nl': '/nl/supplements.html',
              SV: '/sv/supplements/index.html'}
 BACK = {'ar': 'العودة لدليل المكملات', 'en': 'Back to supplements', 'nl': 'Terug naar supplementengids',
         SV: 'Tillbaka till kosttillskottsguiden'}
@@ -445,12 +445,14 @@ def build(s, lang, vetted):
     <meta name="description" content="{esc(meta_desc)}">
     <link rel="canonical" href="{urls[lang]}">
 {hreflang}
-    <link rel="alternate" hreflang="x-default" href="{urls['ar']}">
+    <link rel="alternate" hreflang="x-default" href="{urls['en']}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{esc(title)}">
     <meta property="og:description" content="{esc(meta_desc)}">
     <meta property="og:url" content="{urls[lang]}">
-    <meta property="og:image" content="{SITE}/images/logo.png">
+    <meta property="og:image" content="{SITE}/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="{dict(ar='ar_AR', en='en_US', nl='nl_NL', sv='sv_SE')[lang]}">
     <script type="application/ld+json">
 {json.dumps(schema, ensure_ascii=False, indent=4)}
@@ -638,7 +640,7 @@ def main():
             block += ['  <url>', f'    <loc>{page_url(s["slug"], lang)}</loc>', f'    <lastmod>{lastmod}</lastmod>',
                       '    <changefreq>monthly</changefreq>', '    <priority>0.6</priority>']
             block += [f'    <xhtml:link rel="alternate" hreflang="{l}" href="{page_url(s["slug"], l)}"/>' for l in langs_of(s['slug'])]
-            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(s["slug"], "ar")}"/>', '  </url>']
+            block += [f'    <xhtml:link rel="alternate" hreflang="x-default" href="{page_url(s["slug"], "en")}"/>', '  </url>']
     replace_sitemap_block('SUPPLEMENT-PAGES', block)
     print(f'supplement pages written: {written} ({len(vetted)} supplements x {len(LANGS)} languages, '
           f'{len(SSV.PUBLISH)} also in Swedish)')

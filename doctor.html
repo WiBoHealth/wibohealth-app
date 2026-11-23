@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/dr-wassim-habib.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -51,15 +23,91 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page_title">د. وسيم حبيب – مؤسس WiBo Health</title>
+    <title>د. وسيم حبيب – مؤسس WiBo Health</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/doctor.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/doctor.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/doctor.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/dr-wassim-habib.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/doctor.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "ProfilePage",
+            "@id": "https://wibohealth.com/doctor.html#webpage",
+            "url": "https://wibohealth.com/doctor.html",
+            "name": "د. وسيم حبيب – مؤسس WiBo Health",
+            "description": "تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health، الذي يراجع محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/dr-wassim.webp"
+            },
+            "dateModified": "2026-11-09",
+            "mainEntity": {
+                "@id": "https://wibohealth.com/doctor.html#wassim-habib"
+            },
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/doctor.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "Person",
+            "@id": "https://wibohealth.com/doctor.html#wassim-habib",
+            "name": "Dr. Wassim Habib",
+            "jobTitle": "مؤسس WiBo Health",
+            "url": "https://wibohealth.com/doctor.html",
+            "worksFor": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "image": "https://wibohealth.com/images/dr-wassim.webp"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/doctor.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "د. وسيم حبيب (Dr. Wassim Habib)",
+                    "item": "https://wibohealth.com/doctor.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="description" id="seo_desc" content="تعرّف على د. وسيم حبيب، مؤسس منصة WiBo Health، الذي يراجع محتواها في الصحة الأيضية والمؤشر الجلايسيمي واستجابة الإنسولين، ومنهجية المراجعة العلمية للمحتوى.">
     <meta name="author" content="Dr. Wassim Habib">
-    <link rel="canonical" href="https://wibohealth.com/doctor.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/doctor.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/dr-wassim-habib.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/doctor.html">
-    <!-- SV-ALTERNATES:END -->
 
     <!-- Hreflang Tags for SEO -->
 
@@ -71,41 +119,6 @@
     <meta property="og:image" content="https://wibohealth.com/images/dr-wassim.webp">
 
     <!-- Structured data: physician / author profile -->
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "url": "https://wibohealth.com/doctor.html",
-    "inLanguage": [
-        "ar",
-        "nl",
-        "en"
-    ],
-    "mainEntity": {
-        "@type": "Person",
-        "@id": "https://wibohealth.com/doctor.html#wassim-habib",
-        "name": "Wassim Habib",
-        "honorificPrefix": "Dr.",
-        "jobTitle": "مؤسس WiBo Health",
-        "image": "https://wibohealth.com/images/dr-wassim.webp",
-        "url": "https://wibohealth.com/doctor.html",
-        "worksFor": {
-            "@type": "Organization",
-            "name": "WiBo Health Group",
-            "url": "https://wibohealth.com/"
-        },
-        "knowsAbout": [
-            "Glycemic index",
-            "Insulin index",
-            "Insulin resistance",
-            "Type 2 diabetes prevention",
-            "Non-alcoholic fatty liver disease",
-            "Metabolic health",
-            "Clinical nutrition"
-        ]
-    }
-}
-    </script>
 
     <!-- Icons & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -693,16 +706,10 @@
                 </button>
 
                 <div class="lang-switcher-container">
-                    <button type="button" class="lang-btn" data-lang="ar" onclick="setLocale('ar')" title="العربية">
-                        AR
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="nl" onclick="setLocale('nl')" title="Nederlands">
-                        NL
-                    </button>
-                    <button type="button" class="lang-btn" data-lang="en" onclick="setLocale('en')" title="English">
-                        EN
-                    </button>
-                    <a class="lang-btn" data-sv-link href="/sv/dr-wassim-habib.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
+                    <a class="lang-btn active" href="/doctor.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/doctor.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/doctor.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/dr-wassim-habib.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
                 </div>
             </div>
         </div>
@@ -760,7 +767,7 @@
             <ul class="method-list">
                 <li data-i18n="method_1">قيم المؤشر الجلايسيمي مأخوذة من الجداول الدولية للمؤشر الجلايسيمي (Atkinson وآخرون، 2021) وقواعد بيانات جامعة سيدني وهارفارد.</li>
                 <li data-i18n="method_2">قيم مؤشر الإنسولين تُعرض فقط للأطعمة المختبرة سريرياً (Holt وآخرون، 1997؛ Bao وآخرون، 2009)، أما غير المختبرة فتُوسم بوضوح بأنها غير مختبرة.</li>
-                <li data-i18n="method_3">الحاسبات الصحية تعتمد معادلات سريرية معتمدة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).</li>
+                <li data-i18n="method_3">الحاسبات الصحية تعتمد معادلات علمية معروفة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).</li>
                 <li data-i18n="method_4">المحتوى تثقيفي ويُراجع ويُحدَّث دورياً، ولا يُعد تشخيصاً أو بديلاً عن الاستشارة الطبية الفردية.</li>
             </ul>
 
@@ -874,7 +881,7 @@
                 doc_method_title: "منهجية المراجعة العلمية للمحتوى",
                 method_1: "قيم المؤشر الجلايسيمي مأخوذة من الجداول الدولية للمؤشر الجلايسيمي (Atkinson وآخرون، 2021) وقواعد بيانات جامعة سيدني وهارفارد.",
                 method_2: "قيم مؤشر الإنسولين تُعرض فقط للأطعمة المختبرة سريرياً (Holt وآخرون، 1997؛ Bao وآخرون، 2009)، أما غير المختبرة فتُوسم بوضوح بأنها غير مختبرة.",
-                method_3: "الحاسبات الصحية تعتمد معادلات سريرية معتمدة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).",
+                method_3: "الحاسبات الصحية تعتمد معادلات علمية معروفة مثل Mifflin-St Jeor لاحتياج السعرات ونسبة الخصر إلى الطول (WHtR).",
                 method_4: "المحتوى تثقيفي ويُراجع ويُحدَّث دورياً، ولا يُعد تشخيصاً أو بديلاً عن الاستشارة الطبية الفردية.",
                 doc_articles_title: "مقالات المنصة الطبية",
                 doc_contact_title: "التواصل مع الفريق الطبي",
@@ -922,7 +929,7 @@
                 doc_method_title: "Onze wetenschappelijke reviewmethode",
                 method_1: "Waarden voor de glykemische index komen uit de International Tables of Glycemic Index (Atkinson e.a., 2021) en de databases van de Universiteit van Sydney en Harvard.",
                 method_2: "Insuline-indexwaarden tonen we alleen voor klinisch geteste voedingsmiddelen (Holt e.a., 1997; Bao e.a., 2009); niet-geteste producten zijn duidelijk als zodanig gemarkeerd.",
-                method_3: "Onze calculators gebruiken gevalideerde klinische formules zoals Mifflin-St Jeor en de taille-lengteverhouding (WHtR).",
+                method_3: "Onze calculators gebruiken gangbare wetenschappelijke formules zoals Mifflin-St Jeor en de taille-lengteverhouding (WHtR).",
                 method_4: "De inhoud is educatief, wordt periodiek herzien en vervangt geen diagnose of persoonlijk medisch advies.",
                 doc_articles_title: "Medische artikelen van het platform",
                 doc_contact_title: "Contact met het medisch team",
@@ -969,8 +976,8 @@
                 focus_4_desc: "Dosages, drug interactions and clinical warnings, free of misleading marketing.",
                 doc_method_title: "Our Scientific Review Methodology",
                 method_1: "Glycemic index values come from the International Tables of Glycemic Index (Atkinson et al., 2021) and the University of Sydney and Harvard databases.",
-                method_2: "Insulin index values are shown only for clinically tested foods (Holt et al., 1997; Bao et al., 2009); untested foods are clearly labelled as such.",
-                method_3: "Our health calculators use validated clinical formulas such as Mifflin-St Jeor and the waist-to-height ratio (WHtR).",
+                method_2: "Insulin index values are shown only for foods with a documented reference (Holt et al., 1997; Bao et al., 2009); other foods are clearly labelled as such.",
+                method_3: "Our health calculators use established scientific formulas such as Mifflin-St Jeor and the waist-to-height ratio (WHtR).",
                 method_4: "Content is educational, reviewed and updated periodically, and is not a diagnosis or a substitute for individual medical advice.",
                 doc_articles_title: "Medical Articles on the Platform",
                 doc_contact_title: "Contact the Medical Team",
@@ -1004,9 +1011,7 @@
         let currentLocale = 'ar';
 
         function initLocalization() {
-            const urlLang = new URLSearchParams(window.location.search).get('lang');
-            const saved = (['ar', 'nl', 'en'].includes(urlLang) && urlLang) || localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language') || 'ar';
-            setLocale(saved, false);
+            setLocale(document.documentElement.lang || 'ar', false);   // the page language is fixed by its URL
         }
 
         function setLocale(lang, saveToStorage = true) {
@@ -1046,21 +1051,16 @@
                 }
             });
 
-            if (i18nDictionary[lang]?.page_title) document.title = i18nDictionary[lang].page_title;
+            if (i18nDictionary[lang]?.page_title) /* <title> is static per language URL */
 
             const seoDesc = document.getElementById('seo_desc');
             if (seoDesc && i18nDictionary[lang]?.seo_desc) {
-                seoDesc.setAttribute('content', i18nDictionary[lang].seo_desc);
+                /* meta description is static per language URL */
             }
         }
 
         // Listen for storage changes across browser tabs
         window.addEventListener('storage', function(e) {
-            if (e.key === 'preferred_language' || e.key === 'wibo_language') {
-                if (e.newValue && ['ar', 'nl', 'en'].includes(e.newValue)) {
-                    setLocale(e.newValue, false);
-                }
-            }
             if (e.key === 'wibo_theme') {
                 if (e.newValue) applyTheme(e.newValue);
             }

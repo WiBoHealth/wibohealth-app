@@ -15,34 +15,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                if (q === 'sv') { location.replace('/sv/integritetspolicy.html'); return; }   // sv-forward
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -54,17 +26,79 @@
 
     <!-- Primary Meta Tags & SEO -->
     <title id="pageTitle">سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App</title>
+    <!-- ROOT-HEAD:START (scripts/generate_root_pages.py) -->
+    <link rel="canonical" href="https://wibohealth.com/privacy.html">
+    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://wibohealth.com/en/privacy.html">
+    <link rel="alternate" hreflang="nl" href="https://wibohealth.com/nl/privacy.html">
+    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/integritetspolicy.html">
+    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/en/privacy.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "@id": "https://wibohealth.com/privacy.html#webpage",
+            "url": "https://wibohealth.com/privacy.html",
+            "name": "سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App",
+            "description": "سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و AVG و EU MDR.",
+            "inLanguage": "ar",
+            "isPartOf": {
+                "@id": "https://wibohealth.com/#website"
+            },
+            "publisher": {
+                "@id": "https://wibohealth.com/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/og-wibo-health.jpg"
+            },
+            "dateModified": "2026-11-09",
+            "breadcrumb": {
+                "@id": "https://wibohealth.com/privacy.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://wibohealth.com/#organization",
+            "name": "WiBo Health Group",
+            "url": "https://wibohealth.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://wibohealth.com/images/icon-512.png",
+                "width": 512,
+                "height": 512
+            },
+            "email": "support@wibohealth.com"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://wibohealth.com/privacy.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://wibohealth.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "🔒 سياسة الخصوصية وحماية البيانات",
+                    "item": "https://wibohealth.com/privacy.html"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+    <!-- ROOT-HEAD:END -->
     <meta name="title" content="سياسة الخصوصية وحماية البيانات | WiBo Health & Boodi App">
     <meta name="description" id="pageDescription" content="سياسة الخصوصية وحماية البيانات في WiBo Health وتطبيق boodi - نلتزم بحماية خصوصيتك والامتثال للوائح الأوروبية GDPR و AVG و EU MDR.">
     <meta name="keywords" content="سياسة الخصوصية, WiBo Health, تطبيق بودي, GDPR, AVG, حماية البيانات, EU MDR 2017/745, Privacybeleid Boodi">
     <meta name="author" content="WiBo Health Medical Team">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://wibohealth.com/privacy.html">
-    <!-- SV-ALTERNATES:START (scripts/generate_article_pages.py) -->
-    <link rel="alternate" hreflang="ar" href="https://wibohealth.com/privacy.html">
-    <link rel="alternate" hreflang="sv" href="https://wibohealth.com/sv/integritetspolicy.html">
-    <link rel="alternate" hreflang="x-default" href="https://wibohealth.com/privacy.html">
-    <!-- SV-ALTERNATES:END -->
     
     <!-- Multilingual Hreflang Tags for SEO -->
     
@@ -73,7 +107,9 @@
     <meta property="og:url" content="https://wibohealth.com/privacy.html">
     <meta property="og:title" id="ogTitle" content="سياسة الخصوصية | WiBo Health & Boodi App">
     <meta property="og:description" id="ogDescription" content="التزامنا الكامل بحماية بياناتك الصحية والامتثال للوائح الاتحاد الأوروبي الصارمة.">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="WiBo Health">
 
     <!-- Twitter -->
@@ -81,24 +117,9 @@
     <meta name="twitter:url" content="https://wibohealth.com/privacy.html">
     <meta name="twitter:title" id="twTitle" content="Privacy Policy | WiBo Health & Boodi App">
     <meta name="twitter:description" id="twDescription" content="Official Privacy Policy, GDPR & AVG compliance for WiBo Health and Boodi App.">
-    <meta name="twitter:image" content="https://wibohealth.com/images/logo.png">
+    <meta name="twitter:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
 
     <!-- Structured Data (JSON-LD Schema) for Google Search -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "WiBo Health & Boodi App Privacy Policy",
-      "url": "https://wibohealth.com/privacy.html",
-      "description": "Privacy policy, AVG, GDPR and EU regulatory compliance details for WiBo Health Group and Boodi App.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "WiBo Health Group",
-        "url": "https://wibohealth.com",
-        "logo": "https://wibohealth.com/images/logo.png"
-      }
-    }
-    </script>
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -211,7 +232,7 @@
             filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.4));
         }
 
-        .logo-text h1 {
+        .logo-text .brand-name {
             font-size: 22px;
             background: linear-gradient(135deg, #10b981, #3498db);
             -webkit-background-clip: text;
@@ -687,7 +708,7 @@
                         <img class="brand-mark" src="/images/brand/wibo-logo-64.webp" srcset="/images/brand/wibo-logo-128.webp 2x" width="34" height="34" alt="" decoding="async">
                     </div>
                     <div class="logo-text">
-                        <h1>WiBo Health</h1>
+                        <span class="brand-name">WiBo Health</span>
                     </div>
                 </a>
 
@@ -705,10 +726,10 @@
 
                 <!-- Controls & Language Selector -->
                 <div class="header-controls">
-                    <button class="lang-btn" data-lang-toggle="ar" onclick="changeLanguage('ar')" title="العربية">AR</button>
-                    <button class="lang-btn" data-lang-toggle="en" onclick="changeLanguage('en')" title="English">EN</button>
-                    <a class="lang-btn" data-sv-link href="/sv/integritetspolicy.html" hreflang="sv" lang="sv" title="Svenska">SV</a>
-                    <button class="lang-btn" data-lang-toggle="nl" onclick="changeLanguage('nl')" title="Nederlands">NL</button>
+                    <a class="lang-btn active" href="/privacy.html" hreflang="ar" lang="ar" data-lang="ar" data-lang-toggle="ar" title="العربية" aria-current="page">AR</a>
+                    <a class="lang-btn" href="/en/privacy.html" hreflang="en" lang="en" data-lang="en" data-lang-toggle="en" title="English">EN</a>
+                    <a class="lang-btn" href="/nl/privacy.html" hreflang="nl" lang="nl" data-lang="nl" data-lang-toggle="nl" title="Nederlands">NL</a>
+                    <a class="lang-btn" href="/sv/integritetspolicy.html" hreflang="sv" lang="sv" data-lang="sv" data-lang-toggle="sv" title="Svenska">SV</a>
 
                     <button class="theme-toggle" onclick="toggleTheme()" title="المظهر">
                         <i class="fas fa-moon"></i>
@@ -913,7 +934,7 @@
                 </p>
                 <ul>
                     <li>
-                        <span data-i18n="privacy_email">البريد الإلكتروني المعتمد للدعم والتصحيح:</span> 
+                        <span data-i18n="privacy_email">البريد الإلكتروني الرسمي للدعم والتصحيح:</span> 
                         <a href="mailto:support@wibohealth.com">support@wibohealth.com</a>
                     </li>
                 </ul>
@@ -1027,7 +1048,7 @@
                 privacy_section9_text: "قد نقوم بتحديث هذه السياسة من وقت لآخر لتعكس التطورات التنظيمية والتقنية. يُعلن عن أي تعديل جوهري بنشر التاريخ المحدث على هذه الصفحة.",
                 privacy_section10_title: "10. تواصل معنا",
                 privacy_section10_intro: "لممارسة حقوقك القانونية أو لأي استفسارات تتعلق بسياسة الخصوصية وحماية البيانات، يرجى التواصل مع فريق الدعم القانوني والتقني عبر:",
-                privacy_email: "البريد الإلكتروني المعتمد للدعم والتصحيح:",
+                privacy_email: "البريد الإلكتروني الرسمي للدعم والتصحيح:",
                 privacy_footer_agreement: "بمواصلة استخدام موقع WiBo Health وتطبيق boodi 💚، فإنك تقر بعلمك وموافقتك الكاملة على بنود سياسة الخصوصية هذه.",
                 privacy_back_home: "العودة للرئيسية",
                 btn_explore_boodi: "اكتشف تطبيق بودي 💚",
@@ -1130,7 +1151,7 @@
                 privacy_section9_text: "We may update this policy periodically to reflect evolving legal and technological requirements. Significant updates will be notified via this page.",
                 privacy_section10_title: "10. Contact Us",
                 privacy_section10_intro: "To exercise your legal data rights or submit privacy-related inquiries, please contact our support team via:",
-                privacy_email: "Certified Support & Rectification Email:",
+                privacy_email: "Official Support & Rectification Email:",
                 privacy_footer_agreement: "By continuing to use WiBo Health and boodi 💚 app, you acknowledge and agree to this Privacy Policy.",
                 privacy_back_home: "Back to Home",
                 btn_explore_boodi: "Discover Boodi App 💚",
@@ -1277,21 +1298,7 @@
 
         // Determine Initial Language
         function detectInitialLang() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang && ['ar', 'en', 'nl'].includes(urlLang)) {
-                return urlLang;
-            }
-
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && ['ar', 'en', 'nl'].includes(saved)) {
-                return saved;
-            }
-
-            const browserLang = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || navigator.userLanguage || '').toLowerCase();
-            if (browserLang.startsWith('ar')) return 'ar';
-            if (browserLang.startsWith('nl')) return 'nl';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = detectInitialLang();
@@ -1309,9 +1316,9 @@
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
             
             // Update Page Meta for Googlebot
-            document.title = t('page_title');
+            /* <title> is static per language URL */
             const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) metaDesc.setAttribute('content', t('page_desc'));
+            if (metaDesc) /* meta description is static per language URL */
 
             // Update UI Elements
             document.querySelectorAll('[data-i18n]').forEach(el => {

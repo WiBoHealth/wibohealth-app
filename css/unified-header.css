@@ -143,6 +143,7 @@ body > header .logo-icon svg,
 body > header .brand-mark,
 body > header .brand-logo-svg { width: 34px !important; height: 34px !important; }
 body > header .logo-text h1,
+body > header .logo-text .brand-name,
 body > header .brand-title,
 body > header .brand-logo h1,
 body > header .brand-logo span {
@@ -285,6 +286,8 @@ body > header .lang-switcher-container .lang-btn { height: 28px !important; }
     body > header > .nav-content,
     body > header > .container { padding: 0 10px !important; gap: 6px; }
     body > header .logo-text h1,
+    body > header .logo-text .brand-name,
+body > header .logo-text .brand-name,
     body > header .brand-title,
     body > header .brand-logo h1,
     body > header .brand-logo span { font-size: 17px !important; }
@@ -321,7 +324,7 @@ body > header > .container > .header-content { width: 100%; min-height: 60px; }
 
 /* plain text logos (no gradient) stay readable on the glass background */
 body > header a.logo { color: #10b981 !important; font-size: 19px; font-weight: 900; }
-body > header a.logo h1 { margin: 0 !important; font-size: 19px !important; }
+body > header a.logo h1, body > header a.logo .brand-name { margin: 0 !important; font-size: 19px !important; }
 
 /* pages whose plain <nav> sits in the header row: on small screens it folds behind the hamburger */
 @media (max-width: 992px) {
@@ -455,7 +458,7 @@ body > header .nav-buttons { width: auto !important; }
 body { overflow-x: clip; }
 /* smallest phones (320px): logo + 3 language buttons + theme + menu needed 357px; the wordmark gives way, the heart stays */
 @media (max-width: 360px) {
-    body > header .logo-text, body > header .brand-title, body > header .brand-logo h1, body > header .brand-logo span { display: none !important; }
+    body > header .logo-text, body > header .brand-title, body > header .brand-name, body > header .brand-logo h1, body > header .brand-logo span { display: none !important; }
 }
 /* long Dutch compounds ("Gezondheidsindicatoren") ran 90px past a 390px phone and made mobile browsers zoom the
    whole page out: headings may break inside a word, hyphenated where the browser knows the language */
@@ -555,3 +558,7 @@ html[data-theme="dark"] .hero-badge { color: #a7f3d0; }
 html[data-theme="dark"] .footer-divider { color: var(--wb-muted); }
 html[data-theme="dark"] .calc-submit-btn { background: #047857; }
 html[data-theme="dark"] .calc-submit-btn:hover { background: #065f46; }
+
+/* header wordmark is a <span class="brand-name"> (one <h1> per page = the page title); language links are <a class="lang-btn"> */
+body > header .brand-name { font-weight: 900; }
+a.lang-btn { text-decoration: none; }

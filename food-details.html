@@ -29,33 +29,6 @@
       gtag('config', 'G-WG6S4KXXJS');
     </script>
     <script src="/js/consent.js?v=4" defer></script>
-    <!-- Anti-FOIC: hide the page until the saved language (en/nl) has been applied, so no Arabic text flashes -->
-    <style>html.lang-loading body{visibility:hidden}</style>
-    <script>
-        (function (d) {
-            var h = d.documentElement;
-            try {
-                var ok = function (x) { return x === 'ar' || x === 'en' || x === 'nl'; };
-                var q = (new URLSearchParams(location.search).get('lang') || '').toLowerCase(), s = null;
-                try { s = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language'); } catch (e) {}
-                var n = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-                var l = ok(q) ? q : ok(s) ? s : (n.indexOf('ar') === 0 ? 'ar' : n.indexOf('nl') === 0 ? 'nl' : 'en');
-                h.lang = l; h.dir = l === 'ar' ? 'rtl' : 'ltr';
-                if (l === 'ar') return;
-                h.classList.add('lang-loading');
-                var shown = false;
-                var show = function () { if (!shown) { shown = true; h.classList.remove('lang-loading'); } };
-                window.wiboLangReady = show;
-                // the page's own translation runs in DOMContentLoaded handlers or inline scripts before it;
-                // reveal right after them, before the next paint
-                d.addEventListener('DOMContentLoaded', function () {
-                    requestAnimationFrame(show);
-                    setTimeout(show, 150);          // fallback if a frame is not painted (e.g. background tab)
-                });
-                setTimeout(show, 2500);             // absolute safety net
-            } catch (e) { h.classList.remove('lang-loading'); }
-        })(document);
-    </script>
     <!-- Theme boot: one theme for the whole site (saved choice, else the OS setting), set before the first paint -->
     <script>(function(h){var t;try{t=localStorage.getItem('wibo_theme')}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';try{localStorage.setItem('wibo_theme',t)}catch(e){}}h.setAttribute('data-theme',t)})(document.documentElement);</script>
     <!-- Instant theme toggle: while light/dark flips, every transition is disabled so the switch paints in a single frame (0ms) -->
@@ -65,23 +38,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-    <!-- Language Initializer & Zero-Shift RTL Reset -->
-    <script>
-        (function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            const phone = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-            const lang = (queryLang === 'ar' || queryLang === 'en' || queryLang === 'nl') ? queryLang : 
-                         ((saved === 'ar' || saved === 'en' || saved === 'nl') ? saved : 
-                         (phone.startsWith('ar') ? 'ar' : (phone.startsWith('nl') ? 'nl' : 'en')));
-            document.documentElement.lang = lang;
-            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-            if (window.scrollTo) {
-                window.scrollTo(0, 0);
-            }
-        })();
-    </script>
 
     <!-- Primary SEO & Googlebot Crawling Tags -->
     <title data-i18n="page_title_food_details">تفاصيل الطعام - WiBo Health</title>
@@ -99,7 +55,7 @@
     <meta property="og:url" id="ogUrl" content="https://wibohealth.com/food-details.html">
     <meta property="og:title" id="ogTitle" content="تفاصيل غذائية شاملة للطعام | WiBo Health">
     <meta property="og:description" id="ogDesc" content="تحليل غذائي معتمد للمؤشر الجلايسيمي ومؤشر الأنسولين والقيم الغذائية من فريق ويبو هيلث الطبي.">
-    <meta property="og:image" content="https://wibohealth.com/images/logo.png">
+    <meta property="og:image" content="https://wibohealth.com/images/og-wibo-health.jpg">
     
     <!-- Google Structured Data (Schema.org MedicalWebPage): the JSON-LD tag is added by updateStructuredData() -->
     
@@ -1120,17 +1076,7 @@
         };
 
         function getInitialLanguage() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const queryLang = urlParams.get('lang')?.toLowerCase();
-            if (queryLang && (queryLang === 'ar' || queryLang === 'nl' || queryLang === 'en')) return queryLang;
-
-            const saved = localStorage.getItem('preferred_language') || localStorage.getItem('wibo_language');
-            if (saved && (saved === 'ar' || saved === 'nl' || saved === 'en')) return saved;
-            
-            const phone = (/bot|crawl|spider|slurp|mediapartners|lighthouse/i.test(navigator.userAgent || '') ? 'ar' : navigator.language || '').toLowerCase();
-            if (phone.startsWith('nl')) return 'nl';
-            if (phone.startsWith('ar')) return 'ar';
-            return 'en';
+            return document.documentElement.lang || 'ar';   // the page language is fixed by its URL (/, /en/, /nl/, /sv/)
         }
 
         let currentLang = getInitialLanguage();
