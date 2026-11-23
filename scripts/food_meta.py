@@ -190,28 +190,28 @@ def desc(mode, lang, name, alt, **v):
 FACTS = {
     'en': dict(title='Key numbers at a glance', density='Energy density', per_g='kcal per gram',
                bands=('very low', 'low', 'medium', 'high'), split='Calories from carbs / protein / fat',
-               pdens='Protein', pdens_u='g per 100 kcal', fibre='Fibre per carbohydrate',
+               pdens='Protein', fdens='Fat', pdens_u='g per 100 kcal', fibre='Fibre per carbohydrate',
                fibre_v='1 g fibre per {r} g carbohydrate', fibre_none='no fibre', gl='Glycemic load',
                gl_v='{a} per 100 {u} · {b} per {p} {u} portion', near='Most similar foods in this group',
                cols=('Food', 'kcal', 'Carbs', 'Protein', 'GI'), this='this food',
                note='Computed from the values per 100 {u} on this page; for orientation only.'),
     'nl': dict(title='De belangrijkste cijfers', density='Energiedichtheid', per_g='kcal per gram',
                bands=('zeer laag', 'laag', 'gemiddeld', 'hoog'), split='Calorieën uit koolhydraten / eiwit / vet',
-               pdens='Eiwit', pdens_u='g per 100 kcal', fibre='Vezels per koolhydraat',
+               pdens='Eiwit', fdens='Vet', pdens_u='g per 100 kcal', fibre='Vezels per koolhydraat',
                fibre_v='1 g vezels per {r} g koolhydraten', fibre_none='geen vezels', gl='Glykemische lading',
                gl_v='{a} per 100 {u} · {b} per portie van {p} {u}', near='Meest vergelijkbare producten in deze groep',
                cols=('Product', 'kcal', 'Koolh.', 'Eiwit', 'GI'), this='dit product',
                note='Berekend uit de waarden per 100 {u} op deze pagina; alleen ter oriëntatie.'),
     'sv': dict(title='Nyckeltal i korthet', density='Energitäthet', per_g='kcal per gram',
                bands=('mycket låg', 'låg', 'medel', 'hög'), split='Kalorier från kolhydrater / protein / fett',
-               pdens='Protein', pdens_u='g per 100 kcal', fibre='Fiber per kolhydrat',
+               pdens='Protein', fdens='Fett', pdens_u='g per 100 kcal', fibre='Fiber per kolhydrat',
                fibre_v='1 g fiber per {r} g kolhydrater', fibre_none='inga fibrer', gl='Glykemisk belastning',
                gl_v='{a} per 100 {u} · {b} per portion om {p} {u}', near='Mest liknande livsmedel i gruppen',
                cols=('Livsmedel', 'kcal', 'Kolh.', 'Protein', 'GI'), this='detta livsmedel',
                note='Beräknat från värdena per 100 {u} på sidan; endast som vägledning.'),
     'ar': dict(title='أهم الأرقام باختصار', density='كثافة الطاقة', per_g='سعرة لكل غرام',
                bands=('منخفضة جداً', 'منخفضة', 'متوسطة', 'مرتفعة'), split='مصدر السعرات: كربوهيدرات / بروتين / دهون',
-               pdens='البروتين', pdens_u='غ لكل 100 سعرة', fibre='الألياف مقابل الكربوهيدرات',
+               pdens='البروتين', fdens='الدهون', pdens_u='غ لكل 100 سعرة', fibre='الألياف مقابل الكربوهيدرات',
                fibre_v='1 غ ألياف لكل {r} غ كربوهيدرات', fibre_none='لا ألياف', gl='الحمل الجلايسيمي',
                gl_v='{a} لكل 100 {u} · {b} في حصة {p} {u}', near='أقرب الأطعمة إليه في المجموعة',
                cols=('الطعام', 'سعرات', 'كربوهيدرات', 'بروتين', 'GI'), this='هذا الطعام',
@@ -242,12 +242,17 @@ def facts_html(food, lang, near, *, fmt, name_of, url_of, gi_of, unit, portion, 
     if total > 0:
         pct = [round(x * 100 / total) for x in energy]
         rows.append((t['split'], ' / '.join(f'{p}%' for p in pct)))
-    if kcal >= 5:
-        rows.append((t['pdens'], f'{fmt(food["protein"] * 100 / kcal)} {t["pdens_u"]}'))
-    if food['carbs'] >= 1:
-        rows.append((t['fibre'], t['fibre_v'].format(r=fmt(food['carbs'] / food['fiber'])) if food['fiber'] > 0 else t['fibre_none']))
-    if gl100 is not None:
-        rows.append((t['gl'], t['gl_v'].format(a=fmt(gl100), b=fmt(glp), p=portion, u=unit)))
+    # rows that matter for this food's profile (2026-11-23): under 5 g available carbohydrate the GI does not apply,
+    # so protein and fat lead; carbohydrate foods lead with fibre per carbohydrate and glycemic load
+    protein_row = (t['pdens'], f'{fmt(food["protein"] * 100 / kcal)} {t["pdens_u"]}') if kcal >= 5 else None
+    fat_row = (t['fdens'], f'{fmt(food["fat"] * 100 / kcal)} {t["pdens_u"]}') if kcal >= 5 and food['fat'] >= 0.5 else None
+    fibre_row = ((t['fibre'], t['fibre_v'].format(r=fmt(food['carbs'] / food['fiber'])) if food['fiber'] > 0 else t['fibre_none'])
+                 if food['carbs'] >= 1 else None)
+    gl_row = (t['gl'], t['gl_v'].format(a=fmt(gl100), b=fmt(glp), p=portion, u=unit)) if gl100 is not None else None
+    if food['avail'] < 5:
+        rows += [r for r in (protein_row, fat_row) if r]
+    else:
+        rows += [r for r in (fibre_row, gl_row, protein_row) if r]
     table = ''.join(f'<tr><th scope="row">{e(k)}</th><td>{e(v)}</td></tr>' for k, v in rows)
     def gi_cell(f):
         g = gi_of(f)
