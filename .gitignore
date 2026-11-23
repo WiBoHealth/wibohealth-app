@@ -9,3 +9,7 @@ js/data.backup.js
 
 # local photo review page (not deployed)
 review/
+
+# drafts for the doctor (unapproved medical text) and their builder: local only, never in the public repository
+drafts/
+scripts/build_review_drafts.py
