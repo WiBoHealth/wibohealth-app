@@ -55,24 +55,48 @@
                     {
                         "@type": "ListItem",
                         "position": 1,
+                        "url": "https://wibohealth.com/nl/hba1c-calculator.html",
+                        "name": "HbA1c omrekenen"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "url": "https://wibohealth.com/nl/blood-sugar-converter.html",
+                        "name": "Bloedsuiker omrekenen"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "url": "https://wibohealth.com/nl/diabetes-risk-test.html",
+                        "name": "Diabetes risicotest"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "url": "https://wibohealth.com/nl/insulin-resistance-calculator.html",
+                        "name": "Insulineresistentie berekenen"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
                         "url": "https://wibohealth.com/nl/bmi-calculator.html",
                         "name": "Body mass index (BMI)"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 2,
+                        "position": 6,
                         "url": "https://wibohealth.com/nl/tdee-calculator.html",
                         "name": "Caloriebehoefte (TDEE)"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 3,
+                        "position": 7,
                         "url": "https://wibohealth.com/nl/water-calculator.html",
                         "name": "Dagelijkse waterbehoefte"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 4,
+                        "position": 8,
                         "url": "https://wibohealth.com/nl/whtr-calculator.html",
                         "name": "Taille-lengteratio (WHtR)"
                     }
@@ -840,6 +864,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -933,6 +963,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1085,7 +1121,8 @@
             <nav class="breadcrumb" aria-label="breadcrumb"><a href="/nl/index.html">Home</a> › <span>Gezondheidscalculators</span></nav>
             <h1>Gezondheidscalculators</h1>
             <p class="lead">Kies de calculator die je nodig hebt. Elke calculator heeft een eigen pagina met uitleg over de uitkomst en de wetenschappelijke bronnen. Alles wordt op je eigen apparaat berekend; we bewaren niets van wat je invult.</p>
-            <nav class="hub-tabs" aria-label="Gezondheidscalculators"><a href="#cat-body">Voeding en lichaam</a></nav>
+            <nav class="hub-tabs" aria-label="Gezondheidscalculators"><a href="#cat-diabetes">Diabetes en bloedsuiker</a><a href="#cat-body">Voeding en lichaam</a></nav>
+<section class="hub-section" id="cat-diabetes"><h2 class="section-title">Diabetes en bloedsuiker</h2><div class="hub-grid"><a class="hub-card" href="/nl/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>HbA1c omrekenen</strong><span>Reken HbA1c om tussen % en mmol/mol en zie je gemiddelde glucose.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>Bloedsuiker omrekenen</strong><span>Van mg/dl naar mmol/l en terug.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>Diabetes risicotest</strong><span>8 vragen in twee minuten.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>Insulineresistentie berekenen</strong><span>Uit nuchtere insuline en nuchtere bloedsuiker.</span><em>Open de calculator →</em></a></div></section>
 <section class="hub-section" id="cat-body"><h2 class="section-title">Voeding en lichaam</h2><div class="hub-grid"><a class="hub-card" href="/nl/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Bepaal je gewichtsklasse en het gezonde gewicht bij je lengte.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Caloriebehoefte (TDEE)</strong><span>Calorieën om op gewicht te blijven, af te vallen of spieren op te bouwen.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Dagelijkse waterbehoefte</strong><span>De juiste hoeveelheid vocht voor je gewicht en activiteit.</span><em>Open de calculator →</em></a><a class="hub-card" href="/nl/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Taille-lengteratio (WHtR)</strong><span>Een eenvoudige maat voor buikvet en stofwisselingsrisico.</span><em>Open de calculator →</em></a></div></section>
 
             <h2 class="section-title"><i class="fas fa-link"></i> <span>Handige links</span></h2>

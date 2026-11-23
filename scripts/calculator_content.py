@@ -17,6 +17,10 @@ from calc_sv import SV, T_SV  # noqa: E402
 for _calc in CALCS:
     _calc['content']['sv'] = SV[_calc['key']]
 
+# Diabetes tools (batch B, 2026-11-23): all four languages in calc_diabetes.py
+from calc_diabetes import DIABETES_TOOLS  # noqa: E402
+CALCS += DIABETES_TOOLS
+
 # Page chrome shared by every calculator page, per language.
 T = {
     'ar': dict(

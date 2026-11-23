@@ -941,6 +941,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1233,6 +1239,8 @@
             <p>De trein is geen diabetes geworden, de weg terug ligt wijd open en de oplossingen liggen binnen handbereik: in een kleurrijk bord groenten, in een rustig kwartiertje wandelen na het eten en in een goede nachtrust die je cellen herstelt. Begin vandaag, met alleen je volgende maaltijd, en zie hoe je lichaam je beloont met energie en rust.</p>
             <p class="reviewed">Beoordeeld door Dr. Wassim Habib<br>WiBo Health Group 🌿</p>
 
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Diabetestools</span></h2>
+            <div class="tool-cards"><a href="/nl/hba1c-calculator.html"><strong><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c omrekenen</strong><span>Reken HbA1c om tussen % en mmol/mol en zie je gemiddelde glucose.</span></a><a href="/nl/blood-sugar-converter.html"><strong><i class="fas fa-right-left" aria-hidden="true"></i> Bloedsuiker omrekenen</strong><span>Van mg/dl naar mmol/l en terug.</span></a><a href="/nl/diabetes-risk-test.html"><strong><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risicotest</strong><span>8 vragen in twee minuten.</span></a><a href="/nl/insulin-resistance-calculator.html"><strong><i class="fas fa-syringe" aria-hidden="true"></i> Insulineresistentie berekenen</strong><span>Uit nuchtere insuline en nuchtere bloedsuiker.</span></a></div>
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>Wetenschappelijke bronnen</span></h2>
             <ol class="ref-list"><li>American Diabetes Association Professional Practice Committee. 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1)</li><li>Diabetes Prevention Program Research Group. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med 2002;346(6):393–403</li><li>Diabetes Prevention Program Research Group. Long-term effects of lifestyle intervention or metformin on diabetes development and microvascular complications over 15-year follow-up: the Diabetes Prevention Program Outcomes Study. Lancet Diabetes Endocrinol 2015;3(11):866–875</li><li>Shukla AP, Iliescu RG, Thomas CE, Aronne LJ. Food order has a significant impact on postprandial glucose and insulin levels. Diabetes Care 2015;38(7):e98–e99</li><li>World Health Organization. Definition and diagnosis of diabetes mellitus and intermediate hyperglycaemia: report of a WHO/IDF consultation. Geneva: WHO; 2006</li></ol>
             <p class="disclaimer-box">⚠️ Medische disclaimer: de inhoud en informatie in dit artikel zijn bedoeld voor algemene gezondheidsvoorlichting en voedingsbewustzijn. Ze zijn op geen enkele manier een medische diagnose, een persoonlijk behandelplan of een vervanging van advies van je arts of de zorgverlener die je volgt. Overleg altijd met je arts voordat je grote veranderingen aanbrengt in je voeding of medicatie.</p>

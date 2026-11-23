@@ -55,24 +55,48 @@
                     {
                         "@type": "ListItem",
                         "position": 1,
+                        "url": "https://wibohealth.com/en/hba1c-calculator.html",
+                        "name": "HbA1c calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "url": "https://wibohealth.com/en/blood-sugar-converter.html",
+                        "name": "Blood sugar converter"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "url": "https://wibohealth.com/en/diabetes-risk-test.html",
+                        "name": "Diabetes risk test"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "url": "https://wibohealth.com/en/insulin-resistance-calculator.html",
+                        "name": "Insulin resistance calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
                         "url": "https://wibohealth.com/en/bmi-calculator.html",
                         "name": "Body mass index (BMI)"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 2,
+                        "position": 6,
                         "url": "https://wibohealth.com/en/tdee-calculator.html",
                         "name": "Daily calories (TDEE)"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 3,
+                        "position": 7,
                         "url": "https://wibohealth.com/en/water-calculator.html",
                         "name": "Daily water intake"
                     },
                     {
                         "@type": "ListItem",
-                        "position": 4,
+                        "position": 8,
                         "url": "https://wibohealth.com/en/whtr-calculator.html",
                         "name": "Waist-to-height ratio (WHtR)"
                     }
@@ -840,6 +864,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -933,6 +963,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1085,7 +1121,8 @@
             <nav class="breadcrumb" aria-label="breadcrumb"><a href="/en/index.html">Home</a> › <span>Health calculators</span></nav>
             <h1>Health calculators</h1>
             <p class="lead">Pick the calculator you need. Each one has its own page with an explanation of the result and its scientific sources. Everything is calculated on your device; we do not store anything you enter.</p>
-            <nav class="hub-tabs" aria-label="Health calculators"><a href="#cat-body">Nutrition and body</a></nav>
+            <nav class="hub-tabs" aria-label="Health calculators"><a href="#cat-diabetes">Diabetes and blood sugar</a><a href="#cat-body">Nutrition and body</a></nav>
+<section class="hub-section" id="cat-diabetes"><h2 class="section-title">Diabetes and blood sugar</h2><div class="hub-grid"><a class="hub-card" href="/en/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>HbA1c calculator</strong><span>Convert HbA1c between % and mmol/mol and see your average glucose.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>Blood sugar converter</strong><span>From mg/dL to mmol/L and back.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>Diabetes risk test</strong><span>8 questions in two minutes.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>Insulin resistance calculator</strong><span>From fasting insulin and fasting blood sugar.</span><em>Open the calculator →</em></a></div></section>
 <section class="hub-section" id="cat-body"><h2 class="section-title">Nutrition and body</h2><div class="hub-grid"><a class="hub-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Daily water intake</strong><span>The right amount of fluid for your weight and activity.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Waist-to-height ratio (WHtR)</strong><span>A simple marker of visceral belly fat and metabolic risk.</span><em>Open the calculator →</em></a></div></section>
 
             <h2 class="section-title"><i class="fas fa-link"></i> <span>Useful links</span></h2>

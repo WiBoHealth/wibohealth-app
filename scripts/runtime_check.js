@@ -63,7 +63,31 @@ const HUB = [
     ['tool cards link their pages', `(() => { const a = [...document.querySelectorAll('a.hub-card')].map(x => x.getAttribute('href')); if (a.length < 4) throw new Error(a.length); return a.join(' '); })()`],
     ['section tabs', `(() => { const t = document.querySelectorAll('.hub-tabs a').length; if (!t) throw new Error('no tabs'); return t + ' tab(s)'; })()`],
 ];
+
+// diabetes tools: fill reference values, submit, read the result (formulas tested in scripts/test_calc_formulas.js)
+const fill = (pairs) => `(() => { const f = ${JSON.stringify(pairs)}; for (const [id, v] of Object.entries(f)) { const el = document.getElementById(id); el.value = v; el.dispatchEvent(new Event('change', { bubbles: true })); } })()`;
+const submitAndRead = (want, consult) => `(async () => { await new Promise(r => setTimeout(r, 300)); document.querySelector('#calcForm button[type=submit]').click(); await new Promise(r => setTimeout(r, 400));
+    const main = document.getElementById('r_main').textContent, pill = document.getElementById('r_pill').className, nx = document.getElementById('r_next');
+    const re = new RegExp(${JSON.stringify('WANT')}); if (!re.test(main.replace(/\\s/g, ''))) throw new Error('result ' + main);
+    const hasConsult = !!nx.querySelector('.next-consult'); if (hasConsult !== CONSULT) throw new Error('consult ' + hasConsult);
+    if (!nx.querySelector('a')) throw new Error('no next-step links'); return main + ' | ' + pill.replace('result-status-pill ', ''); })()`.replace('WANT', want).replace('CONSULT', consult);
+const TOOL = {
+    hba1c: [['A1C 7% -> 53 mmol/mol, consult', fill({ f_value: '7', f_unit: 'pct' }) + ';' + submitAndRead('53mmol/mol', true)],
+            ['48 mmol/mol -> 6.5%', fill({ f_value: '48', f_unit: 'mmol' }) + ';' + submitAndRead('6[.,]5%', true)],
+            ['5.2% normal, no consult', fill({ f_value: '5.2', f_unit: 'pct' }) + ';' + submitAndRead('5[.,]2%', false)]],
+    glucose: [['126 mg/dL fasting -> 7.0', fill({ f_value: '126', f_unit: 'mgdl', f_when: 'fast' }) + ';' + submitAndRead('7[.,]0mmol/L', true)],
+              ['5.0 mmol/L fasting -> 90 mg/dL', fill({ f_value: '5', f_unit: 'mmol', f_when: 'fast' }) + ';' + submitAndRead('90mg/dL', false)]],
+    findrisc: [['maximum answers -> 26', fill({ f_sex: 'male', f_age: '70', f_weight: '110', f_height: '170', f_waist: '110', f_active: '0', f_veg: '0', f_bp: '1', f_glu: '1', f_family: 'first' }) + ';' + submitAndRead('26/26', true)],
+               ['minimum answers -> 0', fill({ f_sex: 'male', f_age: '30', f_weight: '65', f_height: '180', f_waist: '80', f_active: '1', f_veg: '1', f_bp: '0', f_glu: '0', f_family: 'none' }) + ';' + submitAndRead('^0/26', false)]],
+    homa: [['insulin 10, glucose 90 mg/dL -> 2.22', fill({ f_ins: '10', f_ins_u: 'uiu', f_glu: '90', f_glu_u: 'mgdl', f_tg: '150', f_tg_u: 'mgdl' }) + ';' + submitAndRead('2[.,]22', false)],
+           ['insulin 20, glucose 6 mmol/L -> 5.33', fill({ f_ins: '20', f_ins_u: 'uiu', f_glu: '6', f_glu_u: 'mmol', f_tg: '', f_tg_u: 'mmol' }) + ';' + submitAndRead('5[.,]33', true)]],
+};
+const toolPages = [];
+for (const [slug, key] of [['hba1c-calculator', 'hba1c'], ['blood-sugar-converter', 'glucose'], ['diabetes-risk-test', 'findrisc'], ['insulin-resistance-calculator', 'homa']])
+    for (const l of ['', '/en', '/nl', '/sv']) toolPages.push([`${l}/${slug}.html`, TOOL[key]]);
+const DIAB_CARDS = [['diabetes tool cards', `(() => { const n = document.querySelectorAll('.tool-cards a').length; if (n !== 4) throw new Error(n); return n + ' cards'; })()`]];
 const PAGES = [
+    ...toolPages, ['/diabetes.html', DIAB_CARDS], ['/en/diabetes/prediabetes.html', DIAB_CARDS], ['/nl/diabetes.html', DIAB_CARDS], ['/sv/diabetes/graviditetsdiabetes.html', DIAB_CARDS],
     ['/calculators.html', HUB], ['/en/calculators.html', HUB], ['/nl/calculators.html', HUB], ['/sv/calculators.html', HUB],
     ['/foods.html', FOODS], ['/en/foods.html', FOODS], ['/nl/foods.html', FOODS], ['/sv/foods.html', FOODS],
     ['/supplements.html', SUPPS], ['/en/supplements.html', SUPPS], ['/nl/supplements.html', SUPPS],

@@ -141,6 +141,12 @@ T = {
 }
 
 EXTRA_CSS = """
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -234,6 +240,19 @@ EXTRA_CSS = """
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 """
+
+
+TOOLS_TITLE = {'ar': 'أدوات السكري', 'en': 'Diabetes tools', 'nl': 'Diabetestools', SV: 'Diabetesverktyg'}
+
+
+def diabetes_tools_html(lang):
+    """The four diabetes calculators (scripts/calc_diabetes.py) as cards, on the diabetes hub and its guides."""
+    from calc_diabetes import DIABETES_TOOLS
+    cards = ''.join(f'<a href="{link("/" + t["slug"] + ".html", lang)}"><strong><i class="fas {t["icon"]}" aria-hidden="true"></i> '
+                    f'{esc(t["content"][lang]["short"])}</strong><span>{esc(t["content"][lang]["blurb"])}</span></a>'
+                    for t in DIABETES_TOOLS)
+    return (f'            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>{TOOLS_TITLE[lang]}</span></h2>\n'
+            f'            <div class="tool-cards">{cards}</div>\n')
 
 
 def section_dir(a):
@@ -506,7 +525,7 @@ def build(a, lang):
 {hero_img}
 {render_body(c["body"], lang)}
 
-{refs}            <p class="disclaimer-box">{c["disclaimer"]}</p>{review}
+{diabetes_tools_html(lang) if a.get('section') == 'diabetes' else ''}{refs}            <p class="disclaimer-box">{c["disclaimer"]}</p>{review}
         </article>'''
     extra_head = f'\n    <meta property="article:published_time" content="{a["published"]}">'
     if hero:
@@ -578,7 +597,7 @@ def build_hub(key, lang):
             <div class="hub-cards">
 {cards}
             </div>
-            <p class="disclaimer-box">{c["disclaimer"]}</p>
+{diabetes_tools_html(lang) if key == 'diabetes' else ''}            <p class="disclaimer-box">{c["disclaimer"]}</p>
         </article>'''
     return shell(lang, title=c['title'], desc=c['desc'], urls=urls, schema=schema, main=main, draft=sec.get('draft'),
                  active=f'/{sec["dir"]}.html')

@@ -60,6 +60,21 @@ eq('FINDRISC bands', [6, 7, 11, 12, 14, 15, 20, 21].map(s => {
     if (left >= 1) { a.vegDaily = false; left -= 1; }
     return C.findrisc(a).band;
 }), ['low', 'slight', 'slight', 'moderate', 'moderate', 'high', 'high', 'veryhigh']);
+// thresholds reached from the other unit (rounded the way labs report): ADA 126 / 100 / 70 mg/dL, OGTT 140 / 200, HbA1c 5.7 / 6.5 %
+eq('126 mg/dL fasting = diabetes', C.fastingGlucoseBand(C.mgdlToMmol(126)), 'diabetes');
+eq('125 mg/dL fasting = prediabetes', C.fastingGlucoseBand(C.mgdlToMmol(125)), 'prediabetes');
+eq('100 mg/dL fasting = prediabetes', C.fastingGlucoseBand(C.mgdlToMmol(100)), 'prediabetes');
+eq('99 mg/dL fasting = normal', C.fastingGlucoseBand(C.mgdlToMmol(99)), 'normal');
+eq('70 mg/dL fasting = normal', C.fastingGlucoseBand(C.mgdlToMmol(70)), 'normal');
+eq('69 mg/dL = low', C.fastingGlucoseBand(C.mgdlToMmol(69)), 'low');
+eq('139 mg/dL after = normal', C.afterMealBand(C.mgdlToMmol(139)), 'normal');
+eq('140 mg/dL after = raised', C.afterMealBand(C.mgdlToMmol(140)), 'prediabetes');
+eq('200 mg/dL after = diabetes', C.afterMealBand(C.mgdlToMmol(200)), 'diabetes');
+eq('eAG 6% rounds to 126 (ADA table)', Math.round(C.eagMgdl(6)), 126);
+eq('5.6% = normal', C.hba1cBand(C.hba1cPercentToMmol(5.6)), 'normal');
+eq('5.7% = prediabetes', C.hba1cBand(C.hba1cPercentToMmol(5.7)), 'prediabetes');
+eq('6.4% = prediabetes', C.hba1cBand(C.hba1cPercentToMmol(6.4)), 'prediabetes');
+eq('6.5% = diabetes', C.hba1cBand(C.hba1cPercentToMmol(6.5)), 'diabetes');
 near('BMI 80kg/180cm', C.round(C.bmi(80, 180), 1), 24.7, 0.05);
 near('comma decimals', C.hba1cPercentToMmol('7,0'), C.hba1cPercentToMmol(7), 1e-9);
 

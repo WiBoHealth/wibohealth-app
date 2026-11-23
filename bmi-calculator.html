@@ -931,6 +931,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1024,6 +1030,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1165,7 +1177,7 @@
             <h1>حاسبة مؤشر كتلة الجسم (BMI) وحساب الوزن المثالي لطولك</h1>
             <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> إعداد ومراجعة فريق WiBo Health الطبي · 18 أكتوبر 2026</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> WHO · NICE 2022</span></div>
             <p class="lead">مؤشر كتلة الجسم (Body Mass Index) هو أكثر أدوات الفحص استخداماً في العالم لتقدير ما إذا كان وزنك مناسباً لطولك. أدخل وزنك وطولك لتحصل فوراً على قيمة BMI وتصنيفها وفق منظمة الصحة العالمية، ونطاق الوزن الصحي الخاص بطولك، ثم اقرأ الدليل أدناه لتعرف ما تعنيه النتيجة وما لا تعنيه.</p>
-            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html" class="current" aria-current="page"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a></nav>
+            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html" class="current" aria-current="page"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a><a href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> حاسبة السكر التراكمي</a><a href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i> تحويل قراءة السكر</a><a href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i> اختبار خطر الإصابة بالسكري</a><a href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i> حساب مقاومة الإنسولين</a></nav>
 
             <section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
@@ -1254,7 +1266,7 @@
             <div class="faq-list"><details><summary>ما هو مؤشر كتلة الجسم الطبيعي للبالغين؟</summary><p>يتراوح مؤشر كتلة الجسم الطبيعي بين 18.5 و24.9 للرجال والنساء من عمر 18 عاماً فأكثر. ولمن تعود أصوله إلى الشرق الأوسط أو آسيا أو أفريقيا، توصي إرشادات NICE باعتبار 23 بداية زيادة الوزن.</p></details><details><summary>كيف أعرف وزني المثالي حسب طولي؟</summary><p>اضرب مربع طولك بالمتر في 18.5 ثم في 24.9. فلطول 170 سم (مربعه 2.89): الوزن الصحي بين 53.5 و72 كغ تقريباً. تعرض الحاسبة أعلاه هذا النطاق تلقائياً.</p></details><details><summary>هل يختلف حساب BMI بين الرجال والنساء؟</summary><p>المعادلة والحدود واحدة للجنسين لدى البالغين، لكن المرأة تحمل في المتوسط نسبة دهون أعلى من الرجل عند المؤشر نفسه، لذلك يفيد قياس الخصر في استكمال الصورة.</p></details><details><summary>هل تصلح حاسبة BMI للأطفال والمراهقين؟</summary><p>لا. يُقيَّم من هم دون 18 عاماً بمنحنيات النمو المئوية حسب العمر والجنس، لأن تركيب الجسم يتغير مع النمو. استشر طبيب الأطفال لتفسير القيم.</p></details><details><summary>لماذا يظهر الرياضي في نطاق زيادة الوزن؟</summary><p>لأن المؤشر يعتمد على الوزن الكلي ولا يفرّق بين العضلات والدهون. لدى الرياضيين يكون قياس الخصر أو نسبة الدهون أدق من BMI.</p></details><details><summary>ما الفرق بين BMI ونسبة الخصر إلى الطول؟</summary><p>يقيس BMI حجم الجسم الكلي، بينما تقيس نسبة الخصر إلى الطول الدهون المتركزة حول البطن، وهي أقوى ارتباطاً بمقاومة الإنسولين وأمراض القلب. استخدم الاثنين معاً للحصول على تقييم أدق.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>حاسبات وأدوات مرتبطة</span></h2>
-            <div class="related-grid"><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span></a><a class="related-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span></a><a class="related-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span></a><a class="related-card" href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>حاسبة السكر التراكمي</strong><span>حوّل HbA1c بين % و mmol/mol واعرف معدل السكر.</span></a><a class="related-card" href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>تحويل قراءة السكر</strong><span>من mg/dL إلى mmol/L وبالعكس.</span></a><a class="related-card" href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>اختبار خطر الإصابة بالسكري</strong><span>8 أسئلة في دقيقتين.</span></a><a class="related-card" href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>حساب مقاومة الإنسولين</strong><span>من تحليل الإنسولين والسكر على الريق.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>تطبيق بودي: افحص طعامك قبل أن تأكله 💚</h2><p>الأرقام وحدها لا تكفي؛ ما تأكله يحدد استجابة الإنسولين وسكر الدم. امسح باركود منتجات السوبرماركت لتعرف مؤشرها الجلايسيمي ومكوناتها وبدائلها الصحية.</p></div>
@@ -1275,6 +1287,7 @@
     <script>
         (function () {
             var S = {"st_under": "نقص الوزن", "st_normal": "وزن طبيعي", "st_over": "زيادة الوزن", "st_ob1": "سمنة من الدرجة الأولى", "st_ob2": "سمنة من الدرجة الثانية", "st_ob3": "سمنة من الدرجة الثالثة", "tip_under": "وزنك أقل من النطاق الصحي. ناقش مع طبيبك أسباب النحافة المحتملة (كاضطرابات الغدة الدرقية أو سوء الامتصاص)، وركّز على أطعمة غنية بالطاقة والبروتين بدل الأطعمة الفارغة.", "tip_normal": "وزنك ضمن النطاق الصحي. حافظ عليه بالنشاط المنتظم ونظام غذائي متوازن، وتحقق أيضاً من نسبة الخصر إلى الطول، فالدهون الحشوية قد تزيد حتى مع وزن طبيعي.", "tip_over": "وزنك فوق النطاق الصحي. خسارة 5 إلى 10% فقط من وزنك الحالي تحسّن ضغط الدم وسكر الدم والدهون بشكل ملموس. احسب احتياجك من السعرات وابدأ بعجز معتدل.", "tip_obese": "النتيجة في نطاق السمنة، وهي ترتبط بارتفاع خطر السكري من النوع الثاني وأمراض القلب. يُنصح بتقييم طبي شامل (السكر التراكمي، الدهون، ضغط الدم) ووضع خطة منظمة لخسارة الوزن تحت إشراف مختص."};
+            function next(band) { var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }
             function val(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }
             function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
             function fmt(n, d) { return n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); }

@@ -55,6 +55,12 @@ def ui(lang):
     return UI_SV if lang == SV else UI[lang]
 
 CALC_CSS = """
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -238,6 +244,54 @@ def widget(calc, lang):
                   f'<div class="breakdown-val" id="r_efsa">--</div><div class="breakdown-sub">{esc(w["efsa_sub"])}</div></div>'
                   f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["drinks_label"])}</div>'
                   f'<div class="breakdown-val" id="r_drinks">--</div><div class="breakdown-sub">{esc(w["drinks_sub"])}</div></div></div>')
+    elif k == 'hba1c':
+        units = opt('pct', w['u_pct'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
+        fields = field('f_value', w['lbl_value'], num('f_value', w['ph_value'], 3, 200, 0.1)) + \
+                 field('f_unit', w['lbl_unit'], f'<select id="f_unit" class="form-control">{units}</select>')
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["eag_label"])}</div>'
+                  f'<div class="breakdown-val" id="r_eag">--</div><div class="breakdown-sub">{esc(w["eag_sub"])}</div></div></div>')
+    elif k == 'glucose':
+        units = opt('mgdl', w['u_mgdl'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
+        when = opt('fast', w['w_fast'], True) + opt('after', w['w_after']) + opt('any', w['w_any'])
+        fields = field('f_value', w['lbl_value'], num('f_value', w['ph_value'], 0.5, 1000, 0.1)) + \
+                 field('f_unit', w['lbl_unit'], f'<select id="f_unit" class="form-control">{units}</select>') + \
+                 field('f_when', w['lbl_when'], f'<select id="f_when" class="form-control">{when}</select>', wide=True)
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>')
+    elif k == 'findrisc':
+        yn = lambda fid, q, yes_first=False: field(fid, w[q], f'<select id="{fid}" class="form-control">'
+                                                         f'{opt("1", w["yes"]) + opt("0", w["no"]) if yes_first else opt("0", w["no"]) + opt("1", w["yes"])}</select>', wide=True)
+        fam = opt('none', w['fam_none']) + opt('second', w['fam_second']) + opt('first', w['fam_first'])
+        fields = field('f_sex', w['sex'], sex_select('f_sex', w)) + \
+                 field('f_age', w['age'], num('f_age', '45', 18, 110, 1)) + \
+                 field('f_weight', w['weight'], num('f_weight', '80', 30, 300, 0.1)) + \
+                 field('f_height', w['height'], num('f_height', '170', 120, 230, 0.5)) + \
+                 field('f_waist', w['waist'], num('f_waist', '92', 40, 220, 0.5), wide=True) + \
+                 yn('f_active', 'active', yes_first=True) + yn('f_veg', 'veg', yes_first=True) + yn('f_bp', 'bp') + yn('f_glu', 'glucose') + \
+                 field('f_family', w['family'], f'<select id="f_family" class="form-control">{fam}</select>', wide=True)
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["risk_label"])}</div>'
+                  '<div class="breakdown-val" id="r_risk">--</div></div>'
+                  f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["bmi_label"])}</div>'
+                  '<div class="breakdown-val" id="r_bmi">--</div></div></div>')
+    elif k == 'homa':
+        ins = opt('uiu', w['u_uiu'], True) + opt('pmol', w['u_pmol'])
+        glu = opt('mgdl', w['u_mgdl'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
+        tgu = opt('mgdl', w['u_mgdl'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
+        opt_num = lambda fid, ph: num(fid, ph, 0.1, 5000, 0.01).replace(' required', '')
+        fields = field('f_ins', w['lbl_ins'], num('f_ins', w['ph_ins'], 0.5, 1000, 0.1)) + \
+                 field('f_ins_u', '', f'<select id="f_ins_u" class="form-control" aria-label="{esc(w["lbl_ins"])}">{ins}</select>') + \
+                 field('f_glu', w['lbl_glu'], num('f_glu', w['ph_glu'], 1, 1000, 0.1)) + \
+                 field('f_glu_u', '', f'<select id="f_glu_u" class="form-control" aria-label="{esc(w["lbl_glu"])}">{glu}</select>') + \
+                 field('f_tg', w['lbl_tg'], opt_num('f_tg', w['ph_tg'])) + \
+                 field('f_tg_u', '', f'<select id="f_tg_u" class="form-control" aria-label="{esc(w["lbl_tg"])}">{tgu}</select>')
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["tyg_label"])}</div>'
+                  '<div class="breakdown-val" id="r_tyg">--</div><div class="breakdown-sub" id="r_tyg_sub"></div></div></div>')
     else:  # whtr
         fields = field('f_waist', w['lbl_waist'], num('f_waist', w['ph_waist'], 40, 220, 0.5)) + \
                  field('f_height', w['lbl_height'], num('f_height', w['ph_height'], 90, 240, 0.5))
@@ -259,7 +313,7 @@ def widget(calc, lang):
                     <button type="submit" class="calc-submit-btn"><i class="fas fa-calculator" aria-hidden="true"></i> {esc(w["btn"])}</button>
                 </form>
                 <div class="result-view" id="resultView" aria-live="polite">{result}
-                    <div class="clinical-note-box"><i class="fas fa-circle-info" aria-hidden="true"></i><span id="r_note"></span></div>
+                    <div class="clinical-note-box"><i class="fas fa-circle-info" aria-hidden="true"></i><span id="r_note"></span></div>{'' if k in ('bmi', 'tdee', 'water', 'whtr') else chr(10) + '                    <div class="next-steps" id="r_next"></div>'}
                 </div>
             </section>'''
 
@@ -321,16 +375,72 @@ LOGIC = {
         var d = wa - h * 0.5;
         set('r_diff', d > 0 ? '−' + fmt(d, 1) + ' cm' : S['ok_diff']);
         return true;""",
+    # diabetes tools: formulas from js/calc-formulas.js (WiboCalc, tested); next(band) fills the "next steps" card
+    'hba1c': r"""
+        var v = val('f_value'), unit = document.getElementById('f_unit').value, C = window.WiboCalc;
+        if (!v || !C) return false;
+        var pct = unit === 'pct' ? v : C.hba1cMmolToPercent(v), mmol = unit === 'pct' ? C.hba1cPercentToMmol(v) : v;
+        if (pct < 3 || pct > 20) return false;
+        var band = C.hba1cBand(mmol), st = { normal: 'status-optimal', prediabetes: 'status-warning', diabetes: 'status-danger' }[band];
+        set('r_main', fmt(pct, 1) + '% = ' + fmt(Math.round(mmol), 0) + ' mmol/mol');
+        set('r_eag', fmt(Math.round(C.eagMgdl(pct)), 0) + ' mg/dL · ' + fmt(C.eagMmol(pct), 1) + ' mmol/L');
+        pill(S['st_' + band], st); set('r_note', S['tip_' + band]); next(band);
+        return true;""",
+    'glucose': r"""
+        var v = val('f_value'), unit = document.getElementById('f_unit').value, when = document.getElementById('f_when').value, C = window.WiboCalc;
+        if (!v || !C) return false;
+        var mmol = unit === 'mmol' ? v : C.mgdlToMmol(v), mg = unit === 'mmol' ? C.mmolToMgdl(v) : v;
+        set('r_main', unit === 'mmol' ? fmt(Math.round(mg), 0) + ' mg/dL' : fmt(mmol, 1) + ' mmol/L');
+        var band, st;
+        if (C.fastingGlucoseBand(mmol) === 'low') band = 'low';
+        else if (when === 'fast') band = C.fastingGlucoseBand(mmol);
+        else if (when === 'after') band = C.afterMealBand(mmol);
+        else band = 'conv';
+        st = { low: 'status-danger', normal: 'status-optimal', prediabetes: 'status-warning', diabetes: 'status-danger', conv: 'status-info' }[band];
+        pill(S['st_' + band], st);
+        set('r_note', band === 'low' || band === 'conv' ? S['tip_' + band] : S['tip_' + when + '_' + band]);
+        next(band);
+        return true;""",
+    'findrisc': r"""
+        var C = window.WiboCalc, age = val('f_age'), w = val('f_weight'), h = val('f_height'), waist = val('f_waist');
+        if (!C || !age || !w || !h || !waist) return false;
+        var b = C.bmi(w, h), r = C.findrisc({ age: age, bmi: b, waist: waist, sex: document.getElementById('f_sex').value === 'female' ? 'f' : 'm',
+            active: document.getElementById('f_active').value === '1', vegDaily: document.getElementById('f_veg').value === '1',
+            bpMeds: document.getElementById('f_bp').value === '1', highGlucose: document.getElementById('f_glu').value === '1',
+            family: document.getElementById('f_family').value });
+        var st = { low: 'status-optimal', slight: 'status-info', moderate: 'status-warning', high: 'status-danger', veryhigh: 'status-danger' }[r.band];
+        set('r_main', r.score + ' / 26'); pill(S['st_' + r.band], st); set('r_risk', S['risk_' + r.band]);
+        set('r_bmi', fmt(b, 1)); set('r_note', S['tip_' + r.band]); next(r.band);
+        return true;""",
+    'homa': r"""
+        var C = window.WiboCalc, ins = val('f_ins'), glu = val('f_glu'), tg = val('f_tg');
+        if (!C || !ins || !glu) return false;
+        if (document.getElementById('f_ins_u').value === 'pmol') ins = ins / 6;
+        var gm = document.getElementById('f_glu_u').value === 'mmol' ? glu : C.mgdlToMmol(glu);
+        var h = C.homaIr(ins, gm), band = C.homaBand(h), st = { low: 'status-optimal', borderline: 'status-warning', high: 'status-danger' }[band];
+        set('r_main', fmt(h, 2)); pill(S['st_' + band], st); set('r_note', S['tip_' + band]);
+        if (tg) {
+            var tm = document.getElementById('f_tg_u').value === 'mmol' ? tg : tg / 88.57, t = C.tyg(tm, gm);
+            set('r_tyg', fmt(t, 2)); set('r_tyg_sub', t < 8.5 ? S['tyg_low'] : S['tyg_high']);
+        } else { set('r_tyg', '--'); set('r_tyg_sub', S['tyg_none']); }
+        next(band);
+        return true;""",
 }
+NEW_TOOLS = ('hba1c', 'glucose', 'findrisc', 'homa')
+import hashlib  # noqa: E402
+FORMULAS_VER = hashlib.sha1((ROOT / 'js' / 'calc-formulas.js').read_bytes()).hexdigest()[:8]
 
 
 def script(calc, lang):
     w = calc['content'][lang]['ui']
-    strings = {k: v for k, v in w.items() if k.startswith(('st_', 'tip', 'cups', 'ok_'))}
+    prefixes = ('st_', 'tip', 'cups', 'ok_') + (('nx_', 'risk_', 'tyg_') if calc['key'] in NEW_TOOLS else ())
+    strings = {k: (render_body(v, lang) if k.startswith('nx_') else v) for k, v in w.items() if k.startswith(prefixes)}
     locale = {'ar': 'en-US', 'en': 'en-GB', 'nl': 'nl-NL', SV: 'sv-SE'}[lang]
-    return f'''    <script>
+    formulas = (f'    <script src="/js/calc-formulas.js?v={FORMULAS_VER}" defer></script>\n' if calc['key'] in NEW_TOOLS else '')
+    return f'''{formulas}    <script>
         (function () {{
             var S = {json.dumps(strings, ensure_ascii=False)};
+            function next(band) {{ var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }}
             function val(id) {{ var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }}
             function set(id, text) {{ var el = document.getElementById(id); if (el) el.textContent = text; }}
             function fmt(n, d) {{ return n.toLocaleString('{locale}', {{ minimumFractionDigits: d, maximumFractionDigits: d }}); }}

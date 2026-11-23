@@ -929,6 +929,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1139,6 +1145,8 @@
                 <div class="faq-item"><h3>Will the diabetes stay after the birth?</h3><p>In more than 90% of cases, blood sugar returns completely to normal once the placenta is delivered. Your doctor will ask for a simple test 4 to 12 weeks after the birth to be sure, and then a check every 1 to 3 years, because gestational diabetes raises the chance of type 2 diabetes later in life. Keeping the healthy eating habits that protected you and your baby is the best prevention.</p></div>
             </div>
 
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Diabetes tools</span></h2>
+            <div class="tool-cards"><a href="/en/hba1c-calculator.html"><strong><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c calculator</strong><span>Convert HbA1c between % and mmol/mol and see your average glucose.</span></a><a href="/en/blood-sugar-converter.html"><strong><i class="fas fa-right-left" aria-hidden="true"></i> Blood sugar converter</strong><span>From mg/dL to mmol/L and back.</span></a><a href="/en/diabetes-risk-test.html"><strong><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risk test</strong><span>8 questions in two minutes.</span></a><a href="/en/insulin-resistance-calculator.html"><strong><i class="fas fa-syringe" aria-hidden="true"></i> Insulin resistance calculator</strong><span>From fasting insulin and fasting blood sugar.</span></a></div>
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>Scientific sources</span></h2>
             <ol class="ref-list"><li>American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)</li><li>American College of Obstetricians and Gynecologists (ACOG). Practice Bulletin No. 190: Gestational Diabetes Mellitus. Obstet Gynecol 2018;131(2):e49–e64</li><li>National Institute for Health and Care Excellence (NICE). Diabetes in pregnancy: management from preconception to the postnatal period (NG3), 2015, updated 2020</li><li>International Federation of Gynecology and Obstetrics (FIGO). The FIGO Initiative on gestational diabetes mellitus: a pragmatic guide for diagnosis, management, and care. Int J Gynaecol Obstet 2015;131(Suppl 3):S173–S211</li></ol>
             <p class="disclaimer-box">⚖️ Clinical safety notice: this guide was prepared by WiBo Health for health education and lifestyle support. It is designed to complement the medical care plan from the obstetrician who follows your pregnancy, and it is not a diagnosis or a substitute for that care.</p>

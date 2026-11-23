@@ -855,6 +855,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1035,6 +1041,8 @@
                     </div>
                 </a>
             </div>
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Diabetesverktyg</span></h2>
+            <div class="tool-cards"><a href="/sv/hba1c-calculator.html"><strong><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c-omvandlare</strong><span>Omvandla HbA1c mellan % och mmol/mol och se ditt medelglukos.</span></a><a href="/sv/blood-sugar-converter.html"><strong><i class="fas fa-right-left" aria-hidden="true"></i> Omvandla blodsocker</strong><span>Från mg/dl till mmol/l och tillbaka.</span></a><a href="/sv/diabetes-risk-test.html"><strong><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risktest</strong><span>8 frågor på två minuter.</span></a><a href="/sv/insulin-resistance-calculator.html"><strong><i class="fas fa-syringe" aria-hidden="true"></i> Räkna ut insulinresistens</strong><span>Från fasteinsulin och fasteblodsocker.</span></a></div>
             <p class="disclaimer-box">⚖️ Medicinsk ansvarsfriskrivning: innehållet i den här delen är allmän hälsoinformation och utbildning från WiBo Health. Det är ingen medicinsk diagnos och ersätter inte råd, diagnos eller behandling från legitimerad hälso- och sjukvårdspersonal. Kontakta din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.</p>
         </article>
     </main>

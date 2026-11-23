@@ -25,11 +25,13 @@
     // ---------------------------------------------------------------- HbA1c
     function hba1cPercentToMmol(pct) { return (num(pct) - 2.15) * 10.929; }
     function hba1cMmolToPercent(mmol) { return 0.0915 * num(mmol) + 2.15; }
-    function eagMgdl(pct) { return 28.7 * num(pct) - 46.7; }
+    // + 1e-9: 28.7 x 6 - 46.7 is 125.5 exactly but 125.4999... in binary; ADA rounds it to 126
+    function eagMgdl(pct) { return 28.7 * num(pct) - 46.7 + 1e-9; }
     function eagMmol(pct) { return eagMgdl(pct) / GLUCOSE_FACTOR; }
-    /* band by HbA1c in mmol/mol: 'normal' < 39, 'prediabetes' 39-47 (ADA; NICE/WHO use 42-47), 'diabetes' >= 48 */
+    /* band by HbA1c in mmol/mol: 'normal' < 39, 'prediabetes' 39-47 (ADA; NICE/WHO use 42-47), 'diabetes' >= 48.
+       Labs report whole mmol/mol, so the value is rounded first (5.7% = 38.8 -> 39, the ADA threshold). */
     function hba1cBand(mmol) {
-        var m = num(mmol);
+        var m = Math.round(num(mmol));
         if (!(m > 0)) return null;
         return m < 39 ? 'normal' : m < 48 ? 'prediabetes' : 'diabetes';
     }
@@ -37,11 +39,19 @@
     // ---------------------------------------------------------------- glucose
     function mgdlToMmol(mgdl) { return num(mgdl) / GLUCOSE_FACTOR; }
     function mmolToMgdl(mmol) { return num(mmol) * GLUCOSE_FACTOR; }
+    /* glucose thresholds are defined on mmol/L with one decimal (126 mg/dL = 6.99 -> 7.0): round before comparing */
+    function glucoseKey(mmol) { return round(num(mmol), 1); }
     /* fasting plasma glucose band (ADA): low < 3.9, normal 3.9-5.5, prediabetes 5.6-6.9, diabetes >= 7.0 mmol/L */
     function fastingGlucoseBand(mmol) {
-        var m = num(mmol);
+        var m = glucoseKey(mmol);
         if (!(m > 0)) return null;
         return m < 3.9 ? 'low' : m < 5.6 ? 'normal' : m < 7.0 ? 'prediabetes' : 'diabetes';
+    }
+    /* 2 hours after a meal, people without diabetes (ADA/WHO OGTT): low < 3.9, normal < 7.8, raised 7.8-11.0, >= 11.1 */
+    function afterMealBand(mmol) {
+        var m = glucoseKey(mmol);
+        if (!(m > 0)) return null;
+        return m < 3.9 ? 'low' : m < 7.8 ? 'normal' : m < 11.1 ? 'prediabetes' : 'diabetes';
     }
 
     // ---------------------------------------------------------------- insulin resistance
@@ -79,6 +89,7 @@
         round: round, num: num, GLUCOSE_FACTOR: GLUCOSE_FACTOR,
         hba1cPercentToMmol: hba1cPercentToMmol, hba1cMmolToPercent: hba1cMmolToPercent, eagMgdl: eagMgdl, eagMmol: eagMmol,
         hba1cBand: hba1cBand, mgdlToMmol: mgdlToMmol, mmolToMgdl: mmolToMgdl, fastingGlucoseBand: fastingGlucoseBand,
+        afterMealBand: afterMealBand,
         homaIr: homaIr, quicki: quicki, tyg: tyg, homaBand: homaBand, findrisc: findrisc, bmi: bmi
     };
 });

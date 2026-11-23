@@ -927,6 +927,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1020,6 +1026,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1161,7 +1173,7 @@
             <h1>حاسبة شرب الماء اليومي: كم لتراً من الماء تحتاج حسب وزنك ونشاطك؟</h1>
             <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> إعداد ومراجعة فريق WiBo Health الطبي · 18 أكتوبر 2026</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> EFSA 2010 · ACSM</span></div>
             <p class="lead">يشكل الماء أكثر من نصف وزن جسم الإنسان البالغ، ويحتاجه كل عضو فيه. تحسب هذه الأداة احتياجك اليومي من السوائل حسب وزنك ومجهودك البدني، وتعرض بجانبه القيم المرجعية الرسمية للهيئة الأوروبية لسلامة الأغذية (EFSA)، لتعرف بالأرقام كم كوباً تحتاج فعلاً.</p>
-            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html" class="current" aria-current="page"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a></nav>
+            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html" class="current" aria-current="page"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a><a href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> حاسبة السكر التراكمي</a><a href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i> تحويل قراءة السكر</a><a href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i> اختبار خطر الإصابة بالسكري</a><a href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i> حساب مقاومة الإنسولين</a></nav>
 
             <section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
@@ -1244,7 +1256,7 @@
             <div class="faq-list"><details><summary>كم لتراً من الماء يجب أن أشرب يومياً؟</summary><p>توصي EFSA بـ2.0 لتر يومياً للنساء و2.5 لتر للرجال من كل المصادر، يأتي نحو 80% منها من المشروبات. وحسب الوزن يحتاج البالغ عادة 30 إلى 35 مل لكل كغ، ويزيد الاحتياج مع التمرين والحر.</p></details><details><summary>هل يُحسب الشاي والقهوة من شرب الماء؟</summary><p>نعم، فالقهوة والشاي بكميات معتدلة يرطبان الجسم. لكن قلل السكر المضاف، وتجنب الإفراط في الكافيين مساءً.</p></details><details><summary>هل شرب الماء يساعد على إنقاص الوزن؟</summary><p>يساعد بشكل متواضع: شرب نحو 500 مل قبل الوجبات مع نظام منخفض السعرات زاد خسارة الوزن في تجربة عشوائية، كما أن استبدال المشروبات المحلاة بالماء يقلل السعرات اليومية.</p></details><details><summary>هل يمكن أن أشرب ماء أكثر من اللازم؟</summary><p>نعم، فالإفراط الشديد في وقت قصير قد يخفض صوديوم الدم. ومرضى القلب والكلى والكبد قد يحتاجون إلى تقييد السوائل حسب تعليمات الطبيب.</p></details><details><summary>كيف أعرف أنني أشرب كمية كافية من الماء؟</summary><p>أبسط علامة هي لون البول الأصفر الفاتح وتكرار التبول بشكل طبيعي خلال اليوم. البول الداكن والصداع والتعب قد تكون علامات نقص السوائل.</p></details><details><summary>هل يحتاج مريض السكري إلى ماء أكثر؟</summary><p>ارتفاع السكر يزيد فقدان الماء بالبول، لذلك يحتاج مريض السكري إلى الانتظام في شرب الماء واختياره بدل المشروبات المحلاة، ما لم يقيد طبيبه السوائل لسبب آخر.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>حاسبات وأدوات مرتبطة</span></h2>
-            <div class="related-grid"><a class="related-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span></a><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span></a><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span></a><a class="related-card" href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>حاسبة السكر التراكمي</strong><span>حوّل HbA1c بين % و mmol/mol واعرف معدل السكر.</span></a><a class="related-card" href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>تحويل قراءة السكر</strong><span>من mg/dL إلى mmol/L وبالعكس.</span></a><a class="related-card" href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>اختبار خطر الإصابة بالسكري</strong><span>8 أسئلة في دقيقتين.</span></a><a class="related-card" href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>حساب مقاومة الإنسولين</strong><span>من تحليل الإنسولين والسكر على الريق.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>تطبيق بودي: افحص طعامك قبل أن تأكله 💚</h2><p>الأرقام وحدها لا تكفي؛ ما تأكله يحدد استجابة الإنسولين وسكر الدم. امسح باركود منتجات السوبرماركت لتعرف مؤشرها الجلايسيمي ومكوناتها وبدائلها الصحية.</p></div>
@@ -1265,6 +1277,7 @@
     <script>
         (function () {
             var S = {"cups": "{a} إلى {b} أكواب (250 مل)", "tip": "وزّع شربك على اليوم ولا تنتظر العطش، واجعل لون البول الأصفر الفاتح دليلك. الشاي والقهوة المعتدلان يُحسبان من السوائل، أما المشروبات المحلاة فاستبدلها بالماء.", "tip_heavy": "مع الأوزان المرتفعة تبالغ قاعدة «مل لكل كغ» في التقدير؛ اعتبر الحد الأدنى من النطاق أو مرجع EFSA نقطة البداية، وعدّل حسب العطش ولون البول."};
+            function next(band) { var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }
             function val(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }
             function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
             function fmt(n, d) { return n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); }

@@ -941,6 +941,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1233,6 +1239,8 @@
             <p>القطار لم يتحول لسكري، وأبواب الرجوع مفتوحة على مصراعيها، والحلول في متناول يدك: في صحن خضار ملون، في ربع ساعة مشي هادئ بعد طعامك، وفي نوم مريح يرمم خلاياك. ابدأ اليوم بوجبتك القادمة فقط.. وسترى كيف سيكافئك جسدك بالحيوية والأمان.</p>
             <p class="reviewed">تمت مراجعة المقال من قبل الدكتور وسيم حبيب<br>مجموعة ويبو هيلث 🌿</p>
 
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>أدوات السكري</span></h2>
+            <div class="tool-cards"><a href="/hba1c-calculator.html"><strong><i class="fas fa-droplet" aria-hidden="true"></i> حاسبة السكر التراكمي</strong><span>حوّل HbA1c بين % و mmol/mol واعرف معدل السكر.</span></a><a href="/blood-sugar-converter.html"><strong><i class="fas fa-right-left" aria-hidden="true"></i> تحويل قراءة السكر</strong><span>من mg/dL إلى mmol/L وبالعكس.</span></a><a href="/diabetes-risk-test.html"><strong><i class="fas fa-list-check" aria-hidden="true"></i> اختبار خطر الإصابة بالسكري</strong><span>8 أسئلة في دقيقتين.</span></a><a href="/insulin-resistance-calculator.html"><strong><i class="fas fa-syringe" aria-hidden="true"></i> حساب مقاومة الإنسولين</strong><span>من تحليل الإنسولين والسكر على الريق.</span></a></div>
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>المصادر العلمية</span></h2>
             <ol class="ref-list"><li>American Diabetes Association Professional Practice Committee. 2. Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1)</li><li>Diabetes Prevention Program Research Group. Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. N Engl J Med 2002;346(6):393–403</li><li>Diabetes Prevention Program Research Group. Long-term effects of lifestyle intervention or metformin on diabetes development and microvascular complications over 15-year follow-up: the Diabetes Prevention Program Outcomes Study. Lancet Diabetes Endocrinol 2015;3(11):866–875</li><li>Shukla AP, Iliescu RG, Thomas CE, Aronne LJ. Food order has a significant impact on postprandial glucose and insulin levels. Diabetes Care 2015;38(7):e98–e99</li><li>World Health Organization. Definition and diagnosis of diabetes mellitus and intermediate hyperglycaemia: report of a WHO/IDF consultation. Geneva: WHO; 2006</li></ol>
             <p class="disclaimer-box">⚠️ إخلاء مسؤولية طبي: المحتوى والمعلومات الواردة في هذا المقال مقدمة لأغراض التثقيف الصحي العام ورفع الوعي الغذائي، ولا تُعتبر بأي حال من الأحوال تشخيصاً طبياً، أو خطة علاجية مخصصة، أو بديلاً عن استشارة الطبيب المختص أو مقدم الرعاية الصحية المتابع لحالتك. استشر طبيبك دائماً قبل إجراء تغييرات جذرية في نظامك الغذائي أو أدويتك.</p>

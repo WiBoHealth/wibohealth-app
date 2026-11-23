@@ -935,6 +935,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1028,6 +1034,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1169,7 +1181,7 @@
             <h1>Calorieën berekenen: dagelijkse caloriebehoefte (TDEE) en basaalmetabolisme (BMR)</h1>
             <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> Opgesteld en beoordeeld door het medische team van WiBo Health · 18 oktober 2026</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> Mifflin-St Jeor 1990</span></div>
             <p class="lead">Hoeveel calorieën heeft je lichaam per dag nodig? Deze tool schat je basaalmetabolisme (BMR) met de formule van Mifflin-St Jeor, de nauwkeurigste van de gangbare formules voor volwassenen. Daarna vermenigvuldigt hij die met je activiteitsniveau tot je totale dagelijkse energiebehoefte (TDEE), met veilige doelen voor afvallen en spieropbouw en een macroverdeling.</p>
-            <nav class="calc-nav" aria-label="Gezondheidscalculators"><a href="/nl/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> Body mass index (BMI)</a><a href="/nl/tdee-calculator.html" class="current" aria-current="page"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> Caloriebehoefte (TDEE)</a><a href="/nl/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> Dagelijkse waterbehoefte</a><a href="/nl/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> Taille-lengteratio (WHtR)</a></nav>
+            <nav class="calc-nav" aria-label="Gezondheidscalculators"><a href="/nl/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> Body mass index (BMI)</a><a href="/nl/tdee-calculator.html" class="current" aria-current="page"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> Caloriebehoefte (TDEE)</a><a href="/nl/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> Dagelijkse waterbehoefte</a><a href="/nl/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> Taille-lengteratio (WHtR)</a><a href="/nl/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c omrekenen</a><a href="/nl/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i> Bloedsuiker omrekenen</a><a href="/nl/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risicotest</a><a href="/nl/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i> Insulineresistentie berekenen</a></nav>
 
             <section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
@@ -1252,7 +1264,7 @@
             <div class="faq-list"><details><summary>Wat is het verschil tussen BMR en TDEE?</summary><p>De BMR is wat je lichaam in volledige rust verbrandt; de TDEE is je totale dagelijkse verbruik inclusief vertering, dagelijkse beweging en sport. Afvalplannen gaan uit van de TDEE, niet van de BMR.</p></details><details><summary>Hoeveel calorieën moet ik eten om af te vallen?</summary><p>Trek ongeveer 20% van je TDEE af zonder onder je BMR te gaan. Voor een vrouw met een TDEE van 2139 kcal is dat ongeveer 1712 kcal per dag.</p></details><details><summary>Is de formule van Mifflin-St Jeor nauwkeurig?</summary><p>Volgens een systematische review voor de American Dietetic Association is het de nauwkeurigste van de gangbare formules voor volwassenen, maar het blijft een schatting die ongeveer 10% kan afwijken. Volg je gewicht twee weken en stel bij.</p></details><details><summary>Waarom val ik niet meer af terwijl ik onder mijn TDEE eet?</summary><p>Een lichter lichaam verbrandt minder energie, en vochtophoping kan vetverlies tijdelijk verbergen. Reken opnieuw met je nieuwe gewicht, meet je buikomvang en controleer of je eten nauwkeurig bijhoudt.</p></details><details><summary>Hoeveel eiwit heb ik per dag nodig?</summary><p>Het minimum voor volwassenen is ongeveer 0,8 g per kg. Bij afvallen met krachttraining helpt 1,6 tot 2,2 g/kg om spieren te behouden. Bij nierziekte volg je het advies van je arts.</p></details><details><summary>Moet ik de calorieën van mijn training bij mijn TDEE optellen?</summary><p>Nee. De activiteitsfactor bevat je gebruikelijke training al. Als je ze opnieuw optelt, tel je ze dubbel en verdwijnt je tekort.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Gerelateerde calculators en tools</span></h2>
-            <div class="related-grid"><a class="related-card" href="/nl/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Bepaal je gewichtsklasse en het gezonde gewicht bij je lengte.</span></a><a class="related-card" href="/nl/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Dagelijkse waterbehoefte</strong><span>De juiste hoeveelheid vocht voor je gewicht en activiteit.</span></a><a class="related-card" href="/nl/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Taille-lengteratio (WHtR)</strong><span>Een eenvoudige maat voor buikvet en stofwisselingsrisico.</span></a><a class="related-card" href="/nl/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Voedingsgids</strong><span>Glykemische index en calorieën van meer dan 700 producten.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/nl/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Bepaal je gewichtsklasse en het gezonde gewicht bij je lengte.</span></a><a class="related-card" href="/nl/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Dagelijkse waterbehoefte</strong><span>De juiste hoeveelheid vocht voor je gewicht en activiteit.</span></a><a class="related-card" href="/nl/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Taille-lengteratio (WHtR)</strong><span>Een eenvoudige maat voor buikvet en stofwisselingsrisico.</span></a><a class="related-card" href="/nl/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>HbA1c omrekenen</strong><span>Reken HbA1c om tussen % en mmol/mol en zie je gemiddelde glucose.</span></a><a class="related-card" href="/nl/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>Bloedsuiker omrekenen</strong><span>Van mg/dl naar mmol/l en terug.</span></a><a class="related-card" href="/nl/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>Diabetes risicotest</strong><span>8 vragen in twee minuten.</span></a><a class="related-card" href="/nl/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>Insulineresistentie berekenen</strong><span>Uit nuchtere insuline en nuchtere bloedsuiker.</span></a><a class="related-card" href="/nl/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Voedingsgids</strong><span>Glykemische index en calorieën van meer dan 700 producten.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>De Boodi-app: check je eten voordat je het eet 💚</h2><p>Cijfers alleen zijn niet genoeg: wat je eet bepaalt je insuline- en bloedsuikerreactie. Scan barcodes in de supermarkt en zie de glykemische index, ingrediënten en gezondere alternatieven.</p></div>
@@ -1273,6 +1285,7 @@
     <script>
         (function () {
             var S = {"tip": "Dit zijn schattingen: volg je gewicht twee weken en pas dan aan met 100–200 calorieën. Kies koolhydraten met een lage glykemische index en veel vezels.", "tip_lowcarb": "Je afvalcalorieën zijn laag ten opzichte van je eiwitdoel, waardoor er weinig ruimte overblijft voor koolhydraten. Ga niet lager zonder diëtist, zeker niet als je diabetesmedicatie gebruikt."};
+            function next(band) { var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }
             function val(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }
             function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
             function fmt(n, d) { return n.toLocaleString('nl-NL', { minimumFractionDigits: d, maximumFractionDigits: d }); }

@@ -937,6 +937,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1150,6 +1156,8 @@
                 <div class="faq-item"><h3>Finns diabetesen kvar efter förlossningen?</h3><p>I mer än 90 % av fallen blir blodsockret helt normalt igen när moderkakan har fötts. Efter förlossningen följs du upp med ett enkelt prov för att vara säker, och sedan rekommenderas regelbundna kontroller på vårdcentralen, eftersom graviditetsdiabetes ökar risken för typ 2-diabetes senare i livet. Din barnmorska berättar hur uppföljningen går till i din region. Att behålla de goda matvanorna som skyddade dig och ditt barn är det bästa du kan göra för din hälsa framåt.</p></div>
             </div>
 
+            <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Diabetesverktyg</span></h2>
+            <div class="tool-cards"><a href="/sv/hba1c-calculator.html"><strong><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c-omvandlare</strong><span>Omvandla HbA1c mellan % och mmol/mol och se ditt medelglukos.</span></a><a href="/sv/blood-sugar-converter.html"><strong><i class="fas fa-right-left" aria-hidden="true"></i> Omvandla blodsocker</strong><span>Från mg/dl till mmol/l och tillbaka.</span></a><a href="/sv/diabetes-risk-test.html"><strong><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risktest</strong><span>8 frågor på två minuter.</span></a><a href="/sv/insulin-resistance-calculator.html"><strong><i class="fas fa-syringe" aria-hidden="true"></i> Räkna ut insulinresistens</strong><span>Från fasteinsulin och fasteblodsocker.</span></a></div>
             <h2 class="section-title"><i class="fas fa-book-medical"></i> <span>Vetenskapliga källor</span></h2>
             <ol class="ref-list"><li>World Health Organization. Diagnostic criteria and classification of hyperglycaemia first detected in pregnancy. Geneva: WHO; 2013</li><li>Socialstyrelsen. Gränsvärden för graviditetsdiabetes – stöd för beslut om behandling. Stockholm: Socialstyrelsen; 2015</li><li>American Diabetes Association (ADA). Standards of Care in Diabetes—2026, Section 15: Management of Diabetes in Pregnancy. Diabetes Care 2026;49(Suppl 1)</li><li>American College of Obstetricians and Gynecologists (ACOG). Practice Bulletin No. 190: Gestational Diabetes Mellitus. Obstet Gynecol 2018;131(2):e49–e64</li><li>National Institute for Health and Care Excellence (NICE). Diabetes in pregnancy: management from preconception to the postnatal period (NG3), 2015, updated 2020</li><li>International Federation of Gynecology and Obstetrics (FIGO). The FIGO Initiative on gestational diabetes mellitus: a pragmatic guide for diagnosis, management, and care. Int J Gynaecol Obstet 2015;131(Suppl 3):S173–S211</li></ol>
             <p class="disclaimer-box">⚖️ Medicinsk ansvarsfriskrivning: den här guiden har tagits fram av WiBo Health som allmän hälsoinformation och stöd för levnadsvanor. Den kompletterar den vård du får av din barnmorska, mödravårdscentral (MVC) och specialistmödravård, och ersätter inte råd, diagnos eller behandling från legitimerad hälso- och sjukvårdspersonal. Kontakta din barnmorska, din vårdcentral eller ring 1177 för sjukvårdsrådgivning. Vid akut fara – ring 112.</p>

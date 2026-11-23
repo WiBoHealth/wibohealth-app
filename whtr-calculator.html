@@ -931,6 +931,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1024,6 +1030,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1165,7 +1177,7 @@
             <h1>حاسبة نسبة الخصر إلى الطول (WHtR): هل دهون بطنك في النطاق الآمن؟</h1>
             <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> إعداد ومراجعة فريق WiBo Health الطبي · 18 أكتوبر 2026</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> NICE 2022 · Ashwell</span></div>
             <p class="lead">القاعدة بسيطة: <strong>اجعل محيط خصرك أقل من نصف طولك</strong>. تقيس نسبة الخصر إلى الطول الدهون المتركزة حول البطن، وهي أخطر أنواع الدهون أيضياً، وقد تفوقت في دراسات كثيرة على مؤشر كتلة الجسم في كشف خطر السكري وأمراض القلب. أدخل محيط خصرك وطولك لتعرف موقعك فوراً.</p>
-            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html" class="current" aria-current="page"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a></nav>
+            <nav class="calc-nav" aria-label="الحاسبات الصحية"><a href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> مؤشر كتلة الجسم BMI</a><a href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> السعرات اليومية TDEE</a><a href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> احتياج الماء اليومي</a><a href="/whtr-calculator.html" class="current" aria-current="page"><i class="fas fa-ruler-combined" aria-hidden="true"></i> نسبة الخصر إلى الطول WHtR</a><a href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> حاسبة السكر التراكمي</a><a href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i> تحويل قراءة السكر</a><a href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i> اختبار خطر الإصابة بالسكري</a><a href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i> حساب مقاومة الإنسولين</a></nav>
 
             <section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
@@ -1254,7 +1266,7 @@
             <div class="faq-list"><details><summary>ما هي نسبة الخصر إلى الطول الطبيعية؟</summary><p>من 0.4 إلى 0.49 للبالغين، أي أن يكون محيط الخصر أقل من نصف الطول. من 0.5 إلى 0.59 يعني خطراً صحياً متزايداً، و0.6 فأكثر خطراً مرتفعاً وفق NICE 2022.</p></details><details><summary>أين أقيس محيط خصري بالضبط؟</summary><p>في منتصف المسافة بين أسفل آخر ضلع وأعلى عظم الحوض، والشريط أفقي على الجلد، في نهاية زفير طبيعي. القياس عند السرة بديل عملي إذا التزمت به في كل مرة.</p></details><details><summary>هل نسبة الخصر إلى الطول أفضل من BMI؟</summary><p>في كشف خطر السكري وأمراض القلب نعم في كثير من الدراسات، لأنها تقيس دهون البطن. والأفضل استخدام الاثنين معاً كما توصي NICE.</p></details><details><summary>ما الفرق بين WHtR وWHR؟</summary><p>WHtR تقسم الخصر على الطول وحدها الصحي 0.5 للجميع تقريباً، أما WHR فتقسم الخصر على محيط الورك وتحتاج إلى قياسين وحدودها مختلفة للرجال والنساء.</p></details><details><summary>هل تمارين البطن تنقص الكرش؟</summary><p>تقوي عضلات البطن لكنها لا تحرق الدهون من البطن تحديداً. ينقص الكرش بعجز السعرات والنشاط الهوائي وتمارين المقاومة وتحسين النوم والغذاء.</p></details><details><summary>هل تصلح هذه الحاسبة للأطفال؟</summary><p>الحدود المعروضة هنا للبالغين وفق NICE. يُقيَّم وزن الأطفال ومحيط خصرهم مع طبيب الأطفال باستخدام معايير مناسبة لأعمارهم.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>حاسبات وأدوات مرتبطة</span></h2>
-            <div class="related-grid"><a class="related-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span></a><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span></a><a class="related-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span></a><a class="related-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span></a><a class="related-card" href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>حاسبة السكر التراكمي</strong><span>حوّل HbA1c بين % و mmol/mol واعرف معدل السكر.</span></a><a class="related-card" href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>تحويل قراءة السكر</strong><span>من mg/dL إلى mmol/L وبالعكس.</span></a><a class="related-card" href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>اختبار خطر الإصابة بالسكري</strong><span>8 أسئلة في دقيقتين.</span></a><a class="related-card" href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>حساب مقاومة الإنسولين</strong><span>من تحليل الإنسولين والسكر على الريق.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 700 صنف.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>تطبيق بودي: افحص طعامك قبل أن تأكله 💚</h2><p>الأرقام وحدها لا تكفي؛ ما تأكله يحدد استجابة الإنسولين وسكر الدم. امسح باركود منتجات السوبرماركت لتعرف مؤشرها الجلايسيمي ومكوناتها وبدائلها الصحية.</p></div>
@@ -1275,6 +1287,7 @@
     <script>
         (function () {
             var S = {"ok_diff": "ضمن الحد ✓", "st_low": "أقل من 0.4: راجع وزنك", "st_healthy": "نطاق صحي", "st_increased": "خطر صحي متزايد", "st_high": "خطر صحي مرتفع", "tip_low": "النسبة أقل من 0.4 قد تعني نحافة أو كتلة عضلية قليلة. تحقق من مؤشر كتلة الجسم وتغذيتك، خاصة إذا كان وزنك ينقص دون قصد.", "tip_healthy": "دهون البطن ضمن النطاق الصحي. حافظ على ذلك بالنشاط المنتظم وقلة السكريات المضافة، وأعد القياس كل بضعة أشهر.", "tip_increased": "لديك دهون بطنية زائدة ترتبط بمقاومة الإنسولين وارتفاع ضغط الدم والدهون. خسارة بضعة سنتيمترات من الخصر تحسّن هذه المؤشرات؛ راجع سكر الدم في فحصك الدوري.", "tip_high": "النسبة 0.6 أو أكثر تعني خطراً مرتفعاً للسكري من النوع الثاني وأمراض القلب. يُنصح بتقييم طبي (السكر التراكمي، الدهون، ضغط الدم، الكبد الدهني) وخطة منظمة لخسارة الوزن."};
+            function next(band) { var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }
             function val(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }
             function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
             function fmt(n, d) { return n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); }

@@ -927,6 +927,12 @@
             .pill-name { font-size: 0.68rem; }
         }
 
+        .tool-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0 26px; }
+        .tool-cards a { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border-color);
+            background: var(--bg-input); color: inherit; text-decoration: none; transition: border-color 0.2s; }
+        .tool-cards a:hover { border-color: var(--primary); }
+        .tool-cards strong { color: var(--primary); }
+        .tool-cards span { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
         /* Open editorial layout: the article flows on the page background in a reading column, not inside a card */
         .page-wrapper.article-page { max-width: 850px; margin: 34px auto 70px; padding: 0 20px; }
         .article-page .about-card { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
@@ -1020,6 +1026,12 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
+        .next-steps:empty { display: none; }
+        .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
+        .next-steps ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 4px; }
+        .next-steps .next-consult { margin: 0 0 8px; }
+        .next-steps a { color: var(--primary); font-weight: 700; }
         .calc-page .disclaimer-box { background: none; border: 0; padding: 0; margin: 28px 0 0; font-size: 0.78rem;
             color: var(--text-muted); line-height: 1.6; box-shadow: none; }
         .page-wrapper.calc-page { max-width: 920px; }
@@ -1161,7 +1173,7 @@
             <h1>Water Intake Calculator: How Much Water Do You Need a Day?</h1>
             <div class="article-meta"><span><i class="fas fa-user-shield" aria-hidden="true"></i> Prepared and reviewed by the WiBo Health medical team · 18 October 2026</span><span><i class="fas fa-book-medical" aria-hidden="true"></i> EFSA 2010 · ACSM</span></div>
             <p class="lead">Water makes up more than half of an adult’s body weight, and every organ depends on it. This tool estimates your daily fluid needs from your weight and physical activity and shows the official reference values of the European Food Safety Authority (EFSA) alongside, so you know in numbers how many glasses you actually need.</p>
-            <nav class="calc-nav" aria-label="Health calculators"><a href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> Body mass index (BMI)</a><a href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> Daily calories (TDEE)</a><a href="/en/water-calculator.html" class="current" aria-current="page"><i class="fas fa-droplet" aria-hidden="true"></i> Daily water intake</a><a href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> Waist-to-height ratio (WHtR)</a></nav>
+            <nav class="calc-nav" aria-label="Health calculators"><a href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i> Body mass index (BMI)</a><a href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i> Daily calories (TDEE)</a><a href="/en/water-calculator.html" class="current" aria-current="page"><i class="fas fa-droplet" aria-hidden="true"></i> Daily water intake</a><a href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i> Waist-to-height ratio (WHtR)</a><a href="/en/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i> HbA1c calculator</a><a href="/en/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i> Blood sugar converter</a><a href="/en/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i> Diabetes risk test</a><a href="/en/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i> Insulin resistance calculator</a></nav>
 
             <section class="calc-card" id="calculator" aria-labelledby="calc-title">
                 <div class="calc-card-head">
@@ -1244,7 +1256,7 @@
             <div class="faq-list"><details><summary>How many litres of water should I drink a day?</summary><p>EFSA recommends 2.0 litres a day for women and 2.5 litres for men from all sources, about 80% of it from drinks. By body weight, adults usually need 30 to 35 ml per kg, more with exercise and heat.</p></details><details><summary>Do tea and coffee count towards my water intake?</summary><p>Yes. Moderate amounts of coffee and tea hydrate the body. Keep added sugar low and avoid too much caffeine in the evening.</p></details><details><summary>Does drinking water help with weight loss?</summary><p>Modestly. Drinking about 500 ml before meals on a low-calorie diet increased weight loss in a randomised trial, and replacing sugary drinks with water lowers daily calories.</p></details><details><summary>Can I drink too much water?</summary><p>Yes. Very large amounts in a short time can lower blood sodium. People with heart, kidney or liver disease may need to restrict fluids on their doctor’s advice.</p></details><details><summary>How do I know if I am drinking enough water?</summary><p>The simplest sign is pale-yellow urine and passing urine normally through the day. Dark urine, headache and fatigue can be signs of low fluid intake.</p></details><details><summary>Do people with diabetes need more water?</summary><p>High blood sugar increases water loss through urine, so people with diabetes should drink regularly and choose water over sugary drinks, unless their doctor restricts fluids for another reason.</p></details></div>
 
             <h2 class="section-title"><i class="fas fa-calculator"></i> <span>Related calculators and tools</span></h2>
-            <div class="related-grid"><a class="related-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span></a><a class="related-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span></a><a class="related-card" href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Waist-to-height ratio (WHtR)</strong><span>A simple marker of visceral belly fat and metabolic risk.</span></a><a class="related-card" href="/en/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Food guide</strong><span>Glycaemic index and calories for more than 700 foods.</span></a></div>
+            <div class="related-grid"><a class="related-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span></a><a class="related-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span></a><a class="related-card" href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Waist-to-height ratio (WHtR)</strong><span>A simple marker of visceral belly fat and metabolic risk.</span></a><a class="related-card" href="/en/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>HbA1c calculator</strong><span>Convert HbA1c between % and mmol/mol and see your average glucose.</span></a><a class="related-card" href="/en/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>Blood sugar converter</strong><span>From mg/dL to mmol/L and back.</span></a><a class="related-card" href="/en/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>Diabetes risk test</strong><span>8 questions in two minutes.</span></a><a class="related-card" href="/en/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>Insulin resistance calculator</strong><span>From fasting insulin and fasting blood sugar.</span></a><a class="related-card" href="/en/foods.html"><i class="fas fa-apple-whole" aria-hidden="true"></i><strong>Food guide</strong><span>Glycaemic index and calories for more than 700 foods.</span></a></div>
 
             <section class="boodi-funnel-card">
                 <div><h2>The Boodi app: check your food before you eat it 💚</h2><p>Numbers alone are not enough: what you eat drives your insulin and blood-sugar response. Scan supermarket barcodes to see a product’s glycaemic index, ingredients and healthier alternatives.</p></div>
@@ -1265,6 +1277,7 @@
     <script>
         (function () {
             var S = {"cups": "{a} to {b} glasses (250 ml)", "tip": "Spread your drinking across the day rather than waiting for thirst, and use pale-yellow urine as your guide. Moderate tea and coffee count as fluid; swap sugary drinks for water.", "tip_heavy": "At higher body weights the “ml per kg” rule overestimates; treat the lower end of the range or the EFSA reference as your starting point and adjust to thirst and urine colour."};
+            function next(band) { var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }
             function val(id) { var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }
             function set(id, text) { var el = document.getElementById(id); if (el) el.textContent = text; }
             function fmt(n, d) { return n.toLocaleString('en-GB', { minimumFractionDigits: d, maximumFractionDigits: d }); }
