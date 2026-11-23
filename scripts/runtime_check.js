@@ -85,6 +85,25 @@ const TOOL = {
 const toolPages = [];
 for (const [slug, key] of [['hba1c-calculator', 'hba1c'], ['blood-sugar-converter', 'glucose'], ['diabetes-risk-test', 'findrisc'], ['insulin-resistance-calculator', 'homa']])
     for (const l of ['', '/en', '/nl', '/sv']) toolPages.push([`${l}/${slug}.html`, TOOL[key]]);
+// batch C (2026-11-23): nutrition and body tools
+TOOL.deficit = [['woman 34/165/68 -> 60 kg at 0.5 kg/week: 1590 kcal', fill({ f_sex: 'female', f_age: '34', f_height: '165', f_weight: '68', f_target: '60', f_activity: '1.55', f_pace: '0.5' }) + ';' + submitAndRead('^1[.,]?590$', false)]];
+TOOL.protein = [['BMI 41.5, weight loss: adjusted weight 84.2 kg -> 101-135 g', fill({ f_sex: 'male', f_age: '40', f_height: '170', f_weight: '120', f_goal: 'loss', f_activity: '1.2' }) + ';' + submitAndRead('^101–135g$', true)]];
+TOOL.bodyfat = [['man 30/178/80, neck 38, waist 90 -> 20.1%', fill({ f_sex: 'male', f_age: '30', f_height: '178', f_weight: '80', f_neck: '38', f_waist: '90' }) + ';' + submitAndRead('^20[.,]1%$', false)],
+                ['below essential fat -> doctor advice', fill({ f_sex: 'male', f_age: '30', f_height: '178', f_weight: '60', f_neck: '40', f_waist: '70' }) + ';' + submitAndRead('^0[.,]6%$', true)]];
+const glMeal = (term) => `(async () => { const q = document.getElementById('f_search'); q.focus(); q.value = ${JSON.stringify(term)}; q.dispatchEvent(new Event('input', { bubbles: true }));
+    for (let i = 0; i < 40 && !document.querySelector('#gl_results button[data-id="1"]'); i++) await new Promise(r => setTimeout(r, 150));
+    const b = document.querySelector('#gl_results button[data-id="1"]'); if (!b) throw new Error('white rice not found for ' + q.value); b.click();
+    const g = document.querySelector('#gl_items input[data-i="0"]'); g.value = '150'; g.dispatchEvent(new Event('input', { bubbles: true })); return 'added'; })()`;
+const GL_TERMS = { '': 'ارز ابيض', '/en': 'white rice', '/nl': 'witte rijst', '/sv': 'vitt ris' };
+const TDEE_PROTEIN = [['protein 1.2-1.6 g/kg: 82-109 g', fill({ f_sex: 'female', f_age: '34', f_weight: '68', f_height: '165', f_activity: '1.55' }) +
+    `;(async () => { await new Promise(r => setTimeout(r, 300)); document.querySelector('#calcForm button[type=submit]').click(); await new Promise(r => setTimeout(r, 300));
+      const p = document.getElementById('r_protein').textContent; if (p !== '82–109 g') throw new Error(p); return p; })()`]];
+for (const [slug, key] of [['calorie-deficit-calculator', 'deficit'], ['protein-calculator', 'protein'], ['body-fat-calculator', 'bodyfat']])
+    for (const l of ['', '/en', '/nl', '/sv']) toolPages.push([`${l}/${slug}.html`, TOOL[key]]);
+for (const l of ['', '/en', '/nl', '/sv']) {
+    toolPages.push([`${l}/glycemic-load-calculator.html`, [['white rice 150 g -> GL 27, medium meal', glMeal(GL_TERMS[l]) + ';' + submitAndRead('^27$', false)], ['like-for-like swap offered (white rice -> white pasta)', `(() => { const a = document.querySelector('#r_swap a'); if (!a || !/white-pasta/.test(a.getAttribute('href'))) throw new Error(document.getElementById('r_swap').innerHTML); return a.textContent; })()`]]]);
+    toolPages.push([`${l}/tdee-calculator.html`, TDEE_PROTEIN]);
+}
 const DIAB_CARDS = [['diabetes tool cards', `(() => { const n = document.querySelectorAll('.tool-cards a').length; if (n !== 4) throw new Error(n); return n + ' cards'; })()`]];
 const PAGES = [
     ...toolPages, ['/diabetes.html', DIAB_CARDS], ['/en/diabetes/prediabetes.html', DIAB_CARDS], ['/nl/diabetes.html', DIAB_CARDS], ['/sv/diabetes/graviditetsdiabetes.html', DIAB_CARDS],

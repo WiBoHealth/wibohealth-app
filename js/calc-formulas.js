@@ -85,7 +85,92 @@
     }
     function bmi(weightKg, heightCm) { var h = num(heightCm) / 100; return num(weightKg) / (h * h); }
 
+    // ---------------------------------------------------------------- energy, weight loss, protein (batch C, 2026-11-23)
+    /* Mifflin-St Jeor 1990: 10 W + 6.25 H - 5 A + 5 (men) / - 161 (women) */
+    function bmr(sex, age, weightKg, heightCm) {
+        return 10 * num(weightKg) + 6.25 * num(heightCm) - 5 * num(age) + (sex === 'f' ? -161 : 5);
+    }
+    var KCAL_PER_KG = 7700;
+    var FLOOR = { f: 1200, m: 1500 };              // minimum daily calories (doctor, 2026-11-23)
+    /* weight-loss plan: o = {sex, age, height, weight, target, pal, pace (kg/week)}.
+       Calories = TDEE - pace x 7700 / 7, never below the floor; recalculated after every 5 kg lost (a lighter body burns
+       less), then simulated week by week, so the date is later than the simple straight-line estimate. */
+    function weightLossPlan(o) {
+        var w = num(o.weight), target = num(o.target), pal = num(o.pal), pace = num(o.pace), sex = o.sex === 'f' ? 'f' : 'm';
+        var deficit = pace * KCAL_PER_KG / 7, floor = FLOOR[sex];
+        var tdee0 = bmr(sex, o.age, w, o.height) * pal;
+        var intakeAt = function (kg) { return Math.max(floor, Math.round((bmr(sex, o.age, kg, o.height) * pal - deficit) / 10) * 10); };
+        var intake0 = intakeAt(w), intake = intake0, lastReset = w, cur = w, weeks = 0, reached = target < w;
+        while (reached && cur > target) {
+            if (lastReset - cur >= 5) { intake = intakeAt(cur); lastReset = cur; }
+            var loss = (bmr(sex, o.age, cur, o.height) * pal - intake) * 7 / KCAL_PER_KG;
+            if (loss <= 0.01 || weeks >= 520) { reached = false; break; }
+            cur -= loss; weeks++;
+        }
+        var hm = num(o.height) / 100;
+        return {
+            tdee: tdee0, bmr: bmr(sex, o.age, w, o.height), intake: intake0, deficit: tdee0 - intake0,
+            floorApplied: intake0 === floor && tdee0 - deficit < floor, belowBmr: intake0 < bmr(sex, o.age, w, o.height),
+            fastPace: pace > 0.01 * w, targetBmi: target / (hm * hm), weeks: weeks, reached: reached, toLose: w - target
+        };
+    }
+    /* weight used for protein: actual weight, or the adjusted weight when BMI >= 30
+       (weight at BMI 25 + 25% of the difference; doctor, 2026-11-23) */
+    function adjustedWeight(weightKg, heightCm) {
+        var h = num(heightCm) / 100, w25 = 25 * h * h, w = num(weightKg);
+        return w > w25 ? w25 + 0.25 * (w - w25) : w;
+    }
+    function proteinWeight(weightKg, heightCm) { return bmi(weightKg, heightCm) >= 30 ? adjustedWeight(weightKg, heightCm) : num(weightKg); }
+    /* g/kg per goal: general 0.83 (EFSA; 1.0-1.2 from 65, PROT-AGE), weight loss 1.2-1.6, muscle 1.6-2.2, GLP-1 1.2-1.6 */
+    function proteinPerKg(goal, age) {
+        if (goal === 'loss' || goal === 'glp1') return [1.2, 1.6];
+        if (goal === 'muscle') return [1.6, 2.2];
+        return num(age) >= 65 ? [1.0, 1.2] : [0.83, 0.83];
+    }
+
+    // ---------------------------------------------------------------- body fat (US Navy) and healthy weight
+    /* Hodgdon & Beckett 1984, centimetres */
+    function navyBodyFat(sex, heightCm, neckCm, waistCm, hipCm) {
+        var h = num(heightCm), n = num(neckCm), w = num(waistCm), hip = num(hipCm);
+        if (sex === 'f') {
+            if (!(w + hip - n > 0)) return NaN;
+            return 495 / (1.29579 - 0.35004 * Math.log10(w + hip - n) + 0.22100 * Math.log10(h)) - 450;
+        }
+        if (!(w - n > 0)) return NaN;
+        return 495 / (1.0324 - 0.19077 * Math.log10(w - n) + 0.15456 * Math.log10(h)) - 450;
+    }
+    /* Gallagher et al., Am J Clin Nutr 2000;72:694-701 (healthy %BF by sex and age; 18-19 use the 20-39 row, 80+ the 60-79
+       row); below essential fat (men < 5%, women < 13%) is 'verylow' (doctor, 2026-11-23). Bands: verylow, low, healthy,
+       high, veryhigh */
+    var GALLAGHER = { m: [[8, 20, 25], [11, 22, 28], [13, 25, 30]], f: [[21, 33, 39], [23, 34, 40], [24, 36, 42]] };
+    function bodyFatBand(sex, age, pct) {
+        var s = sex === 'f' ? 'f' : 'm', a = num(age), p = round(num(pct), 1);
+        var row = GALLAGHER[s][a < 40 ? 0 : a < 60 ? 1 : 2];
+        if (p < (s === 'f' ? 13 : 5)) return 'verylow';
+        return p < row[0] ? 'low' : p < row[1] ? 'healthy' : p < row[2] ? 'high' : 'veryhigh';
+    }
+    function bodyFatRow(sex, age) { var a = num(age); return GALLAGHER[sex === 'f' ? 'f' : 'm'][a < 40 ? 0 : a < 60 ? 1 : 2]; }
+    function healthyWeightRange(heightCm) { var h = num(heightCm) / 100; return [18.5 * h * h, 24.9 * h * h]; }
+
+    // ---------------------------------------------------------------- glycemic load
+    /* GL = GI x available carbohydrate (carbs - fibre) in the portion / 100 */
+    function glycemicLoad(gi, carbsPer100, fiberPer100, grams) {
+        var avail = Math.max(0, num(carbsPer100) - (num(fiberPer100) || 0));
+        return (num(gi) || 0) * avail * num(grams) / 100 / 100;
+    }
+    /* per food portion (University of Sydney): <= 10 low, 11-19 medium, >= 20 high; meal (guide only, no official
+       cut-off; doctor 2026-11-23): < 20 low, 20-40 medium, > 40 high; day: < 80 low, 80-120 medium, > 120 high */
+    function glBand(gl, kind) {
+        var g = Math.round(num(gl));
+        if (kind === 'meal') return g < 20 ? 'low' : g <= 40 ? 'medium' : 'high';
+        if (kind === 'day') return g < 80 ? 'low' : g <= 120 ? 'medium' : 'high';
+        return g <= 10 ? 'low' : g < 20 ? 'medium' : 'high';
+    }
+
     return {
+        bmr: bmr, weightLossPlan: weightLossPlan, adjustedWeight: adjustedWeight, proteinWeight: proteinWeight,
+        proteinPerKg: proteinPerKg, navyBodyFat: navyBodyFat, bodyFatBand: bodyFatBand, bodyFatRow: bodyFatRow,
+        healthyWeightRange: healthyWeightRange, glycemicLoad: glycemicLoad, glBand: glBand, FLOOR: FLOOR,
         round: round, num: num, GLUCOSE_FACTOR: GLUCOSE_FACTOR,
         hba1cPercentToMmol: hba1cPercentToMmol, hba1cMmolToPercent: hba1cMmolToPercent, eagMgdl: eagMgdl, eagMmol: eagMmol,
         hba1cBand: hba1cBand, mgdlToMmol: mgdlToMmol, mmolToMgdl: mmolToMgdl, fastingGlucoseBand: fastingGlucoseBand,

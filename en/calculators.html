@@ -99,6 +99,30 @@
                         "position": 8,
                         "url": "https://wibohealth.com/en/whtr-calculator.html",
                         "name": "Waist-to-height ratio (WHtR)"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 9,
+                        "url": "https://wibohealth.com/en/calorie-deficit-calculator.html",
+                        "name": "Calorie deficit calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 10,
+                        "url": "https://wibohealth.com/en/protein-calculator.html",
+                        "name": "Protein calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 11,
+                        "url": "https://wibohealth.com/en/body-fat-calculator.html",
+                        "name": "Body fat calculator"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 12,
+                        "url": "https://wibohealth.com/en/glycemic-load-calculator.html",
+                        "name": "Glycemic load calculator"
                     }
                 ]
             },
@@ -963,6 +987,28 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+        .gl-table { font-size: 0.86rem; }
+        .gl-table th, .gl-table td { padding: 8px 6px; }
+        .gl-table td:first-child { min-width: 88px; }
+        .gl-table td:not(:first-child) { white-space: nowrap; }
+        .gl-table th { font-size: 0.8rem; line-height: 1.3; vertical-align: bottom; }
+        .gl-results { list-style: none; margin: 6px 0 0; padding: 4px; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-input); max-height: 300px; overflow-y: auto; }
+        .gl-results button { width: 100%; text-align: start; padding: 9px 10px; border: 0; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+        .gl-results button:hover, .gl-results button:focus { background: var(--primary-glow); }
+        .gl-msg { padding: 9px 10px; color: var(--text-muted); }
+        .gl-items { display: grid; gap: 8px; }
+        .gl-empty { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+        .gl-item { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 12px; }
+        .gl-item a { color: var(--primary); font-weight: 700; overflow-wrap: anywhere; }
+        .gl-item label { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+        .gl-item input { width: 84px; padding: 6px 8px; }
+        .gl-remove { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border-color); background: none; color: inherit; font-size: 1.1rem; cursor: pointer; }
+        .gl-band { font-weight: 800; }
+        .gl-low { color: #15803d; } .gl-medium { color: #b45309; } .gl-high { color: #b91c1c; }
+        .gl-note { margin: 10px 0 0; font-size: 0.88rem; color: var(--text-muted); }
+        .gl-note:empty { display: none; }
+        .gl-note a { color: var(--primary); }
         .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
         .next-steps:empty { display: none; }
         .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
@@ -1123,7 +1169,7 @@
             <p class="lead">Pick the calculator you need. Each one has its own page with an explanation of the result and its scientific sources. Everything is calculated on your device; we do not store anything you enter.</p>
             <nav class="hub-tabs" aria-label="Health calculators"><a href="#cat-diabetes">Diabetes and blood sugar</a><a href="#cat-body">Nutrition and body</a></nav>
 <section class="hub-section" id="cat-diabetes"><h2 class="section-title">Diabetes and blood sugar</h2><div class="hub-grid"><a class="hub-card" href="/en/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>HbA1c calculator</strong><span>Convert HbA1c between % and mmol/mol and see your average glucose.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>Blood sugar converter</strong><span>From mg/dL to mmol/L and back.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>Diabetes risk test</strong><span>8 questions in two minutes.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>Insulin resistance calculator</strong><span>From fasting insulin and fasting blood sugar.</span><em>Open the calculator →</em></a></div></section>
-<section class="hub-section" id="cat-body"><h2 class="section-title">Nutrition and body</h2><div class="hub-grid"><a class="hub-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Daily water intake</strong><span>The right amount of fluid for your weight and activity.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Waist-to-height ratio (WHtR)</strong><span>A simple marker of visceral belly fat and metabolic risk.</span><em>Open the calculator →</em></a></div></section>
+<section class="hub-section" id="cat-body"><h2 class="section-title">Nutrition and body</h2><div class="hub-grid"><a class="hub-card" href="/en/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>Body mass index (BMI)</strong><span>Classify your weight and see the healthy range for your height.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>Daily calories (TDEE)</strong><span>Calories to maintain, lose fat or build muscle.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>Daily water intake</strong><span>The right amount of fluid for your weight and activity.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>Waist-to-height ratio (WHtR)</strong><span>A simple marker of visceral belly fat and metabolic risk.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/calorie-deficit-calculator.html"><i class="fas fa-bullseye" aria-hidden="true"></i><strong>Calorie deficit calculator</strong><span>Your weight-loss calories and the date you reach your goal.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/protein-calculator.html"><i class="fas fa-drumstick-bite" aria-hidden="true"></i><strong>Protein calculator</strong><span>How many grams of protein you need for your goal.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/body-fat-calculator.html"><i class="fas fa-person" aria-hidden="true"></i><strong>Body fat calculator</strong><span>Body fat with a tape measure and a healthy weight for your height.</span><em>Open the calculator →</em></a><a class="hub-card" href="/en/glycemic-load-calculator.html"><i class="fas fa-bowl-food" aria-hidden="true"></i><strong>Glycemic load calculator</strong><span>How much your meal raises blood sugar, from our food guide.</span><em>Open the calculator →</em></a></div></section>
 
             <h2 class="section-title"><i class="fas fa-link"></i> <span>Useful links</span></h2>
             <div class="related-grid"><a class="related-card" href="/en/diabetes.html"><i class="fas fa-link" aria-hidden="true"></i><strong>Diabetes</strong><span>Plain-language guides to prediabetes and gestational diabetes.</span></a><a class="related-card" href="/en/foods.html"><i class="fas fa-link" aria-hidden="true"></i><strong>Food guide</strong><span>Glycemic index and calories for more than 970 foods.</span></a></div>

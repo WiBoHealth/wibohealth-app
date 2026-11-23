@@ -21,6 +21,10 @@ for _calc in CALCS:
 from calc_diabetes import DIABETES_TOOLS  # noqa: E402
 CALCS += DIABETES_TOOLS
 
+# Nutrition and body tools (batch C, 2026-11-23): all four languages in calc_nutrition.py
+from calc_nutrition import NUTRITION_TOOLS  # noqa: E402
+CALCS += NUTRITION_TOOLS
+
 # Page chrome shared by every calculator page, per language.
 T = {
     'ar': dict(

@@ -1,6 +1,7 @@
 """TDEE / BMR calorie calculator content (AR / EN / NL).
 Worked example (Mifflin-St Jeor): woman, 34 y, 68 kg, 165 cm, PAL 1.55 -> BMR 1380, TDEE 2139, -20% 1712, +15% 2460;
-macros on 1712 kcal: protein 122 g (488 kcal), fat 48 g (428 kcal), carbs 199 g (796 kcal)."""
+macros on 1712 kcal: protein 1.2-1.6 g/kg = 82-109 g (split on 1.4 g/kg = 95 g, 380 kcal), fat 48 g (428 kcal), carbs 226 g (904 kcal).
+Protein aligned with the protein calculator 2026-11-23 (doctor): 1.2-1.6 g/kg for fat loss, adjusted weight when BMI >= 30."""
 
 TDEE = {
     'key': 'tdee',
@@ -42,7 +43,7 @@ TDEE = {
                 'deficit_label': 'لخسارة الدهون (عجز 20%)', 'deficit_sub': 'لا ينزل عن معدل الأيض الأساسي',
                 'surplus_label': 'لبناء العضلات (فائض 15%)', 'surplus_sub': 'مع تمارين المقاومة',
                 'macros_header': 'توزيع مقترح للماكروز على سعرات خسارة الدهون',
-                'protein': 'البروتين (1.8 غ/كغ)', 'fat': 'الدهون (25% من الطاقة)', 'carbs': 'الكربوهيدرات (الباقي)',
+                'protein': 'البروتين (1.2–1.6 غ/كغ)', 'fat': 'الدهون (25% من الطاقة)', 'carbs': 'الكربوهيدرات (الباقي)',
                 'tip': 'هذه أرقام تقديرية: راقب وزنك أسبوعين ثم عدّل السعرات بمقدار 100–200 سعرة حسب النتيجة. اختر كربوهيدرات منخفضة المؤشر الجلايسيمي وغنية بالألياف.',
                 'tip_lowcarb': 'سعرات العجز منخفضة مقارنة بهدف البروتين، فبقيت حصة صغيرة للكربوهيدرات. لا تنزل أكثر من ذلك دون إشراف أخصائي تغذية، وخاصة إذا كنت تتناول أدوية للسكري.',
             },
@@ -89,11 +90,11 @@ TDEE = {
             <h2 class="section-title"><i class="fas fa-chart-pie"></i> <span>توزيع الماكروز: البروتين والدهون والكربوهيدرات</span></h2>
             <p>تحسب الأداة توزيعاً عملياً على سعرات خسارة الدهون:</p>
             <ul class="check-list">
-                <li><strong>البروتين 1.8 غ لكل كغ من وزنك:</strong> وجد تحليل جامع منشور في المجلة البريطانية للطب الرياضي أن فائدة البروتين للكتلة العضلية مع تمارين المقاومة تستقر عند نحو 1.6 غ/كغ، مع حد أعلى محتمل يقارب 2.2 غ/كغ. <em>مرضى الكلى المزمنة يحتاجون كميات أقل يحددها الطبيب.</em></li>
+                <li><strong>البروتين 1.2 إلى 1.6 غ لكل كغ من وزنك أثناء خسارة الدهون:</strong> يساعد على حماية العضلات والشعور بالشبع. إذا كان مؤشر كتلة الجسم 30 فأكثر نحسبه على «الوزن المعدّل» (الوزن عند مؤشر 25 مضافاً إليه ربع الفرق) حتى لا تخرج كمية مبالغ فيها. لتفاصيل أكثر حسب العمر والهدف استخدم <a href="{calc:protein}">حاسبة البروتين اليومي</a>. <em>مرضى الكلى المزمنة يحتاجون كميات أقل يحددها الطبيب.</em></li>
                 <li><strong>الدهون 25% من الطاقة:</strong> ضمن النطاق الذي توصي به الهيئة الأوروبية لسلامة الأغذية (20–35%)، مع تفضيل زيت الزيتون والمكسرات والأسماك الدهنية.</li>
                 <li><strong>الكربوهيدرات الباقي:</strong> من الحبوب الكاملة والبقوليات والخضار والفواكه، ويفضل اختيار الأصناف منخفضة المؤشر الجلايسيمي لاستقرار سكر الدم.</li>
             </ul>
-            <p>في المثال السابق (1712 سعرة): بروتين 122 غ، ودهون 48 غ، وكربوهيدرات نحو 199 غ يومياً.</p>
+            <p>في المثال السابق (1712 سعرة): بروتين 82 إلى 109 غ، ودهون 48 غ، وكربوهيدرات نحو 226 غ يومياً (التوزيع محسوب على 1.4 غ/كغ، منتصف النطاق).</p>
 
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>حدود الحساب</span></h2>
             <p>كل معادلات تقدير الأيض تعطي متوسطاً للمجموعات، وقد يختلف أيضك الفعلي بنحو 10% صعوداً أو نزولاً. وتقل الدقة لدى الرياضيين ذوي الكتلة العضلية الكبيرة، وكبار السن جداً، ومن يعانون اضطرابات الغدة الدرقية أو يتناولون أدوية تؤثر في الأيض. والمعادلة مصممة للبالغين؛ أما المراهقون فيحتاجون طاقة إضافية للنمو.</p>
@@ -142,7 +143,7 @@ TDEE = {
                 'deficit_label': 'Fat loss (20% deficit)', 'deficit_sub': 'never below your BMR',
                 'surplus_label': 'Muscle gain (15% surplus)', 'surplus_sub': 'with resistance training',
                 'macros_header': 'Suggested macro split on your fat-loss calories',
-                'protein': 'Protein (1.8 g/kg)', 'fat': 'Fat (25% of energy)', 'carbs': 'Carbohydrates (the rest)',
+                'protein': 'Protein (1.2–1.6 g/kg)', 'fat': 'Fat (25% of energy)', 'carbs': 'Carbohydrates (the rest)',
                 'tip': 'These are estimates: track your weight for two weeks, then adjust by 100–200 calories. Choose low-GI, high-fibre carbohydrates.',
                 'tip_lowcarb': 'Your deficit calories are low compared with your protein target, so little is left for carbohydrates. Do not go lower without a dietitian, especially if you take diabetes medication.',
             },
@@ -189,11 +190,11 @@ TDEE = {
             <h2 class="section-title"><i class="fas fa-chart-pie"></i> <span>Macro split: protein, fat and carbohydrates</span></h2>
             <p>The calculator applies a practical split to your fat-loss calories:</p>
             <ul class="check-list">
-                <li><strong>Protein 1.8 g per kg of body weight:</strong> a meta-analysis in the British Journal of Sports Medicine found that the benefit of protein for muscle gains with resistance training levels off around 1.6 g/kg, with a possible upper value near 2.2 g/kg. <em>People with chronic kidney disease need lower amounts set by their doctor.</em></li>
+                <li><strong>Protein 1.2 to 1.6 g per kg of body weight while losing fat:</strong> it helps protect muscle and keeps you full. If your BMI is 30 or more we use your "adjusted weight" (the weight at a BMI of 25 plus a quarter of the difference), so the amount is not overstated. For more detail by age and goal, use the <a href="{calc:protein}">protein calculator</a>. <em>People with chronic kidney disease need lower amounts set by their doctor.</em></li>
                 <li><strong>Fat 25% of energy:</strong> within the 20–35% range of the European Food Safety Authority, favouring olive oil, nuts and oily fish.</li>
                 <li><strong>Carbohydrates the rest:</strong> from whole grains, legumes, vegetables and fruit, preferably low-GI choices for steadier blood sugar.</li>
             </ul>
-            <p>In the example above (1,712 kcal): about 122 g protein, 48 g fat and 199 g carbohydrate a day.</p>
+            <p>In the example above (1,712 kcal): 82 to 109 g protein, 48 g fat and about 226 g carbohydrate a day (the split uses 1.4 g/kg, the middle of the range).</p>
 
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Limits of the calculation</span></h2>
             <p>All metabolic equations predict averages for groups; your real metabolism can be about 10% higher or lower. Accuracy drops in very muscular athletes, the very old, people with thyroid disorders and people taking medicines that affect metabolism. The equation is designed for adults; teenagers need extra energy for growth.</p>
@@ -242,7 +243,7 @@ TDEE = {
                 'deficit_label': 'Vet verliezen (20% tekort)', 'deficit_sub': 'nooit onder je BMR',
                 'surplus_label': 'Spieren opbouwen (15% overschot)', 'surplus_sub': 'met krachttraining',
                 'macros_header': 'Voorgestelde macroverdeling op je afvalcalorieën',
-                'protein': 'Eiwit (1,8 g/kg)', 'fat': 'Vet (25% van de energie)', 'carbs': 'Koolhydraten (de rest)',
+                'protein': 'Eiwit (1,2–1,6 g/kg)', 'fat': 'Vet (25% van de energie)', 'carbs': 'Koolhydraten (de rest)',
                 'tip': 'Dit zijn schattingen: volg je gewicht twee weken en pas dan aan met 100–200 calorieën. Kies koolhydraten met een lage glykemische index en veel vezels.',
                 'tip_lowcarb': 'Je afvalcalorieën zijn laag ten opzichte van je eiwitdoel, waardoor er weinig ruimte overblijft voor koolhydraten. Ga niet lager zonder diëtist, zeker niet als je diabetesmedicatie gebruikt.',
             },
@@ -289,11 +290,11 @@ TDEE = {
             <h2 class="section-title"><i class="fas fa-chart-pie"></i> <span>Macroverdeling: eiwit, vet en koolhydraten</span></h2>
             <p>De calculator past een praktische verdeling toe op je afvalcalorieën:</p>
             <ul class="check-list">
-                <li><strong>Eiwit 1,8 g per kg lichaamsgewicht:</strong> een meta-analyse in het British Journal of Sports Medicine vond dat het effect van eiwit op spiergroei bij krachttraining afvlakt rond 1,6 g/kg, met een mogelijke bovengrens rond 2,2 g/kg. <em>Mensen met chronische nierschade hebben minder nodig, volgens advies van hun arts.</em></li>
+                <li><strong>Eiwit 1,2 tot 1,6 g per kg lichaamsgewicht tijdens het afvallen:</strong> dit helpt je spieren te beschermen en geeft een vol gevoel. Is je BMI 30 of hoger, dan rekenen we met je "aangepaste gewicht" (het gewicht bij een BMI van 25 plus een kwart van het verschil), zodat de hoeveelheid niet te hoog uitvalt. Meer detail per leeftijd en doel vind je in de <a href="{calc:protein}">eiwitcalculator</a>. <em>Mensen met chronische nierschade hebben minder nodig, volgens advies van hun arts.</em></li>
                 <li><strong>Vet 25% van de energie:</strong> binnen de 20–35% van de Europese voedselveiligheidsautoriteit EFSA, bij voorkeur uit olijfolie, noten en vette vis.</li>
                 <li><strong>Koolhydraten de rest:</strong> uit volkoren graan, peulvruchten, groente en fruit, liefst met een lage glykemische index voor een stabielere bloedsuiker.</li>
             </ul>
-            <p>In het voorbeeld hierboven (1712 kcal): ongeveer 122 g eiwit, 48 g vet en 199 g koolhydraten per dag.</p>
+            <p>In het voorbeeld hierboven (1712 kcal): 82 tot 109 g eiwit, 48 g vet en ongeveer 226 g koolhydraten per dag (de verdeling rekent met 1,4 g/kg, het midden van het bereik).</p>
 
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Beperkingen van de berekening</span></h2>
             <p>Alle stofwisselingsformules voorspellen een groepsgemiddelde; je werkelijke verbruik kan ongeveer 10% hoger of lager liggen. De nauwkeurigheid is lager bij zeer gespierde sporters, hoogbejaarden, mensen met schildklierproblemen en bij medicijnen die de stofwisseling beïnvloeden. De formule is bedoeld voor volwassenen; tieners hebben extra energie nodig om te groeien.</p>

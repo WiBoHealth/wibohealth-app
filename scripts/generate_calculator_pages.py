@@ -55,6 +55,28 @@ def ui(lang):
     return UI_SV if lang == SV else UI[lang]
 
 CALC_CSS = """
+        .table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+        .gl-table { font-size: 0.86rem; }
+        .gl-table th, .gl-table td { padding: 8px 6px; }
+        .gl-table td:first-child { min-width: 88px; }
+        .gl-table td:not(:first-child) { white-space: nowrap; }
+        .gl-table th { font-size: 0.8rem; line-height: 1.3; vertical-align: bottom; }
+        .gl-results { list-style: none; margin: 6px 0 0; padding: 4px; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-input); max-height: 300px; overflow-y: auto; }
+        .gl-results button { width: 100%; text-align: start; padding: 9px 10px; border: 0; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+        .gl-results button:hover, .gl-results button:focus { background: var(--primary-glow); }
+        .gl-msg { padding: 9px 10px; color: var(--text-muted); }
+        .gl-items { display: grid; gap: 8px; }
+        .gl-empty { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+        .gl-item { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 12px; }
+        .gl-item a { color: var(--primary); font-weight: 700; overflow-wrap: anywhere; }
+        .gl-item label { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+        .gl-item input { width: 84px; padding: 6px 8px; }
+        .gl-remove { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border-color); background: none; color: inherit; font-size: 1.1rem; cursor: pointer; }
+        .gl-band { font-weight: 800; }
+        .gl-low { color: #15803d; } .gl-medium { color: #b45309; } .gl-high { color: #b91c1c; }
+        .gl-note { margin: 10px 0 0; font-size: 0.88rem; color: var(--text-muted); }
+        .gl-note:empty { display: none; }
+        .gl-note a { color: var(--primary); }
         .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
         .next-steps:empty { display: none; }
         .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
@@ -292,6 +314,68 @@ def widget(calc, lang):
                   '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
                   f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["tyg_label"])}</div>'
                   '<div class="breakdown-val" id="r_tyg">--</div><div class="breakdown-sub" id="r_tyg_sub"></div></div></div>')
+    elif k == 'deficit':
+        acts = ''.join(opt(v, label, v == '1.375') for v, label in zip(('1.2', '1.375', '1.55', '1.725', '1.9'), TDEE_UI[lang]['acts']))
+        paces = ''.join(opt(v, label, v == '0.5') for v, label in zip(('0.25', '0.5', '0.75'), w['paces']))
+        fields = field('f_sex', w['lbl_sex'], sex_select('f_sex', w)) + \
+                 field('f_age', w['lbl_age'], num('f_age', w['ph_age'], 18, 100, 1)) + \
+                 field('f_height', w['lbl_height'], num('f_height', w['ph_height'], 120, 240, 0.5)) + \
+                 field('f_weight', w['lbl_weight'], num('f_weight', w['ph_weight'], 35, 350, 0.1)) + \
+                 field('f_target', w['lbl_target'], num('f_target', w['ph_target'], 30, 350, 0.1), wide=True) + \
+                 field('f_activity', w['lbl_activity'], f'<select id="f_activity" class="form-control">{acts}</select>', wide=True) + \
+                 field('f_pace', w['lbl_pace'], f'<select id="f_pace" class="form-control">{paces}</select>', wide=True)
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  f'<div class="result-big-value" id="r_main">--</div><div class="result-heading">{esc(w["kcal_day"])}</div>'
+                  '<div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["date_label"])}</div>'
+                  '<div class="breakdown-val" id="r_date">--</div><div class="breakdown-sub" id="r_weeks"></div></div>'
+                  f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["tdee_label"])}</div><div class="breakdown-val" id="r_tdee">--</div></div>'
+                  f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["lose_label"])}</div><div class="breakdown-val" id="r_lose">--</div></div></div>')
+    elif k == 'protein':
+        acts = ''.join(opt(v, label, v == '1.375') for v, label in zip(('1.2', '1.375', '1.55', '1.725', '1.9'), TDEE_UI[lang]['acts']))
+        goals = ''.join(opt(v, label, v == 'general') for v, label in zip(('general', 'loss', 'muscle', 'glp1'), w['goals']))
+        kcal = num('f_kcal', w['ph_kcal'], 800, 6000, 10).replace(' required', '')
+        fields = field('f_sex', w['lbl_sex'], sex_select('f_sex', w)) + \
+                 field('f_age', w['lbl_age'], num('f_age', w['ph_age'], 18, 100, 1)) + \
+                 field('f_height', w['lbl_height'], num('f_height', w['ph_height'], 120, 240, 0.5)) + \
+                 field('f_weight', w['lbl_weight'], num('f_weight', w['ph_weight'], 35, 350, 0.1)) + \
+                 field('f_goal', w['lbl_goal'], f'<select id="f_goal" class="form-control">{goals}</select>', wide=True) + \
+                 field('f_activity', w['lbl_activity'], f'<select id="f_activity" class="form-control">{acts}</select>', wide=True) + \
+                 field('f_kcal', w['lbl_kcal'], kcal, wide=True)
+        macros = ''.join(f'<div class="breakdown-box"><div class="breakdown-label">{esc(w[m + "_label"])}</div>'
+                         f'<div class="breakdown-val" id="r_{m}">--</div></div>' for m in ('kcal', 'fat', 'carbs'))
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["meal_label"])}</div><div class="breakdown-val" id="r_meal">--</div></div>'
+                  f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["basis_label"])}</div><div class="breakdown-val" id="r_basis">--</div></div></div>'
+                  f'<h3 style="margin:20px 0 0;font-size:1rem">{esc(w["macros_header"])}</h3><div class="result-grid" style="border-top:0;padding-top:10px">{macros}</div>')
+    elif k == 'bodyfat':
+        hip = num('f_hip', w['ph_hip'], 50, 250, 0.5).replace(' required', '')
+        fields = field('f_sex', w['lbl_sex'], sex_select('f_sex', w)) + \
+                 field('f_age', w['lbl_age'], num('f_age', w['ph_age'], 18, 100, 1)) + \
+                 field('f_height', w['lbl_height'], num('f_height', w['ph_height'], 120, 240, 0.5)) + \
+                 field('f_weight', w['lbl_weight'], num('f_weight', w['ph_weight'], 35, 350, 0.1)) + \
+                 field('f_neck', w['lbl_neck'], num('f_neck', w['ph_neck'], 20, 70, 0.5), wide=True) + \
+                 field('f_waist', w['lbl_waist'], num('f_waist', w['ph_waist'], 40, 220, 0.5), wide=True) + \
+                 field('f_hip', w['lbl_hip'], hip, wide=True).replace('<div class="form-group wide">', '<div class="form-group wide" id="grp_hip" hidden>', 1)
+        boxes = ''.join(f'<div class="breakdown-box"><div class="breakdown-label">{esc(w[b + "_label"])}</div>'
+                        f'<div class="breakdown-val" id="r_{b}">--</div></div>' for b in ('fatkg', 'leankg', 'range', 'hw'))
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="result-grid">{boxes}</div>')
+    elif k == 'gl':
+        fields = (f'<div class="form-group wide"><label class="form-label" for="f_search">{esc(w["lbl_search"])}</label>'
+                  f'<input type="search" id="f_search" class="form-control" autocomplete="off" placeholder="{esc(w["ph_search"])}" '
+                  'aria-controls="gl_results"><ul class="gl-results" id="gl_results" role="listbox" hidden></ul></div>'
+                  f'<div class="form-group wide"><div class="gl-items" id="gl_items"><p class="gl-empty">{esc(w["empty"])}</p></div></div>')
+        heads = ''.join(f'<th>{esc(w[h])}</th>' for h in ('th_food', 'th_gl', 'th_gi', 'th_grams', 'th_carbs'))
+        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                  '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
+                  f'<div class="table-scroll"><table class="nutrition-table gl-table"><thead><tr>{heads}</tr></thead><tbody id="r_rows"></tbody></table></div>'
+                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["day_label"])}</div><div class="breakdown-val" id="r_day">--</div></div>'
+                  f'<div class="breakdown-box" id="box_top"><div class="breakdown-label">{esc(w["top_label"])}</div><div class="breakdown-val" id="r_top">--</div>'
+                  '<div class="breakdown-sub" id="r_swap"></div></div></div>'
+                  '<p class="gl-note" id="r_est"></p><p class="gl-note" id="r_zero"></p>')
     else:  # whtr
         fields = field('f_waist', w['lbl_waist'], num('f_waist', w['ph_waist'], 40, 220, 0.5)) + \
                  field('f_height', w['lbl_height'], num('f_height', w['ph_height'], 90, 240, 0.5))
@@ -341,11 +425,13 @@ LOGIC = {
         if (!a || !w || !h) return false;
         var bmr = 10 * w + 6.25 * h - 5 * a + (sex === 'male' ? 5 : -161), tdee = bmr * pal;
         var deficit = Math.max(Math.round(bmr), Math.round(tdee * 0.8)), surplus = Math.round(tdee * 1.15);
-        var pG = Math.round(w * 1.8), pK = pG * 4, fK = Math.round(deficit * 0.25), fG = Math.round(fK / 9),
+        // protein 1.2-1.6 g/kg (aligned with the protein calculator), adjusted weight when BMI >= 30; split on 1.4 g/kg
+        var pw = window.WiboCalc ? WiboCalc.proteinWeight(w, h) : w, pLo = Math.round(pw * 1.2), pHi = Math.round(pw * 1.6);
+        var pG = Math.round(pw * 1.4), pK = pG * 4, fK = Math.round(deficit * 0.25), fG = Math.round(fK / 9),
             cK = Math.max(0, deficit - pK - fK), cG = Math.round(cK / 4);
         set('r_main', fmt(Math.round(tdee), 0)); set('r_bmr', fmt(Math.round(bmr), 0) + ' kcal');
         set('r_deficit', fmt(deficit, 0) + ' kcal'); set('r_surplus', fmt(surplus, 0) + ' kcal');
-        set('r_protein', pG + ' g'); set('r_protein_kcal', fmt(pK, 0) + ' kcal');
+        set('r_protein', pLo + '–' + pHi + ' g'); set('r_protein_kcal', fmt(pK, 0) + ' kcal');
         set('r_fat', fG + ' g'); set('r_fat_kcal', fmt(fK, 0) + ' kcal');
         set('r_carbs', cG + ' g'); set('r_carbs_kcal', fmt(cK, 0) + ' kcal');
         set('r_note', cK < 400 ? S['tip_lowcarb'] : S['tip']);
@@ -425,28 +511,213 @@ LOGIC = {
         } else { set('r_tyg', '--'); set('r_tyg_sub', S['tyg_none']); }
         next(band);
         return true;""",
+    # batch C (2026-11-23): formulas from js/calc-formulas.js
+    'deficit': r"""
+        var C = window.WiboCalc, sx = document.getElementById('f_sex').value === 'female' ? 'f' : 'm',
+            age = val('f_age'), h = val('f_height'), w = val('f_weight'), t = val('f_target');
+        if (!C || !age || !h || !w || !t) return false;
+        ['r_date', 'r_weeks', 'r_tdee', 'r_lose'].forEach(function (id) { set(id, id === 'r_weeks' ? '' : '--'); });
+        if (t >= w) { set('r_main', '--'); pill(S['st_warn'], 'status-warning'); set('r_note', S['tip_invalid']); next(''); return true; }
+        var p = C.weightLossPlan({ sex: sx, age: age, height: h, weight: w, target: t,
+            pal: parseFloat(document.getElementById('f_activity').value), pace: parseFloat(document.getElementById('f_pace').value) });
+        set('r_main', fmt(p.intake, 0)); set('r_tdee', fmt(Math.round(p.tdee / 10) * 10, 0) + ' kcal'); set('r_lose', fmt(p.toLose, 1) + ' ' + S['kg']);
+        if (p.reached) {
+            var d = new Date(); d.setDate(d.getDate() + p.weeks * 7);
+            set('r_date', d.toLocaleDateString(DATE_LOCALE, { month: 'long', year: 'numeric' })); set('r_weeks', S['weeks_txt'].replace('{n}', p.weeks));
+        }
+        var notes = [];
+        if (!p.reached) notes.push(S['tip_stall']);
+        if (p.floorApplied) notes.push(S['tip_floor'].replace('{floor}', fmt(C.FLOOR[sx], 0)));
+        else if (p.belowBmr) notes.push(S['tip_bmr'].replace('{bmr}', fmt(Math.round(p.bmr / 10) * 10, 0)));
+        if (p.fastPace) notes.push(S['tip_fast']);
+        if (p.targetBmi < 18.5) { var r = C.healthyWeightRange(h); notes.push(S['tip_lowtarget'].replace('{lo}', fmt(Math.ceil(r[0]), 0)).replace('{hi}', fmt(Math.floor(r[1]), 0))); }
+        pill(notes.length ? S['st_warn'] : S['st_plan'], notes.length ? 'status-warning' : 'status-info');
+        set('r_note', notes.concat([S['tip_base']]).join(' ')); next('plan');
+        return true;""",
+    'protein': r"""
+        var C = window.WiboCalc, sx = document.getElementById('f_sex').value === 'female' ? 'f' : 'm',
+            age = val('f_age'), h = val('f_height'), w = val('f_weight'), goal = document.getElementById('f_goal').value, kcal = val('f_kcal');
+        if (!C || !age || !h || !w) return false;
+        var b = C.bmi(w, h), pw = C.proteinWeight(w, h), r = C.proteinPerKg(goal, age), lo = Math.round(pw * r[0]), hi = Math.round(pw * r[1]);
+        set('r_main', lo === hi ? lo + ' g' : lo + '–' + hi + ' g');
+        pill(S['perkg'].replace('{v}', r[0] === r[1] ? fmt(r[0], 2) : fmt(r[0], 1) + '–' + fmt(r[1], 1)), 'status-info');
+        var mid = (lo + hi) / 2;
+        set('r_meal', Math.round(mid / 3) + ' g'); set('r_basis', fmt(pw, 1) + ' kg · ' + (b >= 30 ? S['basis_adj'] : S['basis_actual']));
+        if (!kcal) {
+            var tdee = C.bmr(sx, age, w, h) * parseFloat(document.getElementById('f_activity').value);
+            kcal = goal === 'loss' || goal === 'glp1' ? Math.max(C.FLOOR[sx], tdee - 550) : tdee;
+        }
+        kcal = Math.round(kcal / 10) * 10;
+        var pK = Math.round(mid) * 4, fK = kcal * 0.3, cK = Math.max(0, kcal - pK - fK);
+        set('r_kcal', fmt(kcal, 0) + ' kcal'); set('r_fat', Math.round(fK / 9) + ' g'); set('r_carbs', Math.round(cK / 4) + ' g');
+        var tip = goal === 'general' ? (age >= 65 ? S['tip_general65'] : S['tip_general']) : S['tip_' + goal];
+        set('r_note', tip + (b >= 30 ? ' ' + S['tip_adj'].replace('{w}', fmt(pw, 1)) : '')); next('ok');
+        return true;""",
+    'bodyfat': r"""
+        var C = window.WiboCalc, sx = document.getElementById('f_sex').value === 'female' ? 'f' : 'm',
+            age = val('f_age'), h = val('f_height'), w = val('f_weight'), neck = val('f_neck'), waist = val('f_waist'), hip = val('f_hip');
+        if (!C || !age || !h || !w || !neck || !waist || (sx === 'f' && !hip)) return false;
+        var pct = C.navyBodyFat(sx, h, neck, waist, hip);
+        ['r_fatkg', 'r_leankg', 'r_range', 'r_hw'].forEach(function (id) { set(id, '--'); });
+        if (!(pct > 0 && pct < 75)) { set('r_main', '--'); pill(S['tip_invalid'], 'status-warning'); set('r_note', S['tip_invalid']); next(''); return true; }
+        var band = C.bodyFatBand(sx, age, pct), row = C.bodyFatRow(sx, age), hw = C.healthyWeightRange(h);
+        var st = { verylow: 'status-danger', low: 'status-warning', healthy: 'status-optimal', high: 'status-warning', veryhigh: 'status-danger' }[band];
+        set('r_main', fmt(pct, 1) + '%'); pill(S['st_' + band], st);
+        set('r_fatkg', fmt(w * pct / 100, 1) + ' kg'); set('r_leankg', fmt(w * (1 - pct / 100), 1) + ' kg');
+        set('r_range', row[0] + '–' + row[1] + '%'); set('r_hw', fmt(Math.ceil(hw[0]), 0) + '–' + fmt(Math.floor(hw[1]), 0) + ' kg');
+        set('r_note', S['tip_' + band]); next(band);
+        return true;""",
+    'gl': r"""
+        var C = window.WiboCalc, G = window.WiboGL;
+        if (!C || !G || !G.items.length) { if (G) G.hint(); return false; }
+        var total = 0, rows = '', top = null, est = false, zero = false;
+        G.items.forEach(function (it) {
+            var f = it.f, gi = f[6], carbs = f[8] * it.g / 100, gl = C.glycemicLoad(gi, f[8], 0, it.g);
+            total += gl; if (gi !== null && f[7]) est = true; if (gi === null || !f[8]) zero = true;
+            if (gl > 0 && (!top || gl > top.gl)) top = { f: f, gl: gl };
+            rows += '<tr><td>' + G.link(f) + '</td><td><span class="gl-band gl-' + C.glBand(gl) + '">' + fmt(gl, 1) + '</span></td><td>' +
+                (gi === null ? '–' : gi) + '</td><td>' + fmt(it.g, 0) + ' g</td><td>' + fmt(carbs, 1) + ' g</td></tr>';
+        });
+        document.getElementById('r_rows').innerHTML = rows;
+        var band = C.glBand(total, 'meal'), st = { low: 'status-optimal', medium: 'status-warning', high: 'status-danger' }[band];
+        set('r_main', fmt(Math.round(total), 0)); pill(S['st_' + band], st);
+        set('r_day', S['day_txt'].replace('{p}', Math.round(total / 80 * 100)));
+        var box = document.getElementById('box_top'); box.hidden = !top;
+        if (top) {
+            set('r_top', G.name(top.f) + ' (' + fmt(top.gl, 1) + ')');
+            var swap = G.swap(top.f); document.getElementById('r_swap').innerHTML = swap ? S['swap_txt'].replace('{b}', G.link(swap)) : G.esc(S['no_swap']);
+        }
+        document.getElementById('r_est').innerHTML = est ? S['est_note'] : '';
+        set('r_zero', zero ? S['zero_note'] : '');
+        set('r_note', S['tip_meal']); next('meal');
+        return true;""",
 }
-NEW_TOOLS = ('hba1c', 'glucose', 'findrisc', 'homa')
+NEW_TOOLS = ('hba1c', 'glucose', 'findrisc', 'homa', 'deficit', 'protein', 'bodyfat', 'gl')
+# page set-up that runs once (not on submit): the hip field for women, and the meal builder of the glycemic load tool
+INIT = {
+    'bodyfat': r"""
+            var sexSel = document.getElementById('f_sex'), hipGrp = document.getElementById('grp_hip'), hipIn = document.getElementById('f_hip');
+            function hipToggle() { var f = sexSel.value === 'female'; hipGrp.hidden = !f; hipIn.required = f; }
+            sexSel.addEventListener('change', hipToggle); hipToggle();""",
+    'gl': r"""
+            var NAME = {NAME_COL}, PREFIX = '{PREFIX}', DATA = '/data/gl-foods.json?v={GL_VER}', data = null, loading = null;
+            var q = document.getElementById('f_search'), box = document.getElementById('gl_results'), list = document.getElementById('gl_items');
+            function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+            function norm(s) {
+                // Latin accents and Arabic harakat/hamza marks dropped (NFD splits alef with hamza into alef + mark)
+                return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f\u064b-\u065f\u0670\u0640]/g, '')
+                    .replace(/\u0629/g, '\u0647').replace(/\u0649/g, '\u064a');
+            }
+            function name(f) { return f[NAME]; }
+            function link(f) { return '<a href="' + PREFIX + '/foods/' + f[1] + '.html">' + esc(name(f)) + '</a>'; }
+            function load() {
+                if (data) return Promise.resolve(data);
+                if (!loading) loading = fetch(DATA).then(function (r) { return r.json(); }).then(function (d) {
+                    data = d; d.forEach(function (f) { f.k = norm(f[NAME]) + ' ' + norm(f[3]); }); return d; });
+                return loading;
+            }
+            var G = window.WiboGL = { items: [], name: name, link: link, esc: esc };
+            // swap: same food type, low GI (<= 55) and lower than the food, at least half its carbs; measured GI first,
+            // then the closest carbohydrate content (a like-for-like replacement, e.g. white rice -> pasta)
+            G.swap = function (f) {
+                if (!data || f[6] === null) return null;
+                var best = null, bestKey = null;
+                data.forEach(function (c) {
+                    if (c[11] !== f[11] || c[0] === f[0] || c[6] === null || c[6] > 55 || c[6] >= f[6] || c[8] < f[8] * 0.5) return;
+                    var key = [c[7], Math.abs(c[8] - f[8])];
+                    if (!best || key[0] < bestKey[0] || (key[0] === bestKey[0] && key[1] < bestKey[1])) { best = c; bestKey = key; }
+                });
+                return best;
+            };
+            G.hint = function () { box.hidden = false; box.innerHTML = '<li class="gl-msg">' + esc(S['empty']) + '</li>'; q.focus(); };
+            function render() {
+                if (!G.items.length) { list.innerHTML = '<p class="gl-empty">' + esc(S['empty']) + '</p>'; return; }
+                list.innerHTML = G.items.map(function (it, i) {
+                    return '<div class="gl-item">' + link(it.f) + '<label><input type="number" class="form-control" inputmode="decimal" min="1" max="2000" step="1" value="' +
+                        it.g + '" data-i="' + i + '" aria-label="' + esc(S['grams']) + '"> g</label><button type="button" class="gl-remove" data-rm="' + i +
+                        '" aria-label="' + esc(S['remove']) + '">×</button></div>';
+                }).join('');
+            }
+            function add(f) {
+                if (G.items.length >= 8) { box.hidden = false; box.innerHTML = '<li class="gl-msg">' + esc(S['max_items']) + '</li>'; return; }
+                G.items.push({ f: f, g: f[9] || 100 }); render(); q.value = ''; box.hidden = true; box.innerHTML = '';
+            }
+            function search() {
+                var t = norm(q.value.trim());
+                if (t.length < 2) { box.hidden = true; return; }
+                box.hidden = false;
+                if (!data) box.innerHTML = '<li class="gl-msg">' + esc(S['loading']) + '</li>';
+                load().then(function (d) {
+                    if (norm(q.value.trim()) !== t) return;
+                    var hits = d.filter(function (f) { return f.k.indexOf(t) >= 0; })
+                        .sort(function (a, b) { return (norm(name(a)).indexOf(t) === 0 ? 0 : 1) - (norm(name(b)).indexOf(t) === 0 ? 0 : 1) || name(a).length - name(b).length; })
+                        .slice(0, 8);
+                    box.innerHTML = hits.length ? hits.map(function (f) {
+                        return '<li><button type="button" data-id="' + f[0] + '">' + esc(name(f)) + '</button></li>'; }).join('')
+                        : '<li class="gl-msg">' + esc(S['no_match']) + '</li>';
+                });
+            }
+            q.addEventListener('focus', load); q.addEventListener('input', search);
+            q.addEventListener('keydown', function (e) {
+                if (e.key !== 'Enter') return;
+                var first = box.querySelector('button[data-id]');
+                if (first) { e.preventDefault(); first.click(); }
+            });
+            box.addEventListener('click', function (e) {
+                var b = e.target.closest('button[data-id]'); if (!b) return;
+                var id = +b.getAttribute('data-id'); add(data.filter(function (f) { return f[0] === id; })[0]);
+            });
+            list.addEventListener('input', function (e) {
+                var i = e.target.getAttribute('data-i'); if (i === null) return;
+                var g = parseFloat(String(e.target.value).replace(',', '.')); if (g > 0) G.items[+i].g = g;
+            });
+            list.addEventListener('click', function (e) {
+                var b = e.target.closest('button[data-rm]'); if (!b) return;
+                G.items.splice(+b.getAttribute('data-rm'), 1); render();
+            });""",
+}
 import hashlib  # noqa: E402
 FORMULAS_VER = hashlib.sha1((ROOT / 'js' / 'calc-formulas.js').read_bytes()).hexdigest()[:8]
+TDEE_UI = {l: next(c for c in CALCS if c['key'] == 'tdee')['content'][l]['ui'] for l in ALL_LANGS}
+
+
+def write_gl_data():
+    """data/gl-foods.json for the glycemic load tool (published foods only); returns its short hash for ?v=."""
+    from calc_nutrition import gl_foods
+    raw = json.dumps(gl_foods(), ensure_ascii=False, separators=(',', ':'))
+    path = ROOT / 'data' / 'gl-foods.json'
+    if not path.exists() or path.read_text(encoding='utf-8') != raw:
+        path.write_text(raw, encoding='utf-8', newline='\n')
+    return hashlib.sha1(raw.encode('utf-8')).hexdigest()[:8]
+
+
+GL_VER = write_gl_data()
 
 
 def script(calc, lang):
     w = calc['content'][lang]['ui']
-    prefixes = ('st_', 'tip', 'cups', 'ok_') + (('nx_', 'risk_', 'tyg_') if calc['key'] in NEW_TOOLS else ())
-    strings = {k: (render_body(v, lang) if k.startswith('nx_') else v) for k, v in w.items() if k.startswith(prefixes)}
+    if calc['key'] in NEW_TOOLS:      # every string of the tool (links resolved for this language)
+        strings = {k: (render_body(v, lang) if '{' in v else v) for k, v in w.items() if isinstance(v, str)}
+    else:
+        strings = {k: v for k, v in w.items() if k.startswith(('st_', 'tip', 'cups', 'ok_'))}
     locale = {'ar': 'en-US', 'en': 'en-GB', 'nl': 'nl-NL', SV: 'sv-SE'}[lang]
-    formulas = (f'    <script src="/js/calc-formulas.js?v={FORMULAS_VER}" defer></script>\n' if calc['key'] in NEW_TOOLS else '')
+    date_locale = {'ar': 'ar-u-nu-latn', 'en': 'en-GB', 'nl': 'nl-NL', SV: 'sv-SE'}[lang]
+    formulas = (f'    <script src="/js/calc-formulas.js?v={FORMULAS_VER}" defer></script>\n'
+                if calc['key'] in NEW_TOOLS + ('tdee',) else '')
+    init = INIT.get(calc['key'], '')
+    if calc['key'] == 'gl':
+        init = (init.replace('{NAME_COL}', str({'ar': 2, 'en': 3, 'nl': 4, SV: 5}[lang]))
+                .replace('{PREFIX}', '' if lang == 'ar' else '/' + lang).replace('{GL_VER}', GL_VER))
     return f'''{formulas}    <script>
         (function () {{
-            var S = {json.dumps(strings, ensure_ascii=False)};
+            var S = {json.dumps(strings, ensure_ascii=False)}, DATE_LOCALE = '{date_locale}';
             function next(band) {{ var n = document.getElementById('r_next'); if (n) n.innerHTML = S['nx_' + band] || ''; }}
             function val(id) {{ var v = parseFloat(String(document.getElementById(id).value).replace(',', '.')); return v > 0 ? v : 0; }}
             function set(id, text) {{ var el = document.getElementById(id); if (el) el.textContent = text; }}
             function fmt(n, d) {{ return n.toLocaleString('{locale}', {{ minimumFractionDigits: d, maximumFractionDigits: d }}); }}
             function pill(text, cls) {{ var p = document.getElementById('r_pill'); if (p) {{ p.textContent = text; p.className = 'result-status-pill ' + cls; }} }}
             function run() {{{LOGIC[calc["key"]]}
-            }}
+            }}{init}
             var form = document.getElementById('calcForm');
             form.addEventListener('submit', function (e) {{
                 e.preventDefault();

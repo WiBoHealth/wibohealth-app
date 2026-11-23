@@ -137,7 +137,7 @@ SV = {
             'deficit_label': 'Viktnedgång (20 % underskott)', 'deficit_sub': 'aldrig under din BMR',
             'surplus_label': 'Muskeluppbyggnad (15 % överskott)', 'surplus_sub': 'tillsammans med styrketräning',
             'macros_header': 'Förslag på fördelning av dina kalorier för viktnedgång',
-            'protein': 'Protein (1,8 g/kg)', 'fat': 'Fett (25 % av energin)', 'carbs': 'Kolhydrater (resten)',
+            'protein': 'Protein (1,2–1,6 g/kg)', 'fat': 'Fett (25 % av energin)', 'carbs': 'Kolhydrater (resten)',
             'tip': 'Siffrorna är uppskattningar: följ din vikt i två veckor och justera sedan med 100–200 kalorier. Välj kolhydrater med lågt GI och mycket fiber.',
             'tip_lowcarb': 'Kalorierna för viktnedgång är låga i förhållande till ditt proteinmål, så det blir lite kvar till kolhydrater. Gå inte lägre utan stöd av en dietist, särskilt om du tar läkemedel mot diabetes.',
         },
@@ -184,11 +184,11 @@ SV = {
             <h2 class="section-title"><i class="fas fa-chart-pie"></i> <span>Fördelning: protein, fett och kolhydrater</span></h2>
             <p>Kalkylatorn fördelar dina kalorier för viktnedgång så här:</p>
             <ul class="check-list">
-                <li><strong>Protein 1,8 g per kg kroppsvikt:</strong> en metaanalys i British Journal of Sports Medicine fann att proteinets nytta för muskeltillväxt vid styrketräning planar ut runt 1,6 g/kg, med en möjlig övre nivå nära 2,2 g/kg. <em>Personer med kronisk njursjukdom behöver lägre mängder som läkaren bestämmer.</em></li>
+                <li><strong>Protein 1,2 till 1,6 g per kg kroppsvikt under viktnedgång:</strong> det hjälper till att skydda musklerna och ger mättnad. Om ditt BMI är 30 eller mer räknar vi med din "justerade vikt" (vikten vid BMI 25 plus en fjärdedel av skillnaden), så att mängden inte blir för hög. Mer detaljer efter ålder och mål finns i <a href="{calc:protein}">proteinkalkylatorn</a>. <em>Personer med kronisk njursjukdom behöver lägre mängder som läkaren bestämmer.</em></li>
                 <li><strong>Fett 25 % av energin:</strong> inom EFSA:s intervall på 20–35 %, gärna från rapsolja, olivolja, nötter och fet fisk.</li>
                 <li><strong>Kolhydrater resten:</strong> från fullkorn, baljväxter, grönsaker och frukt, gärna med lågt GI för ett jämnare blodsocker.</li>
             </ul>
-            <p>I exemplet ovan (1 712 kcal): ungefär 122 g protein, 48 g fett och 199 g kolhydrater per dag.</p>
+            <p>I exemplet ovan (1 712 kcal): 82 till 109 g protein, 48 g fett och ungefär 226 g kolhydrater per dag (fördelningen räknar med 1,4 g/kg, mitten av intervallet).</p>
 
             <h2 class="section-title"><i class="fas fa-triangle-exclamation"></i> <span>Beräkningens begränsningar</span></h2>
             <p>Alla ekvationer för energiförbrukning förutsäger genomsnitt för grupper; din verkliga förbrukning kan vara ungefär 10 % högre eller lägre. Träffsäkerheten minskar hos mycket muskulösa idrottare, mycket gamla, personer med sköldkörtelsjukdom och personer som tar läkemedel som påverkar ämnesomsättningen. Ekvationen är gjord för vuxna; tonåringar behöver extra energi för att växa.</p>

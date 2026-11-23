@@ -99,6 +99,30 @@
                         "position": 8,
                         "url": "https://wibohealth.com/whtr-calculator.html",
                         "name": "نسبة الخصر إلى الطول WHtR"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 9,
+                        "url": "https://wibohealth.com/calorie-deficit-calculator.html",
+                        "name": "حاسبة عجز السعرات"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 10,
+                        "url": "https://wibohealth.com/protein-calculator.html",
+                        "name": "حاسبة البروتين اليومي"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 11,
+                        "url": "https://wibohealth.com/body-fat-calculator.html",
+                        "name": "حاسبة نسبة الدهون"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 12,
+                        "url": "https://wibohealth.com/glycemic-load-calculator.html",
+                        "name": "حاسبة الحمل الجلايسيمي"
                     }
                 ]
             },
@@ -963,6 +987,28 @@
         }
         @media (max-width: 640px) { .article-page h1 { font-size: 1.55rem; } }
 
+        .table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+        .gl-table { font-size: 0.86rem; }
+        .gl-table th, .gl-table td { padding: 8px 6px; }
+        .gl-table td:first-child { min-width: 88px; }
+        .gl-table td:not(:first-child) { white-space: nowrap; }
+        .gl-table th { font-size: 0.8rem; line-height: 1.3; vertical-align: bottom; }
+        .gl-results { list-style: none; margin: 6px 0 0; padding: 4px; border: 1px solid var(--border-color); border-radius: 12px; background: var(--bg-input); max-height: 300px; overflow-y: auto; }
+        .gl-results button { width: 100%; text-align: start; padding: 9px 10px; border: 0; border-radius: 8px; background: none; color: inherit; font: inherit; cursor: pointer; }
+        .gl-results button:hover, .gl-results button:focus { background: var(--primary-glow); }
+        .gl-msg { padding: 9px 10px; color: var(--text-muted); }
+        .gl-items { display: grid; gap: 8px; }
+        .gl-empty { margin: 0; color: var(--text-muted); font-size: 0.92rem; }
+        .gl-item { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 8px 10px; border: 1px solid var(--border-color); border-radius: 12px; }
+        .gl-item a { color: var(--primary); font-weight: 700; overflow-wrap: anywhere; }
+        .gl-item label { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+        .gl-item input { width: 84px; padding: 6px 8px; }
+        .gl-remove { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border-color); background: none; color: inherit; font-size: 1.1rem; cursor: pointer; }
+        .gl-band { font-weight: 800; }
+        .gl-low { color: #15803d; } .gl-medium { color: #b45309; } .gl-high { color: #b91c1c; }
+        .gl-note { margin: 10px 0 0; font-size: 0.88rem; color: var(--text-muted); }
+        .gl-note:empty { display: none; }
+        .gl-note a { color: var(--primary); }
         .next-steps { margin-top: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--primary-glow); background: var(--bg-input); }
         .next-steps:empty { display: none; }
         .next-steps h3 { font-size: 1rem; margin: 0 0 6px; }
@@ -1123,7 +1169,7 @@
             <p class="lead">اختر الحاسبة التي تحتاجها. كل حاسبة في صفحة خاصة بها مع شرح للنتيجة ومصادرها العلمية. الحساب يتم على جهازك فقط، ولا نحفظ أي رقم تدخله.</p>
             <nav class="hub-tabs" aria-label="الحاسبات الصحية"><a href="#cat-diabetes">السكري وسكر الدم</a><a href="#cat-body">التغذية والجسم</a></nav>
 <section class="hub-section" id="cat-diabetes"><h2 class="section-title">السكري وسكر الدم</h2><div class="hub-grid"><a class="hub-card" href="/hba1c-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>حاسبة السكر التراكمي</strong><span>حوّل HbA1c بين % و mmol/mol واعرف معدل السكر.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/blood-sugar-converter.html"><i class="fas fa-right-left" aria-hidden="true"></i><strong>تحويل قراءة السكر</strong><span>من mg/dL إلى mmol/L وبالعكس.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/diabetes-risk-test.html"><i class="fas fa-list-check" aria-hidden="true"></i><strong>اختبار خطر الإصابة بالسكري</strong><span>8 أسئلة في دقيقتين.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/insulin-resistance-calculator.html"><i class="fas fa-syringe" aria-hidden="true"></i><strong>حساب مقاومة الإنسولين</strong><span>من تحليل الإنسولين والسكر على الريق.</span><em>افتح الحاسبة →</em></a></div></section>
-<section class="hub-section" id="cat-body"><h2 class="section-title">التغذية والجسم</h2><div class="hub-grid"><a class="hub-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span><em>افتح الحاسبة →</em></a></div></section>
+<section class="hub-section" id="cat-body"><h2 class="section-title">التغذية والجسم</h2><div class="hub-grid"><a class="hub-card" href="/bmi-calculator.html"><i class="fas fa-weight-scale" aria-hidden="true"></i><strong>مؤشر كتلة الجسم BMI</strong><span>صنّف وزنك واعرف نطاق الوزن الصحي لطولك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/tdee-calculator.html"><i class="fas fa-fire-flame-curved" aria-hidden="true"></i><strong>السعرات اليومية TDEE</strong><span>احتياجك من السعرات للثبات والتنحيف والبناء العضلي.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/water-calculator.html"><i class="fas fa-droplet" aria-hidden="true"></i><strong>احتياج الماء اليومي</strong><span>كمية السوائل المناسبة لوزنك ونشاطك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/whtr-calculator.html"><i class="fas fa-ruler-combined" aria-hidden="true"></i><strong>نسبة الخصر إلى الطول WHtR</strong><span>مؤشر بسيط لدهون البطن الحشوية وخطرها الأيضي.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/calorie-deficit-calculator.html"><i class="fas fa-bullseye" aria-hidden="true"></i><strong>حاسبة عجز السعرات</strong><span>سعراتك لإنقاص الوزن وتاريخ الوصول لهدفك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/protein-calculator.html"><i class="fas fa-drumstick-bite" aria-hidden="true"></i><strong>حاسبة البروتين اليومي</strong><span>كم غرام بروتين تحتاج حسب هدفك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/body-fat-calculator.html"><i class="fas fa-person" aria-hidden="true"></i><strong>حاسبة نسبة الدهون</strong><span>نسبة الدهون بشريط القياس والوزن الصحي لطولك.</span><em>افتح الحاسبة →</em></a><a class="hub-card" href="/glycemic-load-calculator.html"><i class="fas fa-bowl-food" aria-hidden="true"></i><strong>حاسبة الحمل الجلايسيمي</strong><span>كم ترفع وجبتك السكر، من دليل الأطعمة.</span><em>افتح الحاسبة →</em></a></div></section>
 
             <h2 class="section-title"><i class="fas fa-link"></i> <span>روابط مفيدة</span></h2>
             <div class="related-grid"><a class="related-card" href="/diabetes.html"><i class="fas fa-link" aria-hidden="true"></i><strong>السكري ومتلازمة الأيض</strong><span>أدلة ما قبل السكري وسكري الحمل بلغة بسيطة.</span></a><a class="related-card" href="/foods.html"><i class="fas fa-link" aria-hidden="true"></i><strong>دليل الأطعمة</strong><span>المؤشر الجلايسيمي والسعرات لأكثر من 970 طعاماً.</span></a></div>

@@ -7,6 +7,7 @@ function near(name, got, want, tol) {
     n++;
     if (!(Math.abs(got - want) <= tol)) { fail++; console.log(`FAIL ${name}: got ${got}, want ${want} ±${tol}`); }
 }
+function ok(name, cond) { eq(name, !!cond, true); }
 function eq(name, got, want) {
     n++;
     if (JSON.stringify(got) !== JSON.stringify(want)) { fail++; console.log(`FAIL ${name}: got ${JSON.stringify(got)}, want ${JSON.stringify(want)}`); }
@@ -84,6 +85,67 @@ eq('6.4% = prediabetes', C.hba1cBand(C.hba1cPercentToMmol(6.4)), 'prediabetes');
 eq('6.5% = diabetes', C.hba1cBand(C.hba1cPercentToMmol(6.5)), 'diabetes');
 near('BMI 80kg/180cm', C.round(C.bmi(80, 180), 1), 24.7, 0.05);
 near('comma decimals', C.hba1cPercentToMmol('7,0'), C.hba1cPercentToMmol(7), 1e-9);
+
+// ---- batch C (2026-11-23)
+// Mifflin-St Jeor worked example on the TDEE page: woman 34 y, 68 kg, 165 cm -> BMR 1380.25, x1.55 = 2139
+near('BMR woman 34/68/165', C.bmr('f', 34, 68, 165), 1380.25, 1e-9);
+near('BMR man 40/80/180', C.bmr('m', 40, 80, 180), 1730, 1e-9);
+let plan = C.weightLossPlan({ sex: 'f', age: 34, height: 165, weight: 68, target: 60, pal: 1.55, pace: 0.5 });
+eq('plan: calories = TDEE - 550, rounded to 10', plan.intake, 1590);
+ok('plan: 8 kg at 0.5 kg/week takes 16-20 weeks (slower than straight line)', plan.weeks >= 16 && plan.weeks <= 20 && plan.reached);
+plan = C.weightLossPlan({ sex: 'f', age: 60, height: 155, weight: 62, target: 55, pal: 1.2, pace: 0.75 });
+eq('plan: floor 1200 for women', plan.intake, 1200);
+ok('plan: floor flagged, fast pace flagged', plan.floorApplied && plan.fastPace);
+plan = C.weightLossPlan({ sex: 'm', age: 30, height: 180, weight: 70, target: 68, pal: 1.2, pace: 0.75 });
+eq('plan: floor 1500 for men', plan.intake, 1500);
+plan = C.weightLossPlan({ sex: 'm', age: 45, height: 175, weight: 130, target: 85, pal: 1.2, pace: 0.5 });
+ok('plan: below-BMR note for a large weight', plan.belowBmr && plan.reached);
+ok('plan: target above weight is not a plan', !C.weightLossPlan({ sex: 'f', age: 30, height: 165, weight: 60, target: 65, pal: 1.2, pace: 0.5 }).reached);
+near('plan: target BMI', C.weightLossPlan({ sex: 'f', age: 30, height: 160, weight: 60, target: 46, pal: 1.2, pace: 0.5 }).targetBmi, 17.97, 0.01);
+// adjusted weight (doctor): weight at BMI 25 + 25% of the difference, only from BMI 30
+near('adjusted weight 120 kg / 170 cm', C.adjustedWeight(120, 170), 84.19, 0.01);
+near('protein weight BMI 29.9 = actual', C.proteinWeight(86.4, 170), 86.4, 1e-9);
+near('protein weight BMI 41.5 = adjusted', C.proteinWeight(120, 170), 84.19, 0.01);
+eq('protein loss 1.2-1.6', C.proteinPerKg('loss', 40).join('-'), '1.2-1.6');
+eq('protein GLP-1 1.2-1.6', C.proteinPerKg('glp1', 40).join('-'), '1.2-1.6');
+eq('protein general 0.83', C.proteinPerKg('general', 40).join('-'), '0.83-0.83');
+eq('protein general 65+ 1.0-1.2', C.proteinPerKg('general', 65).join('-'), '1-1.2');
+eq('protein muscle 1.6-2.2', C.proteinPerKg('muscle', 25).join('-'), '1.6-2.2');
+// US Navy, cm equations agree with the original inch equations (Hodgdon & Beckett 1984) within 0.5 point
+const inchM = (h, n, w) => 86.010 * Math.log10((w - n) / 2.54) - 70.041 * Math.log10(h / 2.54) + 36.76;
+const inchF = (h, n, w, hip) => 163.205 * Math.log10((w + hip - n) / 2.54) - 97.684 * Math.log10(h / 2.54) - 78.387;
+near('Navy man 178/38/90 vs inch formula', C.navyBodyFat('m', 178, 38, 90), inchM(178, 38, 90), 0.5);
+near('Navy man 185/40/105 vs inch formula', C.navyBodyFat('m', 185, 40, 105), inchM(185, 40, 105), 0.5);
+near('Navy woman 165/33/80/100 vs inch formula', C.navyBodyFat('f', 165, 33, 80, 100), inchF(165, 33, 80, 100), 0.5);
+near('Navy woman 160/32/95/110 vs inch formula', C.navyBodyFat('f', 160, 32, 95, 110), inchF(160, 32, 95, 110), 0.5);
+ok('Navy: waist not above neck is not a result', isNaN(C.navyBodyFat('m', 178, 40, 39)));
+// Gallagher 2000 bands + essential-fat limits (doctor)
+eq('man 30 y 4.9% very low', C.bodyFatBand('m', 30, 4.9), 'verylow');
+eq('man 30 y 5% low', C.bodyFatBand('m', 30, 5), 'low');
+eq('man 30 y 8% healthy', C.bodyFatBand('m', 30, 8), 'healthy');
+eq('man 30 y 19.9% healthy', C.bodyFatBand('m', 30, 19.9), 'healthy');
+eq('man 30 y 20% high', C.bodyFatBand('m', 30, 20), 'high');
+eq('man 30 y 25% very high', C.bodyFatBand('m', 30, 25), 'veryhigh');
+eq('man 50 y 21% healthy', C.bodyFatBand('m', 50, 21), 'healthy');
+eq('man 70 y 12% low', C.bodyFatBand('m', 70, 12), 'low');
+eq('woman 30 y 12.9% very low', C.bodyFatBand('f', 30, 12.9), 'verylow');
+eq('woman 30 y 20% low', C.bodyFatBand('f', 30, 20), 'low');
+eq('woman 30 y 21% healthy', C.bodyFatBand('f', 30, 21), 'healthy');
+eq('woman 45 y 33.9% healthy', C.bodyFatBand('f', 45, 33.9), 'healthy');
+eq('woman 65 y 41% high', C.bodyFatBand('f', 65, 41), 'high');
+eq('woman 65 y 42% very high', C.bodyFatBand('f', 65, 42), 'veryhigh');
+near('healthy weight 170 cm low', C.healthyWeightRange(170)[0], 53.465, 0.001);
+near('healthy weight 170 cm high', C.healthyWeightRange(170)[1], 71.961, 0.001);
+// glycemic load: white rice GI 65, 28 g carbs and 0.4 g fibre per 100 g, 150 g -> 26.9
+near('GL white rice 150 g', C.glycemicLoad(65, 28, 0.4, 150), 26.91, 0.01);
+near('GL watermelon 120 g (GI 72, 7.6 g carbs, 0.4 fibre)', C.glycemicLoad(72, 7.6, 0.4, 120), 6.22, 0.01);
+eq('GL no carbs = 0', C.glycemicLoad(null, 0, 0, 200), 0);
+eq('GL food 10 low', C.glBand(10), 'low'); eq('GL food 11 medium', C.glBand(11), 'medium');
+eq('GL food 19 medium', C.glBand(19), 'medium'); eq('GL food 20 high', C.glBand(20), 'high');
+eq('GL meal 19 low', C.glBand(19, 'meal'), 'low'); eq('GL meal 20 medium', C.glBand(20, 'meal'), 'medium');
+eq('GL meal 40 medium', C.glBand(40, 'meal'), 'medium'); eq('GL meal 41 high', C.glBand(41, 'meal'), 'high');
+eq('GL day 79 low', C.glBand(79, 'day'), 'low'); eq('GL day 120 medium', C.glBand(120, 'day'), 'medium');
+eq('GL day 121 high', C.glBand(121, 'day'), 'high');
 
 console.log(`${n - fail}/${n} formula checks passed`);
 process.exit(fail ? 1 : 0);

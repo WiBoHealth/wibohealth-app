@@ -54,7 +54,8 @@ OTHER_PAGES = {
     **{f'/{c}-calculator.html': {'ar': f'/{c}-calculator.html', **{l: f'/{l}/{c}-calculator.html' for l in ('en', 'nl', 'sv')}}
        for c in ('bmi', 'tdee', 'water', 'whtr')},
     **{f'/{s}.html': {'ar': f'/{s}.html', **{l: f'/{l}/{s}.html' for l in ('en', 'nl', 'sv')}}   # diabetes tools (2026-11-23)
-       for s in ('hba1c-calculator', 'blood-sugar-converter', 'diabetes-risk-test', 'insulin-resistance-calculator')},
+       for s in ('hba1c-calculator', 'blood-sugar-converter', 'diabetes-risk-test', 'insulin-resistance-calculator',
+                 'calorie-deficit-calculator', 'protein-calculator', 'body-fat-calculator', 'glycemic-load-calculator')},
     '/fatty-liver.html': {'ar': '/articles/fatty-liver-and-visceral-fat.html',
                           **{l: f'/{l}/articles/fatty-liver-and-visceral-fat.html' for l in ('en', 'nl', 'sv')}},
     '/diabetes.html': {'ar': '/diabetes.html', **{l: f'/{l}/diabetes.html' for l in ('en', 'nl', 'sv')}},
