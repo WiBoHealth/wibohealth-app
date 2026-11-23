@@ -55,6 +55,7 @@ def ui(lang):
     return UI_SV if lang == SV else UI[lang]
 
 CALC_CSS = """
+        .field-hint { display: block; margin-top: 5px; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
         .table-scroll { overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
         .gl-table { font-size: 0.86rem; }
         .gl-table th, .gl-table td { padding: 8px 6px; }
@@ -299,21 +300,22 @@ def widget(calc, lang):
                   '<div class="breakdown-val" id="r_risk">--</div></div>'
                   f'<div class="breakdown-box"><div class="breakdown-label">{esc(w["bmi_label"])}</div>'
                   '<div class="breakdown-val" id="r_bmi">--</div></div></div>')
-    elif k == 'homa':
+    elif k == 'homa':   # glucose required; triglycerides and insulin optional (2026-11-23): TyG and/or HOMA-IR
         ins = opt('uiu', w['u_uiu'], True) + opt('pmol', w['u_pmol'])
         glu = opt('mgdl', w['u_mgdl'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
         tgu = opt('mgdl', w['u_mgdl'], lang in ('ar', 'en')) + opt('mmol', w['u_mmol'], lang in ('nl', SV))
-        opt_num = lambda fid, ph: num(fid, ph, 0.1, 5000, 0.01).replace(' required', '')
-        fields = field('f_ins', w['lbl_ins'], num('f_ins', w['ph_ins'], 0.5, 1000, 0.1)) + \
-                 field('f_ins_u', '', f'<select id="f_ins_u" class="form-control" aria-label="{esc(w["lbl_ins"])}">{ins}</select>') + \
-                 field('f_glu', w['lbl_glu'], num('f_glu', w['ph_glu'], 1, 1000, 0.1)) + \
+        opt_num = lambda fid, ph, lo, hi: num(fid, ph, lo, hi, 0.01).replace(' required', '')
+        hint = lambda key: f'<small class="field-hint">{esc(w[key])}</small>'
+        fields = field('f_glu', w['lbl_glu'], num('f_glu', w['ph_glu'], 1, 1000, 0.1)) + \
                  field('f_glu_u', '', f'<select id="f_glu_u" class="form-control" aria-label="{esc(w["lbl_glu"])}">{glu}</select>') + \
-                 field('f_tg', w['lbl_tg'], opt_num('f_tg', w['ph_tg'])) + \
-                 field('f_tg_u', '', f'<select id="f_tg_u" class="form-control" aria-label="{esc(w["lbl_tg"])}">{tgu}</select>')
-        result = (f'<div class="result-main"><div class="result-heading">{esc(w["res_heading"])}</div>'
+                 field('f_tg', w['lbl_tg'], opt_num('f_tg', w['ph_tg'], 0.1, 5000) + hint('hint_tg')) + \
+                 field('f_tg_u', '', f'<select id="f_tg_u" class="form-control" aria-label="{esc(w["lbl_tg"])}">{tgu}</select>') + \
+                 field('f_ins', w['lbl_ins'], opt_num('f_ins', w['ph_ins'], 0.5, 1000) + hint('hint_ins')) + \
+                 field('f_ins_u', '', f'<select id="f_ins_u" class="form-control" aria-label="{esc(w["lbl_ins"])}">{ins}</select>')
+        result = (f'<div class="result-main"><div class="result-heading" id="r_heading">{esc(w["res_heading"])}</div>'
                   '<div class="result-big-value" id="r_main">--</div><div class="result-status-pill" id="r_pill"></div></div>'
-                  f'<div class="result-grid"><div class="breakdown-box"><div class="breakdown-label">{esc(w["tyg_label"])}</div>'
-                  '<div class="breakdown-val" id="r_tyg">--</div><div class="breakdown-sub" id="r_tyg_sub"></div></div></div>')
+                  f'<div class="result-grid" id="box_sec"><div class="breakdown-box"><div class="breakdown-label" id="r_sec_label">{esc(w["tyg_label"])}</div>'
+                  '<div class="breakdown-val" id="r_sec">--</div><div class="breakdown-sub" id="r_sec_sub"></div></div></div>')
     elif k == 'deficit':
         acts = ''.join(opt(v, label, v == '1.375') for v, label in zip(('1.2', '1.375', '1.55', '1.725', '1.9'), TDEE_UI[lang]['acts']))
         paces = ''.join(opt(v, label, v == '0.5') for v, label in zip(('0.25', '0.5', '0.75'), w['paces']))
@@ -499,17 +501,29 @@ LOGIC = {
         set('r_bmi', fmt(b, 1)); set('r_note', S['tip_' + r.band]); next(r.band);
         return true;""",
     'homa': r"""
-        var C = window.WiboCalc, ins = val('f_ins'), glu = val('f_glu'), tg = val('f_tg');
-        if (!C || !ins || !glu) return false;
-        if (document.getElementById('f_ins_u').value === 'pmol') ins = ins / 6;
+        var C = window.WiboCalc, glu = val('f_glu'), tg = val('f_tg'), ins = val('f_ins'), box = document.getElementById('box_sec');
+        if (!C || !glu) return false;
         var gm = document.getElementById('f_glu_u').value === 'mmol' ? glu : C.mgdlToMmol(glu);
-        var h = C.homaIr(ins, gm), band = C.homaBand(h), st = { low: 'status-optimal', borderline: 'status-warning', high: 'status-danger' }[band];
-        set('r_main', fmt(h, 2)); pill(S['st_' + band], st); set('r_note', S['tip_' + band]);
-        if (tg) {
-            var tm = document.getElementById('f_tg_u').value === 'mmol' ? tg : tg / 88.57, t = C.tyg(tm, gm);
-            set('r_tyg', fmt(t, 2)); set('r_tyg_sub', t < 8.5 ? S['tyg_low'] : S['tyg_high']);
-        } else { set('r_tyg', '--'); set('r_tyg_sub', S['tyg_none']); }
-        next(band);
+        var t = tg ? C.tyg(document.getElementById('f_tg_u').value === 'mmol' ? tg : tg / 88.57, gm) : null;
+        if (!tg && !ins) {          // glucose alone cannot estimate insulin resistance
+            set('r_heading', S['res_heading']); set('r_main', '--'); pill(S['st_need'], 'status-warning');
+            set('r_note', S['tip_need']); box.hidden = true; next('need'); return true;
+        }
+        box.hidden = false;
+        if (ins) {                  // HOMA-IR is the main result, TyG beside it
+            if (document.getElementById('f_ins_u').value === 'pmol') ins = ins / 6;
+            var h = C.homaIr(ins, gm), band = C.homaBand(h), st = { low: 'status-optimal', borderline: 'status-warning', high: 'status-danger' }[band];
+            set('r_heading', S['res_heading']); set('r_main', fmt(h, 2)); pill(S['st_' + band], st); set('r_note', S['tip_' + band]);
+            set('r_sec_label', S['tyg_label']); set('r_sec', t === null ? '--' : fmt(t, 2));
+            set('r_sec_sub', t === null ? S['tyg_none'] : t < 8.5 ? S['tyg_low'] : S['tyg_high']);
+            next(band);
+        } else {                    // no insulin test: TyG is the main result
+            var tb = t < 8.5 ? 'low' : 'high';
+            set('r_heading', S['res_heading_tyg']); set('r_main', fmt(t, 2));
+            pill(S['st_tyg_' + tb], tb === 'low' ? 'status-optimal' : 'status-warning'); set('r_note', S['tip_tyg_' + tb]);
+            set('r_sec_label', S['homa_label']); set('r_sec', '--'); set('r_sec_sub', S['homa_none']);
+            next(tb === 'low' ? 'low' : 'borderline');
+        }
         return true;""",
     # batch C (2026-11-23): formulas from js/calc-formulas.js
     'deficit': r"""

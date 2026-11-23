@@ -736,6 +736,79 @@ HOMA = {
     },
 }
 
+# ------------------------------------------------------------------------------------------------------------------
+# 2026-11-23 (Dr. Wassim Habib): fasting insulin becomes optional. Many patients have no insulin test, so fasting
+# glucose + triglycerides (routine tests) give the TyG index as the main result; with insulin, HOMA-IR stays the main
+# result. Fields renamed so "fasting insulin" is not read as an insulin dose.
+_HOMA_UPDATE = {
+    'ar': dict(
+        blurb='من تحليل السكر على الريق مع الدهون الثلاثية أو الإنسولين.',
+        lead='مقاومة الإنسولين تعني أن الجسم يحتاج كمية أكبر من الإنسولين ليُبقي السكر طبيعياً. اكتب نتيجة تحليل السكر على الريق مع الدهون الثلاثية لنحسب لك مؤشر TyG، وهما من التحاليل الروتينية. وإذا كان معك أيضاً تحليل الإنسولين على الريق من نفس العينة نحسب لك مؤشر HOMA-IR.',
+        ui=dict(lbl_glu='تحليل السكر على الريق', lbl_tg='الدهون الثلاثية (من تحليل الدهون)', hint_tg='موجودة في تحليل الدهون الروتيني.',
+                lbl_ins='تحليل الإنسولين على الريق (من المختبر، اختياري)',
+                hint_ins='الرقم من ورقة التحليل، وليس جرعة الإنسولين. اتركه فارغاً إذا لم تُجرِ هذا التحليل.',
+                res_heading_tyg='مؤشر TyG (من السكر والدهون الثلاثية)', homa_label='مؤشر HOMA-IR (من الإنسولين)',
+                homa_none='أضف تحليل الإنسولين إن كان معك',
+                st_tyg_low='لا يشير غالباً إلى مقاومة', st_tyg_high='قد يشير إلى مقاومة إنسولين', st_need='نحتاج تحليلاً آخر',
+                tip_tyg_low='مؤشر TyG أقل من 8.5، ولا يشير غالباً إلى مقاومة إنسولين.',
+                tip_tyg_high='مؤشر TyG من 8.5 فأكثر، وقد يشير إلى مقاومة إنسولين. يُفهم مع محيط الخصر وباقي تحاليلك.',
+                tip_need='السكر وحده لا يكفي لتقدير مقاومة الإنسولين. أضف الدهون الثلاثية أو تحليل الإنسولين.',
+                nx_need=_next('ar', ['ليس معك تحاليل؟ قِس <a href="{calc:whtr}">نسبة الخصر إلى الطول</a>، فمحيط الخصر من أوضح علامات مقاومة الإنسولين.',
+                                     'أو أجب عن <a href="{calc:findrisc}">اختبار خطر الإصابة بالسكري</a>، ولا يحتاج أي تحليل.'])),
+        faq=('ليس معي تحليل إنسولين، هل أستطيع استخدام الحاسبة؟', 'نعم. بتحليل السكر على الريق والدهون الثلاثية نحسب لك مؤشر TyG، وهما من التحاليل الروتينية.')),
+    'en': dict(
+        blurb='From fasting blood sugar with triglycerides or insulin.',
+        lead='Insulin resistance means your body needs more insulin to keep blood sugar normal. Enter your fasting blood sugar and triglycerides, two routine tests, and we calculate the TyG index. If you also have a fasting insulin test from the same blood sample, we calculate HOMA-IR too.',
+        ui=dict(lbl_glu='Fasting blood sugar test', lbl_tg='Triglycerides (from your lipid test)', hint_tg='Part of the routine lipid (cholesterol) test.',
+                lbl_ins='Fasting insulin (lab test, optional)',
+                hint_ins='The number on your lab report, not your insulin dose. Leave it empty if you have not had this test.',
+                res_heading_tyg='TyG index (from blood sugar and triglycerides)', homa_label='HOMA-IR (from insulin)',
+                homa_none='Add your insulin test if you have one',
+                st_tyg_low='Usually no sign of resistance', st_tyg_high='May point to insulin resistance', st_need='One more test needed',
+                tip_tyg_low='Your TyG index is below 8.5 and usually does not point to insulin resistance.',
+                tip_tyg_high='Your TyG index is 8.5 or more and may point to insulin resistance; read it together with your waist size and other results.',
+                tip_need='Blood sugar alone is not enough to estimate insulin resistance. Add your triglycerides or an insulin test.',
+                nx_need=_next('en', ['No lab tests? Measure your <a href="{calc:whtr}">waist-to-height ratio</a>; waist size is one of the clearest signs of insulin resistance.',
+                                     'Or answer the <a href="{calc:findrisc}">diabetes risk test</a>, which needs no blood test.'])),
+        faq=('I have no insulin test. Can I still use the calculator?', 'Yes. With your fasting blood sugar and triglycerides we calculate the TyG index; both are routine tests.')),
+    'nl': dict(
+        blurb='Uit nuchtere bloedsuiker met triglyceriden of insuline.',
+        lead='Insulineresistentie betekent dat je lichaam meer insuline nodig heeft om je bloedsuiker normaal te houden. Vul je nuchtere bloedsuiker en triglyceriden in, twee standaardbepalingen, en we berekenen de TyG-index. Heb je ook een nuchtere insulinewaarde uit hetzelfde bloedmonster, dan berekenen we ook je HOMA-IR.',
+        ui=dict(lbl_glu='Nuchtere bloedsuiker (bloedonderzoek)', lbl_tg='Triglyceriden (uit je cholesteroltest)', hint_tg='Onderdeel van de standaard cholesteroltest.',
+                lbl_ins='Nuchtere insuline (bloedonderzoek, optioneel)',
+                hint_ins='Het getal op je uitslag, niet je insulinedosis. Laat leeg als deze bepaling niet is gedaan.',
+                res_heading_tyg='TyG-index (uit bloedsuiker en triglyceriden)', homa_label='HOMA-IR (uit insuline)',
+                homa_none='Vul je insulinewaarde in als je die hebt',
+                st_tyg_low='Meestal geen teken van resistentie', st_tyg_high='Kan wijzen op insulineresistentie', st_need='Nog een waarde nodig',
+                tip_tyg_low='Je TyG-index is lager dan 8,5 en wijst meestal niet op insulineresistentie.',
+                tip_tyg_high='Je TyG-index is 8,5 of hoger en kan wijzen op insulineresistentie; bekijk dit samen met je buikomvang en je andere uitslagen.',
+                tip_need='Bloedsuiker alleen is niet genoeg om insulineresistentie in te schatten. Vul ook je triglyceriden of een insulinewaarde in.',
+                nx_need=_next('nl', ['Geen bloedwaarden? Meet je <a href="{calc:whtr}">taille-lengteverhouding</a>; je buikomvang is een van de duidelijkste tekenen van insulineresistentie.',
+                                     'Of doe de <a href="{calc:findrisc}">diabetes risicotest</a>, daarvoor is geen bloedonderzoek nodig.'])),
+        faq=('Ik heb geen insulinewaarde. Kan ik de calculator toch gebruiken?', 'Ja. Met je nuchtere bloedsuiker en triglyceriden berekenen we de TyG-index; beide zijn standaardbepalingen.')),
+    'sv': dict(
+        blurb='Från fasteblodsocker med triglycerider eller insulin.',
+        lead='Insulinresistens betyder att kroppen behöver mer insulin för att hålla blodsockret normalt. Skriv in ditt fasteblodsocker och dina triglycerider, två vanliga rutinprover, så räknar vi ut TyG-index. Har du också ett provsvar för fasteinsulin från samma blodprov räknar vi även ut HOMA-IR.',
+        ui=dict(lbl_glu='Fasteblodsocker (blodprov)', lbl_tg='Triglycerider (från blodfettsprovet)', hint_tg='Ingår i det vanliga blodfettsprovet.',
+                lbl_ins='Fasteinsulin (blodprov, valfritt)',
+                hint_ins='Siffran på ditt provsvar, inte din insulindos. Lämna tomt om du inte har tagit det här provet.',
+                res_heading_tyg='TyG-index (från blodsocker och triglycerider)', homa_label='HOMA-IR (från insulin)',
+                homa_none='Lägg till ditt insulinprov om du har ett',
+                st_tyg_low='Oftast inget tecken på resistens', st_tyg_high='Kan tyda på insulinresistens', st_need='Ett prov till behövs',
+                tip_tyg_low='Ditt TyG-index är under 8,5 och tyder oftast inte på insulinresistens.',
+                tip_tyg_high='Ditt TyG-index är 8,5 eller mer och kan tyda på insulinresistens; tolka det tillsammans med ditt midjemått och dina andra provsvar.',
+                tip_need='Blodsocker ensamt räcker inte för att uppskatta insulinresistens. Lägg till triglycerider eller ett insulinprov.',
+                nx_need=_next('sv', ['Inga provsvar? Mät din <a href="{calc:whtr}">midja-längd-kvot</a>; midjemåttet är ett av de tydligaste tecknen på insulinresistens.',
+                                     'Eller gör <a href="{calc:findrisc}">diabetes risktest</a>, som inte kräver något blodprov.'])),
+        faq=('Jag har inget insulinprov. Kan jag ändå använda kalkylatorn?', 'Ja. Med ditt fasteblodsocker och dina triglycerider räknar vi ut TyG-index; båda är vanliga rutinprover.')),
+}
+for _lang, _u in _HOMA_UPDATE.items():
+    _c = HOMA['content'][_lang]
+    _c['blurb'], _c['lead'] = _u['blurb'], _u['lead']
+    _c['ui'].update(_u['ui'])
+    _c['faq'] = [_u['faq']] + _c['faq']
+HOMA['modified'] = '2026-11-23'
+
 for _lang, _c in HBA1C['content'].items():
     _c['body'] = _c['body'].replace('{TABLE}', hba1c_table(_lang))
 for _lang, _c in GLUCOSE['content'].items():

@@ -80,7 +80,10 @@ const TOOL = {
     findrisc: [['maximum answers -> 26', fill({ f_sex: 'male', f_age: '70', f_weight: '110', f_height: '170', f_waist: '110', f_active: '0', f_veg: '0', f_bp: '1', f_glu: '1', f_family: 'first' }) + ';' + submitAndRead('26/26', true)],
                ['minimum answers -> 0', fill({ f_sex: 'male', f_age: '30', f_weight: '65', f_height: '180', f_waist: '80', f_active: '1', f_veg: '1', f_bp: '0', f_glu: '0', f_family: 'none' }) + ';' + submitAndRead('^0/26', false)]],
     homa: [['insulin 10, glucose 90 mg/dL -> 2.22', fill({ f_ins: '10', f_ins_u: 'uiu', f_glu: '90', f_glu_u: 'mgdl', f_tg: '150', f_tg_u: 'mgdl' }) + ';' + submitAndRead('2[.,]22', false)],
-           ['insulin 20, glucose 6 mmol/L -> 5.33', fill({ f_ins: '20', f_ins_u: 'uiu', f_glu: '6', f_glu_u: 'mmol', f_tg: '', f_tg_u: 'mmol' }) + ';' + submitAndRead('5[.,]33', true)]],
+           ['insulin 20, glucose 6 mmol/L -> 5.33', fill({ f_ins: '20', f_ins_u: 'uiu', f_glu: '6', f_glu_u: 'mmol', f_tg: '', f_tg_u: 'mmol' }) + ';' + submitAndRead('5[.,]33', true)],
+           // no insulin test (2026-11-23): glucose + triglycerides -> TyG as the main result; glucose alone -> ask for one more test
+           ['no insulin: glucose 90 + TG 150 mg/dL -> TyG 8.82', fill({ f_ins: '', f_glu: '90', f_glu_u: 'mgdl', f_tg: '150', f_tg_u: 'mgdl' }) + ';' + submitAndRead('^8[.,]82$', false)],
+           ['glucose alone -> one more test needed', fill({ f_ins: '', f_glu: '90', f_glu_u: 'mgdl', f_tg: '' }) + ';' + submitAndRead('^--$', false)]],
 };
 const toolPages = [];
 for (const [slug, key] of [['hba1c-calculator', 'hba1c'], ['blood-sugar-converter', 'glucose'], ['diabetes-risk-test', 'findrisc'], ['insulin-resistance-calculator', 'homa']])
