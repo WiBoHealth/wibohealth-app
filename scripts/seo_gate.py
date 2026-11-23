@@ -170,6 +170,44 @@ for master, c in site_urls.ROOT_PAGES.items():
 report('old ?lang= URLs without a correct 301', len(bad_lang), detail=bad_lang[:5])
 report('catch-all soft redirects (/en/*, /nl/*, /sv/*)', sum(1 for r in cfg['redirects'] if re.match(r'^/(en|nl|sv)/:path', r['source'])))
 
+# ---- internal links: every <a href> / <form action> on every page must reach a page (file on disk, a directory
+# index, or a vercel.json redirect to one); links that point at redirects or noindex pages are counted separately
+broken, via_redirect, to_noindex = collections.Counter(), collections.Counter(), collections.Counter()
+broken_src, redir_src = {}, {}
+noindex_files = {f for f, p in pages.items() if p['noindex']}
+for f, p in pages.items():
+    for attr, href in re.findall(r'<(?:a|form)\b[^>]*?\s(href|action)="([^"]*)"', strip_scripts(p['src'])):
+        if not href or href.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:', '//')) or '${' in href or '{' in href:
+            continue
+        if href.startswith(('http://', 'https://')):
+            if not href.startswith(SITE):
+                continue
+            href = href[len(SITE):] or '/'
+        path = href.split('#')[0].split('?')[0]
+        if not path:
+            continue
+        if not path.startswith('/'):
+            path = '/' + os.path.normpath(os.path.join(os.path.dirname(f), path)).replace('\\', '/').lstrip('./')
+        target = 'index.html' if path == '/' else path.lstrip('/')
+        if target.endswith('/'):
+            target += 'index.html'
+        if redirect(path):
+            via_redirect[path] += 1
+            redir_src.setdefault(path, f)
+            continue
+        if (ROOT / target).is_file():
+            if target in noindex_files and target not in ('404.html',):
+                to_noindex[target] += 1
+            continue
+        if (ROOT / target / 'index.html').is_file() or path.startswith('/api/'):
+            continue
+        broken[path] += 1
+        broken_src.setdefault(path, f)
+report('broken internal links (targets)', len(broken), detail=[(t, n, broken_src[t]) for t, n in broken.most_common(10)])
+report('internal links that go through a 301', sum(via_redirect.values()), blocking=False,
+       detail=[(t, n, redir_src[t]) for t, n in via_redirect.most_common(10)])
+R['internal links to noindex pages (target: count)'] = (dict(to_noindex.most_common(10)), None)
+
 # ---- canonical / hreflang / lang
 can_err, hl_err, xd_err, lang_err = [], [], [], []
 for f in idx:
@@ -327,6 +365,6 @@ R['noindex pages'] = (sorted(f for f, p in pages.items() if p['noindex']), None)
 # ---- print
 for k, (v, d) in R.items():
     mark = 'FAIL' if k in FAIL else '    '
-    print(f'{mark} {k}: {v}' + (f'\n       e.g. {d}' if d and k in FAIL else ''))
+    print(f'{mark} {k}: {v}' + (f'\n       e.g. {d}' if d and (k in FAIL or 'through a 301' in k) else ''))
 print('\nGATE:', 'FAILED (' + ', '.join(FAIL) + ')' if FAIL else 'PASSED')
 sys.exit(1 if FAIL else 0)
