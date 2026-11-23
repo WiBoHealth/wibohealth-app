@@ -168,258 +168,6 @@
     <meta name="apple-mobile-web-app-title" content="WiBo Health">
 
     <!-- Translations & Smart Auto-Language Engine -->
-    <script>
-        const translations = {
-            sv: {
-                "nav_home": "Hem",
-                "nav_scanner": "📷 Streckkodsskanner",
-                "nav_foods": "Livsmedelsguide",
-                "nav_calculators": "Kalkylatorer",
-                "nav_recipes": "Recept",
-                "nav_articles": "Artiklar",
-                "nav_supplements": "Kosttillskott",
-                "nav_doctor": "WiBo Healths medicinska team",
-                "nav_my_articles": "✍️ Från det medicinska teamet",
-                "nav_body_program": "🌟 Specialprogram",
-                "nav_free_diet": "Gratis kostplan 🎁",
-                "nav_boodi_app": "boodi-appen 💚",
-                "logo_subtitle": "Din guide till sund och balanserad mat",
-                "floating_scanner_text": "Skanna streckkod (ingrediensskanner)",
-                "new_badge": "NYHET 🔥",
-                "scanner_banner_title": "✨ Exklusivt: boodis smarta streckkods- och ingrediensskanner!",
-                "scanner_banner_desc": "Skanna en vara i butiken och se direkt ingredienser, allergener och näringsvärden – och hitta alternativ med mindre socker på samma hylla",
-                "scanner_banner_btn": "Upptäck appen 📲",
-                "compare_title": "🆕 Exklusivt: jämför kosttillskott!",
-                "compare_desc": "Välj 2–5 kosttillskott och jämför dem sida vid sida – användning, doser, varningar och interaktioner med läkemedel",
-                "compare_btn": "Testa nu",
-                "leptin_banner_title": "🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)",
-                "leptin_banner_desc": "Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen",
-                "leptin_banner_btn": "Läs guiden 🩺",
-                "card_badge_hba1c": "Ny medicinsk artikel 🩺",
-                "card_title_hba1c": "HbA1c och insulinresistens",
-                "card_desc_hba1c": "Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.",
-                "card_btn_hba1c": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "card_badge_fatty_liver": "Medicinsk guide 🩺",
-                "card_title_fatty_liver": "Fettlever och fruktos",
-                "card_desc_fatty_liver": "Hur levern omvandlar flytande socker till fett, och vilka levnadsvanor som minskar leverfettet.",
-                "card_btn_fatty_liver": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "card_badge_cortisol": "Hormonguide 🩺",
-                "card_title_cortisol": "Kortisol och stressmage",
-                "card_desc_cortisol": "Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.",
-                "card_btn_cortisol": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "feat_bp_href": "/sv/articles/hogt-blodtryck-socker-insulin.html",
-                "feat_bp_cat": "🫀 Ny artikel / Hjärta och blodkärl",
-                "feat_bp_title": "Tro det eller ej: sockret höjer ditt blodtryck… inte bara saltet!",
-                "feat_bp_sum": "Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.",
-                "feat_bp_alt": "Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert",
-                "feat_bp_btn": "Läs artikeln",
-                "card_badge_magnesium": "Kosttillskottsguide 💊",
-                "card_title_magnesium": "Magnesiumformer – vilken passar dig?",
-                "card_desc_magnesium": "Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.",
-                "card_btn_magnesium": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "card_badge_bones": "Skeletthälsa 🦴",
-                "card_title_bones": "Skeletthälsa: mer än kalcium",
-                "card_desc_bones": "Skelettet behöver mer än kalcium: om D-vitamin, protein, rörelse och balansträning, och när du ska utredas för benskörhet.",
-                "card_btn_bones": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "card_badge_fasting": "Medicinsk guide 🔥",
-                "card_title_fasting": "Periodisk fasta och myterna i sociala medier",
-                "card_desc_fasting": "Vad som händer i kroppen när du fastar, myten om frukosten, hur du hanterar huvudvärk och vem som inte ska fasta.",
-                "card_btn_fasting": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "card_badge_thyroid": "Medicinsk guide 🦋",
-                "card_title_thyroid": "Trög sköldkörtel och långsam ämnesomsättning",
-                "card_desc_thyroid": "Vad TSH, T4 och T3 betyder, de vanliga tecknen på underfunktion och jod och selen i maten.",
-                "card_btn_thyroid": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
-                "stat_recipes": "Recept",
-                "stat_articles": "Artiklar",
-                "stat_supplements": "Kosttillskott",
-                "browse_foods": "Utforska livsmedel",
-                "get_free_diet": "Få en gratis kostplan",
-                "install_app": "Installera appen på din telefon",
-                "feature_gi_title": "Glykemiskt index (GI)",
-                "feature_gi_desc": "Ett mått från 0 till 100 på hur snabbt ett livsmedel höjer blodsockret. Livsmedel med lågt GI (55 eller lägre) ger en jämnare blodsockerkurva.",
-                "feature_ii_title": "Insulinindex (II)",
-                "feature_ii_desc": "Ett mått på hur mycket insulin kroppen frisätter efter ett livsmedel. Bra att känna till vid diabetes och när du vill hålla vikten.",
-                "feature_nutrition_title": "Näringsinnehåll",
-                "feature_nutrition_desc": "En databas med energi, protein, kolhydrater, fett och fiber för alla livsmedel.",
-                "info_title": "Förstå hälsomåtten",
-                "info_gi_box": "Glykemiskt index",
-                "info_gi_low": "Lågt (0–55): tas upp långsamt, ger ett jämnare blodsocker",
-                "info_gi_medium": "Medel (56–69): måttlig upptagning",
-                "info_gi_high": "Högt (70+): tas upp snabbt och höjer blodsockret fort",
-                "info_ii_box": "Insulinindex",
-                "info_ii_low": "Lågt (0–55): liten insulinfrisättning",
-                "info_ii_medium": "Medel (56–69): måttlig insulinfrisättning",
-                "info_ii_high": "Högt (70+): hög insulinfrisättning",
-                "info_why_title": "Varför spelar det roll?",
-                "info_why_1": "✓ Hålla en sund vikt",
-                "info_why_2": "✓ Stöd i vardagen vid diabetes",
-                "info_why_3": "✓ Jämnare energi under dagen",
-                "info_why_4": "✓ Goda vanor för hälsan på lång sikt",
-                "cta_title": "Börja din hälsoresa nu",
-                "cta_subtitle": "Se hälsomåtten för dina favoritlivsmedel",
-                "cta_btn1": "Få en gratis kostplan för en vecka! 🎁",
-                "cta_btn2": "Utforska livsmedel",
-                "cta_btn3": "Räkna ut ditt dagliga behov",
-                "cta_btn4": "Hälsosamma recept",
-                "cta_btn5": "Hälsoartiklar",
-                "cta_btn6": "Om WiBo Healths medicinska team",
-                "footer_about": "Om oss",
-                "footer_contact": "Kontakt",
-                "nav_partners": "Samarbeten",
-                "footer_partners": "Samarbeten",
-                "footer_food_index": "Livsmedelsregister",
-                "footer_supp_index": "Kosttillskottsregister",
-                "footer_privacy": "Integritetspolicy",
-                "footer_terms": "Användarvillkor",
-                "footer_calorie_tracker": "Kalorispårare",
-                "trust_title": "Medicinsk granskning",
-                "trust_text": "Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare av WiBo Health, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.",
-                "trust_btn": "Möt vår grundare",
-                "footer_doctor": "Vår grundare",
-                "footer_delete_account": "Radera konto",
-                "footer_rights": "© 2026 WiBo Health. Alla rättigheter förbehållna.",
-                "pulse_badge": "⚡ Höjdpunkter",
-                "pulse_c1": "Kalkylator för kroppsmasseindex (BMI)",
-                "pulse_c2": "Kalkylator för dagligt kaloribehov (TDEE)",
-                "pulse_c3": "Kalkylator för midja-längd-kvot (WHtR)",
-                "pulse_c4": "Kalkylator för dagligt vätskebehov (EFSA)",
-                "pulse_a1": "Leptingåtan: varför äter jag men blir aldrig mätt?",
-                "pulse_a2": "HbA1c och insulinresistens",
-                "pulse_a3": "Dold fettlever och fruktos",
-                "pulse_a4": "Kortisol och stressmage",
-                "pulse_a5": "Magnesiumformer: så väljer du rätt",
-                "pulse_a6": "Skeletthälsa: mer än kalcium",
-                "pulse_a7": "Periodisk fasta och myterna i sociala medier",
-                "pulse_a8": "Trög sköldkörtel och långsam ämnesomsättning",
-                "meals_badge": "🍳 Vad blir det till middag?",
-                "meals_search_ph": "Sök din maträtt… (t.ex. köttbullar, knäckebröd, salmon, oatmeal)",
-                "meals_search_btn": "Sök 🔍",
-                "tip_label": "Dagens tips",
-                "home_articles_title": "📚 Hälsoartiklar",
-                "home_articles_sub": "Hälsoartiklar, medicinskt granskade av Dr. Wassim Habib",
-                "home_articles_guides": "Grundläggande kostguider",
-                "home_articles_read": "Läs artikeln",
-                "home_articles_ar_only": "(artikeltexten är på arabiska)",
-                "feat_cereal_href": "/sv/articles/frukostflingor-utan-socker.html",
-                "feat_latest_href": "/sv/diabetes/prediabetes.html",
-                "feat_latest_cat": "🆕 Ny guide / Diabetes och metabol hälsa",
-                "feat_latest_title": "Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes",
-                "feat_latest_sum": "HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.",
-                "feat_latest_alt": "Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health",
-                "feat_latest_btn": "Läs artikeln",
-                "feat_gest_href": "/sv/diabetes/graviditetsdiabetes.html",
-                "feat_gest_cat": "🩺 Diabetes och metabol hälsa",
-                "feat_gest_title": "Graviditetsdiabetes: normala blodsockervärden och vad du kan äta",
-                "feat_gest_sum": "Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg",
-                "feat_gest_alt": "Leende gravid kvinna i ett soligt kök med en skål bär och en avokado",
-                "feat_gest_btn": "Läs hela guiden",
-                "feat_liver_href": "/sv/articles/fatty-liver-and-visceral-fat.html",
-                "feat_liver_cat": "🫀 Ny artikel / Lever och metabol hälsa",
-                "feat_liver_title": "Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide",
-                "feat_liver_sum": "Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.",
-                "feat_liver_alt": "En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever",
-                "feat_liver_btn": "Läs artikeln",
-                "pulse_c1_href": "/sv/bmi-calculator.html",
-                "pulse_c2_href": "/sv/tdee-calculator.html",
-                "pulse_c3_href": "/sv/whtr-calculator.html",
-                "pulse_c4_href": "/sv/water-calculator.html",
-                "feat_cereal_cat": "🌾 Ny artikel / Exklusiv guide",
-                "feat_cereal_title": "Frukostflingor utan socker: din guide till en pigg start på dagen",
-                "feat_cereal_sum": "Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller",
-                "feat_cereal_btn": "Läs hela guiden",
-                "feat_cereal_alt": "Kvinna som äter en skål fullkornshavre med bär",
-                "ha_l2": "Periodisk fasta och myterna i sociala medier",
-                "ha_l3": "HbA1c och insulinresistens",
-                "ha_l4": "Dold fettlever och insulinresistens",
-                "ha_l5": "Leptin och mättnad",
-                "ha_l6": "Trög sköldkörtel och långsam ämnesomsättning",
-                "ha_l7": "Kortisol, stresshormonet",
-                "ha_l8": "Magnesiumformer: vilken ska du välja?",
-                "ha_l9": "Skeletthälsa och mineraler",
-                "ha_l10": "Fruktos: en vän i frukten, en fiende i burken",
-                "ha_fructose_href": "/sv/articles/fruktos-frukt-vs-tillsatt-socker.html",
-                "feat_fructose_cat": "🍎 Ny artikel / Diabetes och metabol hälsa",
-                "feat_fructose_title": "Fruktos: en vän i frukten, en fiende i burken… vad är grejen?",
-                "feat_fructose_sum": "Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.",
-                "feat_fructose_alt": "En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker",
-                "card_badge_prediabetes": "Diabetes och metabol hälsa 🩺",
-                "card_badge_liver": "Lever och metabol hälsa 🫀",
-                "card_badge_cereal": "Kostguide 🌾",
-                "card_badge_leptin": "Mättnadshormoner 🧠",
-                "ha_bp": "Högt blodtryck och socker: det dolda sambandet",
-                "ha_prediabetes": "Prediabetes: så stoppar du tåget",
-                "ha_gest": "Den kompletta guiden om graviditetsdiabetes",
-                "ha_cereal": "Frukostflingor utan socker",
-                "ha_1_cat": "Diabetes",
-                "ha_1_title": "Diabetes och bra mat",
-                "ha_1_sum": "En guide till att hantera diabetes med balanserad kost",
-                "ha_2_cat": "Hälsosam kost",
-                "ha_2_title": "Kostfiber och hälsan",
-                "ha_2_sum": "Varför fiber är viktigt och var du hittar det",
-                "ha_3_cat": "Hälsosam kost",
-                "ha_3_title": "Protein och musklerna",
-                "ha_3_sum": "Proteinets roll i kosten och dess olika källor"
-            }
-        };
-
-        function detectInitialLang() {
-            return 'sv';
-        }
-
-        let currentLang = detectInitialLang();
-
-        function t(key) {
-            return translations[currentLang]?.[key] || key;
-        }
-
-        function changeLanguage(lang) {
-            if (lang !== 'sv') { location.href = {"ar": "/", "en": "/en/index.html", "nl": "/nl/index.html"}[lang] || '/'; return; }
-            currentLang = lang;
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            updatePageLanguage();
-            
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                const btnLang = btn.getAttribute('data-lang-toggle');
-                if (btnLang === lang) {
-                    btn.classList.add('active');
-                    btn.style.opacity = '1';
-                } else {
-                    btn.classList.remove('active');
-                    btn.style.opacity = '0.5';
-                }
-            });
-        }
-
-        function updatePageLanguage() {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[currentLang] && translations[currentLang][key]) {
-                    el.innerHTML = translations[currentLang][key];
-                }
-            });
-            document.querySelectorAll('[data-i18n-href]').forEach(el => {
-                const href = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-href')];
-                if (href) el.setAttribute('href', href);
-            });
-            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-                const alt = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-alt')];
-                if (alt) el.setAttribute('alt', alt);
-            });
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                if (translations[currentLang] && translations[currentLang][key]) {
-                    el.placeholder = translations[currentLang][key];
-                    el.setAttribute('aria-label', translations[currentLang][key]);
-                }
-            });
-            if (typeof window.renderHomeTip === 'function') window.renderHomeTip(false);
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            changeLanguage(currentLang);
-        });
-    </script>
 
     <style>
         * {
@@ -2139,6 +1887,259 @@
             <i class="fas fa-arrow-rotate-right" aria-hidden="true"></i>
         </button>
     </aside>
+    <!-- Page language and copy (moved out of <head> on 2026-11-23 so it no longer delays the first paint; the scripts below use currentLang / t()) -->
+    <script>
+        const translations = {
+            sv: {
+                "nav_home": "Hem",
+                "nav_scanner": "📷 Streckkodsskanner",
+                "nav_foods": "Livsmedelsguide",
+                "nav_calculators": "Kalkylatorer",
+                "nav_recipes": "Recept",
+                "nav_articles": "Artiklar",
+                "nav_supplements": "Kosttillskott",
+                "nav_doctor": "WiBo Healths medicinska team",
+                "nav_my_articles": "✍️ Från det medicinska teamet",
+                "nav_body_program": "🌟 Specialprogram",
+                "nav_free_diet": "Gratis kostplan 🎁",
+                "nav_boodi_app": "boodi-appen 💚",
+                "logo_subtitle": "Din guide till sund och balanserad mat",
+                "floating_scanner_text": "Skanna streckkod (ingrediensskanner)",
+                "new_badge": "NYHET 🔥",
+                "scanner_banner_title": "✨ Exklusivt: boodis smarta streckkods- och ingrediensskanner!",
+                "scanner_banner_desc": "Skanna en vara i butiken och se direkt ingredienser, allergener och näringsvärden – och hitta alternativ med mindre socker på samma hylla",
+                "scanner_banner_btn": "Upptäck appen 📲",
+                "compare_title": "🆕 Exklusivt: jämför kosttillskott!",
+                "compare_desc": "Välj 2–5 kosttillskott och jämför dem sida vid sida – användning, doser, varningar och interaktioner med läkemedel",
+                "compare_btn": "Testa nu",
+                "leptin_banner_title": "🔥 Veckans artikel: Varför äter jag men blir aldrig mätt? (Leptingåtan)",
+                "leptin_banner_desc": "Om hjärnan som slutar lyssna på mättnadssignalen, sanningen om fruktsocker och hur du dämpar sötsuget på kvällen",
+                "leptin_banner_btn": "Läs guiden 🩺",
+                "card_badge_hba1c": "Ny medicinsk artikel 🩺",
+                "card_title_hba1c": "HbA1c och insulinresistens",
+                "card_desc_hba1c": "Förstå dina provsvar, de dolda tecknen på insulinresistens och hur kroppen kan bli känsligare för insulin igen.",
+                "card_btn_hba1c": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "card_badge_fatty_liver": "Medicinsk guide 🩺",
+                "card_title_fatty_liver": "Fettlever och fruktos",
+                "card_desc_fatty_liver": "Hur levern omvandlar flytande socker till fett, och vilka levnadsvanor som minskar leverfettet.",
+                "card_btn_fatty_liver": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "card_badge_cortisol": "Hormonguide 🩺",
+                "card_title_cortisol": "Kortisol och stressmage",
+                "card_desc_cortisol": "Stresshormonet bakom envisa viktplatåer och bukfett – och hur det skiljer sig från läkemedlet kortison.",
+                "card_btn_cortisol": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "feat_bp_href": "/sv/articles/hogt-blodtryck-socker-insulin.html",
+                "feat_bp_cat": "🫀 Ny artikel / Hjärta och blodkärl",
+                "feat_bp_title": "Tro det eller ej: sockret höjer ditt blodtryck… inte bara saltet!",
+                "feat_bp_sum": "Högt blodtryck fast du knappt äter salt? Leta efter sockret: hur insulin höjer blodtrycket, hur du mäter rätt hemma och en plan för dina blodkärl.",
+                "feat_bp_alt": "Orolig kvinna mäter blodtrycket med en överarmsmätare, bredvid en saltkar, sötat kaffe och en chokladdessert",
+                "feat_bp_btn": "Läs artikeln",
+                "card_badge_magnesium": "Kosttillskottsguide 💊",
+                "card_title_magnesium": "Magnesiumformer – vilken passar dig?",
+                "card_desc_magnesium": "Osäker på vilket magnesium du ska köpa? Skillnaden mellan formerna, den säkra dosen och vilka läkemedel som påverkas.",
+                "card_btn_magnesium": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "card_badge_bones": "Skeletthälsa 🦴",
+                "card_title_bones": "Skeletthälsa: mer än kalcium",
+                "card_desc_bones": "Skelettet behöver mer än kalcium: om D-vitamin, protein, rörelse och balansträning, och när du ska utredas för benskörhet.",
+                "card_btn_bones": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "card_badge_fasting": "Medicinsk guide 🔥",
+                "card_title_fasting": "Periodisk fasta och myterna i sociala medier",
+                "card_desc_fasting": "Vad som händer i kroppen när du fastar, myten om frukosten, hur du hanterar huvudvärk och vem som inte ska fasta.",
+                "card_btn_fasting": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "card_badge_thyroid": "Medicinsk guide 🦋",
+                "card_title_thyroid": "Trög sköldkörtel och långsam ämnesomsättning",
+                "card_desc_thyroid": "Vad TSH, T4 och T3 betyder, de vanliga tecknen på underfunktion och jod och selen i maten.",
+                "card_btn_thyroid": "Läs artikeln <i class=\"fa-solid fa-arrow-right\"></i>",
+                "stat_recipes": "Recept",
+                "stat_articles": "Artiklar",
+                "stat_supplements": "Kosttillskott",
+                "browse_foods": "Utforska livsmedel",
+                "get_free_diet": "Få en gratis kostplan",
+                "install_app": "Installera appen på din telefon",
+                "feature_gi_title": "Glykemiskt index (GI)",
+                "feature_gi_desc": "Ett mått från 0 till 100 på hur snabbt ett livsmedel höjer blodsockret. Livsmedel med lågt GI (55 eller lägre) ger en jämnare blodsockerkurva.",
+                "feature_ii_title": "Insulinindex (II)",
+                "feature_ii_desc": "Ett mått på hur mycket insulin kroppen frisätter efter ett livsmedel. Bra att känna till vid diabetes och när du vill hålla vikten.",
+                "feature_nutrition_title": "Näringsinnehåll",
+                "feature_nutrition_desc": "En databas med energi, protein, kolhydrater, fett och fiber för alla livsmedel.",
+                "info_title": "Förstå hälsomåtten",
+                "info_gi_box": "Glykemiskt index",
+                "info_gi_low": "Lågt (0–55): tas upp långsamt, ger ett jämnare blodsocker",
+                "info_gi_medium": "Medel (56–69): måttlig upptagning",
+                "info_gi_high": "Högt (70+): tas upp snabbt och höjer blodsockret fort",
+                "info_ii_box": "Insulinindex",
+                "info_ii_low": "Lågt (0–55): liten insulinfrisättning",
+                "info_ii_medium": "Medel (56–69): måttlig insulinfrisättning",
+                "info_ii_high": "Högt (70+): hög insulinfrisättning",
+                "info_why_title": "Varför spelar det roll?",
+                "info_why_1": "✓ Hålla en sund vikt",
+                "info_why_2": "✓ Stöd i vardagen vid diabetes",
+                "info_why_3": "✓ Jämnare energi under dagen",
+                "info_why_4": "✓ Goda vanor för hälsan på lång sikt",
+                "cta_title": "Börja din hälsoresa nu",
+                "cta_subtitle": "Se hälsomåtten för dina favoritlivsmedel",
+                "cta_btn1": "Få en gratis kostplan för en vecka! 🎁",
+                "cta_btn2": "Utforska livsmedel",
+                "cta_btn3": "Räkna ut ditt dagliga behov",
+                "cta_btn4": "Hälsosamma recept",
+                "cta_btn5": "Hälsoartiklar",
+                "cta_btn6": "Om WiBo Healths medicinska team",
+                "footer_about": "Om oss",
+                "footer_contact": "Kontakt",
+                "nav_partners": "Samarbeten",
+                "footer_partners": "Samarbeten",
+                "footer_food_index": "Livsmedelsregister",
+                "footer_supp_index": "Kosttillskottsregister",
+                "footer_privacy": "Integritetspolicy",
+                "footer_terms": "Användarvillkor",
+                "footer_calorie_tracker": "Kalorispårare",
+                "trust_title": "Medicinsk granskning",
+                "trust_text": "Det medicinska innehållet på WiBo Health granskas under ledning av Dr. Wassim Habib, grundare av WiBo Health, med stöd i dokumenterade kliniska källor som de internationella GI-tabellerna och studier om insulinindex.",
+                "trust_btn": "Möt vår grundare",
+                "footer_doctor": "Vår grundare",
+                "footer_delete_account": "Radera konto",
+                "footer_rights": "© 2026 WiBo Health. Alla rättigheter förbehållna.",
+                "pulse_badge": "⚡ Höjdpunkter",
+                "pulse_c1": "Kalkylator för kroppsmasseindex (BMI)",
+                "pulse_c2": "Kalkylator för dagligt kaloribehov (TDEE)",
+                "pulse_c3": "Kalkylator för midja-längd-kvot (WHtR)",
+                "pulse_c4": "Kalkylator för dagligt vätskebehov (EFSA)",
+                "pulse_a1": "Leptingåtan: varför äter jag men blir aldrig mätt?",
+                "pulse_a2": "HbA1c och insulinresistens",
+                "pulse_a3": "Dold fettlever och fruktos",
+                "pulse_a4": "Kortisol och stressmage",
+                "pulse_a5": "Magnesiumformer: så väljer du rätt",
+                "pulse_a6": "Skeletthälsa: mer än kalcium",
+                "pulse_a7": "Periodisk fasta och myterna i sociala medier",
+                "pulse_a8": "Trög sköldkörtel och långsam ämnesomsättning",
+                "meals_badge": "🍳 Vad blir det till middag?",
+                "meals_search_ph": "Sök din maträtt… (t.ex. köttbullar, knäckebröd, salmon, oatmeal)",
+                "meals_search_btn": "Sök 🔍",
+                "tip_label": "Dagens tips",
+                "home_articles_title": "📚 Hälsoartiklar",
+                "home_articles_sub": "Hälsoartiklar, medicinskt granskade av Dr. Wassim Habib",
+                "home_articles_guides": "Grundläggande kostguider",
+                "home_articles_read": "Läs artikeln",
+                "home_articles_ar_only": "(artikeltexten är på arabiska)",
+                "feat_cereal_href": "/sv/articles/frukostflingor-utan-socker.html",
+                "feat_latest_href": "/sv/diabetes/prediabetes.html",
+                "feat_latest_cat": "🆕 Ny guide / Diabetes och metabol hälsa",
+                "feat_latest_title": "Prediabetes: så bromsar du utvecklingen och sänker ditt HbA1c innan det blir diabetes",
+                "feat_latest_sum": "HbA1c mellan 39 och 47 mmol/mol? Det är ännu inte diabetes. Förstå dina värden och börja en 12-veckorsplan med mat, rörelse och sömn för att komma tillbaka till normala nivåer.",
+                "feat_latest_alt": "Balanserad frukost som stöd för blodsockret och insulinkänsligheten – WiBo Health",
+                "feat_latest_btn": "Läs artikeln",
+                "feat_gest_href": "/sv/diabetes/graviditetsdiabetes.html",
+                "feat_gest_cat": "🩺 Diabetes och metabol hälsa",
+                "feat_gest_title": "Graviditetsdiabetes: normala blodsockervärden och vad du kan äta",
+                "feat_gest_sum": "Det är inte ditt fel. Vad provsvaren betyder, en trafikljuslista för maten och din dag steg för steg",
+                "feat_gest_alt": "Leende gravid kvinna i ett soligt kök med en skål bär och en avokado",
+                "feat_gest_btn": "Läs hela guiden",
+                "feat_liver_href": "/sv/articles/fatty-liver-and-visceral-fat.html",
+                "feat_liver_cat": "🫀 Ny artikel / Lever och metabol hälsa",
+                "feat_liver_title": "Fettlever: Symtom, orsaker – och den goda nyheten i denna kompletta guide",
+                "feat_liver_sum": "Varför fett lagras i levern även hos smala, proverna som visar det och en 12-veckorsplan som minskar leverfett och visceralt bukfett.",
+                "feat_liver_alt": "En kvinna med handen på magen i ett ljust kök, som en bild av symtomen vid fettlever",
+                "feat_liver_btn": "Läs artikeln",
+                "pulse_c1_href": "/sv/bmi-calculator.html",
+                "pulse_c2_href": "/sv/tdee-calculator.html",
+                "pulse_c3_href": "/sv/whtr-calculator.html",
+                "pulse_c4_href": "/sv/water-calculator.html",
+                "feat_cereal_cat": "🌾 Ny artikel / Exklusiv guide",
+                "feat_cereal_title": "Frukostflingor utan socker: din guide till en pigg start på dagen",
+                "feat_cereal_sum": "Så avslöjar du sockret i butikens flingor, och de bästa vardagsvalen för en mättnad som håller",
+                "feat_cereal_btn": "Läs hela guiden",
+                "feat_cereal_alt": "Kvinna som äter en skål fullkornshavre med bär",
+                "ha_l2": "Periodisk fasta och myterna i sociala medier",
+                "ha_l3": "HbA1c och insulinresistens",
+                "ha_l4": "Dold fettlever och insulinresistens",
+                "ha_l5": "Leptin och mättnad",
+                "ha_l6": "Trög sköldkörtel och långsam ämnesomsättning",
+                "ha_l7": "Kortisol, stresshormonet",
+                "ha_l8": "Magnesiumformer: vilken ska du välja?",
+                "ha_l9": "Skeletthälsa och mineraler",
+                "ha_l10": "Fruktos: en vän i frukten, en fiende i burken",
+                "ha_fructose_href": "/sv/articles/fruktos-frukt-vs-tillsatt-socker.html",
+                "feat_fructose_cat": "🍎 Ny artikel / Diabetes och metabol hälsa",
+                "feat_fructose_title": "Fruktos: en vän i frukten, en fiende i burken… vad är grejen?",
+                "feat_fructose_sum": "Varför skadar fruktosen i ett äpple dig inte, medan fruktosen i läsk går till levern? En enkel guide om tillsatt socker, alternativen och hur du drar ner.",
+                "feat_fructose_alt": "En ung man och kvinna väljer mellan färsk frukt, sötade drycker och tillsatt socker",
+                "card_badge_prediabetes": "Diabetes och metabol hälsa 🩺",
+                "card_badge_liver": "Lever och metabol hälsa 🫀",
+                "card_badge_cereal": "Kostguide 🌾",
+                "card_badge_leptin": "Mättnadshormoner 🧠",
+                "ha_bp": "Högt blodtryck och socker: det dolda sambandet",
+                "ha_prediabetes": "Prediabetes: så stoppar du tåget",
+                "ha_gest": "Den kompletta guiden om graviditetsdiabetes",
+                "ha_cereal": "Frukostflingor utan socker",
+                "ha_1_cat": "Diabetes",
+                "ha_1_title": "Diabetes och bra mat",
+                "ha_1_sum": "En guide till att hantera diabetes med balanserad kost",
+                "ha_2_cat": "Hälsosam kost",
+                "ha_2_title": "Kostfiber och hälsan",
+                "ha_2_sum": "Varför fiber är viktigt och var du hittar det",
+                "ha_3_cat": "Hälsosam kost",
+                "ha_3_title": "Protein och musklerna",
+                "ha_3_sum": "Proteinets roll i kosten och dess olika källor"
+            }
+        };
+
+        function detectInitialLang() {
+            return 'sv';
+        }
+
+        let currentLang = detectInitialLang();
+
+        function t(key) {
+            return translations[currentLang]?.[key] || key;
+        }
+
+        function changeLanguage(lang) {
+            if (lang !== 'sv') { location.href = {"ar": "/", "en": "/en/index.html", "nl": "/nl/index.html"}[lang] || '/'; return; }
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            updatePageLanguage();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang-toggle');
+                if (btnLang === lang) {
+                    btn.classList.add('active');
+                    btn.style.opacity = '1';
+                } else {
+                    btn.classList.remove('active');
+                    btn.style.opacity = '0.5';
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const href = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-href')];
+                if (href) el.setAttribute('href', href);
+            });
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const alt = translations[currentLang] && translations[currentLang][el.getAttribute('data-i18n-alt')];
+                if (alt) el.setAttribute('alt', alt);
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang] && translations[currentLang][key]) {
+                    el.placeholder = translations[currentLang][key];
+                    el.setAttribute('aria-label', translations[currentLang][key]);
+                }
+            });
+            if (typeof window.renderHomeTip === 'function') window.renderHomeTip(false);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage(currentLang);
+        });
+    </script>
     <script>
         (function () {
             var TIPS = {

@@ -106,9 +106,7 @@ def rewrite_links(page, lang):
 
 
 # relative URLs built in the masters' own scripts (found by checking every master): absolute + language version
-JS_URLS = {
-    '/foods.html': [("`food-details.html?id=", '/food-details.html?id=')],
-}
+JS_URLS = {}   # foods.html's URL templates moved into js/foods-guide.js with absolute paths (2026-11-23)
 SCRIPT_HREF = re.compile(r'(href=\\?["\'])((?![a-z]+:|/|#)[a-zA-Z0-9_-]+\.html(?:[?#][^"\'\\]*)?)')
 
 
@@ -431,6 +429,15 @@ def drop_twins(page, lang):
     return page
 
 
+GUIDE_SCRIPTS = ('foods-guide.js', 'supplements-guide.js')
+
+
+def dictionary_source(src):
+    """The page plus the guide script it loads (js/foods-guide.js, js/supplements-guide.js hold their dictionaries)."""
+    extra = [(ROOT / 'js' / name).read_text(encoding='utf-8') for name in GUIDE_SCRIPTS if f'/js/{name}' in src]
+    return src + '\n'.join(extra)
+
+
 def localise(master, lang, src):
     """The `lang` page of `master` from the Arabic source text `src`."""
     cfg = SEO[master]
@@ -439,9 +446,10 @@ def localise(master, lang, src):
     if master == '/recipes.html':
         page = recipes_english(page)
     else:
-        copy = root_i18n.extract(src)[lang]
+        dsrc = dictionary_source(src)
+        copy = root_i18n.extract(dsrc)[lang]
         missing = set()
-        page = root_i18n.apply(page, copy, root_i18n.mode_of(src), missing)
+        page = root_i18n.apply(page, copy, root_i18n.mode_of(dsrc), missing)
         if missing:
             sys.exit(f'generate_root_pages: {master} [{lang}]: no {lang} copy for {sorted(missing)}')
     page = re.sub(r'<html\b[^>]*>', lambda m: re.sub(r'\bdir="[^"]*"', 'dir="ltr"', re.sub(r'\blang="[^"]*"', f'lang="{lang}"', m.group(0))), page, count=1)
@@ -588,6 +596,8 @@ def vercel():
 
 
 def main():
+    import build_guide_data
+    print('guide data:', build_guide_data.build())
     check_meta()
     changed, errors = [], []
     for master in site_urls.ROOT_PAGES:

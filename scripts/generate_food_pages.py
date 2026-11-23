@@ -1092,9 +1092,21 @@ REFS_UI = {
 }
 
 
+# short citation on every food page, linked to the source (DOI / publisher); the full entries of Atkinson, Holt and
+# Bao are on the methodology page, linked from each references section (2026-11-23: the same long citations on
+# ~3,900 pages were the largest block of repeated text)
+REF_SHORT = {
+    'https://doi.org/10.1093/ajcn/nqab233': 'Atkinson et al., Am J Clin Nutr 2021;114:1625–1632',
+    'https://www.iso.org/standard/43633.html': 'ISO 26642:2010, determination of the glycaemic index',
+    'https://www.fao.org/4/w8079e/w8079e00.htm': 'FAO/WHO 1998, Carbohydrates in human nutrition (FAO Food and Nutrition Paper 66)',
+    'https://doi.org/10.1093/ajcn/66.5.1264': 'Holt et al., Am J Clin Nutr 1997;66:1264–1276',
+    'https://doi.org/10.3945/ajcn.2009.27720': 'Bao et al., Am J Clin Nutr 2009;90:986–992',
+}
+
+
 def ref_cite(ref):
     text, url = ref
-    return f'{esc(text)} <a href="{url}" target="_blank" rel="noopener">{url.split("//", 1)[1]}</a>'
+    return f'<a href="{url}" target="_blank" rel="noopener">{esc(REF_SHORT.get(url, text))}</a>'
 
 
 def studies_word(n, lang):
@@ -1928,14 +1940,10 @@ def build(food, lang, ctx):
     title = food_meta.title(mode, lang, name, taken=ctx.setdefault('titles_taken', {}).setdefault(lang, set()), **meta_v)
     desc = food_meta.desc(mode, lang, name, near_name(near[0]) if near else None, **meta_v)
 
-    # -------- FAQ (answers computed from the numbers, unless doctor-approved questions are given)
+    # -------- FAQ: only doctor-approved questions (2026-11-23). The computed questions only repeated the numbers of
+    # the tables above in the same sentence on every page (name and figures swapped), so they are no longer added.
     faq_override = ctx['overrides'].get(str(food['id']), {}).get('faq', {}).get(lang)
-    if faq_override:
-        faq = [(item['q'], item['a']) for item in faq_override]
-    elif has_gi:
-        faq = build_faq(food, lang, sname, portion, True, gi=gi, lvl=lvl, gl=gl, glv=glv, g=g, reviewed=reviewed)
-    else:
-        faq = build_faq(food, lang, sname, portion, False, g=g)
+    faq = [(item['q'], item['a']) for item in faq_override] if faq_override else []
     # doctor-approved questions appended after the computed ones (batch 22 onwards)
     faq += [(item['q'], item['a']) for item in ctx['overrides'].get(str(food['id']), {}).get('faq_extra', {}).get(lang, [])]
     # every question open, nothing to fold (all food pages, 2026-10-31)
@@ -2288,8 +2296,7 @@ def build(food, lang, ctx):
             <h2 class="section-title">{icon("scale")} <span>{u["compare"]}</span></h2>
             <p>{esc(compare_txt)}</p>{alt_block}
 
-            <h2 class="section-title">{icon("question")} <span>{FAQ[lang]["title"]}</span></h2>
-            <div class="acc-list">{faq_html}</div>
+            {f'<h2 class="section-title">{icon("question")} <span>{FAQ[lang]["title"]}</span></h2>{chr(10)}            <div class="acc-list">{faq_html}</div>' if faq else ''}
 
             <h2 class="section-title">{icon("book")} <span>{READ_ALSO_TITLE[lang]}</span></h2>
             <ul class="alt-list read-also">{read_also_html}</ul>

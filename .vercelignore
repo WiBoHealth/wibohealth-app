@@ -49,3 +49,6 @@ twa-vercel-config.json
 .htaccess
 _headers
 _redirects
+
+# drafts for review (doctor review, old brand assets): never deployed
+drafts/
