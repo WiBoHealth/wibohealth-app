@@ -13,8 +13,8 @@ CATEGORIES = ('diabetes', 'body', 'tests')
 
 HUB = {
     'ar': dict(
-        title='حاسبات صحية مجانية: كتلة الجسم والسعرات والماء والخصر',
-        desc='حاسبات صحية مجانية بالعربية: مؤشر كتلة الجسم BMI، السعرات اليومية والماكروز، احتياج الماء، ونسبة الخصر إلى الطول، مع شرح مبسط لكل نتيجة.',
+        title='حاسبات صحية: السكر التراكمي والسعرات والبروتين والدهون',
+        desc='حاسبات صحية مجانية بالعربية: السكر التراكمي، خطر السكري، مقاومة الإنسولين، الحمل الجلايسيمي، السعرات، البروتين، نسبة الدهون وكتلة الجسم، مع شرح مبسط لكل نتيجة.',
         h1='الحاسبات الصحية',
         intro='اختر الحاسبة التي تحتاجها. كل حاسبة في صفحة خاصة بها مع شرح للنتيجة ومصادرها العلمية. الحساب يتم على جهازك فقط، ولا نحفظ أي رقم تدخله.',
         tabs={'diabetes': 'السكري وسكر الدم', 'body': 'التغذية والجسم', 'tests': 'اختبر نفسك'},
@@ -23,8 +23,8 @@ HUB = {
                ('/foods.html', 'دليل الأطعمة', 'المؤشر الجلايسيمي والسعرات لأكثر من 970 طعاماً.')],
         note='هذه الحاسبات للتثقيف الصحي فقط ولا تُغني عن استشارة الطبيب.'),
     'en': dict(
-        title='Free Health Calculators: BMI, Calories, Water and Waist',
-        desc='Free health calculators: BMI, daily calories and macros, water intake and waist-to-height ratio, each with a plain explanation of your result.',
+        title='Free Health Calculators: Blood Sugar, Calories and Body Fat',
+        desc='Free health calculators: HbA1c, diabetes risk, insulin resistance, glycemic load, calories, protein, body fat and BMI, each with a plain explanation.',
         h1='Health calculators',
         intro='Pick the calculator you need. Each one has its own page with an explanation of the result and its scientific sources. Everything is calculated on your device; we do not store anything you enter.',
         tabs={'diabetes': 'Diabetes and blood sugar', 'body': 'Nutrition and body', 'tests': 'Test yourself'},
@@ -33,8 +33,8 @@ HUB = {
                ('/foods.html', 'Food guide', 'Glycemic index and calories for more than 970 foods.')],
         note='These calculators are for health education only and do not replace advice from your doctor.'),
     'nl': dict(
-        title='Gratis gezondheidscalculators: BMI, calorieën, water en buik',
-        desc='Gratis gezondheidscalculators: BMI, dagelijkse calorieën en macro\'s, vochtbehoefte en taille-lengteverhouding, elk met een duidelijke uitleg.',
+        title='Gratis gezondheidscalculators: bloedsuiker, calorieën en vet',
+        desc='Gratis gezondheidscalculators: HbA1c, diabetesrisico, insulineresistentie, glykemische lading, calorieën, eiwit, vetpercentage en BMI, met duidelijke uitleg.',
         h1='Gezondheidscalculators',
         intro='Kies de calculator die je nodig hebt. Elke calculator heeft een eigen pagina met uitleg over de uitkomst en de wetenschappelijke bronnen. Alles wordt op je eigen apparaat berekend; we bewaren niets van wat je invult.',
         tabs={'diabetes': 'Diabetes en bloedsuiker', 'body': 'Voeding en lichaam', 'tests': 'Test jezelf'},
@@ -43,8 +43,8 @@ HUB = {
                ('/foods.html', 'Voedingswijzer', 'Glykemische index en calorieën van meer dan 970 producten.')],
         note='Deze calculators zijn alleen bedoeld als gezondheidsvoorlichting en vervangen geen advies van je arts.'),
     'sv': dict(
-        title='Gratis hälsokalkylatorer: BMI, kalorier, vatten och midja',
-        desc='Gratis hälsokalkylatorer: BMI, dagligt kaloribehov och makron, vätskebehov och midja-längd-kvot, var och en med en enkel förklaring av resultatet.',
+        title='Gratis hälsokalkylatorer: blodsocker, kalorier och fett',
+        desc='Gratis hälsokalkylatorer: HbA1c, diabetesrisk, insulinresistens, glykemisk belastning, kalorier, protein, fettprocent och BMI, med enkel förklaring.',
         h1='Hälsokalkylatorer',
         intro='Välj den kalkylator du behöver. Varje kalkylator har en egen sida med en förklaring av resultatet och de vetenskapliga källorna. Allt räknas ut på din egen enhet; vi sparar inget av det du skriver in.',
         tabs={'diabetes': 'Diabetes och blodsocker', 'body': 'Kost och kropp', 'tests': 'Testa dig själv'},
